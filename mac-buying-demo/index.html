@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mac 型号选购指南 · Demo</title>
+  <meta name="description" content="2026 Mac 全系选购 demo —— 交互式决策、规格对比、价格筛选。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top"> Mac 选购 · <span>Demo</span></a>
+    <nav>
+      <a href="#chooser">选购器</a>
+      <a href="#lineup">全系</a>
+      <a href="#specs">规格对比</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="eyebrow reveal">2026 选购 DEMO</p>
+      <h1 class="reveal">买哪台 <span class="grad">Mac</span>?<br>30 秒帮你定。</h1>
+      <p class="lede reveal">从 MacBook Air 到 Mac Studio —— 按你的用途、预算和便携需求,交互式筛出最合适的一台。</p>
+      <div class="hero-cta reveal">
+        <a class="btn primary" href="#chooser">开始选购 →</a>
+        <a class="btn ghost" href="#lineup">先看全系</a>
+      </div>
+      <div class="hero-macs" aria-hidden="true">
+        <div class="float laptop"></div>
+        <div class="float mini"></div>
+        <div class="float studio"></div>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">scroll ↓</div>
+  </section>
+
+  <section class="chooser" id="chooser">
+    <h2 class="reveal">① 你主要拿它做什么?</h2>
+    <div class="use-grid">
+      <button class="use" data-use="study" aria-pressed="false"><b>学习 / 办公</b><span>文档、网页、视频</span></button>
+      <button class="use" data-use="dev" aria-pressed="false"><b>编程开发</b><span>编译、容器、多开</span></button>
+      <button class="use" data-use="creative" aria-pressed="false"><b>剪辑 / 设计</b><span>4K 视频、PS/AE</span></button>
+      <button class="use" data-use="pro" aria-pressed="false"><b>专业生产力</b><span>3D、多路 8K</span></button>
+    </div>
+    <div class="budget-row reveal">
+      <label>预算上限:<output id="budgetOut">¥15000</output></label>
+      <input type="range" id="budget" min="6000" max="60000" step="1000" value="15000">
+    </div>
+    <div class="reco" id="reco" hidden>
+      <span class="reco-label">推荐</span>
+      <h3 id="recoName">—</h3>
+      <p id="recoWhy">选择用途后给出建议。</p>
+    </div>
+  </section>
+
+  <section class="lineup" id="lineup">
+    <h2 class="reveal">② 全系一览</h2>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section class="specs" id="specs">
+    <h2 class="reveal">③ 规格对比(性能相对值)</h2>
+    <div class="bars" id="bars"></div>
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 class="reveal">④ 常见问题</h2>
+    <div class="acc" id="acc"></div>
+  </section>
+
+  <footer class="foot">
+    <p>Mac 选购 Demo · 数据为演示用途虚构 · 由家庭服务器经 Cloudflare Tunnel 托管于 vincejiang.com</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

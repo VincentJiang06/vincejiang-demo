@@ -1,0 +1,110 @@
+:root{
+  --bg:#06070b; --bg2:#0d1018; --card:#141925; --line:#222a3a;
+  --txt:#e9edf6; --mut:#8b95ab; --accent:#5b8cff; --accent2:#a06bff; --good:#39d98a;
+  --radius:18px; --maxw:1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--txt);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,"PingFang SC",sans-serif;
+  line-height:1.6; overflow-x:hidden;
+}
+h1,h2,h3{line-height:1.15; letter-spacing:-.02em}
+section{padding:clamp(3rem,8vw,7rem) clamp(1.2rem,5vw,3rem); max-width:var(--maxw); margin:0 auto}
+section>h2{font-size:clamp(1.6rem,4vw,2.6rem); margin-bottom:2rem}
+.grad{background:linear-gradient(120deg,var(--accent),var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent}
+
+/* cursor glow */
+.cursor-glow{position:fixed; top:0; left:0; width:480px; height:480px; border-radius:50%;
+  background:radial-gradient(circle,rgba(91,140,255,.18),transparent 60%);
+  transform:translate(-50%,-50%); pointer-events:none; z-index:0; transition:opacity .3s; opacity:0}
+
+/* nav */
+.nav{position:sticky; top:0; z-index:20; display:flex; align-items:center; justify-content:space-between;
+  padding:.9rem clamp(1.2rem,5vw,3rem); backdrop-filter:blur(12px);
+  background:rgba(6,7,11,.55); border-bottom:1px solid transparent; transition:border-color .3s,background .3s}
+.nav.scrolled{border-color:var(--line); background:rgba(6,7,11,.8)}
+.brand{font-weight:700; text-decoration:none; color:var(--txt)}
+.brand span{color:var(--accent)}
+.nav nav{display:flex; gap:clamp(.8rem,2vw,1.6rem)}
+.nav nav a{color:var(--mut); text-decoration:none; font-size:.92rem; transition:color .2s}
+.nav nav a:hover{color:var(--txt)}
+
+/* hero */
+.hero{position:relative; min-height:92vh; display:flex; align-items:center; max-width:none; overflow:hidden}
+.hero-bg{position:absolute; inset:-20%; z-index:0;
+  background:
+    radial-gradient(40% 50% at 20% 20%,rgba(91,140,255,.25),transparent 60%),
+    radial-gradient(45% 55% at 80% 30%,rgba(160,107,255,.22),transparent 60%),
+    radial-gradient(50% 50% at 50% 90%,rgba(57,217,138,.12),transparent 60%);
+  animation:drift 18s ease-in-out infinite alternate; filter:blur(20px)}
+@keyframes drift{0%{transform:translate3d(0,0,0) scale(1)}100%{transform:translate3d(3%,-3%,0) scale(1.1)}}
+.hero-inner{position:relative; z-index:2; max-width:var(--maxw); margin:0 auto; padding:0 clamp(1.2rem,5vw,3rem); width:100%}
+.eyebrow{font-size:.8rem; letter-spacing:.3em; color:var(--accent); font-weight:600}
+.hero h1{font-size:clamp(2.6rem,8vw,5rem); margin:.4rem 0 1rem}
+.lede{color:var(--mut); font-size:clamp(1rem,2.2vw,1.25rem); max-width:34ch}
+.hero-cta{display:flex; gap:1rem; margin-top:2rem; flex-wrap:wrap}
+.btn{display:inline-block; padding:.8rem 1.5rem; border-radius:999px; text-decoration:none; font-weight:600; transition:transform .2s,box-shadow .2s; border:1px solid transparent}
+.btn.primary{background:linear-gradient(120deg,var(--accent),var(--accent2)); color:#fff; box-shadow:0 8px 30px rgba(91,140,255,.4)}
+.btn.ghost{border-color:var(--line); color:var(--txt)}
+.btn:hover{transform:translateY(-3px)}
+.scroll-hint{position:absolute; bottom:1.5rem; left:50%; transform:translateX(-50%); color:var(--mut); font-size:.8rem; letter-spacing:.2em; animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{50%{transform:translate(-50%,8px)}}
+
+/* floating mac shapes */
+.hero-macs{position:absolute; inset:0; z-index:1; pointer-events:none}
+.float{position:absolute; border-radius:14px; background:linear-gradient(160deg,#1b2233,#0d1119); border:1px solid var(--line); box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.float.laptop{width:230px; height:150px; right:6%; top:22%; animation:floaty 7s ease-in-out infinite}
+.float.laptop::after{content:""; position:absolute; left:8%; top:8%; right:8%; bottom:18%; border-radius:8px; background:linear-gradient(120deg,rgba(91,140,255,.35),rgba(160,107,255,.3))}
+.float.mini{width:120px; height:120px; left:8%; top:30%; animation:floaty 9s ease-in-out infinite reverse}
+.float.studio{width:90px; height:140px; right:24%; bottom:14%; animation:floaty 8s ease-in-out 1s infinite}
+@keyframes floaty{50%{transform:translateY(-22px) rotate(2deg)}}
+
+/* reveal on scroll */
+.reveal{opacity:0; transform:translateY(28px); transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1; transform:none}
+
+/* chooser */
+.use-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem}
+.use{cursor:pointer; text-align:left; padding:1.2rem; border-radius:var(--radius); background:var(--card); border:1px solid var(--line); color:var(--txt); transition:transform .2s,border-color .2s,box-shadow .2s}
+.use b{display:block; font-size:1.05rem}
+.use span{color:var(--mut); font-size:.85rem}
+.use:hover{transform:translateY(-4px); border-color:var(--accent)}
+.use[aria-pressed="true"]{border-color:var(--accent); box-shadow:0 0 0 2px var(--accent) inset, 0 10px 40px rgba(91,140,255,.25)}
+.budget-row{margin-top:1.6rem; display:flex; flex-direction:column; gap:.5rem}
+.budget-row output{color:var(--accent); font-weight:700}
+input[type=range]{width:100%; accent-color:var(--accent)}
+.reco{margin-top:1.6rem; padding:1.4rem 1.6rem; border-radius:var(--radius); background:linear-gradient(120deg,rgba(91,140,255,.12),rgba(160,107,255,.1)); border:1px solid var(--accent)}
+.reco-label{font-size:.72rem; letter-spacing:.2em; color:var(--accent)}
+.reco h3{font-size:1.4rem; margin:.2rem 0}
+
+/* cards */
+.cards{display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:1.2rem}
+.mac-card{position:relative; padding:1.4rem; border-radius:var(--radius); background:var(--card); border:1px solid var(--line);
+  transform-style:preserve-3d; transition:transform .25s ease,box-shadow .25s; will-change:transform}
+.mac-card.dim{opacity:.32; filter:grayscale(.4)}
+.mac-card h3{font-size:1.2rem}
+.mac-card .price{color:var(--good); font-weight:700; margin:.3rem 0}
+.mac-card ul{list-style:none; margin-top:.6rem; color:var(--mut); font-size:.9rem}
+.mac-card li{padding:.15rem 0}
+.tag{display:inline-block; font-size:.7rem; padding:.15rem .55rem; border-radius:999px; background:rgba(91,140,255,.15); color:var(--accent); margin-bottom:.4rem}
+
+/* spec bars */
+.bars{display:flex; flex-direction:column; gap:1.1rem}
+.bar-row{display:grid; grid-template-columns:130px 1fr 48px; align-items:center; gap:1rem}
+.bar-track{height:12px; border-radius:999px; background:var(--bg2); overflow:hidden}
+.bar-fill{height:100%; width:0; border-radius:999px; background:linear-gradient(90deg,var(--accent),var(--accent2)); transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+.bar-row .val{color:var(--mut); font-size:.85rem; text-align:right}
+
+/* faq accordion */
+.acc-item{border-bottom:1px solid var(--line)}
+.acc-q{width:100%; text-align:left; background:none; border:none; color:var(--txt); padding:1.1rem 0; font-size:1.05rem; cursor:pointer; display:flex; justify-content:space-between; gap:1rem}
+.acc-q .plus{transition:transform .3s; color:var(--accent)}
+.acc-item.open .plus{transform:rotate(45deg)}
+.acc-a{max-height:0; overflow:hidden; color:var(--mut); transition:max-height .4s ease}
+.acc-a p{padding:0 0 1.1rem}
+
+.foot{max-width:var(--maxw); margin:0 auto; padding:3rem clamp(1.2rem,5vw,3rem); color:var(--mut); font-size:.85rem; border-top:1px solid var(--line)}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}.reveal{opacity:1; transform:none}}
