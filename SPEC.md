@@ -158,12 +158,12 @@ sudo ./svc.sh install vince && sudo ./svc.sh start
 
 ---
 
-## 8.5 `/status_agents` 页面 —— 特殊:依赖一个服务器侧后端 + 开放接口
+## 8.5 `/status-ai` 页面 —— 特殊:依赖一个服务器侧后端 + 开放接口
 
-`/status_agents/`(本仓库 `status_agents/index.html`)是一个**纯静态前端**,但数据来自一个**不在本仓库**的
+`/status-ai/`(本仓库 `status-ai/index.html`)是一个**纯静态前端**,但数据来自一个**不在本仓库**的
 后端 `svc-status`(在服务器的 `UniWild/platform` 里)。原因:翻译要用 DeepSeek API,**密钥绝不能进前端**。
 
-- **前端**(本仓库 `status_agents/index.html`):`fetch('/status_agents/api')` 渲染。渐变背景 + 明暗切换(记忆) +
+- **前端**(本仓库 `status-ai/index.html`):`fetch('/status-ai/api')` 渲染。渐变背景 + 明暗切换(记忆) +
   每条事件的持续时间 + Claude 的常驻通知单独一行 + 卡片右下角斜放的真实 logo 小卡(`icons/codex.png` / `icons/claude.png`,
   圆角由 `.deco` 的 CSS 统一)+ 状态灯随严重度变闪速;友链野史用各站真实 favicon(`icons/wild/<站>.png`)。
   ⚠️ 静态资源(svg/css/js/图片)在 Cloudflare/浏览器缓存**一周**;**改了图标或任何静态文件,必须 bump 引用处的
@@ -173,7 +173,7 @@ sudo ./svc.sh install vince && sudo ./svc.sh start
 - **后端**(`UniWild/platform/status-svc/server.mjs`,容器 `svc-status`,node:22 零依赖):服务器侧拉
   `status.openai.com` 和 `status.claude.com` 的 Statuspage `summary.json`,喂 DeepSeek(`deepseek-v4-flash`)
   写**通俗中文解说**。
-  - **后端自动轮询**:每 `POLL_INTERVAL`(env,默认 20s)查一次状态,结果存内存,`/status_agents/api` 秒回该缓存。
+  - **后端自动轮询**:每 `POLL_INTERVAL`(env,默认 20s)查一次状态,结果存内存,`/status-ai/api` 秒回该缓存。
     另外拉 `incidents.json`(缓存 120s)统计 `today_outages`(今日挂了几次,按 `TZ_OFFSET_MIN` 默认 UTC+8 算)。
     查状态是免费 HTTP;**翻译按内容变化触发**——解说按"源文本 hash"缓存,官方状态文字不变就**绝不再调** v4flash。
     所以空闲时几乎零成本,只在 OpenAI/Claude 真改状态时才翻译一次。
@@ -181,12 +181,12 @@ sudo ./svc.sh install vince && sudo ./svc.sh start
   - **真故障 vs 常驻通知**:命中 `NOTICE_PATTERNS`(suspend/mythos/fable/deprecat)的事件归到 `notices`,
     **不计入运行是否失效**(`healthy` 只看官方顶层 indicator),单独给一小行 + `name_zh`。要新增常驻通知,
     改 `NOTICE_PATTERNS`。
-  - 路由:Traefik 把 `vincejiang.com/status_agents/api` 指到这个容器(priority 高于本站 catch-all)。
+  - 路由:Traefik 把 `vincejiang.com/status-ai/api` 指到这个容器(priority 高于本站 catch-all)。
   - 密钥:`DEEPSEEK_API_KEY` 在服务器 `platform/.env`(已 gitignore),前端/本仓库都看不到。
   - 改后端逻辑或 prompt → 在服务器 `cd platform && docker compose up -d --build svc-status`。
 
 ### 开放接口(给别人用 agent 抓)
-`GET https://vincejiang.com/status_agents/api` —— 只读、开放 CORS、`schema: "vincejiang.status/1"`。每个 provider:
+`GET https://vincejiang.com/status-ai/api` —— 只读、开放 CORS、`schema: "vincejiang.status/1"`。每个 provider:
 `indicator`(none/minor/major/critical/maintenance)、`healthy`(bool)、`description`(英文原状态)、
 `summary_zh`(DeepSeek 解说)、`today_outages`(今日挂了几次)、`incidents[]`(含 `duration`)、`notices[]`(常驻通知,含 `name_zh`)。
 
