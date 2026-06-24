@@ -104,6 +104,21 @@
     .api a{color:var(--link)}
     .api ul{margin:.5rem 0; padding-left:1.1rem}
 
+    .copy{font:inherit; font-size:.8rem; color:#fff; background:var(--link); border:none; cursor:pointer;
+          padding:.32rem .8rem; border-radius:999px; margin-top:.5rem}
+    .copy:hover{opacity:.9}
+
+    .links{margin-top:1.4rem; display:flex; flex-direction:column; gap:1rem}
+    .lgroup{background:var(--card); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+            border:1px solid var(--border); border-radius:16px; box-shadow:var(--shadow); padding:.95rem 1.1rem}
+    .ltitle{font-size:.82rem; font-weight:700; color:var(--sub); margin-bottom:.6rem}
+    .chips{display:flex; flex-wrap:wrap; gap:.5rem}
+    .chips a{display:inline-block; padding:.34rem .7rem; border-radius:999px; font-size:.85rem; text-decoration:none;
+             color:var(--fg); background:var(--chip); border:1px solid var(--border); transition:transform .12s, background .2s}
+    .chips a:hover{transform:translateY(-1px); background:var(--link); color:#fff; border-color:transparent}
+    .chips a.soon{opacity:.62; font-style:normal}
+    .chips a.soon::after{content:" · 即将上线"; font-size:.78em; opacity:.85}
+
     .foot{margin-top:1.8rem; text-align:center; color:var(--sub); font-size:.82rem}
     .foot a{color:var(--link); text-decoration:none}
     .back{display:inline-block; margin-top:.4rem; color:var(--sub); text-decoration:none; font-size:.82rem}
@@ -118,7 +133,7 @@
     <div class="bar">
       <div class="grow">
         <h1>AI 服务状态 🛰️</h1>
-        <p>瞟一眼就知道 OpenAI &amp; Claude 现在能不能用 🫡 · 中文解说由 DeepSeek 生成 · 想看最新点「刷新」</p>
+        <p>瞟一眼就知道 OpenAI &amp; Claude 现在能不能用 🫡 · 中文解说由 DeepSeek 生成 · 支持开放接口给 agent 抓 🤖</p>
       </div>
       <button class="toggle" id="theme" title="切换明暗模式">🌙</button>
     </div>
@@ -133,10 +148,10 @@
       <button id="refresh">🔄 刷新</button>
     </footer>
 
-    <details class="api">
-      <summary>给 Agent / 程序用:开放 JSON 接口</summary>
+    <details class="api" open>
+      <summary>本站支持开放接口 —— 给 Agent / 程序直接抓</summary>
       <div class="body">
-        <p>这页的数据来自一个开放的只读接口(已开 CORS),拿去喂给你的 agent / 脚本即可:</p>
+        <p>这页的数据来自一个开放的只读接口(已开 CORS、无需鉴权),拿去喂给你的 agent / 脚本即可:</p>
         <pre>GET https://vincejiang.com/_status/api</pre>
         <p>返回 <code>schema: "vincejiang.status/1"</code>,核心字段:</p>
         <ul>
@@ -147,11 +162,34 @@
           <li><code>providers[].incidents[]</code> — 进行中的真故障(含 <code>duration</code> 持续时间)</li>
           <li><code>providers[].notices[]</code> — 常驻通知(如某模型被暂停,<strong>不算故障</strong>,含 <code>name_zh</code>)</li>
         </ul>
-        <p style="margin:.6rem 0 .2rem">试一下:</p>
-        <pre>curl -s https://vincejiang.com/_status/api</pre>
-        <p style="font-size:.92em">说明:翻译只在<strong>官方状态发生变化时</strong>才重新生成(其余时刻走缓存),所以接口又新又省。</p>
+        <p style="margin:.7rem 0 .2rem"><strong>给你的 agent 一段现成 prompt(点下面按钮复制即可用):</strong></p>
+        <pre id="agentPrompt">你是 AI 服务状态助手。请用 HTTP GET 拉取 https://vincejiang.com/_status/api(开放 JSON、无需鉴权,schema 为 vincejiang.status/1)。然后对 OpenAI 和 Claude 各汇报一行:① 是否正常(healthy=true 即正常);② 官方级别 indicator;③ 直接引用 summary_zh 作为中文解说;④ 若 incidents 非空,补一句故障名与 duration.text 持续时间。注意:notices 是常驻通知、不算故障,默认忽略。用简洁中文回答。</pre>
+        <button class="copy" data-target="agentPrompt">📋 复制 prompt</button>
+        <p style="font-size:.92em; margin-top:.8rem">说明:翻译只在<strong>官方状态发生变化时</strong>才重新生成(其余时刻走缓存),所以接口又新又省。</p>
       </div>
     </details>
+
+    <div class="links">
+      <div class="lgroup">
+        <div class="ltitle">🏫 香港高校野史 · Wild 系列</div>
+        <div class="chips">
+          <a href="https://hkuwild.com" target="_blank" rel="noopener">港大野史</a>
+          <a href="https://cuhkwild.com" target="_blank" rel="noopener">中大野史</a>
+          <a href="https://hkustwild.com" target="_blank" rel="noopener">科大野史</a>
+          <a href="https://cityuwild.com" target="_blank" rel="noopener">城大野史</a>
+          <a href="https://polyuwild.com" target="_blank" rel="noopener">理大野史</a>
+          <a href="https://hkuniwild.com" target="_blank" rel="noopener">港校通 · 门户</a>
+        </div>
+      </div>
+      <div class="lgroup">
+        <div class="ltitle">🧰 更多作品</div>
+        <div class="chips">
+          <a href="https://github.com/VincentJiang06/skills" target="_blank" rel="noopener">Skills 仓库 ↗</a>
+          <a class="soon" href="https://unirankindex.com" target="_blank" rel="noopener">UniRankIndex</a>
+          <a class="soon" href="https://cityrankindex.com" target="_blank" rel="noopener">CityRankIndex</a>
+        </div>
+      </div>
+    </div>
 
     <div class="foot">made with ☕ &amp; 🤖 by <strong>小蒋</strong></div>
     <div style="text-align:center"><a class="back" href="/">← 返回首页</a></div>
@@ -241,6 +279,19 @@
     }
     btn.addEventListener('click', load);
     load();                                  // 首次访问加载一次;之后只在点刷新时更新
+
+    // ——— 复制 agent prompt ———
+    document.querySelectorAll('.copy').forEach(b => b.addEventListener('click', async () => {
+      const el = document.getElementById(b.dataset.target);
+      try{
+        await navigator.clipboard.writeText(el.innerText);
+        const old = b.textContent; b.textContent = '✅ 已复制';
+        setTimeout(() => b.textContent = old, 1600);
+      }catch(e){
+        const r = document.createRange(); r.selectNode(el);
+        getSelection().removeAllRanges(); getSelection().addRange(r);
+      }
+    }));
   </script>
 </body>
 </html>
