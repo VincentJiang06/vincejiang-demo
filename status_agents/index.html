@@ -72,16 +72,13 @@
           border-radius:18px; filter:drop-shadow(0 6px 16px rgba(0,0,0,.22)); transition:transform .3s ease}
     .card:hover .deco{transform:rotate(7deg) translateY(-4px) scale(1.05); opacity:1}
     .top{display:flex; align-items:center; gap:.6rem; margin-bottom:.7rem}
-    .dot{width:13px; height:13px; border-radius:50%; flex:0 0 auto; background:#9ca3af; position:relative}
+    .dot{width:12px; height:12px; border-radius:50%; flex:0 0 auto; background:#9ca3af; position:relative}
     .dot::after{content:""; position:absolute; inset:-4px; border-radius:50%; background:inherit; opacity:.4; animation:pulse var(--pd,2.4s) ease-out infinite}
-    .dot::before{content:""; position:absolute; inset:3px; border-radius:50%; background:rgba(255,255,255,.55)}  /* 高光,像点亮的灯 */
     @keyframes pulse{0%{transform:scale(.8);opacity:.5}100%{transform:scale(2);opacity:0}}
     .name{font-size:1.18rem; font-weight:650; flex:1 1 auto}
     .name a{color:inherit; text-decoration:none}
     .name a:hover{text-decoration:underline}
-    .badge{font-size:.72rem; font-weight:700; padding:.2rem .62rem; border-radius:999px; color:#fff; white-space:nowrap;
-           animation:badgeGlow var(--bd,2.8s) ease-in-out infinite}
-    @keyframes badgeGlow{0%,100%{box-shadow:0 0 5px -1px var(--gl,transparent)} 50%{box-shadow:0 0 15px 1px var(--gl,transparent)}}
+    .badge{font-size:.72rem; font-weight:700; padding:.2rem .62rem; border-radius:999px; color:#fff; white-space:nowrap}
     .zh{font-size:1.12rem; font-weight:500; margin:.15rem 0 .5rem}
     .en{font-size:.8rem; color:var(--sub); margin:0}
 
@@ -289,7 +286,8 @@
       if(p.incidents && p.incidents.length){
         inc = '<div class="inc"><div class="h">进行中的故障</div>' + p.incidents.map(i => {
           const ic = COLOR[i.impact] || COLOR.unknown;
-          const nm = i.shortlink ? `<a class="more" href="${esc(i.shortlink)}" target="_blank" rel="noopener">${esc(i.name)}</a>` : esc(i.name);
+          const link = i.url || i.shortlink;
+          const nm = link ? `<a class="more" href="${esc(link)}" target="_blank" rel="noopener">${esc(i.name)} ↗</a>` : esc(i.name);
           const dur = i.duration?.text ? `<span class="dur">⏱ 已持续 ${esc(i.duration.text)}</span>` : '';
           return `<div class="row"><span class="imp" style="background:${ic}">${esc(i.impact||i.status||'')}</span><span>${nm}</span>${dur}</div>`;
         }).join('') + '</div>';
@@ -306,13 +304,13 @@
       }
 
       // 真实官方 logo(PNG)。?v=N 缓存破坏:静态资源在 Cloudflare/浏览器缓存一周,换图必 bump 版本
-      const icon = (p.key === 'openai' ? 'icons/codex.png' : 'icons/claude.png') + '?v=4';
+      const icon = (p.key === 'openai' ? 'icons/codex.png' : 'icons/claude.png') + '?v=5';
       return `<div class="card">
         <img class="deco" src="${icon}" alt="" aria-hidden="true">
         <div class="top">
-          <span class="dot" style="background:${color}; --pd:${pace}; box-shadow:0 0 9px ${color}"></span>
+          <span class="dot" style="background:${color}; --pd:${pace}"></span>
           <span class="name"><a href="${esc(p.page)}" target="_blank" rel="noopener">${esc(p.name)}</a></span>
-          <span class="badge" style="background:${color}; --gl:${color}; --bd:${pace}">${esc(label).trim()}</span>
+          <span class="badge" style="background:${color}">${esc(label).trim()}</span>
         </div>
         <p class="zh">${esc(zh)}</p>
         <p class="en">${en}</p>
