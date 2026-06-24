@@ -63,7 +63,14 @@
     .card{
       background:var(--card); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
       border:1px solid var(--border); border-radius:20px; padding:1.3rem 1.4rem; box-shadow:var(--shadow);
+      position:relative; overflow:hidden;
     }
+    .card .top,.card .zh,.card .en,.card .inc,.card .notice{position:relative; z-index:1}
+    /* 右下角斜放的小卡片图标:像一张塞进角落的小卡 */
+    .deco{position:absolute; z-index:0; right:-12px; bottom:-14px; width:82px; height:82px;
+          transform:rotate(13deg); opacity:.9; pointer-events:none;
+          border-radius:18px; filter:drop-shadow(0 6px 16px rgba(0,0,0,.22)); transition:transform .3s ease}
+    .card:hover .deco{transform:rotate(7deg) translateY(-4px) scale(1.05); opacity:1}
     .top{display:flex; align-items:center; gap:.6rem; margin-bottom:.7rem}
     .dot{width:12px; height:12px; border-radius:50%; flex:0 0 auto; background:#9ca3af; position:relative}
     .dot::after{content:""; position:absolute; inset:-4px; border-radius:50%; background:inherit; opacity:.35; animation:pulse 2.2s ease-out infinite}
@@ -85,13 +92,10 @@
     a.more{color:var(--link); text-decoration:none}
     a.more:hover{text-decoration:underline}
 
-    footer{margin-top:1.7rem; display:flex; align-items:center; gap:.8rem; color:var(--sub); font-size:.82rem; flex-wrap:wrap}
-    footer button{
-      font:inherit; font-size:.82rem; color:#fff; background:var(--link); border:none; cursor:pointer;
-      padding:.32rem .85rem; border-radius:999px; transition:opacity .2s, transform .1s;
-    }
-    footer button:hover{transform:translateY(-1px)}
-    footer button:disabled{opacity:.5; cursor:default; transform:none}
+    footer{margin-top:1.7rem; display:flex; align-items:center; gap:.7rem; color:var(--sub); font-size:.82rem; flex-wrap:wrap}
+    .live{display:inline-flex; align-items:center; gap:.4rem; font-weight:600; color:var(--fg)}
+    .live i{width:8px; height:8px; border-radius:50%; background:#16a34a; position:relative}
+    .live i::after{content:""; position:absolute; inset:0; border-radius:50%; background:#16a34a; animation:pulse 2s ease-out infinite}
 
     .api{margin-top:1.4rem; background:var(--card); backdrop-filter:blur(12px); border:1px solid var(--border);
          border-radius:16px; box-shadow:var(--shadow); font-size:.85rem; overflow:hidden}
@@ -144,8 +148,8 @@
     </div>
 
     <footer>
+      <span class="live"><i></i> 自动更新中</span>
       <span id="updated">加载中…</span>
-      <button id="refresh">🔄 刷新</button>
     </footer>
 
     <details class="api" open>
@@ -245,7 +249,9 @@
         }).join('');
       }
 
+      const icon = p.key === 'openai' ? 'icons/codex.svg' : 'icons/claude-pet.svg';
       return `<div class="card">
+        <img class="deco" src="${icon}" alt="" aria-hidden="true">
         <div class="top">
           <span class="dot" style="background:${color}"></span>
           <span class="name"><a href="${esc(p.page)}" target="_blank" rel="noopener">${esc(p.name)}</a></span>
@@ -257,28 +263,34 @@
       </div>`;
     }
 
-    // ——— 刷新:不自动刷新、不按时间冷却;仅手动,且加载中不可重入 ———
-    const btn = document.getElementById('refresh'), updated = document.getElementById('updated');
-    let loading = false;
+    // ——— 自动更新:不再需要手动按钮 ———
+    // 后端每 ~60s 自己查一次 OpenAI/Claude 状态(查状态免费,翻译只在变化时才调 v4flash)。
+    // 前端只是静默地反复读后端那份缓存(同样不花 token),把最新状态显示出来。
+    const updated = document.getElementById('updated');
+    let loading = false, pollMs = 60000, timer = null;
     async function load(){
       if(loading) return;
-      loading = true; btn.disabled = true; btn.textContent = '⏳ 刷新中…';
+      loading = true;
       try{
         const r = await fetch('/_status/api', { cache:'no-store' });
         if(!r.ok) throw new Error('HTTP '+r.status);
         const d = await r.json();
         document.getElementById('cards').innerHTML = d.providers.map(cardHTML).join('');
-        const t = new Date().toLocaleTimeString('zh-CN', { hour12:false });
-        updated.textContent = `上次刷新 ${t} 🕒`;
-        updated.title = '后端生成时间 ' + (d.generated_at || '');
+        const g = d.generated_at ? new Date(d.generated_at) : new Date();
+        updated.textContent = `状态更新于 ${g.toLocaleTimeString('zh-CN', { hour12:false })}`;
+        if(d.poll_interval_seconds){                     // 跟随后端的轮询节奏
+          pollMs = d.poll_interval_seconds * 1000;
+          if(timer){ clearInterval(timer); timer = setInterval(load, pollMs); }
+        }
       }catch(e){
-        updated.textContent = '加载失败 😵,点刷新重试';
+        updated.textContent = '暂时连不上 😵,稍后自动重试';
       }finally{
-        loading = false; btn.disabled = false; btn.textContent = '🔄 刷新';
+        loading = false;
       }
     }
-    btn.addEventListener('click', load);
-    load();                                  // 首次访问加载一次;之后只在点刷新时更新
+    load();                                  // 进页面先拉一次
+    timer = setInterval(load, pollMs);        // 之后静默自动更新
+    document.addEventListener('visibilitychange', () => { if(!document.hidden) load(); });  // 切回标签页即时刷新
 
     // ——— 复制 agent prompt ———
     document.querySelectorAll('.copy').forEach(b => b.addEventListener('click', async () => {

@@ -164,12 +164,15 @@ sudo ./svc.sh install vince && sudo ./svc.sh start
 后端 `svc-status`(在服务器的 `UniWild/platform` 里)。原因:翻译要用 DeepSeek API,**密钥绝不能进前端**。
 
 - **前端**(本仓库 `status_agents/index.html`):`fetch('/_status/api')` 渲染。渐变背景 + 明暗切换(记忆) +
-  每条事件的持续时间 + Claude 的常驻通知单独一行。**不自动刷新**,只在点「刷新」时更新(无时间冷却,加载中防重入)。
-  改样式/文案直接改它、push 即可。
+  每条事件的持续时间 + Claude 的常驻通知单独一行 + 卡片右下角斜放的小图标(`icons/codex.svg` / `icons/claude-pet.svg`,
+  想换真图标就替换同名文件)。**自动更新**:进页面拉一次,之后每 `poll_interval_seconds`(默认 60s)静默读一次后端缓存
+  (读缓存不花 token),无手动刷新按钮。改样式/文案直接改它、push 即可。
 - **后端**(`UniWild/platform/status-svc/server.mjs`,容器 `svc-status`,node:22 零依赖):服务器侧拉
   `status.openai.com` 和 `status.claude.com` 的 Statuspage `summary.json`,喂 DeepSeek(`deepseek-v4-flash`)
   写**通俗中文解说**。
-  - **翻译按内容变化触发**:解说按"源文本 hash"缓存,官方状态文字不变就**绝不再调** v4flash(省 token)。
+  - **后端自动轮询**:每 `POLL_INTERVAL`(env,默认 60s)查一次状态,结果存内存,`/_status/api` 秒回该缓存。
+    查状态是免费 HTTP;**翻译按内容变化触发**——解说按"源文本 hash"缓存,官方状态文字不变就**绝不再调** v4flash。
+    所以空闲时几乎零成本,只在 OpenAI/Claude 真改状态时才翻译一次。
     缓存**持久化到卷** `status-cache:/data/cache.json`,容器重启/重建不必重新翻译。
   - **真故障 vs 常驻通知**:命中 `NOTICE_PATTERNS`(suspend/mythos/fable/deprecat)的事件归到 `notices`,
     **不计入运行是否失效**(`healthy` 只看官方顶层 indicator),单独给一小行 + `name_zh`。要新增常驻通知,
