@@ -1,0 +1,5 @@
+# 只排除「不该进构建上下文」的大件/噪声。基础设施文件(docker/、Dockerfile 等)仍需进上下文
+# 供 Dockerfile 显式 COPY;它们最终会在镜像内被 rm 掉(见 Dockerfile),不会被对外发布。
+.git
+.DS_Store
+**/.DS_Store
