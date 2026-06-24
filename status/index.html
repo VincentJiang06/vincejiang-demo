@@ -61,7 +61,7 @@
   <div class="wrap">
     <header>
       <h1>AI 服务状态</h1>
-      <p>瞟一眼就知道 OpenAI 和 Claude 现在能不能正常用 · 中文解说由 DeepSeek 实时生成</p>
+      <p>瞟一眼就知道 OpenAI 和 Claude 现在能不能正常用 🫡 · 中文解说由 DeepSeek 生成 · 想看最新点「刷新」(30 秒一次,省 token 🪙)</p>
     </header>
 
     <div class="cards" id="cards">
@@ -72,7 +72,7 @@
 
     <footer>
       <span id="updated">加载中…</span>
-      <button id="refresh">刷新</button>
+      <button id="refresh">🔄 刷新</button>
     </footer>
 
     <a class="back" href="/">← 返回首页</a>
@@ -86,15 +86,6 @@
     const IMPCOLOR = { minor:'var(--amber)', major:'var(--orange)', critical:'var(--red)', maintenance:'var(--blue)', none:'var(--gray)' };
 
     const esc = s => (s==null?'':String(s)).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-
-    function relTime(iso){
-      if(!iso) return '';
-      const d = (Date.now() - new Date(iso).getTime())/1000;
-      if(d < 60) return '刚刚';
-      if(d < 3600) return Math.floor(d/60)+' 分钟前';
-      if(d < 86400) return Math.floor(d/3600)+' 小时前';
-      return Math.floor(d/86400)+' 天前';
-    }
 
     function cardHTML(p){
       const color = COLOR[p.indicator] || 'var(--gray)';
@@ -122,23 +113,44 @@
       </div>`;
     }
 
-    let timer = null;
+    // 不自动刷新:首次访问加载一次,之后只在点「刷新」时更新,且 30s 冷却一次 —— 省 v4flash 的 token 🪙
+    const COOLDOWN = 30000;
+    const btn = document.getElementById('refresh');
+    const updated = document.getElementById('updated');
+    let lastFetch = 0, cdTimer = null, loading = false;
+
+    function paintCooldown(){
+      const left = Math.ceil((COOLDOWN - (Date.now() - lastFetch)) / 1000);
+      if(left > 0){ btn.disabled = true; btn.textContent = `⏳ ${left}s 后可刷新`; }
+      else { btn.disabled = false; btn.textContent = '🔄 刷新'; clearInterval(cdTimer); cdTimer = null; }
+    }
+    function startCooldown(){
+      lastFetch = Date.now();
+      paintCooldown();
+      if(!cdTimer) cdTimer = setInterval(paintCooldown, 250);
+    }
+
     async function load(){
+      if(loading) return;
+      loading = true;
+      startCooldown();                            // 一发起就进冷却,防连点
       try{
         const r = await fetch('/_status/api', { cache:'no-store' });
         if(!r.ok) throw new Error('HTTP '+r.status);
         const d = await r.json();
         document.getElementById('cards').innerHTML = d.providers.map(cardHTML).join('');
-        document.getElementById('updated').textContent = '更新于 ' + relTime(d.updated_at);
+        const t = new Date().toLocaleTimeString('zh-CN', { hour12:false });
+        updated.textContent = `上次刷新 ${t} 🕒`;
+        updated.title = '后端数据时间 ' + (d.updated_at || '');
       }catch(e){
-        document.getElementById('updated').textContent = '加载失败，点刷新重试';
+        updated.textContent = '加载失败 😵，冷却后再试';
+      }finally{
+        loading = false;
       }
     }
 
-    document.getElementById('refresh').addEventListener('click', load);
-    load();
-    timer = setInterval(load, 60000);          // 每 60s 自动刷新
-    document.addEventListener('visibilitychange', () => { if(!document.hidden) load(); });
+    btn.addEventListener('click', () => { if(Date.now() - lastFetch >= COOLDOWN) load(); });
+    load();                                       // 首次访问自动加载一次
   </script>
 </body>
 </html>
