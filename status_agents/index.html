@@ -72,13 +72,16 @@
           border-radius:18px; filter:drop-shadow(0 6px 16px rgba(0,0,0,.22)); transition:transform .3s ease}
     .card:hover .deco{transform:rotate(7deg) translateY(-4px) scale(1.05); opacity:1}
     .top{display:flex; align-items:center; gap:.6rem; margin-bottom:.7rem}
-    .dot{width:12px; height:12px; border-radius:50%; flex:0 0 auto; background:#9ca3af; position:relative}
-    .dot::after{content:""; position:absolute; inset:-4px; border-radius:50%; background:inherit; opacity:.35; animation:pulse 2.2s ease-out infinite}
+    .dot{width:13px; height:13px; border-radius:50%; flex:0 0 auto; background:#9ca3af; position:relative}
+    .dot::after{content:""; position:absolute; inset:-4px; border-radius:50%; background:inherit; opacity:.4; animation:pulse var(--pd,2.4s) ease-out infinite}
+    .dot::before{content:""; position:absolute; inset:3px; border-radius:50%; background:rgba(255,255,255,.55)}  /* 高光,像点亮的灯 */
     @keyframes pulse{0%{transform:scale(.8);opacity:.5}100%{transform:scale(2);opacity:0}}
     .name{font-size:1.18rem; font-weight:650; flex:1 1 auto}
     .name a{color:inherit; text-decoration:none}
     .name a:hover{text-decoration:underline}
-    .badge{font-size:.72rem; font-weight:700; padding:.18rem .6rem; border-radius:999px; color:#fff; white-space:nowrap}
+    .badge{font-size:.72rem; font-weight:700; padding:.2rem .62rem; border-radius:999px; color:#fff; white-space:nowrap;
+           animation:badgeGlow var(--bd,2.8s) ease-in-out infinite}
+    @keyframes badgeGlow{0%,100%{box-shadow:0 0 5px -1px var(--gl,transparent)} 50%{box-shadow:0 0 15px 1px var(--gl,transparent)}}
     .zh{font-size:1.12rem; font-weight:500; margin:.15rem 0 .5rem}
     .en{font-size:.8rem; color:var(--sub); margin:0}
 
@@ -125,6 +128,7 @@
     .chips a.soon::after{content:" · 即将上线"; font-size:.78em; opacity:.85}
     .ic{display:inline-flex; align-items:center; justify-content:center; width:21px; height:21px; border-radius:7px;
         color:#fff; font-size:.74rem; font-weight:700; flex:0 0 auto; line-height:1}
+    .icp{width:21px; height:21px; border-radius:6px; object-fit:cover; flex:0 0 auto; border:1px solid var(--border); background:#fff}
 
     /* 今日稳定性 PK 总览卡 */
     .pk{background:var(--card); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border:1px solid var(--border);
@@ -133,8 +137,8 @@
     .pkrow{display:flex; align-items:stretch}
     .pkrow .side{flex:1; text-align:center; border-radius:14px; padding:.55rem .35rem; display:flex; flex-direction:column;
                  gap:.12rem; justify-content:center; transition:background .35s}
-    .side.win{background:linear-gradient(180deg, rgba(22,163,74,.14), transparent)}
-    .side.lose{background:linear-gradient(180deg, rgba(220,38,38,.11), transparent)}
+    .side.win .pbig{color:#16a34a}
+    .side.lose{opacity:.62}
     .side .pname{font-weight:700; font-size:.92rem}
     .side .pbig{font-size:2rem; font-weight:800; line-height:1.05}
     .side .pbig span{font-size:.82rem; font-weight:600; color:var(--sub); margin-left:.1rem}
@@ -209,12 +213,12 @@
       <div class="lgroup">
         <div class="ltitle">🔗 友链指引</div>
         <div class="chips">
-          <a href="https://hkuwild.com" target="_blank" rel="noopener"><span class="ic" style="background:#006f51">港</span>港大野史</a>
-          <a href="https://cuhkwild.com" target="_blank" rel="noopener"><span class="ic" style="background:#7e2a8e">中</span>中大野史</a>
-          <a href="https://hkustwild.com" target="_blank" rel="noopener"><span class="ic" style="background:#0b5394">科</span>科大野史</a>
-          <a href="https://cityuwild.com" target="_blank" rel="noopener"><span class="ic" style="background:#c0392b">城</span>城大野史</a>
-          <a href="https://polyuwild.com" target="_blank" rel="noopener"><span class="ic" style="background:#b8336a">理</span>理大野史</a>
-          <a href="https://hkuniwild.com" target="_blank" rel="noopener"><span class="ic" style="background:linear-gradient(135deg,#5b5bd6,#16a34a)">通</span>港校通门户</a>
+          <a href="https://hkuwild.com" target="_blank" rel="noopener"><img class="icp" src="icons/wild/hkuwild.png?v=1" alt="">港大野史</a>
+          <a href="https://cuhkwild.com" target="_blank" rel="noopener"><img class="icp" src="icons/wild/cuhkwild.png?v=1" alt="">中大野史</a>
+          <a href="https://hkustwild.com" target="_blank" rel="noopener"><img class="icp" src="icons/wild/hkustwild.png?v=1" alt="">科大野史</a>
+          <a href="https://cityuwild.com" target="_blank" rel="noopener"><img class="icp" src="icons/wild/cityuwild.png?v=1" alt="">城大野史</a>
+          <a href="https://polyuwild.com" target="_blank" rel="noopener"><img class="icp" src="icons/wild/polyuwild.png?v=1" alt="">理大野史</a>
+          <a href="https://hkuniwild.com" target="_blank" rel="noopener"><img class="icp" src="icons/wild/hkuniwild.png?v=1" alt="">港校通门户</a>
           <a href="https://github.com/VincentJiang06/skills" target="_blank" rel="noopener"><span class="ic" style="background:#24292f">🧰</span>Skills 仓库 ↗</a>
           <a class="soon" href="https://unirankindex.com" target="_blank" rel="noopener"><span class="ic" style="background:#0ea5a4">📊</span>UniRankIndex</a>
           <a class="soon" href="https://cityrankindex.com" target="_blank" rel="noopener"><span class="ic" style="background:#f59e0b">🏙</span>CityRankIndex</a>
@@ -246,8 +250,11 @@
     // ——— 渲染 ———
     const COLOR = { none:'#16a34a', operational:'#16a34a', minor:'#d97706', major:'#ea580c',
                     critical:'#dc2626', maintenance:'#2563eb', unknown:'#9ca3af' };
-    const LABEL = { none:'正常 ✅', minor:'小问题 🟡', major:'故障 🟠', critical:'严重中断 🔴',
-                    maintenance:'维护中 🛠️', unknown:'未知 ❓' };
+    const LABEL = { none:'运行顺畅 😎', minor:'略有小恙 🤏', major:'明显抽风 😵', critical:'严重中断 🚨',
+                    maintenance:'维护中 🛠️', unknown:'状态未知 ❓' };
+    // 状态越严重,灯闪得越急(秒)——平时慢悠悠,出事就慌张
+    const PACE  = { none:'2.8s', operational:'2.8s', minor:'1.5s', major:'1.0s', critical:'0.7s',
+                    maintenance:'2.2s', unknown:'2.8s' };
     const esc = s => (s==null?'':String(s)).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
     // 今日稳定性 PK 总览卡(谁今天挂得少)
@@ -274,6 +281,7 @@
     function cardHTML(p){
       const color = COLOR[p.indicator] || COLOR.unknown;
       const label = LABEL[p.indicator] || (esc(p.indicator)+' ');
+      const pace  = PACE[p.indicator] || '2.8s';
       const zh = p.ok ? (p.summary_zh || '(暂无中文解说,见下方英文原状态)') : '获取该服务状态失败 😵,稍后再看。';
       const en = p.description ? esc(p.description) : (p.ok?'':'unreachable');
 
@@ -302,9 +310,9 @@
       return `<div class="card">
         <img class="deco" src="${icon}" alt="" aria-hidden="true">
         <div class="top">
-          <span class="dot" style="background:${color}"></span>
+          <span class="dot" style="background:${color}; --pd:${pace}; box-shadow:0 0 9px ${color}"></span>
           <span class="name"><a href="${esc(p.page)}" target="_blank" rel="noopener">${esc(p.name)}</a></span>
-          <span class="badge" style="background:${color}">${esc(label).trim()}</span>
+          <span class="badge" style="background:${color}; --gl:${color}; --bd:${pace}">${esc(label).trim()}</span>
         </div>
         <p class="zh">${esc(zh)}</p>
         <p class="en">${en}</p>
