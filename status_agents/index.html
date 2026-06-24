@@ -67,8 +67,8 @@
     }
     .card .top,.card .zh,.card .en,.card .inc,.card .notice{position:relative; z-index:1}
     /* 右下角斜放的小卡片图标:像一张塞进角落的小卡 */
-    .deco{position:absolute; z-index:0; right:-12px; bottom:-14px; width:82px; height:82px;
-          transform:rotate(13deg); opacity:.9; pointer-events:none;
+    .deco{position:absolute; z-index:0; right:-12px; bottom:-14px; width:82px; height:82px; object-fit:cover;
+          transform:rotate(13deg); opacity:.92; pointer-events:none;
           border-radius:18px; filter:drop-shadow(0 6px 16px rgba(0,0,0,.22)); transition:transform .3s ease}
     .card:hover .deco{transform:rotate(7deg) translateY(-4px) scale(1.05); opacity:1}
     .top{display:flex; align-items:center; gap:.6rem; margin-bottom:.7rem}
@@ -305,8 +305,8 @@
         }).join('');
       }
 
-      // ?v=N 缓存破坏:SVG 在 Cloudflare/浏览器缓存一周,改图标时必须 bump 版本才会刷新
-      const icon = (p.key === 'openai' ? 'icons/codex.svg' : 'icons/claude.svg') + '?v=3';
+      // 真实官方 logo(PNG)。?v=N 缓存破坏:静态资源在 Cloudflare/浏览器缓存一周,换图必 bump 版本
+      const icon = (p.key === 'openai' ? 'icons/codex.png' : 'icons/claude.png') + '?v=4';
       return `<div class="card">
         <img class="deco" src="${icon}" alt="" aria-hidden="true">
         <div class="top">
