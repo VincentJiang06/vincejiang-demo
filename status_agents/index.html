@@ -297,7 +297,8 @@
         }).join('');
       }
 
-      const icon = p.key === 'openai' ? 'icons/codex.svg' : 'icons/claude.svg';
+      // ?v=N 缓存破坏:SVG 在 Cloudflare/浏览器缓存一周,改图标时必须 bump 版本才会刷新
+      const icon = (p.key === 'openai' ? 'icons/codex.svg' : 'icons/claude.svg') + '?v=3';
       return `<div class="card">
         <img class="deco" src="${icon}" alt="" aria-hidden="true">
         <div class="top">
