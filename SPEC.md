@@ -170,7 +170,8 @@ sudo ./svc.sh install vince && sudo ./svc.sh start
 - **后端**(`UniWild/platform/status-svc/server.mjs`,容器 `svc-status`,node:22 零依赖):服务器侧拉
   `status.openai.com` 和 `status.claude.com` 的 Statuspage `summary.json`,喂 DeepSeek(`deepseek-v4-flash`)
   写**通俗中文解说**。
-  - **后端自动轮询**:每 `POLL_INTERVAL`(env,默认 60s)查一次状态,结果存内存,`/_status/api` 秒回该缓存。
+  - **后端自动轮询**:每 `POLL_INTERVAL`(env,默认 20s)查一次状态,结果存内存,`/_status/api` 秒回该缓存。
+    另外拉 `incidents.json`(缓存 120s)统计 `today_outages`(今日挂了几次,按 `TZ_OFFSET_MIN` 默认 UTC+8 算)。
     查状态是免费 HTTP;**翻译按内容变化触发**——解说按"源文本 hash"缓存,官方状态文字不变就**绝不再调** v4flash。
     所以空闲时几乎零成本,只在 OpenAI/Claude 真改状态时才翻译一次。
     缓存**持久化到卷** `status-cache:/data/cache.json`,容器重启/重建不必重新翻译。
@@ -184,7 +185,7 @@ sudo ./svc.sh install vince && sudo ./svc.sh start
 ### 开放接口(给别人用 agent 抓)
 `GET https://vincejiang.com/_status/api` —— 只读、开放 CORS、`schema: "vincejiang.status/1"`。每个 provider:
 `indicator`(none/minor/major/critical/maintenance)、`healthy`(bool)、`description`(英文原状态)、
-`summary_zh`(DeepSeek 解说)、`incidents[]`(含 `duration`)、`notices[]`(常驻通知,含 `name_zh`)。
+`summary_zh`(DeepSeek 解说)、`today_outages`(今日挂了几次)、`incidents[]`(含 `duration`)、`notices[]`(常驻通知,含 `name_zh`)。
 
 > 想加别的"需要密钥/需要服务器侧抓取"的页面,照这个模式:前端放本仓库,后端放 platform 并用
 > `/_xxx` 路径前缀路由,密钥进 `platform/.env`。**不要把任何密钥写进本仓库。**
