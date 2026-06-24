@@ -179,7 +179,7 @@
       <summary>本站支持开放接口 —— 给 Agent / 程序直接抓</summary>
       <div class="body">
         <p>这页的数据来自一个开放的只读接口(已开 CORS、无需鉴权),拿去喂给你的 agent / 脚本即可:</p>
-        <pre>GET https://vincejiang.com/_status/api</pre>
+        <pre>GET https://vincejiang.com/status_agents/api</pre>
         <p>返回 <code>schema: "vincejiang.status/1"</code>,核心字段:</p>
         <ul>
           <li><code>providers[].indicator</code> — 官方级别:<code>none/minor/major/critical/maintenance</code></li>
@@ -190,7 +190,7 @@
           <li><code>providers[].notices[]</code> — 常驻通知(如某模型被暂停,<strong>不算故障</strong>,含 <code>name_zh</code>)</li>
         </ul>
         <p style="margin:.7rem 0 .2rem"><strong>给你的 agent 一段现成 prompt(点下面按钮复制即可用):</strong></p>
-        <pre id="agentPrompt">你是 AI 服务状态助手。请用 HTTP GET 拉取 https://vincejiang.com/_status/api
+        <pre id="agentPrompt">你是 AI 服务状态助手。请用 HTTP GET 拉取 https://vincejiang.com/status_agents/api
 (开放 JSON、无需鉴权,schema 为 vincejiang.status/1)。
 
 然后对 OpenAI 和 Claude 各汇报一行:
@@ -327,7 +327,7 @@
       if(loading) return;
       loading = true;
       try{
-        const r = await fetch('/_status/api', { cache:'no-store' });
+        const r = await fetch('/status_agents/api', { cache:'no-store' });
         if(!r.ok) throw new Error('HTTP '+r.status);
         const d = await r.json();
         renderOverview(d);
