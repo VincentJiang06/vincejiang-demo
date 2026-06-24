@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 服务状态 · OpenAI &amp; Claude</title>
+  <meta name="description" content="一眼看懂 OpenAI 和 Claude 现在能不能正常用 —— 官方状态聚合 + DeepSeek 通俗中文解说。附开放 JSON 接口,方便用 agent 抓取。">
+  <style>
+    /* ——— 主题变量:浅色默认,深色跟随系统 + 可手动切换 ——— */
+    :root{
+      --fg:#1d1d2b; --sub:#6b6b7b; --card:rgba(255,255,255,.72); --border:rgba(20,20,40,.08);
+      --chip:rgba(20,20,50,.05); --link:#5b5bd6; --shadow:0 8px 30px rgba(40,40,90,.10);
+      --g1:#a8c0ff; --g2:#ffd3e0; --g3:#c2f5e9; --g4:#e7d5ff; --page:#f3f1fb;
+    }
+    @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+      --fg:#eef0f7; --sub:#9a9ab0; --card:rgba(30,31,48,.62); --border:rgba(255,255,255,.09);
+      --chip:rgba(255,255,255,.07); --link:#9d9dff; --shadow:0 10px 36px rgba(0,0,0,.45);
+      --g1:#1e3a8a; --g2:#5b2a6e; --g3:#0f5a52; --g4:#3b2a72; --page:#0b0b14;
+    }}
+    :root[data-theme="dark"]{
+      --fg:#eef0f7; --sub:#9a9ab0; --card:rgba(30,31,48,.62); --border:rgba(255,255,255,.09);
+      --chip:rgba(255,255,255,.07); --link:#9d9dff; --shadow:0 10px 36px rgba(0,0,0,.45);
+      --g1:#1e3a8a; --g2:#5b2a6e; --g3:#0f5a52; --g4:#3b2a72; --page:#0b0b14;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;
+      color:var(--fg); background:var(--page); line-height:1.6; -webkit-font-smoothing:antialiased;
+      min-height:100vh; position:relative; overflow-x:hidden; transition:background .4s, color .4s;
+    }
+    /* 渐变网格背景:四个色团缓慢漂移 */
+    body::before{
+      content:""; position:fixed; inset:-25%; z-index:-1; filter:blur(70px) saturate(1.15); opacity:.9;
+      background:
+        radial-gradient(40% 40% at 18% 22%, var(--g1) 0%, transparent 60%),
+        radial-gradient(38% 38% at 82% 18%, var(--g2) 0%, transparent 62%),
+        radial-gradient(45% 45% at 25% 82%, var(--g3) 0%, transparent 60%),
+        radial-gradient(42% 42% at 78% 80%, var(--g4) 0%, transparent 62%);
+      animation:drift 22s ease-in-out infinite alternate;
+    }
+    @keyframes drift{
+      0%{transform:translate(0,0) scale(1)}
+      50%{transform:translate(2.5%,-2%) scale(1.06)}
+      100%{transform:translate(-2.5%,2.5%) scale(1.02)}
+    }
+    @media (prefers-reduced-motion: reduce){ body::before{animation:none} }
+
+    .wrap{max-width:640px; margin:0 auto; padding:3rem 1.15rem 3rem}
+    .bar{display:flex; align-items:flex-start; gap:.75rem; margin-bottom:1.6rem}
+    .bar h1{font-size:1.85rem; margin:0 0 .3rem; letter-spacing:-.015em}
+    .bar p{color:var(--sub); margin:0; font-size:.9rem}
+    .bar .grow{flex:1 1 auto; min-width:0}
+    .toggle{
+      flex:0 0 auto; width:42px; height:42px; border-radius:50%; border:1px solid var(--border);
+      background:var(--card); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+      cursor:pointer; font-size:1.2rem; line-height:1; box-shadow:var(--shadow); transition:transform .2s;
+    }
+    .toggle:hover{transform:scale(1.08)}
+
+    .cards{display:flex; flex-direction:column; gap:1rem}
+    .card{
+      background:var(--card); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+      border:1px solid var(--border); border-radius:20px; padding:1.3rem 1.4rem; box-shadow:var(--shadow);
+    }
+    .top{display:flex; align-items:center; gap:.6rem; margin-bottom:.7rem}
+    .dot{width:12px; height:12px; border-radius:50%; flex:0 0 auto; background:#9ca3af; position:relative}
+    .dot::after{content:""; position:absolute; inset:-4px; border-radius:50%; background:inherit; opacity:.35; animation:pulse 2.2s ease-out infinite}
+    @keyframes pulse{0%{transform:scale(.8);opacity:.5}100%{transform:scale(2);opacity:0}}
+    .name{font-size:1.18rem; font-weight:650; flex:1 1 auto}
+    .name a{color:inherit; text-decoration:none}
+    .name a:hover{text-decoration:underline}
+    .badge{font-size:.72rem; font-weight:700; padding:.18rem .6rem; border-radius:999px; color:#fff; white-space:nowrap}
+    .zh{font-size:1.12rem; font-weight:500; margin:.15rem 0 .5rem}
+    .en{font-size:.8rem; color:var(--sub); margin:0}
+
+    .inc{margin-top:.85rem; padding:.7rem .85rem; background:var(--chip); border-radius:12px; font-size:.85rem}
+    .inc .h{font-size:.7rem; font-weight:700; letter-spacing:.05em; color:var(--sub); text-transform:uppercase; margin-bottom:.4rem}
+    .inc .row{display:flex; gap:.5rem; align-items:baseline; padding:.18rem 0; flex-wrap:wrap}
+    .imp{font-size:.64rem; font-weight:800; padding:.06rem .42rem; border-radius:5px; color:#fff; flex:0 0 auto}
+    .dur{font-size:.74rem; color:var(--sub); white-space:nowrap}
+    .notice{margin-top:.7rem; display:flex; gap:.45rem; align-items:baseline; font-size:.8rem; color:var(--sub)}
+    .notice .ic{flex:0 0 auto}
+    a.more{color:var(--link); text-decoration:none}
+    a.more:hover{text-decoration:underline}
+
+    footer{margin-top:1.7rem; display:flex; align-items:center; gap:.8rem; color:var(--sub); font-size:.82rem; flex-wrap:wrap}
+    footer button{
+      font:inherit; font-size:.82rem; color:#fff; background:var(--link); border:none; cursor:pointer;
+      padding:.32rem .85rem; border-radius:999px; transition:opacity .2s, transform .1s;
+    }
+    footer button:hover{transform:translateY(-1px)}
+    footer button:disabled{opacity:.5; cursor:default; transform:none}
+
+    .api{margin-top:1.4rem; background:var(--card); backdrop-filter:blur(12px); border:1px solid var(--border);
+         border-radius:16px; box-shadow:var(--shadow); font-size:.85rem; overflow:hidden}
+    .api summary{cursor:pointer; padding:.85rem 1.1rem; font-weight:600; list-style:none}
+    .api summary::-webkit-details-marker{display:none}
+    .api summary::before{content:"🤖 "; }
+    .api .body{padding:0 1.1rem 1.1rem; color:var(--sub)}
+    .api code, .api pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.82em}
+    .api pre{background:var(--chip); padding:.7rem .85rem; border-radius:10px; overflow-x:auto; color:var(--fg)}
+    .api a{color:var(--link)}
+    .api ul{margin:.5rem 0; padding-left:1.1rem}
+
+    .foot{margin-top:1.8rem; text-align:center; color:var(--sub); font-size:.82rem}
+    .foot a{color:var(--link); text-decoration:none}
+    .back{display:inline-block; margin-top:.4rem; color:var(--sub); text-decoration:none; font-size:.82rem}
+    .back:hover{color:var(--fg)}
+    .skeleton .zh,.skeleton .en{background:linear-gradient(90deg,var(--chip),var(--border),var(--chip));
+      background-size:200% 100%; animation:sh 1.3s infinite; color:transparent; border-radius:7px; min-height:1.1em}
+    @keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="bar">
+      <div class="grow">
+        <h1>AI 服务状态 🛰️</h1>
+        <p>瞟一眼就知道 OpenAI &amp; Claude 现在能不能用 🫡 · 中文解说由 DeepSeek 生成 · 想看最新点「刷新」</p>
+      </div>
+      <button class="toggle" id="theme" title="切换明暗模式">🌙</button>
+    </div>
+
+    <div class="cards" id="cards">
+      <div class="card skeleton"><div class="top"><span class="dot"></span><span class="name">OpenAI</span></div><p class="zh">加载中…</p><p class="en">&nbsp;</p></div>
+      <div class="card skeleton"><div class="top"><span class="dot"></span><span class="name">Claude</span></div><p class="zh">加载中…</p><p class="en">&nbsp;</p></div>
+    </div>
+
+    <footer>
+      <span id="updated">加载中…</span>
+      <button id="refresh">🔄 刷新</button>
+    </footer>
+
+    <details class="api">
+      <summary>给 Agent / 程序用:开放 JSON 接口</summary>
+      <div class="body">
+        <p>这页的数据来自一个开放的只读接口(已开 CORS),拿去喂给你的 agent / 脚本即可:</p>
+        <pre>GET https://vincejiang.com/_status/api</pre>
+        <p>返回 <code>schema: "vincejiang.status/1"</code>,核心字段:</p>
+        <ul>
+          <li><code>providers[].indicator</code> — 官方级别:<code>none/minor/major/critical/maintenance</code></li>
+          <li><code>providers[].healthy</code> — 是否正常(<code>true</code>=一切正常;常驻通知不影响它)</li>
+          <li><code>providers[].description</code> — 官方英文原状态</li>
+          <li><code>providers[].summary_zh</code> — DeepSeek 改写的通俗中文解说</li>
+          <li><code>providers[].incidents[]</code> — 进行中的真故障(含 <code>duration</code> 持续时间)</li>
+          <li><code>providers[].notices[]</code> — 常驻通知(如某模型被暂停,<strong>不算故障</strong>,含 <code>name_zh</code>)</li>
+        </ul>
+        <p style="margin:.6rem 0 .2rem">试一下:</p>
+        <pre>curl -s https://vincejiang.com/_status/api</pre>
+        <p style="font-size:.92em">说明:翻译只在<strong>官方状态发生变化时</strong>才重新生成(其余时刻走缓存),所以接口又新又省。</p>
+      </div>
+    </details>
+
+    <div class="foot">made with ☕ &amp; 🤖 by <strong>小蒋</strong></div>
+    <div style="text-align:center"><a class="back" href="/">← 返回首页</a></div>
+  </div>
+
+  <script>
+    // ——— 明暗模式:默认跟随系统,可手动切换并记住 ———
+    const root = document.documentElement, tbtn = document.getElementById('theme');
+    function applyTheme(){
+      const saved = localStorage.getItem('theme');                // 'light' | 'dark' | null(跟随系统)
+      if(saved) root.setAttribute('data-theme', saved); else root.removeAttribute('data-theme');
+      const dark = saved ? saved==='dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+      tbtn.textContent = dark ? '☀️' : '🌙';
+    }
+    tbtn.addEventListener('click', () => {
+      const dark = (localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')) === 'dark';
+      localStorage.setItem('theme', dark ? 'light' : 'dark');
+      applyTheme();
+    });
+    matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
+    applyTheme();
+
+    // ——— 渲染 ———
+    const COLOR = { none:'#16a34a', operational:'#16a34a', minor:'#d97706', major:'#ea580c',
+                    critical:'#dc2626', maintenance:'#2563eb', unknown:'#9ca3af' };
+    const LABEL = { none:'正常 ✅', minor:'小问题 🟡', major:'故障 🟠', critical:'严重中断 🔴',
+                    maintenance:'维护中 🛠️', unknown:'未知 ❓' };
+    const esc = s => (s==null?'':String(s)).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+    function cardHTML(p){
+      const color = COLOR[p.indicator] || COLOR.unknown;
+      const label = LABEL[p.indicator] || (esc(p.indicator)+' ');
+      const zh = p.ok ? (p.summary_zh || '(暂无中文解说,见下方英文原状态)') : '获取该服务状态失败 😵,稍后再看。';
+      const en = p.description ? esc(p.description) : (p.ok?'':'unreachable');
+
+      let inc = '';
+      if(p.incidents && p.incidents.length){
+        inc = '<div class="inc"><div class="h">进行中的故障</div>' + p.incidents.map(i => {
+          const ic = COLOR[i.impact] || COLOR.unknown;
+          const nm = i.shortlink ? `<a class="more" href="${esc(i.shortlink)}" target="_blank" rel="noopener">${esc(i.name)}</a>` : esc(i.name);
+          const dur = i.duration?.text ? `<span class="dur">⏱ 已持续 ${esc(i.duration.text)}</span>` : '';
+          return `<div class="row"><span class="imp" style="background:${ic}">${esc(i.impact||i.status||'')}</span><span>${nm}</span>${dur}</div>`;
+        }).join('') + '</div>';
+      }
+
+      let notice = '';
+      if(p.notices && p.notices.length){
+        notice = p.notices.map(n => {
+          const txt = n.name_zh || n.name;
+          const dur = n.duration?.text ? ` · 已持续 ${esc(n.duration.text)}` : '';
+          const link = n.shortlink ? ` · <a class="more" href="${esc(n.shortlink)}" target="_blank" rel="noopener">详情</a>` : '';
+          return `<div class="notice"><span class="ic">📌</span><span>常驻通知:${esc(txt)}${dur}${link}</span></div>`;
+        }).join('');
+      }
+
+      return `<div class="card">
+        <div class="top">
+          <span class="dot" style="background:${color}"></span>
+          <span class="name"><a href="${esc(p.page)}" target="_blank" rel="noopener">${esc(p.name)}</a></span>
+          <span class="badge" style="background:${color}">${esc(label).trim()}</span>
+        </div>
+        <p class="zh">${esc(zh)}</p>
+        <p class="en">${en}</p>
+        ${inc}${notice}
+      </div>`;
+    }
+
+    // ——— 刷新:不自动刷新、不按时间冷却;仅手动,且加载中不可重入 ———
+    const btn = document.getElementById('refresh'), updated = document.getElementById('updated');
+    let loading = false;
+    async function load(){
+      if(loading) return;
+      loading = true; btn.disabled = true; btn.textContent = '⏳ 刷新中…';
+      try{
+        const r = await fetch('/_status/api', { cache:'no-store' });
+        if(!r.ok) throw new Error('HTTP '+r.status);
+        const d = await r.json();
+        document.getElementById('cards').innerHTML = d.providers.map(cardHTML).join('');
+        const t = new Date().toLocaleTimeString('zh-CN', { hour12:false });
+        updated.textContent = `上次刷新 ${t} 🕒`;
+        updated.title = '后端生成时间 ' + (d.generated_at || '');
+      }catch(e){
+        updated.textContent = '加载失败 😵,点刷新重试';
+      }finally{
+        loading = false; btn.disabled = false; btn.textContent = '🔄 刷新';
+      }
+    }
+    btn.addEventListener('click', load);
+    load();                                  // 首次访问加载一次;之后只在点刷新时更新
+  </script>
+</body>
+</html>

@@ -158,19 +158,30 @@ sudo ./svc.sh install vince && sudo ./svc.sh start
 
 ---
 
-## 8.5 `/status` 页面 —— 特殊:依赖一个服务器侧后端
+## 8.5 `/status_agents` 页面 —— 特殊:依赖一个服务器侧后端 + 开放接口
 
-`/status/`(本仓库 `status/index.html`)是一个**纯静态前端**,但它要的数据来自一个**不在本仓库**的后端
-`svc-status`(在服务器的 `UniWild/platform` 里)。原因:翻译要用 DeepSeek API,**密钥绝不能进前端**。
+`/status_agents/`(本仓库 `status_agents/index.html`)是一个**纯静态前端**,但数据来自一个**不在本仓库**的
+后端 `svc-status`(在服务器的 `UniWild/platform` 里)。原因:翻译要用 DeepSeek API,**密钥绝不能进前端**。
 
-- **前端**(本仓库 `status/index.html`):只 `fetch('/_status/api')` 拿 JSON 然后渲染,每 60s 自动刷新。
-  改样式/文案直接改它、push 即可,和普通页面一样。
-- **后端**(`UniWild/platform/status-svc/server.mjs`,容器 `svc-status`):服务器侧拉
-  `status.openai.com` 和 `status.claude.com` 的 Statuspage `summary.json`,把"顶部状态 + 进行中事件"
-  喂给 DeepSeek(`deepseek-v4-flash`)写成**通俗中文解说**,整包缓存 60s、翻译按英文源 hash 缓存。
+- **前端**(本仓库 `status_agents/index.html`):`fetch('/_status/api')` 渲染。渐变背景 + 明暗切换(记忆) +
+  每条事件的持续时间 + Claude 的常驻通知单独一行。**不自动刷新**,只在点「刷新」时更新(无时间冷却,加载中防重入)。
+  改样式/文案直接改它、push 即可。
+- **后端**(`UniWild/platform/status-svc/server.mjs`,容器 `svc-status`,node:22 零依赖):服务器侧拉
+  `status.openai.com` 和 `status.claude.com` 的 Statuspage `summary.json`,喂 DeepSeek(`deepseek-v4-flash`)
+  写**通俗中文解说**。
+  - **翻译按内容变化触发**:解说按"源文本 hash"缓存,官方状态文字不变就**绝不再调** v4flash(省 token)。
+    缓存**持久化到卷** `status-cache:/data/cache.json`,容器重启/重建不必重新翻译。
+  - **真故障 vs 常驻通知**:命中 `NOTICE_PATTERNS`(suspend/mythos/fable/deprecat)的事件归到 `notices`,
+    **不计入运行是否失效**(`healthy` 只看官方顶层 indicator),单独给一小行 + `name_zh`。要新增常驻通知,
+    改 `NOTICE_PATTERNS`。
   - 路由:Traefik 把 `vincejiang.com/_status/*` 指到这个容器(priority 高于本站 catch-all)。
   - 密钥:`DEEPSEEK_API_KEY` 在服务器 `platform/.env`(已 gitignore),前端/本仓库都看不到。
   - 改后端逻辑或 prompt → 在服务器 `cd platform && docker compose up -d --build svc-status`。
+
+### 开放接口(给别人用 agent 抓)
+`GET https://vincejiang.com/_status/api` —— 只读、开放 CORS、`schema: "vincejiang.status/1"`。每个 provider:
+`indicator`(none/minor/major/critical/maintenance)、`healthy`(bool)、`description`(英文原状态)、
+`summary_zh`(DeepSeek 解说)、`incidents[]`(含 `duration`)、`notices[]`(常驻通知,含 `name_zh`)。
 
 > 想加别的"需要密钥/需要服务器侧抓取"的页面,照这个模式:前端放本仓库,后端放 platform 并用
 > `/_xxx` 路径前缀路由,密钥进 `platform/.env`。**不要把任何密钥写进本仓库。**
