@@ -158,6 +158,23 @@ sudo ./svc.sh install vince && sudo ./svc.sh start
 
 ---
 
+## 8.5 `/status` 页面 —— 特殊:依赖一个服务器侧后端
+
+`/status/`(本仓库 `status/index.html`)是一个**纯静态前端**,但它要的数据来自一个**不在本仓库**的后端
+`svc-status`(在服务器的 `UniWild/platform` 里)。原因:翻译要用 DeepSeek API,**密钥绝不能进前端**。
+
+- **前端**(本仓库 `status/index.html`):只 `fetch('/_status/api')` 拿 JSON 然后渲染,每 60s 自动刷新。
+  改样式/文案直接改它、push 即可,和普通页面一样。
+- **后端**(`UniWild/platform/status-svc/server.mjs`,容器 `svc-status`):服务器侧拉
+  `status.openai.com` 和 `status.claude.com` 的 Statuspage `summary.json`,把"顶部状态 + 进行中事件"
+  喂给 DeepSeek(`deepseek-v4-flash`)写成**通俗中文解说**,整包缓存 60s、翻译按英文源 hash 缓存。
+  - 路由:Traefik 把 `vincejiang.com/_status/*` 指到这个容器(priority 高于本站 catch-all)。
+  - 密钥:`DEEPSEEK_API_KEY` 在服务器 `platform/.env`(已 gitignore),前端/本仓库都看不到。
+  - 改后端逻辑或 prompt → 在服务器 `cd platform && docker compose up -d --build svc-status`。
+
+> 想加别的"需要密钥/需要服务器侧抓取"的页面,照这个模式:前端放本仓库,后端放 platform 并用
+> `/_xxx` 路径前缀路由,密钥进 `platform/.env`。**不要把任何密钥写进本仓库。**
+
 ## 9. 本地预览
 
 ```bash
