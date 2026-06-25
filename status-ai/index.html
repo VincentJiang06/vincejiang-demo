@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI 服务状态 · OpenAI &amp; Claude</title>
-  <meta name="description" content="一眼看懂 OpenAI 和 Claude 现在能不能正常用 —— 官方状态聚合 + DeepSeek 通俗中文解说。附开放 JSON 接口,方便用 agent 抓取。">
+  <title>AI 服务状态 · OpenAI &amp; Anthropic</title>
+  <meta name="description" content="一眼看懂 OpenAI 和 Anthropic 现在能不能正常用 —— 官方状态聚合 + DeepSeek 通俗中文解说。附开放 JSON 接口,方便用 agent 抓取。">
   <link rel="icon" href="/favicon.png?v=1" type="image/png">
   <style>
     /* ——— 主题变量:浅色默认,深色跟随系统 + 可手动切换 ——— */
@@ -66,14 +66,14 @@
       border:1px solid var(--border); border-radius:20px; padding:1.3rem 1.4rem; box-shadow:var(--shadow);
       position:relative; overflow:hidden;
     }
-    .card .top,.card .zh,.card .en,.card .inc,.card .notice{position:relative; z-index:1}
-    /* 右下角斜放的小卡片图标:像一张塞进角落的小卡 */
-    .deco{position:absolute; z-index:0; right:-12px; bottom:-14px; width:82px; height:82px; object-fit:cover;
-          transform:rotate(13deg); opacity:.92; pointer-events:none;
-          border-radius:18px; filter:drop-shadow(0 6px 16px rgba(0,0,0,.22)); transition:transform .3s ease}
-    .card:hover .deco{transform:rotate(7deg) translateY(-4px) scale(1.05); opacity:1}
-    .top{display:flex; align-items:center; gap:.6rem; margin-bottom:.7rem}
+    .top{display:flex; align-items:center; gap:.65rem; margin-bottom:.7rem}
+    /* 品牌头像(左)+ 角标状态点(在线状态那种) */
+    .av{position:relative; flex:0 0 auto; width:38px; height:38px}
+    .av img{width:38px; height:38px; border-radius:10px; object-fit:cover; display:block; box-shadow:0 2px 8px rgba(0,0,0,.16)}
+    .av:hover img{transform:scale(1.05)}
+    .av img{transition:transform .25s ease}
     .dot{width:12px; height:12px; border-radius:50%; flex:0 0 auto; background:#9ca3af; position:relative}
+    .av .dot{position:absolute; right:-3px; bottom:-3px; box-shadow:0 0 0 2.5px var(--page)}
     .dot::after{content:""; position:absolute; inset:-4px; border-radius:50%; background:inherit; opacity:.4; animation:pulse var(--pd,2.4s) ease-out infinite}
     @keyframes pulse{0%{transform:scale(.8);opacity:.5}100%{transform:scale(2);opacity:0}}
     .name{font-size:1.18rem; font-weight:650; flex:1 1 auto}
@@ -159,7 +159,7 @@
     <div class="bar">
       <div class="grow">
         <h1>AI 服务状态 🛰️</h1>
-        <p>瞟一眼就知道 OpenAI &amp; Claude 现在能不能用 🫡 · 中文解说由 DeepSeek 生成 · 支持开放接口给 agent 抓 🤖</p>
+        <p>瞟一眼就知道 OpenAI &amp; Anthropic 现在能不能用 🫡 · 中文解说由 DeepSeek 生成 · 支持开放接口给 agent 抓 🤖</p>
       </div>
       <button class="toggle" id="theme" title="切换明暗模式">🌙</button>
     </div>
@@ -168,7 +168,7 @@
 
     <div class="cards" id="cards">
       <div class="card skeleton"><div class="top"><span class="dot"></span><span class="name">OpenAI</span></div><p class="zh">加载中…</p><p class="en">&nbsp;</p></div>
-      <div class="card skeleton"><div class="top"><span class="dot"></span><span class="name">Claude</span></div><p class="zh">加载中…</p><p class="en">&nbsp;</p></div>
+      <div class="card skeleton"><div class="top"><span class="dot"></span><span class="name">Anthropic</span></div><p class="zh">加载中…</p><p class="en">&nbsp;</p></div>
     </div>
 
     <footer>
@@ -194,7 +194,7 @@
         <pre id="agentPrompt">你是 AI 服务状态助手。请用 HTTP GET 拉取 https://vincejiang.com/status-ai/api
 (开放 JSON、无需鉴权,schema 为 vincejiang.status/1)。
 
-然后对 OpenAI 和 Claude 各汇报一行:
+然后对 OpenAI 和 Anthropic 各汇报一行:
 ① 是否正常(healthy=true 即正常);
 ② 官方级别 indicator;
 ③ 直接引用 summary_zh 作为中文解说;
@@ -272,7 +272,7 @@
         <div class="pkrow">
           <div class="side ${aCls}"><div class="pname">OpenAI</div><div class="pbig">${n(oa)}<span>次</span></div><div class="psub">${aSub}</div></div>
           <div class="vs">VS</div>
-          <div class="side ${bCls}"><div class="pname">Claude</div><div class="pbig">${n(ob)}<span>次</span></div><div class="psub">${bSub}</div></div>
+          <div class="side ${bCls}"><div class="pname">Anthropic</div><div class="pbig">${n(ob)}<span>次</span></div><div class="psub">${bSub}</div></div>
         </div></div>`;
     }
 
@@ -305,11 +305,13 @@
       }
 
       // 真实官方 logo(PNG)。?v=N 缓存破坏:静态资源在 Cloudflare/浏览器缓存一周,换图必 bump 版本
-      const icon = (p.key === 'openai' ? 'icons/codex.png' : 'icons/claude.png') + '?v=5';
+      const icon = (p.key === 'openai' ? 'icons/codex.png' : 'icons/anthropic.png') + '?v=6';
       return `<div class="card">
-        <img class="deco" src="${icon}" alt="" aria-hidden="true">
         <div class="top">
-          <span class="dot" style="background:${color}; --pd:${pace}"></span>
+          <span class="av">
+            <img src="${icon}" alt="${esc(p.name)}">
+            <span class="dot" style="background:${color}; --pd:${pace}"></span>
+          </span>
           <span class="name"><a href="${esc(p.page)}" target="_blank" rel="noopener">${esc(p.name)}</a></span>
           <span class="badge" style="background:${color}">${esc(label).trim()}</span>
         </div>
@@ -320,7 +322,7 @@
     }
 
     // ——— 自动更新:不再需要手动按钮 ———
-    // 后端每 ~60s 自己查一次 OpenAI/Claude 状态(查状态免费,翻译只在变化时才调 v4flash)。
+    // 后端每 ~60s 自己查一次 OpenAI/Anthropic 状态(查状态免费,翻译只在变化时才调 v4flash)。
     // 前端只是静默地反复读后端那份缓存(同样不花 token),把最新状态显示出来。
     const updated = document.getElementById('updated');
     let loading = false, pollMs = 60000, timer = null;

@@ -164,8 +164,8 @@ sudo ./svc.sh install vince && sudo ./svc.sh start
 后端 `svc-status`(在服务器的 `UniWild/platform` 里)。原因:翻译要用 DeepSeek API,**密钥绝不能进前端**。
 
 - **前端**(本仓库 `status-ai/index.html`):`fetch('/status-ai/api')` 渲染。渐变背景 + 明暗切换(记忆) +
-  每条事件的持续时间 + Claude 的常驻通知单独一行 + 卡片右下角斜放的真实 logo 小卡(`icons/codex.png` / `icons/claude.png`,
-  圆角由 `.deco` 的 CSS 统一)+ 状态灯随严重度变闪速;友链野史用各站真实 favicon(`icons/wild/<站>.png`)。
+  每条事件的持续时间 + Anthropic 的常驻通知单独一行 + 卡片左上品牌头像(`icons/codex.png` / `icons/anthropic.png`)
+  右下角带在线状态点(随严重度变闪速);友链野史用各站真实 favicon(`icons/wild/<站>.png`,已裁掉自带白边)。
   ⚠️ 静态资源(svg/css/js/图片)在 Cloudflare/浏览器缓存**一周**;**改了图标或任何静态文件,必须 bump 引用处的
   `?v=N`**(见 `cardHTML` 里的 icon src),否则边缘缓存不刷新。HTML 本身是 `no-cache`,改 HTML 即时生效。
   **自动更新**:进页面拉一次,之后每 `poll_interval_seconds`(默认 20s)静默读一次后端缓存
@@ -176,7 +176,7 @@ sudo ./svc.sh install vince && sudo ./svc.sh start
   - **后端自动轮询**:每 `POLL_INTERVAL`(env,默认 20s)查一次状态,结果存内存,`/status-ai/api` 秒回该缓存。
     另外拉 `incidents.json`(缓存 120s)统计 `today_outages`(今日挂了几次,按 `TZ_OFFSET_MIN` 默认 UTC+8 算)。
     查状态是免费 HTTP;**翻译按内容变化触发**——解说按"源文本 hash"缓存,官方状态文字不变就**绝不再调** v4flash。
-    所以空闲时几乎零成本,只在 OpenAI/Claude 真改状态时才翻译一次。
+    所以空闲时几乎零成本,只在 OpenAI/Anthropic 真改状态时才翻译一次。
     缓存**持久化到卷** `status-cache:/data/cache.json`,容器重启/重建不必重新翻译。
   - **真故障 vs 常驻通知**:命中 `NOTICE_PATTERNS`(suspend/mythos/fable/deprecat)的事件归到 `notices`,
     **不计入运行是否失效**(`healthy` 只看官方顶层 indicator),单独给一小行 + `name_zh`。要新增常驻通知,
