@@ -193,6 +193,26 @@ sudo ./svc.sh install vince && sudo ./svc.sh start
 > 想加别的"需要密钥/需要服务器侧抓取"的页面,照这个模式:前端放本仓库,后端放 platform 并用
 > `/_xxx` 路径前缀路由,密钥进 `platform/.env`。**不要把任何密钥写进本仓库。**
 
+### 接口流量防护(已就绪)
+贵的操作(拉上游 + 调 DeepSeek)是后台每 20s 轮询触发,**不随请求走**;请求只读内存缓存,很便宜。已加:
+- **可缓存响应头**:`Cache-Control: public, max-age=20, s-maxage=20, stale-while-revalidate=30`(= 轮询间隔)。
+- **按真实 IP 限流**:Node 层 30 次/10s(超→`429`),Traefik 层 平均 5 req/s、突发 20;真实 IP 取 `Cf-Connecting-Ip`。
+  阈值可调:`platform/.env` 或 svc-status 环境变量 `RL_MAX` / `RL_WINDOW`。
+- **整站在 Cloudflare 隧道后**,体量型 DDoS 由边缘吸收。
+
+**最强一层(需在 Cloudflare 面板点一次,我/agent 无 CF API 权限)——让边缘直接缓存接口:**
+> Cloudflare → vincejiang.com → **Caching → Cache Rules → Create rule**
+> - 匹配:`Hostname equals vincejiang.com` AND `URI Path equals /status-ai/api`
+> - 行为:**Eligible for cache** 开;**Edge TTL → Respect origin TTL headers**(源已发 `s-maxage=20`)
+> 生效后 `curl -sI .../status-ai/api` 的 `cf-cache-status` 会从 `DYNAMIC` 变 `HIT`,重复请求由边缘秒回,源站每 20s/机房仅 ~1 次。
+
+### GEO / SEO
+- `status-ai/index.html` 已配:keywords/canonical/robots、Open Graph + Twitter card、`theme-color`、
+  **JSON-LD**(`WebApplication` + `Dataset`,`about` 关联 OpenAI/Anthropic 的 `sameAs`)、**`<noscript>` 静态兜底**
+  (页面是 JS 渲染,不跑 JS 的爬虫/AI 抓取器靠 noscript + JSON-LD 拿到可读内容)。
+- 站点根:`robots.txt`(放行 GPTBot/OAI-SearchBot/ClaudeBot/PerplexityBot 等 + Sitemap)、`sitemap.xml`。
+- 换图标/改文案后注意 `?v=N` 缓存破坏(见 8.5)。
+
 ## 9. 本地预览
 
 ```bash

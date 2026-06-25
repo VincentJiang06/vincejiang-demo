@@ -3,9 +3,66 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI 服务状态 · OpenAI &amp; Anthropic</title>
-  <meta name="description" content="一眼看懂 OpenAI 和 Anthropic 现在能不能正常用 —— 官方状态聚合 + DeepSeek 通俗中文解说。附开放 JSON 接口,方便用 agent 抓取。">
+  <title>OpenAI &amp; Anthropic 服务状态 · 实时中文聚合 | vincejiang</title>
+  <meta name="description" content="一眼看懂 OpenAI(ChatGPT/API)和 Anthropic(Claude)现在能不能正常用 —— 聚合两家官方状态页,用通俗中文解说当前是否正常、有无故障、持续多久,每约 20 秒自动更新。附开放 JSON 接口,方便用 agent 抓取。">
+  <meta name="keywords" content="OpenAI 状态,Anthropic 状态,Claude 状态,ChatGPT 状态,AI 服务状态,是否宕机,故障,OpenAI status,Anthropic status,Claude status">
+  <meta name="author" content="小蒋">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#5b5bd6">
+  <link rel="canonical" href="https://vincejiang.com/status-ai/">
   <link rel="icon" href="/favicon.png?v=1" type="image/png">
+  <link rel="apple-touch-icon" href="/favicon.png?v=1">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="vincejiang.com">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:url" content="https://vincejiang.com/status-ai/">
+  <meta property="og:title" content="OpenAI & Anthropic 服务状态 · 实时中文聚合">
+  <meta property="og:description" content="聚合 OpenAI 和 Anthropic 官方状态,用通俗中文告诉你现在能不能用、有无故障、持续多久。每约 20 秒自动更新,附开放 JSON 接口。">
+  <meta property="og:image" content="https://vincejiang.com/favicon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="OpenAI & Anthropic 服务状态 · 实时中文聚合">
+  <meta name="twitter:description" content="一眼看懂 OpenAI 和 Anthropic 现在能不能用 —— 官方状态 + 通俗中文解说 + 开放接口。">
+  <meta name="twitter:image" content="https://vincejiang.com/favicon.png">
+  <!-- 结构化数据:供搜索引擎 / AI 抓取器理解本页与开放接口(多数不跑 JS) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "AI 服务状态 · OpenAI & Anthropic",
+        "url": "https://vincejiang.com/status-ai/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web",
+        "inLanguage": "zh-CN",
+        "isAccessibleForFree": true,
+        "description": "实时聚合 OpenAI 与 Anthropic 官方运行状态,用通俗中文解说当前是否正常、有无故障、持续多久,每约 20 秒自动更新。",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@type": "Person", "name": "小蒋", "url": "https://vincejiang.com/" },
+        "about": [
+          { "@type": "Organization", "name": "OpenAI", "sameAs": ["https://openai.com/", "https://en.wikipedia.org/wiki/OpenAI", "https://status.openai.com/"] },
+          { "@type": "Organization", "name": "Anthropic", "sameAs": ["https://www.anthropic.com/", "https://en.wikipedia.org/wiki/Anthropic", "https://status.claude.com/"] }
+        ]
+      },
+      {
+        "@type": "Dataset",
+        "name": "OpenAI & Anthropic 服务状态聚合 API",
+        "description": "开放只读 JSON 接口,聚合 OpenAI 与 Anthropic 官方 Statuspage 状态并附通俗中文解说,含今日故障次数、进行中故障与持续时间。每约 20 秒更新。",
+        "url": "https://vincejiang.com/status-ai/",
+        "inLanguage": "zh-CN",
+        "isAccessibleForFree": true,
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "creator": { "@type": "Person", "name": "小蒋", "url": "https://vincejiang.com/" },
+        "distribution": {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://vincejiang.com/status-ai/api"
+        }
+      }
+    ]
+  }
+  </script>
   <style>
     /* ——— 主题变量:浅色默认,深色跟随系统 + 可手动切换 ——— */
     :root{
@@ -163,6 +220,15 @@
       </div>
       <button class="toggle" id="theme" title="切换明暗模式">🌙</button>
     </div>
+
+    <noscript>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1rem 1.2rem;margin-bottom:1rem;line-height:1.7">
+        <h2 style="font-size:1rem;margin:.2rem 0 .5rem">OpenAI 与 Anthropic 服务状态聚合</h2>
+        <p>本页实时聚合 <strong>OpenAI</strong>(ChatGPT / API)与 <strong>Anthropic</strong>(Claude)的官方运行状态,并用通俗中文解说当前是否正常、有无故障、已持续多久,每约 20 秒自动更新。请开启 JavaScript 查看实时状态卡片。</p>
+        <p>开放 JSON 接口(无需鉴权):<a href="https://vincejiang.com/status-ai/api">https://vincejiang.com/status-ai/api</a></p>
+        <p>官方状态页:<a href="https://status.openai.com/">OpenAI Status</a> · <a href="https://status.claude.com/">Anthropic (Claude) Status</a></p>
+      </div>
+    </noscript>
 
     <div id="overview"></div>
 
