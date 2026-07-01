@@ -106,6 +106,48 @@
     @media (prefers-reduced-motion: reduce){ body::before{animation:none} }
 
     .wrap{max-width:640px; margin:0 auto; padding:3rem 1.15rem 3rem}
+    .world-clock{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.65rem; margin-bottom:1.35rem}
+    .clock-card{
+      display:flex; align-items:center; gap:.68rem; min-width:0; padding:.72rem .78rem;
+      background:var(--card); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+      border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow);
+      transition:background .3s, border-color .3s, transform .2s;
+    }
+    .clock-card:hover{transform:translateY(-1px)}
+    .clock-mark{
+      width:38px; height:38px; border-radius:50%; flex:0 0 auto; position:relative; overflow:hidden;
+      display:grid; place-items:center;
+    }
+    .clock-mark::before,.clock-mark::after{content:""; position:absolute; border-radius:50%}
+    .clock-card.is-day .clock-mark{
+      background:linear-gradient(145deg,#ffd166,#f97316);
+      box-shadow:inset 0 -8px 18px rgba(120,53,15,.24), 0 0 18px rgba(251,191,36,.32);
+    }
+    .clock-card.is-day .clock-mark::before{
+      width:15px; height:15px; background:#fff7ad;
+      box-shadow:0 0 0 5px rgba(255,247,173,.28), 0 0 18px rgba(255,247,173,.85);
+    }
+    .clock-card.is-day .clock-mark::after{inset:7px; border:1px solid rgba(255,255,255,.36)}
+    .clock-card.is-night .clock-mark{
+      background:linear-gradient(145deg,#1e293b,#4c1d95);
+      box-shadow:inset 0 -8px 18px rgba(15,23,42,.45), 0 0 18px rgba(129,140,248,.22);
+    }
+    .clock-card.is-night .clock-mark::before{
+      width:18px; height:18px; background:#f8fafc; transform:translate(-1px,1px);
+      box-shadow:0 0 16px rgba(248,250,252,.62);
+    }
+    .clock-card.is-night .clock-mark::after{
+      width:17px; height:17px; background:#2b225a; transform:translate(5px,-3px);
+      box-shadow:13px 14px 0 -7px rgba(255,255,255,.85), -10px -9px 0 -8px rgba(255,255,255,.75);
+    }
+    .clock-info{min-width:0}
+    .clock-city{font-size:.76rem; font-weight:750; color:var(--sub); line-height:1.1; white-space:nowrap}
+    .clock-time{
+      display:block; margin-top:.12rem; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+      font-size:1.08rem; font-weight:800; line-height:1.18; color:var(--fg);
+      font-variant-numeric:tabular-nums; letter-spacing:0; white-space:nowrap;
+    }
+    .clock-phase{margin-top:.08rem; font-size:.7rem; color:var(--sub); line-height:1.15; white-space:nowrap}
     .bar{display:flex; align-items:flex-start; gap:.75rem; margin-bottom:1.6rem}
     .bar h1{font-size:1.85rem; margin:0 0 .3rem; letter-spacing:-.015em}
     .bar p{color:var(--sub); margin:0; font-size:.9rem}
@@ -209,10 +251,41 @@
     .skeleton .zh,.skeleton .en{background:linear-gradient(90deg,var(--chip),var(--border),var(--chip));
       background-size:200% 100%; animation:sh 1.3s infinite; color:transparent; border-radius:7px; min-height:1.1em}
     @keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
+    @media (max-width:520px){
+      .world-clock{grid-template-columns:1fr; gap:.55rem}
+      .clock-card{padding:.66rem .75rem}
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
+    <div class="world-clock" aria-label="美国、日本、深圳当前时间">
+      <div class="clock-card" data-clock data-timezone="America/Los_Angeles" data-place="洛杉矶 / PT">
+        <span class="clock-mark" aria-hidden="true"></span>
+        <div class="clock-info">
+          <div class="clock-city">美国</div>
+          <time class="clock-time">--:--:--</time>
+          <div class="clock-phase">计算中…</div>
+        </div>
+      </div>
+      <div class="clock-card" data-clock data-timezone="Asia/Tokyo" data-place="东京 / JST">
+        <span class="clock-mark" aria-hidden="true"></span>
+        <div class="clock-info">
+          <div class="clock-city">日本</div>
+          <time class="clock-time">--:--:--</time>
+          <div class="clock-phase">计算中…</div>
+        </div>
+      </div>
+      <div class="clock-card" data-clock data-timezone="Asia/Shanghai" data-place="深圳 / UTC+8">
+        <span class="clock-mark" aria-hidden="true"></span>
+        <div class="clock-info">
+          <div class="clock-city">深圳</div>
+          <time class="clock-time">--:--:--</time>
+          <div class="clock-phase">计算中…</div>
+        </div>
+      </div>
+    </div>
+
     <div class="bar">
       <div class="grow">
         <h1>AI 服务状态 🛰️</h1>
@@ -310,6 +383,42 @@
     });
     matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
     applyTheme();
+
+    // ——— 顶部三地时钟:全部用浏览器 Intl 时区计算,每秒刷新 ———
+    const clockFormatterCache = new Map();
+    function clockParts(timeZone, date){
+      if(!clockFormatterCache.has(timeZone)){
+        clockFormatterCache.set(timeZone, new Intl.DateTimeFormat('en-US', {
+          timeZone,
+          hour:'2-digit',
+          minute:'2-digit',
+          second:'2-digit',
+          hourCycle:'h23'
+        }));
+      }
+      return Object.fromEntries(
+        clockFormatterCache.get(timeZone).formatToParts(date)
+          .filter(p => p.type !== 'literal')
+          .map(p => [p.type, p.value])
+      );
+    }
+    function renderWorldClocks(){
+      const now = new Date();
+      document.querySelectorAll('[data-clock]').forEach(card => {
+        const p = clockParts(card.dataset.timezone, now);
+        const hour = Number(p.hour);
+        const isDay = hour >= 6 && hour < 18;
+        const timeText = `${p.hour}:${p.minute}:${p.second}`;
+        card.classList.toggle('is-day', isDay);
+        card.classList.toggle('is-night', !isDay);
+        const time = card.querySelector('.clock-time');
+        time.textContent = timeText;
+        time.setAttribute('datetime', timeText);
+        card.querySelector('.clock-phase').textContent = `${isDay ? '白天' : '夜晚'} · ${card.dataset.place}`;
+      });
+    }
+    renderWorldClocks();
+    setInterval(renderWorldClocks, 1000);
 
     // ——— 渲染 ———
     const COLOR = { none:'#16a34a', operational:'#16a34a', minor:'#d97706', major:'#ea580c',
