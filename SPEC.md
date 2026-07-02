@@ -1,224 +1,194 @@
 # vincejiang.com — 部署与维护规范(SPEC)
 
-> 这份文档是「权威说明」。任何人(或 agent)想更新网站、加 demo、或排障,**先读这一份**。
-> 改了部署逻辑(Dockerfile / workflow / nginx 配置),**必须同步更新本文件**。
+> 这份文档是「权威说明」。任何人(或 agent)想发文章、加 demo、或排障,**先读这一份**。
+> 改了部署逻辑(Dockerfile / workflow / nginx 配置 / 生成器),**必须同步更新本文件**。
 
 ---
 
 ## 1. 这是什么
 
-`vincejiang.com` 是一个**纯静态的 demo 展示站**,用来放各种产品 demo / 实验。
-- 仓库:`github.com/VincentJiang06/vincejiang-demo`(public)
-- 线上地址:`https://vincejiang.com` 和 `https://www.vincejiang.com`
-- 没有后端、没有数据库、没有 Node 构建步骤——**仓库里放什么静态文件,网站上就有什么**。
+`vincejiang.com` 是 Vince(小蒋)的个人站,三块内容:
+- **Blog**(`/blog/`):md 写就的博客杂谈与技术笔记;
+- **Gallery**(`/gallery/`):交互式 demo / 实验的作品集索引(status-ai、HiFi 笔记、Mac 选购等);
+- **门户首页**(`/`):汇聚 Blog 最新、Gallery、以及六个香港高校「非官方」野史站的入口。
 
-托管在一台自有服务器(Vultr 东京)上,经 **Cloudflare Tunnel** 对外。和该机上其他 6 个站
-(UniWild 集群)共用同一套基础设施:`cloudflared 隧道 → Traefik 反代 → 每站一个 Docker 容器`。
+- 仓库:`github.com/VincentJiang06/vincejiang-demo`(**public**)。push 用 SSH 别名 `github-vincent`;git 提交身份 `Vince Jiang <realvincentjiang@gmail.com>`。
+- 线上:`https://vincejiang.com` 和 `https://www.vincejiang.com`。
+- **构建方式**:仓库存 **md 源 + 模板 + 生成器**;镜像构建时由 `tools/build-site.mjs` 编译成纯静态站。没有后端、没有数据库(唯一例外见 §11 的 status-ai)。
 
----
-
-## 2. 怎么更新网站(TL;DR)
-
-**只需要一件事:把改动 push 到 `main` 分支。** 其余全自动:
-
-```
-git push  →  GitHub Actions 构建 Docker 镜像  →  推到 GHCR
-          →  服务器上的 self-hosted runner 自动拉新镜像 + 滚动重启容器
-          →  约 1–2 分钟后 vincejiang.com 就是最新版
-```
-
-不需要 SSH 上服务器、不需要手动跑任何命令。push 完去仓库的 **Actions** 标签页能看到
-`build-and-deploy` 在跑;两个 job(`image` → `deploy`)都变绿就上线了。
+托管在自有服务器(Vultr 东京)上,经 **Cloudflare Tunnel** 对外。和该机其他 6 个站共用基础设施:`cloudflared 隧道 → Traefik 反代 → 每站一个 Docker 容器`。
 
 ---
 
-## 3. 怎么加一个新 demo
+## 2. 怎么发一篇博客文章(TL;DR)
 
-1. 在**仓库根目录**建一个文件夹,比如 `my-demo/`,里面至少放一个 `index.html`
-   (想放 `app.js` / `style.css` / 图片 / 视频都行,全是静态资源)。
-2. 在根目录 `index.html` 的 Demos 列表里加一行链接,指向 `/my-demo/`。
-3. `git add . && git commit -m "add my-demo" && git push`。
-4. 完事。约 1–2 分钟后 `https://vincejiang.com/my-demo/` 就能访问。
+**三步:**
+1. 在 `posts/` 放一个 md,比如 `posts/my-post.md`(带图就建目录 `posts/my-post/index.md` + 同目录放图);
+2. 写好 frontmatter(至少 `title`);
+3. `git commit`,**commit message 里带「发布」二字**(或 `[publish]`),`git push`。
 
-**约定:**
-- 每个 demo = 根目录下一个独立文件夹,自带 `index.html`,用根相对路径(`/my-demo/...`)引用自己的资源。
-- 文件夹会被 `Dockerfile` 的 `COPY . /usr/share/nginx/html` 自动收录,**无需改任何配置**。
-- 干净 URL 可用:`/my-demo` 会自动找 `/my-demo/index.html`;`/foo` 会找 `/foo.html`。
+约 1~2 分钟后 `https://vincejiang.com/blog/my-post/` 就上线,首页最新列表 / Blog 索引 / RSS / sitemap 全自动更新。
 
-**不要**把下面这些当成 demo 内容(它们是基础设施,已在 `.dockerignore` 里排除,不会被发布):
-`Dockerfile`、`.dockerignore`、`docker/`、`.github/`、`SPEC.md`、`README.md`、`.git/`。
+**发布判定(关键)**:一篇 md「已发布」⟺ **git 历史里存在任一触碰过它的 commit,其 message 含「发布」或 `[publish]`**。
+- commit 没写「发布」→ 文件躺在仓库里但**不上线**(草稿);之后任何一次带「发布」的 commit 碰它(改一个字也行)即上线;
+- frontmatter 写 `draft: true` → 强制隐藏(优先级最高,压过发布词);
+- 这套判定由 CI 的 `tools/gen-manifest.mjs` 读 git 历史算出,**无状态、无机器人回写**。
+
+**frontmatter 字段**:
+```yaml
+---
+title: 必填
+description: 建议填;缺省时取正文首段前 ~120 字
+tags: [可选]
+date: 2026-07-03      # 可选;缺省 = 首次「发布」commit 的日期(真实,禁虚刷)
+updated: 2026-07-05   # 可选;缺省 = 最后一次「发布」commit 的日期
+draft: true           # 可选;强制隐藏
+cover: cover.png      # 可选;带图目录文章的封面(相对本文件目录)
+---
+```
+- slug = 文件名 / 目录名(kebab-case)。**发布后别改名**(URL 会变);非改不可就在 `docker/site.conf` 加 301。
 
 ---
 
-## 4. 端到端架构(发生了什么)
+## 3. 怎么加一个 demo(老工作流,不变)
 
-```
-浏览器  ──HTTPS──▶  Cloudflare 边缘(终止 TLS,签发证书)
-                      │  Public Hostname: vincejiang.com / www → 隧道
-                      ▼
-        Cloudflare Tunnel（出站长连,服务器不开任何入站端口)
-                      │
-                      ▼
-   服务器: cloudflared(systemd 原生服务) ──http://localhost:8080──▶ Traefik 容器
-                      │  按 Host 路由:HostRegexp(^(.+\.)?vincejiang\.com$)
-                      ▼
-        svc-vincejiang 容器(nginx:alpine,发布本仓库静态内容,听 :80)
-```
+1. 在**仓库根目录**建一个文件夹,如 `my-demo/`,里面至少放一个 `index.html`(可带 js/css/图片,全静态);
+2. 生成器会**原样收录**根目录下的内容文件夹(除基础设施/元文件外);
+3. `git commit && git push`。约 1~2 分钟后 `https://vincejiang.com/my-demo/` 可访问。
+4. 想让它出现在 Gallery / 首页,往 `site.config.json` 的 `gallery` 数组加一条。
 
-- **HTTPS**:由 Cloudflare 边缘提供,容器内只有明文 :80。
-- **零公网端口**:服务器不监听任何对外端口(连 80/443 都不开),全靠 cloudflared 主动外连。
-- **镜像**:`ghcr.io/vincentjiang06/vincejiang-demo:latest`(必须全小写)。
+干净 URL:`/my-demo` 自动找 `/my-demo/index.html`;`/foo` 找 `/foo.html`。
 
 ---
 
-## 5. CI/CD 细节
+## 4. 目录结构
 
-文件:`.github/workflows/deploy.yml`,两个 job:
+```
+posts/            # 博客 md 源(posts/<slug>.md 或 posts/<slug>/index.md + 图)
+templates/        # base.html(页骨架)+ site.css(全站单一样式源)
+tools/            # 生成器 —— build-site.mjs / gen-manifest.mjs / audit.mjs + package.json
+site.config.json  # 首页 & gallery 的单一数据源(6 野史站 + gallery 作品)
+<demo>/           # 各 demo 文件夹(status-ai / vince-hifi-notes / mac-buying-demo …),原样收录
+docker/           # nginx 配置(site.conf + snippets/security-headers.conf)
+Dockerfile        # 多阶段:node 编译 → nginx 发布
+.github/workflows/# deploy.yml(check→image→deploy)+ audit.yml(手动审计)
+```
+**生成物**(不入库,构建时产出):`index.html`、`/blog/**`、`/gallery/`、`sitemap.xml`、`llms.txt`、`posts-manifest.json`。
+
+**不对外发布**(生成器的 COPY_EXCLUDE + .dockerignore 挡掉):`docker/ tools/ templates/ posts/ site.config.json .github/ .git SPEC.md README.md node_modules posts-manifest.json`。
+
+---
+
+## 5. 端到端架构
+
+```
+浏览器 ──HTTPS──▶ Cloudflare 边缘(终止 TLS)
+                    │ Public Hostname: vincejiang.com / www → 隧道
+                    ▼
+     Cloudflare Tunnel(出站长连,服务器零入站端口)
+                    │
+                    ▼
+  服务器: cloudflared(systemd) ──http://localhost:8080──▶ Traefik 容器
+                    │ HostRegexp(^(.+\.)?vincejiang\.com$)
+                    ▼
+     svc-vincejiang 容器(nginx:alpine,发布编译产物,听 :80)
+```
+- HTTPS 由 CF 边缘提供,容器内只有明文 :80;源站强制 HTTPS 由 Traefik 的 XFP 跳转路由处理。
+- **镜像**:`ghcr.io/vincentjiang06/vincejiang-demo`;部署的 tag 是**触发该次构建的 git sha**(见 §6)。
+
+---
+
+## 6. CI/CD 细节
+
+文件:`.github/workflows/deploy.yml`,push `main` 触发三个 job 串起来:
 
 | job | 跑在哪 | 干什么 |
 |-----|--------|--------|
-| `image` | GitHub 托管 runner(ubuntu-latest) | `docker build` → 推 `ghcr.io/vincentjiang06/vincejiang-demo:{latest,<sha>}` |
-| `deploy` | **服务器上的 self-hosted runner**(labels: `self-hosted, vincejiang`) | `cd /home/vince/platform && ./redeploy.sh svc-vincejiang`(= `docker compose pull && up -d`) |
+| `check` | GitHub 托管 | 生成 manifest → `build-site.mjs --check`(frontmatter/slug/内容目录 index.html 硬 gate)+ html-validate(warn-only) |
+| `image` | GitHub 托管 | 生成 manifest → 多阶段 `docker build` → 推 `ghcr.io/...:{latest, <sha>}` |
+| `deploy` | **服务器 self-hosted runner** | `cd /home/vince/platform && ./deploy-pinned.sh svc-vincejiang <sha>` |
 
-- `image` 用仓库自带的 `GITHUB_TOKEN` 推 GHCR,无需额外 secret。
-- `deploy` 在服务器上以用户 `vince` 运行;runner 主动外连 GitHub 取任务,**不需要服务器开入站端口**。
-- 只有本仓库(`vincejiang-demo`)用 self-hosted runner 自动部署;UniWild 那 6 个站仍是手动 `redeploy.sh`。
+**deploy-pinned.sh(在 platform 仓库)** 做的事:把 `<sha>` 写进 `platform/.env` 的 `VINCEJIANG_TAG` → `docker compose pull/up -d` → **健康门**(容器 healthcheck 变 healthy + 经 Traefik 真路由验 `/health`=ok 且 `/`=200)→ **任一步失败自动回滚上一个 tag 并让 job 变红**。
+- compose 里 `image: ghcr.io/...:${VINCEJIANG_TAG:-latest}`;所以部署镜像与触发 commit 强绑定,可精确回滚。
+- 顶层最小权限 `contents: read`;`image` job 单独 `packages: write`。
+- `deploy` 单独串行 concurrency(`cancel-in-progress: false`),滚动更新中途不被后一次 push 取消。
+- 只有本仓库用 self-hosted runner 自动部署;其余 6 站仍手动 `redeploy.sh`。
 
-### 服务器侧 svc 定义
-在 `UniWild/platform` 仓库的 `docker-compose.yml` 里(服务器路径 `/home/vince/platform/docker-compose.yml`):
+---
 
-```yaml
-  svc-vincejiang:
-    image: ghcr.io/vincentjiang06/vincejiang-demo:latest
-    restart: always
-    networks: [web]
-    labels:
-      - traefik.enable=true
-      - traefik.http.routers.vincejiang.rule=HostRegexp(`^(.+\.)?vincejiang\.com$$`)
-      - traefik.http.routers.vincejiang.entrypoints=web
-      - traefik.http.services.vincejiang.loadbalancer.server.port=80
-    healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://localhost/health"]
-      interval: 30s
-      timeout: 5s
-      retries: 3
+## 7. 回滚
+
+在服务器上:
+```bash
+cd /home/vince/platform
+./deploy-pinned.sh svc-vincejiang <旧-git-sha>     # 部署任意历史 sha;过不了健康门会自动再退回
+grep VINCEJIANG_TAG .env                            # 看当前部署的是哪个 sha
 ```
-> `$$` 是 compose 转义,容器实际拿到单个 `$`(正则行尾锚点)。
+GHCR 保留每个 sha 的镜像,`<旧-git-sha>` 用要回退到的那次 commit 的完整 sha。
 
 ---
 
-## 6. 一次性搭建清单(已完成,留档备查)
+## 8. 手动 SEO/GEO 审计(不阻塞日常构建)
 
-这些只需做一次,正常情况下**不用再碰**:
-
-- [x] **Cloudflare Public Hostname**:Zero Trust → Networks → Tunnels → 该隧道 → Public Hostname,
-      加 `vincejiang.com` 和 `www.vincejiang.com` 两条 → Service `HTTP` → URL `localhost:8080`。
-- [x] **platform compose**:加上面第 5 节的 `svc-vincejiang` 段。
-- [x] **GHCR 包设为 public**:首次构建后,在 `github.com/users/VincentJiang06/packages` 找到
-      `vincejiang-demo` → Package settings → Change visibility → Public。
-      (这样服务器拉镜像无需登录 GHCR。若保持 private,则服务器需 `docker login ghcr.io` 且账号有 read 权限。)
-- [x] **self-hosted runner**:在服务器上注册了一个 GitHub Actions runner(labels `self-hosted,vincejiang`),
-      作为 systemd 服务常驻。注册方式见下方第 8 节。
+- 线上触发:仓库 **Actions → seo-geo-audit → Run workflow**(`.github/workflows/audit.yml`);报告进 job summary + artifact。**只审计不部署**。
+- 本地等价:`cd tools && node audit.mjs`(或 `--out report.md`)。
+- 审计内容:逐页对照 MUST(title/desc/canonical/OG/twitter/lang/viewport/单 h1)+ 断链 + img alt + JSON-LD 可解析 + sitemap 双向覆盖。report-only。
 
 ---
 
-## 7. 排障
+## 9. 排障
 
 | 症状 | 多半是 | 怎么查 / 修 |
 |------|--------|-------------|
-| `https://vincejiang.com` 返回 **530**(CF 1033) | 隧道没有该 hostname 的路由 | Cloudflare 面板补 Public Hostname(第 6 节) |
-| 返回 **404 page not found**(Traefik 纯文本) | 隧道通了,但没有匹配的容器/路由 | 服务器 `docker ps` 看 `svc-vincejiang` 是否在跑;compose label 的 HostRegexp 是否对 |
-| `deploy` job 失败,`pull access denied` | GHCR 包是 private 或服务器没登录 | 把包设 public(第 6 节),或在服务器 `docker login ghcr.io` |
-| push 了但网站没变 | runner 没在线 / job 没触发 | 仓库 Settings → Actions → Runners 看 runner 是否 `Idle`;Actions 页看 workflow 有没有跑 |
-| 改了内容但浏览器还是旧的 | 浏览器/CF 缓存 | HTML 是 `no-cache`,一般刷新即可;静态资源缓存一周,改名或强刷 |
+| push 了但网站没变 | check/image job 失败,或 runner 没在线 | 仓库 Actions 页看红在哪一 job;服务器 `pgrep -f Runner.Listener` 看 runner |
+| `deploy` job 红、线上仍是旧版 | 健康门没过,已自动回滚(符合预期) | 看 Actions 里 deploy-pinned 的输出;多半是新构建内容坏了 |
+| 文章 push 了不显示 | commit 没写「发布」,或 `draft: true` | 补一次带「发布」的 commit 碰该文件;去掉 draft |
+| `pull access denied` | GHCR 包非 public | 把 `vincejiang-demo` 包设 public |
+| 返回 404(Traefik 纯文本) | 容器没起来 / 路由不匹配 | `docker ps` 看 svc-vincejiang;compose HostRegexp |
+| 改内容浏览器还是旧的 | 缓存 | HTML 是 no-cache,一般刷新即可;静态资源缓存一周,改 `?v=N` |
 
-**手动兜底**(runner 挂了时,在服务器上):
-```bash
-cd /home/vince/platform && ./redeploy.sh svc-vincejiang
-docker compose logs --tail=30 svc-vincejiang
-```
+**手动兜底部署**(runner 挂了时):`cd /home/vince/platform && ./deploy-pinned.sh svc-vincejiang latest`
 
 ---
 
-## 8. self-hosted runner 注册(参考)
+## 10. self-hosted runner
 
-在服务器上(用户 `vince`,目录 `~/actions-runner`):
-```bash
-# 1. 在 GitHub 取注册 token:仓库 → Settings → Actions → Runners → New self-hosted runner(Linux x64)
-#    复制页面给出的 --token <TOKEN>
-# 2. 配置(labels 必须含 vincejiang,与 deploy.yml 的 runs-on 对应):
-cd ~/actions-runner
-./config.sh --url https://github.com/VincentJiang06/vincejiang-demo \
-            --token <TOKEN> --labels vincejiang --name vultr-tokyo --unattended
-# 3. 装成 systemd 服务常驻:
-sudo ./svc.sh install vince && sudo ./svc.sh start
-```
-> 安全提示:self-hosted runner 会执行本仓库 workflow 里的命令。仓库是私人自有、push 受控,
-> 风险可接受;但不要把此仓库设为接受外部 PR 自动跑 workflow。
+在服务器 `~/actions-runner`,labels `self-hosted,vincejiang`,注册到本仓库(注册见该目录 `config.sh`)。
+
+**常驻方式(现状)**:cron 看门狗 `~/actions-runner/keepalive.sh` —— `@reboot` + 每分钟一次,runner 进程不在就(重新)拉起,flock 防并发双启。开机自启 + 崩溃自恢复,不需要 root。
+> 若日后想换成「官方 systemd 系统服务」(需 root):`sudo ./svc.sh install vince && sudo ./svc.sh start`,装好后**要删掉 crontab 里的 keepalive 两行**,否则会和 systemd 抢着起 runner(双 runner)。
 
 ---
 
-## 8.5 `/status-ai` 页面 —— 特殊:依赖一个服务器侧后端 + 开放接口
+## 11. `/status-ai` —— 特殊:依赖服务器侧后端 + 开放接口
 
-`/status-ai/`(本仓库 `status-ai/index.html`)是一个**纯静态前端**,但数据来自一个**不在本仓库**的
-后端 `svc-status`(在服务器的 `UniWild/platform` 里)。原因:翻译要用 DeepSeek API,**密钥绝不能进前端**。
+`/status-ai/`(本仓库 `status-ai/index.html`)是纯静态前端,数据来自一个**不在本仓库**的后端 `svc-status`(在服务器 `UniWild/platform`),因为翻译要用 DeepSeek API、密钥绝不能进前端/public 仓库。
 
-- **前端**(本仓库 `status-ai/index.html`):`fetch('/status-ai/api')` 渲染。渐变背景 + 明暗切换(记忆) +
-  每条事件的持续时间 + Anthropic 的常驻通知单独一行 + 卡片左上品牌头像(`icons/codex.png` / `icons/anthropic.png`)
-  右下角带在线状态点(随严重度变闪速);友链野史用各站真实 favicon(`icons/wild/<站>.png`,已裁掉自带白边)。
-  ⚠️ 静态资源(svg/css/js/图片)在 Cloudflare/浏览器缓存**一周**;**改了图标或任何静态文件,必须 bump 引用处的
-  `?v=N`**(见 `cardHTML` 里的 icon src),否则边缘缓存不刷新。HTML 本身是 `no-cache`,改 HTML 即时生效。
-  **自动更新**:进页面拉一次,之后每 `poll_interval_seconds`(默认 20s)静默读一次后端缓存
-  (读缓存不花 token),无手动刷新按钮。改样式/文案直接改它、push 即可。
-- **后端**(`UniWild/platform/status-svc/server.mjs`,容器 `svc-status`,node:22 零依赖):服务器侧拉
-  `status.openai.com` 和 `status.claude.com` 的 Statuspage `summary.json`,喂 DeepSeek(`deepseek-v4-flash`)
-  写**通俗中文解说**。
-  - **后端自动轮询**:每 `POLL_INTERVAL`(env,默认 20s)查一次状态,结果存内存,`/status-ai/api` 秒回该缓存。
-    另外拉 `incidents.json`(缓存 120s)统计 `today_outages`(今日挂了几次,按 `TZ_OFFSET_MIN` 默认 UTC+8 算)。
-    查状态是免费 HTTP;**翻译按内容变化触发**——解说按"源文本 hash"缓存,官方状态文字不变就**绝不再调** v4flash。
-    所以空闲时几乎零成本,只在 OpenAI/Anthropic 真改状态时才翻译一次。
-    缓存**持久化到卷** `status-cache:/data/cache.json`,容器重启/重建不必重新翻译。
-  - **真故障 vs 常驻通知**:命中 `NOTICE_PATTERNS`(suspend/mythos/fable/deprecat)的事件归到 `notices`,
-    **不计入运行是否失效**(`healthy` 只看官方顶层 indicator),单独给一小行 + `name_zh`。要新增常驻通知,
-    改 `NOTICE_PATTERNS`。
-  - 路由:Traefik 把 `vincejiang.com/status-ai/api` 指到这个容器(priority 高于本站 catch-all)。
-  - 密钥:`DEEPSEEK_API_KEY` 在服务器 `platform/.env`(已 gitignore),前端/本仓库都看不到。
-  - 改后端逻辑或 prompt → 在服务器 `cd platform && docker compose up -d --build svc-status`。
+- **前端**:`fetch('/status-ai/api')` 渲染;换图标/静态文件要 bump `?v=N`(边缘缓存一周);改 HTML 即时生效。
+- **后端**:`platform/status-svc/server.mjs`(容器 `svc-status`),拉 OpenAI/Anthropic 官方 Statuspage + DeepSeek 写中文解说,按内容 hash 缓存。改后端:服务器 `cd platform && docker compose up -d --build svc-status`。
+- **路由**:Traefik 把 `vincejiang.com/status-ai/api` 高优先级指到该容器(**必须精确到 `/api`**,否则会劫持静态页)。
+- **红线**:`/status-ai/api` 路径动不得;`DEEPSEEK_API_KEY` 只在 `platform/.env`,不进任何仓库/前端。
+- **开放接口**:`GET https://vincejiang.com/status-ai/api` —— 只读、开放 CORS、`schema: vincejiang.status/1`。
 
-### 开放接口(给别人用 agent 抓)
-`GET https://vincejiang.com/status-ai/api` —— 只读、开放 CORS、`schema: "vincejiang.status/1"`。每个 provider:
-`indicator`(none/minor/major/critical/maintenance)、`healthy`(bool)、`description`(英文原状态)、
-`summary_zh`(DeepSeek 解说)、`today_outages`(今日挂了几次)、`incidents[]`(含 `duration`)、`notices[]`(常驻通知,含 `name_zh`)。
+> 想加别的「需密钥/需服务器侧抓取」的页面,照此模式:前端放本仓库,后端放 platform 用 `/xxx/api` 路由,密钥进 `platform/.env`。
 
-> 想加别的"需要密钥/需要服务器侧抓取"的页面,照这个模式:前端放本仓库,后端放 platform 并用
-> `/_xxx` 路径前缀路由,密钥进 `platform/.env`。**不要把任何密钥写进本仓库。**
+---
 
-### 接口流量防护(已就绪)
-贵的操作(拉上游 + 调 DeepSeek)是后台每 20s 轮询触发,**不随请求走**;请求只读内存缓存,很便宜。已加:
-- **可缓存响应头**:`Cache-Control: public, max-age=20, s-maxage=20, stale-while-revalidate=30`(= 轮询间隔)。
-- **按真实 IP 限流**:Node 层 30 次/10s(超→`429`),Traefik 层 平均 5 req/s、突发 20;真实 IP 取 `Cf-Connecting-Ip`。
-  阈值可调:`platform/.env` 或 svc-status 环境变量 `RL_MAX` / `RL_WINDOW`。
-- **整站在 Cloudflare 隧道后**,体量型 DDoS 由边缘吸收。
+## 12. SEO/GEO 基建(长在模板/生成器里,零维护)
 
-**最强一层(需在 Cloudflare 面板点一次,我/agent 无 CF API 权限)——让边缘直接缓存接口:**
-> Cloudflare → vincejiang.com → **Caching → Cache Rules → Create rule**
-> - 匹配:`Hostname equals vincejiang.com` AND `URI Path equals /status-ai/api`
-> - 行为:**Eligible for cache** 开;**Edge TTL → Respect origin TTL headers**(源已发 `s-maxage=20`)
-> 生效后 `curl -sI .../status-ai/api` 的 `cf-cache-status` 会从 `DYNAMIC` 变 `HIT`,重复请求由边缘秒回,源站每 20s/机房仅 ~1 次。
+生成器保证每页 MUST:`<title> · Vince Jiang`、自指 canonical、meta description、OG 四件套 + twitter card、`<html lang>`、viewport、单 h1。JSON-LD 单一来源在 build-site.mjs(禁手写内嵌):首页 `WebSite`+`Person`;文章 `BlogPosting`(真实 git 日期)+`BreadcrumbList`;gallery `CollectionPage`+`ItemList`。
+机读层(GEO):每篇文章的 md 源副本 `/blog/<slug>/index.md`、`llms.txt`、RSS、sitemap(lastmod 用真实 git 日期,禁虚刷)。
 
-### GEO / SEO
-- `status-ai/index.html` 已配:keywords/canonical/robots、Open Graph + Twitter card、`theme-color`、
-  **JSON-LD**(`WebApplication` + `Dataset`,`about` 关联 OpenAI/Anthropic 的 `sameAs`)、**`<noscript>` 静态兜底**
-  (页面是 JS 渲染,不跑 JS 的爬虫/AI 抓取器靠 noscript + JSON-LD 拿到可读内容)。
-- 站点根:`robots.txt`(放行 GPTBot/OAI-SearchBot/ClaudeBot/PerplexityBot 等 + Sitemap)、`sitemap.xml`。
-- 换图标/改文案后注意 `?v=N` 缓存破坏(见 8.5)。
+---
 
-## 9. 本地预览
+## 13. 本地预览
 
 ```bash
-# 直接开静态文件
-python3 -m http.server 8000        # 然后访问 http://localhost:8000
-# 或完整跑容器(连 nginx 配置一起验)
+cd tools && npm ci
+node build-site.mjs --out ../site      # 编译到 ../site(无 manifest 时:所有非 draft 视为已发布)
+python3 -m http.server -d ../site 8000 # 访问 http://localhost:8000
+
+# 或完整跑容器(连 nginx 配置一起验):
 docker build -t svc-vincejiang . && docker run --rm -p 8080:80 svc-vincejiang
-curl -s localhost:8080/health      # → ok
+curl -s localhost:8080/health          # → ok
 ```
