@@ -25,13 +25,16 @@
 **三步:**
 1. 在 `posts/` 放一个 md,比如 `posts/my-post.md`(带图就建目录 `posts/my-post/index.md` + 同目录放图);
 2. 写好 frontmatter(至少 `title`);
-3. `git commit`,**commit message 里带「发布」二字**(或 `[publish]`),`git push`。
+3. `git commit`,**commit message 以「发布」开头**(如 `发布：我的新文`),`git push`。
 
 约 1~2 分钟后 `https://vincejiang.com/blog/my-post/` 就上线,首页最新列表 / Blog 索引 / RSS / sitemap 全自动更新。
 
-**发布判定(关键)**:一篇 md「已发布」⟺ **git 历史里存在任一触碰过它的 commit,其 message 含「发布」或 `[publish]`**。
-- commit 没写「发布」→ 文件躺在仓库里但**不上线**(草稿);之后任何一次带「发布」的 commit 碰它(改一个字也行)即上线;
-- frontmatter 写 `draft: true` → 强制隐藏(优先级最高,压过发布词);
+**发布判定(关键)**:一篇 md「已发布」⟺ git 历史里存在任一触碰过它的 commit,其 message 命中**发布标记**:
+- **某行以「发布」开头**,后接空格/冒号/行尾 —— 如 `发布：标题`、`发布: title`、`发布 xxx`;或
+- **方括号标记** `[发布]` / `[publish]` / `【发布】`(可在任意位置,如 `feat: xxx [publish]`)。
+- ⚠️ **仅在句中提到「发布」二字不算**(如「修复发布流程」「还没发布」「无发布词」)——必须是行首发布标记或方括号标记,避免把草稿误发。
+- commit 没命中标记 → 文件在仓库里但**不上线**(草稿);之后任一命中标记、且触碰该文件的 commit 即让它上线;
+- frontmatter 写 `draft: true` → 强制隐藏(优先级最高,压过发布标记);
 - 这套判定由 CI 的 `tools/gen-manifest.mjs` 读 git 历史算出,**无状态、无机器人回写**。
 
 **frontmatter 字段**:

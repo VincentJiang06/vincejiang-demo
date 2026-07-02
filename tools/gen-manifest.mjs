@@ -34,7 +34,10 @@ function findMd(dir) {
   return out;
 }
 
-const PUBLISH_RE = /发布|\[publish\]/i;
+// 发布标记:必须是「有意发布」,不能被句中偶然提及触发(如「无发布词」「修复发布流程」)。
+// 命中条件(任一):① 某行以「发布」开头,后接 空格/冒号/行尾(匹配 Vince 的「发布：标题」用法);
+//                  ② 出现方括号标记 [发布] / [publish] / 【发布】(可置于任意位置,如 "feat: x [publish]")。
+const PUBLISH_RE = /(^|\n)[ \t]*发布(?=[\s:：]|$)|[[【](?:发布|publish)[\]】]/i;
 
 function commitsFor(relpath) {
   // %x1e 分隔每个 commit,%x1f 分隔字段:hash / author-date(ISO strict) / 完整 message

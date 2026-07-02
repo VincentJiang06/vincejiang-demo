@@ -5,6 +5,8 @@ tags: [agent, claude-code, skills]
 date: 2026-07-03
 ---
 
+> 这篇是 [github.com/VincentJiang06/skills](https://github.com/VincentJiang06/skills) 的说明页,原 `/skills` 页面已并入此文。
+
 给 Claude Code 用的一套 **agent skills**——每个都自带**确定性校验器** + **红绿 eval** + 一个专门想把它弄坏的**独立测试组**。小而专、范围锋利、中英双语。仓库直链:[github.com/VincentJiang06/skills](https://github.com/VincentJiang06/skills)。
 
 一行装好(用 skills CLI,自动发现并装入 `~/.claude/skills/`):
