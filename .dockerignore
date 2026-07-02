@@ -1,5 +1,8 @@
-# 只排除「不该进构建上下文」的大件/噪声。基础设施文件(docker/、Dockerfile 等)仍需进上下文
-# 供 Dockerfile 显式 COPY;它们最终会在镜像内被 rm 掉(见 Dockerfile),不会被对外发布。
+# 只排除「不该进构建上下文」的大件/噪声。基础设施/源文件(docker/、tools/、templates/、posts/ 等)
+# 仍需进上下文供 build 阶段编译;build-site 的 COPY_EXCLUDE 决定最终哪些进 /out 对外发布。
+# 注意:posts-manifest.json 必须进上下文(CI 生成的发布判定),别在这里排除它。
 .git
 .DS_Store
 **/.DS_Store
+**/node_modules
+/site

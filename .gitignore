@@ -1,1 +1,5 @@
 .DS_Store
+node_modules/
+# 构建产物 / CI 生成物(不入库)
+/site/
+posts-manifest.json

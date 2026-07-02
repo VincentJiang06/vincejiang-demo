@@ -1,0 +1,18 @@
+{
+  "name": "vincejiang-site-tools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "vincejiang.com 静态站生成器:md→blog + 首页/gallery + sitemap/RSS/llms.txt",
+  "scripts": {
+    "build": "node build-site.mjs --out ../site",
+    "check": "node build-site.mjs --check",
+    "audit": "node audit.mjs"
+  },
+  "dependencies": {
+    "gray-matter": "4.0.3",
+    "highlight.js": "11.10.0",
+    "markdown-it": "14.1.0",
+    "markdown-it-anchor": "9.2.0"
+  }
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="{{LANG}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+{{HEAD}}
+<link rel="icon" href="/favicon.png?v=1" type="image/png">
+<link rel="apple-touch-icon" href="/favicon.png?v=1">
+<style>{{CSS}}</style>
+</head>
+<body>
+{{NAV}}
+{{MAIN}}
+{{FOOTER}}
+<script>
+// 明暗模式:默认跟随系统,可手动切换并记住(全站一致)
+(function(){
+  var root=document.documentElement, btn=document.getElementById('theme-toggle');
+  function cur(){var s=localStorage.getItem('theme');return s?s==='dark':matchMedia('(prefers-color-scheme:dark)').matches;}
+  function paint(){if(btn)btn.textContent=cur()?'☀️':'🌙';}
+  function apply(){var s=localStorage.getItem('theme');if(s)root.setAttribute('data-theme',s);else root.removeAttribute('data-theme');paint();}
+  if(btn)btn.addEventListener('click',function(){localStorage.setItem('theme',cur()?'light':'dark');apply();});
+  matchMedia('(prefers-color-scheme:dark)').addEventListener('change',paint);
+  apply();
+})();
+</script>
+</body>
+</html>

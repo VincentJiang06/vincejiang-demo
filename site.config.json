@@ -1,0 +1,16 @@
+{
+  "_note": "首页与 gallery 的单一数据源。改这里即改首页/gallery,无需动模板。href 为 http(s) 视作外链、本站相对路径视作内部作品(进 sitemap)。",
+  "wildSites": [
+    { "key": "hkuwild",   "name": "非官方港大",   "url": "https://hkuwild.com",   "desc": "百年殖民史的缩影:港大的身世、争议与人物 lore。" },
+    { "key": "cuhkwild",  "name": "非官方中大",   "url": "https://cuhkwild.com",  "desc": "山城书院制的人文底色:中大的理想主义与它的代价。" },
+    { "key": "hkustwild", "name": "非官方科大",   "url": "https://hkustwild.com", "desc": "理工速成的成与代价:三十年冲进世界前列的科大。" },
+    { "key": "cityuwild", "name": "非官方城大",   "url": "https://cityuwild.com", "desc": "后发逆袭与身份焦虑:城大如何改写自己的坐标。" },
+    { "key": "polyuwild", "name": "非官方理大",   "url": "https://polyuwild.com", "desc": "应用立校的实干者:理大的工科基因与街头传奇。" },
+    { "key": "hkuniwild", "name": "港校通门户",   "url": "https://hkuniwild.com", "desc": "五校信息门户:中性择校工具,内地读者友好,深链各校野史。" }
+  ],
+  "gallery": [
+    { "title": "AI 服务状态", "href": "/status-ai/", "desc": "一眼看懂 OpenAI 与 Anthropic 现在能不能用:聚合官方状态 + 通俗中文解说,附开放 JSON 接口。", "badge": "带后端 · 开放接口" },
+    { "title": "Vince 的 HiFi 笔记", "href": "/vince-hifi-notes/", "desc": "把 HiFi 声学里最迷惑的概念逐一折算成能画出来的 dB:分压器、线材、阻抗、目标曲线。", "badge": "长文技术笔记" },
+    { "title": "Mac 型号选购指南", "href": "/mac-buying-demo/", "desc": "2026 Mac 全系选购 demo:交互式决策、规格对比、价格筛选。", "badge": "交互 demo" }
+  ]
+}
