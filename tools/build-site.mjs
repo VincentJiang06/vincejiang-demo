@@ -114,6 +114,9 @@ function pageHtml({ lang = SITE.lang, active = '', head, main }) {
   return fill(BASE, { LANG: lang, TITLE: head.titleFull, HEAD: head.html, CSS, NAV: navHtml(active), MAIN: main, FOOTER: footHtml() });
 }
 const personLd = { '@type': 'Person', name: SITE.author, url: SITE.url + '/', sameAs: [SITE.github] };
+const LANG_LABEL = { 'zh-CN': '中文', 'zh-Hant': '繁體中文', 'en': 'English' };
+const langLabel = l => LANG_LABEL[l] || l;
+const backLabel = l => (l && l.startsWith('en') ? '← Back to Blog' : '← 返回 Blog');
 
 // ---- 读取文章 ----
 function findMd(dir) {
@@ -149,7 +152,8 @@ function loadPosts() {
     const description = fm.description || plain(body).slice(0, 120);
     posts.push({ slug, rel, abs, isDir, srcDir: isDir ? dirname(abs) : null,
       title: fm.title || slug, description, tags: fm.tags || [], lang: fm.lang || SITE.lang,
-      date, updated, cover: fm.cover || null, draft: fm.draft === true, published, body });
+      date, updated, cover: fm.cover || null, draft: fm.draft === true, published, body,
+      alt: Array.isArray(fm.alt) ? fm.alt : [] });
   }
   posts.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
   return posts;
@@ -172,16 +176,25 @@ function renderPost(p) {
     mainEntityOfPage: SITE.url + path, author: personLd, publisher: personLd,
     ...(p.cover ? { image: SITE.url + path + p.cover.replace(/^\.?\//, '') } : {}),
   };
+  // 双语组:self + alt;发 hreflang(含 x-default 指向 zh 原版)+ 语言切换器
+  const group = [{ lang: p.lang, slug: p.slug, self: true }, ...p.alt.map(a => ({ lang: a.lang, slug: a.slug, label: a.label }))];
+  const hreflang = group.map(g => `<link rel="alternate" hreflang="${g.lang}" href="${SITE.url}/blog/${g.slug}/">`).join('\n');
+  const xdef = group.find(g => /^zh/.test(g.lang));
+  const hreflangFull = group.length > 1 ? hreflang + (xdef ? `\n<link rel="alternate" hreflang="x-default" href="${SITE.url}/blog/${xdef.slug}/">` : '') : '';
+  const langSwitch = group.length > 1
+    ? `<span class="langsw">${group.map(g => g.self ? `<b>${langLabel(g.lang)}</b>` : `<a href="/blog/${g.slug}/" hreflang="${g.lang}">${esc(g.label || langLabel(g.lang))}</a>`).join('<i>·</i>')}</span>`
+    : '';
   const head = {
     titleFull: `${p.title} · ${SITE.name}`,
-    html: headHtml({ type: 'article', path, title: p.title, desc: p.description, jsonld: [blogPosting, { '@context': 'https://schema.org', ...breadcrumb }] }),
+    html: headHtml({ type: 'article', path, title: p.title, desc: p.description, jsonld: [blogPosting, { '@context': 'https://schema.org', ...breadcrumb }] })
+      + (hreflangFull ? '\n' + hreflangFull : ''),
   };
   const tags = p.tags.length ? `<span>${p.tags.map(t => `<a class="tag" href="/blog/#tag-${esc(t)}">${esc(t)}</a>`).join('')}</span>` : '';
   const upd = p.updated !== p.date ? ` · 更新 ${p.updated}` : '';
   const main = `<main class="wrap"><article class="article">
-<div class="head"><h1>${esc(p.title)}</h1><div class="meta"><time datetime="${p.date}">${p.date}</time>${upd}${tags}</div></div>
+<div class="head"><h1>${esc(p.title)}</h1><div class="meta"><time datetime="${p.date}">${p.date}</time>${upd}${tags}${langSwitch}</div></div>
 <div class="prose">${bodyHtml}</div>
-<a class="backlink" href="/blog/">← 返回 Blog</a>
+<a class="backlink" href="/blog/">${backLabel(p.lang)}</a>
 </article></main>`;
   return pageHtml({ lang: p.lang, active: 'blog', head, main });
 }
