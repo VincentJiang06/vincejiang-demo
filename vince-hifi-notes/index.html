@@ -17,7 +17,15 @@ if(p)document.documentElement.setAttribute("data-palette",p);}catch(e){}})();
 </head>
 <body>
 
-<div id="prog" aria-hidden="true"></div>
+<!-- ════════════════════════════════════════════════════════════════
+     框架说明(给后续扩写 by Fable):
+     · 主题令牌见 styles.css 顶部:data-mode(light/neutral/dark) × data-palette(5)。加内容只用类,别写死颜色。
+     · 结构:header.hero → nav.toc(目录)→ 若干 <section id="sN"> → footer。
+     · 新增一节:复制一个 <section id="sN">(含 .sec-head + h2),按需加 <h3> 小节;记得在 nav.toc 补一行目录。
+     · 图:<figure><div class="figbox"><svg…/></div><figcaption>…</figcaption></figure>(点图可放大)。
+     · 组件:.tldr 导读 / .note(.warn) 提示 / .formula 公式 / .cards>.card 概念卡 / table 表格。
+     · 动效已精简:仅主题切换轻过渡 + hover 微交互。勿再加整页/滚动动画——那是之前卡顿的根源。
+     ════════════════════════════════════════════════════════════════ -->
 
 <div class="ctrl">
   <button id="themeBtn" aria-haspopup="true" aria-expanded="false" aria-controls="themePop">
@@ -40,19 +48,6 @@ if(p)document.documentElement.setAttribute("data-palette",p);}catch(e){}})();
     </div>
   </div>
 </div>
-
-<nav id="rail" aria-label="章节导航">
-  <a href="#s1"><span class="b"></span><span class="t">§1 三种系统</span></a>
-  <a href="#s2"><span class="b"></span><span class="t">§2 分压器</span></a>
-  <a href="#s3"><span class="b"></span><span class="t">§3 线材</span></a>
-  <a href="#s4"><span class="b"></span><span class="t">§4 阻抗曲线</span></a>
-  <a href="#s5"><span class="b"></span><span class="t">§5 测量夹具</span></a>
-  <a href="#s6"><span class="b"></span><span class="t">§6 目标曲线</span></a>
-  <a href="#s7"><span class="b"></span><span class="t">§7 相位</span></a>
-  <a href="#s8"><span class="b"></span><span class="t">§8 佩戴</span></a>
-  <a href="#s9"><span class="b"></span><span class="t">§9 急救箱</span></a>
-  <a href="#s10"><span class="b"></span><span class="t">§10 总排序</span></a>
-</nav>
 
 <header class="hero">
   <div class="wrap">

@@ -107,12 +107,7 @@ html.theming #top, html.theming #rail a{
   transition:background-color .3s ease, border-color .3s ease, color .3s ease !important;
 }
 
-/* ---------- 顶部进度条 ---------- */
-#prog{
-  position:fixed; inset:0 0 auto 0; height:3px; z-index:90;
-  background:linear-gradient(90deg, var(--accent), var(--accent2));
-  transform-origin:0 50%; transform:scaleX(0); pointer-events:none;
-}
+/* (顶部阅读进度条已移除,精简) */
 
 /* ---------- 右上控制区(主题) ---------- */
 .ctrl{position:fixed; top:14px; right:16px; z-index:80; font-family:var(--mono)}
@@ -169,25 +164,7 @@ html.theming #top, html.theming #rail a{
 .sw[data-palette="glacier"] .d1{background:#7fb4e8} .sw[data-palette="glacier"] .d2{background:#8fd8cf}
 .sw[data-palette="tube"]    .d1{background:#e8806a} .sw[data-palette="tube"]    .d2{background:#dfba62}
 
-/* ---------- 左侧章节轨(宽屏) ---------- */
-#rail{
-  position:fixed; left:max(14px, calc(50vw - 690px)); top:50%; transform:translateY(-50%);
-  z-index:60; display:none; flex-direction:column; gap:2px; font-family:var(--mono);
-}
-@media (min-width:1360px){ #rail{display:flex} }
-#rail a{
-  display:flex; align-items:center; gap:10px; padding:5px 8px; border:none;
-  color:var(--faint); font-size:11px; letter-spacing:.08em; border-radius:6px;
-}
-#rail a .b{width:5px; height:5px; border-radius:50%; background:var(--grid); flex:none;
-  transition:transform .25s ease, background-color .25s ease}
-#rail a .t{opacity:0; transform:translateX(-4px); transition:opacity .22s ease, transform .22s ease;
-  white-space:nowrap; max-width:180px; overflow:hidden; text-overflow:ellipsis}
-#rail:hover a .t{opacity:.85; transform:none}
-#rail a:hover{color:var(--ink); background:color-mix(in srgb, var(--panel) 70%, transparent)}
-#rail a.on{color:var(--accent)}
-#rail a.on .b{background:var(--accent); transform:scale(1.7)}
-#rail a.on .t{opacity:1; transform:none}
+/* (左侧章节轨已移除,精简;章节导航用上方 nav.toc 目录) */
 
 /* ---------- 头部 ---------- */
 header.hero{padding:76px 0 8px; border-bottom:1px solid var(--line); position:relative; overflow:hidden}
@@ -337,35 +314,12 @@ footer{border-top:1px solid var(--line); margin-top:70px; padding:30px 0 60px; c
 footer .mono{font-family:var(--mono); font-size:12px; letter-spacing:.18em}
 
 /* ============================================================
-   动效(仅在 html.anim 下生效;reduced-motion / 无 JS 时全部静态)
+   动效已精简:去掉滚动渐显 / SVG 描线 / 头部入场 / 进度条 / 章节轨(它们曾是主题切换卡顿源)。
+   现仅保留:主题切换的轻量表层过渡(见上 html.theming)、hover 微交互、图放大(lightbox)。
+   页面默认静态呈现,内容无 JS 也完整可读——便于后续扩写。
    ============================================================ */
-html.anim .rv{opacity:0; transform:translateY(14px);
-  transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
-  transition-delay:var(--d,0ms)}
-html.anim .rv.in{opacity:1; transform:none}
-
-/* 头图与分隔线描线 */
-html.anim .trace{stroke-dasharray:1; stroke-dashoffset:1}
-html.anim .heroplot .trace{animation:draw 2.4s cubic-bezier(.4,0,.2,1) .3s forwards}
-html.anim .heroplot .trace + .trace,
-html.anim .heroplot .trace ~ .trace{animation-delay:.75s}
-html.anim .divider .trace{transition:stroke-dashoffset 1.6s cubic-bezier(.4,0,.2,1)}
-html.anim .divider.rv.in .trace{stroke-dashoffset:0}
-@keyframes draw{to{stroke-dashoffset:0}}
-
-/* 头部文字入场 */
-html.anim .hero .eyebrow{animation:fadeup .8s cubic-bezier(.2,.7,.2,1) both}
-html.anim .hero h1{animation:fadeup .8s cubic-bezier(.2,.7,.2,1) .12s both}
-html.anim .hero .subtitle{animation:fadeup .8s cubic-bezier(.2,.7,.2,1) .24s both}
-html.anim .hero .meta{animation:fadeup .8s cubic-bezier(.2,.7,.2,1) .36s both}
-@keyframes fadeup{from{opacity:0; transform:translateY(14px)} to{opacity:1; transform:none}}
-
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
-  html.anim .rv{opacity:1 !important; transform:none !important; transition:none !important}
-  html.anim .trace{stroke-dasharray:none !important; stroke-dashoffset:0 !important; animation:none !important}
-  html.anim .hero .eyebrow, html.anim .hero h1,
-  html.anim .hero .subtitle, html.anim .hero .meta{animation:none !important}
   .figbox,.card{transition:none !important}
 }
 

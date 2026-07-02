@@ -1,11 +1,14 @@
-/* Vince 的 HiFi 笔记 · app.js
-   零依赖。所有增强均可降级:无 JS / reduced-motion 时页面完全可读。 */
+/* Vince 的 HiFi 笔记 · app.js(精简版)
+   只保留三件事:主题系统(3 模式 × 5 配色)、返回顶部、图放大。
+   已移除:整页 View Transition、滚动渐显、SVG 描线动画、阅读进度条、章节轨
+   ——页面以静态呈现,主题切换只做轻量表层过渡,不再逐元素/逐 SVG 动画(那是之前卡顿的根源)。
+   零依赖;无 JS 时页面完全可读。后续扩写只需往 index.html 加内容,通常不必动本文件。 */
 (function () {
   "use strict";
   var d = document, root = d.documentElement;
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------------- 主题 ---------------- */
+  /* ---------------- 主题:data-mode(light/neutral/dark) × data-palette(5) ---------------- */
   var MODES = ["light", "neutral", "dark"];
   var PALETTES = ["lab", "synth", "moss", "glacier", "tube"];
   var THEME_COLORS = { dark: "#0f1317", neutral: "#e6e1d6", light: "#faf9f5" };
@@ -16,17 +19,13 @@
   function apply(mode, palette, animate) {
     if (MODES.indexOf(mode) < 0) mode = "dark";
     if (PALETTES.indexOf(palette) < 0) palette = "lab";
-    var run = function () {
-      root.setAttribute("data-mode", mode);
-      root.setAttribute("data-palette", palette);
-    };
+    // 轻量过渡:只淡化表层容器(见 styles.css 的 html.theming),不逐元素、不动 SVG。
     if (animate && !reduced) {
-      // 不再用 startViewTransition:整页快照在这个长文 + 多 SVG 页面上会造成点击瞬间卡顿。
-      // 改为轻量的「表层容器」颜色过渡(见 styles.css 的 html.theming 规则),全浏览器一致且流畅。
       root.classList.add("theming");
-      run();
       setTimeout(function () { root.classList.remove("theming"); }, 360);
-    } else run();
+    }
+    root.setAttribute("data-mode", mode);
+    root.setAttribute("data-palette", palette);
     try {
       localStorage.setItem("vhn-mode", mode);
       localStorage.setItem("vhn-palette", palette);
@@ -45,23 +44,16 @@
     });
   }
 
-  /* 弹层 */
+  /* 主题弹层 */
   var btn = d.getElementById("themeBtn"), pop = d.getElementById("themePop");
   if (btn && pop) {
     var setOpen = function (open) {
       pop.classList.toggle("open", open);
       btn.setAttribute("aria-expanded", String(open));
     };
-    btn.addEventListener("click", function (e) {
-      e.stopPropagation();
-      setOpen(!pop.classList.contains("open"));
-    });
-    d.addEventListener("click", function (e) {
-      if (!pop.contains(e.target)) setOpen(false);
-    });
-    d.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") setOpen(false);
-    });
+    btn.addEventListener("click", function (e) { e.stopPropagation(); setOpen(!pop.classList.contains("open")); });
+    d.addEventListener("click", function (e) { if (!pop.contains(e.target)) setOpen(false); });
+    d.addEventListener("keydown", function (e) { if (e.key === "Escape") setOpen(false); });
     pop.querySelectorAll(".tp-modes button").forEach(function (b) {
       b.addEventListener("click", function () { apply(b.dataset.mode, getPalette(), true); });
     });
@@ -71,80 +63,33 @@
   }
   syncThemeUI();
 
-  /* 跟随系统模式变化(仅当用户未手动选择过) */
+  /* 跟随系统模式变化(仅当用户没手动选过) */
   try {
     if (!localStorage.getItem("vhn-mode")) {
       window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", function (e) {
         apply(e.matches ? "light" : "dark", getPalette(), true);
-        localStorage.removeItem("vhn-mode"); // 保持"跟随系统"状态
+        localStorage.removeItem("vhn-mode");
       });
     }
   } catch (e) {}
 
-  /* ---------------- 动效开关 ---------------- */
-  if (!reduced) root.classList.add("anim");
-
-  /* ---------------- 顶部阅读进度 ---------------- */
-  var prog = d.getElementById("prog"), ticking = false;
-  function onScroll() {
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(function () {
-      var h = d.documentElement;
-      var max = h.scrollHeight - h.clientHeight;
-      if (prog) prog.style.transform = "scaleX(" + (max > 0 ? h.scrollTop / max : 0) + ")";
-      if (topBtn) topBtn.classList.toggle("show", h.scrollTop > 1100);
-      ticking = false;
-    });
-  }
-  window.addEventListener("scroll", onScroll, { passive: true });
-
   /* ---------------- 返回顶部 ---------------- */
   var topBtn = d.getElementById("top");
-  if (topBtn) topBtn.addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
-  });
-
-  /* ---------------- 滚动显现 ---------------- */
-  if (!reduced && "IntersectionObserver" in window) {
-    var sel = "section > p, section > h3, section > figure, section > table, " +
-              "section > .note, section > .formula, section > ul, section > ol, " +
-              ".tldr, nav.toc, .part-head, .card, .divider";
-    var els = d.querySelectorAll(sel), n = 0;
-    els.forEach(function (el) {
-      el.classList.add("rv");
-      el.style.setProperty("--d", (n++ % 4) * 60 + "ms");
+  if (topBtn) {
+    topBtn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
     });
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+    var ticking = false;
+    window.addEventListener("scroll", function () {
+      if (ticking) return; ticking = true;
+      requestAnimationFrame(function () {
+        topBtn.classList.toggle("show", d.documentElement.scrollTop > 1100);
+        ticking = false;
       });
-    }, { rootMargin: "0px 0px -6% 0px", threshold: 0.04 });
-    els.forEach(function (el) { io.observe(el); });
+    }, { passive: true });
   }
 
-  /* ---------------- 左侧章节轨 scrollspy ---------------- */
-  var rail = d.getElementById("rail");
-  if (rail && "IntersectionObserver" in window) {
-    var links = {}, cur = null;
-    rail.querySelectorAll("a").forEach(function (a) {
-      links[a.getAttribute("href").slice(1)] = a;
-    });
-    var spy = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) {
-          if (cur) cur.classList.remove("on");
-          cur = links[en.target.id];
-          if (cur) cur.classList.add("on");
-        }
-      });
-    }, { rootMargin: "-18% 0px -66% 0px" });
-    d.querySelectorAll("section[id]").forEach(function (s) {
-      if (links[s.id]) spy.observe(s);
-    });
-  }
-
-  /* ---------------- 图放大 ---------------- */
+  /* ---------------- 图放大(点图看大图;用户触发,非环境动画) ---------------- */
   var lb = d.getElementById("lightbox");
   if (lb) {
     var lbIn = lb.querySelector(".lb-in");
@@ -165,14 +110,8 @@
         if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openLB(); }
       });
     });
-    function closeLB() {
-      lb.classList.remove("open");
-      lbIn.innerHTML = "";
-      d.body.style.overflow = "";
-    }
+    function closeLB() { lb.classList.remove("open"); lbIn.innerHTML = ""; d.body.style.overflow = ""; }
     lb.addEventListener("click", closeLB);
-    d.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && lb.classList.contains("open")) closeLB();
-    });
+    d.addEventListener("keydown", function (e) { if (e.key === "Escape" && lb.classList.contains("open")) closeLB(); });
   }
 })();
