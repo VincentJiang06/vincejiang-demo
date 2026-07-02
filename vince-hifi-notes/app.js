@@ -21,13 +21,11 @@
       root.setAttribute("data-palette", palette);
     };
     if (animate && !reduced) {
-      if (d.startViewTransition) {           // 现代浏览器:整页交叉淡化
-        d.startViewTransition(run);
-      } else {                               // 退化:颜色属性过渡
-        root.classList.add("theming");
-        run();
-        setTimeout(function () { root.classList.remove("theming"); }, 450);
-      }
+      // 不再用 startViewTransition:整页快照在这个长文 + 多 SVG 页面上会造成点击瞬间卡顿。
+      // 改为轻量的「表层容器」颜色过渡(见 styles.css 的 html.theming 规则),全浏览器一致且流畅。
+      root.classList.add("theming");
+      run();
+      setTimeout(function () { root.classList.remove("theming"); }, 360);
     } else run();
     try {
       localStorage.setItem("vhn-mode", mode);

@@ -93,10 +93,18 @@ section{scroll-margin-top:64px}
 .wrap{max-width:980px; margin:0 auto; padding:0 22px}
 .col{max-width:768px; margin:0 auto}
 
-/* 主题切换过渡:仅在切换瞬间启用,避免常驻开销 */
-html.theming body, html.theming body *{
-  transition:background-color .38s ease, color .38s ease,
-             border-color .38s ease, fill .38s ease, stroke .38s ease !important;
+/* 主题切换过渡:仅切换瞬间、只淡化「表层容器」的背景/边框/文字色。
+   不再对 body *(全元素)、更不对 SVG 内部(数百个矢量节点)过渡 fill/stroke
+   ——那是主题切换卡顿的主因(本页 27 个 SVG、~880 矢量节点)。 */
+html.theming body,
+html.theming header.hero, html.theming footer,
+html.theming .tldr, html.theming nav.toc, html.theming nav.toc a,
+html.theming .part-head .pn, html.theming .part-head .ln,
+html.theming .card, html.theming .figbox, html.theming .note, html.theming .formula,
+html.theming code, html.theming table, html.theming th, html.theming td,
+html.theming #themeBtn, html.theming .theme-pop, html.theming .tp-modes button, html.theming .sw,
+html.theming #top, html.theming #rail a{
+  transition:background-color .3s ease, border-color .3s ease, color .3s ease !important;
 }
 
 /* ---------- 顶部进度条 ---------- */
