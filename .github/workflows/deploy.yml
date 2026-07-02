@@ -1,6 +1,6 @@
-# push 到 main → ① 在 GitHub 托管 runner 上构建 Docker 镜像并推到 GHCR
-#                → ② 在服务器的 self-hosted runner 上拉新镜像并滚动更新容器。
-# 两步都成功后,vincejiang.com 就是最新版。无需任何手动操作。
+# push 到 main → ① 在 GitHub 托管 runner 上构建 Docker 镜像并推到 GHCR(latest + 本次 sha)
+#                → ② 在服务器的 self-hosted runner 上把镜像 pin 到本次 sha 部署,过健康门才算成功,
+#                     失败自动回滚上一版本。两步都绿,vincejiang.com 就是最新版。无需任何手动操作。
 #
 # 详见仓库根目录 SPEC.md。改动部署逻辑请同时更新 SPEC.md。
 name: build-and-deploy
@@ -10,8 +10,13 @@ on:
     branches: [main]
   workflow_dispatch:   # 也可在 Actions 页手动触发一次
 
+# 顶层默认最小权限(只读仓库内容);需要写权限的 job 各自单独声明(见 image.permissions)。
+permissions:
+  contents: read
+
+# 同一分支的新构建取消排队中的旧构建(省 runner 时间);deploy job 另设串行组,滚动更新不被取消。
 concurrency:
-  group: deploy-${{ github.ref }}
+  group: vincejiang-${{ github.ref }}
   cancel-in-progress: true
 
 env:
@@ -21,6 +26,7 @@ jobs:
   # ── ① 构建并推送镜像(GitHub 托管 runner)──────────────────────────────
   image:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       contents: read
       packages: write          # 推 GHCR 需要
@@ -44,13 +50,18 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-  # ── ② 服务器侧拉镜像 + 滚动更新(self-hosted runner,跑在 Vultr 东京机)──
+  # ── ② 服务器侧 pin sha 部署 + 健康门 + 失败回滚(self-hosted runner,跑在 Vultr 东京机)──
   # runner 主动外连 GitHub 取任务,不需要服务器开任何入站端口(契合零公网端口架构)。
   deploy:
     needs: image
     runs-on: [self-hosted, vincejiang]
+    timeout-minutes: 10
+    # 串行组:滚动更新进行中不被后一次 push 取消(只排队),避免 up -d 半途被打断。
+    concurrency:
+      group: vincejiang-deploy-serial
+      cancel-in-progress: false
     steps:
-      - name: Pull latest image & roll the container
+      - name: Pin image to this sha, deploy behind health gate (auto-rollback on failure)
         run: |
           cd /home/vince/platform
-          ./redeploy.sh svc-vincejiang
+          ./deploy-pinned.sh svc-vincejiang ${{ github.sha }}
