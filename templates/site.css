@@ -1,24 +1,27 @@
 /* vincejiang.com 全站共享样式(单一源,build 时内联进每页)。亮色默认,暗色跟随系统 + 可手动切换。 */
 :root{
+  color-scheme:light dark;
   --fg:#1d1d2b; --sub:#63637a; --faint:#8a8aa0;
   --card:rgba(255,255,255,.72); --border:rgba(20,20,40,.09); --chip:rgba(20,20,50,.05);
-  --link:#5b5bd6; --link-h:#7a5bff; --page:#f4f3fb; --codebg:rgba(20,20,50,.05);
-  --g1:#a8c0ff; --g2:#ffd3e0; --g3:#c2f5e9; --g4:#e7d5ff;
+  --link:#5b5bd6; --link-h:#7a5bff; --page:#f5f5fa; --codebg:rgba(20,20,50,.05);
+  --glow-a:rgba(150,161,255,.18); --glow-b:rgba(255,206,226,.13);
   --shadow:0 8px 30px rgba(40,40,90,.10); --shadow-h:0 14px 38px rgba(40,40,90,.16);
   --radius:18px;
 }
 @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
   --fg:#eef0f7; --sub:#a2a2b8; --faint:#7c7c94;
   --card:rgba(30,31,48,.60); --border:rgba(255,255,255,.10); --chip:rgba(255,255,255,.07);
-  --link:#9d9dff; --link-h:#b9a8ff; --page:#0b0b14; --codebg:rgba(255,255,255,.05);
-  --g1:#1e3a8a; --g2:#5b2a6e; --g3:#0f5a52; --g4:#3b2a72;
+  --link:#9d9dff; --link-h:#b9a8ff; --page:#0a0b12; --codebg:rgba(255,255,255,.05);
+  --glow-a:rgba(96,104,214,.20); --glow-b:rgba(40,120,132,.12);
   --shadow:0 10px 36px rgba(0,0,0,.45); --shadow-h:0 16px 44px rgba(0,0,0,.55);
 }}
+:root[data-theme="light"]{ color-scheme:light; }
 :root[data-theme="dark"]{
+  color-scheme:dark;
   --fg:#eef0f7; --sub:#a2a2b8; --faint:#7c7c94;
   --card:rgba(30,31,48,.60); --border:rgba(255,255,255,.10); --chip:rgba(255,255,255,.07);
-  --link:#9d9dff; --link-h:#b9a8ff; --page:#0b0b14; --codebg:rgba(255,255,255,.05);
-  --g1:#1e3a8a; --g2:#5b2a6e; --g3:#0f5a52; --g4:#3b2a72;
+  --link:#9d9dff; --link-h:#b9a8ff; --page:#0a0b12; --codebg:rgba(255,255,255,.05);
+  --glow-a:rgba(96,104,214,.20); --glow-b:rgba(40,120,132,.12);
   --shadow:0 10px 36px rgba(0,0,0,.45); --shadow-h:0 16px 44px rgba(0,0,0,.55);
 }
 
@@ -30,17 +33,14 @@ body{
   color:var(--fg); background:var(--page); line-height:1.7; -webkit-font-smoothing:antialiased;
   min-height:100vh; position:relative; overflow-x:hidden; transition:background .4s,color .4s;
 }
+/* 背景:一层从顶部铺开的柔光穹顶 + 右下角一抹极淡的对比色。低透明度、边缘锚定,
+   暗色下是干净的深墨底而非四团脏兮兮的色块;亮/暗共用同一结构,只换 --glow 变量。 */
 body::before{
-  content:""; position:fixed; inset:-25%; z-index:-1; filter:blur(72px) saturate(1.12); opacity:.85;
+  content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
   background:
-    radial-gradient(40% 40% at 18% 20%, var(--g1) 0%, transparent 60%),
-    radial-gradient(38% 38% at 82% 16%, var(--g2) 0%, transparent 62%),
-    radial-gradient(45% 45% at 22% 84%, var(--g3) 0%, transparent 60%),
-    radial-gradient(42% 42% at 80% 82%, var(--g4) 0%, transparent 62%);
-  animation:drift 24s ease-in-out infinite alternate;
+    radial-gradient(125% 90% at 50% -25%, var(--glow-a) 0%, transparent 60%),
+    radial-gradient(90% 70% at 88% 120%, var(--glow-b) 0%, transparent 58%);
 }
-@keyframes drift{0%{transform:translate(0,0) scale(1)}100%{transform:translate(-2.5%,2.5%) scale(1.05)}}
-@media (prefers-reduced-motion:reduce){body::before{animation:none}}
 
 a{color:var(--link); text-decoration:none}
 a:hover{color:var(--link-h)}
