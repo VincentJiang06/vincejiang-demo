@@ -22,6 +22,76 @@ paper:
     - 制度适配
     - 分层适配框架
     - 低利率
+  title_en: >-
+    Implications of Mature Pension Markets' Asset Allocation Experience for
+    China's Multi-Pillar Pension System: An Institutional Adaptation Study Based
+    on Long-Term Capital, Asset-Liability Management, and Risk Governance
+  abstract_en: >-
+    The experience accumulated by mature pension markets in the deployment of
+    long-term capital, asset-liability management, and risk governance has long
+    been regarded as a ready-made reference for the reform of China's
+    multi-pillar pension system. This study proposes a systematic correction to
+    this "experience transplantation" paradigm. Its central proposition is: the
+    transferability of pension asset-allocation experience does not depend on
+    how advanced the allocation technique itself is, but on whether the
+    institutional preconditions carrying that allocation logic can be
+    independently obtained at the target level. Around this proposition, the
+    study builds a layered adaptation framework: taking four entity-level
+    layers—the Basic Pension Insurance Fund, the National Social Security Fund,
+    enterprise annuities and occupational annuities, and personal pensions—as
+    the analytical axis, it fills in fund duration, liability constraints, risk
+    budgets, allocation strategy, and regulatory assessment cell by cell,
+    demonstrating the incommensurability among the four layers; target-date
+    pension funds do not constitute an independent liability entity but rather
+    serve as the investment vehicle for the fourth layer (personal pensions) and
+    the point of contact for two-way linkage between pensions and capital
+    markets, and are therefore treated as a supplementary layer alongside the
+    fourth layer and the decumulation (payout) phase. On this basis, the study
+    explains why mature-market experience cannot be directly copied onto any
+    given layer using a single, unified allocation framework. Within this
+    framework, the study distills five mutually independent judgments. First,
+    pension governance capacity is not a transplantable best practice but a
+    one-time endowment granted by constitutional position, its quality dropping
+    in steps across levels of governance, and patient capital synthesized
+    through administrative sale bans undergoes property-rights self-destruction
+    because it is stripped of the right to rebalance. Second, there is no
+    exogenously given risk-free anchor on the asset side of China's pension
+    system; the definition and pricing of safe assets are endogenously moved by
+    fiscal policy, and the first and second pillars are institutionalized as
+    receiving pools for contingent fiscal liabilities. Third, the allocation
+    divergence within the second pillar is driven mainly by
+    accounting-recognition rules rather than by genuine changes in cash flow;
+    the same contribution is assigned two different risk-free rates owing to the
+    bookkeeping mechanism, producing a pure recognition-display effect. Fourth,
+    the coldness of third-pillar contributions is driven mainly by institutional
+    features—regressive nudges, lock-in costs, and the absence of a default
+    mechanism—rather than primarily by individual financial literacy. Fifth,
+    institutional absorption of longevity risk is systematically missing as the
+    system migrates from defined benefit to defined contribution; without
+    mandatory annuitization, collective-pool risk is returned household by
+    household, and those not covered accumulate as an unpriced, unprovisioned
+    soft fiscal liability. Owing to limited availability of micro-identification
+    data, the causal identification underlying the above judgments is presented
+    via a strict pre-registered design: verifiable aggregate pension facts are
+    adopted after verification against public sources, while
+    micro-identification components are honestly flagged as "identification
+    design in place, absolute magnitude pending data," and directional judgments
+    are flagged as "sign falsifiable, absolute magnitude pending data." The
+    study's conclusion points to a unified policy implication: the priority task
+    of China's pension reform is not to raise the allocation share of any
+    particular asset class, but first to resolve the availability of the
+    institutional carriers on which each layer's allocation logic depends—the
+    constitutional position of governance, the exogeneity of the risk-free
+    anchor, the uniformity of the bookkeeping mechanism, the carrier of the
+    default mechanism, and the provisioning constraints of the entity receiving
+    decumulation-phase risk.
+  keywords_en:
+    - multi-pillar pension system
+    - asset-liability management
+    - risk governance
+    - institutional adaptation
+    - layered adaptation framework
+    - low interest rates
 ---
 
 ## 第一章　导论

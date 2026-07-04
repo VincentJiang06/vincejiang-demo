@@ -23,6 +23,68 @@ paper:
     - 估值平滑
     - 流动性错配
     - 可迁移性
+  title_en: >-
+    Alternative Assets and Globalized Allocation in Mature Pension Markets Under
+    Low Interest Rates: A Comparison Based on Canada, Australia, Japan, and the
+    Netherlands
+  abstract_en: >-
+    This paper studies the causal structure behind the shift toward alternative
+    assets and globalized allocation in four mature pension markets—Canada,
+    Australia, Japan, and the Netherlands—under low interest rates. Existing
+    discussion tends to treat mature markets' higher allocation to alternative
+    assets as an advanced experience that can be directly replicated by
+    late-developing markets; this paper argues that this reading reverses the
+    direction of causality. The central argument is: alternative assets are not
+    a universal solution to low interest rates but a complex risk premium that
+    pension funds can capture only when governance control rights, liability
+    hardness, and countercyclical risk tolerance are sufficiently strong; the
+    endogenous variable determining success or failure of capture is not
+    investment capability itself but the allocation of control rights over that
+    capability, together with the single political-tolerance constraint running
+    through both the asset and liability sides. Around this judgment, the paper
+    advances and argues five interlocking propositions: first, investment,
+    valuation, and risk-management capabilities are priceable, hireable, and
+    separable in factor markets, and capped by political tolerance; what is
+    truly endogenous and non-transferable is the allocation of control rights
+    over that capability; second, a substantial portion of the diversification
+    gains displayed by mature markets comes from the statistical illusion of
+    valuation smoothing, whose book-smoothing has demand-side value for
+    weaker-governance plans, with the speed of self-correction increasing in
+    governance quality; third, the stronger the governance capability and the
+    faster the execution of allocation, the faster the forward-looking premium
+    is drained away by its own reflexivity, so capability is an accelerant
+    rather than a moat; fourth, at the least-supervisable instrument layer, such
+    as private credit, what institutions are really buying is not credit quality
+    so much as an actively manufactured product of non-default; fifth, the true
+    capacity ceiling for alternative assets is jointly determined by liability
+    hardness and the procyclicality of patient capital, rather than by the sheer
+    scale of capital. Methodologically, the paper provides, for each of the five
+    propositions, an identification strategy and falsifiability thresholds set
+    prior to data, honestly flagging their identification status. Owing to data
+    availability constraints, the micro-level data required for
+    identification—fund-level governance-return panels, private-credit default
+    panels, de-smoothed private-return series, and realized losses during
+    liquidation periods—are unavailable in this research setting, so the causal
+    coefficients for each proposition fall outside the scope of this paper's
+    estimates; the paper strictly distinguishes two levels: publicly verifiable
+    institutional and aggregate facts are used to calibrate direction, while
+    micro causal signs are not claimed as identified. This distinction is itself
+    part of the paper's methodological stance—the core of economics papers is
+    judgment, not a pile of data, and an honest identification boundary does not
+    amount to a retreat of judgment. The paper's ultimate conclusion concerns
+    the boundary of transferability of the Canadian model: if a late-developing
+    market does not first establish governance independence, in-house investment
+    teams, market-based compensation, and long-term performance evaluation,
+    simply raising the share of alternative allocation will yield not
+    mature-market-style premium capture but mature-market-style risk exposure.
+  keywords_en:
+    - pension funds
+    - alternative assets
+    - globalized allocation
+    - governance control rights
+    - valuation smoothing
+    - liquidity mismatch
+    - transferability
 ---
 
 ## 第一章　引言

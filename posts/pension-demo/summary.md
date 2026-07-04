@@ -22,6 +22,28 @@ paper:
     - 经验可搬性
     - 机制与前提
     - 成熟养老金市场
+  title_en: >-
+    Pension Asset Allocation Lessons from Mature Overseas Markets Under Low
+    Interest Rates: A Combined Answer from Five Papers
+  abstract_en: >-
+    This paper combines five papers into a direct answer (about 4,700 words) to
+    the original question, "Pension asset allocation lessons from mature
+    overseas markets under a low interest rate environment": the lessons are
+    real and substantial, but their usable form is not a checklist of actions—it
+    is mechanisms and preconditions. Interest rates never directly configure
+    assets; only institutional accounting configures assets. Governance
+    capacity, alternative-asset premia, the risk-free anchor, and risk
+    attribution—each treated as exogenously given—are in fact all endogenous.
+    The only reliable question for judging whether a lesson can be borrowed is
+    whether its institutional preconditions can independently take root at the
+    target level. The full argument appears in the original papers; the
+    systematic elaboration appears in the overview.
+  keywords_en:
+    - pension asset allocation
+    - low interest rates
+    - transferability of experience
+    - mechanisms and preconditions
+    - mature pension markets
 ---
 
 ## 一、低利率究竟通过什么改变配置

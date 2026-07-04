@@ -23,6 +23,32 @@ paper:
     - 内生性
     - 制度适配
     - 诊断框架
+  title_en: >-
+    Overview: The Systematic Reconstruction of Pension Allocation Under
+    Sustained Low Interest Rates and the Decumulation Phase—A Diagnostic
+    Framework Built from Five Progressive Papers
+  abstract_en: >-
+    This paper is the systematic overview of five papers. It rejects the false
+    dichotomy of "reaching for yield vs. asset-liability management (ALM)"—a
+    dichotomy that shares a flawed premise—because once one accepts that the
+    very channel through which interest rates enter allocation is refracted
+    through layers of accounting, institutions, governance, and the
+    settlement-physics layer, the dichotomy ceases to be an empirical question
+    that data can adjudicate. Organized around five nested layers—accounting
+    conventions, institutional form, governance control rights,
+    decumulation-phase pressure, and cross-country adaptation—the paper explains
+    why a single question at the allocation layer requires five progressive
+    papers rather than one, sketches the layer-upon-layer logic connecting them,
+    identifies the three threads running throughout—shadow rate, endogeneity,
+    and non-transferability—and candidly states its judgment-first
+    methodological self-awareness and honest research boundaries.
+  keywords_en:
+    - pension asset allocation
+    - sustained low interest rates
+    - shadow rate
+    - endogeneity
+    - institutional adaptation
+    - diagnostic framework
 ---
 
 ## 一、总问题：为何一次配置层的追问，需要五篇而非一篇来回答

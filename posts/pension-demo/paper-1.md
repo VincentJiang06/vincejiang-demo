@@ -21,6 +21,47 @@ paper:
     - 负债驱动投资
     - 识别策略
     - 结算约束
+  title_en: >-
+    How Sustained Low Interest Rates Reshape Pension Strategic Asset Allocation:
+    Cross-Country Evidence from Mature Pension Markets
+  abstract_en: >-
+    This paper examines the mechanisms through which sustained low interest
+    rates systematically alter pension funds' strategic asset allocation
+    function. Existing literature largely treats allocation as a dependent
+    variable of interest rates, estimates "interest rate → allocation" as a
+    single slope, and defaults to treating interest rates as exogenous, thereby
+    framing the debate around a dichotomy: whether allocation is dominated by
+    "reaching for yield" or by asset-liability management (ALM) pressure.
+    Methodologically, this paper adopts a judgment-prior-to-data,
+    identification-design-centered stance, and its central judgment is that this
+    dichotomy is itself misspecified. First, at the level of measurement, the
+    observed "interest rate → allocation" coefficient is unreliable because of
+    an omitted common cause—population aging—and because rigid pension demand
+    reflexively produces the low-rate environment itself; adjudicating the
+    dichotomy with a contaminated coefficient is unwarranted. Second, at the
+    level of mechanism, the true forces rewriting the allocation function lie in
+    four layers that the dichotomy ignores: accounting conventions, hedging,
+    behavioral reference points, and settlement physics. The main findings are:
+    what enters the allocation function is never the market interest rate itself
+    but a shadow rate refracted through four misaligned accounting regimes; the
+    true constraint on overseas allocation is hedged carry and
+    regulator-manufactured corner solutions, not a monotonic drive from the
+    domestic interest rate; the trigger mechanism for de-risking on the
+    liability side is a behavioral reference-point ratchet rather than
+    first-order optimization; and the holding boundary during stress periods is
+    determined by the physical constraints of settlement and collateral. Owing
+    to limited availability of micro-identification data, this paper does not
+    report point estimates from micro-regressions for each load-bearing
+    mechanism; instead it faithfully presents the identification design, the
+    pre-registered directional predictions, and the support that the literature
+    and public facts lend to those directions, flagging every downgrade and
+    research boundary explicitly.
+  keywords_en:
+    - pension strategic asset allocation
+    - sustained low interest rates
+    - liability-driven investment (LDI)
+    - identification strategy
+    - settlement constraints
 ---
 
 ## 一、文献与制度背景综述

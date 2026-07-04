@@ -36,6 +36,88 @@ paper:
     - 风险承担
     - 制度连续谱
     - 代际再分配
+  title_en: >-
+    Differences in Asset Allocation Between Defined Benefit and Defined
+    Contribution Pensions Under Low Interest Rates: A Comparison Based on
+    Asset-Liability Management and Risk-Bearing Mechanisms
+  abstract_en: >-
+    This paper studies the differences in asset allocation between defined
+    benefit (DB) and defined contribution (DC) pension schemes under low
+    interest rates, and further probes the political-economic causes and
+    risk-transfer consequences underlying this difference. Low interest rates
+    amplify the present value of DB liabilities through the discount-rate
+    channel and depress the terminal value of DC accounts through the
+    expected-return channel; the two scheme types therefore face pressures that
+    point in similar directions but operate through starkly different
+    mechanisms, with the observable aggregate consequence being the shrinkage of
+    private-sector DB and the rise of DC's share. Unlike the textbook DB/DC
+    dichotomy, this paper's central judgment is: pension scheme form is not an
+    exogenously given discrete category but a continuous state space sedimented
+    by history and interest structures; movement along this continuum in the
+    form of "de-risking" need not, in welfare terms, extinguish risk—it is often
+    a one-time redistribution of the value of collective buffering to the
+    generation currently present. Thus "the rising share of DC" is not the
+    endpoint of the analysis but a phenomenon requiring explanation—risk has not
+    vanished but has shifted, along different margins, from the employer's
+    balance sheet to individuals, future taxpayers, and absent generations.
+    Around this judgment, the paper organizes five mutually orthogonal
+    analytical axes: first, the hardness of the residual guarantee put-writer's
+    option position, rather than the scheme's nominal risk classification,
+    drives the sign of allocation direction; second, the degree of risk-sharing
+    and the distributional core constitute the scheme's first-order state
+    variable, with DB/DC as degenerate corner points of this continuum; third,
+    between institutions and behavior lies a measurement identification-display
+    layer composed of the discount benchmark, recognition tiers, and the order
+    of statistical moments displayed, which shapes allocation responses at the
+    margin; fourth, pensions are embedded in a larger institutional
+    configuration of capitalism type, financial system, and skill regime, and
+    the direction of fragility is a system-level property of that configuration;
+    fifth, the contractual nature of asset-side contribution inflows
+    (non-interruptibility, duration, conditional variance) drives the capacity
+    for long-term illiquid allocation. On identification strategy, this paper
+    clearly distinguishes, for each axis, an identifiable consequence side
+    (institutional form → allocation consequence, labeled Direction A) from a
+    cause side that does not pursue clean identification and is presented only
+    theoretically and via case evidence (allocation pressure → reshaping
+    institutions, labeled Direction B). Direction A has a credible
+    identification path, with exogenous variation arising from staggered
+    legislative adoption across jurisdictions or industries, ratings-methodology
+    revisions, emergency withdrawal events, and other shocks independent of any
+    single plan's contemporaneous allocation pressure; Direction B generally
+    lacks clean identification because institutional transformation is
+    endogenous to contemporaneous allocation pressure, and this paper therefore
+    honestly leaves it at the level of political-economic theory and case
+    evidence rather than dressing it in the language of identification. Owing to
+    data availability constraints, the micro causal coefficients on which the
+    core propositions of the five axes depend could not be estimated under this
+    study's conditions; the paper therefore faithfully reports that "the
+    identification design is in place, the exogenous variation genuinely exists
+    in reality, and the directional expectation is consistent with existing
+    research," while fully preserving the pre-specified falsifiability
+    thresholds. This honest boundary is not a modest hedge on the strength of
+    the conclusions but an intrinsic requirement of the paper's methodological
+    stance—the core of pension research is judgment, with data serving to test
+    judgment rather than the reverse, where a pile of data substitutes for
+    judgment. The paper's contribution lies not in claimed identified causal
+    effects but in three respects: at the theoretical level, it reparametrizes
+    the taxonomy of pension institutions, restating the DB/DC dichotomy as
+    degenerate corner points of a continuum and offering downstream research a
+    single unified taxonomic standard; at the level of judgment, it places the
+    political-economic question of "who bears the risk that has been transferred
+    away" at the center of the analysis, pointing to the distributional
+    substance of de-risking in a vacuum of property rights; at the
+    methodological level, it designs, for each of the five axes, an
+    identification strategy distinguishing Direction A from Direction B,
+    establishing falsifiable thresholds and an executable identification
+    blueprint prior to any data.
+  keywords_en:
+    - defined benefit (DB) pension
+    - defined contribution (DC) pension
+    - low interest rates
+    - asset allocation
+    - risk-bearing
+    - institutional continuum
+    - intergenerational redistribution
 ---
 
 ## 文献与制度背景综述

@@ -26,6 +26,73 @@ paper:
     - 杠杆约束
     - 压力测试
     - 归责内生
+  title_en: >-
+    From Low Interest Rates to Interest Rate Repricing: Liquidity Risk, Leverage
+    Constraints, and the Restructuring of Asset-Liability Management in Mature
+    Pension Markets
+  abstract_en: >-
+    Taking the 2022 UK liability-driven investment (LDI) liquidity event as its
+    empirical entry point, this paper systematically examines the liquidity
+    risk, leverage constraints, and structural asset-liability-management
+    deficiencies exposed in mature pension markets during the decumulation phase
+    of a low interest rate environment. Existing discussion is generally subject
+    to two opposing yet closely related misjudgments: first, interpreting the
+    rapid rise in interest rates simply as "rising rates harm pension safety";
+    second, after correcting the first misjudgment, instead reading "improved
+    funding ratio" as a signal of "plan safety." This paper's central claim is
+    that both interpretations commit the same category error—both treat the
+    solvency dimension (funding ratio) and the liquidity dimension (collateral
+    and cash availability) as a single line. Around this core, the paper
+    advances and argues five progressive judgments: first, improvement in the
+    funding line does not constitute a safety signal for the liquidity line; a
+    rise in interest rates is essentially a two-sided event in which liability
+    relief and asset devaluation occur simultaneously, with the sign of the net
+    effect undetermined a priori; second, the fact that the Netherlands and
+    Denmark did not experience a UK-style collateral spiral during the same
+    period is insufficient to infer that their institutions are
+    superior—survivorship bias here is a symmetric blade that cuts both ways,
+    and what is genuinely identifiable is the falsification of the
+    jurisdictional-dichotomy proposition and the difference in vehicle structure
+    within the UK itself; third, the pathology of the spiral lies in the
+    mismatch between the moneyness of variation margin and the topology of
+    central-bank rescuability, a theoretical-dynamics proposition whose causal
+    identification awaits variation in scope across bailout episodes; fourth,
+    the independent variables of stress tests must be reset from static
+    base-case endpoints to paths, densities, and correlation structures—a
+    defensible methodological contribution—while the claim that "path, not
+    magnitude, was the specific cause of death in 2022" must be downgraded to an
+    empirical hypothesis awaiting testing; fifth, risk positioning, in the sense
+    of a mapping from pre-committable institutional variables to the dimension
+    of attribution, is an institutionally endogenous choice of attribution—a
+    comparative proposition that permits falsification through successful
+    transplantation, not an unfalsifiable universal claim that "all risk is
+    endogenous." At the empirical level, the paper adheres to a strict honesty
+    boundary: aggregate institutional facts verifiable through independent
+    sources (the direction of funding ratios, the scale of intervention, the
+    market share of vehicle structures, regulatory buffer thresholds,
+    eligibility thresholds, etc.) are accepted and sourced; causal magnitudes
+    that require plan-level micro panels for identification (slope ratios,
+    difference-in-differences coefficients, regression-discontinuity
+    coefficients, cross-bailout scope panels, contagion-topology penetration
+    shares, etc.), which cannot be identified in this study owing to data
+    availability constraints, are explicitly and uniformly defined as
+    "identification design in place, causal magnitude pending micro data," and
+    are not upgraded to identified causal conclusions. The paper's
+    methodological stance is that the core of an economics paper lies in
+    judgment rather than a pile of data, and the value of judgment lies
+    precisely in its refutability and the honest marking of identification
+    boundaries. On this basis, the paper ultimately offers a set of implications
+    for the upfront design of China's pension risk governance framework,
+    grounded in the fundamental premise that "experience cannot simply be
+    transplanted; it must be designed endogenously to the institution."
+  keywords_en:
+    - liability-driven investment (LDI)
+    - liquidity risk
+    - collateral spiral
+    - moneyness of variation margin
+    - leverage constraints
+    - stress testing
+    - endogenous attribution
 ---
 
 ## 第一章 引言
