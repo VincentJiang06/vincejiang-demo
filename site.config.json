@@ -1,12 +1,29 @@
 {
-  "_note": "首页与 gallery 的单一数据源。改这里即改首页/gallery,无需动模板。href 为 http(s) 视作外链、本站相对路径视作内部作品(进 sitemap)。",
+  "_note": "首页与 gallery 的单一数据源。改这里即改首页/gallery/研究专辑,无需动模板。href 为 http(s) 视作外链、本站相对路径视作内部作品(进 sitemap)。wildSites[].hue = 友链纸皮石站色相(反官色,见 uniwild runbook);collections = 研究专辑(posts/<key>/ 下的文章按 order 排),layout:paper 用论文格式。",
   "wildSites": [
-    { "key": "hkuwild",   "name": "非官方港大",   "url": "https://hkuwild.com",   "desc": "百年殖民史的缩影:港大的身世、争议与人物 lore。" },
-    { "key": "cuhkwild",  "name": "非官方中大",   "url": "https://cuhkwild.com",  "desc": "山城书院制的人文底色:中大的理想主义与它的代价。" },
-    { "key": "hkustwild", "name": "非官方科大",   "url": "https://hkustwild.com", "desc": "理工速成的成与代价:三十年冲进世界前列的科大。" },
-    { "key": "cityuwild", "name": "非官方城大",   "url": "https://cityuwild.com", "desc": "后发逆袭与身份焦虑:城大如何改写自己的坐标。" },
-    { "key": "polyuwild", "name": "非官方理大",   "url": "https://polyuwild.com", "desc": "应用立校的实干者:理大的工科基因与街头传奇。" },
+    { "key": "hkuwild",   "name": "非官方港大",   "url": "https://hkuwild.com",   "hue": 20,  "desc": "百年殖民史的缩影:港大的身世、争议与人物 lore。" },
+    { "key": "cuhkwild",  "name": "非官方中大",   "url": "https://cuhkwild.com",  "hue": 92,  "desc": "山城书院制的人文底色:中大的理想主义与它的代价。" },
+    { "key": "hkustwild", "name": "非官方科大",   "url": "https://hkustwild.com", "hue": 308, "desc": "理工速成的成与代价:三十年冲进世界前列的科大。" },
+    { "key": "cityuwild", "name": "非官方城大",   "url": "https://cityuwild.com", "hue": 152, "desc": "后发逆袭与身份焦虑:城大如何改写自己的坐标。" },
+    { "key": "polyuwild", "name": "非官方理大",   "url": "https://polyuwild.com", "hue": 192, "desc": "应用立校的实干者:理大的工科基因与街头传奇。" },
     { "key": "hkuniwild", "name": "港校通门户",   "url": "https://hkuniwild.com", "desc": "五校信息门户:中性择校工具,内地读者友好,深链各校野史。" }
+  ],
+  "collections": [
+    {
+      "key": "pension-demo",
+      "title": "低利率环境下的养老金资产配置 · 五篇递进研究",
+      "desc": "从利率传导机制、DB/DC 制度分化、另类与全球化配置、退出期风险治理,到对中国的制度适配——一个由五篇经济学论文构成的递进系统,附系统总论与合并摘要。",
+      "note": "阅读顺序即编号顺序。论文格式排版,可直接打印为规范 A4 稿;每篇支持中/EN 切换。",
+      "layout": "paper",
+      "order": ["summary", "overview", "paper-1", "paper-2", "paper-3", "paper-4", "paper-5"]
+    },
+    {
+      "key": "pension-demo-revision",
+      "title": "养老金研究 · 评审与复盘",
+      "desc": "对上述五篇论文的逐篇独立评审、跨篇综合评审,以及整个自动化生产过程的技术复盘。以普通博客格式呈现。",
+      "layout": "post",
+      "order": ["comprehensive-review", "paper-1-review", "paper-2-review", "paper-3-review", "paper-4-review", "paper-5-review", "technical-retrospective"]
+    }
   ],
   "gallery": [
     { "title": "AI 服务状态", "href": "/status-ai/", "desc": "一眼看懂 OpenAI 与 Anthropic 现在能不能用:聚合官方状态 + 通俗中文解说,附开放 JSON 接口。", "badge": "带后端 · 开放接口" },

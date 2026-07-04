@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="{{LANG}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+{{HEAD}}
+<link rel="icon" href="/favicon.png?v=1" type="image/png">
+<link rel="apple-touch-icon" href="/favicon.png?v=1">
+<style>{{CSS}}</style>
+</head>
+<body data-short="{{SHORT}}">
+<button class="stoggle" id="stoggle" aria-label="目录 / outline">☰</button>
+<div class="langpill">{{LANGSW}}</div>
+<aside class="side" id="side">
+  <div class="brand"><a href="/">Vince Jiang</a><span>/</span><a href="/blog/">Blog</a></div>
+  <div class="stitle">{{TITLE_SIDE}}</div>
+  <nav class="toc" id="toc" aria-label="大纲 / outline">
+{{TOC}}
+  </nav>
+  {{PREVNEXT}}
+  <div class="acts">
+    <button type="button" id="printbtn">{{PRINTLABEL}}</button>
+    <a href="index.md">{{SRCLABEL}}</a>
+  </div>
+  <div class="scredit">论文展示模板 · vincejiang.com</div>
+</aside>
+<main class="deck" id="deck">
+  <div class="flow pp" id="flow">
+{{TITLEBLOCK}}
+{{CONTENT}}
+  </div>
+  <div class="sheets" id="sheets"></div>
+</main>
+<script>{{JS}}</script>
+</body>
+</html>

@@ -4,10 +4,6 @@ description: "From Anthropic's model pyramid (the capability tiers of Sonnet / O
 tags: [AI, Claude, agent, essay]
 date: 2026-07-02
 lang: en
-alt:
-  - lang: zh-CN
-    slug: fable-scaling-layering
-    label: 中文
 ---
 
 Today is 2026.7.2, and Fable has been unlocked again. I'd already spent a day doing all-Fable development, so I had a relative sense of the model's strength — but at that point my understanding of Fable was more like "a bigger Opus." Then, a couple of days ago, I tried migrating my Opus workflow over to Sonnet 5 (the benchmarks looked close), and only then did I really come to understand Claude's model lineup as a whole.

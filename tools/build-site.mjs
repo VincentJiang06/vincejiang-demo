@@ -5,10 +5,12 @@
 //
 // 职责(SPEC/runbook §3.3):
 //   1) 原样拷贝静态内容目录(demo 等),剔除基础设施/元文件;
-//   2) 按 manifest 渲染已发布文章 → /blog/<slug>/index.html(+ 同时落 /blog/<slug>/index.md 机读副本);
-//   3) 生成 /blog/ 索引、/blog/feed.xml(RSS);
+//   2) 按 manifest 渲染已发布文章 → /blog/[<group>/]<slug>/index.html(+ 机读 index.md);
+//      文章可分组(posts/<group>/<slug>.md → /blog/<group>/<slug>/);中英双语走 <slug>.en.md 兄弟文件,
+//      配对进主文并额外产出 /en/ 子页(英文页不进任何列表,首页/索引/RSS 只收中文主页)。
+//   3) 生成 /blog/ 索引、各 collection 落地页、/blog/feed.xml(RSS);
 //   4) 生成全站 sitemap.xml(lastmod 用真实 git 日期,来自 manifest);
-//   5) 生成 llms.txt;6) 首页注入最新 N 篇;7) 生成 /gallery/。
+//   5) 生成 llms.txt;6) 首页注入最新 N 篇 + 友链 + 研究专辑;7) 生成 /gallery/。
 // 发布判定 = manifest(git 历史含「发布」)∧ 非 draft;日期优先 frontmatter,否则用 manifest 的 git 日期。
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, rmSync, cpSync, existsSync, statSync } from 'node:fs';
 import { join, dirname, basename } from 'node:path';
@@ -16,6 +18,7 @@ import matter from 'gray-matter';
 import MarkdownIt from 'markdown-it';
 import anchor from 'markdown-it-anchor';
 import hljs from 'highlight.js';
+import { renderPaper } from './paper.mjs';
 
 const ROOT = new URL('..', import.meta.url).pathname.replace(/\/$/, '');
 const TPL = join(ROOT, 'templates');
@@ -45,6 +48,8 @@ const NAV_ITEMS = [
 const BASE = readFileSync(join(TPL, 'base.html'), 'utf8');
 const CSS = readFileSync(join(TPL, 'site.css'), 'utf8');
 const CONFIG = JSON.parse(readFileSync(join(ROOT, 'site.config.json'), 'utf8'));
+const COLLECTIONS = Array.isArray(CONFIG.collections) ? CONFIG.collections : [];
+const collectionOf = group => COLLECTIONS.find(c => c.key === group) || null;
 let MANIFEST = null;
 const manifestPath = join(ROOT, 'posts-manifest.json');
 if (existsSync(manifestPath)) MANIFEST = JSON.parse(readFileSync(manifestPath, 'utf8'));
@@ -79,7 +84,7 @@ function plain(mdText) {
 }
 
 // ---- <head> 生成(每页 MUST:title/canonical/desc/OG/twitter/robots/theme + JSON-LD)----
-function headHtml({ type = 'website', path = '/', title, desc, image = SITE.image, jsonld = [] }) {
+function headHtml({ type = 'website', path = '/', title, desc, image = SITE.image, jsonld = [], locale = 'zh_CN' }) {
   const url = SITE.url + path;
   const ld = jsonld.length ? `<script type="application/ld+json">${JSON.stringify(jsonld.length === 1 ? jsonld[0] : jsonld)}</script>` : '';
   return [
@@ -90,7 +95,7 @@ function headHtml({ type = 'website', path = '/', title, desc, image = SITE.imag
     `<link rel="canonical" href="${url}">`,
     `<meta property="og:type" content="${type}">`,
     `<meta property="og:site_name" content="vincejiang.com">`,
-    `<meta property="og:locale" content="zh_CN">`,
+    `<meta property="og:locale" content="${locale}">`,
     `<meta property="og:url" content="${url}">`,
     `<meta property="og:title" content="${esc(title)}">`,
     `<meta property="og:description" content="${esc(desc)}">`,
@@ -114,9 +119,36 @@ function pageHtml({ lang = SITE.lang, active = '', head, main }) {
   return fill(BASE, { LANG: lang, TITLE: head.titleFull, HEAD: head.html, CSS, NAV: navHtml(active), MAIN: main, FOOTER: footHtml() });
 }
 const personLd = { '@type': 'Person', name: SITE.author, url: SITE.url + '/', sameAs: [SITE.github] };
-const LANG_LABEL = { 'zh-CN': '中文', 'zh-Hant': '繁體中文', 'en': 'English' };
-const langLabel = l => LANG_LABEL[l] || l;
 const backLabel = l => (l && l.startsWith('en') ? '← Back to Blog' : '← 返回 Blog');
+
+// ---- 双语 / 系列 通用片段 ----
+// 语言切换器:两端各一,当前语言加粗、另一语言给链接。英文页不进列表,故只在有 en 时出现。
+function langSwitchHtml(p, isEn) {
+  if (!p.en) return '';
+  const zh = isEn ? `<a href="${p.path}" hreflang="${p.lang}">中文</a>` : `<b>中文</b>`;
+  const en = isEn ? `<b>English</b>` : `<a href="${p.enPath}" hreflang="en">English</a>`;
+  return `<span class="langsw" aria-label="language">${zh}<i>·</i>${en}</span>`;
+}
+function hreflangHtml(p) {
+  if (!p.en) return '';
+  return '\n' + [
+    `<link rel="alternate" hreflang="${p.lang}" href="${SITE.url}${p.path}">`,
+    `<link rel="alternate" hreflang="en" href="${SITE.url}${p.enPath}">`,
+    `<link rel="alternate" hreflang="x-default" href="${SITE.url}${p.path}">`,
+  ].join('\n');
+}
+// 系列上/下篇(同语言);q 为相邻 post 对象
+function prevNextHtml(p, isEn) {
+  if (!p.prev && !p.next) return '';
+  const cell = (q, dir) => {
+    if (!q) return `<span class="pn-empty"></span>`;
+    const href = isEn ? (q.enPath || q.path) : q.path;
+    const t = isEn ? (q.paper?.title_en || q.en?.title || q.title) : q.title;
+    const lbl = dir === 'prev' ? (isEn ? '← Previous' : '← 上一篇') : (isEn ? 'Next →' : '下一篇 →');
+    return `<a class="pn-${dir}" href="${href}"><span class="pn-lbl">${lbl}</span><span class="pn-t">${esc(t)}</span></a>`;
+  };
+  return `<nav class="prevnext" aria-label="series">${cell(p.prev, 'prev')}${cell(p.next, 'next')}</nav>`;
+}
 
 // ---- 读取文章 ----
 function findMd(dir) {
@@ -129,83 +161,186 @@ function findMd(dir) {
   }
   return out;
 }
+// 从绝对路径推出 {group, slug, isDir, isEn}
+//   posts/<slug>.md | posts/<slug>/index.md | posts/<group>/<slug>.md | posts/<group>/<slug>/index.md
+//   翻译:同名 <slug>.en.md 或 <dir>/index.en.md
+function relInfo(abs) {
+  const base = basename(abs);
+  const dir = dirname(abs);
+  const relDir = dir === POSTS ? '' : dir.slice(POSTS.length + 1);
+  const isEn = /\.en\.md$/.test(base);
+  let group, slug, isDir;
+  if (base === 'index.md' || base === 'index.en.md') {
+    isDir = true;
+    const parts = relDir ? relDir.split('/') : [];
+    slug = parts.pop() || '';
+    group = parts.join('/');
+  } else {
+    isDir = false;
+    group = relDir;
+    slug = base.replace(/\.en\.md$/, '').replace(/\.md$/, '');
+  }
+  return { group, slug, isDir, isEn };
+}
+function parseMd(abs) { const g = matter(readFileSync(abs, 'utf8')); return { fm: g.data, body: g.content }; }
+
 function loadPosts() {
   const posts = [];
   const seen = new Map();
-  for (const abs of findMd(POSTS)) {
-    const rel = abs.slice(ROOT.length + 1);           // posts/xxx.md 或 posts/xxx/index.md
-    const isDir = basename(abs) === 'index.md';
-    const slug = isDir ? basename(dirname(abs)) : basename(abs, '.md');
+  const files = findMd(POSTS).map(abs => ({ abs, ...relInfo(abs) }));
+  // 先收英文翻译,按 group/slug 归档
+  const ens = new Map();
+  for (const f of files) {
+    if (!f.isEn) continue;
+    try { const p = parseMd(f.abs); ens.set(`${f.group}/${f.slug}`, { ...f, ...p }); }
+    catch (e) { err(`frontmatter 解析失败: ${f.abs.slice(ROOT.length + 1)} — ${e.message}`); }
+  }
+  // 再收中文主文件,配对英文
+  for (const f of files) {
+    if (f.isEn) continue;
+    const rel = f.abs.slice(ROOT.length + 1);
     let fm, body;
-    try { const g = matter(readFileSync(abs, 'utf8')); fm = g.data; body = g.content; }
+    try { const p = parseMd(f.abs); fm = p.fm; body = p.body; }
     catch (e) { err(`frontmatter 解析失败: ${rel} — ${e.message}`); continue; }
+    const group = fm.group != null ? String(fm.group) : f.group;   // frontmatter 可覆盖目录分组
+    const slug = f.slug;
+    const key = `${group}/${slug}`;
     if (!fm.title) warn(`缺 title: ${rel}`);
     if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) warn(`slug 非 kebab-case: ${slug}`);
-    if (seen.has(slug)) { err(`slug 重复: ${slug}(${rel} 与 ${seen.get(slug)})`); continue; }
-    seen.set(slug, rel);
+    if (group && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(group)) warn(`group 非 kebab-case: ${group}`);
+    if (seen.has(key)) { err(`路径重复: ${key}(${rel} 与 ${seen.get(key)})`); continue; }
+    seen.set(key, rel);
 
     const m = MANIFEST?.posts?.[rel];
     const gitPublished = MANIFEST ? !!m?.published : true;   // 无 manifest(本地):非 draft 即视为已发布
     const published = gitPublished && fm.draft !== true;
     const date = fmDate(fm.date) || (m?.firstPublish ? dOnly(m.firstPublish) : today());
     const updated = fmDate(fm.updated) || (m?.lastPublish ? dOnly(m.lastPublish) : date);
-    const description = fm.description || plain(body).slice(0, 120);
-    posts.push({ slug, rel, abs, isDir, srcDir: isDir ? dirname(abs) : null,
+    const description = fm.description || (fm.paper?.abstract ? String(fm.paper.abstract).slice(0, 120) : plain(body).slice(0, 120));
+    const path = group ? `/blog/${group}/${slug}/` : `/blog/${slug}/`;
+
+    // 配对英文翻译(英文文件只提供 title/description/body;论文元数据一律从中文 frontmatter.paper 取,含 *_en)
+    const ef = ens.get(key);
+    let en = null;
+    if (ef) {
+      const eb = ef.body;
+      en = {
+        title: ef.fm.title || fm.paper?.title_en || fm.title,
+        description: ef.fm.description || (fm.paper?.abstract_en ? String(fm.paper.abstract_en).slice(0, 120) : plain(eb).slice(0, 120)),
+        body: eb, rel: ef.abs.slice(ROOT.length + 1), abs: ef.abs, isDir: ef.isDir, srcDir: ef.isDir ? dirname(ef.abs) : null,
+      };
+      ens.delete(key);
+    }
+
+    posts.push({
+      group, slug, rel, abs: f.abs, isDir: f.isDir, srcDir: f.isDir ? dirname(f.abs) : null,
+      path, enPath: en ? path + 'en/' : null,
       title: fm.title || slug, description, tags: fm.tags || [], lang: fm.lang || SITE.lang,
       date, updated, cover: fm.cover || null, draft: fm.draft === true, published, body,
-      alt: Array.isArray(fm.alt) ? fm.alt : [] });
+      layout: fm.layout === 'paper' ? 'paper' : 'post', paper: fm.paper || null,
+      en, collectionKey: collectionOf(group) ? group : null,
+      prev: null, next: null,
+    });
   }
+  for (const [k, v] of ens) warn(`翻译无主文件: ${v.abs.slice(ROOT.length + 1)}(缺 ${k} 的中文主文件)`);
+
+  // 系列上/下篇(按 collection.order;仅已发布成员参与)
+  for (const coll of COLLECTIONS) {
+    const order = coll.order || [];
+    const members = posts.filter(p => p.collectionKey === coll.key && p.published)
+      .sort((a, b) => (order.indexOf(a.slug) - order.indexOf(b.slug)));
+    members.forEach((p, i) => { p.prev = members[i - 1] || null; p.next = members[i + 1] || null; });
+  }
+
   posts.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
   return posts;
 }
 
-// ---- 渲染单篇 ----
-function renderPost(p) {
-  const path = `/blog/${p.slug}/`;
-  const bodyHtml = md.render(p.body);
+// 论文模板(layout: paper)渲染上下文;渲染逻辑在 paper.mjs,规格见 templates/PAPER-SPEC.md
+const paperCtx = () => ({ SITE, headHtml, personLd, esc, warn, langSwitchHtml, hreflangHtml, prevNextHtml, backLabel });
+
+// ---- 渲染单篇博客(post);isEn=true 时渲染英文子页 ----
+function renderPost(p, isEn = false) {
+  const src = isEn ? p.en : p;
+  const lang = isEn ? 'en' : p.lang;
+  const path = isEn ? p.enPath : p.path;
+  const bodyHtml = md.render(src.body);
   const breadcrumb = {
     '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: '首页', item: SITE.url + '/' },
       { '@type': 'ListItem', position: 2, name: 'Blog', item: SITE.url + '/blog/' },
-      { '@type': 'ListItem', position: 3, name: p.title, item: SITE.url + path },
+      { '@type': 'ListItem', position: 3, name: src.title, item: SITE.url + path },
     ],
   };
   const blogPosting = {
-    '@context': 'https://schema.org', '@type': 'BlogPosting', headline: p.title, description: p.description,
-    datePublished: p.date, dateModified: p.updated, inLanguage: p.lang,
+    '@context': 'https://schema.org', '@type': 'BlogPosting', headline: src.title, description: src.description,
+    datePublished: p.date, dateModified: p.updated, inLanguage: lang,
     mainEntityOfPage: SITE.url + path, author: personLd, publisher: personLd,
-    ...(p.cover ? { image: SITE.url + path + p.cover.replace(/^\.?\//, '') } : {}),
+    ...(p.cover ? { image: SITE.url + p.path + p.cover.replace(/^\.?\//, '') } : {}),
   };
-  // 双语组:self + alt;发 hreflang(含 x-default 指向 zh 原版)+ 语言切换器
-  const group = [{ lang: p.lang, slug: p.slug, self: true }, ...p.alt.map(a => ({ lang: a.lang, slug: a.slug, label: a.label }))];
-  const hreflang = group.map(g => `<link rel="alternate" hreflang="${g.lang}" href="${SITE.url}/blog/${g.slug}/">`).join('\n');
-  const xdef = group.find(g => /^zh/.test(g.lang));
-  const hreflangFull = group.length > 1 ? hreflang + (xdef ? `\n<link rel="alternate" hreflang="x-default" href="${SITE.url}/blog/${xdef.slug}/">` : '') : '';
-  const langSwitch = group.length > 1
-    ? `<span class="langsw">${group.map(g => g.self ? `<b>${langLabel(g.lang)}</b>` : `<a href="/blog/${g.slug}/" hreflang="${g.lang}">${esc(g.label || langLabel(g.lang))}</a>`).join('<i>·</i>')}</span>`
-    : '';
   const head = {
-    titleFull: `${p.title} · ${SITE.name}`,
-    html: headHtml({ type: 'article', path, title: p.title, desc: p.description, jsonld: [blogPosting, { '@context': 'https://schema.org', ...breadcrumb }] })
-      + (hreflangFull ? '\n' + hreflangFull : ''),
+    titleFull: `${src.title} · ${SITE.name}`,
+    html: headHtml({ type: 'article', path, title: src.title, desc: src.description, locale: isEn ? 'en_US' : 'zh_CN', jsonld: [blogPosting, { '@context': 'https://schema.org', ...breadcrumb }] })
+      + hreflangHtml(p),
   };
   const tags = p.tags.length ? `<span>${p.tags.map(t => `<a class="tag" href="/blog/#tag-${esc(t)}">${esc(t)}</a>`).join('')}</span>` : '';
-  const upd = p.updated !== p.date ? ` · 更新 ${p.updated}` : '';
+  const upd = p.updated !== p.date ? ` · ${isEn ? 'updated' : '更新'} ${p.updated}` : '';
   const main = `<main class="wrap"><article class="article">
-<div class="head"><h1>${esc(p.title)}</h1><div class="meta"><time datetime="${p.date}">${p.date}</time>${upd}${tags}${langSwitch}</div></div>
+<div class="head"><h1>${esc(src.title)}</h1><div class="meta"><time datetime="${p.date}">${p.date}</time>${upd}${tags}${langSwitchHtml(p, isEn)}</div></div>
 <div class="prose">${bodyHtml}</div>
-<a class="backlink" href="/blog/">${backLabel(p.lang)}</a>
+${prevNextHtml(p, isEn)}
+<a class="backlink" href="${p.collectionKey ? '/blog/' + p.collectionKey + '/' : '/blog/'}">${isEn ? '← Back' : '← 返回'}</a>
 </article></main>`;
-  return pageHtml({ lang: p.lang, active: 'blog', head, main });
+  return pageHtml({ lang, active: 'blog', head, main });
 }
 
-// ---- 页面:blog 索引 / 首页 / gallery ----
+// ---- 页面:collection 落地页 / blog 索引 / 首页 / gallery ----
+function renderCollection(coll, posts) {
+  const order = coll.order || [];
+  const members = posts.filter(p => p.collectionKey === coll.key)
+    .sort((a, b) => (order.indexOf(a.slug) - order.indexOf(b.slug)));
+  const path = `/blog/${coll.key}/`;
+  const isPaper = coll.layout === 'paper';
+  const items = members.map((p, i) => {
+    const badge = p.layout === 'paper' ? `<span class="tag">论文</span>` : '';
+    const no = `<span class="cnum">${String(i + 1).padStart(2, '0')}</span>`;
+    return `<li><a href="${p.path}">${no}<div class="ci"><div class="t">${esc(p.title)}</div><div class="d">${esc(p.description)}</div><div class="meta"><time datetime="${p.date}">${p.date}</time>${badge}</div></div></a></li>`;
+  }).join('\n');
+  const list = members.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.title, url: SITE.url + p.path }));
+  const head = {
+    titleFull: `${coll.title} · ${SITE.name}`,
+    html: headHtml({ path, title: coll.title, desc: coll.desc, jsonld: [
+      { '@context': 'https://schema.org', '@type': 'CollectionPage', name: coll.title, url: SITE.url + path, description: coll.desc, author: personLd,
+        isPartOf: { '@type': 'Blog', name: `${SITE.name} 的 Blog`, url: SITE.url + '/blog/' },
+        mainEntity: { '@type': 'ItemList', itemListElement: list } },
+      { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '首页', item: SITE.url + '/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: SITE.url + '/blog/' },
+        { '@type': 'ListItem', position: 3, name: coll.title, item: SITE.url + path },
+      ] },
+    ] }),
+  };
+  const main = `<main class="wrap narrow"><div class="hero"><h1>${esc(coll.title)}</h1><p>${esc(coll.desc)}</p>${coll.note ? `<p class="note">${esc(coll.note)}</p>` : ''}</div>
+<ol class="collist${isPaper ? ' paper' : ''}">${items || '<p class="note">敬请期待。</p>'}</ol>
+<a class="backlink" href="/blog/">← 返回 Blog</a></main>`;
+  return pageHtml({ active: 'blog', head, main });
+}
 function renderBlogIndex(posts) {
-  const items = posts.map(p => `<li><a href="/blog/${p.slug}/"><div class="t">${esc(p.title)}</div><div class="d">${esc(p.description)}</div><div class="meta"><time datetime="${p.date}">${p.date}</time>${p.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div></a></li>`).join('\n');
-  const desc = `Vince Jiang 的博客 —— 共 ${posts.length} 篇杂谈与技术笔记。`;
+  // 索引显示:collection 折叠为一张卡,散篇逐条列
+  const inColl = new Set();
+  const collCards = COLLECTIONS.map(c => {
+    const members = posts.filter(p => p.collectionKey === c.key);
+    members.forEach(p => inColl.add(p));
+    if (!members.length) return '';
+    return `<li class="coll"><a href="/blog/${c.key}/"><div class="t">${esc(c.title)}</div><div class="d">${esc(c.desc)}</div><div class="meta"><span class="tag">专辑 · ${members.length} 篇</span></div></a></li>`;
+  }).filter(Boolean).join('\n');
+  const loose = posts.filter(p => !inColl.has(p));
+  const items = loose.map(p => `<li><a href="${p.path}"><div class="t">${esc(p.title)}</div><div class="d">${esc(p.description)}</div><div class="meta"><time datetime="${p.date}">${p.date}</time>${p.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div></a></li>`).join('\n');
+  const total = posts.length;
+  const desc = `Vince Jiang 的博客 —— 共 ${total} 篇杂谈与技术笔记。`;
   const head = { titleFull: `Blog · ${SITE.name}`, html: headHtml({ path: '/blog/', title: 'Blog', desc, jsonld: [{ '@context': 'https://schema.org', '@type': 'Blog', name: `${SITE.name} 的 Blog`, url: SITE.url + '/blog/', author: personLd }] }) };
-  const main = `<main class="wrap narrow"><div class="hero"><h1>Blog</h1><p>杂谈、技术笔记、随手记的实验。共 ${posts.length} 篇。</p></div>
-<ul class="postlist">${items || '<p class="note">还没有已发布的文章。</p>'}</ul></main>`;
+  const main = `<main class="wrap narrow"><div class="hero"><h1>Blog</h1><p>杂谈、技术笔记、随手记的实验。共 ${total} 篇。</p></div>
+<ul class="postlist">${collCards}${items || (collCards ? '' : '<p class="note">还没有已发布的文章。</p>')}</ul></main>`;
   return pageHtml({ active: 'blog', head, main });
 }
 function tileCard(href, title, desc, extra = '') {
@@ -214,11 +349,20 @@ function tileCard(href, title, desc, extra = '') {
   const attr = external ? ' target="_blank" rel="noopener"' : '';
   return `<a class="tile card" href="${href}"${attr}><div class="t">${esc(title)}</div><div class="d">${esc(desc)}</div>${extra}${host}</a>`;
 }
+// 友链卡:纸皮石马赛克底纹 + 站色相(--hue),港铁导视克制调性
+function friendCard(w) {
+  const host = esc(w.url.replace(/^https?:\/\//, '').replace(/\/$/, ''));
+  const hue = Number.isFinite(w.hue) ? ` style="--hue:${w.hue}"` : '';
+  const neutral = w.hue == null ? ' neutral' : '';
+  return `<a class="friend${neutral}"${hue} href="${w.url}" target="_blank" rel="noopener"><span class="mosaic" aria-hidden="true"></span><span class="fc"><span class="t">${esc(w.name)}</span><span class="d">${esc(w.desc)}</span><span class="host">${host} ↗</span></span></a>`;
+}
 function renderHome(posts) {
   const latest = posts.slice(0, LATEST_N);
-  const wild = (CONFIG.wildSites || []).map(w => tileCard(w.url, w.name, w.desc)).join('\n');
+  const friends = (CONFIG.wildSites || []).map(friendCard).join('\n');
   const gallery = (CONFIG.gallery || []).map(g => tileCard(g.href, g.title, g.desc)).join('\n');
-  const blog = latest.map(p => `<a class="tile card" href="/blog/${p.slug}/"><div class="t">${esc(p.title)}</div><div class="d">${esc(p.description)}</div><div class="meta">${p.date}</div></a>`).join('\n');
+  const blog = latest.map(p => `<a class="tile card" href="${p.path}"><div class="t">${esc(p.title)}</div><div class="d">${esc(p.description)}</div><div class="meta">${p.date}</div></a>`).join('\n');
+  const collSec = COLLECTIONS.filter(c => posts.some(p => p.collectionKey === c.key)).map(c =>
+    tileCard(`/blog/${c.key}/`, c.title, c.desc, `<div class="meta"><span class="badge">专辑 · ${posts.filter(p => p.collectionKey === c.key).length} 篇</span></div>`)).join('\n');
   const head = {
     titleFull: `${SITE.name} · 个人站`,
     html: headHtml({ path: '/', title: SITE.name, desc: SITE.tagline, jsonld: [
@@ -231,12 +375,12 @@ function renderHome(posts) {
 
 <div class="sec"><h2>📝 Blog</h2><a class="more" href="/blog/">全部文章 →</a></div>
 <div class="grid c2">${blog || '<p class="note">敬请期待。</p>'}</div>
-
+${collSec ? `\n<div class="sec"><h2>📚 研究专辑</h2><span class="note">成系统的长篇研究</span></div>\n<div class="grid c2">${collSec}</div>\n` : ''}
 <div class="sec"><h2>🎨 Gallery</h2><a class="more" href="/gallery/">全部作品 →</a></div>
 <div class="grid c3">${gallery}</div>
 
-<div class="sec"><h2>🏫 香港高校「非官方」野史 · 集群</h2><span class="note">六站互链,各守一校</span></div>
-<div class="grid c3">${wild}</div>
+<div class="sec"><h2>🔗 友链 · 香港高校「非官方」野史集群</h2><span class="note">六站互链,各守一校 · 纸皮石取自港铁月台墙</span></div>
+<div class="grid c3 friends">${friends}</div>
 </main>`;
   return pageHtml({ active: 'home', head, main });
 }
@@ -263,7 +407,13 @@ function buildSitemap(posts) {
     { loc: '/blog/', lastmod: newest, cf: 'weekly', pri: '0.8' },
     { loc: '/gallery/', lastmod: cfgDate, cf: 'monthly', pri: '0.7' },
   ];
-  for (const p of posts) urls.push({ loc: `/blog/${p.slug}/`, lastmod: p.updated, cf: 'monthly', pri: '0.6' });
+  for (const c of COLLECTIONS) {
+    if (posts.some(p => p.collectionKey === c.key)) urls.push({ loc: `/blog/${c.key}/`, lastmod: newest, cf: 'monthly', pri: '0.6' });
+  }
+  for (const p of posts) {
+    urls.push({ loc: p.path, lastmod: p.updated, cf: 'monthly', pri: '0.6' });
+    if (p.enPath) urls.push({ loc: p.enPath, lastmod: p.updated, cf: 'monthly', pri: '0.5' });
+  }
   for (const g of (CONFIG.gallery || [])) {
     if (/^https?:/.test(g.href)) continue;               // 只收本站内部作品
     const key = g.href.replace(/^\/|\/$/g, '');
@@ -276,8 +426,8 @@ function buildSitemap(posts) {
 function buildRss(posts) {
   const items = posts.slice(0, 20).map(p => `    <item>
       <title>${esc(p.title)}</title>
-      <link>${SITE.url}/blog/${p.slug}/</link>
-      <guid isPermaLink="true">${SITE.url}/blog/${p.slug}/</guid>
+      <link>${SITE.url}${p.path}</link>
+      <guid isPermaLink="true">${SITE.url}${p.path}</guid>
       <pubDate>${rfc822(p.date)}</pubDate>
       <description>${esc(p.description)}</description>
     </item>`).join('\n');
@@ -292,18 +442,20 @@ ${items}
 </channel></rss>\n`;
 }
 function buildLlms(posts) {
-  const recent = posts.slice(0, 10).map(p => `- [${p.title}](${SITE.url}/blog/${p.slug}/) — ${p.description}`).join('\n');
+  const recent = posts.slice(0, 10).map(p => `- [${p.title}](${SITE.url}${p.path}) — ${p.description}`).join('\n');
+  const colls = COLLECTIONS.filter(c => posts.some(p => p.collectionKey === c.key)).map(c =>
+    `- [${c.title}](${SITE.url}/blog/${c.key}/) — ${c.desc}`).join('\n');
   const works = (CONFIG.gallery || []).map(g => `- [${g.title}](${/^https?:/.test(g.href) ? g.href : SITE.url + g.href}) — ${g.desc}`).join('\n');
   return `# ${SITE.name} — vincejiang.com
 
 > ${SITE.tagline}
 
-作者 Vince Jiang(小蒋),GitHub: ${SITE.github}。全站中文,geo-open。
+作者 Vince Jiang(小蒋),GitHub: ${SITE.github}。全站中文(含英文译版),geo-open。
 
 ## Blog(/blog/)
-博客文章的机读 markdown 副本在每篇的 \`/blog/<slug>/index.md\`。最新:
+博客文章的机读 markdown 副本在每篇的 \`<url>index.md\`(英文译版在 \`<url>en/index.md\`)。最新:
 ${recent || '(暂无)'}
-
+${colls ? `\n## 研究专辑\n${colls}\n` : ''}
 ## Gallery(/gallery/)
 ${works}
 
@@ -318,7 +470,8 @@ ${works}
 // ---- 拷贝静态内容 ----
 const COPY_EXCLUDE = new Set(['.git', '.github', '.gitignore', '.dockerignore', 'Dockerfile', 'docker', 'tools', 'templates',
   'posts', 'posts-manifest.json', 'site.config.json', 'SPEC.md', 'README.md', 'LICENSE', 'node_modules', 'site', '.DS_Store',
-  'index.html', 'sitemap.xml', 'llms.txt', 'blog', 'gallery']);
+  'index.html', 'sitemap.xml', 'llms.txt', 'blog', 'gallery', 'release']);
+const ASSET_DIRS = new Set(['assets']);   // 纯静态资源目录:随内容拷贝但不要求 index.html(无干净 URL)
 function contentDirs() {
   return readdirSync(ROOT, { withFileTypes: true })
     .filter(e => !COPY_EXCLUDE.has(e.name))
@@ -329,7 +482,16 @@ function contentDirs() {
 function runCheck(posts) {
   // 每个对外发布的顶层目录必须有 index.html
   for (const c of contentDirs()) {
-    if (c.dir && !existsSync(join(ROOT, c.name, 'index.html'))) err(`内容目录缺 index.html: ${c.name}/`);
+    if (c.dir && !ASSET_DIRS.has(c.name) && !existsSync(join(ROOT, c.name, 'index.html'))) err(`内容目录缺 index.html: ${c.name}/`);
+  }
+  // collection.order 完整性:声明的 slug 必须都有对应文章(反之只 warn)
+  for (const c of COLLECTIONS) {
+    for (const s of (c.order || [])) if (!posts.some(p => p.collectionKey === c.key && p.slug === s)) warn(`collection ${c.key}: order 列了 ${s} 但无对应文章`);
+  }
+  // 论文(layout: paper)整篇试渲染(中 + 英),图表 JSON 非法、正文违规等硬伤在 CI 就拦下
+  for (const p of posts.filter(x => x.layout === 'paper')) {
+    try { renderPaper(p, paperCtx(), { isEn: false }); } catch (e) { err(e.message); }
+    if (p.en) try { renderPaper(p, paperCtx(), { isEn: true }); } catch (e) { err(e.message); }
   }
   const pub = posts.filter(p => p.published);
   console.error(`check: ${posts.length} 篇 md(${pub.length} 已发布),内容目录 ${contentDirs().filter(c => c.dir).length} 个`);
@@ -341,21 +503,33 @@ function runCheck(posts) {
 
 // ---- BUILD 模式 ----
 function copyDir(src, dst) { cpSync(src, dst, { recursive: true }); }
+function writePage(relPath, html) { const dir = join(OUT, relPath); mkdirSync(dir, { recursive: true }); writeFileSync(join(dir, 'index.html'), html); }
 function runBuild(posts) {
   rmSync(OUT, { recursive: true, force: true });
   mkdirSync(OUT, { recursive: true });
   // 1) 拷贝静态内容
   for (const c of contentDirs()) copyDir(join(ROOT, c.name), join(OUT, c.name));
-  // 2) 文章
+  // 2) 文章(中文主页 + 可选英文子页)
   const pub = posts.filter(p => p.published);
   for (const p of pub) {
-    const dir = join(OUT, 'blog', p.slug);
+    const dir = join(OUT, p.path);
     mkdirSync(dir, { recursive: true });
     if (p.isDir) copyDir(p.srcDir, dir);                 // 带图文章:整目录(含 index.md)拷过去
     else writeFileSync(join(dir, 'index.md'), readFileSync(p.abs));  // 单文件:落 md 副本
-    writeFileSync(join(dir, 'index.html'), renderPost(p));           // 渲染后的 html(覆盖同名)
+    writeFileSync(join(dir, 'index.html'), p.layout === 'paper' ? renderPaper(p, paperCtx(), { isEn: false }) : renderPost(p, false));
+    if (p.en) {
+      const edir = join(OUT, p.enPath);
+      mkdirSync(edir, { recursive: true });
+      if (p.en.isDir) copyDir(p.en.srcDir, edir); else writeFileSync(join(edir, 'index.md'), readFileSync(p.en.abs));
+      writeFileSync(join(edir, 'index.html'), p.layout === 'paper' ? renderPaper(p, paperCtx(), { isEn: true }) : renderPost(p, true));
+    }
   }
-  // 3-7) 索引 / 首页 / gallery / sitemap / rss / llms
+  // 3) collection 落地页
+  for (const c of COLLECTIONS) {
+    if (!pub.some(p => p.collectionKey === c.key)) continue;
+    writePage(join('blog', c.key), renderCollection(c, pub));
+  }
+  // 4-8) 索引 / 首页 / gallery / sitemap / rss / llms
   mkdirSync(join(OUT, 'blog'), { recursive: true });
   writeFileSync(join(OUT, 'blog', 'index.html'), renderBlogIndex(pub));
   writeFileSync(join(OUT, 'blog', 'feed.xml'), buildRss(pub));

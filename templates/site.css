@@ -185,3 +185,46 @@ a:hover{color:var(--link-h)}
 .foot a{color:var(--sub)}
 .foot .sp{margin-left:auto}
 .backlink{display:inline-block; margin:1.5rem auto 0; max-width:720px; color:var(--sub); font-size:.88rem}
+
+/* ── 友链:港铁「纸皮石」瓦纹(assets/mosaic.svg 灰阶)+ 站色相(--hue)信号色 ──
+   瓦纹本身极淡(近港铁月台墙),站身份靠信号条 + 线色圆点 + 一抹站色染层承担;克制、一屏一种怀旧元素。 */
+.friend{position:relative; overflow:hidden; display:flex; color:inherit; border-radius:var(--radius);
+  border:1px solid var(--border); background:var(--card); box-shadow:var(--shadow);
+  transition:transform .14s, box-shadow .2s, border-color .2s}
+.friend:hover{transform:translateY(-3px); box-shadow:var(--shadow-h); border-color:hsl(var(--hue,220) 55% 60% / .5)}
+.friend .mosaic{position:absolute; inset:0; background:url(/assets/mosaic.svg); background-size:132px; pointer-events:none}
+.friend::before{content:""; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(120deg, hsl(var(--hue,220) 48% 55% / .12), transparent 60%)}
+.friend .fc{position:relative; z-index:1; display:flex; flex-direction:column; gap:.4rem; width:100%;
+  padding:1.05rem 1.15rem 1.05rem 1.25rem; border-left:3px solid hsl(var(--hue,220) 52% 54%)}
+.friend.neutral .fc{border-left-color:var(--faint)}
+.friend .t{font-weight:650; font-size:1.02rem; color:var(--fg); display:flex; align-items:center; gap:.5rem}
+.friend .t::before{content:""; width:9px; height:9px; border-radius:50%; flex:none;
+  background:hsl(var(--hue,220) 55% 50%); box-shadow:0 0 0 3px hsl(var(--hue,220) 55% 50% / .18)}
+.friend.neutral .t::before{background:var(--faint); box-shadow:0 0 0 3px var(--chip)}
+.friend .d{font-size:.86rem; color:var(--sub); line-height:1.55}
+.friend .host{font-size:.75rem; color:var(--faint); font-family:ui-monospace,SFMono-Regular,Menlo,monospace; margin-top:.1rem}
+
+/* ── collection 落地页:编号清单 ── */
+.collist{list-style:none; padding:0; margin:1.4rem 0 0; display:grid; gap:.7rem}
+.collist li a{display:flex; gap:.9rem; align-items:flex-start; padding:1rem 1.15rem; color:inherit;
+  background:var(--card); border:1px solid var(--border); border-radius:14px; box-shadow:var(--shadow);
+  transition:transform .14s, box-shadow .2s}
+.collist li a:hover{transform:translateY(-2px); box-shadow:var(--shadow-h)}
+.collist .cnum{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.95rem; font-weight:700;
+  color:var(--link); flex:none; min-width:1.8em; padding-top:.1rem}
+.collist .ci{min-width:0}
+.collist .ci .t{font-weight:650; font-size:1.06rem; color:var(--fg)}
+.collist .ci .d{font-size:.9rem; color:var(--sub); margin-top:.25rem; line-height:1.55}
+.collist .ci .meta{font-size:.78rem; color:var(--faint); margin-top:.4rem; display:flex; gap:.6rem; flex-wrap:wrap; align-items:center}
+.postlist .coll a{border-left:3px solid var(--link)}
+
+/* ── 系列上/下篇(博客正文底;论文版另在 paper.css 的 .side .prevnext)── */
+.prevnext{max-width:720px; margin:2rem auto 0; display:flex; gap:.8rem}
+.prevnext a{flex:1; display:flex; flex-direction:column; gap:.15rem; padding:.7rem .95rem; color:inherit;
+  background:var(--card); border:1px solid var(--border); border-radius:12px; transition:transform .14s, box-shadow .2s}
+.prevnext a:hover{transform:translateY(-2px); box-shadow:var(--shadow-h)}
+.prevnext .pn-lbl{font-size:.72rem; color:var(--faint)}
+.prevnext .pn-t{font-size:.9rem; color:var(--fg); line-height:1.4}
+.prevnext .pn-next{text-align:right}
+.prevnext .pn-empty{flex:1}
