@@ -6,6 +6,15 @@ lang: zh-CN
 tags:
   - 养老金
   - 论文评审
+title_en: >-
+  Review of "Differences in Asset Allocation Between Defined Benefit and Defined
+  Contribution Pensions Under Low Interest Rates: A Comparison Based on
+  Asset-Liability Management and Risk-Bearing Mechanisms"
+description_en: >-
+  An independent review of Paper 2, "DB/DC Allocation Differences Under Low
+  Rates": splitting the binary into a continuous spectrum, the substance behind
+  the "de-risking" allocation, and three final-check issues of misattributed
+  bibliography.
 ---
 
 > 外部独立评审（fresh-context）。依据：成品稿全文（thesis.md，约 4.5 万字）、实证边界基线（results.md：14 项经核验聚合事实、微观识别全线降级、三处口径纠偏）、建档判断锚（brief.md）。2026-07-04。

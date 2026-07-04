@@ -6,6 +6,15 @@ lang: zh-CN
 tags:
   - 养老金
   - 论文评审
+title_en: >-
+  Review of "From Low Rates to Rate Repricing: Liquidity Risk, Leverage
+  Constraints, and Asset-Liability Management Reconstruction in Mature Pension
+  Markets"
+description_en: >-
+  An independent review of Paper 4, "Governing Decumulation-Phase Risk": a
+  five-fold rebuttal of the conventional 2022 LDI-crisis narrative, the
+  double-edged sword of survivorship bias, and the topological mismatch between
+  margin moneyness and central-bank bailout capacity.
 ---
 
 **评审性质**：外部独立评审（fresh context）。对象为成品稿全文（state/paper-4/thesis.md），并以 S5 实证执行件（results.md：11 项 verified 聚合锚、27 项显式降级，荷丹对照明标非因果案例、N=1 不作准自然实验）为诚实边界基线逐项对勘，参照 S0 建档 brief。

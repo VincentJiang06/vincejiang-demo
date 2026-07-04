@@ -6,6 +6,15 @@ lang: zh-CN
 tags:
   - 养老金
   - 论文评审
+title_en: >-
+  Review of "What Mature Pension Markets' Asset Allocation Experience Implies
+  for China's Multi-Pillar Pension System: Institutional Fit Based on Long-Term
+  Capital, Asset-Liability Management, and Risk Governance"
+description_en: >-
+  An independent review of Paper 5, "Implications for China's Multi-Pillar
+  System": criteria for transplantability, governance as a constitutionally
+  granted stock quantity, and the real gap—a vacuum in longevity-risk ownership
+  at the decumulation stage.
 ---
 
 ## 一、定位：收官篇的系统落地与收口

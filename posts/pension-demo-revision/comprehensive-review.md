@@ -6,6 +6,12 @@ lang: zh-CN
 tags:
   - 养老金
   - 论文评审
+title_en: Cross-Paper Comprehensive Review of Five Papers
+description_en: >-
+  A cross-paper review of five pension papers (Fable 5 perspective): whether the
+  progressive chain actually bears weight, whether the three main threads
+  (shadow rate / endogeneity / non-transplantability) hold up, a final check of
+  35 issues paper by paper, and an overall assessment.
 ---
 
 > 性质：外部综合评审（Fable 5 视角），对象为本矩阵五篇成品论文与系统总论。与 `papers/overview.md`（作者视角的系统总论）互补：总论论证"五篇是什么"，本综述评审"五篇成色如何"。分篇细评见 `paper-{1..5}-review.md`。

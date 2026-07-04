@@ -6,6 +6,14 @@ lang: zh-CN
 tags:
   - 养老金
   - 论文评审
+title_en: >-
+  Review of "How Prolonged Low Interest Rates Reshape Pension Strategic Asset
+  Allocation: Cross-National Evidence from Mature Pension Markets"
+description_en: >-
+  An independent review of Paper 1, "How Interest Rates Reshape Pension
+  Strategic Allocation": prioritizing the reconstruction of the mechanism, the
+  four-layer mechanism plus one cross-cutting identification warning, and why
+  its evidence pyramid is hollow at the middle.
 ---
 
 **评审性质**：外部独立评审（fresh-context）。已通读成品稿全文（824 行），逐项对照实证边界基线（results.md）与立项简报（brief.md），并对全文做 loop 行话正则扫描后撰写。本评审只报告、不改动任何文件。

@@ -6,6 +6,15 @@ lang: zh-CN
 tags:
   - 养老金
   - 论文评审
+title_en: >-
+  Review of "Alternative Assets and Globalized Allocation in Mature Pension
+  Markets Under Low Interest Rates: A Comparison of Canada, Australia, Japan,
+  and the Netherlands"
+description_en: >-
+  An independent review of Paper 3, "Alternative and Globalized Allocation":
+  triple demystification—governance control rights are non-transferable, the
+  "true" alternative-asset premium is partly a valuation-smoothing illusion, and
+  capacity limits are set by liability hardness.
 ---
 
 **评审性质**：外部独立评审（fresh-context）。依据成品稿全文（state/paper-3/thesis.md，中文正文约 3.8 万字）、实证执行基线（state/paper-3/results.md，19 项 verified 聚合事实 / 23 处显式降级）与建档任务书（state/paper-3/brief.md）三方交叉核对后撰写。
