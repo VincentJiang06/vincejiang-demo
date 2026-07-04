@@ -51,6 +51,18 @@ cover: cover.png      # 可选;带图目录文章的封面(相对本文件目录
 ```
 - slug = 文件名 / 目录名(kebab-case)。**发布后别改名**(URL 会变);非改不可就在 `docker/site.conf` 加 301。
 
+### 2.1 论文格式(`layout: paper`)
+frontmatter 写 `layout: paper` → 用论文模板渲染:A4 排版、左侧大纲、连续分页、三线表、题注编号、打印即规范 A4 稿。**完整写法见 `templates/PAPER-SPEC.md`**(权威)。渲染器 `tools/paper.mjs` + 零依赖图表/结构图/脑图引擎 `tools/paper-charts.mjs`,骨架/样式/脚本 `templates/paper.{html,css,js}`。
+
+### 2.2 分组(子目录即 URL 前缀)
+`posts/<group>/<slug>.md` → `/blog/<group>/<slug>/`;根目录 `posts/<slug>.md` 仍是 `/blog/<slug>/`(不变)。例:`posts/pension-demo/paper-1.md` → `/blog/pension-demo/paper-1/`。
+
+### 2.3 双语(中英,双 URL + 顶部切换)
+中文主文件 `<slug>.md` + 英文译文 `<slug>.en.md`(同目录兄弟,`lang: en`,只需 title/description/正文)。生成中文主页 + `/en/` 英文子页;**首页 / Blog 索引 / RSS 只收中文主页,英文页不重复出现**;两页互挂 hreflang(x-default→中)、顶部「中/EN」切换。论文的双语元数据(`title_en/abstract_en/keywords_en`)统一放中文 `paper:` 里(单一数据源)。
+
+### 2.4 研究专辑(collection)
+`site.config.json` 的 `collections` 加一条(`key`=子目录名,`order`=slug 顺序,`layout:paper` 用论文格式)→ 自动生成落地页 `/blog/<key>/`(编号清单)+ 每篇「上/下篇」串联导航;Blog 索引把该组折叠成一张专辑卡。
+
 ---
 
 ## 3. 怎么加一个 demo(老工作流,不变)
@@ -67,10 +79,12 @@ cover: cover.png      # 可选;带图目录文章的封面(相对本文件目录
 ## 4. 目录结构
 
 ```
-posts/            # 博客 md 源(posts/<slug>.md 或 posts/<slug>/index.md + 图)
-templates/        # base.html(页骨架)+ site.css(全站单一样式源)
-tools/            # 生成器 —— build-site.mjs / gen-manifest.mjs / audit.mjs + package.json
-site.config.json  # 首页 & gallery 的单一数据源(6 野史站 + gallery 作品)
+posts/            # 博客 md 源:posts/<slug>.md、posts/<slug>/index.md+图,或 posts/<group>/<slug>.md 分组;<slug>.en.md 为英文译版
+templates/        # base.html + site.css(博客)+ paper.{html,css,js}(论文模板)+ PAPER-SPEC.md(论文写法规范)
+tools/            # 生成器 —— build-site.mjs / paper.mjs / paper-charts.mjs / gen-manifest.mjs / audit.mjs
+assets/           # 纯静态资源(mosaic.svg 友链纸皮石瓦纹),原样收录,不需 index.html
+release/          # 论文源内容暂存(不对外发布)
+site.config.json  # 首页 / gallery / 友链(wildSites) / 研究专辑(collections)的单一数据源
 <demo>/           # 各 demo 文件夹(status-ai / vince-hifi-notes / mac-buying-demo …),原样收录
 docker/           # nginx 配置(site.conf + snippets/security-headers.conf)
 Dockerfile        # 多阶段:node 编译 → nginx 发布
@@ -78,7 +92,7 @@ Dockerfile        # 多阶段:node 编译 → nginx 发布
 ```
 **生成物**(不入库,构建时产出):`index.html`、`/blog/**`、`/gallery/`、`sitemap.xml`、`llms.txt`、`posts-manifest.json`。
 
-**不对外发布**(生成器的 COPY_EXCLUDE + .dockerignore 挡掉):`docker/ tools/ templates/ posts/ site.config.json .github/ .git SPEC.md README.md node_modules posts-manifest.json`。
+**不对外发布**(生成器的 COPY_EXCLUDE + .dockerignore 挡掉):`docker/ tools/ templates/ posts/ release/ site.config.json .github/ .git SPEC.md README.md node_modules posts-manifest.json`。`assets/` 属例外:原样收录(供 `/assets/mosaic.svg` 等),但不要求 index.html。
 
 ---
 
