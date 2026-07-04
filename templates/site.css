@@ -205,19 +205,8 @@ a:hover{color:var(--link-h)}
 .friend .d{font-size:.86rem; color:var(--sub); line-height:1.55}
 .friend .host{font-size:.75rem; color:var(--faint); font-family:ui-monospace,SFMono-Regular,Menlo,monospace; margin-top:.1rem}
 
-/* ── collection 落地页:编号清单 ── */
-.collist{list-style:none; padding:0; margin:1.4rem 0 0; display:grid; gap:.7rem}
-.collist li a{display:flex; gap:.9rem; align-items:flex-start; padding:1rem 1.15rem; color:inherit;
-  background:var(--card); border:1px solid var(--border); border-radius:14px; box-shadow:var(--shadow);
-  transition:transform .14s, box-shadow .2s}
-.collist li a:hover{transform:translateY(-2px); box-shadow:var(--shadow-h)}
-.collist .cnum{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.95rem; font-weight:700;
-  color:var(--link); flex:none; min-width:1.8em; padding-top:.1rem}
-.collist .ci{min-width:0}
-.collist .ci .t{font-weight:650; font-size:1.06rem; color:var(--fg)}
-.collist .ci .d{font-size:.9rem; color:var(--sub); margin-top:.25rem; line-height:1.55}
-.collist .ci .meta{font-size:.78rem; color:var(--faint); margin-top:.4rem; display:flex; gap:.6rem; flex-wrap:wrap; align-items:center}
-.postlist .coll a{border-left:3px solid var(--link)}
+/* ── collection 落地页:与 blog 索引同用 .postlist(见上);仅论文标签轻蓝 ── */
+.postlist .tag.paper{color:var(--link);border-color:color-mix(in srgb,var(--link) 40%,var(--border))}
 
 /* ── 系列上/下篇(博客正文底;论文版另在 paper.css 的 .side .prevnext)── */
 .prevnext{max-width:720px; margin:2rem auto 0; display:flex; gap:.8rem}
@@ -244,13 +233,14 @@ a:hover{color:var(--link-h)}
 .coll-card .rev-ribbon{background:#c47f2e}
 
 /* ── 专辑落地页:revision 头、专辑互链、TL;DR 项 ── */
-.hero.rev .rev-tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.08em;color:#fff;
-  background:#c47f2e;padding:.16rem .62rem;border-radius:999px;margin-bottom:.55rem}
+.hero .rev-tag,.hero .paper-tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.08em;color:#fff;
+  padding:.16rem .62rem;border-radius:999px;margin-bottom:.55rem}
+.hero .rev-tag{background:#c47f2e}
+.hero .paper-tag{background:var(--link)}
 .crosslink{display:inline-block;margin-top:.9rem;font-size:.9rem;padding:.45rem .85rem;border-radius:10px;
   background:var(--chip);border:1px solid var(--border);color:var(--link)}
 .crosslink:hover{box-shadow:var(--shadow)}
 .crosslink.rev{color:#b06f20}
-.collist .is-tldr a{border:1.5px solid color-mix(in srgb,var(--link) 55%,transparent);
+.postlist .is-tldr a{border:1.5px solid color-mix(in srgb,var(--link) 55%,transparent);
   background:color-mix(in srgb,var(--link) 7%,var(--card))}
-.collist .is-tldr .cnum{color:var(--link)}
 .tag.tldr{color:#fff;background:var(--link);border-color:var(--link);font-weight:700}

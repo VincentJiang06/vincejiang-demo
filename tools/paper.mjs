@@ -228,10 +228,13 @@ export function renderPaper(p, ctx, opts = {}) {
     publisher: ctx.personLd,
     isPartOf: { '@type': 'Blog', name: `${ctx.SITE.name} 的 Blog`, url: ctx.SITE.url + '/blog/' },
   };
+  // 论文归属「Research Demo」(其所在专辑),而非 blog
+  const upHref = p.collectionKey ? `/blog/${p.collectionKey}/` : '/blog/';
+  const upLabel = p.collectionKey ? 'Research Demo' : 'Blog';
   const breadcrumb = {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: '首页', item: ctx.SITE.url + '/' },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: ctx.SITE.url + '/blog/' },
+      { '@type': 'ListItem', position: 2, name: upLabel, item: ctx.SITE.url + upHref },
       { '@type': 'ListItem', position: 3, name: title, item: ctx.SITE.url + path },
     ],
   };
@@ -246,6 +249,7 @@ export function renderPaper(p, ctx, opts = {}) {
     TOC: tocHtml(nh.toc, isEn),
     TITLEBLOCK: titleBlock(p, pp, isEn),
     CONTENT: html,
+    UPLINK: `<a href="${upHref}">${upLabel}</a>`,
     LANGSW: ctx.langSwitchHtml ? ctx.langSwitchHtml(p, isEn) : '',
     PREVNEXT: ctx.prevNextHtml ? ctx.prevNextHtml(p, isEn) : '',
     SRCLABEL: isEn ? 'Markdown source' : 'Markdown 源',

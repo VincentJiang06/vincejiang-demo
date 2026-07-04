@@ -301,35 +301,34 @@ function renderCollection(coll, posts) {
   const members = posts.filter(p => p.collectionKey === coll.key)
     .sort((a, b) => (order.indexOf(a.slug) - order.indexOf(b.slug)));
   const path = `/blog/${coll.key}/`;
-  const isPaper = coll.layout === 'paper';
   const isRev = coll.kind === 'revision';
-  const items = members.map((p, i) => {
+  // 与 blog 索引同版式(.postlist)
+  const items = members.map(p => {
     const tldr = p.card === 'tldr';
     const badge = tldr ? `<span class="tag tldr">TL;DR · 先读这篇</span>`
-      : (p.layout === 'paper' ? `<span class="tag">论文</span>` : '');
-    const no = `<span class="cnum">${String(i + 1).padStart(2, '0')}</span>`;
-    return `<li class="${tldr ? 'is-tldr' : ''}"><a href="${p.path}">${no}<div class="ci"><div class="t">${esc(p.title)}</div><div class="d">${esc(p.description)}</div><div class="meta"><time datetime="${p.date}">${p.date}</time>${badge}</div></div></a></li>`;
+      : (p.layout === 'paper' ? `<span class="tag paper">论文</span>` : `<span class="tag">评述</span>`);
+    return `<li class="${tldr ? 'is-tldr' : ''}"><a href="${p.path}"><div class="t">${esc(p.title)}</div><div class="d">${esc(p.description)}</div><div class="meta"><time datetime="${p.date}">${p.date}</time>${badge}</div></a></li>`;
   }).join('\n');
   const list = members.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.title, url: SITE.url + p.path }));
   const revOf = coll.revisionOf ? collectionOf(coll.revisionOf) : null;
   const revBy = coll.revisedBy ? collectionOf(coll.revisedBy) : null;
   const cross = revOf ? `<a class="crosslink rev" href="/blog/${revOf.key}/">← 本专辑是对《${esc(revOf.title)}》的评述与复盘</a>`
     : revBy ? `<a class="crosslink" href="/blog/${revBy.key}/">📝 这套论文的评述与复盘 → ${esc(revBy.title)}</a>` : '';
+  const heroTag = isRev ? '<span class="rev-tag">修订 · REVISION</span>' : '<span class="paper-tag">论文正文 · RESEARCH</span>';
+  const crumbs = [{ '@type': 'ListItem', position: 1, name: '首页', item: SITE.url + '/' }];
+  if (isRev && revOf) { crumbs.push({ '@type': 'ListItem', position: 2, name: 'Research Demo', item: SITE.url + `/blog/${revOf.key}/` }); crumbs.push({ '@type': 'ListItem', position: 3, name: coll.title, item: SITE.url + path }); }
+  else crumbs.push({ '@type': 'ListItem', position: 2, name: 'Research Demo', item: SITE.url + path });
   const head = {
     titleFull: `${coll.title} · ${SITE.name}`,
     html: headHtml({ path, title: coll.title, desc: coll.desc, jsonld: [
       { '@context': 'https://schema.org', '@type': 'CollectionPage', name: coll.title, url: SITE.url + path, description: coll.desc, author: personLd,
-        isPartOf: { '@type': 'Blog', name: `${SITE.name} 的 Blog`, url: SITE.url + '/blog/' },
+        isPartOf: { '@type': 'CreativeWorkSeries', name: 'Research Demo', url: SITE.url + '/blog/pension-demo/' },
         mainEntity: { '@type': 'ItemList', itemListElement: list } },
-      { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '首页', item: SITE.url + '/' },
-        { '@type': 'ListItem', position: 2, name: 'Blog', item: SITE.url + '/blog/' },
-        { '@type': 'ListItem', position: 3, name: coll.title, item: SITE.url + path },
-      ] },
+      { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: crumbs },
     ] }),
   };
-  const main = `<main class="wrap narrow"><div class="hero${isRev ? ' rev' : ''}">${isRev ? '<span class="rev-tag">修订 · REVISION</span>' : ''}<h1>${esc(coll.title)}</h1><p>${esc(coll.desc)}</p>${coll.note ? `<p class="note">${esc(coll.note)}</p>` : ''}${cross}</div>
-<ol class="collist${isPaper ? ' paper' : ''}">${items || '<p class="note">敬请期待。</p>'}</ol>
+  const main = `<main class="wrap narrow"><div class="hero${isRev ? ' rev' : ' research'}">${heroTag}<h1>${esc(coll.title)}</h1><p>${esc(coll.desc)}</p>${coll.note ? `<p class="note">${esc(coll.note)}</p>` : ''}${cross}</div>
+<ul class="postlist">${items || '<p class="note">敬请期待。</p>'}</ul>
 <a class="backlink" href="/">← 返回首页</a></main>`;
   return pageHtml({ active: 'research', head, main });
 }
@@ -394,7 +393,14 @@ ${collSec ? `\n<div class="sec"><h2>📚 研究专辑</h2><span class="note">成
   return pageHtml({ active: 'home', head, main });
 }
 function renderGallery() {
-  const cards = (CONFIG.gallery || []).map(g => tileCard(g.href, g.title, g.desc, g.badge ? `<div class="meta"><span class="badge">${esc(g.badge)}</span></div>` : '')).join('\n');
+  // 与 blog 索引同一列表版式(.wrap.narrow + .postlist)
+  const items = (CONFIG.gallery || []).map(g => {
+    const ext = /^https?:/.test(g.href);
+    const host = ext ? `<span class="host">${esc(g.href.replace(/^https?:\/\//, '').replace(/\/$/, ''))} ↗</span>` : '';
+    const attr = ext ? ' target="_blank" rel="noopener"' : '';
+    const badge = g.badge ? `<span class="tag">${esc(g.badge)}</span>` : '';
+    return `<li><a href="${g.href}"${attr}><div class="t">${esc(g.title)}</div><div class="d">${esc(g.desc)}</div><div class="meta">${badge}${host}</div></a></li>`;
+  }).join('\n');
   const list = (CONFIG.gallery || []).map((g, i) => ({ '@type': 'ListItem', position: i + 1, name: g.title, url: /^https?:/.test(g.href) ? g.href : SITE.url + g.href }));
   const head = {
     titleFull: `Gallery · ${SITE.name}`,
@@ -402,8 +408,8 @@ function renderGallery() {
       { '@context': 'https://schema.org', '@type': 'CollectionPage', name: `${SITE.name} · Gallery`, url: SITE.url + '/gallery/', author: personLd, mainEntity: { '@type': 'ItemList', itemListElement: list } },
     ] }),
   };
-  const main = `<main class="wrap"><div class="hero"><h1>Gallery</h1><p>做过的交互式 demo 与实验。原地址不变,这里只是索引。</p></div>
-<div class="grid c2">${cards}</div></main>`;
+  const main = `<main class="wrap narrow"><div class="hero"><h1>Gallery</h1><p>做过的交互式 demo 与实验。原地址不变,这里只是索引。</p></div>
+<ul class="postlist">${items}</ul></main>`;
   return pageHtml({ active: 'gallery', head, main });
 }
 
