@@ -193,8 +193,8 @@ GHCR 保留每个 sha 的镜像,`<旧-git-sha>` 用要回退到的那次 commit 
 
 ## 12. SEO/GEO 基建(长在模板/生成器里,零维护)
 
-生成器保证每页 MUST:`<title> · Vince Jiang`、自指 canonical、meta description、OG 四件套 + twitter card、`<html lang>`、viewport、单 h1。JSON-LD 单一来源在 build-site.mjs(禁手写内嵌):首页 `WebSite`+`Person`;文章 `BlogPosting`(真实 git 日期)+`BreadcrumbList`;gallery `CollectionPage`+`ItemList`。
-机读层(GEO):每篇文章的 md 源副本 `/blog/<slug>/index.md`、`llms.txt`、RSS、sitemap(lastmod 用真实 git 日期,禁虚刷)。
+生成器保证每页 MUST:`<title> · Vince Jiang`、自指 canonical、meta description、OG 四件套 + twitter card、`<html lang>`、viewport、单 h1。JSON-LD 单一来源在 build-site.mjs / paper.mjs(禁手写内嵌):首页 `WebSite`+`Person`;博客文章 `BlogPosting`+`BreadcrumbList`;论文 `ScholarlyArticle`(摘要/关键词/`about`/`genre`/`isPartOf` 研究系列 + `workTranslation`↔`translationOfWork` 中英互链)+`BreadcrumbList`;研究专辑落地页 `CollectionPage`+`CreativeWorkSeries`(`hasPart` 含各篇摘要)。日期一律真实 git 日期。
+机读层(GEO):每篇文章的 md 源副本 `/blog/<…>/index.md`(英文 `en/index.md`);`llms.txt`(研究专辑逐篇列出 + 每篇机读 md 链接,置顶于 blog 之上);RSS;sitemap(研究页优先级更高,lastmod 真实 git 日期);`robots.txt` 显式放行 GPTBot / OAI-SearchBot / ChatGPT-User / ClaudeBot / Claude-SearchBot / PerplexityBot / Google-Extended。
 
 ---
 

@@ -217,16 +217,26 @@ export function renderPaper(p, ctx, opts = {}) {
   const authors = (pp.authors || []).map(a => typeof a === 'string' ? { name: a } : a);
   const absTxt = isEn ? pp.abstract_en : pp.abstract;
   const kwTxt = isEn ? pp.keywords_en : pp.keywords;
+  const kwArr = Array.isArray(kwTxt) ? kwTxt : (kwTxt ? String(kwTxt).split(/[;,；、]\s*/).filter(Boolean) : []);
+  // 归属研究系列(而非泛 blog),便于 AI 理解为一套连贯研究
+  const coll = (p.collectionKey && ctx.collectionOf) ? ctx.collectionOf(p.collectionKey) : null;
+  const isPartOf = coll
+    ? { '@type': 'CreativeWorkSeries', name: coll.title, url: ctx.SITE.url + `/blog/${coll.key}/` }
+    : { '@type': 'Blog', name: `${ctx.SITE.name} 的 Blog`, url: ctx.SITE.url + '/blog/' };
+  // 中英互为译本(schema.org 翻译关系)
+  const transHref = isEn ? ctx.SITE.url + p.path : (p.enPath ? ctx.SITE.url + p.enPath : null);
+  const transRel = isEn ? 'translationOfWork' : 'workTranslation';
   const ld = {
     '@context': 'https://schema.org', '@type': 'ScholarlyArticle',
     headline: title, ...(!isEn && pp.title_en ? { alternativeHeadline: pp.title_en } : {}),
     ...(absTxt ? { abstract: absTxt } : {}),
-    ...(kwTxt ? { keywords: Array.isArray(kwTxt) ? kwTxt.join(', ') : kwTxt } : {}),
-    datePublished: p.date, dateModified: p.updated, inLanguage: lang,
-    mainEntityOfPage: ctx.SITE.url + path,
+    ...(kwArr.length ? { keywords: kwArr.join(', '), about: kwArr.map(k => ({ '@type': 'Thing', name: k })) } : {}),
+    genre: 'working paper', datePublished: p.date, dateModified: p.updated, inLanguage: lang,
+    url: ctx.SITE.url + path, mainEntityOfPage: ctx.SITE.url + path,
     author: authors.length ? authors.map(a => ({ '@type': 'Person', name: a.name, ...(a.affil ? { affiliation: a.affil } : {}) })) : ctx.personLd,
     publisher: ctx.personLd,
-    isPartOf: { '@type': 'Blog', name: `${ctx.SITE.name} 的 Blog`, url: ctx.SITE.url + '/blog/' },
+    isPartOf,
+    ...(transHref ? { [transRel]: { '@type': 'ScholarlyArticle', '@id': transHref, url: transHref, inLanguage: isEn ? p.lang : 'en' } } : {}),
   };
   // 论文归属「Research Demo」(其所在专辑),而非 blog
   const upHref = p.collectionKey ? `/blog/${p.collectionKey}/` : '/blog/';

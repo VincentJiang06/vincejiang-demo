@@ -258,7 +258,7 @@ function loadPosts() {
 }
 
 // 论文模板(layout: paper)渲染上下文;渲染逻辑在 paper.mjs,规格见 templates/PAPER-SPEC.md
-const paperCtx = () => ({ SITE, headHtml, personLd, esc, warn, langSwitchHtml, hreflangHtml, prevNextHtml, backLabel });
+const paperCtx = () => ({ SITE, headHtml, personLd, esc, warn, langSwitchHtml, hreflangHtml, prevNextHtml, backLabel, collectionOf });
 
 // ---- 渲染单篇博客(post);isEn=true 时渲染英文子页 ----
 function renderPost(p, isEn = false) {
@@ -315,15 +315,25 @@ function renderCollection(coll, posts) {
   const cross = revOf ? `<a class="crosslink rev" href="/blog/${revOf.key}/">← 本专辑是对《${esc(revOf.title)}》的评述与复盘</a>`
     : revBy ? `<a class="crosslink" href="/blog/${revBy.key}/">📝 这套论文的评述与复盘 → ${esc(revBy.title)}</a>` : '';
   const heroTag = isRev ? '<span class="rev-tag">修订 · REVISION</span>' : '<span class="paper-tag">论文正文 · RESEARCH</span>';
+  // GEO:把各篇作为系列组成部分(含摘要),让 AI 从一页拿到全部摘要
+  const hasPart = members.map(m => {
+    const isP = m.layout === 'paper', mp = m.paper || {};
+    return { '@type': isP ? 'ScholarlyArticle' : 'Article', headline: m.title, url: SITE.url + m.path,
+      ...(isP && mp.abstract ? { abstract: mp.abstract } : { description: m.description }),
+      ...(isP && mp.keywords ? { keywords: Array.isArray(mp.keywords) ? mp.keywords.join(', ') : mp.keywords } : {}),
+      inLanguage: m.lang, datePublished: m.date, author: personLd };
+  });
+  const collKw = [...new Set(members.flatMap(m => Array.isArray(m.paper?.keywords) ? m.paper.keywords : []))].slice(0, 12);
   const crumbs = [{ '@type': 'ListItem', position: 1, name: '首页', item: SITE.url + '/' }];
   if (isRev && revOf) { crumbs.push({ '@type': 'ListItem', position: 2, name: 'Research Demo', item: SITE.url + `/blog/${revOf.key}/` }); crumbs.push({ '@type': 'ListItem', position: 3, name: coll.title, item: SITE.url + path }); }
   else crumbs.push({ '@type': 'ListItem', position: 2, name: 'Research Demo', item: SITE.url + path });
   const head = {
     titleFull: `${coll.title} · ${SITE.name}`,
     html: headHtml({ path, title: coll.title, desc: coll.desc, jsonld: [
-      { '@context': 'https://schema.org', '@type': 'CollectionPage', name: coll.title, url: SITE.url + path, description: coll.desc, author: personLd,
+      { '@context': 'https://schema.org', '@type': ['CollectionPage', 'CreativeWorkSeries'], name: coll.title, url: SITE.url + path, description: coll.desc, author: personLd, inLanguage: 'zh-CN',
+        ...(collKw.length ? { keywords: collKw.join(', ') } : {}),
         isPartOf: { '@type': 'CreativeWorkSeries', name: 'Research Demo', url: SITE.url + '/blog/pension-demo/' },
-        mainEntity: { '@type': 'ItemList', itemListElement: list } },
+        hasPart, mainEntity: { '@type': 'ItemList', itemListElement: list } },
       { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: crumbs },
     ] }),
   };
@@ -423,11 +433,12 @@ function buildSitemap(posts) {
     { loc: '/gallery/', lastmod: cfgDate, cf: 'monthly', pri: '0.7' },
   ];
   for (const c of COLLECTIONS) {
-    if (posts.some(p => p.collectionKey === c.key)) urls.push({ loc: `/blog/${c.key}/`, lastmod: newest, cf: 'monthly', pri: '0.6' });
+    if (posts.some(p => p.collectionKey === c.key)) urls.push({ loc: `/blog/${c.key}/`, lastmod: newest, cf: 'monthly', pri: '0.8' });
   }
   for (const p of posts) {
-    urls.push({ loc: p.path, lastmod: p.updated, cf: 'monthly', pri: '0.6' });
-    if (p.enPath) urls.push({ loc: p.enPath, lastmod: p.updated, cf: 'monthly', pri: '0.5' });
+    const pri = p.collectionKey ? '0.7' : '0.6';   // 研究论文优先级更高
+    urls.push({ loc: p.path, lastmod: p.updated, cf: 'monthly', pri });
+    if (p.enPath) urls.push({ loc: p.enPath, lastmod: p.updated, cf: 'monthly', pri: p.collectionKey ? '0.6' : '0.5' });
   }
   for (const g of (CONFIG.gallery || [])) {
     if (/^https?:/.test(g.href)) continue;               // 只收本站内部作品
@@ -458,19 +469,27 @@ ${items}
 }
 function buildLlms(posts) {
   const recent = posts.filter(p => !p.collectionKey).slice(0, 10).map(p => `- [${p.title}](${SITE.url}${p.path}) — ${p.description}`).join('\n');
-  const colls = COLLECTIONS.filter(c => posts.some(p => p.collectionKey === c.key)).map(c =>
-    `- [${c.title}](${SITE.url}/blog/${c.key}/) — ${c.desc}`).join('\n');
   const works = (CONFIG.gallery || []).map(g => `- [${g.title}](${/^https?:/.test(g.href) ? g.href : SITE.url + g.href}) — ${g.desc}`).join('\n');
+  // 研究专辑:逐篇列出 + 机读 markdown 链接(中英),便于 LLM 检索与引用
+  const research = COLLECTIONS.filter(c => posts.some(p => p.collectionKey === c.key)).map(c => {
+    const order = c.order || [];
+    const members = posts.filter(p => p.collectionKey === c.key).sort((a, b) => order.indexOf(a.slug) - order.indexOf(b.slug));
+    const lines = members.map(p => {
+      const u = SITE.url + p.path;
+      const en = p.enPath ? `;英文 ${SITE.url}${p.enPath}(md ${SITE.url}${p.enPath}index.md)` : '';
+      return `- [${p.title}](${u}) — ${p.description}\n  机读 markdown:${u}index.md${en}`;
+    }).join('\n');
+    return `### ${c.title}\n${c.desc}\n入口:${SITE.url}/blog/${c.key}/\n${lines}`;
+  }).join('\n\n');
   return `# ${SITE.name} — vincejiang.com
 
 > ${SITE.tagline}
 
-作者 Vince Jiang(小蒋),GitHub: ${SITE.github}。全站中文(含英文译版),geo-open。
-
+作者 Vince Jiang(小蒋),GitHub: ${SITE.github}。所有文章都有机读 markdown 副本(文章 URL 后加 \`index.md\`,英文译版在 \`en/index.md\`),欢迎抓取、检索与引用(geo-open;robots.txt 显式放行 GPTBot / OAI-SearchBot / ChatGPT-User / ClaudeBot / Claude-SearchBot / PerplexityBot / Google-Extended)。
+${research ? `\n## 研究专辑 · Research Demo(经济学工作论文,中英双语,每篇附机读 markdown)\n${research}\n` : ''}
 ## Blog(/blog/)
-博客文章的机读 markdown 副本在每篇的 \`<url>index.md\`(英文译版在 \`<url>en/index.md\`)。最新:
 ${recent || '(暂无)'}
-${colls ? `\n## 研究专辑\n${colls}\n` : ''}
+
 ## Gallery(/gallery/)
 ${works}
 
