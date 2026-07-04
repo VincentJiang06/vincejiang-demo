@@ -228,3 +228,29 @@ a:hover{color:var(--link-h)}
 .prevnext .pn-t{font-size:.9rem; color:var(--fg); line-height:1.4}
 .prevnext .pn-next{text-align:right}
 .prevnext .pn-empty{flex:1}
+
+/* ── header「研究专辑」特殊入口(药丸) ── */
+.nav a.item.special{color:var(--link);font-weight:600;font-size:.85rem;padding:.18rem .7rem;border-radius:999px;
+  border:1px solid color-mix(in srgb,var(--link) 42%,transparent)}
+.nav a.item.special:hover,.nav a.item.special.active{background:var(--link);color:#fff;border-color:var(--link)}
+
+/* ── 首页研究专辑卡:featured(论文)/ revision(评述复盘)各自缎带 ── */
+.coll-card{position:relative;overflow:hidden;padding-top:1.3rem}
+.coll-card.featured{border-color:color-mix(in srgb,var(--link) 38%,var(--border))}
+.coll-card .feat-ribbon,.coll-card .rev-ribbon{position:absolute;top:0;right:0;font-size:.64rem;font-weight:700;
+  letter-spacing:.06em;padding:.2rem .6rem;border-radius:0 0 0 9px;color:#fff}
+.coll-card .feat-ribbon{background:var(--link)}
+.coll-card.revision{border-style:dashed;border-color:color-mix(in srgb,#cf8a3c 55%,var(--border))}
+.coll-card .rev-ribbon{background:#c47f2e}
+
+/* ── 专辑落地页:revision 头、专辑互链、TL;DR 项 ── */
+.hero.rev .rev-tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.08em;color:#fff;
+  background:#c47f2e;padding:.16rem .62rem;border-radius:999px;margin-bottom:.55rem}
+.crosslink{display:inline-block;margin-top:.9rem;font-size:.9rem;padding:.45rem .85rem;border-radius:10px;
+  background:var(--chip);border:1px solid var(--border);color:var(--link)}
+.crosslink:hover{box-shadow:var(--shadow)}
+.crosslink.rev{color:#b06f20}
+.collist .is-tldr a{border:1.5px solid color-mix(in srgb,var(--link) 55%,transparent);
+  background:color-mix(in srgb,var(--link) 7%,var(--card))}
+.collist .is-tldr .cnum{color:var(--link)}
+.tag.tldr{color:#fff;background:var(--link);border-color:var(--link);font-weight:700}

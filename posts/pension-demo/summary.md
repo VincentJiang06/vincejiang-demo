@@ -1,6 +1,7 @@
 ---
 layout: paper
-title: 低利率环境下海外成熟市场养老金资产配置经验
+title: "TL;DR：低利率环境下海外成熟市场养老金资产配置经验"
+card: tldr
 description: >-
   本文将五篇论文合并为对「低利率环境下海外成熟市场养老金资产配置经验」这一原始提问的直接回答(约 4,700
   字):经验真实而丰厚,但其可用形态不是一份动作清单,而是机制与前提——利率从不直接配置资产、制度会计才配置资产;被当作外生给定的治理能力、另类溢价、无风险锚、风险归责其实全部内生;判断一条经验
@@ -23,8 +24,8 @@ paper:
     - 机制与前提
     - 成熟养老金市场
   title_en: >-
-    Pension Asset Allocation Lessons from Mature Overseas Markets Under Low
-    Interest Rates: A Combined Answer from Five Papers
+    TL;DR — Pension Asset Allocation Lessons from Mature Overseas Markets Under
+    Low Interest Rates: A Combined Answer from Five Papers
   abstract_en: >-
     This paper combines five papers into a direct answer (about 4,700 words) to
     the original question, "Pension asset allocation lessons from mature

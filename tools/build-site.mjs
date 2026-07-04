@@ -41,6 +41,7 @@ const SITE = {
 const NAV_ITEMS = [
   { key: 'home', label: '首页', href: '/' },
   { key: 'blog', label: 'Blog', href: '/blog/' },
+  { key: 'research', label: '研究专辑', href: '/blog/pension-demo/', special: true },
   { key: 'gallery', label: 'Gallery', href: '/gallery/' },
 ];
 
@@ -108,12 +109,12 @@ function headHtml({ type = 'website', path = '/', title, desc, image = SITE.imag
   ].join('\n');
 }
 function navHtml(active) {
-  const items = NAV_ITEMS.map(i => `<a class="item${i.key === active ? ' active' : ''}" href="${i.href}">${i.label}</a>`).join('\n');
+  const items = NAV_ITEMS.map(i => `<a class="item${i.special ? ' special' : ''}${i.key === active ? ' active' : ''}" href="${i.href}">${i.label}</a>`).join('\n');
   return `<nav class="nav"><div class="in"><a class="brand" href="/">Vince Jiang</a>${items}<button class="toggle" id="theme-toggle" title="切换明暗">🌙</button></div></nav>`;
 }
 function footHtml() {
   const y = new Date().getFullYear();
-  return `<footer class="foot"><span>© ${y} Vince Jiang</span><a href="${SITE.github}" rel="me">GitHub</a><a href="/blog/feed.xml">RSS</a><span class="sp">Served from a home server via Cloudflare Tunnel.</span></footer>`;
+  return `<footer class="foot"><span>© ${y} Vince Jiang</span><a href="${SITE.github}" rel="me">GitHub</a><a href="/blog/feed.xml">RSS</a></footer>`;
 }
 function pageHtml({ lang = SITE.lang, active = '', head, main }) {
   return fill(BASE, { LANG: lang, TITLE: head.titleFull, HEAD: head.html, CSS, NAV: navHtml(active), MAIN: main, FOOTER: footHtml() });
@@ -238,7 +239,7 @@ function loadPosts() {
       title: fm.title || slug, description, tags: fm.tags || [], lang: fm.lang || SITE.lang,
       date, updated, cover: fm.cover || null, draft: fm.draft === true, published, body,
       layout: fm.layout === 'paper' ? 'paper' : 'post', paper: fm.paper || null,
-      en, collectionKey: collectionOf(group) ? group : null,
+      en, collectionKey: collectionOf(group) ? group : null, card: fm.card || null,
       prev: null, next: null,
     });
   }
@@ -301,12 +302,19 @@ function renderCollection(coll, posts) {
     .sort((a, b) => (order.indexOf(a.slug) - order.indexOf(b.slug)));
   const path = `/blog/${coll.key}/`;
   const isPaper = coll.layout === 'paper';
+  const isRev = coll.kind === 'revision';
   const items = members.map((p, i) => {
-    const badge = p.layout === 'paper' ? `<span class="tag">论文</span>` : '';
+    const tldr = p.card === 'tldr';
+    const badge = tldr ? `<span class="tag tldr">TL;DR · 先读这篇</span>`
+      : (p.layout === 'paper' ? `<span class="tag">论文</span>` : '');
     const no = `<span class="cnum">${String(i + 1).padStart(2, '0')}</span>`;
-    return `<li><a href="${p.path}">${no}<div class="ci"><div class="t">${esc(p.title)}</div><div class="d">${esc(p.description)}</div><div class="meta"><time datetime="${p.date}">${p.date}</time>${badge}</div></div></a></li>`;
+    return `<li class="${tldr ? 'is-tldr' : ''}"><a href="${p.path}">${no}<div class="ci"><div class="t">${esc(p.title)}</div><div class="d">${esc(p.description)}</div><div class="meta"><time datetime="${p.date}">${p.date}</time>${badge}</div></div></a></li>`;
   }).join('\n');
   const list = members.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.title, url: SITE.url + p.path }));
+  const revOf = coll.revisionOf ? collectionOf(coll.revisionOf) : null;
+  const revBy = coll.revisedBy ? collectionOf(coll.revisedBy) : null;
+  const cross = revOf ? `<a class="crosslink rev" href="/blog/${revOf.key}/">← 本专辑是对《${esc(revOf.title)}》的评述与复盘</a>`
+    : revBy ? `<a class="crosslink" href="/blog/${revBy.key}/">📝 这套论文的评述与复盘 → ${esc(revBy.title)}</a>` : '';
   const head = {
     titleFull: `${coll.title} · ${SITE.name}`,
     html: headHtml({ path, title: coll.title, desc: coll.desc, jsonld: [
@@ -320,27 +328,20 @@ function renderCollection(coll, posts) {
       ] },
     ] }),
   };
-  const main = `<main class="wrap narrow"><div class="hero"><h1>${esc(coll.title)}</h1><p>${esc(coll.desc)}</p>${coll.note ? `<p class="note">${esc(coll.note)}</p>` : ''}</div>
+  const main = `<main class="wrap narrow"><div class="hero${isRev ? ' rev' : ''}">${isRev ? '<span class="rev-tag">修订 · REVISION</span>' : ''}<h1>${esc(coll.title)}</h1><p>${esc(coll.desc)}</p>${coll.note ? `<p class="note">${esc(coll.note)}</p>` : ''}${cross}</div>
 <ol class="collist${isPaper ? ' paper' : ''}">${items || '<p class="note">敬请期待。</p>'}</ol>
-<a class="backlink" href="/blog/">← 返回 Blog</a></main>`;
-  return pageHtml({ active: 'blog', head, main });
+<a class="backlink" href="/">← 返回首页</a></main>`;
+  return pageHtml({ active: 'research', head, main });
 }
 function renderBlogIndex(posts) {
-  // 索引显示:collection 折叠为一张卡,散篇逐条列
-  const inColl = new Set();
-  const collCards = COLLECTIONS.map(c => {
-    const members = posts.filter(p => p.collectionKey === c.key);
-    members.forEach(p => inColl.add(p));
-    if (!members.length) return '';
-    return `<li class="coll"><a href="/blog/${c.key}/"><div class="t">${esc(c.title)}</div><div class="d">${esc(c.desc)}</div><div class="meta"><span class="tag">专辑 · ${members.length} 篇</span></div></a></li>`;
-  }).filter(Boolean).join('\n');
-  const loose = posts.filter(p => !inColl.has(p));
+  // 研究专辑(collection)不进 blog —— 仅经 header「研究专辑」/ 首页研究专辑区进入。blog 只列散篇。
+  const loose = posts.filter(p => !p.collectionKey);
   const items = loose.map(p => `<li><a href="${p.path}"><div class="t">${esc(p.title)}</div><div class="d">${esc(p.description)}</div><div class="meta"><time datetime="${p.date}">${p.date}</time>${p.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div></a></li>`).join('\n');
-  const total = posts.length;
+  const total = loose.length;
   const desc = `Vince Jiang 的博客 —— 共 ${total} 篇杂谈与技术笔记。`;
   const head = { titleFull: `Blog · ${SITE.name}`, html: headHtml({ path: '/blog/', title: 'Blog', desc, jsonld: [{ '@context': 'https://schema.org', '@type': 'Blog', name: `${SITE.name} 的 Blog`, url: SITE.url + '/blog/', author: personLd }] }) };
   const main = `<main class="wrap narrow"><div class="hero"><h1>Blog</h1><p>杂谈、技术笔记、随手记的实验。共 ${total} 篇。</p></div>
-<ul class="postlist">${collCards}${items || (collCards ? '' : '<p class="note">还没有已发布的文章。</p>')}</ul></main>`;
+<ul class="postlist">${items || '<p class="note">还没有已发布的文章。</p>'}</ul></main>`;
   return pageHtml({ active: 'blog', head, main });
 }
 function tileCard(href, title, desc, extra = '') {
@@ -356,13 +357,21 @@ function friendCard(w) {
   const neutral = w.hue == null ? ' neutral' : '';
   return `<a class="friend${neutral}"${hue} href="${w.url}" target="_blank" rel="noopener"><span class="mosaic" aria-hidden="true"></span><span class="fc"><span class="t">${esc(w.name)}</span><span class="d">${esc(w.desc)}</span><span class="host">${host} ↗</span></span></a>`;
 }
+// 研究专辑卡:featured(论文)/ revision(评述复盘)有各自缎带与配色
+function collectionCard(c, count) {
+  const rev = c.kind === 'revision';
+  const cls = `tile card coll-card${rev ? ' revision' : ''}${c.featured ? ' featured' : ''}`;
+  const ribbon = rev ? `<span class="rev-ribbon">修订 · REVISION</span>` : (c.featured ? `<span class="feat-ribbon">论文专辑</span>` : '');
+  const meta = `<div class="meta"><span class="badge">${rev ? '评述 · 复盘' : '论文专辑'} · ${count} 篇</span></div>`;
+  return `<a class="${cls}" href="/blog/${c.key}/">${ribbon}<div class="t">${esc(c.title)}</div><div class="d">${esc(c.desc)}</div>${meta}</a>`;
+}
 function renderHome(posts) {
-  const latest = posts.slice(0, LATEST_N);
+  const latest = posts.filter(p => !p.collectionKey).slice(0, LATEST_N);   // 论文专辑不进 blog 最新
   const friends = (CONFIG.wildSites || []).map(friendCard).join('\n');
   const gallery = (CONFIG.gallery || []).map(g => tileCard(g.href, g.title, g.desc)).join('\n');
   const blog = latest.map(p => `<a class="tile card" href="${p.path}"><div class="t">${esc(p.title)}</div><div class="d">${esc(p.description)}</div><div class="meta">${p.date}</div></a>`).join('\n');
   const collSec = COLLECTIONS.filter(c => posts.some(p => p.collectionKey === c.key)).map(c =>
-    tileCard(`/blog/${c.key}/`, c.title, c.desc, `<div class="meta"><span class="badge">专辑 · ${posts.filter(p => p.collectionKey === c.key).length} 篇</span></div>`)).join('\n');
+    collectionCard(c, posts.filter(p => p.collectionKey === c.key).length)).join('\n');
   const head = {
     titleFull: `${SITE.name} · 个人站`,
     html: headHtml({ path: '/', title: SITE.name, desc: SITE.tagline, jsonld: [
@@ -424,7 +433,7 @@ function buildSitemap(posts) {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
 }
 function buildRss(posts) {
-  const items = posts.slice(0, 20).map(p => `    <item>
+  const items = posts.filter(p => !p.collectionKey).slice(0, 20).map(p => `    <item>
       <title>${esc(p.title)}</title>
       <link>${SITE.url}${p.path}</link>
       <guid isPermaLink="true">${SITE.url}${p.path}</guid>
@@ -442,7 +451,7 @@ ${items}
 </channel></rss>\n`;
 }
 function buildLlms(posts) {
-  const recent = posts.slice(0, 10).map(p => `- [${p.title}](${SITE.url}${p.path}) — ${p.description}`).join('\n');
+  const recent = posts.filter(p => !p.collectionKey).slice(0, 10).map(p => `- [${p.title}](${SITE.url}${p.path}) — ${p.description}`).join('\n');
   const colls = COLLECTIONS.filter(c => posts.some(p => p.collectionKey === c.key)).map(c =>
     `- [${c.title}](${SITE.url}/blog/${c.key}/) — ${c.desc}`).join('\n');
   const works = (CONFIG.gallery || []).map(g => `- [${g.title}](${/^https?:/.test(g.href) ? g.href : SITE.url + g.href}) — ${g.desc}`).join('\n');

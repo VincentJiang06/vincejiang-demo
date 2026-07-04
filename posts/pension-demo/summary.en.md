@@ -1,7 +1,7 @@
 ---
 lang: en
 title: >-
-  Pension Asset Allocation Lessons from Mature Overseas Markets Under Low
+  TL;DR — Pension Asset Allocation Lessons from Mature Overseas Markets Under Low
   Interest Rates: A Combined Answer from Five Papers
 description: >-
   This paper combines five papers into a direct answer (about 4,700 words) to

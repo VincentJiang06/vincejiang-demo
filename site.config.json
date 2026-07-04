@@ -15,12 +15,16 @@
       "desc": "从利率传导机制、DB/DC 制度分化、另类与全球化配置、退出期风险治理,到对中国的制度适配——一个由五篇经济学论文构成的递进系统,附系统总论与合并摘要。",
       "note": "阅读顺序即编号顺序。论文格式排版,可直接打印为规范 A4 稿;每篇支持中/EN 切换。",
       "layout": "paper",
+      "featured": true,
+      "revisedBy": "pension-demo-revision",
       "order": ["summary", "overview", "paper-1", "paper-2", "paper-3", "paper-4", "paper-5"]
     },
     {
       "key": "pension-demo-revision",
-      "title": "养老金研究 · 评审与复盘",
-      "desc": "对上述五篇论文的逐篇独立评审、跨篇综合评审,以及整个自动化生产过程的技术复盘。以普通博客格式呈现。",
+      "title": "模拟退火思想的上课论文编写",
+      "desc": "把上文五篇当作一次「上课论文」作业,用模拟退火式的对抗迭代自动写作完成——这里是对它的评述与复盘:逐篇独立评审、跨篇综合评审,以及整条自动化生产链的技术复盘。",
+      "kind": "revision",
+      "revisionOf": "pension-demo",
       "layout": "post",
       "order": ["comprehensive-review", "paper-1-review", "paper-2-review", "paper-3-review", "paper-4-review", "paper-5-review", "technical-retrospective"]
     }

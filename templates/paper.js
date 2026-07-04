@@ -13,6 +13,16 @@
   if (tg && side) tg.addEventListener('click', function () { side.classList.toggle('open'); });
   if (toc && side) toc.addEventListener('click', function (e) { if (e.target.closest('a')) side.classList.remove('open'); });
 
+  // 回到顶部:滚动过一屏后出现
+  var totop = document.getElementById('totop');
+  if (totop) {
+    totop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    var tt = false;
+    window.addEventListener('scroll', function () {
+      if (!tt) { tt = true; requestAnimationFrame(function () { tt = false; totop.classList.toggle('show', (window.scrollY || document.documentElement.scrollTop) > 400); }); }
+    }, { passive: true });
+  }
+
   // 大纲滚动高亮:观察正文里的章节标题
   function spy() {
     if (!toc || !flow) return;
