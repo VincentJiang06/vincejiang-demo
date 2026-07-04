@@ -1,20 +1,21 @@
 /* paper.css —— 论文展示模板专用样式(与 site.css 无关,白纸黑字、严肃客观)。
-   屏显:深灰底 + A4 纸张连排(JS 分页) + 左侧大纲栏;无 JS 时退化为单张连续长纸。
-   打印:隐藏一切界面,#flow 按 @page A4 由浏览器原生分页,即规范论文打印稿。
-   A4 @96dpi:794×1123px;页边距 上下 25.4mm(96px) 左右 30mm(113px) → 版心宽 568px。 */
+   屏显:深灰底 + 单张连续长纸(自然滚动阅读) + 左侧大纲书签栏;不做屏上 A4 分页(避免硬裁切)。
+   打印:隐藏界面,#flow 按 @page A4 由浏览器原生分页成论文稿。
+   全站单一字体(--uni):正文与标题同族,只用字号/字重分层级,不混衬线与非衬线。 */
 
 :root{
   --backdrop:#43464d; --side-bg:#26282c; --side-fg:#c8ccd4; --side-dim:#9aa0ab;
-  --accent:#7f9cc4; --ink:#000; --paper:#fff; --plink:#1a3f8f;
-  --serif:Georgia,"Times New Roman","Source Han Serif SC","Noto Serif CJK SC","Songti SC",SimSun,serif;
-  --heiti:"Source Han Sans SC","Noto Sans CJK SC","PingFang SC","Microsoft YaHei","Heiti SC",sans-serif;
+  --accent:#7f9cc4; --ink:#1a1a1a; --paper:#fff; --plink:#1a3f8f;
+  /* 统一字体:Latin 用系统无衬线,CJK 回退到苹方/雅黑/思源黑——同一视觉族,不混衬线。 */
+  --uni:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,"Source Han Sans SC","Noto Sans CJK SC","PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;
+  --serif:var(--uni); --heiti:var(--uni);
   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Courier New",monospace;
   --sidew:288px;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
 html{scroll-behavior:smooth}
-body{background:var(--backdrop);font-family:var(--heiti);-webkit-font-smoothing:antialiased}
+body{background:var(--backdrop);font-family:var(--uni);-webkit-font-smoothing:antialiased}
 
 /* ---------- 左侧大纲栏 ---------- */
 .side{position:fixed;inset:0 auto 0 0;width:var(--sidew);background:var(--side-bg);color:var(--side-fg);
@@ -60,20 +61,11 @@ body{background:var(--backdrop);font-family:var(--heiti);-webkit-font-smoothing:
 .side .prevnext .pn-next{text-align:right}
 .side .prevnext .pn-empty{display:none}
 
-/* ---------- 纸张区 ---------- */
-.deck{margin-left:var(--sidew);padding:26px 18px 60px}
-.flow,.sheet{background:var(--paper);color:var(--ink)}
-.flow{width:794px;margin:0 auto;padding:96px 113px;box-shadow:0 3px 18px rgba(0,0,0,.4)}
-body.paged .flow{display:none}
-.sheets{display:none}
-body.paged .sheets{display:block}
-.sheet{position:relative;width:794px;height:1123px;padding:96px 113px;margin:0 auto 26px;box-shadow:0 3px 18px rgba(0,0,0,.4);zoom:var(--z,1)}
-.sheet.tall{height:auto;min-height:1123px}
-.sheet-body{height:931px;overflow:hidden}
-.sheet.tall .sheet-body{height:auto;overflow:visible}
-.running{position:absolute;top:50px;left:113px;right:113px;text-align:center;font-size:10.5px;color:#555;
-  padding-bottom:5px;border-bottom:0.75px solid #999}
-.pageno{position:absolute;bottom:42px;left:0;right:0;text-align:center;font-size:11px;color:#333;font-family:var(--serif)}
+/* ---------- 纸张区:单张连续长纸,自然滚动 ---------- */
+.deck{margin-left:var(--sidew);padding:26px 18px 64px}
+.flow{background:var(--paper);color:var(--ink);width:794px;max-width:100%;margin:0 auto;
+  padding:72px 96px;box-shadow:0 3px 18px rgba(0,0,0,.4);border-radius:2px}
+.sheets{display:none}          /* 旧分页容器已弃用,保留隐藏以防残留 */
 
 /* ---------- 标题块 ---------- */
 .pt{text-align:center;margin:0 0 1.6em}
@@ -88,8 +80,8 @@ body.paged .sheets{display:block}
 .abs b{font-family:var(--heiti);font-weight:700}
 .absen{border-top:0.75px solid #000;margin-top:0}
 
-/* ---------- 正文(.pp 同时作用于 #flow 与分页克隆) ---------- */
-.pp{font-family:var(--serif);font-size:14px;line-height:1.92;text-align:justify;color:var(--ink)}
+/* ---------- 正文 ---------- */
+.pp{font-family:var(--uni);font-size:15px;line-height:1.9;text-align:justify;color:var(--ink)}
 .pp p{margin:.25em 0;text-indent:2em}
 .pp h2,.pp h3,.pp h4{font-family:var(--heiti);line-height:1.5;text-align:left}
 .pp h2{font-size:16.5px;font-weight:700;margin:1.5em 0 .65em}
@@ -150,7 +142,8 @@ sup.cite a{color:var(--plink)}
   .side{transform:translateX(-102%);transition:transform .22s ease;box-shadow:4px 0 24px rgba(0,0,0,.4)}
   .side.open{transform:none}
   .stoggle{display:block}
-  .deck{margin-left:0;padding:56px 8px 40px}
+  .deck{margin-left:0;padding:56px 10px 40px}
+  .flow{width:100%;padding:40px 20px}     /* 流式阅读列,不再固定 A4 宽 */
 }
 
 /* ---------- 打印:即规范 A4 论文稿 ---------- */
@@ -158,9 +151,8 @@ sup.cite a{color:var(--plink)}
   @bottom-center{content:counter(page);font-size:9pt;font-family:Georgia,serif}}
 @media print{
   body{background:#fff}
-  .side,.stoggle,.langpill,.sheets{display:none!important}
-  body.paged .flow{display:block!important}
-  .flow{width:auto;margin:0;padding:0;box-shadow:none;font-size:10.5pt}
+  .side,.stoggle,.langpill{display:none!important}
+  .flow{width:auto;max-width:none;margin:0;padding:0;box-shadow:none;border-radius:0;font-size:10.5pt}
   .deck{margin:0;padding:0}
   .pp h2{break-after:avoid}
   .pp h3,.pp h4{break-after:avoid}
