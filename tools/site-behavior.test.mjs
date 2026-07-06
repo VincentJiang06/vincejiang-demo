@@ -23,6 +23,8 @@ assert.match(home, /data-period/);
 assert.match(home, /backdrop-filter:blur\(18px\) saturate\(1\.12\)/);
 assert.match(home, /s==='neutral'/);
 assert.match(home, /<div class="hero home-hero">/);
+assert.match(home, /\.home-hero::before\{content:"";position:absolute;left:0;right:0;/);
+assert.doesNotMatch(home, /\.home-hero::before\{[^}]*left:-1\.2rem;right:-1\.2rem;/);
 assert.match(home, /<a class="item" href="\/research\/">Research<\/a>/);
 assert.doesNotMatch(home, /class="item special"/);
 assert.match(home, /<div class="sec research-sec"><h2><span class="section-icon research-icon" aria-hidden="true">⌁<\/span>Research<\/h2><a class="more" href="\/research\/">全部 Research →<\/a><\/div>/);
