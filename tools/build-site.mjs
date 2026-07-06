@@ -108,12 +108,12 @@ function plain(mdText) {
 }
 
 // ---- <head> 生成(每页 MUST:title/canonical/desc/OG/twitter/robots/theme + JSON-LD)----
-function headHtml({ type = 'website', path = '/', title, desc, image = SITE.image, jsonld = [], locale = 'zh_CN' }) {
+function headHtml({ type = 'website', path = '/', title, desc, image = SITE.image, jsonld = [], locale = 'zh_CN', robots = 'index, follow, max-image-preview:large' }) {
   const url = SITE.url + path;
   const ld = jsonld.length ? `<script type="application/ld+json">${JSON.stringify(jsonld.length === 1 ? jsonld[0] : jsonld)}</script>` : '';
   return [
     `<meta name="description" content="${esc(desc)}">`,
-    `<meta name="robots" content="index, follow, max-image-preview:large">`,
+    `<meta name="robots" content="${robots}">`,
     `<meta name="theme-color" content="#5b5bd6">`,
     `<meta name="author" content="${esc(SITE.author)}">`,
     `<link rel="canonical" href="${url}">`,
@@ -139,8 +139,8 @@ function footHtml() {
   const y = new Date().getFullYear();
   return `<footer class="foot"><span>© ${y} Vince Jiang</span><a href="${SITE.github}" rel="me">GitHub</a><a href="/blog/feed.xml">RSS</a></footer>`;
 }
-function pageHtml({ lang = SITE.lang, active = '', head, main }) {
-  return fill(BASE, { LANG: lang, TITLE: head.titleFull, HEAD: head.html, CSS, NAV: navHtml(active), MAIN: main, FOOTER: footHtml() });
+function pageHtml({ lang = SITE.lang, active = '', head, main, chrome = true }) {
+  return fill(BASE, { LANG: lang, TITLE: head.titleFull, HEAD: head.html, CSS, NAV: chrome ? navHtml(active) : '', MAIN: main, FOOTER: chrome ? footHtml() : '' });
 }
 const personLd = { '@type': 'Person', name: SITE.author, url: SITE.url + '/', sameAs: [SITE.github] };
 const backLabel = l => (l && l.startsWith('en') ? '← Back' : '← 返回');
@@ -483,6 +483,16 @@ function renderGallery() {
 <ul class="postlist">${items}</ul></main>`;
   return pageHtml({ active: 'gallery', head, main });
 }
+function renderBackgroundTest() {
+  const path = '/background-test/';
+  const desc = 'Background SVG test page for vincejiang.com.';
+  const head = {
+    titleFull: `Background Test · ${SITE.name}`,
+    html: headHtml({ path, title: 'Background Test', desc, robots: 'noindex, nofollow' }),
+  };
+  const main = `<main class="background-test" aria-label="background svg test"><section class="background-test-badge" aria-label="page label"><h1>Background Test</h1><p>dot matrix + main waves</p></section></main>`;
+  return pageHtml({ head, main, chrome: false });
+}
 
 // ---- sitemap / rss / llms ----
 function buildSitemap(posts) {
@@ -637,6 +647,8 @@ function runBuild(posts) {
   writeFileSync(join(OUT, 'index.html'), renderHome(pub));
   mkdirSync(join(OUT, 'gallery'), { recursive: true });
   writeFileSync(join(OUT, 'gallery', 'index.html'), renderGallery());
+  mkdirSync(join(OUT, 'background-test'), { recursive: true });
+  writeFileSync(join(OUT, 'background-test', 'index.html'), renderBackgroundTest());
   writeFileSync(join(OUT, 'sitemap.xml'), buildSitemap(pub));
   writeFileSync(join(OUT, 'llms.txt'), buildLlms(pub));
 

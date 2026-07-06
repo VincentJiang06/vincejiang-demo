@@ -188,6 +188,13 @@ a:hover{color:var(--link-h)}
 .wrap{max-width:1000px; margin:0 auto; padding:2.4rem 1.2rem 3rem}
 .narrow{max-width:720px}
 .index-page{padding-bottom:6.2rem}
+.background-test{position:relative;z-index:1;min-height:100vh;padding:0}
+.background-test-badge{position:fixed;left:1.2rem;bottom:1.2rem;margin:0;padding:.62rem .78rem;border:1px solid color-mix(in srgb,var(--border) 66%,transparent);
+  border-radius:14px;background:linear-gradient(145deg,color-mix(in srgb,var(--glass-top) 30%,transparent),color-mix(in srgb,var(--glass-bottom) 16%,transparent));
+  box-shadow:0 14px 36px rgba(32,36,56,.08),0 1px 0 color-mix(in srgb,var(--glass-shine) 55%,transparent) inset;
+  backdrop-filter:blur(22px) saturate(1.14);-webkit-backdrop-filter:blur(22px) saturate(1.14)}
+.background-test-badge h1{margin:0;font-size:.86rem;line-height:1.25;letter-spacing:0}
+.background-test-badge p{margin:.12rem 0 0;color:var(--faint);font-size:.7rem;line-height:1.35}
 
 /* 卡片 */
 .card{position:relative;background:linear-gradient(145deg,color-mix(in srgb,var(--glass-top) 92%,transparent),color-mix(in srgb,var(--glass-bottom) 88%,transparent)); backdrop-filter:blur(28px) saturate(1.22); -webkit-backdrop-filter:blur(28px) saturate(1.22);

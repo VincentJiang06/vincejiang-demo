@@ -85,6 +85,16 @@ const galleryIndex = html('gallery');
 assert.match(blogIndex, /<main class="wrap narrow index-page">/);
 assert.match(galleryIndex, /<main class="wrap narrow index-page">/);
 
+const backgroundTest = html('background-test');
+assert.match(backgroundTest, /<title>Background Test · Vince Jiang<\/title>/);
+assert.match(backgroundTest, /<meta name="robots" content="noindex, nofollow">/);
+assert.match(backgroundTest, /<main class="background-test" aria-label="background svg test">/);
+assert.match(backgroundTest, /id="ambient-dot-grid"/);
+assert.match(backgroundTest, /<rect class="dot-matrix"/);
+assert.doesNotMatch(backgroundTest, /<nav class="nav">/);
+assert.doesNotMatch(backgroundTest, /<footer class="foot">/);
+assert.match(backgroundTest, /\.background-test\{position:relative;z-index:1;min-height:100vh;padding:0\}/);
+
 const paperPage = readFileSync(join(OUT, 'research', 'pension-demo', 'paper-1', 'index.html'), 'utf8');
 assert.match(paperPage, /\.side\{[\s\S]*?backdrop-filter:blur\(28px\) saturate\(1\.18\)/);
 assert.match(paperPage, /\.flow\{[\s\S]*?backdrop-filter:blur\(10px\) saturate\(1\.05\)/);
@@ -93,6 +103,7 @@ assert.match(paperPage, /@media print\{[\s\S]*?body::before\{display:none\}/);
 const sitemap = readFileSync(join(OUT, 'sitemap.xml'), 'utf8');
 assert.ok(sitemap.includes('<loc>https://vincejiang.com/research/</loc>'), 'sitemap should include /research/');
 assert.ok(sitemap.includes('<loc>https://vincejiang.com/research/pension-demo/</loc>'), 'sitemap should include research collection');
+assert.ok(!sitemap.includes('<loc>https://vincejiang.com/background-test/</loc>'), 'background test should stay out of sitemap');
 assert.ok(!sitemap.includes('<loc>https://vincejiang.com/blog/pension-demo/</loc>'), 'sitemap should not include old blog collection path');
 
 console.log('site behavior ✓');
