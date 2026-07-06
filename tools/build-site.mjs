@@ -133,7 +133,7 @@ function headHtml({ type = 'website', path = '/', title, desc, image = SITE.imag
 }
 function navHtml(active) {
   const items = NAV_ITEMS.map(i => `<a class="item${i.key === active ? ' active' : ''}" href="${i.href}">${i.label}</a>`).join('\n');
-  return `<nav class="nav"><div class="in"><a class="brand" href="/">Vince Jiang</a>${items}<button class="toggle" id="theme-toggle" title="切换明暗">🌙</button></div></nav>`;
+  return `<nav class="nav"><div class="in"><a class="brand" href="/">Vince Jiang</a>${items}<button class="toggle" id="theme-toggle" title="色彩模式:按时间自动">◷</button></div></nav>`;
 }
 function footHtml() {
   const y = new Date().getFullYear();
@@ -372,24 +372,26 @@ function renderCollection(coll, posts) {
 <a class="backlink" href="/">← 返回首页</a></main>`;
   return pageHtml({ active: 'research', head, main });
 }
-function researchCollectionCard(c, posts, role) {
+function researchCollectionCard(c, posts, role, { compact = false } = {}) {
   const count = collectionPostCount(posts, c.key);
   const isRevision = role === 'revision';
   const label = isRevision ? 'Revision' : '论文正文';
   const meta = isRevision ? `修订复盘 · ${count} 篇` : `Research · ${count} 篇`;
   const title = isRevision ? c.title : '论文正文';
-  return `<a class="research-card ${role}" href="${collectionPath(c.key)}"><span class="research-role">${label}</span><span class="research-card-copy"><span class="t">${esc(title)}</span><span class="d">${esc(c.desc)}</span></span><span class="meta">${meta}</span></a>`;
+  const desc = compact ? (c.homeCardDesc || c.homeDesc || c.desc) : c.desc;
+  return `<a class="research-card ${role}" href="${collectionPath(c.key)}"><span class="research-role">${label}</span><span class="research-card-copy"><span class="t">${esc(title)}</span><span class="d">${esc(desc)}</span></span><span class="meta">${meta}</span></a>`;
 }
 function missingRevisionCard() {
   return `<div class="research-card revision missing"><span class="research-role">Revision</span><span class="research-card-copy"><span class="t">Revision 准备中</span><span class="d">这组研究的修订、评述或复盘尚未发布。</span></span><span class="meta">即将补齐</span></div>`;
 }
 function researchPairBlock(pair, posts, _index, { compact = false, heading = 'h2', framed = true } = {}) {
-  const revCards = pair.revisions.length ? pair.revisions.map(c => researchCollectionCard(c, posts, 'revision')).join('\n') : missingRevisionCard();
+  const revCards = pair.revisions.length ? pair.revisions.map(c => researchCollectionCard(c, posts, 'revision', { compact })).join('\n') : missingRevisionCard();
   const titleTag = heading;
   const classes = ['research-pair', framed ? 'card' : '', compact ? 'compact' : ''].filter(Boolean).join(' ');
+  const desc = compact ? (pair.primary.homeDesc || pair.primary.desc) : pair.primary.desc;
   return `<section class="${classes}">
-<div class="research-pair-head"><${titleTag}>${esc(pair.primary.title)}</${titleTag}><p>${esc(pair.primary.desc)}</p></div>
-<div class="research-card-list">${researchCollectionCard(pair.primary, posts, 'paper')}${revCards}</div>
+<div class="research-pair-head"><${titleTag}>${esc(pair.primary.title)}</${titleTag}><p>${esc(desc)}</p></div>
+<div class="research-card-list">${researchCollectionCard(pair.primary, posts, 'paper', { compact })}${revCards}</div>
 </section>`;
 }
 function renderResearchIndex(posts) {
@@ -452,7 +454,7 @@ function renderHome(posts) {
 
 <div class="sec"><h2>📝 Blog</h2><a class="more" href="/blog/">全部文章 →</a></div>
 <div class="grid c2">${blog || '<p class="note">敬请期待。</p>'}</div>
-${researchSec ? `\n<section class="research-home card"><div class="sec research-home-head"><h2>Research</h2><span class="note">论文正文和 revision 成对展示</span><a class="more" href="${RESEARCH_PATH}">全部 Research →</a></div>\n<div class="research-pairs home">${researchSec}</div></section>\n` : ''}
+${researchSec ? `\n<div class="sec research-sec"><h2><span class="section-icon research-icon" aria-hidden="true">⌁</span>Research</h2><a class="more research-more" href="${RESEARCH_PATH}">全部 Research →</a></div>\n<section class="research-home card"><div class="research-pairs home">${researchSec}</div></section>\n` : ''}
 <div class="sec"><h2>🎨 Gallery</h2><a class="more" href="/gallery/">全部作品 →</a></div>
 <div class="grid c3">${gallery}</div>
 

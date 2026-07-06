@@ -18,10 +18,13 @@ const html = rel => readFileSync(join(OUT, rel, 'index.html'), 'utf8');
 const home = html('');
 
 assert.match(home, /<div class="ambient-bg" aria-hidden="true">/);
+assert.match(home, /data-period/);
 assert.match(home, /s==='neutral'/);
 assert.match(home, /<div class="hero home-hero">/);
 assert.match(home, /<a class="item" href="\/research\/">Research<\/a>/);
 assert.doesNotMatch(home, /class="item special"/);
+assert.match(home, /<div class="sec research-sec"><h2><span class="section-icon research-icon" aria-hidden="true">⌁<\/span>Research<\/h2><a class="more research-more" href="\/research\/">全部 Research →<\/a><\/div>/);
+assert.doesNotMatch(home, /论文正文和 revision 成对展示/);
 assert.match(home, /<section class="research-home card">/);
 assert.doesNotMatch(home, /class="research-pair card compact"/);
 assert.ok(existsSync(join(OUT, 'research', 'index.html')), 'Research index should be generated');
