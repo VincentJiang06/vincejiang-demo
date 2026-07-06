@@ -96,8 +96,8 @@ if (existsSync(smPath)) {
   const pageUrls = new Set(pages.map(p => p.url));
   // sitemap 里指向不存在的页
   const smDead = locs.filter(l => !resolves(l));
-  // 我方页面(/、/blog/、/blog/*、/gallery/)是否都进了 sitemap
-  const ours = pages.map(p => p.url).filter(u => u === '/' || u === '/blog/' || u.startsWith('/blog/') || u === '/gallery/');
+  // 我方页面(/、/blog/、/blog/*、/research/、/gallery/)是否都进了 sitemap
+  const ours = pages.map(p => p.url).filter(u => u === '/' || u === '/blog/' || u.startsWith('/blog/') || u === '/research/' || u === '/gallery/');
   const notInSm = ours.filter(u => !locs.includes(u));
   if (smDead.length) smReport.push(`sitemap 指向不存在的页 ${smDead.length}: ${smDead.slice(0, 5).join(', ')}`);
   if (notInSm.length) smReport.push(`我方页面未进 sitemap ${notInSm.length}: ${notInSm.slice(0, 8).join(', ')}`);

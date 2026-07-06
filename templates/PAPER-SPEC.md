@@ -18,7 +18,7 @@
 | `posts/<group>/<slug>.md` | `/blog/<group>/<slug>/` |
 | `posts/<group>/<slug>.en.md` | `/blog/<group>/<slug>/en/`(英文子页,见 §4) |
 
-**研究专辑**(一组按顺序连排的论文):在 `site.config.json` 的 `collections` 加一条,`order` 列出 slug。该组自动获得落地页 `/blog/<key>/`(编号清单)+ 每篇的「上一篇/下一篇」串联导航,即「多页面文件连排」。
+**Research collection**(一组按顺序连排的论文):在 `site.config.json` 的 `collections` 加一条,`order` 列出 slug。该组自动获得落地页 `/blog/<key>/`(编号清单)+ 每篇的「上一篇/下一篇」串联导航,即「多页面文件连排」。若另有 revision / 评述 / 复盘 collection,用 `revisionOf` 指回正文 collection,正文 collection 可用 `revisedBy` 指向它;`/research/` 会自动把正文和 Revision 成对展示。
 
 ---
 

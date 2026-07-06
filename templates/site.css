@@ -218,19 +218,42 @@ a:hover{color:var(--link-h)}
 .prevnext .pn-next{text-align:right}
 .prevnext .pn-empty{flex:1}
 
-/* ── header「研究专辑」特殊入口(药丸) ── */
-.nav a.item.special{color:var(--link);font-weight:600;font-size:.85rem;padding:.18rem .7rem;border-radius:999px;
-  border:1px solid color-mix(in srgb,var(--link) 42%,transparent)}
-.nav a.item.special:hover,.nav a.item.special.active{background:var(--link);color:#fff;border-color:var(--link)}
-
-/* ── 首页研究专辑卡:featured(论文)/ revision(评述复盘)各自缎带 ── */
-.coll-card{position:relative;overflow:hidden;padding-top:1.3rem}
-.coll-card.featured{border-color:color-mix(in srgb,var(--link) 38%,var(--border))}
-.coll-card .feat-ribbon,.coll-card .rev-ribbon{position:absolute;top:0;right:0;font-size:.64rem;font-weight:700;
-  letter-spacing:.06em;padding:.2rem .6rem;border-radius:0 0 0 9px;color:#fff}
-.coll-card .feat-ribbon{background:var(--link)}
-.coll-card.revision{border-style:dashed;border-color:color-mix(in srgb,#cf8a3c 55%,var(--border))}
-.coll-card .rev-ribbon{background:#c47f2e}
+/* ── Research 索引:每组=论文正文 + Revision,组本身不做卡片 ── */
+.research-pairs{display:grid;gap:1.35rem}
+.research-pairs.home{gap:1rem}
+.research-pair{border-top:1px solid var(--border);padding:1.1rem 0 1.35rem}
+.research-pair:first-child{border-top:0;padding-top:0}
+.research-pair.compact{padding:.35rem 0 1rem}
+.research-pair-head{display:grid;grid-template-columns:44px 1fr;gap:.85rem;align-items:start;margin-bottom:.8rem}
+.research-no{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.74rem;color:var(--faint);
+  border-top:2px solid var(--border);padding-top:.35rem}
+.research-pair-head h2,.research-pair-head h3{margin:0;color:var(--fg);letter-spacing:-.01em;line-height:1.35}
+.research-pair-head h2{font-size:1.18rem}
+.research-pair-head h3{font-size:1.02rem}
+.research-pair-head p{margin:.25rem 0 0;color:var(--faint);font-size:.84rem;line-height:1.55}
+.research-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem}
+.research-card{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:.45rem;min-height:178px;
+  padding:1rem 1.1rem;color:inherit;transition:transform .14s,box-shadow .2s,border-color .2s}
+.research-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-h)}
+.research-card.paper{border-color:color-mix(in srgb,var(--link) 38%,var(--border))}
+.research-card.revision{border-style:dashed;border-color:color-mix(in srgb,#c47f2e 58%,var(--border))}
+.research-card .research-role{align-self:flex-start;font-size:.68rem;font-weight:750;letter-spacing:.04em;
+  border:1px solid var(--border);border-radius:999px;padding:.08rem .55rem}
+.research-card.paper .research-role{color:var(--link);background:color-mix(in srgb,var(--link) 9%,transparent);
+  border-color:color-mix(in srgb,var(--link) 32%,var(--border))}
+.research-card.revision .research-role{color:#b06f20;background:color-mix(in srgb,#c47f2e 12%,transparent);
+  border-color:color-mix(in srgb,#c47f2e 40%,var(--border))}
+.research-card .t{font-weight:650;font-size:1rem;color:var(--fg);line-height:1.45}
+.research-card .d{font-size:.86rem;color:var(--sub);line-height:1.55}
+.research-card .meta{margin-top:auto;font-size:.78rem;color:var(--faint)}
+.research-card.missing{opacity:.74}
+.research-card.missing:hover{transform:none;box-shadow:var(--shadow)}
+@media (max-width:760px){
+  .research-pair-head{grid-template-columns:1fr;gap:.35rem}
+  .research-no{border-top:0;padding-top:0}
+  .research-card-grid{grid-template-columns:1fr}
+  .research-card{min-height:0}
+}
 
 /* ── 专辑落地页:revision 头、专辑互链、TL;DR 项 ── */
 .hero .rev-tag,.hero .paper-tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.08em;color:#fff;

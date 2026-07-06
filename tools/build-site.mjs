@@ -8,9 +8,9 @@
 //   2) 按 manifest 渲染已发布文章 → /blog/[<group>/]<slug>/index.html(+ 机读 index.md);
 //      文章可分组(posts/<group>/<slug>.md → /blog/<group>/<slug>/);中英双语走 <slug>.en.md 兄弟文件,
 //      配对进主文并额外产出 /en/ 子页(英文页不进任何列表,首页/索引/RSS 只收中文主页)。
-//   3) 生成 /blog/ 索引、各 collection 落地页、/blog/feed.xml(RSS);
+//   3) 生成 /blog/ 索引、/research/ 索引、各 collection 落地页、/blog/feed.xml(RSS);
 //   4) 生成全站 sitemap.xml(lastmod 用真实 git 日期,来自 manifest);
-//   5) 生成 llms.txt;6) 首页注入最新 N 篇 + 友链 + 研究专辑;7) 生成 /gallery/。
+//   5) 生成 llms.txt;6) 首页注入最新 N 篇 + 友链 + Research;7) 生成 /gallery/。
 // 发布判定 = manifest(git 历史含「发布」)∧ 非 draft;日期优先 frontmatter,否则用 manifest 的 git 日期。
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, rmSync, cpSync, existsSync, statSync } from 'node:fs';
 import { join, dirname, basename } from 'node:path';
@@ -38,10 +38,11 @@ const SITE = {
   author: 'Vince Jiang', github: 'https://github.com/VincentJiang06',
   image: 'https://vincejiang.com/favicon.png',
 };
+const RESEARCH_PATH = '/research/';
 const NAV_ITEMS = [
   { key: 'home', label: '首页', href: '/' },
   { key: 'blog', label: 'Blog', href: '/blog/' },
-  { key: 'research', label: '研究专辑', href: '/blog/pension-demo/', special: true },
+  { key: 'research', label: 'Research', href: RESEARCH_PATH },
   { key: 'gallery', label: 'Gallery', href: '/gallery/' },
 ];
 
@@ -51,6 +52,22 @@ const CSS = readFileSync(join(TPL, 'site.css'), 'utf8');
 const CONFIG = JSON.parse(readFileSync(join(ROOT, 'site.config.json'), 'utf8'));
 const COLLECTIONS = Array.isArray(CONFIG.collections) ? CONFIG.collections : [];
 const collectionOf = group => COLLECTIONS.find(c => c.key === group) || null;
+const listOf = value => Array.isArray(value) ? value : (value == null ? [] : [value]);
+const hasCollectionPosts = (posts, key) => posts.some(p => p.collectionKey === key);
+const collectionPostCount = (posts, key) => posts.filter(p => p.collectionKey === key).length;
+function revisionCollectionsFor(coll) {
+  const keys = new Set(listOf(coll.revisedBy));
+  for (const c of COLLECTIONS) {
+    if (c.key === coll.key) continue;
+    if (c.kind === 'revision' && listOf(c.revisionOf).includes(coll.key)) keys.add(c.key);
+  }
+  return [...keys].map(collectionOf).filter(Boolean);
+}
+function researchPairs(posts) {
+  return COLLECTIONS
+    .filter(c => hasCollectionPosts(posts, c.key) && c.kind !== 'revision' && listOf(c.revisionOf).length === 0)
+    .map(c => ({ primary: c, revisions: revisionCollectionsFor(c).filter(r => hasCollectionPosts(posts, r.key)) }));
+}
 let MANIFEST = null;
 const manifestPath = join(ROOT, 'posts-manifest.json');
 if (existsSync(manifestPath)) MANIFEST = JSON.parse(readFileSync(manifestPath, 'utf8'));
@@ -109,7 +126,7 @@ function headHtml({ type = 'website', path = '/', title, desc, image = SITE.imag
   ].join('\n');
 }
 function navHtml(active) {
-  const items = NAV_ITEMS.map(i => `<a class="item${i.special ? ' special' : ''}${i.key === active ? ' active' : ''}" href="${i.href}">${i.label}</a>`).join('\n');
+  const items = NAV_ITEMS.map(i => `<a class="item${i.key === active ? ' active' : ''}" href="${i.href}">${i.label}</a>`).join('\n');
   return `<nav class="nav"><div class="in"><a class="brand" href="/">Vince Jiang</a>${items}<button class="toggle" id="theme-toggle" title="切换明暗">🌙</button></div></nav>`;
 }
 function footHtml() {
@@ -120,7 +137,7 @@ function pageHtml({ lang = SITE.lang, active = '', head, main }) {
   return fill(BASE, { LANG: lang, TITLE: head.titleFull, HEAD: head.html, CSS, NAV: navHtml(active), MAIN: main, FOOTER: footHtml() });
 }
 const personLd = { '@type': 'Person', name: SITE.author, url: SITE.url + '/', sameAs: [SITE.github] };
-const backLabel = l => (l && l.startsWith('en') ? '← Back to Blog' : '← 返回 Blog');
+const backLabel = l => (l && l.startsWith('en') ? '← Back' : '← 返回');
 
 // ---- 双语 / 系列 通用片段 ----
 // 语言切换器:两端各一,当前语言加粗、另一语言给链接。英文页不进列表,故只在有 en 时出现。
@@ -266,8 +283,14 @@ function renderPost(p, isEn = false) {
   const lang = isEn ? 'en' : p.lang;
   const path = isEn ? p.enPath : p.path;
   const bodyHtml = md.render(src.body);
+  const coll = p.collectionKey ? collectionOf(p.collectionKey) : null;
   const breadcrumb = {
-    '@type': 'BreadcrumbList', itemListElement: [
+    '@type': 'BreadcrumbList', itemListElement: coll ? [
+      { '@type': 'ListItem', position: 1, name: '首页', item: SITE.url + '/' },
+      { '@type': 'ListItem', position: 2, name: 'Research', item: SITE.url + RESEARCH_PATH },
+      { '@type': 'ListItem', position: 3, name: coll.title, item: SITE.url + `/blog/${coll.key}/` },
+      { '@type': 'ListItem', position: 4, name: src.title, item: SITE.url + path },
+    ] : [
       { '@type': 'ListItem', position: 1, name: '首页', item: SITE.url + '/' },
       { '@type': 'ListItem', position: 2, name: 'Blog', item: SITE.url + '/blog/' },
       { '@type': 'ListItem', position: 3, name: src.title, item: SITE.url + path },
@@ -292,7 +315,7 @@ function renderPost(p, isEn = false) {
 ${prevNextHtml(p, isEn)}
 <a class="backlink" href="${p.collectionKey ? '/blog/' + p.collectionKey + '/' : '/blog/'}">${isEn ? '← Back' : '← 返回'}</a>
 </article></main>`;
-  return pageHtml({ lang, active: 'blog', head, main });
+  return pageHtml({ lang, active: p.collectionKey ? 'research' : 'blog', head, main });
 }
 
 // ---- 页面:collection 落地页 / blog 索引 / 首页 / gallery ----
@@ -325,14 +348,15 @@ function renderCollection(coll, posts) {
   });
   const collKw = [...new Set(members.flatMap(m => Array.isArray(m.paper?.keywords) ? m.paper.keywords : []))].slice(0, 12);
   const crumbs = [{ '@type': 'ListItem', position: 1, name: '首页', item: SITE.url + '/' }];
-  if (isRev && revOf) { crumbs.push({ '@type': 'ListItem', position: 2, name: 'Research Demo', item: SITE.url + `/blog/${revOf.key}/` }); crumbs.push({ '@type': 'ListItem', position: 3, name: coll.title, item: SITE.url + path }); }
-  else crumbs.push({ '@type': 'ListItem', position: 2, name: 'Research Demo', item: SITE.url + path });
+  crumbs.push({ '@type': 'ListItem', position: 2, name: 'Research', item: SITE.url + RESEARCH_PATH });
+  if (isRev && revOf) crumbs.push({ '@type': 'ListItem', position: 3, name: revOf.title, item: SITE.url + `/blog/${revOf.key}/` });
+  crumbs.push({ '@type': 'ListItem', position: isRev && revOf ? 4 : 3, name: coll.title, item: SITE.url + path });
   const head = {
     titleFull: `${coll.title} · ${SITE.name}`,
     html: headHtml({ path, title: coll.title, desc: coll.desc, jsonld: [
       { '@context': 'https://schema.org', '@type': ['CollectionPage', 'CreativeWorkSeries'], name: coll.title, url: SITE.url + path, description: coll.desc, author: personLd, inLanguage: 'zh-CN',
         ...(collKw.length ? { keywords: collKw.join(', ') } : {}),
-        isPartOf: { '@type': 'CreativeWorkSeries', name: 'Research Demo', url: SITE.url + '/blog/pension-demo/' },
+        isPartOf: { '@type': 'CreativeWorkSeries', name: 'Research', url: SITE.url + RESEARCH_PATH },
         hasPart, mainEntity: { '@type': 'ItemList', itemListElement: list } },
       { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: crumbs },
     ] }),
@@ -342,8 +366,44 @@ function renderCollection(coll, posts) {
 <a class="backlink" href="/">← 返回首页</a></main>`;
   return pageHtml({ active: 'research', head, main });
 }
+function researchCollectionCard(c, posts, role) {
+  const count = collectionPostCount(posts, c.key);
+  const isRevision = role === 'revision';
+  const label = isRevision ? 'Revision' : '论文正文';
+  const meta = isRevision ? `修订复盘 · ${count} 篇` : `Research · ${count} 篇`;
+  return `<a class="research-card card ${role}" href="/blog/${c.key}/"><span class="research-role">${label}</span><div class="t">${esc(c.title)}</div><div class="d">${esc(c.desc)}</div><div class="meta"><span class="tag">${meta}</span></div></a>`;
+}
+function missingRevisionCard() {
+  return `<div class="research-card card revision missing"><span class="research-role">Revision</span><div class="t">Revision 准备中</div><div class="d">这组研究的修订、评述或复盘尚未发布。</div><div class="meta"><span class="tag">即将补齐</span></div></div>`;
+}
+function researchPairBlock(pair, posts, index, { compact = false, heading = 'h2' } = {}) {
+  const revCards = pair.revisions.length ? pair.revisions.map(c => researchCollectionCard(c, posts, 'revision')).join('\n') : missingRevisionCard();
+  const titleTag = heading;
+  return `<section class="research-pair${compact ? ' compact' : ''}">
+<div class="research-pair-head"><span class="research-no">${String(index + 1).padStart(2, '0')}</span><div><${titleTag}>${esc(pair.primary.title)}</${titleTag}>${pair.primary.note ? `<p>${esc(pair.primary.note)}</p>` : ''}</div></div>
+<div class="research-card-grid">${researchCollectionCard(pair.primary, posts, 'paper')}${revCards}</div>
+</section>`;
+}
+function renderResearchIndex(posts) {
+  const pairs = researchPairs(posts);
+  const blocks = pairs.map((pair, i) => researchPairBlock(pair, posts, i)).join('\n');
+  const desc = 'Research 索引:每组研究把论文正文与对应 Revision 成对放在一起,便于先读原文,再读修订、评述与复盘。';
+  let pos = 0;
+  const list = pairs.flatMap(pair => [pair.primary, ...pair.revisions]).map(c => ({
+    '@type': 'ListItem', position: ++pos, name: c.title, url: SITE.url + `/blog/${c.key}/`,
+  }));
+  const head = {
+    titleFull: `Research · ${SITE.name}`,
+    html: headHtml({ path: RESEARCH_PATH, title: 'Research', desc, jsonld: [
+      { '@context': 'https://schema.org', '@type': 'CollectionPage', name: `${SITE.name} · Research`, url: SITE.url + RESEARCH_PATH, description: desc, author: personLd, mainEntity: { '@type': 'ItemList', itemListElement: list } },
+    ] }),
+  };
+  const main = `<main class="wrap narrow"><div class="hero"><h1>Research</h1><p>${desc}</p></div>
+<div class="research-pairs">${blocks || '<p class="note">敬请期待。</p>'}</div></main>`;
+  return pageHtml({ active: 'research', head, main });
+}
 function renderBlogIndex(posts) {
-  // 研究专辑(collection)不进 blog —— 仅经 header「研究专辑」/ 首页研究专辑区进入。blog 只列散篇。
+  // Research collections 不进 blog —— 仅经 header「Research」/ 首页 Research 区进入。blog 只列散篇。
   const loose = posts.filter(p => !p.collectionKey);
   const items = loose.map(p => `<li><a href="${p.path}"><div class="t">${esc(p.title)}</div><div class="d">${esc(p.description)}</div><div class="meta"><time datetime="${p.date}">${p.date}</time>${p.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div></a></li>`).join('\n');
   const total = loose.length;
@@ -366,21 +426,12 @@ function friendCard(w) {
   const neutral = w.hue == null ? ' neutral' : '';
   return `<a class="friend${neutral}"${hue} href="${w.url}" target="_blank" rel="noopener"><span class="mosaic" aria-hidden="true"></span><span class="fc"><span class="t">${esc(w.name)}</span><span class="d">${esc(w.desc)}</span><span class="host">${host} ↗</span></span></a>`;
 }
-// 研究专辑卡:featured(论文)/ revision(评述复盘)有各自缎带与配色
-function collectionCard(c, count) {
-  const rev = c.kind === 'revision';
-  const cls = `tile card coll-card${rev ? ' revision' : ''}${c.featured ? ' featured' : ''}`;
-  const ribbon = rev ? `<span class="rev-ribbon">修订 · REVISION</span>` : (c.featured ? `<span class="feat-ribbon">论文专辑</span>` : '');
-  const meta = `<div class="meta"><span class="badge">${rev ? '评述 · 复盘' : '论文专辑'} · ${count} 篇</span></div>`;
-  return `<a class="${cls}" href="/blog/${c.key}/">${ribbon}<div class="t">${esc(c.title)}</div><div class="d">${esc(c.desc)}</div>${meta}</a>`;
-}
 function renderHome(posts) {
   const latest = posts.filter(p => !p.collectionKey).slice(0, LATEST_N);   // 论文专辑不进 blog 最新
   const friends = (CONFIG.wildSites || []).map(friendCard).join('\n');
   const gallery = (CONFIG.gallery || []).map(g => tileCard(g.href, g.title, g.desc)).join('\n');
   const blog = latest.map(p => `<a class="tile card" href="${p.path}"><div class="t">${esc(p.title)}</div><div class="d">${esc(p.description)}</div><div class="meta">${p.date}</div></a>`).join('\n');
-  const collSec = COLLECTIONS.filter(c => posts.some(p => p.collectionKey === c.key)).map(c =>
-    collectionCard(c, posts.filter(p => p.collectionKey === c.key).length)).join('\n');
+  const researchSec = researchPairs(posts).map((pair, i) => researchPairBlock(pair, posts, i, { compact: true, heading: 'h3' })).join('\n');
   const head = {
     titleFull: `${SITE.name} · 个人站`,
     html: headHtml({ path: '/', title: SITE.name, desc: SITE.tagline, jsonld: [
@@ -393,7 +444,7 @@ function renderHome(posts) {
 
 <div class="sec"><h2>📝 Blog</h2><a class="more" href="/blog/">全部文章 →</a></div>
 <div class="grid c2">${blog || '<p class="note">敬请期待。</p>'}</div>
-${collSec ? `\n<div class="sec"><h2>📚 研究专辑</h2><span class="note">成系统的长篇研究</span></div>\n<div class="grid c2">${collSec}</div>\n` : ''}
+${researchSec ? `\n<div class="sec"><h2>Research</h2><span class="note">论文正文和 revision 成对展示</span><a class="more" href="${RESEARCH_PATH}">全部 Research →</a></div>\n<div class="research-pairs home">${researchSec}</div>\n` : ''}
 <div class="sec"><h2>🎨 Gallery</h2><a class="more" href="/gallery/">全部作品 →</a></div>
 <div class="grid c3">${gallery}</div>
 
@@ -430,6 +481,7 @@ function buildSitemap(posts) {
   const urls = [
     { loc: '/', lastmod: newest, cf: 'weekly', pri: '1.0' },
     { loc: '/blog/', lastmod: newest, cf: 'weekly', pri: '0.8' },
+    { loc: RESEARCH_PATH, lastmod: newest, cf: 'monthly', pri: '0.8' },
     { loc: '/gallery/', lastmod: cfgDate, cf: 'monthly', pri: '0.7' },
   ];
   for (const c of COLLECTIONS) {
@@ -470,7 +522,7 @@ ${items}
 function buildLlms(posts) {
   const recent = posts.filter(p => !p.collectionKey).slice(0, 10).map(p => `- [${p.title}](${SITE.url}${p.path}) — ${p.description}`).join('\n');
   const works = (CONFIG.gallery || []).map(g => `- [${g.title}](${/^https?:/.test(g.href) ? g.href : SITE.url + g.href}) — ${g.desc}`).join('\n');
-  // 研究专辑:逐篇列出 + 机读 markdown 链接(中英),便于 LLM 检索与引用
+  // Research:逐篇列出 + 机读 markdown 链接(中英),便于 LLM 检索与引用
   const research = COLLECTIONS.filter(c => posts.some(p => p.collectionKey === c.key)).map(c => {
     const order = c.order || [];
     const members = posts.filter(p => p.collectionKey === c.key).sort((a, b) => order.indexOf(a.slug) - order.indexOf(b.slug));
@@ -486,7 +538,7 @@ function buildLlms(posts) {
 > ${SITE.tagline}
 
 作者 Vince Jiang(小蒋),GitHub: ${SITE.github}。所有文章都有机读 markdown 副本(文章 URL 后加 \`index.md\`,英文译版在 \`en/index.md\`),欢迎抓取、检索与引用(geo-open;robots.txt 显式放行 GPTBot / OAI-SearchBot / ChatGPT-User / ClaudeBot / Claude-SearchBot / PerplexityBot / Google-Extended)。
-${research ? `\n## 研究专辑 · Research Demo(经济学工作论文,中英双语,每篇附机读 markdown)\n${research}\n` : ''}
+${research ? `\n## Research(/research/)\n每组研究在站内 Research 页以「论文正文 + Revision」成对展示;以下保留逐篇机读入口。\n${research}\n` : ''}
 ## Blog(/blog/)
 ${recent || '(暂无)'}
 
@@ -504,7 +556,7 @@ ${works}
 // ---- 拷贝静态内容 ----
 const COPY_EXCLUDE = new Set(['.git', '.github', '.gitignore', '.dockerignore', 'Dockerfile', 'docker', 'tools', 'templates',
   'posts', 'posts-manifest.json', 'site.config.json', 'SPEC.md', 'README.md', 'LICENSE', 'node_modules', 'site', '.DS_Store',
-  'index.html', 'sitemap.xml', 'llms.txt', 'blog', 'gallery', 'release']);
+  'index.html', 'sitemap.xml', 'llms.txt', 'blog', 'research', 'gallery', 'release']);
 const ASSET_DIRS = new Set(['assets']);   // 纯静态资源目录:随内容拷贝但不要求 index.html(无干净 URL)
 function contentDirs() {
   return readdirSync(ROOT, { withFileTypes: true })
@@ -521,6 +573,8 @@ function runCheck(posts) {
   // collection.order 完整性:声明的 slug 必须都有对应文章(反之只 warn)
   for (const c of COLLECTIONS) {
     for (const s of (c.order || [])) if (!posts.some(p => p.collectionKey === c.key && p.slug === s)) warn(`collection ${c.key}: order 列了 ${s} 但无对应文章`);
+    for (const key of listOf(c.revisedBy)) if (!collectionOf(key)) err(`collection ${c.key}: revisedBy 指向不存在的 collection ${key}`);
+    for (const key of listOf(c.revisionOf)) if (!collectionOf(key)) err(`collection ${c.key}: revisionOf 指向不存在的 collection ${key}`);
   }
   // 论文(layout: paper)整篇试渲染(中 + 英),图表 JSON 非法、正文违规等硬伤在 CI 就拦下
   for (const p of posts.filter(x => x.layout === 'paper')) {
@@ -567,6 +621,8 @@ function runBuild(posts) {
   mkdirSync(join(OUT, 'blog'), { recursive: true });
   writeFileSync(join(OUT, 'blog', 'index.html'), renderBlogIndex(pub));
   writeFileSync(join(OUT, 'blog', 'feed.xml'), buildRss(pub));
+  mkdirSync(join(OUT, 'research'), { recursive: true });
+  writeFileSync(join(OUT, 'research', 'index.html'), renderResearchIndex(pub));
   writeFileSync(join(OUT, 'index.html'), renderHome(pub));
   mkdirSync(join(OUT, 'gallery'), { recursive: true });
   writeFileSync(join(OUT, 'gallery', 'index.html'), renderGallery());

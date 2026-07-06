@@ -1,5 +1,5 @@
 {
-  "_note": "首页与 gallery 的单一数据源。改这里即改首页/gallery/研究专辑,无需动模板。href 为 http(s) 视作外链、本站相对路径视作内部作品(进 sitemap)。wildSites[].hue = 友链纸皮石站色相(反官色,见 uniwild runbook);collections = 研究专辑(posts/<key>/ 下的文章按 order 排),layout:paper 用论文格式。",
+  "_note": "首页、gallery、Research 的单一数据源。改这里即改首页/gallery/Research,无需动模板。href 为 http(s) 视作外链、本站相对路径视作内部作品(进 sitemap)。wildSites[].hue = 友链纸皮石站色相(反官色,见 uniwild runbook);collections = Research collections(posts/<key>/ 下的文章按 order 排),layout:paper 用论文格式;正文 collection 用 revisedBy 指向 revision collection,revision collection 用 revisionOf 指回正文,Research 页会自动成对展示。",
   "wildSites": [
     { "key": "hkuwild",   "name": "非官方港大",   "url": "https://hkuwild.com",   "hue": 20,  "desc": "百年殖民史的缩影:港大的身世、争议与人物 lore。" },
     { "key": "cuhkwild",  "name": "非官方中大",   "url": "https://cuhkwild.com",  "hue": 92,  "desc": "山城书院制的人文底色:中大的理想主义与它的代价。" },

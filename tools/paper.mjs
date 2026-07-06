@@ -238,15 +238,21 @@ export function renderPaper(p, ctx, opts = {}) {
     isPartOf,
     ...(transHref ? { [transRel]: { '@type': 'ScholarlyArticle', '@id': transHref, url: transHref, inLanguage: isEn ? p.lang : 'en' } } : {}),
   };
-  // 论文归属「Research Demo」(其所在专辑),而非 blog
+  // 论文归属 Research collection,而非泛 blog
   const upHref = p.collectionKey ? `/blog/${p.collectionKey}/` : '/blog/';
-  const upLabel = p.collectionKey ? 'Research Demo' : 'Blog';
+  const upLabel = p.collectionKey ? 'Research' : 'Blog';
+  const breadcrumbItems = coll ? [
+    { '@type': 'ListItem', position: 1, name: '首页', item: ctx.SITE.url + '/' },
+    { '@type': 'ListItem', position: 2, name: 'Research', item: ctx.SITE.url + '/research/' },
+    { '@type': 'ListItem', position: 3, name: coll.title, item: ctx.SITE.url + `/blog/${coll.key}/` },
+    { '@type': 'ListItem', position: 4, name: title, item: ctx.SITE.url + path },
+  ] : [
+    { '@type': 'ListItem', position: 1, name: '首页', item: ctx.SITE.url + '/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: ctx.SITE.url + '/blog/' },
+    { '@type': 'ListItem', position: 3, name: title, item: ctx.SITE.url + path },
+  ];
   const breadcrumb = {
-    '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-      { '@type': 'ListItem', position: 1, name: '首页', item: ctx.SITE.url + '/' },
-      { '@type': 'ListItem', position: 2, name: upLabel, item: ctx.SITE.url + upHref },
-      { '@type': 'ListItem', position: 3, name: title, item: ctx.SITE.url + path },
-    ],
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: breadcrumbItems,
   };
   const head = ctx.headHtml({ type: 'article', path, title, desc: description, locale: isEn ? 'en_US' : 'zh_CN', jsonld: [ld, breadcrumb] })
     + (ctx.hreflangHtml ? ctx.hreflangHtml(p) : '');

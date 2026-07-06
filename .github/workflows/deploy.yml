@@ -35,7 +35,7 @@ jobs:
       - name: HTML 粗校验(warn-only,不阻塞)
         run: |
           cd tools && node build-site.mjs --out /tmp/site
-          npx --yes html-validate "/tmp/site/index.html" "/tmp/site/blog/**/*.html" "/tmp/site/gallery/**/*.html" || true
+          npx --yes html-validate "/tmp/site/index.html" "/tmp/site/blog/**/*.html" "/tmp/site/research/**/*.html" "/tmp/site/gallery/**/*.html" || true
 
   # ── ① 构建并推送镜像(GitHub 托管 runner)──────────────────────────────
   image:
