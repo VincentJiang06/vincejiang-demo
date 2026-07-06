@@ -175,20 +175,20 @@ a:hover{color:var(--link-h)}
 .nav{position:sticky; top:0; z-index:10; backdrop-filter:blur(28px) saturate(1.28); -webkit-backdrop-filter:blur(28px) saturate(1.28);
   background:linear-gradient(to bottom,color-mix(in srgb,var(--glass-top) 84%,transparent),color-mix(in srgb,var(--page) 34%,transparent));
   border-bottom:1px solid var(--border);box-shadow:0 1px 0 color-mix(in srgb,var(--glass-shine) 42%,transparent) inset,0 12px 34px rgba(30,32,52,.08)}
-.nav .in{position:relative;isolation:isolate;max-width:1000px; margin:0 auto; padding:.7rem 1.2rem; display:flex; align-items:center; gap:1.1rem}
-.nav .in::before{content:"";position:absolute;left:1.2rem;right:1.2rem;top:.45rem;bottom:.45rem;z-index:-1;pointer-events:none;
-  border:1px solid color-mix(in srgb,var(--border) 76%,transparent);border-radius:16px;
-  background:linear-gradient(145deg,color-mix(in srgb,var(--glass-top) 62%,transparent),color-mix(in srgb,var(--glass-bottom) 42%,transparent));
-  box-shadow:0 1px 0 color-mix(in srgb,var(--glass-shine) 66%,transparent) inset,0 12px 28px rgba(30,32,52,.07);
-  backdrop-filter:blur(22px) saturate(1.18);-webkit-backdrop-filter:blur(22px) saturate(1.18)}
-.nav .brand{font-weight:700; letter-spacing:-.01em; color:var(--fg); font-size:1.02rem; margin-right:auto}
-.nav a.item{color:var(--sub); font-size:.92rem; padding:.18rem .28rem; border-radius:9px;border-bottom:2px solid transparent;transition:background .2s,color .2s}
+.nav .in{position:relative;max-width:1000px; margin:0 auto; padding:.7rem 1.2rem; display:flex; align-items:center; gap:1.1rem}
+@keyframes brand-glint{0%,18%{background-position:120% 50%}48%{background-position:-35% 50%}100%{background-position:-35% 50%}}
+.nav .brand{font-weight:760;letter-spacing:0;color:transparent;font-size:1.02rem;margin-right:auto;
+  background:linear-gradient(90deg,var(--fg) 0%,var(--fg) 30%,var(--link) 45%,var(--link-h) 55%,var(--fg) 72%);
+  background-size:220% 100%;background-clip:text;-webkit-background-clip:text;animation:brand-glint 7s ease-in-out infinite}
+.nav .brand:hover{animation-duration:2.8s}
+.nav a.item{color:var(--sub); font-size:.92rem; padding:.2rem 0; border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
 .nav a.item:hover{color:var(--fg)}
-.nav a.item.active{color:var(--fg); border-bottom-color:var(--link);background:color-mix(in srgb,var(--glass-shine) 18%,transparent)}
+.nav a.item.active{color:var(--fg); border-bottom-color:var(--link);background:transparent}
 .nav .toggle{width:36px; height:36px; border-radius:12px; border:1px solid var(--border);
   background:linear-gradient(150deg,var(--glass-top),var(--glass-bottom)); color:var(--fg);
   cursor:pointer; font-size:1rem; line-height:1; box-shadow:var(--shadow),0 1px 0 var(--glass-shine) inset; transition:transform .2s,box-shadow .24s,border-color .24s}
 .nav .toggle:hover{transform:translateY(-1px);box-shadow:var(--shadow-h),0 1px 0 var(--glass-shine) inset;border-color:color-mix(in srgb,var(--link) 28%,var(--border))}
+@media (prefers-reduced-motion:reduce){.nav .brand{animation:none}}
 
 .wrap{max-width:1000px; margin:0 auto; padding:2.4rem 1.2rem 3rem}
 .narrow{max-width:720px}
