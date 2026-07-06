@@ -485,12 +485,12 @@ function renderGallery() {
 }
 function renderBackgroundTest() {
   const path = '/background-test/';
-  const desc = 'Background SVG test page for vincejiang.com.';
+  const desc = 'Background gradient test page for vincejiang.com.';
   const head = {
     titleFull: `Background Test · ${SITE.name}`,
     html: headHtml({ path, title: 'Background Test', desc, robots: 'noindex, nofollow' }),
   };
-  const main = `<main class="background-test" aria-label="background svg test"><section class="background-test-badge" aria-label="page label"><h1>Background Test</h1><p>dot matrix + main waves</p></section></main>`;
+  const main = `<main class="background-test" aria-label="background gradient test"><section class="background-test-badge" aria-label="page label"><h1>Background Test</h1><p>CSS gradient fallback</p></section></main>`;
   return pageHtml({ head, main, chrome: false });
 }
 
