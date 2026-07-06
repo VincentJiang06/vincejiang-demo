@@ -174,21 +174,33 @@ a:hover{color:var(--link-h)}
 /* 顶栏导航 */
 .nav{position:sticky; top:0; z-index:10; backdrop-filter:blur(28px) saturate(1.28); -webkit-backdrop-filter:blur(28px) saturate(1.28);
   background:linear-gradient(to bottom,color-mix(in srgb,var(--glass-top) 84%,transparent),color-mix(in srgb,var(--page) 34%,transparent));
-  border-bottom:1px solid var(--border);box-shadow:0 1px 0 color-mix(in srgb,var(--glass-shine) 42%,transparent) inset,0 12px 34px rgba(30,32,52,.08)}
+  border-bottom:1px solid var(--border);box-shadow:0 1px 0 color-mix(in srgb,var(--glass-shine) 42%,transparent) inset,0 12px 34px rgba(30,32,52,.08);overflow:hidden}
+.nav::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;pointer-events:none;
+  background:linear-gradient(90deg,transparent 0%,color-mix(in srgb,var(--link) 56%,transparent) 38%,color-mix(in srgb,var(--link-h) 58%,transparent) 50%,transparent 74%);
+  transform:translateX(-42%);opacity:.72;animation:nav-horizon 8s ease-in-out infinite}
 .nav .in{position:relative;max-width:1000px; margin:0 auto; padding:.7rem 1.2rem; display:flex; align-items:center; gap:1.1rem}
 @keyframes brand-glint{0%,18%{background-position:120% 50%}48%{background-position:-35% 50%}100%{background-position:-35% 50%}}
-.nav .brand{font-weight:760;letter-spacing:0;color:transparent;font-size:1.02rem;margin-right:auto;
+@keyframes brand-line{0%,100%{transform:translateX(-8%) scaleX(.58);opacity:.44}50%{transform:translateX(8%) scaleX(1);opacity:.92}}
+@keyframes nav-horizon{0%,100%{transform:translateX(-42%);opacity:.48}50%{transform:translateX(42%);opacity:.86}}
+@keyframes nav-underline{0%,100%{transform:scaleX(.72);opacity:.64}50%{transform:scaleX(1);opacity:1}}
+.nav .brand{position:relative;display:inline-block;overflow:visible;font-weight:760;letter-spacing:0;color:transparent;font-size:1.02rem;margin-right:auto;
   background:linear-gradient(90deg,var(--fg) 0%,var(--fg) 30%,var(--link) 45%,var(--link-h) 55%,var(--fg) 72%);
-  background-size:220% 100%;background-clip:text;-webkit-background-clip:text;animation:brand-glint 7s ease-in-out infinite}
+  background-size:220% 100%;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:brand-glint 7s ease-in-out infinite}
+.nav .brand::after{content:"";position:absolute;left:0;right:0;bottom:-.2rem;height:2px;border-radius:2px;pointer-events:none;
+  background:linear-gradient(90deg,transparent,var(--link),var(--link-h),transparent);animation:brand-line 4.8s ease-in-out infinite}
 .nav .brand:hover{animation-duration:2.8s}
-.nav a.item{color:var(--sub); font-size:.92rem; padding:.2rem 0; border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.nav a.item{position:relative;color:var(--sub); font-size:.92rem; padding:.2rem 0; border-bottom:0;transition:color .2s}
+.nav a.item::after{content:"";position:absolute;left:0;right:0;bottom:-.34rem;height:2px;border-radius:2px;
+  background:linear-gradient(90deg,transparent,var(--link),var(--link-h),transparent);transform:scaleX(0);opacity:0;transition:transform .22s,opacity .22s}
 .nav a.item:hover{color:var(--fg)}
-.nav a.item.active{color:var(--fg); border-bottom-color:var(--link);background:transparent}
+.nav a.item:hover::after{transform:scaleX(.74);opacity:.62}
+.nav a.item.active{color:var(--fg);background:transparent}
+.nav a.item.active::after{transform:scaleX(1);opacity:.9;animation:nav-underline 4.8s ease-in-out infinite}
 .nav .toggle{width:36px; height:36px; border-radius:12px; border:1px solid var(--border);
   background:linear-gradient(150deg,var(--glass-top),var(--glass-bottom)); color:var(--fg);
   cursor:pointer; font-size:1rem; line-height:1; box-shadow:var(--shadow),0 1px 0 var(--glass-shine) inset; transition:transform .2s,box-shadow .24s,border-color .24s}
 .nav .toggle:hover{transform:translateY(-1px);box-shadow:var(--shadow-h),0 1px 0 var(--glass-shine) inset;border-color:color-mix(in srgb,var(--link) 28%,var(--border))}
-@media (prefers-reduced-motion:reduce){.nav .brand{animation:none}}
+@media (prefers-reduced-motion:reduce){.nav::after,.nav .brand,.nav .brand::after,.nav a.item.active::after{animation:none}}
 
 .wrap{max-width:1000px; margin:0 auto; padding:2.4rem 1.2rem 3rem}
 .narrow{max-width:720px}
