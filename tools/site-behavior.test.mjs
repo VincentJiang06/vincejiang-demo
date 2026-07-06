@@ -29,6 +29,7 @@ assert.ok(waveStart > -1 && waveEnd > waveStart, 'wave ribbons should render bef
 const waveRibbons = home.slice(waveStart, waveEnd);
 assert.ok((waveRibbons.match(/<path d="/g) || []).length >= 13, 'wave ribbons should add dense horizontal wave lines');
 assert.match(waveRibbons, /<g class="wave-ribbons" opacity="\.86">/);
+assert.match(waveRibbons, /<animateTransform attributeName="transform" type="translate" values="0 -7;0 9;0 -7" dur="15s" repeatCount="indefinite"\/>/);
 assert.match(waveRibbons, /stroke-dasharray="170 54 28 62"/);
 assert.match(waveRibbons, /stroke-dasharray="260 58 42 86"/);
 assert.match(home, /data-period/);
@@ -44,6 +45,9 @@ assert.doesNotMatch(home, /@keyframes brand-glint|@keyframes brand-line|@keyfram
 assert.doesNotMatch(home, /\.nav::after|\.nav \.brand::after|\.nav a\.item::after/);
 assert.match(home, /\.nav \.brand\{font-weight:700; letter-spacing:-\.01em; color:var\(--fg\);/);
 assert.match(home, /\.nav a\.item\.active\{color:var\(--fg\); border-bottom-color:var\(--link\);background:transparent\}/);
+assert.match(home, /\.index-page\{padding-bottom:6\.2rem\}/);
+assert.match(home, /\.foot\{max-width:1000px;width:calc\(100% - 2\.4rem\); margin:3\.8rem auto 3\.8rem;/);
+assert.match(home, /backdrop-filter:blur\(30px\) saturate\(1\.18\)/);
 assert.match(home, /\.sec\{margin:2\.4rem 0 1rem; display:flex; align-items:baseline; gap:\.7rem; flex-wrap:wrap\}/);
 assert.doesNotMatch(home, /\.sec\{[^}]*border-radius:16px/);
 assert.match(home, /\.section-icon\{display:inline;color:var\(--link\);font-size:1\.05rem;/);
@@ -74,6 +78,11 @@ assert.ok(existsSync(join(OUT, 'research', 'pension-demo', 'index.html')), 'pape
 assert.ok(existsSync(join(OUT, 'research', 'pension-demo-revision', 'index.html')), 'revision collection should live under /research/');
 assert.ok(!existsSync(join(OUT, 'blog', 'pension-demo')), 'paper collection should not live under /blog/');
 assert.ok(!existsSync(join(OUT, 'blog', 'pension-demo-revision')), 'revision collection should not live under /blog/');
+
+const blogIndex = html('blog');
+const galleryIndex = html('gallery');
+assert.match(blogIndex, /<main class="wrap narrow index-page">/);
+assert.match(galleryIndex, /<main class="wrap narrow index-page">/);
 
 const paperPage = readFileSync(join(OUT, 'research', 'pension-demo', 'paper-1', 'index.html'), 'utf8');
 assert.match(paperPage, /\.side\{[\s\S]*?backdrop-filter:blur\(28px\) saturate\(1\.18\)/);

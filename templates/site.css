@@ -187,6 +187,7 @@ a:hover{color:var(--link-h)}
 
 .wrap{max-width:1000px; margin:0 auto; padding:2.4rem 1.2rem 3rem}
 .narrow{max-width:720px}
+.index-page{padding-bottom:6.2rem}
 
 /* 卡片 */
 .card{position:relative;background:linear-gradient(145deg,color-mix(in srgb,var(--glass-top) 92%,transparent),color-mix(in srgb,var(--glass-bottom) 88%,transparent)); backdrop-filter:blur(28px) saturate(1.22); -webkit-backdrop-filter:blur(28px) saturate(1.22);
@@ -362,10 +363,10 @@ a:hover{color:var(--link-h)}
 }
 
 /* 页脚 */
-.foot{max-width:1000px; margin:2.5rem auto 0; padding:1.05rem 1.2rem; border:1px solid var(--border);border-bottom:0;border-radius:18px 18px 0 0;
-  background:linear-gradient(145deg,color-mix(in srgb,var(--glass-top) 58%,transparent),color-mix(in srgb,var(--glass-bottom) 34%,transparent));
-  box-shadow:0 -10px 30px rgba(32,36,56,.06),0 1px 0 var(--glass-shine) inset;
-  backdrop-filter:blur(22px) saturate(1.14);-webkit-backdrop-filter:blur(22px) saturate(1.14);
+.foot{max-width:1000px;width:calc(100% - 2.4rem); margin:3.8rem auto 3.8rem; padding:1.05rem 1.2rem; border:1px solid color-mix(in srgb,var(--border) 72%,transparent);border-radius:18px;
+  background:linear-gradient(145deg,color-mix(in srgb,var(--glass-top) 34%,transparent),color-mix(in srgb,var(--glass-bottom) 18%,transparent));
+  box-shadow:0 18px 46px rgba(32,36,56,.07),0 1px 0 color-mix(in srgb,var(--glass-shine) 58%,transparent) inset;
+  backdrop-filter:blur(30px) saturate(1.18);-webkit-backdrop-filter:blur(30px) saturate(1.18);
   color:var(--faint); font-size:.85rem; display:flex; gap:.8rem; flex-wrap:wrap; align-items:center}
 .foot a{color:var(--sub)}
 .foot .sp{margin-left:auto}

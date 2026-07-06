@@ -419,7 +419,7 @@ function renderBlogIndex(posts) {
   const total = loose.length;
   const desc = `Vince Jiang 的博客 —— 共 ${total} 篇杂谈与技术笔记。`;
   const head = { titleFull: `Blog · ${SITE.name}`, html: headHtml({ path: '/blog/', title: 'Blog', desc, jsonld: [{ '@context': 'https://schema.org', '@type': 'Blog', name: `${SITE.name} 的 Blog`, url: SITE.url + '/blog/', author: personLd }] }) };
-  const main = `<main class="wrap narrow"><div class="hero"><h1>Blog</h1><p>杂谈、技术笔记、随手记的实验。共 ${total} 篇。</p></div>
+  const main = `<main class="wrap narrow index-page"><div class="hero"><h1>Blog</h1><p>杂谈、技术笔记、随手记的实验。共 ${total} 篇。</p></div>
 <ul class="postlist">${items || '<p class="note">还没有已发布的文章。</p>'}</ul></main>`;
   return pageHtml({ active: 'blog', head, main });
 }
@@ -479,7 +479,7 @@ function renderGallery() {
       { '@context': 'https://schema.org', '@type': 'CollectionPage', name: `${SITE.name} · Gallery`, url: SITE.url + '/gallery/', author: personLd, mainEntity: { '@type': 'ItemList', itemListElement: list } },
     ] }),
   };
-  const main = `<main class="wrap narrow"><div class="hero"><h1>Gallery</h1><p>做过的交互式 demo 与实验。原地址不变,这里只是索引。</p></div>
+  const main = `<main class="wrap narrow index-page"><div class="hero"><h1>Gallery</h1><p>做过的交互式 demo 与实验。原地址不变,这里只是索引。</p></div>
 <ul class="postlist">${items}</ul></main>`;
   return pageHtml({ active: 'gallery', head, main });
 }
