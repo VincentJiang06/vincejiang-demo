@@ -32,7 +32,7 @@ assert.match(home, /\.section-icon\{display:inline;color:var\(--link\);font-size
 assert.match(home, /\.article \.head\{[\s\S]*?backdrop-filter:blur\(26px\) saturate\(1\.16\)/);
 assert.match(home, /<a class="item" href="\/research\/">Research<\/a>/);
 assert.doesNotMatch(home, /class="item special"/);
-assert.match(home, /<div class="sec research-sec"><h2><span class="section-icon research-icon" aria-hidden="true">⌁<\/span>Research<\/h2><a class="more" href="\/research\/">全部 Research →<\/a><\/div>/);
+assert.match(home, /<div class="sec research-sec"><h2><span class="section-icon research-icon" aria-hidden="true">🧪<\/span>Research<\/h2><a class="more" href="\/research\/">全部 Research →<\/a><\/div>/);
 assert.doesNotMatch(home, /research-more/);
 assert.doesNotMatch(home, /论文正文和 revision 成对展示/);
 assert.match(home, /<section class="research-home card">/);

@@ -454,7 +454,7 @@ function renderHome(posts) {
 
 <div class="sec"><h2>📝 Blog</h2><a class="more" href="/blog/">全部文章 →</a></div>
 <div class="grid c2">${blog || '<p class="note">敬请期待。</p>'}</div>
-${researchSec ? `\n<div class="sec research-sec"><h2><span class="section-icon research-icon" aria-hidden="true">⌁</span>Research</h2><a class="more" href="${RESEARCH_PATH}">全部 Research →</a></div>\n<section class="research-home card"><div class="research-pairs home">${researchSec}</div></section>\n` : ''}
+${researchSec ? `\n<div class="sec research-sec"><h2><span class="section-icon research-icon" aria-hidden="true">🧪</span>Research</h2><a class="more" href="${RESEARCH_PATH}">全部 Research →</a></div>\n<section class="research-home card"><div class="research-pairs home">${researchSec}</div></section>\n` : ''}
 <div class="sec"><h2>🎨 Gallery</h2><a class="more" href="/gallery/">全部作品 →</a></div>
 <div class="grid c3">${gallery}</div>
 
