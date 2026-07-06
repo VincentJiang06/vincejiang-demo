@@ -25,6 +25,9 @@ assert.match(home, /s==='neutral'/);
 assert.match(home, /<div class="hero home-hero">/);
 assert.match(home, /\.home-hero::before\{content:"";position:absolute;left:0;right:0;/);
 assert.doesNotMatch(home, /\.home-hero::before\{[^}]*left:-1\.2rem;right:-1\.2rem;/);
+assert.match(home, /\.nav \.in::before\{[\s\S]*?backdrop-filter:blur\(22px\) saturate\(1\.18\)/);
+assert.match(home, /\.sec\{[\s\S]*?backdrop-filter:blur\(18px\) saturate\(1\.14\)/);
+assert.match(home, /\.article \.head\{[\s\S]*?backdrop-filter:blur\(26px\) saturate\(1\.16\)/);
 assert.match(home, /<a class="item" href="\/research\/">Research<\/a>/);
 assert.doesNotMatch(home, /class="item special"/);
 assert.match(home, /<div class="sec research-sec"><h2><span class="section-icon research-icon" aria-hidden="true">⌁<\/span>Research<\/h2><a class="more" href="\/research\/">全部 Research →<\/a><\/div>/);
@@ -49,6 +52,11 @@ assert.ok(existsSync(join(OUT, 'research', 'pension-demo', 'index.html')), 'pape
 assert.ok(existsSync(join(OUT, 'research', 'pension-demo-revision', 'index.html')), 'revision collection should live under /research/');
 assert.ok(!existsSync(join(OUT, 'blog', 'pension-demo')), 'paper collection should not live under /blog/');
 assert.ok(!existsSync(join(OUT, 'blog', 'pension-demo-revision')), 'revision collection should not live under /blog/');
+
+const paperPage = readFileSync(join(OUT, 'research', 'pension-demo', 'paper-1', 'index.html'), 'utf8');
+assert.match(paperPage, /\.side\{[\s\S]*?backdrop-filter:blur\(28px\) saturate\(1\.18\)/);
+assert.match(paperPage, /\.flow\{[\s\S]*?backdrop-filter:blur\(10px\) saturate\(1\.05\)/);
+assert.match(paperPage, /@media print\{[\s\S]*?body::before\{display:none\}/);
 
 const sitemap = readFileSync(join(OUT, 'sitemap.xml'), 'utf8');
 assert.ok(sitemap.includes('<loc>https://vincejiang.com/research/</loc>'), 'sitemap should include /research/');
