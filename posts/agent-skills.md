@@ -1,13 +1,13 @@
 ---
-title: 工业级 Agent Skills —— 给 Claude Code 的 16 个技能
-description: 给 Claude Code 用的工业级 agent skills:每个都自带确定性校验器 + 红绿 eval + 一个专门想把它弄坏的独立测试组。小而专、范围锋利、中英双语。直链 GitHub 仓库。
+title: 工业级 Agent Skills —— 给 Claude Code / Codex 的 16 个技能
+description: 给 Claude Code、Codex 和其他 agent runtime 用的工业级 agent skills:每个都自带确定性校验器 + 红绿 eval + 独立测试组。16 个正式技能之外,文末另有 stupidskills 附录,不计入总数。
 tags: [agent, claude-code, skills]
 date: 2026-07-03
 ---
 
-> 这篇是 [github.com/VincentJiang06/skills](https://github.com/VincentJiang06/skills) 的说明页,原 `/skills` 页面已并入此文。
+> 这篇是 [github.com/VincentJiang06/skills](https://github.com/VincentJiang06/skills) 的说明页,原 `/skills` 页面已并入此文。正式计数仍为 **16 个 skill**;文末的 **stupidskills** 是实验/旁路工具,不计入总数。
 
-给 Claude Code 用的一套 **agent skills**——每个都自带**确定性校验器** + **红绿 eval** + 一个专门想把它弄坏的**独立测试组**。小而专、范围锋利、中英双语。仓库直链:[github.com/VincentJiang06/skills](https://github.com/VincentJiang06/skills)。
+给 Claude Code / Codex / 其他 agent runtime 用的一套 **agent skills**——每个正式 skill 都自带**确定性校验器** + **红绿 eval** + 一个专门想把它弄坏的**独立测试组**。小而专、范围锋利、中英双语。仓库直链:[github.com/VincentJiang06/skills](https://github.com/VincentJiang06/skills)。
 
 一行装好(用 skills CLI,自动发现并装入 `~/.claude/skills/`):
 
@@ -15,7 +15,7 @@ date: 2026-07-03
 npx skills add VincentJiang06/skills
 ```
 
-16 个 skill,几乎全部由仓库自带的流水线 + 循环造出。每个 skill 的细节看它自己文件夹里的 README。
+16 个正式 skill,几乎全部由仓库自带的流水线 + 循环造出。每个 skill 的细节看它自己文件夹里的 README。stupidskills 只放在页面最底部,明确标记,不进入这个数字。
 
 ## 一个 skill 长什么样
 
@@ -41,7 +41,15 @@ album-review/
 - **schemas/** 用 JSON Schema 校验中间产物,做红绿 gate;
 - **README · .en** 中英双语,各 skill 细节看自己的 README。
 
-## 16 个 skill,按用途分组
+## 这一版更新了什么
+
+- **流水线 v2 化**:guidance / engineer / conductor / zipper 共用可执行 gate;spec、build report、trigger eval、held-out、red log 都能被重跑,不靠口头承诺。
+- **循环工程分层**:`loop-constructor` 设计通用 loop;文末的 stupidskills 里另放 `loop-constructor-codex`,把同一套 loop 工程映射到 `codex exec`、磁盘状态和 fresh evaluator。
+- **独立性成为一等公民**:`attacker`、`reorganize-logic`、`test-driven-development` 都围绕「写答案的人不要同时判答案」重做过。
+- **模型 / effort sizing 显式化**:文末的 `model-pyramid` 只在 subagent fan-out 前给出可审计的 `rule=<id> tier=<tier> effort=<notch>`,不做模型购物,也不负责 spawn。
+- **知识库随 skill 走**:`skill-principle` 和 `loop-principle` 内置到对应 skill,安装时一起带上。
+
+## 16 个正式 skill,按用途分组
 
 ### 成品(拿来即用)
 
@@ -66,10 +74,10 @@ album-review/
 
 ### 流水线(造 skill 的 skill)
 
-- **[skill-conductor](https://github.com/VincentJiang06/skills/tree/main/skills/skill-conductor)** —— 带防注水最终验收地驱动 guidance → engineer → zipper 全程。
-- **[skill-guidance](https://github.com/VincentJiang06/skills/tree/main/skills/skill-guidance)** —— 审计 skill / 仓库并产出 schema 校验的 handoff spec。
-- **[skill-engineer](https://github.com/VincentJiang06/skills/tree/main/skills/skill-engineer)** —— 从 spec 构建并测试 skill,红-绿-重构,配独立测试组。
-- **[skill-zipper](https://github.com/VincentJiang06/skills/tree/main/skills/skill-zipper)** —— 为 token 效率、可靠性、触发准确度无损重构现有 skill。
+- **[skill-conductor](https://github.com/VincentJiang06/skills/tree/main/skills/skill-conductor)** —— 端到端驱动 guidance → engineer → zipper;门禁直接跑阶段脚本,最终验收用 `min(复审,独立测试组)` 防注水。
+- **[skill-guidance](https://github.com/VincentJiang06/skills/tree/main/skills/skill-guidance)** —— 审计 skill / 仓库并产出 handoff spec,用 `validate_spec.mjs` 自 gate。
+- **[skill-engineer](https://github.com/VincentJiang06/skills/tree/main/skills/skill-engineer)** —— 从 spec 红-绿-重构构建并测试 skill,用 `validate_report.mjs` 当场重跑 harness。
+- **[skill-zipper](https://github.com/VincentJiang06/skills/tree/main/skills/skill-zipper)** —— 为 token 效率、可靠性、触发准确度无损重构现有 skill,并带可移植性清单。
 
 ## 怎么用
 
@@ -78,5 +86,12 @@ album-review/
 - 「查一下:埃菲尔铁塔夏天会变高吗?」→ **fact-check**
 - 「写一篇这张专辑的深度乐评」→ **album-review**
 - 「把这个想法做成一个工业级 skill」→ **skill-conductor**
+
+## stupidskills(不计入 16 个正式 skill)
+
+这两张卡只放在页面最下面,是实验/旁路工具。它们可以安装和使用,但**不计入我的 skill 个数记录**。
+
+- **[loop-constructor-codex](https://github.com/VincentJiang06/skills/tree/main/skills/loop-constructor-codex)** —— `loop-constructor` 的 Codex CLI 变体:把同一套 loop 工程落到单 agent、多次 `codex exec`、磁盘状态和 fresh evaluator 上。
+- **[model-pyramid](https://github.com/VincentJiang06/skills/tree/main/skills/model-pyramid)** —— fan-out 前给每个 subagent 右配模型层级 + reasoning effort:peer 保持、search 降 effort、大规模廉价查找降一层模型,永远守住 medium floor。它只负责 sizing,不负责 spawn。
 
 仓库:[VincentJiang06/skills](https://github.com/VincentJiang06/skills)。made with ☕ & 🤖 by 小蒋。
