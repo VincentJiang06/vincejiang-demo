@@ -14,16 +14,30 @@
 <div class="ambient-bg" aria-hidden="true">
 <svg viewBox="0 0 1440 980" preserveAspectRatio="xMidYMid slice" role="img">
 <defs>
-<style>.ambient-dot{r:1px}</style>
 <linearGradient id="ambient-stroke" x1="0" y1="0" x2="1" y2="1">
 <stop offset="0%" stop-color="var(--ambient-line-a)"/>
 <stop offset="48%" stop-color="var(--ambient-line-b)"/>
 <stop offset="100%" stop-color="var(--ambient-line-c)"/>
-<animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5" to="360 .5 .5" dur="26s" repeatCount="indefinite"/>
+<animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5" to="360 .5 .5" dur="18s" repeatCount="indefinite"/>
 </linearGradient>
+<circle id="ambient-dot-core" cx="0" cy="0" r="1"/>
 <pattern id="ambient-dot-grid" width="31" height="31" patternUnits="userSpaceOnUse" patternTransform="translate(-8 -4)">
-<animateTransform attributeName="patternTransform" type="translate" values="-8 -4;8 6;-8 -4" dur="22s" repeatCount="indefinite"/>
-<circle class="ambient-dot" cx="4" cy="4" fill="url(#ambient-stroke)" opacity=".62"/>
+<animateTransform attributeName="patternTransform" type="translate" values="-8 -4;8 6;-8 -4" dur="14s" repeatCount="indefinite"/>
+<g transform="translate(4 4)"><use href="#ambient-dot-core" fill="url(#ambient-stroke)" opacity=".56"/></g>
+</pattern>
+<pattern id="ambient-dot-mid-grid" width="31" height="31" patternUnits="userSpaceOnUse" patternTransform="translate(-18 -9)">
+<animateTransform attributeName="patternTransform" type="translate" values="-34 -16;34 16;-34 -16" dur="10s" repeatCount="indefinite"/>
+<g transform="translate(4 4)"><g>
+<animateTransform attributeName="transform" type="scale" values="1;1.7;1.15;1.55;1" keyTimes="0;.22;.46;.72;1" dur="10s" repeatCount="indefinite"/>
+<use href="#ambient-dot-core" fill="url(#ambient-stroke)" opacity=".64"/>
+</g></g>
+</pattern>
+<pattern id="ambient-dot-near-grid" width="31" height="31" patternUnits="userSpaceOnUse" patternTransform="translate(-26 -13)">
+<animateTransform attributeName="patternTransform" type="translate" values="-34 -16;34 16;-34 -16" dur="10s" repeatCount="indefinite"/>
+<g transform="translate(4 4)"><g>
+<animateTransform attributeName="transform" type="scale" values="1.15;2.45;1.4;2.75;1.15" keyTimes="0;.22;.46;.72;1" dur="10s" repeatCount="indefinite"/>
+<use href="#ambient-dot-core" fill="url(#ambient-stroke)" opacity=".88"/>
+</g></g>
 </pattern>
 <g id="wave-source" fill="none">
 <path d="M-180 154 C -30 118, 86 198, 226 166 S 404 90, 536 132 S 716 244, 856 204 S 1030 94, 1152 130 S 1340 224, 1474 188 S 1612 142, 1700 156"/>
@@ -31,20 +45,21 @@
 <path d="M-190 520 C -30 486, 86 568, 236 528 S 426 430, 564 484 S 764 610, 906 552 S 1096 448, 1234 500 S 1440 610, 1578 558 S 1698 514, 1730 526"/>
 <path d="M-200 734 C -48 688, 74 786, 230 744 S 426 660, 578 716 S 788 842, 936 780 S 1130 668, 1274 722 S 1490 836, 1630 786 S 1740 744, 1770 756"/>
 </g>
-<filter id="wave-dot-grow" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
-<feMorphology in="SourceGraphic" operator="dilate" radius="1.45" result="grown"/>
-<feGaussianBlur in="grown" stdDeviation=".18" result="soft-grown"/>
-<feMerge><feMergeNode in="soft-grown"/><feMergeNode in="SourceGraphic"/></feMerge>
-</filter>
 <filter id="ambient-ripple" x="-10%" y="-20%" width="120%" height="140%">
 <feTurbulence type="fractalNoise" baseFrequency=".004 .009" numOctaves="1" seed="7" result="noise">
-<animate attributeName="baseFrequency" values=".004 .009;.007 .007;.004 .009" dur="12s" repeatCount="indefinite"/>
+<animate attributeName="baseFrequency" values=".004 .009;.007 .007;.004 .009" dur="8s" repeatCount="indefinite"/>
 </feTurbulence>
 <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G"/>
 </filter>
-<mask id="wave-response-mask" maskUnits="userSpaceOnUse" x="-180" y="-100" width="1800" height="1180">
-<g stroke="#fff" stroke-linecap="round" stroke-width="128" opacity=".88">
-<animateTransform attributeName="transform" type="translate" values="-24 -12;24 12;-24 -12" dur="18s" repeatCount="indefinite"/>
+<mask id="wave-mid-mask" maskUnits="userSpaceOnUse" x="-180" y="-100" width="1800" height="1180">
+<g stroke="#fff" stroke-linecap="round" stroke-width="150" opacity=".5">
+<animateTransform attributeName="transform" type="translate" values="-34 -16;34 16;-34 -16" dur="10s" repeatCount="indefinite"/>
+<use href="#wave-source"/>
+</g>
+</mask>
+<mask id="wave-near-mask" maskUnits="userSpaceOnUse" x="-180" y="-100" width="1800" height="1180">
+<g stroke="#fff" stroke-linecap="round" stroke-width="72" opacity=".96">
+<animateTransform attributeName="transform" type="translate" values="-34 -16;34 16;-34 -16" dur="10s" repeatCount="indefinite"/>
 <use href="#wave-source"/>
 </g>
 </mask>
@@ -52,11 +67,14 @@
 <g class="dot-field" opacity=".58">
 <rect x="-180" y="-100" width="1800" height="1180" fill="url(#ambient-dot-grid)"/>
 </g>
-<g class="dot-field wave-reactive" mask="url(#wave-response-mask)" filter="url(#wave-dot-grow)" opacity=".72">
-<rect x="-180" y="-100" width="1800" height="1180" fill="url(#ambient-dot-grid)"/>
+<g class="dot-field wave-reactive mid" mask="url(#wave-mid-mask)" opacity=".52">
+<rect x="-180" y="-100" width="1800" height="1180" fill="url(#ambient-dot-mid-grid)"/>
+</g>
+<g class="dot-field wave-reactive near" mask="url(#wave-near-mask)" opacity=".88">
+<rect x="-180" y="-100" width="1800" height="1180" fill="url(#ambient-dot-near-grid)"/>
 </g>
 <g class="main-waves" filter="url(#ambient-ripple)" stroke="url(#ambient-stroke)" stroke-linecap="round" stroke-width="1.55" vector-effect="non-scaling-stroke" opacity=".96">
-<animateTransform attributeName="transform" type="translate" values="-24 -12;24 12;-24 -12" dur="18s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" values="-34 -16;34 16;-34 -16" dur="10s" repeatCount="indefinite"/>
 <use href="#wave-source"/>
 </g>
 </svg>
