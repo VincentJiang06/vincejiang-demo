@@ -20,21 +20,21 @@
 <stop offset="100%" stop-color="var(--ambient-line-c)"/>
 <animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5" to="360 .5 .5" dur="38s" repeatCount="indefinite"/>
 </linearGradient>
-<pattern id="ambient-dot-grid" width="42" height="42" patternUnits="userSpaceOnUse" patternTransform="translate(-10 -2)">
-<animateTransform attributeName="patternTransform" type="translate" values="-10 -2;10 3;-10 -2" dur="48s" repeatCount="indefinite"/>
-<circle cx="5" cy="5" r="1.15" fill="url(#ambient-stroke)" opacity=".48"/>
+<pattern id="ambient-dot-grid" width="32" height="32" patternUnits="userSpaceOnUse" patternTransform="translate(-8 -3)">
+<animateTransform attributeName="patternTransform" type="translate" values="-8 -3;8 5;-8 -3" dur="48s" repeatCount="indefinite"/>
+<circle cx="4" cy="4" r="1.7" fill="url(#ambient-stroke)" opacity=".72"/>
 </pattern>
 <filter id="ambient-ripple" x="-10%" y="-20%" width="120%" height="140%">
 <feTurbulence type="fractalNoise" baseFrequency=".006 .018" numOctaves="2" seed="7" result="noise">
 <animate attributeName="baseFrequency" values=".006 .018;.012 .011;.006 .018" dur="18s" repeatCount="indefinite"/>
 </feTurbulence>
-<feDisplacementMap in="SourceGraphic" in2="noise" scale="18" xChannelSelector="R" yChannelSelector="G"/>
+<feDisplacementMap in="SourceGraphic" in2="noise" scale="9" xChannelSelector="R" yChannelSelector="G"/>
 </filter>
 </defs>
-<rect class="dot-matrix" x="-180" y="-100" width="1800" height="1180" fill="url(#ambient-dot-grid)" opacity=".34"/>
+<rect class="dot-matrix" x="-180" y="-100" width="1800" height="1180" fill="url(#ambient-dot-grid)" opacity=".58"/>
 <g filter="url(#ambient-ripple)" fill="none" stroke="url(#ambient-stroke)" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity=".98">
 <g stroke-width="1.48">
-<animateTransform attributeName="transform" type="translate" values="-18 -3;18 4;-18 -3" dur="48s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" values="-20 -9;20 9;-20 -9" dur="52s" repeatCount="indefinite"/>
 <path d="M-150 154 C -20 118, 82 198, 220 166 C 334 140, 394 88, 520 132 C 652 178, 708 244, 846 204 C 962 170, 1024 94, 1142 130 C 1260 166, 1328 224, 1464 188 C 1540 168, 1604 144, 1660 156">
 <animate attributeName="d" dur="26s" repeatCount="indefinite" values="M-150 154 C -20 118, 82 198, 220 166 C 334 140, 394 88, 520 132 C 652 178, 708 244, 846 204 C 962 170, 1024 94, 1142 130 C 1260 166, 1328 224, 1464 188 C 1540 168, 1604 144, 1660 156;M-150 186 C -8 146, 88 124, 226 178 C 348 226, 432 102, 548 154 C 680 214, 742 158, 872 184 C 988 206, 1046 126, 1172 162 C 1294 198, 1370 144, 1488 172 C 1560 190, 1618 132, 1660 150;M-150 154 C -20 118, 82 198, 220 166 C 334 140, 394 88, 520 132 C 652 178, 708 244, 846 204 C 962 170, 1024 94, 1142 130 C 1260 166, 1328 224, 1464 188 C 1540 168, 1604 144, 1660 156"/>
 </path>
@@ -46,21 +46,6 @@
 </path>
 <path d="M-180 734 C -42 688, 68 786, 220 744 C 348 710, 420 660, 566 716 C 704 768, 780 842, 926 780 C 1056 724, 1122 668, 1264 722 C 1400 774, 1480 836, 1620 786 C 1686 762, 1734 744, 1760 756">
 <animate attributeName="d" dur="38s" repeatCount="indefinite" values="M-180 734 C -42 688, 68 786, 220 744 C 348 710, 420 660, 566 716 C 704 768, 780 842, 926 780 C 1056 724, 1122 668, 1264 722 C 1400 774, 1480 836, 1620 786 C 1686 762, 1734 744, 1760 756;M-180 766 C -34 722, 86 700, 232 756 C 370 810, 444 704, 588 742 C 724 778, 802 700, 950 758 C 1078 808, 1150 716, 1288 746 C 1426 776, 1510 724, 1642 768 C 1706 790, 1746 726, 1760 748;M-180 734 C -42 688, 68 786, 220 744 C 348 710, 420 660, 566 716 C 704 768, 780 842, 926 780 C 1056 724, 1122 668, 1264 722 C 1400 774, 1480 836, 1620 786 C 1686 762, 1734 744, 1760 756"/>
-</path>
-</g>
-<g stroke-width=".58" opacity=".42" stroke-dasharray="20 30">
-<animateTransform attributeName="transform" type="translate" values="24 3;-22 -4;24 3" dur="36s" repeatCount="indefinite"/>
-<path d="M-90 238 C 36 210, 112 252, 238 226 C 358 202, 430 246, 552 220 C 684 192, 750 246, 878 214 C 1000 184, 1070 232, 1192 206 C 1322 178, 1400 214, 1538 190">
-<animate attributeName="d" dur="18s" repeatCount="indefinite" values="M-90 238 C 36 210, 112 252, 238 226 C 358 202, 430 246, 552 220 C 684 192, 750 246, 878 214 C 1000 184, 1070 232, 1192 206 C 1322 178, 1400 214, 1538 190;M-90 250 C 42 224, 128 198, 250 236 C 374 274, 440 212, 566 232 C 698 252, 768 202, 892 226 C 1016 250, 1086 198, 1210 218 C 1340 238, 1412 188, 1538 202;M-90 238 C 36 210, 112 252, 238 226 C 358 202, 430 246, 552 220 C 684 192, 750 246, 878 214 C 1000 184, 1070 232, 1192 206 C 1322 178, 1400 214, 1538 190"/>
-<animate attributeName="stroke-dashoffset" values="0;-160;0" dur="22s" repeatCount="indefinite"/>
-</path>
-<path d="M-70 430 C 58 396, 142 454, 270 420 C 398 386, 470 454, 598 418 C 730 380, 804 444, 936 404 C 1066 366, 1148 430, 1276 396 C 1398 364, 1468 402, 1570 386">
-<animate attributeName="d" dur="21s" repeatCount="indefinite" values="M-70 430 C 58 396, 142 454, 270 420 C 398 386, 470 454, 598 418 C 730 380, 804 444, 936 404 C 1066 366, 1148 430, 1276 396 C 1398 364, 1468 402, 1570 386;M-70 448 C 64 416, 154 392, 284 438 C 414 484, 492 408, 620 438 C 750 468, 826 402, 956 424 C 1088 446, 1162 392, 1294 414 C 1418 434, 1488 374, 1570 398;M-70 430 C 58 396, 142 454, 270 420 C 398 386, 470 454, 598 418 C 730 380, 804 444, 936 404 C 1066 366, 1148 430, 1276 396 C 1398 364, 1468 402, 1570 386"/>
-<animate attributeName="stroke-dashoffset" values="-60;130;-60" dur="25s" repeatCount="indefinite"/>
-</path>
-<path d="M-110 640 C 16 606, 104 668, 238 632 C 362 598, 452 664, 584 626 C 710 590, 792 660, 928 618 C 1054 580, 1138 646, 1270 610 C 1400 574, 1482 622, 1600 596">
-<animate attributeName="d" dur="24s" repeatCount="indefinite" values="M-110 640 C 16 606, 104 668, 238 632 C 362 598, 452 664, 584 626 C 710 590, 792 660, 928 618 C 1054 580, 1138 646, 1270 610 C 1400 574, 1482 622, 1600 596;M-110 654 C 24 620, 116 592, 250 646 C 382 698, 470 618, 606 648 C 734 676, 816 612, 948 636 C 1078 660, 1162 606, 1292 626 C 1426 646, 1500 584, 1600 610;M-110 640 C 16 606, 104 668, 238 632 C 362 598, 452 664, 584 626 C 710 590, 792 660, 928 618 C 1054 580, 1138 646, 1270 610 C 1400 574, 1482 622, 1600 596"/>
-<animate attributeName="stroke-dashoffset" values="80;-120;80" dur="28s" repeatCount="indefinite"/>
 </path>
 </g>
 </g>
