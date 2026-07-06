@@ -5,8 +5,8 @@
 //
 // 职责(SPEC/runbook §3.3):
 //   1) 原样拷贝静态内容目录(demo 等),剔除基础设施/元文件;
-//   2) 按 manifest 渲染已发布文章 → /blog/[<group>/]<slug>/index.html(+ 机读 index.md);
-//      文章可分组(posts/<group>/<slug>.md → /blog/<group>/<slug>/);中英双语走 <slug>.en.md 兄弟文件,
+//   2) 按 manifest 渲染已发布文章 → /blog/<slug>/ 或 /research/<collection>/<slug>/(+ 机读 index.md);
+//      collection 分组(posts/<group>/<slug>.md)走 /research/<group>/<slug>/;中英双语走 <slug>.en.md 兄弟文件,
 //      配对进主文并额外产出 /en/ 子页(英文页不进任何列表,首页/索引/RSS 只收中文主页)。
 //   3) 生成 /blog/ 索引、/research/ 索引、各 collection 落地页、/blog/feed.xml(RSS);
 //   4) 生成全站 sitemap.xml(lastmod 用真实 git 日期,来自 manifest);
@@ -52,6 +52,8 @@ const CSS = readFileSync(join(TPL, 'site.css'), 'utf8');
 const CONFIG = JSON.parse(readFileSync(join(ROOT, 'site.config.json'), 'utf8'));
 const COLLECTIONS = Array.isArray(CONFIG.collections) ? CONFIG.collections : [];
 const collectionOf = group => COLLECTIONS.find(c => c.key === group) || null;
+const collectionPath = key => `${RESEARCH_PATH}${key}/`;
+const postPath = (group, slug) => collectionOf(group) ? `${collectionPath(group)}${slug}/` : (group ? `/blog/${group}/${slug}/` : `/blog/${slug}/`);
 const listOf = value => Array.isArray(value) ? value : (value == null ? [] : [value]);
 const hasCollectionPosts = (posts, key) => posts.some(p => p.collectionKey === key);
 const collectionPostCount = (posts, key) => posts.filter(p => p.collectionKey === key).length;
@@ -239,7 +241,7 @@ function loadPosts() {
     const date = fmDate(fm.date) || (m?.firstPublish ? dOnly(m.firstPublish) : today());
     const updated = fmDate(fm.updated) || (m?.lastPublish ? dOnly(m.lastPublish) : date);
     const description = fm.description || (fm.paper?.abstract ? String(fm.paper.abstract).slice(0, 120) : plain(body).slice(0, 120));
-    const path = group ? `/blog/${group}/${slug}/` : `/blog/${slug}/`;
+    const path = postPath(group, slug);
 
     // 配对英文翻译(英文文件只提供 title/description/body;论文元数据一律从中文 frontmatter.paper 取,含 *_en)
     const ef = ens.get(key);
@@ -279,7 +281,7 @@ function loadPosts() {
 }
 
 // 论文模板(layout: paper)渲染上下文;渲染逻辑在 paper.mjs,规格见 templates/PAPER-SPEC.md
-const paperCtx = () => ({ SITE, headHtml, personLd, esc, warn, langSwitchHtml, hreflangHtml, prevNextHtml, backLabel, collectionOf });
+const paperCtx = () => ({ SITE, headHtml, personLd, esc, warn, langSwitchHtml, hreflangHtml, prevNextHtml, backLabel, collectionOf, collectionPath });
 
 // ---- 渲染单篇博客(post);isEn=true 时渲染英文子页 ----
 function renderPost(p, isEn = false) {
@@ -292,7 +294,7 @@ function renderPost(p, isEn = false) {
     '@type': 'BreadcrumbList', itemListElement: coll ? [
       { '@type': 'ListItem', position: 1, name: '首页', item: SITE.url + '/' },
       { '@type': 'ListItem', position: 2, name: 'Research', item: SITE.url + RESEARCH_PATH },
-      { '@type': 'ListItem', position: 3, name: coll.title, item: SITE.url + `/blog/${coll.key}/` },
+      { '@type': 'ListItem', position: 3, name: coll.title, item: SITE.url + collectionPath(coll.key) },
       { '@type': 'ListItem', position: 4, name: src.title, item: SITE.url + path },
     ] : [
       { '@type': 'ListItem', position: 1, name: '首页', item: SITE.url + '/' },
@@ -317,7 +319,7 @@ function renderPost(p, isEn = false) {
 <div class="head"><h1>${esc(src.title)}</h1><div class="meta"><time datetime="${p.date}">${p.date}</time>${upd}${tags}${langSwitchHtml(p, isEn)}</div></div>
 <div class="prose">${bodyHtml}</div>
 ${prevNextHtml(p, isEn)}
-<a class="backlink" href="${p.collectionKey ? '/blog/' + p.collectionKey + '/' : '/blog/'}">${isEn ? '← Back' : '← 返回'}</a>
+<a class="backlink" href="${p.collectionKey ? collectionPath(p.collectionKey) : '/blog/'}">${isEn ? '← Back' : '← 返回'}</a>
 </article></main>`;
   return pageHtml({ lang, active: p.collectionKey ? 'research' : 'blog', head, main });
 }
@@ -327,7 +329,7 @@ function renderCollection(coll, posts) {
   const order = coll.order || [];
   const members = posts.filter(p => p.collectionKey === coll.key)
     .sort((a, b) => (order.indexOf(a.slug) - order.indexOf(b.slug)));
-  const path = `/blog/${coll.key}/`;
+  const path = collectionPath(coll.key);
   const isRev = coll.kind === 'revision';
   // 与 blog 索引同版式(.postlist)
   const items = members.map(p => {
@@ -339,8 +341,8 @@ function renderCollection(coll, posts) {
   const list = members.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.title, url: SITE.url + p.path }));
   const revOf = coll.revisionOf ? collectionOf(coll.revisionOf) : null;
   const revBy = coll.revisedBy ? collectionOf(coll.revisedBy) : null;
-  const cross = revOf ? `<a class="crosslink rev" href="/blog/${revOf.key}/">← 本专辑是对《${esc(revOf.title)}》的评述与复盘</a>`
-    : revBy ? `<a class="crosslink" href="/blog/${revBy.key}/">📝 这套论文的评述与复盘 → ${esc(revBy.title)}</a>` : '';
+  const cross = revOf ? `<a class="crosslink rev" href="${collectionPath(revOf.key)}">← 本专辑是对《${esc(revOf.title)}》的评述与复盘</a>`
+    : revBy ? `<a class="crosslink" href="${collectionPath(revBy.key)}">📝 这套论文的评述与复盘 → ${esc(revBy.title)}</a>` : '';
   const heroTag = isRev ? '<span class="rev-tag">修订 · REVISION</span>' : '<span class="paper-tag">论文正文 · RESEARCH</span>';
   // GEO:把各篇作为系列组成部分(含摘要),让 AI 从一页拿到全部摘要
   const hasPart = members.map(m => {
@@ -353,7 +355,7 @@ function renderCollection(coll, posts) {
   const collKw = [...new Set(members.flatMap(m => Array.isArray(m.paper?.keywords) ? m.paper.keywords : []))].slice(0, 12);
   const crumbs = [{ '@type': 'ListItem', position: 1, name: '首页', item: SITE.url + '/' }];
   crumbs.push({ '@type': 'ListItem', position: 2, name: 'Research', item: SITE.url + RESEARCH_PATH });
-  if (isRev && revOf) crumbs.push({ '@type': 'ListItem', position: 3, name: revOf.title, item: SITE.url + `/blog/${revOf.key}/` });
+  if (isRev && revOf) crumbs.push({ '@type': 'ListItem', position: 3, name: revOf.title, item: SITE.url + collectionPath(revOf.key) });
   crumbs.push({ '@type': 'ListItem', position: isRev && revOf ? 4 : 3, name: coll.title, item: SITE.url + path });
   const head = {
     titleFull: `${coll.title} · ${SITE.name}`,
@@ -375,17 +377,19 @@ function researchCollectionCard(c, posts, role) {
   const isRevision = role === 'revision';
   const label = isRevision ? 'Revision' : '论文正文';
   const meta = isRevision ? `修订复盘 · ${count} 篇` : `Research · ${count} 篇`;
-  return `<a class="research-card card ${role}" href="/blog/${c.key}/"><span class="research-role">${label}</span><div class="t">${esc(c.title)}</div><div class="d">${esc(c.desc)}</div><div class="meta"><span class="tag">${meta}</span></div></a>`;
+  const title = isRevision ? c.title : '论文正文';
+  return `<a class="research-card ${role}" href="${collectionPath(c.key)}"><span class="research-role">${label}</span><span class="research-card-copy"><span class="t">${esc(title)}</span><span class="d">${esc(c.desc)}</span></span><span class="meta">${meta}</span></a>`;
 }
 function missingRevisionCard() {
-  return `<div class="research-card card revision missing"><span class="research-role">Revision</span><div class="t">Revision 准备中</div><div class="d">这组研究的修订、评述或复盘尚未发布。</div><div class="meta"><span class="tag">即将补齐</span></div></div>`;
+  return `<div class="research-card revision missing"><span class="research-role">Revision</span><span class="research-card-copy"><span class="t">Revision 准备中</span><span class="d">这组研究的修订、评述或复盘尚未发布。</span></span><span class="meta">即将补齐</span></div>`;
 }
-function researchPairBlock(pair, posts, index, { compact = false, heading = 'h2' } = {}) {
+function researchPairBlock(pair, posts, _index, { compact = false, heading = 'h2', framed = true } = {}) {
   const revCards = pair.revisions.length ? pair.revisions.map(c => researchCollectionCard(c, posts, 'revision')).join('\n') : missingRevisionCard();
   const titleTag = heading;
-  return `<section class="research-pair${compact ? ' compact' : ''}">
-<div class="research-pair-head"><span class="research-no">${String(index + 1).padStart(2, '0')}</span><div><${titleTag}>${esc(pair.primary.title)}</${titleTag}>${pair.primary.note ? `<p>${esc(pair.primary.note)}</p>` : ''}</div></div>
-<div class="research-card-grid">${researchCollectionCard(pair.primary, posts, 'paper')}${revCards}</div>
+  const classes = ['research-pair', framed ? 'card' : '', compact ? 'compact' : ''].filter(Boolean).join(' ');
+  return `<section class="${classes}">
+<div class="research-pair-head"><${titleTag}>${esc(pair.primary.title)}</${titleTag}><p>${esc(pair.primary.desc)}</p></div>
+<div class="research-card-list">${researchCollectionCard(pair.primary, posts, 'paper')}${revCards}</div>
 </section>`;
 }
 function renderResearchIndex(posts) {
@@ -394,7 +398,7 @@ function renderResearchIndex(posts) {
   const desc = 'Research 索引:每组研究把论文正文与对应 Revision 成对放在一起,便于先读原文,再读修订、评述与复盘。';
   let pos = 0;
   const list = pairs.flatMap(pair => [pair.primary, ...pair.revisions]).map(c => ({
-    '@type': 'ListItem', position: ++pos, name: c.title, url: SITE.url + `/blog/${c.key}/`,
+    '@type': 'ListItem', position: ++pos, name: c.title, url: SITE.url + collectionPath(c.key),
   }));
   const head = {
     titleFull: `Research · ${SITE.name}`,
@@ -402,7 +406,7 @@ function renderResearchIndex(posts) {
       { '@context': 'https://schema.org', '@type': 'CollectionPage', name: `${SITE.name} · Research`, url: SITE.url + RESEARCH_PATH, description: desc, author: personLd, mainEntity: { '@type': 'ItemList', itemListElement: list } },
     ] }),
   };
-  const main = `<main class="wrap narrow"><div class="hero"><h1>Research</h1><p>${desc}</p></div>
+  const main = `<main class="wrap narrow research-page"><div class="hero"><h1>Research</h1><p>${desc}</p></div>
 <div class="research-pairs">${blocks || '<p class="note">敬请期待。</p>'}</div></main>`;
   return pageHtml({ active: 'research', head, main });
 }
@@ -435,7 +439,7 @@ function renderHome(posts) {
   const friends = (CONFIG.wildSites || []).map(friendCard).join('\n');
   const gallery = (CONFIG.gallery || []).map(g => tileCard(g.href, g.title, g.desc)).join('\n');
   const blog = latest.map(p => `<a class="tile card" href="${p.path}"><div class="t">${esc(p.title)}</div><div class="d">${esc(p.description)}</div><div class="meta">${p.date}</div></a>`).join('\n');
-  const researchSec = researchPairs(posts).map((pair, i) => researchPairBlock(pair, posts, i, { compact: true, heading: 'h3' })).join('\n');
+  const researchSec = researchPairs(posts).map((pair, i) => researchPairBlock(pair, posts, i, { compact: true, heading: 'h3', framed: false })).join('\n');
   const head = {
     titleFull: `${SITE.name} · 个人站`,
     html: headHtml({ path: '/', title: SITE.name, desc: SITE.tagline, jsonld: [
@@ -444,11 +448,11 @@ function renderHome(posts) {
     ] }),
   };
   const main = `<main class="wrap">
-<div class="hero"><h1>Vince Jiang</h1><p>${esc(SITE.tagline)}</p></div>
+<div class="hero home-hero"><h1>Vince Jiang</h1><p>${esc(SITE.tagline)}</p></div>
 
 <div class="sec"><h2>📝 Blog</h2><a class="more" href="/blog/">全部文章 →</a></div>
 <div class="grid c2">${blog || '<p class="note">敬请期待。</p>'}</div>
-${researchSec ? `\n<div class="sec"><h2>Research</h2><span class="note">论文正文和 revision 成对展示</span><a class="more" href="${RESEARCH_PATH}">全部 Research →</a></div>\n<div class="research-pairs home">${researchSec}</div>\n` : ''}
+${researchSec ? `\n<section class="research-home card"><div class="sec research-home-head"><h2>Research</h2><span class="note">论文正文和 revision 成对展示</span><a class="more" href="${RESEARCH_PATH}">全部 Research →</a></div>\n<div class="research-pairs home">${researchSec}</div></section>\n` : ''}
 <div class="sec"><h2>🎨 Gallery</h2><a class="more" href="/gallery/">全部作品 →</a></div>
 <div class="grid c3">${gallery}</div>
 
@@ -490,7 +494,7 @@ function buildSitemap(posts) {
     { loc: '/gallery/', lastmod: shellDate, cf: 'monthly', pri: '0.7' },
   ];
   for (const c of COLLECTIONS) {
-    if (posts.some(p => p.collectionKey === c.key)) urls.push({ loc: `/blog/${c.key}/`, lastmod: shellDate, cf: 'monthly', pri: '0.8' });
+    if (posts.some(p => p.collectionKey === c.key)) urls.push({ loc: collectionPath(c.key), lastmod: shellDate, cf: 'monthly', pri: '0.8' });
   }
   for (const p of posts) {
     const pri = p.collectionKey ? '0.7' : '0.6';   // 研究论文优先级更高
@@ -536,7 +540,7 @@ function buildLlms(posts) {
       const en = p.enPath ? `;英文 ${SITE.url}${p.enPath}(md ${SITE.url}${p.enPath}index.md)` : '';
       return `- [${p.title}](${u}) — ${p.description}\n  机读 markdown:${u}index.md${en}`;
     }).join('\n');
-    return `### ${c.title}\n${c.desc}\n入口:${SITE.url}/blog/${c.key}/\n${lines}`;
+    return `### ${c.title}\n${c.desc}\n入口:${SITE.url}${collectionPath(c.key)}\n${lines}`;
   }).join('\n\n');
   return `# ${SITE.name} — vincejiang.com
 
@@ -620,7 +624,7 @@ function runBuild(posts) {
   // 3) collection 落地页
   for (const c of COLLECTIONS) {
     if (!pub.some(p => p.collectionKey === c.key)) continue;
-    writePage(join('blog', c.key), renderCollection(c, pub));
+    writePage(join('research', c.key), renderCollection(c, pub));
   }
   // 4-8) 索引 / 首页 / gallery / sitemap / rss / llms
   mkdirSync(join(OUT, 'blog'), { recursive: true });

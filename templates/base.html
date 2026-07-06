@@ -4,13 +4,45 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{TITLE}}</title>
-<script>(function(){try{var s=localStorage.getItem('theme');if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s);}catch(e){}})();</script>
+<script>(function(){try{var s=localStorage.getItem('theme');if(s==='dark'||s==='light'||s==='neutral')document.documentElement.setAttribute('data-theme',s);}catch(e){}})();</script>
 {{HEAD}}
 <link rel="icon" href="/favicon.png?v=1" type="image/png">
 <link rel="apple-touch-icon" href="/favicon.png?v=1">
 <style>{{CSS}}</style>
 </head>
 <body>
+<div class="ambient-bg" aria-hidden="true">
+<svg viewBox="0 0 1440 980" preserveAspectRatio="none" role="img">
+<defs>
+<linearGradient id="ambient-stroke" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="var(--ambient-line-a)"/>
+<stop offset="48%" stop-color="var(--ambient-line-b)"/>
+<stop offset="100%" stop-color="var(--ambient-line-c)"/>
+<animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5" to="360 .5 .5" dur="38s" repeatCount="indefinite"/>
+</linearGradient>
+<filter id="ambient-ripple" x="-10%" y="-20%" width="120%" height="140%">
+<feTurbulence type="fractalNoise" baseFrequency=".006 .018" numOctaves="2" seed="7" result="noise">
+<animate attributeName="baseFrequency" values=".006 .018;.012 .011;.006 .018" dur="18s" repeatCount="indefinite"/>
+</feTurbulence>
+<feDisplacementMap in="SourceGraphic" in2="noise" scale="18" xChannelSelector="R" yChannelSelector="G"/>
+</filter>
+</defs>
+<g filter="url(#ambient-ripple)" fill="none" stroke="url(#ambient-stroke)" stroke-width="1.15" stroke-linecap="round" opacity=".72">
+<path d="M-80 180 C 170 70, 330 310, 560 210 S 980 10, 1530 130">
+<animate attributeName="d" dur="24s" repeatCount="indefinite" values="M-80 180 C 170 70, 330 310, 560 210 S 980 10, 1530 130;M-80 210 C 170 120, 350 250, 570 230 S 1010 70, 1530 170;M-80 180 C 170 70, 330 310, 560 210 S 980 10, 1530 130"/>
+</path>
+<path d="M-60 360 C 180 260, 420 460, 660 350 S 1040 180, 1500 320">
+<animate attributeName="d" dur="28s" repeatCount="indefinite" values="M-60 360 C 180 260, 420 460, 660 350 S 1040 180, 1500 320;M-60 330 C 210 230, 430 510, 690 380 S 1060 210, 1500 290;M-60 360 C 180 260, 420 460, 660 350 S 1040 180, 1500 320"/>
+</path>
+<path d="M-90 570 C 220 490, 390 650, 700 560 S 1060 430, 1510 510">
+<animate attributeName="d" dur="31s" repeatCount="indefinite" values="M-90 570 C 220 490, 390 650, 700 560 S 1060 430, 1510 510;M-90 600 C 230 440, 410 690, 690 530 S 1030 470, 1510 550;M-90 570 C 220 490, 390 650, 700 560 S 1060 430, 1510 510"/>
+</path>
+<path d="M-120 780 C 170 690, 420 850, 690 745 S 1120 640, 1540 720">
+<animate attributeName="d" dur="34s" repeatCount="indefinite" values="M-120 780 C 170 690, 420 850, 690 745 S 1120 640, 1540 720;M-120 740 C 180 730, 430 810, 720 780 S 1090 610, 1540 760;M-120 780 C 170 690, 420 850, 690 745 S 1120 640, 1540 720"/>
+</path>
+</g>
+</svg>
+</div>
 {{NAV}}
 {{MAIN}}
 {{FOOTER}}
@@ -18,10 +50,11 @@
 // 明暗模式:默认跟随系统,可手动切换并记住(全站一致)
 (function(){
   var root=document.documentElement, btn=document.getElementById('theme-toggle');
-  function cur(){var s=localStorage.getItem('theme');return s?s==='dark':matchMedia('(prefers-color-scheme:dark)').matches;}
-  function paint(){if(btn)btn.textContent=cur()?'☀️':'🌙';}
-  function apply(){var s=localStorage.getItem('theme');if(s)root.setAttribute('data-theme',s);else root.removeAttribute('data-theme');paint();}
-  if(btn)btn.addEventListener('click',function(){localStorage.setItem('theme',cur()?'light':'dark');apply();});
+  function stored(){var s=localStorage.getItem('theme');return (s==='light'||s==='dark'||s==='neutral')?s:'';}
+  function effective(){var s=stored();return s || (matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');}
+  function paint(){if(!btn)return;var m=effective();btn.textContent=m==='dark'?'☼':(m==='neutral'?'◐':'☾');btn.title=m==='neutral'?'切换色彩模式:中性':'切换色彩模式';}
+  function apply(){var s=stored();if(s)root.setAttribute('data-theme',s);else root.removeAttribute('data-theme');paint();}
+  if(btn)btn.addEventListener('click',function(){var order=['light','dark','neutral'];var i=order.indexOf(effective());localStorage.setItem('theme',order[(i+1)%order.length]);apply();});
   matchMedia('(prefers-color-scheme:dark)').addEventListener('change',paint);
   apply();
 })();

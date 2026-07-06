@@ -187,7 +187,7 @@ function tocHtml(toc, isEn) {
   return `<a class="t2" href="#paper-top"><span>${isEn ? 'Title & Abstract' : '标题与摘要'}</span></a>\n` + items;
 }
 
-// ---- 主入口;opts.isEn=true 渲染英文子页(/blog/.../en/)----
+// ---- 主入口;opts.isEn=true 渲染英文子页(/research/.../en/)----
 export function renderPaper(p, ctx, opts = {}) {
   const isEn = !!opts.isEn;
   const pp = p.paper || {};
@@ -220,8 +220,9 @@ export function renderPaper(p, ctx, opts = {}) {
   const kwArr = Array.isArray(kwTxt) ? kwTxt : (kwTxt ? String(kwTxt).split(/[;,；、]\s*/).filter(Boolean) : []);
   // 归属研究系列(而非泛 blog),便于 AI 理解为一套连贯研究
   const coll = (p.collectionKey && ctx.collectionOf) ? ctx.collectionOf(p.collectionKey) : null;
+  const collUrl = coll && ctx.collectionPath ? ctx.collectionPath(coll.key) : (coll ? `/research/${coll.key}/` : null);
   const isPartOf = coll
-    ? { '@type': 'CreativeWorkSeries', name: coll.title, url: ctx.SITE.url + `/blog/${coll.key}/` }
+    ? { '@type': 'CreativeWorkSeries', name: coll.title, url: ctx.SITE.url + collUrl }
     : { '@type': 'Blog', name: `${ctx.SITE.name} 的 Blog`, url: ctx.SITE.url + '/blog/' };
   // 中英互为译本(schema.org 翻译关系)
   const transHref = isEn ? ctx.SITE.url + p.path : (p.enPath ? ctx.SITE.url + p.enPath : null);
@@ -239,12 +240,12 @@ export function renderPaper(p, ctx, opts = {}) {
     ...(transHref ? { [transRel]: { '@type': 'ScholarlyArticle', '@id': transHref, url: transHref, inLanguage: isEn ? p.lang : 'en' } } : {}),
   };
   // 论文归属 Research collection,而非泛 blog
-  const upHref = p.collectionKey ? `/blog/${p.collectionKey}/` : '/blog/';
+  const upHref = collUrl || '/blog/';
   const upLabel = p.collectionKey ? 'Research' : 'Blog';
   const breadcrumbItems = coll ? [
     { '@type': 'ListItem', position: 1, name: '首页', item: ctx.SITE.url + '/' },
     { '@type': 'ListItem', position: 2, name: 'Research', item: ctx.SITE.url + '/research/' },
-    { '@type': 'ListItem', position: 3, name: coll.title, item: ctx.SITE.url + `/blog/${coll.key}/` },
+    { '@type': 'ListItem', position: 3, name: coll.title, item: ctx.SITE.url + collUrl },
     { '@type': 'ListItem', position: 4, name: title, item: ctx.SITE.url + path },
   ] : [
     { '@type': 'ListItem', position: 1, name: '首页', item: ctx.SITE.url + '/' },
