@@ -19,6 +19,14 @@ const home = html('');
 
 assert.match(home, /<div class="ambient-bg" aria-hidden="true">/);
 assert.match(home, /class="foam-dots"/);
+assert.match(home, /class="wave-ribbons"/);
+const waveStart = home.indexOf('<g class="wave-ribbons"');
+const waveEnd = home.indexOf('<g class="foam-dots"', waveStart);
+assert.ok(waveStart > -1 && waveEnd > waveStart, 'wave ribbons should render before foam dots');
+const waveRibbons = home.slice(waveStart, waveEnd);
+assert.ok((waveRibbons.match(/<path d="/g) || []).length >= 13, 'wave ribbons should add dense horizontal wave lines');
+assert.match(waveRibbons, /stroke-dasharray="170 54 28 62"/);
+assert.match(waveRibbons, /stroke-dasharray="260 58 42 86"/);
 assert.match(home, /data-period/);
 assert.match(home, /backdrop-filter:blur\(18px\) saturate\(1\.12\)/);
 assert.match(home, /s==='neutral'/);
