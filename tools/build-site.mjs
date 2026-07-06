@@ -92,6 +92,10 @@ md.use(anchor, { level: [2, 3], permalink: anchor.permalink.linkInsideHeader({ s
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const fill = (tpl, map) => { let o = tpl; for (const [k, v] of Object.entries(map)) o = o.split('{{' + k + '}}').join(v); return o; };
 const dOnly = iso => (iso ? String(iso).slice(0, 10) : '');
+const maxDate = (...dates) => {
+  const xs = dates.filter(Boolean).sort();
+  return xs[xs.length - 1] || today();
+};
 // YAML 会把无引号的 date: 2026-07-03 解析成 Date 对象;统一规整成 'YYYY-MM-DD' 字符串
 const fmDate = v => (v == null ? null : v instanceof Date ? v.toISOString().slice(0, 10) : String(v).slice(0, 10));
 const rfc822 = iso => new Date(iso || Date.now()).toUTCString();
@@ -478,14 +482,15 @@ function renderGallery() {
 function buildSitemap(posts) {
   const newest = posts[0]?.updated || today();
   const cfgDate = dOnly(MANIFEST?.paths?.['site.config.json']) || today();
+  const shellDate = maxDate(newest, cfgDate, dOnly(MANIFEST?.paths?.templates), dOnly(MANIFEST?.paths?.tools));
   const urls = [
-    { loc: '/', lastmod: newest, cf: 'weekly', pri: '1.0' },
-    { loc: '/blog/', lastmod: newest, cf: 'weekly', pri: '0.8' },
-    { loc: RESEARCH_PATH, lastmod: newest, cf: 'monthly', pri: '0.8' },
-    { loc: '/gallery/', lastmod: cfgDate, cf: 'monthly', pri: '0.7' },
+    { loc: '/', lastmod: shellDate, cf: 'weekly', pri: '1.0' },
+    { loc: '/blog/', lastmod: shellDate, cf: 'weekly', pri: '0.8' },
+    { loc: RESEARCH_PATH, lastmod: shellDate, cf: 'monthly', pri: '0.8' },
+    { loc: '/gallery/', lastmod: shellDate, cf: 'monthly', pri: '0.7' },
   ];
   for (const c of COLLECTIONS) {
-    if (posts.some(p => p.collectionKey === c.key)) urls.push({ loc: `/blog/${c.key}/`, lastmod: newest, cf: 'monthly', pri: '0.8' });
+    if (posts.some(p => p.collectionKey === c.key)) urls.push({ loc: `/blog/${c.key}/`, lastmod: shellDate, cf: 'monthly', pri: '0.8' });
   }
   for (const p of posts) {
     const pri = p.collectionKey ? '0.7' : '0.6';   // 研究论文优先级更高
