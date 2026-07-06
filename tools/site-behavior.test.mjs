@@ -18,7 +18,9 @@ const html = rel => readFileSync(join(OUT, rel, 'index.html'), 'utf8');
 const home = html('');
 
 assert.match(home, /<div class="ambient-bg" aria-hidden="true">/);
+assert.match(home, /class="foam-dots"/);
 assert.match(home, /data-period/);
+assert.match(home, /backdrop-filter:blur\(18px\) saturate\(1\.12\)/);
 assert.match(home, /s==='neutral'/);
 assert.match(home, /<div class="hero home-hero">/);
 assert.match(home, /<a class="item" href="\/research\/">Research<\/a>/);
