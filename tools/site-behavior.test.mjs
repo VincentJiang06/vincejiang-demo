@@ -28,9 +28,12 @@ assert.match(home, /--status-g1:#1e3a8a; --status-g2:#5b2a6e; --status-g3:#0f5a5
 assert.match(home, /background:\n    radial-gradient\(40rem 40rem at 18% 22%,color-mix\(in srgb,var\(--status-g1\) 58%,transparent\) 0%,transparent 62%\),\n    radial-gradient\(38rem 38rem at 82% 18%,color-mix\(in srgb,var\(--status-g2\) 54%,transparent\) 0%,transparent 64%\),\n    radial-gradient\(45rem 45rem at 25% 82%,color-mix\(in srgb,var\(--status-g3\) 48%,transparent\) 0%,transparent 62%\),\n    radial-gradient\(42rem 42rem at 78% 80%,color-mix\(in srgb,var\(--status-g4\) 52%,transparent\) 0%,transparent 64%\),\n    var\(--page\);\n  background-attachment:fixed;/);
 assert.doesNotMatch(home, /linear-gradient\(135deg,color-mix\(in srgb,var\(--ambient-wash-a\)/);
 assert.doesNotMatch(home, /--ambient-line-[abc]/);
-assert.match(home, /data-period/);
+assert.doesNotMatch(home, /data-period|\[data-period=|morning-a|afternoon-a|evening-a|按时间自动/);
 assert.match(home, /backdrop-filter:blur\(18px\) saturate\(1\.12\)/);
-assert.match(home, /s==='neutral'/);
+assert.doesNotMatch(home, /data-theme="neutral"|s==='neutral'|order=\['auto','light','dark','neutral'\]|色彩模式:默认按本地时间自动换色/);
+assert.match(home, /色彩模式:仅保留 light\/dark;未手动选择时跟随系统。/);
+assert.match(home, /localStorage\.setItem\('theme',effective\(\)==='dark'\?'light':'dark'\)/);
+assert.match(home, /<button class="toggle" id="theme-toggle" title="切换明暗模式">☾<\/button>/);
 assert.match(home, /<div class="hero home-hero">/);
 assert.match(home, /\.home-hero\{min-height:176px;display:flex;flex-direction:column;justify-content:center;/);
 assert.match(home, /background:linear-gradient\(135deg,#2f6eea,#2457c8\)/);

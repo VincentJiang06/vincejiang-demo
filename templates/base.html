@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{TITLE}}</title>
-<script>(function(){try{var r=document.documentElement;function p(){var d=new Date(),h=d.getHours()+d.getMinutes()/60;return h<2?'late':h<8?'sleep':h<10?'morning-a':h<12?'morning-b':h<14?'afternoon-a':h<16?'afternoon-b':h<18?'afternoon-c':h<20?'evening-a':h<22?'evening-b':'evening-c';}r.setAttribute('data-period',p());var s=localStorage.getItem('theme');if(s==='dark'||s==='light'||s==='neutral')r.setAttribute('data-theme',s);}catch(e){}})();</script>
+<script>(function(){try{var r=document.documentElement,s=localStorage.getItem('theme');if(s==='dark'||s==='light')r.setAttribute('data-theme',s);}catch(e){}})();</script>
 {{HEAD}}
 <link rel="icon" href="/favicon.png?v=1" type="image/png">
 <link rel="apple-touch-icon" href="/favicon.png?v=1">
@@ -15,29 +15,16 @@
 {{MAIN}}
 {{FOOTER}}
 <script>
-// 色彩模式:默认按本地时间自动换色,也可手动锁定 light/dark/neutral。
+// 色彩模式:仅保留 light/dark;未手动选择时跟随系统。
 (function(){
   var root=document.documentElement, btn=document.getElementById('theme-toggle');
-  function period(){
-    var d=new Date(),h=d.getHours()+d.getMinutes()/60;
-    if(h<2)return 'late';
-    if(h<8)return 'sleep';
-    if(h<10)return 'morning-a';
-    if(h<12)return 'morning-b';
-    if(h<14)return 'afternoon-a';
-    if(h<16)return 'afternoon-b';
-    if(h<18)return 'afternoon-c';
-    if(h<20)return 'evening-a';
-    if(h<22)return 'evening-b';
-    return 'evening-c';
-  }
-  function stored(){var s=localStorage.getItem('theme');return (s==='light'||s==='dark'||s==='neutral')?s:'';}
-  function effective(){return stored() || 'auto';}
-  function paint(){if(!btn)return;var m=effective();btn.textContent=m==='auto'?'◷':(m==='dark'?'☼':(m==='neutral'?'◐':'☾'));btn.title=m==='auto'?'色彩模式:按时间自动':'色彩模式:'+m;}
-  function apply(){root.setAttribute('data-period',period());var s=stored();if(s)root.setAttribute('data-theme',s);else root.removeAttribute('data-theme');paint();}
-  if(btn)btn.addEventListener('click',function(){var order=['auto','light','dark','neutral'];var i=order.indexOf(effective()),next=order[(i+1)%order.length];if(next==='auto')localStorage.removeItem('theme');else localStorage.setItem('theme',next);apply();});
-  setInterval(apply,60000);
-  document.addEventListener('visibilitychange',function(){if(!document.hidden)apply();});
+  var media=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)');
+  function stored(){var s=localStorage.getItem('theme');return (s==='light'||s==='dark')?s:'';}
+  function effective(){return stored() || (media&&media.matches?'dark':'light');}
+  function paint(){if(!btn)return;var m=effective();btn.textContent=m==='dark'?'☼':'☾';btn.title='切换明暗模式:当前 '+m;}
+  function apply(){var s=stored();if(s)root.setAttribute('data-theme',s);else root.removeAttribute('data-theme');paint();}
+  if(btn)btn.addEventListener('click',function(){localStorage.setItem('theme',effective()==='dark'?'light':'dark');apply();});
+  if(media&&media.addEventListener)media.addEventListener('change',function(){if(!stored())apply();});
   apply();
 })();
 </script>

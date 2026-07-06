@@ -133,7 +133,7 @@ function headHtml({ type = 'website', path = '/', title, desc, image = SITE.imag
 }
 function navHtml(active) {
   const items = NAV_ITEMS.map(i => `<a class="item${i.key === active ? ' active' : ''}" href="${i.href}">${i.label}</a>`).join('\n');
-  return `<nav class="nav"><div class="in"><a class="brand" href="/">Vince Jiang</a>${items}<button class="toggle" id="theme-toggle" title="色彩模式:按时间自动">◷</button></div></nav>`;
+  return `<nav class="nav"><div class="in"><a class="brand" href="/">Vince Jiang</a>${items}<button class="toggle" id="theme-toggle" title="切换明暗模式">☾</button></div></nav>`;
 }
 function footHtml() {
   const y = new Date().getFullYear();
