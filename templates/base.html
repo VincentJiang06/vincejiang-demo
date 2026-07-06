@@ -20,6 +20,10 @@
 <stop offset="100%" stop-color="var(--ambient-line-c)"/>
 <animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5" to="360 .5 .5" dur="38s" repeatCount="indefinite"/>
 </linearGradient>
+<pattern id="ambient-dot-grid" width="42" height="42" patternUnits="userSpaceOnUse" patternTransform="translate(-10 -2)">
+<animateTransform attributeName="patternTransform" type="translate" values="-10 -2;10 3;-10 -2" dur="48s" repeatCount="indefinite"/>
+<circle cx="5" cy="5" r="1.15" fill="url(#ambient-stroke)" opacity=".48"/>
+</pattern>
 <filter id="ambient-ripple" x="-10%" y="-20%" width="120%" height="140%">
 <feTurbulence type="fractalNoise" baseFrequency=".006 .018" numOctaves="2" seed="7" result="noise">
 <animate attributeName="baseFrequency" values=".006 .018;.012 .011;.006 .018" dur="18s" repeatCount="indefinite"/>
@@ -27,6 +31,7 @@
 <feDisplacementMap in="SourceGraphic" in2="noise" scale="18" xChannelSelector="R" yChannelSelector="G"/>
 </filter>
 </defs>
+<rect class="dot-matrix" x="-180" y="-100" width="1800" height="1180" fill="url(#ambient-dot-grid)" opacity=".34"/>
 <g filter="url(#ambient-ripple)" fill="none" stroke="url(#ambient-stroke)" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity=".98">
 <g stroke-width="1.48">
 <animateTransform attributeName="transform" type="translate" values="-18 -3;18 4;-18 -3" dur="48s" repeatCount="indefinite"/>
@@ -57,32 +62,6 @@
 <animate attributeName="d" dur="24s" repeatCount="indefinite" values="M-110 640 C 16 606, 104 668, 238 632 C 362 598, 452 664, 584 626 C 710 590, 792 660, 928 618 C 1054 580, 1138 646, 1270 610 C 1400 574, 1482 622, 1600 596;M-110 654 C 24 620, 116 592, 250 646 C 382 698, 470 618, 606 648 C 734 676, 816 612, 948 636 C 1078 660, 1162 606, 1292 626 C 1426 646, 1500 584, 1600 610;M-110 640 C 16 606, 104 668, 238 632 C 362 598, 452 664, 584 626 C 710 590, 792 660, 928 618 C 1054 580, 1138 646, 1270 610 C 1400 574, 1482 622, 1600 596"/>
 <animate attributeName="stroke-dashoffset" values="80;-120;80" dur="28s" repeatCount="indefinite"/>
 </path>
-</g>
-<g class="wave-ribbons" opacity=".56">
-<g class="wave-echo" stroke-width=".5" opacity=".66" stroke-dasharray="150 74 24 92">
-<animateTransform attributeName="transform" type="translate" values="-16 -2;14 3;-16 -2" dur="42s" repeatCount="indefinite"/>
-<path d="M-168 132 C -32 102, 78 174, 218 146 C 338 122, 400 76, 524 114 C 650 154, 712 212, 842 178 C 964 146, 1024 78, 1146 112 C 1268 146, 1338 198, 1468 166 C 1540 148, 1600 130, 1660 142"/>
-<path d="M-154 184 C -20 150, 82 226, 224 194 C 344 168, 416 112, 544 156 C 674 202, 742 264, 876 226 C 996 192, 1060 122, 1184 154 C 1304 188, 1374 248, 1500 212 C 1570 194, 1624 174, 1680 184"/>
-<animate attributeName="stroke-dashoffset" values="0;-180;0" dur="34s" repeatCount="indefinite"/>
-</g>
-<g class="wave-echo" stroke-width=".52" opacity=".62" stroke-dasharray="170 82 28 108">
-<animateTransform attributeName="transform" type="translate" values="14 3;-14 -3;14 3" dur="38s" repeatCount="indefinite"/>
-<path d="M-156 292 C -18 256, 68 326, 208 294 C 332 266, 414 352, 540 308 C 670 264, 742 372, 872 326 C 996 284, 1060 224, 1192 266 C 1320 306, 1390 368, 1518 320 C 1590 294, 1640 284, 1680 304"/>
-<path d="M-132 348 C 0 314, 84 386, 220 352 C 348 320, 428 410, 558 364 C 692 318, 758 430, 892 382 C 1014 340, 1084 282, 1216 324 C 1344 366, 1416 426, 1540 378 C 1610 352, 1660 338, 1700 356"/>
-<animate attributeName="stroke-dashoffset" values="-40;160;-40" dur="31s" repeatCount="indefinite"/>
-</g>
-<g class="wave-echo" stroke-width=".54" opacity=".58" stroke-dasharray="190 88 32 116">
-<animateTransform attributeName="transform" type="translate" values="-12 -3;12 2;-12 -3" dur="40s" repeatCount="indefinite"/>
-<path d="M-176 492 C -34 460, 74 536, 220 500 C 350 468, 422 408, 554 456 C 690 506, 758 572, 898 520 C 1022 474, 1092 424, 1228 472 C 1360 520, 1434 576, 1572 528 C 1642 504, 1694 488, 1720 500"/>
-<path d="M-156 548 C -18 516, 86 594, 232 556 C 364 522, 438 464, 574 512 C 710 560, 784 630, 922 574 C 1046 528, 1120 474, 1252 522 C 1384 570, 1460 632, 1592 582 C 1660 558, 1710 540, 1740 552"/>
-<animate attributeName="stroke-dashoffset" values="80;-180;80" dur="33s" repeatCount="indefinite"/>
-</g>
-<g class="wave-echo" stroke-width=".56" opacity=".54" stroke-dasharray="210 96 36 128">
-<animateTransform attributeName="transform" type="translate" values="12 2;-12 -2;12 2" dur="44s" repeatCount="indefinite"/>
-<path d="M-194 710 C -54 668, 64 760, 216 720 C 346 688, 424 638, 568 688 C 706 736, 784 808, 930 750 C 1060 698, 1128 644, 1268 694 C 1402 742, 1486 800, 1624 754 C 1690 730, 1734 718, 1760 728"/>
-<path d="M-178 762 C -40 720, 80 814, 230 772 C 360 738, 438 690, 584 742 C 724 792, 802 864, 950 804 C 1080 752, 1152 700, 1290 748 C 1428 798, 1512 858, 1646 808 C 1710 786, 1752 770, 1780 782"/>
-<animate attributeName="stroke-dashoffset" values="120;-220;120" dur="37s" repeatCount="indefinite"/>
-</g>
 </g>
 </g>
 </svg>
