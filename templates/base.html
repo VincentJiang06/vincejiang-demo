@@ -14,54 +14,50 @@
 <div class="ambient-bg" aria-hidden="true">
 <svg viewBox="0 0 1440 980" preserveAspectRatio="none" role="img">
 <defs>
+<style>.ambient-dot{r:1px}</style>
 <linearGradient id="ambient-stroke" x1="0" y1="0" x2="1" y2="1">
 <stop offset="0%" stop-color="var(--ambient-line-a)"/>
 <stop offset="48%" stop-color="var(--ambient-line-b)"/>
 <stop offset="100%" stop-color="var(--ambient-line-c)"/>
 <animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5" to="360 .5 .5" dur="38s" repeatCount="indefinite"/>
 </linearGradient>
-<pattern id="ambient-dot-grid" width="32" height="32" patternUnits="userSpaceOnUse" patternTransform="translate(-8 -3)">
-<animateTransform attributeName="patternTransform" type="translate" values="-8 -3;8 5;-8 -3" dur="48s" repeatCount="indefinite"/>
-<circle cx="4" cy="4" r="1" fill="url(#ambient-stroke)" opacity=".58"/>
+<pattern id="ambient-dot-grid" width="31" height="31" patternUnits="userSpaceOnUse" patternTransform="translate(-8 -4)">
+<animateTransform attributeName="patternTransform" type="translate" values="-8 -4;8 6;-8 -4" dur="54s" repeatCount="indefinite"/>
+<circle class="ambient-dot" cx="4" cy="4" fill="url(#ambient-stroke)" opacity=".62"/>
 </pattern>
-<pattern id="ambient-dot-wave-grid" width="32" height="32" patternUnits="userSpaceOnUse" patternTransform="translate(-20 -9)">
-<animateTransform attributeName="patternTransform" type="translate" values="-20 -9;20 9;-20 -9" dur="52s" repeatCount="indefinite"/>
-<circle cx="4" cy="4" r="2.55" fill="url(#ambient-stroke)" opacity=".86"/>
-</pattern>
-<filter id="ambient-ripple" x="-10%" y="-20%" width="120%" height="140%">
-<feTurbulence type="fractalNoise" baseFrequency=".006 .018" numOctaves="2" seed="7" result="noise">
-<animate attributeName="baseFrequency" values=".006 .018;.012 .011;.006 .018" dur="18s" repeatCount="indefinite"/>
-</feTurbulence>
-<feDisplacementMap in="SourceGraphic" in2="noise" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+<g id="wave-source" fill="none">
+<path d="M-180 154 C -30 118, 86 198, 226 166 S 404 90, 536 132 S 716 244, 856 204 S 1030 94, 1152 130 S 1340 224, 1474 188 S 1612 142, 1700 156"/>
+<path d="M-180 318 C -28 282, 76 360, 216 324 S 420 384, 548 336 S 746 408, 880 356 S 1060 246, 1200 292 S 1398 400, 1524 348 S 1648 306, 1710 326"/>
+<path d="M-190 520 C -30 486, 86 568, 236 528 S 426 430, 564 484 S 764 610, 906 552 S 1096 448, 1234 500 S 1440 610, 1578 558 S 1698 514, 1730 526"/>
+<path d="M-200 734 C -48 688, 74 786, 230 744 S 426 660, 578 716 S 788 842, 936 780 S 1130 668, 1274 722 S 1490 836, 1630 786 S 1740 744, 1770 756"/>
+</g>
+<filter id="wave-dot-grow" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+<feMorphology in="SourceGraphic" operator="dilate" radius="1.45" result="grown"/>
+<feGaussianBlur in="grown" stdDeviation=".18" result="soft-grown"/>
+<feMerge><feMergeNode in="soft-grown"/><feMergeNode in="SourceGraphic"/></feMerge>
 </filter>
-<mask id="wave-dot-mask" maskUnits="userSpaceOnUse" x="-180" y="-100" width="1800" height="1180">
-<g fill="none" stroke="#fff" stroke-linecap="round" stroke-width="112" opacity=".9">
-<animateTransform attributeName="transform" type="translate" values="-20 -9;20 9;-20 -9" dur="52s" repeatCount="indefinite"/>
-<path d="M-150 154 C -20 118, 82 198, 220 166 C 334 140, 394 88, 520 132 C 652 178, 708 244, 846 204 C 962 170, 1024 94, 1142 130 C 1260 166, 1328 224, 1464 188 C 1540 168, 1604 144, 1660 156"/>
-<path d="M-140 318 C -8 282, 70 360, 206 324 C 330 290, 410 384, 536 336 C 668 286, 736 408, 870 356 C 994 310, 1056 246, 1190 292 C 1318 336, 1384 400, 1514 348 C 1588 318, 1640 306, 1680 326"/>
-<path d="M-160 520 C -20 486, 80 568, 226 528 C 356 492, 420 430, 552 484 C 690 540, 754 610, 896 552 C 1020 502, 1088 448, 1224 500 C 1358 552, 1430 610, 1568 558 C 1640 530, 1690 514, 1720 526"/>
-<path d="M-180 734 C -42 688, 68 786, 220 744 C 348 710, 420 660, 566 716 C 704 768, 780 842, 926 780 C 1056 724, 1122 668, 1264 722 C 1400 774, 1480 836, 1620 786 C 1686 762, 1734 744, 1760 756"/>
+<filter id="ambient-ripple" x="-10%" y="-20%" width="120%" height="140%">
+<feTurbulence type="fractalNoise" baseFrequency=".004 .009" numOctaves="1" seed="7" result="noise">
+<animate attributeName="baseFrequency" values=".004 .009;.007 .007;.004 .009" dur="24s" repeatCount="indefinite"/>
+</feTurbulence>
+<feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+</filter>
+<mask id="wave-response-mask" maskUnits="userSpaceOnUse" x="-180" y="-100" width="1800" height="1180">
+<g stroke="#fff" stroke-linecap="round" stroke-width="128" opacity=".88">
+<animateTransform attributeName="transform" type="translate" values="-22 -10;22 10;-22 -10" dur="56s" repeatCount="indefinite"/>
+<use href="#wave-source"/>
 </g>
 </mask>
 </defs>
-<rect class="dot-matrix" x="-180" y="-100" width="1800" height="1180" fill="url(#ambient-dot-grid)" opacity=".54"/>
-<rect class="dot-wave-matrix" x="-180" y="-100" width="1800" height="1180" fill="url(#ambient-dot-wave-grid)" mask="url(#wave-dot-mask)" opacity=".82"/>
-<g filter="url(#ambient-ripple)" fill="none" stroke="url(#ambient-stroke)" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity=".98">
-<g stroke-width="1.48">
-<animateTransform attributeName="transform" type="translate" values="-20 -9;20 9;-20 -9" dur="52s" repeatCount="indefinite"/>
-<path d="M-150 154 C -20 118, 82 198, 220 166 C 334 140, 394 88, 520 132 C 652 178, 708 244, 846 204 C 962 170, 1024 94, 1142 130 C 1260 166, 1328 224, 1464 188 C 1540 168, 1604 144, 1660 156">
-<animate attributeName="d" dur="26s" repeatCount="indefinite" values="M-150 154 C -20 118, 82 198, 220 166 C 334 140, 394 88, 520 132 C 652 178, 708 244, 846 204 C 962 170, 1024 94, 1142 130 C 1260 166, 1328 224, 1464 188 C 1540 168, 1604 144, 1660 156;M-150 186 C -8 146, 88 124, 226 178 C 348 226, 432 102, 548 154 C 680 214, 742 158, 872 184 C 988 206, 1046 126, 1172 162 C 1294 198, 1370 144, 1488 172 C 1560 190, 1618 132, 1660 150;M-150 154 C -20 118, 82 198, 220 166 C 334 140, 394 88, 520 132 C 652 178, 708 244, 846 204 C 962 170, 1024 94, 1142 130 C 1260 166, 1328 224, 1464 188 C 1540 168, 1604 144, 1660 156"/>
-</path>
-<path d="M-140 318 C -8 282, 70 360, 206 324 C 330 290, 410 384, 536 336 C 668 286, 736 408, 870 356 C 994 310, 1056 246, 1190 292 C 1318 336, 1384 400, 1514 348 C 1588 318, 1640 306, 1680 326">
-<animate attributeName="d" dur="30s" repeatCount="indefinite" values="M-140 318 C -8 282, 70 360, 206 324 C 330 290, 410 384, 536 336 C 668 286, 736 408, 870 356 C 994 310, 1056 246, 1190 292 C 1318 336, 1384 400, 1514 348 C 1588 318, 1640 306, 1680 326;M-140 344 C -16 308, 80 266, 214 336 C 344 404, 424 302, 558 352 C 692 402, 754 304, 892 334 C 1010 360, 1082 280, 1210 316 C 1340 352, 1408 300, 1530 334 C 1596 354, 1652 292, 1680 316;M-140 318 C -8 282, 70 360, 206 324 C 330 290, 410 384, 536 336 C 668 286, 736 408, 870 356 C 994 310, 1056 246, 1190 292 C 1318 336, 1384 400, 1514 348 C 1588 318, 1640 306, 1680 326"/>
-</path>
-<path d="M-160 520 C -20 486, 80 568, 226 528 C 356 492, 420 430, 552 484 C 690 540, 754 610, 896 552 C 1020 502, 1088 448, 1224 500 C 1358 552, 1430 610, 1568 558 C 1640 530, 1690 514, 1720 526">
-<animate attributeName="d" dur="34s" repeatCount="indefinite" values="M-160 520 C -20 486, 80 568, 226 528 C 356 492, 420 430, 552 484 C 690 540, 754 610, 896 552 C 1020 502, 1088 448, 1224 500 C 1358 552, 1430 610, 1568 558 C 1640 530, 1690 514, 1720 526;M-160 548 C -28 520, 92 462, 236 540 C 368 612, 442 500, 576 520 C 716 542, 782 484, 918 534 C 1042 578, 1118 494, 1248 524 C 1382 554, 1454 496, 1588 534 C 1652 552, 1700 498, 1720 522;M-160 520 C -20 486, 80 568, 226 528 C 356 492, 420 430, 552 484 C 690 540, 754 610, 896 552 C 1020 502, 1088 448, 1224 500 C 1358 552, 1430 610, 1568 558 C 1640 530, 1690 514, 1720 526"/>
-</path>
-<path d="M-180 734 C -42 688, 68 786, 220 744 C 348 710, 420 660, 566 716 C 704 768, 780 842, 926 780 C 1056 724, 1122 668, 1264 722 C 1400 774, 1480 836, 1620 786 C 1686 762, 1734 744, 1760 756">
-<animate attributeName="d" dur="38s" repeatCount="indefinite" values="M-180 734 C -42 688, 68 786, 220 744 C 348 710, 420 660, 566 716 C 704 768, 780 842, 926 780 C 1056 724, 1122 668, 1264 722 C 1400 774, 1480 836, 1620 786 C 1686 762, 1734 744, 1760 756;M-180 766 C -34 722, 86 700, 232 756 C 370 810, 444 704, 588 742 C 724 778, 802 700, 950 758 C 1078 808, 1150 716, 1288 746 C 1426 776, 1510 724, 1642 768 C 1706 790, 1746 726, 1760 748;M-180 734 C -42 688, 68 786, 220 744 C 348 710, 420 660, 566 716 C 704 768, 780 842, 926 780 C 1056 724, 1122 668, 1264 722 C 1400 774, 1480 836, 1620 786 C 1686 762, 1734 744, 1760 756"/>
-</path>
+<g class="dot-field" opacity=".58">
+<rect x="-180" y="-100" width="1800" height="1180" fill="url(#ambient-dot-grid)"/>
 </g>
+<g class="dot-field wave-reactive" mask="url(#wave-response-mask)" filter="url(#wave-dot-grow)" opacity=".72">
+<rect x="-180" y="-100" width="1800" height="1180" fill="url(#ambient-dot-grid)"/>
+</g>
+<g class="main-waves" filter="url(#ambient-ripple)" stroke="url(#ambient-stroke)" stroke-linecap="round" stroke-width="1.55" vector-effect="non-scaling-stroke" opacity=".96">
+<animateTransform attributeName="transform" type="translate" values="-22 -10;22 10;-22 -10" dur="56s" repeatCount="indefinite"/>
+<use href="#wave-source"/>
 </g>
 </svg>
 </div>
