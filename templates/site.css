@@ -5,6 +5,7 @@
   --card:rgba(255,255,255,.68); --border:rgba(20,20,40,.10); --chip:rgba(20,20,50,.05);
   --link:#5b5bd6; --link-h:#7a5bff; --page:#f5f5fa; --codebg:rgba(20,20,50,.05);
   --ambient-wash-a:rgba(136,148,190,.20); --ambient-wash-b:rgba(122,154,151,.13);
+  --status-g1:#a8c0ff; --status-g2:#ffd3e0; --status-g3:#c2f5e9; --status-g4:#e7d5ff;
   --glass-top:rgba(255,255,255,.64); --glass-bottom:rgba(255,255,255,.34); --glass-shine:rgba(255,255,255,.82);
   --shadow:0 10px 34px rgba(38,42,70,.12); --shadow-h:0 18px 46px rgba(38,42,70,.18);
   --radius:18px;
@@ -14,6 +15,7 @@
   --card:rgba(31,32,42,.56); --border:rgba(255,255,255,.11); --chip:rgba(255,255,255,.07);
   --link:#9d9dff; --link-h:#b9a8ff; --page:#0a0b12; --codebg:rgba(255,255,255,.05);
   --ambient-wash-a:rgba(92,100,148,.20); --ambient-wash-b:rgba(54,104,104,.13);
+  --status-g1:#1e3a8a; --status-g2:#5b2a6e; --status-g3:#0f5a52; --status-g4:#3b2a72;
   --glass-top:rgba(255,255,255,.12); --glass-bottom:rgba(255,255,255,.055); --glass-shine:rgba(255,255,255,.22);
   --shadow:0 10px 36px rgba(0,0,0,.45); --shadow-h:0 16px 44px rgba(0,0,0,.55);
 }}
@@ -24,6 +26,7 @@
   --card:rgba(31,32,42,.56); --border:rgba(255,255,255,.11); --chip:rgba(255,255,255,.07);
   --link:#9d9dff; --link-h:#b9a8ff; --page:#0a0b12; --codebg:rgba(255,255,255,.05);
   --ambient-wash-a:rgba(92,100,148,.20); --ambient-wash-b:rgba(54,104,104,.13);
+  --status-g1:#1e3a8a; --status-g2:#5b2a6e; --status-g3:#0f5a52; --status-g4:#3b2a72;
   --glass-top:rgba(255,255,255,.12); --glass-bottom:rgba(255,255,255,.055); --glass-shine:rgba(255,255,255,.22);
   --shadow:0 10px 36px rgba(0,0,0,.45); --shadow-h:0 16px 44px rgba(0,0,0,.55);
 }
@@ -96,6 +99,7 @@
   --card:rgba(34,30,42,.55); --border:rgba(255,255,255,.115); --chip:rgba(255,255,255,.07);
   --link:#b7a3ff; --link-h:#d0c4ff; --page:#14121a; --codebg:rgba(255,255,255,.055);
   --ambient-wash-a:rgba(108,86,170,.22); --ambient-wash-b:rgba(52,118,128,.15);
+  --status-g1:#1e3a8a; --status-g2:#5b2a6e; --status-g3:#0f5a52; --status-g4:#3b2a72;
   --glass-top:rgba(255,255,255,.13); --glass-bottom:rgba(255,255,255,.058); --glass-shine:rgba(255,255,255,.22);
   --shadow:0 10px 36px rgba(0,0,0,.46); --shadow-h:0 16px 44px rgba(0,0,0,.56);
 }
@@ -105,6 +109,7 @@
   --card:rgba(23,31,34,.56); --border:rgba(232,255,250,.11); --chip:rgba(232,255,250,.065);
   --link:#8bd3c7; --link-h:#b3eee4; --page:#0e1517; --codebg:rgba(232,255,250,.055);
   --ambient-wash-a:rgba(52,126,132,.21); --ambient-wash-b:rgba(102,78,148,.15);
+  --status-g1:#1e3a8a; --status-g2:#5b2a6e; --status-g3:#0f5a52; --status-g4:#3b2a72;
   --glass-top:rgba(255,255,255,.12); --glass-bottom:rgba(255,255,255,.055); --glass-shine:rgba(255,255,255,.21);
   --shadow:0 10px 36px rgba(0,0,0,.46); --shadow-h:0 16px 44px rgba(0,0,0,.56);
 }
@@ -114,6 +119,7 @@
   --card:rgba(34,28,34,.56); --border:rgba(255,244,250,.11); --chip:rgba(255,244,250,.065);
   --link:#d1a6bd; --link-h:#edc4d8; --page:#151115; --codebg:rgba(255,244,250,.055);
   --ambient-wash-a:rgba(134,74,112,.21); --ambient-wash-b:rgba(64,104,126,.14);
+  --status-g1:#1e3a8a; --status-g2:#5b2a6e; --status-g3:#0f5a52; --status-g4:#3b2a72;
   --glass-top:rgba(255,255,255,.12); --glass-bottom:rgba(255,255,255,.055); --glass-shine:rgba(255,255,255,.2);
   --shadow:0 10px 36px rgba(0,0,0,.47); --shadow-h:0 16px 44px rgba(0,0,0,.57);
 }
@@ -123,6 +129,7 @@
   --card:rgba(22,27,29,.55); --border:rgba(235,250,246,.1); --chip:rgba(235,250,246,.06);
   --link:#8eb9b0; --link-h:#b8d9cf; --page:#0d1113; --codebg:rgba(235,250,246,.05);
   --ambient-wash-a:rgba(58,74,76,.2); --ambient-wash-b:rgba(82,72,92,.14);
+  --status-g1:#1e3a8a; --status-g2:#5b2a6e; --status-g3:#0f5a52; --status-g4:#3b2a72;
   --glass-top:rgba(255,255,255,.105); --glass-bottom:rgba(255,255,255,.05); --glass-shine:rgba(255,255,255,.18);
   --shadow:0 10px 36px rgba(0,0,0,.48); --shadow-h:0 16px 44px rgba(0,0,0,.58);
 }
@@ -133,7 +140,11 @@ html{scroll-behavior:smooth;background:var(--page)}
 body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;
   color:var(--fg); background:
-    linear-gradient(135deg,color-mix(in srgb,var(--ambient-wash-a) 54%,var(--page)) 0%,var(--page) 48%,color-mix(in srgb,var(--ambient-wash-b) 52%,var(--page)) 100%);
+    radial-gradient(40rem 40rem at 18% 22%,color-mix(in srgb,var(--status-g1) 58%,transparent) 0%,transparent 62%),
+    radial-gradient(38rem 38rem at 82% 18%,color-mix(in srgb,var(--status-g2) 54%,transparent) 0%,transparent 64%),
+    radial-gradient(45rem 45rem at 25% 82%,color-mix(in srgb,var(--status-g3) 48%,transparent) 0%,transparent 62%),
+    radial-gradient(42rem 42rem at 78% 80%,color-mix(in srgb,var(--status-g4) 52%,transparent) 0%,transparent 64%),
+    var(--page);
   background-attachment:fixed; line-height:1.7; -webkit-font-smoothing:antialiased;
   min-height:100vh; position:relative; overflow-x:hidden; transition:background .4s,color .4s; isolation:isolate;
 }
