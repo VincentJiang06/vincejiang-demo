@@ -579,10 +579,23 @@ const COPY_EXCLUDE = new Set(['.git', '.github', '.gitignore', '.dockerignore', 
   'posts', 'posts-manifest.json', 'site.config.json', 'SPEC.md', 'README.md', 'LICENSE', 'node_modules', 'site', '.DS_Store',
   'index.html', 'sitemap.xml', 'llms.txt', 'blog', 'research', 'gallery', 'release']);
 const ASSET_DIRS = new Set(['assets']);   // 纯静态资源目录:随内容拷贝但不要求 index.html(无干净 URL)
+const BEACON_TAG = '<script src="/assets/beacon.js" defer></script>';
 function contentDirs() {
   return readdirSync(ROOT, { withFileTypes: true })
     .filter(e => !COPY_EXCLUDE.has(e.name))
     .map(e => ({ name: e.name, dir: e.isDirectory() }));
+}
+function injectBeacon(dir) {
+  if (!existsSync(join(OUT, 'assets', 'beacon.js'))) return;
+  for (const e of readdirSync(dir, { withFileTypes: true })) {
+    const p = join(dir, e.name);
+    if (e.isDirectory()) injectBeacon(p);
+    else if (e.isFile() && e.name.endsWith('.html')) {
+      const s = readFileSync(p, 'utf8');
+      if (s.includes('/assets/beacon.js') || !/<\/body>/i.test(s)) continue;
+      writeFileSync(p, s.replace(/<\/body>/i, `${BEACON_TAG}\n</body>`));
+    }
+  }
 }
 
 // ---- CHECK 模式 ----
@@ -651,6 +664,7 @@ function runBuild(posts) {
   writeFileSync(join(OUT, 'background-test', 'index.html'), renderBackgroundTest());
   writeFileSync(join(OUT, 'sitemap.xml'), buildSitemap(pub));
   writeFileSync(join(OUT, 'llms.txt'), buildLlms(pub));
+  injectBeacon(OUT);
 
   for (const w of warnings) console.error('  ⚠ ' + w);
   if (errors.length) { for (const e of errors) console.error('  ✗ ' + e); console.error(`build 失败:${errors.length} 处硬伤`); process.exit(1); }
