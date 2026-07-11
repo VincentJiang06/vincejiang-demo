@@ -44,6 +44,7 @@ const NAV_ITEMS = [
   { key: 'blog', label: 'Blog', href: '/blog/' },
   { key: 'research', label: 'Research', href: RESEARCH_PATH },
   { key: 'gallery', label: 'Gallery', href: '/gallery/' },
+  { key: 'cus', label: 'CU排课', href: 'https://cus.vincejiang.com', external: true },
 ];
 
 // ---- 载入模板/配置/manifest ----
@@ -132,7 +133,12 @@ function headHtml({ type = 'website', path = '/', title, desc, image = SITE.imag
   ].join('\n');
 }
 function navHtml(active) {
-  const items = NAV_ITEMS.map(i => `<a class="item${i.key === active ? ' active' : ''}" href="${i.href}">${i.label}</a>`).join('\n');
+  // 外链项(external:true)不参与 active 高亮判断,且需 target/rel 防 tabnabbing;不进 sitemap(sitemap 另由 buildSitemap 独立生成,不遍历 NAV_ITEMS)
+  const items = NAV_ITEMS.map(i => {
+    const cls = `item${!i.external && i.key === active ? ' active' : ''}`;
+    const attr = i.external ? ' target="_blank" rel="noopener noreferrer"' : '';
+    return `<a class="${cls}" href="${i.href}"${attr}>${i.label}</a>`;
+  }).join('\n');
   return `<nav class="nav"><div class="in"><a class="brand" href="/">Vince Jiang</a>${items}<button class="toggle" id="theme-toggle" title="切换明暗模式">☾</button></div></nav>`;
 }
 function footHtml() {
