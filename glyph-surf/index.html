@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
   <meta name="theme-color" content="#030711">
-  <title>SURF//GLYPH · Pretext 纯字符冲浪</title>
-  <meta name="description" content="一个由 Pretext 测量和布局的非等宽、多色、纯字符冲浪游戏，包含 Endless、Time Trial 与 Zig Zag 三种模式。">
-  <meta property="og:title" content="SURF//GLYPH · Pretext 纯字符冲浪">
-  <meta property="og:description" content="整片海洋由非等宽、超多色字形流动，含三种冲浪模式。">
+  <title>SURF//GLYPH · Pretext 字流与 SVG 礁海</title>
+  <meta name="description" content="由 Pretext 实时围绕 SVG 礁石重排的多色非等宽文字海洋，包含 Endless、Time Trial 与 Zig Zag 三种冲浪模式。">
+  <meta property="og:title" content="SURF//GLYPH · Pretext 字流与 SVG 礁海">
+  <meta property="og:description" content="SVG 礁石会挤压海洋文字，Pretext 随物体移动自动重新断行。">
   <meta property="og:url" content="https://vincejiang.com/glyph-surf/">
   <meta property="og:image" content="https://vincejiang.com/favicon.png">
   <meta name="twitter:card" content="summary">
@@ -16,11 +16,131 @@
 </head>
 <body>
   <main>
-    <canvas id="glyph-stage" tabindex="0" role="application" aria-label="SURF GLYPH 纯字符冲浪游戏"></canvas>
+    <svg id="vector-stage" aria-hidden="true" focusable="false" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="reef-rock" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#8b5cf6"/>
+          <stop offset="0.42" stop-color="#263a73"/>
+          <stop offset="1" stop-color="#080f2c"/>
+        </linearGradient>
+        <linearGradient id="reef-sun" x1="0" y1="0" x2="0.85" y2="1">
+          <stop offset="0" stop-color="#fff36d"/>
+          <stop offset="0.38" stop-color="#ff7a72"/>
+          <stop offset="0.72" stop-color="#e63fa9"/>
+          <stop offset="1" stop-color="#7138a8"/>
+        </linearGradient>
+        <linearGradient id="reef-lagoon" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#d8ff75"/>
+          <stop offset="0.3" stop-color="#38f2cb"/>
+          <stop offset="0.7" stop-color="#148ed0"/>
+          <stop offset="1" stop-color="#5645c8"/>
+        </linearGradient>
+        <radialGradient id="sand-glow" cx="45%" cy="38%" r="72%">
+          <stop offset="0" stop-color="#fff4a6"/>
+          <stop offset="0.58" stop-color="#f4b860"/>
+          <stop offset="1" stop-color="#d26c62"/>
+        </radialGradient>
+        <linearGradient id="board-glow" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#fff46d"/>
+          <stop offset="0.5" stop-color="#ff5ca8"/>
+          <stop offset="1" stop-color="#51e8ff"/>
+        </linearGradient>
+        <radialGradient id="coin-glow">
+          <stop offset="0" stop-color="#fffbd0"/>
+          <stop offset="0.52" stop-color="#ffd43b"/>
+          <stop offset="1" stop-color="#f38b16"/>
+        </radialGradient>
+
+        <symbol id="reef-crown" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path d="M2 87 C7 72 13 64 22 59 L29 21 39 48 51 6 60 48 73 27 78 57 91 49 98 88Z" fill="url(#reef-rock)" stroke="#171c4f" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M4 87 C18 79 27 84 38 80 C51 75 64 88 78 80 C88 75 95 82 99 86" fill="none" stroke="#7effee" stroke-width="8" stroke-linecap="round" opacity=".82"/>
+          <path d="M15 72 29 59 35 71 51 48 61 69 75 57 86 70" fill="none" stroke="#b38cff" stroke-width="3" opacity=".72"/>
+          <circle cx="24" cy="68" r="3" fill="#ffef6d"/><circle cx="59" cy="60" r="2.5" fill="#ff63bb"/><circle cx="82" cy="68" r="2" fill="#62f8df"/>
+        </symbol>
+        <symbol id="reef-garden" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <ellipse cx="50" cy="82" rx="46" ry="14" fill="url(#sand-glow)" stroke="#78f4dc" stroke-width="5"/>
+          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 79 C18 59 28 61 25 43 M25 59 13 49 M25 54 38 40" stroke="#ff5b8d" stroke-width="8"/>
+            <path d="M48 79 C45 55 55 53 52 24 M51 52 37 39 M52 44 69 31" stroke="url(#reef-sun)" stroke-width="10"/>
+            <path d="M75 80 C78 62 68 58 76 43 M73 61 88 52 M74 56 64 47" stroke="#a0ff6a" stroke-width="7"/>
+          </g>
+          <g fill="#fff27a" stroke="#ff7a72" stroke-width="2"><circle cx="25" cy="42" r="6"/><circle cx="52" cy="23" r="7"/><circle cx="76" cy="42" r="5"/><circle cx="37" cy="39" r="4"/><circle cx="69" cy="31" r="4"/></g>
+          <path d="M5 86 Q18 77 32 84 T60 83 T96 85" fill="none" stroke="#c9fff3" stroke-width="5" opacity=".75"/>
+        </symbol>
+        <symbol id="reef-atoll" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path d="M82 19 C55 -2 17 12 9 45 C1 77 33 100 66 87" fill="none" stroke="#173e72" stroke-width="34" stroke-linecap="round"/>
+          <path d="M82 19 C55 -2 17 12 9 45 C1 77 33 100 66 87" fill="none" stroke="url(#sand-glow)" stroke-width="25" stroke-linecap="round"/>
+          <path d="M82 19 C55 -2 17 12 9 45 C1 77 33 100 66 87" fill="none" stroke="#91ffe4" stroke-width="6" stroke-dasharray="7 6" stroke-linecap="round" opacity=".85"/>
+          <path d="M33 36 C47 23 67 27 75 42 C83 56 71 73 53 73 C38 73 28 59 33 36Z" fill="url(#reef-lagoon)" opacity=".9"/>
+          <circle cx="25" cy="26" r="4" fill="#ff63b6"/><circle cx="20" cy="70" r="3.5" fill="#fff36d"/><circle cx="55" cy="89" r="3" fill="#8dff72"/>
+        </symbol>
+        <symbol id="reef-chain" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <g stroke="#172150" stroke-width="3">
+            <path d="M2 77 12 42 24 57 33 18 42 69Z" fill="url(#reef-rock)"/>
+            <path d="M32 87 48 51 57 64 67 28 74 83Z" fill="url(#reef-sun)"/>
+            <path d="M65 91 75 63 83 72 91 43 99 91Z" fill="url(#reef-lagoon)"/>
+          </g>
+          <path d="M1 82 Q13 73 27 82 T52 81 T77 85 T100 84" fill="none" stroke="#83fff0" stroke-width="7" stroke-linecap="round"/>
+          <g fill="#fff36d"><circle cx="31" cy="31" r="3"/><circle cx="66" cy="39" r="3"/><circle cx="91" cy="57" r="2.5"/></g>
+        </symbol>
+
+        <symbol id="surfer" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <ellipse cx="50" cy="56" rx="17" ry="41" fill="url(#board-glow)" stroke="#eaffff" stroke-width="3"/>
+          <path d="M50 13 42 52 50 88 58 52Z" fill="#142250" opacity=".55"/>
+          <circle cx="49" cy="35" r="9" fill="#f1a977" stroke="#642b6f" stroke-width="3"/>
+          <path d="M48 45 37 62 25 53 M48 47 61 61 74 52 M45 59 35 78 M53 59 65 78" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M35 91 Q50 97 66 90" fill="none" stroke="#b8fff3" stroke-width="4" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="shield-ring" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <circle cx="50" cy="50" r="43" fill="none" stroke="#fff36d" stroke-width="5" stroke-dasharray="9 6"/>
+          <circle cx="50" cy="50" r="48" fill="none" stroke="#5ffff0" stroke-width="2" opacity=".8"/>
+        </symbol>
+        <symbol id="island" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <ellipse cx="50" cy="78" rx="45" ry="18" fill="url(#sand-glow)" stroke="#7bfff0" stroke-width="5"/>
+          <path d="M50 70 C45 47 49 31 60 16 M55 30 C43 20 32 23 25 31 M57 27 C69 17 82 22 88 31 M53 40 C66 33 76 39 80 47" fill="none" stroke="#755022" stroke-width="7" stroke-linecap="round"/>
+          <path d="M25 31 Q38 16 55 30 Q69 14 88 31 Q67 29 53 40 Q38 30 25 31Z" fill="#65e45f"/>
+        </symbol>
+        <symbol id="coral" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path d="M50 88V44 M49 64 27 45 M50 55 69 28 M50 70 76 57 M35 51 24 25 M68 31 82 19" fill="none" stroke="url(#reef-sun)" stroke-width="12" stroke-linecap="round"/>
+          <ellipse cx="51" cy="88" rx="34" ry="8" fill="#72f7dc"/>
+          <g fill="#fff176"><circle cx="24" cy="24" r="7"/><circle cx="82" cy="18" r="6"/><circle cx="76" cy="56" r="6"/></g>
+        </symbol>
+        <symbol id="log" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <rect x="8" y="32" width="84" height="38" rx="18" fill="#a85b37" stroke="#ffbd63" stroke-width="5"/>
+          <path d="M25 36 32 65 M47 34 52 68 M69 35 74 65" stroke="#5f3151" stroke-width="4"/>
+          <circle cx="84" cy="51" r="13" fill="#e58a52" stroke="#6d3550" stroke-width="4"/><circle cx="84" cy="51" r="5" fill="none" stroke="#6d3550" stroke-width="2"/>
+        </symbol>
+        <symbol id="buoy" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path d="M50 8 62 31 58 70 42 70 38 31Z" fill="#ff5478" stroke="#fff6a0" stroke-width="5"/>
+          <path d="M40 34H60M43 54H58" stroke="#1c3470" stroke-width="7"/>
+          <ellipse cx="50" cy="76" rx="27" ry="12" fill="#4ee7df" stroke="#dffff9" stroke-width="4"/>
+        </symbol>
+        <symbol id="coin" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <circle cx="50" cy="50" r="40" fill="url(#coin-glow)" stroke="#fff6a0" stroke-width="6"/>
+          <path d="M57 24 39 48H54L42 76 70 43H54Z" fill="#fffbd0"/>
+        </symbol>
+        <symbol id="boost" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path d="M50 5 92 50 50 95 8 50Z" fill="#39e6bb" stroke="#d7fff6" stroke-width="5"/>
+          <path d="M58 18 31 52H49L40 83 71 43H52Z" fill="#fff56b"/>
+        </symbol>
+        <symbol id="friend" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <circle cx="51" cy="27" r="14" fill="#f4aa7b" stroke="#65376f" stroke-width="4"/>
+          <path d="M50 42 39 67 18 52 M50 46 72 34 M43 66 31 91 M58 64 73 87" fill="none" stroke="#ff6fb0" stroke-width="10" stroke-linecap="round"/>
+          <circle cx="81" cy="26" r="12" fill="#fff36d" stroke="#ff7e6f" stroke-width="4"/>
+        </symbol>
+        <symbol id="gate-post" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path d="M50 4 67 31 60 79 40 79 33 31Z" fill="url(#board-glow)" stroke="#f5ffff" stroke-width="5"/>
+          <path d="M35 32H65M39 53H62" stroke="#18336e" stroke-width="8"/>
+          <ellipse cx="50" cy="82" rx="31" ry="12" fill="#54eadc"/>
+        </symbol>
+      </defs>
+      <g data-vector-scene></g>
+    </svg>
+    <canvas id="glyph-stage" tabindex="0" role="application" aria-label="SURF GLYPH Pretext 字流与 SVG 礁海冲浪游戏"></canvas>
     <section class="sr-only" aria-live="polite">
       <h1>SURF//GLYPH</h1>
       <p>按 A/D 或左右方向键转向，W 或上方向键加速，S 或下方向键刹水。数字 1、2、3 选择模式。</p>
-      <p id="game-status">正在加载本地字体与 Pretext。</p>
+      <p id="game-status">正在加载本地字体、Pretext 与 SVG 礁海。</p>
       <a href="/gallery/">返回 Gallery</a>
     </section>
   </main>

@@ -48,11 +48,29 @@ main {
   background: #030711;
 }
 
+main { position: relative; isolation: isolate; }
+
+#vector-stage,
 #glyph-stage {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100vw;
   height: 100dvh;
   min-height: 100vh;
+}
+
+#vector-stage {
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+#vector-stage .vector-object { shape-rendering: geometricPrecision; }
+
+#glyph-stage {
+  z-index: 2;
+  background: transparent;
   outline: none;
   touch-action: none;
   user-select: none;

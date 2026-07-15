@@ -2,6 +2,7 @@ import {
   GlyphStage,
   InputState,
   SeededRandom,
+  VectorStage,
   clamp,
   createLoop,
   fontSpec,
@@ -14,6 +15,29 @@ import {
   textWidth,
   waitForGlyphFonts,
 } from '/assets/glyph-arcade/engine.js';
+
+export const DINO_DIFFICULTY = Object.freeze({
+  id: 'easy',
+  initialSpeed: 215,
+  maxSpeed: 420,
+  acceleration: 0.10,
+  mobileSpeedFactor: 0.88,
+  firstObstacleDelay: 2.1,
+  spawnEarly: [1.60, 2.35],
+  spawnLate: [1.35, 2.00],
+  birdUnlock: 450,
+  vineUnlock: 750,
+  jumpVelocity: 520,
+  gravity: 1250,
+  holdGravity: 650,
+  holdDuration: 0.24,
+  releaseGravity: 1750,
+  fastFallGravity: 2200,
+  fastFallVelocity: -200,
+  jumpBuffer: 0.10,
+  coyoteTime: 0.08,
+  firstEventDelay: 12,
+});
 
 export const DINO_PALETTES = Object.freeze([
   { name: 'DAWN DESERT', sky: 232, accent: 28, ground: 18, danger: 350 },
@@ -31,43 +55,22 @@ const EVENTS = Object.freeze([
   { name: 'FOSSIL BLOOM', duration: 8 },
 ]);
 
-const RUN_SPRITES = [
-  [
-    '       __',
-    '  .-""`  `-.',
-    ' /  o       \\',
-    '<     ___   |',
-    ' `-._/  `-._/',
-    '   /_\\   /',
-  ],
-  [
-    '       __',
-    '  .-""`  `-.',
-    ' /  o       \\',
-    '<     ___   |',
-    ' `-._/  `-._/',
-    '     \\  /_\\',
-  ],
-];
+const BIOME_CORPORA = Object.freeze([
+  'DESERT LATITUDE SOLAR RADIATION THERMAL INERTIA QUARTZ FELDSPAR DUNE CREST SALTATION WIND SHEAR ARIDITY OASIS BASIN ALLUVIAL FAN',
+  'FOSSIL STRATIGRAPHY SEDIMENT MATRIX TRACE BONE MINERALIZATION EROSION FORMATION PERIOD SPECIES HORIZON EXCAVATION CATALOGUE',
+  'NIGHT SKY ORBIT SPECTRUM PHOTON CONSTELLATION METEOR PARALLAX MAGNITUDE GALAXY ROTATION LUNAR PHASE ATMOSPHERIC SCATTERING',
+  'STORM PRESSURE GRADIENT CONVECTION HUMIDITY LIGHTNING THUNDER DOWNDRAFT PRECIPITATION FRONT VELOCITY CLOUD ELECTRIC FIELD',
+  'FROST ALBEDO CRYSTAL NUCLEATION PERMAFROST SUBLIMATION TEMPERATURE GLACIER MORAINE ICE CORE CLIMATE ARCHIVE FREEZE THAW',
+]);
 
-const DUCK_SPRITE = [
-  ' .-""`-.__',
-  '/ o      _ `-.',
-  '`-.___.-` `---',
-  '  /_\\  /_\\',
-];
-
-const OBSTACLE_SPRITES = Object.freeze({
-  cactus: ['  Y', '\\ | /', ' \\|/', '  |', ' _|_'],
-  twin: [' Y   Y', '\\|/ \\|/', ' |   |', '_|_ _|_'],
-  bird: ['  __/\\__', '<_  o  _>', '  \\/\\/'],
-  vine: ['\\/\\/\\/', ' }}}} ', '  }}  '],
+const PLAYER_FLOW = Object.freeze({
+  run: [[0.02, 0.35], [0.12, 0.54], [0.28, 0.45], [0.50, 0.08], [0.95, 0.08], [0.98, 0.42], [0.67, 0.45], [0.65, 0.76], [0.58, 1], [0.42, 1], [0.39, 0.76], [0.23, 1], [0.16, 0.72], [0.04, 0.58]],
+  duck: [[0.01, 0.25], [0.22, 0.50], [0.36, 0.18], [0.92, 0.14], [0.99, 0.65], [0.62, 0.72], [0.54, 1], [0.22, 1], [0.09, 0.78]],
 });
-
-const spriteMetricsCache = new Map();
 
 const canvas = document.getElementById('glyph-stage');
 const stage = new GlyphStage(canvas);
+const vector = new VectorStage(document.querySelector('#vector-stage'));
 const input = new InputState(canvas);
 const rng = new SeededRandom(0xD1A05EED);
 
@@ -76,45 +79,43 @@ const game = {
   time: 0,
   distance: 0,
   best: loadBest('glyph-dino-best'),
-  speed: 285,
+  speed: DINO_DIFFICULTY.initialSpeed,
   groundY: 0,
   scroll: 0,
-  spawnTimer: 1.3,
+  spawnTimer: DINO_DIFFICULTY.firstObstacleDelay,
   biomeIndex: 0,
   event: null,
   lastEventName: null,
   eventLeft: 0,
-  eventCooldown: 3.25,
+  eventCooldown: DINO_DIFFICULTY.firstEventDelay,
   flash: 0,
-  player: { y: 0, vy: 0, duck: false, jumpHold: 0, jumpSustain: false },
+  player: { y: 0, vy: 0, duck: false, jumpHold: 0, jumpSustain: false, jumpBuffer: 0, coyote: DINO_DIFFICULTY.coyoteTime },
   pad: { jump: false, pause: false },
   obstacles: [],
   particles: [],
+  obstacleId: 0,
 };
-
-function hashNoise(x, y, t = 0) {
-  const value = Math.sin(x * 12.9898 + y * 78.233 + t * 37.719) * 43758.5453;
-  return value - Math.floor(value);
-}
 
 function reset() {
   game.state = 'running';
   game.time = 0;
   game.distance = 0;
-  game.speed = 285;
+  game.speed = DINO_DIFFICULTY.initialSpeed * (stage.width < 600 ? DINO_DIFFICULTY.mobileSpeedFactor : 1);
   game.scroll = 0;
-  game.spawnTimer = 1.1;
+  game.spawnTimer = DINO_DIFFICULTY.firstObstacleDelay;
   game.biomeIndex = 0;
   game.event = null;
   game.lastEventName = null;
   game.eventLeft = 0;
-  game.eventCooldown = 3.25;
+  game.eventCooldown = DINO_DIFFICULTY.firstEventDelay;
   game.flash = 0;
   game.player.y = 0;
   game.player.vy = 0;
   game.player.duck = false;
   game.player.jumpHold = 0;
   game.player.jumpSustain = false;
+  game.player.jumpBuffer = 0;
+  game.player.coyote = DINO_DIFFICULTY.coyoteTime;
   game.pad.jump = false;
   game.pad.pause = false;
   game.obstacles.length = 0;
@@ -123,24 +124,30 @@ function reset() {
 }
 
 function spawnObstacle() {
-  const progress = clamp(game.distance / 900, 0, 1);
+  const progress = clamp(game.distance / 1500, 0, 1);
   const roll = rng.next();
   let type = roll < 0.45 ? 'cactus' : roll < 0.68 ? 'twin' : roll < 0.86 ? 'bird' : 'vine';
-  if (game.distance < 130 && (type === 'bird' || type === 'vine')) type = 'cactus';
+  if (type === 'twin' && game.distance < 120) type = 'cactus';
+  if (type === 'bird' && game.distance < DINO_DIFFICULTY.birdUnlock) type = 'cactus';
+  if (type === 'vine' && game.distance < DINO_DIFFICULTY.vineUnlock) {
+    type = game.distance >= DINO_DIFFICULTY.birdUnlock ? 'bird' : 'cactus';
+  }
   const config = {
     cactus: { lift: 0 },
     twin: { lift: 0 },
-    bird: { lift: rng.pick([51, 75]) },
-    vine: { lift: 54 },
+    bird: { lift: rng.pick([28, 56]) },
+    vine: { lift: 48 },
   }[type];
   game.obstacles.push({
+    id: game.obstacleId += 1,
     type,
     x: stage.width + 90,
     lift: config.lift,
     phase: rng.range(0, Math.PI * 2),
   });
-  const minimum = 0.78 + progress * 0.12;
-  game.spawnTimer = rng.range(minimum, 1.48 - progress * 0.18);
+  const minimum = DINO_DIFFICULTY.spawnEarly[0] + (DINO_DIFFICULTY.spawnLate[0] - DINO_DIFFICULTY.spawnEarly[0]) * progress;
+  const maximum = DINO_DIFFICULTY.spawnEarly[1] + (DINO_DIFFICULTY.spawnLate[1] - DINO_DIFFICULTY.spawnEarly[1]) * progress;
+  game.spawnTimer = rng.range(minimum, maximum);
 }
 
 function spawnEvent() {
@@ -149,76 +156,63 @@ function spawnEvent() {
   game.event = next;
   game.lastEventName = next.name;
   game.eventLeft = next.duration;
-  game.eventCooldown = rng.range(12, 18);
+  game.eventCooldown = rng.range(18, 26);
   if (next.name === 'THUNDER PULSE') game.flash = 0.16;
   setSemanticStatus(`环境事件：${next.name}。`);
 }
 
-function spriteMetrics(rows, font, lineHeight, size) {
-  const key = `${font}\u0000${lineHeight}\u0000${rows.join('\n')}`;
-  const cached = spriteMetricsCache.get(key);
-  if (cached) return cached;
-  let left = Infinity;
-  let right = 0;
-  for (const row of rows) {
-    let cursor = 0;
-    for (const char of Array.from(row)) {
-      const width = textWidth(char, font);
-      if (char !== ' ') {
-        left = Math.min(left, cursor);
-        right = Math.max(right, cursor + width);
-      }
-      cursor += width;
-    }
-  }
-  const value = {
-    left: Number.isFinite(left) ? left : 0,
-    right,
-    top: -size * 0.8,
-    bottom: (rows.length - 1) * lineHeight + size * 0.2,
-  };
-  spriteMetricsCache.set(key, value);
-  return value;
-}
-
 function playerVisual() {
-  const size = stage.width < 600 ? 11 : 14;
-  const lineHeight = size * 0.88;
-  const rows = game.player.duck ? DUCK_SPRITE : RUN_SPRITES[Math.floor(game.time * 10) % RUN_SPRITES.length];
-  const font = fontSpec(size, 'casual', 700);
+  const compact = stage.width < 600;
+  const width = game.player.duck ? (compact ? 72 : 88) : (compact ? 54 : 66);
+  const height = game.player.duck ? (compact ? 31 : 38) : (compact ? 58 : 70);
   const x = stage.width * 0.14;
-  const y = game.groundY - game.player.y - rows.length * lineHeight + size;
-  return { rows, size, lineHeight, font, x, y, metrics: spriteMetrics(rows, font, lineHeight, size) };
+  const y = game.groundY - game.player.y - height;
+  const symbol = game.player.duck ? 'dino-duck' : Math.floor(game.time * 12) % 2 ? 'dino-run-a' : 'dino-run-b';
+  return { x, y, width, height, symbol, flowPolygon: game.player.duck ? PLAYER_FLOW.duck : PLAYER_FLOW.run };
 }
 
 function obstacleVisual(obstacle) {
-  const rows = OBSTACLE_SPRITES[obstacle.type];
-  const size = stage.width < 600 ? 10 : obstacle.type === 'bird' ? 13 : 14;
-  const lineHeight = size * 0.9;
-  const font = fontSpec(size, obstacle.type === 'bird' ? 'casual' : 'linear', 700);
+  const compact = stage.width < 600;
+  const dimensions = {
+    cactus: compact ? [24, 48] : [30, 58],
+    twin: compact ? [46, 48] : [56, 58],
+    bird: compact ? [50, 32] : [62, 40],
+    vine: compact ? [48, 29] : [60, 36],
+  }[obstacle.type];
+  const [width, height] = dimensions;
   const bob = obstacle.type === 'bird' ? Math.sin(game.time * 10 + obstacle.phase) * 5 : 0;
-  const y = game.groundY - obstacle.lift - rows.length * lineHeight + size + bob;
-  return { rows, size, lineHeight, font, x: obstacle.x, y, metrics: spriteMetrics(rows, font, lineHeight, size) };
+  const y = game.groundY - obstacle.lift - height + bob;
+  const flowPolygon = obstacle.type === 'bird'
+    ? [[0, 0.50], [0.27, 0.15], [0.50, 0.48], [0.82, 0.27], [1, 0.42], [0.75, 0.68], [0.58, 1], [0.38, 0.72], [0.12, 0.70]]
+    : obstacle.type === 'vine'
+      ? [[0, 0.05], [0.18, 0.05], [0.34, 0.38], [0.51, 0.70], [0.68, 1], [0.84, 0.68], [1, 0.25], [1, 0.62], [0.84, 0.95], [0.67, 0.75], [0.50, 0.48], [0.32, 0.18], [0.16, 0.38], [0, 0.25]]
+      : [[0.05, 1], [0.22, 0.45], [0.08, 0.30], [0.15, 0.12], [0.36, 0.34], [0.43, 0], [0.66, 0], [0.70, 0.30], [0.90, 0.18], [0.98, 0.48], [0.70, 0.58], [0.78, 1]];
+  return { x: obstacle.x, y, width, height, symbol: `dino-${obstacle.type}`, flowPolygon };
 }
 
-function insetBox(visual, horizontalRatio = 0.16, verticalRatio = 0.12) {
-  const { metrics, size } = visual;
-  const insetX = size * horizontalRatio;
-  const insetY = size * verticalRatio;
+function insetBox(visual, horizontalRatio, verticalRatio) {
+  const insetX = visual.width * horizontalRatio;
+  const insetY = visual.height * verticalRatio;
   return {
-    x: visual.x + metrics.left + insetX,
-    y: visual.y + metrics.top + insetY,
-    w: Math.max(1, metrics.right - metrics.left - insetX * 2),
-    h: Math.max(1, metrics.bottom - metrics.top - insetY * 2),
+    x: visual.x + insetX,
+    y: visual.y + insetY,
+    w: Math.max(1, visual.width - insetX * 2),
+    h: Math.max(1, visual.height - insetY * 2),
   };
 }
 
 function playerBox() {
-  return insetBox(playerVisual(), game.player.duck ? 0.12 : 0.18, 0.14);
+  return insetBox(playerVisual(), game.player.duck ? 0.18 : 0.24, game.player.duck ? 0.20 : 0.16);
 }
 
 function obstacleBox(obstacle) {
-  return insetBox(obstacleVisual(obstacle), obstacle.type === 'bird' ? 0.12 : 0.16, 0.1);
+  const ratios = {
+    cactus: [0.22, 0.10],
+    twin: [0.18, 0.10],
+    bird: [0.25, 0.30],
+    vine: [0.22, 0.25],
+  }[obstacle.type];
+  return insetBox(obstacleVisual(obstacle), ratios[0], ratios[1]);
 }
 
 function readGamepad() {
@@ -283,7 +277,8 @@ function update(dt) {
   game.pad.jump = pad.jump;
   game.pad.pause = pad.pause;
   const startAction = input.pressed('Space', 'Enter', 'ArrowUp', 'KeyW', 'PointerDown') || padJumpPressed;
-  const jumpHeld = input.held('Space', 'ArrowUp', 'KeyW') || pad.jump;
+  const pointerJumpHeld = input.pointer.down && input.pointer.x >= stage.width * 0.34;
+  const jumpHeld = input.held('Space', 'ArrowUp', 'KeyW') || pointerJumpHeld || pad.jump;
   const duckHeld = input.held('ArrowDown', 'KeyS') || pad.duck || (input.pointer.down && input.pointer.x < stage.width * 0.34);
 
   if (input.pressed('KeyG') && game.state !== 'running') location.href = '/gallery/';
@@ -304,31 +299,36 @@ function update(dt) {
 
   game.time += dt;
   game.distance += game.speed * dt * 0.035;
-  game.speed = Math.min(580, 285 + game.distance * 0.19);
+  const speedFactor = stage.width < 600 ? DINO_DIFFICULTY.mobileSpeedFactor : 1;
+  game.speed = Math.min(DINO_DIFFICULTY.maxSpeed, DINO_DIFFICULTY.initialSpeed + game.distance * DINO_DIFFICULTY.acceleration) * speedFactor;
   game.scroll += game.speed * dt;
   game.biomeIndex = Math.floor(game.distance / 520) % DINO_PALETTES.length;
   game.flash = Math.max(0, game.flash - dt);
 
   const grounded = game.player.y <= 0.1;
+  game.player.jumpBuffer = startAction ? DINO_DIFFICULTY.jumpBuffer : Math.max(0, game.player.jumpBuffer - dt);
+  game.player.coyote = grounded ? DINO_DIFFICULTY.coyoteTime : Math.max(0, game.player.coyote - dt);
   game.player.duck = duckHeld && grounded;
-  if (startAction && game.player.y <= 0.1 && !game.player.duck) {
-    game.player.vy = 590;
+  if (game.player.jumpBuffer > 0 && game.player.coyote > 0 && !game.player.duck) {
+    game.player.vy = DINO_DIFFICULTY.jumpVelocity;
     game.player.y = 0.2;
     game.player.jumpHold = 0;
     game.player.jumpSustain = true;
+    game.player.jumpBuffer = 0;
+    game.player.coyote = 0;
   }
 
   const fastFall = duckHeld && game.player.y > 3;
   if (!jumpHeld || fastFall) game.player.jumpSustain = false;
-  let gravity = 1660;
+  let gravity = DINO_DIFFICULTY.gravity;
   if (fastFall) {
-    game.player.vy = Math.min(game.player.vy, -240);
-    gravity = 2650;
-  } else if (game.player.jumpSustain && game.player.vy > 0 && game.player.jumpHold < 0.2) {
-    gravity = 760;
+    game.player.vy = Math.min(game.player.vy, DINO_DIFFICULTY.fastFallVelocity);
+    gravity = DINO_DIFFICULTY.fastFallGravity;
+  } else if (game.player.jumpSustain && game.player.vy > 0 && game.player.jumpHold < DINO_DIFFICULTY.holdDuration) {
+    gravity = DINO_DIFFICULTY.holdGravity;
     game.player.jumpHold += dt;
   } else if (!jumpHeld && game.player.vy > 0) {
-    gravity = 2200;
+    gravity = DINO_DIFFICULTY.releaseGravity;
   }
   game.player.y += game.player.vy * dt;
   game.player.vy -= gravity * dt;
@@ -345,7 +345,7 @@ function update(dt) {
   for (const obstacle of game.obstacles) obstacle.x -= game.speed * dt;
   game.obstacles = game.obstacles.filter(obstacle => {
     const visual = obstacleVisual(obstacle);
-    return visual.x + visual.metrics.right > -40;
+    return visual.x + visual.width > -40;
   });
 
   const hitbox = playerBox();
@@ -366,41 +366,96 @@ function update(dt) {
   updateParticles(dt);
 }
 
-function drawSky(now, palette) {
+function overlayLayout() {
   const compact = stage.width < 600;
-  const size = compact ? 12 : 15;
-  const lineHeight = compact ? 17 : 20;
-  const font = fontSpec(size, 'linear', 400);
-  const glyphs = ['.', ',', "'", '`', ':', ';', 'i', 'l', 's', 'w', '~'];
-  const rows = Math.ceil(game.groundY / lineHeight);
-  for (let row = 0; row < rows; row += 1) {
-    let x = -28 - ((game.scroll * (0.018 + row * 0.0005)) % 28);
-    let col = 0;
-    while (x < stage.width + 22) {
-      const noise = hashNoise(col, row, Math.floor(game.distance / 25));
-      const char = glyphs[Math.floor(noise * glyphs.length)];
-      const hue = palette.sky + row * 1.2 + col * 0.85 + Math.sin(now + row) * 6;
-      const light = 18 + row * 0.7 + noise * 18;
-      const alpha = 0.16 + noise * 0.42;
-      stage.glyph(char, x, 18 + row * lineHeight, {
-        font,
-        color: hsl(hue, 70 + noise * 20, light, alpha),
+  const width = Math.min(stage.width - 28, compact ? 344 : 560);
+  const height = compact ? 205 : 226;
+  return { compact, width, height, x: (stage.width - width) / 2, y: Math.max(54, (stage.height - height) / 2 - 8) };
+}
+
+function drawVectorScene(palette) {
+  if (game.state !== 'running') {
+    const panel = overlayLayout();
+    vector.use('overlay-panel', 'dino-panel', {
+      x: panel.x,
+      y: panel.y,
+      width: panel.width,
+      height: panel.height,
+      color: hsl(palette.sky, 48, 8, 0.94),
+      cssVars: { '--highlight': hsl(palette.accent, 96, 70) },
+      flowPolygon: [[0, 0], [1, 0], [1, 1], [0, 1]],
+      flowPadding: 5,
+    });
+  }
+
+  const fossilSpan = stage.width + 260;
+  for (let index = 0; index < 2; index += 1) {
+    const x = ((index * stage.width * 0.63 - game.scroll * 0.06) % fossilSpan + fossilSpan) % fossilSpan - 100;
+    vector.use(`ambient-fossil-${index}`, 'dino-fossil', {
+      x,
+      y: game.groundY - 122 - index * 74,
+      width: 58,
+      height: 28,
+      color: hsl(palette.ground + 36 + index * 20, 78, 58, 0.42),
+      cssVars: { '--highlight': hsl(palette.accent, 88, 68, 0.48) },
+      flowPolygon: [[0, 0.2], [0.8, 0.2], [1, 0.5], [0.78, 0.8], [0, 0.8]],
+      flowPadding: 4,
+      opacity: 0.65,
+    });
+  }
+
+  if (game.event?.name === 'FOSSIL BLOOM') {
+    for (let index = 0; index < 4; index += 1) {
+      const x = ((index * 173 - game.scroll * 0.18) % (stage.width + 120) + stage.width + 120) % (stage.width + 120) - 60;
+      vector.use(`bloom-fossil-${index}`, 'dino-fossil', {
+        x,
+        y: game.groundY - 185 - (index % 2) * 62,
+        width: 64,
+        height: 31,
+        color: hsl(palette.accent + index * 16, 92, 68),
+        cssVars: { '--highlight': hsl(palette.danger + index * 10, 96, 74) },
+        flowPolygon: [[0, 0.15], [0.86, 0.15], [1, 0.5], [0.82, 0.85], [0, 0.85]],
+        flowPadding: 5,
       });
-      x += textWidth(char, font) + 8 + noise * 12;
-      col += 1;
     }
   }
 
-  const mountainFont = fontSpec(compact ? 17 : 23, 'casual', 700);
-  for (let index = 0; index < Math.ceil(stage.width / 34) + 2; index += 1) {
-    const x = index * 34 - (game.scroll * 0.065 % 34);
-    const y = game.groundY - 63 - Math.sin(index * 1.7) * 24;
-    const char = index % 3 === 0 ? 'A' : index % 2 ? '^' : '/\\';
-    stage.glyph(char, x, y, {
-      font: mountainFont,
-      color: hsl(palette.ground + index * 2.1, 62, 32 + index % 4 * 3, 0.72),
+  for (const obstacle of game.obstacles) {
+    const visual = obstacleVisual(obstacle);
+    vector.use(`obstacle-${obstacle.id}`, visual.symbol, {
+      ...visual,
+      color: hsl(obstacle.type === 'bird' ? palette.danger : palette.ground + 100, 88, 56),
+      cssVars: { '--highlight': hsl(palette.accent + obstacle.id * 7, 96, 72), '--cutout': '#030711' },
+      flowPadding: 5,
     });
   }
+
+  const player = playerVisual();
+  vector.use('dino-player', player.symbol, {
+    ...player,
+    color: hsl(palette.accent, 94, 62),
+    cssVars: { '--highlight': hsl(palette.danger, 96, 72), '--cutout': '#030711' },
+    flowPadding: 6,
+  });
+}
+
+function drawSky(_now, palette) {
+  const compact = stage.width < 600;
+  const eventCorpus = game.event ? ` EVENT ${game.event.name} OBSERVATION DURATION DIRECTION INTENSITY ` : '';
+  stage.flowText(`${BIOME_CORPORA[game.biomeIndex]}${eventCorpus}`, {
+    x: 8,
+    y: compact ? 34 : 31,
+    w: stage.width - 16,
+    h: Math.max(50, game.groundY - (compact ? 38 : 35)),
+  }, vector.exclusions, {
+    size: compact ? 8 : 9,
+    lineHeight: compact ? 10 : 11,
+    family: game.biomeIndex % 2 ? 'casual' : 'linear',
+    weight: 400,
+    minWidth: 24,
+    targetCharacters: 12000,
+    color: ({ row, slot, index }) => hsl(palette.sky + row * 2.6 + slot * 19 + index * 0.3, 72 + row % 5 * 4, 34 + (row + slot) % 7 * 4, 0.58),
+  });
 }
 
 function drawEvent(now, palette) {
@@ -465,7 +520,7 @@ function drawEvent(now, palette) {
 
 function drawGround(palette) {
   const compact = stage.width < 600;
-  const fonts = [fontSpec(compact ? 13 : 16, 'linear', 700), fontSpec(compact ? 12 : 15, 'casual', 400)];
+  const fonts = [fontSpec(compact ? 8 : 10, 'linear', 700), fontSpec(compact ? 8 : 9, 'casual', 400)];
   const rows = ['_-=~_.', 'fossil0123456789', '::;,,..--==', 'roots/\\/\\/\\'];
   for (let row = 0; row < rows.length; row += 1) {
     const font = fonts[row % fonts.length];
@@ -475,45 +530,15 @@ function drawGround(palette) {
     while (x < stage.width + 40) {
       const char = source[(index + Math.floor(game.distance / 17)) % source.length];
       const color = hsl(palette.ground + row * 8 + index * 0.9, 68 + row * 4, 46 - row * 6, 0.92 - row * 0.1);
-      stage.glyph(char, x, game.groundY + row * (compact ? 17 : 21), { font, color });
+      stage.glyph(char, x, game.groundY + row * (compact ? 12 : 14), { font, color });
       x += textWidth(char, font) + 4 + row * 2;
       index += 1;
     }
   }
 }
 
-function drawPlayer(palette) {
-  const visual = playerVisual();
-  stage.sprite(visual.rows, visual.x, visual.y, {
-    font: visual.font,
-    size: visual.size,
-    lineHeight: visual.lineHeight,
-    color: (char, row, col) => {
-      if (char === 'o') return hsl(palette.danger, 96, 69);
-      if ('_/-\\'.includes(char)) return hsl(palette.accent + col * 2, 94, 69 - row * 3);
-      return hsl(palette.accent + row * 9 + col, 82, 59);
-    },
-  });
-}
-
-function drawObstacles(palette) {
-  for (const obstacle of game.obstacles) {
-    const visual = obstacleVisual(obstacle);
-    stage.sprite(visual.rows, visual.x, visual.y, {
-      font: visual.font,
-      size: visual.size,
-      lineHeight: visual.lineHeight,
-      color: (char, row, col) => hsl(
-        obstacle.type === 'bird' ? palette.danger + col * 3 : palette.ground + 92 + row * 7 + col * 2,
-        82,
-        49 + ((row + col) % 4) * 7,
-      ),
-    });
-  }
-}
-
 function drawParticles(palette) {
-  const font = fontSpec(13, 'casual', 400);
+  const font = fontSpec(stage.width < 600 ? 8 : 10, 'casual', 400);
   for (const particle of game.particles) {
     stage.glyph(particle.char, particle.x, particle.y, {
       font,
@@ -524,16 +549,16 @@ function drawParticles(palette) {
 
 function drawHud(palette) {
   const compact = stage.width < 600;
-  const size = compact ? 11 : 14;
+  const size = compact ? 8 : 10;
   const font = fontSpec(size, 'linear', 700);
   const left = compact ? 12 : 24;
   const eventText = game.event ? `EVENT:${game.event.name}` : `BIOME:${palette.name}`;
-  stage.glyph(`DINO//TYPE  ${Math.floor(game.distance).toString().padStart(5, '0')}m  BEST:${game.best.toString().padStart(5, '0')}`, left, 27, {
+  stage.glyph(`DINO//TYPE  ${Math.floor(game.distance).toString().padStart(5, '0')}m  BEST:${game.best.toString().padStart(5, '0')}`, left, compact ? 16 : 20, {
     font,
     color: hsl(palette.accent, 96, 72),
   });
-  stage.glyph(eventText, stage.width - left, 27, {
-    font: fontSpec(compact ? 9 : 12, 'casual', 700),
+  stage.glyph(eventText, stage.width - left, compact ? 29 : 20, {
+    font: fontSpec(compact ? 8 : 9, 'casual', 700),
     color: hsl(game.event ? palette.danger : palette.sky + 70, 98, 73),
     align: 'right',
   });
@@ -541,35 +566,31 @@ function drawHud(palette) {
 
 function drawOverlay(palette) {
   if (game.state === 'running') return;
-  const compact = stage.width < 600;
-  const boxWidth = Math.min(stage.width - 32, compact ? 350 : 610);
-  const boxHeight = compact ? 235 : 265;
-  const x = (stage.width - boxWidth) / 2;
-  const y = Math.max(66, (stage.height - boxHeight) / 2 - 10);
+  const { compact, width: boxWidth, height: boxHeight, x, y } = overlayLayout();
   stage.dottedFrame(x, y, boxWidth, boxHeight, { color: hsl(palette.accent, 96, 72), glyph: game.state === 'gameover' ? 'x' : '.' });
   const title = game.state === 'ready' ? 'DINO//TYPE' : game.state === 'paused' ? 'PAUSED//TYPE' : 'EXTINCT//RETRY';
-  stage.glyph(title, stage.width / 2, y + 49, {
-    font: fontSpec(compact ? 28 : 42, 'casual', 700),
+  stage.glyph(title, stage.width / 2, y + 39, {
+    font: fontSpec(compact ? 21 : 29, 'casual', 700),
     color: hsl(game.state === 'gameover' ? palette.danger : palette.accent, 100, 70),
     align: 'center',
   });
   const message = game.state === 'ready'
-    ? 'A proportional-font dinosaur run. Every cloud, fossil, obstacle and particle is a colored glyph measured by Pretext.'
+    ? 'A classic SVG T-Rex squeezes a dense proportional-font field. Pretext reflows every line around each moving shape.'
     : game.state === 'paused'
       ? 'The glyph field is frozen. Press P or ESC to continue.'
       : `Distance ${Math.floor(game.distance)}m. Best ${game.best}m. The desert will typeset another chance.`;
-  stage.paragraph(message, x + 25, y + 83, boxWidth - 50, {
-    size: compact ? 13 : 16,
-    lineHeight: compact ? 18 : 22,
+  stage.paragraph(message, x + 22, y + 64, boxWidth - 44, {
+    size: compact ? 9 : 11,
+    lineHeight: compact ? 12 : 15,
     color: hsl(palette.sky + 42, 72, 79),
   });
-  stage.glyph(game.state === 'paused' ? '[ P / ESC : RESUME ]' : '[ SPACE / TAP : RUN ]', stage.width / 2, y + boxHeight - 52, {
-    font: fontSpec(compact ? 14 : 18, 'linear', 700),
+  stage.glyph(game.state === 'paused' ? '[ P / ESC : RESUME ]' : '[ SPACE / TAP : RUN ]', stage.width / 2, y + boxHeight - 38, {
+    font: fontSpec(compact ? 10 : 13, 'linear', 700),
     color: hsl(palette.accent + 36, 100, 72),
     align: 'center',
   });
-  stage.glyph('HOLD W/UP jump  S/DOWN fast fall  PAD A/B  P pause', stage.width / 2, y + boxHeight - 22, {
-    font: fontSpec(compact ? 10 : 12, 'linear', 400),
+  stage.glyph('HOLD W/UP jump  S/DOWN fast fall  PAD A/B  P pause', stage.width / 2, y + boxHeight - 16, {
+    font: fontSpec(compact ? 8 : 9, 'linear', 400),
     color: hsl(palette.sky + 95, 82, 70),
     align: 'center',
   });
@@ -579,22 +600,31 @@ function render() {
   const palette = DINO_PALETTES[game.biomeIndex];
   const sceneTime = game.time;
   stage.clear();
+  vector.beginFrame(stage.width, stage.height);
+  drawVectorScene(palette);
   drawSky(sceneTime, palette);
   drawEvent(sceneTime, palette);
   drawGround(palette);
   drawParticles(palette);
-  drawObstacles(palette);
-  drawPlayer(palette);
   drawHud(palette);
   drawOverlay(palette);
+  vector.endFrame();
   stage.publishDiagnostics({
     game: 'dino',
     state: game.state,
+    gameTime: Number(game.time.toFixed(2)),
     distance: Math.floor(game.distance),
     event: game.event?.name || null,
     lastEvent: game.lastEventName,
     biome: palette.name,
     player: { y: Math.round(game.player.y), duck: game.player.duck },
+    speed: Math.round(game.speed),
+    obstacleCount: game.obstacles.length,
+    nearestObstacleX: game.obstacles.length ? Math.round(Math.min(...game.obstacles.map(obstacle => obstacle.x))) : null,
+    nextObstacleIn: Number(Math.max(0, game.spawnTimer).toFixed(2)),
+    difficulty: 'easy',
+    flow: stage.flowDiagnostics,
+    activeSvgObjects: vector.visibleCount,
     visibleColors: stage.frameColors.size,
     visibleGlyphs: stage.frameGlyphs,
     proportional: textWidth('iiii', fontSpec(16)) !== textWidth('WWWW', fontSpec(16)),
