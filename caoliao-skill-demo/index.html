@@ -48,10 +48,19 @@ main{padding:16px 20px;max-width:1700px;margin:0 auto}
 .col{background:var(--panel);border:1px solid var(--line);border-radius:10px;min-width:0;display:flex;flex-direction:column;height:calc(100vh - 210px);min-height:420px}
 .col .head{padding:8px 14px;border-bottom:1px solid var(--line);font-size:13px;font-weight:600;display:flex;justify-content:space-between;gap:8px;align-items:baseline;flex-wrap:wrap}
 .col .head .meta{font-weight:400;color:var(--muted);font-size:12px}
+.col .head .tgl{display:inline-flex;gap:8px;font-weight:400;font-size:12px;color:var(--muted);margin-left:auto}
+.col .head .tgl label{display:inline-flex;align-items:center;gap:3px;cursor:pointer;user-select:none}
+.col .head .tgl input{accent-color:var(--brand);margin:0}
+.col.hide-add .body span.add{display:none}
+.col.hide-del .body span.del{display:none}
 .col .body{overflow:auto;padding:14px 18px;white-space:pre-wrap;word-break:break-word;font-size:14px}
 .col .body img{max-width:100%}
 span.add{background:var(--add-bg);color:var(--add-ink);border-radius:3px;padding:0 1px}
 span.del{background:var(--del-bg);color:var(--del-ink);border-radius:3px;padding:0 1px}
+/* 轻量 md 渲染:标题只做小标识,链接短渲染保功能 */
+.body .mdh{font-weight:700;color:var(--brand)}
+.body .mdh .hmark{display:inline-block;font-weight:600;font-size:10px;line-height:1;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:2px 4px;margin-right:6px;vertical-align:1px}
+.body a.mdlink{color:var(--brand);text-decoration:underline;text-underline-offset:2px;word-break:break-all}
 .gates{font-size:12px;color:var(--muted)}
 .gates b.ok{color:var(--ok)}.gates b.bad{color:var(--bad)}
 /* 总览表 */
@@ -103,8 +112,8 @@ table.sum a{color:var(--brand);cursor:pointer;text-decoration:underline}
     </div>
     <div class="cols">
       <div class="col"><div class="head"><span>原文</span><span class="meta" id="origMeta"></span></div><div class="body" id="colO"></div></div>
-      <div class="col"><div class="head"><span id="headA">A</span><span class="meta gates" id="gateA"></span></div><div class="body" id="colA"></div></div>
-      <div class="col"><div class="head"><span id="headB">B</span><span class="meta gates" id="gateB"></span></div><div class="body" id="colB"></div></div>
+      <div class="col" id="boxA"><div class="head"><span id="headA">A</span><span class="meta gates" id="gateA"></span><span class="tgl"><label title="显示/隐藏相对原文新增的内容"><input type="checkbox" id="tglAadd" checked><span class="add">增</span></label><label title="显示/隐藏相对原文删除的内容(隐藏后即改后文)"><input type="checkbox" id="tglAdel" checked><span class="del">删</span></label></span></div><div class="body" id="colA"></div></div>
+      <div class="col" id="boxB"><div class="head"><span id="headB">B</span><span class="meta gates" id="gateB"></span><span class="tgl"><label title="显示/隐藏相对原文新增的内容"><input type="checkbox" id="tglBadd" checked><span class="add">增</span></label><label title="显示/隐藏相对原文删除的内容(隐藏后即改后文)"><input type="checkbox" id="tglBdel" checked><span class="del">删</span></label></span></div><div class="body" id="colB"></div></div>
     </div>
   </section>
   <section id="tab-sum" class="hidden"></section>
@@ -147,6 +156,18 @@ function charDiffHtml(a,b){ // 单段内字符 diff → b 视角 html（含内�
   for(const [t,x,y] of ops){const ch=t==='-'?x:y;if(t!==mode){flush();mode=t;}buf+=ch;}
   flush();return html;
 }
+/* ---------- 轻量 md 行渲染:标题小标识 + 链接/图片短渲染(URL 被 diff 拆散时自动跳过) ---------- */
+function mdLine(html,raw){
+  html=html.replace(/!\[([^\]]*)\]\(([^)\s<]+)\)/g,(_,alt,src)=>`<a class="mdlink" href="${src}" target="_blank" rel="noopener">🖼 ${alt||'图片'}</a>`);
+  html=html.replace(/\[([^\]]+)\]\(([^)\s<]+)\)/g,'<a class="mdlink" href="$2" target="_blank" rel="noopener">$1</a>');
+  const m=raw.match(/^(#{1,6})\s/);
+  if(m){
+    html=html.replace(/^((?:<span class="(?:add|del)">)?)#{1,6}\s?/,'$1');
+    html=`<span class="mdh"><span class="hmark">H${m[1].length}</span>${html}</span>`;
+  }
+  return html;
+}
+function renderMdText(text){return text.split('\n').map(l=>mdLine(escH(l),l)).join('\n')}
 const diffCache={};
 function diffHtml(orig,out){ // 段落级对齐后拼全篇
   const key=orig.length+':'+out.length+':'+out.slice(0,80);
@@ -157,15 +178,15 @@ function diffHtml(orig,out){ // 段落级对齐后拼全篇
   // 把相邻的 -,+ 组配对做字符 diff
   let html='';let i=0;
   while(i<ops.length){
-    if(ops[i][0]==='='){html+=escH(ops[i][2])+'\n';i++;continue;}
+    if(ops[i][0]==='='){html+=mdLine(escH(ops[i][2]),ops[i][2])+'\n';i++;continue;}
     const dels=[],adds=[];
     while(i<ops.length&&ops[i][0]!=='='){if(ops[i][0]==='-')dels.push(ops[i][1]);else adds.push(ops[i][2]);i++;}
     const k=Math.max(dels.length,adds.length);
     for(let x=0;x<k;x++){
       const d=dels[x],a2=adds[x];
-      if(d!=null&&a2!=null)html+=charDiffHtml(d,a2)+'\n';
-      else if(a2!=null)html+='<span class="add">'+escH(a2)+'</span>\n';
-      else html+='<span class="del">'+escH(d)+'</span>\n';
+      if(d!=null&&a2!=null)html+=mdLine(charDiffHtml(d,a2),a2)+'\n';
+      else if(a2!=null)html+=mdLine('<span class="add">'+escH(a2)+'</span>',a2)+'\n';
+      else html+=mdLine('<span class="del">'+escH(d)+'</span>',d)+'\n';
     }
   }
   diffCache[key]=html;return html;
@@ -222,14 +243,14 @@ function renderPane(o,headEl,gateEl,bodyEl,orig){
   if(o.kind==='writer')bodyEl.innerHTML=diffHtml(orig,o.text||'');
   else{
     let h='';
-    if(o.report)h+=escH(o.report);
+    if(o.report)h+=renderMdText(o.report);
     if(o.findings)h+='\n\n───── findings.json ─────\n'+escH(JSON.stringify(o.findings,null,2));
     bodyEl.innerHTML=h||'（缺产出）';
   }
 }
 function renderCols(){
   const c=DATA.cases.find(x=>x.id===curCase);
-  $('#colO').textContent=c.text;
+  $('#colO').innerHTML=renderMdText(c.text);
   const bl=c.baseline;$('#origMeta').textContent=`${c.text.length} 字 · 基线 e${bl?.error??'?'}/w${bl?.warning??'?'}`;
   for(const side of ['A','B']){
     const m=$('#sel'+side+'Model').value,t=$('#sel'+side+'Tier').value;
@@ -242,6 +263,8 @@ function renderCols(){
 for(const side of ['A','B']){
   $('#sel'+side+'Model').onchange=()=>{fillTiers(side);renderCols();};
   $('#sel'+side+'Tier').onchange=renderCols;
+  for(const kind of ['add','del'])
+    $('#tgl'+side+kind).onchange=e=>$('#box'+side).classList.toggle('hide-'+kind,!e.target.checked);
 }
 
 /* ---------- 亮/暗色切换（默认跟随系统，手选后记忆） ---------- */
