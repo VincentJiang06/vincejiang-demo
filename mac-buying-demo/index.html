@@ -3,93 +3,197 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mac 型号选购指南 · Demo</title>
-  <meta name="description" content="2026 Mac 全系选购 demo —— 交互式决策、规格对比、价格筛选。">
+  <title>M 系列 Mac 选购星图 · Pretext ASCII Guide</title>
+  <meta name="description" content="用纯字符动画和 Pretext 文本排版技术重做的 M 系列 Mac 选购指南：覆盖 MacBook Air、MacBook Pro、Mac mini、Mac Studio，按 M1 到 M5 世代给出详细购买建议。">
   <link rel="canonical" href="https://vincejiang.com/mac-buying-demo/">
   <link rel="icon" href="/favicon.png?v=1" type="image/png">
   <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#07110d">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="vincejiang.com">
   <meta property="og:url" content="https://vincejiang.com/mac-buying-demo/">
-  <meta property="og:title" content="Mac 型号选购指南 · Demo">
-  <meta property="og:description" content="2026 Mac 全系选购 demo —— 交互式决策、规格对比、价格筛选。">
+  <meta property="og:title" content="M 系列 Mac 选购星图 · Pretext ASCII Guide">
+  <meta property="og:description" content="一座纯字符 Mac 博物馆：M1 到 M5、MacBook / Mac mini / Mac Studio、性能脉络、二手价值和详细选购建议。">
   <meta property="og:image" content="https://vincejiang.com/favicon.png">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Mac 型号选购指南 · Demo">
-  <meta name="twitter:description" content="2026 Mac 全系选购 demo —— 交互式决策、规格对比、价格筛选。">
+  <meta name="twitter:title" content="M 系列 Mac 选购星图">
+  <meta name="twitter:description" content="纯字符动画 + Pretext 排版：详解 M 系列 Mac 怎么买。">
   <meta name="twitter:image" content="https://vincejiang.com/favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <pre id="starfield" aria-hidden="true"></pre>
 
-  <header class="nav" id="nav">
-    <a class="brand" href="#top"> Mac 选购 · <span>Demo</span></a>
-    <nav>
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#top" aria-label="回到顶部">
+      <span class="brand-glyph">⌘</span>
+      <span>M-Series Atlas</span>
+    </a>
+    <nav aria-label="页面导航">
       <a href="#chooser">选购器</a>
-      <a href="#lineup">全系</a>
-      <a href="#specs">规格对比</a>
-      <a href="#faq">FAQ</a>
+      <a href="#generations">世代</a>
+      <a href="#families">机型</a>
+      <a href="#deep-guide">建议</a>
+      <a href="#sources">来源</a>
     </nav>
   </header>
 
-  <section class="hero" id="top">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="hero-inner">
-      <p class="eyebrow reveal">2026 选购 DEMO</p>
-      <h1 class="reveal">买哪台 <span class="grad">Mac</span>?<br>30 秒帮你定。</h1>
-      <p class="lede reveal">从 MacBook Air 到 Mac Studio —— 按你的用途、预算和便携需求,交互式筛出最合适的一台。</p>
-      <div class="hero-cta reveal">
-        <a class="btn primary" href="#chooser">开始选购 →</a>
-        <a class="btn ghost" href="#lineup">先看全系</a>
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">PRETEXT POWERED · PURE CHARACTER SITE</p>
+        <h1>把 M 系列 Mac<br><span>拆成一张会呼吸的字符星图</span></h1>
+        <p class="lead">这不是“30 秒买电脑”的小玩具。它是一份面向真实购买决策的长指南：MacBook Air / Pro、Mac mini、Mac Studio，按 M1 到 M5 的世代脉络解释性能、寿命、二手价值、内存/硬盘选择和典型坑点。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#chooser">开始选购</a>
+          <a class="button ghost" href="#deep-guide">直接看长文建议</a>
+        </div>
       </div>
-      <div class="hero-macs" aria-hidden="true">
-        <div class="float laptop"></div>
-        <div class="float mini"></div>
-        <div class="float studio"></div>
+      <div class="hero-terminal" aria-label="M 系列芯片字符动画">
+        <div class="terminal-head">
+          <span></span><span></span><span></span>
+          <b>m-series://pretext/ascii</b>
+        </div>
+        <pre id="chipField" aria-hidden="true"></pre>
       </div>
-    </div>
-    <div class="scroll-hint" aria-hidden="true">scroll ↓</div>
-  </section>
+    </section>
 
-  <section class="chooser" id="chooser">
-    <h2 class="reveal">① 你主要拿它做什么?</h2>
-    <div class="use-grid">
-      <button class="use" data-use="study" aria-pressed="false"><b>学习 / 办公</b><span>文档、网页、视频</span></button>
-      <button class="use" data-use="dev" aria-pressed="false"><b>编程开发</b><span>编译、容器、多开</span></button>
-      <button class="use" data-use="creative" aria-pressed="false"><b>剪辑 / 设计</b><span>4K 视频、PS/AE</span></button>
-      <button class="use" data-use="pro" aria-pressed="false"><b>专业生产力</b><span>3D、多路 8K</span></button>
-    </div>
-    <div class="budget-row reveal">
-      <label>预算上限:<output id="budgetOut">¥15000</output></label>
-      <input type="range" id="budget" min="6000" max="60000" step="1000" value="15000">
-    </div>
-    <div class="reco" id="reco" hidden>
-      <span class="reco-label">推荐</span>
-      <h3 id="recoName">—</h3>
-      <p id="recoWhy">选择用途后给出建议。</p>
-    </div>
-  </section>
+    <section class="section-shell pretext-lab" aria-labelledby="pretext-title">
+      <div>
+        <p class="eyebrow">WHY PRETEXT HERE</p>
+        <h2 id="pretext-title">文字很多，但布局不能塌。</h2>
+        <p>这个页面把长篇建议交给 Pretext 做行级排版：文本先被分析、测量、缓存，然后根据容器宽度生成稳定的每一行。窗口变化时，页面只重新计算行，不让浏览器 DOM 反复猜测。字符站最怕“好看但一换宽度就散架”，Pretext 正好治这个病。</p>
+      </div>
+      <div class="metrics-card">
+        <div class="metric"><span id="metricBlocks">0</span><small>prepared blocks</small></div>
+        <div class="metric"><span id="metricLines">0</span><small>visible lines</small></div>
+        <div class="metric"><span id="metricWidth">0</span><small>current px width</small></div>
+      </div>
+    </section>
 
-  <section class="lineup" id="lineup">
-    <h2 class="reveal">② 全系一览</h2>
-    <div class="cards" id="cards"></div>
-  </section>
+    <section class="chooser section-shell" id="chooser" aria-labelledby="chooser-title">
+      <div class="section-intro">
+        <p class="eyebrow">DECISION ENGINE</p>
+        <h2 id="chooser-title">先告诉我你怎么用，我给你一台“不要后悔”的 Mac。</h2>
+      </div>
+      <div class="chooser-grid">
+        <form class="control-panel" id="chooserForm">
+          <fieldset>
+            <legend>你的主场景</legend>
+            <label><input type="radio" name="workload" value="daily" checked> 日常 / 学习 / 写作 / 轻办公</label>
+            <label><input type="radio" name="workload" value="dev"> 编程 / Docker / 多项目开发</label>
+            <label><input type="radio" name="workload" value="creator"> 摄影 / 剪辑 / 设计 / 音频</label>
+            <label><input type="radio" name="workload" value="ai"> 本地 AI / LLM / 3D / 科研计算</label>
+          </fieldset>
+          <fieldset>
+            <legend>形态偏好</legend>
+            <label><input type="radio" name="shape" value="portable" checked> 必须能带走</label>
+            <label><input type="radio" name="shape" value="desk"> 固定桌面更重要</label>
+            <label><input type="radio" name="shape" value="either"> 都可以，只看性价比</label>
+          </fieldset>
+          <fieldset>
+            <legend>预算压力</legend>
+            <input id="budget" type="range" min="1" max="5" value="3" aria-describedby="budgetHint">
+            <div id="budgetHint" class="range-label"><span>省钱</span><output id="budgetOut">主流甜点</output><span>拉满</span></div>
+          </fieldset>
+          <fieldset>
+            <legend>你最不能忍</legend>
+            <label><input type="checkbox" name="pain" value="noise"> 风扇噪音</label>
+            <label><input type="checkbox" name="pain" value="ports"> 接口不够</label>
+            <label><input type="checkbox" name="pain" value="screen"> 屏幕妥协</label>
+            <label><input type="checkbox" name="pain" value="aging"> 两三年后卡</label>
+          </fieldset>
+        </form>
+        <aside class="recommendation terminal-card" aria-live="polite">
+          <div class="terminal-head compact">
+            <span></span><span></span><span></span>
+            <b>recommendation.txt</b>
+          </div>
+          <pre id="asciiMac" aria-hidden="true"></pre>
+          <div id="recommendationText" class="pretext-block"></div>
+        </aside>
+      </div>
+    </section>
 
-  <section class="specs" id="specs">
-    <h2 class="reveal">③ 规格对比(性能相对值)</h2>
-    <div class="bars" id="bars"></div>
-  </section>
+    <section class="section-shell" id="generations" aria-labelledby="generations-title">
+      <div class="section-intro">
+        <p class="eyebrow">M1 → M5</p>
+        <h2 id="generations-title">每一代 M 芯片真正改变了什么。</h2>
+      </div>
+      <div class="generation-rail" id="generationRail"></div>
+      <article class="terminal-card generation-detail">
+        <div class="terminal-head compact">
+          <span></span><span></span><span></span>
+          <b id="generationTitle">generation.log</b>
+        </div>
+        <div id="generationNarrative" class="pretext-block"></div>
+      </article>
+    </section>
 
-  <section class="faq" id="faq">
-    <h2 class="reveal">④ 常见问题</h2>
-    <div class="acc" id="acc"></div>
-  </section>
+    <section class="section-shell" id="families" aria-labelledby="families-title">
+      <div class="section-intro">
+        <p class="eyebrow">FORM FACTORS</p>
+        <h2 id="families-title">MacBook、Mac mini、Mac Studio：不是一条性能线，而是三种生活方式。</h2>
+      </div>
+      <div class="family-grid" id="familyGrid"></div>
+    </section>
 
-  <footer class="foot">
-    <p>Mac 选购 Demo · 数据为演示用途虚构 · 由家庭服务器经 Cloudflare Tunnel 托管于 vincejiang.com</p>
+    <section class="section-shell matrix" aria-labelledby="matrix-title">
+      <div class="section-intro">
+        <p class="eyebrow">MODEL MATRIX</p>
+        <h2 id="matrix-title">当前最值得看的机型。</h2>
+      </div>
+      <div class="model-grid" id="modelGrid"></div>
+    </section>
+
+    <section class="section-shell deep-guide" id="deep-guide" aria-labelledby="guide-title">
+      <div class="section-intro">
+        <p class="eyebrow">LONG BUYING NOTES</p>
+        <h2 id="guide-title">详细选购建议：按人群，不按广告词。</h2>
+      </div>
+      <div class="guide-layout">
+        <aside class="guide-nav" aria-label="建议章节">
+          <button data-guide="student" class="active">学生 / 日常</button>
+          <button data-guide="developer">开发者</button>
+          <button data-guide="creator">创作者</button>
+          <button data-guide="ai">本地 AI / 科研</button>
+          <button data-guide="used">二手与避坑</button>
+          <button data-guide="config">内存硬盘配置</button>
+        </aside>
+        <article class="terminal-card guide-card">
+          <div class="terminal-head compact">
+            <span></span><span></span><span></span>
+            <b id="guideTitle">student.md</b>
+          </div>
+          <div id="guideText" class="pretext-block long"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell sources" id="sources" aria-labelledby="sources-title">
+      <div class="section-intro">
+        <p class="eyebrow">SOURCES & CAVEATS</p>
+        <h2 id="sources-title">数据边界。</h2>
+      </div>
+      <div class="source-grid">
+        <a href="https://support.apple.com/en-us/126320">Apple Support · MacBook Air M5 Tech Specs</a>
+        <a href="https://support.apple.com/en-us/126318">Apple Support · MacBook Pro M5 Pro / M5 Max Tech Specs</a>
+        <a href="https://support.apple.com/en-us/121555">Apple Support · Mac mini 2024 Tech Specs</a>
+        <a href="https://www.apple.com/mac-studio/specs/">Apple · Mac Studio Technical Specifications</a>
+        <a href="https://github.com/chenglou/pretext">chenglou/pretext</a>
+      </div>
+      <p class="fine-print">页面写于 2026-07-15。新机状态、地区售价、教育优惠和电商活动会变化；本文把“选型逻辑”放在第一位，价格只做预算档位参考。二手价格尤其波动，购买前请重新查当地行情、保修、电池循环、监管锁/MDM、进水维修史。</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>vincejiang.com / gallery</span>
+    <span>ASCII only · Pretext layout · no canvas · no SVG</span>
   </footer>
 
-  <script src="app.js"></script>
+  <script type="module" src="app.js"></script>
+  <script src="/assets/beacon.js" defer></script>
 </body>
 </html>
