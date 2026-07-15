@@ -481,7 +481,7 @@ function renderGallery() {
   const list = (CONFIG.gallery || []).map((g, i) => ({ '@type': 'ListItem', position: i + 1, name: g.title, url: /^https?:/.test(g.href) ? g.href : SITE.url + g.href }));
   const head = {
     titleFull: `Gallery · ${SITE.name}`,
-    html: headHtml({ path: '/gallery/', title: 'Gallery', desc: '作品集 —— AI 服务状态聚合、HiFi 声学笔记、Mac 选购等交互式 demo 与实验。', jsonld: [
+    html: headHtml({ path: '/gallery/', title: 'Gallery', desc: '作品集 —— AI 服务状态聚合、HiFi 声学笔记等交互式 demo 与实验。', jsonld: [
       { '@context': 'https://schema.org', '@type': 'CollectionPage', name: `${SITE.name} · Gallery`, url: SITE.url + '/gallery/', author: personLd, mainEntity: { '@type': 'ItemList', itemListElement: list } },
     ] }),
   };

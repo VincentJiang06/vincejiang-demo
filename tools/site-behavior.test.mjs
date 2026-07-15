@@ -82,6 +82,9 @@ const blogIndex = html('blog');
 const galleryIndex = html('gallery');
 assert.match(blogIndex, /<main class="wrap narrow index-page">/);
 assert.match(galleryIndex, /<main class="wrap narrow index-page">/);
+assert.doesNotMatch(home, /mac-buying-demo|M 系列 Mac 纯文本选购终端/);
+assert.doesNotMatch(galleryIndex, /mac-buying-demo|M 系列 Mac 纯文本选购终端|Mac 选购/);
+assert.ok(!existsSync(join(OUT, 'mac-buying-demo')), 'retired Mac demo should not be copied into the build');
 
 const backgroundTest = html('background-test');
 assert.match(backgroundTest, /<title>Background Test · Vince Jiang<\/title>/);
@@ -102,6 +105,7 @@ const sitemap = readFileSync(join(OUT, 'sitemap.xml'), 'utf8');
 assert.ok(sitemap.includes('<loc>https://vincejiang.com/research/</loc>'), 'sitemap should include /research/');
 assert.ok(sitemap.includes('<loc>https://vincejiang.com/research/pension-demo/</loc>'), 'sitemap should include research collection');
 assert.ok(!sitemap.includes('<loc>https://vincejiang.com/background-test/</loc>'), 'background test should stay out of sitemap');
+assert.ok(!sitemap.includes('<loc>https://vincejiang.com/mac-buying-demo/</loc>'), 'retired Mac demo should stay out of sitemap');
 assert.ok(!sitemap.includes('<loc>https://vincejiang.com/blog/pension-demo/</loc>'), 'sitemap should not include old blog collection path');
 
 console.log('site behavior ✓');

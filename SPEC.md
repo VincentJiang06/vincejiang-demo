@@ -9,7 +9,7 @@
 
 `vincejiang.com` 是 Vince(小蒋)的个人站,三块内容:
 - **Blog**(`/blog/`):md 写就的博客杂谈与技术笔记;
-- **Gallery**(`/gallery/`):交互式 demo / 实验的作品集索引(status-ai、HiFi 笔记、Mac 选购等);
+- **Gallery**(`/gallery/`):交互式 demo / 实验的作品集索引(status-ai、HiFi 笔记等);
 - **门户首页**(`/`):汇聚 Blog 最新、Gallery、以及六个香港高校「非官方」野史站的入口。
 
 - 仓库:`github.com/VincentJiang06/vincejiang-demo`(**public**)。push 用 SSH 别名 `github-vincent`;git 提交身份 `Vince Jiang <realvincentjiang@gmail.com>`。
@@ -87,7 +87,7 @@ tools/            # 生成器 —— build-site.mjs / paper.mjs / paper-charts.m
 assets/           # 纯静态资源(mosaic.svg 友链纸皮石瓦纹),原样收录,不需 index.html
 release/          # 论文源内容暂存(不对外发布)
 site.config.json  # 首页 / gallery / 友链(wildSites) / Research collections 的单一数据源
-<demo>/           # 各 demo 文件夹(status-ai / vince-hifi-notes / mac-buying-demo …),原样收录
+<demo>/           # 各 demo 文件夹(status-ai / vince-hifi-notes …),原样收录
 docker/           # nginx 配置(site.conf + snippets/security-headers.conf)
 Dockerfile        # 多阶段:node 编译 → nginx 发布
 .github/workflows/# deploy.yml(check→image→deploy)+ audit.yml(手动审计)
