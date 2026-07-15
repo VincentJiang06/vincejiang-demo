@@ -85,6 +85,22 @@ assert.match(galleryIndex, /<main class="wrap narrow index-page">/);
 assert.doesNotMatch(home, /mac-buying-demo|M 系列 Mac 纯文本选购终端/);
 assert.doesNotMatch(galleryIndex, /mac-buying-demo|M 系列 Mac 纯文本选购终端|Mac 选购/);
 assert.ok(!existsSync(join(OUT, 'mac-buying-demo')), 'retired Mac demo should not be copied into the build');
+assert.match(home, /href="\/glyph-dino\/"/);
+assert.match(home, /href="\/glyph-surf\/"/);
+assert.match(galleryIndex, /DINO\/\/TYPE/);
+assert.match(galleryIndex, /SURF\/\/GLYPH/);
+assert.match(galleryIndex, /href="\/glyph-dino\/"/);
+assert.match(galleryIndex, /href="\/glyph-surf\/"/);
+assert.ok(existsSync(join(OUT, 'glyph-dino', 'index.html')), 'Dino game should be copied into the build');
+assert.ok(existsSync(join(OUT, 'glyph-surf', 'index.html')), 'Surf game should be copied into the build');
+assert.ok(existsSync(join(OUT, 'glyph-dino', 'game.js')), 'Dino runtime should be copied into the build');
+assert.ok(existsSync(join(OUT, 'glyph-surf', 'game.js')), 'Surf runtime should be copied into the build');
+assert.ok(existsSync(join(OUT, 'assets', 'glyph-arcade', 'engine.js')), 'shared glyph engine should be copied into the build');
+assert.ok(existsSync(join(OUT, 'assets', 'glyph-arcade', 'stage.css')), 'shared glyph stage CSS should be copied into the build');
+assert.ok(existsSync(join(OUT, 'assets', 'glyph-arcade', 'pretext', 'layout.js')), 'Pretext runtime should be copied into the build');
+for (const file of ['RecursiveSansLnrSt-Regular.woff2', 'RecursiveSansLnrSt-Bold.woff2', 'RecursiveSansCslSt-Regular.woff2', 'RecursiveSansCslSt-Bold.woff2']) {
+  assert.ok(existsSync(join(OUT, 'assets', 'glyph-arcade', 'fonts', file)), `${file} should be copied into the build`);
+}
 
 const backgroundTest = html('background-test');
 assert.match(backgroundTest, /<title>Background Test · Vince Jiang<\/title>/);
@@ -106,6 +122,12 @@ assert.ok(sitemap.includes('<loc>https://vincejiang.com/research/</loc>'), 'site
 assert.ok(sitemap.includes('<loc>https://vincejiang.com/research/pension-demo/</loc>'), 'sitemap should include research collection');
 assert.ok(!sitemap.includes('<loc>https://vincejiang.com/background-test/</loc>'), 'background test should stay out of sitemap');
 assert.ok(!sitemap.includes('<loc>https://vincejiang.com/mac-buying-demo/</loc>'), 'retired Mac demo should stay out of sitemap');
+assert.ok(sitemap.includes('<loc>https://vincejiang.com/glyph-dino/</loc>'), 'sitemap should include Dino game');
+assert.ok(sitemap.includes('<loc>https://vincejiang.com/glyph-surf/</loc>'), 'sitemap should include Surf game');
 assert.ok(!sitemap.includes('<loc>https://vincejiang.com/blog/pension-demo/</loc>'), 'sitemap should not include old blog collection path');
+
+const llms = readFileSync(join(OUT, 'llms.txt'), 'utf8');
+assert.ok(llms.includes('[DINO//TYPE](https://vincejiang.com/glyph-dino/)'), 'llms.txt should include Dino game');
+assert.ok(llms.includes('[SURF//GLYPH](https://vincejiang.com/glyph-surf/)'), 'llms.txt should include Surf game');
 
 console.log('site behavior ✓');

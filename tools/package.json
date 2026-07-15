@@ -7,7 +7,7 @@
   "scripts": {
     "build": "node build-site.mjs --out ../site",
     "check": "node build-site.mjs --check",
-    "test": "node site-behavior.test.mjs",
+    "test": "node site-behavior.test.mjs && node glyph-arcade.test.mjs",
     "audit": "node audit.mjs"
   },
   "dependencies": {

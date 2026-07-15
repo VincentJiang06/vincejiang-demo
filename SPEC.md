@@ -9,7 +9,7 @@
 
 `vincejiang.com` 是 Vince(小蒋)的个人站,三块内容:
 - **Blog**(`/blog/`):md 写就的博客杂谈与技术笔记;
-- **Gallery**(`/gallery/`):交互式 demo / 实验的作品集索引(status-ai、HiFi 笔记等);
+- **Gallery**(`/gallery/`):交互式 demo / 实验的作品集索引(status-ai、HiFi 笔记、Pretext 字符游戏等);
 - **门户首页**(`/`):汇聚 Blog 最新、Gallery、以及六个香港高校「非官方」野史站的入口。
 
 - 仓库:`github.com/VincentJiang06/vincejiang-demo`(**public**)。push 用 SSH 别名 `github-vincent`;git 提交身份 `Vince Jiang <realvincentjiang@gmail.com>`。

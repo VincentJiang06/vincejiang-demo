@@ -1,0 +1,36 @@
+{
+  "family": "Recursive Sans",
+  "version": "1.085",
+  "license": "OFL-1.1",
+  "sourceRelease": "https://github.com/arrowtype/recursive/releases/tag/v1.085",
+  "files": [
+    {
+      "alias": "Recursive Linear",
+      "style": "normal",
+      "weight": 400,
+      "file": "RecursiveSansLnrSt-Regular.woff2",
+      "sha256": "917d31e7137a2f98917457cb221366cf92616df485a63399be568c18b00e4997"
+    },
+    {
+      "alias": "Recursive Linear",
+      "style": "normal",
+      "weight": 700,
+      "file": "RecursiveSansLnrSt-Bold.woff2",
+      "sha256": "6297d4361f8ef8bd75362a2b3b499113932b9b5ff27b5387aa367675010c7409"
+    },
+    {
+      "alias": "Recursive Casual",
+      "style": "normal",
+      "weight": 400,
+      "file": "RecursiveSansCslSt-Regular.woff2",
+      "sha256": "0b01dcb7d6ee25ad31cccde6caf76152ca2a5b4b8d7163a6afbb40ffb0bd05e2"
+    },
+    {
+      "alias": "Recursive Casual",
+      "style": "normal",
+      "weight": 700,
+      "file": "RecursiveSansCslSt-Bold.woff2",
+      "sha256": "aa5b2e7e7cdb8ec6f0353c29ca22f6f19a58a60bbfc838da0f5a49c272a60b9b"
+    }
+  ]
+}

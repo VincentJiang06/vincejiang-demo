@@ -32,6 +32,8 @@ jobs:
         run: cd tools && npm ci --no-audit --no-fund
       - name: 生成器 --check(硬 gate)
         run: cd tools && node build-site.mjs --check
+      - name: 行为与 Glyph 契约测试(硬 gate)
+        run: cd tools && npm test
       - name: HTML 粗校验(warn-only,不阻塞)
         run: |
           cd tools && node build-site.mjs --out /tmp/site
