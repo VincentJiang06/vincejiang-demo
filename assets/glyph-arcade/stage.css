@@ -32,14 +32,17 @@
 
 :root {
   color-scheme: dark;
-  background: #030711;
+  background: #02040b;
   --glyph-safe-top: env(safe-area-inset-top, 0px);
   --glyph-safe-right: env(safe-area-inset-right, 0px);
   --glyph-safe-bottom: env(safe-area-inset-bottom, 0px);
   --glyph-safe-left: env(safe-area-inset-left, 0px);
+  --glyph-motion-factor: 1;
 }
 
 * { box-sizing: border-box; }
+
+html { overscroll-behavior: none; }
 
 html,
 body,
@@ -49,39 +52,49 @@ main {
   min-height: 100%;
   margin: 0;
   overflow: hidden;
-  background: #030711;
+  background: #02040b;
 }
 
-main { position: relative; isolation: isolate; }
+body {
+  font-family: "Recursive Linear";
+  font-synthesis: none;
+  -webkit-text-size-adjust: 100%;
+}
 
-#vector-stage,
+main {
+  position: relative;
+  isolation: isolate;
+}
+
 #glyph-stage {
   position: absolute;
   inset: 0;
   display: block;
   width: 100vw;
+  height: 100vh;
   height: 100dvh;
-  min-height: 100vh;
-}
-
-#vector-stage {
-  z-index: 1;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-#vector-stage .vector-object { shape-rendering: geometricPrecision; }
-
-#glyph-stage {
-  z-index: 2;
-  background: transparent;
+  min-height: 0;
+  border: 0;
+  background: #02040b;
   outline: none;
-  touch-action: none;
+  touch-action: pinch-zoom;
   user-select: none;
   -webkit-user-select: none;
 }
 
-#glyph-stage:focus-visible { outline: none; }
+#glyph-stage:focus-visible {
+  outline: 2px solid #fff36d;
+  outline-offset: -4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --glyph-motion-factor: 0; }
+
+  #glyph-stage {
+    animation: none !important;
+    transition: none !important;
+  }
+}
 
 .sr-only {
   position: absolute !important;
@@ -93,4 +106,47 @@ main { position: relative; isolation: isolate; }
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+.semantic-toolbar:focus-within {
+  position: fixed !important;
+  top: max(8px, var(--glyph-safe-top)) !important;
+  left: 50% !important;
+  z-index: 20 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  width: min(94vw, 760px) !important;
+  height: auto !important;
+  padding: 8px !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+  transform: translateX(-50%);
+  background: #02040b;
+}
+
+.semantic-toolbar button,
+.semantic-toolbar a {
+  min-height: 36px;
+  padding: 8px 10px;
+  border: 0;
+  color: #dffcff;
+  background: #02040b;
+  font: 700 12px "Recursive Linear";
+  text-decoration: none;
+}
+
+.semantic-toolbar button::before,
+.semantic-toolbar a::before { content: "[ "; color: #5fffe0; }
+
+.semantic-toolbar button::after,
+.semantic-toolbar a::after { content: " ]"; color: #fff36d; }
+
+.semantic-toolbar button:focus-visible,
+.semantic-toolbar a:focus-visible {
+  outline: 2px dotted #fff36d;
+  outline-offset: 2px;
 }

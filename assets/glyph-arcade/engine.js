@@ -666,6 +666,7 @@ export class GlyphStage {
           text: line.text,
           size: typography.size,
           family: typography.family,
+          font: typography.font,
         });
         usedSizes.add(typography.size);
         usedFamilies.add(typography.family);
@@ -708,6 +709,15 @@ export class GlyphStage {
   }
 }
 
+export function shouldIgnoreGameKeyTarget(target) {
+  const tag = String(target?.tagName || '').toLowerCase();
+  if (['button', 'a', 'input', 'select', 'textarea', 'summary'].includes(tag)) return true;
+  if (target?.isContentEditable) return true;
+  const role = String(target?.getAttribute?.('role') || '').toLowerCase();
+  if (['button', 'link', 'textbox', 'combobox', 'checkbox', 'radio', 'slider', 'spinbutton'].includes(role)) return true;
+  return Boolean(target?.closest?.('button,a,input,select,textarea,summary,[contenteditable="true"],[role="button"],[role="link"],[role="textbox"]'));
+}
+
 export class InputState {
   constructor(canvas) {
     this.canvas = canvas;
@@ -715,6 +725,7 @@ export class InputState {
     this.edges = new Set();
     this.pointer = { x: 0, y: 0, down: false, active: false };
     this.onKeyDown = event => {
+      if (shouldIgnoreGameKeyTarget(event.target)) return;
       if (!this.keys.has(event.code)) this.edges.add(event.code);
       this.keys.add(event.code);
       if (['Space', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.code)) event.preventDefault();

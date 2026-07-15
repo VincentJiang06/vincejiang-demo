@@ -69,7 +69,7 @@ for (const abs of findMd(POSTS_DIR)) {
 }
 
 // 静态内容 / 配置的最后改动日期(供 sitemap lastmod 用真实 git 日期,不虚刷)
-const PATHS = ['status-ai', 'vince-hifi-notes', 'glyph-dino', 'glyph-surf', 'site.config.json', 'templates', 'tools', 'robots.txt'];
+const PATHS = ['status-ai', 'vince-hifi-notes', 'glyph-pinball', 'site.config.json', 'templates', 'tools', 'robots.txt'];
 const paths = {};
 for (const p of PATHS) {
   const d = git(`log -1 --format=%aI -- "${p}"`).trim();

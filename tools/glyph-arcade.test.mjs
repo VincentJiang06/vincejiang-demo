@@ -6,91 +6,259 @@ import { join } from 'node:path';
 
 const ROOT = new URL('..', import.meta.url).pathname.replace(/\/$/, '');
 const read = (...parts) => readFileSync(join(ROOT, ...parts), 'utf8');
-const RELEASE_ASSET_VERSION = 'glyph-20260715-pretext3';
+const RELEASE_ASSET_VERSION = 'glyph-20260715-pinball1';
+const GAME = 'glyph-pinball';
 
-for (const game of ['glyph-dino', 'glyph-surf']) {
-  const html = read(game, 'index.html');
-  assert.equal((html.match(/<canvas\b/g) || []).length, 1, `${game} must have exactly one canvas`);
-  assert.equal((html.match(/<svg\b/g) || []).length, 1, `${game} must have exactly one SVG object layer`);
-  assert.match(html, /<svg[^>]+id="vector-stage"/i, `${game} must expose the shared vector stage`);
-  assert.equal(
-    (html.match(/<symbol\b/g) || []).length,
-    (html.match(/<symbol\b[^>]+preserveAspectRatio="none"/g) || []).length,
-    `${game} symbols must stretch exactly like their normalized flow polygons`,
-  );
-  assert.doesNotMatch(html, /<(?:img|video|picture)\b/i, `${game} must not ship raster or video media`);
-  assert.match(html, /<section class="sr-only"/, `${game} should retain hidden semantic instructions`);
-  assert.match(html, /assets\/glyph-arcade\/stage\.css/);
-  assert.match(html, /\.\/game\.js/);
-  assert.ok(html.includes(`stage.css?v=${RELEASE_ASSET_VERSION}`), `${game} CSS cache key must match this release`);
-  assert.ok(html.includes(`game.js?v=${RELEASE_ASSET_VERSION}`), `${game} script cache key must match this release`);
-  assert.ok(read(game, 'game.js').includes(`engine.js?v=${RELEASE_ASSET_VERSION}`), `${game} engine cache key must match this release`);
-}
+assert.ok(existsSync(join(ROOT, GAME, 'index.html')), 'TYPE//PINBALL HTML is missing');
+assert.ok(existsSync(join(ROOT, GAME, 'game.js')), 'TYPE//PINBALL runtime is missing');
+assert.ok(existsSync(join(ROOT, GAME, 'physics.js')), 'TYPE//PINBALL physics module is missing');
+assert.ok(!existsSync(join(ROOT, 'glyph-dino')), 'retired Dino source must be deleted');
+assert.ok(!existsSync(join(ROOT, 'glyph-surf')), 'retired Surf source must be deleted');
+
+const html = read(GAME, 'index.html');
+const game = read(GAME, 'game.js');
+const physicsSource = read(GAME, 'physics.js');
+assert.equal((html.match(/<canvas\b/g) || []).length, 1, 'the game must have exactly one canvas');
+assert.equal((html.match(/<svg\b/g) || []).length, 0, 'the game must render without SVG');
+assert.doesNotMatch(html, /<(?:img|video|picture)\b/i, 'the game must not ship image or video media');
+assert.match(html, /<canvas[^>]+role="application"/i, 'the text field must expose an application role');
+assert.match(html, /<section class="sr-only"/, 'semantic instructions must remain available');
+assert.match(html, /TYPE\/\/PINBALL/, 'the replacement game title is missing');
+assert.ok(html.includes(`stage.css?v=${RELEASE_ASSET_VERSION}`), 'CSS cache key must match this release');
+assert.ok(html.includes(`game.js?v=${RELEASE_ASSET_VERSION}`), 'game cache key must match this release');
+assert.ok(game.includes(`engine.js?v=${RELEASE_ASSET_VERSION}`), 'engine cache key must match this release');
+assert.ok(game.includes(`physics.js?v=${RELEASE_ASSET_VERSION}`), 'physics cache key must match this release');
 
 const engine = read('assets', 'glyph-arcade', 'engine.js');
-assert.match(engine, /prepareWithSegments/);
-assert.match(engine, /measureNaturalWidth/);
-assert.match(engine, /layoutWithLines/);
-assert.match(engine, /layoutNextLine/);
-assert.match(engine, /getPretextUsage/);
-assert.match(engine, /publishDiagnostics/);
-assert.match(engine, /class VectorStage/);
-assert.match(engine, /flowText\(/);
-assert.match(engine, /flowTypographyForSlot/, 'slot width must select real flow typography');
-assert.match(engine, /renderFlowMap\(/, 'SVG exclusions must have a visible Flow Map mode');
-assert.match(engine, /compressedFamily/, 'narrow slots must be able to switch font personality');
-assert.match(engine, /safeTop/, 'canvas layout must expose device safe-area insets');
-assert.match(engine, /freeFlowIntervals/);
-assert.match(engine, /flowPreparedCache/, 'flow corpora must be cached outside the animation hot path');
-assert.match(engine, /\.clearRect\(/);
-assert.match(engine, /\.fillText\(/);
+for (const contract of [
+  /prepareWithSegments/,
+  /measureNaturalWidth/,
+  /layoutWithLines/,
+  /layoutNextLine/,
+  /getPretextUsage/,
+  /publishDiagnostics/,
+  /flowText\(/,
+  /font:\s*typography\.font/,
+  /flowTypographyForSlot/,
+  /compressedFamily/,
+  /freeFlowIntervals/,
+  /flowPreparedCache/,
+  /safeTop/,
+  /safeBottom/,
+  /shouldIgnoreGameKeyTarget\(event\.target\)/,
+  /\.clearRect\(/,
+  /\.fillText\(/,
+]) assert.match(engine, contract, `shared glyph contract missing: ${contract}`);
 
-const { flowTypographyForSlot, freeFlowIntervals } = await import('../assets/glyph-arcade/engine.js');
+const { flowTypographyForSlot, freeFlowIntervals, shouldIgnoreGameKeyTarget } = await import('../assets/glyph-arcade/engine.js');
 const squeezeOptions = {
   size: 10,
   family: 'linear',
   weight: 400,
   squeeze: {
-    minSize: 8,
-    maxSize: 10,
-    narrowWidth: 48,
-    wideWidth: 180,
+    minSize: 7,
+    maxSize: 11,
+    narrowWidth: 44,
+    wideWidth: 190,
     compressedFamily: 'casual',
   },
 };
-const narrowTypography = flowTypographyForSlot(48, squeezeOptions);
+const narrowTypography = flowTypographyForSlot(44, squeezeOptions);
 const wideTypography = flowTypographyForSlot(220, squeezeOptions);
-assert.ok(narrowTypography.size < wideTypography.size, 'narrow slots must render with a smaller measured font');
-assert.equal(narrowTypography.family, 'casual', 'narrow slots must activate the configured compressed family');
+assert.ok(narrowTypography.size < wideTypography.size, 'narrow text slots must choose a smaller measured font');
+assert.equal(narrowTypography.family, 'casual', 'narrow slots must use the compressed font personality');
 assert.equal(wideTypography.family, 'linear', 'wide slots must retain the primary family');
-assert.notEqual(narrowTypography.font, wideTypography.font, 'Pretext must receive distinct real font specs per slot width');
-const centerBlock = [{
-  id: 'reef',
+assert.notEqual(narrowTypography.font, wideTypography.font, 'slot widths must produce distinct real font specs');
+assert.equal(shouldIgnoreGameKeyTarget({ tagName: 'BUTTON' }), true, 'semantic control buttons must keep Space and Enter out of game input');
+assert.equal(shouldIgnoreGameKeyTarget({ tagName: 'CANVAS' }), false, 'the focused game canvas must continue receiving game keys');
+assert.equal(shouldIgnoreGameKeyTarget({ tagName: 'DIV', isContentEditable: true }), true, 'editable content must not leak keys into the game');
+
+const wordBumper = [{
+  id: 'word-bumper',
   padding: 0,
   polygons: [[{ x: 100, y: 0 }, { x: 200, y: 0 }, { x: 200, y: 100 }, { x: 100, y: 100 }]],
 }];
 assert.deepEqual(
-  freeFlowIntervals({ x: 0, y: 0, w: 300, h: 100 }, 20, 40, centerBlock),
+  freeFlowIntervals({ x: 0, y: 0, w: 300, h: 100 }, 20, 40, wordBumper),
   [{ start: 0, end: 100, width: 100 }, { start: 200, end: 300, width: 100 }],
-  'SVG exclusion must split one text band into two flow slots',
-);
-const shiftedBlock = [{
-  id: 'moving-object',
-  padding: 0,
-  polygons: [[{ x: 0, y: 0 }, { x: 80, y: 0 }, { x: 80, y: 100 }, { x: 0, y: 100 }]],
-}];
-assert.deepEqual(
-  freeFlowIntervals({ x: 0, y: 0, w: 300, h: 100 }, 20, 40, shiftedBlock),
-  [{ start: 80, end: 300, width: 220 }],
-  'moving an SVG object must produce a new text-flow geometry',
+  'a text bumper must split the Pretext line into two live slots',
 );
 
-const visibleSource = [
-  engine,
-  read('glyph-dino', 'game.js'),
-  read('glyph-surf', 'game.js'),
-].join('\n');
-assert.doesNotMatch(visibleSource, /\.(?:measureText|getBBox|getCTM)\s*\(/, 'games and flow layout must not bypass Pretext or read SVG geometry');
+const physics = await import('../glyph-pinball/physics.js');
+const {
+  reflectIntoRange,
+  predictInterceptX,
+  movePaddleToward,
+  bounceFromPaddle,
+  resolveCircleRect,
+  scoreBoundary,
+  choosePlayerTarget,
+  remapPointBetweenArenas,
+  stateAllowsPlayerMotion,
+  shouldShowTouchToolbar,
+  fragmentFitsFreeIntervals,
+  resetBumperStates,
+} = physics;
+
+assert.equal(shouldShowTouchToolbar(390, false), true, 'compact screens must expose the character toolbar');
+assert.equal(shouldShowTouchToolbar(1024, true), true, 'large touch screens must expose the character toolbar');
+assert.equal(shouldShowTouchToolbar(1280, false), false, 'wide pointer-only screens should retain the desktop help line');
+
+assert.equal(
+  fragmentFitsFreeIntervals({ x: 20, w: 80 }, [{ start: 20, end: 100, width: 80 }]),
+  true,
+  'a cached Pretext fragment may replay only when its full width is still free',
+);
+assert.equal(
+  fragmentFitsFreeIntervals({ x: 20, w: 80 }, [{ start: 20, end: 56, width: 36 }]),
+  false,
+  'a cached Pretext fragment must be suppressed when a moving exclusion crosses it',
+);
+const bumperStates = [
+  { variant: 1, active: 0.4, cooldown: 0.08 },
+  { variant: 0, active: 0, cooldown: 0 },
+];
+resetBumperStates(bumperStates);
+assert.deepEqual(
+  bumperStates,
+  [
+    { variant: 0, active: 0, cooldown: 0 },
+    { variant: 0, active: 0, cooldown: 0 },
+  ],
+  'reset must clear every transient word-bumper state',
+);
+
+for (const [value, min, max, expected] of [
+  [30, 0, 100, 30],
+  [-20, 0, 100, 20],
+  [130, 0, 100, 70],
+  [250, 0, 100, 50],
+]) assert.equal(reflectIntoRange(value, min, max), expected, `wall-fold failed for ${value}`);
+
+assert.equal(
+  predictInterceptX({ x: 50, y: 100, vx: 30, vy: -50 }, 0, 0, 100),
+  90,
+  'AI prediction must include the future side-wall reflection',
+);
+assert.equal(
+  predictInterceptX({ x: 50, y: 100, vx: 30, vy: 50 }, 0, 0, 100),
+  null,
+  'AI must not predict an intercept while the ball moves away',
+);
+
+assert.deepEqual(
+  movePaddleToward(50, 100, 0.1, { maxSpeed: 200, minCenter: 20, maxCenter: 180, deadZone: 2 }),
+  { center: 70, velocity: 200 },
+  'AI paddle movement must be speed limited',
+);
+assert.deepEqual(
+  movePaddleToward(50, 51, 0.1, { maxSpeed: 200, minCenter: 20, maxCenter: 180, deadZone: 2 }),
+  { center: 50, velocity: 0 },
+  'AI paddle must hold inside its dead zone',
+);
+assert.deepEqual(
+  movePaddleToward(175, 220, 1, { maxSpeed: 200, minCenter: 20, maxCenter: 180, deadZone: 0 }),
+  { center: 180, velocity: 5 },
+  'AI paddle movement must remain inside the field',
+);
+
+const centeredBounce = bounceFromPaddle(
+  { x: 100, y: 600, vx: 0, vy: 280, radius: 8 },
+  { centerX: 100, width: 100, velocity: 0 },
+  -1,
+);
+assert.ok(centeredBounce.vy < 0, 'the player paddle must send the ball upward');
+assert.ok(Math.abs(centeredBounce.vx) < 1, 'a centered hit should stay almost vertical');
+const edgeBounce = bounceFromPaddle(
+  { x: 145, y: 600, vx: 0, vy: 280, radius: 8 },
+  { centerX: 100, width: 100, velocity: 80 },
+  -1,
+);
+assert.ok(edgeBounce.vx > 120 && edgeBounce.vy < 0, 'an edge hit must create a steerable return angle');
+const aiBounce = bounceFromPaddle(
+  { x: 60, y: 70, vx: -40, vy: -280, radius: 8 },
+  { centerX: 60, width: 96, velocity: -30 },
+  1,
+);
+assert.ok(aiBounce.vy > 0, 'the AI reflector must send the ball back toward the player');
+
+const bumperHit = resolveCircleRect(
+  { x: 96, y: 50, vx: 140, vy: 15, radius: 8 },
+  { x: 100, y: 30, w: 50, h: 40 },
+);
+assert.equal(bumperHit.collided, true, 'a word bumper must register a collision');
+assert.ok(bumperHit.ball.vx < 0 && bumperHit.ball.x <= 92, 'the ball must reflect and separate from the nearest bumper edge');
+const playerBackFace = resolveCircleRect(
+  { x: 120, y: 614, vx: 0, vy: 160, radius: 8 },
+  { x: 100, y: 600, w: 40, h: 18 },
+  'top',
+);
+assert.equal(playerBackFace.collided, false, 'the player reflector must not re-catch a ball already moving away');
+const playerUnderside = resolveCircleRect(
+  { x: 120, y: 622, vx: 0, vy: -160, radius: 8 },
+  { x: 100, y: 600, w: 40, h: 18 },
+  'top',
+);
+assert.equal(playerUnderside.collided, false, 'the player reflector must reject a ball arriving from its underside');
+const playerFrontFace = resolveCircleRect(
+  { x: 120, y: 596, vx: 0, vy: 160, radius: 8 },
+  { x: 100, y: 600, w: 40, h: 18 },
+  'top',
+);
+assert.equal(playerFrontFace.collided, true, 'the player reflector must catch a descending ball on its top face');
+assert.equal(scoreBoundary(-9, 0, 700, 8), 'player', 'crossing the AI edge must score for the player');
+assert.equal(scoreBoundary(709, 0, 700, 8), 'ai', 'crossing the player edge must score for the AI');
+assert.equal(scoreBoundary(350, 0, 700, 8), null, 'a ball inside the field must not score');
+assert.equal(
+  stateAllowsPlayerMotion('paused'),
+  false,
+  'paused play must freeze the player reflector as well as the ball',
+);
+assert.equal(
+  choosePlayerTarget({ left: true, right: false, pointerActive: true, pointerX: 280, pointerY: 650 }, 120, { left: 10, right: 300, height: 700 }),
+  10,
+  'keyboard input must override a stale pointer position',
+);
+assert.deepEqual(
+  remapPointBetweenArenas({ x: 640, y: 650 }, { left: 12, right: 1268, top: 7, bottom: 713 }, { left: 12, right: 378, top: 7, bottom: 383 }),
+  { x: 195, y: 349.448 },
+  'resize must preserve the ball position proportionally inside the new arena',
+);
+
+assert.match(game, /stage\.flowText\(/, 'the full text field must flow through Pretext');
+assert.match(game, /dynamicExclusions\(/, 'moving ball and paddles must drive live text exclusions');
+assert.match(game, /function readyBallGeometry\(\)/, 'ready state must expose one shared ball geometry');
+assert.match(game, /const visibleBall = game\.state === 'ready' \? readyBallGeometry\(\) : game\.ball;[\s\S]{0,360}circleExclusion\('ball', visibleBall/, 'the visible ready ball and its Pretext exclusion must share one geometry');
+assert.match(game, /TEXT_BUMPERS/, 'the field must contain visible word bumpers');
+assert.match(game, /TEXT_CORPORA/, 'players must be able to change the flowing text corpus');
+assert.match(game, /predictInterceptX\(/, 'the AI reflector must use a projected intercept');
+assert.match(game, /movePaddleToward\(/, 'the AI reflector must move through the speed-limited algorithm');
+assert.match(game, /AI_REACTION_SECONDS/, 'the AI must have a finite reaction interval');
+assert.match(game, /stateAllowsPlayerMotion\(game\.state\)/, 'paused state must gate player motion');
+assert.match(game, /remapPointBetweenArenas\(/, 'resize must remap the moving ball and trail');
+assert.match(game, /touchToolbarAction\(/, 'mobile players must receive text-only controls beyond movement');
+assert.match(game, /shouldShowTouchToolbar\(/, 'toolbar visibility must include large touch screens');
+assert.match(game, /fragmentFitsFreeIntervals\(/, 'cached fragments must be checked against current live exclusions');
+assert.match(game, /font:\s*fragment\.font/, 'cached 7px fragments must replay with their exact Pretext font');
+assert.match(game, /flowCache:\s*\{[\s\S]{0,220}cacheHit/, 'diagnostics must expose reduced-motion cache state');
+assert.match(game, /renderPolygonOutline\(/, 'the character Flow Map must trace the real exclusion polygon');
+assert.match(game, /flowCache/, 'reduced-motion mode must reduce full-page Pretext reflow frequency');
+assert.match(game, /warmupFrames:\s*2/, 'static ready screens must repaint enough frames for a complete desynchronized canvas');
+assert.match(game, /addEventListener\('resize',[\s\S]{0,520}input\.reset\(\)/, 'resize must clear stale pointer coordinates after a rotation');
+assert.match(game, /function resetMatch\([\s\S]{0,520}resetBumperStates\(game\.bumpers\)/, 'match reset must clear bumper highlight and cooldown state');
+assert.match(game, /game\.state = 'point';[\s\S]{0,180}game\.flowCache = null;/, 'point messages must invalidate the running text cache');
+assert.match(game, /game\.state = game\.state === 'paused'[\s\S]{0,180}game\.flowCache = null;/, 'pause messages must invalidate the running text cache');
+assert.match(game, /game\.pointDelay = nextDelay;[\s\S]{0,180}game\.renderDirty = true;/, 'the visible point countdown must mark its frame dirty');
+assert.match(game, /paddle\.w \* 0\.72/, 'the AI prediction error must be large enough to create natural misses');
+assert.match(game, /pretext:\s*getPretextUsage\(\)/, 'diagnostics must report measured Pretext use');
+assert.match(game, /game\.state === 'paused' && !game\.renderDirty/, 'pause must stop repeated Pretext re-layout');
+assert.match(game, /stage\.safeBottom/, 'the player reflector must respect mobile safe areas');
+for (const control of ['ArrowLeft', 'KeyA', 'ArrowRight', 'KeyD', 'Space', 'KeyP', 'KeyR', 'KeyC']) {
+  assert.ok(game.includes(control), `pinball control missing: ${control}`);
+}
+
+const visibleSource = [engine, game, physicsSource].join('\n');
+assert.doesNotMatch(visibleSource, /\.(?:measureText|getBBox|getCTM)\s*\(/, 'the game must not bypass Pretext measurement');
 for (const method of ['fillRect', 'strokeRect', 'drawImage', 'beginPath', 'moveTo', 'lineTo', 'arc', 'ellipse', 'createLinearGradient', 'createRadialGradient']) {
   assert.doesNotMatch(visibleSource, new RegExp(`\\.${method}\\s*\\(`), `visible renderer must not call ${method}()`);
 }
@@ -100,78 +268,17 @@ const css = read('assets', 'glyph-arcade', 'stage.css');
 assert.equal((css.match(/@font-face\s*\{/g) || []).length, 4, 'four fixed local font faces are required');
 assert.doesNotMatch(css, /font-family\s*:[^;]*(?:system-ui|monospace|sans-serif|serif)/i, 'font fallback stacks are forbidden');
 assert.doesNotMatch(css, /(?:linear|radial|conic)-gradient\(/i, 'CSS gradients must not draw the game');
-assert.match(css, /safe-area-inset-top/, 'shared stage CSS must expose notch-safe positioning');
-assert.match(css, /safe-area-inset-bottom/, 'shared stage CSS must expose home-indicator-safe positioning');
-assert.doesNotMatch(css, /#[a-z-]+:focus-visible\s*\{[^}]*outline\s*:(?!\s*none)/i, 'focus state must not add non-glyph decoration');
-assert.match(css, /#vector-stage/);
-
-const dino = read('glyph-dino', 'game.js');
-assert.match(dino, /pretext:\s*getPretextUsage\(\)/, 'Dino diagnostics must report measured Pretext use');
-assert.match(dino, /DINO_DIFFICULTY/);
-for (const setting of [
-  /initialSpeed:\s*215/,
-  /maxSpeed:\s*420/,
-  /mobileSpeedFactor:\s*0\.88/,
-  /firstObstacleDelay:\s*2\.1/,
-  /spawnEarly:\s*\[1\.60,\s*2\.35\]/,
-  /birdUnlock:\s*450/,
-  /vineUnlock:\s*750/,
-  /jumpBuffer:\s*0\.10/,
-  /coyoteTime:\s*0\.08/,
-  /firstEventDelay:\s*12/,
-]) assert.match(dino, setting, `Dino easy-mode setting missing: ${setting}`);
-assert.match(dino, /stage\.flowText\(/, 'Dino background must flow through Pretext');
-assert.match(dino, /vector\.exclusions/, 'Dino flow must consume SVG exclusions');
-assert.match(dino, /DINO_TEXT_THEMES/, 'Dino must expose selectable text/object themes');
-assert.match(dino, /spawnTypePress\(/, 'Dino must let players summon an SVG type press');
-assert.match(dino, /dinoToolbarPointerTarget\(/, 'Dino touch controls must expose Pretext actions');
-assert.match(dino, /flowMap:\s*true/, 'Dino must reveal the Flow Map on first load');
-assert.match(dino, /vector\.renderFlowMap\(/, 'Dino must draw the same polygons that drive line flow');
-assert.match(dino, /squeeze:\s*\{/, 'Dino must change measured typography as slots narrow');
-assert.match(dino, /game\.state === 'paused' && !game\.renderDirty/, 'Dino must stop re-layout work while paused');
-assert.match(dino, /stage\.safeBottom/, 'Dino touch tools must stay above the device safe area');
-for (const control of ['KeyF', 'KeyC', 'KeyX']) assert.ok(dino.includes(control), `Dino Pretext control missing: ${control}`);
-assert.match(dino, /pointerJumpHeld/, 'touch hold must receive the same sustained-jump assistance as keyboard hold');
-for (const event of ['SANDSTORM', 'METEOR RAIN', 'FIREFLY MIGRATION', 'THUNDER PULSE', 'FOSSIL BLOOM']) {
-  assert.ok(dino.includes(event), `Dino event missing: ${event}`);
-}
-const surf = read('glyph-surf', 'game.js');
-assert.match(surf, /pretext:\s*getPretextUsage\(\)/, 'Surf diagnostics must report measured Pretext use');
-assert.match(surf, /stage\.flowText\(/, 'Surf water must flow through Pretext');
-assert.match(surf, /vector\.exclusions/, 'Surf flow must consume SVG exclusions');
-assert.match(surf, /SURF_TEXT_THEMES/, 'Surf must expose selectable water-text themes');
-assert.match(surf, /summonReef\(/, 'Surf must let players actively summon a safe reef formation');
-assert.match(surf, /surfToolbarPointerTarget\(/, 'Surf touch controls must expose Pretext actions');
-assert.match(surf, /flowMap:\s*true/, 'Surf must reveal the Flow Map on first load');
-assert.match(surf, /flowLens:/, 'Surf must include a draggable SVG flow lens');
-assert.match(surf, /vector\.renderFlowMap\(/, 'Surf must draw the same polygons that drive line flow');
-assert.match(surf, /squeeze:\s*\{/, 'Surf must change measured typography as slots narrow');
-assert.match(surf, /reefSummonQueued/, 'Zig Zag reef requests must queue instead of deleting an active gate');
-assert.match(surf, /activeGates\(\)/, 'Surf reef spawning must account for gates');
-assert.match(surf, /FLOW_LENS_HANDLE_POLYGON/, 'the flow lens handle must participate in exclusion geometry');
-assert.match(surf, /game\.state === 'paused' && !game\.renderDirty/, 'Surf must stop re-layout work while paused');
-assert.match(surf, /stage\.safeTop/, 'Surf HUD and tools must stay below the device safe area');
-for (const control of ['KeyF', 'KeyC', 'KeyX', 'KeyV']) assert.ok(surf.includes(control), `Surf Pretext control missing: ${control}`);
-assert.match(surf, /game\.rng\.int\(2,\s*3\)/, 'REEF RISE must create a cluster of two or three reefs');
-assert.match(surf, /const channel = compact \? 110/, 'mobile reef formations must retain a 110px safe channel');
-assert.match(surf, /variant\.colliders\.some/, 'large reefs must use forgiving multi-circle collision');
-assert.match(surf, /game\.firstEventPending && reefRise/, 'the signature reef cluster should appear during the first run');
-assert.match(surf, /resultsMenuPointerHit/, 'touch players must be able to return to the Surf mode menu');
-for (const mode of ["id: 'endless'", "id: 'time'", "id: 'zigzag'"]) assert.ok(surf.includes(mode), `Surf mode missing: ${mode}`);
-for (const event of ['SUN SHOWER', 'SQUALL LINE', 'BIOLUMINESCENT BLOOM', 'WHALE SONG', 'WHIRLPOOL FIELD', 'KRAKEN WAKE', 'REEF RISE']) {
-  assert.ok(surf.includes(event), `Surf event missing: ${event}`);
-}
-
-const dinoHtml = read('glyph-dino', 'index.html');
-for (const symbol of ['dino-run-a', 'dino-run-b', 'dino-duck', 'dino-cactus', 'dino-bird']) {
-  assert.ok(dinoHtml.includes(`id="${symbol}"`), `Dino SVG symbol missing: ${symbol}`);
-}
-assert.ok(dinoHtml.includes('id="dino-type-press"'), 'Dino SVG type press symbol missing');
-const surfHtml = read('glyph-surf', 'index.html');
-for (const symbol of ['reef-crown', 'reef-garden', 'reef-atoll', 'reef-chain']) {
-  assert.ok(surfHtml.includes(`id="${symbol}"`), `Surf SVG reef missing: ${symbol}`);
-}
-assert.ok(surfHtml.includes('id="flow-lens"'), 'Surf SVG flow lens symbol missing');
+assert.match(css, /safe-area-inset-top/, 'stage CSS must expose notch-safe positioning');
+assert.match(css, /safe-area-inset-bottom/, 'stage CSS must expose home-indicator-safe positioning');
+assert.doesNotMatch(css, /#vector-stage/, 'the text-only game must not retain a vector layer');
+assert.match(css, /height:\s*100vh;\s*height:\s*100dvh;\s*min-height:\s*0/, 'dynamic viewport height must not be expanded by legacy 100vh');
+assert.doesNotMatch(html, /user-scalable\s*=\s*no/i, 'mobile users must be allowed to zoom dense small text');
+assert.match(css, /touch-action:\s*pinch-zoom/, 'the game surface must preserve two-finger zoom');
+assert.match(html, /role="toolbar"/, 'screen readers must receive a semantic controls toolbar');
+assert.equal((html.match(/data-pinball-action=/g) || []).length, 6, 'all six character controls need semantic button twins');
+assert.match(game, /button\.addEventListener\('keydown',[\s\S]{0,320}event\.stopPropagation\(\)[\s\S]{0,240}applyControlAction/, 'semantic Space and Enter must be consumed before global game input');
+assert.match(game, /event\.repeat[\s\S]{0,120}return/, 'held semantic controls must not repeat-toggle game state');
+assert.match(css, /\.semantic-toolbar:focus-within[\s\S]{0,900}clip:\s*auto\s*!important/, 'keyboard-focused semantic controls must become visibly discoverable');
 
 const fontRoot = join(ROOT, 'assets', 'glyph-arcade', 'fonts');
 const manifest = JSON.parse(read('assets', 'glyph-arcade', 'fonts', 'manifest.json'));
@@ -186,7 +293,8 @@ assert.ok(existsSync(join(ROOT, 'assets', 'glyph-arcade', 'pretext', 'layout.js'
 
 const site = JSON.parse(read('site.config.json'));
 const routes = site.gallery.map(item => item.href);
-assert.ok(routes.includes('/glyph-dino/'));
-assert.ok(routes.includes('/glyph-surf/'));
+assert.ok(routes.includes('/glyph-pinball/'), 'Gallery must include TYPE//PINBALL');
+assert.ok(!routes.includes('/glyph-dino/'), 'Gallery must not include retired Dino');
+assert.ok(!routes.includes('/glyph-surf/'), 'Gallery must not include retired Surf');
 
 console.log('glyph arcade constraints ✓');
