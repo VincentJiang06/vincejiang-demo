@@ -6,6 +6,7 @@ import { join } from 'node:path';
 
 const ROOT = new URL('..', import.meta.url).pathname.replace(/\/$/, '');
 const read = (...parts) => readFileSync(join(ROOT, ...parts), 'utf8');
+const RELEASE_ASSET_VERSION = 'glyph-20260715-svg2';
 
 for (const game of ['glyph-dino', 'glyph-surf']) {
   const html = read(game, 'index.html');
@@ -21,6 +22,9 @@ for (const game of ['glyph-dino', 'glyph-surf']) {
   assert.match(html, /<section class="sr-only"/, `${game} should retain hidden semantic instructions`);
   assert.match(html, /assets\/glyph-arcade\/stage\.css/);
   assert.match(html, /\.\/game\.js/);
+  assert.ok(html.includes(`stage.css?v=${RELEASE_ASSET_VERSION}`), `${game} CSS cache key must match this release`);
+  assert.ok(html.includes(`game.js?v=${RELEASE_ASSET_VERSION}`), `${game} script cache key must match this release`);
+  assert.ok(read(game, 'game.js').includes(`engine.js?v=${RELEASE_ASSET_VERSION}`), `${game} engine cache key must match this release`);
 }
 
 const engine = read('assets', 'glyph-arcade', 'engine.js');

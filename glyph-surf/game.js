@@ -14,7 +14,7 @@ import {
   setSemanticStatus,
   textWidth,
   waitForGlyphFonts,
-} from '/assets/glyph-arcade/engine.js';
+} from '/assets/glyph-arcade/engine.js?v=glyph-20260715-svg2';
 
 export const SURF_MODES = Object.freeze([
   { id: 'endless', key: '1', label: 'ENDLESS', goal: 'Ride until the last heart sinks.' },

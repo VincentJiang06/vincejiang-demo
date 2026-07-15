@@ -14,7 +14,7 @@ import {
   setSemanticStatus,
   textWidth,
   waitForGlyphFonts,
-} from '/assets/glyph-arcade/engine.js';
+} from '/assets/glyph-arcade/engine.js?v=glyph-20260715-svg2';
 
 export const DINO_DIFFICULTY = Object.freeze({
   id: 'easy',
