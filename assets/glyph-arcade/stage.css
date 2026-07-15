@@ -1,32 +1,8 @@
 @font-face {
-  font-family: "Recursive Linear";
-  src: url("/assets/glyph-arcade/fonts/RecursiveSansLnrSt-Regular.woff2") format("woff2");
+  font-family: "RedHatMono";
+  src: url("/assets/glyph-arcade/fonts/RedHatMono-VF.woff2") format("woff2-variations");
   font-style: normal;
-  font-weight: 400;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Recursive Linear";
-  src: url("/assets/glyph-arcade/fonts/RecursiveSansLnrSt-Bold.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 700;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Recursive Casual";
-  src: url("/assets/glyph-arcade/fonts/RecursiveSansCslSt-Regular.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Recursive Casual";
-  src: url("/assets/glyph-arcade/fonts/RecursiveSansCslSt-Bold.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 700;
+  font-weight: 300 700;
   font-display: block;
 }
 
@@ -56,7 +32,7 @@ main {
 }
 
 body {
-  font-family: "Recursive Linear";
+  font-family: "RedHatMono";
   font-synthesis: none;
   -webkit-text-size-adjust: 100%;
 }
@@ -135,15 +111,15 @@ main {
   border: 0;
   color: #dffcff;
   background: #02040b;
-  font: 700 12px "Recursive Linear";
+  font: 700 12px "RedHatMono";
   text-decoration: none;
 }
 
 .semantic-toolbar button::before,
-.semantic-toolbar a::before { content: "[ "; color: #5fffe0; }
+.semantic-toolbar a::before { content: "[ "; color: inherit; }
 
 .semantic-toolbar button::after,
-.semantic-toolbar a::after { content: " ]"; color: #fff36d; }
+.semantic-toolbar a::after { content: " ]"; color: inherit; }
 
 .semantic-toolbar button:focus-visible,
 .semantic-toolbar a:focus-visible {

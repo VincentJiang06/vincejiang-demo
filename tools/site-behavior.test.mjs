@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { strict as assert } from 'node:assert';
 import { spawnSync } from 'node:child_process';
-import { existsSync, mkdtempSync, readFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 
@@ -98,9 +98,15 @@ assert.ok(!existsSync(join(OUT, 'glyph-surf')), 'retired Surf must not remain in
 assert.ok(existsSync(join(OUT, 'assets', 'glyph-arcade', 'engine.js')), 'shared glyph engine should be copied into the build');
 assert.ok(existsSync(join(OUT, 'assets', 'glyph-arcade', 'stage.css')), 'shared glyph stage CSS should be copied into the build');
 assert.ok(existsSync(join(OUT, 'assets', 'glyph-arcade', 'pretext', 'layout.js')), 'Pretext runtime should be copied into the build');
-for (const file of ['RecursiveSansLnrSt-Regular.woff2', 'RecursiveSansLnrSt-Bold.woff2', 'RecursiveSansCslSt-Regular.woff2', 'RecursiveSansCslSt-Bold.woff2']) {
+const fontManifest = JSON.parse(readFileSync(join(ROOT, 'assets', 'glyph-arcade', 'fonts', 'manifest.json'), 'utf8'));
+for (const file of fontManifest.files.map(entry => entry.file)) {
   assert.ok(existsSync(join(OUT, 'assets', 'glyph-arcade', 'fonts', file)), `${file} should be copied into the build`);
 }
+assert.deepEqual(
+  readdirSync(join(OUT, 'assets', 'glyph-arcade', 'fonts')).filter(file => file.endsWith('.woff2')).sort(),
+  fontManifest.files.map(entry => entry.file).sort(),
+  'the build must contain only the manifest-listed RedHatMono face',
+);
 
 const backgroundTest = html('background-test');
 assert.match(backgroundTest, /<title>Background Test · Vince Jiang<\/title>/);

@@ -9,15 +9,12 @@ import {
 setLocale('en-US');
 
 export const FONT_FAMILY = Object.freeze({
-  linear: '"Recursive Linear"',
-  casual: '"Recursive Casual"',
+  mono: '"RedHatMono"',
 });
 
 const FONT_PROBES = [
-  '400 16px "Recursive Linear"',
-  '700 16px "Recursive Linear"',
-  '400 16px "Recursive Casual"',
-  '700 16px "Recursive Casual"',
+  '400 16px "RedHatMono"',
+  '700 16px "RedHatMono"',
 ];
 
 const preparedCache = new Map();
@@ -31,15 +28,15 @@ const pretextUsage = {
   flowFragments: 0,
 };
 
-export function fontSpec(size, family = 'linear', weight = 400) {
+export function fontSpec(size, family = 'mono', weight = 400) {
   const numericSize = Number(size);
   const resolvedSize = Number.isFinite(numericSize) ? Math.max(8, numericSize) : 8;
-  const resolvedFamily = FONT_FAMILY[family] || family || FONT_FAMILY.linear;
+  const resolvedFamily = FONT_FAMILY[family] || FONT_FAMILY.mono;
   return `${weight} ${resolvedSize}px ${resolvedFamily}`;
 }
 
 function flowFontSpec(size, family, weight) {
-  const resolvedFamily = FONT_FAMILY[family] || family || FONT_FAMILY.linear;
+  const resolvedFamily = FONT_FAMILY[family] || FONT_FAMILY.mono;
   return `${weight} ${Math.max(1, size)}px ${resolvedFamily}`;
 }
 
@@ -104,7 +101,7 @@ function typographyProfile(options) {
       ? {}
       : null;
   const size = positiveNumber(source.size, 10);
-  const family = source.family || 'linear';
+  const family = source.family || 'mono';
   const weight = fontWeight(source.weight);
   if (!squeeze) {
     return { enabled: false, size, family, weight, font: source.font || fontSpec(size, family, weight) };
@@ -506,7 +503,7 @@ export class GlyphStage {
 
   glyph(text, x, y, options = {}) {
     if (!text) return 0;
-    const font = options.font || fontSpec(options.size || 16, options.family || 'linear', options.weight || 400);
+    const font = options.font || fontSpec(options.size || 16, options.family || 'mono', options.weight || 400);
     const color = options.color || '#ffffff';
     const alpha = options.alpha ?? 1;
     const align = options.align || 'left';
@@ -534,7 +531,7 @@ export class GlyphStage {
 
   sequence(text, x, y, options = {}) {
     const chars = Array.from(text);
-    const font = options.font || fontSpec(options.size || 16, options.family || 'linear', options.weight || 400);
+    const font = options.font || fontSpec(options.size || 16, options.family || 'mono', options.weight || 400);
     let cursor = x;
     for (let index = 0; index < chars.length; index += 1) {
       const char = chars[index];
@@ -552,7 +549,7 @@ export class GlyphStage {
   sprite(rows, x, y, options = {}) {
     const size = options.size || 16;
     const lineHeight = options.lineHeight || size * 0.9;
-    const font = options.font || fontSpec(size, options.family || 'casual', options.weight || 700);
+    const font = options.font || fontSpec(size, options.family || 'mono', options.weight || 700);
     let maxWidth = 0;
     for (let row = 0; row < rows.length; row += 1) {
       const width = this.sequence(rows[row], x, y + row * lineHeight, {
@@ -570,7 +567,7 @@ export class GlyphStage {
   paragraph(text, x, y, maxWidth, options = {}) {
     const size = options.size || 16;
     const lineHeight = options.lineHeight || Math.round(size * 1.28);
-    const font = options.font || fontSpec(size, options.family || 'linear', options.weight || 400);
+    const font = options.font || fontSpec(size, options.family || 'mono', options.weight || 400);
     const lines = wrapLines(text, font, maxWidth, lineHeight);
     for (let index = 0; index < lines.length; index += 1) {
       this.glyph(lines[index].text, x, y + index * lineHeight, { ...options, font });
@@ -667,6 +664,7 @@ export class GlyphStage {
           size: typography.size,
           family: typography.family,
           font: typography.font,
+          row,
         });
         usedSizes.add(typography.size);
         usedFamilies.add(typography.family);
@@ -685,7 +683,7 @@ export class GlyphStage {
 
   dottedFrame(x, y, width, height, options = {}) {
     const size = options.size || 13;
-    const font = fontSpec(size, options.family || 'linear', options.weight || 400);
+    const font = fontSpec(size, options.family || 'mono', options.weight || 400);
     const glyph = options.glyph || '.';
     const step = Math.max(4, textWidth(glyph, font) + 3);
     const color = options.color || '#7fffd4';

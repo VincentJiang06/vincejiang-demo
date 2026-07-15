@@ -13,7 +13,7 @@ import {
   setSemanticStatus,
   textWidth,
   waitForGlyphFonts,
-} from '../assets/glyph-arcade/engine.js?v=glyph-20260715-pinball1';
+} from '../assets/glyph-arcade/engine.js?v=glyph-20260715-pinball2';
 import {
   bounceFromPaddle,
   choosePlayerTarget,
@@ -27,7 +27,7 @@ import {
   scoreBoundary,
   shouldShowTouchToolbar,
   stateAllowsPlayerMotion,
-} from './physics.js?v=glyph-20260715-pinball1';
+} from './physics.js?v=glyph-20260715-pinball2';
 
 export const AI_REACTION_SECONDS = 0.18;
 
@@ -35,28 +35,28 @@ export const TEXT_CORPORA = Object.freeze([
   Object.freeze({
     id: 'motion',
     label: 'MOTION / MOMENTUM',
-    family: 'linear',
+    family: 'mono',
     hues: [168, 186, 205, 258, 326, 48],
     text: 'motion carries a direction / momentum changes at every contact / an angle is a decision / the wall returns what it receives / speed is distance remembered by time / a moving paddle lends spin / prediction is only a folded line / every miss becomes a new serve / the circle crosses a field of measured words / reflection turns arrival into departure',
   }),
   Object.freeze({
     id: 'language',
     label: 'LANGUAGE / RHYTHM',
-    family: 'casual',
+    family: 'mono',
     hues: [48, 92, 168, 205, 278, 332],
     text: 'letters gather into rhythm / a sentence bends around a moving point / narrow space changes voice and scale / punctuation opens a small corridor / words wait at the edge of impact / the next line begins where the last collision ended / every return edits the page / meaning survives compression / the field keeps speaking while the ball keeps moving',
   }),
   Object.freeze({
     id: 'arcade',
     label: 'ARCADE / SIGNAL',
-    family: 'linear',
+    family: 'mono',
     hues: [326, 16, 48, 112, 186, 272],
     text: 'ready player return / one ball two reflectors many possible angles / rally becomes score / score becomes memory / move left move right keep the signal alive / the upper machine predicts but cannot know / the lower hand changes the future / bright glyphs mark a collision / continue continue continue / no pixels were filled except by letters',
   }),
   Object.freeze({
     id: 'cosmos',
     label: 'ORBIT / GRAVITY',
-    family: 'casual',
+    family: 'mono',
     hues: [205, 232, 266, 304, 348, 58],
     text: 'an orbit is a fall that keeps missing / vectors cross the dark field / a small body meets an invisible boundary / the path folds and continues / observation changes anticipation / distant lights become coordinates / gravity writes curves while this arena writes straight segments / every rebound redraws the local sky / the reflector waits near the horizon',
   }),
@@ -170,8 +170,8 @@ function arena() {
 function paddleGeometry() {
   const compact = compactMode();
   const field = arena();
-  const playerFont = fontSpec(compact ? 10 : 12, 'casual', 700);
-  const aiFont = fontSpec(compact ? 9 : 11, 'linear', 700);
+  const playerFont = fontSpec(compact ? 10 : 12, 'mono', 700);
+  const aiFont = fontSpec(compact ? 9 : 11, 'mono', 700);
   const playerLabel = compact ? '<< YOU ===== >>' : '<< YOU ============ >>';
   const aiLabel = compact ? '< AUTO ==== >' : '< AUTO·REFLECTOR ======= >';
   const playerWidth = clamp(textWidth(playerLabel, playerFont) + 18, compact ? 92 : 122, compact ? 124 : 184);
@@ -211,7 +211,7 @@ function layoutBumpers() {
     const active = bumper.active > 0 && !reducedMotion;
     const baseSize = compact ? 11 + index % 2 : 14 + index % 3;
     const size = baseSize + (active ? 3 : 0);
-    const family = active ? 'casual' : index % 2 ? 'linear' : 'casual';
+    const family = 'mono';
     const font = fontSpec(size, family, active ? 700 : 400);
     const label = bumper.labels[bumper.variant];
     const width = textWidth(label, font) + (compact ? 10 : 16);
@@ -577,11 +577,11 @@ function update(dt) {
   updateBall(dt);
 }
 
-function flowVisual(theme, index) {
-  const hue = theme.hues[index % theme.hues.length];
+function flowVisual(theme, row) {
+  const hue = theme.hues[row % theme.hues.length];
   return {
     color: hsl(hue, game.highContrast ? 96 : 88, game.highContrast ? 82 : 75),
-    alpha: game.highContrast ? 0.96 : 0.82 + index % 4 * 0.04,
+    alpha: game.highContrast ? 0.96 : 0.82 + row % 4 * 0.04,
   };
 }
 
@@ -599,7 +599,7 @@ function renderTextField(exclusions) {
         exclusions,
       );
       if (!fragmentFitsFreeIntervals(fragment, freeIntervals)) continue;
-      const visual = flowVisual(theme, index);
+      const visual = flowVisual(theme, fragment.row);
       stage.glyph(fragment.text, fragment.x, fragment.y + fragment.h - 1, {
         font: fragment.font,
         color: visual.color,
@@ -644,11 +644,11 @@ function renderTextField(exclusions) {
       narrowWidth: 44,
       wideWidth: compactMode() ? 128 : 190,
       step: 1,
-      compressedFamily: theme.family === 'linear' ? 'casual' : 'linear',
+      compressedFamily: 'mono',
       compressedBelow: compactMode() ? 72 : 82,
     },
-    color: ({ index }) => flowVisual(theme, index).color,
-    alpha: ({ index }) => flowVisual(theme, index).alpha,
+    color: ({ row }) => flowVisual(theme, row).color,
+    alpha: ({ row }) => flowVisual(theme, row).alpha,
   });
   game.flowCacheStatus = {
     hit: false,
@@ -680,12 +680,12 @@ function renderTextField(exclusions) {
 
 function renderWalls() {
   const field = arena();
-  const font = fontSpec(compactMode() ? 8 : 10, 'linear', 700);
+  const font = fontSpec(compactMode() ? 8 : 10, 'mono', 700);
   for (let y = field.top + 50; y < field.bottom - 24; y += compactMode() ? 12 : 15) {
     stage.glyph('│', field.left - 5, y, { font, color: COLORS.dim, alpha: 0.86, align: 'center' });
     stage.glyph('│', field.right + 5, y, { font, color: COLORS.dim, alpha: 0.86, align: 'center' });
   }
-  const netFont = fontSpec(compactMode() ? 7 : 9, 'casual', 400);
+  const netFont = fontSpec(compactMode() ? 7 : 9, 'mono', 400);
   for (let y = field.top + 100; y < field.bottom - 80; y += compactMode() ? 31 : 38) {
     stage.glyph(':', stage.width / 2, y, { font: netFont, color: COLORS.violet, alpha: 0.42, align: 'center' });
   }
@@ -709,7 +709,7 @@ function renderPrediction() {
   const field = arena();
   const paddle = paddleGeometry().ai;
   const steps = compactMode() ? 7 : 11;
-  const font = fontSpec(compactMode() ? 7 : 9, 'casual', 400);
+  const font = fontSpec(compactMode() ? 7 : 9, 'mono', 400);
   for (let index = 1; index <= steps; index += 1) {
     const ratio = index / (steps + 1);
     const y = game.ball.y + (paddle.y + paddle.h - game.ball.y) * ratio;
@@ -742,19 +742,19 @@ function renderPaddlesAndBall() {
   for (let index = game.trail.length - 1; index >= 1; index -= 1) {
     const point = game.trail[index];
     stage.glyph(trailGlyphs[Math.min(index, trailGlyphs.length - 1)], point.x, point.y + 3, {
-      font: fontSpec(Math.max(6, 13 - index), index % 2 ? 'casual' : 'linear', 400),
+      font: fontSpec(Math.max(6, 13 - index), 'mono', 400),
       color: index % 2 ? COLORS.magenta : COLORS.violet,
       alpha: reducedMotion ? 0.18 : Math.max(0.12, 0.62 - index * 0.075),
       align: 'center',
     });
   }
   stage.glyph('●', game.ball.x, game.ball.y + game.ball.radius * 0.72, {
-    font: fontSpec(compactMode() ? 17 : 21, 'casual', 700),
+    font: fontSpec(compactMode() ? 17 : 21, 'mono', 700),
     color: COLORS.ice,
     align: 'center',
   });
   stage.glyph('o', game.ball.x - game.ball.radius * 0.35, game.ball.y + game.ball.radius * 0.1, {
-    font: fontSpec(compactMode() ? 7 : 8, 'linear', 700),
+    font: fontSpec(compactMode() ? 7 : 8, 'mono', 700),
     color: COLORS.amber,
     alpha: 0.86,
     align: 'center',
@@ -764,22 +764,24 @@ function renderPaddlesAndBall() {
 function renderHud(flow, exclusions) {
   const field = arena();
   const compact = compactMode();
-  const titleFont = fontSpec(compact ? 9 : 11, 'casual', 700);
-  const smallFont = fontSpec(compact ? 7 : 9, 'linear', 700);
-  stage.glyph('TYPE//PINBALL', field.left, field.top + (compact ? 12 : 15), { font: titleFont, color: COLORS.ice });
+  const titleFont = fontSpec(compact ? 9 : 11, 'mono', 700);
+  const smallFont = fontSpec(compact ? 7 : 9, 'mono', 700);
+  const hudPrimaryColor = COLORS.ice;
+  const hudSecondaryColor = COLORS.aqua;
+  stage.glyph('TYPE//PINBALL', field.left, field.top + (compact ? 12 : 15), { font: titleFont, color: hudPrimaryColor });
   stage.glyph(`YOU:${game.playerScore}  AUTO:${game.aiScore}  RALLY:${game.rally}  BEST:${game.best}`, field.right, field.top + (compact ? 12 : 15), {
     font: smallFont,
-    color: COLORS.amber,
+    color: hudPrimaryColor,
     align: 'right',
   });
   stage.glyph(`PTX ${TEXT_CORPORA[game.corpusIndex].label}  slots:${flow.slots}  exclusions:${exclusions.length}  fonts:${stage.flowDiagnostics.fontSizes.join('/')}`, field.left, field.top + (compact ? 28 : 34), {
     font: smallFont,
-    color: COLORS.aqua,
+    color: hudSecondaryColor,
   });
   if (!hasTouchToolbar()) {
     stage.glyph('A/D or ←/→ move  ·  touch/drag  ·  C corpus  F flow  V prediction  H contrast  P pause  R reset  G gallery', field.right, field.top + 34, {
       font: smallFont,
-      color: COLORS.violet,
+      color: hudSecondaryColor,
       align: 'right',
     });
   } else {
@@ -790,7 +792,7 @@ function renderHud(flow, exclusions) {
 function renderTouchToolbar() {
   if (!hasTouchToolbar()) return;
   const layout = touchToolbarLayout();
-  const font = fontSpec(6.5, 'linear', 700);
+  const font = fontSpec(6.5, 'mono', 700);
   for (let index = 0; index < TOUCH_CONTROLS.length; index += 1) {
     const control = TOUCH_CONTROLS[index];
     const x = layout.x + index * layout.itemWidth;
@@ -800,7 +802,7 @@ function renderTouchToolbar() {
           : control.action === 'pause' ? game.state === 'paused'
             : false;
     const label = control.action === 'pause' && game.state === 'paused' ? '[P]PLAY' : control.label;
-    const color = selected ? COLORS.amber : index % 2 ? COLORS.violet : COLORS.aqua;
+    const color = COLORS.aqua;
     stage.dottedFrame(x + 1, layout.top, layout.itemWidth - 2, layout.height, {
       glyph: selected ? '+' : '.',
       size: 5.5,
@@ -812,7 +814,7 @@ function renderTouchToolbar() {
 }
 
 function renderPolygonOutline(polygon, color = COLORS.lime) {
-  const font = fontSpec(6, 'linear', 700);
+  const font = fontSpec(6, 'mono', 700);
   for (let index = 0; index < polygon.length; index += 1) {
     const start = polygon[index];
     const end = polygon[(index + 1) % polygon.length];
@@ -850,24 +852,24 @@ function renderMessage() {
   if (game.state === 'ready') {
     const visibleBall = readyBallGeometry();
     stage.glyph('●', visibleBall.x, visibleBall.y + visibleBall.radius * 0.72, {
-      font: fontSpec(compact ? 17 : 21, 'casual', 700),
+      font: fontSpec(compact ? 17 : 21, 'mono', 700),
       color: COLORS.ice,
       align: 'center',
     });
   }
   stage.glyph(title, stage.width / 2, centerY - 24, {
-    font: fontSpec(compact ? 22 : 31, 'casual', 700),
+    font: fontSpec(compact ? 22 : 31, 'mono', 700),
     color: COLORS.ice,
     align: 'center',
   });
   stage.glyph(subtitle, stage.width / 2, centerY + 9, {
-    font: fontSpec(compact ? 9 : 12, 'linear', 400),
+    font: fontSpec(compact ? 9 : 12, 'mono', 400),
     color: COLORS.aqua,
     align: 'center',
   });
   if (game.state === 'ready') {
     stage.glyph('[ SPACE / TAP TO SERVE ]', stage.width / 2, centerY + 42, {
-      font: fontSpec(compact ? 11 : 14, 'linear', 700),
+      font: fontSpec(compact ? 11 : 14, 'mono', 700),
       color: COLORS.amber,
       align: 'center',
     });
@@ -928,7 +930,7 @@ function render() {
       layoutExclusions: exclusions.length,
       renderedFragments: game.flowCacheStatus.renderedFragments,
     },
-    fonts: ['Recursive Linear', 'Recursive Casual'],
+    fonts: ['RedHatMono'],
     pretext: getPretextUsage(),
     visibleGlyphs: stage.frameGlyphs,
     visibleColors: stage.frameColors.size,

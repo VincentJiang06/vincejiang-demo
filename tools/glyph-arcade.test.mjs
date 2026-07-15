@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 import { strict as assert } from 'node:assert';
 import { createHash } from 'node:crypto';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 const ROOT = new URL('..', import.meta.url).pathname.replace(/\/$/, '');
 const read = (...parts) => readFileSync(join(ROOT, ...parts), 'utf8');
-const RELEASE_ASSET_VERSION = 'glyph-20260715-pinball1';
+const RELEASE_ASSET_VERSION = 'glyph-20260715-pinball2';
 const GAME = 'glyph-pinball';
 
 assert.ok(existsSync(join(ROOT, GAME, 'index.html')), 'TYPE//PINBALL HTML is missing');
@@ -24,6 +24,8 @@ assert.doesNotMatch(html, /<(?:img|video|picture)\b/i, 'the game must not ship i
 assert.match(html, /<canvas[^>]+role="application"/i, 'the text field must expose an application role');
 assert.match(html, /<section class="sr-only"/, 'semantic instructions must remain available');
 assert.match(html, /TYPE\/\/PINBALL/, 'the replacement game title is missing');
+assert.match(html, /等宽/, 'the game description must identify the fixed-width typography');
+assert.doesNotMatch(html, /比例(?:文字|字体)/, 'stale proportional-font copy must be removed');
 assert.ok(html.includes(`stage.css?v=${RELEASE_ASSET_VERSION}`), 'CSS cache key must match this release');
 assert.ok(html.includes(`game.js?v=${RELEASE_ASSET_VERSION}`), 'game cache key must match this release');
 assert.ok(game.includes(`engine.js?v=${RELEASE_ASSET_VERSION}`), 'engine cache key must match this release');
@@ -50,24 +52,25 @@ for (const contract of [
   /\.fillText\(/,
 ]) assert.match(engine, contract, `shared glyph contract missing: ${contract}`);
 
-const { flowTypographyForSlot, freeFlowIntervals, shouldIgnoreGameKeyTarget } = await import('../assets/glyph-arcade/engine.js');
+const { FONT_FAMILY, flowTypographyForSlot, freeFlowIntervals, shouldIgnoreGameKeyTarget } = await import('../assets/glyph-arcade/engine.js');
 const squeezeOptions = {
   size: 10,
-  family: 'linear',
+  family: 'mono',
   weight: 400,
   squeeze: {
     minSize: 7,
     maxSize: 11,
     narrowWidth: 44,
     wideWidth: 190,
-    compressedFamily: 'casual',
+    compressedFamily: 'mono',
   },
 };
 const narrowTypography = flowTypographyForSlot(44, squeezeOptions);
 const wideTypography = flowTypographyForSlot(220, squeezeOptions);
 assert.ok(narrowTypography.size < wideTypography.size, 'narrow text slots must choose a smaller measured font');
-assert.equal(narrowTypography.family, 'casual', 'narrow slots must use the compressed font personality');
-assert.equal(wideTypography.family, 'linear', 'wide slots must retain the primary family');
+assert.deepEqual(FONT_FAMILY, { mono: '"RedHatMono"' }, 'every Canvas font alias must resolve to RedHatMono');
+assert.equal(narrowTypography.family, 'mono', 'narrow slots must retain RedHatMono');
+assert.equal(wideTypography.family, 'mono', 'wide slots must retain RedHatMono');
 assert.notEqual(narrowTypography.font, wideTypography.font, 'slot widths must produce distinct real font specs');
 assert.equal(shouldIgnoreGameKeyTarget({ tagName: 'BUTTON' }), true, 'semantic control buttons must keep Space and Enter out of game input');
 assert.equal(shouldIgnoreGameKeyTarget({ tagName: 'CANVAS' }), false, 'the focused game canvas must continue receiving game keys');
@@ -227,6 +230,11 @@ assert.deepEqual(
 
 assert.match(game, /stage\.flowText\(/, 'the full text field must flow through Pretext');
 assert.match(game, /dynamicExclusions\(/, 'moving ball and paddles must drive live text exclusions');
+assert.match(engine, /fragments\.push\(\{[\s\S]{0,260}\brow,/, 'Pretext fragments must retain their stable visual row');
+assert.match(game, /const visual = flowVisual\(theme, fragment\.row\)/, 'cached text must restore color from the visual row');
+assert.match(game, /color:\s*\(\{ row \}\) => flowVisual\(theme, row\)\.color/, 'live Pretext color must be keyed by row');
+assert.match(game, /alpha:\s*\(\{ row \}\) => flowVisual\(theme, row\)\.alpha/, 'live Pretext alpha must be keyed by row');
+assert.doesNotMatch(game, /flowVisual\(theme,\s*index\)/, 'fragment order must never change a row color');
 assert.match(game, /function readyBallGeometry\(\)/, 'ready state must expose one shared ball geometry');
 assert.match(game, /const visibleBall = game\.state === 'ready' \? readyBallGeometry\(\) : game\.ball;[\s\S]{0,360}circleExclusion\('ball', visibleBall/, 'the visible ready ball and its Pretext exclusion must share one geometry');
 assert.match(game, /TEXT_BUMPERS/, 'the field must contain visible word bumpers');
@@ -253,6 +261,12 @@ assert.match(game, /paddle\.w \* 0\.72/, 'the AI prediction error must be large 
 assert.match(game, /pretext:\s*getPretextUsage\(\)/, 'diagnostics must report measured Pretext use');
 assert.match(game, /game\.state === 'paused' && !game\.renderDirty/, 'pause must stop repeated Pretext re-layout');
 assert.match(game, /stage\.safeBottom/, 'the player reflector must respect mobile safe areas');
+assert.equal((game.match(/color: hudPrimaryColor/g) || []).length, 2, 'the title and score on one HUD row must share one color');
+assert.equal((game.match(/color: hudSecondaryColor/g) || []).length, 2, 'the metadata and help on one HUD row must share one color');
+assert.match(game, /function renderTouchToolbar\([\s\S]{0,800}const color = COLORS\.aqua;/, 'every character on a touch-toolbar row must share one color');
+assert.doesNotMatch(game, /index % 2 \? COLORS\.violet : COLORS\.aqua/, 'toolbar columns must not alternate colors within one row');
+assert.match(game, /fonts:\s*\['RedHatMono'\]/, 'diagnostics must report the one fixed-width font');
+assert.doesNotMatch(game, /fontSpec\([^\n]*['"](?:linear|casual)['"]/, 'all game glyphs must request the mono family');
 for (const control of ['ArrowLeft', 'KeyA', 'ArrowRight', 'KeyD', 'Space', 'KeyP', 'KeyR', 'KeyC']) {
   assert.ok(game.includes(control), `pinball control missing: ${control}`);
 }
@@ -265,7 +279,10 @@ for (const method of ['fillRect', 'strokeRect', 'drawImage', 'beginPath', 'moveT
 assert.doesNotMatch(visibleSource, /\b(?:ctx|context)\.(?:stroke|fill)\s*\(/, 'visible renderer must not stroke or fill paths');
 
 const css = read('assets', 'glyph-arcade', 'stage.css');
-assert.equal((css.match(/@font-face\s*\{/g) || []).length, 4, 'four fixed local font faces are required');
+assert.equal((css.match(/@font-face\s*\{/g) || []).length, 1, 'one local RedHatMono variable face is required');
+assert.match(css, /font-family:\s*"RedHatMono"/, 'the page must use RedHatMono');
+assert.match(css, /font-weight:\s*300 700/, 'the local RedHatMono face must cover every used weight');
+assert.doesNotMatch([css, engine, game].join('\n'), /Recursive/, 'Recursive must be removed from every visible rendering path');
 assert.doesNotMatch(css, /font-family\s*:[^;]*(?:system-ui|monospace|sans-serif|serif)/i, 'font fallback stacks are forbidden');
 assert.doesNotMatch(css, /(?:linear|radial|conic)-gradient\(/i, 'CSS gradients must not draw the game');
 assert.match(css, /safe-area-inset-top/, 'stage CSS must expose notch-safe positioning');
@@ -279,12 +296,20 @@ assert.equal((html.match(/data-pinball-action=/g) || []).length, 6, 'all six cha
 assert.match(game, /button\.addEventListener\('keydown',[\s\S]{0,320}event\.stopPropagation\(\)[\s\S]{0,240}applyControlAction/, 'semantic Space and Enter must be consumed before global game input');
 assert.match(game, /event\.repeat[\s\S]{0,120}return/, 'held semantic controls must not repeat-toggle game state');
 assert.match(css, /\.semantic-toolbar:focus-within[\s\S]{0,900}clip:\s*auto\s*!important/, 'keyboard-focused semantic controls must become visibly discoverable');
+assert.match(css, /\.semantic-toolbar button::before,[\s\S]{0,180}color:\s*inherit/, 'visible semantic-control characters must keep one text color');
 
 const fontRoot = join(ROOT, 'assets', 'glyph-arcade', 'fonts');
 const manifest = JSON.parse(read('assets', 'glyph-arcade', 'fonts', 'manifest.json'));
-assert.equal(manifest.version, '1.085');
+assert.equal(manifest.family, 'Red Hat Mono');
+assert.equal(manifest.cssAlias, 'RedHatMono');
+assert.equal(manifest.version, '5.0.0');
 assert.equal(manifest.license, 'OFL-1.1');
-assert.ok(existsSync(join(fontRoot, 'RECURSIVE-OFL.txt')), 'Recursive OFL must ship beside the fonts');
+assert.ok(existsSync(join(fontRoot, 'RED-HAT-MONO-OFL.txt')), 'Red Hat Mono OFL must ship beside the font');
+assert.deepEqual(
+  readdirSync(fontRoot).filter(file => file.endsWith('.woff2')).sort(),
+  manifest.files.map(entry => entry.file).sort(),
+  'only manifest-listed RedHatMono font files may ship',
+);
 for (const entry of manifest.files) {
   const bytes = readFileSync(join(fontRoot, entry.file));
   assert.equal(createHash('sha256').update(bytes).digest('hex'), entry.sha256, `${entry.file} hash mismatch`);

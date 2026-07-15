@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#02040b">
   <title>TYPE//PINBALL · Pretext 全字符弹球</title>
-  <meta name="description" content="在一整页由 Pretext 实时续排的比例文字中，用字符反射板接住字符球，并观察简单算法控制另一块反射板。">
+  <meta name="description" content="在一整页由 Pretext 实时续排的 RedHatMono 等宽文字中，用字符反射板接住字符球，并观察简单算法控制另一块反射板。">
   <meta property="og:title" content="TYPE//PINBALL · Pretext 全字符弹球">
   <meta property="og:description" content="一个没有 SVG、图片或图形界面的纯字符弹球游戏：移动的球、反射板与文字障碍会持续改变整页排版。">
   <meta property="og:url" content="https://vincejiang.com/glyph-pinball/">
   <meta property="og:image" content="https://vincejiang.com/favicon.png">
   <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://vincejiang.com/glyph-pinball/">
-  <link rel="stylesheet" href="/assets/glyph-arcade/stage.css?v=glyph-20260715-pinball1">
+  <link rel="stylesheet" href="/assets/glyph-arcade/stage.css?v=glyph-20260715-pinball2">
 </head>
 <body>
   <main>
@@ -26,9 +26,9 @@
 
     <section class="sr-only" id="game-instructions">
       <h1>TYPE//PINBALL</h1>
-      <p>这是一个只用比例文字绘制的弹球游戏。球、玩家反射板、算法反射板和文字障碍都会成为 Pretext 的动态排版排除区。</p>
+      <p>这是一个只用 RedHatMono 等宽文字绘制的弹球游戏。球、玩家反射板、算法反射板和文字障碍都会成为 Pretext 的动态排版排除区。</p>
       <p>按 A、D 或左右方向键移动底部反射板；也可以用鼠标或手指横向拖动。按空格键或轻触画面发球。C 切换文字主题，F 显示对象的原始排除多边形（安全留白另由 Pretext 计算），V 显示算法预测，H 开关高对比，P 暂停或继续，R 重新开始；手机端可直接轻触顶部字符工具栏。</p>
-      <p id="game-status" aria-live="polite" aria-atomic="true">正在加载本地比例字体与 Pretext 排版引擎。</p>
+      <p id="game-status" aria-live="polite" aria-atomic="true">正在加载本地 RedHatMono 等宽字体与 Pretext 排版引擎。</p>
       <p>按 G，或使用紧随游戏画布之后的辅助控制栏，返回 Gallery。</p>
     </section>
 
@@ -43,6 +43,6 @@
     </div>
   </main>
 
-  <script type="module" src="./game.js?v=glyph-20260715-pinball1"></script>
+  <script type="module" src="./game.js?v=glyph-20260715-pinball2"></script>
 </body>
 </html>
