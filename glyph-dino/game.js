@@ -14,7 +14,7 @@ import {
   setSemanticStatus,
   textWidth,
   waitForGlyphFonts,
-} from '/assets/glyph-arcade/engine.js?v=glyph-20260715-svg2';
+} from '/assets/glyph-arcade/engine.js?v=glyph-20260715-pretext3';
 
 export const DINO_DIFFICULTY = Object.freeze({
   id: 'easy',
@@ -55,12 +55,42 @@ const EVENTS = Object.freeze([
   { name: 'FOSSIL BLOOM', duration: 8 },
 ]);
 
-const BIOME_CORPORA = Object.freeze([
-  'DESERT LATITUDE SOLAR RADIATION THERMAL INERTIA QUARTZ FELDSPAR DUNE CREST SALTATION WIND SHEAR ARIDITY OASIS BASIN ALLUVIAL FAN',
-  'FOSSIL STRATIGRAPHY SEDIMENT MATRIX TRACE BONE MINERALIZATION EROSION FORMATION PERIOD SPECIES HORIZON EXCAVATION CATALOGUE',
-  'NIGHT SKY ORBIT SPECTRUM PHOTON CONSTELLATION METEOR PARALLAX MAGNITUDE GALAXY ROTATION LUNAR PHASE ATMOSPHERIC SCATTERING',
-  'STORM PRESSURE GRADIENT CONVECTION HUMIDITY LIGHTNING THUNDER DOWNDRAFT PRECIPITATION FRONT VELOCITY CLOUD ELECTRIC FIELD',
-  'FROST ALBEDO CRYSTAL NUCLEATION PERMAFROST SUBLIMATION TEMPERATURE GLACIER MORAINE ICE CORE CLIMATE ARCHIVE FREEZE THAW',
+export const DINO_TEXT_THEMES = Object.freeze([
+  {
+    id: 'desert-processes',
+    name: 'DESERT PROCESSES',
+    family: 'linear',
+    hue: 34,
+    corpus: 'Wind moves dry sand by creep, saltation, and suspension. A dune grows where transport loses energy, while its slip face records the prevailing wind. Quartz grains survive repeated collisions because quartz is harder than many common minerals. Surface temperature changes quickly, but heat penetrates slowly into the sediment. Desert pavement can reduce later erosion by shielding the finer material below.',
+  },
+  {
+    id: 'fossil-record',
+    name: 'FOSSIL RECORD',
+    family: 'casual',
+    hue: 82,
+    corpus: 'A fossil enters the geological record only when burial outpaces decay and disturbance. Sediment protects hard tissue, groundwater carries dissolved minerals, and pressure gradually alters the surrounding matrix. Stratigraphic position provides relative age before radiometric measurements add numerical constraints. Trace fossils preserve behavior such as walking, feeding, and burrowing even when a body is absent.',
+  },
+  {
+    id: 'orbital-observation',
+    name: 'ORBITAL OBSERVATION',
+    family: 'linear',
+    hue: 204,
+    corpus: 'An orbit is continuous free fall around a massive body. Apparent brightness depends on intrinsic luminosity, distance, and the material between observer and source. Parallax shifts a nearby star against a more distant background as Earth changes position. A spectrum separates light by wavelength and reveals temperature, motion, and chemical composition without touching the object.',
+  },
+  {
+    id: 'storm-physics',
+    name: 'STORM PHYSICS',
+    family: 'casual',
+    hue: 278,
+    corpus: 'Warm moist air becomes buoyant when the surrounding atmosphere is cooler and denser. Rising air expands, cools, and can condense into cloud droplets that release latent heat. Charge separation inside a turbulent cloud creates an electric field until lightning opens a conductive path. Thunder is the pressure wave produced when that path heats and expands the nearby air.',
+  },
+  {
+    id: 'cryosphere-archive',
+    name: 'CRYOSPHERE ARCHIVE',
+    family: 'linear',
+    hue: 174,
+    corpus: 'Snow becomes glacial ice as burial compresses grains and removes pore space. Bright ice reflects much of the incoming sunlight, while darker meltwater absorbs more energy. Layers in an ice core preserve dust, volcanic particles, and bubbles of ancient atmosphere. A glacier flows under its own weight and transports rock toward a moraine at its edge.',
+  },
 ]);
 
 const PLAYER_FLOW = Object.freeze({
@@ -77,6 +107,7 @@ const rng = new SeededRandom(0xD1A05EED);
 const game = {
   state: 'ready',
   time: 0,
+  layoutTime: 0,
   distance: 0,
   best: loadBest('glyph-dino-best'),
   speed: DINO_DIFFICULTY.initialSpeed,
@@ -84,6 +115,10 @@ const game = {
   scroll: 0,
   spawnTimer: DINO_DIFFICULTY.firstObstacleDelay,
   biomeIndex: 0,
+  themeIndex: 0,
+  flowMap: true,
+  renderDirty: true,
+  lastFlow: { fragments: [], slots: 0 },
   event: null,
   lastEventName: null,
   eventLeft: 0,
@@ -92,8 +127,12 @@ const game = {
   player: { y: 0, vy: 0, duck: false, jumpHold: 0, jumpSustain: false, jumpBuffer: 0, coyote: DINO_DIFFICULTY.coyoteTime },
   pad: { jump: false, pause: false },
   obstacles: [],
+  typePresses: [],
   particles: [],
   obstacleId: 0,
+  typePressId: 0,
+  readyPressSeeded: false,
+  pointerToolActive: false,
 };
 
 function reset() {
@@ -119,7 +158,11 @@ function reset() {
   game.pad.jump = false;
   game.pad.pause = false;
   game.obstacles.length = 0;
+  game.typePresses.length = 0;
   game.particles.length = 0;
+  game.readyPressSeeded = true;
+  game.pointerToolActive = false;
+  game.renderDirty = true;
   setSemanticStatus('游戏开始。当前距离 0 米。');
 }
 
@@ -159,6 +202,93 @@ function spawnEvent() {
   game.eventCooldown = rng.range(18, 26);
   if (next.name === 'THUNDER PULSE') game.flash = 0.16;
   setSemanticStatus(`环境事件：${next.name}。`);
+}
+
+function typePressVisual(press) {
+  const widthScale = 1.015 + Math.sin(game.layoutTime * 1.75 + press.phase) * 0.335;
+  const heightScale = 0.96 + Math.cos(game.layoutTime * 1.25 + press.phase) * 0.04;
+  const width = press.baseWidth * widthScale;
+  const height = press.baseHeight * heightScale;
+  return {
+    x: press.centerX - width / 2,
+    y: press.y + Math.sin(game.layoutTime * 1.1 + press.phase) * 4,
+    width,
+    height,
+    symbol: 'dino-type-press',
+    flowPolygon: [[0.04, 0.08], [0.20, 0.08], [0.20, 0.28], [0.80, 0.28], [0.80, 0.08], [0.96, 0.08], [0.96, 0.96], [0.04, 0.96]],
+  };
+}
+
+function spawnTypePress(options = {}) {
+  const compact = stage.width < 600;
+  while (game.typePresses.length >= 3) game.typePresses.shift();
+  const demo = options.demo === true;
+  const baseWidth = compact ? 104 : 154;
+  const baseHeight = compact ? 78 : 112;
+  const upper = Math.max(58, game.groundY * 0.36);
+  game.typePresses.push({
+    id: game.typePressId += 1,
+    centerX: stage.width * (demo ? 0.78 : rng.range(0.56, 0.82)),
+    y: demo ? Math.max(48, game.groundY * 0.13) : rng.range(55, upper),
+    baseWidth,
+    baseHeight,
+    phase: rng.range(0, Math.PI * 2),
+    speed: demo ? 3 : rng.range(15, 24),
+    age: 0,
+    demo,
+  });
+  if (!demo) setSemanticStatus(`已召唤 SVG 活字压力机。当前 ${game.typePresses.length} 台，文字正在重新排版。`);
+}
+
+function updateTypePresses(dt) {
+  for (const press of game.typePresses) {
+    press.centerX -= press.speed * dt;
+    press.age += dt;
+  }
+  game.typePresses = game.typePresses.filter(press => {
+    const visual = typePressVisual(press);
+    return visual.x + visual.width > -30 && (press.demo || press.age < 24);
+  });
+}
+
+function cycleTextTheme() {
+  game.themeIndex = (game.themeIndex + 1) % DINO_TEXT_THEMES.length;
+  const theme = DINO_TEXT_THEMES[game.themeIndex];
+  setSemanticStatus(`Pretext 主题切换为 ${theme.name}。字体 ${theme.family}。`);
+}
+
+function dinoToolbarLayout() {
+  const compact = stage.width < 600;
+  const gap = compact ? 5 : 8;
+  const widths = compact ? [66, 76, 66] : [82, 98, 82];
+  const total = widths.reduce((sum, width) => sum + width, 0) + gap * (widths.length - 1);
+  const y = stage.height - stage.safeBottom - (compact ? 64 : 42);
+  const height = compact ? 30 : 28;
+  let x = Math.max(8, (stage.width - total) / 2);
+  const actions = ['flow', 'topic', 'press'];
+  return widths.map((width, index) => {
+    const item = { action: actions[index], x, y, width, height };
+    x += width + gap;
+    return item;
+  });
+}
+
+function dinoToolbarPointerTarget(x, y) {
+  return dinoToolbarLayout().find(item => (
+    x >= item.x && x <= item.x + item.width && y >= item.y && y <= item.y + item.height
+  ))?.action || null;
+}
+
+function runPretextAction(action) {
+  if (action === 'flow') {
+    game.flowMap = !game.flowMap;
+    setSemanticStatus(`Pretext Flow Map ${game.flowMap ? '开启' : '关闭'}。`);
+  } else if (action === 'topic') {
+    cycleTextTheme();
+  } else if (action === 'press') {
+    spawnTypePress();
+  }
+  game.renderDirty = true;
 }
 
 function playerVisual() {
@@ -271,19 +401,42 @@ function emitFootDust() {
 
 function update(dt) {
   game.groundY = stage.height * 0.78;
+  if (game.state !== 'paused') {
+    game.layoutTime += dt;
+    if (game.state === 'ready' && !game.readyPressSeeded) {
+      spawnTypePress({ demo: true });
+      game.readyPressSeeded = true;
+    }
+    updateTypePresses(dt);
+  }
+
   const pad = readGamepad();
   const padJumpPressed = pad.jump && !game.pad.jump;
   const padPausePressed = pad.pause && !game.pad.pause;
   game.pad.jump = pad.jump;
   game.pad.pause = pad.pause;
-  const startAction = input.pressed('Space', 'Enter', 'ArrowUp', 'KeyW', 'PointerDown') || padJumpPressed;
-  const pointerJumpHeld = input.pointer.down && input.pointer.x >= stage.width * 0.34;
+
+  const pointerPressed = input.pressed('PointerDown');
+  const pointerTool = pointerPressed ? dinoToolbarPointerTarget(input.pointer.x, input.pointer.y) : null;
+  if (pointerTool) {
+    game.pointerToolActive = true;
+    runPretextAction(pointerTool);
+  } else if (pointerPressed || !input.pointer.down) {
+    game.pointerToolActive = false;
+  }
+  if (input.pressed('KeyF')) runPretextAction('flow');
+  if (input.pressed('KeyC')) runPretextAction('topic');
+  if (input.pressed('KeyX')) runPretextAction('press');
+
+  const startAction = input.pressed('Space', 'Enter', 'ArrowUp', 'KeyW') || (pointerPressed && !pointerTool) || padJumpPressed;
+  const pointerJumpHeld = input.pointer.down && !game.pointerToolActive && input.pointer.x >= stage.width * 0.34;
   const jumpHeld = input.held('Space', 'ArrowUp', 'KeyW') || pointerJumpHeld || pad.jump;
-  const duckHeld = input.held('ArrowDown', 'KeyS') || pad.duck || (input.pointer.down && input.pointer.x < stage.width * 0.34);
+  const duckHeld = input.held('ArrowDown', 'KeyS') || pad.duck || (input.pointer.down && !game.pointerToolActive && input.pointer.x < stage.width * 0.34);
 
   if (input.pressed('KeyG') && game.state !== 'running') location.href = '/gallery/';
   if ((input.pressed('KeyP', 'Escape') || padPausePressed) && (game.state === 'running' || game.state === 'paused')) {
     game.state = game.state === 'paused' ? 'running' : 'paused';
+    game.renderDirty = true;
   }
 
   if (game.state === 'ready') {
@@ -370,10 +523,10 @@ function overlayLayout() {
   const compact = stage.width < 600;
   const width = Math.min(stage.width - 28, compact ? 344 : 560);
   const height = compact ? 205 : 226;
-  return { compact, width, height, x: (stage.width - width) / 2, y: Math.max(54, (stage.height - height) / 2 - 8) };
+  return { compact, width, height, x: (stage.width - width) / 2, y: Math.max(stage.safeTop + 54, (stage.height - height) / 2 - 8) };
 }
 
-function drawVectorScene(palette) {
+function drawVectorScene(palette, theme) {
   if (game.state !== 'running') {
     const panel = overlayLayout();
     vector.use('overlay-panel', 'dino-panel', {
@@ -401,6 +554,21 @@ function drawVectorScene(palette) {
       flowPolygon: [[0, 0.2], [0.8, 0.2], [1, 0.5], [0.78, 0.8], [0, 0.8]],
       flowPadding: 4,
       opacity: 0.65,
+    });
+  }
+
+  for (const press of game.typePresses) {
+    const visual = typePressVisual(press);
+    vector.use(`type-press-${press.id}`, visual.symbol, {
+      ...visual,
+      color: hsl(theme.hue + press.id * 13, 78, 34, 0.94),
+      cssVars: {
+        '--highlight': hsl(theme.hue + 54, 98, 68),
+        '--spark': hsl(theme.hue + 152, 100, 72),
+        '--cutout': '#030711',
+      },
+      flowPadding: 8,
+      opacity: press.demo ? 0.82 : 0.96,
     });
   }
 
@@ -439,23 +607,37 @@ function drawVectorScene(palette) {
   });
 }
 
-function drawSky(_now, palette) {
+function drawSky(_now, palette, theme) {
   const compact = stage.width < 600;
-  const eventCorpus = game.event ? ` EVENT ${game.event.name} OBSERVATION DURATION DIRECTION INTENSITY ` : '';
-  stage.flowText(`${BIOME_CORPORA[game.biomeIndex]}${eventCorpus}`, {
+  const flowTop = stage.safeTop + (compact ? 50 : 48);
+  const eventCorpus = game.event
+    ? ` The current field event is ${game.event.name.toLowerCase()}, so observers record its duration, direction, and intensity.`
+    : '';
+  const flow = stage.flowText(`${theme.corpus}${eventCorpus}`, {
     x: 8,
-    y: compact ? 34 : 31,
+    y: flowTop,
     w: stage.width - 16,
-    h: Math.max(50, game.groundY - (compact ? 38 : 35)),
+    h: Math.max(50, game.groundY - flowTop - 4),
   }, vector.exclusions, {
-    size: compact ? 8 : 9,
-    lineHeight: compact ? 10 : 11,
-    family: game.biomeIndex % 2 ? 'casual' : 'linear',
+    size: 10,
+    lineHeight: 11,
+    family: theme.family,
     weight: 400,
-    minWidth: 24,
-    targetCharacters: 12000,
-    color: ({ row, slot, index }) => hsl(palette.sky + row * 2.6 + slot * 19 + index * 0.3, 72 + row % 5 * 4, 34 + (row + slot) % 7 * 4, 0.58),
+    minWidth: 22,
+    targetCharacters: 14000,
+    squeeze: {
+      minSize: 8,
+      maxSize: 10,
+      sizes: [8, 9, 10],
+      narrowWidth: compact ? 42 : 200,
+      wideWidth: compact ? 150 : 480,
+      compressedFamily: 'casual',
+      compressedBelow: compact ? 74 : 280,
+    },
+    color: ({ row, slot, index, size }) => hsl(theme.hue + palette.sky * 0.08 + row * 2.4 + slot * 21 + index * 0.26, 72 + row % 5 * 4, 36 + (row + slot + size) % 7 * 4, 0.62),
   });
+  game.lastFlow = flow;
+  return flow;
 }
 
 function drawEvent(now, palette) {
@@ -547,21 +729,55 @@ function drawParticles(palette) {
   }
 }
 
-function drawHud(palette) {
+function drawHud(palette, theme) {
   const compact = stage.width < 600;
   const size = compact ? 8 : 10;
   const font = fontSpec(size, 'linear', 700);
   const left = compact ? 12 : 24;
   const eventText = game.event ? `EVENT:${game.event.name}` : `BIOME:${palette.name}`;
-  stage.glyph(`DINO//TYPE  ${Math.floor(game.distance).toString().padStart(5, '0')}m  BEST:${game.best.toString().padStart(5, '0')}`, left, compact ? 16 : 20, {
+  const flow = stage.flowDiagnostics;
+  const sizes = flow.fontSizes.length ? flow.fontSizes.join('/') : '-';
+  const families = flow.families.length
+    ? flow.families.map(family => family === 'casual' ? 'CAS' : family === 'linear' ? 'LIN' : String(family).slice(0, 3).toUpperCase()).join('/')
+    : '-';
+  stage.glyph(`DINO//TYPE  ${Math.floor(game.distance).toString().padStart(5, '0')}m  BEST:${game.best.toString().padStart(5, '0')}`, left, stage.safeTop + (compact ? 16 : 20), {
     font,
     color: hsl(palette.accent, 96, 72),
   });
-  stage.glyph(eventText, stage.width - left, compact ? 29 : 20, {
+  stage.glyph(eventText, stage.width - left, stage.safeTop + (compact ? 16 : 20), {
     font: fontSpec(compact ? 8 : 9, 'casual', 700),
     color: hsl(game.event ? palette.danger : palette.sky + 70, 98, 73),
     align: 'right',
   });
+  stage.glyph(`TOPIC:${theme.name}  PRESS:${game.typePresses.length}`, left, stage.safeTop + (compact ? 29 : 34), {
+    font: fontSpec(8, theme.family, 700),
+    color: hsl(theme.hue, 94, 72),
+  });
+  stage.glyph(`PTX LIVE  MAP:${game.flowMap ? 'ON' : 'OFF'}  SLOTS:${flow.slots}  EXCL:${flow.exclusions}  FONT:${sizes}  FACE:${families}`, left, stage.safeTop + (compact ? 42 : 46), {
+    font: fontSpec(8, 'linear', 700),
+    color: hsl(theme.hue + 56, 96, 74),
+  });
+}
+
+function drawPretextToolbar(theme) {
+  const labels = ['[F FLOW]', '[C TOPIC]', '[X SVG+]'];
+  const items = dinoToolbarLayout();
+  for (let index = 0; index < items.length; index += 1) {
+    const item = items[index];
+    const active = item.action === 'flow' ? game.flowMap : item.action === 'press' ? game.typePresses.length > 0 : false;
+    const color = hsl(theme.hue + index * 54, 96, active ? 76 : 61);
+    stage.dottedFrame(item.x, item.y, item.width, item.height, {
+      color,
+      glyph: active ? '+' : '.',
+      size: 8,
+      alpha: active ? 0.96 : 0.72,
+    });
+    stage.glyph(labels[index], item.x + item.width / 2, item.y + (stage.width < 600 ? 20 : 19), {
+      font: fontSpec(stage.width < 600 ? 8 : 9, index === 1 ? theme.family : 'linear', 700),
+      color,
+      align: 'center',
+    });
+  }
 }
 
 function drawOverlay(palette) {
@@ -575,7 +791,7 @@ function drawOverlay(palette) {
     align: 'center',
   });
   const message = game.state === 'ready'
-    ? 'A classic SVG T-Rex squeezes a dense proportional-font field. Pretext reflows every line around each moving shape.'
+    ? 'Every dashed Flow Map polygon is a live Pretext exclusion. Tap SVG+ to add a stretching type press, then watch real 8, 9, and 10 pixel fonts refill the changing slots.'
     : game.state === 'paused'
       ? 'The glyph field is frozen. Press P or ESC to continue.'
       : `Distance ${Math.floor(game.distance)}m. Best ${game.best}m. The desert will typeset another chance.`;
@@ -589,7 +805,7 @@ function drawOverlay(palette) {
     color: hsl(palette.accent + 36, 100, 72),
     align: 'center',
   });
-  stage.glyph('HOLD W/UP jump  S/DOWN fast fall  PAD A/B  P pause', stage.width / 2, y + boxHeight - 16, {
+  stage.glyph('W/UP jump  S/DOWN fall  F map  C topic  X press  P pause', stage.width / 2, y + boxHeight - 16, {
     font: fontSpec(compact ? 8 : 9, 'linear', 400),
     color: hsl(palette.sky + 95, 82, 70),
     align: 'center',
@@ -597,17 +813,27 @@ function drawOverlay(palette) {
 }
 
 function render() {
+  if (game.state === 'paused' && !game.renderDirty) return;
   const palette = DINO_PALETTES[game.biomeIndex];
+  const theme = DINO_TEXT_THEMES[game.themeIndex];
   const sceneTime = game.time;
   stage.clear();
   vector.beginFrame(stage.width, stage.height);
-  drawVectorScene(palette);
-  drawSky(sceneTime, palette);
+  drawVectorScene(palette, theme);
+  const flowResult = drawSky(sceneTime, palette, theme);
   drawEvent(sceneTime, palette);
   drawGround(palette);
   drawParticles(palette);
-  drawHud(palette);
+  drawHud(palette, theme);
   drawOverlay(palette);
+  drawPretextToolbar(theme);
+  const flowMapResult = vector.renderFlowMap(game.flowMap, {
+    stroke: hsl(theme.hue + 42, 100, 72),
+    fill: hsl(theme.hue, 88, 48, 0.045),
+    strokeWidth: 1,
+    dashArray: '5 4',
+    opacity: 0.82,
+  });
   vector.endFrame();
   stage.publishDiagnostics({
     game: 'dino',
@@ -617,13 +843,22 @@ function render() {
     event: game.event?.name || null,
     lastEvent: game.lastEventName,
     biome: palette.name,
+    theme: theme.name,
+    themeId: theme.id,
+    flowMap: game.flowMap,
+    flowMapPolygons: flowMapResult.polygons,
+    typePresses: game.typePresses.length,
     player: { y: Math.round(game.player.y), duck: game.player.duck },
     speed: Math.round(game.speed),
     obstacleCount: game.obstacles.length,
     nearestObstacleX: game.obstacles.length ? Math.round(Math.min(...game.obstacles.map(obstacle => obstacle.x))) : null,
     nextObstacleIn: Number(Math.max(0, game.spawnTimer).toFixed(2)),
     difficulty: 'easy',
-    flow: stage.flowDiagnostics,
+    flow: {
+      ...stage.flowDiagnostics,
+      returnedSlots: flowResult.slots,
+      returnedFragments: flowResult.fragments.length,
+    },
     activeSvgObjects: vector.visibleCount,
     visibleColors: stage.frameColors.size,
     visibleGlyphs: stage.frameGlyphs,
@@ -631,10 +866,15 @@ function render() {
     fonts: ['Recursive Linear', 'Recursive Casual'],
     pretext: getPretextUsage(),
     visibleCanvasCount: document.querySelectorAll('canvas:not(.sr-only)').length,
-  });
+    safeInsets: { top: stage.safeTop, right: stage.safeRight, bottom: stage.safeBottom, left: stage.safeLeft },
+  }, game.state === 'paused');
+  game.renderDirty = false;
 }
 
-addEventListener('resize', () => stage.resize());
+addEventListener('resize', () => {
+  stage.resize();
+  game.renderDirty = true;
+});
 
 try {
   await waitForGlyphFonts();

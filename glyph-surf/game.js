@@ -14,7 +14,7 @@ import {
   setSemanticStatus,
   textWidth,
   waitForGlyphFonts,
-} from '/assets/glyph-arcade/engine.js?v=glyph-20260715-svg2';
+} from '/assets/glyph-arcade/engine.js?v=glyph-20260715-pretext3';
 
 export const SURF_MODES = Object.freeze([
   { id: 'endless', key: '1', label: 'ENDLESS', goal: 'Ride until the last heart sinks.' },
@@ -39,7 +39,53 @@ const EVENTS = Object.freeze([
   { name: 'REEF RISE', duration: 10 },
 ]);
 
-const TIDE_CORPUS = 'swell rolls into foam and current / salt light bends across an azure shoal / tide slips around reef and lagoon / drift follows the open water / spray wake ripple coast horizon deep blue violet green gold ';
+export const SURF_TEXT_THEMES = Object.freeze([
+  Object.freeze({
+    id: 'oceanography',
+    label: 'OCEANOGRAPHY',
+    family: 'linear',
+    hue: 186,
+    corpus: 'oceanography log / wind transfers momentum into the surface layer / wave period measures the interval between successive crests / bathymetry redirects swell through refraction / salinity and temperature set seawater density / the thermocline separates warm mixed water from the cold deep layer / longshore current follows the coast / upwelling carries nutrient rich water toward sunlight /',
+  }),
+  Object.freeze({
+    id: 'ecology',
+    label: 'REEF ECOLOGY',
+    family: 'casual',
+    hue: 132,
+    corpus: 'reef ecology field notes / coral polyps build calcium carbonate habitat / seagrass meadows shelter juvenile fish and bind sediment / cleaner wrasse remove parasites from visiting fish / mangrove roots slow the tide and protect the coast / plankton blooms convert sunlight into food / herbivores keep algae from covering young coral / biodiversity increases resilience after a storm /',
+  }),
+  Object.freeze({
+    id: 'navigation',
+    label: 'NAVIGATION',
+    family: 'linear',
+    hue: 48,
+    corpus: 'navigation watch / red port mark and green starboard mark define the channel / steer a compass course corrected for current and leeway / depth soundings reveal shoals beneath the surface / a bearing line joins observer and landmark / latitude follows parallels while longitude follows meridians / keep a safe speed and scan the horizon / plot position time course and distance in the log /',
+  }),
+  Object.freeze({
+    id: 'weather',
+    label: 'MARINE WEATHER',
+    family: 'casual',
+    hue: 306,
+    corpus: 'marine weather bulletin / falling pressure can announce an approaching front / cumulus towers grow where warm humid air rises / a squall produces a sudden increase in wind / sea breeze moves inland as land warms faster than water / swell can arrive before the distant storm / visibility falls inside rain and spray / read cloud wind pressure and wave direction together /',
+  }),
+]);
+
+const FLOW_LENS_POLYGON = Object.freeze([
+  [0.5, 0.02], [0.72, 0.07], [0.89, 0.21], [0.98, 0.42],
+  [0.95, 0.64], [0.84, 0.81], [0.68, 0.91], [0.58, 0.99],
+  [0.4, 0.96], [0.21, 0.84], [0.07, 0.65], [0.03, 0.36],
+]);
+
+const FLOW_LENS_HANDLE_POLYGON = Object.freeze([
+  [0.70, 0.76], [0.77, 0.69], [1, 0.91], [0.92, 1],
+]);
+
+const SURF_TOOLBAR = Object.freeze([
+  Object.freeze({ action: 'flow', label: '[F FLOW]' }),
+  Object.freeze({ action: 'topic', label: '[C TOPIC]' }),
+  Object.freeze({ action: 'reef', label: '[X REEF+]' }),
+  Object.freeze({ action: 'lens', label: '[V LENS]' }),
+]);
 
 const VECTOR_OBJECTS = Object.freeze({
   island: { symbol: 'island', width: 72, height: 62, r: 31, harmful: true, flow: [[[0.05, 0.56], [0.18, 0.2], [0.55, 0.08], [0.92, 0.36], [0.98, 0.9], [0.08, 0.92]]] },
@@ -116,6 +162,22 @@ const game = {
   firstEventPending: true,
   slowMode: false,
   highVisibility: false,
+  themeIndex: 0,
+  flowMap: true,
+  flowLens: {
+    active: true,
+    dragging: false,
+    initialized: false,
+    x: 0,
+    y: 0,
+    offsetX: 0,
+    offsetY: 0,
+  },
+  pointerControl: null,
+  reefSummonCooldown: 0,
+  reefSummonQueued: false,
+  renderDirty: true,
+  flow: { fragments: [], slots: 0 },
   surfer: { x: 0, vx: 0, hearts: 3, boost: 100, invulnerable: 0, shield: 0 },
   objects: [],
   wake: [],
@@ -128,6 +190,83 @@ const game = {
 };
 
 function mode() { return SURF_MODES[game.modeIndex]; }
+
+function textTheme() { return SURF_TEXT_THEMES[game.themeIndex]; }
+
+function toolbarLayout() {
+  const width = Math.min(stage.width - 12, stage.width < 600 ? 420 : 680);
+  const x = (stage.width - width) / 2;
+  const top = stage.safeTop + 55;
+  const height = 31;
+  const itemWidth = width / SURF_TOOLBAR.length;
+  return { x, top, height, width, itemWidth, bottom: top + height };
+}
+
+export function surfToolbarPointerTarget(pointerX, pointerY) {
+  const layout = toolbarLayout();
+  if (
+    pointerX < layout.x
+    || pointerX > layout.x + layout.width
+    || pointerY < layout.top
+    || pointerY > layout.bottom
+  ) return null;
+  const index = clamp(Math.floor((pointerX - layout.x) / layout.itemWidth), 0, SURF_TOOLBAR.length - 1);
+  return SURF_TOOLBAR[index].action;
+}
+
+function flowLensSize() {
+  return stage.width < 600 ? 86 : 122;
+}
+
+function ensureFlowLensPosition() {
+  const size = flowLensSize();
+  const radius = size / 2;
+  const minY = toolbarLayout().bottom + radius + 9;
+  if (!game.flowLens.initialized) {
+    // Start off-centre, not at the edge: the two resulting slots deliberately
+    // land on different discrete 8/9/10px typography levels.
+    game.flowLens.x = stage.width * (stage.width < 600 ? 0.72 : 0.78);
+    game.flowLens.y = minY;
+    game.flowLens.initialized = true;
+  }
+  game.flowLens.x = clamp(game.flowLens.x, radius + 3, stage.width - radius - 3);
+  game.flowLens.y = clamp(game.flowLens.y, minY, stage.height - radius - 3);
+}
+
+function flowLensPointerHit(pointerX, pointerY) {
+  if (!game.flowLens.active) return false;
+  ensureFlowLensPosition();
+  const radius = flowLensSize() * 0.54;
+  return distance({ x: pointerX, y: pointerY }, game.flowLens) <= radius;
+}
+
+function cycleTextTheme() {
+  game.themeIndex = (game.themeIndex + 1) % SURF_TEXT_THEMES.length;
+  const theme = textTheme();
+  game.renderDirty = true;
+  setSemanticStatus(`Pretext 海洋主题切换为 ${theme.label}，字流使用 ${theme.family} 字体。`);
+}
+
+function toggleFlowMap() {
+  game.flowMap = !game.flowMap;
+  game.renderDirty = true;
+  setSemanticStatus(`Pretext Flow Map ${game.flowMap ? '已开启' : '已关闭'}。`);
+}
+
+function toggleFlowLens() {
+  game.flowLens.active = !game.flowLens.active;
+  game.flowLens.dragging = false;
+  if (game.flowLens.active) ensureFlowLensPosition();
+  game.renderDirty = true;
+  setSemanticStatus(`SVG 排版透镜 ${game.flowLens.active ? '已开启，可以拖动观察文字绕排' : '已关闭'}。`);
+}
+
+function applyPretextAction(action) {
+  if (action === 'flow') toggleFlowMap();
+  else if (action === 'topic') cycleTextTheme();
+  else if (action === 'reef') summonReef();
+  else if (action === 'lens') toggleFlowLens();
+}
 
 function reset() {
   const fixedSeed = mode().id === 'time' ? 0x7A11BEEF : (0x51F7C0DE + Math.floor(performance.now())) >>> 0;
@@ -150,6 +289,12 @@ function reset() {
   game.eventLeft = 0;
   game.eventCooldown = 5.5;
   game.firstEventPending = true;
+  game.reefSummonCooldown = 0;
+  game.reefSummonQueued = false;
+  game.renderDirty = true;
+  game.pointerControl = null;
+  game.flowLens.dragging = false;
+  game.flow = { fragments: [], slots: 0 };
   game.surfer.x = stage.width / 2;
   game.surfer.vx = 0;
   game.surfer.hearts = 3;
@@ -214,7 +359,12 @@ function activeReefs() {
   return game.objects.filter(object => object.kind === 'reef' && !object.dead);
 }
 
+function activeGates() {
+  return game.objects.filter(object => object.kind === 'gate' && !object.dead);
+}
+
 function spawnReefFormation(isEvent = false) {
+  if (mode().id === 'zigzag' && activeGates().length) return false;
   const compact = stage.width < 600;
   const channel = compact ? 110 : Math.max(130, Math.min(170, stage.width * 0.22));
   const preferredLaneX = game.surfer.x || stage.width / 2;
@@ -259,12 +409,39 @@ function spawnReefFormation(isEvent = false) {
   game.spawnTimer = Math.max(game.spawnTimer, 2.4);
   game.gateTimer = Math.max(game.gateTimer, 2.2);
   setSemanticStatus(`大型礁石升起，安全航道宽度 ${Math.round(channel)} 像素。`);
+  return true;
+}
+
+export function summonReef() {
+  if (game.state !== 'running') {
+    setSemanticStatus('先开始冲浪，再用 X / REEF+ 主动升起安全礁石。');
+    game.renderDirty = true;
+    return false;
+  }
+  if (game.reefSummonCooldown > 0 || activeReefs().length > 0) return false;
+  if (mode().id === 'zigzag' && activeGates().length) {
+    game.reefSummonQueued = true;
+    setSemanticStatus('REEF+ 已排队：通过当前门后再升起礁石，门不会被删除。');
+    return true;
+  }
+  const existing = new Set(game.objects.map(object => object.id));
+  if (!spawnReefFormation(true)) return false;
+  const summoned = activeReefs().filter(object => !existing.has(object.id));
+  summoned.forEach((reef, index) => {
+    // Reveal the formation immediately while keeping the corridor calculated by
+    // spawnReefFormation intact. Only vertical placement changes here.
+    reef.y = Math.max(reef.y, reef.height * 0.12 + index * Math.min(44, reef.height * 0.2));
+  });
+  game.reefSummonCooldown = 14;
+  game.reefSummonQueued = false;
+  setSemanticStatus(`主动升起 ${summoned.length} 座 SVG 礁石；Pretext 正沿安全航道重新排字。`);
+  return true;
 }
 
 function spawnEvent() {
   const candidates = EVENTS.filter(event => (
     (!event.endlessOnly || mode().id === 'endless')
-    && (event.name !== 'REEF RISE' || activeReefs().length === 0)
+    && (event.name !== 'REEF RISE' || (activeReefs().length === 0 && activeGates().length === 0))
   ));
   const freshCandidates = candidates.filter(event => event.name !== game.lastEventName);
   const reefRise = freshCandidates.find(event => event.name === 'REEF RISE');
@@ -385,7 +562,7 @@ function overlayLayout() {
   const width = Math.min(stage.width - 28, compact ? 360 : 660);
   const height = compact ? 330 : 365;
   const x = (stage.width - width) / 2;
-  const y = Math.max(54, (stage.height - height) / 2 - 12);
+  const y = Math.max(toolbarLayout().bottom + 8, (stage.height - height) / 2 - 12);
   const menuStep = compact ? 42 : 48;
   const menuFirstY = y + 150;
   const startY = y + height - (compact ? 52 : 54);
@@ -448,19 +625,58 @@ function update(dt) {
       setSemanticStatus(`已选择 ${mode().label} 模式。按空格或点击 START 开始。`);
     }
   }
-  if (input.pressed('KeyH')) game.highVisibility = !game.highVisibility;
-  if (input.pressed('KeyL')) game.slowMode = !game.slowMode;
+  if (input.pressed('KeyH')) {
+    game.highVisibility = !game.highVisibility;
+    game.renderDirty = true;
+  }
+  if (input.pressed('KeyL')) {
+    game.slowMode = !game.slowMode;
+    game.renderDirty = true;
+  }
+  if (input.pressed('KeyF')) toggleFlowMap();
+  if (input.pressed('KeyC')) cycleTextTheme();
+  if (input.pressed('KeyX')) summonReef();
+  if (input.pressed('KeyV')) toggleFlowLens();
   if (input.pressed('KeyG') && game.state !== 'running') location.href = '/gallery/';
   if (input.pressed('KeyM') && game.state === 'results') game.state = 'ready';
   if (input.pressed('KeyP', 'Escape') && (game.state === 'running' || game.state === 'paused')) {
     game.state = game.state === 'paused' ? 'running' : 'paused';
+    game.renderDirty = true;
   }
   if (game.state !== 'paused') game.visualTime += dt;
 
   const keyboardStart = input.pressed('Space', 'Enter');
   const pointerStart = input.pressed('PointerDown');
+  let pointerConsumed = false;
+  if (!input.pointer.down) {
+    if (game.flowLens.dragging || game.pointerControl !== null) game.renderDirty = true;
+    game.flowLens.dragging = false;
+    game.pointerControl = null;
+  }
+  if (pointerStart) {
+    const toolbarAction = surfToolbarPointerTarget(input.pointer.x, input.pointer.y);
+    if (toolbarAction) {
+      game.pointerControl = 'toolbar';
+      applyPretextAction(toolbarAction);
+      pointerConsumed = true;
+    } else if (flowLensPointerHit(input.pointer.x, input.pointer.y)) {
+      game.pointerControl = 'lens';
+      game.flowLens.dragging = true;
+      game.flowLens.offsetX = input.pointer.x - game.flowLens.x;
+      game.flowLens.offsetY = input.pointer.y - game.flowLens.y;
+      pointerConsumed = true;
+      setSemanticStatus('正在拖动 SVG 排版透镜；Pretext 字流实时绕过十二边排版边界。');
+    }
+  }
+  if (game.flowLens.dragging && input.pointer.down) {
+    const radius = flowLensSize() / 2;
+    const minY = toolbarLayout().bottom + radius + 9;
+    game.flowLens.x = clamp(input.pointer.x - game.flowLens.offsetX, radius + 3, stage.width - radius - 3);
+    game.flowLens.y = clamp(input.pointer.y - game.flowLens.offsetY, minY, stage.height - radius - 3);
+    game.renderDirty = true;
+  }
   if (game.state === 'ready') {
-    if (pointerStart) {
+    if (pointerStart && !pointerConsumed) {
       const target = menuPointerTarget(input.pointer.x, input.pointer.y);
       if (target?.type === 'mode') {
         game.modeIndex = target.index;
@@ -468,16 +684,16 @@ function update(dt) {
       } else if (target?.type === 'start') {
         reset();
       }
-    } else if (keyboardStart) reset();
+    } else if (keyboardStart && !pointerConsumed) reset();
     return;
   }
   if (game.state === 'results') {
-    if (pointerStart && resultsMenuPointerHit(input.pointer.x, input.pointer.y)) {
+    if (pointerStart && !pointerConsumed && resultsMenuPointerHit(input.pointer.x, input.pointer.y)) {
       game.state = 'ready';
       setSemanticStatus(`已返回模式菜单。当前选择 ${mode().label}。`);
       return;
     }
-    if (keyboardStart || pointerStart || input.pressed('KeyR')) reset();
+    if ((!pointerConsumed && (keyboardStart || pointerStart)) || input.pressed('KeyR')) reset();
     updateWake(dt * 0.35);
     return;
   }
@@ -485,15 +701,17 @@ function update(dt) {
 
   game.time += dt;
   game.elapsed += dt;
+  game.reefSummonCooldown = Math.max(0, game.reefSummonCooldown - dt);
   const pad = gamepadSteer();
   let steer = 0;
   if (input.held('ArrowLeft', 'KeyA')) steer -= 1;
   if (input.held('ArrowRight', 'KeyD')) steer += 1;
   if (Math.abs(pad.steer) > Math.abs(steer)) steer = pad.steer;
-  if (input.pointer.down && !input.held('ArrowLeft', 'ArrowRight', 'KeyA', 'KeyD')) {
+  const pointerRiding = input.pointer.down && game.pointerControl === null;
+  if (pointerRiding && !input.held('ArrowLeft', 'ArrowRight', 'KeyA', 'KeyD')) {
     steer = clamp((input.pointer.x - game.surfer.x) / Math.max(90, stage.width * 0.18), -1, 1);
   }
-  const boost = input.held('ArrowUp', 'KeyW') || input.pointer.down || pad.boost;
+  const boost = input.held('ArrowUp', 'KeyW') || pointerRiding || pad.boost;
   const brake = input.held('ArrowDown', 'KeyS') || pad.brake;
   const speedFactor = game.slowMode ? 0.72 : 1;
   const boostPower = boost && game.surfer.boost > 0 ? 1 : 0;
@@ -515,12 +733,17 @@ function update(dt) {
 
   game.reefTimer -= dt;
   let reefsPresent = activeReefs().length > 0;
-  if (game.reefTimer <= 0 && !reefsPresent && game.event?.name !== 'WHIRLPOOL FIELD') {
+  let gatesPresent = activeGates().length > 0;
+  if (mode().id === 'zigzag' && game.reefSummonQueued && !reefsPresent && !gatesPresent) {
+    game.reefSummonQueued = false;
+    reefsPresent = summonReef();
+  }
+  if (game.reefTimer <= 0 && !reefsPresent && !gatesPresent && game.event?.name !== 'WHIRLPOOL FIELD') {
     spawnReefFormation(false);
     reefsPresent = true;
   }
 
-  if (mode().id === 'zigzag' && !reefsPresent) {
+  if (mode().id === 'zigzag' && !reefsPresent && !game.reefSummonQueued) {
     game.gateTimer -= dt;
     if (game.gateTimer <= 0) spawnGate();
   } else if (mode().id !== 'zigzag' && !reefsPresent) {
@@ -573,6 +796,11 @@ function update(dt) {
   game.objects = game.objects.filter(object => (
     !object.dead && object.y < stage.height + (object.kind === 'reef' ? object.height / 2 + 70 : 100)
   ));
+  gatesPresent = activeGates().length > 0;
+  if (mode().id === 'zigzag' && game.reefSummonQueued && !activeReefs().length && !gatesPresent) {
+    game.reefSummonQueued = false;
+    summonReef();
+  }
 
   game.eventCooldown -= dt;
   if (!game.event && game.eventCooldown <= 0) spawnEvent();
@@ -599,13 +827,18 @@ function addRectExclusion(id, x, y, width, height, padding = 0) {
 function drawVectorScene(palette) {
   vector.beginFrame(stage.width, stage.height);
   if (game.state === 'ready') {
-    const scale = stage.width < 600 ? 0.72 : 1;
+    const compact = stage.width < 600;
+    const scale = compact ? 0.72 : 1;
+    const layout = overlayLayout();
     vector.use('menu-reef-left', 'reef-crown', {
       x: -42 * scale, y: stage.height * 0.08, width: 230 * scale, height: 210 * scale,
       opacity: 0.54, rotate: -4, flowPolygons: REEF_VARIANTS.crown.flow, flowPadding: 8,
     });
     vector.use('menu-reef-right', 'reef-atoll', {
-      x: stage.width - 195 * scale, y: stage.height * 0.61, width: 245 * scale, height: 214 * scale,
+      x: compact ? stage.width - 88 : stage.width - 195,
+      y: compact ? layout.y + layout.height + 28 : stage.height * 0.61,
+      width: compact ? 180 : 245,
+      height: compact ? 158 : 214,
       opacity: 0.5, rotate: 5, flowPolygons: REEF_VARIANTS.atoll.flow, flowPadding: 8,
     });
   } else {
@@ -676,35 +909,94 @@ function drawVectorScene(palette) {
     }
   }
 
-  addRectExclusion('hud', 0, 0, stage.width, 50, 2);
+  if (game.flowLens.active) {
+    ensureFlowLensPosition();
+    const theme = textTheme();
+    const size = flowLensSize();
+    vector.use('pretext-flow-lens', 'flow-lens', {
+      x: game.flowLens.x - size / 2,
+      y: game.flowLens.y - size / 2,
+      width: size,
+      height: size,
+      rotate: Math.sin(game.visualTime * 0.82) * 3.5,
+      opacity: game.flowLens.dragging ? 1 : 0.88,
+      color: hsl(theme.hue, 100, 76),
+      cssVars: {
+        '--highlight': hsl(theme.hue + 54, 100, 72),
+        '--spark': hsl(theme.hue + 154, 100, 70),
+      },
+      flowPolygons: [FLOW_LENS_POLYGON, FLOW_LENS_HANDLE_POLYGON],
+      flowPadding: 7,
+    });
+  }
+
+  const toolbar = toolbarLayout();
+  addRectExclusion('hud', 0, 0, stage.width, toolbar.bottom + 2, 2);
+  if (game.event?.name === 'REEF RISE') {
+    const labelWidth = Math.min(stage.width - 24, stage.width < 600 ? 268 : 390);
+    addRectExclusion('reef-rise-label', (stage.width - labelWidth) / 2, toolbar.bottom + 5, labelWidth, 23, 3);
+  }
   if (game.state !== 'running') {
     const layout = overlayLayout();
     addRectExclusion('overlay', layout.x, layout.y, layout.width, layout.height, 8);
   }
+  const theme = textTheme();
+  const flowMapResult = vector.renderFlowMap(game.flowMap, {
+    stroke: hsl(theme.hue + 42, 100, 74),
+    fill: hsl(theme.hue, 92, 50, 0.045),
+    strokeWidth: game.flowLens.dragging ? 1.8 : 1.15,
+    dashArray: game.flowLens.dragging ? '3 3' : '7 5',
+    opacity: 0.82,
+  });
   vector.endFrame();
+  return flowMapResult;
 }
 
 function drawWater(now, palette) {
   const compact = stage.width < 600;
-  const size = compact ? 8 : stage.width > 1200 ? 10 : 9;
-  const lineHeight = compact ? 11 : size + 4;
+  const theme = textTheme();
+  const lineHeight = compact ? 12 : 14;
   const eventHue = game.event?.name === 'BIOLUMINESCENT BLOOM' ? -42
     : game.event?.name === 'SUN SHOWER' ? 34
       : game.event?.name === 'SQUALL LINE' ? 32
         : 0;
-  stage.flowText(TIDE_CORPUS, { x: 3, y: 0, w: stage.width - 6, h: stage.height }, vector.exclusions, {
-    size,
+  game.flow = stage.flowText(theme.corpus, { x: 3, y: 0, w: stage.width - 6, h: stage.height }, vector.exclusions, {
+    size: 10,
     lineHeight,
-    family: 'linear',
+    family: theme.family,
     weight: 400,
-    minWidth: compact ? 34 : 46,
+    minWidth: compact ? 32 : 42,
     targetCharacters: 24000,
+    squeeze: {
+      minSize: 8,
+      maxSize: 10,
+      sizes: [8, 9, 10],
+      narrowWidth: compact ? 32 : 160,
+      wideWidth: compact ? 148 : Math.min(420, Math.max(300, stage.width * 0.32)),
+      compressedFamily: 'casual',
+      compressedBelow: compact ? 76 : 240,
+    },
     color: ({ row, slot, baseline }) => {
       const depth = baseline / Math.max(1, stage.height);
       const wave = Math.sin(row * 0.48 + slot * 1.7 + now * 1.25);
-      return hsl(palette.deep + (palette.surface - palette.deep) * depth + eventHue + row * 0.7, 72 + row % 19, 29 + depth * 31 + wave * 5, 0.58 + (row % 5) * 0.07);
+      return hsl(theme.hue + depth * 46 + eventHue + row * 1.1 + slot * 8, 72 + row % 19, 29 + depth * 31 + wave * 5, 0.58 + (row % 5) * 0.07);
     },
   });
+  if (game.flowMap) {
+    const markerFont = fontSpec(7, 'casual', 700);
+    for (let index = 0; index < game.flow.fragments.length; index += 4) {
+      const fragment = game.flow.fragments[index];
+      stage.glyph('‹', fragment.x - 2, fragment.y + fragment.h - 2, {
+        font: markerFont,
+        color: hsl(theme.hue + 84, 100, 78, 0.72),
+        align: 'right',
+      });
+      stage.glyph('›', fragment.x + fragment.w + 2, fragment.y + fragment.h - 2, {
+        font: markerFont,
+        color: hsl(theme.hue + 164, 100, 75, 0.72),
+      });
+    }
+  }
 }
 
 function drawEvent(now, palette) {
@@ -753,7 +1045,7 @@ function drawEvent(now, palette) {
       });
     }
   } else if (event === 'REEF RISE') {
-    stage.glyph('REEF RISE // FOLLOW THE OPEN WATER', stage.width / 2, 68, {
+    stage.glyph('REEF RISE // FOLLOW THE OPEN WATER', stage.width / 2, toolbarLayout().bottom + 21, {
       font: fontSpec(stage.width < 600 ? 9 : 13, 'casual', 700),
       color: hsl(palette.sand + now * 18, 100, 72),
       align: 'center',
@@ -831,6 +1123,7 @@ function formatBest() {
 
 function drawHud(palette) {
   const compact = stage.width < 600;
+  const theme = textTheme();
   const font = fontSpec(compact ? 8 : 10, 'linear', 700);
   const hearts = mode().id === 'time' ? `PENALTY +${game.penalties}s` : `${'H'.repeat(game.surfer.hearts)}${'.'.repeat(Math.max(0, 3 - game.surfer.hearts))}`;
   const score = mode().id === 'time'
@@ -838,23 +1131,62 @@ function drawHud(palette) {
     : mode().id === 'zigzag'
       ? `STREAK:${game.streak}  MAX:${game.maxStreak}  GATES:${game.gatesPassed}`
       : `${Math.floor(game.distance).toString().padStart(5, '0')}m`;
-  stage.glyph(`SURF//GLYPH  ${mode().label}  ${hearts}`, 9, 18, { font, color: hsl(palette.foam, 98, 74) });
-  stage.glyph(`${score}  BEST:${formatBest()}`, stage.width - 9, 18, {
+  stage.glyph(`SURF//GLYPH  ${mode().label}  ${hearts}`, 9, stage.safeTop + 18, { font, color: hsl(palette.foam, 98, 74) });
+  stage.glyph(`${score}  BEST:${formatBest()}`, stage.width - 9, stage.safeTop + 18, {
     font,
     color: hsl(palette.surface + 78, 94, 72),
     align: 'right',
   });
   const meter = Math.round(game.surfer.boost / 10);
-  stage.glyph(`BOOST ${'+'.repeat(meter)}${'.'.repeat(10 - meter)}`, 9, 36, {
+  stage.glyph(`BOOST ${'+'.repeat(meter)}${'.'.repeat(10 - meter)}`, 9, stage.safeTop + 36, {
     font: fontSpec(compact ? 8 : 9, 'casual', 700),
     color: hsl(52 + meter * 2, 100, 66),
   });
-  const reefWarning = game.state === 'running' && game.reefTimer > 0 && game.reefTimer < 1.6 ? '  REEF AHEAD' : '';
-  stage.glyph(`${game.event ? `EVENT:${game.event.name}` : SURF_PALETTES[game.paletteIndex].name}${reefWarning}  H:${game.highVisibility ? 'HIGH' : 'COLOR'}  L:${game.slowMode ? 'SLOW' : 'FULL'}`, stage.width - 9, 36, {
+  const reefWarning = game.reefSummonQueued
+    ? '  REEF QUEUED'
+    : game.state === 'running' && game.reefTimer > 0 && game.reefTimer < 1.6 ? '  REEF AHEAD' : '';
+  stage.glyph(`${game.event ? `EVENT:${game.event.name}` : theme.label}${reefWarning}  H:${game.highVisibility ? 'HIGH' : 'COLOR'}  L:${game.slowMode ? 'SLOW' : 'FULL'}`, stage.width - 9, stage.safeTop + 36, {
     font: fontSpec(8, 'linear', 400),
     color: hsl(palette.danger + 20, 92, 72),
     align: 'right',
   });
+
+  const flow = stage.flowDiagnostics;
+  const fontSizes = flow.fontSizes.length ? flow.fontSizes.join('/') : '--';
+  const families = flow.families.length ? flow.families.join('/') : '--';
+  const metricsFont = fontSpec(compact ? 7 : 8, 'linear', 700);
+  stage.glyph(`PTX LIVE  slots:${flow.slots}  exclusions:${flow.exclusions}`, 9, stage.safeTop + 51, {
+    font: metricsFont,
+    color: hsl(theme.hue + 18, 100, 76),
+  });
+  stage.glyph(`fontSizes:${fontSizes}  families:${families}`, stage.width - 9, stage.safeTop + 51, {
+    font: metricsFont,
+    color: hsl(theme.hue + 126, 100, 76),
+    align: 'right',
+  });
+
+  const toolbar = toolbarLayout();
+  for (let index = 0; index < SURF_TOOLBAR.length; index += 1) {
+    const item = SURF_TOOLBAR[index];
+    const itemX = toolbar.x + index * toolbar.itemWidth;
+    const enabled = item.action === 'flow' ? game.flowMap
+      : item.action === 'lens' ? game.flowLens.active
+        : item.action === 'reef'
+          ? game.state === 'running' && !game.reefSummonQueued && game.reefSummonCooldown <= 0 && activeReefs().length === 0
+          : true;
+    const label = item.action === 'reef' && game.reefSummonQueued ? '[X QUEUED]' : item.label;
+    const itemHue = theme.hue + index * 58;
+    stage.dottedFrame(itemX + 1, toolbar.top, toolbar.itemWidth - 3, toolbar.height, {
+      size: compact ? 7 : 8,
+      glyph: enabled ? '+' : '.',
+      color: hsl(itemHue, enabled ? 100 : 48, enabled ? 72 : 49, enabled ? 0.9 : 0.6),
+    });
+    stage.glyph(label, itemX + toolbar.itemWidth / 2, toolbar.top + 20, {
+      font: fontSpec(compact ? 7.5 : 9, item.action === 'topic' ? theme.family : 'linear', 700),
+      color: hsl(itemHue + 22, enabled ? 100 : 42, enabled ? 76 : 58),
+      align: 'center',
+    });
+  }
 }
 
 function drawOverlay(palette) {
@@ -869,7 +1201,7 @@ function drawOverlay(palette) {
   });
 
   if (game.state === 'ready') {
-    stage.paragraph('SVG reefs squeeze a continuous ocean text stream; Pretext reflows every line around the moving shapes. Choose a current:', x + 28, y + 82, width - 56, {
+    stage.paragraph('Drag the SVG lens or change the factual ocean corpus now. During the ride, use REEF+ to raise a safe reef corridor. Pretext remeasures 8–10px proportional type and reflows every line around the moving shapes:', x + 28, y + 82, width - 56, {
       size: compact ? 9 : 11,
       lineHeight: compact ? 13 : 16,
       color: hsl(palette.surface + 42, 76, 79),
@@ -929,7 +1261,7 @@ function drawOverlay(palette) {
       });
     }
   }
-  stage.glyph('A/D steer  W boost  S brake  H visibility  L slow  P pause  G gallery', stage.width / 2, y + height - 25, {
+  stage.glyph('F flow map  C topic  X reef+  V lens/drag  |  A/D steer  W boost  S brake  P pause', stage.width / 2, y + height - 25, {
     font: fontSpec(compact ? 8 : 10, 'linear', 400),
     color: hsl(palette.surface + 95, 78, 70),
     align: 'center',
@@ -937,9 +1269,10 @@ function drawOverlay(palette) {
 }
 
 function render() {
+  if (game.state === 'paused' && !game.renderDirty) return;
   const palette = SURF_PALETTES[game.paletteIndex];
   stage.clear();
-  drawVectorScene(palette);
+  const flowMapResult = drawVectorScene(palette);
   drawWater(game.visualTime, palette);
   drawEvent(game.visualTime, palette);
   drawWake(palette);
@@ -951,6 +1284,21 @@ function render() {
     game: 'surf',
     state: game.state,
     mode: mode().id,
+    theme: textTheme().id,
+    themeFamily: textTheme().family,
+    themeHue: textTheme().hue,
+    flowMap: game.flowMap,
+    flowMapPolygons: flowMapResult.polygons,
+    flowLens: {
+      active: game.flowLens.active,
+      dragging: game.flowLens.dragging,
+      x: Math.round(game.flowLens.x),
+      y: Math.round(game.flowLens.y),
+      polygonSides: FLOW_LENS_POLYGON.length,
+      polygonParts: 2,
+    },
+    reefSummonCooldown: Number(game.reefSummonCooldown.toFixed(2)),
+    reefSummonQueued: game.reefSummonQueued,
     gameTime: Number(game.time.toFixed(2)),
     distance: Math.floor(game.distance),
     event: game.event?.name || null,
@@ -959,9 +1307,15 @@ function render() {
     speed: Math.round(game.speed),
     highVisibility: game.highVisibility,
     slowMode: game.slowMode,
-    flow: { ...stage.flowDiagnostics, activeExclusions: vector.exclusions.length },
+    flow: {
+      ...stage.flowDiagnostics,
+      activeExclusions: vector.exclusions.length,
+      returnedSlots: game.flow.slots,
+      returnedFragments: game.flow.fragments.length,
+    },
     activeSvgObjects: vector.visibleCount,
     activeReefs: activeReefs().length,
+    activeGates: activeGates().length,
     reefIn: Number(Math.max(0, game.reefTimer).toFixed(2)),
     safeLaneX: Math.round(game.safeLaneX),
     worldObjects: game.objects.length,
@@ -973,10 +1327,15 @@ function render() {
     pretext: getPretextUsage(),
     visibleCanvasCount: document.querySelectorAll('canvas:not(.sr-only)').length,
     visibleSvgCount: document.querySelectorAll('#vector-stage').length,
-  });
+    safeInsets: { top: stage.safeTop, right: stage.safeRight, bottom: stage.safeBottom, left: stage.safeLeft },
+  }, game.state === 'paused');
+  game.renderDirty = false;
 }
 
-addEventListener('resize', () => stage.resize());
+addEventListener('resize', () => {
+  stage.resize();
+  game.renderDirty = true;
+});
 
 try {
   await waitForGlyphFonts();

@@ -1,18 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
   <meta name="theme-color" content="#030711">
   <title>SURF//GLYPH · Pretext 字流与 SVG 礁海</title>
-  <meta name="description" content="由 Pretext 实时围绕 SVG 礁石重排的多色非等宽文字海洋，包含 Endless、Time Trial 与 Zig Zag 三种冲浪模式。">
+  <meta name="description" content="拖动 SVG 排版透镜并主动升起巨型礁石，观察 Pretext 将 8–10px 多色比例字流实时分栏续排。">
   <meta property="og:title" content="SURF//GLYPH · Pretext 字流与 SVG 礁海">
-  <meta property="og:description" content="SVG 礁石会挤压海洋文字，Pretext 随物体移动自动重新断行。">
+  <meta property="og:description" content="可操作 Flow Map、四套海洋语料与三种冲浪模式，让 Pretext 成为核心玩法。">
   <meta property="og:url" content="https://vincejiang.com/glyph-surf/">
   <meta property="og:image" content="https://vincejiang.com/favicon.png">
   <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://vincejiang.com/glyph-surf/">
-  <link rel="stylesheet" href="/assets/glyph-arcade/stage.css?v=glyph-20260715-svg2">
+  <link rel="stylesheet" href="/assets/glyph-arcade/stage.css?v=glyph-20260715-pretext3">
 </head>
 <body>
   <main>
@@ -49,6 +49,12 @@
           <stop offset="0" stop-color="#fffbd0"/>
           <stop offset="0.52" stop-color="#ffd43b"/>
           <stop offset="1" stop-color="#f38b16"/>
+        </radialGradient>
+        <radialGradient id="lens-glow" cx="38%" cy="34%" r="72%">
+          <stop offset="0" stop-color="#ffffff" stop-opacity=".38"/>
+          <stop offset=".34" stop-color="#5fffe0" stop-opacity=".2"/>
+          <stop offset=".67" stop-color="#8b5cf6" stop-opacity=".16"/>
+          <stop offset="1" stop-color="#ff5ca8" stop-opacity=".08"/>
         </radialGradient>
 
         <symbol id="reef-crown" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -133,17 +139,24 @@
           <path d="M35 32H65M39 53H62" stroke="#18336e" stroke-width="8"/>
           <ellipse cx="50" cy="82" rx="31" ry="12" fill="#54eadc"/>
         </symbol>
+        <symbol id="flow-lens" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <circle cx="50" cy="50" r="45" fill="url(#lens-glow)" stroke="currentColor" stroke-width="4"/>
+          <circle cx="50" cy="50" r="34" fill="none" stroke="var(--highlight, #fff36d)" stroke-width="3" stroke-dasharray="7 5"/>
+          <path d="M18 50h64M50 18v64M28 30 72 70M72 30 28 70" fill="none" stroke="var(--spark, #ff5ca8)" stroke-width="2" opacity=".78"/>
+          <circle cx="50" cy="50" r="8" fill="var(--highlight, #fff36d)" stroke="#112253" stroke-width="3"/>
+          <path d="M78 78 98 98" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
+        </symbol>
       </defs>
       <g data-vector-scene></g>
     </svg>
     <canvas id="glyph-stage" tabindex="0" role="application" aria-label="SURF GLYPH Pretext 字流与 SVG 礁海冲浪游戏"></canvas>
     <section class="sr-only" aria-live="polite">
       <h1>SURF//GLYPH</h1>
-      <p>按 A/D 或左右方向键转向，W 或上方向键加速，S 或下方向键刹水。数字 1、2、3 选择模式。</p>
+      <p>按 A/D 或左右方向键转向。F 显示排版轮廓，C 切换海洋主题，X 主动升起礁石，V 开关并拖动 SVG 排版透镜。</p>
       <p id="game-status">正在加载本地字体、Pretext 与 SVG 礁海。</p>
       <a href="/gallery/">返回 Gallery</a>
     </section>
   </main>
-  <script type="module" src="./game.js?v=glyph-20260715-svg2"></script>
+  <script type="module" src="./game.js?v=glyph-20260715-pretext3"></script>
 </body>
 </html>

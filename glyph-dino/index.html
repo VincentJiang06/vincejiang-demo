@@ -1,18 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
   <meta name="theme-color" content="#030711">
   <title>DINO//TYPE · Pretext 自动排版跑酷</title>
-  <meta name="description" content="Pretext 非等宽文本会绕开像素风 SVG 恐龙与障碍，实时挤压、换行和重新排版。">
+  <meta name="description" content="召唤伸缩 SVG 活字压力机，直接观察 Pretext 如何按可用槽宽切换 8–10px 字号、字体与断行。">
   <meta property="og:title" content="DINO//TYPE · Pretext 自动排版跑酷">
-  <meta property="og:description" content="小字号客观主题文本与经典方头 T-Rex 共同构成的动态排版游戏。">
+  <meta property="og:description" content="可操作 Flow Map、五种科学语料与经典方头 T-Rex 共同构成的动态排版游戏。">
   <meta property="og:url" content="https://vincejiang.com/glyph-dino/">
   <meta property="og:image" content="https://vincejiang.com/favicon.png">
   <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://vincejiang.com/glyph-dino/">
-  <link rel="stylesheet" href="/assets/glyph-arcade/stage.css?v=glyph-20260715-svg2">
+  <link rel="stylesheet" href="/assets/glyph-arcade/stage.css?v=glyph-20260715-pretext3">
 </head>
 <body>
   <main>
@@ -79,17 +79,29 @@
         <symbol id="dino-panel" viewBox="0 0 100 100" preserveAspectRatio="none">
           <rect x="1" y="1" width="98" height="98" rx="3" fill="currentColor" stroke="var(--highlight, #7fffd4)" stroke-width="1"/>
         </symbol>
+        <symbol id="dino-type-press" viewBox="0 0 160 120" preserveAspectRatio="none">
+          <g stroke-linejoin="round">
+            <path d="M10 108V14h22v72h96V14h22v94Z" fill="currentColor" stroke="var(--highlight, #7fffd4)" stroke-width="5"/>
+            <path d="M30 16h100v23H30Z" fill="var(--highlight, #7fffd4)" stroke="var(--cutout, #030711)" stroke-width="4"/>
+            <path d="M54 39h52v17H54ZM43 76h74v17H43Z" fill="var(--spark, #fff36d)" stroke="var(--cutout, #030711)" stroke-width="4"/>
+            <path d="M66 54h28v23H66Z" fill="currentColor" stroke="var(--highlight, #7fffd4)" stroke-width="4"/>
+            <circle cx="21" cy="103" r="10" fill="var(--spark, #fff36d)" stroke="var(--cutout, #030711)" stroke-width="4"/>
+            <circle cx="139" cy="103" r="10" fill="var(--spark, #fff36d)" stroke="var(--cutout, #030711)" stroke-width="4"/>
+            <path d="M46 26h14m8 0h10m8 0h28" stroke="var(--cutout, #030711)" stroke-width="5" stroke-linecap="square"/>
+            <path d="M22 4v16M138 4v16" stroke="var(--spark, #fff36d)" stroke-width="7" stroke-linecap="square"/>
+          </g>
+        </symbol>
       </defs>
       <g data-vector-scene></g>
     </svg>
     <canvas id="glyph-stage" tabindex="0" role="application" aria-label="DINO TYPE Pretext 自动排版跑酷游戏"></canvas>
     <section class="sr-only" aria-live="polite">
       <h1>DINO//TYPE</h1>
-      <p>按空格、W 或上方向键跳跃；按 S 或下方向键下蹲。经典 SVG T-Rex 与障碍会实时挤压 Pretext 文本。</p>
+      <p>按空格、W 或上方向键跳跃；按 S 或下方向键下蹲。F 显示排版轮廓，C 切换客观主题，X 召唤会挤压文字的 SVG 活字压力机。</p>
       <p id="game-status">正在加载本地字体与 Pretext。</p>
       <a href="/gallery/">返回 Gallery</a>
     </section>
   </main>
-  <script type="module" src="./game.js?v=glyph-20260715-svg2"></script>
+  <script type="module" src="./game.js?v=glyph-20260715-pretext3"></script>
 </body>
 </html>

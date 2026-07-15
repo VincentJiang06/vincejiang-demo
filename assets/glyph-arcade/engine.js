@@ -32,7 +32,164 @@ const pretextUsage = {
 };
 
 export function fontSpec(size, family = 'linear', weight = 400) {
-  return `${weight} ${Math.max(8, size)}px ${FONT_FAMILY[family]}`;
+  const numericSize = Number(size);
+  const resolvedSize = Number.isFinite(numericSize) ? Math.max(8, numericSize) : 8;
+  const resolvedFamily = FONT_FAMILY[family] || family || FONT_FAMILY.linear;
+  return `${weight} ${resolvedSize}px ${resolvedFamily}`;
+}
+
+function flowFontSpec(size, family, weight) {
+  const resolvedFamily = FONT_FAMILY[family] || family || FONT_FAMILY.linear;
+  return `${weight} ${Math.max(1, size)}px ${resolvedFamily}`;
+}
+
+function positiveNumber(value, fallback) {
+  const numeric = Number(value);
+  return Number.isFinite(numeric) && numeric > 0 ? numeric : fallback;
+}
+
+function finiteNumber(value, fallback) {
+  const numeric = Number(value);
+  return Number.isFinite(numeric) ? numeric : fallback;
+}
+
+function roundedSize(value) {
+  return Number(value.toFixed(3));
+}
+
+function fontWeight(value, fallback = 400) {
+  if (typeof value === 'string' && value.trim()) return value;
+  return positiveNumber(value, fallback);
+}
+
+function discreteSizes(minSize, maxSize, config) {
+  const explicit = Array.isArray(config.sizes)
+    ? config.sizes
+    : Array.isArray(config.levels)
+      ? config.levels
+      : Array.isArray(config.steps)
+        ? config.steps
+        : null;
+  if (explicit) {
+    const values = explicit
+      .map(Number)
+      .filter(value => Number.isFinite(value) && value >= minSize && value <= maxSize);
+    values.push(minSize, maxSize);
+    return [...new Set(values.map(roundedSize))].sort((a, b) => a - b);
+  }
+
+  const stepCount = Number(config.steps);
+  if (Number.isFinite(stepCount) && stepCount >= 2) {
+    const count = Math.min(64, Math.floor(stepCount));
+    return Array.from({ length: count }, (_, index) => (
+      roundedSize(minSize + (maxSize - minSize) * index / (count - 1))
+    ));
+  }
+
+  const step = positiveNumber(config.step, 1);
+  const values = [minSize];
+  for (let value = minSize + step; value < maxSize && values.length < 64; value += step) {
+    values.push(roundedSize(value));
+  }
+  if (maxSize !== minSize) values.push(maxSize);
+  return values;
+}
+
+function typographyProfile(options) {
+  const source = options && typeof options === 'object' ? options : {};
+  const rawSqueeze = source.squeeze;
+  const squeeze = rawSqueeze && typeof rawSqueeze === 'object'
+    ? (Array.isArray(rawSqueeze) ? { sizes: rawSqueeze } : rawSqueeze)
+    : rawSqueeze
+      ? {}
+      : null;
+  const size = positiveNumber(source.size, 10);
+  const family = source.family || 'linear';
+  const weight = fontWeight(source.weight);
+  if (!squeeze) {
+    return { enabled: false, size, family, weight, font: source.font || fontSpec(size, family, weight) };
+  }
+
+  const explicitSizes = Array.isArray(squeeze.sizes)
+    ? squeeze.sizes
+    : Array.isArray(squeeze.levels)
+      ? squeeze.levels
+      : Array.isArray(squeeze.steps)
+        ? squeeze.steps
+        : null;
+  const validExplicitSizes = explicitSizes?.map(Number).filter(value => Number.isFinite(value) && value > 0) || [];
+  let minSize = positiveNumber(
+    squeeze.minSize ?? source.minSize,
+    validExplicitSizes.length ? Math.min(...validExplicitSizes) : size,
+  );
+  let maxSize = positiveNumber(
+    squeeze.maxSize ?? source.maxSize,
+    validExplicitSizes.length ? Math.max(...validExplicitSizes) : size,
+  );
+  if (minSize > maxSize) [minSize, maxSize] = [maxSize, minSize];
+
+  const defaultNarrowWidth = Math.max(26, minSize * 4);
+  const narrowWidth = Math.max(0, finiteNumber(squeeze.narrowWidth ?? source.narrowWidth, defaultNarrowWidth));
+  const requestedWideWidth = finiteNumber(
+    squeeze.wideWidth ?? source.wideWidth,
+    Math.max(narrowWidth + 1, narrowWidth * 4),
+  );
+  const wideWidth = Math.max(narrowWidth, requestedWideWidth);
+  const baseFamily = squeeze.family || family;
+  const compressedFamily = squeeze.compressedFamily ?? source.compressedFamily;
+  const compressedBelow = finiteNumber(
+    squeeze.compressedBelow ?? squeeze.compressedWidth ?? source.compressedBelow,
+    narrowWidth,
+  );
+  return {
+    enabled: true,
+    minSize,
+    maxSize,
+    sizes: discreteSizes(minSize, maxSize, squeeze),
+    narrowWidth,
+    wideWidth,
+    family: baseFamily,
+    compressedFamily,
+    compressedBelow,
+    weight: fontWeight(squeeze.weight, weight),
+  };
+}
+
+const FLOW_TYPOGRAPHY_PROFILE = Symbol('flowTypographyProfile');
+
+/**
+ * Pick a real, discrete font for one exclusion-shaped flow slot.
+ * Pass the same options object accepted by GlyphStage.flowText().
+ */
+export function flowTypographyForSlot(slotWidth, options = {}) {
+  const profile = options?.[FLOW_TYPOGRAPHY_PROFILE] || typographyProfile(options);
+  if (!profile.enabled) {
+    return { size: profile.size, family: profile.family, weight: profile.weight, font: profile.font };
+  }
+
+  const numericWidth = Number(slotWidth);
+  const width = numericWidth === Number.POSITIVE_INFINITY
+    ? Number.MAX_VALUE
+    : Math.max(0, Number.isFinite(numericWidth) ? numericWidth : 0);
+  const widthRange = profile.wideWidth - profile.narrowWidth;
+  const progress = widthRange <= 0
+    ? (width >= profile.wideWidth ? 1 : 0)
+    : clamp((width - profile.narrowWidth) / widthRange, 0, 1);
+  const targetSize = profile.minSize + (profile.maxSize - profile.minSize) * progress;
+  let size = profile.sizes[0];
+  let distance = Math.abs(size - targetSize);
+  for (let index = 1; index < profile.sizes.length; index += 1) {
+    const candidate = profile.sizes[index];
+    const candidateDistance = Math.abs(candidate - targetSize);
+    if (candidateDistance <= distance) {
+      size = candidate;
+      distance = candidateDistance;
+    }
+  }
+  const family = profile.compressedFamily && width <= profile.compressedBelow
+    ? profile.compressedFamily
+    : profile.family;
+  return { size, family, weight: profile.weight, font: flowFontSpec(size, family, profile.weight) };
 }
 
 function prepared(text, font, whiteSpace = 'pre-wrap') {
@@ -162,12 +319,17 @@ export class VectorStage {
     this.nodes = new Map();
     this.touched = new Set();
     this.exclusions = [];
+    this.flowMapGroup = null;
+    this.flowMapNodes = new Map();
+    this.flowMapTouched = new Set();
   }
 
   beginFrame(width, height) {
     this.svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
     this.touched.clear();
     this.exclusions.length = 0;
+    this.flowMapTouched.clear();
+    if (this.flowMapGroup) this.flowMapGroup.setAttribute('display', 'none');
   }
 
   use(key, symbol, options) {
@@ -210,6 +372,70 @@ export class VectorStage {
     }
   }
 
+  renderFlowMap(enabled, options = {}) {
+    if (!enabled) {
+      if (this.flowMapGroup) this.flowMapGroup.remove();
+      this.flowMapGroup = null;
+      this.flowMapNodes.clear();
+      this.flowMapTouched.clear();
+      return { polygons: 0 };
+    }
+
+    if (!this.flowMapGroup) {
+      this.flowMapGroup = document.createElementNS(SVG_NS, 'g');
+      this.flowMapGroup.setAttribute('data-vector-flow-map', '');
+      this.flowMapGroup.setAttribute('aria-hidden', 'true');
+      this.flowMapGroup.setAttribute('pointer-events', 'none');
+      this.svg.append(this.flowMapGroup);
+    }
+    this.flowMapGroup.setAttribute('display', '');
+    this.flowMapGroup.setAttribute('opacity', options.opacity ?? 0.78);
+    this.flowMapGroup.setAttribute('class', options.className || 'vector-flow-map');
+    // Keep the diagnostics above the scene without creating a second SVG.
+    this.svg.append(this.flowMapGroup);
+    this.flowMapTouched.clear();
+
+    const precision = Math.max(0, Math.min(4, Math.floor(finiteNumber(options.precision, 2))));
+    const stroke = options.stroke || '#7fffd4';
+    const fill = options.fill || 'none';
+    const strokeWidth = positiveNumber(options.strokeWidth, 1);
+    const dashArray = options.dashArray ?? options.dash ?? '6 5';
+    let polygonCount = 0;
+    for (let exclusionIndex = 0; exclusionIndex < this.exclusions.length; exclusionIndex += 1) {
+      const exclusion = this.exclusions[exclusionIndex];
+      const polygons = exclusion.polygons || (exclusion.points ? [exclusion.points] : []);
+      for (let polygonIndex = 0; polygonIndex < polygons.length; polygonIndex += 1) {
+        const points = polygons[polygonIndex];
+        if (!Array.isArray(points) || points.length < 3) continue;
+        const key = `${exclusion.id ?? exclusionIndex}:${polygonIndex}`;
+        let node = this.flowMapNodes.get(key);
+        if (!node) {
+          node = document.createElementNS(SVG_NS, 'polygon');
+          node.setAttribute('data-flow-map-key', key);
+          this.flowMapGroup.append(node);
+          this.flowMapNodes.set(key, node);
+        }
+        const pointList = points.map(point => (
+          `${finiteNumber(point.x, 0).toFixed(precision)},${finiteNumber(point.y, 0).toFixed(precision)}`
+        )).join(' ');
+        node.setAttribute('points', pointList);
+        node.setAttribute('fill', fill);
+        node.setAttribute('stroke', stroke);
+        node.setAttribute('stroke-width', strokeWidth);
+        node.setAttribute('stroke-dasharray', dashArray);
+        node.setAttribute('vector-effect', 'non-scaling-stroke');
+        this.flowMapTouched.add(key);
+        polygonCount += 1;
+      }
+    }
+    for (const [key, node] of this.flowMapNodes) {
+      if (this.flowMapTouched.has(key)) continue;
+      node.remove();
+      this.flowMapNodes.delete(key);
+    }
+    return { polygons: polygonCount };
+  }
+
   get visibleCount() { return this.nodes.size; }
 }
 
@@ -236,8 +462,12 @@ export class GlyphStage {
     this.alignState = 'left';
     this.frameColors = new Set();
     this.frameGlyphs = 0;
-    this.flowDiagnostics = { fragments: 0, slots: 0, exclusions: 0 };
+    this.flowDiagnostics = { fragments: 0, slots: 0, exclusions: 0, fontSizes: [], families: [] };
     this.lastDiagnosticsPublish = 0;
+    this.safeTop = 0;
+    this.safeRight = 0;
+    this.safeBottom = 0;
+    this.safeLeft = 0;
     this.resize();
   }
 
@@ -245,6 +475,11 @@ export class GlyphStage {
     const rect = this.canvas.getBoundingClientRect();
     this.width = Math.max(1, Math.round(rect.width || innerWidth));
     this.height = Math.max(1, Math.round(rect.height || innerHeight));
+    const rootStyle = getComputedStyle(document.documentElement);
+    this.safeTop = Math.max(0, Number.parseFloat(rootStyle.getPropertyValue('--glyph-safe-top')) || 0);
+    this.safeRight = Math.max(0, Number.parseFloat(rootStyle.getPropertyValue('--glyph-safe-right')) || 0);
+    this.safeBottom = Math.max(0, Number.parseFloat(rootStyle.getPropertyValue('--glyph-safe-bottom')) || 0);
+    this.safeLeft = Math.max(0, Number.parseFloat(rootStyle.getPropertyValue('--glyph-safe-left')) || 0);
     this.dpr = Math.min(1.75, Math.max(1, devicePixelRatio || 1));
     const pixelWidth = Math.round(this.width * this.dpr);
     const pixelHeight = Math.round(this.height * this.dpr);
@@ -266,7 +501,7 @@ export class GlyphStage {
     this.ctx.clearRect(0, 0, this.width, this.height);
     this.frameColors.clear();
     this.frameGlyphs = 0;
-    this.flowDiagnostics = { fragments: 0, slots: 0, exclusions: 0 };
+    this.flowDiagnostics = { fragments: 0, slots: 0, exclusions: 0, fontSizes: [], families: [] };
   }
 
   glyph(text, x, y, options = {}) {
@@ -344,24 +579,52 @@ export class GlyphStage {
   }
 
   flowText(text, bounds, exclusions = [], options = {}) {
-    const size = options.size || 10;
-    const lineHeight = options.lineHeight || Math.round(size * 1.3);
-    const font = options.font || fontSpec(size, options.family || 'linear', options.weight || 400);
     const normalized = String(text || '').replace(/\s+/g, ' ').trim();
     if (!normalized || bounds.w <= 0 || bounds.h <= 0) return { fragments: [], slots: 0 };
+    const baseSize = positiveNumber(options.size, 10);
+    const rawSqueeze = options.squeeze;
+    const squeeze = rawSqueeze && typeof rawSqueeze === 'object'
+      ? (Array.isArray(rawSqueeze) ? { sizes: rawSqueeze } : rawSqueeze)
+      : rawSqueeze
+        ? {}
+        : null;
+    const resolvedTypographyOptions = squeeze
+      ? {
+          ...options,
+          squeeze: {
+            ...squeeze,
+            narrowWidth: squeeze.narrowWidth ?? options.narrowWidth
+              ?? options.minWidth ?? Math.max(26, positiveNumber(squeeze.minSize ?? options.minSize, baseSize) * 4),
+            wideWidth: squeeze.wideWidth ?? options.wideWidth ?? bounds.w,
+          },
+        }
+      : options;
+    const typographyOptions = {
+      ...resolvedTypographyOptions,
+      [FLOW_TYPOGRAPHY_PROFILE]: typographyProfile(resolvedTypographyOptions),
+    };
+    const largestTypography = flowTypographyForSlot(Number.POSITIVE_INFINITY, typographyOptions);
+    const smallestTypography = flowTypographyForSlot(0, typographyOptions);
+    const lineHeight = options.lineHeight || Math.round(largestTypography.size * 1.3);
     const targetCharacters = options.targetCharacters || 16000;
-    const flowPrepared = preparedFlow(normalized, font, targetCharacters);
-    let cursor = { segmentIndex: 0, graphemeIndex: 0 };
+    const requestedCursor = options.cursor;
+    let cursor = requestedCursor && Number.isFinite(requestedCursor.segmentIndex) && Number.isFinite(requestedCursor.graphemeIndex)
+      ? { segmentIndex: Math.max(0, Math.floor(requestedCursor.segmentIndex)), graphemeIndex: Math.max(0, Math.floor(requestedCursor.graphemeIndex)) }
+      : { segmentIndex: 0, graphemeIndex: 0 };
     const fragments = [];
+    const usedSizes = new Set();
+    const usedFamilies = new Set();
     let slotCount = 0;
     let row = 0;
-    const firstBaseline = bounds.y + size;
+    const firstBaseline = bounds.y + largestTypography.size;
     for (let baseline = firstBaseline; baseline <= bounds.y + bounds.h; baseline += lineHeight) {
       const slots = freeFlowIntervals(bounds, baseline - lineHeight + 1, baseline + 2, exclusions)
-        .filter(slot => slot.width >= (options.minWidth || Math.max(26, size * 4)));
+        .filter(slot => slot.width >= (options.minWidth || Math.max(26, smallestTypography.size * 4)));
       slotCount += slots.length;
       for (let slotIndex = 0; slotIndex < slots.length; slotIndex += 1) {
         const slot = slots[slotIndex];
+        const typography = flowTypographyForSlot(slot.width, typographyOptions);
+        const flowPrepared = preparedFlow(normalized, typography.font, targetCharacters);
         let line = layoutNextLine(flowPrepared, cursor, slot.width);
         pretextUsage.layouts += 1;
         if (!line) {
@@ -372,11 +635,40 @@ export class GlyphStage {
         if (!line) continue;
         cursor = line.end;
         if (!line.text.trim()) continue;
-        const context = { row, slot: slotIndex, index: fragments.length, line, baseline };
+        const context = {
+          row,
+          slot: slotIndex,
+          slotWidth: slot.width,
+          index: fragments.length,
+          line,
+          baseline,
+          size: typography.size,
+          family: typography.family,
+          font: typography.font,
+        };
         const color = typeof options.color === 'function' ? options.color(context) : options.color;
         const alpha = typeof options.alpha === 'function' ? options.alpha(context) : options.alpha;
-        this.glyph(line.text, slot.start, baseline, { ...options, font, color, alpha, knownWidth: line.width });
-        fragments.push({ x: slot.start, y: baseline - lineHeight + 1, w: line.width, h: lineHeight, text: line.text });
+        this.glyph(line.text, slot.start, baseline, {
+          ...options,
+          size: typography.size,
+          family: typography.family,
+          weight: typography.weight,
+          font: typography.font,
+          color,
+          alpha,
+          knownWidth: line.width,
+        });
+        fragments.push({
+          x: slot.start,
+          y: baseline - lineHeight + 1,
+          w: line.width,
+          h: lineHeight,
+          text: line.text,
+          size: typography.size,
+          family: typography.family,
+        });
+        usedSizes.add(typography.size);
+        usedFamilies.add(typography.family);
       }
       row += 1;
     }
@@ -385,6 +677,8 @@ export class GlyphStage {
     this.flowDiagnostics.fragments += fragments.length;
     this.flowDiagnostics.slots += slotCount;
     this.flowDiagnostics.exclusions = Math.max(this.flowDiagnostics.exclusions, exclusions.length);
+    this.flowDiagnostics.fontSizes = [...new Set([...this.flowDiagnostics.fontSizes, ...usedSizes])].sort((a, b) => a - b);
+    this.flowDiagnostics.families = [...new Set([...this.flowDiagnostics.families, ...usedFamilies])];
     return { fragments, slots: slotCount, cursor };
   }
 
@@ -404,10 +698,10 @@ export class GlyphStage {
     }
   }
 
-  publishDiagnostics(value) {
+  publishDiagnostics(value, force = false) {
     window.__glyphDiagnostics = value;
     const now = performance.now();
-    if (now - this.lastDiagnosticsPublish >= 250) {
+    if (force || now - this.lastDiagnosticsPublish >= 250) {
       this.canvas.dataset.glyphDiagnostics = JSON.stringify(value);
       this.lastDiagnosticsPublish = now;
     }

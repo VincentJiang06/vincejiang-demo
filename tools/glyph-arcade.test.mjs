@@ -6,7 +6,7 @@ import { join } from 'node:path';
 
 const ROOT = new URL('..', import.meta.url).pathname.replace(/\/$/, '');
 const read = (...parts) => readFileSync(join(ROOT, ...parts), 'utf8');
-const RELEASE_ASSET_VERSION = 'glyph-20260715-svg2';
+const RELEASE_ASSET_VERSION = 'glyph-20260715-pretext3';
 
 for (const game of ['glyph-dino', 'glyph-surf']) {
   const html = read(game, 'index.html');
@@ -36,12 +36,34 @@ assert.match(engine, /getPretextUsage/);
 assert.match(engine, /publishDiagnostics/);
 assert.match(engine, /class VectorStage/);
 assert.match(engine, /flowText\(/);
+assert.match(engine, /flowTypographyForSlot/, 'slot width must select real flow typography');
+assert.match(engine, /renderFlowMap\(/, 'SVG exclusions must have a visible Flow Map mode');
+assert.match(engine, /compressedFamily/, 'narrow slots must be able to switch font personality');
+assert.match(engine, /safeTop/, 'canvas layout must expose device safe-area insets');
 assert.match(engine, /freeFlowIntervals/);
 assert.match(engine, /flowPreparedCache/, 'flow corpora must be cached outside the animation hot path');
 assert.match(engine, /\.clearRect\(/);
 assert.match(engine, /\.fillText\(/);
 
-const { freeFlowIntervals } = await import('../assets/glyph-arcade/engine.js');
+const { flowTypographyForSlot, freeFlowIntervals } = await import('../assets/glyph-arcade/engine.js');
+const squeezeOptions = {
+  size: 10,
+  family: 'linear',
+  weight: 400,
+  squeeze: {
+    minSize: 8,
+    maxSize: 10,
+    narrowWidth: 48,
+    wideWidth: 180,
+    compressedFamily: 'casual',
+  },
+};
+const narrowTypography = flowTypographyForSlot(48, squeezeOptions);
+const wideTypography = flowTypographyForSlot(220, squeezeOptions);
+assert.ok(narrowTypography.size < wideTypography.size, 'narrow slots must render with a smaller measured font');
+assert.equal(narrowTypography.family, 'casual', 'narrow slots must activate the configured compressed family');
+assert.equal(wideTypography.family, 'linear', 'wide slots must retain the primary family');
+assert.notEqual(narrowTypography.font, wideTypography.font, 'Pretext must receive distinct real font specs per slot width');
 const centerBlock = [{
   id: 'reef',
   padding: 0,
@@ -78,6 +100,8 @@ const css = read('assets', 'glyph-arcade', 'stage.css');
 assert.equal((css.match(/@font-face\s*\{/g) || []).length, 4, 'four fixed local font faces are required');
 assert.doesNotMatch(css, /font-family\s*:[^;]*(?:system-ui|monospace|sans-serif|serif)/i, 'font fallback stacks are forbidden');
 assert.doesNotMatch(css, /(?:linear|radial|conic)-gradient\(/i, 'CSS gradients must not draw the game');
+assert.match(css, /safe-area-inset-top/, 'shared stage CSS must expose notch-safe positioning');
+assert.match(css, /safe-area-inset-bottom/, 'shared stage CSS must expose home-indicator-safe positioning');
 assert.doesNotMatch(css, /#[a-z-]+:focus-visible\s*\{[^}]*outline\s*:(?!\s*none)/i, 'focus state must not add non-glyph decoration');
 assert.match(css, /#vector-stage/);
 
@@ -98,6 +122,15 @@ for (const setting of [
 ]) assert.match(dino, setting, `Dino easy-mode setting missing: ${setting}`);
 assert.match(dino, /stage\.flowText\(/, 'Dino background must flow through Pretext');
 assert.match(dino, /vector\.exclusions/, 'Dino flow must consume SVG exclusions');
+assert.match(dino, /DINO_TEXT_THEMES/, 'Dino must expose selectable text/object themes');
+assert.match(dino, /spawnTypePress\(/, 'Dino must let players summon an SVG type press');
+assert.match(dino, /dinoToolbarPointerTarget\(/, 'Dino touch controls must expose Pretext actions');
+assert.match(dino, /flowMap:\s*true/, 'Dino must reveal the Flow Map on first load');
+assert.match(dino, /vector\.renderFlowMap\(/, 'Dino must draw the same polygons that drive line flow');
+assert.match(dino, /squeeze:\s*\{/, 'Dino must change measured typography as slots narrow');
+assert.match(dino, /game\.state === 'paused' && !game\.renderDirty/, 'Dino must stop re-layout work while paused');
+assert.match(dino, /stage\.safeBottom/, 'Dino touch tools must stay above the device safe area');
+for (const control of ['KeyF', 'KeyC', 'KeyX']) assert.ok(dino.includes(control), `Dino Pretext control missing: ${control}`);
 assert.match(dino, /pointerJumpHeld/, 'touch hold must receive the same sustained-jump assistance as keyboard hold');
 for (const event of ['SANDSTORM', 'METEOR RAIN', 'FIREFLY MIGRATION', 'THUNDER PULSE', 'FOSSIL BLOOM']) {
   assert.ok(dino.includes(event), `Dino event missing: ${event}`);
@@ -106,6 +139,19 @@ const surf = read('glyph-surf', 'game.js');
 assert.match(surf, /pretext:\s*getPretextUsage\(\)/, 'Surf diagnostics must report measured Pretext use');
 assert.match(surf, /stage\.flowText\(/, 'Surf water must flow through Pretext');
 assert.match(surf, /vector\.exclusions/, 'Surf flow must consume SVG exclusions');
+assert.match(surf, /SURF_TEXT_THEMES/, 'Surf must expose selectable water-text themes');
+assert.match(surf, /summonReef\(/, 'Surf must let players actively summon a safe reef formation');
+assert.match(surf, /surfToolbarPointerTarget\(/, 'Surf touch controls must expose Pretext actions');
+assert.match(surf, /flowMap:\s*true/, 'Surf must reveal the Flow Map on first load');
+assert.match(surf, /flowLens:/, 'Surf must include a draggable SVG flow lens');
+assert.match(surf, /vector\.renderFlowMap\(/, 'Surf must draw the same polygons that drive line flow');
+assert.match(surf, /squeeze:\s*\{/, 'Surf must change measured typography as slots narrow');
+assert.match(surf, /reefSummonQueued/, 'Zig Zag reef requests must queue instead of deleting an active gate');
+assert.match(surf, /activeGates\(\)/, 'Surf reef spawning must account for gates');
+assert.match(surf, /FLOW_LENS_HANDLE_POLYGON/, 'the flow lens handle must participate in exclusion geometry');
+assert.match(surf, /game\.state === 'paused' && !game\.renderDirty/, 'Surf must stop re-layout work while paused');
+assert.match(surf, /stage\.safeTop/, 'Surf HUD and tools must stay below the device safe area');
+for (const control of ['KeyF', 'KeyC', 'KeyX', 'KeyV']) assert.ok(surf.includes(control), `Surf Pretext control missing: ${control}`);
 assert.match(surf, /game\.rng\.int\(2,\s*3\)/, 'REEF RISE must create a cluster of two or three reefs');
 assert.match(surf, /const channel = compact \? 110/, 'mobile reef formations must retain a 110px safe channel');
 assert.match(surf, /variant\.colliders\.some/, 'large reefs must use forgiving multi-circle collision');
@@ -120,10 +166,12 @@ const dinoHtml = read('glyph-dino', 'index.html');
 for (const symbol of ['dino-run-a', 'dino-run-b', 'dino-duck', 'dino-cactus', 'dino-bird']) {
   assert.ok(dinoHtml.includes(`id="${symbol}"`), `Dino SVG symbol missing: ${symbol}`);
 }
+assert.ok(dinoHtml.includes('id="dino-type-press"'), 'Dino SVG type press symbol missing');
 const surfHtml = read('glyph-surf', 'index.html');
 for (const symbol of ['reef-crown', 'reef-garden', 'reef-atoll', 'reef-chain']) {
   assert.ok(surfHtml.includes(`id="${symbol}"`), `Surf SVG reef missing: ${symbol}`);
 }
+assert.ok(surfHtml.includes('id="flow-lens"'), 'Surf SVG flow lens symbol missing');
 
 const fontRoot = join(ROOT, 'assets', 'glyph-arcade', 'fonts');
 const manifest = JSON.parse(read('assets', 'glyph-arcade', 'fonts', 'manifest.json'));

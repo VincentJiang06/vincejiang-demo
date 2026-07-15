@@ -33,6 +33,10 @@
 :root {
   color-scheme: dark;
   background: #030711;
+  --glyph-safe-top: env(safe-area-inset-top, 0px);
+  --glyph-safe-right: env(safe-area-inset-right, 0px);
+  --glyph-safe-bottom: env(safe-area-inset-bottom, 0px);
+  --glyph-safe-left: env(safe-area-inset-left, 0px);
 }
 
 * { box-sizing: border-box; }
