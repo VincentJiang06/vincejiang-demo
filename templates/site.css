@@ -175,6 +175,10 @@ a:hover{color:var(--link-h)}
 .prose p{margin:.9rem 0}
 .prose ul,.prose ol{padding-left:1.4rem; margin:.9rem 0}
 .prose li{margin:.35rem 0}
+/* 图突破版心:figure 可放大到视口宽(留边距),不受 720px 文字栏限制;图注仍回缩到文字栏宽居中 */
+.prose figure{width:max(100%,min(calc(100vw - 4rem),1200px)); margin:2.2rem 0 2.2rem 50%; transform:translateX(-50%)}
+.prose figure svg{width:100%;height:auto}
+.prose figure figcaption{max-width:720px; margin:.6rem auto 0}
 .prose img{max-width:100%; height:auto; border-radius:16px; display:block; margin:1.2rem auto;
   border:1px solid var(--border);box-shadow:var(--shadow),0 1px 0 var(--glass-shine) inset}
 .prose blockquote{position:relative;overflow:hidden;margin:1.2rem 0; padding:.72rem 1.05rem; border:1px solid var(--border);
@@ -189,10 +193,11 @@ a:hover{color:var(--link-h)}
   border:1px solid var(--border); border-radius:16px; line-height:1.6;
   box-shadow:var(--shadow),0 1px 0 var(--glass-shine) inset;backdrop-filter:blur(18px) saturate(1.12);-webkit-backdrop-filter:blur(18px) saturate(1.12)}
 .prose pre code{background:none; border:none; padding:0; font-size:.85rem}
-.prose table{border-collapse:separate; border-spacing:0; width:100%; margin:1.2rem 0; font-size:.92rem; display:block; overflow-x:auto;
+.prose .tblwrap{margin:1.2rem 0; overflow-x:auto;
   border:1px solid var(--border);border-radius:16px;
   background:linear-gradient(145deg,color-mix(in srgb,var(--glass-top) 48%,transparent),color-mix(in srgb,var(--glass-bottom) 34%,transparent));
   box-shadow:var(--shadow),0 1px 0 var(--glass-shine) inset;backdrop-filter:blur(18px) saturate(1.1);-webkit-backdrop-filter:blur(18px) saturate(1.1)}
+.prose table{border-collapse:separate; border-spacing:0; width:100%; margin:0; font-size:.92rem}
 .prose th,.prose td{border:0;border-bottom:1px solid var(--border); padding:.5rem .7rem; text-align:left}
 .prose tr:last-child td{border-bottom:0}
 .prose th{background:color-mix(in srgb,var(--glass-shine) 18%,var(--chip))}

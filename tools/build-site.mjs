@@ -90,6 +90,10 @@ const md = new MarkdownIt({
   },
 });
 md.use(anchor, { level: [2, 3], permalink: anchor.permalink.linkInsideHeader({ symbol: '#', class: 'anchor', placement: 'after' }) });
+// 表格包滚动容器:卡片样式画在 .tblwrap 上,table 保持 display:table 才能撑满卡片
+// (直接给 table 设 display:block 会让内容表格盒收缩、背景却全宽,表格挤在卡片左侧)
+md.renderer.rules.table_open = () => '<div class="tblwrap"><table>\n';
+md.renderer.rules.table_close = () => '</table></div>\n';
 
 // ---- 工具 ----
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
