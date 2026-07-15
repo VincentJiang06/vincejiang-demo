@@ -51,15 +51,18 @@ main{padding:16px 20px;max-width:1700px;margin:0 auto}
 .col .head .tgl{display:inline-flex;gap:8px;font-weight:400;font-size:12px;color:var(--muted);margin-left:auto}
 .col .head .tgl label{display:inline-flex;align-items:center;gap:3px;cursor:pointer;user-select:none}
 .col .head .tgl input{accent-color:var(--brand);margin:0}
-.col.hide-add .body span.add{display:none}
+.col.hide-add .body span.add{background:none;color:inherit;padding:0}
 .col.hide-del .body span.del{display:none}
 .col .body{overflow:auto;padding:14px 18px;white-space:pre-wrap;word-break:break-word;font-size:14px}
 .col .body img{max-width:100%}
 span.add{background:var(--add-bg);color:var(--add-ink);border-radius:3px;padding:0 1px}
 span.del{background:var(--del-bg);color:var(--del-ink);border-radius:3px;padding:0 1px}
-/* 轻量 md 渲染:标题只做小标识,链接短渲染保功能 */
-.body .mdh{font-weight:700;color:var(--brand)}
-.body .mdh .hmark{display:inline-block;font-weight:600;font-size:10px;line-height:1;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:2px 4px;margin-right:6px;vertical-align:1px}
+/* 轻量 md 渲染:标题=正常文字加粗放大(无颜色变化),链接短渲染保功能 */
+.body .mdh{font-weight:700}
+.body .mdh.h1{font-size:1.3em}
+.body .mdh.h2{font-size:1.2em}
+.body .mdh.h3{font-size:1.1em}
+.body .mdh.h4,.body .mdh.h5,.body .mdh.h6{font-size:1.04em}
 .body a.mdlink{color:var(--brand);text-decoration:underline;text-underline-offset:2px;word-break:break-all}
 .gates{font-size:12px;color:var(--muted)}
 .gates b.ok{color:var(--ok)}.gates b.bad{color:var(--bad)}
@@ -112,8 +115,8 @@ table.sum a{color:var(--brand);cursor:pointer;text-decoration:underline}
     </div>
     <div class="cols">
       <div class="col"><div class="head"><span>原文</span><span class="meta" id="origMeta"></span></div><div class="body" id="colO"></div></div>
-      <div class="col" id="boxA"><div class="head"><span id="headA">A</span><span class="meta gates" id="gateA"></span><span class="tgl"><label title="显示/隐藏相对原文新增的内容"><input type="checkbox" id="tglAadd" checked><span class="add">增</span></label><label title="显示/隐藏相对原文删除的内容(隐藏后即改后文)"><input type="checkbox" id="tglAdel" checked><span class="del">删</span></label></span></div><div class="body" id="colA"></div></div>
-      <div class="col" id="boxB"><div class="head"><span id="headB">B</span><span class="meta gates" id="gateB"></span><span class="tgl"><label title="显示/隐藏相对原文新增的内容"><input type="checkbox" id="tglBadd" checked><span class="add">增</span></label><label title="显示/隐藏相对原文删除的内容(隐藏后即改后文)"><input type="checkbox" id="tglBdel" checked><span class="del">删</span></label></span></div><div class="body" id="colB"></div></div>
+      <div class="col" id="boxA"><div class="head"><span id="headA">A</span><span class="meta gates" id="gateA"></span><span class="tgl"><label title="开=新增文字带绿色高亮;关=去掉高亮(文字保留)"><input type="checkbox" id="tglAadd" checked><span class="add">增</span></label><label title="开=显示被删除的红色文字;关=隐藏(即改后成稿)"><input type="checkbox" id="tglAdel" checked><span class="del">删</span></label></span></div><div class="body" id="colA"></div></div>
+      <div class="col" id="boxB"><div class="head"><span id="headB">B</span><span class="meta gates" id="gateB"></span><span class="tgl"><label title="开=新增文字带绿色高亮;关=去掉高亮(文字保留)"><input type="checkbox" id="tglBadd" checked><span class="add">增</span></label><label title="开=显示被删除的红色文字;关=隐藏(即改后成稿)"><input type="checkbox" id="tglBdel" checked><span class="del">删</span></label></span></div><div class="body" id="colB"></div></div>
     </div>
   </section>
   <section id="tab-sum" class="hidden"></section>
@@ -163,7 +166,7 @@ function mdLine(html,raw){
   const m=raw.match(/^(#{1,6})\s/);
   if(m){
     html=html.replace(/^((?:<span class="(?:add|del)">)?)#{1,6}\s?/,'$1');
-    html=`<span class="mdh"><span class="hmark">H${m[1].length}</span>${html}</span>`;
+    html=`<span class="mdh h${m[1].length}">${html}</span>`;
   }
   return html;
 }
