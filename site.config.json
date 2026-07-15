@@ -34,7 +34,7 @@
   "gallery": [
     { "title": "AI 服务状态", "href": "/status-ai/", "desc": "一眼看懂 OpenAI 与 Anthropic 现在能不能用:聚合官方状态 + 通俗中文解说,附开放 JSON 接口。", "badge": "带后端 · 开放接口" },
     { "title": "Vince 的 HiFi 笔记", "href": "/vince-hifi-notes/", "desc": "把 HiFi 声学里最迷惑的概念逐一折算成能画出来的 dB:分压器、线材、阻抗、目标曲线。", "badge": "长文技术笔记" },
-    { "title": "M 系列 Mac 选购星图", "href": "/mac-buying-demo/", "desc": "纯字符动画 + Pretext 文本排版:详解 M1 到 M5 的 MacBook、Mac mini、Mac Studio 怎么买。", "badge": "Pretext · ASCII guide" },
+    { "title": "M 系列 Mac 纯文本选购终端", "href": "/mac-buying-demo/", "desc": "用 Pretext 生成整页字符 UI、背景动画和选购逻辑:详解 M1 到 M5 的 MacBook、Mac mini、Mac Studio 怎么买。", "badge": "Pretext text render" },
     { "title": "CUHK Schedule", "href": "https://cus.vincejiang.com", "desc": "中大选课助手:粘贴课号排出无冲突课表,筛选本学期还能选什么,解析先修/反修条件,支持 A/B 对比与 .ics 导出。", "badge": "React · 选课工具" }
   ]
 }
