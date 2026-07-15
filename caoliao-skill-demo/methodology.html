@@ -4,8 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>测试环境与方法学 · 草料文风 Skill v2.3 · 0716 测试集</title>
+<script>try{const t=localStorage.getItem('clw-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
 <style>
-:root{--bg:#fafaf8;--panel:#fff;--ink:#1f2937;--muted:#6b7280;--line:#e5e7eb;--brand:#0f766e;--brand-soft:#e6f2f1}
+:root{color-scheme:light;--bg:#fafaf8;--panel:#fff;--ink:#1f2937;--muted:#6b7280;--line:#e5e7eb;--brand:#0f766e;--brand-soft:#e6f2f1;
+  --code-bg:#eef0f2;--pre-bg:#f4f5f6;--warn-bg:#fdf3e7}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#111418;--panel:#1a1f26;--ink:#e5e7eb;--muted:#94a3b8;--line:#2b3340;--brand:#2dd4bf;--brand-soft:#12332f;
+  --code-bg:#252b34;--pre-bg:#161b21;--warn-bg:#3a2c14}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.85 -apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
 .wrap{max-width:920px;margin:0 auto;padding:32px 22px 80px}
@@ -16,20 +20,24 @@ p.lead{color:var(--muted);font-size:16px}
 table{border-collapse:collapse;width:100%;font-size:13.5px;margin:12px 0;background:var(--panel)}
 th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}
 th{background:var(--brand-soft);color:var(--brand)}
-code{background:#eef0f2;padding:1px 5px;border-radius:4px;font-size:13px}
-pre{background:#f4f5f6;border:1px solid var(--line);border-radius:8px;padding:14px 16px;overflow-x:auto;font-size:13px;line-height:1.6}
+code{background:var(--code-bg);padding:1px 5px;border-radius:4px;font-size:13px}
+pre{background:var(--pre-bg);border:1px solid var(--line);border-radius:8px;padding:14px 16px;overflow-x:auto;font-size:13px;line-height:1.6}
 pre code{background:none;padding:0}
 blockquote{border-left:3px solid var(--brand);background:var(--brand-soft);margin:14px 0;padding:8px 16px;border-radius:0 8px 8px 0}
 .toc{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 22px;font-size:14px}
 .toc a{color:var(--brand);text-decoration:none}
-.warn{background:#fdf3e7;border-left:3px solid #d97706;padding:8px 16px;border-radius:0 8px 8px 0;margin:14px 0}
+.warn{background:var(--warn-bg);border-left:3px solid #d97706;padding:8px 16px;border-radius:0 8px 8px 0;margin:14px 0}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 18px}
+.topbar a{color:var(--brand);text-decoration:none;font-size:14px}
+#themeBtn{border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:6px 12px;border-radius:8px;cursor:pointer;font-size:13px}
 @media (prefers-color-scheme:dark){
-:root{--bg:#111418;--panel:#1a1f26;--ink:#e5e7eb;--muted:#94a3b8;--line:#2b3340;--brand:#2dd4bf;--brand-soft:#12332f}
-code{background:#252b34}pre{background:#161b21}
-.warn{background:#3a2c14;border-color:#d97706}}
+:root:not([data-theme="light"]){color-scheme:dark;--bg:#111418;--panel:#1a1f26;--ink:#e5e7eb;--muted:#94a3b8;--line:#2b3340;--brand:#2dd4bf;--brand-soft:#12332f;
+  --code-bg:#252b34;--pre-bg:#161b21;--warn-bg:#3a2c14}}
 </style>
 </head>
 <body><div class="wrap">
+
+<p class="topbar"><a href="./index.html">← 返回对比 Demo</a><button id="themeBtn" title="切换亮/暗色">🌙 暗色</button></p>
 
 <h1>测试环境与方法学<br><small style="font-size:16px;color:var(--muted)">草料文风 Skill 家族 v2.3 · 0716 展示测试集（72 格）· 数据采集于 2026-07-15</small></h1>
 
@@ -176,5 +184,15 @@ node 0716-demo/site/build_site.mjs</code></pre>
 <p>产物落 <code>0716-demo/out/</code> 与 <code>runs/</code>，网页产 <code>0716-demo/site/caoliao-demo.html</code>（单文件自包含，即本站 <a href="./index.html">index.html</a>）。原始数据、跑分脚本、构建器全部随仓库入库，本页所有数字均可从 <code>site/data.json</code> 与 <code>runs/</code> 复核。</p>
 
 <p style="color:var(--muted);font-size:13px;margin-top:48px">草料文风 Skill 家族 v2.3 · 0716-demo · 本页与对比页同源于公司仓库 <code>0716-demo/</code> 目录。</p>
-</div></body>
+</div>
+<script>
+const themeBtn=document.querySelector('#themeBtn');
+function isDark(){const f=document.documentElement.dataset.theme;return f?f==='dark':matchMedia('(prefers-color-scheme: dark)').matches}
+function syncThemeBtn(){themeBtn.textContent=isDark()?'☀️ 亮色':'🌙 暗色'}
+themeBtn.onclick=()=>{const next=isDark()?'light':'dark';document.documentElement.dataset.theme=next;
+  try{localStorage.setItem('clw-theme',next);}catch(e){}syncThemeBtn();};
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',syncThemeBtn);
+syncThemeBtn();
+</script>
+</body>
 </html>

@@ -27,6 +27,8 @@ header h1{font-size:17px;margin:0;color:var(--brand)}
 nav{display:flex;gap:6px}
 nav button{border:1px solid var(--line);background:var(--panel);padding:6px 14px;border-radius:8px;cursor:pointer;font-size:14px;color:var(--muted)}
 nav button.on{background:var(--brand);border-color:var(--brand);color:#fff}
+nav a.navlink{border:1px solid var(--line);background:var(--panel);padding:6px 14px;border-radius:8px;font-size:14px;color:var(--muted);text-decoration:none;display:inline-flex;align-items:center}
+nav a.navlink:hover{color:var(--brand);border-color:var(--brand)}
 main{padding:16px 20px;max-width:1700px;margin:0 auto}
 .hidden{display:none}
 /* 选择区 */
@@ -87,6 +89,7 @@ table.sum a{color:var(--brand);cursor:pointer;text-decoration:underline}
     <button data-tab="cmp" class="on">对比查看</button>
     <button data-tab="sum">测试集总览</button>
     <button data-tab="design">设计说明（给编辑）</button>
+    <a class="navlink" href="methodology.html">测试说明（环境与方法）↗</a>
   </nav>
   <span class="legend">3 案例 × 6 档 × 4 模型 · <span class="add">新增</span> <span class="del">删除</span>（相对原文）</span>
   <button id="themeBtn" title="切换亮/暗色">🌙 暗色</button>
