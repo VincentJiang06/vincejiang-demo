@@ -4,11 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>草料文风 Skill 家族 v2.3 · 测试集对比 Demo</title>
+<script>try{const t=localStorage.getItem('clw-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
 <style>
 :root{
+  color-scheme:light;
   --bg:#fafaf8; --panel:#ffffff; --ink:#1f2937; --muted:#6b7280; --line:#e5e7eb;
   --brand:#0f766e; --brand-soft:#e6f2f1;
   --add-bg:#e3f2e8; --add-ink:#1e5b38; --del-bg:#fbeae8; --del-ink:#8a3328;
+  --ok:#177245; --bad:#b3402f; --code-bg:#f3f4f6; --hover:#f7f9f8;
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#111418; --panel:#1a1f26; --ink:#e5e7eb; --muted:#94a3b8; --line:#2b3340;
+  --brand:#2dd4bf; --brand-soft:#12332f;
+  --add-bg:#173527; --add-ink:#86d9a8; --del-bg:#3a1f1c; --del-ink:#f0a396;
+  --ok:#4ade80; --bad:#f87171; --code-bg:#252b34; --hover:#1f2630;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.75 -apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
@@ -27,7 +37,9 @@ main{padding:16px 20px;max-width:1700px;margin:0 auto}
 .casebtns{display:flex;gap:6px}
 .casebtns button{border:1px solid var(--line);background:var(--panel);padding:7px 12px;border-radius:8px;cursor:pointer;font-size:13px}
 .casebtns button.on{background:var(--brand-soft);border-color:var(--brand);color:var(--brand);font-weight:600}
+.ctrl .duo{display:flex;gap:6px;flex-wrap:wrap}
 .legend{font-size:12px;color:var(--muted);margin-left:auto}
+#themeBtn{border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:6px 12px;border-radius:8px;cursor:pointer;font-size:13px}
 .legend .add,.legend .del{padding:1px 6px;border-radius:4px}
 /* 三栏 */
 .cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
@@ -39,14 +51,14 @@ main{padding:16px 20px;max-width:1700px;margin:0 auto}
 span.add{background:var(--add-bg);color:var(--add-ink);border-radius:3px;padding:0 1px}
 span.del{background:var(--del-bg);color:var(--del-ink);border-radius:3px;padding:0 1px}
 .gates{font-size:12px;color:var(--muted)}
-.gates b.ok{color:#177245}.gates b.bad{color:#b3402f}
+.gates b.ok{color:var(--ok)}.gates b.bad{color:var(--bad)}
 /* 总览表 */
 table.sum{border-collapse:collapse;width:100%;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:13px}
 table.sum th,table.sum td{border-bottom:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
 table.sum th{background:var(--brand-soft);color:var(--brand);position:sticky;top:56px}
-table.sum tr:hover{background:#f7f9f8}
-table.sum .ok{color:#177245;font-weight:600}
-table.sum .bad{color:#b3402f;font-weight:600}
+table.sum tr:hover{background:var(--hover)}
+table.sum .ok{color:var(--ok);font-weight:600}
+table.sum .bad{color:var(--bad);font-weight:600}
 table.sum a{color:var(--brand);cursor:pointer;text-decoration:underline}
 /* 设计说明 */
 #design{max-width:900px;margin:0 auto;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:28px 36px}
@@ -55,13 +67,16 @@ table.sum a{color:var(--brand);cursor:pointer;text-decoration:underline}
 #design th,#design td{border:1px solid var(--line);padding:6px 10px;text-align:left}
 #design th{background:var(--brand-soft)}
 #design blockquote{border-left:3px solid var(--brand);background:var(--brand-soft);margin:10px 0;padding:6px 14px;border-radius:0 8px 8px 0}
-#design code{background:#f3f4f6;padding:1px 5px;border-radius:4px;font-size:13px}
+#design code{background:var(--code-bg);padding:1px 5px;border-radius:4px;font-size:13px}
 @media (max-width:1100px){.cols{grid-template-columns:1fr}.col{height:auto;max-height:70vh}}
 @media (prefers-color-scheme: dark){
-  :root{--bg:#111418;--panel:#1a1f26;--ink:#e5e7eb;--muted:#94a3b8;--line:#2b3340;--brand:#2dd4bf;--brand-soft:#12332f;
-        --add-bg:#173527;--add-ink:#86d9a8;--del-bg:#3a1f1c;--del-ink:#f0a396}
-  #design code{background:#252b34}
-  table.sum tr:hover{background:#1f2630}
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#111418; --panel:#1a1f26; --ink:#e5e7eb; --muted:#94a3b8; --line:#2b3340;
+    --brand:#2dd4bf; --brand-soft:#12332f;
+    --add-bg:#173527; --add-ink:#86d9a8; --del-bg:#3a1f1c; --del-ink:#f0a396;
+    --ok:#4ade80; --bad:#f87171; --code-bg:#252b34; --hover:#1f2630;
+  }
 }
 </style>
 </head>
@@ -74,13 +89,14 @@ table.sum a{color:var(--brand);cursor:pointer;text-decoration:underline}
     <button data-tab="design">设计说明（给编辑）</button>
   </nav>
   <span class="legend">3 案例 × 6 档 × 4 模型 · <span class="add">新增</span> <span class="del">删除</span>（相对原文）</span>
+  <button id="themeBtn" title="切换亮/暗色">🌙 暗色</button>
 </header>
 <main>
   <section id="tab-cmp">
     <div class="ctrl">
       <div class="grp"><label>案例</label><div class="casebtns" id="caseBtns"></div></div>
-      <div class="grp"><label>产出 A</label><select id="selA"></select></div>
-      <div class="grp"><label>产出 B</label><select id="selB"></select></div>
+      <div class="grp"><label>产出 A（模型 + skill）</label><div class="duo"><select id="selAModel"></select><select id="selATier"></select></div></div>
+      <div class="grp"><label>产出 B（模型 + skill）</label><div class="duo"><select id="selBModel"></select><select id="selBTier"></select></div></div>
     </div>
     <div class="cols">
       <div class="col"><div class="head"><span>原文</span><span class="meta" id="origMeta"></span></div><div class="body" id="colO"></div></div>
@@ -171,14 +187,31 @@ function renderCaseBtns(){
   $('#caseBtns').innerHTML=DATA.cases.map(c=>`<button data-c="${c.id}" class="${c.id===curCase?'on':''}">${c.id} ${c.title.split('（')[0]}</button>`).join('');
   document.querySelectorAll('#caseBtns button').forEach(b=>b.onclick=()=>{curCase=b.dataset.c;renderCaseBtns();fillSelectors();renderCols();});
 }
+const TIERS=['writer-lite','writer','writer-max','checker-lite','checker','checker-max'];
+function findOut(caseId,model,tier){return DATA.outputs.find(o=>o.case===caseId&&o.model===model&&o.tier===tier&&!o.missing)}
+function fillTiers(side){ // 档位下拉：optgroup 按 writer/checker 分族，缺产出的组合标注（缺）
+  const mSel=$('#sel'+side+'Model'),tSel=$('#sel'+side+'Tier');
+  const prev=tSel.value;
+  const opts=fam=>TIERS.filter(t=>t.split('-')[0]===fam).map(t=>{
+    const miss=!findOut(curCase,mSel.value,t);
+    return `<option value="${t}">${TIER_CN[t]}${miss?'（缺）':''}</option>`;
+  }).join('');
+  tSel.innerHTML=`<optgroup label="✍️ writer 写作族">${opts('writer')}</optgroup><optgroup label="🔍 checker 检查族">${opts('checker')}</optgroup>`;
+  tSel.value=TIERS.includes(prev)?prev:'writer';
+}
 function fillSelectors(){
   const outs=outputsFor(curCase);
-  const opts=outs.map((o,idx)=>`<option value="${idx}">${label(o)}</option>`).join('');
-  $('#selA').innerHTML=opts;$('#selB').innerHTML=opts;
-  // 默认 A=opus writer，B=dsv4pro writer（找不到则 0/1）
-  const ia=outs.findIndex(o=>o.model==='opus-med'&&o.tier==='writer');
-  const ib=outs.findIndex(o=>o.model==='dsv4pro'&&o.tier==='writer');
-  $('#selA').value=ia>=0?ia:0;$('#selB').value=ib>=0?ib:Math.min(1,outs.length-1);
+  const models=[...new Set(outs.map(o=>o.model))];
+  const mOpts=models.map(m=>`<option value="${m}">${MODEL_CN[m]}</option>`).join('');
+  for(const side of ['A','B']){
+    const mSel=$('#sel'+side+'Model');
+    const prev=mSel.value;
+    mSel.innerHTML=mOpts;
+    if(models.includes(prev))mSel.value=prev;
+    else mSel.value=side==='A'?(models.includes('opus-med')?'opus-med':models[0])
+                              :(models.includes('dsv4pro')?'dsv4pro':models[Math.min(1,models.length-1)]);
+    fillTiers(side);
+  }
 }
 function renderPane(o,headEl,gateEl,bodyEl,orig){
   headEl.textContent=label(o);
@@ -193,14 +226,38 @@ function renderPane(o,headEl,gateEl,bodyEl,orig){
 }
 function renderCols(){
   const c=DATA.cases.find(x=>x.id===curCase);
-  const outs=outputsFor(curCase);
   $('#colO').textContent=c.text;
   const bl=c.baseline;$('#origMeta').textContent=`${c.text.length} 字 · 基线 e${bl?.error??'?'}/w${bl?.warning??'?'}`;
-  const a=outs[+$('#selA').value],b=outs[+$('#selB').value];
-  if(a)renderPane(a,$('#headA'),$('#gateA'),$('#colA'),c.text);
-  if(b)renderPane(b,$('#headB'),$('#gateB'),$('#colB'),c.text);
+  for(const side of ['A','B']){
+    const m=$('#sel'+side+'Model').value,t=$('#sel'+side+'Tier').value;
+    const o=findOut(curCase,m,t);
+    const headEl=$('#head'+side),gateEl=$('#gate'+side),bodyEl=$('#col'+side);
+    if(o)renderPane(o,headEl,gateEl,bodyEl,c.text);
+    else{headEl.textContent=`${MODEL_CN[m]??m} · ${TIER_CN[t]??t}`;gateEl.innerHTML='';bodyEl.textContent='（该 模型 × skill 组合缺产出）';}
+  }
 }
-$('#selA').onchange=renderCols;$('#selB').onchange=renderCols;
+for(const side of ['A','B']){
+  $('#sel'+side+'Model').onchange=()=>{fillTiers(side);renderCols();};
+  $('#sel'+side+'Tier').onchange=renderCols;
+}
+
+/* ---------- 亮/暗色切换（默认跟随系统，手选后记忆） ---------- */
+const themeBtn=$('#themeBtn');
+function syncThemeBtn(){
+  const forced=document.documentElement.dataset.theme;
+  const dark=forced?forced==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+  themeBtn.textContent=dark?'☀️ 亮色':'🌙 暗色';
+}
+themeBtn.onclick=()=>{
+  const forced=document.documentElement.dataset.theme;
+  const dark=forced?forced==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+  const next=dark?'light':'dark';
+  document.documentElement.dataset.theme=next;
+  try{localStorage.setItem('clw-theme',next);}catch(e){}
+  syncThemeBtn();
+};
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',syncThemeBtn);
+syncThemeBtn();
 
 /* ---------- 总览 tab ---------- */
 function renderSummary(){
@@ -223,9 +280,7 @@ function renderSummary(){
   $('#tab-sum').innerHTML=h;
   document.querySelectorAll('#tab-sum a').forEach(a=>a.onclick=()=>{
     curCase=a.dataset.c;renderCaseBtns();fillSelectors();
-    const outs=outputsFor(curCase);
-    const i=outs.findIndex(o=>o.model===a.dataset.m&&o.tier===a.dataset.t);
-    if(i>=0)$('#selB').value=i;
+    $('#selBModel').value=a.dataset.m;fillTiers('B');$('#selBTier').value=a.dataset.t;
     renderCols();switchTab('cmp');
   });
 }
