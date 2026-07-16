@@ -600,7 +600,7 @@ function fmtOf(file) {
 function faceRule(fam, file, weight) {
   return "@font-face{font-family:'" + fam + "';" +
     "src:url('" + FONT_DIR + file + "') format('" + fmtOf(file) + "');" +
-    "font-display:block;font-weight:" + weight + ";font-style:normal;}";
+    "font-display:swap;font-weight:" + weight + ";font-style:normal;}";
 }
 
 // 为每个字体生成 @font-face（浏览器仅在被渲染使用时才拉取字体文件）。
