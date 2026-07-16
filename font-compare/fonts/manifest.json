@@ -1,0 +1,1018 @@
+[
+  {
+    "family": "SourceHanSansSC",
+    "label": "Source Han Sans SC 思源黑体",
+    "file": "SourceHanSansSC-Regular.woff2",
+    "category": "cjk-sans",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Adobe",
+    "sourceUrl": "https://github.com/adobe-fonts/source-han-sans",
+    "supportsCJK": true,
+    "sizeKB": 11158
+  },
+  {
+    "family": "NotoSansSC",
+    "label": "Noto Sans SC 思源黑体(Google)",
+    "file": "NotoSansSC-Regular.woff2",
+    "category": "cjk-sans",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Google",
+    "sourceUrl": "https://github.com/google/fonts/tree/main/ofl/notosanssc",
+    "supportsCJK": true,
+    "sizeKB": 7600
+  },
+  {
+    "family": "MiSans",
+    "label": "MiSans 小米",
+    "file": "MiSans-Regular.ttf",
+    "category": "cjk-sans",
+    "license": "MiSans 字体知识产权许可协议",
+    "licenseType": "free-commercial",
+    "brand": "小米 Xiaomi",
+    "sourceUrl": "https://hyperos.mi.com/font",
+    "supportsCJK": true,
+    "sizeKB": 7739
+  },
+  {
+    "family": "HarmonyOSSansSC",
+    "label": "HarmonyOS Sans SC 鸿蒙黑体",
+    "file": "HarmonyOSSansSC-Regular.woff2",
+    "category": "cjk-sans",
+    "license": "HarmonyOS Sans 字体许可(EULA)",
+    "licenseType": "free-commercial",
+    "brand": "华为 Huawei",
+    "sourceUrl": "https://developer.harmonyos.com/cn/docs/design/des-guides/font-0000001157868583",
+    "supportsCJK": true,
+    "sizeKB": 4173
+  },
+  {
+    "family": "OPPOSans",
+    "label": "OPPO Sans",
+    "file": "OPPOSans-Regular.ttf",
+    "category": "cjk-sans",
+    "license": "OPPO Sans 字体使用许可(EULA)",
+    "licenseType": "free-commercial",
+    "brand": "OPPO",
+    "sourceUrl": "https://open.oppomobile.com/",
+    "supportsCJK": true,
+    "sizeKB": 9915
+  },
+  {
+    "family": "vivoSans",
+    "label": "vivo Sans",
+    "file": "vivoSans-Regular.ttf",
+    "category": "cjk-sans",
+    "license": "vivo Sans 字体知识产权许可协议(EULA)",
+    "licenseType": "free-commercial",
+    "brand": "vivo",
+    "sourceUrl": "https://www.vivo.com.cn/originos",
+    "supportsCJK": true,
+    "sizeKB": 7604
+  },
+  {
+    "family": "HONORSansCN",
+    "label": "HONOR Sans CN 荣耀",
+    "file": "HONORSansCN-Regular.ttf",
+    "category": "cjk-sans",
+    "license": "HONOR Sans Copyright License Agreement(EULA)",
+    "licenseType": "free-commercial",
+    "brand": "荣耀 HONOR",
+    "sourceUrl": "https://www.honor.com/",
+    "supportsCJK": true,
+    "sizeKB": 7839
+  },
+  {
+    "family": "AlibabaPuHuiTi",
+    "label": "Alibaba PuHuiTi 3.0 阿里巴巴普惠体",
+    "file": "AlibabaPuHuiTi-Regular.ttf",
+    "category": "cjk-sans",
+    "license": "阿里巴巴普惠体 3.0 免费商用授权(EULA)",
+    "licenseType": "free-commercial",
+    "brand": "阿里巴巴 Alibaba",
+    "sourceUrl": "https://www.alibabafonts.com/",
+    "supportsCJK": true,
+    "sizeKB": 8333
+  },
+  {
+    "family": "DouyinSans",
+    "label": "Douyin Sans 抖音美好体 (Bold)",
+    "file": "DouyinSans-Bold.ttf",
+    "category": "cjk-sans",
+    "license": "抖音美好体开源免费商用协议(EULA)",
+    "licenseType": "free-commercial",
+    "brand": "字节跳动 ByteDance 抖音",
+    "sourceUrl": "https://github.com/bytedance/fonts",
+    "supportsCJK": true,
+    "sizeKB": 1874
+  },
+  {
+    "family": "SmileySans",
+    "label": "Smiley Sans 得意黑 (Oblique)",
+    "file": "SmileySans-Oblique.woff2",
+    "category": "cjk-sans",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "atelier anchor 厚荷（社区）",
+    "sourceUrl": "https://github.com/atelier-anchor/smiley-sans",
+    "supportsCJK": true,
+    "sizeKB": 1124
+  },
+  {
+    "family": "LXGWNeoXiHei",
+    "label": "LXGW Neo XiHei 霞鹜新晰黑",
+    "file": "LXGWNeoXiHei.woff2",
+    "category": "cjk-sans",
+    "license": "IPA Font License 1.0",
+    "licenseType": "open-source",
+    "brand": "个人作者 lxgw 李赫翔",
+    "sourceUrl": "https://github.com/lxgw/LxgwNeoXiHei",
+    "supportsCJK": true,
+    "sizeKB": 3146
+  },
+  {
+    "family": "GlowSansSC",
+    "label": "Glow Sans SC 未来荧黑",
+    "file": "GlowSansSC-Regular.woff2",
+    "category": "cjk-sans",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "welai 也许可乐（社区）",
+    "sourceUrl": "https://github.com/welai/glow-sans",
+    "supportsCJK": true,
+    "sizeKB": 6248
+  },
+  {
+    "family": "SarasaGothicSC",
+    "label": "Sarasa Gothic SC 更纱黑体",
+    "file": "SarasaGothicSC-Regular.woff2",
+    "category": "cjk-sans",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "be5invis 陈梓煜（社区）",
+    "sourceUrl": "https://github.com/be5invis/Sarasa-Gothic",
+    "supportsCJK": true,
+    "sizeKB": 8146
+  },
+  {
+    "family": "PlangothicP1",
+    "label": "Plangothic 遍黑体 (P1)",
+    "file": "PlangothicP1-Regular.woff2",
+    "category": "cjk-sans",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Plangothic Project（社区）",
+    "sourceUrl": "https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project",
+    "supportsCJK": true,
+    "sizeKB": 8428
+  },
+  {
+    "family": "JetBrainsMono",
+    "label": "JetBrains Mono",
+    "file": "JetBrainsMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "JetBrains",
+    "sourceUrl": "https://github.com/JetBrains/JetBrainsMono",
+    "supportsCJK": false,
+    "sizeKB": 21,
+    "weights": {
+      "Medium": {
+        "file": "JetBrainsMono-Medium.woff2",
+        "sizeKB": 21
+      },
+      "SemiBold": {
+        "file": "JetBrainsMono-SemiBold.woff2",
+        "sizeKB": 21
+      },
+      "Bold": {
+        "file": "JetBrainsMono-Bold.woff2",
+        "sizeKB": 21
+      }
+    }
+  },
+  {
+    "family": "AnonymousPro",
+    "label": "Anonymous Pro",
+    "file": "AnonymousPro-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Mark Simonson",
+    "sourceUrl": "https://www.marksimonson.com/fonts/view/anonymous-pro",
+    "supportsCJK": false,
+    "sizeKB": 17,
+    "weights": {
+      "Bold": {
+        "file": "AnonymousPro-Bold.woff2",
+        "sizeKB": 16
+      }
+    }
+  },
+  {
+    "family": "FiraCode",
+    "label": "Fira Code",
+    "file": "FiraCode-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "The Fira Code Authors",
+    "sourceUrl": "https://github.com/tonsky/FiraCode",
+    "supportsCJK": false,
+    "sizeKB": 23,
+    "weights": {
+      "Medium": {
+        "file": "FiraCode-Medium.woff2",
+        "sizeKB": 23
+      },
+      "SemiBold": {
+        "file": "FiraCode-SemiBold.woff2",
+        "sizeKB": 23
+      },
+      "Bold": {
+        "file": "FiraCode-Bold.woff2",
+        "sizeKB": 22
+      }
+    }
+  },
+  {
+    "family": "FiraMono",
+    "label": "Fira Mono",
+    "file": "FiraMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Mozilla",
+    "sourceUrl": "https://github.com/mozilla/Fira",
+    "supportsCJK": false,
+    "sizeKB": 16,
+    "weights": {
+      "Medium": {
+        "file": "FiraMono-Medium.woff2",
+        "sizeKB": 16
+      },
+      "Bold": {
+        "file": "FiraMono-Bold.woff2",
+        "sizeKB": 18
+      }
+    }
+  },
+  {
+    "family": "Hack",
+    "label": "Hack",
+    "file": "Hack-Regular.woff2",
+    "category": "mono",
+    "license": "MIT + Bitstream Vera License",
+    "licenseType": "open-source",
+    "brand": "Source Foundry",
+    "sourceUrl": "https://github.com/source-foundry/Hack",
+    "supportsCJK": false,
+    "sizeKB": 104,
+    "weights": {
+      "Bold": {
+        "file": "Hack-Bold.woff2",
+        "sizeKB": 105
+      }
+    }
+  },
+  {
+    "family": "IBMPlexMono",
+    "label": "IBM Plex Mono",
+    "file": "IBMPlexMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "IBM",
+    "sourceUrl": "https://github.com/IBM/plex",
+    "supportsCJK": false,
+    "sizeKB": 14,
+    "weights": {
+      "Medium": {
+        "file": "IBMPlexMono-Medium.woff2",
+        "sizeKB": 15
+      },
+      "SemiBold": {
+        "file": "IBMPlexMono-SemiBold.woff2",
+        "sizeKB": 15
+      },
+      "Bold": {
+        "file": "IBMPlexMono-Bold.woff2",
+        "sizeKB": 15
+      }
+    }
+  },
+  {
+    "family": "Inconsolata",
+    "label": "Inconsolata",
+    "file": "Inconsolata-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "The Inconsolata Authors",
+    "sourceUrl": "https://github.com/googlefonts/Inconsolata",
+    "supportsCJK": false,
+    "sizeKB": 17,
+    "weights": {
+      "Medium": {
+        "file": "Inconsolata-Medium.woff2",
+        "sizeKB": 18
+      },
+      "SemiBold": {
+        "file": "Inconsolata-SemiBold.woff2",
+        "sizeKB": 18
+      },
+      "Bold": {
+        "file": "Inconsolata-Bold.woff2",
+        "sizeKB": 18
+      }
+    }
+  },
+  {
+    "family": "MartianMono",
+    "label": "Martian Mono",
+    "file": "MartianMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Evil Martians",
+    "sourceUrl": "https://github.com/evilmartians/mono",
+    "supportsCJK": false,
+    "sizeKB": 10,
+    "weights": {
+      "Medium": {
+        "file": "MartianMono-Medium.woff2",
+        "sizeKB": 10
+      },
+      "SemiBold": {
+        "file": "MartianMono-SemiBold.woff2",
+        "sizeKB": 10
+      },
+      "Bold": {
+        "file": "MartianMono-Bold.woff2",
+        "sizeKB": 10
+      }
+    }
+  },
+  {
+    "family": "NotoSansMono",
+    "label": "Noto Sans Mono",
+    "file": "NotoSansMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Google",
+    "sourceUrl": "https://github.com/notofonts/latin-greek-cyrillic",
+    "supportsCJK": false,
+    "sizeKB": 11,
+    "weights": {
+      "Medium": {
+        "file": "NotoSansMono-Medium.woff2",
+        "sizeKB": 11
+      },
+      "SemiBold": {
+        "file": "NotoSansMono-SemiBold.woff2",
+        "sizeKB": 11
+      },
+      "Bold": {
+        "file": "NotoSansMono-Bold.woff2",
+        "sizeKB": 11
+      }
+    }
+  },
+  {
+    "family": "RedHatMono",
+    "label": "Red Hat Mono",
+    "file": "RedHatMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Red Hat",
+    "sourceUrl": "https://github.com/RedHatOfficial/RedHatFont",
+    "supportsCJK": false,
+    "sizeKB": 10,
+    "weights": {
+      "Medium": {
+        "file": "RedHatMono-Medium.woff2",
+        "sizeKB": 10
+      },
+      "SemiBold": {
+        "file": "RedHatMono-SemiBold.woff2",
+        "sizeKB": 10
+      },
+      "Bold": {
+        "file": "RedHatMono-Bold.woff2",
+        "sizeKB": 10
+      }
+    }
+  },
+  {
+    "family": "RobotoMono",
+    "label": "Roboto Mono",
+    "file": "RobotoMono-Regular.woff2",
+    "category": "mono",
+    "license": "Apache-2.0",
+    "licenseType": "open-source",
+    "brand": "Google",
+    "sourceUrl": "https://github.com/googlefonts/RobotoMono",
+    "supportsCJK": false,
+    "sizeKB": 12,
+    "weights": {
+      "Medium": {
+        "file": "RobotoMono-Medium.woff2",
+        "sizeKB": 13
+      },
+      "SemiBold": {
+        "file": "RobotoMono-SemiBold.woff2",
+        "sizeKB": 13
+      },
+      "Bold": {
+        "file": "RobotoMono-Bold.woff2",
+        "sizeKB": 12
+      }
+    }
+  },
+  {
+    "family": "SourceCodePro",
+    "label": "Source Code Pro",
+    "file": "SourceCodePro-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Adobe",
+    "sourceUrl": "https://github.com/adobe-fonts/source-code-pro",
+    "supportsCJK": false,
+    "sizeKB": 11,
+    "weights": {
+      "Medium": {
+        "file": "SourceCodePro-Medium.woff2",
+        "sizeKB": 11
+      },
+      "SemiBold": {
+        "file": "SourceCodePro-SemiBold.woff2",
+        "sizeKB": 11
+      },
+      "Bold": {
+        "file": "SourceCodePro-Bold.woff2",
+        "sizeKB": 11
+      }
+    }
+  },
+  {
+    "family": "SpaceMono",
+    "label": "Space Mono",
+    "file": "SpaceMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Colophon Foundry / Google",
+    "sourceUrl": "https://github.com/googlefonts/spacemono",
+    "supportsCJK": false,
+    "sizeKB": 16,
+    "weights": {
+      "Bold": {
+        "file": "SpaceMono-Bold.woff2",
+        "sizeKB": 16
+      }
+    }
+  },
+  {
+    "family": "UbuntuMono",
+    "label": "Ubuntu Mono",
+    "file": "UbuntuMono-Regular.woff2",
+    "category": "mono",
+    "license": "Ubuntu Font Licence 1.0",
+    "licenseType": "open-source",
+    "brand": "Canonical",
+    "sourceUrl": "https://design.ubuntu.com/font",
+    "supportsCJK": false,
+    "sizeKB": 27,
+    "weights": {
+      "Bold": {
+        "file": "UbuntuMono-Bold.woff2",
+        "sizeKB": 25
+      }
+    }
+  },
+  {
+    "family": "VictorMono",
+    "label": "Victor Mono",
+    "file": "VictorMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Rune Bjørnerås",
+    "sourceUrl": "https://github.com/rubjo/victor-mono",
+    "supportsCJK": false,
+    "sizeKB": 16,
+    "weights": {
+      "Medium": {
+        "file": "VictorMono-Medium.woff2",
+        "sizeKB": 15
+      },
+      "SemiBold": {
+        "file": "VictorMono-SemiBold.woff2",
+        "sizeKB": 15
+      },
+      "Bold": {
+        "file": "VictorMono-Bold.woff2",
+        "sizeKB": 15
+      }
+    }
+  },
+  {
+    "family": "CascadiaCode",
+    "label": "Cascadia Code",
+    "file": "CascadiaCode-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Microsoft",
+    "sourceUrl": "https://github.com/microsoft/cascadia-code",
+    "supportsCJK": false,
+    "sizeKB": 29,
+    "weights": {
+      "Medium": {
+        "file": "CascadiaCode-Medium.woff2",
+        "sizeKB": 29
+      },
+      "SemiBold": {
+        "file": "CascadiaCode-SemiBold.woff2",
+        "sizeKB": 30
+      },
+      "Bold": {
+        "file": "CascadiaCode-Bold.woff2",
+        "sizeKB": 30
+      }
+    }
+  },
+  {
+    "family": "Iosevka",
+    "label": "Iosevka",
+    "file": "Iosevka-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Belleve Invis",
+    "sourceUrl": "https://github.com/be5invis/Iosevka",
+    "supportsCJK": false,
+    "sizeKB": 961,
+    "weights": {
+      "Medium": {
+        "file": "Iosevka-Medium.woff2",
+        "sizeKB": 968
+      },
+      "SemiBold": {
+        "file": "Iosevka-SemiBold.woff2",
+        "sizeKB": 969
+      },
+      "Bold": {
+        "file": "Iosevka-Bold.woff2",
+        "sizeKB": 965
+      }
+    }
+  },
+  {
+    "family": "DMMono",
+    "label": "DM Mono",
+    "file": "DMMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Colophon Foundry / Google",
+    "sourceUrl": "https://github.com/googlefonts/dm-mono",
+    "supportsCJK": false,
+    "sizeKB": 14,
+    "weights": {
+      "Medium": {
+        "file": "DMMono-Medium.woff2",
+        "sizeKB": 15
+      }
+    }
+  },
+  {
+    "family": "CommitMono",
+    "label": "Commit Mono",
+    "file": "CommitMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Eigil Nikolajsen",
+    "sourceUrl": "https://github.com/eigilnikolajsen/commit-mono",
+    "supportsCJK": false,
+    "sizeKB": 47,
+    "weights": {
+      "Medium": {
+        "file": "CommitMono-Medium.woff2",
+        "sizeKB": 47
+      },
+      "SemiBold": {
+        "file": "CommitMono-SemiBold.woff2",
+        "sizeKB": 47
+      },
+      "Bold": {
+        "file": "CommitMono-Bold.woff2",
+        "sizeKB": 46
+      }
+    }
+  },
+  {
+    "family": "GeistMono",
+    "label": "Geist Mono",
+    "file": "GeistMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Vercel",
+    "sourceUrl": "https://github.com/vercel/geist-font",
+    "supportsCJK": false,
+    "sizeKB": 12,
+    "weights": {
+      "Medium": {
+        "file": "GeistMono-Medium.woff2",
+        "sizeKB": 13
+      },
+      "SemiBold": {
+        "file": "GeistMono-SemiBold.woff2",
+        "sizeKB": 13
+      },
+      "Bold": {
+        "file": "GeistMono-Bold.woff2",
+        "sizeKB": 13
+      }
+    }
+  },
+  {
+    "family": "IntelOneMono",
+    "label": "Intel One Mono",
+    "file": "IntelOneMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Intel",
+    "sourceUrl": "https://github.com/intel/intel-one-mono",
+    "supportsCJK": false,
+    "sizeKB": 15,
+    "weights": {
+      "Medium": {
+        "file": "IntelOneMono-Medium.woff2",
+        "sizeKB": 15
+      },
+      "SemiBold": {
+        "file": "IntelOneMono-SemiBold.woff2",
+        "sizeKB": 17
+      },
+      "Bold": {
+        "file": "IntelOneMono-Bold.woff2",
+        "sizeKB": 15
+      }
+    }
+  },
+  {
+    "family": "JuliaMono",
+    "label": "JuliaMono",
+    "file": "JuliaMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "cormullion",
+    "sourceUrl": "https://github.com/cormullion/juliamono",
+    "supportsCJK": false,
+    "sizeKB": 1017,
+    "weights": {
+      "Medium": {
+        "file": "JuliaMono-Medium.woff2",
+        "sizeKB": 1026
+      },
+      "SemiBold": {
+        "file": "JuliaMono-SemiBold.woff2",
+        "sizeKB": 1026
+      },
+      "Bold": {
+        "file": "JuliaMono-Bold.woff2",
+        "sizeKB": 1016
+      }
+    }
+  },
+  {
+    "family": "PTMono",
+    "label": "PT Mono",
+    "file": "PTMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "ParaType",
+    "sourceUrl": "https://www.paratype.com/fonts/pt/pt-mono",
+    "supportsCJK": false,
+    "sizeKB": 27
+  },
+  {
+    "family": "OverpassMono",
+    "label": "Overpass Mono",
+    "file": "OverpassMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Red Hat / Delve Withrington",
+    "sourceUrl": "https://github.com/RedHatOfficial/Overpass",
+    "supportsCJK": false,
+    "sizeKB": 13,
+    "weights": {
+      "Medium": {
+        "file": "OverpassMono-Medium.woff2",
+        "sizeKB": 13
+      },
+      "SemiBold": {
+        "file": "OverpassMono-SemiBold.woff2",
+        "sizeKB": 13
+      },
+      "Bold": {
+        "file": "OverpassMono-Bold.woff2",
+        "sizeKB": 13
+      }
+    }
+  },
+  {
+    "family": "ShareTechMono",
+    "label": "Share Tech Mono",
+    "file": "ShareTechMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Carrois Apostrophe",
+    "sourceUrl": "https://github.com/google/fonts/tree/main/ofl/sharetechmono",
+    "supportsCJK": false,
+    "sizeKB": 13
+  },
+  {
+    "family": "CourierPrime",
+    "label": "Courier Prime",
+    "file": "CourierPrime-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Quote-Unquote Apps",
+    "sourceUrl": "https://github.com/quoteunquoteapps/CourierPrime",
+    "supportsCJK": false,
+    "sizeKB": 18,
+    "weights": {
+      "Bold": {
+        "file": "CourierPrime-Bold.woff2",
+        "sizeKB": 19
+      }
+    }
+  },
+  {
+    "family": "0xProto",
+    "label": "0xProto",
+    "file": "0xProto-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "0xType / Hiroki Chiba",
+    "sourceUrl": "https://github.com/0xType/0xProto",
+    "supportsCJK": false,
+    "sizeKB": 56,
+    "weights": {
+      "Bold": {
+        "file": "0xProto-Bold.woff2",
+        "sizeKB": 55
+      }
+    }
+  },
+  {
+    "family": "SometypeMono",
+    "label": "Sometype Mono",
+    "file": "SometypeMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Andrew Paglinawan",
+    "sourceUrl": "https://github.com/google/fonts/tree/main/ofl/sometypemono",
+    "supportsCJK": false,
+    "sizeKB": 10,
+    "weights": {
+      "Medium": {
+        "file": "SometypeMono-Medium.woff2",
+        "sizeKB": 10
+      },
+      "SemiBold": {
+        "file": "SometypeMono-SemiBold.woff2",
+        "sizeKB": 10
+      },
+      "Bold": {
+        "file": "SometypeMono-Bold.woff2",
+        "sizeKB": 9
+      }
+    }
+  },
+  {
+    "family": "ChivoMono",
+    "label": "Chivo Mono",
+    "file": "ChivoMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Omnibus-Type",
+    "sourceUrl": "https://github.com/Omnibus-Type/ChivoMono",
+    "supportsCJK": false,
+    "sizeKB": 12,
+    "weights": {
+      "Medium": {
+        "file": "ChivoMono-Medium.woff2",
+        "sizeKB": 12
+      },
+      "SemiBold": {
+        "file": "ChivoMono-SemiBold.woff2",
+        "sizeKB": 12
+      },
+      "Bold": {
+        "file": "ChivoMono-Bold.woff2",
+        "sizeKB": 12
+      }
+    }
+  },
+  {
+    "family": "AzeretMono",
+    "label": "Azeret Mono",
+    "file": "AzeretMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Displaay Type Foundry",
+    "sourceUrl": "https://github.com/displaay/Azeret",
+    "supportsCJK": false,
+    "sizeKB": 10,
+    "weights": {
+      "Medium": {
+        "file": "AzeretMono-Medium.woff2",
+        "sizeKB": 11
+      },
+      "SemiBold": {
+        "file": "AzeretMono-SemiBold.woff2",
+        "sizeKB": 11
+      },
+      "Bold": {
+        "file": "AzeretMono-Bold.woff2",
+        "sizeKB": 10
+      }
+    }
+  },
+  {
+    "family": "SplineSansMono",
+    "label": "Spline Sans Mono",
+    "file": "SplineSansMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "SpaceType / Font Bureau",
+    "sourceUrl": "https://github.com/SpaceType-Inc/spline-sans-mono",
+    "supportsCJK": false,
+    "sizeKB": 13,
+    "weights": {
+      "Medium": {
+        "file": "SplineSansMono-Medium.woff2",
+        "sizeKB": 12
+      },
+      "SemiBold": {
+        "file": "SplineSansMono-SemiBold.woff2",
+        "sizeKB": 13
+      },
+      "Bold": {
+        "file": "SplineSansMono-Bold.woff2",
+        "sizeKB": 13
+      }
+    }
+  },
+  {
+    "family": "FragmentMono",
+    "label": "Fragment Mono",
+    "file": "FragmentMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Wei Huang",
+    "sourceUrl": "https://github.com/weiweihuanghuang/fragment-mono",
+    "supportsCJK": false,
+    "sizeKB": 25
+  },
+  {
+    "family": "Cousine",
+    "label": "Cousine",
+    "file": "Cousine-Regular.woff2",
+    "category": "mono",
+    "license": "Apache-2.0",
+    "licenseType": "open-source",
+    "brand": "Steve Matteson / Ascender",
+    "sourceUrl": "https://fonts.google.com/specimen/Cousine",
+    "supportsCJK": false,
+    "sizeKB": 18,
+    "weights": {
+      "Bold": {
+        "file": "Cousine-Bold.woff2",
+        "sizeKB": 19
+      }
+    }
+  },
+  {
+    "family": "B612Mono",
+    "label": "B612 Mono",
+    "file": "B612Mono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Airbus / Polytechnique",
+    "sourceUrl": "https://github.com/polarsys/b612",
+    "supportsCJK": false,
+    "sizeKB": 19,
+    "weights": {
+      "Bold": {
+        "file": "B612Mono-Bold.woff2",
+        "sizeKB": 19
+      }
+    }
+  },
+  {
+    "family": "OxygenMono",
+    "label": "Oxygen Mono",
+    "file": "OxygenMono-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "Vernon Adams",
+    "sourceUrl": "https://github.com/googlefonts/oxygen",
+    "supportsCJK": false,
+    "sizeKB": 16
+  },
+  {
+    "family": "Lekton",
+    "label": "Lekton",
+    "file": "Lekton-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "ISIA Urbino",
+    "sourceUrl": "https://github.com/google/fonts/tree/main/ofl/lekton",
+    "supportsCJK": false,
+    "sizeKB": 9,
+    "weights": {
+      "Bold": {
+        "file": "Lekton-Bold.woff2",
+        "sizeKB": 9
+      }
+    }
+  },
+  {
+    "family": "MonaspaceNeon",
+    "label": "Monaspace Neon",
+    "file": "MonaspaceNeon-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "GitHub Next",
+    "sourceUrl": "https://github.com/githubnext/monaspace",
+    "supportsCJK": false,
+    "sizeKB": 195,
+    "weights": {
+      "Medium": {
+        "file": "MonaspaceNeon-Medium.woff2",
+        "sizeKB": 192
+      },
+      "SemiBold": {
+        "file": "MonaspaceNeon-SemiBold.woff2",
+        "sizeKB": 193
+      },
+      "Bold": {
+        "file": "MonaspaceNeon-Bold.woff2",
+        "sizeKB": 197
+      }
+    }
+  },
+  {
+    "family": "MapleMonoNFCN",
+    "label": "Maple Mono NF CN",
+    "file": "MapleMonoNFCN-Regular.woff2",
+    "category": "mono",
+    "license": "OFL-1.1",
+    "licenseType": "open-source",
+    "brand": "subframe7536（社区）",
+    "sourceUrl": "https://github.com/subframe7536/maple-font",
+    "supportsCJK": true,
+    "sizeKB": 6150,
+    "weights": {
+      "Medium": {
+        "file": "MapleMonoNFCN-Medium.woff2",
+        "sizeKB": 6235
+      },
+      "SemiBold": {
+        "file": "MapleMonoNFCN-SemiBold.woff2",
+        "sizeKB": 6294
+      },
+      "Bold": {
+        "file": "MapleMonoNFCN-Bold.woff2",
+        "sizeKB": 6257
+      }
+    }
+  }
+]

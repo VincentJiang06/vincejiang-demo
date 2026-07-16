@@ -1,0 +1,89 @@
+QR Label Studio / font-compare — 字体许可证说明（v3）
+======================================================================
+
+本目录字体均为免费可商用。licenseType 两类：
+  open-source    = 真开源许可（OFL / Apache / MIT / IPA Font License 等），允许修改衍生。
+  free-commercial= 仅授权免费商用，厂商 EULA 禁止修改/衍生（多为手机厂商品牌字体）。
+
+部署为静态站点，体积敏感：open-source 且原为 >2MB 的 ttf/otf 已用 fonttools
+转为 woff2（原文件删除）；free-commercial 字体禁止修改，保留厂商原始 ttf/otf 不动。
+
+许可证全文参考：
+  SIL OFL 1.1        https://scripts.sil.org/OFL
+  Apache License 2.0 https://www.apache.org/licenses/LICENSE-2.0
+  MIT License        https://opensource.org/licenses/MIT
+  Ubuntu Font 1.0    https://ubuntu.com/legal/font-licence
+  IPA Font License 1.0 https://opensource.org/licenses/IPA
+
+格式：名称 | licenseType | 具体许可 | 品牌来源 | 来源 URL
+----------------------------------------------------------------------
+
+### 中文黑体 cjk-sans
+Source Han Sans SC 思源黑体 (SourceHanSansSC-Regular.woff2) | open-source | OFL-1.1 | Adobe | https://github.com/adobe-fonts/source-han-sans
+Noto Sans SC 思源黑体(Google) (NotoSansSC-Regular.woff2) | open-source | OFL-1.1 | Google | https://github.com/google/fonts/tree/main/ofl/notosanssc
+MiSans 小米 (MiSans-Regular.ttf) | free-commercial | MiSans 字体知识产权许可协议 | 小米 Xiaomi | https://hyperos.mi.com/font
+HarmonyOS Sans SC 鸿蒙黑体 (HarmonyOSSansSC-Regular.woff2) | free-commercial | HarmonyOS Sans 字体许可(EULA) | 华为 Huawei | https://developer.harmonyos.com/cn/docs/design/des-guides/font-0000001157868583
+OPPO Sans (OPPOSans-Regular.ttf) | free-commercial | OPPO Sans 字体使用许可(EULA) | OPPO | https://open.oppomobile.com/
+vivo Sans (vivoSans-Regular.ttf) | free-commercial | vivo Sans 字体知识产权许可协议(EULA) | vivo | https://www.vivo.com.cn/originos
+HONOR Sans CN 荣耀 (HONORSansCN-Regular.ttf) | free-commercial | HONOR Sans Copyright License Agreement(EULA) | 荣耀 HONOR | https://www.honor.com/
+Alibaba PuHuiTi 3.0 阿里巴巴普惠体 (AlibabaPuHuiTi-Regular.ttf) | free-commercial | 阿里巴巴普惠体 3.0 免费商用授权(EULA) | 阿里巴巴 Alibaba | https://www.alibabafonts.com/
+Douyin Sans 抖音美好体 (Bold) (DouyinSans-Bold.ttf) | free-commercial | 抖音美好体开源免费商用协议(EULA) | 字节跳动 ByteDance 抖音 | https://github.com/bytedance/fonts
+Smiley Sans 得意黑 (Oblique) (SmileySans-Oblique.woff2) | open-source | OFL-1.1 | atelier anchor 厚荷（社区） | https://github.com/atelier-anchor/smiley-sans
+LXGW Neo XiHei 霞鹜新晰黑 (LXGWNeoXiHei.woff2) | open-source | IPA Font License 1.0 | 个人作者 lxgw 李赫翔 | https://github.com/lxgw/LxgwNeoXiHei
+Glow Sans SC 未来荧黑 (GlowSansSC-Regular.woff2) | open-source | OFL-1.1 | welai 也许可乐（社区） | https://github.com/welai/glow-sans
+Sarasa Gothic SC 更纱黑体 (SarasaGothicSC-Regular.woff2) | open-source | OFL-1.1 | be5invis 陈梓煜（社区） | https://github.com/be5invis/Sarasa-Gothic
+Plangothic 遍黑体 (P1) (PlangothicP1-Regular.woff2) | open-source | OFL-1.1 | Plangothic Project（社区） | https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project
+
+### 等宽字体 mono
+JetBrains Mono (JetBrainsMono-Regular.woff2) | open-source | OFL-1.1 | JetBrains | https://github.com/JetBrains/JetBrainsMono
+Anonymous Pro (AnonymousPro-Regular.woff2) | open-source | OFL-1.1 | Mark Simonson | https://www.marksimonson.com/fonts/view/anonymous-pro
+Fira Code (FiraCode-Regular.woff2) | open-source | OFL-1.1 | The Fira Code Authors | https://github.com/tonsky/FiraCode
+Fira Mono (FiraMono-Regular.woff2) | open-source | OFL-1.1 | Mozilla | https://github.com/mozilla/Fira
+Hack (Hack-Regular.woff2) | open-source | MIT + Bitstream Vera License | Source Foundry | https://github.com/source-foundry/Hack
+IBM Plex Mono (IBMPlexMono-Regular.woff2) | open-source | OFL-1.1 | IBM | https://github.com/IBM/plex
+Inconsolata (Inconsolata-Regular.woff2) | open-source | OFL-1.1 | The Inconsolata Authors | https://github.com/googlefonts/Inconsolata
+Martian Mono (MartianMono-Regular.woff2) | open-source | OFL-1.1 | Evil Martians | https://github.com/evilmartians/mono
+Noto Sans Mono (NotoSansMono-Regular.woff2) | open-source | OFL-1.1 | Google | https://github.com/notofonts/latin-greek-cyrillic
+Red Hat Mono (RedHatMono-Regular.woff2) | open-source | OFL-1.1 | Red Hat | https://github.com/RedHatOfficial/RedHatFont
+Roboto Mono (RobotoMono-Regular.woff2) | open-source | Apache-2.0 | Google | https://github.com/googlefonts/RobotoMono
+Source Code Pro (SourceCodePro-Regular.woff2) | open-source | OFL-1.1 | Adobe | https://github.com/adobe-fonts/source-code-pro
+Space Mono (SpaceMono-Regular.woff2) | open-source | OFL-1.1 | Colophon Foundry / Google | https://github.com/googlefonts/spacemono
+Ubuntu Mono (UbuntuMono-Regular.woff2) | open-source | Ubuntu Font Licence 1.0 | Canonical | https://design.ubuntu.com/font
+Victor Mono (VictorMono-Regular.woff2) | open-source | OFL-1.1 | Rune Bjørnerås | https://github.com/rubjo/victor-mono
+Cascadia Code (CascadiaCode-Regular.woff2) | open-source | OFL-1.1 | Microsoft | https://github.com/microsoft/cascadia-code
+Iosevka (Iosevka-Regular.woff2) | open-source | OFL-1.1 | Belleve Invis | https://github.com/be5invis/Iosevka
+DM Mono (DMMono-Regular.woff2) | open-source | OFL-1.1 | Colophon Foundry / Google | https://github.com/googlefonts/dm-mono
+Commit Mono (CommitMono-Regular.woff2) | open-source | OFL-1.1 | Eigil Nikolajsen | https://github.com/eigilnikolajsen/commit-mono
+Geist Mono (GeistMono-Regular.woff2) | open-source | OFL-1.1 | Vercel | https://github.com/vercel/geist-font
+Intel One Mono (IntelOneMono-Regular.woff2) | open-source | OFL-1.1 | Intel | https://github.com/intel/intel-one-mono
+JuliaMono (JuliaMono-Regular.woff2) | open-source | OFL-1.1 | cormullion | https://github.com/cormullion/juliamono
+PT Mono (PTMono-Regular.woff2) | open-source | OFL-1.1 | ParaType | https://www.paratype.com/fonts/pt/pt-mono
+Overpass Mono (OverpassMono-Regular.woff2) | open-source | OFL-1.1 | Red Hat / Delve Withrington | https://github.com/RedHatOfficial/Overpass
+Share Tech Mono (ShareTechMono-Regular.woff2) | open-source | OFL-1.1 | Carrois Apostrophe | https://github.com/google/fonts/tree/main/ofl/sharetechmono
+Courier Prime (CourierPrime-Regular.woff2) | open-source | OFL-1.1 | Quote-Unquote Apps | https://github.com/quoteunquoteapps/CourierPrime
+0xProto (0xProto-Regular.woff2) | open-source | OFL-1.1 | 0xType / Hiroki Chiba | https://github.com/0xType/0xProto
+Sometype Mono (SometypeMono-Regular.woff2) | open-source | OFL-1.1 | Andrew Paglinawan | https://github.com/google/fonts/tree/main/ofl/sometypemono
+Chivo Mono (ChivoMono-Regular.woff2) | open-source | OFL-1.1 | Omnibus-Type | https://github.com/Omnibus-Type/ChivoMono
+Azeret Mono (AzeretMono-Regular.woff2) | open-source | OFL-1.1 | Displaay Type Foundry | https://github.com/displaay/Azeret
+Spline Sans Mono (SplineSansMono-Regular.woff2) | open-source | OFL-1.1 | SpaceType / Font Bureau | https://github.com/SpaceType-Inc/spline-sans-mono
+Fragment Mono (FragmentMono-Regular.woff2) | open-source | OFL-1.1 | Wei Huang | https://github.com/weiweihuanghuang/fragment-mono
+Cousine (Cousine-Regular.woff2) | open-source | Apache-2.0 | Steve Matteson / Ascender | https://fonts.google.com/specimen/Cousine
+B612 Mono (B612Mono-Regular.woff2) | open-source | OFL-1.1 | Airbus / Polytechnique | https://github.com/polarsys/b612
+Oxygen Mono (OxygenMono-Regular.woff2) | open-source | OFL-1.1 | Vernon Adams | https://github.com/googlefonts/oxygen
+Lekton (Lekton-Regular.woff2) | open-source | OFL-1.1 | ISIA Urbino | https://github.com/google/fonts/tree/main/ofl/lekton
+Monaspace Neon (MonaspaceNeon-Regular.woff2) | open-source | OFL-1.1 | GitHub Next | https://github.com/githubnext/monaspace
+Maple Mono NF CN (MapleMonoNFCN-Regular.woff2) | open-source | OFL-1.1 | subframe7536（社区） | https://github.com/subframe7536/maple-font
+
+----------------------------------------------------------------------
+说明：
+- Source Han Sans SC 原为 Adobe 官方 OTF，已转 woff2（源同 v2.27 裁决：思源黑体=Adobe Source Han Sans）。
+- Douyin 抖音美好体、Smiley 得意黑仅含单一字重/斜体（原字体如此），按其唯一样式收录。
+- Plangothic 遍黑体仅收 P1（基本多文种平面 BMP，覆盖常用汉字）；P2（增补平面）未收。
+- Maple Mono NF CN 为等宽且含中文（supportsCJK=true），两种对比模式均参与。
+- 厂商镜像来源：MiSans / HONOR 取自社区镜像仓库（whjkd2005），OPPO（cooingwu）、
+  Alibaba（hongzhi725）同为社区镜像的原始未改文件；Douyin 取自官方 bytedance/fonts；
+  vivo Sans 取自 vivo 官方 CDN zip（vivoSans-Regular.ttf）。
+- mono 字体的 Medium/SemiBold/Bold 附加字重（文件名如 FiraCode-Medium.woff2）与各自 Regular
+  同源同许可，不逐字重另列。
+- QR 编码库 js/vendor/qrcode.js — qrcode-generator, MIT, Kazuhiko Arase,
+  https://github.com/kazuhikoarase/qrcode-generator

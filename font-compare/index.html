@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>字体对比预览 · 三卡片标签</title>
+<style>
+  :root {
+    --scale: 0.45;
+    --bg: #f0f0f2;
+    --panel: #ffffff;
+    --line: #e2e2e6;
+    --ink: #1a1a1e;
+    --muted: #70707a;
+    --accent: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------- 引导横幅 ---------- */
+  .guide-banner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #eaf1ff;
+    border-bottom: 1px solid #c9daf8;
+    color: #23407c;
+    padding: 9px 20px;
+    font-size: 13px;
+  }
+  .guide-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; flex: 1; max-width: 1400px; margin: 0 auto; }
+  .guide-what { font-weight: 600; }
+  .guide-steps { display: inline-flex; align-items: center; gap: 8px; color: #3a54a2; }
+  .gstep b {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: #2258c9; color: #fff; font-size: 10px; margin-right: 5px;
+  }
+  .garrow { color: #8fa8d8; }
+  .guide-close {
+    font: inherit; font-size: 18px; line-height: 1;
+    border: none; background: transparent; color: #5b74a8; cursor: pointer;
+    padding: 4px 8px; border-radius: 6px;
+  }
+  .guide-close:hover { background: rgba(34,88,201,0.1); }
+
+  /* ---------- 顶部控制栏（分组卡片；不再常驻 sticky） ----------
+     滚过阈值后收起为固定单行摘要条（#mini-bar），点「展开设置」把面板以
+     fixed 叠加还原（#toolbar-spacer 占位防布局跳动）。回到顶部自动还原。 */
+  .toolbar {
+    position: relative;
+    z-index: 100;
+    background: rgba(240,240,242,0.94);
+    border-bottom: 1px solid var(--line);
+    padding: 12px 20px;
+  }
+  .toolbar.floating {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 130;
+    max-height: 82vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 24px rgba(20,20,30,0.16);
+    backdrop-filter: saturate(1.4) blur(8px);
+  }
+  #toolbar-spacer { display: none; }
+  .collapse-btn {
+    display: none;
+    margin-left: auto;
+    align-self: flex-start;
+  }
+  .toolbar.floating .collapse-btn { display: inline-block; }
+
+  /* 收起后的紧凑单行摘要条 */
+  #mini-bar {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 120;
+    align-items: center;
+    gap: 14px;
+    height: 42px;
+    padding: 0 20px;
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: saturate(1.4) blur(8px);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 2px 8px rgba(20,20,30,0.06);
+  }
+  #mini-bar.show { display: flex; }
+  .mini-summary {
+    font-size: 12px;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .mini-summary .sep { color: #c2c2ca; }
+  .mini-summary b { font-weight: 700; }
+  .mini-expand { margin-left: auto; flex: 0 0 auto; }
+  .toolbar-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: stretch;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .group {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 10px 14px 12px;
+    box-shadow: 0 1px 2px rgba(20,20,30,0.04);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+  .group-head { display: flex; align-items: center; gap: 7px; }
+  .group-no {
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--accent); font-size: 15px; font-weight: 700; line-height: 1;
+  }
+  .group-title { font-size: 13px; font-weight: 700; letter-spacing: 0.02em; }
+  .group-hint { margin: 3px 0 8px; font-size: 11px; color: var(--muted); }
+  .group-body { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: flex-end; margin-top: auto; }
+  .field { display: flex; flex-direction: column; gap: 5px; }
+  .field label {
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .field input[type="text"], .field select {
+    font: inherit;
+    font-size: 13px;
+    padding: 7px 10px;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    background: #fff;
+    color: var(--ink);
+    min-width: 170px;
+  }
+  .field input[type="text"]:focus, .field select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+  }
+  .tabs { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background:#fff; }
+  .tabs button {
+    font: inherit; font-size: 13px; font-weight: 600;
+    padding: 8px 14px; border: none; background: transparent; color: var(--muted);
+    cursor: pointer;
+  }
+  .tabs button.active { background: var(--ink); color: #fff; }
+  #weight-tabs button { padding: 8px 11px; }
+  .stepper { display: inline-flex; align-items: stretch; border: 1px solid var(--line); border-radius: 7px; overflow: hidden; background: #fff; }
+  .stepper button {
+    font: inherit; font-size: 16px; line-height: 1; width: 30px; border: none; background: #f6f6f8; color: var(--ink); cursor: pointer;
+  }
+  .stepper button:hover { background: #ececf0; }
+  .stepper input {
+    font: inherit; font-size: 13px; width: 62px; text-align: center; border: none; border-left: 1px solid var(--line); border-right: 1px solid var(--line); padding: 7px 4px;
+    -moz-appearance: textfield;
+  }
+  .stepper input:focus { outline: none; }
+  .btn {
+    font: inherit; font-size: 13px;
+    padding: 7px 12px; border: 1px solid var(--line); border-radius: 7px;
+    background: #fff; color: var(--ink); cursor: pointer;
+  }
+  .btn:hover { background: #f6f6f8; }
+  .file-row { display: flex; align-items: center; gap: 8px; }
+  input[type="file"] { font-size: 12px; max-width: 190px; }
+  .zoom-field { min-width: 190px; }
+  .zoom-field input[type="range"] { width: 100%; }
+  .zoom-val { font-variant-numeric: tabular-nums; color: var(--muted); }
+
+  /* ---------- 说明 & 错误 ---------- */
+  .meta-note { max-width: 1400px; margin: 10px auto 0; padding: 0 20px; color: var(--muted); font-size: 12px; }
+  .error-banner {
+    max-width: 1400px; margin: 24px auto; padding: 16px 20px;
+    background: #fff2f2; border: 1px solid #f3b4b4; color: #a11; border-radius: 10px;
+  }
+
+  /* ---------- 对比区 ---------- */
+  .rows { padding: 18px 20px 120px; }
+  .font-row {
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* 信息卡：紧凑窄列，卡片才是主角 */
+  .info {
+    flex: 0 0 152px;
+    width: 152px;
+    padding: 2px 0;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+  .info .fam { font-size: 12px; font-weight: 700; letter-spacing: 0.01em; word-break: break-word; }
+  .info .idx { font-size: 10px; color: var(--muted); font-weight: 600; margin-top: 1px; word-break: break-all; }
+  .info .badges { margin-top: 7px; display: flex; flex-wrap: wrap; gap: 4px; }
+  .badge {
+    display: inline-block;
+    padding: 2px 6px; border-radius: 999px; font-size: 10px; font-weight: 700; cursor: default;
+  }
+  .badge.open { background: #e7f6ec; color: #197a3d; border: 1px solid #b5e2c4; }
+  .badge.free { background: #fdf0e3; color: #b5670c; border: 1px solid #f2cfa0; }
+  .badge.brand { background: #eef1f6; color: #45505f; border: 1px solid #d9dee7; font-weight: 600; }
+  .badge.missing { background: #f1f1f4; color: #9a9aa4; border: 1px solid #e0e0e6; font-weight: 600; }
+  .badge.effective { background: #eaf1ff; color: #2258c9; border: 1px solid #c3d6f7; font-weight: 600; }
+  .info .cjk-mark { margin-top: 5px; font-size: 10px; color: #197a3d; }
+  .status {
+    margin-top: 8px; font-size: 10px; display: flex; align-items: center; gap: 6px; color: var(--muted);
+  }
+  .status .badge-load {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #eef1f6; color: #55606f; padding: 3px 9px; border-radius: 999px; font-weight: 600;
+  }
+  .status.loading .badge-load { background: #eaf1ff; color: #2258c9; }
+  .status.loaded .badge-load { background: #e7f6ec; color: #197a3d; }
+  .status.failed .badge-load { background: #fdeaea; color: #c0322b; }
+  .spinner {
+    width: 11px; height: 11px; border: 2px solid currentColor; border-right-color: transparent;
+    border-radius: 50%; display: inline-block; animation: spin 0.7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* 卡片视口 + 缩放 */
+  .cards-viewport {
+    position: relative;
+    width: calc(1296px * var(--scale));
+    height: calc(550px * var(--scale));
+    flex: 0 0 auto;
+  }
+  .cards {
+    position: absolute; top: 0; left: 0;
+    display: flex; gap: 48px; align-items: flex-start;
+    transform: scale(var(--scale));
+    transform-origin: top left;
+  }
+
+  /* 单张黑卡 */
+  .card {
+    position: relative;
+    width: 400px;
+    background: #000;
+    border-radius: 12px;
+    flex: 0 0 auto;
+    overflow: hidden;
+    font-synthesis: none; /* 禁止浏览器伪加粗/伪斜体：缺字重必须回退真实字体 */
+  }
+  .card.a { height: 450px; }
+  .card.b { height: 500px; }
+  .card.c { height: 550px; }
+  .card .qr {
+    position: absolute;
+    width: 340px; height: 340px;
+    border-radius: 6px;
+    left: 30px;
+    display: block;
+    image-rendering: pixelated;
+  }
+  .card.a .qr { top: 35px; }
+  .card.b .qr { top: 85px; }
+  .card.c .qr { top: 135px; }
+  .card .toptext {
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    padding-top: 15px;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    line-height: 48px;
+    white-space: nowrap;
+  }
+  .card .number {
+    position: absolute;
+    left: 0; right: 0; bottom: 23px;
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+  <div class="guide-banner" id="guide-banner" style="display:none">
+    <div class="guide-inner">
+      <span class="guide-what">在同一组标签卡片上，一次看遍所有候选字体的效果，帮你选字。</span>
+      <span class="guide-steps">
+        <span class="gstep"><b>1</b> 输入文字</span><span class="garrow">→</span>
+        <span class="gstep"><b>2</b> 选对比模式</span><span class="garrow">→</span>
+        <span class="gstep"><b>3</b> 滚动浏览、切字重</span>
+      </span>
+    </div>
+    <button class="guide-close" id="guide-close" aria-label="关闭引导" title="关闭">×</button>
+  </div>
+
+  <div id="mini-bar">
+    <div class="mini-summary" id="mini-summary"></div>
+    <button class="btn mini-expand" id="mini-expand">展开设置</button>
+  </div>
+
+  <div class="toolbar" id="toolbar">
+    <div class="toolbar-inner">
+
+      <section class="group">
+        <header class="group-head">
+          <span class="group-no">①</span>
+          <span class="group-title">文字内容</span>
+        </header>
+        <p class="group-hint">输入即改，所有卡片实时更新</p>
+        <div class="group-body">
+          <div class="field">
+            <label for="in-top1">顶行 1</label>
+            <input type="text" id="in-top1" value="扫码了解更多">
+          </div>
+          <div class="field">
+            <label for="in-top2">顶行 2</label>
+            <input type="text" id="in-top2" value="内含物品清单与说明">
+          </div>
+          <div class="field">
+            <label for="in-num">底部编号</label>
+            <input type="text" id="in-num" value="ABC-1234">
+          </div>
+        </div>
+      </section>
+
+      <section class="group">
+        <header class="group-head">
+          <span class="group-no">②</span>
+          <span class="group-title">二维码图</span>
+        </header>
+        <p class="group-hint">可上传不同白边距的版本对比（纯本地处理，不上传）</p>
+        <div class="group-body">
+          <div class="field">
+            <label for="in-qr">替换图片</label>
+            <div class="file-row">
+              <input type="file" id="in-qr" accept="image/*">
+              <button class="btn" id="btn-qr-reset">恢复默认图</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="group">
+        <header class="group-head">
+          <span class="group-no">③</span>
+          <span class="group-title">对比设置</span>
+        </header>
+        <p class="group-hint" id="mode-hint">逐行对比底部编号的等宽字体；中文用右侧固定字体</p>
+        <div class="group-body">
+          <div class="field">
+            <label>对比模式</label>
+            <div class="tabs" id="mode-tabs">
+              <button data-mode="mono" class="active">等宽字体对比</button>
+              <button data-mode="cjk">中文字体对比</button>
+            </div>
+          </div>
+          <div class="field" id="fixed-mono-field" style="display:none">
+            <label for="sel-fixed-mono">固定不变的另一维度：编号等宽字体</label>
+            <select id="sel-fixed-mono"></select>
+          </div>
+          <div class="field" id="fixed-cjk-field">
+            <label for="sel-fixed-cjk">固定不变的另一维度：中文黑体</label>
+            <select id="sel-fixed-cjk"></select>
+          </div>
+          <div class="field">
+            <label>编号字重（等宽）</label>
+            <div class="tabs" id="weight-tabs">
+              <button data-weight="Regular" class="active">Regular</button>
+              <button data-weight="Medium">Medium</button>
+              <button data-weight="SemiBold">SemiBold</button>
+              <button data-weight="Bold">Bold</button>
+              <button data-weight="Custom">Custom</button>
+            </div>
+          </div>
+          <div class="field" id="custom-weight-field" style="display:none">
+            <label for="w-custom">自定义字重 (100–900)</label>
+            <div class="stepper">
+              <button type="button" id="w-dec" aria-label="减 50">−</button>
+              <input type="number" id="w-custom" min="100" max="900" step="50" value="400">
+              <button type="button" id="w-inc" aria-label="加 50">+</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="group">
+        <header class="group-head">
+          <span class="group-no">④</span>
+          <span class="group-title">显示</span>
+        </header>
+        <p class="group-hint">缩小可一屏看更多行</p>
+        <div class="group-body">
+          <div class="field zoom-field">
+            <label for="in-zoom">缩放 <span class="zoom-val" id="zoom-val">45%</span></label>
+            <input type="range" id="in-zoom" min="30" max="100" value="45">
+          </div>
+        </div>
+      </section>
+
+      <button class="btn collapse-btn" id="panel-collapse">收起 ↑</button>
+
+    </div>
+  </div>
+  <div id="toolbar-spacer"></div>
+
+  <div class="meta-note" id="meta-note">正在加载字体清单…</div>
+  <div id="rows-host" class="rows"></div>
+
+<script>
+"use strict";
+
+// 默认 QR 图（base64 data URI，内嵌）
+const DEFAULT_QR = "data:image/png;base64,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";
+
+const FONT_DIR = "fonts/";
+const FAM_PREFIX = "fc-"; // 唯一前缀避免与系统字体撞名
+
+const state = {
+  fonts: [],
+  mode: "mono",             // "mono"（默认）| "cjk"
+  weight: "Regular",        // 编号字重：Regular | Medium | SemiBold | Bold | Custom
+  customWeight: 400,        // Custom 档的数值（100–900，步进 50）
+  qr: DEFAULT_QR,
+  top1: "扫码了解更多",
+  top2: "内含物品清单与说明",
+  num: "ABC-1234",
+  fixedMono: "JetBrainsMono",
+  fixedCjk: "SourceHanSansSC",
+  scale: 0.45,
+  loaded: new Set(),        // 已成功加载的 family+weight
+  failed: new Set(),
+};
+
+// 命名字重 → 数字字重（界面主选项只暴露命名）
+const WEIGHT_MAP = { Regular: 400, Medium: 500, SemiBold: 600, Bold: 700 };
+
+function famName(f) { return FAM_PREFIX + f.family; }
+function sizeMB(kb) { return (kb / 1024).toFixed(kb < 1024 ? 2 : 1); }
+
+// 某等宽字体实际可用的静态字重文件列表（Regular 恒有 + weights 映射里的）
+function availableWeights(font) {
+  const list = [{ name: "Regular", num: 400, file: font.file, sizeKB: font.sizeKB }];
+  if (font.weights) {
+    ["Medium", "SemiBold", "Bold"].forEach(name => {
+      const w = font.weights[name];
+      if (w && w.file) list.push({ name, num: WEIGHT_MAP[name], file: w.file, sizeKB: w.sizeKB || font.sizeKB });
+    });
+  }
+  return list;
+}
+
+// 解析某等宽字体在当前字重设置下的实际生效字重。
+// 返回 {weight(数字), file, sizeKB, tagText, tagKind}
+//  - 命名档缺失 → 回退 Regular，tagKind:"missing"（灰标「无 X」）
+//  - Custom → 静态文件无法插值，取数值最接近的可用档（并列取较重），tagKind:"effective"（「→ X」）
+function resolveMonoWeight(font) {
+  const avail = availableWeights(font);
+  if (state.weight === "Custom") {
+    const target = state.customWeight;
+    let best = avail[0];
+    for (const w of avail) {
+      const d = Math.abs(w.num - target), bd = Math.abs(best.num - target);
+      if (d < bd || (d === bd && w.num > best.num)) best = w;
+    }
+    return { weight: best.num, file: best.file, sizeKB: best.sizeKB, tagText: "→ " + best.name, tagKind: "effective" };
+  }
+  const wname = state.weight;
+  if (wname === "Regular") {
+    return { weight: 400, file: font.file, sizeKB: font.sizeKB, tagText: "", tagKind: "" };
+  }
+  const w = font.weights && font.weights[wname];
+  if (w && w.file) {
+    return { weight: WEIGHT_MAP[wname], file: w.file, sizeKB: w.sizeKB || font.sizeKB, tagText: "", tagKind: "" };
+  }
+  return { weight: 400, file: font.file, sizeKB: font.sizeKB, tagText: "无 " + wname, tagKind: "missing" };
+}
+
+// 当前行的「编号」用哪款等宽字体：mono 模式=行字体；cjk 模式=固定 mono
+function numberMonoFontFor(rowFont) {
+  return state.mode === "mono" ? rowFont : fixedFontObj();
+}
+
+// ---------- 引导 ----------
+async function boot() {
+  initGuideBanner(); // 引导横幅不依赖 manifest，先初始化
+  try {
+    const res = await fetch(FONT_DIR + "manifest.json");
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    state.fonts = await res.json();
+  } catch (err) {
+    document.getElementById("meta-note").style.display = "none";
+    const host = document.getElementById("rows-host");
+    host.innerHTML = '<div class="error-banner"><b>字体清单加载失败：</b>' +
+      String(err) + '<br>请通过 http 服务访问本页（如 <code>python3 -m http.server</code>），' +
+      '而非直接用 file:// 打开，并确认 <code>fonts/manifest.json</code> 存在。</div>';
+    return;
+  }
+  injectFontFaces();
+  buildFixedSelects();
+  bindControls();
+  updateModeHint();
+  render();
+  updateMeta();
+  initPanelCollapse();
+}
+
+function fmtOf(file) {
+  return file.endsWith(".woff2") ? "woff2" : (file.endsWith(".ttf") ? "truetype" : "opentype");
+}
+function faceRule(fam, file, weight) {
+  return "@font-face{font-family:'" + fam + "';" +
+    "src:url('" + FONT_DIR + file + "') format('" + fmtOf(file) + "');" +
+    "font-display:block;font-weight:" + weight + ";font-style:normal;}";
+}
+
+// 为每个字体生成 @font-face（浏览器仅在被渲染使用时才拉取字体文件）。
+// 等宽字体若有 weights 映射，每个字重各生成一条（同 family 名 + 对应 font-weight）。
+function injectFontFaces() {
+  const style = document.createElement("style");
+  const rules = [];
+  state.fonts.forEach(f => {
+    const fam = famName(f);
+    rules.push(faceRule(fam, f.file, 400)); // Regular
+    if (f.weights) {
+      Object.keys(f.weights).forEach(wname => {
+        const w = f.weights[wname];
+        const num = WEIGHT_MAP[wname];
+        if (w && w.file && num) rules.push(faceRule(fam, w.file, num));
+      });
+    }
+  });
+  style.textContent = rules.join("\n");
+  document.head.appendChild(style);
+}
+
+function buildFixedSelects() {
+  const monoFonts = state.fonts.filter(f => f.category === "mono");
+  const cjkFonts = state.fonts.filter(f => f.category === "cjk-sans" || f.supportsCJK);
+  const selMono = document.getElementById("sel-fixed-mono");
+  const selCjk = document.getElementById("sel-fixed-cjk");
+  selMono.innerHTML = monoFonts.map(f =>
+    '<option value="' + f.family + '"' + (f.family === state.fixedMono ? " selected" : "") + '>' + f.label + '</option>').join("");
+  selCjk.innerHTML = cjkFonts.map(f =>
+    '<option value="' + f.family + '"' + (f.family === state.fixedCjk ? " selected" : "") + '>' + f.label + '</option>').join("");
+}
+
+// 当前模式下参与的字体行
+function rowFonts() {
+  if (state.mode === "cjk") {
+    // 中文行：所有 cjk-sans + 支持中文的等宽体（如 Maple Mono CN）
+    return state.fonts.filter(f => f.category === "cjk-sans" || f.supportsCJK);
+  }
+  // 等宽行：所有 mono 字体
+  return state.fonts.filter(f => f.category === "mono");
+}
+
+function fixedFontObj() {
+  const fam = state.mode === "cjk" ? state.fixedMono : state.fixedCjk;
+  return state.fonts.find(f => f.family === fam);
+}
+
+// ---------- 渲染 ----------
+let io = null;
+function render() {
+  const host = document.getElementById("rows-host");
+  host.innerHTML = "";
+  if (io) io.disconnect();
+
+  const fixed = fixedFontObj();
+
+  io = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (e.isIntersecting) {
+        io.unobserve(e.target);
+        activateRow(e.target);
+      }
+    }
+  }, { rootMargin: "300px 0px" });
+
+  rowFonts().forEach((f, i) => {
+    const row = buildRow(f, i, fixed);
+    host.appendChild(row);
+    io.observe(row);
+  });
+
+  // IO 的“初始交叉”回调在部分环境（后台/隐藏标签页，rAF 亦被节流）不一定触发，
+  // 因此渲染后同步主动激活当前视口内的行（getBoundingClientRect 触发布局），
+  // 确保控件切换即时生效；滚动加载仍交给 IO。再加一次 setTimeout 兜底。
+  activateVisibleRows();
+  setTimeout(activateVisibleRows, 80);
+}
+
+function activateVisibleRows() {
+  if (!io) return;
+  const vh = window.innerHeight || document.documentElement.clientHeight;
+  document.querySelectorAll(".font-row").forEach(row => {
+    if (row.dataset.activated) return;
+    const r = row.getBoundingClientRect();
+    if (r.top < vh + 300 && r.bottom > -300) {
+      io.unobserve(row);
+      activateRow(row);
+    }
+  });
+}
+
+function buildRow(f, i, fixed) {
+  const row = document.createElement("div");
+  row.className = "font-row";
+  row.dataset.family = f.family;
+
+  // 信息卡（紧凑、徽章化）
+  const info = document.createElement("div");
+  info.className = "info";
+  const isOpen = f.licenseType === "open-source";
+  const cjkMark = (state.mode === "mono" && f.supportsCJK)
+    ? '<div class="cjk-mark">✓ 支持中文·双模式</div>' : "";
+  info.innerHTML =
+    '<div class="fam">' + esc(f.label) + '</div>' +
+    '<div class="idx">#' + (i + 1) + ' · ' + esc(f.family) + '</div>' +
+    '<div class="badges">' +
+      '<span class="badge ' + (isOpen ? "open" : "free") + '" title="许可：' + esc(f.license) + '">' +
+        (isOpen ? "开源·可修改" : "免费商用·不可改") + '</span>' +
+      '<span class="badge brand" title="品牌来源">' + esc(f.brand) + '</span>' +
+      '<span class="badge missing missing-slot" style="display:none"></span>' +
+    '</div>' +
+    cjkMark +
+    '<div class="status"><span class="badge-load">滚动加载 · ' + sizeMB(f.sizeKB) + ' MB</span></div>';
+
+  // 卡片视口
+  const viewport = document.createElement("div");
+  viewport.className = "cards-viewport";
+  const cards = document.createElement("div");
+  cards.className = "cards";
+  cards.appendChild(buildCard("a", f, fixed));
+  cards.appendChild(buildCard("b", f, fixed));
+  cards.appendChild(buildCard("c", f, fixed));
+  viewport.appendChild(cards);
+
+  row.appendChild(info);
+  row.appendChild(viewport);
+  return row;
+}
+
+// 系统占位字体（行未进入视口前使用，避免过早拉取字体文件 → 实现懒加载）
+const CJK_FALLBACK = "-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif";
+const MONO_FALLBACK = "ui-monospace, 'SF Mono', Menlo, monospace";
+
+// 每张卡：中文文字与编号各归各的字体维度。
+// 关键：构建时先用系统占位字体，不设置 fc- 目标族名 —— 否则浏览器会立即拉取全部字体，破坏懒加载。
+// 目标族名在 activateRow（行进入视口）时才写入。
+function buildCard(kind, rowFont, fixed) {
+  const card = document.createElement("div");
+  card.className = "card " + kind;
+
+  const img = document.createElement("img");
+  img.className = "qr";
+  img.src = state.qr;
+  img.alt = "QR";
+  card.appendChild(img);
+
+  // 顶部中文行
+  const lines = kind === "a" ? [] : (kind === "b" ? [state.top1] : [state.top1, state.top2]);
+  if (lines.length) {
+    const t = document.createElement("div");
+    t.className = "toptext cjk-slot";
+    t.style.fontFamily = CJK_FALLBACK; // 占位，进入视口后替换
+    t.innerHTML = lines.map(esc).join("<br>");
+    card.appendChild(t);
+  }
+
+  // 底部编号
+  const n = document.createElement("div");
+  n.className = "number num-slot";
+  n.style.fontFamily = MONO_FALLBACK; // 占位，进入视口后替换
+  n.textContent = state.num;
+  card.appendChild(n);
+
+  return card;
+}
+
+// 把某一行的文字槽切换到目标字体族 + 应用编号字重（进入视口时调用）
+function applyRowFonts(row, rowFont, fixed) {
+  // cjk 模式：中文=行字体，编号=固定 mono；mono 模式：编号=行字体，中文=固定 cjk
+  const cjkFam = state.mode === "cjk" ? famName(rowFont) : famName(fixed);
+  const numFam = state.mode === "cjk" ? famName(fixed) : famName(rowFont);
+  const monoFont = numberMonoFontFor(rowFont);
+  const wr = resolveMonoWeight(monoFont); // 命名缺失→回退400；Custom→最近可用档
+
+  row.querySelectorAll(".cjk-slot").forEach(el => {
+    el.style.fontFamily = "'" + cjkFam + "', " + CJK_FALLBACK;
+  });
+  row.querySelectorAll(".num-slot").forEach(el => {
+    el.style.fontFamily = "'" + numFam + "', " + MONO_FALLBACK;
+    el.style.fontWeight = wr.weight; // font-synthesis:none 保证缺字重不伪加粗
+  });
+
+  // 字重小标：「无 X」（缺命名档）或「→ X」（Custom 实际生效档）
+  const tag = row.querySelector(".missing-slot");
+  if (tag) {
+    if (wr.tagText) {
+      tag.textContent = wr.tagText;
+      tag.className = "badge missing-slot " + (wr.tagKind === "effective" ? "effective" : "missing");
+      tag.style.display = "";
+    } else {
+      tag.style.display = "none";
+    }
+  }
+  return wr;
+}
+
+// 行进入视口：加载行字体（+ 确保固定字体已加载），切换字体
+function activateRow(row) {
+  if (row.dataset.activated) return; // 防止 IO 与主动激活重复处理
+  row.dataset.activated = "1";
+  const fam = row.dataset.family;
+  const f = state.fonts.find(x => x.family === fam);
+  const fixed = fixedFontObj();
+  const status = row.querySelector(".status");
+
+  // 切到目标字体族 → 此刻才触发浏览器拉取字体文件（懒加载核心）
+  const wr = applyRowFonts(row, f, fixed);
+
+  // 该行两个维度用到的字体 + 字重（懒加载覆盖字重文件）：
+  //  中文维度：cjk 模式=行字体，mono 模式=固定 cjk —— 恒用 Regular(400)
+  //  编号维度：mono 模式=行字体，cjk 模式=固定 mono —— 用 wr.weight
+  const monoFont = state.mode === "mono" ? f : fixed;
+  // 行状态徽章反映“行自身字体”：mono 模式=编号字重文件(wr)，cjk 模式=中文 Regular
+  const rowWeight = state.mode === "mono" ? wr.weight : 400;
+  const rowSize = state.mode === "mono" ? wr.sizeKB : f.sizeKB;
+
+  const jobs = [loadFont(f, rowWeight)]; // 行字体（徽章依据 results[0]）
+  if (monoFont && (monoFont.family !== f.family || wr.weight !== rowWeight)) {
+    jobs.push(loadFont(monoFont, wr.weight)); // 编号字重文件
+  }
+  const cjkFixed = state.mode === "mono" ? fixed : null; // mono 模式下中文固定字体
+  if (cjkFixed && cjkFixed.family !== f.family) jobs.push(loadFont(cjkFixed, 400));
+
+  setStatus(status, "loading", "加载中 · " + sizeMB(rowSize) + " MB");
+
+  Promise.all(jobs).then((results) => {
+    if (results[0]) {
+      setStatus(status, "loaded", "已加载 · " + sizeMB(rowSize) + " MB");
+    } else {
+      state.failed.add(f.family);
+      setStatus(status, "failed", "字体加载失败");
+    }
+  });
+}
+
+// 用 document.fonts.load 跟踪单个字体+字重的加载态；返回 Promise<boolean 成功?>
+const loadCache = new Map();
+function loadFont(f, weight) {
+  weight = weight || 400;
+  const key = f.family + ":" + weight;
+  if (state.loaded.has(key)) return Promise.resolve(true);
+  if (loadCache.has(key)) return loadCache.get(key);
+  const q = weight + ' 16px "' + famName(f) + '"';
+  const p = document.fonts.load(q, f.supportsCJK ? "中文Aa1" : "Aa1")
+    .then(list => {
+      if (list && list.length > 0) { state.loaded.add(key); return true; }
+      return document.fonts.check(q) ? (state.loaded.add(key), true) : false;
+    })
+    .catch(() => false);
+  loadCache.set(key, p);
+  return p;
+}
+
+function setStatus(el, cls, text) {
+  if (!el) return;
+  el.className = "status " + cls;
+  const showSpin = cls === "loading";
+  el.innerHTML = '<span class="badge-load">' +
+    (showSpin ? '<span class="spinner"></span>' : "") + esc(text) + '</span>';
+}
+
+// ---------- 实时更新（无需重建行，直接改文本/字体）----------
+function updateTexts() {
+  document.querySelectorAll(".font-row").forEach(row => {
+    const kinds = row.querySelectorAll(".card");
+    kinds.forEach(card => {
+      const t = card.querySelector(".toptext");
+      const n = card.querySelector(".number");
+      if (t) {
+        const isC = card.classList.contains("c");
+        t.innerHTML = isC ? (esc(state.top1) + "<br>" + esc(state.top2)) : esc(state.top1);
+      }
+      if (n) n.textContent = state.num;
+    });
+  });
+}
+
+function updateQR() {
+  document.querySelectorAll(".card .qr").forEach(img => { img.src = state.qr; });
+}
+
+// ---------- 控件绑定 ----------
+function bindControls() {
+  document.getElementById("in-top1").addEventListener("input", e => { state.top1 = e.target.value; updateTexts(); });
+  document.getElementById("in-top2").addEventListener("input", e => { state.top2 = e.target.value; updateTexts(); });
+  document.getElementById("in-num").addEventListener("input", e => { state.num = e.target.value; updateTexts(); });
+
+  document.getElementById("in-qr").addEventListener("change", e => {
+    const file = e.target.files && e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = ev => { state.qr = ev.target.result; updateQR(); };
+    reader.readAsDataURL(file); // 纯客户端，不上传
+  });
+  document.getElementById("btn-qr-reset").addEventListener("click", () => {
+    state.qr = DEFAULT_QR; updateQR();
+    document.getElementById("in-qr").value = "";
+  });
+
+  document.querySelectorAll("#mode-tabs button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const m = btn.dataset.mode;
+      if (m === state.mode) return;
+      state.mode = m;
+      document.querySelectorAll("#mode-tabs button").forEach(b => b.classList.toggle("active", b === btn));
+      document.getElementById("fixed-mono-field").style.display = m === "cjk" ? "" : "none";
+      document.getElementById("fixed-cjk-field").style.display = m === "mono" ? "" : "none";
+      updateModeHint();
+      render();
+      updateMeta();
+    });
+  });
+
+  document.getElementById("sel-fixed-mono").addEventListener("change", e => { state.fixedMono = e.target.value; render(); });
+  document.getElementById("sel-fixed-cjk").addEventListener("change", e => { state.fixedCjk = e.target.value; render(); });
+
+  // 字重分段控件
+  document.querySelectorAll("#weight-tabs button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const w = btn.dataset.weight;
+      if (w === state.weight) return;
+      state.weight = w;
+      document.querySelectorAll("#weight-tabs button").forEach(b => b.classList.toggle("active", b === btn));
+      document.getElementById("custom-weight-field").style.display = (w === "Custom") ? "" : "none";
+      render(); // 重建行 → 各行按新字重重新解析并懒加载对应字重文件
+    });
+  });
+
+  // Custom 数字字重：范围 100–900，步进 ±50（按钮 + 键盘上下箭头）
+  const wIn = document.getElementById("w-custom");
+  const clampW = v => Math.max(100, Math.min(900, v));
+  const setCustom = v => {
+    state.customWeight = clampW(v);
+    wIn.value = state.customWeight;
+    if (state.weight === "Custom") render();
+  };
+  wIn.addEventListener("input", () => {
+    const v = parseInt(wIn.value, 10);
+    if (!isNaN(v)) { state.customWeight = clampW(v); if (state.weight === "Custom") render(); }
+  });
+  wIn.addEventListener("change", () => setCustom(parseInt(wIn.value, 10) || 400));
+  wIn.addEventListener("keydown", e => {
+    if (e.key === "ArrowUp") { e.preventDefault(); setCustom(state.customWeight + 50); }
+    else if (e.key === "ArrowDown") { e.preventDefault(); setCustom(state.customWeight - 50); }
+  });
+  document.getElementById("w-inc").addEventListener("click", () => setCustom(state.customWeight + 50));
+  document.getElementById("w-dec").addEventListener("click", () => setCustom(state.customWeight - 50));
+
+  const zoom = document.getElementById("in-zoom");
+  zoom.addEventListener("input", e => {
+    state.scale = e.target.value / 100;
+    document.documentElement.style.setProperty("--scale", state.scale);
+    document.getElementById("zoom-val").textContent = e.target.value + "%";
+  });
+  document.documentElement.style.setProperty("--scale", state.scale);
+
+  // 滚动/缩放时兜底激活进入视口的行（与 IntersectionObserver 并行，互不重复）
+  let ticking = false;
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    setTimeout(() => { ticking = false; activateVisibleRows(); }, 100);
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
+}
+
+// 模式 tab 下的动态说明（随模式切换）
+function updateModeHint() {
+  document.getElementById("mode-hint").textContent = state.mode === "mono"
+    ? "逐行对比底部编号的等宽字体；中文用右侧固定字体"
+    : "逐行对比顶部中文黑体；编号用右侧固定字体";
+}
+
+// ---------- 工具栏收起/展开（滚动深处只留一条摘要，不占对比区） ----------
+const panel = { pinned: false, pinScrollY: 0, threshold: 300 };
+
+function measurePanelThreshold() {
+  const tb = document.getElementById("toolbar");
+  if (!tb.classList.contains("floating")) panel.threshold = tb.offsetHeight;
+}
+
+function updateMiniSummary() {
+  const modeName = state.mode === "mono" ? "等宽字体对比" : "中文字体对比";
+  const fixed = fixedFontObj();
+  const w = state.weight === "Custom" ? ("Custom " + state.customWeight) : state.weight;
+  document.getElementById("mini-summary").innerHTML =
+    '<b>' + esc(modeName) + '</b>' +
+    '<span class="sep">·</span>固定 ' + esc(fixed ? fixed.label : "—") +
+    '<span class="sep">·</span>字重 ' + esc(w) +
+    '<span class="sep">·</span>缩放 ' + Math.round(state.scale * 100) + '%';
+}
+
+// 三态：顶部=完整面板（文档流）；深处未展开=mini 摘要条；深处已展开=固定面板+占位防跳动
+function updatePanelState() {
+  const tb = document.getElementById("toolbar");
+  const mini = document.getElementById("mini-bar");
+  const spacer = document.getElementById("toolbar-spacer");
+
+  if (window.scrollY <= panel.threshold) { // 回到顶部：自动还原完整面板
+    panel.pinned = false;
+    tb.classList.remove("floating");
+    spacer.style.display = "none";
+    mini.classList.remove("show");
+    measurePanelThreshold(); // 面板在文档流中，顺带校准阈值（控件展开/收起会改高度）
+    return;
+  }
+  // 展开后用户再滚动 → 自动收回摘要条
+  if (panel.pinned && Math.abs(window.scrollY - panel.pinScrollY) > 60) panel.pinned = false;
+
+  if (panel.pinned) {
+    if (!tb.classList.contains("floating")) {
+      spacer.style.height = tb.offsetHeight + "px"; // 固定高度占位，无布局跳动
+      spacer.style.display = "block";
+      tb.classList.add("floating");
+    }
+    mini.classList.remove("show");
+  } else {
+    tb.classList.remove("floating");
+    spacer.style.display = "none";
+    updateMiniSummary();
+    mini.classList.add("show");
+  }
+}
+
+function initPanelCollapse() {
+  measurePanelThreshold();
+  window.addEventListener("scroll", updatePanelState, { passive: true });
+  window.addEventListener("resize", () => { measurePanelThreshold(); updatePanelState(); }, { passive: true });
+  document.getElementById("mini-expand").addEventListener("click", () => {
+    panel.pinned = true;
+    panel.pinScrollY = window.scrollY;
+    updatePanelState();
+  });
+  document.getElementById("panel-collapse").addEventListener("click", () => {
+    panel.pinned = false;
+    updatePanelState();
+  });
+  updatePanelState();
+}
+
+// 引导横幅：localStorage 记住关闭状态
+const GUIDE_KEY = "fontCompare.guideDismissed";
+function initGuideBanner() {
+  const banner = document.getElementById("guide-banner");
+  let dismissed = false;
+  try { dismissed = localStorage.getItem(GUIDE_KEY) === "1"; } catch (e) { /* 隐私模式等 */ }
+  if (!dismissed) banner.style.display = "";
+  document.getElementById("guide-close").addEventListener("click", () => {
+    banner.style.display = "none";
+    try { localStorage.setItem(GUIDE_KEY, "1"); } catch (e) {}
+  });
+}
+
+function updateMeta() {
+  const n = rowFonts().length;
+  const modeName = state.mode === "cjk" ? "中文字体对比" : "等宽字体对比";
+  document.getElementById("meta-note").textContent =
+    modeName + "：共 " + n + " 款字体，按 manifest 顺序逐行展示。行进入视口时才加载字体文件（滚动渐进加载）。";
+}
+
+function esc(s) {
+  return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+}
+
+boot();
+</script>
+</body>
+</html>

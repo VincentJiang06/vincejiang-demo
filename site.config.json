@@ -36,6 +36,7 @@
     { "title": "Vince 的 HiFi 笔记", "href": "/vince-hifi-notes/", "desc": "把 HiFi 声学里最迷惑的概念逐一折算成能画出来的 dB:分压器、线材、阻抗、目标曲线。", "badge": "长文技术笔记" },
     { "title": "草料文风 Skill 对比 Demo", "href": "/caoliao-skill-demo/", "desc": "草料文风 skill 家族 v2.3 的测试集三栏对比页:同一篇原文并排展示 skill 各档输出与问题清单,直观看到自动改写与人工判定的边界。", "badge": "Skill 评测 · 单文件" },
     { "title": "TYPE//PINBALL", "href": "/glyph-pinball/", "desc": "用底部字符板把字符球顶回满屏文字；顶部反射板用侧墙折返预测与限速追踪回球，移动物体会让 Pretext 持续重排整页 RedHatMono 等宽字流。", "badge": "Pretext · 全字符弹球" },
+    { "title": "标签字体对比工坊", "href": "/font-compare/", "desc": "在同一组二维码标签卡上一次看遍 52 款字体：14 款免费商用中文黑体 × 38 款等宽编号字体，标注开源可改 / 仅免费商用与品牌来源，支持改文字、上传 QR 图、切换命名字重。", "badge": "52 款字体 · 懒加载" },
     { "title": "CUHK Schedule", "href": "https://cus.vincejiang.com", "desc": "中大选课助手:粘贴课号排出无冲突课表,筛选本学期还能选什么,解析先修/反修条件,支持 A/B 对比与 .ics 导出。", "badge": "React · 选课工具" }
   ]
 }
