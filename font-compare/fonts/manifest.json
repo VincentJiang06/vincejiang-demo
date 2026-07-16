@@ -9,7 +9,17 @@
     "brand": "Adobe",
     "sourceUrl": "https://github.com/adobe-fonts/source-han-sans",
     "supportsCJK": true,
-    "sizeKB": 11158
+    "sizeKB": 11158,
+    "weights": {
+      "Medium": {
+        "file": "SourceHanSansSC-Medium.woff2",
+        "sizeKB": 11426
+      },
+      "Bold": {
+        "file": "SourceHanSansSC-Bold.woff2",
+        "sizeKB": 11835
+      }
+    }
   },
   {
     "family": "NotoSansSC",
@@ -21,7 +31,17 @@
     "brand": "Google",
     "sourceUrl": "https://github.com/google/fonts/tree/main/ofl/notosanssc",
     "supportsCJK": true,
-    "sizeKB": 7600
+    "sizeKB": 7600,
+    "weights": {
+      "Medium": {
+        "file": "NotoSansSC-Medium.woff2",
+        "sizeKB": 11423
+      },
+      "Bold": {
+        "file": "NotoSansSC-Bold.woff2",
+        "sizeKB": 11835
+      }
+    }
   },
   {
     "family": "MiSans",
@@ -33,7 +53,21 @@
     "brand": "小米 Xiaomi",
     "sourceUrl": "https://hyperos.mi.com/font",
     "supportsCJK": true,
-    "sizeKB": 7739
+    "sizeKB": 7739,
+    "weights": {
+      "Medium": {
+        "file": "MiSans-Medium.ttf",
+        "sizeKB": 7691
+      },
+      "SemiBold": {
+        "file": "MiSans-SemiBold.ttf",
+        "sizeKB": 7641
+      },
+      "Bold": {
+        "file": "MiSans-Bold.ttf",
+        "sizeKB": 7622
+      }
+    }
   },
   {
     "family": "HarmonyOSSansSC",
@@ -45,7 +79,17 @@
     "brand": "华为 Huawei",
     "sourceUrl": "https://developer.harmonyos.com/cn/docs/design/des-guides/font-0000001157868583",
     "supportsCJK": true,
-    "sizeKB": 4173
+    "sizeKB": 4173,
+    "weights": {
+      "Medium": {
+        "file": "HarmonyOSSansSC-Medium.woff2",
+        "sizeKB": 4244
+      },
+      "Bold": {
+        "file": "HarmonyOSSansSC-Bold.woff2",
+        "sizeKB": 4298
+      }
+    }
   },
   {
     "family": "OPPOSans",
@@ -57,7 +101,17 @@
     "brand": "OPPO",
     "sourceUrl": "https://open.oppomobile.com/",
     "supportsCJK": true,
-    "sizeKB": 9915
+    "sizeKB": 9915,
+    "weights": {
+      "Medium": {
+        "file": "OPPOSans-Medium.ttf",
+        "sizeKB": 9844
+      },
+      "Bold": {
+        "file": "OPPOSans-Bold.ttf",
+        "sizeKB": 9665
+      }
+    }
   },
   {
     "family": "vivoSans",
@@ -69,7 +123,21 @@
     "brand": "vivo",
     "sourceUrl": "https://www.vivo.com.cn/originos",
     "supportsCJK": true,
-    "sizeKB": 7604
+    "sizeKB": 7604,
+    "weights": {
+      "Medium": {
+        "file": "vivoSans-Medium.ttf",
+        "sizeKB": 7594
+      },
+      "SemiBold": {
+        "file": "vivoSans-SemiBold.ttf",
+        "sizeKB": 7587
+      },
+      "Bold": {
+        "file": "vivoSans-Bold.ttf",
+        "sizeKB": 7576
+      }
+    }
   },
   {
     "family": "HONORSansCN",
@@ -81,7 +149,21 @@
     "brand": "荣耀 HONOR",
     "sourceUrl": "https://www.honor.com/",
     "supportsCJK": true,
-    "sizeKB": 7839
+    "sizeKB": 7839,
+    "weights": {
+      "Medium": {
+        "file": "HONORSansCN-Medium.ttf",
+        "sizeKB": 7848
+      },
+      "SemiBold": {
+        "file": "HONORSansCN-SemiBold.ttf",
+        "sizeKB": 7841
+      },
+      "Bold": {
+        "file": "HONORSansCN-Bold.ttf",
+        "sizeKB": 7845
+      }
+    }
   },
   {
     "family": "AlibabaPuHuiTi",
@@ -93,7 +175,21 @@
     "brand": "阿里巴巴 Alibaba",
     "sourceUrl": "https://www.alibabafonts.com/",
     "supportsCJK": true,
-    "sizeKB": 8333
+    "sizeKB": 8333,
+    "weights": {
+      "Medium": {
+        "file": "AlibabaPuHuiTi-Medium.ttf",
+        "sizeKB": 8232
+      },
+      "SemiBold": {
+        "file": "AlibabaPuHuiTi-SemiBold.ttf",
+        "sizeKB": 8179
+      },
+      "Bold": {
+        "file": "AlibabaPuHuiTi-Bold.ttf",
+        "sizeKB": 8175
+      }
+    }
   },
   {
     "family": "DouyinSans",
@@ -141,7 +237,17 @@
     "brand": "welai 也许可乐（社区）",
     "sourceUrl": "https://github.com/welai/glow-sans",
     "supportsCJK": true,
-    "sizeKB": 6248
+    "sizeKB": 6248,
+    "weights": {
+      "Medium": {
+        "file": "GlowSansSC-Medium.woff2",
+        "sizeKB": 6306
+      },
+      "Bold": {
+        "file": "GlowSansSC-Bold.woff2",
+        "sizeKB": 6350
+      }
+    }
   },
   {
     "family": "SarasaGothicSC",
@@ -153,7 +259,17 @@
     "brand": "be5invis 陈梓煜（社区）",
     "sourceUrl": "https://github.com/be5invis/Sarasa-Gothic",
     "supportsCJK": true,
-    "sizeKB": 8146
+    "sizeKB": 8146,
+    "weights": {
+      "SemiBold": {
+        "file": "SarasaGothicSC-SemiBold.woff2",
+        "sizeKB": 8279
+      },
+      "Bold": {
+        "file": "SarasaGothicSC-Bold.woff2",
+        "sizeKB": 8422
+      }
+    }
   },
   {
     "family": "PlangothicP1",

@@ -165,7 +165,42 @@
     cursor: pointer;
   }
   .tabs button.active { background: var(--ink); color: #fff; }
-  #weight-tabs button { padding: 8px 11px; }
+  #weight-tabs button, #cjk-weight-tabs button { padding: 8px 11px; }
+
+  /* ---------- 双维度颜色语义：等宽·编号=琥珀橙，中文·黑体=蓝 ---------- */
+  :root {
+    --mono-c: #b45309;  --mono-c2: #f59e0b;  --mono-bg: #fdf3e3;  --mono-line: #f0d9ae;
+    --cjk-c: #1d4ed8;   --cjk-c2: #3b82f6;   --cjk-bg: #eaf1ff;   --cjk-line: #c3d6f7;
+  }
+  /* 模式 tab 选中态按维度着色 */
+  #mode-tabs button.active[data-mode="mono"] { background: var(--mono-c); color: #fff; }
+  #mode-tabs button.active[data-mode="cjk"]  { background: var(--cjk-c);  color: #fff; }
+  /* 固定字体下拉标签着色（下拉本身属于「另一维度」） */
+  .dim-mono-label > label { color: var(--mono-c); }
+  .dim-cjk-label > label  { color: var(--cjk-c); }
+  /* 两套字重控件的维度框 */
+  .dim-box {
+    border: 1.5px solid;
+    border-radius: 10px;
+    padding: 8px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .dim-box.dim-mono { border-color: var(--mono-line); background: var(--mono-bg); }
+  .dim-box.dim-cjk  { border-color: var(--cjk-line);  background: var(--cjk-bg); }
+  .dim-badge {
+    align-self: flex-start;
+    font-size: 11px; font-weight: 800; letter-spacing: 0.02em;
+    padding: 2px 8px; border-radius: 999px; color: #fff;
+  }
+  .dim-mono .dim-badge { background: var(--mono-c); }
+  .dim-cjk .dim-badge  { background: var(--cjk-c); }
+  .dim-mono .field > label { color: var(--mono-c); }
+  .dim-cjk .field > label  { color: var(--cjk-c); }
+  .dim-mono .tabs button.active { background: var(--mono-c); color: #fff; }
+  .dim-cjk .tabs button.active  { background: var(--cjk-c); color: #fff; }
+  .dim-body { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: flex-end; }
   .stepper { display: inline-flex; align-items: stretch; border: 1px solid var(--line); border-radius: 7px; overflow: hidden; background: #fff; }
   .stepper button {
     font: inherit; font-size: 16px; line-height: 1; width: 30px; border: none; background: #f6f6f8; color: var(--ink); cursor: pointer;
@@ -225,6 +260,11 @@
   .badge.brand { background: #eef1f6; color: #45505f; border: 1px solid #d9dee7; font-weight: 600; }
   .badge.missing { background: #f1f1f4; color: #9a9aa4; border: 1px solid #e0e0e6; font-weight: 600; }
   .badge.effective { background: #eaf1ff; color: #2258c9; border: 1px solid #c3d6f7; font-weight: 600; }
+  .badge.effective.eff-mono { background: var(--mono-bg); color: var(--mono-c); border-color: var(--mono-line); }
+  .badge.effective.eff-cjk  { background: var(--cjk-bg);  color: var(--cjk-c);  border-color: var(--cjk-line); }
+  /* 字体行信息区左侧维度色条（行所属对比维度） */
+  .font-row.dim-mono .info { border-left: 3px solid var(--mono-c2); padding-left: 9px; }
+  .font-row.dim-cjk  .info { border-left: 3px solid var(--cjk-c2);  padding-left: 9px; }
   .info .cjk-mark { margin-top: 5px; font-size: 10px; color: #197a3d; }
   .status {
     margin-top: 8px; font-size: 10px; display: flex; align-items: center; gap: 6px; color: var(--muted);
@@ -375,30 +415,60 @@
               <button data-mode="cjk">中文字体对比</button>
             </div>
           </div>
-          <div class="field" id="fixed-mono-field" style="display:none">
+          <div class="field dim-mono-label" id="fixed-mono-field" style="display:none">
             <label for="sel-fixed-mono">固定不变的另一维度：编号等宽字体</label>
             <select id="sel-fixed-mono"></select>
           </div>
-          <div class="field" id="fixed-cjk-field">
+          <div class="field dim-cjk-label" id="fixed-cjk-field">
             <label for="sel-fixed-cjk">固定不变的另一维度：中文黑体</label>
             <select id="sel-fixed-cjk"></select>
           </div>
-          <div class="field">
-            <label>编号字重（等宽）</label>
-            <div class="tabs" id="weight-tabs">
-              <button data-weight="Regular" class="active">Regular</button>
-              <button data-weight="Medium">Medium</button>
-              <button data-weight="SemiBold">SemiBold</button>
-              <button data-weight="Bold">Bold</button>
-              <button data-weight="Custom">Custom</button>
+
+          <div class="dim-box dim-mono">
+            <span class="dim-badge">🔶 等宽 · 底部编号</span>
+            <div class="dim-body">
+              <div class="field">
+                <label>编号字重（等宽）</label>
+                <div class="tabs" id="weight-tabs">
+                  <button data-weight="Regular" class="active">Regular</button>
+                  <button data-weight="Medium">Medium</button>
+                  <button data-weight="SemiBold">SemiBold</button>
+                  <button data-weight="Bold">Bold</button>
+                  <button data-weight="Custom">Custom</button>
+                </div>
+              </div>
+              <div class="field" id="custom-weight-field" style="display:none">
+                <label for="w-custom">自定义字重 (100–900)</label>
+                <div class="stepper">
+                  <button type="button" id="w-dec" aria-label="减 50">−</button>
+                  <input type="number" id="w-custom" min="100" max="900" step="50" value="400">
+                  <button type="button" id="w-inc" aria-label="加 50">+</button>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="field" id="custom-weight-field" style="display:none">
-            <label for="w-custom">自定义字重 (100–900)</label>
-            <div class="stepper">
-              <button type="button" id="w-dec" aria-label="减 50">−</button>
-              <input type="number" id="w-custom" min="100" max="900" step="50" value="400">
-              <button type="button" id="w-inc" aria-label="加 50">+</button>
+
+          <div class="dim-box dim-cjk">
+            <span class="dim-badge">🔷 中文 · 顶部文字</span>
+            <div class="dim-body">
+              <div class="field">
+                <label>中文字重（黑体）</label>
+                <div class="tabs" id="cjk-weight-tabs">
+                  <button data-weight="Regular" class="active">Regular</button>
+                  <button data-weight="Medium">Medium</button>
+                  <button data-weight="SemiBold">SemiBold</button>
+                  <button data-weight="Bold">Bold</button>
+                  <button data-weight="Custom">Custom</button>
+                </div>
+              </div>
+              <div class="field" id="cjk-custom-weight-field" style="display:none">
+                <label for="w-cjk-custom">自定义字重 (100–900)</label>
+                <div class="stepper">
+                  <button type="button" id="w-cjk-dec" aria-label="减 50">−</button>
+                  <input type="number" id="w-cjk-custom" min="100" max="900" step="50" value="400">
+                  <button type="button" id="w-cjk-inc" aria-label="加 50">+</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -439,8 +509,10 @@ const FAM_PREFIX = "fc-"; // 唯一前缀避免与系统字体撞名
 const state = {
   fonts: [],
   mode: "mono",             // "mono"（默认）| "cjk"
-  weight: "Regular",        // 编号字重：Regular | Medium | SemiBold | Bold | Custom
-  customWeight: 400,        // Custom 档的数值（100–900，步进 50）
+  weight: "Regular",        // 编号字重（等宽维度）：Regular | Medium | SemiBold | Bold | Custom
+  customWeight: 400,        // 编号 Custom 数值（100–900，步进 50）
+  cjkWeight: "Regular",     // 中文字重（黑体维度）：同结构，独立生效
+  cjkCustomWeight: 400,     // 中文 Custom 数值
   qr: DEFAULT_QR,
   top1: "扫码了解更多",
   top2: "内含物品清单与说明",
@@ -470,14 +542,14 @@ function availableWeights(font) {
   return list;
 }
 
-// 解析某等宽字体在当前字重设置下的实际生效字重。
+// 解析某字体在给定字重设置下的实际生效字重（等宽/中文两维通用）。
 // 返回 {weight(数字), file, sizeKB, tagText, tagKind}
 //  - 命名档缺失 → 回退 Regular，tagKind:"missing"（灰标「无 X」）
 //  - Custom → 静态文件无法插值，取数值最接近的可用档（并列取较重），tagKind:"effective"（「→ X」）
-function resolveMonoWeight(font) {
+function resolveWeight(font, weightName, customWeight) {
   const avail = availableWeights(font);
-  if (state.weight === "Custom") {
-    const target = state.customWeight;
+  if (weightName === "Custom") {
+    const target = customWeight;
     let best = avail[0];
     for (const w of avail) {
       const d = Math.abs(w.num - target), bd = Math.abs(best.num - target);
@@ -485,21 +557,18 @@ function resolveMonoWeight(font) {
     }
     return { weight: best.num, file: best.file, sizeKB: best.sizeKB, tagText: "→ " + best.name, tagKind: "effective" };
   }
-  const wname = state.weight;
-  if (wname === "Regular") {
+  if (weightName === "Regular") {
     return { weight: 400, file: font.file, sizeKB: font.sizeKB, tagText: "", tagKind: "" };
   }
-  const w = font.weights && font.weights[wname];
+  const w = font.weights && font.weights[weightName];
   if (w && w.file) {
-    return { weight: WEIGHT_MAP[wname], file: w.file, sizeKB: w.sizeKB || font.sizeKB, tagText: "", tagKind: "" };
+    return { weight: WEIGHT_MAP[weightName], file: w.file, sizeKB: w.sizeKB || font.sizeKB, tagText: "", tagKind: "" };
   }
-  return { weight: 400, file: font.file, sizeKB: font.sizeKB, tagText: "无 " + wname, tagKind: "missing" };
+  return { weight: 400, file: font.file, sizeKB: font.sizeKB, tagText: "无 " + weightName, tagKind: "missing" };
 }
-
-// 当前行的「编号」用哪款等宽字体：mono 模式=行字体；cjk 模式=固定 mono
-function numberMonoFontFor(rowFont) {
-  return state.mode === "mono" ? rowFont : fixedFontObj();
-}
+// 两个维度的当前解析（monoFont=编号维度字体，cjkFont=中文维度字体）
+function resolveMonoDim(font) { return resolveWeight(font, state.weight, state.customWeight); }
+function resolveCjkDim(font)  { return resolveWeight(font, state.cjkWeight, state.cjkCustomWeight); }
 
 // ---------- 引导 ----------
 async function boot() {
@@ -626,7 +695,7 @@ function activateVisibleRows() {
 
 function buildRow(f, i, fixed) {
   const row = document.createElement("div");
-  row.className = "font-row";
+  row.className = "font-row " + (state.mode === "mono" ? "dim-mono" : "dim-cjk"); // 行所属维度色条
   row.dataset.family = f.family;
 
   // 信息卡（紧凑、徽章化）
@@ -642,7 +711,8 @@ function buildRow(f, i, fixed) {
       '<span class="badge ' + (isOpen ? "open" : "free") + '" title="许可：' + esc(f.license) + '">' +
         (isOpen ? "开源·可修改" : "免费商用·不可改") + '</span>' +
       '<span class="badge brand" title="品牌来源">' + esc(f.brand) + '</span>' +
-      '<span class="badge missing missing-slot" style="display:none"></span>' +
+      '<span class="badge missing tag-mono-slot" style="display:none"></span>' +
+      '<span class="badge missing tag-cjk-slot" style="display:none"></span>' +
     '</div>' +
     cjkMark +
     '<div class="status"><span class="badge-load">滚动加载 · ' + sizeMB(f.sizeKB) + ' MB</span></div>';
@@ -699,34 +769,39 @@ function buildCard(kind, rowFont, fixed) {
   return card;
 }
 
-// 把某一行的文字槽切换到目标字体族 + 应用编号字重（进入视口时调用）
+// 把某一行的文字槽切换到目标字体族 + 应用两个维度各自的字重（进入视口时调用）
 function applyRowFonts(row, rowFont, fixed) {
   // cjk 模式：中文=行字体，编号=固定 mono；mono 模式：编号=行字体，中文=固定 cjk
-  const cjkFam = state.mode === "cjk" ? famName(rowFont) : famName(fixed);
-  const numFam = state.mode === "cjk" ? famName(fixed) : famName(rowFont);
-  const monoFont = numberMonoFontFor(rowFont);
-  const wr = resolveMonoWeight(monoFont); // 命名缺失→回退400；Custom→最近可用档
+  const cjkFont = state.mode === "cjk" ? rowFont : fixed;
+  const monoFont = state.mode === "mono" ? rowFont : fixed;
+  const monoWr = resolveMonoDim(monoFont); // 编号维度：命名缺失→回退400；Custom→最近可用档
+  const cjkWr = resolveCjkDim(cjkFont);    // 中文维度：同规则，独立生效
 
   row.querySelectorAll(".cjk-slot").forEach(el => {
-    el.style.fontFamily = "'" + cjkFam + "', " + CJK_FALLBACK;
+    el.style.fontFamily = "'" + famName(cjkFont) + "', " + CJK_FALLBACK;
+    el.style.fontWeight = cjkWr.weight; // font-synthesis:none 保证缺字重不伪加粗
   });
   row.querySelectorAll(".num-slot").forEach(el => {
-    el.style.fontFamily = "'" + numFam + "', " + MONO_FALLBACK;
-    el.style.fontWeight = wr.weight; // font-synthesis:none 保证缺字重不伪加粗
+    el.style.fontFamily = "'" + famName(monoFont) + "', " + MONO_FALLBACK;
+    el.style.fontWeight = monoWr.weight;
   });
 
-  // 字重小标：「无 X」（缺命名档）或「→ X」（Custom 实际生效档）
-  const tag = row.querySelector(".missing-slot");
-  if (tag) {
-    if (wr.tagText) {
-      tag.textContent = wr.tagText;
-      tag.className = "badge missing-slot " + (wr.tagKind === "effective" ? "effective" : "missing");
-      tag.style.display = "";
-    } else {
-      tag.style.display = "none";
-    }
+  // 每维一个字重小标：「编号/中文 无 X」（缺命名档）或「编号/中文 → X」（Custom 实际生效档）
+  setDimTag(row.querySelector(".tag-mono-slot"), "编号", monoWr, "eff-mono", "tag-mono-slot");
+  setDimTag(row.querySelector(".tag-cjk-slot"), "中文", cjkWr, "eff-cjk", "tag-cjk-slot");
+  return { monoWr, cjkWr };
+}
+
+function setDimTag(el, dimName, wr, effClass, slotClass) {
+  if (!el) return;
+  if (wr.tagText) {
+    el.textContent = dimName + " " + wr.tagText;
+    el.className = "badge " + slotClass + " " +
+      (wr.tagKind === "effective" ? ("effective " + effClass) : "missing");
+    el.style.display = "";
+  } else {
+    el.style.display = "none";
   }
-  return wr;
 }
 
 // 行进入视口：加载行字体（+ 确保固定字体已加载），切换字体
@@ -739,22 +814,25 @@ function activateRow(row) {
   const status = row.querySelector(".status");
 
   // 切到目标字体族 → 此刻才触发浏览器拉取字体文件（懒加载核心）
-  const wr = applyRowFonts(row, f, fixed);
+  const { monoWr, cjkWr } = applyRowFonts(row, f, fixed);
 
-  // 该行两个维度用到的字体 + 字重（懒加载覆盖字重文件）：
-  //  中文维度：cjk 模式=行字体，mono 模式=固定 cjk —— 恒用 Regular(400)
-  //  编号维度：mono 模式=行字体，cjk 模式=固定 mono —— 用 wr.weight
+  // 该行两个维度用到的字体 + 各自字重（懒加载覆盖两维的字重文件）：
+  //  编号维度：mono 模式=行字体，cjk 模式=固定 mono —— 用 monoWr.weight
+  //  中文维度：cjk 模式=行字体，mono 模式=固定 cjk —— 用 cjkWr.weight
   const monoFont = state.mode === "mono" ? f : fixed;
-  // 行状态徽章反映“行自身字体”：mono 模式=编号字重文件(wr)，cjk 模式=中文 Regular
-  const rowWeight = state.mode === "mono" ? wr.weight : 400;
-  const rowSize = state.mode === "mono" ? wr.sizeKB : f.sizeKB;
+  const cjkFont = state.mode === "cjk" ? f : fixed;
+  // 行状态徽章反映“行自身字体”在其所属维度下实际加载的文件
+  const rowWr = state.mode === "mono" ? monoWr : cjkWr;
+  const rowWeight = rowWr.weight;
+  const rowSize = rowWr.sizeKB;
 
   const jobs = [loadFont(f, rowWeight)]; // 行字体（徽章依据 results[0]）
-  if (monoFont && (monoFont.family !== f.family || wr.weight !== rowWeight)) {
-    jobs.push(loadFont(monoFont, wr.weight)); // 编号字重文件
+  const extra = state.mode === "mono"
+    ? { font: cjkFont, weight: cjkWr.weight }   // 固定中文字体 + 中文字重
+    : { font: monoFont, weight: monoWr.weight }; // 固定等宽字体 + 编号字重
+  if (extra.font && (extra.font.family !== f.family || extra.weight !== rowWeight)) {
+    jobs.push(loadFont(extra.font, extra.weight));
   }
-  const cjkFixed = state.mode === "mono" ? fixed : null; // mono 模式下中文固定字体
-  if (cjkFixed && cjkFixed.family !== f.family) jobs.push(loadFont(cjkFixed, 400));
 
   setStatus(status, "loading", "加载中 · " + sizeMB(rowSize) + " MB");
 
@@ -814,6 +892,42 @@ function updateQR() {
   document.querySelectorAll(".card .qr").forEach(img => { img.src = state.qr; });
 }
 
+// 一套字重控件的通用绑定（分段 tab + Custom 数字输入，±50 步进/键盘上下箭头/100–900 钳制）
+function bindWeightControl(cfg) {
+  const tabs = document.getElementById(cfg.tabsId);
+  const field = document.getElementById(cfg.customFieldId);
+  const wIn = document.getElementById(cfg.inputId);
+  const clampW = v => Math.max(100, Math.min(900, v));
+
+  tabs.querySelectorAll("button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const w = btn.dataset.weight;
+      if (w === cfg.getName()) return;
+      cfg.setName(w);
+      tabs.querySelectorAll("button").forEach(b => b.classList.toggle("active", b === btn));
+      field.style.display = (w === "Custom") ? "" : "none";
+      render(); // 重建行 → 各行按新字重重新解析并懒加载对应字重文件
+    });
+  });
+
+  const setCustom = v => {
+    cfg.setCustom(clampW(v));
+    wIn.value = cfg.getCustom();
+    if (cfg.getName() === "Custom") render();
+  };
+  wIn.addEventListener("input", () => {
+    const v = parseInt(wIn.value, 10);
+    if (!isNaN(v)) { cfg.setCustom(clampW(v)); if (cfg.getName() === "Custom") render(); }
+  });
+  wIn.addEventListener("change", () => setCustom(parseInt(wIn.value, 10) || 400));
+  wIn.addEventListener("keydown", e => {
+    if (e.key === "ArrowUp") { e.preventDefault(); setCustom(cfg.getCustom() + 50); }
+    else if (e.key === "ArrowDown") { e.preventDefault(); setCustom(cfg.getCustom() - 50); }
+  });
+  document.getElementById(cfg.incId).addEventListener("click", () => setCustom(cfg.getCustom() + 50));
+  document.getElementById(cfg.decId).addEventListener("click", () => setCustom(cfg.getCustom() - 50));
+}
+
 // ---------- 控件绑定 ----------
 function bindControls() {
   document.getElementById("in-top1").addEventListener("input", e => { state.top1 = e.target.value; updateTexts(); });
@@ -849,37 +963,19 @@ function bindControls() {
   document.getElementById("sel-fixed-mono").addEventListener("change", e => { state.fixedMono = e.target.value; render(); });
   document.getElementById("sel-fixed-cjk").addEventListener("change", e => { state.fixedCjk = e.target.value; render(); });
 
-  // 字重分段控件
-  document.querySelectorAll("#weight-tabs button").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const w = btn.dataset.weight;
-      if (w === state.weight) return;
-      state.weight = w;
-      document.querySelectorAll("#weight-tabs button").forEach(b => b.classList.toggle("active", b === btn));
-      document.getElementById("custom-weight-field").style.display = (w === "Custom") ? "" : "none";
-      render(); // 重建行 → 各行按新字重重新解析并懒加载对应字重文件
-    });
+  // 两套字重控件（结构一致）：cfg 指定作用的 state 字段与 DOM id
+  bindWeightControl({
+    tabsId: "weight-tabs", customFieldId: "custom-weight-field",
+    inputId: "w-custom", incId: "w-inc", decId: "w-dec",
+    getName: () => state.weight, setName: v => { state.weight = v; },
+    getCustom: () => state.customWeight, setCustom: v => { state.customWeight = v; },
   });
-
-  // Custom 数字字重：范围 100–900，步进 ±50（按钮 + 键盘上下箭头）
-  const wIn = document.getElementById("w-custom");
-  const clampW = v => Math.max(100, Math.min(900, v));
-  const setCustom = v => {
-    state.customWeight = clampW(v);
-    wIn.value = state.customWeight;
-    if (state.weight === "Custom") render();
-  };
-  wIn.addEventListener("input", () => {
-    const v = parseInt(wIn.value, 10);
-    if (!isNaN(v)) { state.customWeight = clampW(v); if (state.weight === "Custom") render(); }
+  bindWeightControl({
+    tabsId: "cjk-weight-tabs", customFieldId: "cjk-custom-weight-field",
+    inputId: "w-cjk-custom", incId: "w-cjk-inc", decId: "w-cjk-dec",
+    getName: () => state.cjkWeight, setName: v => { state.cjkWeight = v; },
+    getCustom: () => state.cjkCustomWeight, setCustom: v => { state.cjkCustomWeight = v; },
   });
-  wIn.addEventListener("change", () => setCustom(parseInt(wIn.value, 10) || 400));
-  wIn.addEventListener("keydown", e => {
-    if (e.key === "ArrowUp") { e.preventDefault(); setCustom(state.customWeight + 50); }
-    else if (e.key === "ArrowDown") { e.preventDefault(); setCustom(state.customWeight - 50); }
-  });
-  document.getElementById("w-inc").addEventListener("click", () => setCustom(state.customWeight + 50));
-  document.getElementById("w-dec").addEventListener("click", () => setCustom(state.customWeight - 50));
 
   const zoom = document.getElementById("in-zoom");
   zoom.addEventListener("input", e => {
@@ -918,11 +1014,13 @@ function measurePanelThreshold() {
 function updateMiniSummary() {
   const modeName = state.mode === "mono" ? "等宽字体对比" : "中文字体对比";
   const fixed = fixedFontObj();
-  const w = state.weight === "Custom" ? ("Custom " + state.customWeight) : state.weight;
+  const wMono = state.weight === "Custom" ? ("Custom " + state.customWeight) : state.weight;
+  const wCjk = state.cjkWeight === "Custom" ? ("Custom " + state.cjkCustomWeight) : state.cjkWeight;
   document.getElementById("mini-summary").innerHTML =
-    '<b>' + esc(modeName) + '</b>' +
+    '<b style="color:' + (state.mode === "mono" ? "var(--mono-c)" : "var(--cjk-c)") + '">' + esc(modeName) + '</b>' +
     '<span class="sep">·</span>固定 ' + esc(fixed ? fixed.label : "—") +
-    '<span class="sep">·</span>字重 ' + esc(w) +
+    '<span class="sep">·</span><span style="color:var(--mono-c);font-weight:600">编号 ' + esc(wMono) + '</span>' +
+    '<span class="sep">·</span><span style="color:var(--cjk-c);font-weight:600">中文 ' + esc(wCjk) + '</span>' +
     '<span class="sep">·</span>缩放 ' + Math.round(state.scale * 100) + '%';
 }
 

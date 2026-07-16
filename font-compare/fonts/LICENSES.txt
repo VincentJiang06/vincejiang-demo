@@ -83,7 +83,8 @@ Maple Mono NF CN (MapleMonoNFCN-Regular.woff2) | open-source | OFL-1.1 | subfram
 - 厂商镜像来源：MiSans / HONOR 取自社区镜像仓库（whjkd2005），OPPO（cooingwu）、
   Alibaba（hongzhi725）同为社区镜像的原始未改文件；Douyin 取自官方 bytedance/fonts；
   vivo Sans 取自 vivo 官方 CDN zip（vivoSans-Regular.ttf）。
-- mono 字体的 Medium/SemiBold/Bold 附加字重（文件名如 FiraCode-Medium.woff2）与各自 Regular
-  同源同许可，不逐字重另列。
+- mono 与 cjk-sans 字体的 Medium/SemiBold/Bold 附加字重（文件名如 FiraCode-Medium.woff2、
+  MiSans-Bold.ttf）与各自 Regular 同源同许可，不逐字重另列。Noto Sans SC 的静态字重取自
+  官方 notofonts/noto-cjk（NotoSansCJKsc-Medium/Bold.otf，OFL，已转 woff2 并按本目录命名）。
 - QR 编码库 js/vendor/qrcode.js — qrcode-generator, MIT, Kazuhiko Arase,
   https://github.com/kazuhikoarase/qrcode-generator
