@@ -54,7 +54,7 @@
   .guide-close:hover { background: rgba(34,88,201,0.1); }
 
   /* ---------- 顶部控制栏（分组卡片；不再常驻 sticky） ----------
-     滚过阈值后收起为固定单行摘要条（#mini-bar），点「展开设置」把面板以
+     滚过阈值后「对比设置」组压缩为常驻条（.condensed），点「展开全部设置」把完整面板以
      fixed 叠加还原（#toolbar-spacer 占位防布局跳动）。回到顶部自动还原。 */
   .toolbar {
     position: relative;
@@ -80,36 +80,47 @@
   }
   .toolbar.floating .collapse-btn { display: inline-block; }
 
-  /* 收起后的紧凑单行摘要条 */
-  #mini-bar {
-    display: none;
+  /* 滚动深处：「对比设置」组压缩后 sticky 常驻页顶，其余组滚走 */
+  .toolbar.condensed {
     position: fixed;
     top: 0; left: 0; right: 0;
-    z-index: 120;
-    align-items: center;
-    gap: 14px;
-    height: 42px;
-    padding: 0 20px;
-    background: rgba(255,255,255,0.94);
+    z-index: 130;
+    padding: 6px 20px;
+    background: rgba(255,255,255,0.95);
     backdrop-filter: saturate(1.4) blur(8px);
-    border-bottom: 1px solid var(--line);
-    box-shadow: 0 2px 8px rgba(20,20,30,0.06);
+    box-shadow: 0 2px 10px rgba(20,20,30,0.10);
   }
-  #mini-bar.show { display: flex; }
-  .mini-summary {
-    font-size: 12px;
-    color: var(--ink);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    min-width: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  .toolbar.condensed .toolbar-inner { flex-wrap: nowrap; align-items: center; }
+  .toolbar.condensed .group:not(.group-compare) { display: none; }
+  .toolbar.condensed .group-compare {
+    background: transparent; border: none; box-shadow: none;
+    padding: 0; flex-direction: row; align-items: center;
+    min-width: 0; overflow-x: auto;
   }
-  .mini-summary .sep { color: #c2c2ca; }
-  .mini-summary b { font-weight: 700; }
-  .mini-expand { margin-left: auto; flex: 0 0 auto; }
+  .toolbar.condensed .group-compare .group-head,
+  .toolbar.condensed .group-compare .group-hint { display: none; }
+  .toolbar.condensed .group-compare .field > label { display: none; } /* 压缩：隐藏文字标签，维度徽章仍在 */
+  .toolbar.condensed .group-compare .group-body { flex-wrap: nowrap; align-items: center; margin-top: 0; }
+  .toolbar.condensed .dim-box { padding: 4px 8px; flex-direction: row; align-items: center; gap: 8px; }
+  .expand-all-btn { display: none; margin-left: auto; flex: 0 0 auto; }
+  .toolbar.condensed .expand-all-btn { display: inline-block; }
+
+  /* 小号按钮 + 折叠行 */
+  .btn-xs { padding: 2px 8px; font-size: 11px; border-radius: 6px; }
+  .collapse-summary {
+    max-width: 1400px; margin: 10px auto 0; padding: 0 20px;
+    font-size: 12px; color: var(--muted);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .font-row.collapsed { padding: 7px 0; }
+  .collapsed-line {
+    display: flex; align-items: center; gap: 10px;
+    padding-left: 9px; border-left: 3px solid var(--line);
+    font-size: 12px; font-weight: 600; color: var(--ink);
+  }
+  .font-row.dim-mono .collapsed-line { border-left-color: var(--mono-c2); }
+  .font-row.dim-cjk .collapsed-line { border-left-color: var(--cjk-c2); }
+  .collapse-row-btn { align-self: flex-start; margin-top: 8px; }
   .toolbar-inner {
     display: flex;
     flex-wrap: wrap;
@@ -200,7 +211,12 @@
   .dim-cjk .field > label  { color: var(--cjk-c); }
   .dim-mono .tabs button.active { background: var(--mono-c); color: #fff; }
   .dim-cjk .tabs button.active  { background: var(--cjk-c); color: #fff; }
-  .dim-body { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: flex-end; }
+  /* 固定单行：Custom 输入常驻分段控件右侧，切换只改禁用态，零换行/零位移 */
+  .dim-body { display: flex; flex-wrap: nowrap; gap: 8px 14px; align-items: flex-end; }
+  .custom-field { flex: 0 0 auto; transition: opacity 0.15s; }
+  .custom-field.disabled { opacity: 0.45; }
+  .stepper button:disabled { cursor: default; }
+  .stepper input:disabled { background: transparent; }
   .stepper { display: inline-flex; align-items: stretch; border: 1px solid var(--line); border-radius: 7px; overflow: hidden; background: #fff; }
   .stepper button {
     font: inherit; font-size: 16px; line-height: 1; width: 30px; border: none; background: #f6f6f8; color: var(--ink); cursor: pointer;
@@ -354,11 +370,6 @@
     <button class="guide-close" id="guide-close" aria-label="关闭引导" title="关闭">×</button>
   </div>
 
-  <div id="mini-bar">
-    <div class="mini-summary" id="mini-summary"></div>
-    <button class="btn mini-expand" id="mini-expand">展开设置</button>
-  </div>
-
   <div class="toolbar" id="toolbar">
     <div class="toolbar-inner">
 
@@ -404,6 +415,20 @@
       <section class="group">
         <header class="group-head">
           <span class="group-no">③</span>
+          <span class="group-title">显示</span>
+        </header>
+        <p class="group-hint">缩小可一屏看更多行</p>
+        <div class="group-body">
+          <div class="field zoom-field">
+            <label for="in-zoom">缩放 <span class="zoom-val" id="zoom-val">45%</span></label>
+            <input type="range" id="in-zoom" min="30" max="100" value="45">
+          </div>
+        </div>
+      </section>
+
+      <section class="group group-compare">
+        <header class="group-head">
+          <span class="group-no">④</span>
           <span class="group-title">对比设置</span>
         </header>
         <p class="group-hint" id="mode-hint">逐行对比底部编号的等宽字体；中文用右侧固定字体</p>
@@ -437,12 +462,12 @@
                   <button data-weight="Custom">Custom</button>
                 </div>
               </div>
-              <div class="field" id="custom-weight-field" style="display:none">
-                <label for="w-custom">自定义字重 (100–900)</label>
+              <div class="field custom-field disabled" id="custom-weight-field">
+                <label for="w-custom">自定义 (100–900)</label>
                 <div class="stepper">
-                  <button type="button" id="w-dec" aria-label="减 50">−</button>
-                  <input type="number" id="w-custom" min="100" max="900" step="50" value="400">
-                  <button type="button" id="w-inc" aria-label="加 50">+</button>
+                  <button type="button" id="w-dec" aria-label="减 50" disabled>−</button>
+                  <input type="number" id="w-custom" min="100" max="900" step="50" value="400" disabled>
+                  <button type="button" id="w-inc" aria-label="加 50" disabled>+</button>
                 </div>
               </div>
             </div>
@@ -461,12 +486,12 @@
                   <button data-weight="Custom">Custom</button>
                 </div>
               </div>
-              <div class="field" id="cjk-custom-weight-field" style="display:none">
-                <label for="w-cjk-custom">自定义字重 (100–900)</label>
+              <div class="field custom-field disabled" id="cjk-custom-weight-field">
+                <label for="w-cjk-custom">自定义 (100–900)</label>
                 <div class="stepper">
-                  <button type="button" id="w-cjk-dec" aria-label="减 50">−</button>
-                  <input type="number" id="w-cjk-custom" min="100" max="900" step="50" value="400">
-                  <button type="button" id="w-cjk-inc" aria-label="加 50">+</button>
+                  <button type="button" id="w-cjk-dec" aria-label="减 50" disabled>−</button>
+                  <input type="number" id="w-cjk-custom" min="100" max="900" step="50" value="400" disabled>
+                  <button type="button" id="w-cjk-inc" aria-label="加 50" disabled>+</button>
                 </div>
               </div>
             </div>
@@ -474,27 +499,18 @@
         </div>
       </section>
 
-      <section class="group">
-        <header class="group-head">
-          <span class="group-no">④</span>
-          <span class="group-title">显示</span>
-        </header>
-        <p class="group-hint">缩小可一屏看更多行</p>
-        <div class="group-body">
-          <div class="field zoom-field">
-            <label for="in-zoom">缩放 <span class="zoom-val" id="zoom-val">45%</span></label>
-            <input type="range" id="in-zoom" min="30" max="100" value="45">
-          </div>
-        </div>
-      </section>
-
       <button class="btn collapse-btn" id="panel-collapse">收起 ↑</button>
+      <button class="btn expand-all-btn" id="expand-all">展开全部设置</button>
 
     </div>
   </div>
   <div id="toolbar-spacer"></div>
 
   <div class="meta-note" id="meta-note">正在加载字体清单…</div>
+  <div class="collapse-summary" id="collapse-summary" style="display:none">
+    已折叠 <b id="collapse-count">0</b> 款 ·
+    <button class="btn btn-xs" id="expand-all-rows">全部展开</button>
+  </div>
   <div id="rows-host" class="rows"></div>
 
 <script>
@@ -544,7 +560,9 @@ function availableWeights(font) {
 
 // 解析某字体在给定字重设置下的实际生效字重（等宽/中文两维通用）。
 // 返回 {weight(数字), file, sizeKB, tagText, tagKind}
-//  - 命名档缺失 → 回退 Regular，tagKind:"missing"（灰标「无 X」）
+//  - 命名档缺失 → **向上回退**：取最近的更重档（SemiBold 缺→Bold；Medium 缺→SemiBold→Bold）；
+//    仅当不存在任何更重档时才向下取最近档（最后才是 Regular）。
+//    小标显示实际生效档（如「SemiBold → Bold」），tagKind:"effective"。
 //  - Custom → 静态文件无法插值，取数值最接近的可用档（并列取较重），tagKind:"effective"（「→ X」）
 function resolveWeight(font, weightName, customWeight) {
   const avail = availableWeights(font);
@@ -557,14 +575,17 @@ function resolveWeight(font, weightName, customWeight) {
     }
     return { weight: best.num, file: best.file, sizeKB: best.sizeKB, tagText: "→ " + best.name, tagKind: "effective" };
   }
-  if (weightName === "Regular") {
-    return { weight: 400, file: font.file, sizeKB: font.sizeKB, tagText: "", tagKind: "" };
+  const target = WEIGHT_MAP[weightName];
+  const exact = avail.find(w => w.num === target);
+  if (exact) {
+    return { weight: exact.num, file: exact.file, sizeKB: exact.sizeKB, tagText: "", tagKind: "" };
   }
-  const w = font.weights && font.weights[weightName];
-  if (w && w.file) {
-    return { weight: WEIGHT_MAP[weightName], file: w.file, sizeKB: w.sizeKB || font.sizeKB, tagText: "", tagKind: "" };
-  }
-  return { weight: 400, file: font.file, sizeKB: font.sizeKB, tagText: "无 " + weightName, tagKind: "missing" };
+  // 向上取最近更重档；没有更重档才向下取最近较轻档
+  const heavier = avail.filter(w => w.num > target).sort((a, b) => a.num - b.num)[0];
+  const lighter = avail.filter(w => w.num < target).sort((a, b) => b.num - a.num)[0];
+  const pick = heavier || lighter;
+  return { weight: pick.num, file: pick.file, sizeKB: pick.sizeKB,
+           tagText: weightName + " → " + pick.name, tagKind: "effective" };
 }
 // 两个维度的当前解析（monoFont=编号维度字体，cjkFont=中文维度字体）
 function resolveMonoDim(font) { return resolveWeight(font, state.weight, state.customWeight); }
@@ -670,8 +691,9 @@ function render() {
   rowFonts().forEach((f, i) => {
     const row = buildRow(f, i, fixed);
     host.appendChild(row);
-    io.observe(row);
+    if (!row.classList.contains("collapsed")) io.observe(row); // 折叠行跳过懒加载
   });
+  updateCollapseSummary();
 
   // IO 的“初始交叉”回调在部分环境（后台/隐藏标签页，rAF 亦被节流）不一定触发，
   // 因此渲染后同步主动激活当前视口内的行（getBoundingClientRect 触发布局），
@@ -693,7 +715,57 @@ function activateVisibleRows() {
   });
 }
 
+// ---------- 字体行折叠（按 family 记忆，localStorage 持久化，模式切换/刷新保持） ----------
+const COLLAPSE_KEY = "fontCompare.collapsedFamilies";
+const collapsedSet = new Set((() => {
+  try { return JSON.parse(localStorage.getItem(COLLAPSE_KEY) || "[]"); } catch (e) { return []; }
+})());
+function saveCollapsed() {
+  try { localStorage.setItem(COLLAPSE_KEY, JSON.stringify([...collapsedSet])); } catch (e) {}
+}
+
+function updateCollapseSummary() {
+  const families = new Set(rowFonts().map(f => f.family));
+  const n = [...collapsedSet].filter(fam => families.has(fam)).length;
+  const el = document.getElementById("collapse-summary");
+  el.style.display = n > 0 ? "" : "none";
+  document.getElementById("collapse-count").textContent = n;
+}
+
+// 折叠/展开单行：原地替换节点，展开后立即参与懒加载
+function toggleRowCollapse(fam, collapse) {
+  if (collapse) collapsedSet.add(fam); else collapsedSet.delete(fam);
+  saveCollapsed();
+  const old = document.querySelector('.font-row[data-family="' + fam + '"]');
+  const fonts = rowFonts();
+  const i = fonts.findIndex(f => f.family === fam);
+  if (old && i >= 0) {
+    const nr = buildRow(fonts[i], i, fixedFontObj());
+    old.replaceWith(nr);
+    if (!collapse && io) { io.observe(nr); activateVisibleRows(); }
+  }
+  updateCollapseSummary();
+}
+
+// 折叠态：紧凑单行条（维度色条+字体名+许可徽章+展开按钮），不渲染卡片、懒加载跳过
+function buildCollapsedRow(f, i) {
+  const row = document.createElement("div");
+  row.className = "font-row collapsed " + (state.mode === "mono" ? "dim-mono" : "dim-cjk");
+  row.dataset.family = f.family;
+  const isOpen = f.licenseType === "open-source";
+  row.innerHTML =
+    '<div class="collapsed-line">' +
+      '<span class="cfam">#' + (i + 1) + ' ' + esc(f.label) + '</span>' +
+      '<span class="badge ' + (isOpen ? "open" : "free") + '" title="许可：' + esc(f.license) + '">' +
+        (isOpen ? "开源·可修改" : "免费商用·不可改") + '</span>' +
+      '<button class="btn btn-xs expand-row-btn" data-family="' + esc(f.family) + '">展开</button>' +
+    '</div>';
+  return row;
+}
+
 function buildRow(f, i, fixed) {
+  if (collapsedSet.has(f.family)) return buildCollapsedRow(f, i);
+
   const row = document.createElement("div");
   row.className = "font-row " + (state.mode === "mono" ? "dim-mono" : "dim-cjk"); // 行所属维度色条
   row.dataset.family = f.family;
@@ -715,7 +787,8 @@ function buildRow(f, i, fixed) {
       '<span class="badge missing tag-cjk-slot" style="display:none"></span>' +
     '</div>' +
     cjkMark +
-    '<div class="status"><span class="badge-load">滚动加载 · ' + sizeMB(f.sizeKB) + ' MB</span></div>';
+    '<div class="status"><span class="badge-load">滚动加载 · ' + sizeMB(f.sizeKB) + ' MB</span></div>' +
+    '<button class="btn btn-xs collapse-row-btn" data-family="' + esc(f.family) + '">折叠</button>';
 
   // 卡片视口
   const viewport = document.createElement("div");
@@ -807,6 +880,7 @@ function setDimTag(el, dimName, wr, effClass, slotClass) {
 // 行进入视口：加载行字体（+ 确保固定字体已加载），切换字体
 function activateRow(row) {
   if (row.dataset.activated) return; // 防止 IO 与主动激活重复处理
+  if (row.classList.contains("collapsed")) return; // 折叠行不加载字体
   row.dataset.activated = "1";
   const fam = row.dataset.family;
   const f = state.fonts.find(x => x.family === fam);
@@ -897,7 +971,17 @@ function bindWeightControl(cfg) {
   const tabs = document.getElementById(cfg.tabsId);
   const field = document.getElementById(cfg.customFieldId);
   const wIn = document.getElementById(cfg.inputId);
+  const incBtn = document.getElementById(cfg.incId);
+  const decBtn = document.getElementById(cfg.decId);
   const clampW = v => Math.max(100, Math.min(900, v));
+
+  // Custom 输入常驻同行：只切换禁用态，不改布局（零换行/零位移）
+  const setCustomEnabled = on => {
+    field.classList.toggle("disabled", !on);
+    wIn.disabled = !on;
+    incBtn.disabled = !on;
+    decBtn.disabled = !on;
+  };
 
   tabs.querySelectorAll("button").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -905,7 +989,7 @@ function bindWeightControl(cfg) {
       if (w === cfg.getName()) return;
       cfg.setName(w);
       tabs.querySelectorAll("button").forEach(b => b.classList.toggle("active", b === btn));
-      field.style.display = (w === "Custom") ? "" : "none";
+      setCustomEnabled(w === "Custom");
       render(); // 重建行 → 各行按新字重重新解析并懒加载对应字重文件
     });
   });
@@ -985,6 +1069,20 @@ function bindControls() {
   });
   document.documentElement.style.setProperty("--scale", state.scale);
 
+  // 字体行折叠/展开（事件委托，行节点会被重建）
+  document.getElementById("rows-host").addEventListener("click", e => {
+    const cBtn = e.target.closest(".collapse-row-btn");
+    if (cBtn) { toggleRowCollapse(cBtn.dataset.family, true); return; }
+    const eBtn = e.target.closest(".expand-row-btn");
+    if (eBtn) { toggleRowCollapse(eBtn.dataset.family, false); }
+  });
+  // 「全部展开」：仅清当前模式行集合中的折叠项
+  document.getElementById("expand-all-rows").addEventListener("click", () => {
+    rowFonts().forEach(f => collapsedSet.delete(f.family));
+    saveCollapsed();
+    render();
+  });
+
   // 滚动/缩放时兜底激活进入视口的行（与 IntersectionObserver 并行，互不重复）
   let ticking = false;
   const onScroll = () => {
@@ -1008,51 +1106,36 @@ const panel = { pinned: false, pinScrollY: 0, threshold: 300 };
 
 function measurePanelThreshold() {
   const tb = document.getElementById("toolbar");
-  if (!tb.classList.contains("floating")) panel.threshold = tb.offsetHeight;
+  if (!tb.classList.contains("floating") && !tb.classList.contains("condensed")) {
+    panel.threshold = tb.offsetHeight; // 仅在文档流中测量完整高度
+  }
 }
 
-function updateMiniSummary() {
-  const modeName = state.mode === "mono" ? "等宽字体对比" : "中文字体对比";
-  const fixed = fixedFontObj();
-  const wMono = state.weight === "Custom" ? ("Custom " + state.customWeight) : state.weight;
-  const wCjk = state.cjkWeight === "Custom" ? ("Custom " + state.cjkCustomWeight) : state.cjkWeight;
-  document.getElementById("mini-summary").innerHTML =
-    '<b style="color:' + (state.mode === "mono" ? "var(--mono-c)" : "var(--cjk-c)") + '">' + esc(modeName) + '</b>' +
-    '<span class="sep">·</span>固定 ' + esc(fixed ? fixed.label : "—") +
-    '<span class="sep">·</span><span style="color:var(--mono-c);font-weight:600">编号 ' + esc(wMono) + '</span>' +
-    '<span class="sep">·</span><span style="color:var(--cjk-c);font-weight:600">中文 ' + esc(wCjk) + '</span>' +
-    '<span class="sep">·</span>缩放 ' + Math.round(state.scale * 100) + '%';
-}
-
-// 三态：顶部=完整面板（文档流）；深处未展开=mini 摘要条；深处已展开=固定面板+占位防跳动
+// 三态：顶部=完整面板（文档流）；深处未展开=「对比设置」组压缩常驻（condensed）；
+// 深处已展开=完整面板浮层（floating）。fixed 时用等高 spacer 占位防布局跳动。
 function updatePanelState() {
   const tb = document.getElementById("toolbar");
-  const mini = document.getElementById("mini-bar");
   const spacer = document.getElementById("toolbar-spacer");
 
   if (window.scrollY <= panel.threshold) { // 回到顶部：自动还原完整面板
     panel.pinned = false;
-    tb.classList.remove("floating");
+    tb.classList.remove("floating", "condensed");
     spacer.style.display = "none";
-    mini.classList.remove("show");
     measurePanelThreshold(); // 面板在文档流中，顺带校准阈值（控件展开/收起会改高度）
     return;
   }
-  // 展开后用户再滚动 → 自动收回摘要条
+  // 展开全部设置后用户再滚动 → 自动收回常驻条
   if (panel.pinned && Math.abs(window.scrollY - panel.pinScrollY) > 60) panel.pinned = false;
 
+  // 深处：面板脱离文档流，spacer 按完整面板高度占位（零跳动）
+  spacer.style.height = panel.threshold + "px";
+  spacer.style.display = "block";
   if (panel.pinned) {
-    if (!tb.classList.contains("floating")) {
-      spacer.style.height = tb.offsetHeight + "px"; // 固定高度占位，无布局跳动
-      spacer.style.display = "block";
-      tb.classList.add("floating");
-    }
-    mini.classList.remove("show");
+    tb.classList.remove("condensed");
+    tb.classList.add("floating");
   } else {
     tb.classList.remove("floating");
-    spacer.style.display = "none";
-    updateMiniSummary();
-    mini.classList.add("show");
+    tb.classList.add("condensed");
   }
 }
 
@@ -1060,7 +1143,7 @@ function initPanelCollapse() {
   measurePanelThreshold();
   window.addEventListener("scroll", updatePanelState, { passive: true });
   window.addEventListener("resize", () => { measurePanelThreshold(); updatePanelState(); }, { passive: true });
-  document.getElementById("mini-expand").addEventListener("click", () => {
+  document.getElementById("expand-all").addEventListener("click", () => {
     panel.pinned = true;
     panel.pinScrollY = window.scrollY;
     updatePanelState();
