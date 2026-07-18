@@ -106,10 +106,10 @@ git commit + push → CI 自动部署
 - [x] W9 CONVERGE 扩写 C01,C02,C03,C07 + N00（源 14-briefs + 00 总纲，按契约 v2）
 - [x] W-R 可读性修订：批一交付的 24 课（R01-R06/B01-B07/Y01-Y06/K00-K04）按契约 v2 重修（白话导语/术语白话化/考证下沉/一句话带走）
 - [x] W12 v3.1 新 12 课：R14,R15,B15,B16,B17,Y16,Y17,G07,G08,K05,K06,C08（源见 tree.json sources 字段，契约 v2）
-- [ ] W10 图鉴更新（术语表/讹传表补新条目）+ 全站交叉引用核对 + sitemap
+- [x] W10 图鉴更新（术语表/讹传表补新条目）+ 全站交叉引用核对 + sitemap
 - [x] W11a 互动模块复杂化·通用引擎（mod-kit 控件扩容 + explorable 预测→操作→揭示三段式 + provenance/timeline/quiz）
 - [x] W11b 互动模块复杂化·定制 sim 批一（feedback/boom-bust/musiclab/game-the-ranking/overfit/eval-overfit-lab/the-loop）
-- [ ] W11c 互动模块复杂化·定制 sim 批二（goodhart4/variety/policy-invariance/overopt/winners-curse/arena/seven-levers/design-robust-eval）+ 新节点配模块
+- [x] W11c 互动模块复杂化·定制 sim 批二（goodhart4/variety/policy-invariance/overopt/winners-curse/arena/seven-levers/design-robust-eval）+ 新节点配模块
 - [ ] 终检：截图审计（双主题）+ 移动端 + 部署验证
 
 **UI 迭代备忘（2026-07-18 用户第二轮裁决，已执行）**：树总览排列放宽（ROW_H 244/COL_W 190/GUTTER 150）；

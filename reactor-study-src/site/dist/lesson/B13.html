@@ -54,7 +54,7 @@
       <span>选中的那个，真值期望低于它的估计值</span><span class="spacer"></span>
       <span class="mono">SIM</span></figcaption>
     <div class="module-body"><script type="application/json" class="mod-config">{}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
-  </figure><script type="module" src="/modules/winners-curse.js?v=52ef777f05"></script>
+  </figure><script type="module" src="/modules/winners-curse.js?v=68b619e64e"></script>
 <div class="read">
 <p>Smith 与 Winkler 用一个三行就能写完的玩具模型把机制钉死（论文第 2.1 节）。设三个备选方案，真实价值全都是零，也就是根本不存在「更好的那个」；你对每个的估计无偏，误差服从标准正态分布。现在挑估计值最高的那个。三个标准正态的最大值，期望约等于 0.85，于是你选中的方案平均会让你失望 0.85 个标准差：明明三个都一样，你却坚信自己挑到了宝。备选增加到 4 个，失望升到估计标准差的 103%；增加到 10 个，升到 154%。数字的含义直白：候选越多、测量噪声越大，选中者的水分越大，而这一切发生时没有任何人说谎。</p>
 <p>机制一句话：取最大值这个操作，专门偏爱正向噪声大的候选。估计里运气成分越高的，越容易排到最前而被选中，所以「择优」本身就在系统性地捞取好运气。面试的例子最贴身：按面试分录取的状元，入职后普遍「不如预期」，不是面试骗了你，是你只见过他运气最好的那一面。它就是回归型 Goodhart 的另一个名字，与拍卖里的赢者诅咒是近亲：赢者诅咒是多人竞价，出价最高者往往是最高估标的的人；优化者诅咒是单人从多个选项里择优，两者共用同一套顺序统计量。现象本身被注意到得更早，金融学的 Brown 1974 年、组织学的 Harrison 与 March 1984 年（起名 postdecision surprise，决策后惊讶）都有记录，Smith 与 Winkler 的贡献是命名、形式化，并强调它波及一切从含噪估计中择优的决策，不限于竞标。他们开出的药方叫有纪律的怀疑（disciplined skepticism）：把估计当成含噪信号，与先验混合，对选中者的分数打折扣，候选越多、噪声越大，折扣越狠。这套操作的学名是贝叶斯收缩，精神很朴素：你不是在惩罚冠军，是在请它归还借来的运气。</p>

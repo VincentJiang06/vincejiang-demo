@@ -1,5 +1,7 @@
-/* REACTOR · overopt.js (Y07) — reward-model overoptimization (Gao et al. 2023) */
-import { mount, canvas, controls, slider, add, readout, legend, scoped } from "/modules/mod-kit.js";
+/* REACTOR · overopt.js (Y07) — reward-model overoptimization (Gao et al. 2023)
+   W11c 升级：annot 标注层钉住 gold 曲线的峰值——「在这停手」。
+   曲线数值逻辑与原版同源：proxy/gold 的公式一个字没动。 */
+import { mount, canvas, controls, slider, add, readout, legend, scoped, annot } from "/modules/mod-kit.js";
 
 mount("overopt", (body, fig, { config }) => {
   const C = scoped(fig);
@@ -12,12 +14,20 @@ mount("overopt", (body, fig, { config }) => {
     slider(body, { label: "proxy 与真实目标的错配(噪声)", min: 5, max: 80, step: 5, value: 35, fmt: v => (v / 100).toFixed(2) }).on(v => { noise = v / 100; draw(); }),
     slider(body, { label: "KL 约束(缰绳)：限制离初始多远", min: 0, max: 100, step: 10, value: 0, fmt: v => v + "%" }).on(v => { dead = v / 100; draw(); })
   );
-  const { c, ctx, resize } = canvas(body, 300);
+  const cv = canvas(body, 300);
+  const { ctx } = cv;
+  let lastW = 0, size = { w: 0, h: 300 };
+  const sized = () => {                              // 尺寸真变才重设 canvas（性能红线）
+    const w = body.clientWidth || 600;
+    if (w !== lastW) { lastW = w; size = cv.resize(); }
+    return size;
+  };
+  const an = annot(cv);
   const out = readout(body, "");
   legend(body, [{ c: "var(--accent)", t: "proxy 得分（奖励模型说的）" }, { c: "var(--red)", t: "gold 得分（真实目标）" }]);
 
   function draw() {
-    const { w, h } = resize(); ctx.clearRect(0, 0, w, h);
+    const { w, h } = sized(); ctx.clearRect(0, 0, w, h);
     const pad = 38, gw = w - pad * 2, gh = h - pad * 2;
     // d = optimization distance (KL^0.5). proxy rises ~ a*d ; gold = proxy - noise*d^2 (overoptimization)
     const maxD = 10 * (dead ? (1 - dead * 0.85) : 1);
@@ -33,6 +43,13 @@ mount("overopt", (body, fig, { config }) => {
     const pk = gold.indexOf(Math.max(...gold));
     ctx.fillStyle = C("--red"); ctx.beginPath(); ctx.arc(X(pk), Y(gold[pk]), 3.5, 0, 7); ctx.fill();
     ctx.fillStyle = C("--ink-400"); ctx.font = "10px monospace"; ctx.fillText("优化强度 (KL 距离) →", pad + 4, h - 8);
+
+    /* 标注层：钉住真实目标的峰值。峰值靠右时气泡翻到左侧，免得出界 */
+    an.show([{
+      x: Math.round(X(pk)), y: Math.round(Y(gold[pk])),
+      t: `真实目标在这见顶——在这停手`, dir: pk > N * 0.55 ? "left" : "right"
+    }]);
+
     const overshoot = ((proxy[N] - gold[N])).toFixed(1);
     out.innerHTML = `真实目标在优化距离 <span class="big">${(pk / N * maxD).toFixed(1)}</span> 处见顶，之后<strong>掉头向下</strong>。
       <div style="font-size:.8rem;margin-top:6px;opacity:.9">${dead ? "KL 缰绳把你限制在近处：峰值前停手，避免过优化。" : "松开缰绳一路优化 proxy：终点处 proxy 与真实目标的差距达 " + overshoot + "。加一点 KL 约束试试。"}</div>`;
