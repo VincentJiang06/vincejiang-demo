@@ -2,8 +2,9 @@ export default {
   id: "R07",
   blocks: [
     { t: "prose", html: `
-<p>操演性（performativity）的命题是：经济理论不是被动拍摄市场的相机，而是驱动市场的引擎。Donald MacKenzie 把书名定为《An Engine, Not a Camera》。更早提出这个词的是 Michel Callon，1998 年的原话："Economics... performs, shapes and formats the economy, rather than observing how it functions."</p>
-<p>它与自我实现预言是近亲，但主语换了：这里能动的是理论与模型，不是人的期望。MacKenzie 的贡献是把「理论塑造现实」拆成强度不同的四档，避免它沦为万能口号。</p>` },
+<p>这一课讲一个听起来像悖论的真实故事：一条数学公式，先把整个市场改造成了它自己描述的样子，又在十四年后亲手毁掉了这个成果。主角是金融学里最有名的期权定价公式 Black–Scholes。社会学家用这个案例造了一个词，叫<strong>操演性（performativity）</strong>：理论不是照相机，拍下世界本来的样子；理论是发动机，把世界拉向它描述的样子。</p>
+<p>这个词是法国社会学家 Michel Callon 在 1998 年提出的，他的原话是：经济学不是在观察经济如何运行，而是在「执行、塑造、格式化」经济。他的完整主张更激进：经济不是嵌进社会里的，是嵌进经济学里的。市场要运转，先得有会计算的买家卖家，有把一笔交易从千丝万缕的人情关联里切割出来的规则和工具，而这些正是经济学供应的。教科书里那个只认利益的「经济人」，在 Callon 看来不是对人性的错误假设，而是一份逐渐被装置实现的产品说明书。</p>
+<p>听起来玄，看完案例就不玄了。苏格兰社会学家 Donald MacKenzie 接着做了最关键的一步：把「理论塑造现实」按力度分成四档，从「只是被人使用」到「把世界拉向自己」再到「把自己弄假」，避免它变成一句什么都能解释的万能口号。你在 <code>R06</code> 见过「分类会改变被分类的人」，这一课是它的理论版：理论会改变被理论描述的世界。</p>` },
 
     { t: "module", module: "explorable:performativity", title: "操演性的强度谱系", config: {
       mode: "steps",
@@ -16,24 +17,34 @@ export default {
     } },
 
     { t: "prose", html: `
-<p>最硬的实证是 Black–Scholes 期权定价。MacKenzie 与 Millo 2003 年对芝加哥期权交易所的历史社会学研究（AJS，被引超过 2300）给出了完整弧线。模型 1973 年发表时，市场价格偏离模型；交易者随身带着 Black 印的定价活页表，照着模型定价、套利，价格逐渐向模型收敛，1973 到 1987 年间拟合越来越好，跨执行价的隐含波动率近乎平坦。不是模型准确描述了市场，而是市场被模型改造得越来越像模型。</p>
-<p>然后是断裂。1987 年 10 月 19 日道指单日暴跌 22.6%，基于同一套对冲逻辑的组合保险放大了抛售螺旋；崩盘后出现持久的波动率微笑，低执行价看跌期权的隐含波动率显著翘起，市场学会了预期崩盘，这个 skew 此后再没消失。模型的广泛使用，最终摧毁了它自己的经验有效性。这就是 counterperformativity 的教科书案例。</p>
-<p>分析哲学一侧，Mäki 2013 年指出 MacKenzie 借 Austin 的 performative 概念用词过松：市场向模型收敛是因果的社会过程，不是「说即做」的语言行为。Brisset 2016 年给出限度论：并非任何理论都能操演成功，Barnesian 自证需要制度、利益、物质装置配合，现实会抵抗。Mirowski 与 Nik-Khah 的政治经济学批评最尖锐：不能脱离「哪一种经济学、为谁的利益」来谈操演性。Marti 与 Gond 2018 年把这些收束成可检验的边界条件：理论要自我实现，需要被当作行动脚本、有配套装置、且无强反制。</p>` },
+<p>故事从 1973 年讲起，那一年两件事几乎同时发生：Black 与 Scholes 发表了期权定价公式，芝加哥期权交易所（CBOE）在 4 月 26 日开市。期权是「未来以约定价格买卖股票的权利」，这种权利本身该值多少钱，当时没人说得清，而这条公式给出了一个算法。刚上市时，市场价格和公式算出来的价格对不上，也就是说，公式是「错」的。</p>
+<p>接下来发生的事是整个案例的核心。交易员开始随身携带 Black 印制的定价活页表，照着公式报价；更重要的是套利：只要市场价偏离公式价，就有人低买高卖赚差价，而套利本身会把市场价往公式价推。于是市场价格逐渐向模型收敛。MacKenzie 与 Millo 2003 年翻检交易所历史档案的研究（发表在《美国社会学杂志》，被引超过 2300）给出了完整弧线：1973 到 1987 年间，模型和市场的拟合越来越好。好到什么程度，有一个技术读数：模型假设波动率是常数，而 1987 年之前，从不同执行价的期权反推出来的隐含波动率确实几乎排成一条平线，危机前夕，10% 价外看跌期权与其余期权的隐含波动率差只有约 1.83 个百分点。市场几乎就是模型说的那个世界。注意这句话的方向：不是模型准确描述了市场，而是市场被模型改造得越来越像模型。这就是四档里最强的一档，Barnesian（得名自社会学家 Barry Barnes）。</p>
+<p>然后是断裂。1987 年 10 月 19 日，道琼斯指数单日暴跌 22.6%（508 点），史称黑色星期一。MacKenzie 2004 年的专文拆开了机制：当时流行一种叫组合保险（portfolio insurance）的产品，它就是把 Black–Scholes 的对冲逻辑做成自动执行的规则，价格下跌就按公式卖出止损。问题在于成千上万个账户同时在执行同一条公式：下跌触发卖出，卖出加深下跌，再触发更多卖出，一场由公式自己组织起来的踩踏。崩盘之后，市场留下一道永久的疤：低执行价看跌期权的隐含波动率显著翘起，那条平线变成了「波动率微笑」，市场学会了预期崩盘，这个形状此后再没消失。翻译一下：模型用的人太多，把模型自己用假了。这就是第四档 counterperformativity，操演性的反转。MacKenzie 与 Bamford 2018 年把这类案例正式整理成文：一个理论可以因为太多人相信它而变得不真。</p>
+<p>批评者给这套理论画了三条边界，都值得记。第一条来自哲学家 Mäki 2013 年：「操演」这个词借自语言哲学家 Austin 的「施为句」，说即做，比如「我宣布你们结为夫妻」；但市场向模型收敛不是语言魔法，是套利、装置、利益推动的因果过程，借词要小心。第二条来自 Brisset：不是任何理论都能操演成功，现实会抵抗，理论要自我实现，得有制度、利益和物质装置配合。第三条最尖锐，来自 Mirowski 与 Nik-Khah：研究「经济学家造市场」的人，不能把它当成中性现象，还得问造的是哪一种经济学的市场、为了谁的利益。Marti 与 Gond 2018 年把这些收拢成三个可检验的条件：理论要被当作行动脚本、有配套装置、且没有强反制力量，三者齐备，自我实现才会发生。</p>
+<p>最后把它和你走过的红色主线接上。排名反应性（<code>R01</code>）研究「人被测量后如何反应」，操演性研究「理论如何造世界」：前者的输入是一个评价性的数字，盯住被测者的挣扎与问责；后者的输入是一整套理论和装置，盯住世界被塑形。Espeland 与 Sauder 2007 年明知 Callon 的概念在先，仍另选了 reactivity 这个词，理由正是要把测量的效度与问责留在问题中心。两个词不是同义词，是同一台机器的两个观察孔。</p>` },
 
     { t: "callout", variant: "myth", html: `
-<p><strong>流行说法：「操演性证明经济学总能自证。」</strong>复核结论：这恰恰抹掉了 MacKenzie 四分类学的全部要点。generic 不等于 effective，更不等于 Barnesian，而且存在方向相反的 counterperformativity。另一条诚实边界：文献里「价格向模型收敛」的精确百分比说法不一，稳妥的主张只有两条硬事实：拟合先改善，1987 后断裂。别为了故事漂亮去虚构一个收敛数字。</p>` },
+<p><strong>流行说法：「操演性证明经济学总能自证。」</strong>复核结论：这恰恰抹掉了 MacKenzie 四分类学的全部要点。generic（只是被使用）不等于 effective（使用造成差别），更不等于 Barnesian（把世界拉向理论），而且存在方向相反的 counterperformativity。考证补一笔：概念的完整谱系是 Callon 1998 年提出术语与纲领，MacKenzie 与 Millo 2003 年给出 CBOE 实证，MacKenzie 2006 年《An Engine, Not a Camera》定下四分类，2004 年的组合保险专文与 2018 年的 Counterperformativity 论文补齐反转档。另一条诚实边界：文献里「价格向模型收敛」的精确百分比说法不一，稳妥的主张只有两条硬事实：拟合先改善，1987 后断裂。别为了故事漂亮去虚构一个收敛数字。</p>` },
+
+    { t: "callout", variant: "intuit", html: `
+<p><strong>操演不靠信念魔法，靠装置。</strong>交易员不是抽象地「相信」公式，而是每天拿着定价活页表照它报价、按它对冲；理论被固化成表格、计算器和结算流程，才获得拉动价格的因果力。这也解释了反转那一档为什么可能：装置只执行公式，不检查公式的前提。1987 年组合保险照公式卖出时，公式假设的「交易连续、价格不跳空」正在被它自己制造的踩踏踩碎。</p>` },
 
     { t: "callout", variant: "applied", html: `
-<p><strong>这是 Goodhart 的社会学镜像，而且已经和 ML 正式合流。</strong>一个被广泛采用的 eval（reward model、LLM-judge）一旦成为训练目标，生态会向它收敛（Barnesian），分数越来越好看；优化过头之后，优化本身破坏它要测量的能力（counter）。2024 年 NeurIPS 上一篇论文标题直接叫 "An Engine, Not a Camera: Measuring Performative Power of Online Search"，用真实搜索引擎实验测量平台「操舵」用户分布的能力。五十年的社会学叙事，正在变成可测量的指标。<code>Y09</code> 给出它的数学形式。</p>` },
+<p><strong>这是 Goodhart 的社会学镜像，而且已经和机器学习正式合流。</strong>一个被广泛采用的 eval（奖励模型、LLM 裁判）一旦成为训练目标，整个生态会向它收敛，分数越来越好看，这是 Barnesian；优化过头之后，优化本身破坏它要测量的能力，这是 counter。合流不是比喻：2022 年有研究者定义了 performative power，专门度量一个平台「把用户分布往自己预测的方向推」的能力，推力小，平台是相机，推力大，平台是引擎；2024 年 NeurIPS 上一篇论文标题直接叫 "An Engine, Not a Camera: Measuring Performative Power of Online Search"，用真实搜索引擎实验测了一次。五十年的社会学叙事，正在变成可测量的指标。它的数学形式在 <code>Y09</code>，概念家族的全图在 <code>C01</code>。</p>` },
 
     { t: "prose", html: `
-<p>留一个问题：MacKenzie 的案例里被操演的是可读的理论（一条定价公式）。当操演者换成不可解释的深度模型，Barnesian 与 counter 的区分还适用吗？能不能在事前判断一个模型的普及会放大还是抵消它自己？这两问 D6 报告都标为未解。</p>` },
+<p>留一个问题：MacKenzie 的案例里，被操演的是一条人人能读懂的公式。当「理论」换成不可解释的深度模型，放大与反转这两档还分得出来吗？能不能在事前判断，一个模型的普及会放大还是抵消它自己？这两问在 D6 报告里都标为未解。</p>
+<p><strong>一句话带走：理论用的人够多，世界就会先变得像它，再被它压垮。</strong></p>` },
 
     { t: "sources", items: [
       `MacKenzie, D. & Millo, Y. (2003). "Constructing a Market, Performing Theory." <em>AJS</em> 109(1):107–145.`,
       `MacKenzie, D. (2006). <em>An Engine, Not a Camera</em>. MIT Press（四分类学）。`,
-      `Mäki (2013)；Brisset (2016)；Mirowski & Nik-Khah (2007)；Marti & Gond (2018)（边界条件）。`,
-      `Mendler-Dünner, Carovano & Hardt (2024). "An Engine, Not a Camera: Measuring Performative Power of Online Search." <em>NeurIPS</em>。深化见 <code>research/deep/D6</code> §4。`
+      `MacKenzie, D. (2004). "The big, bad wolf and the rational market: portfolio insurance, the 1987 crash and the performativity of economics." <em>Economy and Society</em> 33(3):303–334.`,
+      `MacKenzie, D. & Bamford, A. (2018). "Counterperformativity." <em>New Left Review</em> 113:97–121.`,
+      `Callon, M. (ed.) (1998). <em>The Laws of the Markets</em>. Blackwell（纲领性导论）。`,
+      `Mäki (2013)；Brisset (2016; 2018)；Mirowski & Nik-Khah (2007)；Marti & Gond (2018)（批评与边界条件）。`,
+      `Hardt, Jagadeesan & Mendler-Dünner (2022). "Performative Power." <em>NeurIPS</em>；Mendler-Dünner, Carovano & Hardt (2024). "An Engine, Not a Camera: Measuring Performative Power of Online Search." <em>NeurIPS</em>。`,
+      `深化见 <code>research/deep/D6</code> §4；概念辨析见 <code>research/02</code> §12–14。`
     ] }
   ]
 };

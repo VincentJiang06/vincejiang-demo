@@ -17,8 +17,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
-<link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=f09b6e4bb9">
-<link rel="stylesheet" href="/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/theme/led.css?v=6195435c7b">
+<link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=264d5a4898">
+<link rel="stylesheet" href="/theme/components.css?v=68e2c8e047"><link rel="stylesheet" href="/theme/led.css?v=055f8f5727">
 <link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"基准污染与饱和 · Contamination & Saturation","description":"题被吃进训练集，题本身也可能是坏的。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://reactor.vincejiang.com/lesson/Y03.html"}</script>
 </head><body><div class="bg-dots" aria-hidden="true"></div>
@@ -43,8 +43,8 @@
       <h1>基准污染与饱和</h1>
       <p class="lede">题被吃进训练集，题本身也可能是坏的。</p>
       <div class="prereq-row">
-    <span class="label">前置</span> <a href="/lesson/Y01.html">Y01 过拟合</a>
-    <span class="label" style="margin-left:auto">解锁</span> <a href="/lesson/Y11.html">Y11 排行榜幻觉</a> <span class="stub">Y13 污染取证学</span> <span class="stub">G03 留出与动态评测</span>
+    <span class="label">前置</span> <span class="stub">Y17 基准是怎么造出来的</span>
+    <span class="label" style="margin-left:auto">解锁</span> <a href="/lesson/Y11.html">Y11 排行榜幻觉</a> <a href="/lesson/Y13.html">Y13 污染取证学</a> <a href="/lesson/G03.html">G03 留出与动态评测</a>
   </div>
     </div>
     <article class="stack"><div class="read">
@@ -56,7 +56,7 @@
       <span>基准饱和与污染简史</span><span class="spacer"></span>
       <span class="mono">TIMELINE</span></figcaption>
     <div class="module-body"><script type="application/json" class="mod-config">{"hint":"点节点看每个基准是怎么被刷爆、被污染、或被判损坏的。","events":[{"date":"2012–15","title":"ImageNet 时代","html":"深度学习的分水岭。Recht et al. (2019) 造了一套\u003cem>新\u003c/em>的 ImageNet 测试集，所有模型都掉分（存在真实过拟合），但\u003cstrong>排名基本保持\u003c/strong>：绝对分虚高，相对比较较稳。这限定了「退化」的形状。"},{"date":"2018–19","title":"GLUE → SuperGLUE","html":"GLUE 推出不到一年就逼近人类水平天花板，只好推出更难的 SuperGLUE。饱和快到基准来不及用。"},{"date":"2024","title":"GSM8k → GSM1k → GSM-Symbolic","html":"GSM8k 被广泛使用后，Scale AI 造了同难度新题集 GSM1k：部分模型掉分 8–13%，前沿模型基本不掉。Apple 的 GSM-Symbolic 切口更深：只往题里塞一条\u003cstrong>看似相关实则无关\u003c/strong>的子句（GSM-NoOp），前沿模型普遍掉分，最大降幅达 \u003cstrong>65%\u003c/strong>，说明背的不只是题，是题型模板。"},{"date":"2024–25","title":"MMLU 的天花板部分来自错题","html":"MMLU-Redux 人工重标 5,700 道题，估计 \u003cstrong>6.49% 的题目本身有错\u003c/strong>（错标答案、题干残缺、多正解）。准确率上限被错题限制在 93.5% 附近：看起来像能力饱和，部分是撞上了标注天花板。清洗错题后模型排名会变。"},{"date":"2023–26","title":"SWE-bench 全弧线","html":"原版被查出 32.67% 的「成功」补丁涉及答案泄漏（写在 issue 评论里，SWE-bench+ 审计）；人工校验的 Verified 又被 OpenAI 查出至少 16.4% 任务缺陷、最难 138 题约 59% 损坏、模型能逐词复现人类原始补丁，2026 年被弃用；替身 SWE-bench Pro 不到一年也被审计出 \u003cstrong>约 30% 损坏\u003c/strong>并被撤回推荐（顶尖模型通过率 8 个月从 23.3% 飙到 80.3%）。从 SWE-bench 到 Verified 再到 Pro，三代之间的可用周期依次缩短。"},{"date":"持续","title":"抗污染设计与它的限度","html":"Dynabench（动态对抗出题）、LiveBench / LiveCodeBench（只用发布日之后的新题）、canary 字符串。有效，但 2026 年的系统研究给出两条反向证据：跨 60 个基准统计，\u003cstrong>公开测试集与私有测试集的饱和率无统计学差异\u003c/strong>（藏题防不了饱和）；抗污染设计防得住逐字泄漏，防不住题目本身质量差、测试太弱、答案可记忆。"}]}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
-  </figure><script type="module" src="/modules/timeline.js?v=efa45f7010"></script>
+  </figure><script type="module" src="/modules/timeline.js?v=87f352989f"></script>
 <div class="read">
 <p>饱和的另一半原因不在模型，在题。MMLU-Redux 人工重标 5700 道题之后估出 6.49% 的错题率，把准确率上限钉死在 93.5% 附近，于是「能力饱和」至少有一部分其实是「撞上标注天花板」；清洗错题后模型排名会变，意味着原榜单部分是被错题噪声搅乱的。这不是 MMLU 独有：精修过的 MMLU-Pro 仍查出约 4% 的错题与另外约 5% 的生成、标注、答案抽取问题，一项 Text-to-SQL 审计更发现 121 道开源 gold SQL 里 66.1% 标注有误。基准出错是跨领域的系统性现象，「更难」不等于「更干净」。</p>
 <p>「饱和在加速」的流行叙事也要打个折。Akhtar 与 Reuel 等人 2026 年系统分析 60 个主流基准：饱和比例从发布不满 24 个月的 42.9% 升到超过 60 个月的 54.5%，随年龄上升但相当温和，与 AI Index 那组单点飙升并不矛盾，前者是全体基准的长期趋势，后者是个别新基准的初期陡升，混起来读就会夸大。同一研究里最反直觉的一条：公开测试集与私有测试集的饱和率无统计学差异。藏题防得住逐字泄漏，防不住饱和本身。</p>

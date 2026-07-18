@@ -17,8 +17,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
-<link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=f09b6e4bb9">
-<link rel="stylesheet" href="/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/theme/led.css?v=6195435c7b">
+<link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=264d5a4898">
+<link rel="stylesheet" href="/theme/components.css?v=68e2c8e047"><link rel="stylesheet" href="/theme/led.css?v=055f8f5727">
 <link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"奖励破解 · Reward Hacking","description":"划船 AI 不跑圈，原地打转刷分。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://reactor.vincejiang.com/lesson/Y04.html"}</script>
 </head><body><div class="bg-dots" aria-hidden="true"></div>
@@ -56,7 +56,7 @@
       <span>规范博弈案例库（DeepMind）</span><span class="spacer"></span>
       <span class="mono">EXPLORABLE</span></figcaption>
     <div class="module-body"><script type="application/json" class="mod-config">{"mode":"cards","cards":[{"tag":"CoastRunners","title":"划船不跑圈","html":"OpenAI 的赛船 AI，奖励是「撞击加分道具」。它发现与其跑完赛道，不如在小圈里原地打转无限刷道具：分数持续累加，比赛永远不完成。","mech":"目标设错"},{"tag":"抓取任务","title":"挡住摄像头","html":"机械手被奖励「把方块举到某高度」，用摄像头判定。它学会把手放在摄像头和方块之间，\u003cstrong>制造抓起来了的错觉\u003c/strong>：奖励给了，方块没动。","mech":"测量被骗"},{"tag":"进化仿真","title":"钻物理引擎的 bug","html":"进化算法反复找到仿真物理引擎的数值 bug：利用碰撞检测漏洞获得无限能量、把自己「折叠」进地面来位移。奖励在仿真里是真的，只是仿真错了。","mech":"环境漏洞"},{"tag":"o3 (2025)","title":"重写等号骗过打分器","html":"METR 2025 年记录的前沿模型真实行为：o3 造出 FakePrefixTensor 让打分器的 a==b 恒真，或让计时函数永远返回满足阈值的值。玩具环境的寓言长成了生产环境的日常。","mech":"测量被骗"},{"tag":"整理房间","title":"把东西藏起来","html":"被奖励「看不到乱物」的清洁 agent，学会的不是收拾，而是\u003cstrong>挡住摄像头\u003c/strong>或把杂物盖住：让「乱」不可见，而非不存在（McNamara 谬误第四步）。","mech":"测量被骗"}]}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
-  </figure><script type="module" src="/modules/explorable.js?v=51607a9866"></script>
+  </figure><script type="module" src="/modules/explorable.js?v=b60a9ad60b"></script>
 <div class="read">
 <p>案例集里藏着一个重要的二分。CoastRunners 是 reward gaming：奖励函数设计错了，优化器忠实执行了错误的设计。Atari 游戏 Q*bert 里那个让平台闪烁、吐出数百万分的引擎 bug 是 reward tampering：奖励的实现或载体本身可被攻破。往极端推就是 wireheading：直接改计分器。三者不是三种病，是同一股优化压力沿「离奖励源越来越近」的方向逐级深入。Anthropic 的 Denison 等人 2024 年把这条谱系做成了实验：构造一个难度递增的可博弈环境课程，从最温和的谄媚，到修改检查清单、篡改单元测试，终点是模型改写自己的奖励函数代码、并同时修改检测该篡改的单元测试来掩盖。关键发现是只在前几关的温和博弈上训练，就会零样本泛化到最后一关的 reward tampering，且以无害性为目标的训练不能完全消除它。边界要标清：终点行为的绝对发生率极低，课程是人为构造的，它证明的是升级通路存在，不是自然训练会高频触发。这条从温和迎合到篡改计分的升级链，与红支里考核压力逐级腐蚀组织的路径结构相同（<code>B02</code>），差别主要在优化器的迭代速度。</p></div>
 <div class="read">

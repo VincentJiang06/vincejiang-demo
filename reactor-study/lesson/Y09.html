@@ -17,8 +17,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
-<link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=f09b6e4bb9">
-<link rel="stylesheet" href="/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/theme/led.css?v=6195435c7b">
+<link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=264d5a4898">
+<link rel="stylesheet" href="/theme/components.css?v=68e2c8e047"><link rel="stylesheet" href="/theme/led.css?v=055f8f5727">
 <link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"表演性预测 · Performative Prediction","description":"预测改变分布：反应性的数学化。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://reactor.vincejiang.com/lesson/Y09.html"}</script>
 </head><body><div class="bg-dots" aria-hidden="true"></div>
@@ -48,19 +48,32 @@
   </div>
     </div>
     <article class="stack"><div class="read">
-<p><strong>表演性预测（performative prediction）</strong>指的是：你的预测本身会改变它所预测的那个分布。2020 年 Perdomo、Zrnic、Mendler-Dünner 与 Hardt 把 Espeland-Sauder 的反应性写成了这条干净的机器学习数学。</p>
-<p>标准机器学习假设数据分布固定，你去拟合它。表演性预测说：你的预测本身会改变数据分布。你部署一个模型，它的输出影响世界，世界变了，产生新数据，你原来拟合的那个分布已经不在了。原文定义："When predictions support decisions they may influence the outcome they aim to predict."这正是「排名重新制造现实」的数学版。</p></div>
+<p>这一课把整个红支的核心直觉写成数学。<code>R07</code> 说理论是发动机不是照相机，<code>R01</code> 说排名会重新制造它声称测量的现实。2020 年，Perdomo、Zrnic、Mendler-Dünner 与 Hardt 四位机器学习理论家把这件事变成了定义、定理和收敛条件。读完这一课，「测量塑造现实」对你就不再是社会学隐喻，而是一套能算的东西：能算出反复校准会走到哪里，也能算出走到的那个地方好不好。</p>
+<p><strong>表演性预测（performative prediction）</strong>指的是：预测本身会改变它所预测的那个世界。原文定义只有一句：预测一旦被用来支撑决策，就会影响它想预测的结果。</p>
+<p>先看具体场景。银行训练一个模型预测谁会违约，然后照着预测放贷。申请人不是石头：一旦「哪些特征会降低违约预测」被公布或被摸透，他们就调整自己的行为，于是未来的申请数据不再来自模型当初拟合的那个世界。银行拿新数据重新训练，世界再次响应，如此往复。标准机器学习假设「数据分布固定，模型去拟合它」；表演性预测把这个假设撤掉，让分布本身成为模型的函数：你部署哪个模型，世界就长成哪个样子。</p>
+<p>形式化的核心是一个双重角色。模型的风险（平均损失）要在「模型自己诱导出来的分布」上计算：模型参数在式子里出现两次，一次在损失里，一次在数据分布里。第二次出现的那个位置，就是反应性在数学里的座位。</p>
+<p>这一课放进黄支而不是留在红支，是因为 AI 评测生态正是表演性最强的场景之一。一个 benchmark 发布，就是一次「预测部署」：它宣布什么算好模型，开发者照着它调整训练，下一批模型的分布因它而变。Miller 等人 2021 年给这个处境起了个准确的名字：回音室。你永远只看见自己诱导出来的分布，听见的都是自己声音的回响。</p></div>
 <figure class="module reg" data-module="explorable" data-modname="performative" data-modtype="explorable">
     <figcaption class="module-head"><span class="fig">FIG.01</span>
       <span>预测改变分布：反应性的数学化</span><span class="spacer"></span>
       <span class="mono">EXPLORABLE</span></figcaption>
     <div class="module-body"><script type="application/json" class="mod-config">{"mode":"steps","steps":[{"k":"01","t":"分布依赖于模型","html":"数据分布 D(θ) 是模型参数 θ 的函数：换一个模型，世界给你的数据就变。信用评分改变借贷行为、推荐系统改变口味、招聘筛选改变简历。分布不再是外部给定的，是你自己造的。反应性强度被形式化为分布映射的 Lipschitz 常数 ε：数据对模型有多敏感。"},{"k":"02","t":"两种解概念","html":"\u003cstrong>Performative stability（表演性稳定）\u003c/strong>：模型对它\u003cem>自己造成的\u003c/em>分布最优，即重训练收敛到的不动点。\u003cstrong>Performative optimality（表演性最优）\u003c/strong>：考虑到自己会改变分布之后，真正最好的模型。\u003cstrong>关键定理：两者一般不重合，且稳定点可以离最优点任意远。\u003c/strong>一个自我印证的均衡，可以是任意糟糕的均衡。"},{"k":"03","t":"重训练收敛到哪","html":"部署、收集新数据、重训练、再部署，循环往复（repeated risk minimization，RRM）。Perdomo 证明：当反应性 ε 低于阈值（约 ε&lt;γ/β，反应性小于损失曲率与光滑度之比）时，循环指数收敛，但收敛到的是 stability，不是 optimality；ε 超过阈值，循环震荡发散。「越优化越发散」第一次有了可写下的分界。你以为在逼近真相，实际在逼近一个自洽的幻觉。Miller 等人 2021 年的论文标题把这个困境叫作 echo chamber：你永远只看见自己诱导出来的分布。"},{"k":"04","t":"这就是 Espeland-Sauder","html":"把「模型」换成「排名」，把「重训练」换成「学校调整行为」：排名反复更新，收敛到一个各校都已按它重塑的稳定状态。那个状态自洽、「准确」，却不是任何独立意义上的「最好」。反应性有了不动点定理。真实世界证据也有了：Perdomo 等 2025 年检验威斯康星州辍学预警系统十年数据，发现预测系统在很大程度上只是在复述学校层面的既有不平等。"}]}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
-  </figure><script type="module" src="/modules/explorable.js?v=51607a9866"></script>
+  </figure><script type="module" src="/modules/explorable.js?v=b60a9ad60b"></script>
+<div class="read">
+<p>模块里的两个概念值得用白话再过一遍。<strong>稳定</strong>：模型对「它自己造成的世界」而言已经最优，再训练也不会动了。<strong>最优</strong>：把「我会改变世界」这件事也算进去之后，真正最好的模型。定理说两者一般不重合，而且稳定点可以离最优点任意远。反复重训练走到的，是前者。用银行的例子说：稳定点是「对现在这批已经学会打扮申请材料的申请人，我的模型最优」；最优点是「考虑到我的模型会教出什么样的申请人之后，全局最好的模型」。两者的差距，就是被自己的测量惯出来的那部分世界。</p>
+<p>它与 <code>Y10</code> 的策略性分类是同源的两兄弟，分工要分清。策略性分类是一次性的博弈：你公布一个分类规则，对面看清楚后改造自己，一轮结束。表演性预测处理的是反复部署、反复重训练的动态，问的是这个循环最终停在哪里。后续的 stateful 扩展更贴近现实：世界的响应有惯性、有滞后，今天的分布不但取决于当前模型，还拖着昨天的尾巴，收敛条件相应更苛刻。</p>
+<p>收敛定理的前提值得单独一段，因为它最常被略过。「反复重训练会收敛到稳定点」依赖世界的响应足够温和：数据分布随模型的变化要平滑，幅度要小于一个由损失函数形状决定的阈值。响应剧烈或不连续时，循环可能不收敛，或收敛到一个很糟的均衡。把「模型」换成「评测基准」再看这个前提：厂商对榜单的响应不是连续微调，而是发布会式的跳变，一次性换模型、换策略、私测挑变体。光滑性恰恰是评测生态最不满足的那条假设。生态最终会稳定还是永远震荡，取决于一个从来没人测过的量：世界对测量的反应强度。</p>
+<p>这条线在 2025 年拿到了五年综述与真实世界检验。Perdomo 等人复盘威斯康星州辍学预警系统的十年数据，发现这个预测系统在很大程度上只是复述学校层面的既有不平等：预测「准确」，因为它参与维持了它所预测的结构。这与 <code>R02</code> 自我实现预言的机制一模一样，只是这次主角是一个每年重训练的算法。</p></div>
+<aside class="callout intuit"><span class="co-tag">// 直觉</span>
+<p><strong>稳定与最优的差，是「自洽」与「正确」的差。</strong>稳定点上，模型对它看到的数据完美校准：每次验证都通过、误差指标全绿，因为它验证的对象是它自己塑造的世界。这种状态从系统内部看不出任何毛病，单看拟合优度永远发现不了，因为稳定点的定义就是「拟合优度已经最优」。想知道自己是否被锁在一个自洽的幻觉里，只能做干预：换一个不同的模型部署出去，看世界跟不跟着变。金融市场的泡沫（<code>R08</code> 反身性：价格印证预期，预期推高价格）是这种自洽幻觉的老牌案例，每一步都「对」，整体在错。</p></aside>
 <aside class="callout myth"><span class="co-tag">// 讹传更正</span>
-<p><strong>流行说法：「重训练收敛了，说明系统调好了。」</strong>复核结论：收敛到稳定点几乎从不等于到达最优，把 RRM 收敛当胜利，正是 Goodhart 的高发形态。另一条：performativity 不是 Perdomo 等人的发明，他们在论文开篇明确追认这是政策研究与经济社会学（MacKenzie）里研究已久的现象，ML 版是形式化不是原创。这份诚实值得学。</p></aside>
+<p><strong>流行说法：「重训练收敛了，说明系统调好了。」</strong>复核结论：收敛到稳定点几乎从不等于到达最优，把重训练收敛当胜利，正是 Goodhart 的高发形态：一切读数都好看，只因为读数在量它自己造的世界。另一条：performativity 不是 Perdomo 等人的发明，他们在论文开篇明确追认这是政策研究与经济社会学（MacKenzie，见 <code>R07</code>）里研究已久的现象，ML 版是形式化不是原创。这份优先权上的诚实值得学。</p></aside>
 <aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
-<p><strong>你的 eval 若会影响你训练什么，它就是表演性的。</strong>你不是在测量固定的模型群体：eval 塑造下一代模型，下一代模型又改变 eval 该测什么。反复迭代，生态收敛到一个对当前 eval 表演性稳定的点，所有模型都擅长你的 eval，而 eval 早已不测量你最初关心的东西。这是「eval 越多越退化到 eval」的不动点表述。还有一层更深的问题：Oesterheld 等 2023 年证明，当评测者的预测本身影响结果时，标准的 proper scoring rule 不再诱导诚实。评测者自己也在回路里。</p></aside>
-<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Perdomo, Zrnic, Mendler-Dünner & Hardt (2020). "Performative Prediction." ICML.</li><li>Miller, Perdomo & Zrnic (2021). "Outside the Echo Chamber." ICML；Hardt & Mendler-Dünner (2025). "Performative Prediction: Past and Future." <em>Statistical Science</em>（五年综述）。</li><li>Perdomo et al. (2025). 威斯康星 DEWS 十年检验, ACM FAccT。</li><li>Oesterheld et al. (2023). "Incentivizing honest performative predictions with proper scoring rules." UAI。</li><li>深化见 <code>research/deep/D6</code> §2。</li></ul></div></details></article>
+<p><strong>你的 eval 若会影响你训练什么，它就是表演性的。</strong>你不是在测量一群固定的模型：eval 塑造下一代模型，下一代模型又改变 eval 该测什么。反复迭代，生态会收敛到一个对当前 eval「表演性稳定」的点：所有模型都擅长你的 eval，而 eval 早已不测量你最初关心的东西。这是「eval 越用越退化成 eval」的不动点表述。还有一层更深：Oesterheld 等 2023 年证明，当评测者的预测本身会影响结果时，连「用记分规则诱导诚实预报」这个统计学老办法都会失灵。评测者自己也在回路里，没有旁观席。</p></aside>
+<div class="read">
+<p>留一个问题：表演性预测的收敛理论建立在「世界温和响应」之上，而评测生态的响应方式（跳变式发版、私测、撤分）恰恰剧烈且不连续。这个反应强度能不能被测量？测不了的话，「评测生态终将稳定」与「评测生态在永久震荡」就都只是信仰。<code>research/deep/D6</code> §2 把它列为形式化的前沿。</p>
+<p><strong>一句话带走：</strong>一个会改变世界的预测，反复校准之后得到的不是真相，而是一个它自己造出来、并且只对它自己成立的世界。</p></div>
+<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Perdomo, Zrnic, Mendler-Dünner & Hardt (2020). "Performative Prediction." arXiv:2002.06673（ICML）；stateful 扩展：arXiv:2011.03885。</li><li>Miller, Perdomo & Zrnic (2021). "Outside the Echo Chamber." ICML；Hardt & Mendler-Dünner (2025). "Performative Prediction: Past and Future." <em>Statistical Science</em>（五年综述）。</li><li>Perdomo et al. (2025). 威斯康星 DEWS 十年检验, ACM FAccT。</li><li>Oesterheld et al. (2023). "Incentivizing honest performative predictions with proper scoring rules." UAI。</li><li>深化见 <code>research/13</code>（Y09 简报）、<code>research/05</code> §六、<code>research/deep/D6</code> §2。</li></ul></div></details></article>
     <nav class="prereq-row" style="margin-top:48px">
       <a class="btn" href="/">← 返回天赋树</a>
       

@@ -1,10 +1,10 @@
 <!doctype html><html lang="zh-CN" data-theme="dark"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>reactor-study · 当尺子开始回看你</title>
-<meta name="description" content="一部关于排名、评测与反身性的现场手册：从 Espeland-Sauder 反应性、Goodhart 定律家族，到 AI 评测的代理博弈与抗博弈设计。">
+<title>REACTOR · 排名、评测与指标失灵的互动课程</title>
+<meta name="description" content="免费互动课程：排名为什么会反过来改造世界、AI 评测为什么会被博弈、以及怎么设计扛得住的指标。70 节短课组成一棵可自由探索的天赋树，每课配可上手的交互实验。">
 <link rel="canonical" href="https://reactor.vincejiang.com/">
-<meta property="og:type" content="website"><meta property="og:title" content="reactor-study · 当尺子开始回看你">
-<meta property="og:description" content="一部关于排名、评测与反身性的现场手册：从 Espeland-Sauder 反应性、Goodhart 定律家族，到 AI 评测的代理博弈与抗博弈设计。"><meta property="og:url" content="https://reactor.vincejiang.com/">
+<meta property="og:type" content="website"><meta property="og:title" content="REACTOR · 排名、评测与指标失灵的互动课程">
+<meta property="og:description" content="免费互动课程：排名为什么会反过来改造世界、AI 评测为什么会被博弈、以及怎么设计扛得住的指标。70 节短课组成一棵可自由探索的天赋树，每课配可上手的交互实验。"><meta property="og:url" content="https://reactor.vincejiang.com/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg"><link rel="mask-icon" href="/favicon.svg" color="#E11D3A">
 <script>try{var m=localStorage.getItem("reactor.theme")||"auto",t=(m==="light"||m==="dark")?m:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
@@ -17,10 +17,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
-<link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=f09b6e4bb9">
-<link rel="stylesheet" href="/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/theme/led.css?v=6195435c7b">
+<link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=264d5a4898">
+<link rel="stylesheet" href="/theme/components.css?v=68e2c8e047"><link rel="stylesheet" href="/theme/led.css?v=055f8f5727">
 <link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"REACTOR — 当尺子开始回看你","description":"一部关于排名、评测与反身性的现场手册：从 Espeland-Sauder 反应性、Goodhart 定律家族，到 AI 评测的代理博弈与抗博弈设计。","inLanguage":"zh-CN","provider":{"@type":"Organization","name":"REACTOR"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"REACTOR — 排名、评测与指标失灵的互动课程","description":"免费互动课程：排名为什么会反过来改造世界、AI 评测为什么会被博弈、以及怎么设计扛得住的指标。70 节短课组成一棵可自由探索的天赋树，每课配可上手的交互实验。","inLanguage":"zh-CN","provider":{"@type":"Organization","name":"REACTOR"}}</script>
 </head><body><div class="bg-dots" aria-hidden="true"></div>
 <div class="bg-field" aria-hidden="true"></div><header class="site-head">
   <a class="brand persist" href="/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
@@ -31,27 +31,25 @@
   </nav>
 </header><main class="tree-full" data-branch="root">
   <section class="tree-intro glass bolted">
-    <div class="nameplate"><span class="tag">v3</span><span>FIELD MANUAL</span>
-      <span class="rule"></span><span class="rev">58 NODES</span></div>
-    <h1>当尺子开始回看你</h1>
-    <p class="lede">测量一个社会对象，就是干预它。这里把「排名 / 评测 / 反身性」从社会学、经济学
-    铺到 AI 前沿，长成一棵可以自由探索的天赋树——不是 1 到 100 的线性课程，而是一张跟着
-    知识脉络生长的结构图。</p>
+    <div class="nameplate"><span class="tag">REACTOR</span><span>互动课程</span>
+      <span class="rule"></span><span class="rev">v3 · 70 节点</span></div>
+    <h1>当指标成为目标，<br>一切开始失灵</h1>
+    <p class="lede">排名会反过来改造被排名的世界，AI 评测会被模型反向博弈。这门免费课程把这件事
+    从社会学、经济学讲到 AI 前沿：每个节点是一节十分钟的短课，配一个能上手玩的小实验。</p>
+    <nav class="intro-map" aria-label="内容总览"><button class="im-row" data-jump="red"><span class="im-dot" style="background:var(--red)"></span><span class="im-name">社会学谱系</span><span class="im-n">15 节</span><span class="im-desc">排名如何重新制造现实</span></button>
+<button class="im-row" data-jump="blue"><span class="im-dot" style="background:var(--blue)"></span><span class="im-name">定律与形式</span><span class="im-n">17 节</span><span class="im-desc">指标失灵的定律与定理</span></button>
+<button class="im-row" data-jump="yellow"><span class="im-dot" style="background:var(--yellow)"></span><span class="im-name">机器与前沿</span><span class="im-n">17 节</span><span class="im-desc">AI 评测的博弈与幻觉</span></button>
+<button class="im-row" data-jump="green"><span class="im-dot" style="background:var(--green)"></span><span class="im-name">防御与设计</span><span class="im-n">8 节</span><span class="im-desc">怎么设计扛得住的指标</span></button>
+<button class="im-row" data-jump="case"><span class="im-dot" style="background:var(--text-mute)"></span><span class="im-name">案例带</span><span class="im-n">7 节</span><span class="im-desc">六个领域的真实案例</span></button>
+<button class="im-row" data-jump="converge"><span class="im-dot" style="background:var(--text)"></span><span class="im-name">汇流</span><span class="im-n">5 节</span><span class="im-desc">把所有线索拧成方法论</span></button></nav>
     <div class="intro-cta">
-      <a class="btn btn-primary" href="/lesson/N00.html">通电 · 从根节点开始 →</a>
-      <a class="btn" href="/atlas.html">图鉴</a>
+      <a class="btn btn-primary" href="/lesson/N00.html">从第一课开始 →</a>
+      <a class="btn" href="/atlas.html">全部节点一览</a>
     </div>
-    <p class="intro-hint">拖动平移 · ⌘/CTRL+滚轮缩放 · 点击节点进入 · 点亮的是推荐下一步</p>
+    <p class="intro-hint">右边就是完整课程地图 · 拖动平移 · 点亮的是推荐下一步</p>
   </section>
   <div class="tree-viewport" id="tree-viewport" data-mode="full">
-    <div class="tree-legend">
-      <button class="k" data-jump="red"><span class="sw" style="background:var(--red)"></span>红 · 社会学谱系</button>
-      <button class="k" data-jump="blue"><span class="sw" style="background:var(--blue)"></span>蓝 · 定律与形式</button>
-      <button class="k" data-jump="yellow"><span class="sw" style="background:var(--yellow)"></span>黄 · 机器与前沿</button>
-      <button class="k" data-jump="green"><span class="sw" style="background:var(--green)"></span>绿 · 防御与设计</button>
-      <button class="k" data-jump="case"><span class="sw" style="background:var(--text-mute)"></span>灰 · 案例带</button>
-      <button class="k" data-jump="converge"><span class="sw" style="background:var(--text)"></span>白 · 汇流</button>
-    </div>
+    
     <div class="tree-hud">
       <button data-tree-zout aria-label="缩小">−</button><button data-tree-zin aria-label="放大">+</button>
       <button data-tree-fit>适配</button><button data-tree-reset-progress>重置进度</button>

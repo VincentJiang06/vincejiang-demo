@@ -1,5 +1,5 @@
 /* REACTOR · boom-bust.js (R08) — Soros reflexivity: positive vs negative feedback */
-import { mount, canvas, controls, slider, toggleBank, add, readout, legend, scoped, gauss } from "/modules/mod-kit.js?v=fccf0ac854";
+import { mount, canvas, controls, slider, toggleBank, add, readout, legend, scoped, gauss } from "/modules/mod-kit.js?v=49b358d492";
 
 mount("boom-bust", (body, fig, { config }) => {
   const C = scoped(fig);

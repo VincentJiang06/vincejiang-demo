@@ -1,5 +1,5 @@
 /* REACTOR · design-robust-eval.js (C03) — pick defenses, watch the attack */
-import { mount, readout, scoped } from "/modules/mod-kit.js?v=fccf0ac854";
+import { mount, readout, scoped } from "/modules/mod-kit.js?v=49b358d492";
 
 const VECTORS = [
   { k: "题目过拟合", base: 34, blockedBy: ["heldout", "rotate"] },

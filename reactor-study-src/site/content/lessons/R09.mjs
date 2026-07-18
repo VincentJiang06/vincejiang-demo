@@ -2,8 +2,9 @@ export default {
   id: "R09",
   blocks: [
     { t: "prose", html: `
-<p>1980 年代以来，审计从财务领域溢出，蔓延到几乎一切：医疗审计、环境审计、质量审计、教学审计。Michael Power 把这叫审计爆炸（audit explosion），他 1997 年那本书被引超过 1.3 万次，副标题是 <em>Rituals of Verification</em>：核验的仪式。</p>
-<p>核心洞见：在这场爆炸里，组织开始重塑自己以变得「可审计」（making things auditable）。审计生产的与其说是实质保证，不如说是合法性叙事和一种安心感。审计的规范期望与它的操作能力「不安地共存」，而可审计性逐渐取代了实质。</p>` },
+<p>财务查账、安全检查、质量认证、教学评估、合规报告：过去四十年，「审计」从会计行业蔓延到几乎一切领域。如果你的工作里有填不完的合规文档、应付不完的年审与评估表，这一课解释的就是你每天在经历的事。伦敦政经的会计学教授 Michael Power 给这场蔓延起了个名字，<strong>审计爆炸（audit explosion）</strong>，1997 年写成《The Audit Society》，被引超过 1.3 万次。他的诊断反直觉：审计生产的往往不是「事情真的没问题」的保证，而是「看起来查过了」的安心感；更关键的是，为了变得可以被审计，组织会悄悄把自己改造成另一个样子。书的副标题概括了这层意思：Rituals of Verification，核验的仪式。</p>
+<p>先看这场爆炸从哪来。Power 的回答是政治而非效率：1980 年代以来的公共部门改革要求一切「可问责」，问责需要证据，证据需要核验，于是审计成了默认动作。这里可以借一步后面才展开的洞见（<code>R12</code> 机械客观性）：当一个社会不再信任专业人员的自由裁量，它就会转而信任程序与数字，因为程序看起来人人可查。审计是对信任缺失的制度回应，不是信任的来源。</p>
+<p>核心概念是一个动词短语：making things auditable，把东西弄得可审计。审计不是拿着尺子来量一个现成的组织；组织会预先长出合规部门、文档系统、指标体系，把自己整备成审计能读懂的形态。Power 指出其中的裂缝：审计承诺的保证与它实际能提供的保证之间，隔着一道填不平的沟，两者「不安地共存」。仪式做足了，实质未必在，而可审计性会逐渐取代实质。</p>` },
 
     { t: "module", module: "explorable:auditability", title: "逐层加审计，会发生什么", config: {
       mode: "steps",
@@ -16,20 +17,32 @@ export default {
     } },
 
     { t: "prose", html: `
-<p>Power 本人做过自我修正：2000 与 2003 年的回顾里他承认早期论述过于悲观、过于功能主义，呼吁看审计的在地变异；2022 年他与合作者转向研究「会计如何自我瓦解、终结」，给「审计只会扩张」的叙事补了反向一笔。人类学一侧由 Shore 与 Wright 接棒：1999 年提出 audit culture 概念，2015 年在《Current Anthropology》把排名与评级正式并入审计文化，2024 年收束成专著《Audit Culture: How Indicators and Rankings are Reshaping the World》。这条线是「审计社会」与「排名反应性」两大文献的枢纽。</p>
-<p>顺带一笔考证：本课程反复出现的名言 "When a measure becomes a target, it ceases to be a good measure"，正是 Marilyn Strathern 在分析英国大学审计文化的 1997 年论文里写定并使之流传的（她自己追溯给 Hoskin 1996）。它诞生于审计社会的语境，不是 Goodhart 的货币经济学原文，考证细节在 <code>B01</code>。名言本身也经历了一次审计社会式的命运：可传播性取代了原意。</p>` },
+<p>难得的是，Power 自己后来给理论踩了刹车，这让它更可信而不是更弱。2000 年他写了篇「再想想」（second thoughts），2003 年的回顾承认早期论述过于悲观、把审计写成了铁板一块，呼吁去看它在不同场合的实际变异。2004 年他把诊断推进一层：组织开始做「二阶风险管理」，管理的不是业务本身的风险，而是「自己被问责的风险」，防御性的文档与流程层层加码。2022 年他与合作者干脆研究起会计实践如何自我瓦解、走向终结，给「审计只会无限扩张」的叙事补了反向一笔。</p>
+<p>另一条线来自人类学。Marilyn Strathern 1997 年分析英国大学的评分文化，2000 年主编《Audit Cultures》文集，把审计从会计术语升格为一种文化形式：问责的语言如何殖民大学，乃至殖民学者的自我理解；她同年一篇文章的标题就够狠，「透明度的暴政」。Shore 与 Wright 1999 年正式提出 audit culture 概念；2015 年他们把排名与评级也并入审计文化，这篇论文是「审计社会」与「排名反应性」（<code>R01</code> 那台机器）两大文献的枢纽；2024 年收束成专著。原发场景是英国大学的科研评估制度 RAE（后来的 REF）：大学为迎接评估重排内部结构、批量生产合规文档，实质研究被「可审计的代理指标」挤占。这个场景你应该眼熟，它就是排名规训的行政版。</p>
+<p>把审计社会放回你走过的地图，它的位置是「土壤」。<code>R03</code> 讲可通约化怎么把质压成量，<code>R04</code> 讲排名这种公开度量怎么穿透组织、让人自我规训；而审计文化回答的是一个更靠前的问题：这么多度量是从哪里来的。答案是审计爆炸批量制造了它们，每一份指标、评分、认证背后，都站着一套「必须可核验」的问责要求。换句话说，反应性（<code>R01</code>）描述的是组织对度量的挣扎，审计社会解释的是为什么组织会被那么多度量包围，前者是戏，后者是舞台。这也是为什么两条文献在 2015 年由 Shore 与 Wright 正式合流：排名与评级本来就是审计文化的一个分支。</p>
+<p>最后给证据分级，这是本课的诚实边界。审计文化的批判大多是案例与民族志；问责的反效果确有硬实证，英格兰 NHS 医疗目标制的研究记录了成套的博弈手法，但同一场域的对照研究也显示等待时间真的缩短了，博弈与真实改善并存，全案在 <code>K02</code>（案例带，专讲治理指标）。公共管理学一侧，de Bruijn 与 Radin 把这类「绩效问责的悖论」整理成了系统教材。最新的田野来自 2026 年：一线机构自建「秘密电子表格」，上报的数字负责喂饱审计，表格里记的才是真实工作，组织在两个现实里同时生活。还有一条没接上的线：Power 的「把东西弄得可审计」，与 Espeland 后来补的「逆向工程」机制（被评价者拆解排名公式、据此重排自己），很可能是同一件事在两个学科里的两个名字，但两边文献至今没有认真对话。</p>` },
+
+    { t: "callout", variant: "myth", html: `
+<p><strong>流行说法之一：「那句 Goodhart 名言出自 Goodhart。」</strong>复核结论：本课程反复出现的 "When a measure becomes a target, it ceases to be a good measure"（测量一旦成为目标，就不再是好测量），正是 Strathern 在 1997 年那篇分析英国大学评分文化的论文里写定并使之流传的，她自己把源头追溯给 Hoskin 1996；Goodhart 1975 年的原文是一条货币经济学的技术命题，里面根本没有 measure 和 target 这两个词。完整家谱在 <code>B01</code>（蓝色分支起点）。名言本身的命运就很审计社会：可传播性取代了原意。<strong>流行说法之二：「审计社会理论证明审计一无是处。」</strong>复核结论：Power 的准确主张是「错位」而非「无用」，他本人 2000 与 2003 年两度承认早期版本过于悲观；NHS 的实证也显示博弈与真实改善并存。把这套理论读成「问责必然失败」，跳过了真正的问题：问责在什么条件下退化、什么条件下起效，这个边界恰恰是文献还没补齐的部分。</p>` },
+
+    { t: "callout", variant: "intuit", html: `
+<p><strong>可审计性取代实质，不需要任何人作恶。</strong>审计只能核验被记录之物，于是记录本身成了生产目标：一项工作要变得可审计，先得被改写成能留痕的流程；改写完成后，成本与激励都指向痕迹，而不是工作。每个人只是理性地回应「什么会被查到」，加总起来，组织就长成了「为通过审计而存在」的样子。这也解释了为什么加大审计力度往往加深而非纠正错位：力度越大，痕迹的回报越高。上面模块里那道越拉越开的剪刀差，画的就是这件事。</p>` },
 
     { t: "callout", variant: "applied", html: `
 <p><strong>安全审计、red-team 报告、model card、合规评估，生产的可能是安心感而不是实质安全。</strong>这是审计社会对 AI 治理最尖锐的提问。当组织为了通过 eval 而重塑自己变得可审计，可测的代理指标就会压过真正想保障的东西。你的模型正在长成「能通过安全评估的样子」，而这未必等于安全。Power 的对策方向也适用：把审计当探针（触发追问），别当仪表盘（直接驱动决策），细节在 <code>G02</code>。</p>` },
 
     { t: "prose", html: `
-<p>留一个问题：审计文化的反效果证据大多是案例式的。有没有审计真正改善了结果的稳健证据？D1 报告把它列为本线尚未补齐的反方证据：并非所有问责都退化，缺的是边界条件。</p>` },
+<p>留一个问题：审计文化的反效果证据大多是案例式的。有没有审计真正改善了结果的稳健证据？D1 报告把它列为本线尚未补齐的反方证据：并非所有问责都退化，缺的是边界条件。</p>
+<p><strong>一句话带走：审计查得越勤，组织越擅长「被审计」，而这件事和「组织变好」之间，隔着一道要专门设计才能跨过去的沟。</strong></p>` },
 
     { t: "sources", items: [
-      `Power, M. (1997). <em>The Audit Society: Rituals of Verification</em>. Oxford UP；(2000; 2003) 自我修正两篇。`,
-      `Shore, C. & Wright, S. (2015). "Audit Culture Revisited." <em>Current Anthropology</em> 56(3)；(2024) <em>Audit Culture</em>. Pluto Press.`,
-      `Strathern, M. (1997). "'Improving ratings': audit in the British University system." <em>European Review</em> 5(3):305–321.`,
-      `Kongsgaard, L. T. (2026). "Outnumbered." <em>PAR</em>（秘密电子表格）。深化见 <code>research/deep/D1</code> §5。`
+      `Power, M. (1997). <em>The Audit Society: Rituals of Verification</em>. Oxford UP；(1994) <em>The Audit Explosion</em>. Demos；(2000; 2003) 自我修正两篇；(2004) <em>The Risk Management of Everything</em>. Demos.`,
+      `Palermo, Power & Ashby (2022). "How Accounting Ends." <em>Contemporary Accounting Research</em> 39(2).`,
+      `Shore, C. & Wright, S. (1999). "Audit Culture and Anthropology." <em>JRAI</em> 5(4)；(2015) "Audit Culture Revisited." <em>Current Anthropology</em> 56(3)；(2024) <em>Audit Culture</em>. Pluto Press.`,
+      `Strathern, M. (1997). "'Improving ratings': audit in the British University system." <em>European Review</em> 5(3):305–321；(2000) "The Tyranny of Transparency." <em>BERJ</em> 26(3).`,
+      `Bevan & Hood (2006). "What's Measured Is What Matters." <em>Public Administration</em> 84(3)（NHS 目标制）。`,
+      `Kongsgaard, L. T. (2026). "Outnumbered." <em>PAR</em>（秘密电子表格）。`,
+      `深化见 <code>research/deep/D1</code> §5；谱系见 <code>research/02</code> §10–11。`
     ] }
   ]
 };

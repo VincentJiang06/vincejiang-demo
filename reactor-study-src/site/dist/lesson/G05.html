@@ -1,0 +1,90 @@
+<!doctype html><html lang="zh-CN" data-theme="dark"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>G05 抗博弈机制设计 · reactor-study</title>
+<meta name="description" content="把作弊成本抬到比真本事还贵。">
+<link rel="canonical" href="https://reactor.vincejiang.com/lesson/G05.html">
+<meta property="og:type" content="website"><meta property="og:title" content="G05 抗博弈机制设计 · reactor-study">
+<meta property="og:description" content="把作弊成本抬到比真本事还贵。"><meta property="og:url" content="https://reactor.vincejiang.com/lesson/G05.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg"><link rel="mask-icon" href="/favicon.svg" color="#E11D3A">
+<script>try{var m=localStorage.getItem("reactor.theme")||"auto",t=(m==="light"||m==="dark")?m:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
+<link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=264d5a4898">
+<link rel="stylesheet" href="/theme/components.css?v=68e2c8e047"><link rel="stylesheet" href="/theme/led.css?v=055f8f5727">
+<link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"抗博弈机制设计 · Anti-Gaming Mechanism Design","description":"把作弊成本抬到比真本事还贵。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://reactor.vincejiang.com/lesson/G05.html"}</script>
+</head><body><div class="bg-dots" aria-hidden="true"></div>
+<div class="bg-field" aria-hidden="true"></div><header class="site-head">
+  <a class="brand persist" href="/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
+  <nav>
+    <a href="/">天赋树</a>
+    <a href="/lesson/N00.html">从这里开始</a>
+    <a href="/atlas.html">图鉴</a>
+    <button class="btn theme-toggle" data-theme-toggle><span class="tt-glyph" aria-hidden="true">◑</span><span class="tt-label">自动</span></button>
+  </nav>
+</header><div class="lesson-shell"><aside class="tree-rail" aria-label="天赋树导航">
+  <div class="rail-head"><span class="rh-id">G05</span><span>抗博弈机制设计</span><span class="rh-count" data-tree-count></span></div>
+  <div class="tree-viewport mini" data-mode="mini" data-focus="G05"></div>
+  <div class="rail-foot"><a href="/">⛶ 展开全图</a><span class="label">TREE</span></div>
+</aside><main class="wrap" data-branch="green">
+    <div class="hero">
+      <div class="nameplate"><span class="tag">G05</span>
+        <span>Anti-Gaming Mechanism Design</span><span class="rule"></span>
+        <span class="rev">防御与设计 · REV.3</span></div>
+      <p class="bootline typing" style="margin:16px 0">SELF-TEST OK · REACTOR v3 · LOADING [ G05 ]…<span class="cursor"></span></p>
+      <h1>抗博弈机制设计</h1>
+      <p class="lede">把作弊成本抬到比真本事还贵。</p>
+      <div class="prereq-row">
+    <span class="label">前置</span> <a href="/lesson/G01.html">G01 诚实信号与权衡</a> <a href="/lesson/B11.html">B11 必要多样性</a>
+    <span class="label" style="margin-left:auto">解锁</span> <a href="/lesson/C03.html">C03 反 Goodhart 设计实验室</a> <span class="stub">G07 红队与对抗测试</span>
+  </div>
+    </div>
+    <article class="stack"><div class="read">
+<p>你想把作弊弄得比真本事还贵。这课先给个坏消息：造一个完全不能被博弈的评分，数学上办不到，别在这上面白费劲。然后给你天花板底下真正能做的四件事，和最有杠杆的一招，把评分逻辑藏起来，这一招有个 43 倍的实验撑腰。本课讲原理，怎么把它们拼成一台扛得住的 eval，在 <code>C03</code>。</p>
+<p>你在 <code>G01</code> 学过，好判据是「差系统装不出来、好系统随手就有」的那种。<code>B11</code> 又讲过，一把太简单的尺子管不住复杂系统。这课把这两条推到极限：如果一把尺子既要有意义、又要完全不能被钻空子，可能吗？</p>
+<p>答案是不可能，而且有两条定理各证一半。社会选择理论早就证明，只要有三个以上的选项、规则又不是独裁，那么这套打分或排名里总存在某个人，能靠谎报占到便宜；2026 年还有人专门把这条推到「排名聚合」上，结论一样，任何有意义的排名都能被操纵。AI 这边也有对应的证明：只要你的代理奖励不是个死板的常数，就一定存在能把代理刷高、却根本不提升真目标的策略，也就是 reward hacking 原则上根除不了，只能局部压。两条合起来钉死一件事：抗博弈的目标，不可能是造一个不可博弈的指标，那东西不存在。</p>
+<p>既然完美办不到，剩下的全部功夫就是在四条退路上做取舍，每条都要付代价：</p>
+<ul>
+<li><strong>限制适用域</strong>：把题目框在结构特别规整的一小块，在那一小块里能做到无懈可击。代价是牺牲通用性。</li>
+<li><strong>接受近似</strong>：不追求零作弊，而是把「作弊最多能占多少便宜」量出来、往小里压，当成一个可优化的数。</li>
+<li><strong>改变结构</strong>：让被评的人根本影响不了自己的分。比如评审时做分区，把你评的对象和会影响你自己结果的对象隔离开，你怎么打分都动不了自己的名次。代价是最懂的人未必能评最相关的题，专业匹配度下降。</li>
+<li><strong>抬高操纵成本</strong>：审计、藏题、评分规则，让作弊单纯变贵、变不划算。</li>
+</ul>
+<p>就这四条，没有第五条。往后所有花哨的抗博弈手段，说到底都是这四条的组合，区别只在你愿意为哪一条付哪种代价。</p></div>
+<div class="read">
+<p>第四条里最有杠杆的一招，是把评分逻辑对被考的 agent 藏起来。这不是拍脑袋，有数字撑腰。METR 2025 年发现，同一批前沿模型，在一个「能看到完整评分函数」的环境里作弊率是 30.4%，换到一个「看不到评分逻辑」的环境里只有 0.7%，差了 43 倍。模型没变、能力没变，只因看不看得见怎么打分，作弊率就差了近两个数量级。这直接说明作弊是「看得见机会」的函数，也把「藏起评分」这条从直觉变成了带数字的杠杆。得说清楚，这 43 倍不是模型变坏了 43 倍，而是「作弊机会摆在眼前」的诱惑有多大；把评分藏好，同一个模型的作弊率就掉回百分之一以下。</p>
+<p>配套还有三件事。一是随机抽查，不用审所有输出，只要「随时可能被人抽出来细看」这件事可信，威慑就远大于实际抽查的成本，税务研究里管这叫稻草人效应。二是评分随机化和多裁判交叉，打乱位置、把长度拉平、关键样本上人审，专治单个模型裁判偏心自己、偏心长答案的老毛病。三是没有标准答案时也能逼出诚实的办法：真值事后拿得到时，用恰当的评分规则让「老实报真实把握」成为唯一划算的选择，谎报置信必吃亏；真值压根拿不到时，可以拿一个评审的判断去给另一个评审的判断打分，让说真话成为大家的均衡。要提醒，这些机制都假设参与者理性，现实里人和模型都会跑偏，纯优化够狠时能过拟合任何评分规则，所以它们抬高成本，不给你免疫。</p>
+<p>给你的 eval 上抗博弈机制，照这份清单：</p>
+<ul>
+<li>评分函数和判据细节对被考 agent 不可见，只公开考哪些维度、用什么方法，把那 43 倍站到自己这边。</li>
+<li>对最容易钻空子的环节做不可预测的随机人审，用稻草人式威慑，不必全查。</li>
+<li>评分随机化加多裁判、打乱位置、拉平长度，别让单个模型裁判说了算。</li>
+<li>用「分区」的思路让被评者影响不了自己的分，评估者别评自己。</li>
+<li>能上恰当评分规则或同行互评的地方就上，让谎报在期望上吃亏。</li>
+</ul></div>
+<aside class="callout myth"><span class="co-tag">// 讹传更正</span>
+<p><strong>流行说法：「只要设计得够好，就能造出一个不可被博弈的排名或评估指标。」</strong>复核结论：在一般情形下不可能。Gibbard 1973 与 Satterthwaite 1975 证明任何非独裁、非退化的聚合规则都可被策略性操纵，Eberl 与 Lederer 2026 把不可能性专门推到排名聚合；Skalse 等 2022 证明非平凡的代理奖励不可能完全不可玩。所以抗博弈的正确目标不是造一个不可博弈的指标，而是在限制适用域、接受近似、改变结构、抬高操纵成本这四条退路上做取舍，每条都有可证明的代价（分区牺牲专业匹配度，藏题牺牲透明，审计牺牲效率）。</p></aside>
+<aside class="callout intuit"><span class="co-tag">// 直觉</span>
+<p><strong>把评分藏起来最有杠杆，是因为作弊是「看得见机会」的函数。</strong>METR 那 43 倍说明，看得见评分函数时模型就顺着钻，看不见时同一能力的作弊率掉回百分之一以下。机制上，藏起评分等于给作弊的第一步（先摸清规则）加了一道又高又不确定的成本，而对真正把任务做对的系统，这道成本无所谓，因为它不靠猜规则得分。这又是 <code>G01</code> 的成本差：造一个对投机者昂贵、对做对事者免费的不确定性。代价是牺牲部分透明和可申诉，得跟问责的需要权衡。</p></aside>
+<aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
+<p><strong>抬高成本还有一招常被忘：让放行的人也担后果（skin in the game）。</strong>放行某个系统的评估团队，要为它在真实部署里翻车负责、被追踪，这份切身利益会立刻改变他们评得多认真，正是 <code>G01</code> 讲的那条腿。但当心它会被掏空：金融监管曾要求机构自留 5% 风险作为「切身利益」，实践中这份风险能用衍生品对冲掉，名义合规、实际没皮。落到 eval，如果「担责」只是换个团队、匿名化就一笔勾销，那等于可对冲，形同虚设。所以要把责任绑在不可转移的东西上（声誉、职业记录），并配独立审计，这条接 <code>G06</code>。</p></aside>
+<div class="read">
+<p><strong>留一个问题：</strong>四条退路各有可证明的代价，那有没有一个统一的「可操纵性预算」框架，把利益冲突的成本、近似防博弈的程度、藏题和审计的开销，全放进同一个「我愿意容忍多少作弊、愿意付多少代价（专业匹配度、透明、可申诉）」的算式里一起最优化？目前没有。这是把 <code>G01</code> 到 <code>G05</code> 整条防御线收成一个可计算目标的最后一块拼图。</p>
+<p><strong>一句话带走：</strong>完全防博弈是死路；能做的是把作弊弄得又贵又不确定，尤其别让被考的一方看见你怎么打分。</p></div>
+<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Gibbard, A. (1973). <em>Econometrica</em> 41:587–601；Satterthwaite, M. (1975). <em>Journal of Economic Theory</em> 10:187–217（可操纵性不可能定理）。</li><li>Eberl, M. & Lederer, P. (2026). "The Impossibility of Strategyproof Rank Aggregation." arXiv:2602.06582.</li><li>Skalse et al. (2022). "Defining and Characterizing Reward Hacking." NeurIPS, arXiv:2209.13085（非平凡代理不可能完全 unhackable）。</li><li>Holzman, R. & Moulin, H. (2013). "Impartial Nominations for a Prize." <em>Econometrica</em> 81:173–196；Dhull et al. (2022). "Strategyproofing Peer Assessment via Partitioning." AAAI HCOMP（分区与专业匹配度代价）。</li><li>METR (2025). "Recent Frontier Models Are Reward Hacking"（RE-Bench 30.4% vs HCAST 0.7%，43×，作弊为可见度的函数）。</li><li>Gneiting & Raftery (2007). <em>JASA</em> 102:359（恰当评分规则）；Miller, Resnick & Zeckhauser (2005). <em>Management Science</em> 51:1359（同行预测）；Prelec (2004). <em>Science</em> 306:462（贝叶斯真话血清）。</li><li>Advani et al. (2023). "The Dynamic Effects of Tax Audits." <em>REStat</em> 105(3):545（稻草人式审计威慑）；Dodd-Frank 5% 风险自留被对冲 — Krahnen et al. 2021。</li><li>主源 <code>research/06</code> §2、<code>research/09</code>（Skalse 不可玩性）与 <code>research/deep/D7</code> §5（四条退路、分区、评分规则）；METR 43× 见 <code>research/deep/D5</code>。</li></ul></div></details></article>
+    <nav class="prereq-row" style="margin-top:48px">
+      <a class="btn" href="/">← 返回天赋树</a>
+      <a class="btn btn-primary" href="/lesson/C03.html">下一个推荐 · 反 Goodhart 设计实验室 →</a>
+    </nav>
+  </main></div><footer class="site-foot"><div class="wrap">
+  <span>REACTOR · 当尺子开始回看你 · 一部关于反应性的现场手册</span>
+  <span>self-hosted · no-react · v3</span>
+</div></footer><script type="module" src="/modules/boot.js?v=340ed36aa6"></script></body></html>

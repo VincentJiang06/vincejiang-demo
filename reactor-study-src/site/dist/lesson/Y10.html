@@ -17,8 +17,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
-<link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=f09b6e4bb9">
-<link rel="stylesheet" href="/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/theme/led.css?v=6195435c7b">
+<link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=264d5a4898">
+<link rel="stylesheet" href="/theme/components.css?v=68e2c8e047"><link rel="stylesheet" href="/theme/led.css?v=055f8f5727">
 <link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"策略性分类 · Strategic Classification","description":"公布评分规则，人就照着改自己。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://reactor.vincejiang.com/lesson/Y10.html"}</script>
 </head><body><div class="bg-dots" aria-hidden="true"></div>
@@ -48,19 +48,31 @@
   </div>
     </div>
     <article class="stack"><div class="read">
-<p><strong>策略性分类（strategic classification）</strong>指的是：当你公布一个分类器的规则，被分类的人会照着规则改造自己，好被分到有利的一边。2016 年 Hardt、Megiddo、Papadimitriou 与 Wootters 提出这个框架，形式上是一个 Stackelberg 博弈（先行者先承诺策略，后行者观察后再最优响应）：你先承诺分类器，对方观察后付成本改特征。</p>
-<p>你训练一个信用评分模型，公布了「多开几张信用卡加分」。理性的申请人就去多开卡，不是为了改善真实信用，而是为了操纵评分。分类器一旦公开，输入分布就朝「骗过分类器」的方向移动。这是把 Goodhart 放进博弈：被测者是有策略的对手。</p></div>
+<p>这一课讲一个所有考核者都会撞上的处境：你公布评分规则的那一刻，被打分的人就开始照着规则改造自己。信用评分认「多开几张卡」，人们就去开卡而不是攒储蓄；简历筛选器认关键词，求职者就往简历里堆关键词。2016 年，Hardt、Megiddo、Papadimitriou 与 Wootters 把这个处境做成了一个正式研究领域，叫<strong>策略性分类（strategic classification）</strong>。它值得你花十分钟，因为它给出了整门课里最硬的一条设计定理：想让考核激励真本事而不是表演，你必须先解决一个因果问题，而且没有捷径。</p>
+<p>先解释框架。<strong>分类器</strong>就是一条自动决策规则：输入一个人的特征（收入、负债、开了几张卡），输出一个判定（放贷或拒绝）。策略性分类把它建模成一场先后手博弈（术语叫 Stackelberg 博弈）：你先公开承诺规则，对方看清规则后，只要改造自己的成本低于「被分到好的一边」的收益，就动手改造。原论文证明：假装对面不会动的朴素分类器，在这种博弈下性能急剧退化；同时给出了预料到对方会动、并据此设防的稳健分类器。这是把 Goodhart 放进博弈论：被测者不再是静止的样本，是有策略的对手。</p>
+<p>这与 <code>B12</code> 委托代理是同一个舞台的两幕：那里的问题是代理人会博弈合同条款，这里的问题是被打分者会博弈评分公式。厂商对 benchmark 的操作是它的直接实例：调「评测脚手架」（系统提示、答题模板、答案抽取方式这些不动模型本身的外围设置），私下测很多变体只发布最好的，针对题型做特化。同一个模型的分数，仅靠调外围就能漂移好几个百分点。评分标准公开得越细，可供表演的表面就越大。</p></div>
 <figure class="module reg" data-module="explorable" data-modname="strategic-clf" data-modtype="explorable">
     <figcaption class="module-head"><span class="fig">FIG.01</span>
       <span>公布规则，人就照着改自己</span><span class="spacer"></span>
       <span class="mono">EXPLORABLE</span></figcaption>
     <div class="module-body"><script type="application/json" class="mod-config">{"mode":"steps","steps":[{"k":"01","t":"设定","html":"分类器 f 公开。每个个体有真实特征 x 和操纵预算，只要改动成本低于「被分到好一边」的收益，就把 x 改成 x'。分类器面对的不再是固定分布，是\u003cstrong>会回应它\u003c/strong>的分布。"},{"k":"02","t":"gaming vs improvement","html":"关键区分：有些改动是 \u003cstrong>gaming\u003c/strong>（只改信号不改实质，多开卡刷分），有些是 \u003cstrong>improvement\u003c/strong>（真的变好，还清欠款）。同一个分类器可能激励前者也可能激励后者，取决于你选哪些特征当依据。"},{"k":"03","t":"定理：防博弈必须做因果建模","html":"Miller、Milli 与 Hardt 2020 年证明的硬结果，原文：\u003cem>any procedure for designing classifiers that incentivize improvement must inevitably solve a non-trivial causal inference problem\u003c/em>。想设计一个诱导真改进而非刷分的评估机制，就不可避免要解一个因果推断问题：哪些特征\u003cstrong>因果地\u003c/strong>决定真实结果。分不清 gaming 与 improvement，等价于不知道特征到结果的因果结构。"},{"k":"04","t":"两条工程出路 + 一条公平警告","html":"出路一（Shavit 等）：把评估当一连串因果干预，主动测试一系列决策规则、观察响应，从数据里识别因果系数。出路二（Bechavod 等，反直觉）：agent 的 gaming 行为本身泄漏因果信息，反而帮你学到真机制。公平警告（Milli 等）：为防 gaming 把门槛抬到 Stackelberg 最优，成本必然转嫁给被分类者，且弱势群体（改特征成本更高的人）承担更多。\u003cstrong>防博弈的收紧是累退的：成本负担更多落在改特征代价最高的人身上。\u003c/strong>"}]}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
-  </figure><script type="module" src="/modules/explorable.js?v=51607a9866"></script>
+  </figure><script type="module" src="/modules/explorable.js?v=b60a9ad60b"></script>
+<div class="read">
+<p>模块第三步那条定理是这一课的心脏，用白话再讲一遍。先分清两种「照着规则改变自己」：<strong>gaming</strong> 是只改信号、不改实质，比如临时刷流水让报表好看，还款能力没变；<strong>improvement</strong> 是真的变好，比如还清欠款。两者在数据表面上几乎一样，都表现为「特征变了，预测跟着变了」。差别在底层：improvement 改动了真正决定结果的东西，gaming 只改动了与结果相关、但不导致结果的替身。</p>
+<p>Miller、Milli 与 Hardt 2020 年证明：想设计一个只激励 improvement 的评分规则，你必须知道哪些特征是「因」、哪些只是「相关」，而这在数学上等价于解一个不平凡的因果推断问题。因果推断，白话说就是回答「如果我动手改变这个量，结果会不会跟着变」，它出了名地比找相关难。这条定理的杀伤力在于：防博弈没有通用配方，不存在「加点防伪措施」就能解决的补丁；你对「什么导致什么」理解到哪一步，你的评分就只能防到哪一步。</p>
+<p>推论直接落在特征选择上。把评分锚在因果特征上（真的完成了任务、真的还清了欠款），改造信号的唯一办法就是改造实质，gaming 与 improvement 的成本合一，博弈被迫变成改进。把评分锚在代理特征上（报表的样子、输出的格式、有没有喊「完成」），你就是在补贴表演。保密评分细则只是权宜：它降低对方的优化效率，不改变特征的因果地位，泄漏一次就归零。</p>
+<p>公平的账也要记。Milli 等人算过：为了防 gaming 把门槛抬到博弈最优的位置，代价不会消失，只会转嫁给被分类的人，而且改造特征成本最高的群体（往往是资源最少的群体）承担最多。防博弈的收紧是累退的，像一种向下征收的税。评分设计者在「被骗」与「误伤」之间做的每一次权衡，都有分配后果。</p>
+<p>最后接回 <code>Y01</code>。过拟合讲的是「你反复看数据，数据的噪声渗进模型」；策略性分类讲的是反方向，「数据反复看你，你的规则渗进数据」。两边合起来，测量者与被测者互相塑形，这正是黄支反复出现的双向循环在博弈论里的写法。</p></div>
+<aside class="callout intuit"><span class="co-tag">// 直觉</span>
+<p><strong>公布规则，等于把「真值的投影」交给对方优化。</strong>评分规则是真实目标的低维投影：在投影上用力便宜，在真值上用力贵，理性的被测者自然选便宜的那条。这也把蓝支「奖励了 A，却指望 B」（<code>B06</code>）升级成可操作的判据：A 与 B 的距离，就是从 A 到 B 的因果链长度。链越长、旁路越多，表演越划算。</p></aside>
 <aside class="callout myth"><span class="co-tag">// 讹传更正</span>
-<p><strong>流行说法：「strategic classification 就是对抗鲁棒性。」</strong>复核结论：数学相近，语义相反。对抗样本是恶意扰动、不改真实标签；strategic agent 是理性自利、可能真的改结果。把二者等同，会错过 gaming 与 improvement 的全部要害。另一条边界：经典理论假设完全理性、成本已知的 agent，2025 年之后用 LLM 模拟真实策略响应的研究发现，有限理性 agent 的行为与经典模型定性不同，而被评测的模型能直接读取评测规则并据此推理，这是经典模型未涵盖的情形。</p></aside>
+<p><strong>流行说法：「strategic classification 就是对抗鲁棒性。」</strong>复核结论：数学相近，语义相反。对抗样本是恶意扰动、不改真实标签；策略性的被测者是理性自利、可能真的改结果。把二者等同，会错过 gaming 与 improvement 的全部要害：前者只需要防，后者恰恰是你想要的。另一条边界：经典理论假设完全理性、成本已知的被测者，2025 年之后用 LLM 模拟真实策略响应的研究发现，有限理性的被测者行为与经典模型定性不同；而被评测的模型能直接读取评测规则并据此推理，这是经典模型未涵盖的情形。</p></aside>
 <aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
-<p><strong>你一旦公开 eval 的评分标准，模型开发就变成策略性分类。</strong>公开的评分细则（rubric）、公开的 benchmark 构成，等于把分类器规则交给对手，优化循环会朝「满足 rubric 表面」移动。Miller-Milli-Hardt 定理告诉你这不是加防伪补丁能解决的：想让 eval 激励真改进，你必须知道哪些可测行为因果地通向真实能力，这本身是个研究问题。工程上最接近的做法是 Shavit 式的干预循环：改变 eval 的构成，观察生态怎么响应，用响应反推因果结构。<code>C03/G01</code> 会把这条原则做成设计清单。</p></aside>
-<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Hardt, Megiddo, Papadimitriou & Wootters (2016). "Strategic Classification." ITCS.</li><li>Miller, Milli & Hardt (2020). "Strategic Classification Is Causal Modeling in Disguise." ICML（核心定理）。</li><li>Milli et al. (2019). "The Social Cost of Strategic Classification." FAT*（累退警告）；Shavit et al. (2020)；Bechavod et al. (2021)。</li><li>有限理性 agent 的策略响应（2025 起，LLM 模拟）：见 <code>research/deep/D6</code> §3「2024–2026 最新进展」。</li><li>深化见 <code>research/deep/D6</code> §3。</li></ul></div></details></article>
+<p><strong>你一旦公开 eval 的评分标准，模型开发就变成策略性分类。</strong>公开的评分细则、公开的 benchmark 构成，等于把分类器规则交给对手，优化循环会朝「满足表面标准」移动。Miller-Milli-Hardt 定理告诉你，这不是加防伪补丁能解决的：想让 eval 激励真改进，你必须知道哪些可测行为因果地通向真实能力，而这本身是研究问题。工程上最接近的做法是把评估当成一连串试验（Shavit 式干预循环）：主动改变 eval 的构成，观察生态怎么响应，用响应反推因果结构；Bechavod 等还给出一条反直觉的安慰，被测者的博弈行为本身会泄漏因果信息，对手的作弊反过来帮你学到真机制。<code>C03</code> 与 <code>G01</code> 会把这条原则做成设计清单。</p></aside>
+<div class="read">
+<p>留一个问题：当后手的响应速度快过先手的规则更新速度，「先承诺、后响应」的博弈次序还剩多少约束力？被评测的模型如今能当场读完你的评分细则再作答，这已经不是 2016 年框架里那个要付出成本、慢慢改造自己的申请人了。</p>
+<p><strong>一句话带走：</strong>公布评分规则，人和模型都会照着规则改造自己；想让这种改造是真进步而不是表演，你必须知道哪些特征真正导致结果，而这没有捷径。</p></div>
+<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Hardt, Megiddo, Papadimitriou & Wootters (2016). "Strategic Classification." arXiv:1506.06980（ITCS）。</li><li>Miller, Milli & Hardt (2020). "Strategic Classification Is Causal Modeling in Disguise." arXiv:1910.10362（ICML，核心定理）。</li><li>Milli et al. (2019). "The Social Cost of Strategic Classification." FAT*（累退警告）；Shavit et al. (2020)；Bechavod et al. (2021)。</li><li>有限理性 agent 的策略响应（2025 起，LLM 模拟）：见 <code>research/deep/D6</code> §3「2024–2026 最新进展」。</li><li>深化见 <code>research/13</code>（Y10 简报）、<code>research/05</code> §六、<code>research/deep/D6</code> §3。</li></ul></div></details></article>
     <nav class="prereq-row" style="margin-top:48px">
       <a class="btn" href="/">← 返回天赋树</a>
       

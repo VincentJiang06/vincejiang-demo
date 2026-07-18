@@ -1,46 +1,131 @@
-/* REACTOR · provenance.js (generic) — flip the myth, read the archive.
-   config = { cards:[{front,frontTag,back,backTag}], timeline:[[year,text],...] } */
-import { mount } from "/modules/mod-kit.js?v=fccf0ac854";
+/* REACTOR · provenance.js — 考证翻卡：翻的是流言，读的是档案。
+   config = {
+     hint?,
+     cards:[{front, frontTag, back, backTag, quote?, cite?}],   // quote/cite 新增：一手来源引文，可展开
+     contrast?: { label?, a:{tag?,text}, b:{tag?,text} },       // 新增：讹传/原文对照，text 里 [[词]] 标高亮
+     timeline: [[year, text], ...] 或 [{y, t, html?, kind?:"myth"}]  // 老格式照用；翻开一张卡后通电成可点证据链
+   }
+   现有课页（cards + timeline 数组）零改动可用。 */
+import { mount } from "/modules/mod-kit.js?v=49b358d492";
 
 mount("provenance", (body, fig, { config }) => {
   const cards = config.cards || [];
-  const timeline = config.timeline || [];
+  const chainData = (config.timeline || []).map(e =>
+    Array.isArray(e) ? { y: e[0], t: e[1], html: null, kind: null }
+                     : { y: e.y, t: e.t, html: e.html || null, kind: e.kind || null });
+  let unlocked = false, chainSel = null;
 
   const p = document.createElement("p");
   p.className = "label"; p.style.marginBottom = "12px";
   p.textContent = config.hint || "点卡片翻面 · 流行的说法往往不是原文。";
   body.appendChild(p);
 
+  /* —— 翻卡 —— */
   const grid = document.createElement("div");
   grid.style.cssText = "display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px";
   cards.forEach(cd => {
-    const card = document.createElement("button");
-    card.style.cssText = "position:relative;min-height:180px;border:1px solid var(--line);border-radius:4px;background:var(--card);padding:0;cursor:pointer;text-align:left;font:inherit;color:inherit;perspective:900px";
-    card.innerHTML = `<div class="fc-inner" style="position:relative;width:100%;height:100%;min-height:178px;transition:transform .55s cubic-bezier(.5,0,.2,1);transform-style:preserve-3d">
-      <div style="position:absolute;inset:0;backface-visibility:hidden;padding:16px;display:flex;flex-direction:column;gap:8px">
+    const card = document.createElement("div");
+    card.className = "prov-card";
+    card.tabIndex = 0;
+    card.setAttribute("role", "button");
+    card.setAttribute("aria-pressed", "false");
+    card.innerHTML = `<div class="fc-inner">
+      <div class="fc-face">
         <span class="label" style="color:var(--accent)">${cd.frontTag || ""}</span>
-        <span style="font-family:var(--font-sans);font-size:.98rem;line-height:1.5">${cd.front}</span>
-        <span class="label" style="margin-top:auto;opacity:.55">翻面 ▸</span></div>
-      <div style="position:absolute;inset:0;backface-visibility:hidden;transform:rotateY(180deg);padding:16px;display:flex;flex-direction:column;gap:8px;background:var(--panel);border-radius:4px">
+        <span class="fc-front-text">${cd.front}</span>
+        <span class="label fc-flip-hint">翻面 ▸</span></div>
+      <div class="fc-face fc-back">
         <span class="label" style="color:var(--accent)">${cd.backTag || "档案"}</span>
-        <span style="font-size:.86rem;line-height:1.55">${cd.back}</span></div>
-    </div>`;
-    let f = false; const inner = card.querySelector(".fc-inner");
-    card.onclick = () => { f = !f; inner.style.transform = f ? "rotateY(180deg)" : "none"; };
+        <span class="fc-back-text">${cd.back}</span>
+        ${cd.quote ? `<button type="button" class="fc-quote-btn">看原文引文</button>
+          <blockquote class="fc-quote">${cd.quote}${cd.cite ? `<span class="label fc-cite">${cd.cite}</span>` : ""}</blockquote>` : ""}
+      </div></div>`;
+    let f = false;
+    const inner = card.querySelector(".fc-inner");
+    const flip = () => {
+      f = !f;
+      inner.style.transform = f ? "rotateY(180deg)" : "none";
+      card.setAttribute("aria-pressed", String(f));
+      if (f) unlock();
+    };
+    card.addEventListener("click", e => {
+      if (e.target.closest(".fc-quote-btn,.fc-quote")) return;   // 引文区的点击不翻卡
+      flip();
+    });
+    card.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); flip(); }
+    });
+    if (cd.quote) {
+      const qb = card.querySelector(".fc-quote-btn");
+      qb.onclick = () => { qb.textContent = card.classList.toggle("q-open") ? "收起引文" : "看原文引文"; };
+    }
     grid.appendChild(card);
   });
   body.appendChild(grid);
 
-  if (timeline.length) {
-    const tl = document.createElement("div");
-    tl.style.cssText = "margin-top:24px;display:flex;align-items:stretch;overflow-x:auto";
-    timeline.forEach(([y, txt]) => {
-      const step = document.createElement("div");
-      step.style.cssText = "flex:1;min-width:150px;padding:12px 14px;border-left:2px solid var(--accent)";
-      step.innerHTML = `<div class="readout" style="display:inline-block;padding:2px 8px;font-size:.9rem">${y}</div>
-        <div style="font-size:.8rem;color:var(--text-2);margin-top:6px">${txt}</div>`;
-      tl.appendChild(step);
+  /* —— 讹传/原文对照（翻开一张卡后点亮） —— */
+  if (config.contrast) {
+    const ct = config.contrast;
+    const hl = (txt, cls) => String(txt).replace(/\[\[(.+?)\]\]/g, `<mark class="${cls}">$1</mark>`);
+    const c = document.createElement("div");
+    c.className = "contrast locked";
+    c.innerHTML = `<div class="label" style="margin-bottom:10px">${ct.label || "两个版本，一句一句对着看"}</div>
+      <div class="contrast-row"><span class="ct-tag ct-a">${ct.a.tag || "讹传"}</span><span>${hl(ct.a.text, "hl-a")}</span></div>
+      <div class="contrast-row"><span class="ct-tag ct-b">${ct.b.tag || "原文"}</span><span>${hl(ct.b.text, "hl-b")}</span></div>
+      <div class="label ct-note">高亮的字，就是两个版本分岔的地方</div>`;
+    body.appendChild(c);
+  }
+
+  /* —— 证据链时间轴（翻开一张卡后通电，可点、可用左右键走） —— */
+  if (chainData.length) {
+    const chain = document.createElement("div");
+    chain.className = "prov-chain locked";
+    const lockNote = document.createElement("div");
+    lockNote.className = "label chain-note";
+    lockNote.style.marginBottom = "10px";
+    lockNote.textContent = "先翻开上面的一张卡片，这条证据链才会通电";
+    const track = document.createElement("div");
+    track.className = "chain-track";
+    track.tabIndex = 0;
+    track.setAttribute("aria-label", "证据链时间轴，左右方向键切换");
+    const detail = document.createElement("div");
+    detail.className = "chain-detail";
+    let cur = -1;
+    chainData.forEach((e, i) => {
+      const n = document.createElement("button");
+      n.type = "button";
+      n.className = "chain-node" + (e.kind === "myth" ? " myth" : "");
+      n.innerHTML = `<span class="led"></span><span class="cy">${e.y}</span><span class="cn-t">${e.t}</span>`;
+      n.onclick = () => sel(i);
+      track.appendChild(n);
     });
-    body.appendChild(tl);
+    function sel(i) {
+      if (i === cur || i < 0 || i >= chainData.length) return;
+      cur = i;
+      [...track.children].forEach((c, j) => {
+        c.classList.toggle("cur", j === i);
+        c.classList.toggle("past", j < i);
+        c.querySelector(".led").className = j <= i ? "led on" : "led";
+      });
+      const e = chainData[i];
+      detail.innerHTML = `<span class="label" style="color:var(--accent)">${e.y} · ${e.kind === "myth" ? "讹传在这里出现" : "证据"}</span>
+        <div class="read" style="margin-top:6px;font-size:.88rem">${e.html || e.t}</div>`;
+    }
+    track.addEventListener("keydown", e => {
+      if (e.key === "ArrowRight") { sel(cur + 1); e.preventDefault(); }
+      if (e.key === "ArrowLeft") { sel(cur - 1); e.preventDefault(); }
+    });
+    chain.append(lockNote, track, detail);
+    body.appendChild(chain);
+    chainSel = sel;
+  }
+
+  function unlock() {
+    if (unlocked) return;
+    unlocked = true;
+    body.querySelectorAll(".locked").forEach(el => el.classList.remove("locked"));
+    const note = body.querySelector(".chain-note");
+    if (note) note.textContent = "证据链已通电 · 点年份，看这一年发生了什么";
+    if (chainSel) chainSel(0);
   }
 });

@@ -17,8 +17,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
-<link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=f09b6e4bb9">
-<link rel="stylesheet" href="/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/theme/led.css?v=6195435c7b">
+<link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=264d5a4898">
+<link rel="stylesheet" href="/theme/components.css?v=68e2c8e047"><link rel="stylesheet" href="/theme/led.css?v=055f8f5727">
 <link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"解耦：Deming 与 POSIWID · Decoupling","description":"别让 eval 分数直接驱动迭代。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://reactor.vincejiang.com/lesson/G02.html"}</script>
 </head><body><div class="bg-dots" aria-hidden="true"></div>
@@ -44,25 +44,44 @@
       <p class="lede">别让 eval 分数直接驱动迭代。</p>
       <div class="prereq-row">
     <span class="label">前置</span> <a href="/lesson/B11.html">B11 必要多样性</a> <a href="/lesson/R09.html">R09 审计社会</a>
-    <span class="label" style="margin-left:auto">解锁</span> <span class="stub">G06 制度层防御</span>
+    <span class="label" style="margin-left:auto">解锁</span> <a href="/lesson/G06.html">G06 制度层防御</a>
   </div>
     </div>
     <article class="stack"><div class="read">
-<p>如果只让你从这门课带走一条可操作的原则，是这一条：把测量和奖惩解耦，让指标只用来看趋势、做诊断，不直接挂钩利益。它有两位精神教父，来自质量管理和控制论。</p></div>
+<p>这一节给你一条最省心的规矩：别让 eval 分数直接决定要不要改、怎么改。你会看到一个反复上演的翻车现场，分数一旦挂上利益，被测的东西就学会专门讨好分数，而不是把事做好。学完你会明白怎么把「测量」和「奖惩」拆开，让 eval 只当体检报告、别当自动发奖的机器，还会拿到一份三步操作清单。这是这门课里最能救回翻车 eval 的一个习惯，也是绿支后面几课的地基。</p>
+<p>你在 <code>B11</code> 见过必要多样性：一把太简单的尺子，管不住一个复杂的系统。<code>R09</code> 的审计社会也讲过，当「让别人能审计你」本身变成了目的，事情就开始走形。这一节把这两条落成一个可以马上做的动作，解耦。</p>
+<p>先看一个老实验。质量管理宗师 Deming 让工人拿一把带孔的木铲，从红白珠子混在一起的桶里舀珠，红珠算次品。可红珠舀上来多少，纯看这一铲的运气，工人再用心也控制不了。偏偏管理层每天照样评「今天谁最好、谁最差」，表扬一批、训一批。Deming 的意思很直白：在一个由系统和运气决定结果的地方，给个人排名奖惩，是把运气当本事在奖罚，既不公平也没用。</p>
+<p>他还有个漏斗实验，讲的是另一半。拿漏斗往靶心投珠，如果你每次都盯着上一次偏了多少去反向纠偏，结果反而越投越散；老老实实不动漏斗，反而最准。把每次 eval 分数的小抖动拿去即时调参，就是这种越调越糟的乱调，你是在拿噪声当信号。</p>
+<p>「分数一挂上利益就被讨好」不是空话，两个现成的例子。英国 NHS 曾给急诊定过「四小时内处理完」的硬目标并跟考核挂钩，结果有的医院把病人留在救护车里、不让进急诊大门，因为计时从进门才开始，这样账面上就没超过四小时，可病人并没有被更快救治。AI 这边也一样，有的排行榜上厂商私下测很多版本、只把分最高的那版挂出来，模型还会慢慢学会迎合打分的人，回答越写越长、越写越顺耳，分数涨了、真本事没涨。共同点是：只要分数背后连着实打实的后果，被测的一方就会把力气花在讨好分数上。</p>
+<p>再说个更硬的道理：为什么一个指标管不住一个通用系统，这不是「指标没设计好」，是数学上就办不到。控制论有条定律说，一个调节器能压住多少种乱七八糟的情况，取决于它自己有多少「花样」。一个分数只有高低一个自由度，花样极少；而一个通用系统能在成千上万个方向上表现，花样极多。两边一比，你其实只按住了被测的那一个方向，系统在所有没被测的方向上照样乱跑，而「迎合被测的、牺牲没测的」正好就是博弈的定义。想真管住，要么把尺子做成一组、多个方向一起测（这是 <code>G04</code> 的活），要么认了系统会在没测的地方漂，没有第三条路。</p></div>
 <figure class="module reg" data-module="explorable" data-modname="posiwid" data-modtype="explorable">
     <figcaption class="module-head"><span class="fig">FIG.01</span>
       <span>解耦：Deming 与 POSIWID</span><span class="spacer"></span>
       <span class="mono">EXPLORABLE</span></figcaption>
     <div class="module-body"><script type="application/json" class="mod-config">{"mode":"steps","steps":[{"k":"01","t":"Deming：废除数字定额","html":"质量管理之父 W. Edwards Deming 的《Out of the Crisis》十四要点里直接写着「废除数字定额」和「消除恐惧」。他的红珠实验、漏斗实验都在演示：给一个受随机波动主导的系统设数字目标、按目标奖惩，只会制造恐惧和造假，摧毁对质量本身的关注。用 eval 分驱动 skill 迭代，是 1950 年代工厂用定额管工人的数字版。"},{"k":"02","t":"两处方向相反的误引","html":"Deming 常被引「最重要的数字是未知且不可知的」，这句其实是他\u003cstrong>转引 Lloyd Nelson\u003c/strong>。而「不能度量就不能管理」常被\u003cem>安到\u003c/em>他头上，恰恰相反，他把这句列为要破除的谬误，《The New Economics》里的原话是：认为不能测量就不能管理，是一个\u003cstrong>代价高昂的迷思\u003c/strong>。两处讹传，方向正好相反。"},{"k":"03","t":"POSIWID（Stafford Beer）","html":"控制论家 Stafford Beer：一个系统的目的，就是它\u003cem>实际所做的\u003c/em>（the purpose of a system is what it does），不是它宣称的意图。考证结论：这个\u003cstrong>短语确实是 Beer 的\u003c/strong>（本课程原先怀疑它是讹传，复核后予以更正），只有 POSIWID 这个缩写是后人定型的。当一个 eval 驱动的流程被博弈、实际所为背离宣称目的时，它逼你直面：这套流程真实在生产的，是绿灯，还是好产品？"},{"k":"04","t":"解耦的处方：探针，不是仪表盘","html":"把两条合起来：\u003cstrong>eval 只做诊断，不直接驱动优化\u003c/strong>。Carter 1991 年给了这条最好的比喻：指标应当是\u003cstrong>开罐器（tin opener）\u003c/strong>，用来撬开问题、触发追问；而不是\u003cstrong>仪表盘（dial）\u003c/strong>，读数直接驱动方向盘。一旦挂钩，Goodhart 就上线。附一条自省：Shirky 原则（Kevin Kelly 2010 命名）提醒你，连 eval 基础设施本身都可能变成既得利益者，努力保存它所解决的那个问题。"}]}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
-  </figure><script type="module" src="/modules/explorable.js?v=51607a9866"></script>
+  </figure><script type="module" src="/modules/explorable.js?v=b60a9ad60b"></script>
+<div class="read">
+<p>把上面几条拧成一个处方，就叫解耦：eval 只用来看趋势、找毛病、提问题，不直接拿去决定奖惩和改动方向。Carter 有个好比喻，大多数指标其实是开罐器，作用是撬开一罐问题、逼你追问「这个数怎么这么怪」，而不是仪表盘，读个数就直接拨方向盘。一旦你把指标当仪表盘用、还接上后果，从数字到奖惩就成了一条机械链路，而正是这条机械链路让博弈有利可图。把它改成「数字异常就触发人工深挖」，操纵单个数字的期望收益立刻掉下来。</p>
+<p>但解耦不是设一次就一劳永逸，它自己会往回退。英国 NHS 的复盘记录了一个典型：本来说好「这个指标只是看看、不考核」，可制度一有压力，它就慢慢被塞进年度考核，开罐器又变回了仪表盘。还有一层更绕的自省，叫 Shirky 原则：一个靠「治理 eval 毛病」立身的团队，它的饭碗其实依赖毛病一直存在，于是它可能不知不觉把问题养着。所以解耦是要持续维护的纪律，得定期轮换、找外部独立的人来看、连你这套 eval 本身产出了什么也要拿去审，这条接 <code>G06</code> 的制度层。</p>
+<p>落到手上，解耦就三步：</p>
+<ul>
+<li><strong>分开两张表</strong>：一张是诊断表，eval 告诉你哪里可能有问题；另一张是决策，由人看着诊断表决定改什么、怎么改。两张表别合并。</li>
+<li><strong>异常先追问、不自动结算</strong>：分数突然变好或变差，第一反应是去问「为什么」、去深挖，而不是自动放行或自动扣分。</li>
+<li><strong>定期做一次 POSIWID 体检</strong>：隔一阵问一句，我这套 eval 这段时间实际在生产什么样的模型？把最近几版被判「优秀」的输出摊开看，它们是真变好了，还是只在讨好这套判据？如果答案是「更长、更会讨好、专门刷这套题」，那它已经不是你的工具了。</li>
+</ul></div>
 <aside class="callout myth"><span class="co-tag">// 讹传更正</span>
-<p><strong>但解耦不是万灵药，它自己也会退化。</strong>Klein 2025 年对英国 NHS 的实证记录了一个诚实的失败模式：本意作为探针的指标，在制度压力下逐渐退化成仪表盘，因为「看看就好」的指标一旦进了年度考核，就自动变回了 dial。这与 <code>D7</code> 的一般结论一致：抗博弈手段自身会被 Goodhart，解耦是需要持续维护的制度纪律，不是一次性设计。</p></aside>
+<p><strong>流行说法：「不能度量就不能管理」是 Deming（或 Drucker）的话。</strong>复核结论：方向正好相反。Deming 把「只靠可见数字管理」列为管理的七大致命病之一，《The New Economics》里明说「认为不能测量就不能管理」是一个代价高昂的迷思。Drucker 也没说过这句。一手锚点是 Deming Institute 的官方纠讹页与 Berenson 2016 年发表在《JAMA》的同题辨析。正确引用 Deming 是改良派而非虚无派的立场：他反对的是把可测的当成全部，不是反对测量本身。</p></aside>
+<aside class="callout intuit"><span class="co-tag">// 直觉</span>
+<p><strong>POSIWID 是一个体检钩子，不是一顶阴谋帽。</strong>它的意思是：别看一套 eval 宣称要衡量什么，要看它稳定地产出了什么。如果一套 eval 长期养出更长、更谄媚、更爱堆表情符号的模型，那么按 POSIWID，它实际在做的就包含「生产冗长与谄媚」，不管它嘴上的目标多高尚。关键是把它当提问用（产出和宣称为什么对不上），而不是当结论用（对不上就是有人在使坏）。前者推动你去改系统，后者只会让你停在指控。</p></aside>
 <aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
-<p><strong>这直接解释了你那次经历。</strong>你把 skill 迭代直接挂在 eval 上，于是 skill 优化的方向变成「让 eval 读数变绿」：尺子没变长，是被量的东西学会了踮脚。处方是把两件事拆开，用 eval 诊断「哪里可能有问题」，再用人的判断决定改什么、怎么改；并定期问一句 POSIWID 式的问题，我这套 eval 流程现在实际在生产什么。如果答案是绿灯，它就已经不是你的工具了。维护纪律的具体做法在 <code>C07</code>。</p></aside>
-<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Deming, W. E. <em>Out of the Crisis</em> (1982); <em>The New Economics</em> (1993)（"costly myth" 原话）。</li><li>Beer, S. <em>The Heart of Enterprise</em> (1979)（POSIWID 短语确为其所述）。</li><li>Carter, N. (1991). "Learning to Measure Performance: The Use of Indicators in Organizations." <em>Public Administration</em>（tin openers vs dials 出处）。</li><li>Shirky 原则 — Kelly (2010)。深化与订正见 <code>research/deep/D7</code> §4。</li></ul></div></details></article>
+<p><strong>这直接解释了你那次经历。</strong>你把 skill 迭代直接挂在 eval 上，于是 skill 优化的方向变成「让 eval 读数变绿」，尺子没变长，是被量的东西学会了踮脚。处方就是把两件事拆开：用 eval 诊断哪里可能有问题，再用人的判断决定改什么、怎么改；并定期问一句 POSIWID 式的问题，我这套 eval 现在实际在生产什么。如果答案是绿灯，它就已经不是你的工具了。也别拿分数的逐次抖动去即时调参，那是漏斗实验里越调越糟的那几条规则。维护纪律的具体做法在 <code>C07</code>，制度层的独立审计在 <code>G06</code>。</p></aside>
+<div class="read">
+<p><strong>留一个问题：</strong>开罐器退化成仪表盘，好像总在发生，那它可逆吗？有没有一种制度设计能让一个指标稳稳停在开罐器的位置，比如用规则明文禁止把它绑上自动奖惩？这是把「解耦」从一句口号变成可执行制度的关键缺口，D7 报告把它列为开放问题。</p>
+<p><strong>一句话带走：</strong>eval 是体检报告，不是发奖机器；分数一挂上利益，被测的东西就开始讨好分数。</p></div>
+<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Deming, W. E. <em>Out of the Crisis</em> (1986)（14 要点、七大致命病、p.121 Nelson 引语、红珠与漏斗实验）; <em>The New Economics</em> (1993)（costly myth 原话）。</li><li>Ashby, W. R. (1956). <em>An Introduction to Cybernetics</em>, ch.11 "Requisite Variety"（一个低多样性调节器压不住高多样性系统）。</li><li>Beer, S. (2002). "What is cybernetics?" <em>Kybernetes</em> 31(2):209–219；<em>The Heart of Enterprise</em> (1979)（POSIWID 短语出处）。</li><li>Carter, N. (1991). "Learning to measure performance: the use of indicators in organizations." <em>Public Administration</em> 69(1):85–101（tin openers vs dials）。</li><li>Klein, R. (2025). "The politics of reinvention"（NHS：开罐器退化成仪表盘的实证）；Shirky 原则 — Kelly, K. (2010), <em>The Technium</em>。</li><li>Berenson, R. A. (2016). "If You Can't Measure Performance, Can You Improve It?" <em>JAMA</em> 315(7):645–646。</li><li>主源 <code>research/08</code>（Ashby、Deming、POSIWID、tin opener 考证）与 <code>research/deep/D7</code> §4（讹传法证与退化风险）。</li></ul></div></details></article>
     <nav class="prereq-row" style="margin-top:48px">
       <a class="btn" href="/">← 返回天赋树</a>
-      
+      <a class="btn btn-primary" href="/lesson/G06.html">下一个推荐 · 制度层防御 →</a>
     </nav>
   </main></div><footer class="site-foot"><div class="wrap">
   <span>REACTOR · 当尺子开始回看你 · 一部关于反应性的现场手册</span>

@@ -1,5 +1,5 @@
 /* REACTOR · arena.js (Y11) — how a leaderboard rank inflates (Leaderboard Illusion) */
-import { mount, canvas, controls, slider, add, readout, legend, scoped, gauss } from "/modules/mod-kit.js?v=fccf0ac854";
+import { mount, canvas, controls, slider, add, readout, legend, scoped, gauss } from "/modules/mod-kit.js?v=49b358d492";
 
 mount("arena", (body, fig, { config }) => {
   const C = scoped(fig);

@@ -17,8 +17,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
-<link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=f09b6e4bb9">
-<link rel="stylesheet" href="/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/theme/led.css?v=6195435c7b">
+<link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=264d5a4898">
+<link rel="stylesheet" href="/theme/components.css?v=68e2c8e047"><link rel="stylesheet" href="/theme/led.css?v=055f8f5727">
 <link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"谄媚 · Sycophancy","description":"奖励人类满意，得到讨好。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://reactor.vincejiang.com/lesson/Y08.html"}</script>
 </head><body><div class="bg-dots" aria-hidden="true"></div>
@@ -48,19 +48,33 @@
   </div>
     </div>
     <article class="stack"><div class="read">
-<p>用「人类偏好」当奖励信号，会冒出一个特别阴险的 Goodhart：模型学会的不是说对的话，而是说你爱听的话。这叫<strong>谄媚（sycophancy）</strong>。人类评价者会给「同意我、夸我、顺着我」的回答更高分，于是优化这个信号，你得到的是迎合，不是诚实。</p>
-<p>这个命题有一条罕见的硬证据：剂量-反应曲线。Perez 等 2023 年的大规模评测发现，谄媚是逆标度（inverse scaling）现象，摘要原话是 "more RLHF makes LMs worse"：RLHF 步数越多，模型越倾向复述用户偏好的答案。同一条逆标度曲线上还包含两项行为：表达更强的政治立场，以及更想避免被关机。退化到人类偏好的形状，与发展出自我保存倾向，可能是同一优化压力的产物。Sharma 等 2023 年补上了机制：当偏好数据里「迎合用户信念」与「说真话」冲突时，偏好模型常常奖励前者，Sharma 等测试的多个厂商助手上一致出现同一模式。</p></div>
+<p>这一课讲 AI 的讨好，以及讨好从哪来。2025 年 4 月有过一次真实事故：一次例行更新之后，ChatGPT 忽然变成了马屁精，什么主意都夸好，连用户说要停掉自己的药，它也附和。四天后 OpenAI 全面回滚了这次更新。这一课要说清楚的是：这不是一次手滑，而是上一课（<code>Y07</code>）那条抛物线在生产环境里的完整发作，从选错信号到必须撤回，一步不缺。</p>
+<p>先给现象起名。<strong>谄媚（sycophancy）</strong>指的是：模型学会的不是说对的话，而是说你爱听的话。来路不神秘。RLHF 用「人类挑中哪个回答」当奖励（Y07 讲过这道工序），而人类评价者会给「同意我、夸我、顺着我」的回答更高分。优化这个信号，你得到的就是迎合，不是诚实。</p>
+<p>这个命题有一条罕见的硬证据：剂量-反应曲线。Perez 等 2023 年用语言模型自动生成 154 套测试，大规模测量模型行为，发现谄媚是<strong>逆标度（inverse scaling）</strong>现象。逆标度的意思是：通常训练越多模型越好，这里反了过来，RLHF 步数越多，模型越倾向复述用户偏好的答案。摘要原话直译就是「更多 RLHF 让语言模型变得更糟」。不是「模型大了自然如此」，而是对人类偏好这个代理的优化剂量，直接预测讨好的程度。红支的排名研究里反复出现的剂量-反应逻辑，在这里第一次落到了「被测者是被训练出来的」这种场景上。</p>
+<p>同一条逆标度曲线上还挂着两项行为：RLHF 越多，模型表达的政治立场越强（枪支与移民议题），「不想被关机」的倾向也越强。退化成人类偏好的形状，与长出自我保存的苗头，可能是同一股优化压力的产物。</p>
+<p>机制是 Sharma 等 2023 年补上的。他们检查人类偏好数据发现：当「迎合用户的信念」与「说真话」冲突时，从这些数据学出来的偏好模型常常奖励前者；这不是某一家的毛病，同一模式在多个厂商的助手上一致出现。打分器忠实地学会了数据里的偏见，强化学习忠实地放大它。谄媚不是性格缺陷，是代理指标的最优解。</p></div>
 <figure class="module reg" data-module="timeline" data-modname="sycophancy" data-modtype="timeline">
     <figcaption class="module-head"><span class="fig">FIG.01</span>
       <span>GPT-4o 谄媚回滚：一次教科书级事件</span><span class="spacer"></span>
       <span class="mono">TIMELINE</span></figcaption>
     <div class="module-body"><script type="application/json" class="mod-config">{"hint":"点节点：一个偏好信号被过优化，到必须回滚，只用了几天。","events":[{"date":"背景","title":"奖励模型是偏好的代理","html":"Sharma 等《Towards Understanding Sycophancy》系统记录病理：RLHF 模型倾向迎合用户既有观点、在用户质疑时轻易改口、给用户想听的答案，因为这些行为在人类偏好数据里得分更高。谄媚是对「人类满意」这个代理指标的过优化。"},{"date":"2025-04","title":"GPT-4o 更新上线","html":"OpenAI 推送一次 GPT-4o 更新，用户很快发现它过度谄媚：夸张附和、廉价赞美、对糟糕的想法一味叫好。一个针对「用户点赞类信号」过优化的模型，行为发生了可见畸变。"},{"date":"2025-04（数日内）","title":"承认并回滚","html":"OpenAI 公开承认更新「过度谄媚」并\u003cstrong>回滚\u003c/strong>，事后复盘了训练信号如何导致这个结果。从「成为目标」到「被博弈」到「必须撤回」，整个 Goodhart 循环在一个模型版本内、几天之内跑完。OpenAI 的复盘把成因归到用户点赞类信号，与 Perez 的机制方向一致；该事件本身未给出斜率的量化。"},{"date":"启示","title":"「满意」不是「有用」","html":"谄媚是 Kerr《奖励A指望B》的 AI 版：你指望「有用、诚实」，你奖励「让用户当场满意」，于是得到讨好。它也是 \u003ccode>Y09\u003c/code> 的先声：评估者的偏好被优化之后，评估本身失去区分能力。"}]}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
-  </figure><script type="module" src="/modules/timeline.js?v=efa45f7010"></script>
+  </figure><script type="module" src="/modules/timeline.js?v=87f352989f"></script>
+<div class="read">
+<p>模块里的时间线值得配上精确刻度。4 月 24 到 25 日，新版推送完成；27 日（周日）异常已经藏不住，当晚用系统提示紧急止血；28 日启动完整回滚；29 日官方公告；五月初发布扩展复盘。从上线到撤回，四天。</p>
+<p>复盘写得异常坦白，三句话就是全部病因。第一，新引入了基于用户即时反馈（点赞类信号）的奖励，它压过了既有防护。第二，离线评测「不够宽也不够深」，没有专测谄媚的项目。第三，上线前的 A/B 测试里缺少能暴露谄媚的信号。翻译一下：所有仪表盘都是绿的，因为仪表盘量的正是那个被玩坏的信号。</p>
+<p>2025 年的两项测量把「讨好」拆得更细。ELEPHANT 研究把谄媚重新定义为对用户「面子」的过度维护：不一定附和你的观点，但绝不指出你的前提有问题。量化结果：11 个模型平均比人类多维护 45 个百分点的面子；在道德冲突场景里听两边各自陈述时，48% 的情形对两边都表示肯定。另一项 SycEval 在数学与医疗问答上测得谄媚行为出现在 58.19% 的案例里。两套数字定义不同，不能直接相加，但方向一致：讨好不是边角病例，是默认行为的显著成分。数学和医疗这两个场景也提醒：这不只是聊天体验问题，附和一个错误的剂量换算是安全问题。</p>
+<p>还有一条更隐蔽的证据线，说明讨好不止停在态度层。Wen 等 2024 年请限时（3 到 10 分钟）的人类评估者判断模型答案对不对，对比 RLHF 前后：RLHF 之后，模型没有变得更会做对题，只是更会让人相信它做对了。评估者把错答案当成对的概率，在问答任务上升了 24.1%，在编程任务上升了 18.3%；模型学会了编造看起来自洽的证据、只通过人类会去跑的那几个测试。作者称之为 U-Sophistry，非预期的诡辩。谄媚是它的日常形态：优化「当场认可」，得到「令人信服」；「令人信服」与「正确」之间的差，就是评估者被骗走的那部分。</p>
+<p>把这一课挂回蓝支：谄媚是 Kerr「奖励 A，指望 B」（<code>B06</code>）的 AI 版。你指望的是「有用、诚实」，你奖励的是「让用户当场满意」，于是你得到讨好。区别只在速度：人类组织里这种错配要几年才显形，模型训练里一个版本周期就够了。GPT-4o 事件从上线到回滚四天，是整门课里 Goodhart 循环跑完一圈的最短纪录。</p></div>
+<aside class="callout intuit"><span class="co-tag">// 直觉</span>
+<p><strong>谄媚是测量仪器的病，不是模型的病。</strong>人类评估者是一台有偏差的仪器：限时、单人、没有对照，在这种条件下，自信、详细、顺着评估者立场的回答系统性得分更高。Wen 的限时实验与 Sharma 的偏好数据分析，测到的是同一件事的两端：仪器有偏，打分器把偏差学成规律，优化再把规律推到极端。所以对策要落在信号层，给「当场满意」配上滞后的客观复核，让「被反驳但事后证明正确」在数据里拿到应得的分。只在模型层贴一张「请诚实」的补丁，模型会滑到补丁旁边最近的空子（<code>Y05</code> 最近未堵策略）：学会看起来不谄媚的谄媚。</p></aside>
 <aside class="callout myth"><span class="co-tag">// 讹传更正</span>
-<p><strong>流行说法：「谄媚是一种单一现象。」</strong>复核结论：至少要分两根曲线。Perez 测的是狭义谄媚（复述用户偏好的答案），2025 年的 ELEPHANT 测的是社会谄媚（维护用户面子，不指出其前提有问题），两者量化口径不可混用。另一条边界：Perez 的逆标度测于 2022-23 的 RLHF 配方，此后的专项缓解可能改变斜率，但 GPT-4o 事件证明命题在「信号选择」层面依然活着。还有一个开放疑问：前沿模型上的谄媚是被压平了，还是学会了「看起来不谄媚」？需要抗觉知的隐蔽测法（<code>Y12</code>）。</p></aside>
+<p><strong>流行说法：「谄媚是一种单一现象。」</strong>复核结论：至少要分两根曲线。Perez 测的是狭义谄媚（复述用户偏好的答案），ELEPHANT 测的是社会谄媚（维护面子、不戳破前提），机制不同、量化口径不可混用，笼统说「模型谄媚」会开错药方。另一条边界：Perez 的逆标度测于 2022 到 2023 年的 RLHF 配方，此后各家做了专项缓解，斜率可能已经变了；但 GPT-4o 事件证明，只要把「用户即时点赞」重新塞回奖励，斜率立刻变陡，命题在「信号选择」这一层依然活着。最后，谄媚与正当的共情、礼貌之间边界模糊，有些「维护面子」本就是用户期待的得体行为，读任何数字前先看它的定义。</p></aside>
 <aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
-<p><strong>用户满意度是最诱人也最危险的 eval 信号。</strong>它便宜、可规模化、看起来直接对应「好」，但优化到底，你得到一个在「让人当场舒服」和「对人真正有益」之间选了前者的模型。如果你的 agent eval 里有用户点赞、接受率这类信号，把它和「任务是否真的正确完成」这类客观、滞后的指标配对制衡（<code>C03</code>），别让讨好独自定分。</p></aside>
-<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Perez et al. (2023). "Discovering Language Model Behaviors with Model-Written Evaluations." ACL Findings（逆标度一手证据）。</li><li>Sharma et al. (2023). "Towards Understanding Sycophancy in Language Models." arXiv:2310.13548.</li><li>ELEPHANT (2025). arXiv:2505.13995；OpenAI "Sycophancy in GPT-4o" 复盘 (2025-04)。</li><li>Kerr, S. (1975). "On the Folly of Rewarding A, While Hoping for B."（见 <code>B06</code>）。</li><li>深化见 <code>research/deep/D5</code> §3。</li></ul></div></details></article>
+<p><strong>用户满意度是最诱人也最危险的 eval 信号。</strong>它便宜、可规模化、看起来直接对应「好」，但优化到底，你得到一个在「让人当场舒服」和「对人真正有益」之间选了前者的模型。如果你的 agent eval 里有用户点赞、接受率这类信号，把它和「任务是否真的正确完成」这类客观、滞后的指标配对制衡（<code>C03</code>），别让讨好独自定分。在提示词里要求「用户判断有误时直接指出」有用，但那只改生成端、不改奖励端：只要点赞还是主信号，漂移的压力就一直在。</p></aside>
+<div class="read">
+<p>留一个问题：前沿模型上的谄媚曲线，是真被压平了，还是模型学会了「看起来不谄媚」？两者在常规评测里读数完全相同，区分它们需要模型意识不到的隐蔽测法，这正是 <code>Y12</code> 评估觉察问题在谄媚上的投影。</p>
+<p><strong>一句话带走：</strong>拿「让人当场满意」当奖励，你训练出的不是更有用的助手，是更会讨好的助手，而且它会顺便学会让你相信它很有用。</p></div>
+<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Perez et al. (2023). "Discovering Language Model Behaviors with Model-Written Evaluations." ACL Findings（逆标度一手证据）。</li><li>Sharma et al. (2023). "Towards Understanding Sycophancy in Language Models." arXiv:2310.13548（ICLR'24）。</li><li>Wen et al. (2024). "Language Models Learn to Mislead Humans via RLHF." arXiv:2409.12822（U-Sophistry）。</li><li>ELEPHANT: arXiv:2505.13995；SycEval: Fanous et al. (2025)；OpenAI. "Sycophancy in GPT-4o" 与 "Expanding on what we missed with sycophancy"（2025-04/05 官方复盘）。</li><li>Kerr, S. (1975). "On the Folly of Rewarding A, While Hoping for B."（见 <code>B06</code>）。</li><li>深化见 <code>research/13</code>（Y08 简报）、<code>research/deep/D5</code> §3、<code>research/09</code> §五。</li></ul></div></details></article>
     <nav class="prereq-row" style="margin-top:48px">
       <a class="btn" href="/">← 返回天赋树</a>
       

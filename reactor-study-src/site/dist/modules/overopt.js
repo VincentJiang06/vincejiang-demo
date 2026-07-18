@@ -1,5 +1,5 @@
 /* REACTOR · overopt.js (Y07) — reward-model overoptimization (Gao et al. 2023) */
-import { mount, canvas, controls, slider, add, readout, legend, scoped } from "/modules/mod-kit.js?v=fccf0ac854";
+import { mount, canvas, controls, slider, add, readout, legend, scoped } from "/modules/mod-kit.js?v=49b358d492";
 
 mount("overopt", (body, fig, { config }) => {
   const C = scoped(fig);

@@ -22,8 +22,8 @@ const byId = Object.fromEntries(tree.nodes.map(n => [n.id, n]));
 /* ---- talent-tree auto-layout (branch columns × tier rows) ----
    Column x is derived from each branch's widest tier, so branches can never
    collide; tiers wider than MAX_PER_ROW wrap into stacked sub-rows. */
-const ROW_H = 210, COL_W = 168, SUB_DY = 92;
-const CHIP_W = 132, MAX_PER_ROW = 4, GUTTER = 96, CONV_OFFSET_TIERS = 1;
+const ROW_H = 244, COL_W = 190, SUB_DY = 106;
+const CHIP_W = 132, MAX_PER_ROW = 4, GUTTER = 150, CONV_OFFSET_TIERS = 1;
 const rowsOf = len => Math.ceil(len / MAX_PER_ROW);
 const perRowOf = len => Math.ceil(len / rowsOf(len));
 /* v3 布局：四条色支横排（红|蓝|黄|绿），root 与南区（case 案例带 + converge 汇流）
@@ -251,40 +251,51 @@ function nextNode(node) {
   return unlocks[0] || null;
 }
 
-/* ---- homepage：v2 全屏天赋树（树即首页即核心导航）---- */
+
+/* 首页内容总览行（点击=树视角跳到该分支，与 tree.js 的 [data-jump] 联动） */
+function introMap() {
+  const DESC = {
+    red: "排名如何重新制造现实", blue: "指标失灵的定律与定理",
+    yellow: "AI 评测的博弈与幻觉", green: "怎么设计扛得住的指标",
+    case: "六个领域的真实案例", converge: "把所有线索拧成方法论"
+  };
+  const SW = { red: "var(--red)", blue: "var(--blue)", yellow: "var(--yellow)",
+    green: "var(--green)", case: "var(--text-mute)", converge: "var(--text)" };
+  return ["red", "blue", "yellow", "green", "case", "converge"].map(b => {
+    const n = tree.nodes.filter(x => x.branch === b).length;
+    return `<button class="im-row" data-jump="${b}"><span class="im-dot" style="background:${SW[b]}"></span>` +
+      `<span class="im-name">${BRANCH_LABEL[b]}</span><span class="im-n">${n} 节</span>` +
+      `<span class="im-desc">${DESC[b]}</span></button>`;
+  }).join("\n");
+}
+
+/* ---- homepage：v3 全屏天赋树（树即首页即核心导航）---- */
 function homePage() {
   const url = SITE + "/";
   const jsonld = {
     "@context": "https://schema.org", "@type": "Course",
-    name: "REACTOR — 当尺子开始回看你",
-    description: "一部关于排名、评测与反身性的现场手册：从 Espeland-Sauder 反应性、Goodhart 定律家族，到 AI 评测的代理博弈与抗博弈设计。",
+    name: "REACTOR — 排名、评测与指标失灵的互动课程",
+    description: "免费互动课程：排名为什么会反过来改造世界、AI 评测为什么会被博弈、以及怎么设计扛得住的指标。70 节短课组成一棵可自由探索的天赋树，每课配可上手的交互实验。",
     inLanguage: "zh-CN", provider: { "@type": "Organization", name: "REACTOR" }
   };
-  return head({ title: "reactor-study · 当尺子开始回看你", desc: jsonld.description, url, jsonld })
+  return head({ title: "REACTOR · 排名、评测与指标失灵的互动课程", desc: jsonld.description, url, jsonld })
     + siteHead({ home: true })
     + `<main class="tree-full" data-branch="root">
   <section class="tree-intro glass bolted">
-    <div class="nameplate"><span class="tag">v${tree.meta.version}</span><span>FIELD MANUAL</span>
-      <span class="rule"></span><span class="rev">${tree.nodes.length} NODES</span></div>
-    <h1>当尺子开始回看你</h1>
-    <p class="lede">测量一个社会对象，就是干预它。这里把「排名 / 评测 / 反身性」从社会学、经济学
-    铺到 AI 前沿，长成一棵可以自由探索的天赋树——不是 1 到 100 的线性课程，而是一张跟着
-    知识脉络生长的结构图。</p>
+    <div class="nameplate"><span class="tag">REACTOR</span><span>互动课程</span>
+      <span class="rule"></span><span class="rev">v${tree.meta.version} · ${tree.nodes.length} 节点</span></div>
+    <h1>当指标成为目标，<br>一切开始失灵</h1>
+    <p class="lede">排名会反过来改造被排名的世界，AI 评测会被模型反向博弈。这门免费课程把这件事
+    从社会学、经济学讲到 AI 前沿：每个节点是一节十分钟的短课，配一个能上手玩的小实验。</p>
+    <nav class="intro-map" aria-label="内容总览">${introMap()}</nav>
     <div class="intro-cta">
-      <a class="btn btn-primary" href="/lesson/N00.html">通电 · 从根节点开始 →</a>
-      <a class="btn" href="/atlas.html">图鉴</a>
+      <a class="btn btn-primary" href="/lesson/N00.html">从第一课开始 →</a>
+      <a class="btn" href="/atlas.html">全部节点一览</a>
     </div>
-    <p class="intro-hint">拖动平移 · ⌘/CTRL+滚轮缩放 · 点击节点进入 · 点亮的是推荐下一步</p>
+    <p class="intro-hint">右边就是完整课程地图 · 拖动平移 · 点亮的是推荐下一步</p>
   </section>
   <div class="tree-viewport" id="tree-viewport" data-mode="full">
-    <div class="tree-legend">
-      <button class="k" data-jump="red"><span class="sw" style="background:var(--red)"></span>红 · 社会学谱系</button>
-      <button class="k" data-jump="blue"><span class="sw" style="background:var(--blue)"></span>蓝 · 定律与形式</button>
-      <button class="k" data-jump="yellow"><span class="sw" style="background:var(--yellow)"></span>黄 · 机器与前沿</button>
-      <button class="k" data-jump="green"><span class="sw" style="background:var(--green)"></span>绿 · 防御与设计</button>
-      <button class="k" data-jump="case"><span class="sw" style="background:var(--text-mute)"></span>灰 · 案例带</button>
-      <button class="k" data-jump="converge"><span class="sw" style="background:var(--text)"></span>白 · 汇流</button>
-    </div>
+    
     <div class="tree-hud">
       <button data-tree-zout aria-label="缩小">−</button><button data-tree-zin aria-label="放大">+</button>
       <button data-tree-fit>适配</button><button data-tree-reset-progress>重置进度</button>

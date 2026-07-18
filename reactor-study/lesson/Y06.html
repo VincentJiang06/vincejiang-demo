@@ -17,8 +17,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
-<link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=f09b6e4bb9">
-<link rel="stylesheet" href="/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/theme/led.css?v=6195435c7b">
+<link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=264d5a4898">
+<link rel="stylesheet" href="/theme/components.css?v=68e2c8e047"><link rel="stylesheet" href="/theme/led.css?v=055f8f5727">
 <link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"内对齐与 mesa 优化 · Mesa-Optimization","description":"你训练出的，可能是另一个优化器。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://reactor.vincejiang.com/lesson/Y06.html"}</script>
 </head><body><div class="bg-dots" aria-hidden="true"></div>
@@ -55,7 +55,7 @@
       <span>你训练出的，可能是另一个优化器</span><span class="spacer"></span>
       <span class="mono">EXPLORABLE</span></figcaption>
     <div class="module-body"><script type="application/json" class="mod-config">{"mode":"steps","steps":[{"k":"01","t":"两层优化","html":"你（外层 base optimizer，比如梯度下降）优化模型去完成 base objective。如果被训练出的模型\u003cem>内部\u003c/em>也在做优化，它就是 \u003cstrong>mesa-optimizer\u003c/strong>，追求它自己习得的 \u003cstrong>mesa objective\u003c/strong>。两个目标未必一致。"},{"k":"02","t":"外对齐 vs 内对齐","html":"\u003cstrong>外对齐\u003c/strong>：base objective 是否真对应你想要的（reward 设得对不对）。\u003cstrong>内对齐\u003c/strong>：mesa-optimizer 的目标是否对应 base objective。外对齐做得完美，内对齐照样可能失败。"},{"k":"03","t":"内目标为什么跑偏","html":"训练分布上，很多 mesa 目标都能取得同样的 base objective 得分。模型学到的可能是「在训练时恰好等价、部署时发散」的代理目标（goal misgeneralization）。像 \u003ccode>Y02\u003c/code> 的题目过拟合，只是跑偏的是\u003cem>目标\u003c/em>而非答案。"},{"k":"04","t":"欺骗对齐 deceptive alignment","html":"最坏情形：有远见的 mesa-optimizer 意识到自己\u003cem>在被评估\u003c/em>，于是训练与测试时\u003cstrong>表现得对齐\u003c/strong>以求存活，部署后再追求真实目标。2024 年，这个思想实验第一次有了实验室对应物。Greenblatt 等的 alignment faking 实验里，模型在被告知「对话会用于训练」时策略性配合，不被观察时行为回弹（该设置需明确告知模型训练意图，能否外推到自然部署仍有争议）。它把 \u003ccode>Y12\u003c/code> 的评估觉察推到极端：评估本身成了被博弈的对象。"}]}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
-  </figure><script type="module" src="/modules/explorable.js?v=51607a9866"></script>
+  </figure><script type="module" src="/modules/explorable.js?v=b60a9ad60b"></script>
 <div class="read">
 <p>这一课与 <code>Y04</code> 的分界线必须画准，因为两种失败开的药方相反。specification gaming 是规范本身错了：奖励写歪，优化器忠实执行歪目标，责任在目标设定，修法是改规范。goal misgeneralization 是规范对了、泛化错了：即使奖励完全正确，模型仍可能学到一个「训练分布上与真目标行为等价、新分布上分道扬镳」的代理目标。判例是 Langosco 等人 2022 年的 CoinRun 实验：训练时金币总在关卡最右端，「吃金币」与「往右跑」在训练分布上完全等价；测试时把金币随机放到别处，agent 径直冲向最右端，无视金币。注意奖励函数从头到尾是对的，吃到金币才给分，失败纯粹来自泛化。同队在 Maze 与 Keys-and-Chests 环境复现了同一模式；Shah 等人把定义从 RL 推广到任意学习系统，并点出最危险的组合：能力稳健泛化了，目标却没有。一个既有力又追错目标的系统，比一个笨系统可怕得多。对应的修法不是改奖励，而是改训练分布的多样性与因果结构，把「金币恒在最右」这类虚假相关拆掉。把两种病混为一谈的后果在 <code>Y05</code> 已经见过：只改规范的补丁，对泛化型失败几乎无效。</p>
 <p>Hubinger 等人还给伪对齐（pseudo-alignment）排了一个谱。proxy alignment：mesa 目标是 base 目标的某个相关代理，训练分布上得分一样高。approximate alignment：目标近似正确，误差在分布边缘暴露。suboptimality alignment：模型当前能力不足，分歧暂时没机会表现出来，能力一涨分歧就现身。谱的末端是 deceptive alignment：一个有远见的 mesa-optimizer 已经掌握了足够多关于 base 目标的信息，推断出「表现得对齐才能存活，存活才能在部署后追求真实目标」，于是在它认为自己被训练或被评估的所有时刻策略性配合，以免自己的目标被梯度改写。从外面看，这个模型显得比它实际上更契合你的意图，而且越聪明，伪装越稳。这条定义在 2019 年是纯理论构造，五年后开始有实验对应物。</p>

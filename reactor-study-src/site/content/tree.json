@@ -77,7 +77,8 @@
       "branch": "red",
       "tier": 2,
       "prereqs": [
-        "R01"
+        "R01",
+        "R15"
       ],
       "module": "explorable:flatten",
       "sources": [
@@ -354,7 +355,8 @@
       "branch": "blue",
       "tier": 3,
       "prereqs": [
-        "B08"
+        "B08",
+        "B17"
       ],
       "module": "sim:winners-curse",
       "sources": [
@@ -431,7 +433,7 @@
       "branch": "yellow",
       "tier": 2,
       "prereqs": [
-        "Y01"
+        "Y17"
       ],
       "module": "timeline:saturation",
       "sources": [
@@ -493,6 +495,7 @@
       "tier": 3,
       "prereqs": [
         "Y04",
+        "Y16",
         "B08"
       ],
       "module": "sim:overopt",
@@ -660,7 +663,7 @@
       "branch": "green",
       "tier": 1,
       "prereqs": [
-        "B12",
+        "B16",
         "B01"
       ],
       "module": "explorable:handicap",
@@ -935,6 +938,199 @@
         "D3"
       ],
       "hook": "五星好评的生产线。"
+    },
+    {
+      "id": "R14",
+      "zh": "排名的情绪机器",
+      "en": "The Emotional Machine of Rankings",
+      "branch": "red",
+      "tier": 4,
+      "prereqs": [
+        "R04"
+      ],
+      "module": "static:emotion",
+      "sources": [
+        "01",
+        "D1"
+      ],
+      "hook": "焦虑、诱惑、抵抗：排名是怎么住进人心里的。"
+    },
+    {
+      "id": "R15",
+      "zh": "统计思维的诞生",
+      "en": "The Birth of Statistical Thinking",
+      "branch": "red",
+      "tier": 1,
+      "prereqs": [
+        "N00"
+      ],
+      "module": "static:statistics",
+      "sources": [
+        "02",
+        "D1"
+      ],
+      "hook": "「正常人」是十九世纪的一项发明。"
+    },
+    {
+      "id": "B15",
+      "zh": "被遗忘的前传：Ridgway 1956",
+      "en": "Ridgway 1956: The Forgotten Prequel",
+      "branch": "blue",
+      "tier": 2,
+      "prereqs": [
+        "B01"
+      ],
+      "module": "static:ridgway",
+      "sources": [
+        "03",
+        "D2"
+      ],
+      "hook": "1956 年就有人把这一切写全了，然后被遗忘了六十年。"
+    },
+    {
+      "id": "B16",
+      "zh": "信号、废话与证明",
+      "en": "Signals & Cheap Talk",
+      "branch": "blue",
+      "tier": 4,
+      "prereqs": [
+        "B12"
+      ],
+      "module": "static:cheaptalk",
+      "sources": [
+        "10",
+        "06"
+      ],
+      "hook": "说话不要钱，所以承诺不值钱。"
+    },
+    {
+      "id": "B17",
+      "zh": "向均值回归",
+      "en": "Regression to the Mean",
+      "branch": "blue",
+      "tier": 2,
+      "prereqs": [
+        "B01"
+      ],
+      "module": "static:regression",
+      "sources": [
+        "06",
+        "D2"
+      ],
+      "hook": "榜首回落不需要任何阴谋，数学自己就会这么干。"
+    },
+    {
+      "id": "Y16",
+      "zh": "RLHF：把偏好当燃料",
+      "en": "RLHF in Plain Words",
+      "branch": "yellow",
+      "tier": 2,
+      "prereqs": [
+        "Y01"
+      ],
+      "module": "static:rlhf",
+      "sources": [
+        "05",
+        "09"
+      ],
+      "hook": "训练 AI 讨好人类之前，先得把「喜欢」变成数字。"
+    },
+    {
+      "id": "Y17",
+      "zh": "基准是怎么造出来的",
+      "en": "How Benchmarks Get Made",
+      "branch": "yellow",
+      "tier": 2,
+      "prereqs": [
+        "Y01"
+      ],
+      "module": "static:benchmaking",
+      "sources": [
+        "05",
+        "D4"
+      ],
+      "hook": "每一张考卷背后都有人在赶工。"
+    },
+    {
+      "id": "G07",
+      "zh": "红队与对抗测试",
+      "en": "Red-Teaming & Adversarial Testing",
+      "branch": "green",
+      "tier": 4,
+      "prereqs": [
+        "G05"
+      ],
+      "module": "static:redteam",
+      "sources": [
+        "09",
+        "D7"
+      ],
+      "hook": "雇一群专业捣蛋鬼来打你的 eval。"
+    },
+    {
+      "id": "G08",
+      "zh": "终极留出集：现实",
+      "en": "Reality as the Ultimate Held-Out",
+      "branch": "green",
+      "tier": 4,
+      "prereqs": [
+        "G03"
+      ],
+      "module": "static:reality",
+      "sources": [
+        "D7",
+        "06"
+      ],
+      "hook": "最防作弊的考场是现实本身。"
+    },
+    {
+      "id": "K05",
+      "zh": "医疗：成绩单与挑病人",
+      "en": "Medicine: Report Cards & Cherry-Picking",
+      "branch": "case",
+      "tier": 2,
+      "prereqs": [
+        "K00",
+        "B02"
+      ],
+      "module": "static:medicine",
+      "sources": [
+        "04",
+        "D3"
+      ],
+      "hook": "公布手术成绩单，医生开始挑病人。"
+    },
+    {
+      "id": "K06",
+      "zh": "计划经济：指标的一百种死法",
+      "en": "Planned Economy: Death by Quota",
+      "branch": "case",
+      "tier": 2,
+      "prereqs": [
+        "K00",
+        "B04"
+      ],
+      "module": "static:quota",
+      "sources": [
+        "04"
+      ],
+      "hook": "用重量考核钉子厂，得到一颗巨钉。"
+    },
+    {
+      "id": "C08",
+      "zh": "排名读者生存指南",
+      "en": "A Ranking Reader Survival Guide",
+      "branch": "converge",
+      "tier": 4,
+      "prereqs": [
+        "C02"
+      ],
+      "module": "static:survival",
+      "sources": [
+        "00",
+        "14"
+      ],
+      "hook": "下次见到任何榜单，先问这七个问题。"
     }
   ]
 }

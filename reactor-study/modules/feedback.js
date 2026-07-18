@@ -1,5 +1,5 @@
 /* REACTOR · feedback.js (R02) — self-fulfilling prophecy loop */
-import { mount, canvas, controls, slider, add, readout, legend, scoped } from "/modules/mod-kit.js?v=fccf0ac854";
+import { mount, canvas, controls, slider, add, readout, legend, scoped } from "/modules/mod-kit.js?v=49b358d492";
 
 mount("feedback", (body, fig, { config }) => {
   const C = scoped(fig);

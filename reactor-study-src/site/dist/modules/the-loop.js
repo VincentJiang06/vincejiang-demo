@@ -2,7 +2,7 @@
    性能契约：空闲时零帧——rAF 只在指针悬在点阵上时运行，离开即停在最后一帧。
    （旧版无条件 rAF 循环 + 每帧重设 canvas 尺寸 + 每帧重写 innerHTML，
      静置页面烧掉 1/3 个核。canvas 尺寸只在真变时重设，读数只在值变时更新。） */
-import { mount, canvas, readout, cssvar } from "/modules/mod-kit.js?v=fccf0ac854";
+import { mount, canvas, readout, cssvar } from "/modules/mod-kit.js?v=49b358d492";
 
 mount("the-loop", (body, fig) => {
   const C = n => cssvar(n, fig);

@@ -2,8 +2,9 @@ export default {
   id: "G01",
   blocks: [
     { t: "prose", html: `
-<p>抗博弈的关键常被概括为「把作弊成本拉高」。这一节给它一个理论根基，并把这句概括本身修正掉。理论来自一个意想不到的地方：生物学。</p>
-<p>孔雀为什么长着累赘的大尾巴？Zahavi 1975 年的<strong>障碍原理（handicap principle）</strong>说：正因为尾巴昂贵、是负担，它才是诚实信号，只有真正健康的个体负担得起，代价本身就是质量的证明。这个直觉太漂亮，Grafen 1990 年用博弈论做了形式化，教科书从此奉它为诚实信号的一般原理。故事的第二幕和第三幕，教科书大多没跟上。</p>` },
+<p>怎么判断一个 agent 是真有本事，还是只会对着测试装样子？这一节给你一个出人意料的判断标准，它来自研究孔雀尾巴的生物学家。你会学到一句反直觉的话：让信号可信的不是「贵」，而是「对说谎的人才贵」。学会这个区别，你以后出考题时就知道该找哪一种，那种差系统再努力也装不出来、好系统却随手就有的判据。花十分钟，值。</p>
+<p>你在 <code>B01</code> 已经见过 Goodhart 定律：一个指标一旦变成大家要冲的目标，就不再是好指标。<code>B12</code> 的委托代理也讲过，你想要一个好 agent，可优化器只想让 eval 亮绿灯。这一节接着往下问：既然指标总会被冲，有没有哪种信号天生就更难造假？</p>
+<p>生物学早就在琢磨这事。孔雀拖着一条又大又碍事的尾巴，按理说该先被天敌吃掉，Zahavi 1975 年却说，正是这条累赘尾巴让它可信：只有真健康的孔雀才养得起这么大的负担还活得好，于是尾巴成了健康的可靠证据。这个想法叫障碍原理，它的名声起落过三回，下面的交互带你走一遍。</p>` },
 
     { t: "module", module: "explorable:handicap", title: "诚实不来自贵，而来自「对说谎者才贵」", config: {
       mode: "steps",
@@ -15,20 +16,44 @@ export default {
       ]
     } },
 
+    { t: "prose", html: `
+<p>三幕故事落到一句话：诚实不来自「贵」，来自「对说谎者才贵」。同一条尾巴，健康孔雀养得起，病孔雀养不起，这个成本落差才是关键，绝对的贵反而不必要。教科书常停在第一幕的「越贵越可信」，学界其实已经走到这一步。</p>
+<p>顺着这句话，还有更省事的做法。经济学里有个词叫 cheap talk，直译是零成本的空口白话，它证明了一件很有用的事：如果说话的人和听话的人利益一致，说真话根本不用花钱，空口白话就够可信；反过来，双方利益冲突越大，才越需要昂贵的信号去把谎话压住。一句话，维持诚实要花多少成本，跟利益冲突的大小成正比。</p>
+<p>举个身边的例子。你问同组同事「这段代码有没有 bug」，他和你在一个组、bug 出了也砸他的活，他没理由骗你，随口一答就可信；可要是他是外包、多报「没问题」就能早点结款走人，你就不得不加验收、加追责，也就是加成本。同一个问题，成本该加多少，全看你俩利益差多远。</p>
+<p>这给了你一个跟直觉相反的设计顺序：别一上来就把门槛往死里抬。先想办法让考题的设计者和被考的 agent 利益一致，把冲突降下来；再决定还要不要加成本。就算要加，也不用加到天上，给谎报加一点点确定的代价（一定概率被抽查、事后追责），就能把诚实往回拉不少。</p>
+<p>最狠的一种判据干脆不靠成本，靠物理。有些信号，低质量的一方压根造不出来。小鸟发不出大鸟那种低沉的叫声，因为音高被身体大小卡死了，这信号不花力气，却假不了，这类叫 index 信号。落到 eval 上它最值钱：真能跑通的程序、能复现的实验结果、多步操作后留下的真实后果，都是由任务结构决定、弱模型物理上做不到的东西，比任何「难度很高」的评分都靠得住。这条到 <code>G05</code> 会推成正式的机制设计，操作台在 <code>C03</code>。</p>
+<p>这不是纸上谈兵。有一批编程测试就栽在这上面：模型分数很高，后来发现它多半是把人类早就写好的修复补丁逐字背了出来，是记忆不是推理。如果当初判据盯的是 index 型的东西，比如改动前后程序行为的真实差异、能不能跑通一组它没见过的测试，光靠背答案就拿不到分。差系统装不出「真跑通」，这就是 index 信号的价值。</p>
+<p>把这一课收成三步，你以后看一个判据抗不抗造假，照着问就行：</p>
+<ul>
+<li><strong>先问利益</strong>：出题的人和被考的 agent，利益一致吗？能不能让出题的人自己也要用这个 agent 干活？冲突越小，后面越省事。</li>
+<li><strong>再找结构</strong>：这道题里有没有「弱模型物理上做不到」的部分？能跑通的程序、能复现的结果、留下真实痕迹的操作，优先用它们当判据。</li>
+<li><strong>最后算成本差</strong>：对想蒙混的差系统，造出好看结果要多费多少劲？如果差系统和好系统一样轻松、或一样吃力，这判据就没用；你要的是差系统特别费劲、好系统随手就有。</li>
+</ul>
+<p>还得提前打个预防针：任何一种判据，一旦大家都摸清了、都照着优化，就会慢慢失灵。这跟文凭贬值一个道理，大学文凭稀罕时能证明能力，人人都有之后就不值钱了。被考的一方会朝判据聚拢，分辨力越来越弱。一套公开的编程基准往往就是这样，头一年还能拉开模型差距，两三年后大家都在上面刷，分数全挤到顶，也就废了。所以抗博弈不是「设计一次好判据」就完事，最好给每个判据记个「服役时长」，算着它多久会被摸透、定期换新，这条接 <code>G03</code> 的动态刷新和 <code>G04</code> 的指标轮换。</p>` },
+
     { t: "callout", variant: "myth", html: `
-<p><strong>流行说法：「孔雀尾巴可信是因为太昂贵。」</strong>复核结论：这是第一幕的版本，学界已走到第三幕。均衡成本可以为零，诚实由质量依赖的净收益差锁定。争论仍有两方：Penn 与 Számadó 主张"handicap"这个名字应彻底废弃而非修改；Grafen 一系（Biernaskie 等 2018）用一个统一模型把从线索到障碍排成连续谱，把障碍降格为特例保留。数学上双方共识，分歧在命名与「成本是否必要」。置信度提示：trade-offs 取代 cost 的表述较新（2023–2026，主要出自同一作者群），尚未被全领域采纳。</p>` },
+<p><strong>流行说法：「孔雀尾巴可信是因为太昂贵。」</strong>复核结论：这是第一幕的版本，学界已走到第三幕。均衡成本可以为零，诚实由质量依赖的净收益差锁定。争论仍有两方：Penn 与 Számadó 主张 handicap 这个名字应彻底废弃而非修改；Grafen 一系（Biernaskie 等 2018）用一个统一模型把从线索到障碍排成连续谱，把障碍降格为特例保留。数学上双方共识，分歧在命名与「成本是否必要」。置信度提示：trade-offs 取代 cost 的表述较新（2023–2026，主要出自同一作者群），尚未被全领域采纳。</p>` },
 
     { t: "callout", variant: "intuit", html: `
-<p><strong>最有操作价值的一条定理，来自 cheap talk 传统而非生物学：维持诚实所需的信号成本，正比于信号者与接收者之间的利益冲突。</strong>Crawford 与 Sobel 1982 年证明，完全无成本的沟通里，双方偏好越接近，均衡越有信息量；Lachmann 等 2001 年把它推到生物学，标题就是判决："waste is not required"。这把「昂贵信号」从二元选择变成一个连续旋钮：<strong>先想办法对齐利益（把冲突降下来），再决定还需要多少成本去锁住剩余的冲突。</strong>利益一致时，昂贵是纯损失。还有一条补充：Kartik 等证明，即便只给谎报加一点点确定的边际成本（审计概率、事后追责、声誉罚），也能显著改善信息传递，门槛不必抬到天上。</p>` },
+<p><strong>一条比「越贵越可信」更准的定理，来自 cheap talk 传统：维持诚实所需的成本，正比于双方的利益冲突。</strong>Crawford 与 Sobel 1982 年证明，无成本沟通里双方偏好越接近，说真话越可信；Lachmann 等 2001 年把它推到生物学，标题直接就是「浪费不是必需的」。这把「昂贵信号」从一个开关变成一个旋钮：利益完全一致时，昂贵是纯浪费；冲突越大，才越拧得高。所以先对齐利益，再谈成本。</p>` },
 
     { t: "callout", variant: "applied", html: `
-<p><strong>翻译成 agent eval，三条可直接用：</strong>其一，设计任务让「真解决」和「刷分」之间的净收益差最大化。需要真实多步推理、真实环境交互、长链条后果的任务，骗子刷不动；单点可模式匹配的断言，骗子几乎零成本刷满。其二，优先找 index 型判据：那些由任务结构决定、低能力模型物理上做不到的东西（真跑通的程序、可复现的实验结果），比任何「昂贵」的评分都稳。其三，先降冲突再加成本：让 eval 的设计者自己要用这个 agent（skin in the game），比把 eval 修得更严更有效。这三条是 <code>C07</code> 清单的支柱。</p>` },
+<p><strong>翻译成 agent eval，三条可直接用：</strong>其一，设计任务让「真解决」和「刷分」之间的净收益差最大化。需要真实多步推理、真实环境交互、长链条后果的任务，骗子刷不动；单点可模式匹配的断言，骗子几乎零成本刷满。其二，优先找 index 型判据：那些由任务结构决定、低能力模型物理上做不到的东西（真跑通的程序、可复现的实验结果），比任何「昂贵」的评分都稳。其三，先降冲突再加成本：让 eval 的设计者自己要用这个 agent（skin in the game），比把 eval 修得更严更有效。这三条是 <code>C07</code> 清单的支柱，机制设计的天花板在 <code>G05</code>。</p>` },
+
+    { t: "prose", html: `
+<p><strong>留一个问题：</strong>如果诚实靠的是「差异」而不是「昂贵」，那在人造的评分系统里，我们到底该复制成本上的差异，还是收益上的差异？生物学里那种「小鸟天生发不出低音」的结构性不可伪造，人造 eval 里有没有对得上的东西？这是 D7 报告留的关键缺口。</p>
+<p><strong>一句话带走：</strong>好判据不是最难的那个，是「差系统装不出来、好系统随手就有」的那个。</p>` },
 
     { t: "sources", items: [
-      `Zahavi (1975)；Grafen (1990)；Penn, D. J. & Számadó, S. (2020). <em>Biological Reviews</em> 95(1):267–290.`,
-      `Számadó, Zachar, Czégel & Penn (2023). <em>BMC Biology</em> 21:4；Számadó, Zachar & Penn (2026). <em>J. Evolutionary Biology</em> 39(2)（trade-offs 框架）。`,
-      `Crawford & Sobel (1982). <em>Econometrica</em>；Lachmann, Számadó & Bergstrom (2001). <em>PNAS</em>（waste is not required）。`,
-      `Spence (1973)；Taleb, <em>Skin in the Game</em>。深化见 <code>research/deep/D7</code> §1–3。`
+      `Zahavi, A. (1975). "Mate selection—A selection for a handicap." <em>Journal of Theoretical Biology</em> 53(1):205–214.`,
+      `Grafen, A. (1990). "Biological signals as handicaps." <em>Journal of Theoretical Biology</em> 144(4):517–546.`,
+      `Penn, D. J. & Számadó, S. (2020). "The Handicap Principle: how an erroneous hypothesis became a scientific principle." <em>Biological Reviews</em> 95(1):267–290.`,
+      `Számadó, Zachar, Czégel & Penn (2023). <em>BMC Biology</em> 21:4；Számadó, Zachar & Penn (2026). <em>J. Evolutionary Biology</em> 39(2):171（trade-offs 框架）。`,
+      `Crawford, V. P. & Sobel, J. (1982). "Strategic Information Transmission." <em>Econometrica</em> 50(6):1431–1451.`,
+      `Lachmann, Számadó & Bergstrom (2001). "Cost and conflict in animal signals and human language." <em>PNAS</em> 98(23):13189–13194（waste is not required）。`,
+      `Kartik, Ottaviani & Squintani (2007). "Credulity, lies, and costly talk." <em>JET</em> 134(1):93–116；Spence, A. M. (1973). "Job Market Signaling." <em>QJE</em> 87(3):355–374。`,
+      `Biernaskie, Perry & Grafen (2018). "A general model of biological signals, from cues to handicaps." <em>Evolution Letters</em> 2(3):201–209（连续谱的温和派）。`,
+      `主源 <code>research/10</code> §1–4 与 <code>research/deep/D7</code> §1–2；争论两方与 index 信号见 D7-1。`
     ] }
   ]
 };

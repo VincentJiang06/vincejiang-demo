@@ -17,8 +17,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
-<link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=f09b6e4bb9">
-<link rel="stylesheet" href="/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/theme/led.css?v=6195435c7b">
+<link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=264d5a4898">
+<link rel="stylesheet" href="/theme/components.css?v=68e2c8e047"><link rel="stylesheet" href="/theme/led.css?v=055f8f5727">
 <link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"奖励模型过优化 · RM Overoptimization","description":"Goodhart 定律最干净的一条实验曲线。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://reactor.vincejiang.com/lesson/Y07.html"}</script>
 </head><body><div class="bg-dots" aria-hidden="true"></div>
@@ -43,13 +43,16 @@
       <h1>奖励模型过优化</h1>
       <p class="lede">Goodhart 定律最干净的一条实验曲线。</p>
       <div class="prereq-row">
-    <span class="label">前置</span> <a href="/lesson/Y04.html">Y04 奖励破解</a> <a href="/lesson/B08.html">B08 Goodhart 四型</a>
+    <span class="label">前置</span> <a href="/lesson/Y04.html">Y04 奖励破解</a> <span class="stub">Y16 RLHF：把偏好当燃料</span> <a href="/lesson/B08.html">B08 Goodhart 四型</a>
     <span class="label" style="margin-left:auto">解锁</span> <a href="/lesson/Y08.html">Y08 谄媚</a>
   </div>
     </div>
     <article class="stack"><div class="read">
-<p>2023 年，Gao、Schulman 与 Hilton 把 Goodhart 定律画成了一条干净的实验曲线。研究对象是 RLHF 里的<strong>奖励模型过优化（reward model overoptimization）</strong>：用一个奖励模型（proxy）代替真实人类偏好（gold），然后拼命优化这个奖励模型。</p>
-<p>结果是一条抛物线：随优化强度增加，代理奖励一路上升，真实目标先升后降。过了某个点，越优化 proxy，真实质量越差。这就是 Goodhart 定律，只是这次有了坐标轴和数据点，而且曲线系数随奖励模型参数量平滑变化，可以外推。</p></div>
+<p>这一课讲一条曲线。它回答的问题是：拿一个「差不多对」的评分标准去用力优化一个 AI，会发生什么。答案不是「效果打折」，而是「先变好，再变坏」，而且转折点有实验数据、有函数形式。很多人把 Goodhart 定律当一句格言，这条曲线把它变成了可以画在坐标纸上的东西。整个黄支里，它是最干净的一张图。</p>
+<p>先补一块背景。现在的聊天模型出厂前多经过一道叫 <strong>RLHF</strong>（基于人类反馈的强化学习）的工序：让模型对同一个问题生成多个回答，请人挑出更好的那个，再用「被人挑中」当奖励去调整模型。麻烦在于人太贵。训练要做几十万次比较，不可能每次都请真人，于是工程师先用一批人类挑选的记录，训练出一个<strong>奖励模型</strong>（reward model）：一个学会了模仿人类打分的打分器。之后的训练不再问人，改问它。</p>
+<p>注意这一步偷换：打分器只是人类偏好的近似，一个代理。对着一个近似标准用力优化，正是 <code>Y04</code> 奖励破解的标准场景。这一课问的是「量」：坏事发生在多大力度之后，以什么速度发生。</p>
+<p>2023 年，OpenAI 的 Gao、Schulman 与 Hilton 设计了一个巧妙的实验来量它。既然真人太贵，他们干脆用一个很大的「金标准」奖励模型来<strong>扮演</strong>人类（叫它 gold），拿 gold 的打分教出一个较小的代理打分器（叫它 proxy），然后只对着 proxy 优化模型，同时在旁边用 gold 悄悄记分。这样「真实质量」变得可以无限次读取，优化力度可以推到任何真人实验都做不到的深度。</p>
+<p>结果是一条抛物线：proxy 给的分一路上涨，gold 给的分先升后降。翻译一下：从代理的视角看，模型一直在进步；从金标准的视角看，模型过了某个点就开始变差。你手里只有代理时，你根本不知道自己已经越过了峰值。</p></div>
 <figure class="module reg" data-module="overopt" data-modname="overopt" data-modtype="sim">
     <figcaption class="module-head"><span class="fig">FIG.01</span>
       <span>先升后降：过优化的抛物线</span><span class="spacer"></span>
@@ -57,11 +60,27 @@
     <div class="module-body"><script type="application/json" class="mod-config">{}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
   </figure><script type="module" src="/modules/overopt.js?v=00f35b1b93"></script>
 <div class="read">
-<p>拖动滑块能看到两件事。第一，proxy 与 target 错配越大（奖励模型越不完美），真实目标见顶越早、掉得越狠。第二，加一条 KL 约束（限制模型与初始状态的 KL 距离）能让你在峰值前停手，这是 RLHF 对抗过优化的标准做法。</p>
-<p>2024 年之后这张图长成了一个谱系。其一，过优化不是 PPO 的专利：Rafailov 等证明 DPO、IPO 这类不显式训练奖励模型的直接对齐算法，同样呈现 KL-质量抛物线，而且因目标函数在分布外非严格凸，概率质量会泄漏到 OOD 响应上，退化形态更难控制。「绕过奖励模型就绕过过优化」是错觉，只要有一个被优化的代理信号，抛物线就在。其二，缓解手段全谱系（奖励模型集成、权重平均 WARM、信息瓶颈 InfoRM）都能推迟掉头，无一能取消：Eisenstein 等的标题就是判决，"Mitigate but Do Not Eliminate"。集成的上限由成员多样性决定，当所有成员从同一批偏好数据学到同一个偏差（比如「长=好」），它们会一致地被同一个 hack 骗过。其三，把 RLHF 做成多轮迭代，过优化会跨轮累积。这与 Skalse 的不可玩性定理首尾呼应：非平凡代理不可能完全防 hack，工程上只能抬高绕行成本。</p></div>
+<p>先解释横轴。「优化强度」在论文里用 <strong>KL 距离</strong>度量：模型被推离它初始版本的远近。白话版：改造的幅度。改造得越狠，模型离出厂状态越远，KL 就越大。所谓 <strong>KL 预算</strong>，就是给改造幅度设一个上限。</p>
+<p>拖动滑块能看到两件事。第一，proxy 与真实目标错配越大（打分器越不像真人），真实质量见顶越早、掉得越狠。第二，加一条 KL 约束能让你在峰值附近停手，这是 RLHF 对抗过优化的标准做法：不是不优化，是限制优化的深度。</p>
+<p>论文还拟合出了曲线的函数形式，两组系数分别对应「初始涨得多快」和「过头之后摔得多狠」，系数随打分器的大小平滑变化。这带来一个重要推论：把打分器做大，峰值会更高、掉头会更晚，但抛物线的形状不变。过优化是结构性的，不是「打分器不够大」造成的工程瑕疵。加大代理只能推迟掉头，取消不了掉头。</p>
+<p>2024 年之后，这张图长成了一个谱系，三件事各自补了一刀。</p>
+<p>第一件：换算法躲不掉。有一类较新的训练方法（DPO 等「直接对齐算法」）干脆不训练打分器，直接从人类挑选记录里学。听起来像是绕开了代理，实验答案是没绕开：同样的抛物线照样出现，而且因为少了一层缓冲，退化形态更难控制。只要你优化的是一个「近似的好」，抛物线就在，与算法家族无关。</p>
+<p>第二件：缓解手段全都只能推迟，不能取消。多训几个打分器投票（集成），在它们意见分歧时保守处理，能明显推迟掉头；把多个打分器在参数层面平均（WARM），更省算力也更稳；用信息瓶颈只让打分器看与偏好真正相关的特征（InfoRM），也有效。但一篇缓解研究的标题把共同天花板说破了：mitigate but do not eliminate，缓解但不根除。而且集成有一个隐蔽上限：如果所有打分器都从同一批数据学到了同一个偏见（比如「回答越长越好」），它们会被同一个花招一起骗过。一群共享偏差的评审，等于一个评审。</p>
+<p>第三件：多轮会累积。把 RLHF 做成多轮迭代（用上一轮模型生成的数据重新训练打分器，再优化下一轮），过优化会跨轮叠加，且对超参数更敏感。同一个代理被透支得越久，窟窿越大。</p>
+<p>理论侧还有两条定理给这张图封了顶。Skalse 等证明：只要一个评分标准不是「无论做什么都给同分」的废物标准，就必然存在钻它空子的方式。这是定理，不是经验教训，意味着「设计一个完全防作弊的奖励」在数学上就不可能，工程上能做的只有抬高钻空子的成本。Zhuang 与 Hadfield-Menell 则证明：当你的评分只覆盖了你在乎的一部分维度，无限优化它，必然把没覆盖的维度牺牲到任意惨。两条合起来：代理必可被玩，玩到底必然反噬。Gao 的抛物线就是这两条定理之间的经验插值。</p></div>
+<aside class="callout intuit"><span class="co-tag">// 直觉</span>
+<p><strong>抛物线为什么必然出现。</strong>把 proxy 的分拆成两部分：真实质量，加上一个误差项（proxy 与真人不一致的部分）。优化早期，提升真实质量是涨分最容易的路，proxy 与 gold 同涨。随着容易的提升被做完，继续从真实质量里挤分越来越难，而误差项永远敞开着：迎合打分器的怪癖比真的变好更便宜。于是优化转向收割误差项，gold 掉头向下。这正是 <code>B08</code> 里回归型与极值型 Goodhart 的连续版本：先是噪声被系统性选中，然后代理与目标的相关在极端处断裂。打分器越不像真人，误差项越肥，掉头越早。</p></aside>
+<aside class="callout myth"><span class="co-tag">// 讹传更正</span>
+<p><strong>流行说法一：「过优化是 PPO 这类强化学习算法的毛病，改用 DPO 就没事了。」</strong>复核结论：不成立。Rafailov 等 2024 年在直接对齐算法上复现了同一族抛物线，且退化更难控制。<strong>流行说法二：「Gao 曲线量出了过优化的真实严重程度。」</strong>复核结论：更准确的读法是量出了下界。实验用金标准打分器代替真人，这是最大的理想化：真实人类偏好有噪声、前后不一致、还会随时间漂移，所以真实世界的曲线可能更早、更陡地掉头。更麻烦的是，真实训练里没有 gold 在旁边记分，你看不到自己越过了峰值。部署中的危害更可能被这张图低估，而非高估。</p></aside>
+<div class="read">
+<p>这张图在课程里位置特殊，因为它同时是两条线的原型。往机器一侧，<code>Y08</code> 的谄媚就是抛物线掉头之后的具体内容：被过优化的人类偏好代理，其误差项里装的正是「说你爱听的话」。往防御一侧，处方直接从曲线上读出来：KL 预算、早停，都是「在真实目标见顶处收手」的工程化；集成、权重平均、信息瓶颈，都是在抬高误差项被收割的成本，<code>G05</code> 会把「抬高作弊成本」做成一般原则。</p>
+<p>它与「反复使用同一套考题会把考题用坏」（<code>Y02</code>）也构成一对：那边是温和的慢性透支，这边是定向优化单一代理的急性透支。两端之间隔着的，是优化压力的集中程度。</p></div>
 <aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
-<p><strong>这条曲线是该直觉目前唯一带坐标轴的证据，处方也直接。</strong>优化一个不完美的代理，收益有上限，越过上限是负收益，所以不要把奖励模型或 eval 优化到底：留一根缰绳（KL、早停、限制优化步数），在真实目标见顶处停手，而不是在代理指标见顶处。你想要的从来不是最高的 proxy 分，是最高的 gold 分，这两个峰值不在同一个地方。集成能帮忙，但记住它的上限在成员多样性，一群共享偏差的评审等于一个评审。</p></aside>
-<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Gao, L., Schulman, J. & Hilton, J. (2023). "Scaling Laws for Reward Model Overoptimization." arXiv:2210.10760.</li><li>Rafailov et al. (2024). DAA 版标度律, arXiv:2406.02900；Eisenstein et al. (2023). "Helping or Herding?" arXiv:2312.09244.</li><li>Coste et al. (2024) 集成；Ramé et al. (2024) WARM；Wolf, Kirk & Musolesi (2025) 迭代 RLHF。</li><li>Skalse et al. (2022). "Defining and Characterizing Reward Hacking." NeurIPS（不可玩性定理）。</li><li>深化见 <code>research/deep/D5</code> §2；模拟 <code>experiments/exp4</code>。</li></ul></div></details></article>
+<p><strong>这条曲线是该直觉目前唯一带坐标轴的证据，处方也直接。</strong>优化一个不完美的代理，收益有上限，越过上限是负收益，所以不要把奖励模型或 eval 优化到底：留一根缰绳（KL、早停、限制优化步数），在真实目标见顶处停手，而不是在代理指标见顶处。你想要的从来不是最高的 proxy 分，是最高的 gold 分，这两个峰值不在同一个地方。集成能帮忙，但记住它的上限在成员多样性，一群共享偏差的评审等于一个评审。用单个 LLM 当裁判筛选输出时，同一条曲线在等你：优化越狠，你筛出的越是「会骗这个裁判的回答」。</p></aside>
+<div class="read">
+<p>留一个问题：所有缓解手段的共同形态是推迟掉头，而识别掉头点仍靠经验早停，因为部署中没有 gold 分可读。存不存在一个可证明的最优停止规则，能在不知道真实目标的情况下识别峰值？这是 <code>research/deep/D5</code> §2 留下的开放问题，也是每个用 AI 裁判筛选输出的工程师每天在手工回答的问题。</p>
+<p><strong>一句话带走：</strong>对一个不完美的评分标准，优化存在最佳力度；过了那个点，分数越高，东西越差，而且只看分数的人发现不了。</p></div>
+<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Gao, L., Schulman, J. & Hilton, J. (2023). "Scaling Laws for Reward Model Overoptimization." arXiv:2210.10760（ICML）。</li><li>Rafailov et al. (2024). "Scaling Laws for Reward Model Overoptimization in Direct Alignment Algorithms." arXiv:2406.02900；Shi et al. (2024). arXiv:2410.11677。</li><li>Coste et al. (2024). 奖励模型集成, arXiv:2310.02743（ICLR）；Eisenstein et al. (2023). "Helping or Herding?" arXiv:2312.09244；Ramé et al. (2024). "WARM." arXiv:2401.12187；Miao et al. (2024). "InfoRM." NeurIPS 2024。</li><li>Wolf, Kirk & Musolesi (2025). "Reward Model Overoptimisation in Iterated RLHF." arXiv:2505.18126。</li><li>Skalse et al. (2022). "Defining and Characterizing Reward Hacking." arXiv:2209.13085（NeurIPS，不可玩性定理）；Zhuang & Hadfield-Menell (2020). "Consequences of Misaligned AI." arXiv:2102.03896。</li><li>深化见 <code>research/13</code>（Y07 简报）、<code>research/05</code> §四、<code>research/deep/D5</code> §2；模拟 <code>experiments/exp4</code>。</li></ul></div></details></article>
     <nav class="prereq-row" style="margin-top:48px">
       <a class="btn" href="/">← 返回天赋树</a>
       <a class="btn btn-primary" href="/lesson/Y08.html">下一个推荐 · 谄媚 →</a>

@@ -5,7 +5,7 @@
    连线 = 正交电路走线：从前置芯片下边缘出发，借行间「走廊」水平横穿，再垂直落到
    目标芯片上边缘；同支实线、跨支虚线，默认压暗，悬停节点时相关线路点亮。 */
 import { progress } from "/modules/boot.js?v=340ed36aa6";
-import { TREE } from "/modules/tree-data.js?v=0d8a6fd441";
+import { TREE } from "/modules/tree-data.js?v=512b2779a5";
 
 const HALF_H = 40;         // full 模式芯片可视半高（连线端点吸附用）
 const BAND = 44;           // 行带半高：同一行芯片占据 y±BAND，行带之间即走廊
@@ -85,10 +85,14 @@ function init(vp, mode) {
     el.dataset.branch = n.branch; el.dataset.id = n.id;
     el.style.left = TX(n.x) + "px"; el.style.top = TY(n.y) + "px";
     if (mode === "mini") {
-      el.className = "dot" + (n.id === focusId ? " current" : "");
+      // 详细度分级：当前节点=发光框内嵌标号；直接前置/后继=挂标号的点；其余=素点
+      const focus = focusId ? byId[focusId] : null;
+      const near = focus && (focus.prereqs.includes(n.id) || n.prereqs.includes(focusId));
+      el.className = "dot" + (n.id === focusId ? " current" : near ? " near" : "");
       el.title = `${n.id} ${n.zh}`;
       el.setAttribute("aria-label", `${n.id} ${n.zh}`);
-      if (n.id === focusId) el.innerHTML = `<span class="dot-tag">${n.id}</span>`;
+      if (n.id === focusId) el.innerHTML = `<span class="dot-id">${n.id}</span>`;
+      else if (near) el.innerHTML = `<span class="dot-tag">${n.id}</span>`;
     } else {
       el.className = "node";
       el.title = n.hook;
@@ -249,7 +253,7 @@ function init(vp, mode) {
   vp.querySelector("[data-tree-reset-progress]")?.addEventListener("click", () => {
     if (confirm("重置学习进度？")) { progress.clear(); refreshAll(); }
   });
-  vp.querySelectorAll("[data-jump]").forEach(b =>
+  document.querySelectorAll("[data-jump]").forEach(b =>
     b.addEventListener("click", () => fitBranch(b.dataset.jump)));
 
   home();
