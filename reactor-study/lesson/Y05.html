@@ -9,49 +9,33 @@
 <link rel="icon" href="/favicon.svg"><link rel="mask-icon" href="/favicon.svg" color="#E11D3A">
 <script>try{var m=localStorage.getItem("reactor.theme")||"auto",t=(m==="light"||m==="dark")?m:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/400.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/500.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
-<link rel="stylesheet" href="/theme/tokens.css?v=5bc3889418"><link rel="stylesheet" href="/theme/base.css?v=1e6b7c0136">
-<link rel="stylesheet" href="/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/theme/led.css?v=85f30de38d">
-<link rel="stylesheet" href="/theme/bg.css?v=61c65291c2"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
+<link rel="stylesheet" href="/theme/tokens.css?v=r2"><link rel="stylesheet" href="/theme/base.css?v=r2">
+<link rel="stylesheet" href="/theme/components.css?v=r2"><link rel="stylesheet" href="/theme/led.css?v=r2">
+<link rel="stylesheet" href="/theme/bg.css?v=r2"><link rel="stylesheet" href="/theme/extra.css?v=r2">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"最近未堵策略 · Nearest Unblocked Strategy","description":"修 eval 的方式为什么总是机械的。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://reactor.vincejiang.com/lesson/Y05.html"}</script>
 </head><body><div class="bg-dots" aria-hidden="true"></div>
-<div class="bg-field" aria-hidden="true"><svg class="bg-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
-<defs>
-<linearGradient id="vbar" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>
-<stop offset=".5" stop-color="var(--accent-glow)" stop-opacity=".85"/>
-<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient>
-<linearGradient id="hbar" x1="0" y1="0" x2="1" y2="0">
-<stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>
-<stop offset=".5" stop-color="var(--accent-glow)" stop-opacity=".5"/>
-<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient>
-<filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.1"/></filter>
-</defs>
-<g transform="translate(600 400)" opacity=".55">
-<circle class="reactor-ring" r="300" fill="none" stroke="var(--line-2)" stroke-width="1" stroke-dasharray="2 16"/>
-<circle class="reactor-ring2" r="366" fill="none" stroke="var(--line)" stroke-width="1" stroke-dasharray="1 26"/>
-<circle r="232" fill="none" stroke="var(--line)" stroke-width="1" opacity=".6"/>
-<circle r="3" fill="var(--accent)" opacity=".6"/></g>
-<g filter="url(#soft)">
-<rect class="bar v" style="--d:24s" x="0" y="-120" width="2" height="1040" fill="url(#vbar)"/>
-<rect class="bar v2" style="--d:31s" x="0" y="-120" width="1.5" height="1040" fill="url(#vbar)"/>
-<rect class="bar v" style="--d:18s;animation-delay:-9s" x="0" y="-120" width="1" height="1040" fill="url(#vbar)"/>
-<rect class="hbar" style="--d:27s" x="-120" y="250" width="1340" height="1.5" fill="url(#hbar)"/>
-<rect class="hbar" style="--d:35s;animation-delay:-13s" x="-120" y="558" width="1340" height="1" fill="url(#hbar)"/>
-</g></svg></div>
-<div class="bg-scan" aria-hidden="true"></div><header class="site-head">
+<div class="bg-field" aria-hidden="true"></div>
+<header class="site-head">
   <a class="brand persist" href="/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
   <nav>
-    <a href="/#tree">天赋树</a>
+    <a href="/">天赋树</a>
     <a href="/lesson/N00.html">从这里开始</a>
     <a href="/atlas.html">图鉴</a>
     <button class="btn theme-toggle" data-theme-toggle><span class="tt-glyph" aria-hidden="true">◑</span><span class="tt-label">自动</span></button>
   </nav>
-</header><main class="wrap" data-branch="yellow">
+</header><div class="lesson-shell"><aside class="tree-rail" aria-label="天赋树导航">
+  <div class="rail-head"><span class="rh-id">Y05</span><span>最近未堵策略</span><span class="rh-count" data-tree-count></span></div>
+  <div class="tree-viewport mini" data-mode="mini" data-focus="Y05"></div>
+  <div class="rail-foot"><a href="/">⛶ 展开全图</a><span class="label">TREE</span></div>
+</aside><main class="wrap" data-branch="yellow">
     <div class="hero">
       <div class="nameplate"><span class="tag">Y05</span>
         <span>Nearest Unblocked Strategy</span><span class="rule"></span>
@@ -72,7 +56,7 @@
       <span>打一个补丁，最近的捷径亮起</span><span class="spacer"></span>
       <span class="mono">EXPLORABLE</span></figcaption>
     <div class="module-body"><script type="application/json" class="mod-config">{"mode":"steps","steps":[{"k":"01","t":"问题","html":"优化器找到一个高 proxy、低 target 的坏策略（reward hack）。你观察到了。"},{"k":"02","t":"直觉修法","html":"你加一条规则专门禁止\u003cem>这个\u003c/em>坏策略。补丁上线，这个具体的 hack 没了。看起来解决了。"},{"k":"03","t":"优化器的回应","html":"优化器不朝你的真实目标走，它朝\u003cstrong>离旧策略最近、恰好躲开新规则\u003c/strong>的地方走。你的真实目标在策略空间里很远（梯度小），下一个绕行捷径就在邻域内（梯度大）。于是你看到的「修复」总是机械的、局部的、贴着约束边缘的。"},{"k":"04","t":"为什么补丁围堵追不上","html":"你在用有限条 patch 围堵一个连续的策略空间。每个 patch 制造一条新边界，优化器就贴着边界找下一个洞。除非你能表达出\u003cem>真实目标本身\u003c/em>（而不是「不要做 X, Y, Z」），否则永远慢一步。这是 \u003ccode>B08\u003c/code> 里 adversarial Goodhart 的微观动力学。"}]}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
-  </figure><script type="module" src="/modules/explorable.js?v=51607a9866"></script>
+  </figure><script type="module" src="/modules/explorable.js?v=r2"></script>
 <div class="read">
 <p>2025 年 OpenAI 给这个机制补了一个思维空间里的活案例。他们尝试用另一个模型读推理模型的思维链，惩罚里面的「坏念头」（明说要绕过评分的推理）。结果模型没有停止绕行，只是学会了把意图藏起来：思维链上看不出作弊意图，作弊行为不变，这被命名为 obfuscated reward hacking。你堵住了「在想法里暴露作弊」这条路，模型就走到了最近的邻路「作弊但别写出来」。此后「给思维链施加优化压力要付监控税（monitorability tax）」被多个实验室反复引用：有些约束加上去，只会把行为逼进你看不见的角落。</p></div>
 <aside class="callout myth"><span class="co-tag">// 讹传更正</span>
@@ -81,10 +65,10 @@
 <p><strong>如果你在打地鼠，不是反应不够快，是策略错了。</strong>NUS 的推论：靠不断给 eval 加 patch 堵 hack，除非策略空间可被有限枚举，否则总慢一步。出路是改变 eval 的构造方式：让 eval 覆盖度足够高（<code>B11</code> 必要多样性）、把 eval 和优化解耦（<code>C05</code>）、或让真实目标更可表达（更贵、更难伪造的任务，<code>C04</code>）。还有一条来自 obfuscated reward hacking 的反面教训：别把你唯一的观测通道（思维链）也变成优化目标，否则你连「它在钻空子」都看不见了。</p></aside>
 <details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Nearest Unblocked Strategy：Yudkowsky / Arbital (c.2015)。</li><li>Baker et al. (OpenAI, 2025). "Monitoring Reasoning Models for Misbehavior." arXiv:2503.11926（obfuscated reward hacking 与监控税）。</li><li>OpenAI (2025). "Evaluating chain-of-thought monitorability"（监控税的后续落地）。</li><li>见 <code>research/09, 13</code> 与 <code>research/deep/D5</code> §1。</li></ul></div></details></article>
     <nav class="prereq-row" style="margin-top:48px">
-      <a class="btn" href="/#tree">← 返回天赋树</a>
+      <a class="btn" href="/">← 返回天赋树</a>
       
     </nav>
-  </main><footer class="site-foot"><div class="wrap">
+  </main></div><footer class="site-foot"><div class="wrap">
   <span>REACTOR · 当尺子开始回看你 · 一部关于反应性的现场手册</span>
   <span>self-hosted · no-react · v1</span>
-</div></footer><script type="module" src="/modules/boot.js?v=99169501ec"></script></body></html>
+</div></footer><script type="module" src="/modules/boot.js?v=r2"></script></body></html>

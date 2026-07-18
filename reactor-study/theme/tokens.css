@@ -2,8 +2,9 @@
    REACTOR · Design Tokens (权威定义，见 course/DESIGN-SYSTEM.md §2)
    ============================================================ */
 /* ── fonts: 全部无衬线，外部开源 CDN（jsDelivr / fontsource，SIL OFL）──
-   Inter = 拉丁，Noto Sans SC = 中日韩，JetBrains Mono = 等宽拉丁。
-   <link> 标签在 build.mjs 的 head() 里，此处只做栈定义。 */
+   Space Grotesk = 拉丁（几何科技感），Noto Sans SC = 中日韩，JetBrains Mono = 等宽拉丁。
+   全站基准字重 500（比常规加粗一档），强调 700。
+   <link> 标签在各页 head 里，此处只做栈定义。 */
 
 :root {
   /* ── 中性色阶：墨黑 → 纸白（带极轻冷调）── */
@@ -31,7 +32,7 @@
   --accent:var(--ink-100); --accent-glow:var(--white);
 
   /* ── 字体（全站无衬线：一个正文 + 一个等宽）── */
-  --font-sans:"Inter","Noto Sans SC",-apple-system,BlinkMacSystemFont,"PingFang SC",
+  --font-sans:"Space Grotesk","Noto Sans SC",-apple-system,BlinkMacSystemFont,"PingFang SC",
     "Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
   --font-mono:"JetBrains Mono","SFMono-Regular",ui-monospace,"Menlo","Noto Sans SC",monospace;
   /* 向后兼容别名——全部指向同一套无衬线 */
@@ -42,7 +43,7 @@
   --font-read:var(--font-sans);
 
   /* ── 间距 / 圆角 / 网格 ── */
-  --u:8px; --radius:2px; --radius-panel:4px; --maxw:1200px;
+  --u:8px; --radius:2px; --radius-panel:4px; --maxw:1200px; --headh:57px;
   --border:1px solid var(--ink-600);
   --dot-gap:22px; --grid-unit:64px;
 
@@ -69,11 +70,12 @@
   --glass-hi:color-mix(in srgb,#fff 60%,transparent);
   --dot:color-mix(in srgb,#000 6%,transparent);
 
-  /* 亮底要另一套分支色：暗底那套（尤其黄 1.45:1、绿 2.32:1）在纸白上根本读不了 */
-  --red:#C2183A;    /* 5.47:1 on #F4F4F2 */
-  --yellow:#8A6100; /* 5.03:1 */
-  --blue:#1D4FD8;   /* 6.03:1 */
-  --green:#067A57;  /* 4.85:1 */
+  /* 亮底要另一套分支色：暗底那套（尤其黄 1.45:1、绿 2.32:1）在纸白上根本读不了。
+     2026-07 提亮一档（保住 ≥4.5:1 附近的正文可读线）*/
+  --red:#D91E45;    /* 4.52:1 on #F4F4F2 */
+  --yellow:#A16207; /* 4.47:1 */
+  --blue:#2563EB;   /* 4.69:1 */
+  --green:#057E5B;  /* 4.60:1 */
   --accent:#141416; --accent-glow:#55555C;
   /* 图表里的"中性/真值"系列色：暗底那档 #8A8A95 落在纸白面板上只有 2.83:1，
      而它画的恰好是各模块里"真实能力/基本面"那条线，不能是最淡的一笔 */
@@ -86,8 +88,8 @@
   --ink-600:#D8D8D2; /* 图框细线 */
   /* 发光态在纸白上也得跟着换：分支页的 --accent-glow 走 --*-glow，
      不覆盖的话 canvas 光晕和 LED halo 还是暗色主题那套霓虹，糊在纸上像脏点 */
-  --red-glow:#E03A57; --yellow-glow:#B98400;
-  --blue-glow:#4A73E8; --green-glow:#199C74;
+  --red-glow:#F43F5E; --yellow-glow:#D19000;
+  --blue-glow:#5B8AF5; --green-glow:#10B981;
 }
 
 /* 分支作用域：把 --accent 指向该分支恒定色（用于课程页/节点） */

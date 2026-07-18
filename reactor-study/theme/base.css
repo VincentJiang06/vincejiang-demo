@@ -7,6 +7,7 @@ html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 
 body{
   font-family:var(--font-sans);
+  font-weight:500; /* 全站基准加粗一档（配套 CDN 已载 500 字重，非合成加粗） */
   color:var(--text); background:var(--bg);
   line-height:1.65; letter-spacing:.01em;
   -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
@@ -15,14 +16,18 @@ body{
 }
 
 /* ── 排版层级（统一无衬线）── */
-h1,h2,h3,h4{font-family:var(--font-sans);font-weight:700;line-height:1.12;letter-spacing:-.02em}
+/* text-wrap 新算法（渐进增强，Firefox 自动回退）：
+   标题 balance 均衡多行；正文 pretty 优化整段断行、避免孤行词——中英混排尤其受益 */
+h1,h2,h3,h4{font-family:var(--font-sans);font-weight:700;line-height:1.12;letter-spacing:-.02em;
+  text-wrap:balance}
 h1{font-size:clamp(2.5rem,6.4vw,5rem);line-height:1.02}
 h2{font-size:clamp(1.6rem,3.4vw,2.4rem);margin:calc(var(--u)*5) 0 calc(var(--u)*2)}
 h3{font-size:1.24rem;margin:calc(var(--u)*3) 0 var(--u)}
-p{margin:0 0 calc(var(--u)*2);max-width:68ch}
+p{margin:0 0 calc(var(--u)*2);max-width:68ch;text-wrap:pretty}
+li{text-wrap:pretty}
 .read p,.read li{font-family:var(--font-sans);font-size:1.04rem;line-height:1.92}
 /* 引用：全站同一套无衬线，靠字号/字重/竖线区分，不再换字体 */
-.pullquote,blockquote,.cite{font-family:var(--font-sans);font-weight:400}
+.pullquote,blockquote,.cite{font-family:var(--font-sans);font-weight:500}
 .pullquote{font-size:clamp(1.15rem,2.2vw,1.5rem);line-height:1.6;
   border-left:2px solid var(--accent);padding:calc(var(--u)*.5) 0 calc(var(--u)*.5) calc(var(--u)*2.5);
   margin:calc(var(--u)*3) 0;color:var(--text)}

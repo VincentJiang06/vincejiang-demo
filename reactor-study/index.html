@@ -9,107 +9,52 @@
 <link rel="icon" href="/favicon.svg"><link rel="mask-icon" href="/favicon.svg" color="#E11D3A">
 <script>try{var m=localStorage.getItem("reactor.theme")||"auto",t=(m==="light"||m==="dark")?m:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/400.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/500.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
-<link rel="stylesheet" href="/theme/tokens.css?v=5bc3889418"><link rel="stylesheet" href="/theme/base.css?v=1e6b7c0136">
-<link rel="stylesheet" href="/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/theme/led.css?v=85f30de38d">
-<link rel="stylesheet" href="/theme/bg.css?v=61c65291c2"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
+<link rel="stylesheet" href="/theme/tokens.css?v=r2"><link rel="stylesheet" href="/theme/base.css?v=r2">
+<link rel="stylesheet" href="/theme/components.css?v=r2"><link rel="stylesheet" href="/theme/led.css?v=r2">
+<link rel="stylesheet" href="/theme/bg.css?v=r2"><link rel="stylesheet" href="/theme/extra.css?v=r2">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"REACTOR — 当尺子开始回看你","description":"一部关于排名、评测与反身性的现场手册：从 Espeland-Sauder 反应性、Goodhart 定律家族，到 AI 评测的代理博弈与抗博弈设计。","inLanguage":"zh-CN","provider":{"@type":"Organization","name":"REACTOR"}}</script>
 </head><body><div class="bg-dots" aria-hidden="true"></div>
-<div class="bg-field" aria-hidden="true"><svg class="bg-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
-<defs>
-<linearGradient id="vbar" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>
-<stop offset=".5" stop-color="var(--accent-glow)" stop-opacity=".85"/>
-<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient>
-<linearGradient id="hbar" x1="0" y1="0" x2="1" y2="0">
-<stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>
-<stop offset=".5" stop-color="var(--accent-glow)" stop-opacity=".5"/>
-<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient>
-<filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.1"/></filter>
-</defs>
-<g transform="translate(600 400)" opacity=".55">
-<circle class="reactor-ring" r="300" fill="none" stroke="var(--line-2)" stroke-width="1" stroke-dasharray="2 16"/>
-<circle class="reactor-ring2" r="366" fill="none" stroke="var(--line)" stroke-width="1" stroke-dasharray="1 26"/>
-<circle r="232" fill="none" stroke="var(--line)" stroke-width="1" opacity=".6"/>
-<circle r="3" fill="var(--accent)" opacity=".6"/></g>
-<g filter="url(#soft)">
-<rect class="bar v" style="--d:24s" x="0" y="-120" width="2" height="1040" fill="url(#vbar)"/>
-<rect class="bar v2" style="--d:31s" x="0" y="-120" width="1.5" height="1040" fill="url(#vbar)"/>
-<rect class="bar v" style="--d:18s;animation-delay:-9s" x="0" y="-120" width="1" height="1040" fill="url(#vbar)"/>
-<rect class="hbar" style="--d:27s" x="-120" y="250" width="1340" height="1.5" fill="url(#hbar)"/>
-<rect class="hbar" style="--d:35s;animation-delay:-13s" x="-120" y="558" width="1340" height="1" fill="url(#hbar)"/>
-</g></svg></div>
-<div class="bg-scan" aria-hidden="true"></div><header class="site-head">
+<div class="bg-field" aria-hidden="true"></div><header class="site-head">
   <a class="brand persist" href="/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
   <nav>
-    <a href="/#tree">天赋树</a>
     <a href="/lesson/N00.html">从这里开始</a>
     <a href="/atlas.html">图鉴</a>
     <button class="btn theme-toggle" data-theme-toggle><span class="tt-glyph" aria-hidden="true">◑</span><span class="tt-label">自动</span></button>
   </nav>
-</header><main>
-    <section class="wrap hero" data-branch="root">
-      <div class="nameplate"><span class="tag">v1</span><span>FIELD MANUAL</span>
-        <span class="rule"></span><span class="rev">REACTIVITY · MEASUREMENT · FEEDBACK</span></div>
-      <p class="bootline typing" style="margin:18px 0">BOOTING REACTOR… 44 NODES · 3 BRANCHES · SELF-TEST OK<span class="cursor"></span></p>
-      <h1>当尺子开始<br>回看你</h1>
-      <p class="lede">测量一个社会对象，就是干预它。这部手册把「排名 / 评测 / 反身性」这件事，从
-      社会学、经济学到 AI 前沿，铺成一棵可以自由探索的天赋树。它不是 1 到 100 的线性课程，
-      而是一张跟着知识脉络生长的结构图。</p>
-      <div class="prereq-row" style="margin-top:24px">
-        <a class="btn btn-primary" href="/lesson/N00.html">通电 · 从根节点开始 →</a>
-        <a class="btn" href="#tree">俯瞰天赋树</a>
-      </div>
-    </section>
-
-    <section class="wrap section" id="tree" data-branch="root">
-      <div class="nameplate"><span class="tag">MAP</span><span>THE TALENT TREE</span><span class="rule"></span>
-        <span class="rev">拖动平移 · 滚轮缩放 · 点击进入</span></div>
-      <h2 style="margin-top:16px">天赋树</h2>
-      <div class="tree-viewport" id="tree-viewport" data-tree='{"nodes":[{"id":"N00","zh":"测量即干预","en":"To Measure Is To Intervene","branch":"root","x":0,"y":0,"prereqs":[],"hook":"你以为你在读数，其实读数在读你。","built":true},{"id":"R01","zh":"反应性","en":"Reactivity","branch":"red","x":-830,"y":210,"prereqs":["N00"],"hook":"排名不只反映现实，它参与重新制造现实。","built":true},{"id":"R02","zh":"自我实现预言","en":"Self-Fulfilling Prophecy","branch":"red","x":-662,"y":210,"prereqs":["N00"],"hook":"一个假定义，如何长成真事实。","built":true},{"id":"R11","zh":"霍桑效应及其证伪","en":"Hawthorne & Its Debunking","branch":"red","x":-494,"y":210,"prereqs":["N00"],"hook":"连反应性的招牌案例都没通过原始数据检验。","built":true},{"id":"R03","zh":"可通约化","en":"Commensuration","branch":"red","x":-830,"y":374,"prereqs":["R01"],"hook":"三页纸总结全美法学教育。","built":true},{"id":"R04","zh":"规训与监视","en":"Discipline & Surveillance","branch":"red","x":-662,"y":374,"prereqs":["R01"],"hook":"为什么组织缓冲不掉排名。","built":true},{"id":"R05","zh":"可读性","en":"Legibility","branch":"red","x":-494,"y":374,"prereqs":["R02"],"hook":"国家为了看清你，先把你改简单。","built":true},{"id":"R06","zh":"循环效应","en":"Looping Effects","branch":"red","x":-746,"y":466,"prereqs":["R02"],"hook":"分类会改变被分类的人。","built":true},{"id":"R08","zh":"反身性","en":"Reflexivity (Soros)","branch":"red","x":-578,"y":466,"prereqs":["R02"],"hook":"价格反映基本面，也塑造基本面。","built":true},{"id":"R10","zh":"马太效应与人工市场","en":"Matthew & MusicLab","branch":"red","x":-494,"y":630,"prereqs":["R02"],"hook":"最好的歌，命运却看运气。","built":true},{"id":"R07","zh":"表演性","en":"Performativity","branch":"red","x":-830,"y":630,"prereqs":["R03","R06"],"hook":"理论不是照相机，是发动机。","built":true},{"id":"R09","zh":"审计社会","en":"Audit Society","branch":"red","x":-662,"y":630,"prereqs":["R03","R04"],"hook":"让组织可审计，本身成了目的。","built":true},{"id":"B01","zh":"Goodhart 定律","en":"Goodhart&#39;s Law","branch":"blue","x":0,"y":210,"prereqs":["N00"],"hook":"一条小小脚注如何统治了世界。","built":true},{"id":"B02","zh":"Campbell 定律","en":"Campbell&#39;s Law","branch":"blue","x":-168,"y":374,"prereqs":["B01"],"hook":"警示指标的人，本是测量的旗手。","built":true},{"id":"B03","zh":"Lucas 批判","en":"Lucas Critique","branch":"blue","x":0,"y":374,"prereqs":["B01"],"hook":"你一用规律，人就改行为。","built":true},{"id":"B04","zh":"眼镜蛇效应","en":"Cobra Effect","branch":"blue","x":168,"y":374,"prereqs":["B01"],"hook":"悬赏捕蛇，市民开始养蛇。","built":true},{"id":"B05","zh":"McNamara 谬误","en":"McNamara Fallacy","branch":"blue","x":-168,"y":466,"prereqs":["B01"],"hook":"不能测量的，最后被宣布不存在。","built":true},{"id":"B08","zh":"Goodhart 四型","en":"Goodhart Taxonomy","branch":"blue","x":0,"y":466,"prereqs":["B01"],"hook":"同一句格言，四种完全不同的机制。","built":true},{"id":"B11","zh":"必要多样性","en":"Requisite Variety","branch":"blue","x":168,"y":466,"prereqs":["B01"],"hook":"只有多样性能消灭多样性。","built":true},{"id":"B06","zh":"奖励A却指望B","en":"Rewarding A, Hoping for B","branch":"blue","x":-252,"y":630,"prereqs":["B04"],"hook":"希望教学好，却只奖励发表。","built":true},{"id":"B07","zh":"代理指标替代","en":"Surrogation","branch":"blue","x":-84,"y":630,"prereqs":["B06"],"hook":"为什么当事人不觉得自己在作弊。","built":true},{"id":"B12","zh":"委托代理","en":"Principal-Agent","branch":"blue","x":84,"y":630,"prereqs":["B04"],"hook":"你要好 agent，优化器只要 eval 通过。","built":true},{"id":"B13","zh":"优化者诅咒","en":"Optimizer&#39;s Curse","branch":"blue","x":252,"y":630,"prereqs":["B08"],"hook":"选中的那个，真值期望低于它的估计。","built":true},{"id":"B09","zh":"多任务代理","en":"Multitask Agency","branch":"blue","x":-84,"y":840,"prereqs":["B06"],"hook":"教师为什么拿固定工资：一条定理。","built":true},{"id":"B10","zh":"绩效测量扭曲","en":"Baker Distortion","branch":"blue","x":84,"y":840,"prereqs":["B09"],"hook":"便宜、低噪、可控，仍可能是坏指标。","built":true},{"id":"Y01","zh":"过拟合","en":"Overfitting","branch":"yellow","x":662,"y":210,"prereqs":["N00"],"hook":"训练集就是你的 eval。","built":true},{"id":"Y02","zh":"自适应过拟合","en":"Adaptive Overfitting","branch":"yellow","x":494,"y":420,"prereqs":["Y01"],"hook":"你反复看同一个测试集，就已经在训练它。","built":true},{"id":"Y03","zh":"基准污染与饱和","en":"Contamination & Saturation","branch":"yellow","x":662,"y":420,"prereqs":["Y01"],"hook":"题被吃进训练集，题本身也可能是坏的。","built":true},{"id":"Y04","zh":"奖励破解","en":"Reward Hacking","branch":"yellow","x":830,"y":420,"prereqs":["B01"],"hook":"划船 AI 不跑圈，原地打转刷分。","built":true},{"id":"Y05","zh":"最近未堵策略","en":"Nearest Unblocked Strategy","branch":"yellow","x":494,"y":584,"prereqs":["Y04"],"hook":"修 eval 的方式为什么总是机械的。","built":true},{"id":"Y06","zh":"内对齐与 mesa 优化","en":"Mesa-Optimization","branch":"yellow","x":662,"y":584,"prereqs":["Y04"],"hook":"你训练出的，可能是另一个优化器。","built":true},{"id":"Y07","zh":"奖励模型过优化","en":"RM Overoptimization","branch":"yellow","x":830,"y":584,"prereqs":["Y04","B08"],"hook":"Goodhart 定律最干净的一条实验曲线。","built":true},{"id":"Y10","zh":"策略性分类","en":"Strategic Classification","branch":"yellow","x":494,"y":676,"prereqs":["B12","Y01"],"hook":"公布评分规则，人就照着改自己。","built":true},{"id":"Y11","zh":"排行榜幻觉","en":"Leaderboard Illusion","branch":"yellow","x":662,"y":676,"prereqs":["Y03","R10"],"hook":"发布即登顶，分里有多少是押题？","built":true},{"id":"Y12","zh":"评估觉察","en":"Evaluation Awareness","branch":"yellow","x":830,"y":676,"prereqs":["R11","Y04"],"hook":"被观察的模型，不是真实的模型。","built":true},{"id":"Y08","zh":"谄媚","en":"Sycophancy","branch":"yellow","x":578,"y":840,"prereqs":["Y07"],"hook":"奖励人类满意，得到讨好。","built":true},{"id":"Y09","zh":"表演性预测","en":"Performative Prediction","branch":"yellow","x":746,"y":840,"prereqs":["R07","Y04"],"hook":"预测改变分布：反应性的数学化。","built":true},{"id":"C06","zh":"案例库","en":"Cross-Domain Case Vault","branch":"converge","x":0,"y":1050,"prereqs":["R01","B04"],"hook":"从 US News 到 Doing Business 到刷单。","built":true},{"id":"C01","zh":"概念地图：五个近邻","en":"Concept Map","branch":"converge","x":-168,"y":1260,"prereqs":["R07","R08","R09"],"hook":"不是一个东西的五个名字。","built":true},{"id":"C04","zh":"诚实信号","en":"Honest & Costly Signals","branch":"converge","x":0,"y":1260,"prereqs":["B12","B01"],"hook":"难伪造的信号才诚实，但「昂贵」够吗？","built":true},{"id":"C05","zh":"解耦：Deming 与 POSIWID","en":"Decoupling","branch":"converge","x":168,"y":1260,"prereqs":["B11","R09"],"hook":"别让 eval 分数直接驱动迭代。","built":true},{"id":"C02","zh":"统一框架：七个杠杆","en":"The Seven Levers","branch":"converge","x":-84,"y":1470,"prereqs":["R01","B01","Y04"],"hook":"预测任何排名/评测的失真强度。","built":true},{"id":"C03","zh":"反 Goodhart 设计实验室","en":"Anti-Goodhart Lab","branch":"converge","x":84,"y":1470,"prereqs":["B11","C02"],"hook":"既然指标必被博弈，怎么设计才扛得住。","built":true},{"id":"C07","zh":"你的 Eval 事后剖析","en":"Your Eval Postmortem","branch":"converge","x":0,"y":1680,"prereqs":["C03","C04","Y02"],"hook":"你发现 eval 前后毫无区别，这个发现比多数 eval 值钱。","built":true}],"bounds":{"minX":-950,"maxX":950,"minY":-90,"maxY":1790},"branchLabel":{"root":"ROOT","red":"社会学谱系","blue":"定律与形式","yellow":"机器与前沿","converge":"汇流"}}'>
-        <div class="tree-legend">
-          <div class="k"><span class="sw" style="background:var(--red)"></span>红 · 社会学谱系</div>
-          <div class="k"><span class="sw" style="background:var(--yellow)"></span>黄 · 机器与前沿</div>
-          <div class="k"><span class="sw" style="background:var(--blue)"></span>蓝 · 定律与形式</div>
-          <div class="k"><span class="sw" style="background:var(--green)"></span>绿 · 汇流综合</div>
-          <div class="k"><span class="sw" style="background:linear-gradient(90deg,var(--red),var(--yellow))"></span>合金 · 跨分支</div>
-        </div>
-        <div class="tree-hud">
-          <button data-tree-zout>−</button><button data-tree-zin>+</button>
-          <button data-tree-fit>适配</button><button data-tree-reset-progress>重置进度</button>
-        </div>
-        <div class="tree-hint">拖动平移 · 按住 ⌘/Ctrl 滚轮缩放 · 点亮的是推荐的下一步，未点亮的也能直接进</div>
-        <noscript><div class="noscript-fallback">天赋树需要 JavaScript。你可以直接从
-          <a href="/lesson/N00.html">根节点</a>顺序阅读，或用上方导航进入各分支。</div></noscript>
-      </div>
-    </section>
-
-    <section class="wrap section" data-branch="root">
-      <div class="nameplate"><span class="tag">03</span><span>THREE BRANCHES</span><span class="rule"></span></div>
-      <h2 style="margin-top:16px">三条谱系</h2>
-      <div class="cards" style="margin-top:24px"><a class="card" data-branch="red" href="/lesson/R01.html">
-      <span class="num">RED · 11 节点</span>
-      <h3>社会学谱系</h3>
-      <p>排名如何重新制造社会：反应性、可通约化、规训、可读性、表演性。</p>
-    </a><a class="card" data-branch="yellow" href="/lesson/Y01.html">
-      <span class="num">YELLOW · 12 节点</span>
-      <h3>机器与前沿</h3>
-      <p>AI/ML 的代理博弈：过拟合、奖励破解、排行榜幻觉、评估觉察。</p>
-    </a><a class="card" data-branch="blue" href="/lesson/B01.html">
-      <span class="num">BLUE · 13 节点</span>
-      <h3>定律与形式</h3>
-      <p>指标失效的定律与定理：Goodhart、Campbell、必要多样性、多任务代理。</p>
-    </a><a class="card" data-branch="green" href="/lesson/C06.html">
-      <span class="num">GREEN · 7 节点</span>
-      <h3>汇流综合</h3>
-      <p>三支在此交汇：概念地图、七个杠杆、反 Goodhart 设计、你的 eval 事后剖析。</p>
-    </a></div>
-    </section>
-  </main><footer class="site-foot"><div class="wrap">
-  <span>REACTOR · 当尺子开始回看你 · 一部关于反应性的现场手册</span>
-  <span>self-hosted · no-react · v1</span>
-</div></footer><script type="module" src="/modules/boot.js?v=99169501ec"></script></body></html>
+</header><main class="tree-full" data-branch="root">
+  <section class="tree-intro glass bolted">
+    <div class="nameplate"><span class="tag">v1</span><span>FIELD MANUAL</span>
+      <span class="rule"></span><span class="rev">44 NODES</span></div>
+    <h1>当尺子开始回看你</h1>
+    <p class="lede">测量一个社会对象，就是干预它。这里把「排名 / 评测 / 反身性」从社会学、经济学
+    铺到 AI 前沿，长成一棵可以自由探索的天赋树——不是 1 到 100 的线性课程，而是一张跟着
+    知识脉络生长的结构图。</p>
+    <div class="intro-cta">
+      <a class="btn btn-primary" href="/lesson/N00.html">通电 · 从根节点开始 →</a>
+      <a class="btn" href="/atlas.html">图鉴</a>
+    </div>
+    <p class="intro-hint">拖动平移 · ⌘/CTRL+滚轮缩放 · 点击节点进入 · 点亮的是推荐下一步</p>
+  </section>
+  <div class="tree-viewport" id="tree-viewport" data-mode="full">
+    <div class="tree-legend">
+      <button class="k" data-jump="red"><span class="sw" style="background:var(--red)"></span>红 · 社会学谱系</button>
+      <button class="k" data-jump="blue"><span class="sw" style="background:var(--blue)"></span>蓝 · 定律与形式</button>
+      <button class="k" data-jump="yellow"><span class="sw" style="background:var(--yellow)"></span>黄 · 机器与前沿</button>
+      <button class="k" data-jump="green"><span class="sw" style="background:var(--green)"></span>绿 · 汇流综合</button>
+    </div>
+    <div class="tree-hud">
+      <button data-tree-zout aria-label="缩小">−</button><button data-tree-zin aria-label="放大">+</button>
+      <button data-tree-fit>适配</button><button data-tree-reset-progress>重置进度</button>
+    </div>
+    <noscript><div class="noscript-fallback">天赋树需要 JavaScript。你可以直接从
+      <a href="/lesson/N00.html">根节点</a>顺序阅读，或从<a href="/atlas.html">图鉴</a>进入各节点。</div></noscript>
+  </div>
+</main><script type="module" src="/modules/boot.js?v=r2"></script></body></html>
