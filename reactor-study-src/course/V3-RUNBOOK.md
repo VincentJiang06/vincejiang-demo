@@ -110,7 +110,7 @@ git commit + push → CI 自动部署
 - [x] W11a 互动模块复杂化·通用引擎（mod-kit 控件扩容 + explorable 预测→操作→揭示三段式 + provenance/timeline/quiz）
 - [x] W11b 互动模块复杂化·定制 sim 批一（feedback/boom-bust/musiclab/game-the-ranking/overfit/eval-overfit-lab/the-loop）
 - [x] W11c 互动模块复杂化·定制 sim 批二（goodhart4/variety/policy-invariance/overopt/winners-curse/arena/seven-levers/design-robust-eval）+ 新节点配模块
-- [ ] 终检：截图审计（双主题）+ 移动端 + 部署验证
+- [x] 终检：截图审计（双主题）+ 移动端 + 部署验证
 
 **UI 迭代备忘（2026-07-18 用户第二轮裁决，已执行）**：树总览排列放宽（ROW_H 244/COL_W 190/GUTTER 150）；
 迷你树详细度分级（当前=发光框嵌标号，邻接=挂标号点）；灯带 6px+3.6s 周期；全站禁 backdrop-filter；
