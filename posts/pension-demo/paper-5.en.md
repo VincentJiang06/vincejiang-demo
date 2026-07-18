@@ -95,15 +95,15 @@ This chapter has laid out the institutional background of China's three-pillar p
 
 ---
 
-## Chapter 3　Theoretical Framework: Four-Tier Incommensurability, Governance Endogeneity, and Non-Transferability
+## Chapter 3 Theoretical Framework: Four-Tier Incommensurability, Governance Endogeneity, and Non-Transferability
 
-### Section 1　The Tiered Adaptation Framework and Four-Tier Incommensurability
+### Section 1 The Tiered Adaptation Framework and Four-Tier Incommensurability
 
 The tiered adaptation framework is the basic structure organizing all judgments in this study. Its basic thesis is: different pension accounts correspond to different fund horizons, different fund horizons correspond to different liability constraints, different liability constraints correspond to different risk budgets, different risk budgets correspond to different allocation strategies, and different allocation strategies in turn correspond to different regulatory and assessment mechanisms. This chain is not a simple juxtaposition of six dimensions but a deductive structure that transmits step by step from fund characteristics to regulatory assessment. The framework requires that these six dimensions be filled in cell by cell across four institutional tiers, and strictly prohibits applying the same allocation logic across tiers; pension target funds, as a supplementary tier, do not constitute an independent liability entity but rather serve as the investment vehicle for the fourth-tier individual pension and the point of convergence for bidirectional linkage between pensions and capital markets, with their judgment content presented as a supplement alongside the fourth tier and the decumulation (payout) phase, rather than as a separate independent judgment cell.
 
 The core value of the framework lies in the incommensurability between cells. By incommensurability we mean that an allocation judgment valid at one tier cannot be transposed to another tier, because the institutional preconditions supporting that judgment do not hold at the other tier. The reason the National Social Security Fund can undertake long-term equity investment and globally diversified allocation is that, as a strategic reserve, it faces no rigid immediate payout pressure and is equipped with specialized, independent governance; the basic old-age insurance fund cannot do the same, not because its managers lack competence, but because it bears immediate payout responsibility and does not possess independent governance. The reason the second-pillar occupational annuity can introduce default mechanisms and life-cycle design is that an employer exists as an automatic contribution-bearing entity; the third pillar, when facing the flexibly employed population, cannot do the same, not because that population lacks contribution capacity, but because the bearing entity on which the default mechanism depends is absent for that population. Identifying the judgment content of each cell and revealing the institutional roots of incommensurability between cells is the central task of this study.
 
-### Section 2　The Principle of Governance Endogeneity
+### Section 2 The Principle of Governance Endogeneity
 
 Governance endogeneity is the first basic principle on which this study judges what is transferable and what is not. This principle holds that: the truly scarce component of pension allocation capacity — the component that truly determines the feasibility of allocation — is not technical capability that can be outsourced or built, but governance control rights that are endogenous to institutional structure and cannot be transferred across entities.
 
@@ -111,7 +111,7 @@ The principle of governance endogeneity can be broken down into two dimensions. 
 
 The principle of governance endogeneity provides the underlying logic of the criterion for the tiered adaptation framework: a given allocation experience is transferable if, and only if, the governance control rights or institutional bearing entity that carry it can be independently obtained at the target tier. This principle will be developed concretely across the chapters on governance bearing entities, behavioral architecture, and decumulation-phase absorption.
 
-### Section 3　The Argumentative Criterion for Non-Transferability
+### Section 3 The Argumentative Criterion for Non-Transferability
 
 Non-transferability is the second basic principle on which this study constrains policy recommendations, and also the watershed distinguishing this study from policy sloganeering. This principle requires: any conclusion of non-transferability must not remain at the level of a bare conclusion but must be supported on two fronts.
 
@@ -121,7 +121,7 @@ The second is a judgment of political-economic feasibility. Every policy recomme
 
 The principle of non-transferability and the principle of governance endogeneity mutually reinforce each other: governance endogeneity reveals why certain preconditions cannot be obtained out of nothing, while non-transferability requires that this unobtainability be translated into concrete institutional constraints and feasibility judgments. Together the two constitute the methodological foundation on which this study assesses the transferability of overseas experience.
 
-### Section 4　Four Types of Argumentative Traps the Framework Avoids
+### Section 4 Four Types of Argumentative Traps the Framework Avoids
 
 The tiered adaptation framework is not only a positive organizing structure but also a checklist for avoiding argumentative traps. With respect to research on China's pension asset allocation, four types of argumentative traps are most common, and this study uses the framework as a mirror to avoid each of them in turn.
 
@@ -141,11 +141,11 @@ This chapter has established the theoretical framework of this study. This chapt
 
 ---
 
-## Chapter 4　The Governance Bearing Entity: Governance Capacity as a Stock Endowment Granted by Constitutional Position
+## Chapter 4 The Governance Bearing Entity: Governance Capacity as a Stock Endowment Granted by Constitutional Position
 
 This chapter corresponds to the first set of judgments in this study, situated on the axis of governance control rights between the basic old-age insurance fund and the National Social Security Fund.
 
-### Section 1　The Judgment
+### Section 1 The Judgment
 
 The core judgment proposed in this chapter is: pension governance capacity is neither a transplantable best practice nor a flow that can be gradually accumulated through construction, but a stock endowment granted once and for all by constitutional position. This judgment comprises two testable sub-propositions. First, governance quality declines in a step fashion across the three trustee tiers — proximate to the central government, provincial consolidation, and local trusteeship — this is a discrete step proposition, not a continuous function decaying with distance. Second, patient capital synthesized through administrative means is not equivalent to genuine patient capital: patient capital synthesized through means such as sale bans, mandatory long-term holding, and forced capital injection, by stripping the entity of its rebalancing rights and stop-loss rights, results in a self-destruction of property rights, producing an institutionalized reverse rebalancing whereby the lower the return, the greater the addition to positions. The step-wise comparison of governance quality across the three trustee tiers, and the change in rebalancing discipline of the same fund before and after the sale-ban breakpoint, are the identification entry points this chapter uses to test the two sub-propositions above.
 
@@ -153,7 +153,7 @@ It is necessary to clarify at the outset of this judgment the boundary of what t
 
 This chapter's position within the tiered adaptation framework lies on the axis of governance control rights between the basic old-age insurance fund and the National Social Security Fund. The specific institutional constraint it anchors on is: the absence of statutory firewalling, the dependence of governance independence on administrative rank rather than law, and the lock-in of pooling by rents that localities obtain through the three tools of surplus fiscal rollover, credit leverage, and investment platforms. The bearing entity of governance — statutory firewalling and constitutional position — cannot be independently obtained across tiers; this is the hardest institutional anchor for judging that the relevant experience is non-transferable.
 
-### Section 2　The Mechanism
+### Section 2 The Mechanism
 
 The causal chain of this chapter can be stated as a single transmission path: the absence of statutory firewalling makes governance independence dependent on administrative rank rather than law; better governance — that is, centralized pooling by the council — is rationally locked in by the rents of the three tools under local incentives; this gives rise to the pooling paradox, whereby the very localities that ought to diffuse better governance are the ones that cannot be pooled; consequently, from the top down, there is an attempt to synthesize patient capital through sale bans, mandatory long-term holding, and forced capital injection; but this synthesis is in fact a retained obligation that strips away rebalancing and stop-loss rights; ultimately producing an institutionalized reverse rebalancing whereby the lower the return, the greater the addition to positions — that is, self-destruction of property rights.
 
@@ -163,7 +163,7 @@ The second critical link in this causal chain is the divide between retained obl
 
 The third critical link in this causal chain is the political-economic floor of the pooling paradox. Resistance to pooling is not a matter of cognition or capability — that is, it is not that localities fail to understand that centralized management is superior — but a matter of an incentive floor: localities rationally benefit from surplus rents, and pooling means cutting off that rent. Precisely for this reason, the very localities that ought to diffuse better governance are the ones that cannot be pooled.
 
-### Section 3　Identification Strategy
+### Section 3 Identification Strategy
 
 The identification in this chapter consists of two primary strategies, one backup strategy, and one identification fallback design, all arranged at the design level.
 
@@ -175,7 +175,7 @@ The backup strategy is to seek exogenous variation in incentive intensity within
 
 The identification fallback design was fixed at the design stage. If the governance indicators across the three trustee tiers cannot be independently coded prior to performance — that is, if the coding is contaminated by performance outcomes — then the step proposition is downgraded to a taxonomic framework, and the main text will be presented on the basis of that taxonomic framework, with the identifiable core identification link falling back to the single-fund event study around the 2024 breakpoint alone, which does not depend on three-tier coding and stands independently. If the compensating-design counterfactual remains unobtainable, the causal claim of granted stock is permanently flagged as pending pre-registration, and this does not falsify the step proposition.
 
-### Section 4　Honest Labeling of Evidence
+### Section 4 Honest Labeling of Evidence
 
 At the level of verifiable aggregate facts, there are several institutional facts that can provide directional corroboration for this chapter's judgment, but their nature as an aggregate two-point difference, rather than a micro cross-sectional regression coefficient, must be made explicit.
 
@@ -187,7 +187,7 @@ At the micro-identification level, owing to data availability constraints, the c
 
 An honest boundary that must especially be observed is: the rents from the three tools — surplus fiscal rollover, credit leverage, and investment platforms — are unobtainable in explicit ledgers owing to their off-balance-sheet nature, but the absence of an explicit rent ledger must never be read as evidence of no rent; the absence merely lowers the strength of the claim about the scale of rent, and must never be reversed into positive evidence of no rent. Likewise, the absence of observed increases in governance independence with construction effort within the observation period must never be read as proof that the granted-stock account has been established.
 
-### Section 5　Counterarguments and Their Treatment
+### Section 5 Counterarguments and Their Treatment
 
 Two of the strongest possible objections to this chapter's judgment must be addressed directly, because the manner of response itself defines the boundary of this chapter's identification.
 
@@ -197,7 +197,7 @@ The second objection targets falsifiability. The structure whereby "template suc
 
 This chapter's two main identification designs and their falsification conditions can be presented together in the table below, set against the treatment of the two objections.
 
-Table 2　Competing Hypotheses and Identification Strategies for the First Set of Judgments
+Table 2 Competing Hypotheses and Identification Strategies for the First Set of Judgments
 
 | Core Identification Link | This Chapter's Hypothesis | Competing Hypothesis | Identification Strategy | Ex-Ante Falsification Condition |
 |---|---|---|---|---|
@@ -327,11 +327,11 @@ This chapter has argued for the judgment that the divergence in second-pillar al
 
 ---
 
-## Chapter 7　Behavioral Architecture: The Institutional Regressivity Driving Cold Contributions in the Three-Pillar System
+## Chapter 7 Behavioral Architecture: The Institutional Regressivity Driving Cold Contributions in the Three-Pillar System
 
 This chapter corresponds to the fourth group of judgments in this study, situated on the behavioral-architecture axis of individual pensions, and crosses the two layers of the basic pension insurance fund and individual pensions at the flexible-employment fault line.
 
-### Section 1　Judgment
+### Section 1 Judgment
 
 The core judgment advanced in this chapter is: the cold-contribution phenomenon in the three-pillar system is driven mainly by institutional features, not mainly by individual literacy. The unified tax-preference nudge constitutes a regressive nudge for low- and middle-income earners — the arrangement of deferring taxation on contributions amplifies this regressivity; the closed account is an unpriced prepayment of a liquidity option under low interest rates; the dominant form of the coverage gap is not non-enrollment but enrollment in the worst tier — low interest rates have reversed the relative attractiveness of the Employee Pension Insurance and the Urban-Rural Resident Pension Insurance, triggering a cascade of downward migration; and the auto-enrollment mechanism is structurally absent for the flexibly employed population, since this population has no employer, no payroll, and no default pathway — the coverage gap arises at the site of decision costs and institutional carriers, not at the site of contribution capacity. The identification in this chapter accordingly rests on three components: a comparison of effect sizes between mechanism and literacy, quantile-controlled price sensitivity, and a quasi-natural experiment on default carriers.
 
@@ -339,7 +339,7 @@ At the outset of this judgment, a methodological self-constraint must be made ex
 
 This chapter's position within the layered-adaptation framework lies on the behavioral-architecture axis of individual pensions, crossing the two layers of the basic pension insurance fund and individual pensions at the flexible-employment fault line. The specific institutional constraints it anchors to are the regressivity of the unified nudge, the unpriced nature of the closed account's liquidity-option prepayment, and the absence of a carrier for the auto-enrollment mechanism among the flexibly employed. That the institutional carrier of the default mechanism is not independently available at the flexible-employment layer is the hardest institutional anchor for the judgment that the default mechanism is transferable if and only if a default carrier exists.
 
-### Section 2　Mechanism
+### Section 2 Mechanism
 
 The causal chain of this chapter can be stated as follows: low interest rates weaken savings incentives, and combined with the unpriced nature of closure costs and the regressivity of the unified nudge, this causes low- and middle-income earners to migrate downward or defer contributions, from which the coverage gap is endogenously generated.
 
@@ -351,7 +351,7 @@ The third key link in this causal chain is the country of no defaults. The effic
 
 It must be emphasized that capacity constraints and institutional responses can coexist; this chapter does not construct a false dichotomy. Low-income individuals can simultaneously be constrained by capacity and be sensitive to meager actual returns. Precisely for this reason, this chapter does not ask the unidentifiable question of whether residents are rational, but asks the identifiable question of which lever is more effective at the margin.
 
-### Section 3　Identification Strategy
+### Section 3 Identification Strategy
 
 The identification in this chapter consists of three primary strategies, one backup strategy, and one identification fallback design.
 
@@ -365,7 +365,7 @@ The backup strategy is a comparison of closed windows on liquidity liabilities �
 
 The identification fallback design is determined at the design stage itself. If the default arm and the investor-education arm cannot be randomly assigned, the mechanism-versus-literacy comparison falls back to the single quasi-natural experiment on per-order billing, identified via exogenous variation in the carrier. The attribute of rationality versus non-rationality is never subject to an identifiable claim, even where data are abundant — only the effect size of the mechanism is identified, never the attribute.
 
-### Section 4　Honest Labeling of the Evidence
+### Section 4 Honest Labeling of the Evidence
 
 At the level of verifiable aggregate facts, a number of institutional facts lend support to the judgments of this chapter.
 
@@ -375,7 +375,7 @@ At the level of micro-identification, owing to data-availability constraints, th
 
 The honest boundary that must especially be observed is: this chapter acknowledges that capacity constraints and institutional responses can coexist, and does not construct a false dichotomy — observing price sensitivity does not rule out capacity constraints, and therefore continued sensitivity after controlling for quantile is never to be read as purely institutional, with no capacity constraint; this chapter identifies only which lever is more effective at the margin. The attribute judgment of resident rationality versus non-rationality — since price sensitivity is compatible with multiple explanations including rational optimization, framing, herding, myopia, and loss aversion — is permanently labeled as non-identified; this chapter retains only mechanism attribution.
 
-### Section 5　Counterarguments and Responses
+### Section 5 Counterarguments and Responses
 
 Two of the strongest possible objections to the judgment of this chapter must be addressed directly, the first of which directly delimits the wording boundary of this chapter's judgment.
 
@@ -389,11 +389,11 @@ This chapter has argued for the judgment that cold contributions in the three-pi
 
 ---
 
-## Chapter 8　Decumulation-Phase Uptake: The Misallocation and Soft Constraint of Longevity-Risk Uptake
+## Chapter 8 Decumulation-Phase Uptake: The Misallocation and Soft Constraint of Longevity-Risk Uptake
 
 This chapter corresponds to the fifth and analytically strongest cluster of judgments in this study, situated on the cross-layer axis of longevity-uptake responsibility allocation and the urban–rural dual redistribution axis.
 
-### Section 1　Judgment
+### Section 1 Judgment
 
 The core judgment advanced in this chapter is the analytically strongest of this study: institutional uptake of longevity risk is systematically absent as the system migrates from defined benefit (DB) or pay-as-you-go arrangements toward defined contribution (DC) or individual-account arrangements, with the uptake gap widening as the degree of contribution-definedness rises. First, because the payout phase does not mandate annuitization, longevity risk that could otherwise be pooled and diversified is instead disaggregated household by household and handed back, unchanged, to individuals and families — responsibility undergoes reverse socialization, with the uptake party unambiguously identified as the family. Second, for those covered by the non-annuitized defined contribution scheme who are also not covered by the first pillar, the family likewise lacks the capacity to absorb the risk, so it settles as a soft fiscal liability — a liability with an identified bearer but no pricing and no provisioning. The counter-cyclical commitment embedded in the bookkeeping interest rate of the Urban and Rural Resident Basic Pension Insurance converts interest-rate risk into an implicit fiscal liability, and the true regressivity lies in the spatial mismatch of payout capacity — the provinces with the highest bookkeeping rates are precisely those that are deeply aged and fiscally weak. The identification in this chapter accordingly takes as its backbone the interaction term for reverse socialization and the bidirectional falsification of spatial mismatch.
 
@@ -403,7 +403,7 @@ This chapter accordingly abandons the negative framing of an "unowned vacuum" an
 
 This chapter's position within the layered adaptation framework lies on the cross-layer axis of longevity-uptake responsibility allocation and the urban–rural dual redistribution axis. The uptake party at the decumulation phase — an annuitizing entity with both pricing and provisioning — is not independently available at the defined contribution layer; this is the hardest institutional anchor establishing that overseas decumulation-phase experience, which presupposes a mature annuitized market, cannot be directly transplanted. This chapter upgrades each layer from an asset-allocation framework to a risk-uptake responsibility-allocation framework, representing the highest-order increment of judgment in this study.
 
-### Section 2　Mechanism
+### Section 2 Mechanism
 
 The causal chain of this chapter can be stated as follows: the migration of the decumulation phase from defined benefit to defined contribution causes longevity risk to be disaggregated household by household and returned to families; those not covered settle as soft fiscal liabilities; and the urban–rural spatial mismatch amplifies the differential in default probability.
 
@@ -415,7 +415,7 @@ The third critical link in this causal chain is the soft-constrained fiscal auth
 
 The fourth critical link in this causal chain is the spatial mismatch of payout capacity. The true regressivity lies in the fact that the provinces with high bookkeeping rates are precisely those that are deeply aged and fiscally weak — where commitments are high is precisely where payout capacity is weak, and inequality is converted from a difference in benefit flows into a difference in default probabilities.
 
-### Section 3　Identification Strategy
+### Section 3 Identification Strategy
 
 The identification in this chapter is built from two primary strategies, one backup strategy, and one identification fallback design.
 
@@ -427,7 +427,7 @@ The backup strategy is a positive cross-sectional contrast on misallocation of t
 
 The identification fallback design was fixed at the design stage. If payout method cannot be separated from longevity exposure, reverse socialization falls back to the single track of the positive cross-section of spatial mismatch, which is constructed from provincial bookkeeping rates, aging rates, and fiscal capacity, and does not depend on the exogeneity of payout method. The soft constraint on the uptake party is permanently flagged as pre-registered, and is established only via positive contrast, not via the negative judgment that an absence of trace on the liability side constitutes proof.
 
-### Section 4　Honest Labeling of the Evidence
+### Section 4 Honest Labeling of the Evidence
 
 At the level of verifiable aggregate facts, several institutional facts lend support to the judgment of this chapter.
 
@@ -437,7 +437,7 @@ At the level of micro-identification, owing to data-availability constraints, th
 
 The honesty boundary that must be especially observed is this: this chapter never passively harvests a near-zero pass-through elasticity as support for the fiscal-uptake hypothesis — a near-zero estimate is a directional judgment that can be overturned by positive direct pass-through, and a significantly positive elasticity would falsify fiscal uptake, with positive identification instead carried by the positive cross-section. Likewise, this chapter never reads the absence of trace on the liability side as establishing that the vacuum in attribution holds; instead it substitutes the positive contrast between life insurance and account-based systems, such that finding a liability item linked to survival status constitutes falsification. The absence of data only lowers the strength of the claim regarding uptake magnitude — it never reverses it.
 
-### Section 5　Counterarguments and Responses
+### Section 5 Counterarguments and Responses
 
 Two of the strongest possible objections to the judgment of this chapter must be addressed directly, the first of which concerns an institutional fact that must be corrected.
 
@@ -447,7 +447,7 @@ The second objection concerns the fact that the threshold for a negative existen
 
 The five core judgments of the full paper, together with their identification strategies and honest-labeling status, are presented together in the table below, to display the full picture of identification design and data boundaries across the five problem domains.
 
-Table 3　Overview of the core identification steps, identification strategies, and evidentiary status of the five sets of judgments
+Table 3 Overview of the core identification steps, identification strategies, and evidentiary status of the five sets of judgments
 
 | Problem domain | Core judgment | Primary identification strategy | Verifiable aggregate corroboration | Micro-identification status |
 |---|---|---|---|---|
@@ -463,15 +463,15 @@ This chapter has argued for the analytically strongest judgment of this study: t
 
 ---
 
-## Chapter 9　Cross-Paper Synthesis: From Overseas Experience to China Adaptation
+## Chapter 9 Cross-Paper Synthesis: From Overseas Experience to China Adaptation
 
-### Section 1　The Logic of Synthesis: The China Convergence of a Single Thread
+### Section 1 The Logic of Synthesis: The China Convergence of a Single Thread
 
 This study is the concluding and grounding segment of the complete research thread running from interest-rate mechanisms, through institutional differences, allocation instruments, and risk boundaries, to a China solution. The preceding four papers respectively established the transmission-mechanism chain from interest rates to allocation, an institutional taxonomy and risk-bearing mapping, an allocation toolbox together with its governance-capacity conditions, and a risk-boundary and governance-reconstruction framework. The task of this chapter is to explicitly carry the general conclusions of these four papers down to the specific circumstances of China's four entity tiers and the pension target fund supplementary tier, thereby demonstrating why the China solution holds, and so bringing to convergence the single thread running from macro interest-rate shocks, through institutional differences, allocation transformation, and risk exposure, to China adaptation.
 
 Synthesis is not a repetition of the preceding four papers, but a grounding of their general judgments in the specific forms of China's institutions. This chapter successively takes up the interest-rate mechanism paper, the institutional-differences paper, the paper on the endogeneity of governance in allocation instruments, and the paper on decumulation-phase risk governance, showing the concrete landed form each paper's core judgment takes within each tier in China, and revealing how the present study's five sets of judgments each supply a China-specific empirical interface for these four papers.
 
-### Section 2　Taking Up the Interest-Rate Mechanism Paper: The Institutionalized Channel of the Shadow Rate in China
+### Section 2 Taking Up the Interest-Rate Mechanism Paper: The Institutionalized Channel of the Shadow Rate in China
 
 The interest-rate mechanism paper established the transmission chain from interest rates to allocation, one of whose core concepts is the restructuring of the real-return structure of risk-free assets under the shadow rate. The chapter of the present study on the risk-free anchor is the primary synthesis interface for this interest-rate mechanism in China.
 
@@ -479,7 +479,7 @@ The derivation may be stated as follows. The premise is the judgment of the inte
 
 The interest-rate mechanism also resonates throughout the other chapters. In the chapter on governance vehicles, the interest rate is transmitted via the logic that lower returns trigger more position-adding — low rates render manifest, from latent, the self-destruction of property rights in synthetic patient capital, because it is only under low returns that the left-tail cost of the sale-restriction constraint becomes binding. In the chapter on accounting manifestation, the interest rate is transmitted via the dual-rate illusion between the booking rate and the real curve — the booking rate, partly locked in by fiscal contributions, is itself a shadow booking rate, and low rates render the dual-rate wedge manifest from latent. In the chapter on decumulation-phase absorption, the interest rate is transmitted via the countercyclical commitment of the booking rate for the Urban and Rural Resident Pension Insurance — under low rates, the countercyclical commitment converts interest-rate risk into an implicit fiscal liability. These four points of resonance show that the transmission chain depicted in the interest-rate mechanism paper does not appear in China in a single form, but unfolds across the five sets of judgments in institutionalized forms including the manifestation of property-rights self-destruction, the manifestation of the dual-rate wedge, and the accumulation of implicit fiscal liabilities — their common feature being that the primary effect of low rates is not to change economic substance but to push costs that were already latent within institutional arrangements into visibility.
 
-### Section 3　Taking Up the Institutional-Differences Paper: The China Mapping of the Defined-Benefit–Defined-Contribution Continuum
+### Section 3 Taking Up the Institutional-Differences Paper: The China Mapping of the Defined-Benefit–Defined-Contribution Continuum
 
 The institutional-differences paper established an institutional taxonomy and risk-bearing mapping grounded in the tripartite classification of defined benefit (DB), defined contribution (DC), and public reserves, emphasizing that institutional difference is a continuous spectrum rather than a discrete typology. Multiple chapters of the present study take this taxonomy as their coordinate system.
 
@@ -489,7 +489,7 @@ The derivation may be stated as follows. The premise is the judgment of the inst
 
 It is worth noting that the stopping-option logic in the institutional-differences paper — whereby residual risk is pushed, along the principal-agent chain, to different stopping points — is repeatedly invoked in the present study and reaches its terminus at the decumulation phase. The downward-migration cascade in the chapter on behavioral architecture is a stopping point at which risk and responsibility are pushed, across tiers, to the worst-off tier — from Employee Pension Insurance down to Urban and Rural Resident Pension Insurance; in the chapter on decumulation-phase absorption, the stopping point for longevity risk — pushed onto households at the DC tier and settling as a soft fiscal liability wherever coverage is absent — is the final link in this stopping-point logic.
 
-### Section 4　Taking Up the Paper on the Endogeneity of Governance in Allocation Instruments: Capacity Is Transferable, Control Rights Are Not
+### Section 4 Taking Up the Paper on the Endogeneity of Governance in Allocation Instruments: Capacity Is Transferable, Control Rights Are Not
 
 The allocation-instruments paper established an allocation toolbox and put forward the key judgment of governance-capacity conditions — namely, that the transferability of alternative and global allocation is premised on governance capacity. Its core judgment is that capacity can be learned but control rights cannot — governance capacity can be outsourced, unbundled, and capped by political tolerance, while what is endogenous is the non-transferable governance control right. The chapter of the present study on governance vehicles is the primary synthesis interface for this judgment in China.
 
@@ -497,7 +497,7 @@ The derivation may be stated as follows. The premise is the judgment of the allo
 
 The governance-endogeneity judgment of the allocation-instruments paper also resonates throughout the other chapters. In the chapter on behavioral architecture, the technology of the default mechanism — i.e., automatic payroll-deduction software — can be outsourced, but the carrier of the default — the employer, the payroll system, the tax-collection apparatus — cannot be transferred across populations, isomorphic to the allocation-instruments paper's judgment that what is transferable is capacity while what is non-transferable is the carrier and the control right. Furthermore, the smoothing illusion revealed by the allocation-instruments paper — that the true premium contains a smoothing component, and valuation smoothing suppresses realized volatility — is, together with the present study's finding in the chapter on the risk-free anchor that the booking-rate convention systematically overstates real returns, and the finding in the chapter on accounting manifestation that discount-rate smoothing delays the manifestation of interest-spread losses, a shared instance of the divergence between book figures and economic substance in different applications — the present study's booking-rate wedge and discount-rate smoothing are the counterparts, at China's booking layer and second-pillar liability-discounting layer, of the smoothing illusion identified in the allocation-instruments paper.
 
-### Section 5　Taking Up the Paper on Decumulation-Phase Risk Governance: Risk Placement as an Institutionally Endogenous Choice of Attribution
+### Section 5 Taking Up the Paper on Decumulation-Phase Risk Governance: Risk Placement as an Institutionally Endogenous Choice of Attribution
 
 The paper on decumulation-phase risk governance established a risk-boundary and governance-reconstruction framework, whose meta-judgment is that risk placement is an institutionally endogenous choice of attribution that must be designed endogenously and cannot be transplanted. The chapter of the present study on decumulation-phase absorption is the primary synthesis interface for this judgment in China, and the short put on guarantee options in the chapter on accounting manifestation is also brought to synthesis in this section.
 
@@ -507,7 +507,7 @@ The guarantee-option judgment of the decumulation-phase risk-governance paper fi
 
 The derivations and bound elements of the four synthesis exercises above may be presented together in the table below, so as to display the full picture of the synthesis thread.
 
-Table 4　Antecedent Conclusions, China Landed Forms, and Synthesis Interfaces of the Four Cross-Paper Synthesis Derivations
+Table 4 Antecedent Conclusions, China Landed Forms, and Synthesis Interfaces of the Four Cross-Paper Synthesis Derivations
 
 | Derivation | Antecedent-Conclusion Paper | China Landed Form | Primary Synthesis Interface | Bound Constraint |
 |---|---|---|---|---|
@@ -516,7 +516,7 @@ Table 4　Antecedent Conclusions, China Landed Forms, and Synthesis Interfaces o
 | Taking up the endogeneity of governance in allocation instruments | Capacity is transferable, control rights are not | Governance control rights as a stock granted by constitutional position | Chapter on governance vehicles | Absence of statutory ring-fencing |
 | Taking up decumulation-phase risk governance | Risk placement is an institutionally endogenous choice of attribution | Misaligned attribution of longevity risk at the DC tier, soft constraint at the urban-rural tier | Chapter on decumulation-phase absorption | Misalignment and soft constraint of the absorbing agent |
 
-### Section 6　Cross-Tier Ordering of Political-Economic Feasibility
+### Section 6 Cross-Tier Ordering of Political-Economic Feasibility
 
 The four instances of synthesis not only supply the institutional constraints explaining why transplantation is impossible, but also implicitly yield a political-economic feasibility ordering across the reform agendas. Following the second criterion of the non-transplantability principle established by the present study, this section specifies, for each tier's reform, the implementing agent, the source of resistance, and the implementation sequence, so that the synthesis moves beyond diagnosis to an executable path.
 
@@ -528,7 +528,7 @@ For the reform of behavioral architecture and the decumulation phase, the implem
 
 The shared logic of this cross-tier ordering is: the precondition for reform is always the building of institutional carriers, not the adjustment of allocation parameters; any sequence that places parameter adjustment ahead of carrier-building will have the parameter adjustment rendered ineffective by the absence of its precondition.
 
-### Section 7　The Comprehensive Proposition of the China Adaptation Framework
+### Section 7 The Comprehensive Proposition of the China Adaptation Framework
 
 Synthesizing the above instances of synthesis and ordering, the present study arrives at a unified proposition regarding China's pension adaptation: the transferability of asset-allocation experience from mature pension markets depends, without exception, on whether the institutional precondition carrying that allocation logic is independently obtainable at the target tier. This proposition unfolds cell by cell across the four entity tiers, and extends to the pension target fund supplementary tier as the fourth-tier investment vehicle, as detailed below.
 
@@ -544,9 +544,9 @@ This chapter has completed the explicit synthesis of the preceding four papers. 
 
 ---
 
-## Chapter 10　Conclusion
+## Chapter 10 Conclusion
 
-### Section 1　Principal Conclusions
+### Section 1 Principal Conclusions
 
 The present study, taking as its subject the institutional adaptation of mature pension markets' asset-allocation experience to China's multi-pillar pension system, has proposed a systematic revision of the existing paradigm of experiential transplantation. The central conclusion of the study is: the transferability of pension asset-allocation experience does not depend on the technical sophistication of the allocation technique itself, but on whether the institutional precondition carrying that allocation logic is independently obtainable at the target tier. Around this central conclusion, the present study has built a tiered adaptation framework and distilled five mutually independent sets of judgments.
 
@@ -554,7 +554,7 @@ The first set of judgments holds that pension governance capacity is a stock end
 
 The five sets of judgments each supply a China-specific empirical interface for the preceding four papers, and jointly converge on a unified proposition: the priority task of China's pension reform is not to raise the allocation ratio of some asset class, but first to resolve the availability of the institutional carriers on which the allocation logic of each tier depends.
 
-### Section 2　Policy Implications
+### Section 2 Policy Implications
 
 The policy implications of the present study must strictly follow the aforementioned criteria for the non-transplantability argument — that is, every recommendation must be bound to an implementing agent, a resistance analysis, and an implementation sequence, rather than remaining at the level of a slogan about what should be done.
 
@@ -562,7 +562,7 @@ As regards governance vehicles, the recommendation to raise the ratio of alterna
 
 The shared logic running through these policy implications is: the sequence of reform should be to first build institutional carriers and only then adjust allocation parameters, because in the absence of carriers, any adjustment of allocation parameters will be distorted by the absence of its institutional precondition.
 
-### Section 3　Limitations of the Study
+### Section 3 Limitations of the Study
 
 The present study has three main limitations.
 
