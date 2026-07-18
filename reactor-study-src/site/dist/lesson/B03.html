@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
 <link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=f09b6e4bb9">
-<link rel="stylesheet" href="/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/theme/led.css?v=3ecca47a70">
+<link rel="stylesheet" href="/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/theme/led.css?v=6195435c7b">
 <link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Lucas 批判 · Lucas Critique","description":"你一用规律，人就改行为。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://reactor.vincejiang.com/lesson/B03.html"}</script>
 </head><body><div class="bg-dots" aria-hidden="true"></div>
@@ -48,7 +48,8 @@
   </div>
     </div>
     <article class="stack"><div class="read">
-<p>Lucas 批判（Lucas Critique）是 Goodhart 定律在宏观计量里的孪生命题，1976 年由 Robert Lucas 提出。大意是：你观察到经济变量之间有稳定的历史统计关系（比如通胀和失业的取舍），想用这个关系制定政策；但那些历史关系里的参数，本身内含了人们对旧政策的预期。你一旦改变政策，预期就变，行为就变，你据以定策的关系随之瓦解。你用来预测的规律，因为你使用它而失效。</p></div>
+<p>Lucas 批判（Lucas Critique）是 Goodhart 定律在宏观计量里的孪生命题，1976 年由 Robert Lucas 提出。大意是：你观察到经济变量之间有稳定的历史统计关系（比如通胀和失业的取舍），想用这个关系制定政策；但那些历史关系里的参数，本身内含了人们对旧政策的预期。你一旦改变政策，预期就变，行为就变，你据以定策的关系随之瓦解。你用来预测的规律，因为你使用它而失效。</p>
+<p>Lucas 在原文里把论证压缩成他自称的「单个三段论」（1976 年论文第 41 页）：计量模型的结构由经济主体的最优决策规则组成；最优决策规则随决策者所面对序列的结构变化而系统地变化；因此任何政策改变都会系统地改变计量模型的结构。三句话没有一句多余：参数不是自然常数，是人们在旧规则下最优行为的化约投影，规则一换，投影重排。所以「用当前宏观计量模型比较备选政策规则的效果」是无效的，无论模型样本内拟合和短期预测表现多好。顺带一处考据：结论句原文是单数 any change in policy，常见转引写成复数 any changes，属于误引；这篇论文没有摘要，核心命题就藏在第七节的结语里，和 Goodhart 的脚注一样，以不起眼的姿态改变了学科。</p></div>
 <figure class="module reg" data-module="policy-invariance" data-modname="policy-invariance" data-modtype="sim">
     <figcaption class="module-head"><span class="fig">FIG.01</span>
       <span>规律一旦被用于决策，就不再成立</span><span class="spacer"></span>
@@ -56,13 +57,22 @@
     <div class="module-body"><script type="application/json" class="mod-config">{}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
   </figure><script type="module" src="/modules/policy-invariance.js?v=5bd348810f"></script>
 <div class="read">
-<p>它和 Goodhart 定律的关系比「雷同」更近。Chrystal 与 Mizen 2003 年的裁定原文是："It could be argued that Goodhart's Law and the Lucas Critique are essentially the same thing. If they are, Robert Lucas almost certainly said it first.「两者的分工在语域：Lucas 批判改变了宏观计量的方法论（要建立在深层参数上），Goodhart 定律改变了货币政策的设计（货币目标制退场、通胀目标制登场）。至于」谁先"，取决于把会议宣读还是正式出版算作首发：Goodhart 1975 年宣读在前，Lucas 1976 年发表在前。这桩优先权之争至今没有定论。</p>
-<p>Lucas 把机制精确定位到理性预期：人是前瞻的，会根据预期到的政策调整行为，所以历史参数不是结构不变的。他的建设性主张是，模型应该建立在深层结构参数（偏好、技术、约束）之上，这些参数对政策变化不变（policy-invariant）。用本课程的语言翻译：<strong>想要不被反应性摧毁的预测，必须建立在因果结构上，而不是表层相关上。</strong>这一判断五十年后在机器学习里得到了形式化的对应结论（<code>Y10</code> 的「防博弈必须做因果建模」定理）。</p></div>
+<p>范例是菲利普斯曲线的瓦解。1960 年代的数据显示通胀与失业之间存在看似稳定的取舍，决策者据此以为可以用持续的温和通胀买到持续的低失业。可这条曲线的斜率本身内含了公众对旧政策环境的预期：政府一旦开始系统地利用它，预期随之调整，工资与价格的设定方式改变，权衡消失。1970 年代的滞胀，高通胀与高失业并存，正是教科书式的收场。规律没有错，错的是把被动观测到的规律当成可以主动踩的杠杆。曲线不是被证伪的，是被使用坏的：这句话几乎可以原样刻在每一个饱和的 benchmark 上。</p>
+<p>Goodhart 的英国现场可以逐句套进这个三段论，两条定律在同一段历史里互为注脚。货币总量与名义收入之间的稳定关系，是银行与企业在旧管制下最优行为的化约投影；英格兰银行 1971 年放松信贷管制，1973 年底又以「胸衣」式的直接管制去压广义货币，政策规则两度改写；于是主体重新优化，银行发明不计入管制口径的替代性负债，被瞄准的总量与经济活动的关系应声瓦解（过程与数字在 <code>B01</code>）。差别只在叙述者站的位置：Lucas 站在建模者一侧说「你的参数会漂」，Goodhart 站在央行一侧说「你的目标会崩」，说的是同一场事故。</p>
+<p>Lucas 的建设性主张常被忽略：批判的出路是把模型建立在深层结构参数上，即偏好、技术、资源约束这些不随政策变化的量（policy-invariant），而把会随政策漂移的化约参数从外推链条里请出去。用本课程的语言翻译：<strong>想要不被反应性摧毁的预测，必须建立在因果结构上，而不是表层相关上。</strong>这一判断五十年后在机器学习里得到了形式化的对应结论（<code>Y10</code> 的「防博弈必须做因果建模」定理；<code>Y09</code> 的表演性预测则是「预测改变分布」的数学化）。</p></div>
+<aside class="callout intuit"><span class="co-tag">// 直觉</span>
+<p><strong>化约参数是行为的影子，不是行为的骨架。</strong>你估计出的每一个系数，都是千万个主体在旧规则下解最优化问题的汇总解；它看起来稳定，只因为规则还没变。政策一改，主体重解问题，影子随身而动。所以「历史上稳定」与「干预下稳定」是两种不同的稳定：前者只要求环境不变，后者要求参数植根于不随干预漂移的深层结构。把前者误当后者，是宏观计量在 1970 年代付出滞胀学费才认清的区别。这也解释了为什么样本内拟合优度救不了政策评估：拟合考察的是影子画得像不像，政策问的是骨架动了之后影子还在不在。</p></aside>
+<div class="read">
+<p>它和 Goodhart 定律的关系比「雷同」更近。Chrystal 与 Mizen 2003 年的裁定原文是："It could be argued that Goodhart's Law and the Lucas Critique are essentially the same thing. If they are, Robert Lucas almost certainly said it first." 两者的分工在语域：Lucas 批判改变了宏观计量的方法论（模型要建立在深层参数上），Goodhart 定律改变了货币政策的设计（货币目标制退场、通胀目标制登场）。至于「谁先」，取决于把会议宣读还是正式出版算作首发：Goodhart 1975 年 7 月在悉尼宣读在前，Lucas 1976 年正式刊出在后，而 Lucas 的会议文稿实际流传得更早。这桩优先权公案至今没有定论。</p>
+<p>放进更大的家谱，Lucas 批判是同一洞见的经济学方法论版本。Ridgway 1956 年已在组织研究里综述指标失效，Campbell 的腐蚀命题 1969 年已具雏形，Goodhart 1975 年给出货币制度的经验概括，Lucas 1976 年给出微观基础与一般性定理：理性预期是机制，深参数与化约参数之分是出路。几个学科先后撞上同一堵墙，Lucas 是把墙的力学写成定理的那个人。也因此，Goodhart 定律可以粗略读作 Lucas 批判加上博弈规避在货币语境的特例：Lucas 讲的主体只是重新优化自己的决策，Goodhart 面对的银行还会主动发明新负债工具绕开管制口径，多出的那一层是对抗（对抗型机制的完整分类在 <code>B08</code>；措辞谱系与家谱的另一半见 <code>B01</code> 与 <code>B02</code>）。</p>
+<p>这套区分对评测的对应非常直接。一个静态 benchmark 的「分数与能力相关」，是在没人针对它优化的分布上估出来的化约参数：模型的训练配方、数据配比、采样策略在当时都没把这个 benchmark 当作目标。它发布并被当作目标的那一刻，等价于一次政策变更；训练方重新优化，分数的生成机制改变，原先的相关不再对部署后的真实能力负责。<code>Y02</code> 的自适应过拟合与 <code>Y03</code> 的基准饱和，就是这条参数漂移曲线在排行榜上的两种读法。</p></div>
 <aside class="callout myth"><span class="co-tag">// 讹传更正</span>
 <p><strong>流行说法：「Lucas 批判证明计量经济学没用。」</strong>复核结论：批判是为了指向更好的建模，不是虚无。Lucas 的原意是把建模对象从「会随政策漂移的表层相关」换成「政策不变的深层参数」。把它读成对量化本身的否定，与把 Campbell 读成反对测量，属于同一类误读。</p></aside>
 <aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
-<p><strong>把「政策」换成「你的 eval 或训练目标」。</strong>你观察到某个代理指标与真实能力相关，于是拿它当优化目标；但这个相关关系的参数，是在模型还没针对它优化时测出来的。一旦开始优化，模型行为改变，相关关系瓦解。Lucas 批判的 eval 版本一句话：不要把优化前测到的相关，当成优化后还成立的结构。</p></aside>
-<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Lucas, R. E. (1976). "Econometric Policy Evaluation: A Critique." <em>Carnegie-Rochester Conf. Series</em> 1:19–46.</li><li>Chrystal, K. A. & Mizen, P. D. (2003)（与 Goodhart 定律的优先权与分工裁定）。</li><li>见 <code>research/deep/D2</code> §2。</li></ul></div></details></article>
+<p><strong>把「政策」换成「你的 eval 或训练目标」。</strong>你观察到某个代理指标与真实能力相关，于是拿它当优化目标；但这个相关关系的参数，是在模型还没针对它优化时测出来的。一旦开始优化，模型行为改变，相关关系瓦解。Lucas 批判的 eval 版本一句话：不要把优化前测到的相关，当成优化后还成立的结构。对策也可以照搬 Lucas 的路数：要么锚定不随优化漂移的量，要么让「政策」永远追不上你的参数估计，留出从未进过优化循环的测试分布（<code>G03</code> 的留出与动态评测）。</p></aside>
+<div class="read">
+<p>留一个问题：深参数在 eval 语境里到底是什么？经济学把偏好与技术当作不随政策变的底层，但对一个会被训练重塑的模型，几乎没有哪个内部量是「优化不变」的。找到 eval 的深参数，或者证明它不存在，你赌哪一个先发生？</p></div>
+<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Lucas, R. E. (1976). "Econometric Policy Evaluation: A Critique." <em>Carnegie-Rochester Conference Series on Public Policy</em> 1:19–46（核心句 p.41，原文为单数 any change）。</li><li>Chrystal, K. A. & Mizen, P. D. (2003). "Goodhart's Law: Its Origins, Meaning and Implications for Monetary Policy."（与 Goodhart 定律的优先权与分工裁定）。</li><li>Ridgway (1956)、Campbell (1969)：家谱前段，见 <code>B01</code>、<code>B02</code>。</li><li>考证见 <code>research/03</code> §4 与 <code>research/deep/D2</code> §2。</li></ul></div></details></article>
     <nav class="prereq-row" style="margin-top:48px">
       <a class="btn" href="/">← 返回天赋树</a>
       

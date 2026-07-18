@@ -80,14 +80,14 @@ git commit + push → CI 自动部署
 - [x] P0 回灌 v2 进 build 系统（build.mjs 模板 + theme/modules 回灌 + tree-data.js 生成）
 - [x] P1 tree.json v3 + 布局（四分支+案例带）+ tokens/led 分支样式 + 三节点迁移 + 301
 - [x] P2 首波部署（新树上线，新节点以「施工中」态出现）
-- [ ] W1 RED 扩写 R01–R06（源 11-briefs + D1）
+- [x] W1 RED 扩写 R01–R06（源 11-briefs + D1）
 - [ ] W2 RED 扩写 R07–R11 + 新写 R12,R13
 - [ ] W3 BLUE 扩写 B01–B07（源 12-briefs + D2 + 03a/03b/03c）
 - [ ] W4 BLUE 扩写 B08–B13 + 新写 B14
-- [ ] W5 YELLOW 扩写 Y01–Y06（源 13-briefs + D4/D5）
+- [x] W5 YELLOW 扩写 Y01–Y06（源 13-briefs + D4/D5）
 - [ ] W6 YELLOW 扩写 Y07–Y12 + 新写 Y13,Y14,Y15
 - [ ] W7 GREEN：G01,G02 迁移扩写 + 新写 G03–G06（源 10 + D7 + 06 + 08）
-- [ ] W8 CASE：K00 迁移 + 新写 K01–K04（源 04 + D3）
+- [x] W8 CASE：K00 迁移 + 新写 K01–K04（源 04 + D3）
 - [ ] W9 CONVERGE 扩写 C01,C02,C03,C07 + N00（源 14-briefs + 00 总纲）
 - [ ] W10 图鉴更新（术语表/讹传表补新条目）+ 全站交叉引用核对 + sitemap
 - [ ] 终检：截图审计（双主题）+ 移动端 + 部署验证

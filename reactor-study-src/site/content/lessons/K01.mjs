@@ -1,0 +1,58 @@
+export default {
+  id: "K01",
+  blocks: [
+    { t: "prose", html: `
+<p>教育是 Campbell 定律的原产地，也是它证据最全的领域。事实链分三段：高利害考试的分数可以在真实学力不变的情况下持续大涨（分数通胀，有跨考试对照的计量证据）；压力足够大时，膨胀越过合法边界变成集体造假（亚特兰大，有刑事定罪档案）；而同一套问责在低利害审计考试上也留下过真实增益（NCLB 的数学成绩）。三段合起来是本课结论：应试化不是教育界道德滑坡的故事，而是把高利害绑在远端代理指标上的结构后果。分数与学力之间裂缝的宽度，取决于指标设计，不取决于教师的人品。</p>` },
+
+    { t: "h", text: "Campbell 定律的原产地" },
+    { t: "prose", html: `
+<p>Campbell 的命题 1974 年在匈牙利 Visegrád 会议上宣读，1976 年以西密歇根大学 Occasional Paper #8 流传，1979 年正式刊于 Evaluation and Program Planning，小节标题就叫「量化指标的腐蚀效应」。教育从第一天起就是原始例证：Texarkana 绩效合同案（Stake 1971 记录），按学生成绩涨幅付费的承包商，直接教期末考题。Campbell 关于考试的原话值得整段读：</p>
+<p class="pullquote">"Achievement tests may well be valuable indicators of general school achievement under conditions of normal teaching aimed at general competence. But when test scores become the goal of the teaching process, they both lose their value as indicators of educational status and distort the educational process in undesirable ways."<span class="src">Campbell, 1976/1979</span></p>
+<p>两层损失被分开点名：指标失效（分数不再指示学力），过程腐蚀（教学本身被应试改造）。本课其余内容，就是这两句话此后五十年的实证展开。机制标注：对抗型 Goodhart（<code>B08</code>），拉满的杠杆是利害绑定与可操纵通道；定律本身的谱系考证在 <code>B02</code>。</p>` },
+
+    { t: "h", text: "分数通胀的计量学" },
+    { t: "prose", html: `
+<p>分数通胀（score inflation）是 Koretz 的核心概念：高利害考试分数的涨幅，远超低利害审计考试所显示的真实学力增长。最干净的案例是肯塔基州的 KIRIS 考试：1992 至 1995 年州考分数大涨，同批学生的 ACT 成绩纹丝不动，数学差距约 0.7 个标准差，阅读约 0.4 个标准差（Koretz & Barron 1998，RAND 报告）。更早有「Lake Wobegon 效应」：Cannell 1987 年发现各州都宣称本州成绩高于全国平均，这在算术上不可能成立。</p>
+<p>Koretz 反复展示的那条曲线因此被称为锯齿：一套新考试上线，分数先跌回真实水平，随后逐年陡升；换下一套考试，再跌，再陡升。上升段测出的不是学力在增长，而是师生对这套特定题型的熟悉度在增长；每个下降沿都是一次天然审计，暴露出上一段爬升里通胀的部分。因此审计通道是这个领域的关键仪器：NAEP 这类无人为其应试的低利害考试，能把真实增益与通胀分开。机制标注：规则套利（针对题型的应试特化），不是造假；它完全合法，也正因此比作弊普遍得多。</p>` },
+
+    { t: "h", text: "教到及格线为止" },
+    { t: "prose", html: `
+<p>问责制的计分方式决定了扭曲的形状。NCLB 以「达标人数」为核心口径，于是教师的理性反应是把资源投向刚好卡在及格线附近的学生（bubble kids）：Neal & Schanzenbach 2010 用芝加哥数据显示，中段学生的分数被抬高，最弱与最强的学生同时被忽视。评分环节同样有反应性：纽约州 Regents 考试由本校教师评分，分数分布在及格线上方异常堆积，Dee 等人 2019 年估计约 40% 本应略低于及格线的成绩被人为抬到线上。作弊的总量也有算法估计：Jacob & Levitt 2003 用异常分数跳变加可疑答案串的模式检测，估计芝加哥每年至少 4% 到 5% 的班级存在教师或管理者改卷，且比例随问责压力上升。三项证据合成一幅分布图：合法的应试特化是主体，评分宽纵是中间带，彻底造假是尾部；压力越大，尾部越厚。</p>` },
+
+    { t: "h", text: "亚特兰大：尾部的司法档案" },
+    { t: "prose", html: `
+<p>亚特兰大公立学校改卷案，是这条尾部迄今最完整的档案。动因是 NCLB 的年度进步目标（AYP）与挂钩的奖金和工作保障，压力从学区总监层层下压。《亚特兰大宪法报》2009 年起用擦改分析（答题卡上异常密集的错改对涂改）质疑成绩暴涨；2011 年 7 月佐治亚州调查局报告认定 44 所学校存在作弊、约 178 名教育者涉案，手法包括考后集体涂改答题卡，乃至聚众办「擦改派对」。2013 年 3 月，大陪审团起诉 35 名教育者，罪名包括 RICO，一条本用于打击有组织犯罪的法条；多数被告认罪，2015 年 4 月受审的 12 人中 11 人被裁定 RICO 罪成，部分初判最高约 20 年（后经量刑协商减轻）。学区总监 Beverly Hall 曾获全美年度总监，2015 年 3 月在审前病逝，未受审。机制标注：直接造假。它与应试特化不是两种现象，而是同一条压力梯度的两端：奖金与去留挂在指标上有多紧，行为就滑向光谱的哪一段。</p>` },
+
+    { t: "h", text: "国家级的考场：PISA 冲击" },
+    { t: "prose", html: `
+<p>把考场放大到国家尺度，机制不变。2000 年首轮 PISA 结果低于 OECD 平均，在德国引发占据头条数周的「PISA-Schock」，各州文教部长随即推出全国统一教育标准与全日制学校计划；日本的阅读排名从 2000 年第 8 跌到 2006 年第 15，舆论把账算在削减约三成课程内容的「宽松教育」头上，2008 与 2011 年的课纲修订增回课时，宽松教育实质终结。一张跨国排名，改写了两个教育大国的课程表。而上海 2009、2012 年两度夺冠的另一面是样本：因户籍壁垒，逾 12 万名 15 岁随迁子女不在被抽样的学校体系内，成绩被向上偏估（Loveless 的批评），2018 年改为四省市联合抽样后代表性再受质疑。机制标注：政策趋同叠加样本层面的选择效应；国家和学区一样，先改能改的口径。</p>` },
+
+    { t: "h", text: "反方：应试何时是学习" },
+    { t: "prose", html: `
+<p>把教育问责讲成纯粹的 Campbell 灾难，同样是对证据不忠。Dee & Jacob 2011 用州际引入时点差异识别 NCLB 的因果效应：到 2007 年，四年级数学在 NAEP 上提高约 0.22 个标准差，且增益遍布全部五个数学子量表，而非集中于易应试题型；NAEP 是无人为其应试的审计考试，因此这更可能是真实学习增益。代价同样写在数据里：阅读两个年级均无效应，应试科目挤占其他课程。Koretz 与 Dee/Jacob 并不矛盾：高利害分数同时包含真实增益与通胀成分，审计考试能把两者分开。应试趋于等于学习的条件，正是 <code>B14</code> 归纳的良性指标条件在教育上的投影：考的东西离想要的能力足够近（代理距离短），存在不可博弈的审计通道，利害强度不把人推过合法边界。</p>` },
+
+    { t: "callout", variant: "intuit", html: `
+<p><strong>锯齿曲线是一台通胀检测仪。</strong>只要有两把尺子，一把被瞄准、一把没被瞄准，两者读数的裂缝就是通胀的量：KIRIS 对 ACT，州考对 NAEP，逻辑相同。被瞄准的尺子陡升而未被瞄准的纹丝不动，差值就是应试特化吃掉的部分；两把尺子同步上升（NCLB 的数学），增益就大概率为真。单尺子系统里，你永远分不清涨的是能力还是熟练度，这是审计通道不可省略的原因。</p>` },
+
+    { t: "callout", variant: "myth", html: `
+<p><strong>两条错引，都爱出现在教育改革的幻灯片里。</strong>其一，「Campbell 举过中国科举与八股取士的例子」：1979 年原文全文检索无 China、无 imperial examination，科举例子是后人附会。其二，「When a measure becomes a target, it ceases to be a good measure」常被归给 Goodhart，这句其实是 Strathern 1997 年讨论英国大学审计文化时的措辞（考证见 <code>B01</code>）。另注：Campbell 本人从未自命「Campbell's Law」，原文写的是复数的「悲观定律」，名号系后人所加。</p>` },
+
+    { t: "callout", variant: "applied", html: `
+<p><strong>教育问责是 eval 的等比例沙盘。</strong>leaderboard 分数是州考，held-out 私测是 NAEP：没有第二把尺子，你分不清模型是变强了还是把题型学熟了，<code>Y02</code> 的自适应过拟合就是同一台锯齿机。bubble kids 对应阈值优化：当发布线定在某个分数，优化会堆积在线的正上方，正如 Regents 的及格线堆积。亚特兰大的教训则关于压力设计：当 eval 结果直接连着团队的奖金与去留，你选择的不是「会不会有人博弈」，而是博弈停在光谱的哪一段。审计通道与利害强度的搭配方案，见 <code>G03</code> 与 <code>G04</code>。</p>` },
+
+    { t: "prose", html: `
+<p>留一个问题：以涨幅代替达标人数的增长模型问责（value-added），理论上应削弱 bubble kids 效应，因为每个学生的边际进步都计分；但 Race to the Top 之后的实证并不充分。bubble 是被消除了，还是只是移动到了别处？</p>` },
+
+    { t: "sources", items: [
+      `Campbell, D. T. (1979). "Assessing the Impact of Planned Social Change." <em>Evaluation and Program Planning</em> 2(1):67–90（=1976 Occasional Paper #8）。`,
+      `Koretz, D. & Barron, S. (1998). <em>The Validity of Gains in Scores on the KIRIS</em>. RAND MR-1014；Koretz (2008) <em>Measuring Up</em>；Koretz (2017) <em>The Testing Charade</em>。`,
+      `Jacob, B. & Levitt, S. (2003). "Rotten Apples." <em>QJE</em> 118(3):843–877。`,
+      `Neal, D. & Schanzenbach, D. W. (2010). "Left Behind by Design." <em>Review of Economics and Statistics</em>。`,
+      `Dee, T., Dobbie, W., Jacob, B. & Rockoff, J. (2019). "The Causes and Consequences of Test Score Manipulation." <em>AEJ: Applied Economics</em>。`,
+      `Dee, T. & Jacob, B. (2011). "The Impact of No Child Left Behind on Student Achievement." <em>JPAM</em> 30(3):418–446。`,
+      `亚特兰大案时间线：GBI 调查报告（2011）、CNN（2013-03-29）、NYT（2015-04-01）。`,
+      `PISA 冲击与上海抽样争议：<code>research/04-cases-across-domains.md</code> §2B（含 Loveless, Brookings 的批评）。`,
+      `底稿：<code>research/03-goodhart-family.md</code> §6.4、§9.1；<code>research/deep/D3</code> §4.2–4.3。`
+    ] }
+  ]
+};

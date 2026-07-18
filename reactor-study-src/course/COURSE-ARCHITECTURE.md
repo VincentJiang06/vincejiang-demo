@@ -1,8 +1,11 @@
 # 课程架构：REACTOR 天赋树
 
+> ⚠️ **2026-07-18 起本文记录的是 v1 结构（44 节点，历史文档）。现行结构是 v3
+> （58 节点：绿支重生为「防御与设计」、新增案例带、汇流瘦身为 4 个真 capstone），
+> 权威定义 = `site/content/tree.json`，设计依据与波次进度 = [V3-RUNBOOK.md](V3-RUNBOOK.md)。**
+>
 > 本文定义课程的知识结构——一棵非线性的天赋树，而非线性 1→100 的章节。
-> 它是 `site/content/tree.json` 的权威来源。设计系统见 [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md)。
-> 底层研究见 research/01–10。
+> 设计系统见 [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md)。底层研究见 research/01–14 与 deep/。
 
 ---
 

@@ -2,29 +2,40 @@ export default {
   id: "R02",
   blocks: [
     { t: "prose", html: `
-<p>自我实现预言（self-fulfilling prophecy）是这样一种机制：一个起初为假的情境定义，通过改变人的行为，把自己变成真的。命名者 Robert Merton 1948 年用一个虚构案例讲清了它：Last National Bank 资产充裕，某天流传「它要倒闭」的谣言。谣言当下是假的，但储户不敢赌，纷纷取款；银行从不以现金持有全部资产，在挤兑面前无力兑付，于是真的倒闭了。用 Merton 的原话，这是 "a false definition of the situation evoking a new behavior which makes the originally false conception come true"：一个自信的错误，制造出它自己的虚假证实。</p>` },
+<p>自我实现预言（self-fulfilling prophecy）是这样一种机制：一个起初为假的情境定义，通过改变人的行为，把自己变成真的。命名者 Robert Merton 1948 年发表在《The Antioch Review》的那篇文章，用一个虚构案例讲清了它：Last National Bank 资产充裕，行长 Cartwright Millingville 经营有方，某天流传「它要倒闭」的谣言。谣言当下是假的，但储户不敢赌，纷纷取款；银行从不以现金持有全部资产，在挤兑面前无力兑付，于是真的倒闭了。用 Merton 的原话，这是 "a false definition of the situation evoking a new behavior which makes the originally false conception come true"：一个自信的错误，制造出它自己的虚假证实。</p>
+<p>这不是 Merton 的灵光一现，而是他一条研究纲领的收束。早在 1936 年他就发表过《有意社会行动的非预期后果》，追问行动如何绕过行动者的意图产生后果；自我实现预言是其中最刁钻的特例，预言本身成为改变结果的「新的、动态的因素」，评估预言的人再也拿不到一个未被预言污染过的世界当对照组。寓言的结语只有一句："The prophecy of collapse led to its own fulfilment."，崩溃的预言导致了它自身的实现。故事被设定在 1932 年不是偶然，Merton 写作时，大萧条里成排倒下的真实银行就是他的读者的集体记忆。</p>` },
 
     { t: "module", module: "sim:feedback", title: "预言如何坐实自己" },
 
     { t: "prose", html: `
 <p>它的根子是社会学里最古老的一条定理，W. I. Thomas 1928 年写下：<span class="pullquote">"If men define situations as real, they are real in their consequences."<span class="src">Thomas & Thomas, The Child in America, 1928, p.572</span></span></p>
-<p>Espeland 与 Sauder 发现，排名正是靠这个机制运转的，而且他们放宽了 Merton 的定义：预言不必起于虚假信念，只要一个期望「一旦被界定为真实，就放大或印证其效果」即可。一个最初只是测量噪声的排名差，会改变申请者、雇主、捐赠者的预期；预期变成真实的资源流向，最终把噪声坐实成真实差距。</p>
-<p>这个机制有边界，而且边界被实验测出来了。Salganik 与 Watts 2008 年在人造音乐市场里人为反转歌曲人气（把最不受欢迎的显示为最受欢迎），多数歌曲的假人气确实变成了真人气；但市场整体没有被反转带走，因为最好的那批歌在长期恢复了排名。换句话说：质量决定可能的区间，社会影响决定区间内谁胜出。预言能坐实噪声，坐实不了任意的谎言。细节在 <code>R10</code>。</p>` },
+<p>Espeland 与 Sauder 发现，排名正是靠这个机制运转的，而且他们放宽了 Merton 的定义：预言不必起于虚假信念，只要一个期望「一旦被界定为真实，就放大或印证其效果」即可。一个最初只是测量噪声的排名差，会改变申请者、雇主、捐赠者的预期；预期变成真实的资源流向，最终把噪声坐实成真实差距。<code>R01</code> 里的声誉调查是教科书式的实例：院长照着上一年的排名给同行打分，排名于是印证了自己。这一放宽有理论代价，它使自我实现预言与 Barnesian performativity 几乎接壤，两者的分界要到 <code>R07</code> 才能画清。</p>
+<p>常被拿来当铁证的还有 Pygmalion 实验，值得把细节摆出来。Rosenthal 与 Jacobson 1968 年在加州南旧金山一所小学（化名 Oak School）开学时做了一次智力测验，伪装成「Harvard Test of Inflected Acquisition」，然后随机抽出约 20% 的学生（每班约 5 人），告知教师这些孩子是「潜力冲刺者」。标签是随机贴的，一学年后被贴标签的低年级学生智力增益却显著高于对照组，约五分之一的「冲刺者」增益超过 30 分。差别只可能来自教师被植入的期望。但这个实验经不起放大使用：效应几乎只集中在一、二年级，高年级近乎为零；所用智力工具对低龄儿童在心理测量学上不合适，Thorndike 1968 年当年就点出了这一点；后续复制并不稳定，效应量远小于通俗叙事。它是机制存在的证据，不是机制强度的证据。</p>
+<p>同一篇 1948 年论文里还有被二手文献普遍漏掉的另一半：Merton 称之为 suicidal prophecy，自杀式预言。一个起初可能为真的预测，因为被公开、被相信，触发了阻止它实现的行为，结果证伪了自己。经典形态是预警：对危机的预报促成预防，危机没有发生，预报「看起来」错了，尽管正是它避免了危机。两者在因果结构上完全对称，只差反馈符号：自我实现预言是正反馈，预言、放大、成真；自我否定预言是负反馈，预言、抵消、落空。这给出一个深刻的认识论困境：在预测能反作用于结果的领域，一个正确的预测可能恰恰因为它正确而被采取行动，进而变得不正确。Popper 在《历史主义的贫困》里独立命名过同一结构，叫 Oedipus effect：神谕正是通过引发规避行为，促成了它所预言之事。Popper 拿它做的用途更狠：既然预测与被预测对象之间存在这条反馈，社会科学的无条件长程预言在原则上就是受限的，这是他反对「历史主义」的核心论据之一。Merton 与 Popper 在 1940 年代各自独立写下这枚硬币的两面；Soros 后来把放大与抵消两轴装进同一个 boom-bust 动态，那是 <code>R08</code> 的正题。对齐关系值得记一行：自我实现预言、Barnesian performativity、Soros 的正反馈是放大轴；自我否定预言、counterperformativity、Soros 的负反馈是抵消轴。</p>
+<p>这个机制有边界，而且边界被实验测出来了。Salganik 与 Watts 2008 年在人造音乐市场里对 12,207 名被试人为反转歌曲人气（把最不受欢迎的显示为最受欢迎），多数歌曲的假人气确实变成了真人气；但市场整体没有被反转带走：最好的那批歌在长期恢复了排名，信息扭曲还降低了歌曲吸引力与人气的相关，并让总下载量下降。换句话说，质量决定可能的区间，社会影响决定区间内谁胜出；预言能坐实噪声，坐实不了任意的谎言，而且系统为谎言付出了总量代价。细节在 <code>R10</code>。</p>
+<p>最后交代一句这个机制的哲学地基。自我实现预言默认了一件事：被预言的对象会读到预言并据此调整。这只对人成立，对电子不成立。Hacking 把前者叫 interactive kind，把后者叫 indifferent kind，这条区分决定了整个反应性家族的适用边界，在 <code>R06</code> 展开。而「被观察即改变行为」的心理学版本（霍桑效应）恰恰经不起原始数据检验，这堂纠错课在 <code>R11</code>：预言改变世界靠的是制度化的激励与资源流向，不是被看一眼的心理战栗。</p>` },
 
     { t: "callout", variant: "myth", html: `
 <p><strong>流行说法：「自我实现预言就是 Thomas 定理。」</strong>复核结论：Thomas 定理是更宽的命题（信念有实在后果），涵盖信念为真、信念与结果无关的一切情形；自我实现预言只截取其中最隐蔽的一支，即假信念因被相信而变真。另一条常被当铁证的 Pygmalion 实验（随机给学生贴「潜力股」标签、成绩上扬）效应主要限于低年级、复制不稳定，Thorndike 1968 年就提出过方法学批评。引用时带上这条脚注，不要用可疑实证去撑大理论。</p>` },
 
+    { t: "callout", variant: "intuit", html: `
+<p><strong>预言坐实自己，不需要阴谋，也不需要轻信。</strong>挤兑里没有一个储户是傻子：给定「别人会去取钱」这个信念，抢先取款是各自的理性选择。预言的力量不在说服所有人它为真，而在改变每个人行动的收益结构。还要有一条传动装置把信念转成结果：银行的传动装置是部分准备金（它从不以现金持有全部资产），排名的传动装置是申请与捐款流向。没有传动装置的预言只是噪声，找到传动装置，就找到了干预点。</p>` },
+
     { t: "callout", variant: "applied", html: `
-<p><strong>你的 benchmark 也会自我实现。</strong>一个被当作权威的分数，哪怕最初只是噪声，也会把资源、注意力和后续训练吸过去，让模型逐渐长成这个 benchmark 所测量的样子，事后反过来印证它的「效度」。排名确实变准了，但那是因为世界已经照着它重塑了自己。这个循环在 <code>R01</code> 出现过，<code>Y09 表演性预测</code>会给它一个带收敛条件的数学形式。</p>` },
+<p><strong>你的 benchmark 也会自我实现。</strong>一个被当作权威的分数，哪怕最初只是噪声，也会把资源、注意力和后续训练吸过去，让模型逐渐长成这个 benchmark 所测量的样子，事后反过来印证它的「效度」。排名确实变准了，但那是因为世界已经照着它重塑了自己。反向的 suicidal prophecy 同样在场：一份危险能力评测促成缓解措施，事后危险没有出现，于是评测被讥为杞人忧天。这个循环在 <code>R01</code> 出现过，<code>Y09 表演性预测</code>会给它一个带收敛条件的数学形式。</p>` },
 
     { t: "prose", html: `
 <p>留一个问题：MusicLab 里「最好的歌会恢复」依赖一个前提，即存在可辨识的真实质量。在质量本身没有共识的场域（使命各异的法学院、目标各异的模型），恢复的力量还在吗？还是社会影响完全接管？这是把实验室结论外推到制度场域时最需要小心的边界。</p>` },
 
     { t: "sources", items: [
       `Merton, R. K. (1948). "The Self-Fulfilling Prophecy." <em>The Antioch Review</em> 8(2):193–210.`,
+      `Merton, R. K. (1936). "The Unanticipated Consequences of Purposive Social Action." <em>ASR</em> 1(6):894–904（前史）。`,
       `Thomas, W. I. & Thomas, D. S. (1928). <em>The Child in America</em>, p.572.`,
+      `Popper, K. R. (1957). <em>The Poverty of Historicism</em>（Oedipus effect，独立命名）。`,
+      `Rosenthal, R. & Jacobson, L. (1968). <em>Pygmalion in the Classroom</em>（注意其争议；Thorndike 1968 的批评）。`,
       `Salganik, M. J. & Watts, D. J. (2008). "Leading the Herd Astray." <em>Social Psychology Quarterly</em> 71(4):338–355（预言的边界实验）。`,
-      `Rosenthal & Jacobson (1968) <em>Pygmalion in the Classroom</em>（注意其争议）。深化见 <code>research/deep/D1</code> §6。`
+      `Biggs, M. (2009). "Self-Fulfilling Prophecies." in <em>The Oxford Handbook of Analytical Sociology</em>（现代系统整理）。`,
+      `谱系与镜像预言：<code>research/07</code> §2；Pygmalion 细节与讹传：<code>research/11</code>、<code>research/deep/D1</code> §6。`
     ] }
   ]
 };

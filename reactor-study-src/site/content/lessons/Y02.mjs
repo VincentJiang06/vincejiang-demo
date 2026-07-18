@@ -3,7 +3,8 @@ export default {
   blocks: [
     { t: "prose", html: `
 <p>自适应过拟合（adaptive overfitting）是这样一个现象：你从来没把测试集拿去训练，只是反复看它、用它筛选模型，可「反复看同一个测试集来做选择」这个动作本身，就在把测试集的特异性灌进你的模型。</p>
-<p>它对应你最切身的那个经历：搭一套 eval 衡量 agent 好不好，反复用它筛选、调参、挑最优版本，eval 分数漂亮地涨了；放到真实使用里，前后毫无区别。模型只是学会了严丝合缝地拟合你那套 eval。</p>` },
+<p>它对应你最切身的那个经历：搭一套 eval 衡量 agent 好不好，反复用它筛选、调参、挑最优版本，eval 分数漂亮地涨了；放到真实使用里，前后毫无区别。模型只是学会了严丝合缝地拟合你那套 eval。这不是个人失误：凡把同一套 eval 同时用作筛选器与成绩单的流程，结构上都在重演这个动作，筛选的次数越多，成绩单越失真。</p>
+<p>这个动作在统计学里有正式名字：适应性数据分析。非适应性分析里，所有要问数据的问题在看到数据之前就已提好，经典统计的全部保证建立在这个前提上；适应性分析里，下一个问题取决于上一个答案。你每次根据上一轮分数决定下一步改什么，恰好落在后者，于是经典保证整体失效。Blum 与 Hardt 2015 年为 Kaggle 式排行榜设计 Ladder 算法时，把病灶点得很直白：参与者被允许反复在排行榜上评估自己的提交，于是可能开始过拟合。他们的解法是只在新提交显著优于历史最好时才更新公开分数，把每次提交泄漏的信息量卡死。Dwork 等人同年在 Science 上给出更一般的定价：用差分隐私机制中介对 holdout 的访问，可支持指数级多次适应性查询而不失效。两份工作共同确立了一个会计视角：测试集是一笔预算，查询就是支出，「看」的成本必须被记账。<code>Y01</code> 结尾那句「看，也是一种训练」，在这里有了定理的形状。</p>` },
 
     { t: "module", module: "sim:eval-overfit-lab", title: "Eval 过拟合实验室：解剖榜面分数" },
 
@@ -21,22 +22,28 @@ export default {
     { t: "callout", variant: "myth", html: `
 <p><strong>流行说法：「反复刷同一个榜，必然严重过拟合。」</strong>复核结论：理论警告的是最坏情况，经验裁决温和得多。Roelofs 与 Recht 等人 2019 年复核了一百多场 Kaggle 竞赛（公榜私榜天然对照），原文结论是 "little evidence of substantial overfitting"；Mania 等人给出机制：候选模型彼此高度相似，对测试集的有效独立查询数远小于提交次数，过拟合预算消耗得慢。ImageNet 十年重测也显示绝对分虚高但相对排名稳定。<strong>命题的准确版本：经典测试集重用的退化被模型相似性稀释得很弱；退化真正凶猛的场景，是优化压力高度集中于单一、可记忆目标的时候（RLHF、agentic coding 记忆补丁）。</strong>这条边界是 D4 报告画出来的。</p>` },
 
+    { t: "prose", html: `
+<p>理论与经验之间这道缝要说透。先看证据的形状：Kaggle 每场竞赛都有公开榜与私有榜，公榜给日常提交读数，私榜只在赛末揭晓，天然形成「被反复查询的集合」与「只看一次的集合」的对照组，Roelofs 等人的方法就是量取上百场竞赛里两榜分差的分布。结果是分差主要由随机波动解释，不是系统性的适应性透支。而 Ladder 与可重用 holdout 的保证针对最坏情况：一个每次查询都榨取最大信息量的理想对手。现实中的刷榜者效率远低于此，上面那条「模型相似性稀释有效查询数」的机制解释了为什么。旁证还有一组：Miller 等人 2020 年在问答基准上复核，结论同样是未发现适应性过拟合的证据，掉分几乎全部来自新题稍难的自然分布漂移。Roelofs 那批作者据此写道，这说明 holdout 方法跨数据领域、跨损失函数、跨模型类别、跨分析者都相当稳健。这条线如今有了自己的纲领：Hardt 2026 年把 benchmark 本身立为研究对象，称之为机器学习基准的新兴科学，黄支末端的 <code>Y15</code> 会回到它。</p>
+<p>于是版图分成两半。经典监督学习那一半，题库足够丰富、优化目标分散、社区靠换架构而非纯刷分推进，退化被稀释到几乎测不到。另一半是优化压力高度集中于单一、可记忆目标的场景：RLHF 死磕人类偏好这个代理，学出谄媚与堆料（<code>Y07</code>、<code>Y08</code>）；agentic coding 死磕一套固定题库，前沿模型被审计出能逐词复现 SWE-bench 里人类写好的修复补丁（<code>Y03</code>）。两半之间还有人为放大器：少数厂商在 LMArena 发布前私测多个变体、只公开最好的那个，等于把全社区分散的适应性查询集中到一家之手（<code>Y11</code>）。在集中的这一半，「退化到 eval」是实锤。判断你手里的 eval 危不危险，先看这两个变量：优化压力有多集中，目标有多可记忆。</p>` },
+
     { t: "callout", variant: "applied", html: `
 <p><strong>防御手段的效力在图上一眼可见：</strong><br>
 ① <strong>留出集（held-out）</strong>：留一组优化循环永远看不到的题，题目过拟合无处藏。<br>
 ② <strong>动态轮换题库</strong>：让博弈追不上（Dynabench、LiveBench 的抗污染设计）。<br>
 ③ <strong>把 eval 和优化循环解耦</strong>：eval 只做诊断、不直接驱动改模型，Deming 的老处方（<code>G02</code>）。<br>
 ④ <strong>承认容量约束</strong>：别把所有优化压力压在一个窄 eval 上。<br>
-完整的抗博弈 eval 清单见 <code>C07</code>。</p>` },
+还有一条便宜的纪律：给你的 eval 记一本查询账，每次用它做过一个决定就记一笔；账目不需要精确，它的存在本身会提醒你什么时候该换题。完整的抗博弈 eval 清单见 <code>C07</code>，工程细节见 <code>G03</code>。</p>` },
 
     { t: "prose", html: `
-<p>一句实话作结：你能发现「eval 前后毫无区别」，这个发现本身比那套 eval 值钱。在第一层，eval 绿灯全亮而产品质量没有变化，容易被读成进步；第二层是看见测量本身的失效。第三层是建一套从一开始就知道自己会被博弈、并为此做了设计的评估体系。</p>` },
+<p>一句实话作结：你能发现「eval 前后毫无区别」，这个发现本身比那套 eval 值钱。在第一层，eval 绿灯全亮而产品质量没有变化，容易被读成进步；第二层是看见测量本身的失效。第三层是建一套从一开始就知道自己会被博弈、并为此做了设计的评估体系。</p>
+<p>留一个问题：Kaggle 那场裁决来自 2019 年以前的监督学习竞赛，那时「模型选择」是提交一份预测文件。今天你对着同一套 eval 调 prompt、换脚手架、挑 checkpoint，适应性查询的形态完全变了，经典裁决能否外推，还没有同等规模的复核。另一半问题更拧：模型相似性既在保护 holdout（有效查询变少），也在制造生态同质化（大家都蒸馏同几个强模型）。同一件事在两条账本上符号相反，该怎么记？</p>` },
 
     { t: "sources", items: [
-      `Blum & Hardt (2015). "The Ladder." <em>ICML</em>；Dwork et al. (2015) 可重用 holdout。`,
-      `Roelofs, Shankar, Recht et al. (2019). "A Meta-Analysis of Overfitting in Machine Learning." <em>NeurIPS</em>（Kaggle 百场裁决）。`,
-      `Mania et al. (2019). "Model Similarity Mitigates Test Set Overuse." <em>NeurIPS</em>（机制解释）。`,
-      `Recht et al. (2019)；GSM1k (Zhang et al. 2024)。深化见 <code>research/deep/D4</code> §1；模拟对应 <code>experiments/exp4</code>。`
+      `Blum & Hardt (2015). "The Ladder." <em>ICML</em>，arXiv:1502.04585；Dwork et al. (2015). "The Reusable Holdout." <em>Science</em> 349:636，STOC 版 arXiv:1411.2664。`,
+      `Roelofs, Shankar, Recht et al. (2019). "A Meta-Analysis of Overfitting in Machine Learning." <em>NeurIPS</em>，arXiv:1902.03570（Kaggle 百场裁决）。`,
+      `Mania et al. (2019). "Model Similarity Mitigates Test Set Overuse." <em>NeurIPS</em>（机制解释）；Miller et al. (2020). 问答基准复核，<em>ICML</em>。`,
+      `Recht et al. (2019). arXiv:1902.10811；GSM1k (Zhang et al. 2024). arXiv:2405.00332。`,
+      `深化见 <code>research/deep/D4</code> §1；模拟对应 <code>experiments/exp4</code>。`
     ] }
   ]
 };

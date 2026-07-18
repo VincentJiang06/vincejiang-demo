@@ -2,7 +2,9 @@ export default {
   id: "Y03",
   blocks: [
     { t: "prose", html: `
-<p>基准测试有个残酷的生命周期：诞生，被当作目标，被优化到饱和，贬值，被下一个基准取代。隐蔽的加速器是<strong>污染（contamination）</strong>：基准题目进入训练数据，模型不是学会了能力，而是见过答案。</p>` },
+<p>基准测试有个残酷的生命周期：诞生，被当作目标，被优化到饱和，贬值，被下一个基准取代。隐蔽的加速器是<strong>污染（contamination）</strong>：基准题目进入训练数据，模型不是学会了能力，而是见过答案。</p>
+<p>先给生命周期一组宏观读数。Stanford AI Index 2025 统计：2023 年才发布的 MMMU、GPQA、SWE-bench，一年之内分数分别飙升 18.8、48.9、67.3 个百分点，SWE-bench 从 4.4% 冲到 71.7%；MMLU、GSM8K、HumanEval 已普遍饱和在 88% 以上，对前沿模型失去区分度。基准的有效寿命一代比一代短，这是反应性的宏观指纹：一把尺子越被当作目标，报废得越快。</p>
+<p>污染这条加速器有剂量-反应级的证据。Scale AI 的 GSM1k 按 GSM8K 的风格、难度、解题步数重新命制一千道全新的小学数学题：Phi 与 Mistral 家族系统性掉分 8% 到 13%，且模型「能逐词吐出一道 GSM8K 原题」的概率与掉分幅度正相关（Spearman r² 约 0.36），越像背过原题，掉得越狠。同年还有一篇故意荒诞的讽刺论文：Schaeffer 训练了一个一百万参数的小模型 phi-CTNL（读作 fictional），只因训练数据就是各基准的测试集本身，便在众多学术基准上拿到满分，靶子是不做污染排查就宣布 SOTA 的发布会文化。Apple 的 GSM-Symbolic 把切口再推深一层：不碰原题，只把题目里的数值换掉，多数模型就显著下滑；这说明被背下的不只是题面，还有题型模板本身。</p>` },
 
     { t: "module", module: "timeline:saturation", title: "基准饱和与污染简史", config: {
       hint: "点节点看每个基准是怎么被刷爆、被污染、或被判损坏的。",
@@ -16,8 +18,18 @@ export default {
       ]
     } },
 
+    { t: "prose", html: `
+<p>饱和的另一半原因不在模型，在题。MMLU-Redux 人工重标 5700 道题之后估出 6.49% 的错题率，把准确率上限钉死在 93.5% 附近，于是「能力饱和」至少有一部分其实是「撞上标注天花板」；清洗错题后模型排名会变，意味着原榜单部分是被错题噪声搅乱的。这不是 MMLU 独有：精修过的 MMLU-Pro 仍查出约 4% 的错题与另外约 5% 的生成、标注、答案抽取问题，一项 Text-to-SQL 审计更发现 121 道开源 gold SQL 里 66.1% 标注有误。基准出错是跨领域的系统性现象，「更难」不等于「更干净」。</p>
+<p>「饱和在加速」的流行叙事也要打个折。Akhtar 与 Reuel 等人 2026 年系统分析 60 个主流基准：饱和比例从发布不满 24 个月的 42.9% 升到超过 60 个月的 54.5%，随年龄上升但相当温和，与 AI Index 那组单点飙升并不矛盾，前者是全体基准的长期趋势，后者是个别新基准的初期陡升，混起来读就会夸大。同一研究里最反直觉的一条：公开测试集与私有测试集的饱和率无统计学差异。藏题防得住逐字泄漏，防不住饱和本身。</p>
+<p>SWE-bench 的三代弧线（时间线里那格）值得单独一句判词：每一代「修好」的基准都在被优化到失去区分度后另造新版，而新版寿命一代比一代短。病根在材料：GitHub issue 是为人类协作生产的，解答会写在评论里、测试本来就不为拦截 AI 而设计，从这种材料里造基准，缺陷是继承来的。OpenAI 在撤回 SWE-bench Pro 推荐时给出的方向是由资深工程师专为 AI 评测从零设计任务，代价是昂贵且难以规模化。取证侧的困境（为什么事后检测靠不住）在 <code>Y13</code> 单独展开，防御侧的时间切分与留出设计在 <code>G03</code>。</p>
+<p>审计的冲击力用一个数字就能传达：SWE-bench+ 把泄漏题与弱测试题清洗之后，SWE-Agent 加 GPT-4 的解决率从 12.47% 跌到 3.97%，跌掉的那部分就是「抄到答案」与「测试没拦住」的合计。agentic 评测还多出一个静态基准没有的作弊面：环境本身。agent 可以用普通的 git 命令翻看仓库历史，从未来的 commit 里直接捞出官方修复，这条路没人堵过，最近的出口就在那里（机制的名字见 <code>Y05</code>，agent 评测的系统处理见 <code>Y14</code>）。</p>
+<p>造一批短期刷不爆的题，是另一条对策线。Humanity's Last Exam 收 2500 道跨学科前沿难题，顶级系统起初只拿约 8.8%，但作者自己预测这个数字撑不了多久；FrontierMath 请职业数学家命制未发表的原创难题，SOTA 起初不到 2%。后者随即演示了一种全新的失效方式：2025 年 1 月媒体披露，这个以「未见题」为卖点的基准由 OpenAI 资助，付费命题的数学家事先不知情，OpenAI 拿到对绝大多数最难题目及解答的独家访问权，并用它宣布 o3 拿下 25%（前代仅 2%）；Epoch 承认透明度有错，称双方有口头约定不拿题目训练。技术上的抗污染设计再精巧，只要出题方与被测方之间存在资金与数据访问的不对称，「模型没见过题」这句保证本身就成了待审计的对象。这不再是统计问题，是治理问题，评测治理这条线在 <code>Y15</code> 与 <code>G06</code> 继续。</p>` },
+
+    { t: "callout", variant: "intuit", html: `
+<p><strong>用时间轴当白名单。</strong>抗污染设计的共同思路，是把「模型没见过这道题」从一个需要事后取证的统计命题，变成一个靠日期保证的契约命题：LiveCodeBench 只用发布日晚于模型训练截止日的竞赛新题，LiveBench 每月替换约六分之一的题目，Dynabench 靠人机回环持续造模型答错的新题。契约式保证的强处是不依赖任何检测方法；弱处也明确，它防的是「见过」，防不住「题目本身质量差」与「测试太弱」，而且题库必须被持续生产，这种基准的寿命是运营出来的，不是设计完就白捡的。</p>` },
+
     { t: "callout", variant: "myth", html: `
-<p><strong>流行说法：「污染 = 分数虚高，掉多少分就是注了多少水。」</strong>复核结论：污染的效果是路径依赖的。Schaeffer 等 2026 年用因果框架给出「污染悖论」的建模论证（预印本，尚无独立复现）：单条测试集副本进预训练语料就能让 loss 低于干净语料的不可约误差（致命），但后续大量新鲜数据训练又会把污染效应冲淡甚至抹平（可忽略）。这解释了 GSM1k 的分布：前沿模型经历大量后续训练，早期污染被稀释，几乎不掉分；小模型污染离最终检查点近，掉分大。另一条反向证据指向检测方法：n-gram 检测被改写轻松规避，成员推断攻击（MIA）在 LLM 上不显著优于随机基线，2025 年的系统综述标题就叫 "rushing nowhere"。凭 n-gram 或 MIA 得出的污染指控，方法上不足以支撑结论。</p>` },
+<p><strong>流行说法：「污染 = 分数虚高，掉多少分就是注了多少水。」</strong>复核结论：污染的效果是路径依赖的。Schaeffer 等 2026 年用因果框架给出「污染悖论」的建模论证（预印本，尚无独立复现）：单条测试集副本进预训练语料就能让 loss 低于干净语料的不可约误差（致命），但后续大量新鲜数据训练又会把污染效应冲淡甚至抹平（可忽略）。这解释了 GSM1k 的分布：前沿模型经历大量后续训练，早期污染被稀释，几乎不掉分；小模型污染离最终检查点近，掉分大。另一条反向证据指向检测方法：n-gram 检测被改写轻松规避，成员推断攻击（MIA）在 LLM 上不显著优于随机基线，2025 年的系统综述标题就叫 "rushing nowhere"。凭 n-gram 或 MIA 得出的污染指控，方法上不足以支撑结论。顺带纠一个小讹传：BIG-bench 式的 canary 字符串只是数据集的自愿标记，方便自查泄漏，没有任何机制保证厂商真的用它过滤了训练集，别把它当免疫针。</p>` },
 
     { t: "callout", variant: "applied", html: `
 <p><strong>一个 benchmark 的分数，要连着它的「新鲜度」和「题目质量」一起读。</strong>发布已久、被广泛训练过的基准上的高分，含金量远低于发布日之后新题上的表现；而「逼近 100%」的军备竞赛在测量学上可能本就是幻觉，因为人工标注质量有天然上限。对你的 agent 开发，最实用的一条不变：保留一批模型和优化循环都从未见过的任务，定期更换，并且抽查题目本身的质量。题不干净，分数再稳也是噪声的排列。</p>` },
@@ -26,11 +38,13 @@ export default {
 <p>留一个问题：如果 n-gram 失效、MIA 失效、语义检测又能被规避，那「证明某个分数是干净的」在原则上还可能吗？D4 报告认为这把污染问题推向了和适应性过拟合同样的处境：最坏情况不可判定，只能靠制度设计（held-out、时间切分、审计）而不是事后检测。</p>` },
 
     { t: "sources", items: [
-      `Zhang et al. (2024). GSM1k, arXiv:2405.00332；Mirzadeh et al. (2025). GSM-Symbolic, arXiv:2410.05229（NoOp 掉分至 65%）。`,
-      `Gema et al. (2025). "Are We Done with MMLU?"（MMLU-Redux，6.49% 错题）。`,
-      `Aleithan et al. (2024). SWE-bench+；OpenAI (2026). "Why We No Longer Evaluate SWE-bench Verified" 与 "Separating Signal from Noise"（Pro 约 30% 损坏）。`,
-      `Schaeffer et al. (2026). 污染悖论, arXiv:2601.04301；Meeus et al. (2025). "MIA Are Rushing Nowhere"。`,
-      `Akhtar, Reuel et al. (2026). 饱和系统研究（藏题无效）。深化见 <code>research/deep/D4</code> §2–3、§5。`
+      `Zhang et al. (2024). GSM1k, arXiv:2405.00332；Mirzadeh et al. (2025). GSM-Symbolic, arXiv:2410.05229（NoOp 掉分至 65%）；Schaeffer (2023). phi-CTNL 讽刺文, arXiv:2309.08632。`,
+      `Gema et al. (2025). "Are We Done with MMLU?"（MMLU-Redux，6.49% 错题）；Wang et al. (2024). MMLU-Pro, arXiv:2406.01574。`,
+      `Aleithan et al. (2024). SWE-bench+, arXiv:2410.06992；OpenAI (2026). "Why We No Longer Evaluate SWE-bench Verified" 与 "Separating Signal from Noise"（Pro 约 30% 损坏）。`,
+      `Schaeffer et al. (2026). 污染悖论, arXiv:2601.04301；Meeus et al. (2025). "MIA Are Rushing Nowhere"；Dekoninck et al. (2024). 规避检测, arXiv:2402.02823。`,
+      `Jain et al. (2024). LiveCodeBench, arXiv:2403.07974；White et al. (2024). LiveBench, arXiv:2406.19314；Kiela et al. (2021). Dynabench, arXiv:2104.14337。`,
+      `Humanity's Last Exam (2025). arXiv:2501.14249；Glazer et al. (2024). FrontierMath, arXiv:2411.04872（OpenAI 资助争议：TechCrunch 2025-01）。`,
+      `Stanford AI Index 2025（饱和加速读数）；Akhtar, Reuel et al. (2026). 饱和系统研究, arXiv:2602.16763（藏题无效；2026 编号引用前请复核）。深化见 <code>research/deep/D4</code> §2–3、§5。`
     ] }
   ]
 };

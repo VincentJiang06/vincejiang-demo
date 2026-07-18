@@ -18,15 +18,22 @@
 /* ── LED dot 通用发光点 ── */
 .led{width:9px;height:9px;border-radius:50%;background:var(--line-2);display:inline-block}
 .led.on{background:var(--accent);box-shadow:0 0 6px var(--accent-glow),0 0 14px var(--accent-glow)}
-.led.pulse{animation:led-pulse 2.4s ease-in-out infinite}
-@keyframes led-pulse{0%,100%{opacity:.45;box-shadow:0 0 3px var(--accent-glow)}
-  50%{opacity:1;box-shadow:0 0 8px var(--accent-glow),0 0 16px var(--accent-glow)}}
+.led.pulse{box-shadow:0 0 8px var(--accent-glow),0 0 16px var(--accent-glow);
+  animation:led-pulse 2.4s ease-in-out infinite}
+/* 性能红线：呼吸灯只动 opacity（合成器动画，不触发每帧样式重算/重绘）。
+   之前的版本在关键帧里插值 box-shadow，全站每个常亮呼吸灯都在以 60Hz 逼浏览器
+   重算样式+重绘——静置页面白烧 15% CPU 的元凶。光晕改为静态阴影，用透明度呼吸。 */
+@keyframes led-pulse{0%,100%{opacity:.45}50%{opacity:1}}
 
 /* ── Glyph 灯带 = 品牌标识：两盏白灯 + 红黄蓝绿（三分支 + 汇流）──
    从左到右逐个点亮；灭掉时是中性灯珠，看不出自己是什么颜色。
    每盏灯把自己的颜色存进 --_lamp，共用一条 keyframe（var() 在关键帧里按元素解析）。*/
 .glyph-strip{display:flex;gap:5px;align-items:center}
-.glyph-strip .led{background:var(--line-2);box-shadow:none;
+/* 性能红线：追逐灯只动 opacity（合成器）。旧版逐帧插值 background+box-shadow，
+   灯带在每个页面的 header 里常驻，等于全站永续 60Hz 样式重算。
+   现在灯珠常亮自己的颜色+静态光晕，靠透明度 .22↔1 实现「点亮/熄灭」。 */
+.glyph-strip .led{background:var(--_lamp,var(--line-2));
+  box-shadow:0 0 6px var(--_glow),0 0 14px var(--_glow);opacity:.22;
   animation:glyph-chase 2.8s steps(1) infinite}
 .glyph-strip .led.l-w     {--_lamp:var(--white);         --_glow:color-mix(in srgb,var(--white) 70%,transparent)}
 .glyph-strip .led.l-red   {--_lamp:var(--branch-red);    --_glow:var(--red-glow)}
@@ -40,14 +47,14 @@
 .glyph-strip .led:nth-child(5){animation-delay:.56s}
 .glyph-strip .led:nth-child(6){animation-delay:.70s}
 @keyframes glyph-chase{
-  0%,20%  {background:var(--_lamp);box-shadow:0 0 6px var(--_glow),0 0 14px var(--_glow)}
-  21%,100%{background:var(--line-2);box-shadow:none}}
+  0%,20%  {opacity:1}
+  21%,100%{opacity:.22}}
 /* 亮色主题下白灯要改成深色，否则纸白上两盏灯亮起来等于没亮 */
 :root[data-theme="light"] .glyph-strip .led.l-w{--_lamp:var(--ink-800);
   --_glow:color-mix(in srgb,var(--ink-800) 45%,transparent)}
 /* 关掉动画时（reduced-motion）就常亮，不然灯带全灭看不出是什么 */
 @media (prefers-reduced-motion:reduce){
-  .glyph-strip .led{background:var(--_lamp);box-shadow:0 0 5px var(--_glow)}}
+  .glyph-strip .led{opacity:1;box-shadow:0 0 5px var(--_glow)}}
 
 /* ── Progress spine 进度脊（Glyph 灯带竖版）── */
 .spine{position:fixed;left:14px;top:50%;transform:translateY(-50%);z-index:40;
@@ -106,8 +113,10 @@
 .node{position:absolute;width:132px;transform:translate(-50%,-50%);
   display:flex;flex-direction:column;gap:6px;padding:10px;cursor:pointer;
   border:1px solid var(--line);border-radius:var(--radius-panel);
-  background:color-mix(in srgb,var(--panel) 82%,transparent);
-  backdrop-filter:blur(6px);text-decoration:none;transition:transform .15s,border-color .15s}
+  /* 性能红线：芯片不用 backdrop-filter——58 个模糊层叠在整块可平移的 stage 上,
+     每帧平移/缩放都要重采样 58 次,GPU 内存与合成时间双爆。近似色直接混进背景色。 */
+  background:color-mix(in srgb,var(--panel) 88%,var(--bg));
+  text-decoration:none;transition:transform .15s,border-color .15s}
 .node:hover{transform:translate(-50%,-50%) scale(1.05);text-decoration:none}
 .node .n-head{display:flex;align-items:center;justify-content:space-between;
   font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;color:var(--text-2)}
@@ -123,7 +132,8 @@
 .node.locked .n-zh{color:var(--text-2)}
 .node.available{border-color:var(--accent)}
 .node.available::before{content:"";position:absolute;inset:-1px;border-radius:inherit;
-  border:1px solid var(--accent);animation:led-pulse 2.4s ease-in-out infinite;pointer-events:none}
+  border:1px solid var(--accent);box-shadow:0 0 8px var(--accent-glow);
+  animation:led-pulse 2.4s ease-in-out infinite;pointer-events:none}
 .node.completed{border-color:var(--accent);
   box-shadow:0 0 0 1px var(--accent) inset,0 0 16px color-mix(in srgb,var(--accent-glow) 30%,transparent)}
 .node.completed .n-id::after{content:" ✓";color:var(--accent)}

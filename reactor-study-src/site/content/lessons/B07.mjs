@@ -14,15 +14,36 @@ export default {
       ]
     } },
 
+    { t: "prose", html: `
+<p>机制的地基是 Kahneman 与 Frederick 的属性替代（attribute substitution）：面对一个难评估的属性（这家公司的战略执行得好不好），认知系统会悄悄换上一个容易评估的属性（这季度的调查分是多少），然后回答那个更容易的问题，而当事人自始至终以为自己回答的还是原问题。替代的全程没有决策点，没有一个可以被良心拦住的瞬间，这正是它与作弊的分界：作弊者知道自己换了目标，surrogation 的当事人不知道。</p>
+<p>Choi、Hecht 与 Tayler 的贡献是把这个机制放进受控实验，并测出了它的开关。2012 年《The Accounting Review》与 2013 年《Journal of Accounting Research》的两组实验给出一对关键发现：把薪酬与单一指标挂钩，会显著加剧 surrogation，付钱让你盯一个数字，这个数字就加速在你脑中变成目标本身；改用多重指标，替代显著缓解，几个并排的数字在持续暗示「没有哪一个就是战略」。留意处方的杠杆点在认知而非监督：多指标起效不是因为更难作弊，而是因为它拆掉了「指标即构念」这个错觉的认知条件。</p>` },
+
     { t: "callout", variant: "intuit", html: `
 <p><strong>surrogation 是 Goodhart 的心理学地基。</strong>Goodhart 描述系统层面的后果（指标一旦成为目标就崩坏），surrogation 解释个体层面的原因（当事人为什么不觉得自己在作弊）。一旦替代在认知上完成，优化指标而牺牲真实目标，对当事人来说不像作弊，像在努力工作。这就是最真诚的人同样会落入其中的原因。</p>` },
 
+    { t: "prose", html: `
+<p>Wells Fargo 是这个概念的旗舰案例，数字都有案卷。银行的战略构念是「深度客户关系」，代理指标是交叉销售数，口号「Eight is Great」，每户八个产品；指标与薪酬、内部排名、解雇威胁层层挂钩。2016 年 9 月 8 日，消费者金融保护局（CFPB）的同意令揭出：员工在客户不知情下开设约 153.4 万个存款账户、提交约 56.5 万份信用卡申请；2017 年 8 月，银行委托的扩大复核（覆盖 2009 年以来约 1.65 亿个账户）把潜在未授权账户上修到约 350 万个。罚款合计 1.85 亿美元（CFPB 一亿、OCC 三千五百万、洛杉矶市检五千万），约 5,300 名员工被解雇；2018 年美联储对其施加资产上限，2020 年再与司法部和证交会达成 30 亿美元和解。指标追逐的直接产出，是摧毁了它本要代理的那个构念：客户关系。</p>
+<p>这个案子的教学价值在于双层结构。一线是对抗型博弈：伪造账户，内部黑话管这些手法叫 gaming、sandbagging、pinning，董事会 2017 年 4 月的独立调查报告原样记录了这些词。管理层是 surrogation：把交叉销售数真诚地当成健康经营的证据，Harris 与 Tayler 2019 年在《Harvard Business Review》即以此为 surrogation 的旗舰案例。同一个指标，同时驱动了作弊的人与真诚的人，两种腐蚀叠加，这正是 <code>B01</code> 里那句「指标会悄悄替换掉你脑子里的目标」的完整企业版。</p>` },
+
+    { t: "callout", variant: "myth", html: `
+<p><strong>流行叙事把这类丑闻讲成「坏人蓄意造假」。复核结论：蓄意只解释了一半，另一半是无人自觉的认知替代。</strong>surrogation 的定义就排除了故意：当事人真诚地把代理指标当成了目标本身，优化指标在其主观体验里就是努力工作。这解释了为什么同类治理失败反复发生在自认清白的组织里，也解释了为什么「加强职业道德教育」对它基本无效，错觉不归道德管。顺带纠一个数字讹传：「Wells Fargo 被 CFPB 罚 1.85 亿美元」不准确，1.85 亿是三家机构的合计，CFPB 的部分是一亿。</p>` },
+
+    { t: "prose", html: `
+<p>缓解手段在同一支文献里被陆续测出来。多指标并用是第一条，出处即 2012 年的原实验。Bentley 2019 年在《The Accounting Review》补了第二条：要求用叙事性汇报（写句子解释业绩，而不只报数字）能减少扭曲与 surrogation；数字容易顶替构念，句子迫使汇报者重新接触构念本身。Black、Meservy、Tayler 与 Williams 2021 年在《JMAR》的后续沿这条线继续推进。翻译到指标治理：别让任何单一数字独占激励，别让汇报退化成报数（这组实验证据是 <code>G04</code> 多指标制衡的地基之一，<code>G02</code> 的解耦则直接拆掉「指标连着奖惩」这个加剧条件）。</p>
+<p>在家族分工里，surrogation 补的是心理学那一格：Goodhart 与 Campbell 描述系统层面的后果，Kerr 描述设计端的错位（<code>B06</code>），surrogation 解释执行端的心智，为什么理性而真诚的人会成为失真的载体。委托代理模型（<code>B12</code>）假设 agent 清楚自己在最优化什么，surrogation 提醒你连这个假设都嫌乐观：很多时候 agent 以为自己在优化 B，手上优化的已经是 A。</p>` },
+
     { t: "callout", variant: "applied", html: `
-<p><strong>你盯着 eval 分数看得越久，越容易对它发生 surrogation。</strong>当「提高 benchmark 分」在团队日常里反复出现、还连着 KPI，它就会在集体认知里替换掉「造一个真正有用的模型」。缓解处方来自同一组实验：别用单一指标加激励，用一组互相制衡的指标，让任何一个数字都冒充不了目标本身。这是 <code>C03 抗博弈设计</code>的核心原则之一。</p>` },
+<p><strong>你盯着 eval 分数看得越久，越容易对它发生 surrogation。</strong>当「提高 benchmark 分」在团队日常里反复出现、还连着 KPI，它就会在集体认知里替换掉「造一个真正有用的模型」；同理，训练团队会不知不觉把 Arena 的 Elo 当成「模型质量本身」，于是优化风格、长度与讨好去迎合评分器。缓解处方来自同一组实验：别用单一指标加激励，用一组互相制衡的指标，让任何一个数字都冒充不了目标本身。这是 <code>C03</code>（反 Goodhart 设计实验室）的核心原则之一。</p>` },
+
+    { t: "prose", html: `
+<p>留一个问题，取自 Bentley 的发现：为什么改用句子汇报能削弱替代？如果答案是「叙事迫使人重新接触构念」，那么当汇报的句子也开始由模型代写，这道防线还剩多少？</p>` },
 
     { t: "sources", items: [
-      `Choi, J., Hecht, G. & Tayler, W. B. (2012). "Lost in Translation: The Effects of Incentive Compensation on Strategy Surrogation." <em>The Accounting Review</em> 87(4):1135–1163.`,
-      `Harris & Tayler (2019). <em>HBR</em>（Wells Fargo 案）。见 <code>research/03c, 12</code>。`
+      `Choi, J., Hecht, G. & Tayler, W. B. (2012). "Lost in Translation: The Effects of Incentive Compensation on Strategy Surrogation." <em>The Accounting Review</em> 87(4):1135–1163；(2013). <em>Journal of Accounting Research</em> 51(1):105–133。`,
+      `Harris & Tayler (2019). "Don't Let Metrics Undermine Your Business." <em>HBR</em> 97(5):62–69（Wells Fargo 案）。`,
+      `Wells Fargo 案卷：CFPB 同意令（2016-09-08）；董事会独立调查报告（2017-04-10）；扩大复核（2017-08）。`,
+      `Bentley (2019). <em>The Accounting Review</em> 94(3):27–55（叙事性汇报）；Black, Meservy, Tayler & Williams (2021). <em>JMAR</em> 34(1):9–29。`,
+      `见 <code>research/03c</code> §3、<code>research/03</code> §6.8 与 <code>research/12</code>。`
     ] }
   ]
 };
