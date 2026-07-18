@@ -1,12 +1,47 @@
 {
   "_note": "首页、gallery、Research 的单一数据源。改这里即改首页/gallery/Research,无需动模板。href 为 http(s) 视作外链、本站相对路径视作内部作品(进 sitemap)。wildSites[].hue = 友链纸皮石站色相(反官色,见 uniwild runbook);collections = Research collections(posts/<key>/ 下的文章按 order 排),layout:paper 用论文格式;正文 collection 用 revisedBy 指向 revision collection,revision collection 用 revisionOf 指回正文,Research 页会自动成对展示。",
   "wildSites": [
-    { "key": "hkuwild",   "name": "非官方港大",   "url": "https://hkuwild.com",   "hue": 20,  "desc": "百年殖民史的缩影:港大的身世、争议与人物 lore。" },
-    { "key": "cuhkwild",  "name": "非官方中大",   "url": "https://cuhkwild.com",  "hue": 92,  "desc": "山城书院制的人文底色:中大的理想主义与它的代价。" },
-    { "key": "hkustwild", "name": "非官方科大",   "url": "https://hkustwild.com", "hue": 308, "desc": "理工速成的成与代价:三十年冲进世界前列的科大。" },
-    { "key": "cityuwild", "name": "非官方城大",   "url": "https://cityuwild.com", "hue": 152, "desc": "后发逆袭与身份焦虑:城大如何改写自己的坐标。" },
-    { "key": "polyuwild", "name": "非官方理大",   "url": "https://polyuwild.com", "hue": 192, "desc": "应用立校的实干者:理大的工科基因与街头传奇。" },
-    { "key": "hkuniwild", "name": "港校通门户",   "url": "https://hkuniwild.com", "desc": "五校信息门户:中性择校工具,内地读者友好,深链各校野史。" }
+    {
+      "key": "hkuwild",
+      "name": "非官方港大",
+      "url": "https://hkuwild.com",
+      "hue": 20,
+      "desc": "百年殖民史的缩影:港大的身世、争议与人物 lore。"
+    },
+    {
+      "key": "cuhkwild",
+      "name": "非官方中大",
+      "url": "https://cuhkwild.com",
+      "hue": 92,
+      "desc": "山城书院制的人文底色:中大的理想主义与它的代价。"
+    },
+    {
+      "key": "hkustwild",
+      "name": "非官方科大",
+      "url": "https://hkustwild.com",
+      "hue": 308,
+      "desc": "理工速成的成与代价:三十年冲进世界前列的科大。"
+    },
+    {
+      "key": "cityuwild",
+      "name": "非官方城大",
+      "url": "https://cityuwild.com",
+      "hue": 152,
+      "desc": "后发逆袭与身份焦虑:城大如何改写自己的坐标。"
+    },
+    {
+      "key": "polyuwild",
+      "name": "非官方理大",
+      "url": "https://polyuwild.com",
+      "hue": 192,
+      "desc": "应用立校的实干者:理大的工科基因与街头传奇。"
+    },
+    {
+      "key": "hkuniwild",
+      "name": "港校通门户",
+      "url": "https://hkuniwild.com",
+      "desc": "五校信息门户:中性择校工具,内地读者友好,深链各校野史。"
+    }
   ],
   "collections": [
     {
@@ -18,7 +53,15 @@
       "layout": "paper",
       "featured": true,
       "revisedBy": "pension-demo-revision",
-      "order": ["summary", "overview", "paper-1", "paper-2", "paper-3", "paper-4", "paper-5"]
+      "order": [
+        "summary",
+        "overview",
+        "paper-1",
+        "paper-2",
+        "paper-3",
+        "paper-4",
+        "paper-5"
+      ]
     },
     {
       "key": "pension-demo-revision",
@@ -28,16 +71,65 @@
       "kind": "revision",
       "revisionOf": "pension-demo",
       "layout": "post",
-      "order": ["comprehensive-review", "paper-1-review", "paper-2-review", "paper-3-review", "paper-4-review", "paper-5-review", "technical-retrospective"]
+      "order": [
+        "comprehensive-review",
+        "paper-1-review",
+        "paper-2-review",
+        "paper-3-review",
+        "paper-4-review",
+        "paper-5-review",
+        "technical-retrospective"
+      ]
     }
   ],
   "gallery": [
-    { "title": "REACTOR · 当尺子开始回看你", "href": "https://reactor.vincejiang.com/", "desc": "一部关于测量反应性的现场手册:44 个节点的天赋树,从法学院排名研究、Goodhart / Campbell 定律,走到 AI eval 的过拟合、奖励破解与排行榜幻觉。每节配一个可上手的交互模块。", "badge": "44 节 · 交互天赋树" },
-    { "title": "AI 服务状态", "href": "/status-ai/", "desc": "一眼看懂 OpenAI 与 Anthropic 现在能不能用:聚合官方状态 + 通俗中文解说,附开放 JSON 接口。", "badge": "带后端 · 开放接口" },
-    { "title": "Vince 的 HiFi 笔记", "href": "/vince-hifi-notes/", "desc": "把 HiFi 声学里最迷惑的概念逐一折算成能画出来的 dB:分压器、线材、阻抗、目标曲线。", "badge": "长文技术笔记" },
-    { "title": "草料文风 Skill 对比 Demo", "href": "/caoliao-skill-demo/", "desc": "草料文风 skill 家族 v2.3 的测试集三栏对比页:同一篇原文并排展示 skill 各档输出与问题清单,直观看到自动改写与人工判定的边界。", "badge": "Skill 评测 · 单文件" },
-    { "title": "TYPE//PINBALL", "href": "/glyph-pinball/", "desc": "用底部字符板把字符球顶回满屏文字；顶部反射板用侧墙折返预测与限速追踪回球，移动物体会让 Pretext 持续重排整页 RedHatMono 等宽字流。", "badge": "Pretext · 全字符弹球" },
-    { "title": "标签字体对比工坊", "href": "/font-compare/", "desc": "在同一组二维码标签卡上一次看遍 52 款字体：14 款免费商用中文黑体 × 38 款等宽编号字体，标注开源可改 / 仅免费商用与品牌来源，支持改文字、上传 QR 图、切换命名字重。", "badge": "52 款字体 · 懒加载" },
-    { "title": "CUHK Schedule", "href": "https://cus.vincejiang.com", "desc": "中大选课助手:粘贴课号排出无冲突课表,筛选本学期还能选什么,解析先修/反修条件,支持 A/B 对比与 .ics 导出。", "badge": "React · 选课工具" }
+    {
+      "title": "Paletter 配色工具",
+      "href": "/paletter/",
+      "desc": "从一个起始色出发生成和谐配色：取色画布、色彩方案、色阶、渐变混合、WCAG 对比度校验（AAA/AA 三级），内置 563 个预制色板库（Pantone 年度色、名画、自然、设计系统），支持链接分享色板，中英双语。",
+      "badge": "单文件 · 563 色板库"
+    },
+    {
+      "title": "REACTOR · 当尺子开始回看你",
+      "href": "https://reactor.vincejiang.com/",
+      "desc": "一部关于测量反应性的现场手册:44 个节点的天赋树,从法学院排名研究、Goodhart / Campbell 定律,走到 AI eval 的过拟合、奖励破解与排行榜幻觉。每节配一个可上手的交互模块。",
+      "badge": "44 节 · 交互天赋树"
+    },
+    {
+      "title": "AI 服务状态",
+      "href": "/status-ai/",
+      "desc": "一眼看懂 OpenAI 与 Anthropic 现在能不能用:聚合官方状态 + 通俗中文解说,附开放 JSON 接口。",
+      "badge": "带后端 · 开放接口"
+    },
+    {
+      "title": "Vince 的 HiFi 笔记",
+      "href": "/vince-hifi-notes/",
+      "desc": "把 HiFi 声学里最迷惑的概念逐一折算成能画出来的 dB:分压器、线材、阻抗、目标曲线。",
+      "badge": "长文技术笔记"
+    },
+    {
+      "title": "草料文风 Skill 对比 Demo",
+      "href": "/caoliao-skill-demo/",
+      "desc": "草料文风 skill 家族 v2.3 的测试集三栏对比页:同一篇原文并排展示 skill 各档输出与问题清单,直观看到自动改写与人工判定的边界。",
+      "badge": "Skill 评测 · 单文件"
+    },
+    {
+      "title": "TYPE//PINBALL",
+      "href": "/glyph-pinball/",
+      "desc": "用底部字符板把字符球顶回满屏文字；顶部反射板用侧墙折返预测与限速追踪回球，移动物体会让 Pretext 持续重排整页 RedHatMono 等宽字流。",
+      "badge": "Pretext · 全字符弹球"
+    },
+    {
+      "title": "标签字体对比工坊",
+      "href": "/font-compare/",
+      "desc": "在同一组二维码标签卡上一次看遍 52 款字体：14 款免费商用中文黑体 × 38 款等宽编号字体，标注开源可改 / 仅免费商用与品牌来源，支持改文字、上传 QR 图、切换命名字重。",
+      "badge": "52 款字体 · 懒加载"
+    },
+    {
+      "title": "CUHK Schedule",
+      "href": "https://cus.vincejiang.com",
+      "desc": "中大选课助手:粘贴课号排出无冲突课表,筛选本学期还能选什么,解析先修/反修条件,支持 A/B 对比与 .ics 导出。",
+      "badge": "React · 选课工具"
+    }
   ]
 }
