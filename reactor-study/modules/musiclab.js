@@ -1,5 +1,5 @@
 /* REACTOR · musiclab.js (R10) — Salganik, Dodds & Watts 2006 artificial market */
-import { mount, canvas, controls, slider, add, readout, legend, scoped } from "/reactor-study/modules/mod-kit.js?v=fccf0ac854";
+import { mount, canvas, controls, slider, add, readout, legend, scoped } from "/modules/mod-kit.js?v=fccf0ac854";
 
 mount("musiclab", (body, fig, { config }) => {
   const C = scoped(fig);

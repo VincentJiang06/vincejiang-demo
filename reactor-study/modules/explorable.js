@@ -5,7 +5,7 @@
      "cards"   {cards:[{title,tag,html,mech}], filters?}  — filterable card grid
      "matrix"  {cols:[...], rows:[{h, cells:[...]}], note} — hover-highlight table
 */
-import { mount, scoped } from "/reactor-study/modules/mod-kit.js?v=fccf0ac854";
+import { mount, scoped } from "/modules/mod-kit.js?v=fccf0ac854";
 
 mount("explorable", (body, fig, { config }) => {
   const mode = config.mode || "steps";

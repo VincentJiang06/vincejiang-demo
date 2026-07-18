@@ -1,12 +1,12 @@
-<!doctype html><html lang="zh-CN" data-theme="dark" data-base="/reactor-study"><head>
+<!doctype html><html lang="zh-CN" data-theme="dark" data-base=""><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>R11 霍桑效应及其证伪 · reactor-study</title>
 <meta name="description" content="连反应性的招牌案例都没通过原始数据检验。">
-<link rel="canonical" href="https://vincejiang.com/reactor-study/lesson/R11.html">
+<link rel="canonical" href="https://reactor.vincejiang.com/lesson/R11.html">
 <meta property="og:type" content="website"><meta property="og:title" content="R11 霍桑效应及其证伪 · reactor-study">
-<meta property="og:description" content="连反应性的招牌案例都没通过原始数据检验。"><meta property="og:url" content="https://vincejiang.com/reactor-study/lesson/R11.html">
+<meta property="og:description" content="连反应性的招牌案例都没通过原始数据检验。"><meta property="og:url" content="https://reactor.vincejiang.com/lesson/R11.html">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/reactor-study/favicon.svg"><link rel="mask-icon" href="/reactor-study/favicon.svg" color="#E11D3A">
+<link rel="icon" href="/favicon.svg"><link rel="mask-icon" href="/favicon.svg" color="#E11D3A">
 <script>try{var m=localStorage.getItem("reactor.theme")||"auto",t=(m==="light"||m==="dark")?m:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/400.css">
@@ -14,10 +14,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
-<link rel="stylesheet" href="/reactor-study/theme/tokens.css?v=5bc3889418"><link rel="stylesheet" href="/reactor-study/theme/base.css?v=1e6b7c0136">
-<link rel="stylesheet" href="/reactor-study/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/reactor-study/theme/led.css?v=85f30de38d">
-<link rel="stylesheet" href="/reactor-study/theme/bg.css?v=61c65291c2"><link rel="stylesheet" href="/reactor-study/theme/extra.css?v=a9bfb1b0f7">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"霍桑效应及其证伪 · Hawthorne & Its Debunking","description":"连反应性的招牌案例都没通过原始数据检验。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://vincejiang.com/reactor-study/lesson/R11.html"}</script>
+<link rel="stylesheet" href="/theme/tokens.css?v=5bc3889418"><link rel="stylesheet" href="/theme/base.css?v=1e6b7c0136">
+<link rel="stylesheet" href="/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/theme/led.css?v=85f30de38d">
+<link rel="stylesheet" href="/theme/bg.css?v=61c65291c2"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"霍桑效应及其证伪 · Hawthorne & Its Debunking","description":"连反应性的招牌案例都没通过原始数据检验。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://reactor.vincejiang.com/lesson/R11.html"}</script>
 </head><body><div class="bg-dots" aria-hidden="true"></div>
 <div class="bg-field" aria-hidden="true"><svg class="bg-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
 <defs>
@@ -44,11 +44,11 @@
 <rect class="hbar" style="--d:35s;animation-delay:-13s" x="-120" y="558" width="1340" height="1" fill="url(#hbar)"/>
 </g></svg></div>
 <div class="bg-scan" aria-hidden="true"></div><header class="site-head">
-  <a class="brand persist" href="/reactor-study/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
+  <a class="brand persist" href="/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
   <nav>
-    <a href="/reactor-study/#tree">天赋树</a>
-    <a href="/reactor-study/lesson/N00.html">从这里开始</a>
-    <a href="/reactor-study/atlas.html">图鉴</a>
+    <a href="/#tree">天赋树</a>
+    <a href="/lesson/N00.html">从这里开始</a>
+    <a href="/atlas.html">图鉴</a>
     <button class="btn theme-toggle" data-theme-toggle><span class="tt-glyph" aria-hidden="true">◑</span><span class="tt-label">自动</span></button>
   </nav>
 </header><main class="wrap" data-branch="red">
@@ -60,8 +60,8 @@
       <h1>霍桑效应及其证伪</h1>
       <p class="lede">连反应性的招牌案例都没通过原始数据检验。</p>
       <div class="prereq-row">
-    <span class="label">前置</span> <a href="/reactor-study/lesson/N00.html">N00 测量即干预</a>
-    <span class="label" style="margin-left:auto">解锁</span> <a href="/reactor-study/lesson/Y12.html">Y12 评估觉察</a>
+    <span class="label">前置</span> <a href="/lesson/N00.html">N00 测量即干预</a>
+    <span class="label" style="margin-left:auto">解锁</span> <a href="/lesson/Y12.html">Y12 评估觉察</a>
   </div>
     </div>
     <article class="stack"><div class="read">
@@ -71,7 +71,7 @@
       <span>神话 vs 原始档案</span><span class="spacer"></span>
       <span class="mono">PROVENANCE</span></figcaption>
     <div class="module-body"><script type="application/json" class="mod-config">{"hint":"翻开卡片：一个被神话的效应，和它真正的证据。","cards":[{"frontTag":"流行版 · 你听过的","front":"无论灯调亮、调暗、还是保持不变，产出都上升。「被关注本身」提升了绩效。","backTag":"档案 · 判决","back":"Levitt & List (2011) 在图书馆\u003cstrong>找回了一度被认为已销毁、从未被正式分析过\u003c/strong>的原始照明数据，重新分析后判定：文献描述的那些惊人模式在档案里\u003cstrong>查无实据\u003c/strong>，原文用词是 entirely fictional。"},{"frontTag":"问：那产出波动是什么？","front":"如果不是「被观察」，工人产量的起伏由什么解释？","backTag":"档案 · 更朴素的答案","back":"产出波动更干净地由 \u003cstrong>day-of-week 周期（周一/周五）与发薪周期\u003c/strong>解释，控制之后处理组与对照组差异\u003cstrong>基本消失\u003c/strong>。更早的两轮重审同向：Franke & Kaul (1978) 首次统计重估，发现管理纪律（替换低产工人）与大萧条压力解释力更强；Jones (1992) 重审继电器室数据，同样没找到稳健证据。"},{"frontTag":"问：这名字谁起的？","front":"「Hawthorne effect」是当年那些实验者起的吗？","backTag":"档案 · 时代误置","back":"不是。这个名字由 \u003cstrong>John R. P. French 1953 年\u003c/strong>铸造、Landsberger (1958) 推广，回溯安到 Elton Mayo 头上是时代误置。「工人在近乎月光的照度下还在增产」的戏剧化细节，原始档案同样\u003cstrong>无干净证据\u003c/strong>。早期继电器室的增产，至少部分源于两名低产工人被替换（Chiesa & Hobbs 2008）。"},{"frontTag":"问：医学界怎么判？","front":"循证医学领域现在还用「霍桑效应」这个概念吗？","backTag":"档案 · 弃名判决","back":"McCambridge, Witton & Elbourne (2014) 系统综述 19 项研究后的结论：这个概念太笼统、机制不清，应改用 \u003cstrong>research participation effects\u003c/strong>。这篇论文被引约 3800 次，实质上是主张放弃「Hawthorne effect」这个名字。此后越严格的设计越难复现强效应：2019 年一项专门想诱发霍桑效应的随机试验，什么也没测到。"}],"timeline":[["1924–32","Western Electric 霍桑工厂做照明与继电器实验"],["1953","French 铸造 Hawthorne effect 这个名字"],["1978","Franke & Kaul 首次统计重估：纪律与经济因素解释更强"],["1992","Jones 重审：无稳健证据"],["2011","Levitt & List 找回原始数据：entirely fictional"],["2014","McCambridge 系统综述：建议弃名，改用 research participation effects"]]}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
-  </figure><script type="module" src="/reactor-study/modules/provenance.js?v=feb1502742"></script>
+  </figure><script type="module" src="/modules/provenance.js?v=feb1502742"></script>
 <aside class="callout myth"><span class="co-tag">// 讹传更正</span>
 <p><strong>流行说法：「霍桑被证伪，说明被观察不会改变行为。」</strong>复核结论：反应性是真实的，整门课都在给它上证据。被证伪的是霍桑效应的强版本（被关注本身稳定提升绩效）。教训有两层。第一，引用任何经典效应之前，先查它的原始实证是否稳健，别让一个被神话的故事支撑整套哲学。第二层更深：反应性最强、最稳的证据来自制度层面（排名重塑法学院），驱动它的是可通约、公开、零和的度量施加的结构性激励，而不是被注视时的心理反应。个体心理层面的观察者效应家族（novelty、demand characteristics、John Henry effect：对照组因知道被比较而格外卖力）各有机制，证据强度参差，不应混为一谈。</p></aside>
 <aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
@@ -80,10 +80,10 @@
 <p>留一个问题：如果「被观察即改变」在个体心理层面证据薄弱，在制度层面却极其稳健，那么两者的分界线到底由什么决定？D1 报告给出的候选答案是激励结构：当读数连着钱、名声和生存，反应性才有了持续的燃料。</p></div>
 <details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Levitt, S. D. & List, J. A. (2011). "Was There Really a Hawthorne Effect at the Hawthorne Plant?" <em>AEJ: Applied Economics</em> 3(1):224–238.</li><li>McCambridge, J., Witton, J. & Elbourne, D. R. (2014). "Systematic Review of the Hawthorne Effect." <em>J. Clinical Epidemiology</em> 67(3):267–277（弃名判决）。</li><li>Franke & Kaul (1978) <em>ASR</em>；Jones (1992) <em>AJS</em>；Chiesa & Hobbs (2008)。</li><li>对照效应家族（John Henry、demand characteristics）与最新复核见 <code>research/deep/D1</code> §7。</li></ul></div></details></article>
     <nav class="prereq-row" style="margin-top:48px">
-      <a class="btn" href="/reactor-study/#tree">← 返回天赋树</a>
-      <a class="btn btn-primary" href="/reactor-study/lesson/Y12.html">下一个推荐 · 评估觉察 →</a>
+      <a class="btn" href="/#tree">← 返回天赋树</a>
+      <a class="btn btn-primary" href="/lesson/Y12.html">下一个推荐 · 评估觉察 →</a>
     </nav>
   </main><footer class="site-foot"><div class="wrap">
   <span>REACTOR · 当尺子开始回看你 · 一部关于反应性的现场手册</span>
   <span>self-hosted · no-react · v1</span>
-</div></footer><script type="module" src="/reactor-study/modules/boot.js?v=99169501ec"></script></body></html>
+</div></footer><script type="module" src="/modules/boot.js?v=99169501ec"></script></body></html>

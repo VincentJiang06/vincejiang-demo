@@ -1,6 +1,6 @@
 /* REACTOR · provenance.js (generic) — flip the myth, read the archive.
    config = { cards:[{front,frontTag,back,backTag}], timeline:[[year,text],...] } */
-import { mount } from "/reactor-study/modules/mod-kit.js?v=fccf0ac854";
+import { mount } from "/modules/mod-kit.js?v=fccf0ac854";
 
 mount("provenance", (body, fig, { config }) => {
   const cards = config.cards || [];

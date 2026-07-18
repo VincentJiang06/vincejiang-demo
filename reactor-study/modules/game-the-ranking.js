@@ -1,5 +1,5 @@
 /* REACTOR · game-the-ranking.js (R01) — you are the dean */
-import { mount, canvas, controls, slider, add, readout, legend, cssvar } from "/reactor-study/modules/mod-kit.js?v=fccf0ac854";
+import { mount, canvas, controls, slider, add, readout, legend, cssvar } from "/modules/mod-kit.js?v=fccf0ac854";
 
 mount("game-the-ranking", (body, fig) => {
   const C = n => cssvar(n, fig);

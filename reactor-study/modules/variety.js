@@ -1,5 +1,5 @@
 /* REACTOR · variety.js (B11) — Ashby's Law of Requisite Variety */
-import { mount, controls, slider, add, readout, scoped } from "/reactor-study/modules/mod-kit.js?v=fccf0ac854";
+import { mount, controls, slider, add, readout, scoped } from "/modules/mod-kit.js?v=fccf0ac854";
 
 mount("variety", (body, fig, { config }) => {
   const C = scoped(fig);

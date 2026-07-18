@@ -66,7 +66,7 @@ if (lessonId && /^[NRBYC]\d/.test(lessonId) && document.querySelector("article.s
 }
 
 /* ---- lazily boot the talent tree if present ---- */
-if (document.getElementById("tree-viewport")) import("/reactor-study/modules/tree.js?v=06a6205550");
+if (document.getElementById("tree-viewport")) import("/modules/tree.js?v=06a6205550");
 
 /* ---- respect reduced motion for typing bootlines ---- */
 if (matchMedia("(prefers-reduced-motion: reduce)").matches)

@@ -1,5 +1,5 @@
 /* REACTOR · eval-overfit-lab.js (Y02) — the score is 94% illusion */
-import { mount, canvas, controls, slider, toggleBank, add, readout, legend, cssvar, gauss } from "/reactor-study/modules/mod-kit.js?v=fccf0ac854";
+import { mount, canvas, controls, slider, toggleBank, add, readout, legend, cssvar, gauss } from "/modules/mod-kit.js?v=fccf0ac854";
 
 mount("eval-overfit-lab", (body, fig) => {
   const C = n => cssvar(n, fig);

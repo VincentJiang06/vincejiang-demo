@@ -1,12 +1,12 @@
-<!doctype html><html lang="zh-CN" data-theme="dark" data-base="/reactor-study"><head>
+<!doctype html><html lang="zh-CN" data-theme="dark" data-base=""><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>C05 解耦：Deming 与 POSIWID · reactor-study</title>
 <meta name="description" content="别让 eval 分数直接驱动迭代。">
-<link rel="canonical" href="https://vincejiang.com/reactor-study/lesson/C05.html">
+<link rel="canonical" href="https://reactor.vincejiang.com/lesson/C05.html">
 <meta property="og:type" content="website"><meta property="og:title" content="C05 解耦：Deming 与 POSIWID · reactor-study">
-<meta property="og:description" content="别让 eval 分数直接驱动迭代。"><meta property="og:url" content="https://vincejiang.com/reactor-study/lesson/C05.html">
+<meta property="og:description" content="别让 eval 分数直接驱动迭代。"><meta property="og:url" content="https://reactor.vincejiang.com/lesson/C05.html">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/reactor-study/favicon.svg"><link rel="mask-icon" href="/reactor-study/favicon.svg" color="#E11D3A">
+<link rel="icon" href="/favicon.svg"><link rel="mask-icon" href="/favicon.svg" color="#E11D3A">
 <script>try{var m=localStorage.getItem("reactor.theme")||"auto",t=(m==="light"||m==="dark")?m:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/400.css">
@@ -14,10 +14,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
-<link rel="stylesheet" href="/reactor-study/theme/tokens.css?v=5bc3889418"><link rel="stylesheet" href="/reactor-study/theme/base.css?v=1e6b7c0136">
-<link rel="stylesheet" href="/reactor-study/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/reactor-study/theme/led.css?v=85f30de38d">
-<link rel="stylesheet" href="/reactor-study/theme/bg.css?v=61c65291c2"><link rel="stylesheet" href="/reactor-study/theme/extra.css?v=a9bfb1b0f7">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"解耦：Deming 与 POSIWID · Decoupling","description":"别让 eval 分数直接驱动迭代。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://vincejiang.com/reactor-study/lesson/C05.html"}</script>
+<link rel="stylesheet" href="/theme/tokens.css?v=5bc3889418"><link rel="stylesheet" href="/theme/base.css?v=1e6b7c0136">
+<link rel="stylesheet" href="/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/theme/led.css?v=85f30de38d">
+<link rel="stylesheet" href="/theme/bg.css?v=61c65291c2"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"解耦：Deming 与 POSIWID · Decoupling","description":"别让 eval 分数直接驱动迭代。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://reactor.vincejiang.com/lesson/C05.html"}</script>
 </head><body><div class="bg-dots" aria-hidden="true"></div>
 <div class="bg-field" aria-hidden="true"><svg class="bg-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
 <defs>
@@ -44,11 +44,11 @@
 <rect class="hbar" style="--d:35s;animation-delay:-13s" x="-120" y="558" width="1340" height="1" fill="url(#hbar)"/>
 </g></svg></div>
 <div class="bg-scan" aria-hidden="true"></div><header class="site-head">
-  <a class="brand persist" href="/reactor-study/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
+  <a class="brand persist" href="/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
   <nav>
-    <a href="/reactor-study/#tree">天赋树</a>
-    <a href="/reactor-study/lesson/N00.html">从这里开始</a>
-    <a href="/reactor-study/atlas.html">图鉴</a>
+    <a href="/#tree">天赋树</a>
+    <a href="/lesson/N00.html">从这里开始</a>
+    <a href="/atlas.html">图鉴</a>
     <button class="btn theme-toggle" data-theme-toggle><span class="tt-glyph" aria-hidden="true">◑</span><span class="tt-label">自动</span></button>
   </nav>
 </header><main class="wrap" data-branch="converge">
@@ -60,7 +60,7 @@
       <h1>解耦：Deming 与 POSIWID</h1>
       <p class="lede">别让 eval 分数直接驱动迭代。</p>
       <div class="prereq-row">
-    <span class="label">前置</span> <a href="/reactor-study/lesson/B11.html">B11 必要多样性</a> <a href="/reactor-study/lesson/R09.html">R09 审计社会</a>
+    <span class="label">前置</span> <a href="/lesson/B11.html">B11 必要多样性</a> <a href="/lesson/R09.html">R09 审计社会</a>
     <span class="label" style="margin-left:auto">解锁</span> <span class='stub'>——</span>
   </div>
     </div>
@@ -71,17 +71,17 @@
       <span>解耦：Deming 与 POSIWID</span><span class="spacer"></span>
       <span class="mono">EXPLORABLE</span></figcaption>
     <div class="module-body"><script type="application/json" class="mod-config">{"mode":"steps","steps":[{"k":"01","t":"Deming：废除数字定额","html":"质量管理之父 W. Edwards Deming 的《Out of the Crisis》十四要点里直接写着「废除数字定额」和「消除恐惧」。他的红珠实验、漏斗实验都在演示：给一个受随机波动主导的系统设数字目标、按目标奖惩，只会制造恐惧和造假，摧毁对质量本身的关注。用 eval 分驱动 skill 迭代，是 1950 年代工厂用定额管工人的数字版。"},{"k":"02","t":"两处方向相反的误引","html":"Deming 常被引「最重要的数字是未知且不可知的」，这句其实是他\u003cstrong>转引 Lloyd Nelson\u003c/strong>。而「不能度量就不能管理」常被\u003cem>安到\u003c/em>他头上，恰恰相反，他把这句列为要破除的谬误，《The New Economics》里的原话是：认为不能测量就不能管理，是一个\u003cstrong>代价高昂的迷思\u003c/strong>。两处讹传，方向正好相反。"},{"k":"03","t":"POSIWID（Stafford Beer）","html":"控制论家 Stafford Beer：一个系统的目的，就是它\u003cem>实际所做的\u003c/em>（the purpose of a system is what it does），不是它宣称的意图。考证结论：这个\u003cstrong>短语确实是 Beer 的\u003c/strong>（本课程原先怀疑它是讹传，复核后予以更正），只有 POSIWID 这个缩写是后人定型的。当一个 eval 驱动的流程被博弈、实际所为背离宣称目的时，它逼你直面：这套流程真实在生产的，是绿灯，还是好产品？"},{"k":"04","t":"解耦的处方：探针，不是仪表盘","html":"把两条合起来：\u003cstrong>eval 只做诊断，不直接驱动优化\u003c/strong>。Carter 1991 年给了这条最好的比喻：指标应当是\u003cstrong>开罐器（tin opener）\u003c/strong>，用来撬开问题、触发追问；而不是\u003cstrong>仪表盘（dial）\u003c/strong>，读数直接驱动方向盘。一旦挂钩，Goodhart 就上线。附一条自省：Shirky 原则（Kevin Kelly 2010 命名）提醒你，连 eval 基础设施本身都可能变成既得利益者，努力保存它所解决的那个问题。"}]}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
-  </figure><script type="module" src="/reactor-study/modules/explorable.js?v=51607a9866"></script>
+  </figure><script type="module" src="/modules/explorable.js?v=51607a9866"></script>
 <aside class="callout myth"><span class="co-tag">// 讹传更正</span>
 <p><strong>但解耦不是万灵药，它自己也会退化。</strong>Klein 2025 年对英国 NHS 的实证记录了一个诚实的失败模式：本意作为探针的指标，在制度压力下逐渐退化成仪表盘，因为「看看就好」的指标一旦进了年度考核，就自动变回了 dial。这与 <code>D7</code> 的一般结论一致：抗博弈手段自身会被 Goodhart，解耦是需要持续维护的制度纪律，不是一次性设计。</p></aside>
 <aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
 <p><strong>这直接解释了你那次经历。</strong>你把 skill 迭代直接挂在 eval 上，于是 skill 优化的方向变成「让 eval 读数变绿」：尺子没变长，是被量的东西学会了踮脚。处方是把两件事拆开，用 eval 诊断「哪里可能有问题」，再用人的判断决定改什么、怎么改；并定期问一句 POSIWID 式的问题，我这套 eval 流程现在实际在生产什么。如果答案是绿灯，它就已经不是你的工具了。维护纪律的具体做法在 <code>C07</code>。</p></aside>
 <details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Deming, W. E. <em>Out of the Crisis</em> (1982); <em>The New Economics</em> (1993)（"costly myth" 原话）。</li><li>Beer, S. <em>The Heart of Enterprise</em> (1979)（POSIWID 短语确为其所述）。</li><li>Carter, N. (1991). "Learning to Measure Performance: The Use of Indicators in Organizations." <em>Public Administration</em>（tin openers vs dials 出处）。</li><li>Shirky 原则 — Kelly (2010)。深化与订正见 <code>research/deep/D7</code> §4。</li></ul></div></details></article>
     <nav class="prereq-row" style="margin-top:48px">
-      <a class="btn" href="/reactor-study/#tree">← 返回天赋树</a>
+      <a class="btn" href="/#tree">← 返回天赋树</a>
       
     </nav>
   </main><footer class="site-foot"><div class="wrap">
   <span>REACTOR · 当尺子开始回看你 · 一部关于反应性的现场手册</span>
   <span>self-hosted · no-react · v1</span>
-</div></footer><script type="module" src="/reactor-study/modules/boot.js?v=99169501ec"></script></body></html>
+</div></footer><script type="module" src="/modules/boot.js?v=99169501ec"></script></body></html>

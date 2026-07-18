@@ -1,5 +1,5 @@
 /* REACTOR · goodhart4.js (B08) — the four variants (Manheim & Garrabrant 2018) */
-import { mount, canvas, controls, slider, toggleBank, add, readout, legend, scoped, gauss } from "/reactor-study/modules/mod-kit.js?v=fccf0ac854";
+import { mount, canvas, controls, slider, toggleBank, add, readout, legend, scoped, gauss } from "/modules/mod-kit.js?v=fccf0ac854";
 
 const TYPES = {
   regressional: { name: "回归型 · 赢者诅咒", gen: (n, r) => { const t = gauss(); return [t + gauss(), t]; },

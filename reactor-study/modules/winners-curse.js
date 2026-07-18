@@ -1,5 +1,5 @@
 /* REACTOR · winners-curse.js (B13) — optimizer's curse / best-of-N */
-import { mount, canvas, controls, slider, add, readout, legend, scoped, gauss } from "/reactor-study/modules/mod-kit.js?v=fccf0ac854";
+import { mount, canvas, controls, slider, add, readout, legend, scoped, gauss } from "/modules/mod-kit.js?v=fccf0ac854";
 
 mount("winners-curse", (body, fig, { config }) => {
   const C = scoped(fig);

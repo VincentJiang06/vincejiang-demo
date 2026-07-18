@@ -1,6 +1,6 @@
 /* REACTOR · quiz.js (generic) — LED self-check.
    config = { questions:[{ q, options:[{t, ok}], explain }] } */
-import { mount } from "/reactor-study/modules/mod-kit.js?v=fccf0ac854";
+import { mount } from "/modules/mod-kit.js?v=fccf0ac854";
 
 mount("quiz", (body, fig, { config }) => {
   const qs = config.questions || [];

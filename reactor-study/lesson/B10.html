@@ -1,12 +1,12 @@
-<!doctype html><html lang="zh-CN" data-theme="dark" data-base="/reactor-study"><head>
+<!doctype html><html lang="zh-CN" data-theme="dark" data-base=""><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>B10 绩效测量扭曲 · reactor-study</title>
 <meta name="description" content="便宜、低噪、可控，仍可能是坏指标。">
-<link rel="canonical" href="https://vincejiang.com/reactor-study/lesson/B10.html">
+<link rel="canonical" href="https://reactor.vincejiang.com/lesson/B10.html">
 <meta property="og:type" content="website"><meta property="og:title" content="B10 绩效测量扭曲 · reactor-study">
-<meta property="og:description" content="便宜、低噪、可控，仍可能是坏指标。"><meta property="og:url" content="https://vincejiang.com/reactor-study/lesson/B10.html">
+<meta property="og:description" content="便宜、低噪、可控，仍可能是坏指标。"><meta property="og:url" content="https://reactor.vincejiang.com/lesson/B10.html">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/reactor-study/favicon.svg"><link rel="mask-icon" href="/reactor-study/favicon.svg" color="#E11D3A">
+<link rel="icon" href="/favicon.svg"><link rel="mask-icon" href="/favicon.svg" color="#E11D3A">
 <script>try{var m=localStorage.getItem("reactor.theme")||"auto",t=(m==="light"||m==="dark")?m:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/400.css">
@@ -14,10 +14,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
-<link rel="stylesheet" href="/reactor-study/theme/tokens.css?v=5bc3889418"><link rel="stylesheet" href="/reactor-study/theme/base.css?v=1e6b7c0136">
-<link rel="stylesheet" href="/reactor-study/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/reactor-study/theme/led.css?v=85f30de38d">
-<link rel="stylesheet" href="/reactor-study/theme/bg.css?v=61c65291c2"><link rel="stylesheet" href="/reactor-study/theme/extra.css?v=a9bfb1b0f7">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"绩效测量扭曲 · Baker Distortion","description":"便宜、低噪、可控，仍可能是坏指标。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://vincejiang.com/reactor-study/lesson/B10.html"}</script>
+<link rel="stylesheet" href="/theme/tokens.css?v=5bc3889418"><link rel="stylesheet" href="/theme/base.css?v=1e6b7c0136">
+<link rel="stylesheet" href="/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/theme/led.css?v=85f30de38d">
+<link rel="stylesheet" href="/theme/bg.css?v=61c65291c2"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"绩效测量扭曲 · Baker Distortion","description":"便宜、低噪、可控，仍可能是坏指标。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://reactor.vincejiang.com/lesson/B10.html"}</script>
 </head><body><div class="bg-dots" aria-hidden="true"></div>
 <div class="bg-field" aria-hidden="true"><svg class="bg-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
 <defs>
@@ -44,11 +44,11 @@
 <rect class="hbar" style="--d:35s;animation-delay:-13s" x="-120" y="558" width="1340" height="1" fill="url(#hbar)"/>
 </g></svg></div>
 <div class="bg-scan" aria-hidden="true"></div><header class="site-head">
-  <a class="brand persist" href="/reactor-study/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
+  <a class="brand persist" href="/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
   <nav>
-    <a href="/reactor-study/#tree">天赋树</a>
-    <a href="/reactor-study/lesson/N00.html">从这里开始</a>
-    <a href="/reactor-study/atlas.html">图鉴</a>
+    <a href="/#tree">天赋树</a>
+    <a href="/lesson/N00.html">从这里开始</a>
+    <a href="/atlas.html">图鉴</a>
     <button class="btn theme-toggle" data-theme-toggle><span class="tt-glyph" aria-hidden="true">◑</span><span class="tt-label">自动</span></button>
   </nav>
 </header><main class="wrap" data-branch="blue">
@@ -60,7 +60,7 @@
       <h1>绩效测量扭曲</h1>
       <p class="lede">便宜、低噪、可控，仍可能是坏指标。</p>
       <div class="prereq-row">
-    <span class="label">前置</span> <a href="/reactor-study/lesson/B09.html">B09 多任务代理</a>
+    <span class="label">前置</span> <a href="/lesson/B09.html">B09 多任务代理</a>
     <span class="label" style="margin-left:auto">解锁</span> <span class='stub'>——</span>
   </div>
     </div>
@@ -71,17 +71,17 @@
       <span>好指标的判据不是噪声，是对齐</span><span class="spacer"></span>
       <span class="mono">EXPLORABLE</span></figcaption>
     <div class="module-body"><script type="application/json" class="mod-config">{"mode":"steps","steps":[{"k":"01","t":"两种缺陷是正交的","html":"一个指标有两种独立的缺陷：\u003cstrong>风险（噪声）\u003c/strong>，它随机波动；\u003cstrong>扭曲（错配）\u003c/strong>，它对行动的响应方式偏离真实价值的响应方式。Baker 证明扭曲会降低激励效率，\u003cem>即使代理人风险中性\u003c/em>。失效与风险无关，是纯粹的对齐失败。Feltham 与 Xie 1994 年给这两个病灶起了正式名字：congruity 缺失（方向不对齐，扭曲努力配置）与 noise（压低努力强度），并证明它们各自独立起作用。"},{"k":"02","t":"同一个指标，两种结论","html":"销售提成用「收入」，成本低且易测量。Firm A（销售只影响销量）：收入的边际产出 = 价值的边际产出，无扭曲，b=1，first-best。Firm B（销售还影响单位成本）：两者不再对齐，扭曲出现，b\u003c1。\u003cstrong>同样的可测性，相反的结论。\u003c/strong>问题从来不是好不好测，是对不对齐。"},{"k":"03","t":"gaming 的形式定义","html":"gaming = 利用那些「指标响应 > 价值响应」的状态。按专利计酬的科学家，会在容易的专利上投入过多，在难的专利上投入过少，因为那些状态里 P′>V′。最优对策：把激励强度\u003cstrong>压到 1 以下\u003c/strong>。「不要全力优化一个有偏的代理指标」成了最优合约的性质，不是道德劝告。"}]}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
-  </figure><script type="module" src="/reactor-study/modules/explorable.js?v=51607a9866"></script>
+  </figure><script type="module" src="/modules/explorable.js?v=51607a9866"></script>
 <aside class="callout myth"><span class="co-tag">// 讹传更正</span>
 <p><strong>流行说法：「平衡计分卡解决了多任务问题。」</strong>复核结论：Budde 2007 年在同一框架里证明，平衡计分卡只是把 congruity 问题从「单指标」搬到「指标向量的权重选择」。只要真实价值是高维隐含的，任何有限维加权指标组都存在残余的对齐缺口。多指标缓解问题，不消灭问题。</p></aside>
 <aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
 <p><strong>判断一个 eval 好不好，别问它噪声大不大，问它对齐不对齐。</strong>低噪声、可复现、便宜的 benchmark，如果「模型行为对它的边际影响」与「对真实效用的边际影响」不对齐，依然是坏指标，而且低噪声反而会抬高你对它的信任。Baker 的处方反直觉但直接可用：对有偏的代理指标，最优做法是别全力优化它（b 压到 1 以下）。这正是 <code>Y07</code> 里「加 KL 缰绳」的经济学理由。</p></aside>
 <details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Baker, G. (1992). "Incentive Contracts and Performance Measurement." <em>JPE</em> 100(3):598–614；Baker (2002). <em>JHR</em>。</li><li>Feltham & Xie (1994). <em>The Accounting Review</em> 69(3)（congruity × noise 命名）。</li><li>Budde, J. (2007). <em>J. Accounting Research</em> 45(3)（平衡计分卡的限度）。深化见 <code>research/deep/D6</code> §1。</li></ul></div></details></article>
     <nav class="prereq-row" style="margin-top:48px">
-      <a class="btn" href="/reactor-study/#tree">← 返回天赋树</a>
+      <a class="btn" href="/#tree">← 返回天赋树</a>
       
     </nav>
   </main><footer class="site-foot"><div class="wrap">
   <span>REACTOR · 当尺子开始回看你 · 一部关于反应性的现场手册</span>
   <span>self-hosted · no-react · v1</span>
-</div></footer><script type="module" src="/reactor-study/modules/boot.js?v=99169501ec"></script></body></html>
+</div></footer><script type="module" src="/modules/boot.js?v=99169501ec"></script></body></html>

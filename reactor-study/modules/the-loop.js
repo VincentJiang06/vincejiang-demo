@@ -1,5 +1,5 @@
 /* REACTOR · the-loop.js (N00) — observing the data changes the data */
-import { mount, canvas, readout, cssvar } from "/reactor-study/modules/mod-kit.js?v=fccf0ac854";
+import { mount, canvas, readout, cssvar } from "/modules/mod-kit.js?v=fccf0ac854";
 
 mount("the-loop", (body, fig) => {
   const C = n => cssvar(n, fig);

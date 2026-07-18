@@ -1,5 +1,5 @@
 /* REACTOR · seven-levers.js (C02) — reactivity strength scorecard */
-import { mount, controls, slider, add, readout, scoped } from "/reactor-study/modules/mod-kit.js?v=fccf0ac854";
+import { mount, controls, slider, add, readout, scoped } from "/modules/mod-kit.js?v=fccf0ac854";
 
 const LEVERS = [
   ["垄断度", "只有一个排名，还是多家并存？（USNWR 法学院=高；商学院五家=低）"],

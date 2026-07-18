@@ -1,5 +1,5 @@
 /* REACTOR · tree.js — the interactive talent tree (SVG edges + DOM node chips) */
-import { progress } from "/reactor-study/modules/boot.js?v=99169501ec";
+import { progress } from "/modules/boot.js?v=99169501ec";
 
 const vp = document.getElementById("tree-viewport");
 if (vp) init(vp);

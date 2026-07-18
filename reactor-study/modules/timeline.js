@@ -1,5 +1,5 @@
 /* REACTOR · timeline.js (generic) — config = { events:[{date,title,html}] } */
-import { mount } from "/reactor-study/modules/mod-kit.js?v=fccf0ac854";
+import { mount } from "/modules/mod-kit.js?v=fccf0ac854";
 
 mount("timeline", (body, fig, { config }) => {
   const events = config.events || [];

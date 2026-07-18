@@ -1,5 +1,5 @@
 /* REACTOR · policy-invariance.js (B03) — Lucas critique: exploit the curve, it breaks */
-import { mount, canvas, controls, slider, add, readout, legend, scoped, gauss } from "/reactor-study/modules/mod-kit.js?v=fccf0ac854";
+import { mount, canvas, controls, slider, add, readout, legend, scoped, gauss } from "/modules/mod-kit.js?v=fccf0ac854";
 
 mount("policy-invariance", (body, fig, { config }) => {
   const C = scoped(fig);
