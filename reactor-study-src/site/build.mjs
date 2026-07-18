@@ -23,7 +23,7 @@ const byId = Object.fromEntries(tree.nodes.map(n => [n.id, n]));
    规则：一个 tier 一行，绝不折行（tree.json 保证每支每 tier ≤4，超了在这里直接报错）；
    四条色支横排（红|蓝|黄|绿），列宽由该支最宽的一行决定；root 与南区（case/converge）
    在整体跨度的水平中心；南区 tier 从 1 起排在色支最深行之下。层级即行号，所见即依赖深度。 */
-const ROW_H = 270, COL_W = 210, CHIP_W = 132, GUTTER = 190, SOUTH_GAP_ROWS = 1.25;
+const ROW_H = 236, COL_W = 192, CHIP_W = 164, GUTTER = 118, SOUTH_GAP_ROWS = 1.25;
 const SOUTH = new Set(["case", "converge"]);
 function layout() {
   const groups = {};
