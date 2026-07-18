@@ -3,7 +3,7 @@
   color-scheme:light dark;
   --fg:#1d1d2b; --sub:#63637a; --faint:#8a8aa0;
   --card:rgba(255,255,255,.68); --border:rgba(20,20,40,.10); --chip:rgba(20,20,50,.05);
-  --link:#5b5bd6; --link-h:#7a5bff; --page:#f5f5fa; --codebg:rgba(20,20,50,.05);
+  --link:#5b5bd6; --link-h:#7a5bff; --page:#ffffff; --codebg:rgba(20,20,50,.05);
   --ambient-wash-a:rgba(136,148,190,.20); --ambient-wash-b:rgba(122,154,151,.13);
   --status-g1:#a8c0ff; --status-g2:#ffd3e0; --status-g3:#c2f5e9; --status-g4:#e7d5ff;
   --glass-top:rgba(255,255,255,.64); --glass-bottom:rgba(255,255,255,.34); --glass-shine:rgba(255,255,255,.82);
@@ -13,7 +13,7 @@
 @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
   --fg:#eef0f7; --sub:#a2a2b8; --faint:#7c7c94;
   --card:rgba(31,32,42,.56); --border:rgba(255,255,255,.11); --chip:rgba(255,255,255,.07);
-  --link:#9d9dff; --link-h:#b9a8ff; --page:#0a0b12; --codebg:rgba(255,255,255,.05);
+  --link:#9d9dff; --link-h:#b9a8ff; --page:#000000; --codebg:rgba(255,255,255,.05);
   --ambient-wash-a:rgba(92,100,148,.20); --ambient-wash-b:rgba(54,104,104,.13);
   --status-g1:#1e3a8a; --status-g2:#5b2a6e; --status-g3:#0f5a52; --status-g4:#3b2a72;
   --glass-top:rgba(255,255,255,.12); --glass-bottom:rgba(255,255,255,.055); --glass-shine:rgba(255,255,255,.22);
@@ -24,7 +24,7 @@
   color-scheme:dark;
   --fg:#eef0f7; --sub:#a2a2b8; --faint:#7c7c94;
   --card:rgba(31,32,42,.56); --border:rgba(255,255,255,.11); --chip:rgba(255,255,255,.07);
-  --link:#9d9dff; --link-h:#b9a8ff; --page:#0a0b12; --codebg:rgba(255,255,255,.05);
+  --link:#9d9dff; --link-h:#b9a8ff; --page:#000000; --codebg:rgba(255,255,255,.05);
   --ambient-wash-a:rgba(92,100,148,.20); --ambient-wash-b:rgba(54,104,104,.13);
   --status-g1:#1e3a8a; --status-g2:#5b2a6e; --status-g3:#0f5a52; --status-g4:#3b2a72;
   --glass-top:rgba(255,255,255,.12); --glass-bottom:rgba(255,255,255,.055); --glass-shine:rgba(255,255,255,.22);
@@ -35,13 +35,8 @@ html,body{margin:0}
 html{scroll-behavior:smooth;background:var(--page)}
 body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;
-  color:var(--fg); background:
-    radial-gradient(40rem 40rem at 18% 22%,color-mix(in srgb,var(--status-g1) 58%,transparent) 0%,transparent 62%),
-    radial-gradient(38rem 38rem at 82% 18%,color-mix(in srgb,var(--status-g2) 54%,transparent) 0%,transparent 64%),
-    radial-gradient(45rem 45rem at 25% 82%,color-mix(in srgb,var(--status-g3) 48%,transparent) 0%,transparent 62%),
-    radial-gradient(42rem 42rem at 78% 80%,color-mix(in srgb,var(--status-g4) 52%,transparent) 0%,transparent 64%),
-    var(--page);
-  background-attachment:fixed; line-height:1.7; -webkit-font-smoothing:antialiased;
+  color:var(--fg); background:var(--page);   /* 纯色背景(用户裁决:去掉四团渐变色斑) */
+  line-height:1.7; -webkit-font-smoothing:antialiased;
   min-height:100vh; position:relative; overflow-x:hidden; transition:background .4s,color .4s; isolation:isolate;
 }
 
@@ -353,3 +348,24 @@ a:hover{color:var(--link-h)}
 .postlist .is-tldr a{border:1.5px solid color-mix(in srgb,var(--link) 55%,transparent);
   background:color-mix(in srgb,var(--link) 7%,var(--card))}
 .tag.tldr{color:#fff;background:var(--link);border-color:var(--link);font-weight:700}
+
+
+/* ===== Highlight 大卡(主题图为底) + 列表主题缩略图 ===== */
+.tile.hl{position:relative;min-height:200px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;color:#fff}
+.tile.hl .hl-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .5s ease}
+.tile.hl:hover .hl-bg{transform:scale(1.045)}
+.tile.hl .hl-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,6,10,.06) 30%,rgba(5,6,10,.66) 74%,rgba(5,6,10,.85))}
+.tile.hl .t,.tile.hl .d,.tile.hl .meta{position:relative;z-index:1}
+.tile.hl .t{color:#fff;font-size:1.06rem;text-shadow:0 1px 10px rgba(0,0,0,.55)}
+.tile.hl .d{color:rgba(255,255,255,.82);text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.tile.hl .meta{display:flex;align-items:center;gap:.6rem;margin-top:.45rem}
+.tile.hl .host{color:rgba(255,255,255,.6)}
+.tile.hl .tag{background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.28)}
+.tile.themed{padding-top:0;overflow:hidden}
+.tile.themed .tile-thumb{display:block;height:74px;margin:0 0 .7rem;background-size:cover;background-position:center;
+  border-bottom:1px solid var(--border)}
+.postlist li.themed a{position:relative;padding-right:120px}
+.postlist li.themed .pl-thumb{position:absolute;right:14px;top:50%;transform:translateY(-50%);
+  width:92px;height:56px;border-radius:8px;background-size:cover;background-position:center;
+  border:1px solid var(--border)}
+@media (max-width:640px){.postlist li.themed a{padding-right:0}.postlist li.themed .pl-thumb{display:none}}

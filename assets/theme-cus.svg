@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="pg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4C1D95"/>
+      <stop offset="1" stop-color="#2E1065"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".10"/>
+      <stop offset=".45" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#pg)"/>
+  <!-- 周课表网格 -->
+  <g stroke="#FFFFFF" stroke-opacity=".14" stroke-width="1">
+    <path d="M120 36 V344 M220 36 V344 M320 36 V344 M420 36 V344 M520 36 V344"/>
+    <path d="M64 78 H600 M64 132 H600 M64 186 H600 M64 240 H600 M64 294 H600"/>
+  </g>
+  <g fill="#FFFFFF" fill-opacity=".5" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="600">
+    <text x="152" y="60">MON</text><text x="252" y="60">TUE</text>
+    <text x="352" y="60">WED</text><text x="452" y="60">THU</text><text x="546" y="60">FRI</text>
+  </g>
+  <!-- 课程块 -->
+  <g font-family="-apple-system,system-ui,sans-serif" font-size="11" font-weight="700">
+    <rect x="128" y="86" width="84" height="72" rx="8" fill="#F59E0B"/>
+    <text x="138" y="106" fill="#452A03">ENGG</text><text x="138" y="120" fill="#452A03" opacity=".75">LSK LT1</text>
+    <rect x="228" y="140" width="84" height="98" rx="8" fill="#14B8A6"/>
+    <text x="238" y="160" fill="#043A34">MATH</text><text x="238" y="174" fill="#043A34" opacity=".75">YIA 505</text>
+    <rect x="328" y="86" width="84" height="46" rx="8" fill="#A78BFA"/>
+    <text x="338" y="106" fill="#2A1361">UGEB</text>
+    <rect x="328" y="194" width="84" height="72" rx="8" fill="#EC4899"/>
+    <text x="338" y="214" fill="#4A0E2B">PHYS</text><text x="338" y="228" fill="#4A0E2B" opacity=".75">SC L1</text>
+    <rect x="428" y="112" width="84" height="98" rx="8" fill="#60A5FA"/>
+    <text x="438" y="132" fill="#0B2B5E">CSCI</text><text x="438" y="146" fill="#0B2B5E" opacity=".75">ERB 404</text>
+    <rect x="528" y="86" width="72" height="60" rx="8" fill="#FBBF24" fill-opacity=".92"/>
+    <text x="538" y="106" fill="#4A3003">CHLT</text>
+    <rect x="128" y="240" width="84" height="54" rx="8" fill="#FFFFFF" fill-opacity=".22" stroke="#FFFFFF" stroke-opacity=".5" stroke-dasharray="5 5"/>
+    <text x="138" y="262" fill="#FFFFFF" opacity=".8">+ 拖入</text>
+  </g>
+  <rect width="640" height="360" fill="url(#shine)"/>
+</svg>

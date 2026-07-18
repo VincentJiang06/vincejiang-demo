@@ -433,11 +433,23 @@ function renderBlogIndex(posts) {
 <ul class="postlist">${items || '<p class="note">还没有已发布的文章。</p>'}</ul></main>`;
   return pageHtml({ active: 'blog', head, main });
 }
-function tileCard(href, title, desc, extra = '') {
+function tileCard(href, title, desc, extra = '', theme = null) {
   const external = /^https?:/.test(href);
   const host = external ? `<span class="host">${esc(href.replace(/^https?:\/\//, '').replace(/\/$/, ''))} ↗</span>` : '';
   const attr = external ? ' target="_blank" rel="noopener"' : '';
-  return `<a class="tile card" href="${href}"${attr}><div class="t">${esc(title)}</div><div class="d">${esc(desc)}</div>${extra}${host}</a>`;
+  const thumb = theme ? `<span class="tile-thumb" style="background-image:url(/assets/theme-${theme}.svg)" aria-hidden="true"></span>` : '';
+  return `<a class="tile card${theme ? ' themed' : ''}" href="${href}"${attr}>${thumb}<div class="t">${esc(title)}</div><div class="d">${esc(desc)}</div>${extra}${host}</a>`;
+}
+// Highlight 大卡:blog 卡同构(题/述/meta),但以主题图为底 + 压字渐晕
+function highlightCard(g) {
+  const external = /^https?:/.test(g.href);
+  const attr = external ? ' target="_blank" rel="noopener"' : '';
+  const host = external ? `<span class="host">${esc(g.href.replace(/^https?:\/\//, '').replace(/\/$/, ''))} ↗</span>` : '';
+  const badge = g.badge ? `<span class="tag">${esc(g.badge)}</span>` : '';
+  return `<a class="tile card hl" href="${g.href}"${attr}>
+    <span class="hl-bg" style="background-image:url(/assets/theme-${g.theme}.svg)" aria-hidden="true"></span>
+    <span class="hl-scrim" aria-hidden="true"></span>
+    <div class="t">${esc(g.title)}</div><div class="d">${esc(g.desc)}</div><div class="meta">${badge}${host}</div></a>`;
 }
 // 友链卡:纸皮石马赛克底纹 + 站色相(--hue),港铁导视克制调性
 function friendCard(w) {
@@ -449,7 +461,8 @@ function friendCard(w) {
 function renderHome(posts) {
   const latest = posts.filter(p => !p.collectionKey).slice(0, LATEST_N);   // 论文专辑不进 blog 最新
   const friends = (CONFIG.wildSites || []).map(friendCard).join('\n');
-  const gallery = (CONFIG.gallery || []).map(g => tileCard(g.href, g.title, g.desc)).join('\n');
+  const gallery = (CONFIG.gallery || []).map(g => tileCard(g.href, g.title, g.desc, '', g.theme)).join('\n');
+  const highlights = (CONFIG.gallery || []).filter(g => g.highlight && g.theme).map(highlightCard).join('\n');
   const blog = latest.map(p => `<a class="tile card" href="${p.path}"><div class="t">${esc(p.title)}</div><div class="d">${esc(p.description)}</div><div class="meta">${p.date}</div></a>`).join('\n');
   const researchSec = researchPairs(posts).map((pair, i) => researchPairBlock(pair, posts, i, { compact: true, heading: 'h3', framed: false })).join('\n');
   const head = {
@@ -462,6 +475,7 @@ function renderHome(posts) {
   const main = `<main class="wrap">
 <div class="hero home-hero"><h1>Vince Jiang</h1><p>${esc(SITE.tagline)}</p></div>
 
+${highlights ? `<div class="sec"><h2>✨ Highlight</h2></div>\n<div class="grid c2 highlights">${highlights}</div>\n` : ''}
 <div class="sec"><h2>📝 Blog</h2><a class="more" href="/blog/">全部文章 →</a></div>
 <div class="grid c2">${blog || '<p class="note">敬请期待。</p>'}</div>
 ${researchSec ? `\n<div class="sec research-sec"><h2><span class="section-icon research-icon" aria-hidden="true">🧪</span>Research</h2><a class="more" href="${RESEARCH_PATH}">全部 Research →</a></div>\n<section class="research-home card"><div class="research-pairs home">${researchSec}</div></section>\n` : ''}
@@ -480,7 +494,8 @@ function renderGallery() {
     const host = ext ? `<span class="host">${esc(g.href.replace(/^https?:\/\//, '').replace(/\/$/, ''))} ↗</span>` : '';
     const attr = ext ? ' target="_blank" rel="noopener"' : '';
     const badge = g.badge ? `<span class="tag">${esc(g.badge)}</span>` : '';
-    return `<li><a href="${g.href}"${attr}><div class="t">${esc(g.title)}</div><div class="d">${esc(g.desc)}</div><div class="meta">${badge}${host}</div></a></li>`;
+    const thumb = g.theme ? `<span class="pl-thumb" style="background-image:url(/assets/theme-${g.theme}.svg)" aria-hidden="true"></span>` : '';
+    return `<li${g.theme ? ' class="themed"' : ''}><a href="${g.href}"${attr}>${thumb}<div class="t">${esc(g.title)}</div><div class="d">${esc(g.desc)}</div><div class="meta">${badge}${host}</div></a></li>`;
   }).join('\n');
   const list = (CONFIG.gallery || []).map((g, i) => ({ '@type': 'ListItem', position: i + 1, name: g.title, url: /^https?:/.test(g.href) ? g.href : SITE.url + g.href }));
   const head = {

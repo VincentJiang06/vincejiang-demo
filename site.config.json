@@ -92,8 +92,10 @@
     {
       "title": "REACTOR · 当尺子开始回看你",
       "href": "https://reactor.vincejiang.com/",
-      "desc": "一部关于测量反应性的现场手册:44 个节点的天赋树,从法学院排名研究、Goodhart / Campbell 定律,走到 AI eval 的过拟合、奖励破解与排行榜幻觉。每节配一个可上手的交互模块。",
-      "badge": "44 节 · 交互天赋树"
+      "desc": "一部关于测量反应性的互动课程:70 个节点的天赋树,从排名如何改造世界、Goodhart 定律家族,讲到 AI 评测的博弈与抗博弈设计。每节配可上手的交互实验。",
+      "badge": "70 节 · 交互天赋树",
+      "highlight": true,
+      "theme": "reactor"
     },
     {
       "title": "AI 服务状态",
@@ -129,7 +131,9 @@
       "title": "CUHK Schedule",
       "href": "https://cus.vincejiang.com",
       "desc": "中大选课助手:粘贴课号排出无冲突课表,筛选本学期还能选什么,解析先修/反修条件,支持 A/B 对比与 .ics 导出。",
-      "badge": "React · 选课工具"
+      "badge": "React · 选课工具",
+      "highlight": true,
+      "theme": "cus"
     }
   ]
 }
