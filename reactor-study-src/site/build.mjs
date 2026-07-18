@@ -7,6 +7,7 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { createHash } from "node:crypto";
+import { layoutTree } from "./lib/tree-layout.mjs";
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.join(ROOT, "dist");
@@ -19,56 +20,12 @@ const SITE = process.env.SITE || "https://reactor.study";
 const tree = JSON.parse(await readFile(path.join(ROOT, "content/tree.json"), "utf8"));
 const byId = Object.fromEntries(tree.nodes.map(n => [n.id, n]));
 
-/* ---- talent-tree auto-layout v3.2（从头重建）----
-   规则：一个 tier 一行，绝不折行（tree.json 保证每支每 tier ≤4，超了在这里直接报错）；
-   四条色支横排（红|蓝|黄|绿），列宽由该支最宽的一行决定；root 与南区（case/converge）
-   在整体跨度的水平中心；南区 tier 从 1 起排在色支最深行之下。层级即行号，所见即依赖深度。 */
-const ROW_H = 236, COL_W = 192, CHIP_W = 164, GUTTER = 118, SOUTH_GAP_ROWS = 1.25;
-const SOUTH = new Set(["case", "converge"]);
-function layout() {
-  const groups = {};
-  for (const n of tree.nodes) {
-    const key = n.branch + ":" + n.tier;
-    (groups[key] ||= []).push(n);
-  }
-  for (const [key, arr] of Object.entries(groups))
-    if (arr.length > 4 && key.split(":")[0] !== "root")
-      throw new Error(`布局纪律：${key} 有 ${arr.length} 个节点（上限 4）——去 tree.json 重排该行`);
-  // 每支列宽 = 最宽一行的半宽（含芯片边缘）
-  const halfW = {};
-  for (const [key, arr] of Object.entries(groups)) {
-    const branch = key.split(":")[0];
-    const half = (arr.length - 1) / 2 * COL_W + CHIP_W / 2;
-    halfW[branch] = Math.max(halfW[branch] || 0, half);
-  }
-  const BRANCH_X = { blue: 0 };
-  BRANCH_X.red = -((halfW.blue || 0) + GUTTER + (halfW.red || 0));
-  BRANCH_X.yellow = (halfW.blue || 0) + GUTTER + (halfW.yellow || 0);
-  BRANCH_X.green = BRANCH_X.yellow + (halfW.yellow || 0) + GUTTER + (halfW.green || 0);
-  const spanL = BRANCH_X.red - (halfW.red || 0), spanR = BRANCH_X.green + (halfW.green || 0);
-  const center = (spanL + spanR) / 2;
-  BRANCH_X.root = center; BRANCH_X.case = center; BRANCH_X.converge = center;
-
-  const maxBranchTier = Math.max(...tree.nodes.filter(n => !SOUTH.has(n.branch)).map(n => n.tier));
-  for (const [key, arr] of Object.entries(groups)) {
-    const [branch, tierStr] = key.split(":");
-    const tier = +tierStr;
-    arr.sort((a, b) => a.id.localeCompare(b.id));
-    const baseY = SOUTH.has(branch)
-      ? (maxBranchTier + SOUTH_GAP_ROWS + (tier - 1)) * ROW_H
-      : tier * ROW_H;
-    arr.forEach((n, i) => {
-      n.x = BRANCH_X[branch] + (i - (arr.length - 1) / 2) * COL_W;
-      n.y = baseY;
-    });
-  }
-  const xs = tree.nodes.map(n => n.x), ys = tree.nodes.map(n => n.y);
-  return {
-    minX: Math.min(...xs) - 130, maxX: Math.max(...xs) + 130,
-    minY: Math.min(...ys) - 100, maxY: Math.max(...ys) + 120
-  };
-}
-const bounds = layout();
+/* ---- 布局：正式排版算法 v4（lib/tree-layout.mjs，规格见 course/TREE-LAYOUT-ALGORITHM.md）
+   tree.json 的 tier 字段已废弃——层级由 prereq 图自动推导。 ---- */
+const _layout = layoutTree(tree.nodes);
+for (const n of tree.nodes) { n.x = _layout.pos[n.id].x; n.y = _layout.pos[n.id].y; }
+const bounds = _layout.bounds;
+const LEVELS = _layout.levels;
 
 /* ---- load authored lessons ---- */
 const lessonsDir = path.join(ROOT, "content/lessons");
@@ -429,8 +386,8 @@ if (existsSync(path.join(ROOT, "static/favicon.svg"))) await cp(path.join(ROOT, 
 await writeFile(path.join(DIST, "modules", "tree-data.js"),
   `/* REACTOR · tree-data.js — generated from content/tree.json by build.mjs, do not edit */\n`
   + `export const TREE = ${JSON.stringify({
-      nodes: tree.nodes.map(n => ({ id: n.id, zh: n.zh, en: n.en, branch: n.branch, x: n.x, y: n.y, prereqs: n.prereqs, hook: n.hook, built: builtIds.has(n.id) })),
-      bounds, branchLabel: BRANCH_LABEL
+      nodes: tree.nodes.map(n => ({ id: n.id, zh: n.zh, en: n.en, branch: n.branch, x: n.x, y: n.y, prereqs: n.prereqs, hook: n.hook, built: builtIds.has(n.id), kind: n.branch === "converge" ? "cap" : "chip" })),
+      bounds, branchLabel: BRANCH_LABEL, levels: LEVELS
     })};\n`);
 
 await writeFile(path.join(DIST, "index.html"), homePage());

@@ -60,22 +60,24 @@ function init(vp, mode) {
   stage.className = "tree-stage";
   stage.style.width = W + "px"; stage.style.height = H + "px";
 
-  function route(a, b) {
-    // 端点吸附芯片真实边缘：从前置下边缘出发，落到目标上边缘（渲染后按 offsetHeight 量）
+  function routeSpec(a, b) {
+    // 端点吸附芯片真实边缘;返回走线要素,水平总线段的最终 y 由车道分配统一微调
     const x1 = TX(a.x), y1 = TY(a.y) + half(a), x2 = TX(b.x), y2 = TY(b.y) - half(b);
-    if (Math.abs(x2 - x1) < 1) return `M${x1},${y1} L${x2},${y2}`;
-    if (y2 - y1 < 18) {           // 行距太近排不下正交走线：退化为平滑曲线
+    if (Math.abs(x2 - x1) < 1) return { d: `M${x1},${y1} L${x2},${y2}` };
+    if (y2 - y1 < 18) {
       const my = (y1 + y2) / 2;
-      return `M${x1},${y1} C${x1},${my + 24} ${x2},${my - 24} ${x2},${y2}`;
+      return { d: `M${x1},${y1} C${x1},${my + 24} ${x2},${my - 24} ${x2},${y2}` };
     }
-    // 走廊选择：取目标行上方最近的一条走廊做水平「总线」
     const usable = mids.filter(c => TY(c) > y1 + 6 && TY(c) < y2 - 6);
     const ym = usable.length ? TY(usable[usable.length - 1]) : (y1 + y2) / 2;
+    return { bus: { x1, y1, x2, y2, ym } };
+  }
+  const busPath = ({ x1, y1, x2, y2, ym }) => {
     const s = x2 > x1 ? 1 : -1;
     const r = Math.min(10, Math.abs(x2 - x1) / 2, (ym - y1) / 2, (y2 - ym) / 2);
     return `M${x1},${y1} L${x1},${ym - r} Q${x1},${ym} ${x1 + s * r},${ym}` +
            ` L${x2 - s * r},${ym} Q${x2},${ym} ${x2},${ym + r} L${x2},${y2}`;
-  }
+  };
 
   /* ---- 节点（先渲染，才能量出芯片高度供连线吸附）---- */
   const nodeEls = {};
@@ -93,6 +95,12 @@ function init(vp, mode) {
       el.setAttribute("aria-label", `${n.id} ${n.zh}`);
       if (n.id === focusId) el.innerHTML = `<span class="dot-id">${n.id}</span>`;
       else if (near) el.innerHTML = `<span class="dot-tag">${n.id}</span>`;
+    } else if (n.kind === "cap") {
+      // 汇流舱:横条卡形制,与普通芯片明确异形(里程碑不放大同款,换形)
+      el.className = "node node-cap";
+      el.title = n.hook;
+      el.innerHTML = `<span class="n-led"></span><span class="n-id">${n.id}</span>
+        <span class="cap-txt"><span class="n-zh">${n.zh}</span><span class="n-en">${n.en}</span></span>`;
     } else {
       el.className = "node";
       el.title = n.hook;
@@ -115,17 +123,45 @@ function init(vp, mode) {
   const svg = document.createElementNS(svgNS, "svg");
   svg.setAttribute("class", "tree-svg");
   svg.setAttribute("width", W); svg.setAttribute("height", H);
+  // 难度分层线:横穿全宽的虚线 + 左端 LEVEL 标签(mini 里线更淡、无标签)
+  for (const lv of (data.levels || [])) {
+    const ly = TY(lv.y);
+    const line = document.createElementNS(svgNS, "line");
+    line.setAttribute("x1", 0); line.setAttribute("x2", W);
+    line.setAttribute("y1", ly); line.setAttribute("y2", ly);
+    line.setAttribute("class", "level-line");
+    svg.appendChild(line);
+    if (mode !== "mini") {
+      const t = document.createElementNS(svgNS, "text");
+      t.setAttribute("x", 14); t.setAttribute("y", ly - 10);
+      t.setAttribute("class", "level-label");
+      t.textContent = lv.label;
+      svg.appendChild(t);
+    }
+  }
   const edgeEls = [];
+  const pending = [];
   for (const n of nodes) {
     for (const p of n.prereqs) {
       const a = byId[p]; if (!a) continue;
-      const path = document.createElementNS(svgNS, "path");
-      path.setAttribute("d", route(a, n));
-      const cross = a.branch !== n.branch && a.branch !== "root" && n.branch !== "converge";
-      path.setAttribute("class", "edge" + (cross ? " cross" : ""));
-      path.dataset.from = p; path.dataset.to = n.id; path.dataset.branch = n.branch;
-      svg.appendChild(path); edgeEls.push(path);
+      pending.push({ a, n, spec: routeSpec(a, n) });
     }
+  }
+  // 车道分配:同一走廊(ym 相近)的总线按水平段中点排序,各领 ±LANE 间距的车道,不再叠线
+  const LANE = mode === "mini" ? 2.5 : 7;
+  const groups = {};
+  for (const e of pending) if (e.spec.bus) (groups[Math.round(e.spec.bus.ym / 4)] ||= []).push(e);
+  for (const g of Object.values(groups)) {
+    g.sort((u, v) => ((u.spec.bus.x1 + u.spec.bus.x2) - (v.spec.bus.x1 + v.spec.bus.x2)) || (u.n.id < v.n.id ? -1 : 1));
+    g.forEach((e, i) => { e.spec.bus.ym += (i - (g.length - 1) / 2) * LANE; });
+  }
+  for (const { a, n, spec } of pending) {
+    const path = document.createElementNS(svgNS, "path");
+    path.setAttribute("d", spec.d || busPath(spec.bus));
+    const cross = a.branch !== n.branch && a.branch !== "root" && n.branch !== "converge";
+    path.setAttribute("class", "edge" + (cross ? " cross" : ""));
+    path.dataset.from = a.id; path.dataset.to = n.id; path.dataset.branch = n.branch;
+    svg.appendChild(path); edgeEls.push(path);
   }
   stage.insertBefore(svg, stage.firstChild);
 
@@ -166,7 +202,7 @@ function init(vp, mode) {
       left = intro.offsetLeft + intro.offsetWidth;
     // 初始视角＝俯瞰：横向在介绍浮层右侧的剩余空间里装下整棵树（纵向交给平移），
     // 但比例不低于 0.45 保住芯片可辨；放不下时靠约束保证最左芯片不藏进浮层后面
-    scale = Math.max(0.45, Math.min(0.66, (r.width - left - 48) / W));
+    scale = Math.max(0.38, Math.min(0.6, (r.width - left - 48) / W));
     tx = left + (r.width - left) / 2 - (W / 2) * scale;
     // 仅当浮层真在树上方悬浮时才需要「最左芯片让位」约束；
     // 移动端浮层是普通文档流（left=0），套这个约束会把根节点推出屏幕
