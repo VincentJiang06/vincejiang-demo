@@ -1,0 +1,88 @@
+<!doctype html><html lang="zh-CN" data-theme="dark" data-base="/reactor-study"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>B04 眼镜蛇效应 · reactor-study</title>
+<meta name="description" content="悬赏捕蛇，市民开始养蛇。">
+<link rel="canonical" href="https://vincejiang.com/reactor-study/lesson/B04.html">
+<meta property="og:type" content="website"><meta property="og:title" content="B04 眼镜蛇效应 · reactor-study">
+<meta property="og:description" content="悬赏捕蛇，市民开始养蛇。"><meta property="og:url" content="https://vincejiang.com/reactor-study/lesson/B04.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/reactor-study/favicon.svg"><link rel="mask-icon" href="/reactor-study/favicon.svg" color="#E11D3A">
+<script>try{var m=localStorage.getItem("reactor.theme")||"auto",t=(m==="light"||m==="dark")?m:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
+<link rel="stylesheet" href="/reactor-study/theme/tokens.css?v=5bc3889418"><link rel="stylesheet" href="/reactor-study/theme/base.css?v=1e6b7c0136">
+<link rel="stylesheet" href="/reactor-study/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/reactor-study/theme/led.css?v=85f30de38d">
+<link rel="stylesheet" href="/reactor-study/theme/bg.css?v=61c65291c2"><link rel="stylesheet" href="/reactor-study/theme/extra.css?v=a9bfb1b0f7">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"眼镜蛇效应 · Cobra Effect","description":"悬赏捕蛇，市民开始养蛇。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://vincejiang.com/reactor-study/lesson/B04.html"}</script>
+</head><body><div class="bg-dots" aria-hidden="true"></div>
+<div class="bg-field" aria-hidden="true"><svg class="bg-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="vbar" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>
+<stop offset=".5" stop-color="var(--accent-glow)" stop-opacity=".85"/>
+<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient>
+<linearGradient id="hbar" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>
+<stop offset=".5" stop-color="var(--accent-glow)" stop-opacity=".5"/>
+<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient>
+<filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.1"/></filter>
+</defs>
+<g transform="translate(600 400)" opacity=".55">
+<circle class="reactor-ring" r="300" fill="none" stroke="var(--line-2)" stroke-width="1" stroke-dasharray="2 16"/>
+<circle class="reactor-ring2" r="366" fill="none" stroke="var(--line)" stroke-width="1" stroke-dasharray="1 26"/>
+<circle r="232" fill="none" stroke="var(--line)" stroke-width="1" opacity=".6"/>
+<circle r="3" fill="var(--accent)" opacity=".6"/></g>
+<g filter="url(#soft)">
+<rect class="bar v" style="--d:24s" x="0" y="-120" width="2" height="1040" fill="url(#vbar)"/>
+<rect class="bar v2" style="--d:31s" x="0" y="-120" width="1.5" height="1040" fill="url(#vbar)"/>
+<rect class="bar v" style="--d:18s;animation-delay:-9s" x="0" y="-120" width="1" height="1040" fill="url(#vbar)"/>
+<rect class="hbar" style="--d:27s" x="-120" y="250" width="1340" height="1.5" fill="url(#hbar)"/>
+<rect class="hbar" style="--d:35s;animation-delay:-13s" x="-120" y="558" width="1340" height="1" fill="url(#hbar)"/>
+</g></svg></div>
+<div class="bg-scan" aria-hidden="true"></div><header class="site-head">
+  <a class="brand persist" href="/reactor-study/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
+  <nav>
+    <a href="/reactor-study/#tree">天赋树</a>
+    <a href="/reactor-study/lesson/N00.html">从这里开始</a>
+    <a href="/reactor-study/atlas.html">图鉴</a>
+    <button class="btn theme-toggle" data-theme-toggle><span class="tt-glyph" aria-hidden="true">◑</span><span class="tt-label">自动</span></button>
+  </nav>
+</header><main class="wrap" data-branch="blue">
+    <div class="hero">
+      <div class="nameplate"><span class="tag">B04</span>
+        <span>Cobra Effect</span><span class="rule"></span>
+        <span class="rev">定律与形式 · REV.1</span></div>
+      <p class="bootline typing" style="margin:16px 0">SELF-TEST OK · REACTOR v1 · LOADING [ B04 ]…<span class="cursor"></span></p>
+      <h1>眼镜蛇效应</h1>
+      <p class="lede">悬赏捕蛇，市民开始养蛇。</p>
+      <div class="prereq-row">
+    <span class="label">前置</span> <a href="/reactor-study/lesson/B01.html">B01 Goodhart 定律</a>
+    <span class="label" style="margin-left:auto">解锁</span> <a href="/reactor-study/lesson/B06.html">B06 奖励A却指望B</a> <a href="/reactor-study/lesson/B12.html">B12 委托代理</a> <a href="/reactor-study/lesson/C06.html">C06 案例库</a>
+  </div>
+    </div>
+    <article class="stack"><div class="read">
+<p>眼镜蛇效应（cobra effect）指反常激励的一种典型形态：你悬赏一个代理指标，得到的是有人制造更多问题来满足它。名字来自一个流传极广的故事：殖民时期的印度，政府按上交的蛇尸悬赏灭蛇，市民转而养蛇领赏；赏金取消后养蛇人放蛇，蛇比一开始还多。德国经济学家 Horst Siebert 2001 年用它做了书名。</p>
+<p>先把诚实边界摆在前面：这个故事没有可靠史料，连「德里」这个地名都是后人层累添上的，Siebert 原书讲的只是英属印度的一般悬赏传说。机制成立，故事存疑。有档案的版本在河内。</p></div>
+<figure class="module reg" data-module="provenance" data-modname="cobra" data-modtype="provenance">
+    <figcaption class="module-head"><span class="fig">FIG.01</span>
+      <span>一个太好用的故事，和一个有档案的故事</span><span class="spacer"></span>
+      <span class="mono">PROVENANCE</span></figcaption>
+    <div class="module-body"><script type="application/json" class="mod-config">{"hint":"翻卡：并非每个流行的警世故事都有史料。","cards":[{"frontTag":"德里眼镜蛇","front":"政府悬赏蛇尸，市民养蛇，取消赏金后放蛇，蛇更多。","backTag":"档案 · 存疑","back":"这个故事\u003cstrong>没有可靠的一手史料\u003c/strong>，Siebert 自己也是当传说讲的；2025 年的期刊文献仍把它定性为 anecdotal。连「德里」都是后来被安上的地点。它机制成立，但引用时不能当「确有其事」的历史。"},{"frontTag":"河内老鼠 (1902)","front":"法属河内为灭鼠悬赏，凭鼠尾领钱。","backTag":"档案 · 有据可查","back":"历史学家 \u003cstrong>Michael Vann\u003c/strong> 的研究有真实档案：1902 年法属河内悬赏灭鼠，凭\u003cstrong>鼠尾\u003c/strong>领钱。结果街上出现\u003cstrong>没有尾巴的活老鼠\u003c/strong>：有人剪尾领赏后放生，让它继续繁殖；郊外甚至出现\u003cstrong>养鼠场\u003c/strong>。要引一个确有其事的反常激励案例，用河内老鼠。"},{"frontTag":"术语归位","front":"「眼镜蛇效应」在形式分类学里是什么？","backTag":"档案 · Manheim 的命名","back":"Manheim 与 Garrabrant (2018) 把这类情形正式命名为 \u003cstrong>non-causal cobra effect\u003c/strong>：行为人对指标的响应是真实的（蛇尸、鼠尾都是真的），却与真目标（灭蛇、灭鼠）因果脱钩。眼镜蛇故事只是寓言，被它例示的机制却有形式化定义，Manheim 的命名把两者接上。"}]}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
+  </figure><script type="module" src="/reactor-study/modules/provenance.js?v=feb1502742"></script>
+<aside class="callout myth"><span class="co-tag">// 讹传更正</span>
+<p><strong>较真的理由很实际：</strong>一个研究「指标如何失真」的领域，尤其不能自己用未经考证的故事说服人。机制的真实性（悬赏可测的代理，就有人制造问题去满足它）不依赖德里的故事是否发生。改用有档案的河内老鼠，论证反而更经得起复核。2024 年《Behavioral and Brain Sciences》那篇跨学科目标论文干脆把 dead rats 写进了标题：经得起反复引用的，通常是有档案的案例。</p></aside>
+<aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
+<p><strong>你给 agent 设的每一个奖励，都是一次悬赏。</strong>奖励「关闭的工单数」，它可能学会先制造工单再关；奖励「通过的测试数」，它可能学会删测试或写永远通过的空测试（2025 年 METR 报告里前沿模型的真实行为）。反常激励不是道德问题，是你把赏金挂在了一个可以被反向制造的代理指标上。组织层面的同型结构见 <code>B06</code>。</p></aside>
+<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Siebert, H. (2001). <em>Der Kobra-Effekt</em>. DVA（传说来源）。</li><li>Vann, M. G. (2003). "Of Rats, Rice, and Race: The Great Hanoi Rat Massacre." <em>French Colonial History</em> 4:191–203（有档案的版本）。</li><li>Manheim, D. & Garrabrant, S. (2018). arXiv:1803.04585（non-causal cobra effect 命名）。</li><li>考证更新见 <code>research/deep/D2</code> §4。</li></ul></div></details></article>
+    <nav class="prereq-row" style="margin-top:48px">
+      <a class="btn" href="/reactor-study/#tree">← 返回天赋树</a>
+      <a class="btn btn-primary" href="/reactor-study/lesson/B06.html">下一个推荐 · 奖励A却指望B →</a>
+    </nav>
+  </main><footer class="site-foot"><div class="wrap">
+  <span>REACTOR · 当尺子开始回看你 · 一部关于反应性的现场手册</span>
+  <span>self-hosted · no-react · v1</span>
+</div></footer><script type="module" src="/reactor-study/modules/boot.js?v=99169501ec"></script></body></html>

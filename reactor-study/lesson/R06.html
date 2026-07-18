@@ -1,0 +1,91 @@
+<!doctype html><html lang="zh-CN" data-theme="dark" data-base="/reactor-study"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>R06 循环效应 · reactor-study</title>
+<meta name="description" content="分类会改变被分类的人。">
+<link rel="canonical" href="https://vincejiang.com/reactor-study/lesson/R06.html">
+<meta property="og:type" content="website"><meta property="og:title" content="R06 循环效应 · reactor-study">
+<meta property="og:description" content="分类会改变被分类的人。"><meta property="og:url" content="https://vincejiang.com/reactor-study/lesson/R06.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/reactor-study/favicon.svg"><link rel="mask-icon" href="/reactor-study/favicon.svg" color="#E11D3A">
+<script>try{var m=localStorage.getItem("reactor.theme")||"auto",t=(m==="light"||m==="dark")?m:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
+<link rel="stylesheet" href="/reactor-study/theme/tokens.css?v=5bc3889418"><link rel="stylesheet" href="/reactor-study/theme/base.css?v=1e6b7c0136">
+<link rel="stylesheet" href="/reactor-study/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/reactor-study/theme/led.css?v=85f30de38d">
+<link rel="stylesheet" href="/reactor-study/theme/bg.css?v=61c65291c2"><link rel="stylesheet" href="/reactor-study/theme/extra.css?v=a9bfb1b0f7">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"循环效应 · Looping Effects","description":"分类会改变被分类的人。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://vincejiang.com/reactor-study/lesson/R06.html"}</script>
+</head><body><div class="bg-dots" aria-hidden="true"></div>
+<div class="bg-field" aria-hidden="true"><svg class="bg-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="vbar" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>
+<stop offset=".5" stop-color="var(--accent-glow)" stop-opacity=".85"/>
+<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient>
+<linearGradient id="hbar" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>
+<stop offset=".5" stop-color="var(--accent-glow)" stop-opacity=".5"/>
+<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient>
+<filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.1"/></filter>
+</defs>
+<g transform="translate(600 400)" opacity=".55">
+<circle class="reactor-ring" r="300" fill="none" stroke="var(--line-2)" stroke-width="1" stroke-dasharray="2 16"/>
+<circle class="reactor-ring2" r="366" fill="none" stroke="var(--line)" stroke-width="1" stroke-dasharray="1 26"/>
+<circle r="232" fill="none" stroke="var(--line)" stroke-width="1" opacity=".6"/>
+<circle r="3" fill="var(--accent)" opacity=".6"/></g>
+<g filter="url(#soft)">
+<rect class="bar v" style="--d:24s" x="0" y="-120" width="2" height="1040" fill="url(#vbar)"/>
+<rect class="bar v2" style="--d:31s" x="0" y="-120" width="1.5" height="1040" fill="url(#vbar)"/>
+<rect class="bar v" style="--d:18s;animation-delay:-9s" x="0" y="-120" width="1" height="1040" fill="url(#vbar)"/>
+<rect class="hbar" style="--d:27s" x="-120" y="250" width="1340" height="1.5" fill="url(#hbar)"/>
+<rect class="hbar" style="--d:35s;animation-delay:-13s" x="-120" y="558" width="1340" height="1" fill="url(#hbar)"/>
+</g></svg></div>
+<div class="bg-scan" aria-hidden="true"></div><header class="site-head">
+  <a class="brand persist" href="/reactor-study/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
+  <nav>
+    <a href="/reactor-study/#tree">天赋树</a>
+    <a href="/reactor-study/lesson/N00.html">从这里开始</a>
+    <a href="/reactor-study/atlas.html">图鉴</a>
+    <button class="btn theme-toggle" data-theme-toggle><span class="tt-glyph" aria-hidden="true">◑</span><span class="tt-label">自动</span></button>
+  </nav>
+</header><main class="wrap" data-branch="red">
+    <div class="hero">
+      <div class="nameplate"><span class="tag">R06</span>
+        <span>Looping Effects</span><span class="rule"></span>
+        <span class="rev">社会学谱系 · REV.1</span></div>
+      <p class="bootline typing" style="margin:16px 0">SELF-TEST OK · REACTOR v1 · LOADING [ R06 ]…<span class="cursor"></span></p>
+      <h1>循环效应</h1>
+      <p class="lede">分类会改变被分类的人。</p>
+      <div class="prereq-row">
+    <span class="label">前置</span> <a href="/reactor-study/lesson/R02.html">R02 自我实现预言</a>
+    <span class="label" style="margin-left:auto">解锁</span> <a href="/reactor-study/lesson/R07.html">R07 表演性</a>
+  </div>
+    </div>
+    <article class="stack"><div class="read">
+<p>哲学家 Ian Hacking（1936–2023）把事物分成两类。电子、硫、水是 indifferent kinds（无差别的类）：你怎么给它们分类、命名，它们毫不在乎。「人的类别」不同：被分类的人会意识到自己被这样归类，从而改变自我理解和行为，这又反过来改变类别本身。他称之为 interactive kinds（互动的类）。</p>
+<p>由此产生一个不会停的反馈：标签改变人，人改变标签。Hacking 叫它 looping effect（循环效应），后果是人的类别成了 moving targets（移动的靶子）。</p></div>
+<figure class="module reg" data-module="explorable" data-modname="looping" data-modtype="explorable">
+    <figcaption class="module-head"><span class="fig">FIG.01</span>
+      <span>两种类：石头 vs 人</span><span class="spacer"></span>
+      <span class="mono">EXPLORABLE</span></figcaption>
+    <div class="module-body"><script type="application/json" class="mod-config">{"mode":"compare","label":"分类会改变它吗？","a":{"t":"Indifferent kind（电子 / 石头）","html":"你叫它「夸克」、给它任何理论范畴，它无动于衷。自然类不回应分类，因此可以放心假设：测量之前和之后，被测对象是同一个。这是自然科学能「客观」的底气。"},"b":{"t":"Interactive kind（人）","html":"自闭症的诊断边界和被诊断者的\u003cstrong>生活体验\u003c/strong>在过去六十年剧烈变动：从 Kanner 的窄定义，到 Asperger，到 DSM 的「谱系」，再到 neurodiversity 运动对这个类别的反向改写。今天被诊断的「自闭症」，已经不是命名它之前的那个自闭症。原文：The disability we call autism has changed its contours... That is the moving target."}}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
+  </figure><script type="module" src="/reactor-study/modules/explorable.js?v=51607a9866"></script>
+<div class="read">
+<p>Hacking 把这套机制叫 making up people（制造人）：新分类开辟出新的「为人的可能性空间」。他给了五要素框架（分类、人、制度、知识、专家），要素彼此拉扯，让类别和人同时地、相互地涌现，他称之为 dynamic nominalism（动态唯名论）。多动症、多重人格是同类案例；Haslam 2016 年把 looping 接到 concept creep 命题上，解释 harm、trauma 这类概念为何不断外扩。</p>
+<p>Cooper 2004 年的著名反驳指出：interactive/indifferent 的二分撑不起 Hacking 想要的自然类/人类类之分，很多人的类别（某些遗传病）其成员并不知道自己被分类，却仍是 human kind。Tsou 2007 与 2025 年进一步主张：精神疾病可以同时是互动的类和有稳定生物基础的自然类。对本课程的含义是：<strong>被测者会反应，不代表被测的东西没有独立实在。</strong>排名既反映又重塑，「重新制造」不等于「无中生有」。</p></div>
+<aside class="callout myth"><span class="co-tag">// 讹传更正</span>
+<p><strong>流行说法：「looping 证明分类都是人为的、不真实的。」</strong>复核结论：Hacking 本人在《The Social Construction of What?》里明确反对这个读法。互动的类既是被建构的又是真实的，儿童虐待既被「制造」为一个类别，又指向真实的伤害。借 looping 论证「排名纯属人为、毫无实在依托」，是对 Hacking 的误读，也会把反应性理论推到它守不住的阵地。</p></aside>
+<aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
+<p><strong>研究者给模型行为发明的每个标签，都是一次 making up people。</strong>越狱、谄媚、涌现能力、欺骗对齐：这些标签一旦进入训练数据、RLHF 目标和研究议程，就改变了模型和研究者的行为，让类别成为移动的靶子。今天你测的「谄媚」，已经不是你命名它之前的那个谄媚。你的 eval 分类，正在制造它要测量的对象。一个待检验的推论：被「AI 安全」类别标注过的模型，会不会因为训练数据里含有这些类别而回望并改变行为？这是 looping 在机器上的开放问题。</p></aside>
+<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Hacking, I. (1986). "Making Up People"; (2007). "Kinds of People: Moving Targets." <em>Proc. British Academy</em> 151:285–318.</li><li>Cooper, R. (2004). "Why Hacking is Wrong about Human Kinds." <em>BJPS</em> 55(1)（最有名的反驳）。</li><li>Tsou, J. Y. (2007; 2025). looping 与自然类可以并存。</li><li>Hacking 逝世于 2023-05-10（Misak 2024 讣告）。深化见 <code>research/deep/D1</code> §4。</li></ul></div></details></article>
+    <nav class="prereq-row" style="margin-top:48px">
+      <a class="btn" href="/reactor-study/#tree">← 返回天赋树</a>
+      <a class="btn btn-primary" href="/reactor-study/lesson/R07.html">下一个推荐 · 表演性 →</a>
+    </nav>
+  </main><footer class="site-foot"><div class="wrap">
+  <span>REACTOR · 当尺子开始回看你 · 一部关于反应性的现场手册</span>
+  <span>self-hosted · no-react · v1</span>
+</div></footer><script type="module" src="/reactor-study/modules/boot.js?v=99169501ec"></script></body></html>

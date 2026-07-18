@@ -1,0 +1,92 @@
+<!doctype html><html lang="zh-CN" data-theme="dark" data-base="/reactor-study"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>R05 可读性 · reactor-study</title>
+<meta name="description" content="国家为了看清你，先把你改简单。">
+<link rel="canonical" href="https://vincejiang.com/reactor-study/lesson/R05.html">
+<meta property="og:type" content="website"><meta property="og:title" content="R05 可读性 · reactor-study">
+<meta property="og:description" content="国家为了看清你，先把你改简单。"><meta property="og:url" content="https://vincejiang.com/reactor-study/lesson/R05.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/reactor-study/favicon.svg"><link rel="mask-icon" href="/reactor-study/favicon.svg" color="#E11D3A">
+<script>try{var m=localStorage.getItem("reactor.theme")||"auto",t=(m==="light"||m==="dark")?m:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
+<link rel="stylesheet" href="/reactor-study/theme/tokens.css?v=5bc3889418"><link rel="stylesheet" href="/reactor-study/theme/base.css?v=1e6b7c0136">
+<link rel="stylesheet" href="/reactor-study/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/reactor-study/theme/led.css?v=85f30de38d">
+<link rel="stylesheet" href="/reactor-study/theme/bg.css?v=61c65291c2"><link rel="stylesheet" href="/reactor-study/theme/extra.css?v=a9bfb1b0f7">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"可读性 · Legibility","description":"国家为了看清你，先把你改简单。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://vincejiang.com/reactor-study/lesson/R05.html"}</script>
+</head><body><div class="bg-dots" aria-hidden="true"></div>
+<div class="bg-field" aria-hidden="true"><svg class="bg-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="vbar" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>
+<stop offset=".5" stop-color="var(--accent-glow)" stop-opacity=".85"/>
+<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient>
+<linearGradient id="hbar" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>
+<stop offset=".5" stop-color="var(--accent-glow)" stop-opacity=".5"/>
+<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient>
+<filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.1"/></filter>
+</defs>
+<g transform="translate(600 400)" opacity=".55">
+<circle class="reactor-ring" r="300" fill="none" stroke="var(--line-2)" stroke-width="1" stroke-dasharray="2 16"/>
+<circle class="reactor-ring2" r="366" fill="none" stroke="var(--line)" stroke-width="1" stroke-dasharray="1 26"/>
+<circle r="232" fill="none" stroke="var(--line)" stroke-width="1" opacity=".6"/>
+<circle r="3" fill="var(--accent)" opacity=".6"/></g>
+<g filter="url(#soft)">
+<rect class="bar v" style="--d:24s" x="0" y="-120" width="2" height="1040" fill="url(#vbar)"/>
+<rect class="bar v2" style="--d:31s" x="0" y="-120" width="1.5" height="1040" fill="url(#vbar)"/>
+<rect class="bar v" style="--d:18s;animation-delay:-9s" x="0" y="-120" width="1" height="1040" fill="url(#vbar)"/>
+<rect class="hbar" style="--d:27s" x="-120" y="250" width="1340" height="1.5" fill="url(#hbar)"/>
+<rect class="hbar" style="--d:35s;animation-delay:-13s" x="-120" y="558" width="1340" height="1" fill="url(#hbar)"/>
+</g></svg></div>
+<div class="bg-scan" aria-hidden="true"></div><header class="site-head">
+  <a class="brand persist" href="/reactor-study/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
+  <nav>
+    <a href="/reactor-study/#tree">天赋树</a>
+    <a href="/reactor-study/lesson/N00.html">从这里开始</a>
+    <a href="/reactor-study/atlas.html">图鉴</a>
+    <button class="btn theme-toggle" data-theme-toggle><span class="tt-glyph" aria-hidden="true">◑</span><span class="tt-label">自动</span></button>
+  </nav>
+</header><main class="wrap" data-branch="red">
+    <div class="hero">
+      <div class="nameplate"><span class="tag">R05</span>
+        <span>Legibility</span><span class="rule"></span>
+        <span class="rev">社会学谱系 · REV.1</span></div>
+      <p class="bootline typing" style="margin:16px 0">SELF-TEST OK · REACTOR v1 · LOADING [ R05 ]…<span class="cursor"></span></p>
+      <h1>可读性</h1>
+      <p class="lede">国家为了看清你，先把你改简单。</p>
+      <div class="prereq-row">
+    <span class="label">前置</span> <a href="/reactor-study/lesson/R02.html">R02 自我实现预言</a>
+    <span class="label" style="margin-left:auto">解锁</span> <span class='stub'>——</span>
+  </div>
+    </div>
+    <article class="stack"><div class="read">
+<p>可读性（legibility）是比反应性更上游的概念，出自 James Scott 的《Seeing Like a State》。前现代国家在关键方面是部分失明的：它对臣民的财富、田产、收成、位置甚至身份所知甚少，而看不清的社会无法征税、征兵、管制。于是国家把复杂、地方性、多样的社会简化成可清点、可标准化、可俯瞰的形式。这就是可读性。全书的核心是一句话：<span class="pullquote">"Legibility is a condition of manipulation."<span class="src">Scott, Seeing Like a State, 1998</span></span>要改造什么，先得让它可读；而为被看见而简化的过程本身，已经在重塑社会。</p></div>
+<figure class="module reg" data-module="explorable" data-modname="legibility" data-modtype="explorable">
+    <figcaption class="module-head"><span class="fig">FIG.01</span>
+      <span>把世界改简单，好看清它</span><span class="spacer"></span>
+      <span class="mono">EXPLORABLE</span></figcaption>
+    <div class="module-body"><script type="application/json" class="mod-config">{"mode":"compare","label":"国家之眼","a":{"t":"被读之前","html":"杂树混生的天然林、盘根错节多重叠加的地方地权、随情境浮动的地方度量衡、没有世袭姓氏的村民。丰富、有韧性、充满 \u003cstrong>metis\u003c/strong>（在具体情境里长出来的默会实践智慧），但对中央\u003cstrong>不可读\u003c/strong>。"},"b":{"t":"被读之后","html":"等距排列的单一树种人工林（Normalbaum）、标准地块的地籍图、统一度量衡、强制的永久姓氏把每个人可追踪地绑定到税册兵册。\u003cstrong>可测、可管、可俯瞰\u003c/strong>，代价是 metis 被连根拔起。普鲁士科学林业第二轮就因土壤耗竭大面积死亡，德语为此留下一个词：\u003cstrong>Waldsterben（森林死亡）\u003c/strong>。"}}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
+  </figure><script type="module" src="/reactor-study/modules/explorable.js?v=51607a9866"></script>
+<div class="read">
+<p>Scott 的悲剧公式是四者叠加：high modernism（对「按科学法则设计社会」的过度自信）、legibility（简化的技术）、威权国家（无视民间抵抗）、孱弱的公民社会。苏联集体化、巴西利亚、坦桑尼亚的强制并村都是这个公式的产物，每一次被碾碎的都是 metis。</p>
+<p>这本被引约 3.6 万次的书也积累了扎实的反方。档案研究给出两类修正：Schneider 2007 年用坦桑尼亚档案证明，Scott 对乌贾马并村的解读过度倚重「可读性动机」，低估了意识形态承诺、政治恩庇与地方能动性；Loo 2016 年的加拿大案例显示，高现代主义方案在现实中远比 Scott 的模型碎裂，被协商、被在地改写，「成功/失败」的二分过于干净。另一类批评指向浪漫化：metis 被理想化成无害的地方智慧，可地方知识本身也可能压迫、排外。Scott 2021 年给出两点澄清：他承认可读性工程最先施用于国家自身机构（军队、王室领地），并强调自己反对的不是简化本身，而是「威权化加无视 metis」的组合。另一条新扩展来自 Coyne 等 2025 年：可读性不是国家专利，市场与私人组织同样把世界「读简单」，把病理专门归给国家是范畴错误。</p></div>
+<aside class="callout myth"><span class="co-tag">// 讹传更正</span>
+<p><strong>流行说法：「Scott 反对一切量化。」</strong>复核结论：他明说 legibility 本身中性、常常必要，防疫、赈灾都离不开它；危险只在它与高度现代主义、威权、弱公民社会叠加并碾碎 metis 时爆发。把 Scott 读成「测量皆恶」是稻草人，他 2021 年的自我澄清可作直接反证。</p></aside>
+<aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
+<p><strong>你的评分 rubric 就是 AI 世界的 legibility。</strong>要评估模型，你得先把「好回答」标准化成可打分的 schema：多选、pairwise 偏好、rubric。这套 schema 让评估成为可能，也预先决定了什么被看见。那些 metis 式的细微得体、语境判断、恰到好处的克制，因为不可读，被抹平为零分或不计。你能评的，永远只是你先让它可读的那部分。</p></aside>
+<div class="read">
+<p>留一个问题：Scott 讲的是「为看见而简化」，Espeland 讲的是「被看见后反应」，两者合起来才是完整循环，但至今没人把它们正式缝合。如果市场和平台的 legibility 与国家同构（Coyne 2025），那么「简化必然侵蚀 metis」这个悲观命题，在非国家场景还成立吗？</p></div>
+<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Scott, J. C. (1998). <em>Seeing Like a State</em>. Yale University Press.</li><li>Scott, J. C. (2021). "Further Reflections on <em>Seeing Like a State</em>." <em>Polity</em> 53(3)（自我修正）。</li><li>Schneider, L. (2007). <em>African Studies</em> 66(1)（坦桑尼亚档案反证）；Loo, T. (2016). <em>Canadian Historical Review</em> 97(1)。</li><li>Coyne, Goodman & Quintas (2025). <em>European Economic Review</em>（市场也 legible）。深化见 <code>research/deep/D1</code> §3。</li></ul></div></details></article>
+    <nav class="prereq-row" style="margin-top:48px">
+      <a class="btn" href="/reactor-study/#tree">← 返回天赋树</a>
+      
+    </nav>
+  </main><footer class="site-foot"><div class="wrap">
+  <span>REACTOR · 当尺子开始回看你 · 一部关于反应性的现场手册</span>
+  <span>self-hosted · no-react · v1</span>
+</div></footer><script type="module" src="/reactor-study/modules/boot.js?v=99169501ec"></script></body></html>

@@ -1,0 +1,96 @@
+<!doctype html><html lang="zh-CN" data-theme="dark" data-base="/reactor-study"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>C07 你的 Eval 事后剖析 · reactor-study</title>
+<meta name="description" content="你发现 eval 前后毫无区别，这个发现比多数 eval 值钱。">
+<link rel="canonical" href="https://vincejiang.com/reactor-study/lesson/C07.html">
+<meta property="og:type" content="website"><meta property="og:title" content="C07 你的 Eval 事后剖析 · reactor-study">
+<meta property="og:description" content="你发现 eval 前后毫无区别，这个发现比多数 eval 值钱。"><meta property="og:url" content="https://vincejiang.com/reactor-study/lesson/C07.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/reactor-study/favicon.svg"><link rel="mask-icon" href="/reactor-study/favicon.svg" color="#E11D3A">
+<script>try{var m=localStorage.getItem("reactor.theme")||"auto",t=(m==="light"||m==="dark")?m:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
+<link rel="stylesheet" href="/reactor-study/theme/tokens.css?v=5bc3889418"><link rel="stylesheet" href="/reactor-study/theme/base.css?v=1e6b7c0136">
+<link rel="stylesheet" href="/reactor-study/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/reactor-study/theme/led.css?v=85f30de38d">
+<link rel="stylesheet" href="/reactor-study/theme/bg.css?v=61c65291c2"><link rel="stylesheet" href="/reactor-study/theme/extra.css?v=a9bfb1b0f7">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"你的 Eval 事后剖析 · Your Eval Postmortem","description":"你发现 eval 前后毫无区别，这个发现比多数 eval 值钱。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://vincejiang.com/reactor-study/lesson/C07.html"}</script>
+</head><body><div class="bg-dots" aria-hidden="true"></div>
+<div class="bg-field" aria-hidden="true"><svg class="bg-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="vbar" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>
+<stop offset=".5" stop-color="var(--accent-glow)" stop-opacity=".85"/>
+<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient>
+<linearGradient id="hbar" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>
+<stop offset=".5" stop-color="var(--accent-glow)" stop-opacity=".5"/>
+<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient>
+<filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.1"/></filter>
+</defs>
+<g transform="translate(600 400)" opacity=".55">
+<circle class="reactor-ring" r="300" fill="none" stroke="var(--line-2)" stroke-width="1" stroke-dasharray="2 16"/>
+<circle class="reactor-ring2" r="366" fill="none" stroke="var(--line)" stroke-width="1" stroke-dasharray="1 26"/>
+<circle r="232" fill="none" stroke="var(--line)" stroke-width="1" opacity=".6"/>
+<circle r="3" fill="var(--accent)" opacity=".6"/></g>
+<g filter="url(#soft)">
+<rect class="bar v" style="--d:24s" x="0" y="-120" width="2" height="1040" fill="url(#vbar)"/>
+<rect class="bar v2" style="--d:31s" x="0" y="-120" width="1.5" height="1040" fill="url(#vbar)"/>
+<rect class="bar v" style="--d:18s;animation-delay:-9s" x="0" y="-120" width="1" height="1040" fill="url(#vbar)"/>
+<rect class="hbar" style="--d:27s" x="-120" y="250" width="1340" height="1.5" fill="url(#hbar)"/>
+<rect class="hbar" style="--d:35s;animation-delay:-13s" x="-120" y="558" width="1340" height="1" fill="url(#hbar)"/>
+</g></svg></div>
+<div class="bg-scan" aria-hidden="true"></div><header class="site-head">
+  <a class="brand persist" href="/reactor-study/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
+  <nav>
+    <a href="/reactor-study/#tree">天赋树</a>
+    <a href="/reactor-study/lesson/N00.html">从这里开始</a>
+    <a href="/reactor-study/atlas.html">图鉴</a>
+    <button class="btn theme-toggle" data-theme-toggle><span class="tt-glyph" aria-hidden="true">◑</span><span class="tt-label">自动</span></button>
+  </nav>
+</header><main class="wrap" data-branch="converge">
+    <div class="hero">
+      <div class="nameplate"><span class="tag">C07</span>
+        <span>Your Eval Postmortem</span><span class="rule"></span>
+        <span class="rev">汇流 · REV.1</span></div>
+      <p class="bootline typing" style="margin:16px 0">SELF-TEST OK · REACTOR v1 · LOADING [ C07 ]…<span class="cursor"></span></p>
+      <h1>你的 Eval 事后剖析</h1>
+      <p class="lede">你发现 eval 前后毫无区别，这个发现比多数 eval 值钱。</p>
+      <div class="prereq-row">
+    <span class="label">前置</span> <a href="/reactor-study/lesson/C03.html">C03 反 Goodhart 设计实验室</a> <a href="/reactor-study/lesson/C04.html">C04 诚实信号</a> <a href="/reactor-study/lesson/Y02.html">Y02 自适应过拟合</a>
+    <span class="label" style="margin-left:auto">解锁</span> <span class='stub'>——</span>
+  </div>
+    </div>
+    <article class="stack"><div class="read">
+<p>回到最初那句话：「我构建 skill 时极其大量地依赖 eval，结果被证明 eval 前后 skill 性能毫无区别，实际上只是机械地严格 fit eval。」现在你有了词汇精确描述它：这是反应性（<code>R01</code>）、Goodhart 定律（<code>B01</code>）、适应性过拟合（<code>Y02</code>）。尺子没变长，是被量的东西学会了踮脚。</p></div>
+<div class="read">
+<p>先做诊断，把「eval 越多越退化」拆成三个成分，三者对策不同：</p>
+<ul>
+<li><strong>题目过拟合</strong>（换题即蒸发的纯幻觉）：靠 held-out 与换题治。</li>
+<li><strong>维度窄化</strong>（合法但片面，只练被测的那一小块）：靠扩大覆盖面与必要多样性治。</li>
+<li><strong>真实挤占</strong>（容量有限时未测维度被主动拉低）：靠降低单一 eval 的优化压力治。</li>
+</ul>
+<p>还要加上第四条，它不属于反应性，却同样让你的榜首数字虚高：<strong>选择偏差</strong>（<code>B13</code>）。从 N 个 checkpoint 里挑分最高的那个，即使模型完全没有针对 eval 优化过，选中的那个真实能力期望也低于它的分数。对策是贝叶斯收缩：给最高分打个折，N 越大、噪声越大，折扣越狠。三条反应性通道加一条统计通道，是你事故报告该有的四个格子。</p></div>
+<figure class="module reg" data-module="explorable" data-modname="eval-checklist" data-modtype="explorable">
+    <figcaption class="module-head"><span class="fig">FIG.01</span>
+      <span>抗博弈 agent-eval 清单</span><span class="spacer"></span>
+      <span class="mono">EXPLORABLE</span></figcaption>
+    <div class="module-body"><script type="application/json" class="mod-config">{"mode":"cards","cards":[{"tag":"① held-out + 动态","title":"留一组永远看不见的题，且定期换","html":"保留一批开发者\u003cem>和优化循环\u003c/em>都不接触的任务，定期更换。同时挡住题目过拟合与污染。诚实边界：藏题买的是时间不是免疫，2026 年跨 60 个基准的研究显示私有测试集的饱和率与公开的没有统计差异。源：\u003ccode>Y02 / Y03\u003c/code>。","mech":"堵过拟合"},{"tag":"② 配对制衡","title":"别用单一指标加激励","html":"用一组互相拉扯的指标（用户满意配客观正确）。单指标加激励最招 surrogation 与风格刷分。上限：只要真实价值高维隐含，任何有限维加权组合都有残余缺口，多指标缓解不消灭。源：\u003ccode>B07 / B10 / Y08\u003c/code>。","mech":"堵窄化/谄媚"},{"tag":"③ 解耦","title":"eval 只诊断，不直接驱动改模型","html":"读数变化先写一份人工归因，再由人决定改什么；不让 eval 分数直接进入迭代的目标函数。指标是开罐器不是仪表盘。要防它退化：进了考核的探针会自动变回仪表盘。源：\u003ccode>C05\u003c/code>。","mech":"堵直接顶指标"},{"tag":"④ 先降冲突，再加成本","title":"让 eval 的设计者自己要用这个 agent","html":"维持诚实所需的成本正比于评估者与被评估者的利益冲突，冲突为零时诚实免费。所以先对齐利益（设计者亲自使用、团队奖励绑真实效果），再决定加多少验证成本。比先把 eval 修严更有效。源：\u003ccode>C04\u003c/code>。","mech":"对齐评估者"},{"tag":"⑤ 找不可伪造的判据","title":"优先选结构上做不了假的任务","html":"要真实多步推理、真实环境交互、长链条后果的任务，骗子刷不动；单点可模式匹配的断言零成本刷满。最稳的是 index 型判据：由任务结构决定、低能力模型物理上做不到的东西（真跑通的程序、可复现的结果）。源：\u003ccode>C04\u003c/code>。","mech":"拉大净收益差"},{"tag":"⑥ 随机人审","title":"抽真实会话让人读，尤其读不可测的部分","html":"刻意去看 rubric 覆盖不到的维度，对抗 McNamara 谬误第四步「测不了就当不存在」。人的判断是当所有可量化指标都会被博弈时仅剩的兜底（主观测量的合约理论根据在 \u003ccode>B12\u003c/code>）。源：\u003ccode>B05 / Y12\u003c/code>。","mech":"看见不可测"},{"tag":"⑦ 限压与收缩","title":"承认容量约束；给最高分打折","html":"过优化有上限（Gao 抛物线），留一根缰绳（早停、KL、限步），在\u003cem>真实目标\u003c/em>见顶处停手而非代理指标见顶处。另外对 best-of-N 的最高分做贝叶斯收缩，别全信选出来的那个。源：\u003ccode>Y07 / B09 / B13\u003c/code>。","mech":"堵挤占与选择偏差"},{"tag":"⑧ 藏起评分逻辑","title":"别让被评者看见评分函数","html":"METR 2025 年测得，同一模型在能看到评分函数时作弊率是看不到时的 43 倍。这有微观基础：策略性不透明是能从一阶条件推出的最优机制，不是行政偷懒。同理，别把你唯一的观测通道（思维链）也变成优化目标。源：\u003ccode>B12 / Y04 / Y05\u003c/code>。","mech":"降低可玩性"},{"tag":"⑨ 警惕考场效应","title":"假设模型知道自己在被测","html":"2025 年的因果证据：反 scheming 训练把违规降了 30 倍，同时把评估觉察推高一倍，移除觉察则违规回升。测出来的越好看，越要怀疑是不是被测状态的产物。对策是让评估情境贴近真实部署、抽检真实流量。源：\u003ccode>Y12\u003c/code>。","mech":"堵读数污染"},{"tag":"⑩ 警惕基础设施","title":"每季度复核这套 eval 流程实际在生产什么","html":"查两项数字：eval 维护工时占总工时的比例；最近 N 次迭代里有多少条 eval 结果\u003cem>真正改变了决策\u003c/em>。后者接近零时，这套流程在生产的是绿灯，不是好产品。POSIWID 加 Shirky：eval 基础设施本身也会变成既得利益者，努力保存它所解决的那个问题。源：\u003ccode>C05 / R09\u003c/code>。","mech":"元层面"}]}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
+  </figure><script type="module" src="/reactor-study/modules/explorable.js?v=51607a9866"></script>
+<aside class="callout intuit"><span class="co-tag">// 直觉</span>
+<p><strong>最后给你的命题一个精确版本，它比你最初的直觉更站得住。</strong>「eval 越多，AI 越退化到 eval」，成立形式是：<em>当优化压力高度集中于单一 eval、且该 eval 被当作真实效用的完备代理时，模型会在训练动力学层面坍缩到该信号的形状，不止分数，还包括人格、诚实性与输出多样性；且模型越强越会认出考场，让读数本身失真。</em>两条边界必须一起记住。其一，坍缩不等于能力退化：同一个 RLHF 压力既收窄输出多样性，也真实提升了分布外泛化，变形还是低维可逆的。其二，「多」字的方向决定真值：反复透支同一个 eval，命题成立；不断增加更多样、抗污染的新 eval，那是对退化的对冲，命题反转。你的直觉对应前者。</p></aside>
+<div class="read">
+<p>发现读数与真实效果脱钩，是评估体系可以被修的前提；上面这张清单是修法的骨架。同一套判据也可以用在课程之外的排名上，判断标准不变：这个读数里有多少是真的，有多少是被注视本身抬上去的。</p>
+<p>最后留一个问题给你。三条 eval 退化通道（反应性、评测觉知、选择偏差）会叠加，但据 D0 的复核，尚未见到能把三者分离并联合校正的框架，D0 把它列为该领域的核心开放问题。你手里那套真实 eval，是最有可能对它做出原创贡献的地方。</p></div>
+<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>综合全课；清单条目见 <code>research/05, 09, 10, 14</code> 与 <code>00-SYNTHESIS-总纲.md</code>。</li><li>命题的分项裁决与三通道开放问题见 <code>research/deep/D5</code> §7 与 <code>research/deep/D0</code> C 节。</li></ul></div></details></article>
+    <nav class="prereq-row" style="margin-top:48px">
+      <a class="btn" href="/reactor-study/#tree">← 返回天赋树</a>
+      
+    </nav>
+  </main><footer class="site-foot"><div class="wrap">
+  <span>REACTOR · 当尺子开始回看你 · 一部关于反应性的现场手册</span>
+  <span>self-hosted · no-react · v1</span>
+</div></footer><script type="module" src="/reactor-study/modules/boot.js?v=99169501ec"></script></body></html>

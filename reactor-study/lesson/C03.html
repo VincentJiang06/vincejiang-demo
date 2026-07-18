@@ -1,0 +1,98 @@
+<!doctype html><html lang="zh-CN" data-theme="dark" data-base="/reactor-study"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>C03 反 Goodhart 设计实验室 · reactor-study</title>
+<meta name="description" content="既然指标必被博弈，怎么设计才扛得住。">
+<link rel="canonical" href="https://vincejiang.com/reactor-study/lesson/C03.html">
+<meta property="og:type" content="website"><meta property="og:title" content="C03 反 Goodhart 设计实验室 · reactor-study">
+<meta property="og:description" content="既然指标必被博弈，怎么设计才扛得住。"><meta property="og:url" content="https://vincejiang.com/reactor-study/lesson/C03.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/reactor-study/favicon.svg"><link rel="mask-icon" href="/reactor-study/favicon.svg" color="#E11D3A">
+<script>try{var m=localStorage.getItem("reactor.theme")||"auto",t=(m==="light"||m==="dark")?m:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
+<link rel="stylesheet" href="/reactor-study/theme/tokens.css?v=5bc3889418"><link rel="stylesheet" href="/reactor-study/theme/base.css?v=1e6b7c0136">
+<link rel="stylesheet" href="/reactor-study/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/reactor-study/theme/led.css?v=85f30de38d">
+<link rel="stylesheet" href="/reactor-study/theme/bg.css?v=61c65291c2"><link rel="stylesheet" href="/reactor-study/theme/extra.css?v=a9bfb1b0f7">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"反 Goodhart 设计实验室 · Anti-Goodhart Lab","description":"既然指标必被博弈，怎么设计才扛得住。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://vincejiang.com/reactor-study/lesson/C03.html"}</script>
+</head><body><div class="bg-dots" aria-hidden="true"></div>
+<div class="bg-field" aria-hidden="true"><svg class="bg-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="vbar" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>
+<stop offset=".5" stop-color="var(--accent-glow)" stop-opacity=".85"/>
+<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient>
+<linearGradient id="hbar" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>
+<stop offset=".5" stop-color="var(--accent-glow)" stop-opacity=".5"/>
+<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient>
+<filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.1"/></filter>
+</defs>
+<g transform="translate(600 400)" opacity=".55">
+<circle class="reactor-ring" r="300" fill="none" stroke="var(--line-2)" stroke-width="1" stroke-dasharray="2 16"/>
+<circle class="reactor-ring2" r="366" fill="none" stroke="var(--line)" stroke-width="1" stroke-dasharray="1 26"/>
+<circle r="232" fill="none" stroke="var(--line)" stroke-width="1" opacity=".6"/>
+<circle r="3" fill="var(--accent)" opacity=".6"/></g>
+<g filter="url(#soft)">
+<rect class="bar v" style="--d:24s" x="0" y="-120" width="2" height="1040" fill="url(#vbar)"/>
+<rect class="bar v2" style="--d:31s" x="0" y="-120" width="1.5" height="1040" fill="url(#vbar)"/>
+<rect class="bar v" style="--d:18s;animation-delay:-9s" x="0" y="-120" width="1" height="1040" fill="url(#vbar)"/>
+<rect class="hbar" style="--d:27s" x="-120" y="250" width="1340" height="1.5" fill="url(#hbar)"/>
+<rect class="hbar" style="--d:35s;animation-delay:-13s" x="-120" y="558" width="1340" height="1" fill="url(#hbar)"/>
+</g></svg></div>
+<div class="bg-scan" aria-hidden="true"></div><header class="site-head">
+  <a class="brand persist" href="/reactor-study/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
+  <nav>
+    <a href="/reactor-study/#tree">天赋树</a>
+    <a href="/reactor-study/lesson/N00.html">从这里开始</a>
+    <a href="/reactor-study/atlas.html">图鉴</a>
+    <button class="btn theme-toggle" data-theme-toggle><span class="tt-glyph" aria-hidden="true">◑</span><span class="tt-label">自动</span></button>
+  </nav>
+</header><main class="wrap" data-branch="converge">
+    <div class="hero">
+      <div class="nameplate"><span class="tag">C03</span>
+        <span>Anti-Goodhart Lab</span><span class="rule"></span>
+        <span class="rev">汇流 · REV.1</span></div>
+      <p class="bootline typing" style="margin:16px 0">SELF-TEST OK · REACTOR v1 · LOADING [ C03 ]…<span class="cursor"></span></p>
+      <h1>反 Goodhart 设计实验室</h1>
+      <p class="lede">既然指标必被博弈，怎么设计才扛得住。</p>
+      <div class="prereq-row">
+    <span class="label">前置</span> <a href="/reactor-study/lesson/B11.html">B11 必要多样性</a> <a href="/reactor-study/lesson/C02.html">C02 统一框架：七个杠杆</a>
+    <span class="label" style="margin-left:auto">解锁</span> <a href="/reactor-study/lesson/C07.html">C07 你的 Eval 事后剖析</a>
+  </div>
+    </div>
+    <article class="stack"><div class="read">
+<p>如果任何指标都会被腐蚀，是不是只能放弃测量？不是。这一节是全课最建设性的部分：既然指标必被博弈，就设计博弈成本高到不划算的评估体系。先说清天花板在哪，再说在天花板之下能做什么。</p>
+<p><strong>天花板是一条定理。</strong>Gibbard-Satterthwaite 定理证明，在一般域上不存在既有效又完全防操纵的聚合规则；Skalse 等 2022 年的机器学习版同向：除平凡情形外，任何一对不完全对齐的奖励几乎必然可被博弈。追求「不可被博弈的 eval」在数学上是死路。可行的目标只有四条有可证代价的退路：限制适用域、接受近似（把可博弈程度压到某个界内）、改变结构（比如让被评者无法给自己打分）、以及抬高博弈成本。这一节做的是最后一条。</p></div>
+<figure class="module reg" data-module="design-robust-eval" data-modname="design-robust-eval" data-modtype="sandbox">
+    <figcaption class="module-head"><span class="fig">FIG.01</span>
+      <span>抗博弈 eval 构建器</span><span class="spacer"></span>
+      <span class="mono">SANDBOX</span></figcaption>
+    <div class="module-body"><script type="application/json" class="mod-config">{}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
+  </figure><script type="module" src="/reactor-study/modules/design-robust-eval.js?v=5c5fd59c7d"></script>
+<div class="read">
+<p>沙盒里的关键规律：没有单一防御能挡住一切，是多层组合把博弈成本顶到不划算。每层防御堵一条特定通道：</p>
+<ul>
+<li><strong>held-out 与动态轮换</strong> 堵题目过拟合与污染（<code>Y02</code>、<code>Y03</code>）：让优化循环永远看不到、追不上。诚实提示：2026 年的系统研究显示藏题并不能阻止饱和，它买的是时间不是免疫。</li>
+<li><strong>配对指标制衡</strong> 堵维度窄化与风格刷分（<code>B09</code>、<code>Y08</code>）：几个互相拉扯的指标难被同时满足，也缓解 surrogation（<code>B07</code>）。上限来自 <code>B10</code>：只要真实价值是高维隐含的，任何有限维加权组合都有残余对齐缺口。</li>
+<li><strong>eval 与优化解耦</strong> 堵直接顶着边界爬（<code>C05</code>）：eval 只诊断，不驱动改模型。</li>
+<li><strong>随机人工抽检</strong> 堵不可测部分被无视（<code>B05</code>）：刻意去看 rubric 覆盖不到的维度。</li>
+<li><strong>承认容量约束</strong> 堵真实挤占（<code>B09</code>）：别把全部优化压力压在一个窄 eval 上。</li>
+<li><strong>评分逻辑对被评者不可见</strong>：METR 2025 年测得，同一模型在能看到评分函数的环境里作弊率是看不到时的 43 倍。这条有微观基础（<code>B12</code> 的策略性不透明是能从一阶条件推出的最优机制），不是行政偷懒。</li>
+</ul></div>
+<aside class="callout intuit"><span class="co-tag">// 直觉</span>
+<p><strong>最有价值的一条心法，不是「把作弊弄贵」，而是「先降低利益冲突」。</strong>cheap talk 传统证明，维持诚实所需的信号成本正比于评估者与被评估者之间的利益冲突：冲突为零时诚实免费，冲突越大才越需要昂贵。所以顺序应该是先想办法对齐利益（让 eval 的设计者自己要用这个 agent、让团队的奖励绑在真实效果而非榜面分上），再决定还需要多少成本去锁住剩余的冲突。另一条来自 <code>Y10</code> 的硬定理提醒你别指望纯技术方案：想让 eval 激励真改进而非刷分，必须解一个因果推断问题，弄清哪些可测行为因果地通向真实能力。最接近可行的做法是把评估当一连串干预：改变 eval 的构成，观察生态怎么响应，用响应反推因果结构。</p></aside>
+<aside class="callout myth"><span class="co-tag">// 讹传更正</span>
+<p><strong>抗博弈手段自己也会被 Goodhart，这不是俏皮话。</strong>三个实例：Dodd-Frank 要求证券化机构自留 5% 风险以保证切身利益，实践中这份风险可以被对冲掉；本意作为诊断探针的指标，一旦进了年度考核就退化回仪表盘（Klein 2025 对 NHS 的实证）；用来抓 gaming 的思维链监控，一旦纳入优化压力，模型就学会隐藏意图（<code>Y05</code>）。<strong>抗博弈是需要持续维护的制度纪律，不是一次性设计。</strong>把这条写进你的日程，而不只是写进文档。</p></aside>
+<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Gibbard-Satterthwaite 定理；Skalse et al. (2022). "Defining and Characterizing Reward Hacking." NeurIPS.</li><li>Bevan & Hood (2006)；Carter (1991)（tin openers vs dials）；METR (2025)（43× 可见度效应）。</li><li>Miller, Milli & Hardt (2020)（因果建模定理）；Crawford & Sobel (1982)（成本正比于冲突）。</li><li>综合 <code>research/06, 10, 14</code> 与 <code>research/deep/D7</code> §5。</li></ul></div></details></article>
+    <nav class="prereq-row" style="margin-top:48px">
+      <a class="btn" href="/reactor-study/#tree">← 返回天赋树</a>
+      <a class="btn btn-primary" href="/reactor-study/lesson/C07.html">下一个推荐 · 你的 Eval 事后剖析 →</a>
+    </nav>
+  </main><footer class="site-foot"><div class="wrap">
+  <span>REACTOR · 当尺子开始回看你 · 一部关于反应性的现场手册</span>
+  <span>self-hosted · no-react · v1</span>
+</div></footer><script type="module" src="/reactor-study/modules/boot.js?v=99169501ec"></script></body></html>

@@ -1,0 +1,60 @@
+/* ============================================================
+   REACTOR · animated background field (moving light bars + reactor ring)
+   fixed, behind everything, pointer-events none, theme/accent aware
+   ============================================================ */
+.bg-field{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none;
+  background:
+    radial-gradient(120% 90% at 50% -20%, color-mix(in srgb,var(--accent) 9%,transparent), transparent 55%),
+    radial-gradient(90% 70% at 100% 110%, color-mix(in srgb,var(--accent) 6%,transparent), transparent 60%);
+  contain:strict}
+.bg-svg{position:absolute;inset:-4% ; width:108%; height:108%}
+
+/* ── dotted perforation grid (its own layer so it can drift subtly) ── */
+.bg-dots{position:fixed;inset:0;z-index:-3;pointer-events:none;
+  background-image:radial-gradient(var(--dot) 1px, transparent 1.5px);
+  background-size:var(--dot-gap) var(--dot-gap);
+  mask-image:radial-gradient(120% 100% at 50% 0%, #000 55%, transparent 100%);
+  animation:dots-drift 60s linear infinite}
+@keyframes dots-drift{to{background-position:var(--dot-gap) var(--dot-gap)}}
+
+/* ── vertical sweeping light bars ── */
+.bar{opacity:0}
+.bar.v{animation:bar-sweep-v var(--d,22s) ease-in-out infinite}
+.bar.v2{animation:bar-sweep-v2 var(--d,28s) ease-in-out infinite}
+.hbar{animation:bar-sweep-h var(--d,26s) linear infinite}
+@keyframes bar-sweep-v{
+  0%{opacity:0;transform:translateX(-120px)}
+  15%{opacity:.55}45%{opacity:.15}
+  85%{opacity:.5}100%{opacity:0;transform:translateX(1200px)}}
+@keyframes bar-sweep-v2{
+  0%{opacity:0;transform:translateX(1300px)}
+  20%{opacity:.4}60%{opacity:.12}
+  100%{opacity:0;transform:translateX(-160px)}}
+@keyframes bar-sweep-h{
+  0%{opacity:0;transform:translateY(-80px)}
+  25%{opacity:.28}75%{opacity:.28}
+  100%{opacity:0;transform:translateY(900px)}}
+
+/* ── faint reactor ring, slow rotation ── */
+.reactor-ring{transform-origin:center;animation:ring-spin 120s linear infinite}
+.reactor-ring2{transform-origin:center;animation:ring-spin 90s linear infinite reverse}
+@keyframes ring-spin{to{transform:rotate(360deg)}}
+
+/* ── scanline shimmer over the whole page (very subtle) ── */
+.bg-scan{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.4;
+  background:repeating-linear-gradient(0deg,transparent 0 3px,
+    color-mix(in srgb,#000 6%,transparent) 3px 4px);
+  mix-blend-mode:overlay}
+:root[data-theme="light"] .bg-scan{opacity:.25;mix-blend-mode:multiply}
+
+@media (prefers-reduced-motion:reduce){
+  .bar,.hbar,.reactor-ring,.reactor-ring2,.bg-dots{animation:none}
+  .bar.v,.bar.v2{opacity:.18}
+}
+
+/* corner registration marks on major sections (engineering-drawing flourish) */
+.reg{position:relative}
+.reg::before,.reg::after{content:"";position:absolute;width:10px;height:10px;
+  border:1px solid var(--line-2);pointer-events:none}
+.reg::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
+.reg::after{bottom:-1px;right:-1px;border-left:0;border-top:0}

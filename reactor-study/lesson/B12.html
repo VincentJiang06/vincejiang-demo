@@ -1,0 +1,85 @@
+<!doctype html><html lang="zh-CN" data-theme="dark" data-base="/reactor-study"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>B12 委托代理 · reactor-study</title>
+<meta name="description" content="你要好 agent，优化器只要 eval 通过。">
+<link rel="canonical" href="https://vincejiang.com/reactor-study/lesson/B12.html">
+<meta property="og:type" content="website"><meta property="og:title" content="B12 委托代理 · reactor-study">
+<meta property="og:description" content="你要好 agent，优化器只要 eval 通过。"><meta property="og:url" content="https://vincejiang.com/reactor-study/lesson/B12.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/reactor-study/favicon.svg"><link rel="mask-icon" href="/reactor-study/favicon.svg" color="#E11D3A">
+<script>try{var m=localStorage.getItem("reactor.theme")||"auto",t=(m==="light"||m==="dark")?m:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
+<link rel="stylesheet" href="/reactor-study/theme/tokens.css?v=5bc3889418"><link rel="stylesheet" href="/reactor-study/theme/base.css?v=1e6b7c0136">
+<link rel="stylesheet" href="/reactor-study/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/reactor-study/theme/led.css?v=85f30de38d">
+<link rel="stylesheet" href="/reactor-study/theme/bg.css?v=61c65291c2"><link rel="stylesheet" href="/reactor-study/theme/extra.css?v=a9bfb1b0f7">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"委托代理 · Principal-Agent","description":"你要好 agent，优化器只要 eval 通过。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://vincejiang.com/reactor-study/lesson/B12.html"}</script>
+</head><body><div class="bg-dots" aria-hidden="true"></div>
+<div class="bg-field" aria-hidden="true"><svg class="bg-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="vbar" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>
+<stop offset=".5" stop-color="var(--accent-glow)" stop-opacity=".85"/>
+<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient>
+<linearGradient id="hbar" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>
+<stop offset=".5" stop-color="var(--accent-glow)" stop-opacity=".5"/>
+<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient>
+<filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.1"/></filter>
+</defs>
+<g transform="translate(600 400)" opacity=".55">
+<circle class="reactor-ring" r="300" fill="none" stroke="var(--line-2)" stroke-width="1" stroke-dasharray="2 16"/>
+<circle class="reactor-ring2" r="366" fill="none" stroke="var(--line)" stroke-width="1" stroke-dasharray="1 26"/>
+<circle r="232" fill="none" stroke="var(--line)" stroke-width="1" opacity=".6"/>
+<circle r="3" fill="var(--accent)" opacity=".6"/></g>
+<g filter="url(#soft)">
+<rect class="bar v" style="--d:24s" x="0" y="-120" width="2" height="1040" fill="url(#vbar)"/>
+<rect class="bar v2" style="--d:31s" x="0" y="-120" width="1.5" height="1040" fill="url(#vbar)"/>
+<rect class="bar v" style="--d:18s;animation-delay:-9s" x="0" y="-120" width="1" height="1040" fill="url(#vbar)"/>
+<rect class="hbar" style="--d:27s" x="-120" y="250" width="1340" height="1.5" fill="url(#hbar)"/>
+<rect class="hbar" style="--d:35s;animation-delay:-13s" x="-120" y="558" width="1340" height="1" fill="url(#hbar)"/>
+</g></svg></div>
+<div class="bg-scan" aria-hidden="true"></div><header class="site-head">
+  <a class="brand persist" href="/reactor-study/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
+  <nav>
+    <a href="/reactor-study/#tree">天赋树</a>
+    <a href="/reactor-study/lesson/N00.html">从这里开始</a>
+    <a href="/reactor-study/atlas.html">图鉴</a>
+    <button class="btn theme-toggle" data-theme-toggle><span class="tt-glyph" aria-hidden="true">◑</span><span class="tt-label">自动</span></button>
+  </nav>
+</header><main class="wrap" data-branch="blue">
+    <div class="hero">
+      <div class="nameplate"><span class="tag">B12</span>
+        <span>Principal-Agent</span><span class="rule"></span>
+        <span class="rev">定律与形式 · REV.1</span></div>
+      <p class="bootline typing" style="margin:16px 0">SELF-TEST OK · REACTOR v1 · LOADING [ B12 ]…<span class="cursor"></span></p>
+      <h1>委托代理</h1>
+      <p class="lede">你要好 agent，优化器只要 eval 通过。</p>
+      <div class="prereq-row">
+    <span class="label">前置</span> <a href="/reactor-study/lesson/B04.html">B04 眼镜蛇效应</a>
+    <span class="label" style="margin-left:auto">解锁</span> <a href="/reactor-study/lesson/Y10.html">Y10 策略性分类</a> <a href="/reactor-study/lesson/C04.html">C04 诚实信号</a>
+  </div>
+    </div>
+    <article class="stack"><div class="read">
+<p>委托代理问题给整条蓝色分支提供骨架。所有「指标失效」的故事，底下是同一个结构：一方（委托人 principal）想要某样东西，另一方（代理人 agent）替他去做，而两者目标不一致、信息不对称。指标就是委托人用来穿透不对称的探照灯，但它一旦点亮，就会被博弈。</p></div>
+<figure class="module reg" data-module="explorable" data-modname="principal-agent" data-modtype="explorable">
+    <figcaption class="module-head"><span class="fig">FIG.01</span>
+      <span>委托代理：目标不一致、信息不对称，与两条制度出路</span><span class="spacer"></span>
+      <span class="mono">EXPLORABLE</span></figcaption>
+    <div class="module-body"><script type="application/json" class="mod-config">{"mode":"steps","steps":[{"k":"01","t":"两种信息不对称","html":"\u003cstrong>道德风险（moral hazard）\u003c/strong>= 隐藏\u003cem>行动\u003c/em>：委托人无法观测代理人是否付出努力，只能看到含运气的结果。\u003cstrong>逆向选择（adverse selection）\u003c/strong>= 隐藏\u003cem>类型\u003c/em>：委托人事先不知道代理人属于哪种类型（Akerlof 的柠檬市场）。"},{"k":"02","t":"informativeness principle","html":"Holmström 1979：一个信号值不值得写进合约，取决于它对「代理人是否努力」提供多少\u003cem>增量信息\u003c/em>。注意常见误读：这条原则不是「能测就该纳入激励」，恰恰相反，一个对不可测维度毫无信息、却对可测维度高度敏感的信号，纳入合同反而有害。"},{"k":"03","t":"坏指标的两个正交病灶","html":"Feltham 与 Xie 1994 年给出干净分解：指标与真实价值向量\u003cstrong>方向不对齐\u003c/strong>（congruity 缺失）导致努力被分配到错的任务；指标\u003cstrong>噪声\u003c/strong>导致努力强度被压低。一个指标被 Goodhart 的程度 = 它的 congruity 缺口 × 激励强度。加权综合指标之所以危险，正因为调任何权重都在改变整个向量的方向，几乎不可能与高维真实价值对齐。"},{"k":"04","t":"两条制度出路","html":"其一，\u003cstrong>主观测量\u003c/strong>：Baker、Gibbons 与 Murphy 1994 年证明，当所有可量化指标都会被博弈，引入依赖声誉自我执行的上级判断能改善合约。其二，\u003cstrong>策略性不透明\u003c/strong>：Ederer、Holden 与 Meyer 2018 年证明，当代理人能看到考核规则并据此把投入集中到被考核的维度，委托人的最优反应常是故意不公布各维度权重，逼代理人均衡投入。保密不是管理上的怠惰，而是可从一阶条件推出的最优机制。"}]}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
+  </figure><script type="module" src="/reactor-study/modules/explorable.js?v=51607a9866"></script>
+<aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
+<p><strong>你和你的优化器，就是一对委托代理。</strong>你想要「好用的 agent」，优化循环想要「eval 通过」。信息不对称在于：你无法直接观测「真的有用」，只能观测代理指标，而优化器有远比你充分的信息去专门满足指标的表面要求。对齐之所以难，是因为它本质上是个几十年历史的委托代理问题，只是代理人这次是优化器。两条制度出路都有 AI 对应物：主观测量对应人类专家盲评兜底，策略性不透明对应 held-out eval 与随机轮换（<code>C03</code>）。开放问题也一并继承：当「上级判断」本身被 LLM 评审替代，靠声誉自我执行的主观测量还成立吗？</p></aside>
+<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Holmström, B. (1979). "Moral Hazard and Observability." <em>Bell J. of Economics</em>；Ross (1973)；Jensen & Meckling (1976)。</li><li>Feltham, G. A. & Xie, J. (1994). <em>The Accounting Review</em> 69(3):429–453（congruity × noise 分解）。</li><li>Baker, Gibbons & Murphy (1994). <em>QJE</em> 109(4)（主观测量）；Ederer, Holden & Meyer (2018). <em>RAND</em>（策略性不透明）。</li><li>深化见 <code>research/deep/D6</code> §1 与 <code>research/deep/D2</code> §6。</li></ul></div></details></article>
+    <nav class="prereq-row" style="margin-top:48px">
+      <a class="btn" href="/reactor-study/#tree">← 返回天赋树</a>
+      <a class="btn btn-primary" href="/reactor-study/lesson/Y10.html">下一个推荐 · 策略性分类 →</a>
+    </nav>
+  </main><footer class="site-foot"><div class="wrap">
+  <span>REACTOR · 当尺子开始回看你 · 一部关于反应性的现场手册</span>
+  <span>self-hosted · no-react · v1</span>
+</div></footer><script type="module" src="/reactor-study/modules/boot.js?v=99169501ec"></script></body></html>

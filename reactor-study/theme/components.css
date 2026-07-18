@@ -1,0 +1,142 @@
+/* ============================================================
+   REACTOR · Components (见 course/DESIGN-SYSTEM.md §4)
+   ============================================================ */
+
+/* ── 4.1 Nameplate 铭牌 ── */
+.nameplate{display:flex;align-items:center;gap:calc(var(--u)*1.5);
+  font-family:var(--font-mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--text-2)}
+.nameplate .tag{display:inline-flex;align-items:center;gap:.4em;
+  padding:.2em .55em;border:1px solid var(--line-2);border-radius:var(--radius);
+  color:var(--accent)}
+.nameplate .rule{flex:1;height:1px;background:
+  repeating-linear-gradient(90deg,var(--line) 0 6px,transparent 6px 10px)}
+.nameplate .rev{color:var(--text-mute)}
+
+/* ── 4.3 Glass panel 玻璃面板（暴露结构：四角螺丝孔）── */
+.glass{position:relative;background:var(--glass-bg);
+  backdrop-filter:blur(var(--blur)) saturate(1.15);
+  -webkit-backdrop-filter:blur(var(--blur)) saturate(1.15);
+  border:1px solid var(--glass-brd);border-radius:var(--radius-panel);
+  padding:calc(var(--u)*3.5)}
+.glass::before{content:"";position:absolute;inset:0 0 auto 0;height:1px;border-radius:inherit;
+  background:linear-gradient(90deg,transparent,var(--glass-hi),transparent)}
+/* 四角螺丝孔 */
+.glass.bolted::after{content:"";position:absolute;inset:8px;pointer-events:none;border-radius:2px;
+  background:
+    radial-gradient(circle 2px at 0 0,var(--line-2) 98%,transparent) 0 0/8px 8px no-repeat,
+    radial-gradient(circle 2px at 100% 0,var(--line-2) 98%,transparent) 100% 0/8px 8px no-repeat,
+    radial-gradient(circle 2px at 0 100%,var(--line-2) 98%,transparent) 0 100%/8px 8px no-repeat,
+    radial-gradient(circle 2px at 100% 100%,var(--line-2) 98%,transparent) 100% 100%/8px 8px no-repeat}
+
+/* ── Buttons ── */
+.btn{display:inline-flex;align-items:center;gap:.6em;
+  font-family:var(--font-mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text);background:transparent;border:1px solid var(--line-2);
+  border-radius:var(--radius);padding:.7em 1.1em;cursor:pointer;
+  transition:border-color .15s,color .15s,background .15s}
+.btn:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.btn-primary{border-color:var(--accent);color:var(--accent);
+  box-shadow:0 0 0 1px color-mix(in srgb,var(--accent) 40%,transparent) inset,
+             0 0 16px color-mix(in srgb,var(--accent-glow) 30%,transparent)}
+.btn-primary:hover{background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.btn .arrow{font-family:var(--font-mono)}
+
+/* ── 4.8 Callout 旁注块（三型）── */
+.callout{position:relative;border-left:2px solid var(--accent);
+  background:color-mix(in srgb,var(--accent) 7%,transparent);
+  padding:calc(var(--u)*2) calc(var(--u)*2.5);border-radius:0 var(--radius) var(--radius) 0;
+  margin:calc(var(--u)*3) 0;font-size:.96rem}
+.callout .co-tag{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.5em}
+.callout.myth   {--accent:var(--red);--accent-glow:var(--red-glow)}
+.callout.intuit {--accent:var(--blue);--accent-glow:var(--blue-glow)}
+.callout.applied{--accent:var(--yellow);--accent-glow:var(--yellow-glow)}
+
+/* ── 4.4 LED readout 读出屏 ── */
+.readout{font-family:var(--font-mono);background:var(--bg-2);
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:calc(var(--u)*1.5) calc(var(--u)*2);color:var(--accent);
+  text-shadow:0 0 8px color-mix(in srgb,var(--accent-glow) 40%,transparent);position:relative;overflow:hidden}
+.readout::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(0deg,transparent 0 2px,color-mix(in srgb,var(--text) 8%,transparent) 2px 3px)}
+:root[data-theme="light"] .readout{text-shadow:none}
+.readout .big{font-size:1.8rem;font-weight:700;letter-spacing:.04em}
+
+/* ── 4.5 Toggle bank 拨杆组（主题/参数切换）── */
+.toggle-bank{display:inline-flex;gap:2px;border:1px solid var(--line-2);
+  border-radius:var(--radius);padding:2px;background:var(--bg-2)}
+.toggle-bank button{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--text-2);background:transparent;border:0;
+  padding:.45em .7em;cursor:pointer;border-radius:1px;transition:.15s}
+.toggle-bank button[aria-pressed="true"]{color:var(--bg);background:var(--accent)}
+
+/* ── Module frame（交互模块的仪器外壳）── */
+.module{position:relative;border:1px solid var(--line);border-radius:var(--radius-panel);
+  background:var(--bg-2);margin:calc(var(--u)*4) 0;overflow:hidden}
+/* engineering registration ticks in the corners */
+.module::before,.module::after{content:"";position:absolute;width:12px;height:12px;z-index:2;
+  border:1px solid var(--accent);opacity:.55;pointer-events:none}
+.module::before{top:6px;left:6px;border-right:0;border-bottom:0}
+.module::after{bottom:6px;right:6px;border-left:0;border-top:0}
+.module>.module-head{display:flex;align-items:center;gap:calc(var(--u)*1.5);
+  padding:calc(var(--u)*1.5) calc(var(--u)*2);border-bottom:1px solid var(--line);
+  font-family:var(--font-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text-2);background:var(--panel)}
+.module>.module-head::before{content:"";width:7px;height:7px;border-radius:50%;
+  background:var(--accent);box-shadow:0 0 6px var(--accent-glow),0 0 12px var(--accent-glow);
+  animation:led-pulse 2.4s ease-in-out infinite;flex:none}
+.module>.module-head .fig{color:var(--accent)}
+.module>.module-head .spacer{flex:1}
+.module .module-body{padding:calc(var(--u)*3)}
+.module .controls{display:flex;flex-wrap:wrap;gap:calc(var(--u)*2.5) calc(var(--u)*4);
+  align-items:flex-end;margin-bottom:calc(var(--u)*2)}
+.control{display:flex;flex-direction:column;gap:.5em;min-width:150px}
+.control label{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--text-2);display:flex;justify-content:space-between}
+.control label .val{color:var(--accent)}
+.control input[type=range]{-webkit-appearance:none;appearance:none;height:3px;
+  background:var(--line-2);border-radius:2px;outline:none}
+.control input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;
+  border-radius:50%;background:var(--accent);cursor:pointer;
+  box-shadow:0 0 8px var(--accent-glow)}
+.control input[type=range]::-moz-range-thumb{width:14px;height:14px;border:0;border-radius:50%;
+  background:var(--accent);cursor:pointer;box-shadow:0 0 8px var(--accent-glow)}
+.module canvas{width:100%;background:var(--bg-2);border-radius:var(--radius)}
+.module .legend{display:flex;flex-wrap:wrap;gap:calc(var(--u)*2);margin-top:var(--u);
+  font-family:var(--font-mono);font-size:.68rem;color:var(--text-2)}
+.module .legend .k{display:inline-flex;align-items:center;gap:.4em}
+.module .legend .k::before{content:"";width:10px;height:2px;background:var(--_k,currentColor)}
+.noscript-fallback{padding:calc(var(--u)*3);color:var(--text-2);font-size:.9rem}
+
+/* ── Hero（首页/课程头）── */
+.hero{padding-block:calc(var(--u)*8) calc(var(--u)*5)}
+.hero .kicker{margin-bottom:calc(var(--u)*2)}
+.hero .lede{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--text-2);max-width:60ch;
+  margin-top:calc(var(--u)*3)}
+
+/* ── 面包屑 / 前后节点 ── */
+.prereq-row{display:flex;flex-wrap:wrap;gap:calc(var(--u)*1.5);align-items:center;
+  font-family:var(--font-mono);font-size:.72rem;color:var(--text-2)}
+.prereq-row a{padding:.3em .6em;border:1px solid var(--line);border-radius:var(--radius)}
+
+/* ── 卡片网格（分支页/案例）── */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:calc(var(--u)*2)}
+.card{border:1px solid var(--line);border-radius:var(--radius-panel);padding:calc(var(--u)*2.5);
+  background:var(--card);transition:border-color .15s,transform .15s}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.card .num{font-family:var(--font-mono);font-size:.7rem;color:var(--accent);letter-spacing:.12em}
+.card h3{margin:.4em 0 .3em}
+.card p{font-size:.86rem;color:var(--text-2);margin:0}
+
+.theme-toggle{gap:.5em;padding:.55em .8em}
+.theme-toggle .tt-label{letter-spacing:.1em}
+
+@media (max-width:720px){
+  /* 以前这里把导航整条藏了，图鉴在手机上就此无路可达。改成换行 + 收紧字号 */
+  .site-head{flex-wrap:wrap;gap:var(--u) calc(var(--u)*1.5)}
+  .site-head nav{margin-left:auto;gap:calc(var(--u)*1.75);font-size:.9em}
+  .site-head nav a{font-size:.66rem;letter-spacing:.1em}
+  .theme-toggle{padding:.5em .6em}
+  .module .controls{gap:var(--u) calc(var(--u)*2)}
+}

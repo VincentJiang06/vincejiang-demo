@@ -1,0 +1,12 @@
+.atlas-table{width:100%;border-collapse:collapse;font-size:.9rem}
+.atlas-table th,.atlas-table td{text-align:left;padding:.6em .8em;border-bottom:1px solid var(--line)}
+.atlas-table th{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-2)}
+.atlas-table.myths td{font-size:.86rem;vertical-align:top}
+.atlas-table.myths td:first-child{color:var(--text);font-weight:700}
+.glossary{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2px 24px;margin:0}
+.glossary .gl{padding:12px 0;border-bottom:1px solid var(--line)}
+.glossary dt{font-family:var(--font-mono);font-size:.82rem;color:var(--accent);margin-bottom:4px}
+.glossary dd{margin:0;font-size:.9rem;color:var(--text-2);line-height:1.55}
+.stub{color:var(--text-mute)}
+details.sources{margin-top:24px;border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px}
+details.sources summary{cursor:pointer}
