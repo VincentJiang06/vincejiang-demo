@@ -247,10 +247,10 @@ function init(vp, mode) {
     apply();
   }, { passive: false });
 
-  vp.querySelector("[data-tree-fit]")?.addEventListener("click", fit);
-  vp.querySelector("[data-tree-zin]")?.addEventListener("click", () => zoomBy(1.25));
-  vp.querySelector("[data-tree-zout]")?.addEventListener("click", () => zoomBy(0.8));
-  vp.querySelector("[data-tree-reset-progress]")?.addEventListener("click", () => {
+  document.querySelector("[data-tree-fit]")?.addEventListener("click", fit);
+  document.querySelector("[data-tree-zin]")?.addEventListener("click", () => zoomBy(1.25));
+  document.querySelector("[data-tree-zout]")?.addEventListener("click", () => zoomBy(0.8));
+  document.querySelector("[data-tree-reset-progress]")?.addEventListener("click", () => {
     if (confirm("重置学习进度？")) { progress.clear(); refreshAll(); }
   });
   document.querySelectorAll("[data-jump]").forEach(b =>

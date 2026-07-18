@@ -19,16 +19,11 @@ const SITE = process.env.SITE || "https://reactor.study";
 const tree = JSON.parse(await readFile(path.join(ROOT, "content/tree.json"), "utf8"));
 const byId = Object.fromEntries(tree.nodes.map(n => [n.id, n]));
 
-/* ---- talent-tree auto-layout (branch columns × tier rows) ----
-   Column x is derived from each branch's widest tier, so branches can never
-   collide; tiers wider than MAX_PER_ROW wrap into stacked sub-rows. */
-const ROW_H = 244, COL_W = 190, SUB_DY = 106;
-const CHIP_W = 132, MAX_PER_ROW = 4, GUTTER = 150, CONV_OFFSET_TIERS = 1;
-const rowsOf = len => Math.ceil(len / MAX_PER_ROW);
-const perRowOf = len => Math.ceil(len / rowsOf(len));
-/* v3 布局：四条色支横排（红|蓝|黄|绿），root 与南区（case 案例带 + converge 汇流）
-   在整体跨度的水平中心；南区两支共用一套纵深刻度——case/converge 节点的 tier
-   从 1 起排在色支最深 tier 之下。 */
+/* ---- talent-tree auto-layout v3.2（从头重建）----
+   规则：一个 tier 一行，绝不折行（tree.json 保证每支每 tier ≤4，超了在这里直接报错）；
+   四条色支横排（红|蓝|黄|绿），列宽由该支最宽的一行决定；root 与南区（case/converge）
+   在整体跨度的水平中心；南区 tier 从 1 起排在色支最深行之下。层级即行号，所见即依赖深度。 */
+const ROW_H = 270, COL_W = 210, CHIP_W = 132, GUTTER = 190, SOUTH_GAP_ROWS = 1.25;
 const SOUTH = new Set(["case", "converge"]);
 function layout() {
   const groups = {};
@@ -36,11 +31,14 @@ function layout() {
     const key = n.branch + ":" + n.tier;
     (groups[key] ||= []).push(n);
   }
-  // half-width each branch needs at its widest tier, chip edge included
+  for (const [key, arr] of Object.entries(groups))
+    if (arr.length > 4 && key.split(":")[0] !== "root")
+      throw new Error(`布局纪律：${key} 有 ${arr.length} 个节点（上限 4）——去 tree.json 重排该行`);
+  // 每支列宽 = 最宽一行的半宽（含芯片边缘）
   const halfW = {};
   for (const [key, arr] of Object.entries(groups)) {
     const branch = key.split(":")[0];
-    const half = (perRowOf(arr.length) - 1) / 2 * COL_W + CHIP_W / 2;
+    const half = (arr.length - 1) / 2 * COL_W + CHIP_W / 2;
     halfW[branch] = Math.max(halfW[branch] || 0, half);
   }
   const BRANCH_X = { blue: 0 };
@@ -49,30 +47,25 @@ function layout() {
   BRANCH_X.green = BRANCH_X.yellow + (halfW.yellow || 0) + GUTTER + (halfW.green || 0);
   const spanL = BRANCH_X.red - (halfW.red || 0), spanR = BRANCH_X.green + (halfW.green || 0);
   const center = (spanL + spanR) / 2;
-  BRANCH_X.root = center;
-  BRANCH_X.case = center;
-  BRANCH_X.converge = center;
+  BRANCH_X.root = center; BRANCH_X.case = center; BRANCH_X.converge = center;
 
   const maxBranchTier = Math.max(...tree.nodes.filter(n => !SOUTH.has(n.branch)).map(n => n.tier));
   for (const [key, arr] of Object.entries(groups)) {
     const [branch, tierStr] = key.split(":");
     const tier = +tierStr;
     arr.sort((a, b) => a.id.localeCompare(b.id));
-    const rows = rowsOf(arr.length), perRow = perRowOf(arr.length);
     const baseY = SOUTH.has(branch)
-      ? (maxBranchTier + CONV_OFFSET_TIERS + (tier - 1)) * ROW_H
+      ? (maxBranchTier + SOUTH_GAP_ROWS + (tier - 1)) * ROW_H
       : tier * ROW_H;
     arr.forEach((n, i) => {
-      const r = Math.floor(i / perRow), j = i - r * perRow;
-      const inRow = Math.min(perRow, arr.length - r * perRow);
-      n.x = BRANCH_X[branch] + (j - (inRow - 1) / 2) * COL_W;
-      n.y = baseY + (r - (rows - 1) / 2) * SUB_DY;
+      n.x = BRANCH_X[branch] + (i - (arr.length - 1) / 2) * COL_W;
+      n.y = baseY;
     });
   }
   const xs = tree.nodes.map(n => n.x), ys = tree.nodes.map(n => n.y);
   return {
-    minX: Math.min(...xs) - 120, maxX: Math.max(...xs) + 120,
-    minY: Math.min(...ys) - 90, maxY: Math.max(...ys) + 110
+    minX: Math.min(...xs) - 130, maxX: Math.max(...xs) + 130,
+    minY: Math.min(...ys) - 100, maxY: Math.max(...ys) + 120
   };
 }
 const bounds = layout();
@@ -162,7 +155,7 @@ function siteHead({ home = false } = {}) {
 function siteFoot() {
   return `<footer class="site-foot"><div class="wrap">
   <span>REACTOR · 当尺子开始回看你 · 一部关于反应性的现场手册</span>
-  <span>self-hosted · no-react · v${tree.meta.version}</span>
+  <span>self-hosted · no-react</span>
 </div></footer><script type="module" src="/modules/boot.js"></script></body></html>`;
 }
 
@@ -283,23 +276,23 @@ function homePage() {
     + `<main class="tree-full" data-branch="root">
   <section class="tree-intro glass bolted">
     <div class="nameplate"><span class="tag">REACTOR</span><span>互动课程</span>
-      <span class="rule"></span><span class="rev">v${tree.meta.version} · ${tree.nodes.length} 节点</span></div>
-    <h1>当指标成为目标，<br>一切开始失灵</h1>
+      <span class="rule"></span><span class="rev">${tree.nodes.length} 节点</span></div>
+    <h1>当指标成为目标，一切开始失灵</h1>
     <p class="lede">排名会反过来改造被排名的世界，AI 评测会被模型反向博弈。这门免费课程把这件事
-    从社会学、经济学讲到 AI 前沿：每个节点是一节十分钟的短课，配一个能上手玩的小实验。</p>
+    从社会学讲到 AI 前沿：每节点一门十分钟短课，配一个能上手玩的小实验。</p>
     <nav class="intro-map" aria-label="内容总览">${introMap()}</nav>
     <div class="intro-cta">
       <a class="btn btn-primary" href="/lesson/N00.html">从第一课开始 →</a>
-      <a class="btn" href="/atlas.html">全部节点一览</a>
+      <a class="btn" href="/atlas.html">图鉴</a>
     </div>
-    <p class="intro-hint">右边就是完整课程地图 · 拖动平移 · 点亮的是推荐下一步</p>
+    <div class="intro-spacer"></div>
+    <div class="intro-controls" aria-label="地图控制">
+      <button data-tree-zout aria-label="缩小">−</button><button data-tree-zin aria-label="放大">+</button>
+      <button data-tree-fit>适配全图</button><button data-tree-reset-progress>重置进度</button>
+    </div>
+    <p class="intro-hint">右边是完整课程地图 · 拖动平移 · 点亮的是推荐下一步</p>
   </section>
   <div class="tree-viewport" id="tree-viewport" data-mode="full">
-    
-    <div class="tree-hud">
-      <button data-tree-zout aria-label="缩小">−</button><button data-tree-zin aria-label="放大">+</button>
-      <button data-tree-fit>适配</button><button data-tree-reset-progress>重置进度</button>
-    </div>
     <noscript><div class="noscript-fallback">天赋树需要 JavaScript。你可以直接从
       <a href="/lesson/N00.html">根节点</a>顺序阅读，或从<a href="/atlas.html">图鉴</a>进入各节点。</div></noscript>
   </div>

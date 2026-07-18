@@ -5,7 +5,7 @@
    连线 = 正交电路走线：从前置芯片下边缘出发，借行间「走廊」水平横穿，再垂直落到
    目标芯片上边缘；同支实线、跨支虚线，默认压暗，悬停节点时相关线路点亮。 */
 import { progress } from "/modules/boot.js?v=340ed36aa6";
-import { TREE } from "/modules/tree-data.js?v=68e0eae061";
+import { TREE } from "/modules/tree-data.js?v=bc62746ef7";
 
 const HALF_H = 40;         // full 模式芯片可视半高（连线端点吸附用）
 const BAND = 44;           // 行带半高：同一行芯片占据 y±BAND，行带之间即走廊
@@ -247,10 +247,10 @@ function init(vp, mode) {
     apply();
   }, { passive: false });
 
-  vp.querySelector("[data-tree-fit]")?.addEventListener("click", fit);
-  vp.querySelector("[data-tree-zin]")?.addEventListener("click", () => zoomBy(1.25));
-  vp.querySelector("[data-tree-zout]")?.addEventListener("click", () => zoomBy(0.8));
-  vp.querySelector("[data-tree-reset-progress]")?.addEventListener("click", () => {
+  document.querySelector("[data-tree-fit]")?.addEventListener("click", fit);
+  document.querySelector("[data-tree-zin]")?.addEventListener("click", () => zoomBy(1.25));
+  document.querySelector("[data-tree-zout]")?.addEventListener("click", () => zoomBy(0.8));
+  document.querySelector("[data-tree-reset-progress]")?.addEventListener("click", () => {
     if (confirm("重置学习进度？")) { progress.clear(); refreshAll(); }
   });
   document.querySelectorAll("[data-jump]").forEach(b =>

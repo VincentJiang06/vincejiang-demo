@@ -81,26 +81,41 @@
 .tree-full{position:relative}
 .tree-full .tree-viewport{height:calc(100dvh - var(--headh));border:0;border-radius:0;
   background-color:var(--bg);touch-action:none}
-.tree-intro{position:absolute;left:clamp(16px,3vw,40px);top:clamp(16px,3vh,32px);z-index:6;
-  width:min(430px,calc(100vw - 32px))}
-.tree-intro h1{font-size:clamp(1.35rem,1.9vw,1.7rem);line-height:1.25;margin:.5em 0 .35em}
-.tree-intro .lede{font-size:.86rem;line-height:1.7;color:var(--text-2);margin:0 0 1em}
-/* 内容总览：六行分支导览=图例+跳转+内容说明三合一（层级：名称>节数>说明）*/
-.intro-map{display:block;margin:0 0 1.1em;border-bottom:1px solid var(--line)}
-.im-row{display:flex;align-items:center;gap:.55em;width:100%;background:none;border:0;
-  border-top:1px solid var(--line);padding:.5em 2px;cursor:pointer;text-align:left;
+/* 介绍卡：窄长竖栏，贴视口上下边；地图控制钮并入卡底（树=绝对核心,卡=它的仪表柱）*/
+.tree-intro{position:absolute;left:clamp(14px,2vw,28px);top:14px;
+  bottom:14px;z-index:6;width:min(330px,calc(100vw - 28px));
+  display:flex;flex-direction:column;overflow-y:auto;overscroll-behavior:contain}
+.tree-intro h1{font-size:1.24rem;line-height:1.35;margin:.55em 0 .4em}
+.tree-intro .lede{font-size:.8rem;line-height:1.68;color:var(--text-2);margin:0 0 .9em}
+/* 内容总览：两行式分支导览=图例+跳转+说明三合一（窄栏下说明退居第二行）*/
+.intro-map{display:block;margin:0 0 1em;border-bottom:1px solid var(--line)}
+.im-row{display:grid;grid-template-columns:auto auto 1fr;align-items:center;
+  column-gap:.55em;row-gap:.15em;width:100%;background:none;border:0;
+  border-top:1px solid var(--line);padding:.45em 2px;cursor:pointer;text-align:left;
   font-family:inherit;color:var(--text-2);transition:background .12s,color .12s}
 .im-row:hover{background:color-mix(in srgb,var(--text) 6%,transparent);color:var(--text)}
-.im-dot{width:9px;height:9px;border-radius:2px;flex:none}
-.im-name{font-weight:700;font-size:.82rem;color:var(--text);flex:none}
-.im-n{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.08em;color:var(--text-mute);flex:none}
-.im-desc{margin-left:auto;font-size:.72rem;color:var(--text-mute);text-align:right}
+.im-dot{width:9px;height:9px;border-radius:2px}
+.im-name{font-weight:700;font-size:.8rem;color:var(--text)}
+.im-n{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.08em;
+  color:var(--text-mute);justify-self:end}
+.im-desc{grid-column:2 / -1;font-size:.7rem;color:var(--text-mute)}
 .im-row:hover .im-desc{color:var(--text-2)}
-.tree-intro .intro-cta{display:flex;flex-wrap:wrap;gap:calc(var(--u)*1.5)}
-.tree-intro .intro-hint{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.1em;
-  color:var(--text-mute);margin:1.2em 0 0}
+.tree-intro .intro-cta{display:flex;flex-wrap:wrap;gap:calc(var(--u)*1.25)}
+.tree-intro .intro-cta .btn{font-size:.68rem;padding:.6em .9em}
+.intro-spacer{flex:1;min-height:12px}
+/* 地图控制钮（原浮动 HUD 收编进卡底）*/
+.intro-controls{display:flex;gap:6px;border-top:1px solid var(--line);
+  padding-top:10px;font-family:var(--font-mono)}
+.intro-controls button{background:color-mix(in srgb,var(--bg-2) 90%,transparent);
+  border:1px solid var(--glass-brd);color:var(--text-2);border-radius:var(--radius);
+  font-family:var(--font-mono);font-size:.64rem;letter-spacing:.06em;
+  padding:.45em .7em;cursor:pointer;min-width:30px}
+.intro-controls button:hover{color:var(--accent);border-color:var(--accent)}
+.tree-intro .intro-hint{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.08em;
+  color:var(--text-mute);margin:.8em 0 0}
 @media (max-width:860px){
-  .tree-intro{position:static;width:auto;margin:12px 12px 0}
+  .tree-intro{position:static;width:auto;margin:12px 12px 0;bottom:auto;overflow:visible}
+  .intro-spacer{display:none}
   .tree-full .tree-viewport{height:min(66dvh,640px)}
 }
 
