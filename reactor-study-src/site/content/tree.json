@@ -999,7 +999,8 @@
       "module": "static:cheaptalk",
       "sources": [
         "10",
-        "06"
+        "06",
+        "D7"
       ],
       "hook": "说话不要钱，所以承诺不值钱。"
     },
@@ -1015,7 +1016,8 @@
       "module": "static:regression",
       "sources": [
         "06",
-        "D2"
+        "D2",
+        "D6"
       ],
       "hook": "榜首回落不需要任何阴谋，数学自己就会这么干。"
     },

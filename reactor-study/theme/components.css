@@ -360,3 +360,23 @@ mark.hl-b{background:color-mix(in srgb,var(--green) 20%,transparent);color:var(-
 @media (prefers-reduced-motion:reduce){
   .prov-card .fc-inner,.stage .stage-inner,.shutter,.contrast,.prov-chain{transition:none}
 }
+
+/* ============================================================
+   W11b · 招牌定制模拟器升级
+   （predict 门直接复用上方 explorable 三段式的样式类；
+    这里只补 stepper 讲解面板与「当前杠杆」聚焦高亮。
+    动画纪律不变：只有颜色/阴影参与 .15s 过渡，无布局位移。）
+   ============================================================ */
+
+/* ── step-note：stepper 讲解面板 / 分步论证的旁白框 ── */
+.step-note{margin-top:calc(var(--u)*2);border:1px solid var(--line);border-radius:var(--radius-panel);
+  background:var(--panel);padding:calc(var(--u)*2);font-size:.88rem;color:var(--text-2);line-height:1.7}
+.step-note .label{color:var(--accent);display:block;margin-bottom:8px}
+.step-note p{margin:.35em 0}
+.step-note .case-line{border-top:1px dashed var(--line);margin-top:10px;padding-top:10px}
+
+/* ── lever-focus：stepper 正在讲解的那根滑块（box-shadow 假 padding，零布局位移）── */
+.control.lever-focus{background:color-mix(in srgb,var(--accent) 8%,transparent);
+  box-shadow:0 0 0 6px color-mix(in srgb,var(--accent) 8%,transparent);border-radius:var(--radius);
+  transition:background .15s,box-shadow .15s}
+.control.lever-focus label{color:var(--accent)}

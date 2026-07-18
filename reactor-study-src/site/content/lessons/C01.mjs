@@ -2,7 +2,12 @@ export default {
   id: "C01",
   blocks: [
     { t: "prose", html: `
-<p>reactivity、performativity、looping effects、legibility、audit culture 这五个概念指向的不是同一件事。区别在于谁是能动的主体：reactivity 的主体是被测量者，performativity 的主体是理论本身，looping effects 的主体是分类与被分类者构成的双向回路，legibility 的主体是要把世界读简单的中心，audit culture 的主体则是审计这套仪式。用错概念会指向错误的对策，所以这个辨析不是词汇练习。</p>` },
+<p>先说一个每天都在发生的小误会。一个做模型评测的人皱着眉说，我的 eval 有 performativity（操演性）问题。你追问，他描述的其实是：模型被反复测，慢慢长成了这套题的形状。那不是操演性，那是反应性。用错词看起来无伤大雅，可下一步就麻烦了，因为不同的词指向完全不同的对策，抓错病名就会开错药。</p>
+<p>这一课要辨析五个总被当成同义词的近邻：reactivity（反应性）、performativity（操演性）、looping effects（循环效应）、legibility（可读性）、audit culture（审计文化）。它们确实亲缘，共享一个内核，但每一个都比其余多说了一点别的。分清它们，靠问三个问题：谁在回望、朝哪个方向使劲、以及它相对反应性多讲了什么。</p>` },
+
+    { t: "prose", html: `
+<p>先给内核，五个词都绕着它转：被测量、被分类、被观察的对象，不是一块无所谓的铁，它会「回望」你的尺子，并据此改造自己。测量因此不是镜子，是引擎。哲学家 Ian Hacking 把这个内核说得最凝练，他区分「无所谓的种类」和「会互动的种类」：夸克不在乎你怎么命名它，被诊断的「多动症儿童」却会因为这个标签而改变自己。五个近邻，是这同一个内核在五个不同分析层次上的切片。</p>
+<p>逐个白描一遍。<strong>反应性</strong>（<code>R01</code>，基准概念）的主体是被测的人或组织：你公布一个排名，被排的人为了名次改造自己。它扣住的是「测量效度」和「问责」，是这一族里最贴近日常评估的一个。<strong>操演性</strong>（你在 <code>R07</code> 见过）的主体是理论本身：Black–Scholes 公式一被交易员采用，市场价格就朝公式收敛，理论把世界拉成了自己描述的样子；它跟反应性的关键差别是触发物是一整套理论而非一个评价性数字，且它天生自带一套强度分级，这是反应性缺的。<strong>循环效应</strong>（<code>R06</code>）的主体是「分类」与「被分类者」构成的双向回路，它多说的那点，是改变的不只是个体行为，而是<em>类别本身</em>在漂移，「什么算多动症」这条定义每一版都在变。<strong>可读性</strong>（<code>R05</code>）的主体是想把世界看清的国家或中心，它先把复杂社会强行简化成可清点的形式，推行统一姓氏、地籍图、单一树种的人工林，强调的是测量的<em>前提</em>，发生在测量<em>之前</em>。<strong>审计文化</strong>（<code>R09</code>）的主体是核查这套制度仪式，它讲组织为了「看起来可被审计」而重组自己，长出合规部门、文档系统，用「可审计性」置换掉了实质。</p>` },
 
     { t: "module", module: "explorable:concept-map", title: "五个近邻：不是一个东西的五个名字", config: {
       mode: "matrix",
@@ -18,15 +23,27 @@ export default {
     } },
 
     { t: "prose", html: `
-<p>蓝色与黄色分支处理的是同一个不变式，差别在形式化语言：Goodhart 与 Campbell 把它写成指标治理下的失效定律，Holmström-Milgrom 与 Baker 写成合约理论定理，于是 surrogation 补上了它的认知微观基础，而 reward hacking 与 performative prediction 是它在梯度下降里的重演。</p>
-<p>D6 报告给这个不变式写下了一句精确的表述：<strong>当你用一个低维、带噪、可被回应的指标去优化或选择一个高维、会回应的系统时，你收敛到的不是系统的真优，而是指标的不动点、博弈的均衡、选择偏差的上序统计量、或退化模型的同态像；偏离量随优化压力单调上升。</strong>契约论、优化不动点、Stackelberg 博弈、历史社会学、控制论、统计学，六种语言各自证过它一次。</p>` },
+<p>矩阵把五者的分工摊平了，但真正把它们拧成一股的，是蓝色和黄色两条分支。这两条处理的其实是同一个不变式，只是换了形式化的语言：Goodhart 与 Campbell 把它写成指标治理下的失效定律；Holmström–Milgrom 与 Baker 写成合约理论的定理；surrogation 给它补上认知层的微观基础，也就是人为什么会把指标当成目标本身；到了机器学习里，reward hacking 与 performative prediction 是它在梯度下降里的重演。社会学的五个近邻，是它在人间的切片；这两条分支，是它在数学里的切片。</p>
+<p>D6 报告把这个不变式写成了一句精确的话，值得慢读一遍：<strong>当你用一个低维、带噪、会被回应的指标，去优化或挑选一个高维、会回应的系统，你收敛到的不是系统的真优，而是指标的不动点、博弈的均衡、选择偏差的上序统计量、或退化模型的同态像；偏离的量随优化压力单调上升。</strong>契约论、优化不动点、Stackelberg 博弈、历史社会学、控制论、统计学，六种语言各自把它证过一遍。你不必现在就读懂这句话的每一个词，只要记住一件事：这五个近邻不是散落的比喻，它们背后站着同一条可以被证明的规律。</p>
+<p>五个近邻还能串成一条自上而下的因果链，帮你记住它们的次序。Weber 与 Simmel 描述的可计算性文化在最上游，Foucault 的治理术用统计去「看见」人口，Scott 的可读性为了看见而简化世界，可通约化把质压成量，度量被公开、周期发布，长成排名与审计（审计文化），被度量者作为「会互动的种类」产生反应性、循环效应与操演性，最后度量成靶，被 Goodhart 与 Campbell 的博弈掏空。反应性正好坐在这条链的倒数第二环：行动者对公共测量的回应。这也解释了它为什么最贴近你手里的活儿，你做的 eval，正是一次公开测量。</p>
+<p>顺带把你在 <code>R08</code> 学的反身性也安进这张图。反身性是这个内核在金融市场里的动态反馈版：观念影响现实、被改变的现实又喂养下一轮观念，同一个「回望」被写成了一个带符号的反馈回路，正反馈是泡沫，负反馈是均衡。它跟这五个近邻不冲突，是同一台引擎从「反馈动力学」这个角度拍的一张侧面照。你会发现，越是把这些词摆到一起看，越能确认它们不是六套理论在抢地盘，而是一件事被六个学科各自撞见、各起了一个名字。</p>` },
 
     { t: "callout", variant: "applied", html: `
-<p><strong>这张地图的用处在诊断阶段。</strong>你的 eval 问题可能是 reactivity（模型因被测而变）、performativity（eval 在重塑整个模型生态）、或 legibility（rubric 预先决定了什么可见），三者对应三种完全不同的干预。此外还要加上一条独立于反应性的通道：选择偏差（<code>B13</code>），被测者完全诚实也会让榜首虚高。因此诊断的第一步不是找对策，是先认准机制家族。</p>` },
+<p><strong>这张地图的用处在诊断阶段。</strong>你的 eval 出问题，可能是反应性（模型因被测而变）、操演性（这个 eval 在重塑整个模型生态）、或可读性（rubric 预先决定了什么可见），三者对应三种完全不同的干预。此外还要加一条独立于反应性的通道：选择偏差（<code>B13</code>），被测者完全诚实，光是「从一堆里挑最高分」也会让榜首虚高。所以诊断的第一步不是急着找对策，是先认准它属于哪一个机制家族，别拿操演性的药去治反应性的病。</p>` },
+
+    { t: "callout", variant: "myth", html: `
+<p><strong>流行说法：「reactivity 和 performativity 是一回事，可以换着用。」</strong>复核结论：不准确，而且这个混用会抹掉两个词各自的要点。Espeland 与 Sauder 2007 年在论文第 6 页<em>有意</em>选了 reactivity 而不是 performativity，理由正是 reactivity 扣住「测量效度受威胁」这个方法论议题，而 performativity 更关心「世界被造出来」这种本体论问题。两者高度亲缘，自我实现预言约等于 Barnesian 操演性，自我否定预言约等于 counterperformativity，但不同义。再补一个常被讲反的地方：Black–Scholes 那条弧线是先向模型收敛（1976 到 1987，越用越真），1987 股灾后才出现波动率微笑、拟合变差（counter，越用越假），不是一路更真。方向讲反，整个案例就废了。</p>` },
+
+    { t: "prose", html: `
+<p>留一个问题：这五个近邻各自都有一套现成的分析语言，但它们能不能被统一进一个带参数的模型，让你输入一个具体案例，就读出它主要属于哪一层、强度几何？D6 那句六语言表述已经把内核统一了，可它是定性的；把「谁在回望、朝哪使劲、强度多大」变成能算出来的量，还没有人做成。</p>
+<p><strong>一句话带走：</strong>这不是一个东西的五个名字；先分清谁在回望，才知道该往哪里下手。</p>` },
 
     { t: "sources", items: [
-      `综合自 <code>00-SYNTHESIS-总纲.md §3</code> 与 <code>research/02, 14</code>。`,
-      `六语言统一表述见 <code>research/deep/D6</code> 综合节。`
+      `Espeland, W. N. & Sauder, M. (2007). "Rankings and Reactivity." <em>AJS</em> 113(1):1–40（有意选用 reactivity，p.6）。`,
+      `MacKenzie, D. (2006). <em>An Engine, Not a Camera</em>. MIT Press（操演性四分类）；MacKenzie & Bamford (2018). "Counterperformativity." <em>NLR</em> 113。`,
+      `Hacking, I. (2007). "Kinds of People: Moving Targets." <em>Proc. British Academy</em> 151（interactive vs indifferent kinds）。`,
+      `Scott, J. C. (1998). <em>Seeing Like a State</em>. Yale UP（legibility）；Power, M. (1997). <em>The Audit Society</em>. Oxford UP（audit culture）。`,
+      `综合自 <code>00-SYNTHESIS-总纲.md §3</code> 与 <code>research/02 §10、§14</code>、<code>research/14</code>；六语言统一表述见 <code>research/deep/D6</code> 综合节。`
     ] }
   ]
 };

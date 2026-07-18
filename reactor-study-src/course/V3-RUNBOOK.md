@@ -103,12 +103,12 @@ git commit + push → CI 自动部署
 - [x] W6 YELLOW 扩写 Y07–Y12 + 新写 Y13,Y14,Y15
 - [x] W7 GREEN：G01,G02 迁移扩写 + 新写 G03–G06（源 10 + D7 + 06 + 08）
 - [x] W8 CASE：K00 迁移 + 新写 K01–K04（源 04 + D3）
-- [ ] W9 CONVERGE 扩写 C01,C02,C03,C07 + N00（源 14-briefs + 00 总纲，按契约 v2）
-- [ ] W-R 可读性修订：批一交付的 24 课（R01-R06/B01-B07/Y01-Y06/K00-K04）按契约 v2 重修（白话导语/术语白话化/考证下沉/一句话带走）
-- [ ] W12 v3.1 新 12 课：R14,R15,B15,B16,B17,Y16,Y17,G07,G08,K05,K06,C08（源见 tree.json sources 字段，契约 v2）
+- [x] W9 CONVERGE 扩写 C01,C02,C03,C07 + N00（源 14-briefs + 00 总纲，按契约 v2）
+- [x] W-R 可读性修订：批一交付的 24 课（R01-R06/B01-B07/Y01-Y06/K00-K04）按契约 v2 重修（白话导语/术语白话化/考证下沉/一句话带走）
+- [x] W12 v3.1 新 12 课：R14,R15,B15,B16,B17,Y16,Y17,G07,G08,K05,K06,C08（源见 tree.json sources 字段，契约 v2）
 - [ ] W10 图鉴更新（术语表/讹传表补新条目）+ 全站交叉引用核对 + sitemap
 - [x] W11a 互动模块复杂化·通用引擎（mod-kit 控件扩容 + explorable 预测→操作→揭示三段式 + provenance/timeline/quiz）
-- [ ] W11b 互动模块复杂化·定制 sim 批一（feedback/boom-bust/musiclab/game-the-ranking/overfit/eval-overfit-lab/the-loop）
+- [x] W11b 互动模块复杂化·定制 sim 批一（feedback/boom-bust/musiclab/game-the-ranking/overfit/eval-overfit-lab/the-loop）
 - [ ] W11c 互动模块复杂化·定制 sim 批二（goodhart4/variety/policy-invariance/overopt/winners-curse/arena/seven-levers/design-robust-eval）+ 新节点配模块
 - [ ] 终检：截图审计（双主题）+ 移动端 + 部署验证
 

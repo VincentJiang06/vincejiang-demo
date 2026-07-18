@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
 <link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=264d5a4898">
-<link rel="stylesheet" href="/theme/components.css?v=68e2c8e047"><link rel="stylesheet" href="/theme/led.css?v=055f8f5727">
+<link rel="stylesheet" href="/theme/components.css?v=37908a0707"><link rel="stylesheet" href="/theme/led.css?v=055f8f5727">
 <link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"过拟合 · Overfitting","description":"训练集就是你的 eval。","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://reactor.vincejiang.com/lesson/Y01.html"}</script>
 </head><body><div class="bg-dots" aria-hidden="true"></div>
@@ -44,13 +44,14 @@
       <p class="lede">训练集就是你的 eval。</p>
       <div class="prereq-row">
     <span class="label">前置</span> <a href="/lesson/N00.html">N00 测量即干预</a>
-    <span class="label" style="margin-left:auto">解锁</span> <a href="/lesson/Y02.html">Y02 自适应过拟合</a> <a href="/lesson/Y10.html">Y10 策略性分类</a> <span class="stub">Y16 RLHF：把偏好当燃料</span> <span class="stub">Y17 基准是怎么造出来的</span>
+    <span class="label" style="margin-left:auto">解锁</span> <a href="/lesson/Y02.html">Y02 自适应过拟合</a> <a href="/lesson/Y10.html">Y10 策略性分类</a> <a href="/lesson/Y16.html">Y16 RLHF：把偏好当燃料</a> <a href="/lesson/Y17.html">Y17 基准是怎么造出来的</a>
   </div>
     </div>
     <article class="stack"><div class="read">
-<p><strong>过拟合（overfitting）</strong>是 Goodhart 定律的统计学同构，统计学习理论只是不用 Goodhart 这个名字描述它。</p>
-<p>你有一批数据，想学一个规律。你不断提高模型容量（比如多项式次数）去更好地拟合训练数据，训练误差一路下降。可在没见过的测试数据上看，误差先降后升：过了某个点，模型不再学习规律，而是开始背诵训练集的噪声。高次多项式穿过每一个样本点，却在样本点之间剧烈振荡，就是这种背诵最直观的画像。它在训练集上的完美，是拿真实泛化换来的。</p>
-<p>这个现象有一副干净的代数骨架。Geman、Bienenstock 与 Doursat 在 1992 年给出经典的偏差-方差分解：期望误差拆成偏差平方、方差与不可约噪声三项。欠拟合是高偏差：模型太简单，规律没学全。过拟合是高方差：模型太灵活，把这一批数据特有的巧合也当成了规律。容量上升，偏差下降而方差上升，两项之和先降后升，教科书里那条 U 形曲线就是这么来的。它与 Goodhart 的对应关系一眼可见：训练误差是你能直接优化的代理，泛化误差是你真正在乎的目标，两者在低优化压力下同向变化，压力越过某个点就开始脱钩。</p></div>
+<p>黄色分支从这里开始讲机器。这一课讲机器学习给 Goodhart 定律起的另一个名字：<strong>过拟合（overfitting）</strong>。统计学习理论只是不用 Goodhart 这个词描述它而已。这一课值十分钟的理由：整条黄支后面的机制，全都是这一课的变体；而且你会拿到一句可以贴在显示器上的话，训练集就是你的 eval。</p>
+<p>先讲一个你见过的学生。他备考的方式是把往年真题和答案背得滚瓜烂熟，用真题做模拟考，回回满分；上了考场，卷子是新出的，当场垮掉。他没有学会规律，他背下了那一批题。</p>
+<p>机器学习里的同一幕是这样的。你有一批数据（叫训练集，给模型学的例题），想让模型从中学出规律。你不断提高模型容量（它能记多少、拟合曲线能弯多少下，比如多项式的次数），训练集上的误差一路下降，好像越学越好。可是拿一批它没见过的新数据（叫测试集）一考，误差先降后升：过了某个点，模型不再学习规律，开始背诵这批例题特有的巧合和噪声。高次多项式穿过每一个样本点、却在样本点之间剧烈振荡，就是这种背诵最直观的画像。它在训练集上的完美，是拿真实泛化（在新数据上的表现）换来的。</p>
+<p>这个现象有一副干净的代数骨架，1992 年由 Geman 等人写成经典的偏差-方差分解：模型的期望误差可以拆成三份。偏差：模型太简单，规律没学全，怎么练都差一截。方差：模型太灵活，把这一批数据碰巧有的花纹也当成了规律，换批数据就翻车。再加一份数据本身的噪声，谁也消不掉。容量上升，偏差降、方差升，两项之和先降后升，教科书那条 U 形曲线就是这么来的。它与 Goodhart 的对应一眼可见：训练误差是你能直接优化的代理指标，泛化误差是你真正在乎的目标，低压力下两者同向，压力越过某个点就开始脱钩。</p></div>
 <figure class="module reg" data-module="overfit" data-modname="overfit" data-modtype="sim">
     <figcaption class="module-head"><span class="fig">FIG.01</span>
       <span>训练集就是你的 eval</span><span class="spacer"></span>
@@ -58,20 +59,23 @@
     <div class="module-body"><script type="application/json" class="mod-config">{}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
   </figure><script type="module" src="/modules/overfit.js?v=28854a3daa"></script>
 <div class="read">
-<p>把映射写清楚，后面几节的机制都是这一条的变体：训练集 = 你优化的代理指标；真实分布 = 你真正想要的目标；模型容量 = 优化压力。「在训练集上过拟合」和「把一个 benchmark 分刷到虚高」是同一件事的两个名字。你在训练误差（proxy）上使的劲越大，它和测试误差（target）越可能分道扬镳，这正是 <code>B08</code> 里的 regressional 与 extremal Goodhart。</p>
-<p>同构还可以往下压一层，压到四型词表上。回归型：测试分数 = 真实能力 + 噪声，你从一堆候选里挑分数最高的，会系统性挑中噪声恰好偏高的那个，于是榜首的真实能力在期望上低于它的分数，这就是 <code>B13</code> 的优化者诅咒在模型选择里的形态。极值型：把分数推到分布极端，代理与目标的相关在极端处断裂，一个被刷到 99% 的基准上，最后那一个百分点度量的往往已经不是能力。这两型不需要任何博弈方作恶，纯统计就会发生；对抗型（厂商定向刷榜）与因果型（为刷分做的改动不改善真实效用）要到 <code>Y11</code> 与 <code>Y03</code> 才有戏份。</p>
-<p>机器学习社区为此发展出一套三分纪律：训练集调参数，验证集选模型和超参，测试集只看一次。三分里最容易被忽略的角色是验证集：它承担了全部日常挑选，于是最先被用旧，你在它上面挑出的最优超参，部分是它的噪声的最优解，这正是最终报告必须回到测试集的原因。而「只看一次」不是洁癖，是有定价的。Dwork 等人 2015 年在 Science 上给出严格版本：每一次拿测试集做模型选择，都是对它的一次适应性查询，都在消耗它的统计有效性。他们同时给出解药：用差分隐私机制（Thresholdout）中介对测试集的访问，可以在指数级多次适应性查询下仍保持泛化保证。差分隐私在这里的作用直白：让每一次查询只带出模糊的读数，模糊到不足以定位测试集的噪声，泛化保证于是得以留存。测试集因此更像一个账户而不是一面镜子：余额有限，每看一眼都在扣款，只是账单从不主动寄给你。</p></div>
+<p>把映射逐项写清楚，后面几课都要用：训练集 = 你优化的代理指标；真实分布 = 你真正想要的目标；模型容量 = 优化压力。「在训练集上过拟合」和「把一个 benchmark 分数刷到虚高」（benchmark：给模型统一出题打分的公开题库）是同一件事的两个名字。</p>
+<p>这个同构还可以往下压一层。蓝支 <code>B08</code> 把 Goodhart 崩塌分成四型，其中两型不需要任何人作恶，纯统计就会发生，过拟合正好把它们演示齐了。回归型：测试分数 = 真实能力 + 噪声，你从一堆候选里挑分数最高的，会系统性挑中噪声恰好偏高的那个，于是榜首的真实能力在期望上低于它的分数，这也叫优化者诅咒（<code>B13</code> 专讲）。极值型：把分数推到分布极端处，代理与目标的相关在极端处断裂，一个被刷到 99% 的基准上，最后那一个百分点度量的往往已经不是能力。另外两型（厂商定向刷榜的对抗型、改动不改善真实效用的因果型）要到 <code>Y11</code> 与 <code>Y03</code> 才有戏份。</p>
+<p>机器学习社区为此发展出一套三分纪律：训练集用来调参数；验证集（从数据里再切出的一块）用来挑模型、挑超参数；测试集只在最后看一次，当成绩单。三分里最容易被忽略的角色是验证集：它承担了全部日常挑选，于是最先被用旧，你在它上面挑出的最优配置，一部分是它的噪声的最优解，这正是最终报告必须回到测试集的原因。</p>
+<p>而「只看一次」不是洁癖，是有定价的。Dwork 等人 2015 年在 Science 上给出严格版本：每一次拿测试集做决定，都是对它的一次适应性查询，都在消耗它的统计有效性。他们同时给出解药 Thresholdout：用差分隐私机制（一种故意把查询结果弄模糊、限制每次泄漏信息量的技术）中介对测试集的访问，可以在指数级多次查询下仍保持泛化保证。模糊的作用很直白：读数糊到不足以定位测试集的噪声，噪声就灌不进你的决策。测试集因此更像一个账户而不是一面镜子：余额有限，每看一眼都在扣款，只是账单从不主动寄给你。</p></div>
 <aside class="callout intuit"><span class="co-tag">// 直觉</span>
-<p><strong>挑选本身就携带信息。</strong>反向传播不是把测试集的特异性灌进模型的唯一通道。你在同一个测试集上比较二十个候选、留下分数最高的那个，「挑选」这个动作本身就在传递测试集的信息：被留下的模型，部分是因为恰好押中了这套题的噪声。挑选重复得越多，传进去的信息越多。因此测试集要防的不只是「被拿去训练」，还有「被反复拿来做决定」。这也是为什么固定的公开排行榜天然是一台过拟合机器：它把「反复挑选」做成了全社区的日常。这条账本的机制细节与经验边界在 <code>Y02</code> 展开。</p></aside>
+<p><strong>挑选本身就携带信息。</strong>把测试集拿去训练，不是唯一的污染通道。你在同一个测试集上比较二十个候选、留下分数最高的那个，「挑选」这个动作本身就在传递测试集的信息：被留下的模型，部分是因为恰好押中了这套题的噪声。挑选重复得越多，传进去的信息越多。因此测试集要防的不只是「被拿去训练」，还有「被反复拿来做决定」。这也是为什么固定的公开排行榜天然是一台过拟合机器：它把「反复挑选」做成了全社区的日常。这条账本的机制细节与经验边界在 <code>Y02</code> 展开。</p></aside>
 <aside class="callout myth"><span class="co-tag">// 讹传更正</span>
-<p><strong>流行说法：「过拟合就是坏事，模型越大越容易过拟合。」</strong>复核结论：这在深度学习的过参数化区间是过时直觉。Belkin 等人 2019 年提出双下降（double descent）：参数量越过插值阈值（训练误差压到零的那个点）之后，测试误差可能出现第二次下降；Nakkiran 等人在现代深度网络上系统复现了这条曲线。Bartlett 等人 2020 年进一步刻画了良性过拟合（benign overfitting）：超大线性模型可以完美拟合含噪训练集，同时保持良好泛化。所以准确的图景是经典 U 形与双下降两张图并置，「插值必然有害」不成立。边界同样要说清：双下降修正的是容量轴上的结论，没有修正优化压力轴上的账本，「反复在同一测试集上做选择会透支它」与参数量无关，照旧成立。</p></aside>
+<p><strong>流行说法：「过拟合就是坏事，模型越大越容易过拟合。」</strong>复核结论：这在深度学习的过参数化区间是过时直觉。Belkin 等人 2019 年提出双下降（double descent）：参数量越过插值阈值（模型大到能把训练误差压到零的那个点）之后，测试误差可能出现第二次下降，也就是说继续变大反而又变好了；Nakkiran 等人在现代深度网络上系统复现了这条曲线。Bartlett 等人 2020 年进一步刻画了良性过拟合（benign overfitting）：超大线性模型可以完美拟合含噪训练集，同时保持良好泛化。所以准确的图景是经典 U 形与双下降两张图并置，「插值必然有害」不成立。边界同样要说清：双下降修正的是容量轴上的结论，没有修正优化压力轴上的账本，「反复在同一测试集上做选择会透支它」与参数量无关，照旧成立。</p></aside>
 <div class="read">
-<p>那笔账在现实里到底被透支了多少，有一组出人意料的测量。Recht 等人 2019 年按原始流程重造了一套新的 ImageNet 测试集，让历年模型全部重考：准确率普遍下掉（CIFAR-10 与 ImageNet 两项研究合计约 3% 到 15%，ImageNet 约 10%），乍看像十年集体过拟合的铁证。但关键结论恰恰相反：模型的相对排名几乎完好保留，掉分主要来自新测试集稍难的分布漂移，而非整个社区在同一测试集上迭代十年造成的适应性透支。排名保留这个细节值得咀嚼：分布漂移对所有模型近似同向地扣分，像整场考试换了一份更难的卷子；而适应性过拟合应当偏爱被挑选次数最多的模型，让它们在新卷子上摔得更重。后者没有出现，就是透支有限的证据。这给「eval 用多了就退化」画了一条经验上界：账本是真的，最坏情况的理论保证也是真的，但在题目足够丰富、社区靠换架构而非纯刷分推进的场景里，透支速度远低于恐慌。</p>
-<p>这条上界也框定了本分支的路线。<code>Y02</code> 讲坏得快的那一侧：优化压力高度集中于单一目标时，退化如何变得剧烈。<code>Y03</code> 讲最字面的版本：测试题直接进了训练语料，「过拟合」不再需要任何统计机制，背诵即可。防御侧的对应处方是 <code>G03</code> 的留出与动态评测：既然每看一眼都在扣款，就把一部分题库锁进优化循环永远看不到的地方。</p></div>
+<p>那笔账在现实里到底被透支了多少，有一组出人意料的测量。Recht 等人 2019 年按原始流程重造了一套新的 ImageNet 测试集（ImageNet：深度学习时代最重要的图像识别基准），让历年模型全部重考。结果所有模型普遍掉分：CIFAR-10 与 ImageNet 两项研究合计掉了约 3% 到 15%，ImageNet 约 10%。乍看像十年集体过拟合的铁证。</p>
+<p>但关键结论恰恰相反：模型的相对排名几乎完好保留。掉分主要来自新测试集稍难的分布漂移，而不是整个社区在同一测试集上迭代十年造成的适应性透支。这个细节值得咀嚼：分布漂移对所有模型近似同向地扣分，像整场考试换了一份更难的卷子，谁都掉几分但名次不变；而适应性过拟合应当偏爱被挑选次数最多的模型，让它们在新卷子上摔得更重。后者没有出现，就是透支有限的证据。</p>
+<p>这给「eval 用多了就退化」画了一条经验上界：账本是真的，最坏情况的理论保证也是真的，但在题目足够丰富、社区靠换架构而非纯刷分推进的场景里，透支速度远低于恐慌。这条上界也框定了本分支的路线：<code>Y02</code> 讲坏得快的那一侧，优化压力高度集中于单一目标时退化如何变得剧烈；<code>Y03</code> 讲最字面的版本，测试题直接进了训练语料，「过拟合」不再需要任何统计机制，背诵即可。防御侧的对应处方是 <code>G03</code> 的留出与动态评测：既然每看一眼都在扣款，就把一部分题库锁进优化循环永远看不到的地方。</p></div>
 <aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
-<p><strong>关键一句：训练集就是你的 eval。</strong>机器学习为对抗过拟合发明的整套纪律（留出验证集、交叉验证、正则化、早停）正是对抗 Goodhart 的纪律。<code>Y02</code> 会讲一个更隐蔽的版本：即使从不把测试集拿去训练，只要反复看它来做模型选择，你依然在过拟合它。看，也是一种训练。该版本在经验上比理论预言温和得多，边界见 <code>Y02</code>。落到操作上：别在同一组 eval 上反复迭代你的 prompt 或 agent，每一次「跑分、改、再跑」都是一次适应性查询；留一个只在里程碑时刻看一次的私有 held-out 集，它才反映真实泛化。</p></aside>
+<p><strong>关键一句：训练集就是你的 eval。</strong>机器学习为对抗过拟合发明的整套纪律（留出验证集、交叉验证、正则化、早停）正是对抗 Goodhart 的纪律。<code>Y02</code> 会讲一个更隐蔽的版本：即使从不把测试集拿去训练，只要反复看它来做模型选择，你依然在过拟合它。看，也是一种训练。该版本在经验上比理论预言温和得多，边界见 <code>Y02</code>。落到操作上：别在同一组 eval 上反复迭代你的 prompt 或 agent，每一次「跑分、改、再跑」都是一次适应性查询；留一个只在里程碑时刻看一次的私有 held-out 集（held-out：故意锁起来、平时绝不看的那部分题），它才反映真实泛化。</p></aside>
 <div class="read">
-<p>留一个问题：良性过拟合表明，超大模型可以一字不差地拟合含噪训练集却依然泛化良好，那「过拟合」的边界到底该画在哪里？画在「拟合了噪声」，还是画在「拟合了只属于这套题、换一套题就蒸发的东西」？后一种画法正是 <code>Y02</code> 与 <code>Y03</code> 采用的口径。</p></div>
+<p>留一个问题：良性过拟合表明，超大模型可以一字不差地拟合含噪训练集却依然泛化良好，那「过拟合」的边界到底该画在哪里？画在「拟合了噪声」，还是画在「拟合了只属于这套题、换一套题就蒸发的东西」？后一种画法正是 <code>Y02</code> 与 <code>Y03</code> 采用的口径。</p>
+<p><strong>一句话带走：</strong>在例题上的完美是可以买的，代价是新题上的真实；你的 eval 就是那批例题。</p></div>
 <details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Geman, Bienenstock & Doursat (1992). "Neural Networks and the Bias/Variance Dilemma." <em>Neural Computation</em>（偏差-方差分解）。</li><li>Vapnik, V. (1995). <em>The Nature of Statistical Learning Theory</em>；Hastie, Tibshirani & Friedman (2009). <em>The Elements of Statistical Learning</em>（VC 维、正则化）。</li><li>Belkin et al. (2019). 双下降，arXiv:1812.11118（PNAS）；Nakkiran et al. (2019). "Deep Double Descent." arXiv:1912.02292；Bartlett et al. (2020). 良性过拟合，<em>PNAS</em>。</li><li>Dwork et al. (2015). "The Reusable Holdout." <em>Science</em> 349:636；STOC 版 arXiv:1411.2664（适应性查询的统计定价）。</li><li>Recht et al. (2019). "Do ImageNet Classifiers Generalize to ImageNet?" arXiv:1902.10811（十年重测：掉分但排名稳）。</li><li>见 <code>research/13</code>（Y01 简报）、<code>research/05</code> §五、<code>research/deep/D4</code> 主线一。</li></ul></div></details></article>
     <nav class="prereq-row" style="margin-top:48px">
       <a class="btn" href="/">← 返回天赋树</a>

@@ -5,7 +5,7 @@
    连线 = 正交电路走线：从前置芯片下边缘出发，借行间「走廊」水平横穿，再垂直落到
    目标芯片上边缘；同支实线、跨支虚线，默认压暗，悬停节点时相关线路点亮。 */
 import { progress } from "/modules/boot.js?v=340ed36aa6";
-import { TREE } from "/modules/tree-data.js?v=512b2779a5";
+import { TREE } from "/modules/tree-data.js?v=68e0eae061";
 
 const HALF_H = 40;         // full 模式芯片可视半高（连线端点吸附用）
 const BAND = 44;           // 行带半高：同一行芯片占据 y±BAND，行带之间即走廊
