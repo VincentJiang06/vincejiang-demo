@@ -587,6 +587,7 @@ ${works}
 // ---- 拷贝静态内容 ----
 const COPY_EXCLUDE = new Set(['.git', '.github', '.gitignore', '.dockerignore', 'Dockerfile', 'docker', 'tools', 'templates',
   'posts', 'posts-manifest.json', 'site.config.json', 'SPEC.md', 'README.md', 'LICENSE', 'node_modules', 'site', '.DS_Store',
+  'reactor-study-src',   // reactor-study 的研究源料与生成器源码:只存仓库,不发布(产物在 reactor-study/)
   'index.html', 'sitemap.xml', 'llms.txt', 'blog', 'research', 'gallery', 'release']);
 const ASSET_DIRS = new Set(['assets']);   // 纯静态资源目录:随内容拷贝但不要求 index.html(无干净 URL)
 const BEACON_TAG = '<script src="/assets/beacon.js" defer></script>';

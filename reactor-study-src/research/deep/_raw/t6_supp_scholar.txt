@@ -1,0 +1,1383 @@
+===== Query 1/8: Capen Clapp Campbell 1971 competitive bidding high-risk situations winner's curse =====
+
+1. The winner's curse
+   https://www.researchgate.net/profile/Richard-Thaler/publication/4719439_Anomalies_The_Winner's_Curse/links/09e41510fce94c6d85000000/Anomalies-The-Winners-Curse.pdf
+   (RH Thaler - Journal of Economic Perspectives, 1988 - researchgate.net | 1988 | cited by 198)
+   [PDF] https://www.researchgate.net/profile/Richard-Thaler/publication/4719439_Anomalies_The_Winner's_Curse/links/09e41510fce94c6d85000000/Anomalies-The-Winners-Curse.pdf
+   … of the industry in areas where sealed competitive bidding is the method of acquiring leases. … a winner's curse scenario. The Capen, Clapp and Campbell article was published in 1971, …
+
+2. Anomalies: The winner's curse
+   https://www.aeaweb.org/articles?id=10.1257/jep.2.1.191
+   (RH Thaler - Journal of economic perspectives, 1988 - aeaweb.org | 1988 | cited by 887)
+   [PDF] https://pubs.aeaweb.org/m/doi/pdfplus/10.1257/jep.2.1.191
+   … of the industry in areas where sealed competitive bidding is the method of acquiring leases. … a winner's curse scenario. The Capen, Clapp and Campbell article was published in 1971, …
+
+3. First-price common-value auctions: Bidder behavior and the “winner's curse”
+   https://books.google.com/books?hl=en&lr=&id=rDwDEAAAQBAJ&oi=fnd&pg=PA85&dq=Capen+Clapp+Campbell+1971+competitive+bidding+high-risk+situations+winner%27s+curse&ots=L8b6Hye2fi&sig=NbJ__8ElwmuYkIMSwAYlvq2jQVQ
+   (JH Kagel, D Levin, RC Battalio… - … and the Winner's Curse, 2002 - books.google.com | 2002 | cited by 3)
+   … in Capen, Clapp, and Campbell [1971], Lohrenz and Dougherty [1983], and Mead, Moseidjord, and Sorenson [1983], suggests that the winner's curse … winner's curse exist in this auction …
+
+4. On competitive bidding
+   https://pubsonline.informs.org/doi/abs/10.1287/opre.23.6.1072
+   (ME Oren, AC Williams - Operations Research, 1975 - pubsonline.informs.org | 1975 | cited by 86)
+   [PDF] https://www.bridgewebs.com/abf/BOYER-SCHILLI.pdf
+   … amount to about 33 per cent; against ﬁve competitors, 70 per cent. This result was also reported by Capen, Clapp and Campbell.m (b) Suppose all competitors sample from the df H (:13)…
+
+5. … “Competitive Bidding in High-Risk Situations”, authored by EC Capen, et al. One of the fundamental findings of the Capen work was their notion of “winner's …
+   https://www.ogj.com/general-interest/article/14169958/winners-curse-revisiting-bidding-challenges-in-the-gulf-of-mexico
+   (MR Walls - ogj.com)
+   … The rich data set provided by a long history of bidding activities in the Gulf of Mexico is well-… meaningful decision support when managers are faced with competitive bidding situations. …
+
+6. In search of the winner's curse: comment
+   https://search.proquest.com/openview/4c39c28fc210ece28e8889c9e9fe3153/1?pq-origsite=gscholar&cbl=1821025
+   (KC Brown - Economic Inquiry, 1986 - search.proquest.com | 1986 | cited by 11)
+   … Capen, Clapp and Campbell was quite clear, much subsequent literature about a winner's curse … from the recognition that some bidding strategies reported in the pre-1971 literature [eg …
+
+7. Winner's Curse in Organizational Contexts
+   https://books.google.com/books?hl=en&lr=&id=4o05DQAAQBAJ&oi=fnd&pg=PA69&dq=Capen+Clapp+Campbell+1971+competitive+bidding+high-risk+situations+winner%27s+curse&ots=TuhGH_10Px&sig=zBQi48cu4YwvaITszQhLu4kKq4I
+   (JR Harrison - Negotiation as a social process, 1995 - books.google.com | 1995 | cited by 21)
+   [PDF] https://www.researchgate.net/profile/J-Harrison-2/publication/232586280_Regression_to_the_mean_expectation_inflation_and_the_winner%27s_curse_in_organizational_contexts/links/55566c1308ae6943a8733c4b/Regression-to-the-mean-expectation-inflation-and-the-winners-curse-in-organizational-contexts.pdf
+   … of the winner's curse (Bazerman & Samuelson, 1983; Capen, Clapp, & Campbell, 1971). … The importance of the winner's curse in competitive bidding can be seen in the context of …
+
+8. Common Value Auctions and the Winner's Curse
+   https://books.google.com/books?hl=en&lr=&id=kQ7-1id4eVAC&oi=fnd&pg=PA65&dq=Capen+Clapp+Campbell+1971+competitive+bidding+high-risk+situations+winner%27s+curse&ots=J7YqipNZW3&sig=ctzfnHva0gHc2fadxyo4cLNfQM8
+   (JH Kagel, D Levin - The Economics of Risk, 2001 - books.google.com | 2001 | cited by 3)
+   [PDF] https://research.upjohn.org/cgi/viewcontent.cgi?filename=4&article=1176&context=up_press&type=additional
+   … bidders fell prey to the winner’s curse have arisen in a number of field settings. In addition to the oil industry (Capen, Clapp, and Campbell 1971; … Frequency of winner's curse (raw data) …
+
+9. A note on var for the winner's curse
+   https://bibliotekanauki.pl/articles/569850.pdf
+   (Z Palmowski - Ekonomia XXI Wieku, 2017 - bibliotekanauki.pl | 2017 | cited by 22)
+   [PDF] https://bibliotekanauki.pl/articles/569850.pdf
+   … winner’s curse risk. This expression was first used in the work of [Capen, Clapp, Campbell 1971] … The bidders cannot exactly know the value of the jar, they can just estimate it by looking …
+
+10. Auctions and bidding
+   https://www.jstor.org/stable/2726107
+   (RP McAfee, J McMillan - Journal of economic literature, 1987 - JSTOR | 1987 | cited by 4337)
+   [PDF] https://uwo.scholaris.ca/bitstreams/fba55a55-c95f-48a9-bc87-a1aad5ec29ce/download
+   … winner's curse has also been claimed to exist in auctions of offshore oil rights (EC Capen, RV Clapp, and WM Campbell 1971… Does the process of price formation by competitive bidding …
+
+11. Common value auctions and the winner's curse: Lessons from the economics laboratory
+   https://www.researchgate.net/profile/John-Kagel/publication/254717353_Common_Value_Auctions_and_the_Winner's_Curse_Lessons_from_the_Economics_Laboratory/links/53fb53aa0cf2e3cbf5662a01/Common-Value-Auctions-and-the-Winners-Curse-Lessons-from-the-Economics-Laboratory.pdf
+   (JH Kagel, D Levin - The economics of risk, 2001 - researchgate.net | 2001 | cited by 14)
+   [PDF] https://www.researchgate.net/profile/John-Kagel/publication/254717353_Common_Value_Auctions_and_the_Winner's_Curse_Lessons_from_the_Economics_Laboratory/links/53fb53aa0cf2e3cbf5662a01/Common-Value-Auctions-and-the-Winners-Curse-Lessons-from-the-Economics-Laboratory.pdf
+   … The winner’s curse story begins with Capen, Clapp, and Campbell (1971), three petroleum … presence of a relatively strong winner's curse in auctions with large numbers of bidders. If …
+
+12. The winner's curse and public information in common value auctions: Reply
+   https://www.jstor.org/stable/2006809
+   (JH Kagel, D Levin - The American Economic Review, 1991 - JSTOR | 1991 | cited by 64)
+   … (EC Capen et al., 1971) in … bidding, thereby mitigating the winner's curse, and 2) a statistically significant cashbalance effect indicating that each $1 increase in balances reduced bids …
+
+13. The winner's curse and public information in common value auctions
+   https://www.jstor.org/stable/1816459
+   (JH Kagel, D Levin - The American economic review, 1986 - JSTOR | 1986 | cited by 1127)
+   [PDF] https://www.academia.edu/download/43031929/Kagel_Levin1986AER.pdf
+   … Oil companies claim they fell prey to the winner's curse in early OCS lease sales (EC Capen, RV Clapp, and WM Campbell, 1971; John Lorenz and EL Dougherty, 1983; and references …
+
+14. First‐price common value auctions: Bidder behavior and the “Winner's Curse”
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1465-7295.1989.tb00780.x
+   (JH Kagel, D Levin, RC Battalio, DJ Meyer - Economic Inquiry, 1989 - Wiley Online Library | 1989 | cited by 109)
+   … involves an agent’s inability to account for the adverse selection problem inherent in competitive bidding on the basis of unbiased estimates of the item’s value, causing him to …
+
+15. Investigating the winner's curse based on decision making in an auction environment
+   https://journals.sagepub.com/doi/abs/10.1177/1046878116633971
+   (CK Karl - Simulation & Gaming, 2016 - journals.sagepub.com | 2016 | cited by 35)
+   [PDF] https://duepublico2.uni-due.de/servlets/MCRFileNodeServlet/duepublico_derivate_00076775/Karl_2016_Investigating_Winners_Curse.pdf
+   … Therefore, the bidder with the lowest bid is the winner. This competitive bidding environment is the reason that construction companies suffer from underestimated project costs; the true …
+
+16. Learning to avoid the winner's curse
+   https://www.sciencedirect.com/science/article/pii/S0749597896900722
+   (P Foreman, JK Murnighan - Organizational Behavior and Human Decision …, 1996 - Elsevier | 1996 | cited by 72)
+   [PDF] https://www.academia.edu/download/26189935/Foreman___Murnighan.pdf
+   … competitive bidding, the winner tends to be the player who most overestimates the true tract value... He who bids … winner’s curse using the ‘‘aclarger bids for an object, with the highest …
+
+17. A theory of auctions and competitive bidding
+   https://www.jstor.org/stable/1911865
+   (PR Milgrom, RJ Weber - Econometrica: Journal of the Econometric Society, 1982 - JSTOR | 1982 | cited by 5946)
+   [PDF] https://apps.dtic.mil/sti/tr/pdf/ADA123665.pdf
+   … Petroleum engineers (Capen, Clapp, and Campbell [1]) have claimed that this phenomenon… weakens the winner's curse and leads to more aggressive bidding in the English auction, …
+
+18. Uncertainty, experience and the “winner's curse” in OCS lease bidding
+   https://pubsonline.informs.org/doi/abs/10.1287/mnsc.32.6.673
+   (OW Gilley, GV Karels, RP Leone - Management Science, 1986 - pubsonline.informs.org | 1986 | cited by 33)
+   … high range in bid levels is due … competitive bidding [and] have been inclined to make serious errors in arriving at their dollar bid for a particular tract” (Capen, Clapp and Campbell 1971). …
+
+19. The Winner's Curse and Public Information
+   https://kylewoodward.com/blog-data/pdfs/references/kagel+levin-the-american-economic-review-1986A.pdf
+   (JH KAGEL, DAN LEVIN - kylewoodward.com)
+   [PDF] https://kylewoodward.com/blog-data/pdfs/references/kagel+levin-the-american-economic-review-1986A.pdf
+   … Oil companies claim they fell prey to the winner's curse in early OCS lease sales (EC Capen, RV Clapp, and WM Campbell, 1971; John Lorenz and EL Dougherty, 1983; and references …
+
+20. The winner's curse in bilateral negotiations
+   https://dspace.mit.edu/bitstream/handle/1721.1/49408/winnerscurseinbi00samu.pdf
+   (W Samuelson, MH Bazerman - 1984 - dspace.mit.edu | 1984 | cited by 185)
+   [PDF] https://dspace.mit.edu/bitstream/handle/1721.1/49408/winnerscurseinbi00samu.pdf
+   … The present study extends the analysis of the winner's curse to bilateral negotiations. … the area of competitive bidding. Researchers (eg, Capen, Clapp, and Campbell, 1971; Bazerman …
+
+21. A NOTE ON VAR FOR THE WINNER'S CURSE WARTOŚĆ ZAGROŻONA I PRZEKLEŃSTWO ZWYCIĘZCY
+   https://www.dbc.wroc.pl/Content/38948/PDF/Palmowski_A_Note_On_Var_For_The_Winners_Curse_2017.pdf
+   (Z Palmowski - dbc.wroc.pl)
+   [PDF] https://www.dbc.wroc.pl/Content/38948/PDF/Palmowski_A_Note_On_Var_For_The_Winners_Curse_2017.pdf
+   … winner’s curse risk. This expression was first used in the work of [Capen, Clapp, Campbell 1971] … The bidders cannot exactly know the value of the jar, they can just estimate it by looking …
+
+22. Is there a winner's curse in the market for baseball players? Evidence from the field
+   https://authors.library.caltech.edu/records/g0knw-0jx59
+   (B Blecherman, CF Camerer - 1996 - authors.library.caltech.edu | 1996 | cited by 16)
+   [PDF] https://authors.library.caltech.edu/records/g0knw-0jx59/files/sswp966.pdf
+   … leases The term "winner's curse" was coined by Capen, Clapp, and Campbell (1971). They … "/ n competitive bidding, the winner tends to be the player who most overestimates true tract …
+
+23. The Winner's Curse and Optimal Auction Bidding Strategies.
+   https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=19391633&asa=N&AN=48001030&h=%2FwzyBOUPwlkx84WK2FxD77BMxJkHp%2FdLXwWDO7V5yj%2BpgiY0jbLMgHPGL4dhQJTkGR4zuunvQXrgSZ2N30Y%2FaQ%3D%3D&crl=c
+   (WJ Hahn, SL Seaman - Graziadio Business Report, 2009 - search.ebscohost.com | 2009 | cited by 5)
+   … bidders are at least intuitively aware of the winner's curse, we next consider the case where one or both bidders adopt different hedging strategies. Under these circumstances, we …
+
+24. I won the auction but don't want the prize
+   https://journals.sagepub.com/doi/abs/10.1177/0022002783027004003
+   (MH Bazerman, WF Samuelson - Journal of conflict …, 1983 - journals.sagepub.com | 1983 | cited by 550)
+   [PDF] https://www.researchgate.net/profile/Max-Bazerman/publication/239667259_I_Won_the_Auction_but_Don't_Want_the_Prize/links/53d1020e0cf25dc05cfe7bff/I-Won-the-Auction-but-Dont-Want-the-Prize.pdf
+   … demonstration of the winner's curse, and identifies factors that … Thus the winner of a competitive auction should expect to find … These results generally support the findings of Capen et al. (…
+
+25. NON‐AGGRESSIVE BIDDING BEHAVIOR AND THE “WINNER'S CURSE”
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1465-7295.1981.tb00323.x
+   (JL Smith - Economic Inquiry, 1981 - Wiley Online Library | 1981 | cited by 49)
+   [PDF] https://dspace.mit.edu/bitstream/handle/1721.1/32989/MIT-EL-80-013WP-06684288.pdf?sequence=1&origin=publication_detail
+   … We have described the conditions under which an individual bidder would adopt a non-aggressive competitive bidding response. The conditions presuppose uncertainty regarding both …
+
+26. The loser's curse
+   https://www.jstor.org/stable/2118072
+   (CA Holt, R Sherman - The American Economic Review, 1994 - JSTOR | 1994 | cited by 180)
+   … In order to neutralize the winner's curse, we identify an opposing bias: a situation in … winner's curse phenomenon was mentioned in EC Capen et al. (1971) in the context of bidding …
+
+27. Winner's Curse
+   https://link.springer.com/rwe/10.1057/978-1-137-00772-8_681
+   (A King - The Palgrave Encyclopedia of Strategic Management, 2018 - Springer | 2018)
+   … involved in oil exploration (Capen et al. 1971). The authors noted that firms seemed to … value to all the bidders illustrates the application of the winners curse to ‘common value’ auctions. …
+
+28. Construction bidding and the winner's curse: Game theory approach
+   https://ascelibrary.org/doi/abs/10.1061/(ASCE)CO.1943-7862.0001058
+   (MO Ahmed, IH El-Adaway, KT Coatney… - Journal of construction …, 2016 - ascelibrary.org | 2016 | cited by 144)
+   [PDF] https://www.researchgate.net/profile/Muaz-Ahmed/publication/283183057_Construction_Bidding_and_the_Winner's_Curse_Game_Theory_Approach/links/652464fdfc5c2a0c3bc6ef0f/Construction-Bidding-and-the-Winners-Curse-Game-Theory-Approach.pdf
+   … In the construction industry, competitive bidding has long been used as a method for contractor selection. Because the true cost of construction is not known until the completion of the …
+
+29. Bidding on new audit clients: Avoiding the winner's curse
+   https://www.sciencedirect.com/science/article/pii/S000768132030121X
+   (A Blankley, J MacGregor, MJ Mowchan - Business Horizons, 2021 - Elsevier | 2021 | cited by 13)
+   … On a fundamental level, the winners curse occurs when a bidder wins an auction but either … bidder worse off. In this article, we first consider conditions giving rise to the winner’s curse in …
+
+30. The Winner's Curse and public information in common-value auctions (by John H. Kagel and Dan Levin)
+   https://api.taylorfrancis.com/content/chapters/edit/download?identifierName=doi&identifierValue=10.4324/9781003019121-5&type=chapterpdf
+   (G Charness - The Art of Experimental Economics, 2021 - api.taylorfrancis.com | 2021)
+   Kagel and Levin took the “Winner’s Curse,” an important real-… The Winner’s Curse, first mentioned with respect to bidding … The Winner’s Curse is found even with experienced bidders …
+
+31. Winner's Curse
+   https://link.springer.com/rwe/10.1057/978-1-349-94848-2_681-1
+   (A King - The Palgrave Encyclopedia of Strategic Management, 2016 - Springer | 2016)
+   … involved in oil exploration (Capen et al. 1971). The authors noted that firms seemed to … value to all the bidders illustrates the application of the winners curse to ‘common value’ auctions. …
+
+32. Winner's curse without overbidding
+   https://www.sciencedirect.com/science/article/pii/S0014292102002908
+   (JK Goeree, T Offerman - European Economic Review, 2003 - Elsevier | 2003 | cited by 58)
+   [PDF] https://www1feb-uva.nl/creed/pdffiles/NEWS.pdf
+   … winner's curse” irrespective of confounding factors. Bidders may also fall prey to a “news curse… We find that the effects of the winner's curse are mitigated by a news curse and loss or risk …
+
+33. Level‐k Auctions: Can a Nonequilibrium Model of Strategic Thinking Explain the Winner's Curse and Overbidding in Private‐Value Auctions?
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0262.2007.00810.x
+   (VP Crawford, N Iriberri - Econometrica, 2007 - Wiley Online Library | 2007 | cited by 695)
+   [PDF] https://escholarship.org/content/qt12586197/qt12586197_noSplash_ad0600d67381f9ea6ada48b657af6634.pdf
+   … auction theory. It allows a unified explanation of the winner's curse in common‐value auctions and overbidding in those independent‐private‐value auctions without the uniform value …
+
+34. The myth of the" winner's curse" in auctions of capital goods
+   https://cdn.mises.org/qjae14_1_2.pdf
+   (J Brätland - Quarterly Journal of Austrian Economics, 2011 - cdn.mises.org | 2011 | cited by 3)
+   [PDF] https://cdn.mises.org/qjae14_1_2.pdf
+   … leases acquired in competitive auctions. Further presumptive … the unlikely names of Capen, Clapp and Campbell (hereafter … credit union (Capen, Clapp and Campbell, 1971, p. 641). …
+
+35. The origin of the winner's curse: a laboratory study
+   https://www.aeaweb.org/articles?id=10.1257/mic.1.1.207
+   (G Charness, D Levin - American Economic Journal: Microeconomics, 2009 - aeaweb.org | 2009 | cited by 292)
+   [PDF] https://escholarship.org/content/qt8g88c6ww/qt8g88c6ww.pdf
+   … Previous Empirical and Experimental Evidence on the Winner’s Curse The first formal claim of the WC was made by EC Capen, RV Clap, and W. M. Campbell (1971), three petroleum …
+
+36. In search of the winner's curse
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1465-7295.1984.tb00705.x
+   (JC Cox, RM Isaac - Economic Inquiry, 1984 - Wiley Online Library | 1984 | cited by 129)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1465-7295.1984.tb00705.x
+   … bidders will never suffer from a winner’s curse in an auction where only the winning bid is announced; furthermore, such bidders … Our sojourn into competitive bidding theory tells us to …
+
+37. Predicting the winner's curse
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-5915.1994.tb00517.x
+   (PJ Lederer - Decision Sciences, 1994 - Wiley Online Library | 1994 | cited by 11)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1540-5915.1994.tb00517.x
+   … Capen, Clapp, and Campbell [l] on oil auctions showed that an auction winner may not be aware of the winner’s curse … in alerting managers as to whether they should mind the “curse.” …
+
+38. The economics of competitive bidding: a selective survey
+   https://books.google.com/books?hl=en&lr=&id=r_UeI-D7b1AC&oi=fnd&pg=PA261&dq=Capen+Clapp+Campbell+1971+competitive+bidding+high-risk+situations+winner%27s+curse&ots=uctWx2XVJX&sig=aB1hPzFybEZFhHl9qSf3TzJ_i3U
+   (PR Milgrom - Social goals and social organization: Essays in …, 1985 - books.google.com | 1985 | cited by 210)
+   [PDF] http://web.stanford.edu/~milgrom/publishedarticles/Economics%20Of%20Competitive%20Bidding.pdf
+   … focuses on the winner's curse and related issues. How does one bid to alleviate the curse?(… (Private information alleviates the curse for the informed bidder and intensifies the curse for …
+
+39. The existence and persistence of a winner's curse: new evidence from the (baseball) field
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/j.2325-8012.2008.tb00901.x
+   (JD Burger, SJK Walters - Southern Economic Journal, 2008 - Wiley Online Library | 2008 | cited by 28)
+   [PDF] https://college.holycross.edu/hcs/RePEc/spe/BurgerWalters_WinnersCurse.pdf
+   … For example, Capen, Clapp, and Campbell (1971) found overbidding and low … bidders in this era failed to adjust bids downward for high-risk, inconsistent players. In the winner's curse …
+
+40. The Winner's Curse in Public Procurement Procedures in Colombia: A Behavioral Economics' Analysis
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/contxto52&section=7
+   (S Morales Quijano - Con-texto, 2019 - HeinOnline | 2019)
+   … En 1971, Capen, Clapp y Campbell pusieron en relevancia para la literatura económica el extraño evento de los concesionarios de explotación petrolera en el Golfo de México, …
+
+41. The winner's curse with independent private values
+   
+   (O Compte - W orking Paper, 2002 - Citeseer | 2002 | cited by 28)
+
+42. Bidding
+   https://link.springer.com/content/pdf/10.1007/978-1-349-20215-7_5?pdf=chapter%20toc
+   (R Wilson - Allocation, Information and Markets, 1989 - Springer | 1989 | cited by 6)
+   … , is called the winner's curse (Capen, Clapp and Campbell, 1971); it is … bidder's expected percentage profit. The seemingly low bid factors are necessary to avoid the winner's curse…
+
+43. Auctions, negotiation and winner's curse in coal mining in India
+   https://www.inderscienceonline.com/doi/abs/10.1504/IJMP.2021.111749
+   (S Sarkar - International Journal of Management Practice, 2021 - inderscienceonline.com | 2021 | cited by 3)
+   … is well known (Capen et al., 1971; Thaler, 1988). In such … competitive bidding, risks a–d constitute the ‘winner’s curse’ in … For instance, in a high risk situation, it would almost fully insure …
+
+44. The economics of auctions and bidder collusion
+   https://link.springer.com/content/pdf/10.1007/0-306-47568-5_11.pdf
+   (RC Marshall, MJ Meurer - Game Theory and Business Applications, 2001 - Springer | 2001 | cited by 15)
+   … The quick knock is only worthwhile if it disrupts the ring, and the short run loss is outweighed by the long run gain from more competitive bidding in future auctions. Although the quick …
+
+45. The Winner's Curse in Corporate Takeovers
+   https://diglib.uibk.ac.at/download/pdf/2706016.pdf
+   (MDA Gantner, C Berger - diglib.uibk.ac.at)
+   [PDF] https://diglib.uibk.ac.at/download/pdf/2706016.pdf
+   … winner’s curse phenomenon first appears as such in 1971, in a study of three Atlantic Richfield engineers Capen, Clapp and Campbell. (… prior to the public bidding of an acquisition. The …
+
+46. The value of victory: Social origins of the winner's curse in common value auctions
+   https://www.cambridge.org/core/journals/judgment-and-decision-making/article/value-of-victory-social-origins-of-the-winners-curse-in-common-value-auctions/5DDB727F9F2E599C7BA90106F5AAC3C0
+   (W Van den Bos, J Li, T Lau, E Maskin… - … and decision making, 2008 - cambridge.org | 2008 | cited by 88)
+   [PDF] https://www.cambridge.org/core/services/aop-cambridge-core/content/view/5DDB727F9F2E599C7BA90106F5AAC3C0/S1930297500000759a.pdf/value_of_victory_social_origins_of_the_winners_curse_in_common_value_auctions.pdf
+   … , even highly experienced bidders tend to suffer net losses (… the winner’s curse and was first identified in auctions for drilling rights in the Gulf of Mexico (Capen, Clapp, & Campbell, 1971…
+
+47. Construction bidding and the winner's curse
+   https://search.proquest.com/openview/4fa607f28ef1e801c8906cd64ca8e9d3/1?pq-origsite=gscholar&cbl=18750
+   (MO Ahmed - 2015 - search.proquest.com | 2015 | cited by 9)
+   [PDF] https://scholarsjunction.msstate.edu/cgi/viewcontent.cgi?article=2164&context=td
+   … from the winner's curse in both single and multi-stage bidding … The multi-stage bidding environment incurs more losses … Competitive bidding is the way through which many services are …
+
+48. Auctions and bidding: A primer
+   https://www.aeaweb.org/articles?id=10.1257/jep.3.3.3
+   (P Milgrom - Journal of economic perspectives, 1989 - aeaweb.org | 1989 | cited by 1504)
+   [PDF] https://pubs.aeaweb.org/doi/pdf/10.1257%2Fjep.3.3.3
+   … of competitive bidding. The phenomenon experienced by the painting contractor, known as the " Winner's Curse," … by Capen, Clapp, and Campbell (1971). As applied to the problem of …
+
+49. The 'winner's curse'hypothesis and corporate takeovers
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/mde.4090090306
+   (NP Varaiya - Managerial and decision Economics, 1988 - Wiley Online Library | 1988 | cited by 209)
+   … winner's curse phenomenon requires that bidders' bidding strategies should account for the … Campbell (1971). Competitive bidding in high-risk situations. Journal of Petroleum Technol…
+
+50. Common Value Auctions and the Winner's Curse
+   https://www.tandfonline.com/doi/full/10.1080/00346760600712063
+   (TD Jeitschko - 2007 - Taylor & Francis | 2007)
+   … the thinking of experts in auctions from Capen et al.'s initial Citation1971 article on the winner's curse to the design of multi-billion dollar airwave spectrum auctions conducted at the turn …
+
+51. Underpricing in Social Infrastructure Projects: Combating the Institutionalization of the Winner's Curse
+   https://ascelibrary.org/doi/abs/10.1061/(ASCE)CO.1943-7862.0001926
+   (R Signor, PED Love, FF Marchiori… - Journal of Construction …, 2020 - ascelibrary.org | 2020 | cited by 20)
+   … Cognizant of experiencing potential cost overruns, this paper demonstrates that agencies within the Brazilian public sector institutionalized the winner’s curse to ensure their …
+
+52. Labor market regulation and the winner's curse
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1465-7295.1999.tb01438.x
+   (C Bilginsoy - Economic inquiry, 1999 - Wiley Online Library | 1999 | cited by 10)
+   … This approach lays bare critical elements in competitive bidding. First, the contractor faces a … of Capen, Clapp, and Campbell [1971]. The threshold value of the number of bidders …
+
+53. Wartość zagrożona i przekleństwo zwycięzcy
+   https://www.ceeol.com/search/article-detail?id=603980
+   (Z Palmowski - Ekonomia XXI Wieku, 2017 - ceeol.com | 2017)
+   … winner’s curse risk. This expression was first used in the work of [Capen, Clapp, Campbell 1971] … The bidders cannot exactly know the value of the jar, they can just estimate it by looking …
+
+54. THE WINNER'S CURSE
+   https://www.researchgate.net/profile/Wladimir-Andreff-2/publication/254417935_The_winner's_curse_Why_is_the_cost_of_mega_sporting_events_so_often_underestimated/links/5689603608ae1975839aa7ce/The-winners-curse-Why-is-the-cost-of-mega-sporting-events-so-often-underestimated
+   (W Andreff - researchgate.net)
+   … 1971) to explain the low returns on investments to companies engaged in competitive bidding … Forty years after the article by Capen et al., the literature about the winner’s curse has …
+
+55. Auctions in theory and practice
+   https://link.springer.com/content/pdf/10.1007/0-306-47568-5_10.pdf
+   (W Samuelson - Game Theory and Business Applications, 2002 - Springer | 2002 | cited by 13)
+   … Auctions and competitive bidding institutions are important both for empirical and theoretical … Auctions are among the oldest forms of economic exchange. Today, auctions are used in an …
+
+56. Games Corporations Play: A Theory of Tender Offers
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/nylr61&section=14
+   (DW Leebron - NYUL Rev., 1986 - HeinOnline | 1986 | cited by 118)
+   … offer price, or in modifications of other terms and conditions of the offer. For a fuller discussion of auctions and the extent to which tender offers resemble a competitive auction market, …
+
+57. Do Groups Fall Prey to the Winner's Curse?
+   https://www.researchgate.net/profile/Marco-Casari/publication/46459377_Do_Groups_Fall_Prey_to_the_Winner's_Curse/links/0912f50f8f0bd6a0f1000000/Do-Groups-Fall-Prey-to-the-Winners-Curse.pdf
+   (M Casari, C Jackson, J Zhang - 2010 - researchgate.net | 2010 | cited by 8)
+   [PDF] https://www.researchgate.net/profile/Marco-Casari/publication/46459377_Do_Groups_Fall_Prey_to_the_Winner's_Curse/links/0912f50f8f0bd6a0f1000000/Do-Groups-Fall-Prey-to-the-Winners-Curse.pdf
+   … the winner’s curse. We found that groups of three members, who could exchange opinions and chat, substantially reduced the winner's curse and generally placed better bids than …
+
+58. Hedging winner's curse with multiple bids: Evidence from the Portuguese Treasury bill auction
+   https://direct.mit.edu/rest/article-abstract/81/3/448/57151
+   (MB Gordy - Review of Economics and Statistics, 1999 - direct.mit.edu | 1999 | cited by 70)
+   [PDF] https://econwpa.ub.uni-muenchen.de/econ-wp/mic/papers/9702/9702002.pdf
+   … This paper proposes that bidders use multiple bids to adjust for winner’s curse: By spreading her bids, a bidder aligns her outcome … The Portuguese auction allows only competitive bids. …
+
+59. Bidding
+   https://link.springer.com/rwe/10.1057/978-1-349-95189-5_603
+   (R Wilson - The New Palgrave Dictionary of Economics, 2018 - Springer | 2018)
+   Auctions are studied because they are market institutions of practical importance. Their simple procedural rules to resolve multilateral bargaining over the terms of trade enjoy enduring …
+
+60. The Winner's Curse: Behavioral Economics Anomalies, Then and Now
+   https://books.google.com/books?hl=en&lr=&id=SKFFEQAAQBAJ&oi=fnd&pg=PA9&dq=Capen+Clapp+Campbell+1971+competitive+bidding+high-risk+situations+winner%27s+curse&ots=LhCwvBRRpC&sig=KZHsgDZfpu8CV3tSUaqjEsadngw
+   (RH Thaler, A Imas - 2025 - books.google.com | 2025 | cited by 7)
+   … Personally, I was about a decade into a high-risk professional … marvelous article by Capen, Clapp, and Campbell that first … where sealed competitive bidding is the method of acquiring …
+
+61. Information impact and allocation rules in auctions with affiliated private values: A laboratory study
+   https://www.jstor.org/stable/1913557
+   (JH Kagel, RM Harstad, D Levin - Econometrica: Journal of the Econometric …, 1987 - JSTOR | 1987 | cited by 815)
+   [PDF] http://econweb.ucsd.edu/~jandreoni/Econ264/papers/Kagel%20et%20al%20EMetrica%201987.pdf
+   … fact that when bidder i wins the auction he/… winner's curse effect, a behavioral phenomena commonly cited in the context of common value auctions (Capen, Clapp, and Campbell, 1971; …
+
+62. Risk aversion and bidding behavior for offshore petroleum leases
+   https://www.jstor.org/stable/2098218
+   (JL Smith - The Journal of Industrial Economics, 1982 - JSTOR | 1982 | cited by 22)
+   … of uncertainty the chol_e of bid is complicated by the phenomenon of "winner's curse;" ie, … of non-aggressive bidding strategies of the type advocated by Capen, Clapp, and Campbell [2]. …
+
+63. Bidding patterns, experience, and avoiding the winner's curse in online auctions
+   https://www.tandfonline.com/doi/abs/10.2753/MIS0742-1222270309
+   (RF Easley, CA Wood, S Barkataki - Journal of Management …, 2010 - Taylor & Francis | 2010 | cited by 44)
+   … observable bidder behavior—the winner’s curse adjustment for the expected number of bidders in an auction… Capen recounts initial adjustment efforts that went too far, resulting in “our …
+
+64. 10 AUCTIONS IN THEORY AND
+   https://books.google.com/books?hl=en&lr=&id=is4RBwAAQBAJ&oi=fnd&pg=PA295&dq=Capen+Clapp+Campbell+1971+competitive+bidding+high-risk+situations+winner%27s+curse&ots=zxcnTIvHk9&sig=2BxmEyLcx5N90ccu9Ay2ZFXFlFc
+   (W Samuelson - Game Theory and Business Applications, 2006 - books.google.com | 2006)
+   … Auctions and competitive bidding institutions are important … public information to bidders about the item's unknown value increases revenue (by diminishing the risk of the winner's curse)…
+
+65. The winner's curse in sports economics
+   https://shs.hal.science/halshs-01243890/
+   (W Andreff - Contemporary research in sports economics, 2014 - shs.hal.science | 2014 | cited by 42)
+   [PDF] https://shs.hal.science/halshs-01243890/document
+   … In the Fort‟s textbook glossary, one finds “winner‟s curse: in a competitive bidding … The winner‟s curse hypothesis was first advanced by Capen et al. (1971) to explain the low returns …
+
+66. Auction theory: A guide to the literature
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-6419.00083
+   (P Klemperer - Journal of economic surveys, 1999 - Wiley Online Library | 1999 | cited by 2596)
+   [PDF] https://ora.ox.ac.uk/objects/uuid:f776a391-7ac0-4489-9e12-8b7db59dfc4b/files/m9aead38a5cc62aade0c6e61ea62915a5
+   … of bidding in auctions with common-values components is the winner's curse: each bidder … in demands (for example, from non-competitive bidders) or in the seller's supply. Klemperer …
+
+67. Misapplications reviews: getting the model right—the case of competitive bidding
+   https://pubsonline.informs.org/doi/abs/10.1287/inte.23.3.99
+   (MH Rothkopf, R Engelbrecht-Wiggans - Interfaces, 1993 - pubsonline.informs.org | 1993 | cited by 23)
+   … the phrase ”winner’s curse" into the bidding literature, Capen, Clapp, and Campbell [1971] … , "Competitive bidding in high risk situations,” Ioumal of Petroleum Technology, Vol. 23, No. …
+
+68. THE WINNER'S CURSE
+   https://www.researchgate.net/profile/Wladimir-Andreff-2/publication/254417935_The_winner's_curse_Why_is_the_cost_of_mega_sporting_events_so_often_underestimated/links/5543505f0cf24107d3949f6b/The-winners-curse-Why-is-the-cost-of-mega-sporting-events-so-often-underestimated.pdf
+   (IW Maennig, A Zimbalist, E Elgar - researchgate.net)
+   [PDF] https://www.researchgate.net/profile/Wladimir-Andreff-2/publication/254417935_The_winner's_curse_Why_is_the_cost_of_mega_sporting_events_so_often_underestimated/links/5543505f0cf24107d3949f6b/The-winners-curse-Why-is-the-cost-of-mega-sporting-events-so-often-underestimated.pdf
+   … 1971) to explain the low returns on investments to companies engaged in competitive bidding … Forty years after the article by Capen et al., the literature about the winner‟s curse has …
+
+69. Audit pricing, auditor changes, and the winner's curse
+   https://www.sciencedirect.com/science/article/pii/S0890838997900548
+   (CJ COATE, MP LOEB - The British Accounting Review, 1997 - Elsevier | 1997 | cited by 39)
+   … ‘A note on competitive bidding with asymmetric information’, Management Science, Vol. … bids by all auditors. The candidates must add this premium to protect against the winners curse. …
+
+70. Bidding
+   https://link.springer.com/rwe/10.1057/978-1-349-95121-5_603-1
+   (R Wilson - The New Palgrave Dictionary of Economics, 1987 - Springer | 1987 | cited by 30)
+   Auctions are studied because they are market institutions of practical importance. Their simple procedural rules to resolve multilateral bargaining over the terms of trade enjoy enduring …
+
+71. Competing in construction auctions: A theoretical perspective
+   https://www.taylorfrancis.com/chapters/edit/10.4324/9780203926895-11/competing-construction-auctions-theoretical-perspective-derek-drew
+   (DS Drew - Modern Construction Economics, 2010 - taylorfrancis.com | 2010 | cited by 14)
+   [PDF] http://111.68.96.114:8088/get/pdf/Modern%20Construction%20Economics_%20Theory%20and%20application%20-%20Gerard%20de%20Valence%20%28edt%29_14842.pdf#page=78
+   … If, however, the contractor submits a more competitive bid of $10.8 … price, a contractor might adopt a high-risk strategy in … The term “winner’s curse” was first used in a paper by Capen …
+
+72. Learning direction theory and the winner's curse
+   https://www.cambridge.org/core/journals/experimental-economics/article/learning-direction-theory-and-the-winners-curse/BB5875F31DDC6015F5B4FDAD3DBA3B16
+   (R Selten, K Abbink, R Cox - Experimental Economics, 2005 - cambridge.org | 2005 | cited by 179)
+   [PDF] https://www.econstor.eu/bitstream/10419/78393/1/bgse10_2001.pdf
+   … The winner’s curse phenomenon was first observed in the context of oil field auctions by Capen et al. (1971). They pointed out that on the average, those firms who obtained oil fields as …
+
+73. Competing in construction auctions
+   https://books.google.com/books?hl=en&lr=&id=LcR8AgAAQBAJ&oi=fnd&pg=PT51&dq=Capen+Clapp+Campbell+1971+competitive+bidding+high-risk+situations+winner%27s+curse&ots=duUYnTLtWs&sig=ORXjWdPBYwsnfnapWI_nzaq0P9M
+   (DS Drew - Modern Construction Economics: Theory and …, 2010 - books.google.com | 2010 | cited by 1)
+   … If, however, the contractor submits a more competitive bid of $10.8 … price, a contractor might adopt a high-risk strategy in … The term “winner’s curse” was first used in a paper by Capen …
+
+74. Selection bias, demographic effects, and ability effects in common value auction experiments
+   https://www.aeaweb.org/articles?id=10.1257/aer.97.4.1278
+   (M Casari, JC Ham, JH Kagel - American Economic Review, 2007 - aeaweb.org | 2007 | cited by 203)
+   [PDF] https://www.econstor.eu/bitstream/10419/60705/1/492575614.pdf
+   … money as a consequence (EC Capen, RV Clapp, and WM Campbell 1971). … winners curse fall prey again following changes in treatment conditions (eg, changing the number of bidders …
+
+75. Learning in common value auctions
+   https://link.springer.com/chapter/10.1007/978-3-642-48356-1_14
+   (JH Kagel, D Dyer - Bounded Rational Behavior in Experimental Games …, 1988 - Springer | 1988 | cited by 14)
+   … conditions result in sharp disruptions to the market, and the learning process must repeat itself. Data from a series of common value auction … as bidders adjust to the "winner's curse". …
+
+76. European 3G auctions: Using a comparative event study to search for a winner's curse
+   https://www.sciencedirect.com/science/article/pii/S0957178708000106
+   (JRK Mackley - Utilities Policy, 2008 - Elsevier | 2008 | cited by 21)
+   … This paper seeks to identify any possible winner's curse in the European 3G licence … If a winner's curse is present within European licence auctions, then we may expect a ‘winner's …
+
+77. Bidder overpayment in takeovers
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/stflr41&section=25
+   (BS Black - Stan. L. Rev., 1988 - HeinOnline | 1988 | cited by 436)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2447000
+   … bid will have a muted effect on the bidder's stock price. Roll describes a world in which bidders overpay due to "hubris" and winner's curse … of optimism and the winner's curse, but our …
+
+78. Information impact and allocation rules in auctions with affiliated private values: A laboratory study
+   https://books.google.com/books?hl=en&lr=&id=LPoF2MlSDkcC&oi=fnd&pg=PA177&dq=Capen+Clapp+Campbell+1971+competitive+bidding+high-risk+situations+winner%27s+curse&ots=086mxpnNJp&sig=4WT-9jFX9BmvObHgQFrb7jggimY
+   (JH Kagel, RM Harstad, D Levin - … Auctions and the Winner's …, 2002 - books.google.com | 2002 | cited by 1)
+   … fact that when bidder i wins the auction he/… winner's curse effect, a behavioral phenomena commonly cited in the context of common value auctions (Capen, Clapp, and Campbell, 1971; …
+
+79. Overpaying in corporate takeovers: The winner's curse
+   https://www.tandfonline.com/doi/pdf/10.2469/faj.v43.n3.64
+   (NP Varaiya, KR Ferris - Financial Analysts Journal, 1987 - Taylor & Francis | 1987 | cited by 370)
+   … bidding strategies account for the effect of the winner's curse, we … In the words of Capen, Clapp and Campbell: "He who bids on … Campbell ("Competitive Bidding in High-Risk Situations," …
+
+80. The price effects of increased competition in auction markets
+   https://www.jstor.org/stable/1937897
+   (L Brannman, JD Klein, LW Weiss - The review of Economics and Statistics, 1987 - JSTOR | 1987 | cited by 267)
+   … winners in CV auctions are subject to the "winner's curse," or the "overbidding problem."2 If bidders simply bid … Kessel (1971) who studied 9,420 issues submitted to competitive sealed …
+
+===== Query 2/8: Thaler 1988 winner's curse anomalies =====
+
+1. Anomalies: The winner's curse
+   https://www.aeaweb.org/articles?id=10.1257/jep.2.1.191
+   (RH Thaler - Journal of economic perspectives, 1988 - aeaweb.org | 1988 | cited by 887)
+   [PDF] https://pubs.aeaweb.org/m/doi/pdfplus/10.1257/jep.2.1.191
+   Next time that you find yourself a little short of cash for lunch, try the following experiment in your class. Take a jar and fill it with coins, noting the total value of the coins. Now auction off the jar to your class (offering to pay the winning bidder in bills to control for penny aversion). Chances are very high that the following results will be obtained: (1) the average bid will be significantly less than the value of the coins (bidders are risk averse); (2) the winning bid will exceed the value of the jar. Therefore, you will have money for lunch, and your students will have learned first-hand about the “winner's curse.” The winner's curse cannot occur if all the bidders are rational, so evidence of a winner's curse in market settings would constitute an anomaly. However, acting rationally in a common value auction can be difficult. Solving for the optimal bid is not trivial. Thus, it is an empirical question whether bidders in various contexts get it right or are cursed. I will present some evidence, both from experimental and field studies, suggesting that the winner's curse may be a common phenomenon.
+
+===== Query 3/8: Ioannidis 2005 why most published research findings are false =====
+
+1. Why most published research findings are false
+   https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124&kuid=6129b2e2-a57d-49d7-ab1d-87620d9ab0df&kref=https://loganchristopher.com/science-as-propaganda/
+   (JPA Ioannidis - PLoS medicine, 2005 - journals.plos.org | 2005 | cited by 16185)
+   There is increasing concern that most current published research findings are false. The probability that a research claim is true may depend on study power and bias, the number of other studies on the same question, and, importantly, the ratio of true to no relationships among the relationships probed in each scientific field. In this framework, a research finding is less likely to be true when the studies conducted in a field are smaller; when effect sizes are smaller; when there is a greater number and lesser preselection of tested relationships; …
+
+2. Why most published research findings are false: author's reply to Goodman and Greenland
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC1896210/
+   (JPA Ioannidis - PLoS medicine, 2007 - pmc.ncbi.nlm.nih.gov | 2007 | cited by 119)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC1896210/pdf/pmed.0040215.pdf
+   We applaud PLoS editors for their commitment to publishing high-quality systematic reviews (SRs)[1]. Moher et al.[2] clearly documented the inconsistent quality of reporting of SRs. With more than 2,500 SRs published every year, low-quality or outdated reviews may mislead researchers, providers, and policy makers. The situation could be improved if more evidence-based reporting guidelines were agreed upon, developed, and adhered to. The growing field of genetic associations (GAs) illustrates the urgent need for transparent SRs and meta …
+
+===== Query 4/8: Gelman Loken garden of forking paths multiple comparisons =====
+
+1. The garden of forking paths: Why multiple comparisons can be a problem, even when there is no “fishing expedition” or “p-hacking” and the research hypothesis …
+   https://sites.stat.columbia.edu/gelman/research/unpublished/p_hacking.pdf
+   (A Gelman, E Loken - Department of Statistics, Columbia …, 2013 - sites.stat.columbia.edu | 2013 | cited by 1340)
+   [PDF] https://sites.stat.columbia.edu/gelman/research/unpublished/p_hacking.pdf
+   Researcher degrees of freedom can lead to a multiple comparisons problem, even in settings where researchers perform only a single analysis on their data. The problem is there can be a large number of potential comparisons when the details of data analysis are highly contingent on data, without the researcher having to perform any conscious procedure of fishing or examining multiple p-values. We discuss in the context of several examples of published papers where data-analysis decisions were theoretically-motivated based on previous literature, but where the details of data selection and analysis were not pre-specified and, as a result, were contingent on data.
+
+===== Query 5/8: Bailey Lopez de Prado deflated Sharpe ratio backtest overfitting =====
+
+1. The deflated sharpe ratio: Correcting for selection bias, backtest overfitting, and non-normality
+   https://www.pm-research.com/content/iijpormgmt%3A%3A%3A40%3A%3A%3A5%3A%3A%3A94.full.pdf
+   (DH Bailey, ML De Prado - The Journal of Portfolio Management, 2014 - pm-research.com | 2014 | cited by 291)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2460551
+   Today’s quantitative teams rou-tinely scan through petabytes of financial data, looking for patterns invisible to the naked eye. In this endeavor, they are assisted by a host of technologies and advancing mathematical fields. Big data, machine learning, cloud networks, and parallel processing have meant that millions (if not billions) of analyses can be carried out on a given dataset, searching for profitable investment strategies. To put this in perspective, the amount of data used by most quant teams today is comparable to the memory stored by Netflix to support its video-streaming business nationwide. This constitutes a radical change compared to the situation a couple of decades ago, when the typical financial analyst would run elementary arithmetic calculations on a spreadsheet containing a few thousand data points. In this article we will discuss some of the unintended consequences of using scientific techniques and high-performance computing without controlling for selection bias. Although these problems are not specific to finance, examples are particularly abundant in financial research.Backtests are a case in point. A backtest is a historical simulation of how a particular investment strategy would have performed in the past. Although backtesting is a powerful and necessary research tool, it can also be easily manipulated. In this article, we will argue
+
+===== Query 6/8: Vul Harris Winkielman Pashler puzzlingly high correlations voodoo =====
+
+1. Puzzlingly high correlations in fMRI studies of emotion, personality, and social cognition
+   https://journals.sagepub.com/doi/abs/10.1111/j.1745-6924.2009.01125.x
+   (E Vul, C Harris, P Winkielman… - Perspectives on …, 2009 - journals.sagepub.com | 2009 | cited by 1912)
+   [PDF] https://escholarship.org/content/qt51d4r5tn/qt51d4r5tn_noSplash_5843a11c53c758451afdfbebf9eb63ac.pdf
+   Functional magnetic resonance imaging (fMRI) studiesofemotion, personality, and social cognition have drawn much attention in recent years, with high-profile studies frequently reporting extremely high (e.g., >.8) correlations between brain activation and personality measures. We show that these correlations are higher than should be expected given the (evidently limited) reliability of both fMRI and personality measures. The high correlations are all the more puzzling because method sections rarely contain much detail about how the correlations were obtained. We surveyed authors of 55 articles that reported findings of this kind to determine a few details on how these correlations were computed. More than half acknowledged using a strategy that computes separate correlations for individual voxels and reports means of only those voxels exceeding chosen thresholds. We show how this nonindependent analysis inflates correlations while yielding reassuring-looking scattergrams. This analysis technique was used to obtain the vast majority of the implausibly high correlations in our survey sample. In addition, we argue that, in some cases, other analysis problems likely created entirely spurious correlations. We outline how the data from these studies could be reanalyzed with unbiased methods to provide accurate estimates of the correlations in question and urge authors to perform such reanalyses. The underlying problems described here appear to be common in fMRI research of many kinds—not just in studies of emotion, personality, and social cognition.
+
+===== Query 7/8: regression to the mean Galton Kahneman selection best performers =====
+
+1. Judgment under Uncertainty: Heuristics and Biases: Biases in judgments reveal some heuristics of thinking under uncertainty.
+   https://www.science.org/doi/abs/10.1126/science.185.4157.1124
+   (A Tversky, D Kahneman - science, 1974 - science.org | 1974 | cited by 59613)
+   [PDF] https://apps.dtic.mil/sti/pdfs/AD0767426.pdf
+   … known as regression toward the mean, whichwas first documented by Galton more than 100 … administered when performance is good, and punishments are typically administered when …
+
+2. Judgment under uncertainty: Heuristics and biases
+   https://books.google.com/books?hl=en&lr=&id=gjA-OLUWiSUC&oi=fnd&pg=PA171&dq=regression+to+the+mean+Galton+Kahneman+selection+best+performers&ots=FDc3-UxvL7&sig=EUl-pKXc1oSQX2N0ExCUFduXAj0
+   (A Tversky, D Kahneman, P Slovic - 1982 - books.google.com | 1982 | cited by 2491)
+   … by Galton more than 100 years ago. … of regression toward the mean , in the comparison of the height of fathers and sons, of the intelligence of husbands and wives, or of the performance …
+
+3. Probabilistic reasoning
+   https://books.google.com/books?hl=en&lr=&id=mv2vGDT-6KIC&oi=fnd&pg=PA43&dq=regression+to+the+mean+Galton+Kahneman+selection+best+performers&ots=4HlbViD54B&sig=nsgAWVHtsysVJro3FfQBpKCQuW8
+   (A Tversky, D Kahneman - Readings in philosophy and cognitive …, 1993 - books.google.com | 1993 | cited by 55)
+   [PDF] https://intelligentoptioninvestor.com/wp-content/uploads/2015/03/amos_tversky_and_daniel_kahneman_-_probabilistic_reasoning2.pdf
+   … known as regression toward the mean, which was first documented by Galton more than 100 … administered when performance is good, and punishments are typically administered when …
+
+4. Do Statistics Test Scores Regress Toward the Mean?
+   https://www.tandfonline.com/doi/pdf/10.1080/09332480.1997.10542064
+   (G Smith - Chance, 1997 - Taylor & Francis | 1997 | cited by 12)
+   … adult children (Galton 1886). Because the … is performing below average docs better after switching clubs, shoes, or shirts. A baseball player who is performing below average docs better …
+
+5. Judgement Under Uncertainty Heuristics and Biases
+   https://books.google.com/books?hl=en&lr=&id=dd64yyo7Cp4C&oi=fnd&pg=PA371&dq=regression+to+the+mean+Galton+Kahneman+selection+best+performers&ots=ThyymL0mUy&sig=iBeu9bGKm-ena_ZUPIq34QHfTck
+   (A Tversky, D Kahneman - Knowledge: critical concepts, 2005 - books.google.com | 2005 | cited by 5)
+   … Galton more than 100 years ago. In the normal course of life, one encounters many instances of regression toward the mean… wives, or of the performance of individuals on consecutive …
+
+6. Regression to the mean
+   https://digitalcommons.ursinus.edu/cgi/viewcontent.cgi?article=1003&context=triumphs_statistics
+   (D Klyve - 2019 - digitalcommons.ursinus.edu | 2019 | cited by 3)
+   [PDF] https://digitalcommons.ursinus.edu/cgi/viewcontent.cgi?article=1003&context=triumphs_statistics
+   … After a careful study of the data (which we will examine below), Galton discovered that not … poor performance. After the talk, an incredulous senior instructor confronted Kahneman and …
+
+7. The need to control for regression to the mean in social psychology studies
+   https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2014.01574/full
+   (R Yu, L Chen - Frontiers in Psychology, 2015 - frontiersin.org | 2015 | cited by 102)
+   … This is known as “regression to the mean” (RTM) (Galton, 1886). The measurement … top-performing 10% students are selected, these people would be likely to score worse, on average, …
+
+8. Unskilled, unaware, or both? The better-than-average heuristic and statistical regression predict errors in estimates of own performance.
+   https://psycnet.apa.org/fulltext/2002-10107-003.html
+   (J Krueger, RA Mueller - Journal of personality and social …, 2002 - psycnet.apa.org | 2002 | cited by 483)
+   [PDF] https://www.researchgate.net/profile/Ross-Oakes-Mueller/publication/11530099_Unskilled_unaware_or_both_The_better-than-average_heuristic_and_statistical_regression_predict_errors_in_estimates_of_own_performance/links/00b4952334a03d5c86000000/Unskilled-Unaware-or-Both-The-Better-Than-Average-Heuristic-and-Statistical-Regression-Predict-Errors-in-Estimates-of-Own-Performance.pdf
+   … , in contrast, not only “reach erroneous conclusions and make unfortunate choices, but their … height of their fathers is a classic illustration of regression (Galton, 1886). When successive …
+
+9. Best (but oft-forgotten) practices: identifying and accounting for regression to the mean in nutrition and obesity research
+   https://academic.oup.com/ajcn/article/111/2/256/5573383
+   (DM Thomas, N Clark, D Turner, C Siu… - … American journal of …, 2020 - academic.oup.com | 2020 | cited by 39)
+   [PDF] https://academic.oup.com/ajcn/article-pdf/111/2/256/32447379/nqz196.pdf
+   … This phenomenon was initially described by Galton as “regression toward mediocrity” (7). … of sports performance and other data have been highlighted in Kahneman's Thinking, Fast and …
+
+10. Intuitive prediction: Biases and corrective procedures
+   https://apps.dtic.mil/sti/html/tr/ADA047747/
+   (D Kahneman, A Tversky - 1977 - apps.dtic.mil | 1977 | cited by 2322)
+   [PDF] https://apps.dtic.mil/sti/pdfs/ADA047747.pdf
+   … , on average, their current performance is somewhat disappointing. Conversely, if we select … This phenomenon, known as regression towards the mean, is a mathematical consequence …
+
+11. The puzzle of regression to the mean
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5130381
+   (DA Affognon - International journal of educational methodology, 2025 - papers.ssrn.com | 2025 | cited by 3)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5130381
+   … or treat random fluctuations as real performance changes. … Furthermore, the psychologists Daniel Kahneman and Amos … average man is 8% taller than the average woman, Galton …
+
+12. Cognitive biases resulting from the representativeness heuristic in operations management: an experimental investigation
+   https://www.tandfonline.com/doi/abs/10.2147/PRBM.S193092
+   (M AlKhars, N Evangelopoulos, R Pavur… - Psychology Research …, 2019 - Taylor & Francis | 2019 | cited by 68)
+   [PDF] https://www.tandfonline.com/doi/pdf/10.2147/prbm.s193092
+   … Galton extensively studied the phenomenon of regression … improves performance, praising brings about performance … , Kahneman states that the concept of regression toward the …
+
+13. Regression to the Mean: More than a Statistic.
+   https://psycnet.apa.org/record/2006-01409-006
+   (RJ Smith - Journal of Theoretical and Philosophical Psychology, 2005 - psycnet.apa.org | 2005 | cited by 1)
+   … This article looks at Galton’s regression to the mean1 … unexpected performance (Tversky, & Kahneman, 1974, p. 1127). This for the very reason that Tversky and Kahneman themselves …
+
+14. On the psychology of prediction.
+   https://psycnet.apa.org/journals/rev/80/4/237/
+   (D Kahneman, A Tversky - Psychological review, 1973 - psycnet.apa.org | 1973 | cited by 10609)
+   … of this group would be nonregressive when compared to the … , subjects select the prediction which best represents their … great confidence in our prediction of his future performance, …
+
+15. Software effort estimation by analogy and “regression toward the mean”
+   https://www.sciencedirect.com/science/article/pii/S0164121203000669
+   (M Jørgensen, U Indahl, D Sjøberg - Journal of Systems and Software, 2003 - Elsevier | 2003 | cited by 161)
+   … If the selected projects have an unusual high or low … Galton in the late 1800s regarding the statistical phenomenon “… The best performance of the analogy based estimation model was …
+
+16. Correcting for “regression to the mean” in list selection decisions
+   https://www.sciencedirect.com/science/article/pii/S0892059190705502
+   (CM Ehrman - Journal of Direct Marketing, 1990 - Elsevier | 1990 | cited by 7)
+   … ) is small, since the mean value is to remain constant over time. Galton noted that in random … These probabilities should be used as evaluative criteria for list performance. The list with …
+
+17. Psychological heuristics for making inferences: Definition, performance, and the emerging theory and practice
+   https://pubsonline.informs.org/doi/abs/10.1287/deca.1100.0191
+   (KV Katsikopoulos - Decision analysis, 2011 - pubsonline.informs.org | 2011 | cited by 198)
+   … best to standard decisiontheoretic tools such as linear models, Bayesian networks, or classification and regression … , such as regression, including sophisticated versions of it that select …
+
+18. The first use of the term regression in statistics
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/jole17&section=5
+   (JE Ciecka - J. Legal Econ., 2010 - HeinOnline | 2010 | cited by 1)
+   … /3 captures Galton's regression towards the mean and acts as … That is, Galton was concerned about sample selection bias. … insights into the stability and performance of firms in a …
+
+19. 5 Heuristics: Assumptions and Quick Rules of Thumb We All Use, But Maybe Shouldn't
+   
+   (A Tversky, D Kahneman)
+
+20. A primer on regression artifacts
+   
+   (DT Campbell, DA Kenny - 2002 - Guilford Press | 2002 | cited by 906)
+
+21. Listening to your heart: How interoception shapes emotion experience and intuitive decision making
+   https://journals.sagepub.com/doi/abs/10.1177/0956797610389191
+   (BD Dunn, HC Galton, R Morgan, D Evans… - Psychological …, 2010 - journals.sagepub.com | 2010 | cited by 895)
+   [PDF] https://www.overcominghateportal.org/uploads/5/4/1/5/5415260/interoception_shapes_emotion_and_intuitive_decisions.pdf
+   … The lines represent the regression equations for different … that when bodily signals offer good guidance about potential choices (ie, … Behavioral performance in the validation study of the …
+
+22. When the best appears to be saved for last: Serial position effects on choice
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/bdm.638
+   (YE Li, N Epley - Journal of Behavioral Decision Making, 2009 - Wiley Online Library | 2009 | cited by 145)
+   [PDF] http://yeli.us/papers/LiEpley2009SerialPosition.pdf
+   … extreme scores on the other variable (Galton, 1886). An intense … and regressive evaluations operate in choices in everyday … Among these final good singers, those who came later in the …
+
+23. Judgment under Uncertainty: Heuristics and Biases
+   https://www.academia.edu/download/42837696/Tversky_and_Kahneman_Prediction_heuristic.pdf
+   (A Tversky, D Kahneman - academia.edu)
+   [PDF] https://www.academia.edu/download/42837696/Tversky_and_Kahneman_Prediction_heuristic.pdf
+   … known as regression toward ;he mean, which was first documented by Galton more than 100 … administered when performance is good, and punishments are typically administered when …
+
+24. Learning From Past Out-of-Sample Errors: An Application of the Galton Method in the United Kingdom Stock Market
+   https://search.proquest.com/openview/d6dea13955d1684f6052faa79c3bee3d/1?pq-origsite=gscholar&cbl=2026366&diss=y
+   (G Celardo - 2023 - search.proquest.com | 2023)
+   … Nobel Prize winner in psychology, Daniel Kahneman … it comes to the regression toward the mean. The scholar points … work, the Galton portfolios register better performance in terms of …
+
+25. Effect of regression to the mean on decision making in health care
+   https://www.bmj.com/content/326/7398/1083.full-text
+   (V Morton, DJ Torgerson - Bmj, 2003 - bmj.com | 2003 | cited by 405)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC1125994/pdf/3261083.pdf
+   … It occurs whenever a group is selected with extreme values for … Galton called this phenomenon regression towards … can justify league table initiatives for improving poorly performing …
+
+26. Correcting for regression to the mean in behavior and ecology
+   https://www.journals.uchicago.edu/doi/abs/10.1086/497402
+   (C Kelly, TD Price - The American Naturalist, 2005 - journals.uchicago.edu | 2005 | cited by 185)
+   [PDF] https://www.sfu.ca/~lmgonigl/materials-qm/papers/kelly-2005-700.pdf
+   … Galton noted that if there were no regression to the mean, … for rewarding” (Kahneman and Tversky 1973, p. 251). … Here we consider studies in which there is no initial selection bias but …
+
+27. A replication of the use of regression towards the mean (R2M) as an adjustment to effort estimation models
+   https://ieeexplore.ieee.org/abstract/document/1509316/
+   (M Shepperd, M Cartwright - 11th IEEE International Software …, 2005 - ieeexplore.ieee.org | 2005 | cited by 25)
+   [PDF] https://www.researchgate.net/profile/Martin-Shepperd/publication/4175542_A_replication_of_the_use_of_regression_towards_the_mean_R2M_as_an_adjustment_to_effort_estimation_models/links/0fcfd50e357599a08f000000/A-replication-of-the-use-of-regression-towards-the-mean-R2M-as-an-adjustment-to-effort-estimation-models.pdf
+   … Galton related the height of children to the average height of … Kahneman and Tversky [11] argue that despite regression to … the best performing sports teams will on average continue to …
+
+28. Why best cannot last: Cultural differences in predicting regression toward the mean
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-839X.2010.01310.x
+   (RR Spina, LJ Ji, M Ross, Y Li… - Asian Journal of Social …, 2010 - Wiley Online Library | 2010 | cited by 20)
+   [PDF] https://eprints.chi.ac.uk/id/eprint/2051/1/revision_submitted_on_June_23_2009.pdf
+   … good day after a string of bad ones’. The concept was first used by Francis Galton (1886) in his paper ‘Regression … description of the past performance (poor, average or good in score or …
+
+29. by Kahneman, Slovic & Tversky, 1982). This research has its focus on
+   https://books.google.com/books?hl=en&lr=&id=T9up9E4P_1UC&oi=fnd&pg=PA399&dq=regression+to+the+mean+Galton+Kahneman+selection+best+performers&ots=f_D8qIrgvM&sig=jtd_X1Sn5ShSDBHdb9feaAdBXak
+   (M Björkman - Psychology in the 1990's: In honour of Professor …, 2011 - books.google.com | 1990)
+   … observations (eg Galton's discovery of regression). Nor do … selection strategy is the optimal one for any accuracy (above 50%) of the scanner. If my guess about people's performance …
+
+30. Decision making and postdecision surprises
+   https://www.jstor.org/stable/2393078
+   (JR Harrison, JG March - Administrative Science Quarterly, 1984 - JSTOR | 1984 | cited by 352)
+   [PDF] https://www.researchgate.net/profile/J-Harrison-2/publication/248663178_Decision_Making_and_Postdecision_Surprises/links/55566a4508ae6fd2d823635d/Decision-Making-and-Postdecision-Surprises.pdf
+   … Galton (1879), who observed that large sweet peas produced offspring with slightly smaller seeds. Regression to the mean … expected performance, and each is costly, an optimal policy …
+
+31. The law of regression to the tail: How to survive Covid-19, the climate crisis, and other disasters
+   https://www.sciencedirect.com/science/article/pii/S1462901120308637
+   (B Flyvbjerg - Environmental Science & Policy, 2020 - Elsevier | 2020 | cited by 73)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC7533687/pdf/main.pdf
+   … Galton coined the term "regression to the mean" – … Kahneman, pilots who performed well on recent flights tended to perform less well on later flights, closer to the mean of performance …
+
+32. Regression to the mean does not explain away nonconscious processing: A critical review of Shanks 2017.
+   https://psycnet.apa.org/record/2022-02021-001
+   (AY Sklar, A Goldstein, RR Hassin - Experimental psychology, 2021 - psycnet.apa.org | 2021 | cited by 12)
+   [PDF] https://openscholar.huji.ac.il/sites/default/files/labconscious/files/regression_to_the_mean_does_not_explain_away_nonconscious_processing_a_critical_review_of_shanks_2017.pdf
+   … a priori selection rules can lead to potential inflation of observed … performance are uncorrelated (which would result in robust evidence for regression to the mean according to a Galton …
+
+33. Reflections on Change: Educational and Institutional Implications of" Regression Toward the Mean′′
+   https://search.proquest.com/openview/9fd871644b5158e043681748d6bb8bdc/1?pq-origsite=gscholar&cbl=33821
+   (J Hilliard - Education for Health, 2001 - search.proquest.com | 2001 | cited by 2)
+   … Done properly, teaching is linked to student performance. … of ``regression to the mean’’ to Kahneman and Tversky, who … , ®rst identi®ed by Sir Francis Galton (1886) from his studies of …
+
+34. A brief history of decision making
+   http://samuellearning.org/decisionmaking/handout1.pdf
+   (L Buchanan, AO Connell - Harvard business review, 2006 - samuellearning.org | 2006 | cited by 791)
+   [PDF] http://samuellearning.org/decisionmaking/handout1.pdf
+   … enough information, Daniel Kahneman and Amos Tversky identify … Francis Galton came up with the concept of regression to the … Later, the popularity of high-performance teams, coupled …
+
+35. The bias bias in behavioral economics
+   https://www.emerald.com/rbe/article/5/3-4/303/1321769
+   (G Gigerenzer - Review of Behavioral Economics, 2018 - emerald.com | 2018 | cited by 363)
+   [PDF] https://pure.mpg.de/rest/items/item_3037697_5/component/file_3047156/content
+   … Unlike in Simon’s vision, behavioral economics à la Kahneman … Across players, the hot hand boosted performance by 11 … Sir Francis Galton, who called it “reversion toward the mean.” …
+
+36. " Best practices" research: A methodological guide for the perplexed
+   https://www.jstor.org/stable/3525702
+   (S Bretschneider, FJ Marc-Aurele Jr, J Wu - Journal of Public Administration …, 2005 - JSTOR | 2005 | cited by 307)
+   … a "best practice" competition suffer from severe selection problems … for identifying and analyzing "best practices" in situations … regression analysis may help in identifying highperforming …
+
+37. Towards an understanding of statistical thinking
+   https://link.springer.com/content/pdf/10.1007/1-4020-2278-6.pdf#page=28
+   (M Pfannkuch, C Wild - The challenge of developing statistical literacy …, 2004 - Springer | 2004 | cited by 444)
+   [PDF] https://www.researchgate.net/profile/Paul-Cobb-2/publication/226069411_Principles_of_Instructional_Design_for_Supporting_the_Development_of_Students'_Statistical_Reasoning/links/02e7e52cf2f10ce30d000000/Principles-of-Instructional-Design-for-Supporting-the-Development-of-Students-Statistical-Reasoning.pdf#page=28
+   … Kahneman made an insightful connection with Galton’s statistical principle of regression to the mean… the students’ performance as a random process with an underlying mean. …
+
+38. In defense of really statistical explanations
+   https://link.springer.com/article/10.1007/s11229-022-03868-8
+   (M Lange - Synthese, 2022 - Springer | 2022 | cited by 5)
+   [PDF] http://marclange.org/wp-content/uploads/2025/05/In-Defense-of-Really-Statistical-Explanations.pdf
+   … I will also argue that Kahneman’s view of the alleged RS … In Galton’s original example of regression toward the mean, … of regression toward the mean where the best-performing students …
+
+39. The stochastic component in choice and regression to the mean
+   https://link.springer.com/article/10.1007/s11238-010-9223-6
+   (A García-Gallego, N Georgantzís… - Theory and …, 2011 - Springer | 2011 | cited by 18)
+   [PDF] https://cyberleninka.org/article/n/1077340.pdf
+   … What Galton thought to be a basic property of inheritance, … initial performance with their second one, we would find that, on … Choices could even regress to the mean by getting away from …
+
+40. Adaptation: Representativeness
+   https://link.springer.com/content/pdf/10.1007/978-3-031-08956-5_387-1.pdf
+   (J Pappas - Encyclopedia of Sexual Psychology and Behavior, 2025 - Springer | 2025)
+   … Tversky and Kahneman attribute this statistical error to the fact that both hospitals are … performance will be equally impressive, an expectation that suggests regression toward the mean …
+
+41. Taking 'Galton's problem'seriously: Towards a theory of policy diffusion
+   https://journals.sagepub.com/doi/abs/10.1177/0951629806064351
+   (D Braun, F Gilardi - Journal of theoretical politics, 2006 - journals.sagepub.com | 2006 | cited by 745)
+   [PDF] https://www.academia.edu/download/66793753/0247e1a7124ddd26a7258fd8e3780701e8c0.pdf
+   … In the second step we examine how policy change decisions may be interdependent, that is, how the choices of an actor are influenced by the policy choices of other actors. In this step …
+
+42. The failure of invariance
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119198321.ch4
+   (PL Bernstein - … Management: Meeting the Noble Challenges of …, 2012 - Wiley Online Library | 2012 | cited by 5)
+   [PDF] https://www.arabictrader.com/cdn/application/2009/07/24/pdf/v202/9BA6E5AE-173C-0202-D6C8-4958429EA08A.pdf#page=14
+   … performance is most likely to reflect regression to the mean … Here is a question that Kahneman and Tversky use to show … But Galton conceived of regression to the mean—a powerful …
+
+43. Regression explanation and statistical autonomy
+   https://link.springer.com/article/10.1007/s10539-019-9705-z
+   (J Witteveen - Biology & Philosophy, 2019 - Springer | 2019 | cited by 5)
+   [PDF] https://www.researchgate.net/profile/Joeri-Witteveen/publication/335631993_Regression_Explanation_and_Statistical_Autonomy/links/5d7d264c4585155f1e4dd881/Regression-Explanation-and-Statistical-Autonomy.pdf?_sg%5B0%5D=started_experiment_milestone&_sg%5B1%5D=started_experiment_milestone&origin=journalDetail
+   … Kahneman was quick to realize that the flight instructor had … good and bad performances will tend to be followed by more … understood that Galton at first committed a regression fallacy …
+
+44. Appendix A: Judgment Under Uncertainty: Heuristics and Biases
+   https://www.academia.edu/download/31902763/JUDGMENT_UNDER_UNCERTAINTY-_HEURISTICS_AND_BIASES_Amos_Tversky_and_Daniel_Kahneman.pdf
+   (A Tversky, D Kahneman - academia.edu)
+   [PDF] https://www.academia.edu/download/31902763/JUDGMENT_UNDER_UNCERTAINTY-_HEURISTICS_AND_BIASES_Amos_Tversky_and_Daniel_Kahneman.pdf
+   … Galton more than 100 years ago. In the normal course of life, one encounters many instances of regression toward the mean… wives, or of the performance of individuals on consecutive …
+
+45. Regression to the tail: Why the Olympics blow up
+   https://journals.sagepub.com/doi/abs/10.1177/0308518X20958724
+   (B Flyvbjerg, A Budzier, D Lunn - Environment and Planning …, 2021 - journals.sagepub.com | 2021 | cited by 214)
+   [PDF] https://journals.sagepub.com/doi/pdf/10.1177/0308518X20958724
+   … is a likelihood ratio test for model selection using the Kullback-… Sir Francis Galton coined the term regression to the mean – … , but because their recent good performance was due not to …
+
+46. Assessing regression to the mean effects in health care initiatives
+   https://link.springer.com/article/10.1186/1471-2288-13-119
+   (A Linden - BMC medical research methodology, 2013 - Springer | 2013 | cited by 248)
+   [PDF] https://link.springer.com/content/pdf/10.1186/1471-2288-13-119.pdf
+   … Regression to the mean was first described over a century ago by Francis Galton (later Sir Francis) upon discovering that, on average… We examine the performance of the RTM equation (…
+
+47. Rescuing collective wisdom when the average group opinion is wrong
+   https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2017.00056/full
+   (A Laan, G Madirolas, GG De Polavieja - Frontiers in Robotics and AI, 2017 - frontiersin.org | 2017 | cited by 62)
+   [PDF] https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2017.00056/pdf
+   … , 1972; Myers and Lamm, 1976; Kahneman, 2011), but we will … performance of our method for K > 2 is always strictly better … wisdom of crowds comes from Galton, whose work we briefly …
+
+48. Blood pressure reductions: correcting for regression to the mean
+   https://www.sciencedirect.com/science/article/pii/0091743583902396
+   (DS Shepard, LJ Finison - Preventive medicine, 1983 - Elsevier | 1983 | cited by 53)
+   … Regression occurs because when individuals are selected ac… of regression toward the mean was first reported by Galton … and performance on successive landings of student pilots (18). …
+
+49. The wisdom of select crowds.
+   https://psycnet.apa.org/record/2014-30504-003
+   (AE Mannes, JB Soll, RP Larrick - Journal of personality and social …, 2014 - psycnet.apa.org | 2014 | cited by 429)
+   [PDF] https://www.researchgate.net/profile/Jack-Soll/publication/264462189_The_Wisdom_of_Select_Crowds/links/54e76bce0cf277664ffa8382/The-Wisdom-of-Select-Crowds.pdf?utm_source=chatgpt.com
+   … Within each environment, we examined the performance of the best member and select … correlated with these choices, we conducted a multinomiallogistic regression of participants’ …
+
+50. Cognitive biases that interfere with critical thinking and scientific reasoning: A course module
+   https://www.academia.edu/download/53716840/CriticalThinkingCognitiveBiases_RevisedJune302017.pdf
+   (HH Friedman - SSRN Electronic Journal, 2017 - academia.edu | 2017 | cited by 66)
+   … Kahneman discusses the possible reasons behind the … bias was first documented by Sir Francis Galton (1886) who was … theories that claim that good performance should be rewarded …
+
+51. The regression effect; or, I always thought that the rich get richer…
+   https://pubs.nctm.org/view/journals/mt/79/8/article-p644.pdf
+   (AE Watkins - Mathematics Teacher, 1986 - pubs.nctm.org | 1986 | cited by 3)
+   … Galton called the phenomenon" reversion." Later, Galton was able to reproduce these results … He found that children deviate from the mean height by about twothirds as much as their …
+
+52. Finance and intelligence: An overview of the literature
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/joes.12583
+   (N Eber, P Roger, T Roger - Journal of Economic Surveys, 2024 - Wiley Online Library | 2024 | cited by 6)
+   [PDF] https://tristanroger.com/wp-content/uploads/2023/08/Journal-of-Economic-Surveys-2023-Eber.pdf
+   … cognitive ability and financial performance. Intuition tells us … Both measures yield the same regression results and the … markets have rather good cognitive abilities (selection bias). …
+
+53. Representativeness and Statistics in Field Performance Assessment
+   https://ascelibrary.org/doi/abs/10.1061/40486(300)1
+   (GB Baecher - Performance Confirmation of Constructed …, 2000 - ascelibrary.org | 2000 | cited by 4)
+   [PDF] https://www.researchgate.net/profile/Gregory-Baecher/publication/269130933_Representativeness_and_Statistics_in_Field_Performance_Assessment/links/5f5a23ee4585154dbbc45c6b/Representativeness-and-Statistics-in-Field-Performance-Assessment.pdf
+   … Today, we think of regression analysis as fitting lines to data, but when Francis Galton did his … the term, his interest was not in best-fit lines but in reversion to the mean (Stigler, 1999). …
+
+54. Cognitive biases and their influence on critical thinking and scientific reasoning: A practical guide for students and teachers
+   https://papers.ssrn.com/Sol3/papers.cfm?abstract_id=2958800
+   (HH Friedman - Available at SSRN 2958800, 2023 - papers.ssrn.com | 2958 | cited by 35)
+   [PDF] https://papers.ssrn.com/Sol3/Delivery.cfm/SSRN_ID4518718_code638928.pdf?abstractid=2958800
+   … that can even turn us away from a better deal and toward the “free” one (Ariely, 2009, para. 5). … Regression toward the mean bias was first documented by Sir Francis Galton (1886), who …
+
+55. On the calibration of probability judgements. Some critical comments and alternative perspectives
+   https://research.tue.nl/files/1436888/612384.pdf
+   (G Keren - Journal of Behavioral Decision Making, 1997 - research.tue.nl | 1997 | cited by 120)
+   [PDF] https://research.tue.nl/files/1436888/612384.pdf
+   … First, regression toward the mean is a statistical reality (but not more than that!) which applies to a wide variety of phenomena (it was originally observed by Galton… by Daniel Kahneman (…
+
+56. When is a crowd wise?
+   https://psycnet.apa.org/journals/dec/1/2/79/
+   (CP Davis-Stober, DV Budescu, J Dana, SB Broomell - Decision, 2014 - psycnet.apa.org | 2014 | cited by 300)
+   [PDF] https://arxiv.org/pdf/1406.7563
+   … Under Galton’s conditions of individuals having largely … that could reflect past individual performance; for example, … predictor variables in a multiple regression, adding a predictor that …
+
+57. How does project size affect cost estimation error? Statistical artifacts and methodological challenges
+   https://www.sciencedirect.com/science/article/pii/S0263786312000099
+   (M Jørgensen, T Halkjelsvik, B Kitchenham - International Journal of Project …, 2012 - Elsevier | 2012 | cited by 62)
+   Empirical studies differ in what they report as the underlying relation between project size and percent cost overrun. As a consequence, the studies also differ in their project …
+
+58. Improving the accuracy of project schedules
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/poms.13299
+   (M Lorko, M Servatka, L Zhang - Production and Operations …, 2021 - Wiley Online Library | 2021 | cited by 17)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3437760
+   … individuals regress their estimates toward the historical average … We reward task performance separately instead of … , the reference class was selected appropriately, and the historical …
+
+59. Biases in Probabilistic Judgment A Historical Perspective
+   https://www.sciencedirect.com/science/article/pii/S0166411508613357
+   (G Wright, P Ayton - Advances in psychology, 1990 - Elsevier | 1990 | cited by 6)
+   … To demonstrate Tversky and Kahneman's approach to data … , was first documented by Galton a century ago. Failure to … of six times more often than were good performance results. …
+
+60. Why do categories affect stimulus judgment?
+   https://psycnet.apa.org/record/2000-15522-004
+   (J Huttenlocher, LV Hedges… - Journal of experimental …, 2000 - psycnet.apa.org | 2000 | cited by 534)
+   [PDF] http://faculty.ucmerced.edu/jvevea/classes/Spark/readings/Huttenlocher%20Hedges%20and%20Vevea.pdf
+   … Kahneman and Tversky found that the relative frequencies of alternatives were … to regression to the mean, as described by Galton (1889). In Galton's formulation, regression to the mean …
+
+61. Sifting statistical significance from the artifact of regression-discontinuity design
+   https://journals.sagepub.com/doi/abs/10.1177/0193841X9001400204
+   (TD Stanley, A Robinson - Evaluation Review, 1990 - journals.sagepub.com | 1990 | cited by 14)
+   … Galton estimated the regression coefficient that relates the height of sons to the height of … of the selection process needs to be correlated with subsequent performance before regression …
+
+62. The psychology of risk and its role in military decision‐making
+   https://www.tandfonline.com/doi/full/10.1080/1470243042000344786
+   (RJ Knighton - Defence Studies, 2004 - Taylor & Francis | 2004 | cited by 53)
+   [PDF] https://www.tandfonline.com/doi/pdf/10.1080/1470243042000344786
+   … After some thought, Kahneman realised that the instructors were inferring a … Galton in the nineteenth century of regression to the mean. Because overall improvement in performance of …
+
+63. Do stocks added to a stock index outperform those they replace?: evidence from changes to the French CAC 40 index between 1993 and 2009
+   https://osuva.uwasa.fi/items/0595f20f-b9fc-44e6-86b0-92cb2ca542ed
+   (C Dromacque - 2012 - osuva.uwasa.fi | 2012)
+   [PDF] https://osuva.uwasa.fi/bitstreams/fc60c5aa-532f-40f9-957b-c62b2e7e781d/download
+   … of regression towards the mean was discovered and first described by Sir Francis Galton in … found that buying the 20 best performers and shorting the worst performers over the past 12 …
+
+64. Threats to validity of research design
+   http://creative-wisdom.com/teaching/WBI/threat.shtml
+   (C Yu, B Ohlund - 2010 - creative-wisdom.com | 2010 | cited by 157)
+   … regression: It is also known as regression towards the mean. This phenomenon was first discovered by British statistician Francis Galton … thus achieved higher performance. The hidden …
+
+65. More than an artifact: Regression as a theoretical construct
+   https://api.taylorfrancis.com/content/chapters/edit/download?identifierName=doi&identifierValue=10.4324/9780203854150-13&type=chapterpdf
+   (K Fiedler, JI Krueger - Social judgment and decision making, 2012 - api.taylorfrancis.com | 2012 | cited by 57)
+   … Analogous to the Galton story, one might produce the … For each, they select an answer and indicate their degree of … Given the general response bias toward high performance estimates …
+
+66. Great Companies: Looking for Success Secrets in All the
+   https://www.researchgate.net/profile/Gary-Smith-8/publication/282392907_Great_Companies_Looking_for_Success_Secrets_in_All_the_Wrong_Places/links/56fb3f3908ae1b40b804dc71/Great-Companies-Looking-for-Success-Secrets-in-All-the-Wrong-Places.pdf
+   (W Places - researchgate.net)
+   [PDF] https://www.researchgate.net/profile/Gary-Smith-8/publication/282392907_Great_Companies_Looking_for_Success_Secrets_in_All_the_Wrong_Places/links/56fb3f3908ae1b40b804dc71/Great-Companies-Looking-for-Success-Secrets-in-All-the-Wrong-Places.pdf
+   … by Galton himself in titling his study “Regression Towards … its stature and performance, perhaps even become great, ifit … selecting compłnies to analyze are unconvincing. The stock …
+
+67. Behavioural Analytics: Exploring judgments and choices in large data sets
+   https://www.tandfonline.com/doi/abs/10.1080/01605682.2018.1434400
+   (IN Durbach, G Montibeller - Journal of the Operational Research …, 2019 - Taylor & Francis | 2019 | cited by 7)
+   [PDF] https://repository.lboro.ac.uk/articles/journal_contribution/Behavioural_analytics_Exploring_judgments_and_choices_in_large_data_sets/9503846/files/17130683.pdf
+   … on the choice made Tversky, & Kahneman, Citation1981), and … significance results for logistic regression models fitted to our … than predicted) performance to past performance, we fit a …
+
+68. Can financial professionals avoid behavioral biases? A survey experiment.
+   https://unitesi.unive.it/handle/20.500.14247/22147
+   (L Corletto - 2018 - unitesi.unive.it | 2018)
+   [PDF] https://unitesi.unive.it/bitstream/20.500.14247/22147/1/865736-1224544.pdf
+   … current assets position (Tversky e Kahneman 1979). Another … of the mean regression concept, developed by Galton in the … self-assessment to pick better performing stocks and the other …
+
+69. The wisdom of model crowds
+   https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2021.4090
+   (L He, PP Analytis, S Bhatia - Management Science, 2022 - pubsonline.informs.org | 2022 | cited by 47)
+   [PDF] https://par.nsf.gov/servlets/purl/10394341
+   … wisdom of crowds (Galton 1907, Surowiecki 2004) … selected either the top 5 or top 10 best-performing models in the training set for each training-testing iteration and obtained the select …
+
+70. Shoot the Horse and Build a Better Barn Door: Exploring the Potential for a Superforecasting Methodology to Strengthen the DHS Leadership Selection …
+   https://www.academia.edu/download/59906120/18Dec_Dorman_Ronald20190701-27851-13kdo17.pdf
+   (R Dorman - Naval Postgraduate School, 2018 - academia.edu | 2018 | cited by 1)
+   … cannot assess the performance of the selection process to … Kahneman tested the accuracy of those predictions and found … In it, Galton publicly updated his beliefs by concluding, “This …
+
+71. A fallacy that will not die
+   https://www.researchgate.net/profile/Gary-Smith-8/publication/303876200_FallacyWillNotDie/links/5759edfe08aed884620b2c0a/FallacyWillNotDie.pdf
+   (G Smith - The Journal of Investing, 2016 - researchgate.net | 2016 | cited by 8)
+   [PDF] https://www.researchgate.net/profile/Gary-Smith-8/publication/303876200_FallacyWillNotDie/links/5759edfe08aed884620b2c0a/FallacyWillNotDie.pdf
+   … Galton [1886] observed that the children of unusually tall (or … We now know that regression to the mean occurs in a great … This explains why the subsequent performance of the top and …
+
+72. The potential of prospect theory under inductive reasoning
+   https://reference-global.com/article/10.2478/fcds-2026-0001
+   (AB Leoneti, LFAM Gomes - Foundations of Computing and …, 2026 - reference-global.com | 2026 | cited by 1)
+   [PDF] https://reference-global.com/download/article/10.2478/fcds-2026-0001.pdf
+   … In the 19th century, statisticians such as Francis Galton and … inspired by the exponential version of Kahneman & Tversky’s [12] … Finally, the best performance of multinomial regression …
+
+73. Distributed idea screening in stage–gate development processes
+   https://www.tandfonline.com/doi/abs/10.1080/09544828.2011.649426
+   (B Onarheim, BT Christensen - Journal of Engineering Design, 2012 - Taylor & Francis | 2012 | cited by 120)
+   [PDF] http://analogi.dk/wp-content/uploads/2019/11/2012-Onarheim-Christensen.pdf
+   … behaviour of the employees, an average selection score was … top 12 ideas (corresponding to the number of ideas selected … In comparison, the same regression was run for the selection …
+
+74. Critical thinking, cognitive distortions, and logical reasoning: A guide for those who want to empower their minds
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4680652
+   (HH Friedman - Cognitive Distortions, and Logical Reasoning: A …, 2023 - papers.ssrn.com | 2023 | cited by 9)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=4680652
+   … An example that Kahneman uses to see these two systems is the "ball and a bat" … Regression toward the mean bias was first documented by Sir Francis Galton (1886), who …
+
+75. Predictors of leadership: The usual suspects and the suspect traits
+   https://www.torrossa.com/gs/resourceProxy?an=4913712&publisher=FZ7200&page#page=308
+   (J Antonakis - Sage handbook of leadership, 2011 - torrossa.com | 2011 | cited by 212)
+   [PDF] https://iris.unil.ch/bitstreams/4d9df31d-2cef-451c-9439-36cc2f0b2600/download
+   … the partial standardized regression coefficient of intelligence to be … Another example is the work of Galton (1869, p. 1), who … seem to predict performance somewhat better in intellectually …
+
+76. Horace Secrist's (1933) Theory of Organizational Mediocrity: A Cautionary Tale.
+   https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=07391110&asa=N&AN=80156132&h=WV5BC6ZqyHZ2m%2FHy4rWZm0Y2b4UyH4StQXrvPVwmlQuGG5DmUhniYyElLPGp3cIVnnxB0kPb2%2FAyflAFqmOqPg%3D%3D&crl=c
+   (S Highhouse - TIP: The Industrial-Organizational …, 2012 - search.ebscohost.com | 2012)
+   … lower than average performance performed steadily better. The … Francis Galton’s concept of statistical regression to the mean, … Anytime people track the performance of a select group, …
+
+77. The Reference Cass Time Series Forecasting Technique
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5362060
+   (R Hossain - Available at SSRN 5362060, 2024 - papers.ssrn.com | 5362)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5362060
+   … a constant mean and those with a time-varying mean. This … techniques—mean-based forecasting and regression-based … bias.selecting an appropriate reference class, Kahneman and …
+
+78. Predicting experimental results: who knows what?
+   https://www.journals.uchicago.edu/doi/abs/10.1086/699976
+   (S DellaVigna, D Pope - Journal of Political Economy, 2018 - journals.uchicago.edu | 2018 | cited by 291)
+   [PDF] https://www.nber.org/system/files/working_papers/w22566/w22566.pdf
+   … We do this by linear regression of forecast accuracy on … Turning to individual experts’ performance, our benchmark measure … Within each group, we select the top percentile in predicted …
+
+79. Variational Galton Machine: From Point Predictions to a Probabilistic Aggregate
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5392541
+   (Y Jia, J Keppo, V Satopää - Available at SSRN 5392541, 2026 - papers.ssrn.com | 5392 | cited by 1)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5392541
+   … To evaluate the performance of our VGM framework, we apply it to a wide range of synthetic … model and implies a typical linear-regression-like relation between the peer prediction pk …
+
+80. A" Born Leader:" The Fallacy of Identifying Leadership as an Innate Characteristic
+   http://www.inquiriesjournal.com/articles/1323/a-born-leader-the-fallacy-of-identifying-leadership-as-an-innate-characteristic
+   (JC Bridges - Inquiries Journal, 2015 - inquiriesjournal.com | 2015 | cited by 2)
+   … , and (c) that performance is attributable to the production of … of leadership, analysed using Kahneman’s concepts of … Understanding how people arrive at their choices is an area …
+
+===== Query 8/8: file drawer problem publication bias Rosenthal =====
+
+1. The file drawer problem and tolerance for null results.
+   https://psycnet.apa.org/journals/bul/86/3/638/
+   (R Rosenthal - Psychological bulletin, 1979 - psycnet.apa.org | 1979 | cited by 11772)
+   [PDF] http://pages.ucsd.edu/~cmckenzie/Rosenthal1979PsychBulletin.pdf
+   … Now, however, although no definitive solution to the problem is available, one can establish … done by the file drawer problem. This advance in our ability to cope with the file drawer is an …
+
+2. Selection models and the file drawer problem
+   https://www.jstor.org/stable/2245925
+   (S Iyengar, JB Greenhouse - Statistical Science, 1988 - JSTOR | 1988 | cited by 561)
+   [PDF] https://projecteuclid.org/journals/statistical-science/volume-3/issue-1/Selection-Models-and-the-File-Drawer-Problem/10.1214/ss/1177013012.pdf
+   … We start with Rosenthal's approach to assessing the magnitude of the file drawer problem. … of 0.080, which is approximately the MLE if we assume no publication bias (/3 = y = 0). At the …
+
+3. Writing meta-analytic reviews.
+   https://psycnet.apa.org/fulltext/1995-45257-001.html
+   (R Rosenthal - Psychological bulletin, 1995 - psycnet.apa.org | 1995 | cited by 1464)
+   [PDF] http://128.174.199.77/writing_class_material/psych_bull_articles/rosenthal.pdf
+   … is available, but reasonable boundaries can be established on the problem, and the … file drawer problem can be estimated. The fundamental idea in coping with the file drawer problem …
+
+4. The file‐drawer problem revisited: A general weighted method for calculating fail‐safe numbers in meta‐analysis
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.0014-3820.2005.tb01004.x
+   (MS Rosenberg - Evolution, 2005 - Wiley Online Library | 2005 | cited by 1504)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111%2Fj.0014-3820.2005.tb01004.x
+   … to estimate whether publication bias is likely to be a problem for a … A second problem with Rosenthal’s method is that the … Rosenthal’s calculation is therefore not precisely applicable …
+
+5. Publication bias as a threat to the validity of meta-analytic results
+   https://link.springer.com/article/10.1007/s11292-007-9046-9
+   (HR Rothstein - Journal of Experimental Criminology, 2008 - Springer | 2008 | cited by 308)
+   [PDF] https://www.researchgate.net/profile/Hannah-Rothstein/publication/226368149_Publication_bias_as_a_threat_to_the_validity_of_meta-analytic_results/links/0912f5064ebbc67614000000/Publication-bias-as-a-threat-to-the-validity-of-meta-analytic-results.pdf?origin=journalDetail&_tp=eyJwYWdlIjoiam91cm5hbERldGFpbCJ9
+   … N (file drawer analysis) Robert Rosenthal called attention to the “file drawer problem” in 1979… (Rosenthal 1979). He was concerned that meta-analytic results could be wrong, due to non-…
+
+6. Publication bias: A case study of four test vendors
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1744-6570.2006.00059.x
+   (MA McDaniel, HR Rothstein… - Personnel …, 2006 - Wiley Online Library | 2006 | cited by 188)
+   [PDF] https://www.academia.edu/download/72559611/j.1744-6570.2006.00059.x20211014-25096-7qpctq.pdf
+   … Rosenthal suggested that rather than speculate on whether the file drawer problem existed, the … For comparison with trim and fill, we also conducted a traditional Rosenthal file drawer (…
+
+7. Failsafe N or File‐Drawer Number
+   https://onlinelibrary.wiley.com/doi/pdf/10.1002/0470870168#page=121
+   (BJ Becker - Publication bias in meta‐analysis: Prevention …, 2005 - Wiley Online Library | 2005 | cited by 308)
+   [PDF] https://www.researchgate.net/profile/Ramin-Sadeghi/post/Meta_analysis_How_to_calculate_the_impact_of_unpublished_data_on_result_of_analysis/attachment/59d63496c49f478072ea2db6/AS%3A273655265726473%401442255908007/download/publication+bias.pdf#page=131
+   … not to publish results that are not significant, instead storing them in file drawers (thus Rosenthal’s label ‘the file-drawer problem’). If this has happened, the published literature is not …
+
+8. [Selection models and the file drawer problem]: comment: assumptions and procedures in the file drawer problem
+   https://www.jstor.org/stable/2245927
+   (R Rosenthal, DB Rubin - Statistical Science, 1988 - JSTOR | 1988 | cited by 123)
+   [PDF] https://dash.harvard.edu/bitstreams/7312037c-f3fa-6bd4-e053-0100007fdf3b/download
+   … Interesting and important questions have been raised about the file drawer problem in the … the file drawer computations, (b) report some empirical estimates of retrieval bias relevant to …
+
+9. Publication bias in meta‐analysis: Confidence intervals for Rosenthal's Fail‐Safe number
+   https://onlinelibrary.wiley.com/doi/abs/10.1155/2014/825383
+   (KC Fragkos, M Tsagris… - … scholarly research notices, 2014 - Wiley Online Library | 2014 | cited by 219)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1155/2014/825383
+   … be missing from an analysis (ie, placed in a file drawer) and that these studies, if included, … Rosenthal suggested that rather than speculate on whether the file drawer problem existed, …
+
+10. Publication practices and the file drawer problem: A survey of published authors
+   https://search.proquest.com/openview/7a413c1744b2a59b83c5d64f70f2c3c2/1?pq-origsite=gscholar&cbl=1819046
+   (J Rotton, PW Foos, L Van Meek… - Journal of Social …, 1995 - search.proquest.com | 1995 | cited by 86)
+   … Rosenthal's procedures are based on the assumption that enough studies have escaped file drawers … Given the frequency of calls for replication (Berkowitz, 1992; Rosenthal, 1990), we …
+
+11. The influence of unpublished studies on results of recent meta-analyses: Publication bias, the file drawer problem, and implications for the replication crisis
+   https://www.tandfonline.com/doi/abs/10.1080/13645579.2021.1922805
+   (JA Wagner III - International Journal of Social Research …, 2022 - Taylor & Francis | 2022 | cited by 54)
+   … in part to publication bias and the resulting file drawer problem. … prone to the same publication bias and file drawer effects. A study … drawers, creating the ‘file drawer problem’ (Rosenthal, …
+
+12. [Selection models and the file drawer problem]: Rejoinder
+   https://www.jstor.org/stable/2245932
+   (S Iyengar, JB Greenhouse - Statistical Science, 1988 - JSTOR | 1988 | cited by 15)
+   [PDF] https://projecteuclid.org/journals/statistical-science/volume-3/issue-1/Selection-Models-and-the-File-Drawer-Problem-Rejoinder/10.1214/ss/1177013019.pdf
+   … those suggested by Bailar (1986), the problems of reporting bias might diminish. The empirical results concerning publication bias presented by Rosenthal and Rubin are interesting but …
+
+13. Combining probabilities and the file drawer problem
+   https://www.sciencedirect.com/science/article/pii/0191765X80900038
+   (R Rosenthal - Evaluation in Education, 1980 - Elsevier | 1980 | cited by 42)
+   … in file drawers that did not make the magic .05 level (Rosenthal and Gaito, 1963; 1964). … solution to the problem is available, we can establish reasonable boundaries on the problem …
+
+14. Publication bias (the" file-drawer problem") in scientific inference
+   https://arxiv.org/abs/physics/9909033
+   (JD Scargle - arXiv preprint physics/9909033, 1999 - arxiv.org | 9909 | cited by 520)
+   [PDF] https://arxiv.org/pdf/physics/9909033
+   … Safe File Drawer (FSFD) method for setting limits on the potential harm of publication bias, … 260), more or less repeating the analysis in (Rosenthal, 1979), with an illustrative example. …
+
+15. Publication bias: a brief concept note
+   https://journals.umt.edu.pk/index.php/CPR/article/download/6847/3104
+   (M Ali - Currents in Pharmaceutical Research, 2025 - journals.umt.edu.pk | 2025 | cited by 1)
+   [PDF] https://journals.umt.edu.pk/index.php/CPR/article/download/6847/3104
+   … The term "publication bias," often known as the "file drawer problem," refers to the tendency in the published literature to … Robert Rosenthal was the first to introduce the term "file drawer …
+
+16. Solving the “file drawer problem”: How researchers, institutions, publishers and funders can reduce publication bias
+   https://septentrio.uit.no/index.php/SCS/article/view/8315
+   (A Morka, S Jurburg, R Kirk… - Septentrio Conference …, 2025 - septentrio.uit.no | 2025)
+   [PDF] https://septentrio.uit.no/index.php/SCS/article/download/8315/9044
+   … Rosenthal proposed that “journals are filled with the 5% of the studies that show Type I errors, while the file drawers are … Despite being identified 45 years ago, the “file drawer problem” …
+
+17. THE POWER FUNCTION AND THE “FILE DRAWER PROBLEM”
+   http://www.markfisher.net/~mefisher/papers/Publication%20Selection%20Process.pdf
+   (M FISHER - markfisher.net)
+   [PDF] http://www.markfisher.net/~mefisher/papers/Publication%20Selection%20Process.pdf
+   … Rosenthal addresses the problem by aggregating the p-values from … The current paper takes a different approach to addressing the file drawer problem. Unpublished studies constitute …
+
+18. fiddle: a tool to combat publication bias by getting research out of the file drawer and into the scientific community
+   https://portlandpress.com/clinsci/article-abstract/134/20/2729/226790
+   (R Bernard, TL Weissgerber, E Bobrov… - Clinical …, 2020 - portlandpress.com | 2020 | cited by 17)
+   [PDF] https://portlandpress.com/clinsci/article-pdf/134/20/2729/896052/cs-2020-1125.pdf
+   … have the potential to reduce publication bias, many scientists are unaware that these formats exist and don’t know how to use them. Our open source file drawer data liberation effort (…
+
+19. A Generalized Model for Publication Bias and the File-drawer Problem
+   
+   (PH Schonemann, JD Scargle - Paper submitted for publication, 2006 | 2006 | cited by 1)
+
+20. Reliability and bias in peer-review practices
+   https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/reliability-and-bias-in-peerreview-practices/1D08EBF2FE6325A8A6475B3876DEDF18
+   (R Rosenthal - Behavioral and Brain Sciences, 1982 - cambridge.org | 1982 | cited by 25)
+   … In the present study we attempted to examine the issue of reliability and response bias in journal reviews, but instead of using indirect, correlational approaches, we decided there …
+
+21. Publication and related biases
+   https://books.google.com/books?hl=en&lr=&id=y-BjX58AXsQC&oi=fnd&pg=PA207&dq=file+drawer+problem+publication+bias+Rosenthal&ots=_klsIABYkJ&sig=otFp3tpKtlRF7zdp_uY2GyoreJQ
+   (MD Jennions, CJ Lortie, MS Rosenberg… - Handbook of meta …, 2013 - books.google.com | 2013 | cited by 209)
+   [PDF] https://www.researchgate.net/profile/Jakelyne-Bezerra/post/Is-there-any-minimum-number-for-studies-that-should-be-included-in-meta-analysis/attachment/5ee909274c18f900012a1d89/AS%3A903113871474694%401592330534970/download/Koricheva_2013_Handbook+of+meta-analysis+in+ecology+and+evolution.pdf#page=224
+   … First, if the problem of publication bias really is so severe, … Rosenberg’s N was far smaller than Rosenthal’s N (eg, for … Finally, we all need to open our file drawers and submit those …
+
+22. Sorting the file drawer: A typology for describing unpublished studies
+   https://journals.sagepub.com/doi/abs/10.1177/1745691620979831
+   (DA Lishner - Perspectives on Psychological Science, 2022 - journals.sagepub.com | 2022 | cited by 26)
+   … Rosenthal called this the file-drawer problem, and the greater its extent… file-drawer problem, also referred to as publication bias, considers it a more general problem of bias in published …
+
+23. Publication biases in replication studies
+   https://www.cambridge.org/core/journals/political-analysis/article/publication-biases-in-replication-studies/EA053746A49877FA119856FD05BE58D7
+   (AJ Berinsky, JN Druckman, T Yamamoto - Political Analysis, 2021 - cambridge.org | 2021 | cited by 35)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3454901
+   … distinct types of publication bias. First, we examine the wellknown file drawer problem (Rosenthal … File drawer bias occurs if a positive test result (ie, a statistical test that rejects the null …
+
+24. Revisiting the file drawer problem in meta‐analysis: An assessment of published and nonpublished correlation matrices
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1744-6570.2012.01243.x
+   (DR Dalton, H Aguinis, CM Dalton… - Personnel …, 2012 - Wiley Online Library | 2012 | cited by 221)
+   [PDF] http://ww.hermanaguinis.com/pdf/PPsych2012b.pdf
+   … fear of the biasing effects of the file drawer problem has led meta-… Next, we provide a brief synopsis of the file drawer problem … The issue of publication bias potentially arises “whenever …
+
+25. A generalized publication bias model
+   https://arxiv.org/abs/0808.1588
+   (PH Schonemann, JD Scargle - arXiv preprint arXiv:0808.1588, 2008 - arxiv.org | 808 | cited by 14)
+   [PDF] https://arxiv.org/pdf/0808.1588
+   … for coping with the nagging "file-drawer problem" of meta-… unlikely that there are file drawers crammed with the unpublished … belief that Rosenthal & Rubin had banished the confirmatory …
+
+26. Software for publication bias
+   https://onlinelibrary.wiley.com/doi/pdf/10.1002/0470870168#page=202
+   (M Borenstein - Publication bias in meta‐analysis: Prevention …, 2005 - Wiley Online Library | 2005 | cited by 280)
+   [PDF] https://meta-analysis.com/download/Publication-Bias%20Software.pdf
+   … Rosenthal suggested that we could compute the number of missing studies (with mean … Rosenthal referred to this as a ‘File drawer’analysis (this being the presumed location of the …
+
+27. Publication bias in the social sciences: Unlocking the file drawer
+   https://www.science.org/doi/abs/10.1126/science.1255484
+   (A Franco, N Malhotra, G Simonovits - Science, 2014 - science.org | 2014 | cited by 2053)
+   [PDF] https://www.law.nyu.edu/sites/default/files/upload_documents/September%209%20Neil%20Malhotra.pdf
+   … Strong results are 40 percentage points more likely to be published than are null results and … of publication bias and identify the stage of research production at which publication bias …
+
+28. How many studies are in the file drawer? An estimate from the family/marital psychotherapy literature
+   https://www.sciencedirect.com/science/article/pii/0272735889900135
+   (WR Shadish Jr, M Doherty, LM Montgomery - Clinical Psychology Review, 1989 - Elsevier | 1989 | cited by 64)
+   … However, because so few file drawer studies were act&b … Hence the o!egree of bias resultingfiom the file drawer problem is still … of Rosenthal’s “worst case scenario” in which file …
+
+29. Worsening file-drawer problem in the abstracts of natural, medical and social science databases
+   https://akjournals.com/view/journals/11192/85/1/article-p193.xml
+   (M Pautasso - Scientometrics, 2010 - akjournals.com | 2010 | cited by 123)
+   … bias are driving publication bias, this study does not address the issue of the temporal development in a potential bias of … that Rosenthal originally pointed out the file-drawer problem for …
+
+30. Result-blind peer reviews and editorial decisions
+   https://econtent.hogrefe.com/doi/full/10.1027/1016-9040/a000144
+   (W Greve, A Bröder, E Erdfelder - European Psychologist, 2013 - econtent.hogrefe.com | 2013 | cited by 33)
+   … file drawer problem in scientific research (Rosenthal, 1978, 1979), that is, the tendency for “nonsignificant” results to remain hidden in scientists’ file drawers … illustrate publication bias …
+
+31. Prying Open the File Drawer
+   https://journalofethics.ama-assn.org/article/prying-open-file-drawer/2009-04
+   (GM Sparks - AMA Journal of Ethics, 2009 - journalofethics.ama-assn.org | 2009 | cited by 1)
+   … Rosenthal coined the term “file drawer problem” to describe the tendency of researchers to publish … This publication bias leads to an overestimation of total effect size by 32 percent …
+
+32. Is there a" file drawer problem" in biological research?
+   https://www.jstor.org/stable/3546025
+   (V Bauchau - Oikos, 1997 - JSTOR | 1997 | cited by 44)
+   … the file drawer problem in a statistical framework, which will be useful in discussing how the bias … The publication bias that we cannot accept is a bias against non-significant results at a …
+
+33. The causes, consequences and detection of publication bias in psychiatry
+   https://onlinelibrary.wiley.com/doi/abs/10.1034/j.1600-0447.2000.102004241.x
+   (SM Gilbody, F Song, AJ Eastwood… - Acta Psychiatrica …, 2000 - Wiley Online Library | 2000 | cited by 118)
+   … Estimating the number of unpublished studies An alternative to the funnel plot is the `file drawer method' proposed originally by Rosenthal and colleagues (30). Rosenthal suggests a …
+
+34. Models for estimating the failsafe number in the file drawer problem
+   
+   (LJ Gleser, I Olkin - Technical Report No. 284, 1991 - Stanford University Stanford, CA | 1991 | cited by 2)
+
+35. Publication bias in meta-analysis: its causes and consequences
+   https://www.sciencedirect.com/science/article/pii/S0895435699001614
+   (A Thornton, P Lee - Journal of clinical epidemiology, 2000 - Elsevier | 2000 | cited by 1522)
+   Publication bias is a widespread problem that may seriously distort attempts … publication bias, and the role the author, journal editor, and reviewer play in selecting studies for publication…
+
+36. Meta-analytic methods to detect publication bias in behavior science research
+   https://link.springer.com/article/10.1007/s40614-021-00303-0
+   (A Dowdy, DA Hantula, JC Travers, M Tincani - Perspectives on behavior …, 2022 - Springer | 2022 | cited by 73)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC8894526/pdf/40614_2021_Article_303.pdf
+   … techniques for examining publication bias when published and grey literature … Rosenthal referred to this as the “file drawer analysis” because he presumed the researcher’s file drawer …
+
+37. Meta-Analytic Procedures for Social Science Research Sage Publications: Beverly Hills, 1984, 148 pp.
+   https://journals.sagepub.com/doi/abs/10.3102/0013189X015008018
+   (R Rosenthal - Educational Researcher, 1986 - journals.sagepub.com | 1986 | cited by 10529)
+   [PDF] https://dash.harvard.edu/bitstreams/43c989df-d54e-4c8d-8340-9e3e869cb3ee/download
+   … file drawers of researchers are filled with unpublished papers showing essen tially null results. His contribution to the problem … find ing is robust against the file drawer threat. If not, and …
+
+38. Reviewer bias against replication research
+   https://search.proquest.com/openview/fe2c00410d208e060711bf1686e3d282/1?pq-origsite=gscholar&cbl=1819046
+   (JW Neuliep, R Crandall - Journal of Social Behavior and …, 1993 - search.proquest.com | 1993 | cited by 181)
+   … Rosenthal, R. (1979). The "file drawer problem" and tolerance for null results. Psychological Bulletin, 86, 638-641. Rosenthal, R. (1990). Replication in behavioral research. …
+
+39. Comment: Assumptions and Procedures
+   https://projecteuclid.org/journalArticle/Download?urlId=10.1214%2Fss%2F1177013014
+   (FD COMPUTATIONS - projecteuclid.org)
+   … been raised about the file drawer problem in the thoughtful … the assumptions underlying the file drawer computations, (b) … Therefore, the original file drawer calculations of Rosenthal (…
+
+40. Fail-safe Ns for one-versus two-tailed tests lead to different conclusions about publication bias
+   https://www.tandfonline.com/doi/abs/10.1207/S15328031US0102_02
+   (LM Hsu - Understanding Statistics: Statistical Issues in …, 2002 - Taylor & Francis | 2002 | cited by 29)
+   … Zjs may be viewed, in the context of the Stouffer and Rosenthal model, as a problem of … to the file drawer problem. This conclusion is quite different from the one implied by Rosenthal’s …
+
+41. Publication bias in neuroimaging research: implications for meta-analyses
+   https://link.springer.com/article/10.1007/s12021-011-9125-y
+   (RG Jennings, JD Van Horn - Neuroinformatics, 2012 - Springer | 2012 | cited by 130)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC4368431/pdf/nihms668930.pdf
+   … the notion of publication bias, present several analytic means for assessing publication bias from a … in the meta-analysis are not robust enough, and not resistant to the file drawer threat. …
+
+42. Meta-analysis: a review.
+   https://journals.lww.com/bsam/citation/1991/05000/meta_analysis__a_review_.1.aspx
+   (R Rosenthal - Biopsychosocial Science and Medicine, 1991 - journals.lww.com | 1991 | cited by 406)
+   … Perhaps we could regard as robust to the file drawer problem any combined results for which the tolerance level (X) reaches 5 k + 10. That seems a conservative but reasonable …
+
+43. An examination of publication bias in an international journal of information technology in education
+   https://www.tandfonline.com/doi/abs/10.1300/J025v24n01_10
+   (L Liu, S Aberasturi, K Axtell… - Computers in the Schools, 2007 - Taylor & Francis | 2007 | cited by 3)
+   … In the present study, we examined the publication bias or file drawer problem, using an entirely … If the results only included a value for r the following formula was used from Rosenthal: …
+
+44. Replication in behavioral research
+   https://search.proquest.com/openview/5ccc3a267139968c18c0d7ce1a1c09f6/1?pq-origsite=gscholar&cbl=1819046
+   (R Rosenthal - Journal of Social Behavior and Personality, 1990 - search.proquest.com | 1990 | cited by 420)
+   … file drawer problem (Rosenthal, 1979; 1984; Rosenthal & Rubin, 1988). The fundamental idea in coping with the file drawer problem is … that must be in the file drawers before the overall …
+
+45. An increasing problem in publication ethics: Publication bias and editors' role in avoiding it
+   https://link.springer.com/article/10.1007/s11019-017-9767-0
+   (PE Ekmekci - Medicine, Health Care and Philosophy, 2017 - Springer | 2017 | cited by 79)
+   … Rosenthal stated that 95% of the studies with non-significant results were left in files without being published and used the term “file drawer … Given the file drawer problem, excluding …
+
+46. Cumulating evidence
+   https://www.taylorfrancis.com/chapters/edit/10.4324/9781315799582-24/cumulating-evidence-robert-rosenthal
+   (R Rosenthal - A Handbook for Data Analysis in the Behaviorial …, 2014 - taylorfrancis.com | 2014 | cited by 136)
+   … plausible that other studies in that area may be in those file drawers. Perhaps we could regard as robust to the file drawer problem any combined results for which the tolerance level (X) …
+
+47. Is there a “best” way to detect and minimize publication bias? An empirical evaluation
+   https://journals.sagepub.com/doi/abs/10.1177/016327870102400202
+   (B Pham, R Platt, L McAuley… - Evaluation & the …, 2001 - journals.sagepub.com | 2001 | cited by 87)
+   … , we used the Rosenthal (1979) and … file drawer number indicates robustness in a meta-analysis, while a small number of missing studies indicates the extent of the file drawer problem. …
+
+48. Publication bias & small-study effects in pediatric dentistry meta-analyses
+   https://www.sciencedirect.com/science/article/pii/S1532338214002395
+   (SN Papageorgiou, D Dimitraki, T Coolidge… - Journal of Evidence …, 2015 - Elsevier | 2015 | cited by 31)
+   [PDF] https://www.academia.edu/download/36249626/Papageorgiou_et_al_2014_JEBDP_Supp.pdf
+   Objectives The aim of this study was to examine the presence and extent of publication bias and small-study effects in meta-analyses (MAs) investigating pediatric dentistry-related …
+
+49. Documentation of the file drawer problem in academic finance journals
+   https://www.pm-research.com/content/iijinvest/27/1/local/complete-issue.pdf#page=145
+   (MR Morey, S Yadav - Journal of Investing, 2018 - pm-research.com | 2018 | cited by 11)
+   … 1 Because of this publication bias, a researcher who finds nonsignificant results often will place them in the … 2The file drawer problem was first coined by Rosenthal [1979]. …
+
+50. Testing and adjusting for publication bias
+   https://www.cell.com/trends/ecology-evolution/abstract/S0169-5347(01)02235-2
+   (AP Møller, MD Jennions - Trends in Ecology & Evolution, 2001 - cell.com | 2001 | cited by 481)
+   [PDF] https://openresearch-repository.anu.edu.au/bitstreams/39d10de9-528b-4fa6-9a27-76f4240f0e13/download
+   … a biased sample of available studies? Publication bias refers to phenomena arising from bias … Direct and indirect methods for investigating publication bias are now readily available, but …
+
+51. Publication bias: a problem in interpreting medical data
+   https://academic.oup.com/jrsssa/article-abstract/151/3/419/7106627
+   (CB Begg, JA Berlin - Journal of the Royal Statistical Society …, 1988 - academic.oup.com | 1988 | cited by 1112)
+   … The method of source augmentation was developed by Rosenthal (1978, 1979). Sometimes called the 'file drawer problem', Rosenthal suggested that to develop an appropriate …
+
+52. Evidence of the File Drawer/Publication Bias Problem in Organization Research: An Affirmative Replication of Dalton, Aguinis, Dalton, Bosco, and Pierce (2012)
+   https://journals.sagepub.com/doi/abs/10.1177/00332941251389578
+   (JA Wagner III - Psychological Reports, 2025 - journals.sagepub.com | 2025)
+   … The file drawer problem and related publication bias have … of a file drawer/publication bias problem after accounting for … that the file drawer problem and related publication bias are not …
+
+53. [Selection models and the file drawer problem]: comment
+   https://www.jstor.org/stable/2245926
+   (LV Hedges - Statistical Science, 1988 - JSTOR | 1988 | cited by 12)
+   [PDF] https://projecteuclid.org/journals/statistical-science/volume-3/issue-1/Selection-Models-and-the-File-Drawer-Problem-Comment/10.1214/ss/1177013013.pdf
+   … ORIGINS OF SELECTION BIAS One form of selection bias is publication bias that connotes … Therefore, the original file drawer calculations of Rosenthal (1979) are fully consistent with …
+
+54. Publication bias in research synthesis: sensitivity analysis using a priori weight functions.
+   https://psycnet.apa.org/record/2005-16136-006
+   (JL Vevea, CM Woods - Psychological methods, 2005 - psycnet.apa.org | 2005 | cited by 586)
+   [PDF] http://faculty.ucmerced.edu/jvevea/other/Vevea_and_Woods_Psy_Meth.pdf
+   … Publication bias, or the “file-drawer problem” (Rosenthal, 1979), is the tendency for the … the file drawers. Thus, even in the presence of such efforts, the problem of publication bias cannot …
+
+55. PUBLICATION BIAS: THE ACHILLES'HEEL OF SYSTEMATIC REVIEWS?
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8527.2006.00332.x
+   (CJ Torgerson - British Journal of Educational Studies, 2006 - Wiley Online Library | 2006 | cited by 252)
+   … In summary, since 1959 various methodological and empirical researchers have found significant evidence for a file drawer effect within education and the social sciences. To avoid this …
+
+56. Publication bias in the organizational sciences
+   https://journals.sagepub.com/doi/abs/10.1177/1094428112452760
+   (S Kepes, GC Banks, M McDaniel… - Organizational …, 2012 - journals.sagepub.com | 2012 | cited by 527)
+   [PDF] https://www.researchgate.net/profile/Sven-Kepes/publication/235701995_Publication_bias_in_the_organizational_sciences/links/0912f512be1a43ff69000000/Publication-bias-in-the-organizational-sciences.pdf
+   … address the issue of publication bias in a comprehensive and systematic fashion. We note that this recommendation is aligned with the most recent version of the publication manual of …
+
+57. Examining publication bias—a simulation-based evaluation of statistical tests on publication bias
+   https://peerj.com/articles/4115/
+   (A Schneck - PeerJ, 2017 - peerj.com | 2017 | cited by 36)
+   [PDF] https://peerj.com/articles/4115.pdf
+   … publication bias and its degree (0%, 50%, 100%) were simulated. The type of publication bias was defined either as file-drawer, … Although Rosenthal’s example is extreme, a multitude of …
+
+58. The file drawer effect: A call for meticulous methodology and tolerance for non-significant results
+   https://journals.lww.com/ijaweb/fulltext/2017/61060/the_file_drawer_effect__a_call_for_meticulous.15.aspx
+   (PJ Nagarajan, BK Garla, M Taranath… - Indian journal of …, 2017 - journals.lww.com | 2017 | cited by 18)
+   [PDF] https://journals.lww.com/ijaweb/_layouts/15/oaks.journals/downloadpdf.aspx?an=01762628-201761060-00015
+   … non-significant research findings into ‘file drawers’ making these results inaccessible and … Rosenthal R. The file drawer problem and tolerance for null results. Psychol Bull 1979;86:…
+
+59. Reporting all results efficiently: A RARE proposal to open up the file drawer
+   https://www.pnas.org/doi/abs/10.1073/pnas.2106178118
+   (DD Laitin, E Miguel, A Alrababa'h… - Proceedings of the …, 2021 - pnas.org | 2021 | cited by 38)
+   [PDF] https://www.pnas.org/doi/pdf/10.1073/pnas.2106178118
+   … to resolve the “file drawer problem” (4). In … these published registered reports than in the traditional literature, suggesting it may be an effective mechanism for reducing publication bias (…
+
+60. The file drawer effect and publication rates in menstrual cycle research
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1471-6402.1987.tb00786.x
+   (B Sommer - Psychology of Women Quarterly, 1987 - Wiley Online Library | 1987 | cited by 49)
+   … The file drawer problem refers to a publication bias for … to the file drawer. The assumption is that researchers are unable to … The term file drawer effect was coined by Rosenthal (1979, …
+
+61. The effects of unrepresented studies on the robustness of validity generalization results
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1744-6570.1992.tb00853.x
+   (SD Ashworth, HG Osburn, JC Callender… - Personnel …, 1992 - Wiley Online Library | 1992 | cited by 34)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1744-6570.1992.tb00853.x
+   … to Rosenthal’s FileDrawer Equation The difference between the present technique and Rosenthal’s filedrawer … shortcomings of applying Rosenthal's file-drawer equation to the results of …
+
+62. Geographical disparities in navigating rejection in science drive disparities in its file drawer
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4872023
+   (H Chen, CI Rider, D Jurgens… - Available at SSRN …, 2024 - papers.ssrn.com | 2024 | cited by 7)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=4872023
+   … representation in not only published knowledge but also the" file drawer" of unpublished … by 62 STEM journals published by the Institute of Physics Publishing, we document several new …
+
+63. The" file drawer problem" of non-significant results: does it apply to biological research?
+   https://www.jstor.org/stable/3546355
+   (RD Csada, PC James, RHM Espie - Oikos, 1996 - JSTOR | 1996 | cited by 255)
+   … a publication bias against non-significant results in the biological literature. We suggest reasons why non-significant results are not published… is Rosenthal's (1979) "file drawer problem". …
+
+64. The file drawer problem in reliability generalization: A strategy to compute a fail-safe N with reliability coefficients
+   https://journals.sagepub.com/doi/abs/10.1177/0013164407301528
+   (RT Howell, AL Shields - Educational and Psychological …, 2008 - journals.sagepub.com | 2008 | cited by 47)
+   [PDF] https://www.researchgate.net/profile/Ryan-Howell-2/publication/241647362_The_File_Drawer_Problem_in_Reliability_GeneralizationA_Strategy_to_Compute_a_Fail-Safe_N_With_Reliability_Coefficients/links/56a3a3c208ae1b6511306bd6/The-File-Drawer-Problem-in-Reliability-GeneralizationA-Strategy-to-Compute-a-Fail-Safe-N-With-Reliability-Coefficients.pdf
+   … Thus, when incorporating the concept of the Fail-Safe N into the RG literature, we focus on the impact of both nonreporting published articles and unpublished (file drawer) studies. To …
+
+65. Publication Bias
+   https://link.springer.com/chapter/10.1007/978-3-031-73773-2_13
+   (R Cooke - Meta-Analysis for Psychologists, 2024 - Springer | 2024)
+   … , often putting away non-significant findings in the metaphorical file drawer (Rosenthal, 1979). … values across studies, a common practice when Rosenthal published his work in 1979. It’s …
+
+66. Conservative tests under satisficing models of publication bias
+   https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0149590
+   (J McCrary, G Christensen, D Fanelli - PloS one, 2016 - journals.plos.org | 2016 | cited by 30)
+   [PDF] https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0149590&type=printable
+   … Rosenthal famously notes that in the “extreme view of this problem, the ‘file drawer problem,… the studies that show type I errors, while the file drawers back at the lab are filled with the 95…
+
+67. Not published is not perished: Addressing publication bias in meta-analytic studies in communication
+   https://academic.oup.com/hcr/article-abstract/46/2-3/300/5771510
+   (Y Sun, Z Pan - Human Communication Research, 2020 - academic.oup.com | 2020 | cited by 19)
+   … of publication bias and some major methods of assessment, we provide a systematic review of meta-analyses published … Publication bias, initially identified as the “file drawer problem” (…
+
+68. Assessing small study effects and publication bias in orthodontic meta-analyses: a meta-epidemiological study
+   https://link.springer.com/article/10.1007/s00784-014-1196-3
+   (SN Papageorgiou, MA Papadopoulos… - Clinical Oral …, 2014 - Springer | 2014 | cited by 29)
+   [PDF] https://www.academia.edu/download/33760174/Papageorgiou_et_al_2014_COI_Supp.pdf
+   … of MAs’ results to publication bias was examined by Rosenthal’s … after consideration of publication bias using Duval and … Publication bias (also known as the “file-drawer problem”) has …
+
+69. Publication bias in ecology and evolution: an empirical assessment using the 'trim and fill'method
+   https://www.cambridge.org/core/journals/biological-reviews/article/publication-bias-in-ecology-and-evolution-an-empirical-assessment-using-the-trim-and-fill-method/6967D420D51E37D5CC184069206509D3
+   (MD Jennions, AP Moeller - Biological reviews, 2002 - cambridge.org | 2002 | cited by 317)
+   [PDF] https://repository.si.edu/bitstreams/daae1619-4170-47d1-8c61-f6980a90cb77/download
+   … (5) We conclude that publication bias is a potential problem for reviewers. This is most clearly … The ‘‘file drawer problem’’ of non-significant results: does it apply to biological research? …
+
+70. Investigating the File Drawer Problem in Causal Effects Studies in Science Education.
+   https://eric.ed.gov/?id=ED563102
+   (J Taylor, S Kowalski, M Stuhlsatz, C Wilson… - Society for Research on …, 2013 - ERIC | 2013)
+   [PDF] https://files.eric.ed.gov/fulltext/ED563102.pdf
+   … type of publication bias. That is, the … publication. In other words, we are investigating for science education studies what Robert Rosenthal originally coined as the “file drawer” problem (…
+
+71. Revisiting the file drawer problem in meta-analysis
+   https://journals.aom.org/doi/abs/10.5465/ambpp.2011.65869140
+   (DR Dalton, H Aguinis, CM Dalton… - Academy of …, 2011 - journals.aom.org | 2011 | cited by 7)
+   … to estimate the magnitude of the file drawer problem and we enthusiastically concur with Cooper and Hedges’ (2009: 565) observation that “publication bias is easier to detect than to …
+
+72. Publication bias in clinical research
+   https://www.sciencedirect.com/science/article/pii/014067369190201Y
+   (PJ Easterbrook, R Gopalan, JA Berlin, DR Matthews - The Lancet, 1991 - Elsevier | 1991 | cited by 3864)
+   [PDF] https://www.sciencedirect.com/science/article/pii/014067369190201Y/pdf?md5=a172a3fa25a497f12a25377ce46eaa73&pid=1-s2.0-014067369190201Y-main.pdf
+   … Also of interest was whether the magnitude of publication bias varied across different subgroups of studies, so we looked for interactions between the variable for attainment of statistical …
+
+73. Beyond publication bias
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.0950-0804.2005.00250.x
+   (TD Stanley - Journal of economic surveys, 2005 - Wiley Online Library | 2005 | cited by 1046)
+   … the effects of publication bias, often referred to as the ‘file drawer problem’ (Rosenthal, 1978… Many researchers have pointed out the flaws in Rosenthal’s approach. It is arbitrary (Sutton …
+
+74. Publication bias: what is it? How do we measure it? How do we avoid it?
+   https://www.tandfonline.com/doi/abs/10.2147/OAJCT.S34419
+   (F Song, L Hooper, YK Loke - Open Access Journal of Clinical …, 2013 - Taylor & Francis | 2013 | cited by 390)
+   [PDF] https://www.tandfonline.com/doi/pdf/10.2147/OAJCT.S34419
+   … file-drawer problem” was used by Rosenthal in 1979 to describe the fact that many completed studies have never been published… The “file drawer problem” and tolerance for null results. …
+
+75. Tranexamic acid in total hip arthroplasty: a recursive cumulative meta-analysis of randomized controlled trials and assessment of publication bias
+   https://www.sciencedirect.com/science/article/pii/S0972978X17300946
+   (K Sridharan, G Sivaramakrishnan - Journal of orthopaedics, 2017 - Elsevier | 2017 | cited by 12)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC5440691/pdf/main.pdf
+   … presence of any publication bias. 11 The Rosenthal method also known as ‘file drawer analysis’ … Additionally, we also assessed the publication bias using Rosenthal and, Trim and Fill …
+
+76. Publication bias, with a focus on psychiatry: causes and solutions
+   https://link.springer.com/article/10.1007/s40263-013-0067-9
+   (EH Turner - CNS drugs, 2013 - Springer | 2013 | cited by 92)
+   … Publication bias occurs when investigators, reviewers, and editors submit or accept … term “publication bias” can refer to selective publication of entire trials, aka the file drawer problem [2]…
+
+77. Biomarkers in Cardiovascular Medicine: The Shame of Publication Bias Comment on “Bias in Associations of Emerging Biomarkers With Cardiovascular Disease”
+   https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/1672288
+   (SE Nissen - JAMA internal medicine, 2013 - jamanetwork.com | 2013 | cited by 11)
+   … or positive publication bias. In 1979, this practice was graphically described by … Robert Rosenthal as the “file drawer problem.” Rosenthal wrote that “the extreme view of the file drawer …
+
+78. Publication Bias—A Threat to Scientific Validity
+   https://www.thieme-connect.com/products/ejournals/html/10.1055/s-0039-1677673
+   (B Sharma - Homœopathic Links, 2018 - thieme-connect.com | 2018 | cited by 3)
+   [PDF] https://scholar.archive.org/work/ebxzb57rjbfcdhdrjqnhxo7reu/access/wayback/https://www.thieme-connect.de/products/ejournals/pdf/10.1055/s-0039-1677673.pdf
+   … [1] Publication bias is sometimes called the ‘file drawer effect’ which says that results not … the file drawers, leading to a bias in published research.[2] The term was coined by Rosenthal …
+
+79. The perils of misinterpreting and misusing “publication bias” in meta-analyses: an education review on funnel plot-based methods
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC10933152/
+   (J Afonso, R Ramirez-Campillo… - Sports Medicine …, 2023 - pmc.ncbi.nlm.nih.gov | 2023 | cited by 221)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC10933152/pdf/40279_2023_Article_1927.pdf
+   … misuse and misinterpretation of publication bias. Because true publication bias is very difficult to determine, we recommend that future publications use the term “risk of publication bias”. …
+
+80. Publication bias in special education meta-analyses
+   https://journals.sagepub.com/doi/abs/10.1177/0014402917691016
+   (NA Gage, BG Cook, B Reichow - Exceptional Children, 2017 - journals.sagepub.com | 2017 | cited by 159)
+   [PDF] https://www.researchgate.net/profile/Bryan-Cook/publication/319021810_Publication_Bias_in_Special_Education_Meta-Analyses/links/59ca977445851556e97e2b44/Publication-Bias-in-Special-Education-Meta-Analyses.pdf
+   … is sometimes relegated to the “file drawer.” Publication bias—both study level and review level… ) to calculate Rosenthal’s fail-safe N (1979). Next, we defined the presence or absence of …

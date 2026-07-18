@@ -1,0 +1,1740 @@
+===== Query 1/6: Hardt Megiddo Papadimitriou Wootters 2016 strategic classification =====
+
+1. Strategic classification
+   https://dl.acm.org/doi/abs/10.1145/2840728.2840730
+   (…, N Megiddo, C Papadimitriou, M Wootters - Proceedings of the 2016 …, 2016 - dl.acm.org | 2016 | cited by 628)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/2840728.2840730
+   Machine learning relies on the assumption that unseen test instances of a classification problem follow the same distribution as observed training data. However, this principle can break down when machine learning is used to make important decisions about the welfare (employment, education, health) of strategic individuals. Knowing information about the classifier, such individuals may manipulate their attributes in order to obtain a better classification outcome. As a result of this behavior -- often referred to as gaming -- the performance of the classifier may deteriorate sharply. Indeed, gaming is a well-known obstacle for using machine learning methods in practice; in financial policy-making, the problem is widely known as Goodhart's law. In this paper, we formalize the problem, and pursue algorithms for learning classifiers that are robust to gaming. We model classification as a sequential game between a player named "Jury" and a player named "Contestant." Jury designs a classifier, and Contestant receives an input to the classifier drawn from a distribution. Before being classified, Contestant may change his input based on Jury's classifier. However, Contestant incurs a cost for these changes according to a cost function. Jury's goal is to achieve high classification accuracy with respect to Contestant's original input and some underlying target classification function, assuming Contestant plays best response. Contestant's goal is to achieve a favorable classification outcome while taking into account the cost of achieving it. For a natural class of "separable" cost functions, and certain generalizations, we obtain computationally efficient learning algorithms which are near optimal, achieving a classification error that is arbitrarily close to the theoretical minimum. Surprisingly, our algorithms are efficient even on concept classes that are computationally hard to learn. For general cost functions, designing an approximately optimal strategy-proof classifier, for inverse-polynomial approximation, is NP-hard.
+
+===== Query 2/6: strategic classification Stackelberg game gaming =====
+
+1. Who leads and who follows in strategic classification?
+   https://proceedings.neurips.cc/paper/2021/hash/812214fb8e7066bfa6e32c626c2c688b-Abstract.html
+   (T Zrnic, E Mazumdar, S Sastry… - Advances in neural …, 2021 - proceedings.neurips.cc | 2021 | cited by 103)
+   [PDF] https://proceedings.neurips.cc/paper/2021/file/812214fb8e7066bfa6e32c626c2c688b-Paper.pdf
+   … To give an overview of our results, we recall some relevant game-theoretic concepts… strategic classification is modeled as a Stackelberg game. A Stackelberg game is a twoperson game …
+
+2. Strategic classification
+   https://dl.acm.org/doi/abs/10.1145/2840728.2840730
+   (M Hardt, N Megiddo, C Papadimitriou… - Proceedings of the 2016 …, 2016 - dl.acm.org | 2016 | cited by 628)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/2840728.2840730
+   … is to formalize gaming in classification … strategy (a classifier f) before the second player (Contestant) responds. We wish to find a Stackelberg equilibrium, that is, a highest-payoff strategy …
+
+3. Learning in stackelberg games with non-myopic agents
+   https://dl.acm.org/doi/abs/10.1145/3490486.3538308
+   (N Haghtalab, T Lykouris, S Nietert, A Wei - Proceedings of the 23rd ACM …, 2022 - dl.acm.org | 2022 | cited by 51)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3490486.3538308
+   … For Stackelberg security games, we devise an algorithm, … For strategic classification, we prove that an existing non-… For general finite Stackelberg games, we extend a multiple LP …
+
+4. Incentive mechanisms for strategic classification and regression problems
+   https://dl.acm.org/doi/abs/10.1145/3490486.3538300
+   (K Jin, X Zhang, MM Khalili, P Naghizadeh… - Proceedings of the 23rd …, 2022 - dl.acm.org | 2022 | cited by 22)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3490486.3538300
+   … ] are gaming and thus all subsidies go toward gaming. Both … that subsidizing gaming is a strictly dominated strategy for the … Stackelberg game models to study the strategic classification …
+
+5. Strategic classification from revealed preferences
+   https://dl.acm.org/doi/abs/10.1145/3219166.3219193
+   (J Dong, A Roth, Z Schutzman, B Waggoner… - Proceedings of the 2018 …, 2018 - dl.acm.org | 2018 | cited by 295)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3219166.3219193
+   … each strategic round can be viewed as a Stackelberg game, in which the learner as the leader plays her strategy … With this observation, we define the Stackelberg regret to measure the …
+
+6. Calibrated stackelberg games: Learning optimal commitments against calibrated agents
+   https://proceedings.neurips.cc/paper_files/paper/2023/hash/c23ccf9eedf87e4380e92b75b24955bb-Abstract-Conference.html
+   (N Haghtalab, C Podimata… - Advances in Neural …, 2023 - proceedings.neurips.cc | 2023 | cited by 50)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2023/file/c23ccf9eedf87e4380e92b75b24955bb-Paper-Conference.pdf
+   … Two prominent and immediate applications of our results are the settings of learning in Stackelberg Security Games and strategic classification, both against calibrated agents. …
+
+7. Anticipating Gaming to Incentivize Improvement: Guiding Agents in (Fair) Strategic Classification
+   https://arxiv.org/abs/2505.05594
+   (S Alhanouti, P Naghizadeh - arXiv preprint arXiv:2505.05594, 2025 - arxiv.org | 2505 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2505.05594
+   … We consider a Stackelberg game where the firm (algorithm designer) first announces a classifier, following which the agents respond strategically. In this section, we detail the agents’ …
+
+8. Stackelberg reasoning in mixed-motive games: An experimental investigation
+   https://www.sciencedirect.com/science/article/pii/S0167487098000087
+   (AM Colman, JA Stirk - Journal of Economic Psychology, 1998 - Elsevier | 1998 | cited by 106)
+   … preferred Stackelberg strategies in Stackelberg-soluble games, … joint payoff maximization and strategic dominance were given … tend to use Stackelberg strategies in the h-soluble games. …
+
+9. Could Anticipating Gaming Incentivize Improvement in (Fair) Strategic Classification?
+   https://ieeexplore.ieee.org/abstract/document/10886604/
+   (S Alhanouti, P Naghizadeh - 2024 IEEE 63rd Conference on …, 2024 - ieeexplore.ieee.org | 2024 | cited by 5)
+   [PDF] https://parinazn.com/papers/conferences/cdc24.pdf
+   … We consider a Stackelberg game where the firm (algorithm designer) first announces a classifier, following which the agents respond strategically. We detail the agents’ and the firm …
+
+10. Stackelberg strategies and incentives in multiperson deterministic decision problems
+   https://ieeexplore.ieee.org/abstract/document/6313265/
+   (YP Zheng, T Basar, JB Cruz - IEEE transactions on Systems …, 1984 - ieeexplore.ieee.org | 1984 | cited by 96)
+   … of a Stackelberg game and the related … game a "feedback Stackelberg game with informational advantage to the leader" and the associated solution concept the "feedback Stackelberg …
+
+11. Stackelberg games
+   https://www.elgaronline.com/edcollchap/edcoll/9781785363276/9781785363276.00017.xml
+   (LA Julien - Handbook of Game Theory and Industrial Organization …, 2018 - elgaronline.com | 2018 | cited by 27)
+   … the logic of Stackelberg competition to capture some salient features of strategic interactions in … of the basic Stackelberg duopoly game. Third, we compare the performance of the …
+
+12. Stackelberg games for adversarial prediction problems
+   https://dl.acm.org/doi/abs/10.1145/2020408.2020495
+   (M Brückner, T Scheffer - Proceedings of the 17th ACM SIGKDD …, 2011 - dl.acm.org | 2011 | cited by 362)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/2020408.2020495
+   … the Stackelberg equilibrium instead of a worst-case strategy … However, in contrast to the Nash strategy, the Stackelberg model … and is able to identify and follow the equilibrial strategy. …
+
+13. Convergence of learning dynamics in stackelberg games
+   https://arxiv.org/abs/1906.01217
+   (T Fiez, B Chasnov, LJ Ratliff - arXiv preprint arXiv:1906.01217, 2019 - arxiv.org | 1906 | cited by 118)
+   [PDF] https://arxiv.org/pdf/1906.01217
+   … response strategy for which each stable critical point is guaranteed to be … Stackelberg equilibrium in zero-sum games. As a result, the learning rule provably converges to a Stackelberg …
+
+14. Complexity of computing optimal stackelberg strategies in security resource allocation games
+   https://ojs.aaai.org/index.php/AAAI/article/view/7638
+   (D Korzhyk, V Conitzer, R Parr - Proceedings of the AAAI Conference on …, 2010 - ojs.aaai.org | 2010 | cited by 275)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/download/7638/7499
+   … a mixed strategy, a so-called Stackelberg model. As pointed out by Kiek… strategies for the defender. In this paper, we study how to compute optimal Stackelberg strategies in such games, …
+
+15. On classification of strategic agents who can both game and improve
+   https://arxiv.org/abs/2203.00124
+   (S Ahmadi, H Beyhaghi, A Blum, K Naggita - arXiv preprint arXiv …, 2022 - arxiv.org | 2022 | cited by 42)
+   [PDF] https://arxiv.org/pdf/2203.00124
+   … presence of strategic agents. Much of this work considers agents whose actions are only gaming and … mechanism design in the presence of agents who can both game and improve [2, 3…
+
+16. Stochastic demand response management using mixed-strategy stackelberg game
+   https://ieeexplore.ieee.org/abstract/document/9733023/
+   (M Samadi, H Kebriaei, H Schriemer… - IEEE Systems …, 2022 - ieeexplore.ieee.org | 2022 | cited by 13)
+   … DR approach by using a mixed-strategy Stackelberg game (MSG) between an aggregator and … We map the MSG to subgames and prove the equilibrium using mixed-strategy Nash …
+
+17. Stratified game-theoretic optimization of robust control design for fuzzy dynamical systems: A hybrid Nash–Stackelberg strategy
+   https://ieeexplore.ieee.org/abstract/document/10384797/
+   (C Li, C Ma, YH Chen, R Yu - IEEE Transactions on Systems …, 2024 - ieeexplore.ieee.org | 2024 | cited by 11)
+   … First, the generalized Stackelberg game theory is applied when there are one leader and two followers. … Hence, a novel twolevel game is proposed by combing the Stackelberg game …
+
+18. A REVIEW OF DYNAMIC STACKELBERG GAME MODELS.
+   https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=15313492&asa=Y&AN=120235604&h=YiOM%2FKAfURoeI4Q2WDR2Ced7Jf6b2WANYMQVF8K7kvj6Yfuw%2BZbJ2o5WJcjL39uEdGJB3hP5R9FtUkbKkxXMnQ%3D%3D&crl=c
+   (T Li, SP Sethi - … & Continuous Dynamical Systems-Series B, 2017 - search.ebscohost.com | 2017 | cited by 191)
+   … , Stackelberg games have been used to study inventory issues, such as wholesale and retail pricing strategies, … In marketing, dynamic Stackelberg games have been used to model …
+
+19. A Stackelberg game-based approach to load aggregator bidding strategies in electricity spot markets
+   https://www.sciencedirect.com/science/article/pii/S2352152X24020954
+   (Y Li, Y Yang, F Zhang, Y Li - Journal of Energy Storage, 2024 - Elsevier | 2024 | cited by 39)
+   … trading strategy reduces the purchasing cost by 16.53 % and increases the revenue by 12.66 %… The introduction of the Stackelberg game model ensures the sustainability of the strategy …
+
+20. Energy-efficient resource allocation strategy in ultra dense small-cell networks: A Stackelberg game approach
+   https://ieeexplore.ieee.org/abstract/document/7997289/
+   (L Xu, Y Mao, S Leng, G Qiao… - 2017 IEEE International …, 2017 - ieeexplore.ieee.org | 2017 | cited by 36)
+   … To solve these two processes, thereafter, we employ a uniform pricing scheme to reduce the feedback overhead and build the PA problem into a two-stage Stackelberg game, where the …
+
+21. Stackelberg game approaches for anti-jamming defence in wireless networks
+   https://ieeexplore.ieee.org/abstract/document/8558506/
+   (L Jia, Y Xu, Y Sun, S Feng… - IEEE Wireless …, 2018 - ieeexplore.ieee.org | 2018 | cited by 166)
+   [PDF] https://arxiv.org/pdf/1805.12308
+   … Stackelberg game can capture the inter… ’ strategies to improve jamming efficiency. Thus, the anti-jamming problem contains a natural hierarchical characteristic, and Stackelberg game is …
+
+22. No-regret learning in dynamic stackelberg games
+   https://ieeexplore.ieee.org/abstract/document/10310098/
+   (N Lauffer, M Ghasemi, A Hashemi… - … on Automatic Control, 2023 - ieeexplore.ieee.org | 2023 | cited by 46)
+   [PDF] https://arxiv.org/pdf/2202.04786
+   … , a leader commits to a randomized strategy, and a follower chooses their best strategy in … of a standard Stackelberg game, called a discrete-time dynamic Stackelberg game, that has an …
+
+23. Stackelberg game-based energy-efficient resource allocation for 5G cellular networks
+   https://search.proquest.com/openview/368435d20068f7a5f55c83bf85f81214/1?pq-origsite=gscholar&cbl=45633
+   (L Huo, D Jiang - Telecommunication Systems, 2019 - search.proquest.com | 2019 | cited by 77)
+   … Thus, we use the iteration method to find the optimal allocation strategy scheme. For the Stackelberg game, we try to find the NE points which stand for the stable strategy of resources …
+
+24. Strategic classification with externalities
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/46079bebac3c5379e7a70b1f36ad6750-Abstract-Conference.html
+   (S Hossain, E Micha, Y Chen… - … Conference on Learning …, 2025 - proceedings.iclr.cc | 2025 | cited by 8)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/46079bebac3c5379e7a70b1f36ad6750-Paper-Conference.pdf
+   … a Stackelberg game, with the resulting agent manipulation dynamics captured as a simultaneous game… the standard strategic classification model, we consider a Stackelberg interaction …
+
+25. Stochastic-Stackelberg-game-based edge service selection for massive IoT networks
+   https://ieeexplore.ieee.org/abstract/document/10214076/
+   (H Liang, W Zhang - IEEE Internet of Things Journal, 2023 - ieeexplore.ieee.org | 2023 | cited by 15)
+   … We propose a novel edge service selection strategy for massive IoT networks. We use a stochastic Stackelberg game framework to formulate this problem. The proposed strategy can …
+
+26. Modeling adversarial learning as nested stackelberg games
+   https://link.springer.com/chapter/10.1007/978-3-319-31750-2_28
+   (Y Zhou, M Kantarcioglu - … -Asia Conference on Knowledge Discovery and …, 2016 - Springer | 2016 | cited by 39)
+   … may use different strategies to corrupt the data. We present a nested Stackelberg game to handle both data corruption and unknown types of adversaries. The game framework consists …
+
+27. Optimizing Spectrum Sharing in UAV Swarms: A Stackelberg Game-Based Incentive Mechanism
+   https://ieeexplore.ieee.org/abstract/document/11125892/
+   (Q Wang, Y Shen, L Xu, H Zhang… - IEEE Transactions on …, 2025 - ieeexplore.ieee.org | 2025 | cited by 5)
+   … model, this paper studies the trading strategy to maximize the utility of both sides. First, U2B links act as the leaders and determine the price according to prior experience. U2U links act …
+
+28. Effective solutions for real-world stackelberg games: When agents must deal with human uncertainties
+   https://u.cs.biu.ac.il/~krauss/data/articles/pitaetal-aamas09.pdf
+   (J Pita, M Jain, F Ordóñez, M Tambe, S Kraus… - Proceedings of The …, 2009 - u.cs.biu.ac.il | 2009 | cited by 112)
+   [PDF] https://u.cs.biu.ac.il/~krauss/data/articles/pitaetal-aamas09.pdf
+   … Therefore, in general, the leader in a Stackelberg game must commit to a strategy considering three different types of uncertainty: (i) adversary response uncertainty due to his bounded …
+
+29. Playing games for security: An efficient exact algorithm for solving Bayesian Stackelberg games
+   https://aamas.csc.liv.ac.uk/Proceedings/aamas08/proceedings/pdf/paper/AAMAS08_0057.pdf
+   (P Paruchuri, JP Pearce, J Marecki… - Proceedings of the …, 2008 - aamas.csc.liv.ac.uk | 2008 | cited by 690)
+   [PDF] https://aamas.csc.liv.ac.uk/Proceedings/aamas08/proceedings/pdf/paper/AAMAS08_0057.pdf
+   … the adversary chooses its own strategy. We consider Bayesian Stackelberg games, in which the … of determining the optimal strategy for a leader to commit to in a Bayesian Stackelberg …
+
+30. Incentive mechanism for mobile crowdsensing with two-stage stackelberg game
+   https://ieeexplore.ieee.org/abstract/document/9857647/
+   (CL Hu, KY Lin, CK Chang - IEEE Transactions on Services …, 2022 - ieeexplore.ieee.org | 2022 | cited by 76)
+   … aware of user’s gaming strategies, and then adjusts the basis … problem with the twostage Stackelberg game model. This … -stage Stackelberg game model in analyzing the strategies for …
+
+31. Information structure, Stackelberg games, and incentive controllability
+   https://ieeexplore.ieee.org/abstract/document/1102652/
+   (YC Ho, P Luh, R Muralidharan - IEEE Transactions on …, 1981 - ieeexplore.ieee.org | 1981 | cited by 136)
+   … Stackelberg controls and Stackelberg feedback strategies [I] still exists. With this understanding. closed-loop Stackelberg strategy … It is clear that many strategies y;, are possible due to …
+
+32. Equilibria in stochastic dynamic games of stackelberg type
+   https://dspace.mit.edu/bitstream/handle/1721.1/1265/R-0662-02398960.pdf?sequence=1
+   (DA Castanon - 1976 - dspace.mit.edu | 1976 | cited by 17)
+   [PDF] https://dspace.mit.edu/bitstream/handle/1721.1/1265/R-0662-02398960.pdf?sequence=1
+   … Games Solution concepts are discussed in this chapter for two classes of games: Nash games and Stackelberg games. … A signaling-free strategy in a Stackelberg game for player 1 at …
+
+33. Sequential Strategic Classification with Multi-Stage Selective Classifiers
+   https://arxiv.org/abs/2605.04202
+   (Z Huang, L Alkarmi, M Liu - arXiv preprint arXiv:2605.04202, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.04202
+   … , multi-stage model of strategic classification, by capturing how … and true attributes) and gaming actions (enhancing only ob… and formulated the problem as a Stackelberg game, where …
+
+34. Strategic gradient transmission with targeted privacy-awareness in model training: A Stackelberg game analysis
+   https://ieeexplore.ieee.org/abstract/document/10502336/
+   (H Sun, Y Wang, H Yang, K Huo… - IEEE Transactions on …, 2024 - ieeexplore.ieee.org | 2024 | cited by 3)
+   … To address this concern, we propose a Stackelberg game framework that models the training process. In … By proposing a Stackelberg game framework, we offer a structured approach to …
+
+35. Imperfect information dynamic stackelberg game based resource allocation using hidden Markov for cloud computing
+   https://ieeexplore.ieee.org/abstract/document/7422131/
+   (W Wei, X Fan, H Song, X Fan… - IEEE transactions on …, 2016 - ieeexplore.ieee.org | 2016 | cited by 411)
+   [PDF] http://pfigshare-u-files.s3.amazonaws.com/6006480/07422131.pdf
+   … on an imperfect information Stackelberg game model (CSAM-… Then, we construct an imperfect information Stackelberg game … In dynamic game price strategy, the SP determines the bid…
+
+36. Resource-aware detection and defense system against multi-type attacks in the cloud: Repeated bayesian stackelberg game
+   https://ieeexplore.ieee.org/abstract/document/8675527/
+   (OA Wahab, J Bentahar, H Otrok… - IEEE Transactions on …, 2019 - ieeexplore.ieee.org | 2019 | cited by 100)
+   [PDF] https://www.researchgate.net/profile/Omar-Wahab/publication/332053178_Resource-Aware_Detection_and_Defense_System_Against_Multi-Type_Attacks_in_the_Cloud_Repeated_Bayesian_Stackelberg_Game/links/5ce7a79592851c4eabba3729/Resource-Aware-Detection-and-Defense-System-Against-Multi-Type-Attacks-in-the-Cloud-Repeated-Bayesian-Stackelberg-Game.pdf
+   … In Section 4, we design the Bayesian Stackelberg game proposed to derive the optimal detection load distribution strategy among VMs and demonstrate how to solve it using the …
+
+37. Collaboration as a mechanism for more robust strategic classification
+   https://ieeexplore.ieee.org/abstract/document/10383651/
+   (K Jin, Z Huang, M Liu - … 62nd IEEE Conference on Decision and …, 2023 - ieeexplore.ieee.org | 2023 | cited by 5)
+   … actions when gaming is a more cost-efficient strategy. To the best … leads to more robust strategic classification. Specifically, the … mechanism formulated as a Stackelberg game, where the …
+
+38. The adversarial Stackelberg value in quantitative games
+   https://arxiv.org/abs/2004.12918
+   (E Filiot, R Gentilini, JF Raskin - arXiv preprint arXiv:2004.12918, 2020 - arxiv.org | 2004 | cited by 12)
+   [PDF] https://arxiv.org/pdf/2004.12918
+   … notion of Stackelberg equilibria and explain the variant that is the focus of this paper. Stackelberg games are strategic games played by two players. We note Σ0 the set of strategies of …
+
+39. Introduction to game theory
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119723950.ch2
+   (F Fang, S Liu, A Basak, Q Zhu… - Game theory and …, 2021 - Wiley Online Library | 2021 | cited by 80)
+   … a discussion on Stackelberg games and their applications … strategy and define an evaluation metric for a strategy. If the other player’s strategy is known in advance, then the best strategy …
+
+40. Multiplayer Stackelberg game-based intelligent frequency control of power system with line loss uncertainty
+   https://ieeexplore.ieee.org/abstract/document/10381578/
+   (X Tong, D Ma, R Wang, Q Sun… - IEEE Transactions on …, 2024 - ieeexplore.ieee.org | 2024 | cited by 7)
+   … To verify the superiority of the stackelberg game strategy proposed in this paper, the … 10, the IRL based on Stackelberg game for frequency control strategy can exchange leader’…
+
+41. Downlink power control in two-tier cellular OFDMA networks under uncertainties: A robust Stackelberg game
+   https://ieeexplore.ieee.org/abstract/document/6987329/
+   (K Zhu, E Hossain, A Anpalagan - IEEE Transactions on …, 2014 - ieeexplore.ieee.org | 2014 | cited by 112)
+   [PDF] http://anpalagan.org/wp-content/uploads/2020/03/174.pdf
+   … used to analyze a Stackelberg game. Therefore, we start analyzing the robust Stackelberg game by firstly investigating the robust follower sub-game given the strategies of the leaders. …
+
+42. Bayesian strategic classification
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/ca774047bc3b46cc81e53ead34cd5d5a-Abstract-Conference.html
+   (L Cohen, S Sharifi-Malvajerdi… - Advances in …, 2024 - proceedings.neurips.cc | 2024 | cited by 22)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/ca774047bc3b46cc81e53ead34cd5d5a-Paper-Conference.pdf
+   … Given our model, we consider a (Stackelberg) game … label: manipulation is seen purely as “gaming”; it does not change the … defined in Definition 2.2 can be seen as a Stackelberg game …
+
+43. Stochastic stackelberg games
+   https://www.researchgate.net/profile/Deepanshu-Vasal-2/publication/334382531_Stochastic_Stackelberg_Security_Games/links/5eb46500299bf1287f7509fd/Stochastic-Stackelberg-Security-Games.pdf
+   (D Vasal - arXiv preprint arXiv:2005.01997, 2020 - researchgate.net | 2005 | cited by 13)
+   [PDF] https://www.researchgate.net/profile/Deepanshu-Vasal-2/publication/334382531_Stochastic_Stackelberg_Security_Games/links/5eb46500299bf1287f7509fd/Stochastic-Stackelberg-Security-Games.pdf
+   … In this paper, we present an algorithm that computes such strategies by solving smaller fixed-point equations for each time t. This reduces the computational complexity of the problem …
+
+44. DDoS defense for IoT: A Stackelberg game model-enabled collaborative framework
+   https://ieeexplore.ieee.org/abstract/document/9662404/
+   (X Chen, L Xiao, W Feng, N Ge… - IEEE Internet of Things …, 2021 - ieeexplore.ieee.org | 2021 | cited by 52)
+   … , such that in equilibrium the attacker’s optimal strategy is to give up the attack. To achieve this goal, we establish a Stackelberg game model to characterize the behaviors of the …
+
+45. Learning in structured stackelberg games
+   https://arxiv.org/abs/2504.09006
+   (MF Balcan, K Fragkia, K Harris - arXiv preprint arXiv:2504.09006, 2025 - arxiv.org | 2504 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2504.09006
+   … strategies. This raises a natural question: given that the state of the world might evolve over time, how should the leader in a Stackelberg game design a strategy that … Stackelberg games …
+
+46. A Stackelberg game model for resource allocation in cargo container security
+   https://link.springer.com/article/10.1007/s10479-010-0793-z
+   (NO Bakır - Annals of Operations Research, 2011 - Springer | 2011 | cited by 47)
+   [PDF] https://www.academia.edu/download/98666538/A_Stackelberg_game_model_for_resource_allocation_in_cargo_container_security.pdf
+   … Abstract This paper presents a game theoretic model that analyzes resource allocation strategies … The attacker observes the defender’s security strategy and chooses a site to insert the …
+
+47. Learning strategy-aware linear classifiers
+   https://proceedings.neurips.cc/paper_files/paper/2020/hash/ae87a54e183c075c494c4d397d126a66-Abstract.html
+   (Y Chen, Y Liu, C Podimata - Advances in Neural …, 2020 - proceedings.neurips.cc | 2020 | cited by 145)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2020/file/ae87a54e183c075c494c4d397d126a66-Paper.pdf
+   … Stackelberg and external regret for the problem of strategic … learner and the strategic agents1 as a repeated Stackelberg game over T … ” that aim at gaming the system without altering yt. …
+
+48. Resource allocation in multi-user cognitive radio network with stackelberg game
+   https://ieeexplore.ieee.org/abstract/document/9039645/
+   (B Ning, G Sun, J Li, A Zhang, W Hao, S Yang - IEEE Access, 2020 - ieeexplore.ieee.org | 2020 | cited by 25)
+   [PDF] https://ieeexplore.ieee.org/iel7/6287639/8948470/09039645.pdf
+   … The resource allocation in the sensing-based spectrum sharing model would be studied by a two-stage Stackelberg game. The Stackelberg game is a strategic game that consists of a …
+
+49. Adversarial Deep Learning with Stackelberg Games
+   https://link.springer.com/chapter/10.1007/978-3-030-36808-1_1
+   (A Sreevallabh Chivukula, X Yang, W Liu - International Conference on …, 2019 - Springer | 2019 | cited by 4)
+   … models for image classification. We propose to formulate the game strategy space for the … We propose a new simulated annealing algorithm in the game’s randomized strategy space …
+
+50. Optimal power schedule for distributed Kalman filtering under DoS attacks: a Stackelberg game strategy
+   https://www.tandfonline.com/doi/abs/10.1080/00207721.2024.2438350
+   (YC Sun, K Gao, L Chen, F Yang… - International Journal of …, 2025 - Taylor & Francis | 2025 | cited by 11)
+   … a distributed reinforcement learning algorithm in groups based on Stackelberg game framework, named DRLG-Stackelberg algorithm, to find the optimal strategies for both players. …
+
+51. Stackelberg game approach for resource allocation in device-to-device communication with heterogeneous networks
+   https://www.sciencedirect.com/science/article/pii/S0921889022001300
+   (R Rathi, S Dixit, S Bansal, K Kumar, N Taskaeva… - Robotics and …, 2022 - Elsevier | 2022 | cited by 14)
+   … allocation, and power control strategies need to be addressed in … by proposing a Stackelberg game approach to increase network … Stackelberg game in which the leaders are macrocell …
+
+52. A real-time demand-response algorithm for smart grids: A stackelberg game approach
+   https://ieeexplore.ieee.org/abstract/document/7073650/
+   (M Yu, SH Hong - IEEE Transactions on smart grid, 2015 - ieeexplore.ieee.org | 2015 | cited by 458)
+   … Stackelberg game, we model the interactions between the EMC and devices as a one-leader, N-follower game. A … its utility as a function of its own strategy c and all followers’ strategies …
+
+53. Stackelberg-game-based mechanism for opportunistic data offloading using moving vehicles
+   https://ieeexplore.ieee.org/abstract/document/8895833/
+   (F Yang, J Yan, Y Guo, X Luo - IEEE Access, 2019 - ieeexplore.ieee.org | 2019 | cited by 36)
+   [PDF] https://ieeexplore.ieee.org/iel7/6287639/6514899/08895833.pdf
+   … strategy that uses the Stackelberg game to model the interaction between a service provider and a service requester. Then, the Stackelberg … results of the Stackelberg equilibrium. Finally…
+
+54. A survey of game theoretic approach for adversarial machine learning
+   https://wires.onlinelibrary.wiley.com/doi/abs/10.1002/widm.1259
+   (Y Zhou, M Kantarcioglu, B Xi - Wiley Interdisciplinary Reviews …, 2019 - Wiley Online Library | 2019 | cited by 106)
+   [PDF] https://www.stat.purdue.edu/~xbw/research/survey-2019.pdf
+   … strategies for the Bayesian Stackelberg game are found. It is quite effective for the learner to play a mixed strategy … The optimal mixed strategy introduces randomness to the solution, …
+
+55. Energy sharing management for microgrids with PV prosumers: A Stackelberg game approach
+   https://ieeexplore.ieee.org/abstract/document/7820171/
+   (N Liu, X Yu, C Wang, J Wang - IEEE Transactions on Industrial …, 2017 - ieeexplore.ieee.org | 2017 | cited by 499)
+   [PDF] https://www.researchgate.net/profile/Nian-Liu-41/publication/312320519_Energy_Sharing_Management_for_Microgrids_With_PV_Prosumers_A_Stackelberg_Game_Approach/links/59db2a08458515a5bc2d6fdd/Energy-Sharing-Management-for-Microgrids-With-PV-Prosumers-A-Stackelberg-Game-Approach.pdf
+   … In Stackelberg games, an equilibrium in pure strategies is not always guaranteed to exist. Thus, we need to investigate as to whether there exists an SE in the proposed …
+
+56. Network games with strategic machine learning
+   https://link.springer.com/chapter/10.1007/978-3-030-90370-1_7
+   (K Jin, T Yin, CA Kamhoua, M Liu - … Conference on Decision and Game …, 2021 - Springer | 2021 | cited by 10)
+   … our network game models with strategic machine learning. Then we study the Stackelberg … We consider a Stackelberg game with a planner (alternately referred to as the mechanism …
+
+57. Optimally deceiving a learning leader in stackelberg games
+   https://proceedings.neurips.cc/paper/2020/hash/ed383ec94720d62a939bfb6bdd98f50c-Abstract.html
+   (G Birmpas, J Gan, A Hollender… - Advances in …, 2020 - proceedings.neurips.cc | 2020 | cited by 31)
+   [PDF] https://proceedings.neurips.cc/paper/2020/file/ed383ec94720d62a939bfb6bdd98f50c-Paper.pdf
+   … Recent results in the ML community have revealed that learning algorithms used to compute the optimal strategy for the leader to commit to in a Stackelberg game, are susceptible to …
+
+58. Optimal resource allocation in the difference and differential Stackelberg games on marketing networks.
+   https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=21646066&AN=142928669&h=2QWyEJSf7xwlBiV0cHLHWmyx%2FzxXczYoI331ugBJuqIubzN9WCPjeI6PJ7VRYg3fru%2B2TwXom7tJkhjY%2BQvFpQ%3D%3D&crl=c
+   (A Korolev, G Ougolnitsky - Journal of Dynamics & Games, 2020 - search.ebscohost.com | 2020 | cited by 10)
+   … Repeating the same actions as in the game LD, we receive the same optimal strategy of the leader and the same guaranteed payoff (22). In fact, during the solution of the problem LD …
+
+59. Optimal consensus control strategy for multi-agent systems under cyber attacks via a stackelberg game approach
+   https://ieeexplore.ieee.org/abstract/document/11090164/
+   (P Yu, Y Hu, Y Wang, R Jia, J Guo - IEEE Transactions on …, 2025 - ieeexplore.ieee.org | 2025 | cited by 22)
+   … on the Stackelberg game theory, … a Stackelberg game model between the MAS and attackers under incomplete information. By solving the Stackelberg equilibrium solution of the game …
+
+60. Hybrid EXGBStackQoE Classifier and Stackelberg Game-Theoretic Approaches for Enhanced QoE in Video Services over 5G Wireless Networks
+   https://ieeexplore.ieee.org/abstract/document/10971361/
+   (KB Ajeyprasaath, V Pandu - IEEE Access, 2025 - ieeexplore.ieee.org | 2025 | cited by 2)
+   [PDF] https://ieeexplore.ieee.org/iel8/6287639/6514899/10971361.pdf
+   … The findings of this study can inform the development of strategies to enhance the quality of video streaming services. The work proposes a framework to predict QoE based on users' …
+
+61. Endogenous stackelberg leadership
+   https://www.sciencedirect.com/science/article/pii/S089982569890687X
+   (E Van Damme, S Hurkens - Games and Economic Behavior, 1999 - Elsevier | 1999 | cited by 303)
+   [PDF] https://research.tilburguniversity.edu/files/526053/115.pdf
+   … game, a player has infinitely many strategies available; the choice is not simply between committing to the Stackelberg … Furthermore, it is known that, in general, the reduced 2 × 2 game …
+
+62. Stackelberg equilibria for discrete-time dynamic games part I: Deterministic games
+   https://ieeexplore.ieee.org/abstract/document/5874949/
+   (K Staňková, B De Schutter - 2011 International Conference on …, 2011 - ieeexplore.ieee.org | 2011 | cited by 11)
+   [PDF] https://www.researchgate.net/profile/Katerina-Stankova-2/publication/224241739_Stackelberg_equilibria_for_discrete-time_dynamic_games_part_I_Deterministic_games/links/02e7e525fa16eb67f3000000/Stackelberg-equilibria-for-discrete-time-dynamic-games-part-I-Deterministic-games.pdf
+   … the solution of the game under feedback information structure [… direction of the so-called inverse Stackelberg games [6], [18]–[… : (Stackelberg equilibrium strategy) In a Stackelberg game …
+
+63. Mixed Bayesian Stackelberg Strategies for Robust Adversarial Classifiers.
+   https://pdfs.semanticscholar.org/81e3/31081e84a63f616a2d1bb73786136b7edd66.pdf
+   (H Quadri - EAI Endorsed Transactions on Scalable …, 2025 - pdfs.semanticscholar.org | 2025 | cited by 1)
+   [PDF] https://pdfs.semanticscholar.org/81e3/31081e84a63f616a2d1bb73786136b7edd66.pdf
+   … Hence, we propose a game theory framework using Bayesian Stackelberg games that models the interaction between a single defender and multiple adversaries. By leveraging prior …
+
+64. Stackelberg Game-Based Hierarchical Incentive Mechanism for Clustered Vehicular Federated Learning
+   https://ieeexplore.ieee.org/abstract/document/11048964/
+   (S Wang, W Xia, H Zhao, K Wei… - IEEE Transactions on …, 2025 - ieeexplore.ieee.org | 2025 | cited by 2)
+   … strategies in our mechanism. This is due to the nature of the Stackelberg game, where the ultimate optimal strategies … to deviations from the theoretical optimal strategies. Meanwhile, it’s …
+
+65. Strategic classification in the dark
+   https://proceedings.mlr.press/v139/ghalme21a.html
+   (G Ghalme, V Nair, I Eilat… - International …, 2021 - proceedings.mlr.press | 2021 | cited by 113)
+   [PDF] http://proceedings.mlr.press/v139/ghalme21a/ghalme21a.pdf
+   … sense—it assumes that while gaming on behalf of the users … A key assumption made throughout the strategic classification … We consider a two-sided statistical Stackelberg game, …
+
+66. Camouflage strategy of a Stackelberg game based on evolution rules
+   https://www.sciencedirect.com/science/article/pii/S0960077921009577
+   (F Chaoqi, Z Pengtao, Z Lin, G Yangjun, D Na - Chaos, Solitons & Fractals, 2021 - Elsevier | 2021 | cited by 13)
+   The importance of critical infrastructure makes it a target of attacks in the new era. Using the Stackelberg game model, we analyze the offensive and defensive security issues of critical …
+
+67. Stackelberg-game-oriented optimal control for bounded constrained mechanical systems: A fuzzy evidence-theoretic approach
+   https://ieeexplore.ieee.org/abstract/document/9566803/
+   (Y Zheng, H Zhao, J Zheng, C He… - IEEE Transactions on …, 2021 - ieeexplore.ieee.org | 2021 | cited by 19)
+   … Most game strategies require all players to determine strategies simultaneously, such … games and noncooperative games. In the Stackelberg game, the players determine their strategy …
+
+68. Stackelberg-game-based defense analysis against advanced persistent threats on cloud control system
+   https://ieeexplore.ieee.org/abstract/document/8746251/
+   (H Yuan, Y Xia, J Zhang, H Yang… - IEEE Transactions on …, 2019 - ieeexplore.ieee.org | 2019 | cited by 50)
+   … for a single physical plant, this paper studies strategic defense by optimally allocating resources on … and attacker is modeled by a Stackelberg game with both sides subject to resource …
+
+69. Stackelberg game approach for energy-aware resource allocation in data centers
+   https://ieeexplore.ieee.org/abstract/document/7425237/
+   (B Yang, Z Li, S Chen, T Wang… - IEEE Transactions on …, 2016 - ieeexplore.ieee.org | 2016 | cited by 89)
+   … among multiple scheduler agents and one provider as a stackelberg game. The problem analyzes the limits of energy saving and strategies for configuring the right set of servers that …
+
+70. Achieving optimal adversarial accuracy for adversarial deep learning using Stackelberg games
+   https://link.springer.com/article/10.1007/s10473-022-0613-y
+   (X Gao, S Liu, L Yu - Acta Mathematica Scientia, 2022 - Springer | 2022 | cited by 10)
+   … We show that G2 has a Stackelberg equilibrium and G3 has a mixed strategy Nash equilibrium. Furthermore, the payoff functions of G1, G2, and G3 at their equilibria decrease …
+
+71. Strategic classification made practical
+   https://proceedings.mlr.press/v139/levanon21a.html
+   (S Levanon, N Rosenfeld - International Conference on …, 2021 - proceedings.mlr.press | 2021 | cited by 107)
+   [PDF] http://proceedings.mlr.press/v139/levanon21a/levanon21a.pdf
+   … Strategic classification can be formulated as a Stackelberg … of strategic classification thus far has been focused on a single objective: predicting accurately in the face of strategic gaming. …
+
+72. MEC network slicing: Stackelberg-game-based slice pricing and resource allocation with QoS guarantee
+   https://ieeexplore.ieee.org/abstract/document/10565807/
+   (W Fan, X Li, B Tang, Y Su, Y Liu - IEEE Transactions on …, 2024 - ieeexplore.ieee.org | 2024 | cited by 28)
+   … a two-stage Stackelberg strategy. In the first phase, … game strategy of the second stage MEC-NSP to optimize the overall profit. At this stage, the MEC-NSP can develop a pricing strategy …
+
+73. Augmented Decision Spaces for Stackelberg Security Games: Sparse evolution begets scalability
+   https://dl.acm.org/doi/abs/10.1145/3712256.3726440
+   (A Żychowski, A Gupta, YS Ong… - Proceedings of the Genetic …, 2025 - dl.acm.org | 2025 | cited by 1)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3712256.3726440
+   … strategies in Stackelberg Security Games (SSGs). The proposed method enhances traditional strategy … for security: an efficient exact algorithm for solving Bayesian Stackelberg games. …
+
+74. Minimax group fairness in strategic classification
+   https://ieeexplore.ieee.org/abstract/document/10992431/
+   (E Diana, S Sharifi-Malvajerdi… - 2025 IEEE Conference …, 2025 - ieeexplore.ieee.org | 2025 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2410.02513?
+   … Given this notion, we formalize a fairness-aware Stackelberg game between the learner and the … Similar to standard strategic classification settings, we consider a Stackelberg game …
+
+75. Learning Sequential Deception Defense Strategy Against APT Using Stackelberg Markov Game
+   https://ieeexplore.ieee.org/abstract/document/11396046/
+   (X Deng, P Li, R Wang, J Tan, Y Liu… - IEEE Transactions on …, 2026 - ieeexplore.ieee.org | 2026 | cited by 1)
+   … the Stackelberg game into the Cyber Deception Stackelberg … ’s strategy, we model their interaction as a Stackelberg game. … , we extend the Stackelberg game to the sequential scenario, …
+
+76. Scalability via Sparsity in Stackelberg Security Games: An Augmented Decision Space Approach
+   https://dl.acm.org/doi/abs/10.1145/3799431
+   (A Żychowski, A Gupta, YS Ong… - ACM Transactions on …, 2026 - dl.acm.org | 2026 | cited by 1)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3799431
+   … for sparsity-driven optimization of mixed strategies in Stackelberg Security Games (SSGs). Unlike … for security: an efficient exact algorithm for solving Bayesian Stackelberg games. In …
+
+77. The game to play: Expanding the co-opetition proposal through the strategic games matrix
+   https://www.ingentaconnect.com/content/mcb/ijcma/2009/00000020/00000002/art00002
+   (EA Costa, CP Bottura, JMG Boaventura… - … Journal of Conflict …, 2009 - ingentaconnect.com | 2009 | cited by 11)
+   [PDF] https://www.academia.edu/download/48573828/THE_GAME_TO_PLAY_EXPANDING_THE_CO-OPETIT20160904-6067-19jza21.pdf
+   … games, the stronger player decides on its strategy and … apply the Stackelberg strategy; there are a leader strategy for the … games, as Minimax, Pareto, Nash and Stackelberg games. The …
+
+78. Two-stage incentive mechanism based on a cooperative mode: A Stackelberg game approach
+   https://ieeexplore.ieee.org/abstract/document/10947489/
+   (L Wang, Y Wang, H Teng, X Jiao, M Sun… - IEEE Internet of …, 2025 - ieeexplore.ieee.org | 2025 | cited by 4)
+   … loading strategies, respectively. Hu et al. [43] introduced a two-stage Stackelberg game to … a three-stage Stackelberg game, and derived the optimal set of strategies so that all parties …
+
+79. A Markovian Stackelberg game approach for computing an optimal dynamic mechanism
+   https://link.springer.com/article/10.1007/s40314-021-01578-4
+   (JB Clempner - Computational and Applied Mathematics, 2021 - Springer | 2021 | cited by 8)
+   … We assume that the leaders can ex ante commit to their disclosure strategy and … a Stackelberg game. In this dynamics, leaders and followers together are in a Stackelberg game where …
+
+80. A stackelberg game model for overlay D2D transmission with heterogeneous rate requirements
+   https://ieeexplore.ieee.org/abstract/document/7365466/
+   (J Lyu, YH Chew, WC Wong - IEEE Transactions on Vehicular …, 2015 - ieeexplore.ieee.org | 2015 | cited by 32)
+   [PDF] https://arxiv.org/pdf/1512.06197
+   … a Stackelberg game in which the base station (BS) in the cellular network acts as a Stackelberg … Based on the analysis, the pricing strategies of the Stackelberg leader are proposed in …
+
+81. Meta stackelberg game: Robust federated learning against adaptive and mixed poisoning attacks
+   https://arxiv.org/abs/2410.17431
+   (T Li, H Li, Y Pan, T Xu, Z Zheng, Q Zhu - arXiv preprint arXiv:2410.17431, 2024 - arxiv.org | 2410 | cited by 22)
+   [PDF] https://arxiv.org/pdf/2410.17431?
+   … , and adaptive attacks employing diverse strategies. This work formulates adversarial … a Bayesian Stackelberg Markov game, based on which we propose the meta-Stackelberg defense …
+
+82. The social cost of strategic classification
+   https://dl.acm.org/doi/abs/10.1145/3287560.3287576
+   (S Milli, J Miller, AD Dragan, M Hardt - Proceedings of the conference on …, 2019 - dl.acm.org | 2019 | cited by 286)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3287560.3287576
+   … the non-strategic τ0 to the Stackelberg optimal τ … Stackelberg equilibrium places lower social burden on individuals. Finally, we focus on the setting where individuals are merely “gaming…
+
+83. Analytical Stackelberg Resource Allocation in Sequential Attacker--Defender Games
+   https://arxiv.org/abs/2512.17284
+   (A Iqbal, JM Chappell, D Abbott - arXiv preprint arXiv:2512.17284, 2025 - arxiv.org | 2512)
+   [PDF] https://arxiv.org/pdf/2512.17284
+   … We develop an analytical Stackelberg game framework for optimal resource allocation in a se… ], a strategic interplay in combat scenario is considered through the lens of the Stackelberg …
+
+84. Stackelberg game for energy-aware resource allocation to sustain data centers using RES
+   https://ieeexplore.ieee.org/abstract/document/7949095/
+   (GS Aujla, M Singh, N Kumar… - IEEE Transactions on …, 2017 - ieeexplore.ieee.org | 2017 | cited by 84)
+   … is proposed using a Stackelberg game for energy management … For this purpose, a Stackelberg game for energy trading is … Theorom 1: The equilibrium strategies adopted by followers …
+
+85. A Stackelberg game framework for double-incentive consensus mechanism with cost budget in group decision making
+   https://ieeexplore.ieee.org/abstract/document/10844920/
+   (B Zhang, Y Zeng, Q An, Y Dong… - IEEE Transactions on …, 2025 - ieeexplore.ieee.org | 2025 | cited by 16)
+   … Within the Stackelberg game framework, we present the maximum-… Stackelberg game framework. We propose a hybrid approach that combines the best-response update strategy with …
+
+86. Achieve Optimal Adversarial Accuracy for Adversarial Deep Learning using Stackelberg Game
+   https://arxiv.org/abs/2207.08137
+   (XS Gao, S Liu, L Yu - arXiv preprint arXiv:2207.08137, 2022 - arxiv.org | 2207 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2207.08137
+   … We show that G2 has a Stackelberg equilibrium and G3 has a mixes strategy Nash equilibrium. Furthermore, the payoff functions of G1,G2,G3 at their equilibria decrease successively. …
+
+87. The game to play: expanding the co‐opetition proposal through the strategic games matrix
+   https://www.emerald.com/ijcma/article/20/2/132/125216
+   (E Arantes da Costa, C Pascoli Bottura… - International Journal of …, 2009 - emerald.com | 2009 | cited by 21)
+   [PDF] https://www.academia.edu/download/45615567/The_game_to_play_expanding_the_co-opetit20160514-15315-v760oq.pdf
+   … games, the stronger player decides on its strategy and … apply the Stackelberg strategy; there are a leader strategy for the … games, as Minimax, Pareto, Nash and Stackelberg games. The …
+
+88. Stackelberg strategy with closed-loop information structure for linear-quadratic games
+   https://www.academia.edu/download/40547978/JTAKsiam.pdf
+   (M Jungers, E Trélat, H Abou-Kandil - Preprint Hal, 2006 - academia.edu | 2006 | cited by 10)
+   [PDF] https://www.academia.edu/download/40547978/JTAKsiam.pdf
+   … the Stackelberg strategy in the case of a closed-loop information structure. Two players differential games are considered with one leader and one follower. The Stackelberg controls in …
+
+89. A game-theoretic analysis of adversarial classification
+   https://ieeexplore.ieee.org/abstract/document/7954621/
+   (L Dritsoula, P Loiseau… - IEEE Transactions on …, 2017 - ieeexplore.ieee.org | 2017 | cited by 60)
+   [PDF] https://ieeexplore.ieee.org/ielaam/10206/8017695/7954621-aam.pdf
+   … strategies of the players using a non-linear program, while we analyze the Nash equilibria of a classification game, … Yet, in the classification game, we show that threshold strategies are …
+
+90. Game-theoretic analysis of Stackelberg oligopoly with arbitrary rank reflexive behavior of agents
+   https://www.emerald.com/k/article/46/06/1052/273610
+   (M Geraskin - Kybernetes, 2017 - emerald.com | 2017 | cited by 19)
+   … duopoly as a “battle for leadership” or “Stackelberg … of the agents; the game, leading to a Stackelberg disequilibrium, is … action (strategy) of environing or the so-called strategic reflection. …
+
+91. A Stackelberg game framework for energy internet system by operator approach
+   https://ieeexplore.ieee.org/abstract/document/10944584/
+   (Y Chen, P Yi, J Lei, X Li - IEEE Transactions on Network …, 2025 - ieeexplore.ieee.org | 2025 | cited by 6)
+   … Abstract—This paper proposes a Stackelberg game … propose a networked Stackelberg game framework with two … and the Nash game among all companies driven by strategic …
+
+92. Finite-Time Convergence Rates in Stochastic Stackelberg Games with Smooth Algorithmic Agents
+   https://openreview.net/forum?id=q6aopfT2d5
+   (E Frankel, K Kulkarni, D Drusvyatskiy, S Oh… - … on Machine Learning, 2025 - openreview.net | 2025 | cited by 1)
+   [PDF] https://openreview.net/pdf?id=q6aopfT2d5
+   … Throughout, we remark on the decisiondependent non-strategic setting (ie … Stackelberg games, where updates from the decision-maker and the agents induces a time-varying game for …
+
+93. Stackelberg games for modeling defense scenarios against cloud security threats
+   https://www.sciencedirect.com/science/article/pii/S1084804518300663
+   (A Jakóbik, F Palmieri, J Kołodziej - Journal of network and computer …, 2018 - Elsevier | 2018 | cited by 31)
+   … Security Stackelberg games may be used to model a … strategy and the attackers act by following the provider's actions. In this work we define a model based on Stackelberg games that …
+
+94. A stackelberg game approach for sponsored content management in mobile data market with network effects
+   https://ieeexplore.ieee.org/abstract/document/9007349/
+   (Z Xiong, S Feng, D Niyato, P Wang… - IEEE Internet of …, 2020 - ieeexplore.ieee.org | 2020 | cited by 35)
+   … Stackelberg game, where the service provider and the content provider act as the leaders determining the pricing and sponsoring strategies, … optimizes its pricing strategy for maximizing …
+
+95. An existence result for hierarchical Stackelberg v/s Stackelberg games
+   https://ieeexplore.ieee.org/abstract/document/7088583/
+   (AA Kulkarni, UV Shanbhag - IEEE Transactions on Automatic …, 2015 - ieeexplore.ieee.org | 2015 | cited by 80)
+   [PDF] https://arxiv.org/pdf/1401.0186
+   … Stackelberg equilibrium, the followers’ response is taken as the Nash equilibrium of the follower-level game parametrized by leader strategy … Pang, “Strategic gaming analysis for electric …
+
+96. Endogenous timing in duopoly games: Stackelberg or Cournot equilibria
+   https://www.sciencedirect.com/science/article/pii/089982569090012J
+   (JH Hamilton, SM Slutsky - Games and Economic Behavior, 1990 - Elsevier | 1990 | cited by 1061)
+   … basic game. We will also denote the Cournot, Stackelberg leader, and Stackelberg follower actions in the basic game as … We assume that strategies in the extended game are chosen …
+
+97. Regret minimization in stackelberg games with side information
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/178b6cd141e003fa5ff808c7d7d8e2cc-Abstract-Conference.html
+   (K Harris, ZS Wu, MF Balcan - Advances in Neural …, 2024 - proceedings.neurips.cc | 2024 | cited by 15)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/178b6cd141e003fa5ff808c7d7d8e2cc-Paper-Conference.pdf
+   … leader’s optimal mixed strategy in the repeated Stackelberg game setting against a perfectly … ’s optimal mixed strategy have also been studied in Stackelberg security games [5, 7, 26, 6]. …
+
+98. The sample complexity of stackelberg games
+   https://arxiv.org/abs/2405.06977
+   (F Bacchiocchi, M Bollini, M Castiglioni… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 6)
+   [PDF] https://arxiv.org/pdf/2405.06977
+   … Learning in Stackelberg games We study SGs in which the leader does not know anything about follower’s payoffs and they have to learn an optimal strategy to commit to. The leader …
+
+99. Play like a vertex: A stackelberg game approach for streaming graph partitioning
+   https://dl.acm.org/doi/abs/10.1145/3654965
+   (Z Ding, Y Xiang, S Wang, X Xie, SK Zhou - Proceedings of the ACM on …, 2024 - dl.acm.org | 2024 | cited by 18)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3654965
+   … the Stackelberg game, signifying that all clusters have fine-tuned their cost functions, and no player can improve the cost by unilaterally changing their strategy. … the gaming process. The …
+
+100. A three-tier stackelberg game-based hierarchical optimization framework for integrated electric vehicle battery swapping and charging systems
+   https://www.nature.com/articles/s41598-026-59548-x
+   (S Kannan, G Anbazhagan, T Mariprasath, K Alkayid… - Scientific Reports, 2026 - nature.com | 2026)
+   [PDF] https://www.nature.com/articles/s41598-026-59548-x_reference.pdf
+   … hierarchical optimization model explicitly representing strategic interactions of grid operators, integrated CPO-BSS operators, and EV users through a Stackelberg game formulation; (ii) …
+
+===== Query 3/6: gaming vs improvement strategic learning causal =====
+
+1. Strategic classification is causal modeling in disguise
+   http://proceedings.mlr.press/v119/miller20b
+   (J Miller, S Milli, M Hardt - … Conference on Machine Learning, 2020 - proceedings.mlr.press | 2020 | cited by 180)
+   [PDF] http://proceedings.mlr.press/v119/miller20b/miller20b.pdf
+   … In this work, we develop a causal framework for strategic adaptation. Our causal perspective clearly distinguishes between gaming and improvement and reveals an important obstacle …
+
+2. Causal strategic linear regression
+   http://proceedings.mlr.press/v119/shavit20a.html
+   (Y Shavit, B Edelman, B Axelrod - … on Machine Learning, 2020 - proceedings.mlr.press | 2020 | cited by 121)
+   [PDF] http://proceedings.mlr.press/v119/shavit20a/shavit20a.pdf
+   … as “causal strategic learning”, in view of the causal impact of … agents’ responses and true outcomes, we can improve our … pure gaming, this paper points out that in many real-life strategic …
+
+3. Incentive-aware machine learning; robustness, fairness, improvement & causality
+   https://dl.acm.org/doi/abs/10.1145/3821540.3821546
+   (C Podimata - ACM SIGecom Exchanges, 2025 - dl.acm.org | 2025 | cited by 9)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3821540.3821546
+   … causal settings, and highlights key challenges such as differentiating between gaming and improvement … sub-populations to improve their outcomes in strategic learning contexts. Unlike …
+
+4. Gaming helps! learning from strategic interactions in natural dynamics
+   https://proceedings.mlr.press/v130/bechavod21a.html
+   (Y Bechavod, K Ligett, S Wu… - … Conference on Artificial …, 2021 - proceedings.mlr.press | 2021 | cited by 77)
+   [PDF] http://proceedings.mlr.press/v130/bechavod21a/bechavod21a.pdf
+   … gaming and actual improvements by drawing a connection to causality and introducing causal … improvements rather than gaming, and that designing good incentives that push agents to …
+
+5. Causal strategic learning with competitive selection
+   https://ojs.aaai.org/index.php/AAAI/article/view/29466
+   (KQH Vo, M Aadil, SL Chau, K Muandet - Proceedings of the AAAI …, 2024 - ojs.aaai.org | 2024 | cited by 16)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/view/29466/30763
+   … causal modeling as a strategy to mitigate the effect of gaming… agent’s baseline and their strategic improvement, namely Xt :… their strategic action at ∈ Rd into the improvement upon the …
+
+6. Causal strategic classification: A tale of two shifts
+   https://proceedings.mlr.press/v202/horowitz23a.html
+   (G Horowitz, N Rosenfeld - … Conference on Machine Learning, 2023 - proceedings.mlr.press | 2023 | cited by 43)
+   [PDF] https://proceedings.mlr.press/v202/horowitz23a/horowitz23a.pdf
+   … ‘gaming’ the system. Here we remove this assumption, and study … , but these focus almost exclusively on improvement. … To study temporal aspects of causal strategic learning, we adopt …
+
+7. Strategic Gaming Enhancement of Research Productivity: A Comprehensive Framework for Cognitive Optimization
+   https://www.authorea.com/doi/pdf/10.22541/au.175269971.17381611
+   (KT Abrar - Authorea Preprints, 2025 - authorea.com | 2025)
+   [PDF] https://www.authorea.com/doi/pdf/10.22541/au.175269971.17381611
+   … how curated portfolios of gaming experiences can optimize … to establish a definitive causal link between strategic gaming and … , causal evidence, measuring the impact of curated gaming …
+
+8. Playing with the future past: Scaffolding Taiwanese high school students' historical causal thinking through dialogic game-based learning
+   https://www.sciencedirect.com/science/article/pii/S1871187124002888
+   (CC Chang, WC Hsu, XC Chien, HC Kuo - Thinking Skills and Creativity, 2025 - Elsevier | 2025 | cited by 15)
+   … effect of dialogic game-based learning as a scaffold for fostering historical causal thinking among high … The intervention led to significant improvements in students' ability to analyze the …
+
+9. Using tutors to improve educational games: A cognitive game for policy argument
+   https://www.tandfonline.com/doi/abs/10.1080/10508406.2016.1269287
+   (MW Easterday, V Aleven, R Scheines… - Journal of the Learning …, 2017 - Taylor & Francis | 2017 | cited by 36)
+   [PDF] https://www.researchgate.net/profile/Matthew-Easterday/publication/311731830_Using_Tutors_to_Improve_Educational_Games_A_Cognitive_Game_for_Policy_Argument/links/5b7ad19b299bf1d5a717df4c/Using-Tutors-to-Improve-Educational-Games-A-Cognitive-Game-for-Policy-Argument.pdf
+   … Furthermore, assistance and penalties may affect learning and interest by multiple, competing causal mechanisms (see Figure 1 ), so it is by no means clear whether we can design …
+
+10. A causal-comparative exploration of the relationship between game-based learning and academic achievement: Teaching management with video games
+   https://search.proquest.com/openview/998c0433a36732a964a563143ef9cc03/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (RD Blunt - 2006 - search.proquest.com | 2006 | cited by 63)
+   … efficacy of game-based learning: “We are charging head-long into gamebased learning without … We know simulations improve learning. Yet, I challenge anyone to show me a literature …
+
+11. Learning with a strategic management simulation game: A case study
+   https://www.sciencedirect.com/science/article/pii/S1472811715000324
+   (M Loon, J Evans, C Kerridge - The International Journal of Management …, 2015 - Elsevier | 2015 | cited by 145)
+   [PDF] https://eprints.glos.ac.uk/3819/1/Learning%20with%20a%20strategic%20management%20simulation%20game.pdf
+   … as a vehicle for learning. In so doing the research provides one of the few empirically based … games in enhancing learning and, more importantly, contextualizes the enhancement in …
+
+12. Not just fun, but serious strategies: Using meta-cognitive strategies in game-based learning
+   https://www.sciencedirect.com/science/article/pii/S0360131508001954
+   (B Kim, H Park, Y Baek - Computers & Education, 2009 - Elsevier | 2009 | cited by 863)
+   [PDF] https://cddoc.uc.cl/wp-content/uploads/2020/03/Using_metacognitive_strategies_GBL.pdf
+   … of the meta-cognitive strategies on the academic and gaming achievements. … game until they all reached the third level to ensure that they have the same gaming ability prior to gaming …
+
+13. Who's gaming the system? a causally-motivated approach for detecting strategic adaptation
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/4aab410455f9aab47c4e312dd855ee3a-Abstract-Conference.html
+   (T Chang, L Warrenburg, SH Park… - Advances in …, 2024 - proceedings.neurips.cc | 2024 | cited by 13)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/4aab410455f9aab47c4e312dd855ee3a-Paper-Conference.pdf
+   … in dense regions of covariate space by design, while causal approaches would excel due to improved overlap. If outliers are more likely to be manipulated (eg, if populations with lower …
+
+14. Causal Reinforcement Learning Algorithm for Adaptive Business Strategy Optimization Under Market Volatility
+   https://www.svedbergopen.com/index.php/ijaiml/article/view/163
+   (SAO Ugli, ND Lal, N Mishra, S VR… - … Machine Learning, 2026 - svedbergopen.com | 2026)
+   [PDF] https://www.svedbergopen.com/index.php/ijaiml/article/download/163/130
+   … in a causal environment, ignoring the game-theoretic nature of competitive strategy. Extending … to identify the causal Q-function and make monotonic improvements in policies using the …
+
+15. Achieving Human Expert Level Time Performance for Atari Games–A Causal Learning Approach
+   https://ieeexplore.ieee.org/abstract/document/9308301/
+   (SB Ho, X Yang, T Quieta - 2020 IEEE Symposium Series on …, 2020 - ieeexplore.ieee.org | 2020 | cited by 5)
+   … In this paper, we describe an improvement over the previous paper, which is … causal learning and problem solving framework to simulate more closely how a human would play the game…
+
+16. A survey on causal reinforcement learning
+   https://ieeexplore.ieee.org/abstract/document/10771589/
+   (Y Zeng, R Cai, F Sun, L Huang… - … Networks and Learning …, 2024 - ieeexplore.ieee.org | 2024 | cited by 124)
+   [PDF] https://arxiv.org/pdf/2302.05209
+   … of prior causal information in policy learning, to improve sample efficiency, … game Cleanup and a tragedy-of-the-commons game Harvest to empirically demonstrate the enhancement of …
+
+17. EFfECT-RL: Enabling Framework for Establishing Causality and Triggering engagement through RL
+   https://dl.acm.org/doi/abs/10.1145/3627673.3680058
+   (D Sadhukhan, D Seth, S Agrawal… - Proceedings of the 33rd …, 2024 - dl.acm.org | 2024)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3627673.3680058
+   … In skill gaming platforms, the impact of causal relationships often manifests with a delay, … reinforcement learning-based approach. Our online recommendations show a 3% improvement …
+
+18. Causal strategic inference in a game—theoretic model of multiplayer networked microfinance markets
+   https://dl.acm.org/doi/abs/10.1145/3232861
+   (MT Irfan, LE Ortiz - ACM Transactions on Economics and Computation …, 2018 - dl.acm.org | 2018 | cited by 10)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3232861
+   … We present causal strategic inference as a framework for conducting … , learning the model using single-sample real-world microfinance data, and designing algorithms for various causal …
+
+19. Causal cross-impact analysis as a gaming tool for strategic decision making
+   
+   (H Duin - … on new methods for learning and innovation in …, 2007 | 2007 | cited by 11)
+
+20. Data-driven causal modeling of" gaming the system" and off-task behavior in Cognitive Tutor Algebra
+   
+   (SE Fancsali - NIPS workshop on data driven education, 2013 | 2013 | cited by 21)
+
+21. Strategy making: a gamified causal mapping approach
+   https://stax.strath.ac.uk/concern/theses/q811kk238
+   (W Shakaa - 2025 - stax.strath.ac.uk | 2025)
+   [PDF] http://stax.strath.ac.uk/downloads/1831ck58v
+   … gamification with causal mapping to improve strategy making … can improve strategy making workshops that employ Causal … of Causal Mapping in organizational strategy development …
+
+22. Learning From Strategic Agents: Accuracy, Improvement, and Causality, ICML
+   https://par.nsf.gov/biblio/10190171
+   (Y Shavit, B Edelman, B Axelrod - Proceedings of Machine Learning …, 2020 - par.nsf.gov | 2020)
+   [PDF] https://par.nsf.gov/servlets/purl/10190171
+   … as “causal strategic learning”, after the causal relationship of … pure gaming, this paper points out that in many real-life strategic … in the causal graph, and thus actions may lead to genuine …
+
+23. Causal Reinforcement Learning for Complex Card Games: A Magic The Gathering Benchmark
+   https://arxiv.org/abs/2605.06066
+   (CC Cunha, A Mian, T French, W Liu - arXiv preprint arXiv:2605.06066, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.06066
+   Causal reinforcement learning (RL) lacks benchmarks for complex … strategically rich, partially observed domain with an explicit causal interface and statistical protocol, MTG-Causal…
+
+24. Causal feature discovery through strategic modification
+   https://www.researchgate.net/profile/Yahav-Bechavod/publication/339323980_Causal_Feature_Discovery_through_Strategic_Modification/links/5f3ba45aa6fdcccc43d10962/Causal-Feature-Discovery-through-Strategic-Modification.pdf
+   (Y Bechavod, K Ligett, ZS Wu, J Ziani - arXiv preprint arXiv …, 2020 - researchgate.net | 2020 | cited by 34)
+   [PDF] https://www.researchgate.net/profile/Yahav-Bechavod/publication/339323980_Causal_Feature_Discovery_through_Strategic_Modification/links/5f3ba45aa6fdcccc43d10962/Causal-Feature-Discovery-through-Strategic-Modification.pdf
+   … improvements rather than gaming, and that designing good incentives that push agents to improve is at least as hard as causal … [2020] study the sample complexity of learning a linear …
+
+25. CausalXRL: Explainable Reinforcement Learning through Causal Graph Reasoning
+   https://openreview.net/forum?id=KBt9iIfQAi
+   (Y Zhang, E Papenhausen, K Mueller - … Conference on Machine Learning - openreview.net)
+   [PDF] https://openreview.net/pdf?id=KBt9iIfQAi
+   … I believe that beginners in RTS games can quickly catch on … that the global causal graph helped reveal strategic patterns that would … Causal influence detection for improving efficiency in …
+
+26. Teaching causation and effectuation in the large classroom: A production–trade game
+   https://journals.sagepub.com/doi/abs/10.1177/1052562920951971
+   (N Memar, A Sundström… - Journal of Management …, 2021 - journals.sagepub.com | 2021 | cited by 42)
+   [PDF] https://journals.sagepub.com/doi/pdf/10.1177/1052562920951971
+   … The core curriculum of this shared segment is oriented toward strategic learning. The SBG … game to assist us in improving our performance, and (3) our network assisted us in improving …
+
+27. Desirable Effort Fairness and Optimality Trade-offs in Strategic Learning
+   https://arxiv.org/abs/2510.19098
+   (V Efthymiou, E Fedorova, C Podimata - arXiv preprint arXiv:2510.19098, 2025 - arxiv.org | 2510 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2510.19098
+   … causal framework in which to study strategic learning, agents’ feature alterations are not always gaming. … study a learner who must provide fair incentives to improvement across agents. …
+
+28. Learning, attentional control, and action video games
+   https://www.cell.com/current-biology/fulltext/S0960-9822(12)00130-3?_returnURL=http://linkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0960982212001303%3Fshowall%3Dtrue&cc=y%3D
+   (CS Green, D Bavelier - Current biology, 2012 - cell.com | 2012 | cited by 1162)
+   … causal effect of action video game play is established when action trainees show greater pre-post performance improvements … A causal role of action game playing is indicated by a …
+
+29. Empirical support for a causal relationship between gamification and learning outcomes
+   https://dl.acm.org/doi/abs/10.1145/3173574.3173885
+   (P Denny, F McDonald, R Empson, P Kelly… - Proceedings of the …, 2018 - dl.acm.org | 2018 | cited by 201)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3173574.3173885
+   … improvement in exam scores. Our data supports a causal relationship between gamification and learning … , we infer that the effect of the game elements on student activity is causal. …
+
+30. Non-linear welfare-aware strategic learning
+   https://ojs.aaai.org/index.php/AIES/article/view/31755
+   (T Xie, X Zhang - Proceedings of the AAAI/ACM Conference on AI, Ethics …, 2024 - ojs.aaai.org | 2024 | cited by 14)
+   [PDF] https://ojs.aaai.org/index.php/AIES/article/download/31755/33922
+   … may exert efforts to genuinely improve their labels or game the ML models by manipulating … on causal strategic learning where features are divided into "causal" and "non-causal" ones. …
+
+31. Integration of causal models and deep neural networks for recommendation systems in dynamic environments: a case study in StarCraft II
+   https://www.mdpi.com/2076-3417/15/8/4263
+   (F Moreira, JI Velez-Bedoya, J Arango-López - Applied Sciences, 2025 - mdpi.com | 2025 | cited by 4)
+   … causal relationships to suggest optimal strategies, improving decision-making in varying game … This study adds to the field of artificial intelligence used in real-time strategy games by …
+
+32. Discovering Optimal Scoring Mechanisms in Causal Strategic Prediction
+   https://arxiv.org/abs/2302.06804
+   (T Yan, S Gupta, Z Lipton - arXiv preprint arXiv:2302.06804, 2023 - arxiv.org | 2302)
+   [PDF] https://arxiv.org/pdf/2302.06804
+   … e ect of feature manipulation lies at the heart of strategic ML and recourse literature. Our … the causal e ect of such changes, distinguishing the good (improvement) from the bad (gaming). …
+
+33. Action video games make dyslexic children read better
+   https://www.cell.com/current-biology/fulltext/S0960-9822(13)00079-1?_return
+   (S Franceschini, S Gori, M Ruffino, S Viola, M Molteni… - Current biology, 2013 - cell.com | 2013 | cited by 829)
+   … improvement can directly translate into better reading abilities, providing a new, fast, fun remediation of dyslexia that has theoretical relevance in unveiling the causal … the causal role of …
+
+34. Desirable Effort Fairness and Optimality Trade-offs in Strategic Learning
+   https://openreview.net/forum?id=uaTqxaRk9V
+   (E Fedorova, V Efthymiou, C Podimata - 2025 - openreview.net | 2025)
+   [PDF] https://openreview.net/pdf?id=uaTqxaRk9V
+   … We focus on a Stackelberg game between a principal and an … a learner who must provide fair incentives to improvement … Our work uses their model of peer learning but adds causal …
+
+35. Developing a theory of gamified learning: Linking serious games and gamification of learning
+   https://journals.sagepub.com/doi/abs/10.1177/1046878114563660
+   (RN Landers - Simulation & gaming, 2014 - journals.sagepub.com | 2014 | cited by 1859)
+   [PDF] https://www.academia.edu/download/36761294/Landers_2015_-_Theory_of_gamified_learning.pdf
+   … a causal theory to explain how gamification can affect learning as … at improving learning if either of the two causal relationships … instructor must ensure that the game elements lead to the …
+
+36. Incentivizing desirable effort profiles in strategic classification: The role of causality and uncertainty
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/d7ad6951ce4f6063469adbc7f54cd711-Abstract-Conference.html
+   (V Efthymiou, C Podimata, D Sen… - Advances in Neural …, 2026 - proceedings.neurips.cc | 2026 | cited by 11)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/d7ad6951ce4f6063469adbc7f54cd711-Paper-Conference.pdf
+   … of causality in strategic classification capturing settings where agents do not know the classifier, causal graph, … gaming as opposed to improvement is as hard as learning the underlying …
+
+37. Casual social games as serious games: The psychology of gamification in undergraduate education and employee training
+   https://link.springer.com/chapter/10.1007/978-1-4471-2161-9_20
+   (RN Landers, RC Callan - Serious games and edutainment applications, 2011 - Springer | 2011 | cited by 539)
+   [PDF] https://www.researchgate.net/profile/Richard-Landers-2/publication/230854777_Casual_Social_Games_as_Serious_Games_The_Psychology_of_Gamification_in_Undergraduate_Education_and_Employee_Training/links/5591f37d08ae47a34910c1d7/Casual-Social-Games-as-Serious-Games-The-Psychology-of-Gamification-in-Undergraduate-Education-and-Employee-Training.pdf
+   … games are considered for their potential to improve learning, … , real-time strategy games and platform games are commonly … Casual games might be defined as any other game that does …
+
+38. The Disparate Effects of Partial Information in Bayesian Strategic Learning
+   https://ojs.aaai.org/index.php/AIES/article/view/36544
+   (S Avasarala, S Wang, J Ziani - … of the AAAI/ACM Conference on AI …, 2025 - ojs.aaai.org | 2025)
+   [PDF] https://ojs.aaai.org/index.php/AIES/article/download/36544/38682
+   … We study a Stackelberg game between a learner (or principal) … of strategic agents who can both game and improve. arXiv … Information discrepancy in strategic learning. In International …
+
+39. Improvement-focused causal recourse (ICR)
+   https://ojs.aaai.org/index.php/AAAI/article/view/26398
+   (G König, T Freiesleben… - Proceedings of the AAAI …, 2023 - ojs.aaai.org | 2023 | cited by 36)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/download/26398/26170
+   … causal knowledge to design post-recourse decision systems that recognize improvement (Section 6), such that improvement … gaming the predictor (ie, guide towards acceptance without …
+
+40. Brain plasticity through the life span: learning to learn and action video games
+   https://www.annualreviews.org/content/journals/10.1146/annurev-neuro-060909-152832
+   (D Bavelier, CS Green, A Pouget… - Annual review of …, 2012 - annualreviews.org | 2012 | cited by 885)
+   … If action game play truly has a causal effect on the skill under study, we expect greater pre- to posttest improvement in the action trainees than in the control trainees. Such causal effects …
+
+41. Information discrepancy in strategic learning
+   http://proceedings.mlr.press/v162/bechavod22a.html
+   (Y Bechavod, C Podimata, S Wu… - … on Machine Learning, 2022 - proceedings.mlr.press | 2022 | cited by 86)
+   [PDF] https://proceedings.mlr.press/v162/bechavod22a/bechavod22a.pdf
+   … Importantly, in our setting, even if the principal knows the causal … the improvement among groups, in the presence of information discrepancy, at a Stackelberg equilibrium of our game. …
+
+42. Causal Models and Big Data Learning Analytics: Evolution of Causal Relation Between Learning Efficiency and Instructional Effectiveness
+   https://link.springer.com/chapter/10.1007/978-3-662-44659-1_3
+   (VS Kumar, Kinshuk, C Clemens, S Harris - Ubiquitous learning …, 2014 - Springer | 2014 | cited by 11)
+   … from the graphical causal model literature, we are able to discover some causal relationships from observational data, even allowing latent variables, and improve the model using both …
+
+43. Computer games for learning: An evidence-based approach
+   https://books.google.com/books?hl=en&lr=&id=VckIBAAAQBAJ&oi=fnd&pg=PR7&dq=gaming+vs+improvement+strategic+learning+causal&ots=5yQU59ZgbH&sig=iTte3Vat_7-7-yv1PumI51hTOoY
+   (RE Mayer - 2014 - books.google.com | 2014 | cited by 633)
+   [PDF] https://scholar.archive.org/work/e2ba77h555fnxchxjtbbrfdv6a/access/wayback/http://pdfs.semanticscholar.org/6d81/95a12a69419530540452a108b9d7028d0bdb.pdf
+   … who are assigned to play a game show greater improvement on a cognitive skill related to … also use the term experiment to refer to causal studies that feature random assignment) are …
+
+44. Game-tars: Pretrained foundation models for scalable generalist multimodal game agents
+   https://arxiv.org/abs/2510.23691
+   (Z Wang, X Li, Y Ye, J Fang, H Wang, L Liu… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 9)
+   [PDF] https://arxiv.org/pdf/2510.23691
+   … causal confusion and an efficient Sparse-Thinking strategy that balances reasoning depth and inference cost. Experiments show that Game-… improvements when scaled to cross-game …
+
+45. A casual revolution: Reinventing video games and their players
+   https://books.google.com/books?hl=en&lr=&id=r4vRa7MGbYIC&oi=fnd&pg=PR5&dq=gaming+vs+improvement+strategic+learning+causal&ots=7y0N2yjoo6&sig=oKuEBN1JeKfZLg9RrBUioA8q-l8
+   (J Juul - 2012 - books.google.com | 2012 | cited by 2053)
+   [PDF] https://marzipa.wordpress.com/wp-content/uploads/2011/08/a-casual-revolution-reinventing-video-games-and-their-players.pdf
+   … games using the common industry term casual games. In this book I am focusing on the two liveliest trends in the casual … My feeling is that video game studies must keep improving its …
+
+46. Tracking precursors of learning analytics over serious game team performance ranking
+   https://www.tandfonline.com/doi/abs/10.1080/0144929X.2018.1474949
+   (A Capatina, G Bleoju, E Rancati… - Behaviour & Information …, 2018 - Taylor & Francis | 2018 | cited by 23)
+   … web marketing serious game (Simbound), we highlight a combination of causal conditions (… reality of learning analytics, we identify associations of causal conditions to improve decision…
+
+47. The effects of video game playing on attention, memory, and executive control
+   https://www.sciencedirect.com/science/article/pii/S0001691808001200
+   (WR Boot, AF Kramer, DJ Simons, M Fabiani, G Gratton - Acta psychologica, 2008 - Elsevier | 2008 | cited by 1589)
+   [PDF] https://www.biblioteken.fi/sites/default/files/content/The%20effects%20of%20video%20game%20playing%20on%20attention,%20memory,%20and%20executive%20control.pdf
+   … who do or do not play video games. Recent research has suggested a causal relationship between playing action video games and improvements in a variety of visual and attentional …
+
+48. Brain Drain Or Brain Gain? Cognitive Skill Training With Novice Video Game Players With Casual Video Games
+   https://egrove.olemiss.edu/etd/1137/
+   (S Hollis - 2016 - egrove.olemiss.edu | 2016 | cited by 1)
+   [PDF] https://egrove.olemiss.edu/cgi/viewcontent.cgi?article=2136&context=etd
+   … Individuals playing the strategy style game demonstrated significant improvements in working memory, problem-solving, and visuospatial skills as well. Both groups exhibited a decline …
+
+49. Learning under imitative strategic behavior with unforeseeable outcomes
+   https://arxiv.org/abs/2405.01797
+   (T Xie, Z Zuo, MM Khalili, X Zhang - arXiv preprint arXiv:2405.01797, 2024 - arxiv.org | 2405 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2405.01797
+   … We first propose a novel Stackelberg game to model the … strategic behavior where individuals manipulate/improve by … between our model and causal strategic learning in App. B.1. …
+
+50. Strategic instrumental variable regression: Recovering causal relationships from strategic responses
+   https://proceedings.mlr.press/v162/harris22a.html
+   (K Harris, DDT Ngo, L Stapleton… - … on Machine Learning, 2022 - proceedings.mlr.press | 2022 | cited by 50)
+   [PDF] https://proceedings.mlr.press/v162/harris22a/harris22a.pdf
+   … that our causal recovery method can be utilized to improve … causal associations block undesirable pathways of gaming … do not apply to the strategic learning setting we consider. See …
+
+51. How can strategy games be optimized to balance depth with the demands of casual players: A case study
+   
+   (J Ding - 2025 | 2025)
+
+52. Using video games to improve capabilities in decision making and cognitive skill: A literature review
+   https://www.sciencedirect.com/science/article/pii/S1877050920324698
+   (C Reynaldo, R Christian, H Hosea… - Procedia Computer …, 2021 - Elsevier | 2021 | cited by 208)
+   [PDF] https://www.sciencedirect.com/science/article/pii/S1877050920324698/pdf?md5=9c972df1be41eb22bda012e937ac54a4&pid=1-s2.0-S1877050920324698-main.pdf
+   … The results of the review proved that video games do improve … subjects were trained with video games. In relation to video … Cons: This study exclude the causation between different …
+
+53. The Role of Causal Features in Strategic Classification for Robustness and Alignment
+   https://arxiv.org/abs/2605.27163
+   (A Gois, S Gunluk, N Rosenfeld, N Hegde… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.27163
+   … 2020), some changes improve agent outcomes while others constitute gaming the classifier, worsening classification error. In this paper, we study whether classifiers can maintain …
+
+54. On classification of strategic agents who can both game and improve
+   https://arxiv.org/abs/2203.00124
+   (S Ahmadi, H Beyhaghi, A Blum, K Naggita - arXiv preprint arXiv …, 2022 - arxiv.org | 2022 | cited by 42)
+   [PDF] https://arxiv.org/pdf/2203.00124
+   … gaming versus true improvement. How … learning-theoretic formulations of such scenarios, where a binary classification must be made in the presence of both gaming and improvement …
+
+55. Learning to incentivize improvements from strategic agents
+   https://openreview.net/forum?id=W98AEKQ38Y
+   (Y Chen, J Wang, Y Liu - Transactions on Machine Learning …, 2023 - openreview.net | 2023 | cited by 14)
+   [PDF] https://openreview.net/pdf?id=W98AEKQ38Y
+   … game, and characterize optimal strategies for … causal features (which do not lead to changes in the true qualification), we provide formal evidence that this risk captures both the strategic …
+
+56. Inducing strategic learning from texts by means of informed, self-control training
+   https://www.ideals.illinois.edu/items/17675/bitstreams/63496/data.pdf
+   (AL Brown, AS Palincsar - Center for the Study of Reading …, 1982 - ideals.illinois.edu | 1982 | cited by 1215)
+   [PDF] https://www.ideals.illinois.edu/items/17675/bitstreams/63496/data.pdf
+   … that the use of the strategy did result in improved recall. This … engaged in a interactive learning game that involved taking … knowledge of events: A causal analysis of story structure. In G…
+
+57. Transforming Young Gamers: A Qualitative Study of the Gaming Routines, Health Practices, and Learning Motivation of Elite Esports Students in Norway
+   https://journals.humankinetics.com/view/journals/jege/3/1/article-jege.2024-0031.xml
+   (S Overå, N Talberg - Journal of Electronic Gaming and …, 2025 - journals.humankinetics.com | 2025 | cited by 2)
+   [PDF] https://www.researchgate.net/profile/Stian-Overa/publication/392814845_Transforming_Young_Gamers_A_Qualitative_Study_of_the_Gaming_Routines_Health_Practices_and_Learning_Motivation_of_Elite_Esports_Students_in_Norway/links/68591c86cdf1a35eb174bb94/Transforming-Young-Gamers-A-Qualitative-Study-of-the-Gaming-Routines-Health-Practices-and-Learning-Motivation-of-Elite-Esports-Students-in-Norway.pdf
+   … gaming habits, health practices, and learning motivation changed during the transition from casual gaming … and analytics to improve their strategies for different in-game situations. Marie …
+
+58. Systems thinking and organizational learning: Acting locally and thinking globally in the organization of the future
+   https://www.sciencedirect.com/science/article/pii/037722179290011W
+   (PM Senge, JD Sterman - European journal of operational research, 1992 - Elsevier | 1992 | cited by 1187)
+   [PDF] https://proceedings.systemdynamics.org/1990/proceed/pdfs/senge1007.pdf
+   … Efforts to improve strategic management often founder because new … The participants learn causal diagramming in the process of … scenarios are used to introduce the game. The …
+
+59. Advanced strategic improvement with decision interactions
+   https://link.springer.com/chapter/10.1007/978-3-032-05962-8_25
+   (W Yang, X Lv, Y Mao, L Xu, R Jin, H Chen… - … on Machine Learning …, 2025 - Springer | 2025 | cited by 2)
+   [PDF] https://ecmlpkdd-storage.s3.eu-central-1.amazonaws.com/preprints/2025/research/preprint_ecml_pkdd_2025_research_540.pdf
+   … on strategic machine learning and causal decorrelation … distinguish between genuine improvement and gaming behavior [36, … the strategic improvement framework [8, 26], the strategic …
+
+60. Vicarious Experimentation: Do Innovators Learn by Being Imitated?
+   https://journals.aom.org/doi/abs/10.5465/amj.2022.1122
+   (S Kim, HE Posen, M Ganco - Academy of Management Journal, 2025 - journals.aom.org | 2025 | cited by 2)
+   … By theorizing the interplay between causal ambiguity and vicarious learning, this study … subsequent PlayStation 2 video games, we find that quality improvements in sequels are strongly …
+
+61. An empirical test of the theory of gamified learning: The effect of leaderboards on time-on-task and academic performance
+   https://journals.sagepub.com/doi/abs/10.1177/1046878114563662
+   (RN Landers, AK Landers - Simulation & gaming, 2014 - journals.sagepub.com | 2014 | cited by 752)
+   [PDF] https://www.researchgate.net/profile/Richard-Landers-2/publication/268632350_An_Empirical_Test_of_the_Theory_of_Gamified_Learning/links/552edbc70cf2d495071a919d/An-Empirical-Test-of-the-Theory-of-Gamified-Learning.pdf
+   … Essentially, we propose that the reason leaderboards improve learning outcomes is … game elements used in combination as a leaderboard causally, but indirectly affect learning …
+
+62. Games and simulations and their relationships to learning
+   https://www.taylorfrancis.com/chapters/edit/10.4324/9781410609519-30/games-simulations-relationships-learning-margaret-gredler
+   (ME Gredler - … of research on educational communications and …, 2013 - taylorfrancis.com | 2013 | cited by 920)
+   [PDF] https://www.academia.edu/download/100841899/21.pdf
+   … to the use of war games in the 1600s. The purpose was to improve the strategic planning of … among several variables that reflect authentic causal or relational processes. That is, the …
+
+63. The Role of Causal Features in Strategic Classification for Robustness and Alignment
+   https://openreview.net/forum?id=tgnnCHVGxd
+   (A Góis, S Günlük, N Rosenfeld, N Hegde… - The 29th International … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=tgnnCHVGxd
+   … 2020), some changes improve agent outcomes while others constitute gaming the classifier, worsening classification error. In this paper, we study whether classifiers can maintain …
+
+64. Algorithmic transparency with strategic users
+   https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2022.4475
+   (Q Wang, Y Huang, S Jasin… - Management Science, 2023 - pubsonline.informs.org | 2023 | cited by 81)
+   [PDF] https://arxiv.org/pdf/2008.09283
+   … out the difference between gaming and improvement: gaming is bad for the … improving the causal feature for the H type agents) is smaller than C L (the cost of improving the causal …
+
+65. A case study of computer gaming for math: Engaged learning from gameplay?
+   https://www.sciencedirect.com/science/article/pii/S0360131508000523
+   (F Ke - Computers & education, 2008 - Elsevier | 2008 | cited by 861)
+   … and have claimed them as not equally effective in improving learning and skills in comparison to other game genres. This claim, however, needs to be well evidenced by more empirical …
+
+66. Does granting managerial autonomy in exchange for accountability mitigate gaming?
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/puar.13564
+   (X Han, W Wang - Public Administration Review, 2023 - Wiley Online Library | 2023 | cited by 14)
+   … opted into the experiment created challenges for our causal analysis due to the possibility of … Another possible threat to our estimation strategy is that efforts to improve the performance …
+
+67. 17. Educational games and simulations: A technology in search of a (research) paradigm
+   http://www.speakeasydesigns.com/SDSU/student/SAGE/compsprep/Ed_Games_and_Simulations.pdf
+   (ME Gredler - Technology, 1996 - speakeasydesigns.com | 1996 | cited by 666)
+   [PDF] http://www.speakeasydesigns.com/SDSU/student/SAGE/compsprep/Ed_Games_and_Simulations.pdf
+   … for the learner and the type of causal model … causal model (see Table 17-2). In contrast, diagnostic, crisis management, and social-process simulations are based on qualitative causal …
+
+68. A qualitative meta-analysis of computer games as learning tools
+   https://www.igi-global.com/chapter/qualitative-meta-analysis-computer-games/49470
+   (F Ke - Gaming and simulations: Concepts, methodologies …, 2011 - igi-global.com | 2011 | cited by 816)
+   [PDF] https://www.researchgate.net/profile/Fengfeng-Ke/publication/237267086_Chapter_I_A_Qualitative_Meta-Analysis_of_Computer_Games_as_Learning_Tools/links/5604212d08ae5e8e3f2fcdf7/Chapter-I-A-Qualitative-Meta-Analysis-of-Computer-Games-as-Learning-Tools.pdf
+   … ’ use with children and found no clear causal relationship between academic performance and the use of … Game improved learning gains and increased the speed of test performance. …
+
+69. Serious games and learning effectiveness: The case of It'sa Deal!
+   https://www.sciencedirect.com/science/article/pii/S0360131511001734
+   (V Guillén-Nieto, M Aleson-Carbonell - Computers & education, 2012 - Elsevier | 2012 | cited by 529)
+   [PDF] https://www.academia.edu/download/67547662/j.compedu.2011.07.01520210607-8953-yjsvnk.pdf
+   … not improve their intercultural learning, what are the factors influencing such failure? The game … Findings of this study demonstrate that the video game is an effective learning tool for the …
+
+70. Effects of time scale focus on system understanding in decision support systems
+   https://journals.sagepub.com/doi/abs/10.1177/104687810003100301
+   (DN Ford, DEM McCormack - Simulation & Gaming, 2000 - journals.sagepub.com | 2000 | cited by 46)
+   … of causal understanding improvement as a … improve causal understanding more for causal relations that have immediate impacts and are therefore easier to understand than for causal …
+
+71. The gamification of learning and instruction: game-based methods and strategies for training and education
+   https://books.google.com/books?hl=en&lr=&id=M2Rb9ZtFxccC&oi=fnd&pg=PR12&dq=gaming+vs+improvement+strategic+learning+causal&ots=JzPf13aB8H&sig=KqZ4r4J37XBoqUc5TeeNuWhTBbE
+   (KM Kapp - 2012 - books.google.com | 2012 | cited by 13070)
+   … Recently she launched the first ever DoD Casual Games site; since its launch in December … the four teams sitting around the lean manufacturing game boards how they could improve. …
+
+72. Designing and integrating purposeful learning in game play: A systematic review
+   https://link.springer.com/article/10.1007/s11423-015-9418-1
+   (F Ke - Educational Technology Research and Development, 2016 - Springer | 2016 | cited by 506)
+   [PDF] https://tecfa.unige.ch/tecfa/maltt/VIP/Ressources/Articles/Ke2016.pdf
+   … learning games, this article presents a systematic discussion on the design of intrinsic integration of domain-specific learning in game mechanics and game … Exemplary learning games …
+
+73. The effective communication of system dynamics to improve insight and learning in management education
+   https://www.tandfonline.com/doi/abs/10.1057/palgrave.jors.2600679
+   (K Warren, P Langley - Journal of the Operational Research Society, 1999 - Taylor & Francis | 1999 | cited by 82)
+   … simple, high-level causal mapping techniques to conceptualise dynamic … gaming simulations as learning tools. We then use this evidence to guide design and implementation of gaming …
+
+74. Using a Causal Model for the Design and Development of a Simulation Game for Teacher Education.
+   https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=15400182&asa=Y&AN=36836106&h=4BtVIw%2Ftx4QvyTlB6XnUx6U8Kdu8JuKDG5OApBNma7fJDMSO8Dq8ya8h29vVBDpyaymlx%2FYPqI2exlFtr3XQ3A%3D%3D&crl=c
+   (D Ifenthaler - Technology, Instruction, Cognition & Learning, 2009 - search.ebscohost.com | 2009 | cited by 18)
+   … EPICS provides a fictitious but realistic environment in which learners can experience and … improvement at different levels. In this way, EPICS allows one to explore the scope of strategic …
+
+75. Video game genres and English language learning motivation: Evidence from Indonesian EFL learners
+   https://e-journal.metrouniv.ac.id/pedagogy/article/view/13200
+   (FS Andhara, FO Kurniawan - Pedagogy: Journal of …, 2026 - e-journal.metrouniv.ac.id | 2026)
+   [PDF] https://e-journal.metrouniv.ac.id/pedagogy/article/download/13200/5194
+   … in the statement “Playing video games makes me want to improve my English skills,” where … Meanwhile, casual, social, and fun games make the English learning experience feel more …
+
+76. Do action video games improve perception and cognition?
+   https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2011.00226/full
+   (WR Boot, DP Blakely, DJ Simons - Frontiers in psychology, 2011 - frontiersin.org | 2011 | cited by 730)
+   [PDF] https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2011.00226/pdf
+   … Although such clinical trials are necessary to draw causal inferences about gaming benefits, the literature includes far fewer training studies than cross-sectional ones – few laboratories …
+
+77. Reportable Serious Game Mechanics (SGMX): an ontological framework for the analysis and design of digital game-based learning
+   https://acquire.cqu.edu.au/articles/thesis/Reportable_Serious_Game_Mechanics_SGMX_an_ontological_framework_for_the_analysis_and_design_of_digital_game-based_learning/27601275
+   (G Shearer - 2024 - acquire.cqu.edu.au | 2024)
+   [PDF] https://acquire.cqu.edu.au/articles/thesis/Reportable_Serious_Game_Mechanics_SGMX_an_ontological_framework_for_the_analysis_and_design_of_digital_game-based_learning/27601275/1/files/50204439.pdf
+   … learning designers (LDs) in designing and improving organisational training. A survey aimed at LDs and game … causative aspects of DGBL, as presented in the Learning Mechanics – …
+
+78. Game on: comparing stress reduction effects between a serious game and a commercial off-the-shelf casual game in emerging adulthood
+   https://www.sciencedirect.com/science/article/pii/S1875952125001557
+   (S Velert-Jiménez, HA Sánchez-Sánchez… - Entertainment …, 2025 - Elsevier | 2025)
+   … outcomes between a serious game area specifically designed … serious game group experienced significant improvements … Additionally, 36.7% of participants in the serious game …
+
+79. Melding the power of serious games and embedded assessment to monitor and foster learning: Flow and grow
+   https://www.taylorfrancis.com/chapters/edit/10.4324/9780203891650-31/melding-power-serious-games-embedded-assessment-monitor-foster-learning-flow-grow-valerie-shute-matthew-ventura-malcolm-bauer-diego-zapata-rivera
+   (VJ Shute, M Ventura, M Bauer, D Zapata-Rivera - Serious games, 2009 - taylorfrancis.com | 2009 | cited by 680)
+   [PDF] http://myweb.fsu.edu/vshute/pdf/shute%202009_c.pdf
+   … games to assess the degree of actual and important learning … : (1) learning by doing (required in game play) may improve … are different from casual games. Two key features of serious …
+
+80. Simulation and gaming: Fidelity, feedback, and motivation
+   https://books.google.com/books?hl=en&lr=&id=ss3fz-5WC6gC&oi=fnd&pg=PA197&dq=gaming+vs+improvement+strategic+learning+causal&ots=uB5HqqK2N-&sig=cpwpCeikon3Njo2U_DJTAN2tOqo
+   (JW Jacobs, JV Dempsey - Interactive instruction and feedback, 1993 - books.google.com | 1993 | cited by 165)
+   … learner involvement via simulation and gaming and incorporating sound instructional features, learning outcomes should show improvements relative … The model reflects the causal rela…
+
+81. Classification of learning outcomes: Evidence from the computer games literature
+   https://www.tandfonline.com/doi/abs/10.1080/09585170500384529
+   (HF O'Neil, R Wainess, EL Baker - The Cirriculum Journal, 2005 - Taylor & Francis | 2005 | cited by 800)
+   … causal relationships. Gredler also defined a mixed metaphor referred to as simulation games or gaming … and worked examples to improve video game problem-solving performance. …
+
+82. Video games and creativity
+   https://books.google.com/books?hl=en&lr=&id=9gV8BgAAQBAJ&oi=fnd&pg=PP1&dq=gaming+vs+improvement+strategic+learning+causal&ots=6IlhkStfUQ&sig=s7vu5mTW_gmv2N83GgHd9XONe78
+   (G Green, JC Kaufman - 2015 - books.google.com | 2015 | cited by 106)
+   … of improving our education system. The research and development of game-based learning … are a far cry from demonstrating a causal relationship between video game playing and task …
+
+83. Multitype Game Optimisation: A Two‐Stage Fine‐Tuning Framework for Multi‑Game Optimisation With Large Language Models
+   https://ietresearch.onlinelibrary.wiley.com/doi/abs/10.1049/cit2.70108
+   (X Li, J Gu, F He, Y Xiao, Y Jia… - CAAI Transactions on …, 2026 - Wiley Online Library | 2026 | cited by 4)
+   [PDF] https://ietresearch.onlinelibrary.wiley.com/doi/pdf/10.1049/cit2.70108
+   … actions conform to game rules, improving training stability … faster and more stable strategy learning, leading to higher win … , whereas ChessGPT employed causal modelling. A chess‐…
+
+84. The power of possibility: Causal learning, counterfactual reasoning, and pretend play
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC3385687/
+   (D Buchsbaum, S Bridgers… - … Transactions of the …, 2012 - pmc.ncbi.nlm.nih.gov | 2012 | cited by 351)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC3385687/pdf/rstb20120122.pdf
+   … to learn about causation and to construct causal models. … hood learning, and play in particular, and adult causal cognition … in the context of the pretend game. Based on our hypothesis …
+
+85. … competitiveness stimulated by points and leaderboards on user engagement and performance growth: A natural experiment with gamification in an informal learning …
+   https://www.tandfonline.com/doi/abs/10.1080/0960085X.2020.1808540
+   (L Amo, R Liao, R Kishore, HR Rao - European Journal of …, 2020 - Taylor & Francis | 2020 | cited by 77)
+   [PDF] https://drive.google.com/file/d/1jdVgeRZ-_--Een2S6OsKB1BH5VxCYpC-/view
+   … literature by providing strong causal evidence of points and … causal inferences about the connections among game … in the NetBuilder game significantly improved performance on …
+
+86. A causal perspective on meaningful and robust algorithmic recourse
+   https://arxiv.org/abs/2107.07853
+   (G König, T Freiesleben, M Grosse-Wentrup - arXiv preprint arXiv …, 2021 - arxiv.org | 2021 | cited by 29)
+   [PDF] https://arxiv.org/pdf/2107.07853
+   … requires knowledge of the causal graph. Furthermore, one … gaming is problematic for both model authorities and individuals who seek robust recommendations that help them to improve…
+
+87. The effects of human-game interaction, network externalities, and motivations on players' use of mobile casual games
+   https://www.emerald.com/imds/article/118/9/1766/176124
+   (S Molinillo, F Muñoz-Leiva… - Industrial management & …, 2018 - emerald.com | 2018 | cited by 60)
+   [PDF] https://www.researchgate.net/profile/Francisco-Munoz-Leiva/publication/327022540_The_effects_of_human-game_interaction_network_externalities_and_motivations_on_players'_use_of_mobile_casual_games/links/609d0867299bf1259ed10378/The-effects-of-human-game-interaction-network-externalities-and-motivations-on-players-use-of-mobile-casual-games.pdf
+   … games, some of the industry’s biggest hits are casual games, like Candy Crush Saga®. Casual games … to propose a model to help improve the understanding of the use of mobile casual …
+
+88. Action-video-game experience alters the spatial resolution of vision
+   https://journals.sagepub.com/doi/abs/10.1111/j.1467-9280.2007.01853.x
+   (CS Green, D Bavelier - Psychological science, 2007 - journals.sagepub.com | 2007 | cited by 1435)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC2896830/pdf/nihms209878.pdf
+   … mechanisms underlying this improvement remain unclear. Here we show that playing action video … to demonstrate a causative relationship between action-video-game experience and …
+
+89. The effectiveness of casual advergames on adolescents' brand attitudes
+   https://www.emerald.com/ejm/article/46/11-12/1671/52003
+   (I Redondo - European Journal of Marketing, 2012 - emerald.com | 2012 | cited by 158)
+   … of casual advergames, those free simple games usually posted on marketers' web sites. … , a casual advergame is expected to improve brand attitude (1) when the game induces a …
+
+90. Gamification in engineering education–An empirical assessment on learning and game performance
+   https://www.cell.com/heliyon/fulltext/S2405-8440(20)31815-6
+   (J Díaz-Ramírez - Heliyon, 2020 - cell.com | 2020 | cited by 208)
+   [PDF] https://www.cell.com/heliyon/pdf/S2405-8440(20)31815-6.pdf
+   … However, the direction of causality in the last … the improvement of the learning process through the design, implementation, and assessment of game-like activities comprised in a game …
+
+91. Teaching strategic intelligence through games
+   https://www.tandfonline.com/doi/abs/10.1080/08850607.2011.548217
+   (KJ Wheaton - International Journal of intelligence and …, 2011 - Taylor & Francis | 2011 | cited by 25)
+   … a game-based approach to teaching strategic intelligence analysis would increase learning and improve … In the end, I settled on using casual online or downloadable games or games, …
+
+92. A Causal Role of the Dorsal Medial Prefrontal Cortex in Belief Learning
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4509502
+   (H Zhang, G Xiong, S Cai, S Wu - Available at SSRN 4509502 - papers.ssrn.com | 4509)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=4509502
+   … the opponents’ decision and improved the model fitting of the … Race game, with the strategic and non-strategic conditions over … and belief prediction errors underlie strategic learning. …
+
+93. System dynamics to design an educational game for improving interpersonal skills to manage conflict
+   https://www.jstage.jst.go.jp/article/jamdsm/13/2/13_2019jamdsm0040/_article/-char/ja/
+   (H Takahashi, M Nakano - Journal of Advanced Mechanical Design …, 2019 - jstage.jst.go.jp | 2019 | cited by 2)
+   [PDF] https://www.jstage.jst.go.jp/article/jamdsm/13/2/13_2019jamdsm0040/_pdf
+   … to design a business game for fostering interpersonal skills. A causal loop diagram is used to confirm the game design so that the participants can learn by playing about importance of …
+
+94. Transparency, Detection and Imitation in Strategic Classification.
+   https://pure.tudelft.nl/ws/files/132552382/0010.pdf
+   (F Barsotti, RG Koçer, FP Santos - IJCAI, 2022 - pure.tudelft.nl | 2022 | cited by 25)
+   [PDF] https://pure.tudelft.nl/ws/files/132552382/0010.pdf
+   … where individuals find cheaper to game than to improve, in the absence … We do not perform any causal analysis; we focus, instead, on the … Information discrepancy in strategic learning. …
+
+95. A scoping review of digital game-based technology on English language learning
+   https://www.jstor.org/stable/48727469
+   (Z Xu, Z Chen, L Eutsler, Z Geng, A Kogut - … Technology Research and …, 2020 - JSTOR | 2020 | cited by 273)
+   … We provide strategies for educational researchers to improve … tal game designers can apply toward language-learning game … casual and non-casual (eg, triple-A) games which differ in …
+
+96. Gamification of adult learning: Gamifying employee training and development
+   https://www.researchgate.net/profile/Richard-Landers-2/publication/331256286_Gamification_of_Adult_Learning_Gamifying_Employee_Training_and_Development/links/5ccca8f592851c4eab80fe5b/Gamification-of-Adult-Learning-Gamifying-Employee-Training-and-Development.pdf
+   (RN Landers, EM Auer, AB Helms, S Marin… - … of technology and …, 2019 - researchgate.net | 2019 | cited by 84)
+   [PDF] https://www.researchgate.net/profile/Richard-Landers-2/publication/331256286_Gamification_of_Adult_Learning_Gamifying_Employee_Training_and_Development/links/5ccca8f592851c4eab80fe5b/Gamification-of-Adult-Learning-Gamifying-Employee-Training-and-Development.pdf
+   … learning behaviors or attitudes to improve learning outcomes more distally. In summary, a user can learn directly from a game but … Because of this causal relationship, improving learner …
+
+97. Exploring the practical value of business games: Analysis with Toulmin's sensemaking framework
+   
+   (JB Kim, E Watson, SI Shin - Asia pacific …, 2022 - The Korea Society of Management … | 2022 | cited by 2)
+
+98. Theory-oriented evaluation for the design of and research in gaming and simulation
+   https://journals.sagepub.com/doi/abs/10.1177/1046878106287950
+   (WC Kriz, JU Hense - Simulation & Gaming, 2006 - journals.sagepub.com | 2006 | cited by 221)
+   [PDF] https://hal.science/hal-00704032v1/file/Kriz_Hense_2006.pdf
+   … in the simulation game improve the effectiveness of the series of strategic decisions in an … to improvements, such as including more accurate causal links in the dynamic game model. …
+
+99. Children's choices and strategies in video games
+   https://www.sciencedirect.com/science/article/pii/S0747563210002980
+   (KR Hamlen - Computers in Human Behavior, 2011 - Elsevier | 2011 | cited by 207)
+   … more frequently are more likely to have a knowledge base of strategies that have … game performance also performed better, suggesting the possibility of improved strategy and learning …
+
+===== Query 4/6: Miller Milli Hardt strategic classification causal =====
+
+1. Strategic classification is causal modeling in disguise
+   http://proceedings.mlr.press/v119/miller20b
+   (J Miller, S Milli, M Hardt - International Conference on …, 2020 - proceedings.mlr.press | 2020 | cited by 180)
+   [PDF] http://proceedings.mlr.press/v119/miller20b/miller20b.pdf
+   Consequential decision-making incentivizes individuals to strategically adapt their behavior to the specifics of the decision rule. While a long line of work has viewed strategic adaptation as gaming and attempted to mitigate its effects, recent work has instead sought to design classifiers that incentivize individuals to improve a desired quality. Key to both accounts is a cost function that dictates which adaptations are rational to undertake. In this work, we develop a causal framework for strategic adaptation. Our causal perspective clearly distinguishes between gaming and improvement and reveals an important obstacle to incentive design. We prove any procedure for designing classifiers that incentivize improvement must inevitably solve a non-trivial causal inference problem. We show a similar result holds for designing cost functions that satisfy the requirements of previous work. With the benefit of hindsight, our results show much of the prior work on strategic classification is causal modeling in disguise.
+
+===== Query 5/6: Shavit Edelman Axelrod causal strategic linear regression =====
+
+1. Causal strategic linear regression
+   http://proceedings.mlr.press/v119/shavit20a.html
+   (Y Shavit, B Edelman, B Axelrod - … Conference on Machine …, 2020 - proceedings.mlr.press | 2020 | cited by 121)
+   [PDF] http://proceedings.mlr.press/v119/shavit20a/shavit20a.pdf
+   In many predictive decision-making scenarios, such as credit scoring and academic testing, a decision-maker must construct a model that accounts for agents’ propensity to “game” the decision rule by changing their features so as to receive better decisions. Whereas the strategic classification literature has previously assumed that agents’ outcomes are not causally affected by their features (and thus that strategic agents’ goal is deceiving the decision-maker), we join concurrent work in modeling agents’ outcomes as a function of their changeable attributes. As our main contribution, we provide efficient algorithms for learning decision rules that optimize three distinct decision-maker objectives in a realizable linear setting: accurately predicting agents’ post-gaming outcomes (prediction risk minimization), incentivizing agents to improve these outcomes (agent outcome maximization), and estimating the coefficients of the true underlying model (parameter estimation). Our algorithms circumvent a hardness result of Miller et al.(2019) by allowing the decision maker to test a sequence of decision rules and observe agents’ responses, in effect performing causal interventions through the decision rules.
+
+===== Query 6/6: social cost strategic classification Milli =====
+
+1. The social cost of strategic classification
+   https://dl.acm.org/doi/abs/10.1145/3287560.3287576
+   (S Milli, J Miller, AD Dragan, M Hardt - Proceedings of the conference on …, 2019 - dl.acm.org | 2019 | cited by 286)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3287560.3287576
+   … Introducing a notion of social burden, we prove that any increase in institutional utility … in social burden. Moreover, we show that the negative externalities of strategic classification can …
+
+2. Incentivizing recourse through auditing in strategic classification
+   https://par.nsf.gov/biblio/10440483
+   (A Estornell, Y Chen, S Das, Y Liu, Y Vorobeychik - IJCAI, 2023 - par.nsf.gov | 2023 | cited by 22)
+   [PDF] https://par.nsf.gov/servlets/purl/10440483
+   … Model: We model strategic classification in the presence of recourse as a game … [Milli et al., 2019] Smitha Milli, John Miller, Anca D Dragan, and Moritz Hardt. The social cost of strategic …
+
+3. Strategic classification made practical
+   https://proceedings.mlr.press/v139/levanon21a.html
+   (S Levanon, N Rosenfeld - International Conference on …, 2021 - proceedings.mlr.press | 2021 | cited by 107)
+   [PDF] http://proceedings.mlr.press/v139/levanon21a/levanon21a.pdf
+   … for strategic classification that is practical. Our approach directly minimizes the “strategic” … works have raised concern as to the adverse social outcomes this may entail (Milli et al.…
+
+4. The Role of Causal Features in Strategic Classification for Robustness and Alignment
+   https://arxiv.org/abs/2605.27163
+   (A Gois, S Gunluk, N Rosenfeld, N Hegde… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.27163
+   … improve agents’ utility instead of imposing a social cost. … strategic classification, we consider institutions that deploy classifiers to make decisions, and predicted agents that strategically …
+
+5. Learning losses for strategic classification
+   https://ojs.aaai.org/index.php/AAAI/article/view/20696
+   (T Lechner, R Urner - Proceedings of the AAAI Conference on Artificial …, 2022 - ojs.aaai.org | 2022 | cited by 35)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/view/20696/20455
+   … to a positive classification, for example since the utility of this change in classification exceeds the cost of the change between these vectors. We define our strategic loss in dependence …
+
+6. Strategic classification is causal modeling in disguise
+   http://proceedings.mlr.press/v119/miller20b
+   (J Miller, S Milli, M Hardt - International Conference on …, 2020 - proceedings.mlr.press | 2020 | cited by 180)
+   [PDF] http://proceedings.mlr.press/v119/miller20b/miller20b.pdf
+   … to a classification rule. For example, it is common in strategic classification to model agents as being rational with respect to a cost function that quantifies the cost of feature changes. …
+
+7. The Role of Causal Features in Strategic Classification for Robustness and Alignment
+   https://openreview.net/forum?id=tgnnCHVGxd
+   (A Góis, S Günlük, N Rosenfeld, N Hegde… - The 29th International … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=tgnnCHVGxd
+   … improve agents’ utility instead of imposing a social cost. … strategic classification, we consider institutions that deploy classifiers to make decisions, and predicted agents that strategically …
+
+8. Strategic ranking
+   https://proceedings.mlr.press/v151/liu22b.html
+   (LT Liu, N Garg, C Borgs - International Conference on …, 2022 - proceedings.mlr.press | 2022 | cited by 43)
+   [PDF] https://proceedings.mlr.press/v151/liu22b/liu22b.pdf
+   … Strategic classification studies the … , strategic classification and fair machine learning in computer science, and contests and effort in economics. Strategic classification As in strategic …
+
+9. Alternative microfoundations for strategic classification
+   http://proceedings.mlr.press/v139/jagadeesan21a.html
+   (M Jagadeesan, C Mendler-Dünner… - … on Machine Learning, 2021 - proceedings.mlr.press | 2021 | cited by 78)
+   [PDF] http://proceedings.mlr.press/v139/jagadeesan21a/jagadeesan21a.pdf
+   … We observe that the social burden decreases with the fraction p of non-strategic agents in the population. Furthermore, if every agent follows noisy response (p = 0), the social burden is …
+
+10. Population size effects on strategic classification dynamics
+   https://www.ifaamas.org/Proceedings/aamas2026/pdfs/CKRS7125.pdf
+   (MC Couto, F Barsotti, FP Santos - Proc. of the 25th International …, 2026 - ifaamas.org | 2026)
+   [PDF] https://www.ifaamas.org/Proceedings/aamas2026/pdfs/CKRS7125.pdf
+   … Here, we plot the summary metric social cost to algorithmic accuracy ratio (cost-to-accuracy ratio for short), where we define accuracy as the sum of true positive and true negative rates. …
+
+11. The Social Cost of Strategic Classification (2018)
+   
+   (S Milli, J Miller, AD Dragan, M Hardt | cited by 3)
+
+12. Collective dynamics of strategic classification
+   https://arxiv.org/abs/2508.09340
+   (MC Couto, F Barsotti, FP Santos - arXiv preprint arXiv:2508.09340, 2025 - arxiv.org | 2508 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2508.09340
+   … pay excessive costs to meet the institutions’ expectations (leading to high social costs) or … We show that increased detection capabilities reduce social costs and could lead to users’ …
+
+13. Strategic classification with externalities
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/46079bebac3c5379e7a70b1f36ad6750-Abstract-Conference.html
+   (S Hossain, E Micha, Y Chen… - … Conference on Learning …, 2025 - proceedings.iclr.cc | 2025 | cited by 8)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/46079bebac3c5379e7a70b1f36ad6750-Paper-Conference.pdf
+   … strategic classification problem: a principal reveals a classifier, and n agents report their (possibly manipulated) features to be classified. … against multiple strategic actors interacting in a …
+
+14. Risk-based power system planning integrating social and economic direct and indirect costs
+   https://onlinelibrary.wiley.com/doi/pdf/10.1002/9780470529164#page=171
+   (L Mili, K Dooley - Econ. Market Design Plann. Elec. Power Syst, 2010 - Wiley Online Library | 2010 | cited by 8)
+   [PDF] https://www.researchgate.net/profile/Lamine-Mili/publication/228046564_Risk-Based_Power_System_Planning_Integrating_Social_and_Economic_Direct_and_Indirect_Costs/links/5ab2b5e1a6fdcc1bc0c1e81e/Risk-Based-Power-System-Planning-Integrating-Social-and-Economic-Direct-and-Indirect-Costs.pdf
+   … a poor strategy by itself compared to a more proactive strategy of … Finally, we shall examine whether social costs scale linearly … This risk is then classified as low, medium or severe. The …
+
+15. One-shot strategic classification under unknown costs
+   https://arxiv.org/abs/2311.02761
+   (E Rosenfeld, N Rosenfeld - arXiv preprint arXiv:2311.02761, 2023 - arxiv.org | 2311 | cited by 15)
+   [PDF] https://arxiv.org/pdf/2311.02761
+   … of inputs by strategic behavior and an adversarial choice of cost function. We … strategic classification under a single, fixed cost, then any discrepancy between that cost and the true cost …
+
+16. Strategic classification
+   https://dl.acm.org/doi/abs/10.1145/2840728.2840730
+   (M Hardt, N Megiddo, C Papadimitriou… - Proceedings of the 2016 …, 2016 - dl.acm.org | 2016 | cited by 628)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/2840728.2840730
+   … However, we will show that for a natural class C of cost functions, in fact it is possible to achieve strategy-robust learning with no dependence on h! However, we may want to ask a bit …
+
+17. Who leads and who follows in strategic classification?
+   https://proceedings.neurips.cc/paper/2021/hash/812214fb8e7066bfa6e32c626c2c688b-Abstract.html
+   (T Zrnic, E Mazumdar, S Sastry… - Advances in neural …, 2021 - proceedings.neurips.cc | 2021 | cited by 103)
+   [PDF] https://proceedings.neurips.cc/paper/2021/file/812214fb8e7066bfa6e32c626c2c688b-Paper.pdf
+   … on strategic classification treats this problem as a Stackelberg game: the decision-maker “leads” in the game by deploying a model, and the strategic … of play in strategic classification is …
+
+18. Robust strategic classification under decision-dependent cost uncertainty
+   https://arxiv.org/abs/2606.30136
+   (S Alhanouti, GÃ Bayraksan, P Naghizadeh - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2606.30136
+   … an approximation of the cost-induced norms that appear in the firm’s per-stage objective (which we show has an added benefit in the context of strategic classification, by enhancing …
+
+19. Strategic classification with unknown user manipulations
+   https://proceedings.mlr.press/v202/lechner23a.html
+   (T Lechner, R Urner… - … Conference on Machine …, 2023 - proceedings.mlr.press | 2023 | cited by 30)
+   [PDF] https://proceedings.mlr.press/v202/lechner23a/lechner23a.pdf
+   … The field of strategic classification deals with this … strategic loss even without knowing the feasible manipulations beforehand. In line with recent advances in the strategic classification …
+
+20. Strategic classification in the dark
+   https://proceedings.mlr.press/v139/ghalme21a.html
+   (G Ghalme, V Nair, I Eilat… - International …, 2021 - proceedings.mlr.press | 2021 | cited by 113)
+   [PDF] http://proceedings.mlr.press/v139/ghalme21a/ghalme21a.pdf
+   … generalize the strategic classification model to such scenarios. We define the “price of opacity” … Our goal in this work is to adapt the strategic classification framework to such settings, in …
+
+21. Strategic evaluation
+   https://dl.acm.org/doi/abs/10.1145/3617694.3623237
+   (B Laufer, J Kleinberg, K Levy… - Proceedings of the 3rd …, 2023 - dl.acm.org | 2023 | cited by 11)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3617694.3623237
+   … to its students, we typically describe this grading process as a way of measuring student … Milli et al. [33] consider decision subject effort as a social cost that should be minimized. Hu …
+
+22. Breaking the gradient barrier: Unveiling large language models for strategic classification
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/464917b6103e074e1f9df7a2bf3bf6ba-Abstract-Conference.html
+   (X Lv, Y Mao, H Li, K Liang, J Yang… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 5)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/464917b6103e074e1f9df7a2bf3bf6ba-Paper-Conference.pdf
+   … the strategic classification task and the in-context learning mechanisms within LLMs. In Section 3, we demonstrate the feasibility of leveraging LLMs for the strategic classification …
+
+23. Pac-learning for strategic classification
+   http://www.jmlr.org/papers/v24/21-1250.html
+   (R Sundaram, A Vullikanti, H Xu, F Yao - Journal of Machine Learning …, 2023 - jmlr.org | 2023 | cited by 71)
+   [PDF] https://www.jmlr.org/papers/volume24/21-1250/21-1250.pdf
+   … to be true in strategic classification — there are … classification with zero-manipulation-cost adversaries, by leveraging the special properties of the cost function in adversarial classification…
+
+24. The role of randomness and noise in strategic classification
+   https://arxiv.org/abs/2005.08377
+   (M Braverman, S Garg - arXiv preprint arXiv:2005.08377, 2020 - arxiv.org | 2005 | cited by 75)
+   [PDF] https://arxiv.org/pdf/2005.08377
+   … optimal classifiers in the “strategic classification” setting, where the classification is part of a … the cost of strategy differently from the “social burden” of strategic classification defined in …
+
+25. Bayesian strategic classification
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/ca774047bc3b46cc81e53ead34cd5d5a-Abstract-Conference.html
+   (L Cohen, S Sharifi-Malvajerdi… - Advances in …, 2024 - proceedings.neurips.cc | 2024 | cited by 22)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/ca774047bc3b46cc81e53ead34cd5d5a-Paper-Conference.pdf
+   … coin the “price of opacity” in strategic classification, defined … price can be positive (in the context of strategic classification)… by fully releasing their classifier in strategic settings. Our work …
+
+26. Incentive mechanisms for strategic classification and regression problems
+   https://dl.acm.org/doi/abs/10.1145/3490486.3538300
+   (K Jin, X Zhang, MM Khalili, P Naghizadeh… - Proceedings of the 23rd …, 2022 - dl.acm.org | 2022 | cited by 22)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3490486.3538300
+   … in strategic classification and regression problems. Conventional strategic classification and … (3) We study the social well-being of the augmented strategic learning system, focusing on …
+
+27. Strategic classification with randomised classifiers
+   https://arxiv.org/abs/2502.01313
+   (J Geary, H Gouk - arXiv preprint arXiv:2502.01313, 2025 - arxiv.org | 2502 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2502.01313
+   … a model to classify agents based on features that have been strategically modified. Previous … previous theoretical work analysing the problem of strategic classification. We conclude that …
+
+28. Quantification in social networks
+   https://ieeexplore.ieee.org/abstract/document/7344845/
+   (L Milli, A Monreale, G Rossetti… - … Conference on Data …, 2015 - ieeexplore.ieee.org | 2015 | cited by 39)
+   [PDF] https://www.academia.edu/download/109982071/DSAA2015.pdf
+   … to classification: however, the goal of classification is different, since in classification we are … We propose two different strategies to decide which class label must be assigned to a node …
+
+29. The disparate effects of strategic manipulation
+   https://dl.acm.org/doi/abs/10.1145/3287560.3287597
+   (L Hu, N Immorlica, JW Vaughan - Proceedings of the Conference on …, 2019 - dl.acm.org | 2019 | cited by 239)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3287560.3287597
+   … in receiving a positive classification, but is bound up in a complex web of social factors that … of strategic manipulation to capture dynamics that may arise in a setting of social inequality …
+
+30. Strategic classification with graph neural networks
+   https://arxiv.org/abs/2205.15765
+   (I Eilat, B Finkelshtein, C Baskin, N Rosenfeld - arXiv preprint arXiv …, 2022 - arxiv.org | 2022 | cited by 33)
+   [PDF] https://arxiv.org/pdf/2205.15765
+   … Strategic classification studies learning in settings where users can … of strategic classification are often social in nature, we focus on graph neural networks, which make use of social …
+
+31. The impact of transparency and imitation over complex networks in strategic classification
+   https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0346241
+   (F Barsotti, FP Santos - PloS one, 2026 - journals.plos.org | 2026)
+   [PDF] https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0346241&type=printable
+   … social information on strategic classification. We assume that agents adapt based on best response and behavioural imitation along the edges of social … monitor social costs of strategic …
+
+32. Collaboration as a mechanism for more robust strategic classification
+   https://ieeexplore.ieee.org/abstract/document/10383651/
+   (K Jin, Z Huang, M Liu - … 62nd IEEE Conference on Decision and …, 2023 - ieeexplore.ieee.org | 2023 | cited by 5)
+   … We will show in what sense this mechanism leads to more robust strategic classification. Specifically, the … Hardt, “The social cost of strategic classification,” 01 2019, pp. 230–239. [3] M. …
+
+33. Beyond rational illusion: Behaviorally realistic strategic classification
+   https://arxiv.org/abs/2605.19674
+   (X Lv, Y Mao, R Xu, C Zheng, Y Chen, H Li, Y Shi… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2605.19674
+   … the limitations of the rationalagent assumption in strategic classification by introducing a new problem setting, termed behaviorally realistic strategic classification (BR-SC). We further …
+
+34. Incentive-aware machine learning; robustness, fairness, improvement & causality
+   https://dl.acm.org/doi/abs/10.1145/3821540.3821546
+   (C Podimata - ACM SIGecom Exchanges, 2025 - dl.acm.org | 2025 | cited by 9)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3821540.3821546
+   … There are a couple of works that focus on restricted strategic classification settings where δ is unknown, but the principal can still learn robust decision rules (see Section 3 for details). …
+
+35. Choosing the right weights: Balancing value, strategy, and noise in recommender systems
+   https://arxiv.org/abs/2305.17428
+   (S Milli, E Pierson, N Garg - arXiv preprint arXiv:2305.17428, 2023 - arxiv.org | 2305 | cited by 16)
+   [PDF] https://arxiv.org/pdf/2305.17428
+   … Strategic classification, ranking, and recommendation. Our model considers how strategic producer behavior (alongside estimation noise and behavior value-faithfulness) should affect …
+
+36. Addressing strategic manipulation disparities in fair classification
+   https://dl.acm.org/doi/abs/10.1145/3617694.3623252
+   (V Keswani, LE Celis - Proceedings of the 3rd ACM Conference on Equity …, 2023 - dl.acm.org | 2023 | cited by 14)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3617694.3623252
+   … strategic manipulation, we propose a constrained optimization framework that constructs classifiers that lower the strategic manipulation cost … group-specific strategic cost disparity and …
+
+37. Partial fairness awareness: Belief-guided strategic mechanism for strategic agents
+   https://ojs.aaai.org/index.php/AAAI/article/view/39600
+   (X Lv, C Zheng, Y Mao, R Xu, H Zou, S Gu… - Proceedings of the …, 2026 - ojs.aaai.org | 2026 | cited by 2)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/download/39600/43561
+   … To address the fairness dilemma in strategic classification, we naturally propose the … agent qualification, we use the strategic improvement framework (Miller, Milli, and Hardt 2020; Chen…
+
+38. Non-linear welfare-aware strategic learning
+   https://ojs.aaai.org/index.php/AIES/article/view/31755
+   (T Xie, X Zhang - Proceedings of the AAAI/ACM Conference on AI, Ethics …, 2024 - ojs.aaai.org | 2024 | cited by 14)
+   [PDF] https://ojs.aaai.org/index.php/AIES/article/download/31755/33922
+   … As pointed out by Miller, Milli, and Hardt (2020), we can never learn the agent response … Milli, S.; Miller, J.; Dragan, AD; and Hardt, M. 2019. The social cost of strategic classification. In …
+
+39. Minimax group fairness in strategic classification
+   https://ieeexplore.ieee.org/abstract/document/10992431/
+   (E Diana, S Sharifi-Malvajerdi… - 2025 IEEE Conference …, 2025 - ieeexplore.ieee.org | 2025 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2410.02513?
+   … Similar to standard strategic classification settings, we consider a Stackelberg game … her strategy first, and the agents who are the “followers” meaning that they respond to the strategy of …
+
+40. Group-fair classification with strategic agents
+   https://dl.acm.org/doi/abs/10.1145/3593013.3594006
+   (A Estornell, S Das, Y Liu, Y Vorobeychik - Proceedings of the 2023 ACM …, 2023 - dl.acm.org | 2023 | cited by 25)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3593013.3594006
+   … The intersection between strategic classification and fairness is … strategic behavior by individuals [21], as well as social cost disparities resulting from making classifiers robust to strategic …
+
+41. To Give or Not to Give? The Impacts of Strategically Withheld Recourse
+   https://arxiv.org/abs/2504.05891
+   (Y Chen, A Estornell, Y Vorobeychik, Y Liu - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2504.05891
+   … algorithmic recourse, strategic classification, and fairness in … and Social Cost Lastly, we investigate how strategic system … strategic behavior Milli et al. (2019); Estornell et al. (2023b). …
+
+42. Incentivizing desirable effort profiles in strategic classification: The role of causality and uncertainty
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/d7ad6951ce4f6063469adbc7f54cd711-Abstract-Conference.html
+   (V Efthymiou, C Podimata, D Sen… - Advances in Neural …, 2026 - proceedings.neurips.cc | 2026 | cited by 11)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/d7ad6951ce4f6063469adbc7f54cd711-Paper-Conference.pdf
+   … We study strategic classification in binary decision-making settings where agents can modify their features in order to improve their classification outcomes. Importantly, our work …
+
+43. Stateful strategic regression
+   https://proceedings.neurips.cc/paper/2021/hash/f1404c2624fa7f2507ba04fd9dfc5fb1-Abstract.html
+   (K Harris, H Heidari, SZ Wu - Advances in Neural …, 2021 - proceedings.neurips.cc | 2021 | cited by 50)
+   [PDF] https://proceedings.neurips.cc/paper/2021/file/f1404c2624fa7f2507ba04fd9dfc5fb1-Paper.pdf
+   … [26], Milli et al. [36] address strategic classification—a setting in which decision subjects are assumed to respond strategically and potentially untruthfully to the choice of the predictive …
+
+44. Ambiguous Strategic Classification
+   https://arxiv.org/abs/2606.10137
+   (I Hikri, N Rosenfeld - arXiv preprint arXiv:2606.10137, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.10137
+   … notion of ambiguity robustness into strategic classification. … conventional framework of strategic classification to account … standard assumptions of strategic classification, which captures …
+
+45. Anti-social behaviour, behavioural expectations and an urban aesthetic
+   https://academic.oup.com/bjc/article-abstract/48/3/379/356360
+   (A Millie - The British Journal of Criminology, 2008 - academic.oup.com | 2008 | cited by 243)
+   [PDF] https://oro.open.ac.uk/96932/1/2008%20Millie%20BJC.pdf
+   … Tackling ASB is now seen as an important element of this process; and there is a clear logic to linking ASB strategies with regeneration programmes (Millie 2007b). However, there are …
+
+46. Strategic recourse in linear classification
+   https://dynamicdecisions.github.io/assets/pdfs/28.pdf
+   (Y Chen, J Wang, Y Liu - arXiv preprint arXiv …, 2020 - dynamicdecisions.github.io | 2020 | cited by 44)
+   [PDF] https://dynamicdecisions.github.io/assets/pdfs/28.pdf
+   … standard strategic classification setting [8], in which the objective function for the mechanism designer is simply to maximize prediction accuracy considering agents’ strategic behavior. …
+
+47. Anti-social behaviour in London: setting the context for the London Anti-Social Behaviour Strategy
+   https://oro.open.ac.uk/97288/
+   (A Millie, J Jacobson, M Hough, A Paraskevopoulou - 2005 - oro.open.ac.uk | 2005 | cited by 23)
+   [PDF] https://oro.open.ac.uk/97288/1/Millie_LondonASB2005.pdf
+   … This report presents the findings of research on anti-social behaviour (henceforth ASB) in London. The research explored the impact of ASB on the lives of Londoners and examined …
+
+48. Classification algorithms and social outcomes
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/ajps.70005
+   (EM Penn, JW Patty - American Journal of Political Science, 2025 - Wiley Online Library | 2025 | cited by 4)
+   … of classification can always attain his highest possible payoff. Finally, we show that social welfare—… The designer’s goal in strategic classification is accuracy maximization. This is often …
+
+49. Incentivizing truthfulness through audits in strategic classification
+   https://ojs.aaai.org/index.php/AAAI/article/view/16674
+   (A Estornell, S Das, Y Vorobeychik - … of the AAAI Conference on Artificial …, 2021 - ojs.aaai.org | 2021 | cited by 19)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/download/16674/16481
+   … by strategically choosing … on strategic or adversarial classification has considered a closely related problem where agents subject to classification can modify feature values at some cost …
+
+50. Uber drivers and employment status in the gig economy: Should corporate social responsibility tip the scales?
+   https://link.springer.com/article/10.1007/s10672-018-9325-9
+   (S Malos, GV Lester, M Virick - Employee Responsibilities and Rights …, 2018 - Springer | 2018 | cited by 76)
+   … standard as to employee classification. We argue that corporate … Private companies already are required to cover social costs of … To the contrary, we believe there are potential strategic …
+
+51. Performative prediction
+   https://proceedings.mlr.press/v119/perdomo20a.html
+   (J Perdomo, T Zrnic… - … on Machine Learning, 2020 - proceedings.mlr.press | 2020 | cited by 690)
+   [PDF] http://proceedings.mlr.press/v119/perdomo20a/perdomo20a.pdf
+   … We observe that strategic classification is a special case of performative prediction. On the one hand, this allows us to transfer our technical results to this established setting. In particular…
+
+52. The double-edged sword of behavioral responses in strategic classification: Theory and user studies
+   https://dl.acm.org/doi/abs/10.1145/3715275.3732056
+   (R Ebrahimi, K Vaccaro, P Naghizadeh - … of the 2025 ACM Conference on …, 2025 - dl.acm.org | 2025 | cited by 11)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3715275.3732056
+   … While a growing line of literature on strategic classification has … In this paper, we propose a strategic classification model that … We also show that strategic agents with behavioral biases …
+
+53. Stochastic optimization for performative prediction
+   https://proceedings.neurips.cc/paper/2020/hash/33e75ff09dd601bbe69f351039152189-Abstract.html
+   (C Mendler-Dünner, J Perdomo… - Advances in Neural …, 2020 - proceedings.neurips.cc | 2020 | cited by 199)
+   [PDF] https://proceedings.neurips.cc/paper/2020/file/33e75ff09dd601bbe69f351039152189-Paper.pdf
+   … Whenever we use prediction in social settings, there are important social costs associated with … Second, we evaluate the performance of these procedures on a strategic classification …
+
+54. Fundamental bounds on online strategic classification
+   https://dl.acm.org/doi/abs/10.1145/3580507.3597818
+   (S Ahmadi, A Blum, K Yang - Proceedings of the 24th ACM Conference …, 2023 - dl.acm.org | 2023 | cited by 26)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3580507.3597818
+   … perspective of strategic classification, where strategic agents … to the current classifier, are strategically manipulated as best-… Since the way that strategic agents manipulate depends on …
+
+55. Maximizing welfare with incentive-aware evaluation mechanisms
+   https://arxiv.org/abs/2011.01956
+   (N Haghtalab, N Immorlica, B Lucier… - arXiv preprint arXiv …, 2020 - arxiv.org | 2020 | cited by 110)
+   [PDF] https://arxiv.org/pdf/2011.01956
+   … are controlled by strategic individuals who can modify their features at a cost. A learner can … social planner. In this work, we focus on this powerful and under-utilized role of classification …
+
+56. Classification under strategic self-selection
+   https://arxiv.org/abs/2402.15274
+   (G Horowitz, Y Sommer, M Koren… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 9)
+   [PDF] https://arxiv.org/pdf/2402.15274
+   … 5 shows social costs, defined as the ratio of qualified applicants (y = 1) that did not apply (a … , for increasing costs c and average over splits. As expected, for stratx the social cost is high …
+
+57. Transparency, Detection and Imitation in Strategic Classification.
+   https://pure.tudelft.nl/ws/files/132552382/0010.pdf
+   (F Barsotti, RG Koçer, FP Santos - IJCAI, 2022 - pure.tudelft.nl | 2022 | cited by 25)
+   [PDF] https://pure.tudelft.nl/ws/files/132552382/0010.pdf
+   … to strategic classification in the context of AI and their impact on the risks that the Institution could face resulting from the recourse provided. We use a binary classification … strategic …
+
+58. Beyond Independent Manipulation: Individual Fairness-aware Strategic Classification with Peer Imitation
+   https://arxiv.org/abs/2606.00827
+   (X Lv, C Zheng, Y Mao, R Xu, J Yang, Y Chen… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.00827
+   … We briefly review strategic classification and fairness notions used in this work. Throughout, random variables are denoted by uppercase letters (eg, X, Y ) and their realizations by …
+
+59. Strategic ML: How to Learn With Data That'Behaves'
+   https://dl.acm.org/doi/abs/10.1145/3616855.3636453
+   (N Rosenfeld - Proceedings of the 17th ACM International Conference …, 2024 - dl.acm.org | 2024 | cited by 6)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3616855.3636453?trk=public_post_comment-text
+   … We will begin with the canonical task of strategic classification, … to social implications that are inherent to learning in strategic … to strategic machine learning, with a particular focus on …
+
+60. Strategic classification under unknown personalized manipulation
+   https://proceedings.neurips.cc/paper_files/paper/2023/hash/543924fdf260ba990f2ef84f940f3db2-Abstract-Conference.html
+   (H Shao, A Blum, O Montasser - Advances in Neural …, 2023 - proceedings.neurips.cc | 2023 | cited by 31)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2023/file/543924fdf260ba990f2ef84f940f3db2-Paper-Conference.pdf
+   … We study the fundamental mistake bound and sample complexity in the strategic classification, where agents can strategically manipulate their feature vector up to an extent in order to …
+
+61. Individual Fairness In Strategic Classification
+   https://arxiv.org/abs/2602.05084
+   (Z Zuo, MM Khalili - arXiv preprint arXiv:2602.05084, 2026 - arxiv.org | 2602 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2602.05084
+   … , strategic decision-making can lead to unfair cost disparities. Prior work has examined the trade-off between social cost and … In this work, we analyze binary strategic classification and …
+
+62. Algorithmic classification and strategic effort
+   https://dl.acm.org/doi/abs/10.1145/3440968.3440974
+   (J Kleinberg, M Raghavan - ACM SIGecom Exchanges, 2020 - dl.acm.org | 2020 | cited by 7)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3440968.3440974
+   … In the case of spam classification, it would seem obvious that we should think of strategic behavior as simply making the task harder without affecting the ground truth of whether or not …
+
+63. Classification in Equilibrium: Structure of Optimal Decision Rules
+   https://arxiv.org/abs/2511.08347
+   (EM Penn, JW Patty - arXiv preprint arXiv:2511.08347, 2025 - arxiv.org | 2511 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2511.08347
+   … socially costly ways. The similarities between our results and those of Hu, Immorlica and Vaughan (2019) and Milli … the proof strategy of Theorem 1 to consider classification with cheating…
+
+64. How strategic agents respond: Comparing analytical models with llm-generated responses in strategic classification
+   https://arxiv.org/abs/2501.16355
+   (T Xie, P Rauch, X Zhang - arXiv preprint arXiv:2501.16355, 2025 - arxiv.org | 2501 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2501.16355
+   … Specifically, we examine five well-known settings where strategic classification is known to occur: (i) loan applications [46]; (ii) personal income prediction [13]; (iii) law school …
+
+65. Revisiting (un) fairness in recourse by minimizing worst-case social burden
+   https://ojs.aaai.org/index.php/AAAI/article/view/39050
+   (A Barrainkua, G De Toni, JA Lozano… - Proceedings of the AAAI …, 2026 - ojs.aaai.org | 2026)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/download/39050/43012
+   … classification (ie, f(x)=0), we want to find the “closest” instance x′ achieving a positive classification … A growing body of work has proposed diverse strategies gf (x) to offer recourse to …
+
+66. Learning strategy-aware linear classifiers
+   https://proceedings.neurips.cc/paper_files/paper/2020/hash/ae87a54e183c075c494c4d397d126a66-Abstract.html
+   (Y Chen, Y Liu, C Podimata - Advances in Neural …, 2020 - proceedings.neurips.cc | 2020 | cited by 145)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2020/file/ae87a54e183c075c494c4d397d126a66-Paper.pdf
+   … • In order to prove the incompatibility results of the regret notions in strategic classification, we present a formal framework, which may be of independent interest. • To overcome the non-…
+
+67. Could Anticipating Gaming Incentivize Improvement in (Fair) Strategic Classification?
+   https://ieeexplore.ieee.org/abstract/document/10886604/
+   (S Alhanouti, P Naghizadeh - 2024 IEEE 63rd Conference on …, 2024 - ieeexplore.ieee.org | 2024 | cited by 5)
+   [PDF] https://parinazn.com/papers/conferences/cdc24.pdf
+   … Milli, J. Miller, AD Dragan, and M. Hardt, “The social cost of strategic classification,” in Proceedings of the Conference on Fairness, Accountability, and Transparency, 2019, pp. 230–239. …
+
+68. Quantification trees
+   https://ieeexplore.ieee.org/abstract/document/6729537/
+   (L Milli, A Monreale, G Rossetti… - 2013 IEEE 13th …, 2013 - ieeexplore.ieee.org | 2013 | cited by 80)
+   [PDF] https://giuliorossetti.github.io/assets/pdf/papers/ICDM13.pdf
+   … , in general, all our quantifiers that exploit an adjusted classify and count (AC) strategy behave better than the ones relying only on classify and count (CC). In particular we can notice …
+
+69. Looking for anti-social behaviour
+   https://bristoluniversitypressdigital.com/view/journals/pp/35/4/article-p611.xml
+   (A Millie - Policy & Politics, 2007 - bristoluniversitypressdigital.com | 2007 | cited by 51)
+   … tighter limits on what is regarded as ASB, especially at a time when all local Crime and Disorder Reduction Partnerships (CDRPs) in England and Wales are expected to have strategies …
+
+70. Linear Strategic Classification with Endogenous Improvements
+   https://arxiv.org/abs/2606.01198
+   (S Shrivastava, M Akshintala, B Reddy… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.01198
+   … cost. Subsequent works explore several aspects of strategic classification including the social cost … [17, 30], sequential version of strategic classification [11] and so on. Kolkman et al. [24…
+
+71. The strategic perceptron
+   https://dl.acm.org/doi/abs/10.1145/3465456.3467629
+   (S Ahmadi, H Beyhaghi, A Blum, K Naggita - Proceedings of the 22nd …, 2021 - dl.acm.org | 2021 | cited by 89)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3465456.3467629
+   … We study an online linear classification problem when the individuals are strategic. To isolate the effect of manipulation, we focus on finding a linear classifier when the unmanipulated …
+
+72. Anti-social behaviour
+   https://books.google.com/books?hl=en&lr=&id=ngvJpBZ60DwC&oi=fnd&pg=PP1&dq=social+cost+strategic+classification+Milli&ots=0yjXTPzybR&sig=FuKC9BbvOB64iOhwV8M7hdXxovM
+   (A Millie - 2008 - books.google.com | 2008 | cited by 226)
+   [PDF] https://research.edgehill.ac.uk/ws/files/20152431/Millie_-_2006_-_IJC.pdf
+   … anti-social behaviours (as shown in Box 1.1). This also isn’t perfect; but unlike the earlier Home Office classification it attempts to restrict behaviours to those that are just anti-social, and …
+
+73. Learning in reverse causal strategic environments with ramifications on two sided markets
+   https://proceedings.iclr.cc/paper_files/paper/2024/hash/fa1b12647b0cec169890d5965307ba82-Abstract-Conference.html
+   (S Somerstep, Y Sun, Y Ritov - International Conference on …, 2024 - proceedings.iclr.cc | 2024 | cited by 5)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2024/file/fa1b12647b0cec169890d5965307ba82-Paper-Conference.pdf
+   … Motivated by equilibrium models of labor markets, we develop a formulation of causal strategic classification in which strategic agents can directly manipulate their outcomes. As an …
+
+74. Causal strategic classification: A tale of two shifts
+   https://proceedings.mlr.press/v202/horowitz23a.html
+   (G Horowitz, N Rosenfeld - International Conference on …, 2023 - proceedings.mlr.press | 2023 | cited by 43)
+   [PDF] https://proceedings.mlr.press/v202/horowitz23a/horowitz23a.pdf
+   … effort to extend strategic classification beyond its original narrow … strategic classification more flexible. In particular, here we target one of the key assumptions in strategic classification, …
+
+75. Spatial economics of crime: spatial design factors and the total social cost of crime against individuals and property in London
+   https://discovery.ucl.ac.uk/id/eprint/18605/1/18605.pdf
+   (A Chiaradia, B Hillier, C Schwander - 2009 - discovery.ucl.ac.uk | 2009 | cited by 16)
+   [PDF] https://discovery.ucl.ac.uk/id/eprint/18605/1/18605.pdf
+   … social cost of the same crime, this paper proposes a methodology to evaluate the total socio-economic cost … evaluate burglary and robbery risk as a cost in spatial planning and design. …
+
+76. Algorithmic social engineering
+   https://www.aeaweb.org/articles?id=10.1257/pandp.20201037
+   (B Cowgill, MT Stevenson - AEA papers and proceedings, 2020 - aeaweb.org | 2020 | cited by 45)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3523999
+   … classic strategic communication models (Crawford and Sobel 1982) to analyze the microeconomic limitations of algorithmic social … We show that this strategy suffers from the strategic …
+
+77. Prosocial dynamics in multiagent systems
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/aaai.12143
+   (FP Santos - AI Magazine, 2024 - Wiley Online Library | 2024 | cited by 23)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/aaai.12143
+   … will pay a low individual cost, however reducing the accuracy level of the classifier. As in the case of altruistic cooperation, strategic classification suggests a social dilemma which, to be …
+
+78. Sequential Strategic Classification with Multi-Stage Selective Classifiers
+   https://arxiv.org/abs/2605.04202
+   (Z Huang, L Alkarmi, M Liu - arXiv preprint arXiv:2605.04202, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.04202
+   … Specifically, we introduce a novel sequential model of multi-stage strategic classification that captures how agents behave as they move through a sequence of classifiers with …
+
+79. Optimal classification with endogenous behavior
+   https://arxiv.org/abs/2504.06127
+   (EM Penn - arXiv preprint arXiv:2504.06127, 2025 - arxiv.org | 2504 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2504.06127
+   … to a classification strategy that will map a signal of the individual’s behavior into a classification … A threshold rule offers the “good” classification to those individuals whose outcome …
+
+80. Bridging machine learning and mechanism design towards algorithmic fairness
+   https://dl.acm.org/doi/abs/10.1145/3442188.3445912
+   (J Finocchiaro, R Maio, F Monachou, GK Patro… - Proceedings of the …, 2021 - dl.acm.org | 2021 | cited by 108)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3442188.3445912
+   … [152] Smitha Milli, John Miller, Anca D Dragan, and Moritz Hardt. The social cost of strategic classification. In Proceedings of the 2019 ACM Conference on Fairness, Accountability, and …
+
+81. Gaming helps! learning from strategic interactions in natural dynamics
+   https://proceedings.mlr.press/v130/bechavod21a.html
+   (Y Bechavod, K Ligett, S Wu… - … Conference on Artificial …, 2021 - proceedings.mlr.press | 2021 | cited by 77)
+   [PDF] http://proceedings.mlr.press/v130/bechavod21a/bechavod21a.pdf
+   … social impact of robust classification, and show that i) robust classifiers come at a social cost … individuals to invest in costly feature manipulations in order to be classified positively) and ii…
+
+82. Unfairness despite awareness: group-fair classification with strategic agents
+   https://arxiv.org/abs/2112.02746
+   (A Estornell, S Das, Y Liu, Y Vorobeychik - arXiv preprint arXiv:2112.02746, 2021 - arxiv.org | 2112 | cited by 9)
+   [PDF] https://arxiv.org/pdf/2112.02746
+   … be known as strategic classification, to … strategic classification and fairness is particularly salient to our work, and has featured studies that highlight the inequity that results from strategic …
+
+83. Fairness interventions as (dis) incentives for strategic manipulation
+   https://proceedings.mlr.press/v162/zhang22l.html
+   (X Zhang, MM Khalili, K Jin… - … on Machine Learning, 2022 - proceedings.mlr.press | 2022 | cited by 37)
+   [PDF] https://proceedings.mlr.press/v162/zhang22l/zhang22l.pdf
+   … (2021) generalized (Hardt et al., 2016a) by allowing individuals’ heterogeneous preferences over classification outcomes and studied PAC-learnability of strategic classification. …
+
+84. Causal strategic linear regression
+   http://proceedings.mlr.press/v119/shavit20a.html
+   (Y Shavit, B Edelman, B Axelrod - … Conference on Machine …, 2020 - proceedings.mlr.press | 2020 | cited by 121)
+   [PDF] http://proceedings.mlr.press/v119/shavit20a/shavit20a.pdf
+   … Whereas the strategic classification literature has previously assumed that agents’ outcomes are not causally affected by their features (and thus that strategic agents’ goal is deceiving …
+
+85. Sequential strategic screening
+   https://proceedings.mlr.press/v202/cohen23a.html
+   (L Cohen, S Sharifi-Malvajerdi… - International …, 2023 - proceedings.mlr.press | 2023 | cited by 14)
+   [PDF] https://proceedings.mlr.press/v202/cohen23a/cohen23a.pdf
+   … strategic classification within screening processes, taking a departure from the classical point of view in the strategic classification … The key novel idea of our model of strategic screening …
+
+86. Non-Linear Strategic Classification Made Practical
+   https://arxiv.org/abs/2606.28204
+   (J Geary, B Gao, H Gouk - arXiv preprint arXiv:2606.28204, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.28204
+   … In this work we have demonstrated how the Agents’ objective in strategic classification can be reformulated as a constrained optimisation problem which is amenable to Lagrangian …
+
+87. Multi-Level Strategic Classification: Incentivizing Improvement through Promotion and Relegation Dynamics
+   https://arxiv.org/abs/2602.11439
+   (Z Huang, L Alkarmi, M Liu - arXiv preprint arXiv:2602.11439, 2026 - arxiv.org | 2602 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2602.11439
+   … Our findings reveal how human or societal factors influence strategic classification outcomes… for long-term strategic adaptation. Similar to most strategic classification systems, our model …
+
+88. Optimal decision making under strategic behavior
+   https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2021.02567
+   (S Tsirtsis, B Tabibian, M Khajehnejad… - Management …, 2024 - pubsonline.informs.org | 2024 | cited by 48)
+   … of utility in such a strategic setting. First, we characterize how strategic investment of effort by … Then, we demonstrate that, if the cost individuals pay to change their features satisfies a …
+
+89. Performative prediction: Past and future
+   https://projecteuclid.org/journals/statistical-science/volume-40/issue-3/Performative-Prediction-Past-and-Future/10.1214/25-STS986.short
+   (M Hardt, C Mendler-Dünner - Statistical Science, 2025 - projecteuclid.org | 2025 | cited by 96)
+   [PDF] https://arxiv.org/pdf/2310.16608
+   … We refer to Rosenfeld (2024) for a comprehensive overview of recent results related to strategic classification. Micro-macro tension. Due to the precise characterization of the agent’s …
+
+90. Strategic usage in a multi-learner setting
+   https://proceedings.mlr.press/v238/shekhtman24a.html
+   (E Shekhtman, S Dean - International Conference on Artificial …, 2024 - proceedings.mlr.press | 2024 | cited by 6)
+   [PDF] https://proceedings.mlr.press/v238/shekhtman24a/shekhtman24a.pdf
+   … Strategic Classification Our work is inspired by the setting of … contrast to the strategic classification setting, which primarily explores dynamics involving strategic user feature modification …
+
+91. Biomedical applications of untethered mobile milli/microrobots
+   https://ieeexplore.ieee.org/abstract/document/7067029/
+   (M Sitti, H Ceylan, W Hu, J Giltinan… - Proceedings of the …, 2015 - ieeexplore.ieee.org | 2015 | cited by 1069)
+   [PDF] https://ieeexplore.ieee.org/ielaam/5/7066868/7067029-aam.pdf
+   … milli/microrobots can be also classified as synthetic and biohybrid. In the former case, the milli… the way for minimally invasive and cost-effective strategies, thereby leading to fast recovery …
+
+92. Learnability gaps of strategic classification
+   https://proceedings.mlr.press/v247/cohen24c.html
+   (L Cohen, Y Mansour, S Moran… - The Thirty Seventh …, 2024 - proceedings.mlr.press | 2024 | cited by 18)
+   [PDF] https://proceedings.mlr.press/v247/cohen24c/cohen24c.pdf
+   … is known, have been explored in strategic classification. In this work, we … strategic classification and standard learning. We essentially show that any learnable class is also strategically …
+
+93. The AI Book
+   https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119551966
+   (S Chishti, I Bartoletti, A Leslie, S Millie - 2020 - Wiley Online Library | 2020 | cited by 45)
+   … Deep learning solves the classification problem by letting the machine learn by itself. … strategy. “AI for AI’s sake” is neither useful nor cost efficient; however, employing AI strategically …
+
+94. Revisiting Fairness Impossibility with Endogenous Behavior
+   https://dl.acm.org/doi/abs/10.1145/3805689.3812247
+   (EM Penn, JW Patty - The 2026 ACM Conference on Fairness …, 2026 - dl.acm.org | 2026)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3805689.3812247
+   … Milli et al. [19] further study the welfare and social costs of strategic classification, … A complementary strand treats strategic responses as genuine behavioral change rather than feature …
+
+95. How do classifiers induce agents to invest effort strategically?
+   https://dl.acm.org/doi/abs/10.1145/3417742
+   (J Kleinberg, M Raghavan - ACM Transactions on Economics and …, 2020 - dl.acm.org | 2020 | cited by 238)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3417742
+   … decision-making rules that classify or evaluate individuals. … be classified a certain way, they may behave strategically to influence their outcomes. We develop a model for how strategic …
+
+96. A convolutional neural network model to detect illegitimate URLs
+   https://ieeexplore.ieee.org/abstract/document/9079026/
+   (N Al-Milli, BH Hammo - 2020 11th International Conference on …, 2020 - ieeexplore.ieee.org | 2020 | cited by 37)
+   [PDF] https://www.researchgate.net/profile/Nabeel-Al-Milli/publication/340973749_A_Convolutional_Neural_Network_Model_to_Detect_Illegitimate_URLs/links/5ed0320492851c9c5e65dd78/A-Convolutional-Neural-Network-Model-to-Detect-Illegitimate-URLs.pdf
+   … In [23], the authors applied a nonlinear regression strategy for detecting … classification problems is the Convolutional Neural Network (CNN). CNN is used for complex hard classification …
+
+97. Should Decision-Makers Reveal Classifiers in Online Strategic Classification?
+   https://arxiv.org/abs/2506.01936
+   (H Shao, S Xie, K Yang - arXiv preprint arXiv:2506.01936, 2025 - arxiv.org | 2506 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2506.01936
+   … Strategic classification addresses a learning problem where … In the standard model of online strategic classification, in … an extended online strategic classification setting where agents …
+
+98. Advanced strategic improvement with decision interactions
+   https://link.springer.com/chapter/10.1007/978-3-032-05962-8_25
+   (W Yang, X Lv, Y Mao, L Xu, R Jin, H Chen… - … Conference on Machine …, 2025 - Springer | 2025 | cited by 2)
+   [PDF] https://ecmlpkdd-storage.s3.eu-central-1.amazonaws.com/preprints/2025/research/preprint_ecml_pkdd_2025_research_540.pdf
+   … As machine learning-based decision making becomes increasingly prevalent, strategic classification [23] has garnered significant attention in recent years. Strategic classification …
+
+99. Outside the echo chamber: Optimizing the performative risk
+   http://proceedings.mlr.press/v139/miller21a.html
+   (JP Miller, JC Perdomo, T Zrnic - International Conference on …, 2021 - proceedings.mlr.press | 2021 | cited by 179)
+   [PDF] http://proceedings.mlr.press/v139/miller21a/miller21a.pdf
+   … For example, in strategic classification, the performative effects are often only present in the strategically manipulated features, and not in the label. In Example 3.2, on the other hand, …
+
+100. On classification of strategic agents who can both game and improve
+   https://arxiv.org/abs/2203.00124
+   (S Ahmadi, H Beyhaghi, A Blum, K Naggita - arXiv preprint arXiv …, 2022 - arxiv.org | 2022 | cited by 42)
+   [PDF] https://arxiv.org/pdf/2203.00124
+   … costs. In contrast, our goal is to maximize true positive classifications while minimizing false positives, and in the linear case our movement cost assumptions are somewhat different. …

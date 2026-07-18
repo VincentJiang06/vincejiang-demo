@@ -1,0 +1,1687 @@
+===== Query 1/6: Conant Ashby 1970 every good regulator must be a model of that system =====
+
+1. Every good regulator of a system must be a model of that system
+   https://www.tandfonline.com/doi/abs/10.1080/00207727008920220
+   (RC Conant, W Ross Ashby - International journal of systems …, 1970 - Taylor & Francis | 1970 | cited by 2071)
+   [PDF] http://cadia.ru.is/wiki/_media/public:t-720-atai:everygoodregulator.pdf
+   The design of a complex regulator often includes the making of a model of the system to be regulated. The making of such a model has hitherto been regarded as optional, as merely one of many possible ways. In this paper a theorem is presented which shows, under very broad conditions, that any regulator that is maximally both successful and simple must be isomorphic with the system being regulated. (The exact assumptions are given.) Making a model is thus necessary. The theorem has the interesting corollary that the living brain, so far as it is to be successful and efficient as a regulator for survival, must proceed, in learning, by the formation of a model (or models) of its environment.
+
+===== Query 2/6: good regulator theorem cybernetics critique =====
+
+1. Some comments on cybernetics and control
+   https://ieeexplore.ieee.org/abstract/document/4309868/
+   (WJM Kickert, JWM Bertrand… - … , Man, and Cybernetics, 1978 - ieeexplore.ieee.org | 1978 | cited by 20)
+   [PDF] https://scholar.archive.org/work/kbctdf6255c7potaaxngdwu4li/access/wayback/https://pure.tue.nl/ws/files/3352000/588941.pdf
+   … analysis, comments, and criticism. First is the obvious importance of this branch of cybernetics for control theory. … A good regulator should minimize the variability of the output. Apart from …
+
+2. How to apply the Ethical Regulator Theorem to crises
+   https://ojs.uclouvain.be/index.php/AES/article/view/56223
+   (M Ashby - Acta Europeana Systemica, 2018 - ojs.uclouvain.be | 2018 | cited by 11)
+   [PDF] https://ojs.uclouvain.be/index.php/AES/article/download/56223/52723
+   … and sufficient for a cybernetic regulator to be effective and … be used to conduct systematic root cause analysis of crises and to … a regulator to have an internal model is known as the Good …
+
+3. Optimal isn't good enough
+   https://link.springer.com/article/10.1007/s00422-012-0514-6
+   (GE Loeb - Biological cybernetics, 2012 - Springer | 2012 | cited by 258)
+   … For an experimental biologist, this translates into whether the theory of optimal control … of the controller exploring the space. In the remainder of this article, we will consider goodenough …
+
+4. A critique of cybernetics
+   https://www.jstor.org/stable/40969483
+   (H Jonas - Social Research, 1953 - JSTOR | 1953 | cited by 80)
+   … The beauty of this self-regulation is in the fact that the machine … the outset that if cybernetics makes good its claim with regard … Nothing could be more devastating f this account of theory-…
+
+5. Regulatory cybernetics: adaptability and probability in the public administration's regulations
+   https://sciendo.com/2/v2/download/article/10.2478/nispa-2020-0006.pdf
+   (M Pečarič - NISPAcee Journal of Public Administration and Policy, 2020 - sciendo.com | 2020 | cited by 9)
+   [PDF] https://sciendo.com/2/v2/download/article/10.2478/nispa-2020-0006.pdf
+   … Dynamic perspectives from systems theory and cybernetics … To prevent disruptions, a good regulator limits the flow of … sessment of probability, risk analysis and related similar methods …
+
+6. A Critique of Bob Jessop's Application of Biocybernetic Frameworks in Regulation Theory
+   http://www.fullemployment.net/publications/wp/2007/07-11.pdf
+   (J Juniper - 2007 - fullemployment.net | 2007 | cited by 2)
+   [PDF] http://www.fullemployment.net/publications/wp/2007/07-11.pdf
+   … cybernetic interpretations, arguing that these afford more insight at less cost in terms of speculative excess. This review will be followed by a brief review … of both good and bad forms of …
+
+7. Prolegomena to a Critique of Cybernetic Reason
+   https://ieeexplore.ieee.org/abstract/document/9532531/
+   (L Homem - 2021 IEEE Conference on Norbert Wiener in the …, 2021 - ieeexplore.ieee.org | 2021)
+   [PDF] https://www.u-mentalism.com/papers/2021-ieee-prolegomena-cybernetic-reason.pdf
+   … the foreground to a regulative (regulatory system) principle of … , the sublime, and the good), the Galvanis are credited to … analysis, potential theory, calculus partial differential analysis…
+
+8. Cybernetic control processes and the self-regulation of behavior
+   https://books.google.com/books?hl=en&lr=&id=YU8IpnTnQasC&oi=fnd&pg=PA28&dq=good+regulator+theorem+cybernetics+critique&ots=5RIOx93rky&sig=_2khEoPzhtrGcINH4cfkCH3iLqs
+   (CS Carver, MF Scheier - The Oxford handbook of human …, 2012 - books.google.com | 2012 | cited by 142)
+   [PDF] https://nibmehub.com/opac-service/pdf/read/The%20Oxford%20Handbook%20of%20Human%20Motivation.pdf#page=47
+   … of the usefulness of control theory in engineering applications. It’… You can have the goal of being a good citizen, but you can … evidence linking sadness to failure of approach (for reviews, …
+
+9. On the history of Ludwig von Bertalanffy's “General Systemology”, and on its relationship to cybernetics–part III: convergences and divergences
+   https://www.tandfonline.com/doi/abs/10.1080/03081079.2014.1000642
+   (M Drack, D Pouvreau - International journal of general systems, 2015 - Taylor & Francis | 2015 | cited by 115)
+   [PDF] https://www.tandfonline.com/doi/pdf/10.1080/03081079.2014.1000642
+   … the latter see system theory as a subset of cybernetics. Others, … the ideas of cybernetics, provides a good impression of the scope … This criticism is, as far as we know, the first publication …
+
+10. Towards a critique of cybernetic urbanism: The smart city and the society of control
+   https://journals.sagepub.com/doi/abs/10.1177/1473095216645631
+   (M Krivý - Planning theory, 2018 - journals.sagepub.com | 2018 | cited by 432)
+   … The first part of this article reviews current critiques of this … It is argued that these critiques either misunderstand how … The second part advances an alternative critique, contending that …
+
+11. Introduction to economic cybernetics
+   https://books.google.com/books?hl=en&lr=&id=h4OjBQAAQBAJ&oi=fnd&pg=PP1&dq=good+regulator+theorem+cybernetics+critique&ots=u16y-9yfyC&sig=61Ok917fC3Ptj6UzyaiVhOn8ND8
+   (O Lange - 2014 - books.google.com | 2014 | cited by 201)
+   … An excellent … is an analysis of the pattern of the economic processes with the help of the contemporary scientific apparatus of cybernetics and particularly of its branch called the theory of …
+
+12. Cybernetics: from past to future
+   https://books.google.com/books?hl=en&lr=&id=LbQvCwAAQBAJ&oi=fnd&pg=PP7&dq=good+regulator+theorem+cybernetics+critique&ots=OKh3NrES3n&sig=pt4BFiM4hsymMjTFvF1la9gOX_M
+   (DA Novikov - 2015 - books.google.com | 2015 | cited by 217)
+   … of cybernetics with control philosophy and control methodology (Chap. 2), as well as with systems theory and systems analysis (… some modern development trends of cybernetics. In the …
+
+13. Feedback and Cybernetics: Reimaging the Body in the Age of the Cyborg
+   https://journals.sagepub.com/doi/abs/10.1177/1357034x95001003002
+   (D Tomas - Body & Society, 1995 - journals.sagepub.com | 1995 | cited by 166)
+   … in 1947, “cybernetics' was considered to be a neologism that best described a new … in relativity theory is not important for our purposes; we are borrowing it for literary criticism almost as …
+
+14. Evolution of cybernetics: philosophical and methodological analysis
+   https://www.emerald.com/k/article/47/2/249/272882
+   (V Lepskiy - Kybernetes, 2018 - emerald.com | 2018 | cited by 163)
+   [PDF] https://www.reflexion.ru/Library/Lepskiy2018a.pdf
+   … Freedom of a subject is significantly limited by the purposes and norms regulating activity. … Claude Shannon predicted searches for applications of his theory of information, and Russell …
+
+15. The cybernetic revolution and the forthcoming epoch of self-regulating systems
+   https://books.google.com/books?hl=en&lr=&id=qcHNDAAAQBAJ&oi=fnd&pg=PA1&dq=good+regulator+theorem+cybernetics+critique&ots=zhtBmgXsdw&sig=od8mJt-FC0otCujDUhF9rAB2ipw
+   (L Grinin, AL Grinin - 2016 - books.google.com | 2016 | cited by 129)
+   [PDF] https://www.ssoar.info/ssoar/bitstream/handle/document/57569/ssoar-2016-grinin_et_al-The_Cybernetic_Revolution_and_the.pdf?sequence=1
+   … ’ since it will lead to a wide spread of selfregulating systems. We base our analysis of such systems on the ideas from cybernetics which is a theory of control over different complex …
+
+16. Second‐order cybernetics: an historical introduction
+   https://www.emerald.com/k/article/33/9-10/1365/262487
+   (B Scott - Kybernetes, 2004 - emerald.com | 2004 | cited by 226)
+   [PDF] https://www.researchgate.net/profile/Bernard-Scott-2/publication/235251005_Second-order_Cybernetics_An_Historical_Introduction/links/55c098cf08aed621de13c911/Second-order-Cybernetics-An-Historical-Introduction.pdf
+   … ‐theory of conversational domains with methodologies for knowledge and task analysis and … and participants, it behoves us to do our best to know who and what we are as living systems…
+
+17. The science of cybernetics and the cybernetics of science
+   https://www.tandfonline.com/doi/abs/10.1080/01969729008902227
+   (SA Umpleby - Cybernetics and Systems: An International Journal, 1990 - Taylor & Francis | 1990 | cited by 135)
+   [PDF] http://www.nomads.usp.br/pesquisas/design/objetos_interativos/arquivos/restrito/umpleby_science_cybernetics.pdf
+   … uses the terms systems theory, cybernetics, and logical … to review the contributions of the previous point of view. … you all the good fortune you deserve"; the Federal regulation, "Warning: …
+
+18. Try again. Fail again. Fail better: The cybernetics in design and the design in cybernetics
+   https://www.emerald.com/insight/content/doi/10.1108/03684920710827238/full/html
+   (R Glanville - Kybernetes, 2007 - emerald.com | 2007 | cited by 215)
+   [PDF] https://asc-cybernetics.org/publications/systems_papers/C%20and%20D%20paper%200670360902.pdf
+   … The paper develops by a comparative analysis of the two … approaches, from post modern theory to complexity studies and … best known for his “Colloquy of Mobiles” at the Cybernetic …
+
+19. Cybernetics of practice
+   https://www.emerald.com/k/article/44/8-9/1397/270138
+   (B Sweeting - Kybernetes, 2015 - emerald.com | 2015 | cited by 13)
+   [PDF] https://cris.brighton.ac.uk/ws/files/379213/151214%20Cybernetics%20of%20practice%20post%20print.pdf
+   … between theory and practice. First, as is reflected on in second-order cybernetics, theory is … In the Nicomachean Ethics, Aristotle defines the good as the goal at which all things aim (I.1…
+
+20. A cybernetic theory of psychopathology
+   https://www.tandfonline.com/doi/abs/10.1080/1047840X.2018.1513680
+   (CG DeYoung, RF Krueger - Psychological Inquiry, 2018 - Taylor & Francis | 2018 | cited by 180)
+   [PDF] https://www.researchgate.net/profile/Colin-Deyoung/publication/329899748_A_Cybernetic_Theory_of_Psychopathology/links/5c2a1fde458515a4c7036695/A-Cybernetic-Theory-of-Psychopathology.pdf
+   … We review evidence that the major dimensions of … Organisms contain cybernetic subsystems regulating many … current theory we focus primarily on the Big Five, as the best established …
+
+21. A cybernetic model of global personality traits
+   https://journals.sagepub.com/doi/abs/10.1177/1088868309334860
+   (LF Van Egeren - Personality and Social Psychology Review, 2009 - journals.sagepub.com | 2009 | cited by 183)
+   … Cybernetic theory offers the opportunity to shift the usual question … cybernetic model of self-regulation may provide a good place to … human behavior, but it is not a good place to end it. …
+
+22. The purpose of second‐order cybernetics
+   https://www.emerald.com/k/article/33/9-10/1379/262510
+   (R Glanville - Kybernetes, 2004 - emerald.com | 2004 | cited by 150)
+   [PDF] https://cepa.info/fulltexts/2294.pdf
+   … The essential discovery of the treatment of Cybernetics as revealed through cybernetic analysis and … Furthermore, there is no control and controller. These are at best just roles. Each is …
+
+23. A Cybernetic Perspective on Psychological Wellness
+   https://journals.sagepub.com/doi/abs/10.1177/10892680251384111
+   (S Yu - Review of General Psychology, 2026 - journals.sagepub.com | 2026)
+   … concept in cybernetic analysis is internal models. If we know that the action of the regulator is … Consequently, following the Good Regulator Theorem, individuals cannot achieve the …
+
+24. Cybernetics and second-order cybernetics
+   https://cliffjoslyn.github.io/Docs/HeFJoC03.pdf
+   (F Heylighen, C Joslyn - Encyclopedia of physical science & …, 2001 - cliffjoslyn.github.io | 2001 | cited by 1013)
+   [PDF] https://cliffjoslyn.github.io/Docs/HeFJoC03.pdf
+   … , and cellular automata; Ashby’s and von Foerster’s analysis … tries to integrate cybernetics with evolutionary theory, and the … their classic paper “Every good regulator of a system must be …
+
+25. System dynamics and cybernetics: a synergetic pair
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/sdr.400
+   (M Schwaninger, JP Ríos - … Dynamics Review: The Journal of …, 2008 - Wiley Online Library | 2008 | cited by 139)
+   [PDF] https://www.alexandria.unisg.ch/bitstreams/84d78fa5-c108-477a-84cc-09ade5652c6c/download
+   … and set theory for managerial cybernetics, and engineering and control theory for SD. SD is … We maintain that the VSM is an excellent choice, when issues of organizational diagnosis …
+
+26. A cybernetic theory of stress, coping, and well-being in organizations
+   https://journals.aom.org/doi/abs/10.5465/AMR.1992.4279536
+   (JR Edwards - Academy of management review, 1992 - journals.aom.org | 1992 | cited by 1079)
+   … As stated, cybernetics concerns the functioning of self-regulating systems. At its core is the … The operation of the negative feedback loop is perhaps best understood by sequentially …
+
+27. Manual control cybernetics: State-of-the-art and current trends
+   https://ieeexplore.ieee.org/abstract/document/8088358/
+   (M Mulder, DM Pool, DA Abbink, ER Boer… - … on Human-Machine …, 2017 - ieeexplore.ieee.org | 2017 | cited by 132)
+   [PDF] https://www.academia.edu/download/70650247/download.pdf
+   … This paper reviews the current state-of-the-art in our … has leapfrogged the classic cybernetics theory, and our current … , to an expert controller, establishing the best compromise between …
+
+28. Stakeholder governance: A cybernetic and property rights analysis
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-8683.00035
+   (S Turnbull - Corporate Governance: An International Review, 1997 - Wiley Online Library | 1997 | cited by 186)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=11355
+   … is the use of cybernetic principles to introduce self-regulation as … The quality of a good or service and the time of its delivery … Application of the theory and practice of cybernetics in firms …
+
+29. State theory, governance and the logic of regulation and administrative control
+   https://www.academia.edu/download/12926128/warntjen_wonka_governance_in_e.pdf#page=22
+   (V Schneider - Governance in Europe, 2004 - academia.edu | 2004 | cited by 102)
+   [PDF] https://www.academia.edu/download/12926128/warntjen_wonka_governance_in_e.pdf#page=22
+   … demonstrate that regulation in its broadest, cybernetic sense … In this analysis, the concept of governance will be used from … the property rights linked to a good or commodity. As Demsetz (…
+
+30. Cybernetic spatial planning: steering, managing or just letting go?
+   https://www.taylorfrancis.com/chapters/edit/10.4324/9781315279251-30/cybernetic-spatial-planning-steering-managing-letting-go-nikos-karadimitriou
+   (N Karadimitriou - … Ashgate research companion to planning theory, 2016 - taylorfrancis.com | 2016 | cited by 21)
+   … seems to concur with the critique launched at the modernist … order cybernetics applied in spatial planning, the controller is … that are good enough but not necessarily ‘optimal’ or ‘best’, as …
+
+31. In search of post-humanist theory: the second-order cybernetics of Maturana and Varela
+   https://www.jstor.org/stable/1354432
+   (C Wolfe - Cultural critique, 1995 - JSTOR | 1995 | cited by 125)
+   [PDF] https://www.academia.edu/download/56356679/Cary_Wolfe_-_The_Politics_of_Systems_and_Environments__Part_I___In_Search_of_Post-Humanist_Theory.pdf
+   … in making sure the good guys win, nor even in defining who the good guys are-except … whereas "it is for relativists and constructionists that the good life is to be lived and made, as …
+
+32. Algorithmic regulation: A critical interrogation
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/rego.12158
+   (K Yeung - Regulation & governance, 2018 - Wiley Online Library | 2018 | cited by 1223)
+   [PDF] https://papers.ssrn.com/Sol3/Delivery.cfm/SSRN_ID2972505_code830937.pdf?abstractid=2972505
+   … a descriptive analysis of algorithmic regulation, classifying … By understanding regulation as a cybernetic process involving … the regulatory form (whether algorithmic or otherwise) best …
+
+33. Organization theory: An overview and an appraisal
+   https://journals.aom.org/doi/full/10.5465/254584
+   (WG Scott - Academy of management journal, 1961 - journals.aom.org | 1961 | cited by 651)
+   … review and appraisal of more traditional forms of organization … There is a good deal of truth in both criticisms, but another … as decision theory, information theory, and cybernetics also …
+
+34. Critical reflections on regulation [Plus a reply by Dimity Kingsford Smith.]
+   https://search.informit.org/doi/pdf/10.3316/ielapa.200206927
+   (J Black, D Kingsford Smith - Australasian Journal of Legal …, 2002 - search.informit.org | 2002 | cited by 1805)
+   [PDF] https://eprints.lse.ac.uk/35985/1/Disspaper4-1.pdf
+   … ' analysis of regulation, and to consider what that analysis … Much of the theoretical analysis is rooted in systems theory, … aspects of the cybernetic definition of regulation with the temporal, …
+
+35. Requisite variety and its implications for the control of complex systems
+   https://link.springer.com/chapter/10.1007/978-1-4899-0718-9_28
+   (WR Ashby - Facets of systems science, 1991 - Springer | 1991 | cited by 2058)
+   [PDF] http://pespmc1.vub.ac.be/books/AshbyReqVar.pdf
+   … two theorems, and to indicate something of their implications for regulation, in the cybernetic … 1952-used the mathematical language of analysis and continuous functions. This language …
+
+36. Natural selection and the regulation of defenses: A signal detection analysis of the smoke detector principle
+   https://www.sciencedirect.com/science/article/pii/S109051380400056X
+   (RM Nesse - Evolution and human behavior, 2005 - Elsevier | 2005 | cited by 691)
+   [PDF] https://websites.umich.edu/~nesse/Articles/Nesse-DefenseReg-EHB-2005.pdf
+   … Because these perceptions are the focus of regulation, anything that distorts them will disrupt … Modern systems theory formalizes the notion of feedback regulation in standardized control …
+
+37. Stability analysis and stabilization for discrete-time fuzzy systems with time-varying delay
+   https://ieeexplore.ieee.org/abstract/document/4703279/
+   (H Gao, X Liu, J Lam - … , and Cybernetics, Part B (Cybernetics), 2008 - ieeexplore.ieee.org | 2008 | cited by 235)
+   [PDF] https://hub.hku.hk/bitstream/10722/59037/1/Content.pdf?accept=1
+   … According to the best of the authors’ knowledge, little … In this section, Theorem 1 will be extended to design stabilizing … The purpose of this section is to design a controller, based on the …
+
+38. Competing theories of process: A critique and a proposal
+   https://publicationsncte.org/content/journals/10.58680/ce198611585?crawler=true&mimetype=application/pdf
+   (L Faigley - College English, 1986 - publicationsncte.org | 1986 | cited by 1103)
+   [PDF] https://mjreiff.com/Faigley.pdf
+   … Romantic theory: that "good" … theory of cybernetics as the beginnings of contemporary cognitive science.5 The basic principle of cybernetics is the feedback loop, in which the regulating …
+
+39. Optimal design of CMAC neural-network controller for robot manipulators
+   https://ieeexplore.ieee.org/abstract/document/827451/
+   (YH Kim, FL Lewis - … on Systems, Man, and Cybernetics, Part C …, 2002 - ieeexplore.ieee.org | 2002 | cited by 263)
+   … control (MCTC) and quadratic optimal-control theory to derive a parameterized proportional-derivative (PD) form for an auxiliary input to the controller. However, in actual situations, …
+
+40. Cybernetics and dependence: Reframing the control concept
+   https://journals.aom.org/doi/abs/10.5465/amr.1988.4306891
+   (SG Green, MA Welsh - Academy of management review, 1988 - journals.aom.org | 1988 | cited by 553)
+   [PDF] https://www.researchgate.net/profile/M-Welsh-2/publication/243774105_Cybernetics_and_Dependence_Reframing_the_Control_Concept/links/54f9f0070cf29a9fbd7c58ec/Cybernetics-and-Dependence-Reframing-the-Control-Concept.pdf
+   … as a regulatory process, and often it is described in cybernetic … Thus, we propose that control is best understood in terms of … Also, the idea of a contingency theory of control is …
+
+41. Integrating models of self-regulation
+   https://www.annualreviews.org/content/journals/10.1146/annurev-psych-061020-105721
+   (M Inzlicht, KM Werner, JL Briskin… - Annual review of …, 2021 - annualreviews.org | 2021 | cited by 922)
+   [PDF] http://michaelinzlicht.com/s/Integrating-models-of-self-regulation.pdf
+   … Cybernetic feedback principles are also at the heart of dominant models of control from … thought to underlie and describe self-regulation (eg, choosing the best means to achieve a goal, …
+
+42. Cybernetics and Strategy a Necessary Synergy for Strategic Models
+   https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2916168
+   (Q Kamran - A Cybernetics Approach to Porter's FFM In Turbulent …, 2016 - papers.ssrn.com | 2016 | cited by 1)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2916168
+   … the most in-depth analysis of the Porterian strategic doctrines … on cybernetic laws he conceptual framework and theory are … ’s Theorem”, 132 which states: “Every good regulator of a …
+
+43. From communications engineering to communications science: Cybernetics and information theory in the United States, France, and the Soviet Union
+   https://api.taylorfrancis.com/content/chapters/edit/download?identifierName=doi&identifierValue=10.4324/9781315015002-4&type=chapterpdf
+   (D Mindell, J Segal, S Gerovitch - Science and Ideology, 2013 - api.taylorfrancis.com | 2013 | cited by 98)
+   … Press tried their best to prevent the publication of the book in … Soviet critics charged that Shannon's theory of communication … theory of tracking systems, the theory of automatic regulation …
+
+44. Formative assessment: A cybernetic viewpoint
+   https://www.tandfonline.com/doi/abs/10.1080/0969594042000333887
+   (B Roos, D Hamilton - … in Education: Principles, Policy & Practice, 2005 - Taylor & Francis | 2005 | cited by 142)
+   … , clearly must attempt to make best use of evaluation in both … In both practice and theory, cybernetics is the field of more … data for the criticism of the system and its regulation, we have …
+
+45. Being a beast machine: The somatic basis of selfhood
+   https://www.cell.com/trends/cognitive-sciences/abstract/S1364-6613(18)30207-9
+   (AK Seth, M Tsakiris - Trends in cognitive sciences, 2018 - cell.com | 2018 | cited by 520)
+   [PDF] https://sussex.figshare.com/articles/journal_contribution/Being_a_beast_machine_the_somatic_basis_of_selfhood/23461235/1/files/41169080.pdf
+   … context of mid-20th century cybernetics and the more recent free … ‘good regulator theorem’ that states that ‘every good … body, which seems to resist easy analysis in terms of the sort of …
+
+46. Instructional regulation and control: Cybernetics, algorithmization, and heuristics in education
+   https://books.google.com/books?hl=en&lr=&id=Q-4aijg0rH4C&oi=fnd&pg=PA3&dq=good+regulator+theorem+cybernetics+critique&ots=ueAkSf9h29&sig=xooTOP-esIWP_dGNyqI3UpWtuzw
+   (LN Landa - 1976 - books.google.com | 1976 | cited by 266)
+   … theory and practice have achieved thus far. We believe that analysis of the instructional process from the point of view of control principles and the requirements which a "good control …
+
+47. The Global Superorganism: an evolutionary-cybernetic model of the emerging network society
+   https://cyberleninka.ru/article/n/the-global-superorganism-an-evolutionary-cybernetic-model-of-the-emerging-network-society
+   (H Francis - Social Evolution & History, 2007 - cyberleninka.ru | 2007 | cited by 227)
+   [PDF] https://cyberleninka.ru/article/n/the-global-superorganism-an-evolutionary-cybernetic-model-of-the-emerging-network-society.pdf
+   … by incorporating concepts from cybernetics, evolutionary theory, and complex … controller, an autocratic agent that oversees and directs the system being controlled. A cybernetic analysis …
+
+48. Design of Cognition, Cognition of Design—A Cybernetics and Phenomenological Approach to Enhancing Organizational Cognition
+   https://link.springer.com/chapter/10.1007/978-3-031-52811-8_8
+   (Q Kamran - Building the Future with Human Resource …, 2024 - Springer | 2024 | cited by 2)
+   [PDF] http://repository.psa.edu.my/xmlui/bitstream/handle/123456789/4857/19.%20Building%20the%20Future%20with%20Human%20Resource%20Management.pdf?sequence=1&isAllowed=y#page=200
+   … is best understood as constructivist rather than metaphysical. This paper critically reviews influential publications in the fields of cybernetics, … The discussed “Good Regulator Theorem” …
+
+49. GOOD REGULATION REFLECTS WORDS IN ACTION
+   https://sciendo.com/pdf/10.2478/danb-2021-0011
+   (M Pečarič - sciendo.com | cited by 1)
+   [PDF] https://sciendo.com/pdf/10.2478/danb-2021-0011
+   … techniques that are based on the systemic and/or cybernetic … If at least a major part of statistical analysis in the field of … what makes a scientific theory good.Modern French legislation has …
+
+50. The cybernetics moment: Or why we call our age the information age
+   https://books.google.com/books?hl=en&lr=&id=NQPHCQAAQBAJ&oi=fnd&pg=PP1&dq=good+regulator+theorem+cybernetics+critique&ots=IKzcW_ELUn&sig=m3eC4Km47mSWuU_228SnFiXlk1U
+   (RR Kline - 2015 - books.google.com | 2015 | cited by 726)
+   [PDF] https://www.soziopolis.de/the-cybernetics-moment.pdf
+   … as a sounding board and friendly critic of the ideas in this book … The traces of cybernetics and information theory thus permeate … We know a good deal about Wiener’s wartime research …
+
+51. Adaptive critic nonlinear robust control: A survey
+   https://ieeexplore.ieee.org/abstract/document/7967695/
+   (D Wang, H He, D Liu - IEEE transactions on cybernetics, 2017 - ieeexplore.ieee.org | 2017 | cited by 426)
+   [PDF] https://ieeexplore.ieee.org/ielaam/6221036/8026346/7967695-aam.pdf
+   … a brief review of the continuoustime nonlinear optimal regulation … According to Theorem 3, we should perform the optimal … Hence, it has a good potential to combine event-triggering …
+
+52. Rough set theory and its applications to data analysis
+   https://www.tandfonline.com/doi/abs/10.1080/019697298125470
+   (Z Pawlak - Cybernetics & Systems, 1998 - Taylor & Francis | 1998 | cited by 1731)
+   [PDF] https://www.mimuw.edu.pl/~skowron/ZP-papers/SPIS_PRAC/BibTex/roboczy/RSTADA2.pdf
+   … set theory} a new approach to data analysis. The lower and upper approximation of a set, the basic operations of the theory… C, S, and P, we can say that pipes 1 and 6 are surely good, v …
+
+53. Attention and self-regulation: A control-theory approach to human behavior
+   https://books.google.com/books?hl=en&lr=&id=fXTrBwAAQBAJ&oi=fnd&pg=PA2&dq=good+regulator+theorem+cybernetics+critique&ots=eTKqUW7vUQ&sig=jLZ7-1v4MoP7RgRoAsJSZdi58oo
+   (CS Carver, MF Scheier - 2012 - books.google.com | 2012 | cited by 7114)
+   … of cybernetic ideas to human functioning at levels of analysis … known as cybernetics or control theory. The assumptions of … For now, however, we believe it is best to stay with the basics. …
+
+54. Regulation inside government: Waste-watchers, quality police, and sleazebusters
+   https://books.google.com/books?hl=en&lr=&id=sQhREAAAQBAJ&oi=fnd&pg=PR9&dq=good+regulator+theorem+cybernetics+critique&ots=9qmfD4ba80&sig=4iQT5puqWpnPYs01PT-0EscDQGU
+   (C Hood, O James, G Jones, C Scott, T Travers - 1999 - books.google.com | 1999 | cited by 1209)
+   … All theory, said Nietzsche, is autobiography, and such theory as … Doctrine about best practice in internal regulation was … the main lesson of cybernetic analysis for bureaucracy is that a …
+
+55. The psychology of self-regulation: An introductory review
+   https://www.taylorfrancis.com/chapters/edit/10.4324/9780203837962-1/psychology-self-regulation-joseph-forgas-roy-baumeister-dianne-tice
+   (JP Forgas, RF Baumeister, DM Tice - 2011 - taylorfrancis.com | 2011 | cited by 146)
+   … review, see Baumeister, Gailliot, DeWall, & Oaten, 2006). Self-regulation thus represents one of the best … ) pioneering adaptation of cybernetic theory to selfregulation, Attention and Self-…
+
+56. Control, organisation and accounting
+   https://api.taylorfrancis.com/content/chapters/edit/download?identifierName=doi&identifierValue=10.4324/9780429422553-8&type=chapterpdf
+   (DT Otley, AJ Berry - Management control theory, 2019 - api.taylorfrancis.com | 2019 | cited by 854)
+   … in which In this paper, cybernetic concepts of control are … Cybernetics has summary critique of the role of control in yet … the task of in their own best interests, then the control management …
+
+57. Reinforcement learning neural-network-based controller for nonlinear discrete-time systems with input constraints
+   https://ieeexplore.ieee.org/abstract/document/4126287/
+   (P He, S Jagannathan - … , and Cybernetics, Part B (Cybernetics), 2007 - ieeexplore.ieee.org | 2007 | cited by 278)
+   [PDF] https://scholarsmine.mst.edu/cgi/viewcontent.cgi?article=1650&context=ele_comeng_facwork
+   … A novel adaptive NN controller consisting of an action plus a critic NN … To balance stability and good approximation requirements, … The next theorem presents how to select the controller …
+
+58. Toward consensus in the psychology of self-regulation: How far have we come? How far do we have yet to travel?
+   https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=0269994X&asa=N&AN=16466317&h=J8glwkuj6cp88fxgy1SoNkXTRAD6FcimUGH9eu537mFZa3ph6c0ewRjZORGO09MmP42c3rstYSsD96qFdNCxEA%3D%3D&crl=c
+   (P Karoly, M Boekaerts, S Maes - … : An International Review, 2005 - search.ebscohost.com | 2005 | cited by 149)
+   … control- and social cognitive theory illustrates both the strengths and potential weaknesses of cybernetic formulations in work … In the “good news” column, we note that contemporary self-…
+
+59. Adaptive critic learning techniques for engine torque and air–fuel ratio control
+   https://ieeexplore.ieee.org/abstract/document/4554033/
+   (D Liu, H Javaherian, O Kovalenko… - … , Man, and Cybernetics …, 2008 - ieeexplore.ieee.org | 2008 | cited by 176)
+   [PDF] http://www.derongliu.org/papers/liu-java-kova-huang-SMCB-2008.pdf
+   … A class of adaptive critic designs that can be classified as (model… problems, excellent neural network controller transient … Dynamic programming is a theory developed back in the 1950s […
+
+60. Control theory: A useful conceptual framework for personality–social, clinical, and health psychology.
+   https://psycnet.apa.org/journals/bul/92/1/111/
+   (CS Carver, MF Scheier - Psychological bulletin, 1982 - psycnet.apa.org | 1982 | cited by 4547)
+   [PDF] https://www.academia.edu/download/50721534/82_PB_Control.pdf
+   … that we believe is useful in the analysis of human behavior. … theory and research on human behavior in which cybernetic … , the cybernetic model appears to provide a good accounting of …
+
+61. State-of-the-art in ecosystem theory
+   https://www.sciencedirect.com/science/article/pii/S0304380097001567
+   (F Müller - Ecological modelling, 1997 - Elsevier | 1997 | cited by 220)
+   … , and on that basis the general objective of the text is defined: Does ecosystem theory cope … as cybernetics, control theory, information theory, network theory, thermodynamics, the theory …
+
+62. Applications of fuzzy set theory
+   https://ieeexplore.ieee.org/abstract/document/6313408/
+   (J Maiers, YS Sherif - … on Systems, Man, and Cybernetics, 1985 - ieeexplore.ieee.org | 1985 | cited by 398)
+   … We will briefly review some of those developments. The first application of fuzzy sets of a … controller was shown to perform better than a human operator and as good as a PI controller…
+
+63. Frameworks to assess health systems governance: a systematic review
+   https://academic.oup.com/heapol/article-abstract/32/5/710/3061529
+   (T Pyone, H Smith… - Health Policy and Planning, 2017 - academic.oup.com | 2017 | cited by 256)
+   [PDF] https://academic.oup.com/heapol/article-pdf/32/5/710/13953772/czx007.pdf
+   … ’s institutional analysis and the cybernetics theory. Governance … with effective oversight, regulation, incentives and accountability… The framework draws on the values of good governance …
+
+64. Self-regulation in organizational settings: A tale of two paradigms
+   https://www.sciencedirect.com/science/article/pii/B9780121098902500391
+   (JB Vancouver - Handbook of self-regulation, 2000 - Elsevier | 2000 | cited by 285)
+   Publisher Summary This chapter illustrates the difference between serial and parallel processing. The chapter argues that cybernetic-systems theory tends to describe humans as a …
+
+65. Characteristic model-based all-coefficient adaptive control method and its applications
+   https://ieeexplore.ieee.org/abstract/document/4106038/
+   (H Wu, J Hu, Y Xie - … on Systems, Man, and Cybernetics, Part C …, 2007 - ieeexplore.ieee.org | 2007 | cited by 215)
+   … controller along with logical integral and logical differential controller, a control system can obtain good … present modeling and control theory is based on accurate dynamic analysis, and …
+
+66. On Adam Tooze: A Contribution to the Critique of Political Economy.
+   https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=21572151&asa=N&AN=161801249&h=g%2Bj%2FYh5tzR4%2BdbKPJyyLbGY2gfRm47jB8YqOXOvH70EI0%2BiUWzV8XmSrq%2FePYbQs8cPGsBLElgpN8zTq3uZ7Tw%3D%3D&crl=c
+   (A Hernandez - Brooklyn Rail, 2023 - search.ebscohost.com | 2023)
+   … of cybernetic problems, the inadequate self-regulation mechanisms of the … critique starts from a cybernetic theorem derived from information theory, Ashby's theorem of a "good regulator…
+
+67. Data-driven practical cooperative output regulation under actuator faults and DoS attacks
+   https://ieeexplore.ieee.org/abstract/document/10105189/
+   (C Deng, W Gao, C Wen, Z Chen… - … on Cybernetics, 2023 - ieeexplore.ieee.org | 2023 | cited by 118)
+   … approach and the output regulation theory. In order to … To the best of our knowledge, there is no resilience analysis of a … the data-driven-based controller design to tackle DoS attacks …
+
+68. The origins and purposes of several traditions in systems theory and cybernetics
+   https://www.tandfonline.com/doi/abs/10.1080/019697299125299
+   (SA Umpleby, EB Dent - Cybernetics & Systems, 1999 - Taylor & Francis | 1999 | cited by 179)
+   [PDF] https://blogs.gwu.edu/umpleby/files/2021/05/SYSTEMS-THEORY-AND-CYBERNETICS.pdf
+   … The story of systems theory and cybernetics is a story of several … The schools of thought presented are general systems theory, … A key conclusion of this research was that a regulator …
+
+69. Social theory and education: A critique of theories of social and cultural reproduction
+   https://books.google.com/books?hl=en&lr=&id=JZnwFlGI5gsC&oi=fnd&pg=PR9&dq=good+regulator+theorem+cybernetics+critique&ots=JgVj665V6v&sig=fSklfm8thNv6vyBotdmO0X9X3l4
+   (RA Morrow, CA Torres - 1995 - books.google.com | 1995 | cited by 944)
+   … for information and cybernetic theories where the concept … could be best described as paradigms of research and hence … change, that is, regulation within the parameters of the given …
+
+70. Cybernetics: A new management tool
+   https://books.google.com/books?hl=en&lr=&id=VqQpICD5IXgC&oi=fnd&pg=PR9&dq=good+regulator+theorem+cybernetics+critique&ots=vMZbrGcpk4&sig=VvAwxtk5AkNp2Ra1vuoTNK3ZL8s
+   (B Clemson - 1991 - books.google.com | 1991 | cited by 312)
+   … some combination of 'objective' analysis of the situation and … Cybernetics and general systems theory are concerned with … because this is the best that any regulator can ever do. It is of …
+
+71. Integrating cybernetic modeling with pathway analysis provides a dynamic, systems‐level description of metabolic control
+   https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/abs/10.1002/bit.21780
+   (JD Young, KL Henne, JA Morgan… - Biotechnology and …, 2008 - Wiley Online Library | 2008 | cited by 94)
+   [PDF] https://www.vanderbilt.edu/younglab/pdf/young08b.pdf
+   … It views metabolic regulation as an attempt by cells to … Cybernetic models therefore depend upon concepts from automatic control theory to determine the regulatory policies that best …
+
+72. Flatline constructs: Gothic materialism and cybernetic theory-fiction
+   https://books.google.com/books?hl=en&lr=&id=FehBEQAAQBAJ&oi=fnd&pg=PT7&dq=good+regulator+theorem+cybernetics+critique&ots=KUddMTf9ka&sig=xtMkM9xkqd5wpPDnKDFjmQDtjS4
+   (M Fisher - 2025 - books.google.com | 2025 | cited by 157)
+   [PDF] https://wrap.warwick.ac.uk/id/eprint/110900/1/WRAP_Theses_Fisher_1999.pdf
+   … Except for brief quotations in critical articles or reviews, no … -engendered principles of self-regulation or self-organisation, the point … of the best cyberpunk fiction is to effectuate a critique …
+
+73. Research review for broad learning system: Algorithms, theory, and applications
+   https://ieeexplore.ieee.org/abstract/document/9380770/
+   (X Gong, T Zhang, CLP Chen… - … on Cybernetics, 2021 - ieeexplore.ieee.org | 2021 | cited by 380)
+   … Generally speaking, a good machine-learning algorithm needs to satisfy two demands: it can not only learn the knowledge of training data well but also have good generalization ability […
+
+74. An integrated control theory model of work motivation
+   https://journals.aom.org/doi/abs/10.5465/amr.1989.4282072
+   (HJ Klein - Academy of management review, 1989 - journals.aom.org | 1989 | cited by 991)
+   … control theory models is presented as a possible meta-theory … , and focuses on self-regulation and the underlying cognitive … be employed rather than the cybernetic definitions. That is, …
+
+75. The Conditions of the Invisible Hand: A Cybernetic-Philosophical Diagnosis of the Two Dominant Economic Architectures (Book)
+   https://philpapers.org/rec/NOUTCO-4
+   (M Nourizadeh - 2026 - philpapers.org | 2026)
+   [PDF] https://philpapers.org/archive/NOUTCO-4.pdf
+   … It is rather a problem of how to secure the best use of resources … in the lineage of Ashby, Conant, and Beer; the analysis of … It removes the units of analysis the theorem operates on. …
+
+76. Grounding a theory of firms in the natural sciences
+   https://link.springer.com/article/10.1007/s41463-016-0017-z
+   (S Turnbull - Humanistic Management Journal, 2017 - Springer | 2017 | cited by 17)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s41463-016-0017-z.pdf
+   … control and communication described as cybernetics. It is also … is referred to as Transaction Byte Analysis (TBA). This phrase … organises the production of some specific good or service. …
+
+77. How colleges work: The cybernetics of academic organization and leadership
+   https://www.tandfonline.com/doi/pdf/10.1080/07377366.1989.10401184
+   (R Birnbaum, PJ Edelson - 1989 - Taylor & Francis | 1989 | cited by 5090)
+   [PDF] https://www.ses.unam.mx/curso2016/pdf/21-oct-Birmbaum.PDF
+   … In Part Two, the author presents a good review of four … into cybernetics, the science of communication and control theory… An electrical/mechanical example of cybernetics is a home …
+
+78. The depth of history and explanation as benefit and bane for psychological control theories.
+   https://psycnet.apa.org/journals/apl/90/1/38.html?uid=2004-22497-004
+   (JB Vancouver - Journal of applied psychology, 2005 - psycnet.apa.org | 2005 | cited by 247)
+   [PDF] https://www.academia.edu/download/116203427/02a50a7b7c4ddafd7f2f93b22a3840906dad.pdf
+   … of control theory provide, has led some critics to misapply … I classify control theories as belonging to the cybernetic-… theory or theory elements are best is what we do as scientists. …
+
+79. An integrated framework for information-centred human-machine systems analysis
+   https://www.inderscienceonline.com/doi/abs/10.1504/IJEM.2002.000515
+   (A Worm - International Journal of Emergency Management, 2002 - inderscienceonline.com | 2002 | cited by 7)
+   … -machine interaction, control theory, mathematical modelling, cybernetics, cognitive system … this specific time, but also on earlier input values, and that a good regulator of a system has …
+
+80. Where are the Cyborgs in Cybernetics?
+   https://journals.sagepub.com/doi/abs/10.1177/0306312708101046
+   (R Kline - Social Studies of Science, 2009 - journals.sagepub.com | 2009 | cited by 182)
+   [PDF] https://arquivo.fluxo.info/conteudo/cyberneticzoo.com/cyberneticzoo.com/wp-content/uploads/2012/02/Where-are-the-Cyborgs-in-Cybernetics-Kline.pdf
+   … the history of cybernetics by critiquing cyborg studies that … I include information theory as an area of cybernetics in Table … If this eventually happens – and I have given good reasons for …
+
+81. What is systemic thinking?
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/sdr.4260100208
+   (R Espejo - System Dynamics Review, 1994 - Wiley Online Library | 1994 | cited by 268)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1002/sdr.4260100208
+   … A good many of the available publications in the subject … To understand this reinterpretation we need a theory of … -order cybernetics is reconfiguring management cybernetics. This …
+
+82. Managing complexity—the path toward intelligent organizations
+   https://link.springer.com/article/10.1023/A:1009546721353
+   (M Schwaninger - Systemic practice and action research, 2000 - Springer | 2000 | cited by 187)
+   [PDF] https://www.alexandria.unisg.ch/bitstreams/7f15760c-1d1b-4c17-bc2f-4b8ad2623881/download
+   … In this section, three models of organizational cybernetics … a theory become available that makes the control variables and parameters of the higher logical levels accessible for analysis …
+
+83. Adaptive dynamic programming
+   https://ieeexplore.ieee.org/abstract/document/1039198/
+   (JJ Murray, CJ Cox, GG Lendaris… - … , man, and cybernetics …, 2002 - ieeexplore.ieee.org | 2002 | cited by 816)
+   [PDF] https://www.researchgate.net/profile/George-Lendaris/publication/3421445_Adaptive_Dynamic_Programming/links/5457b72a0cf26d5090ab4fd7/Adaptive-Dynamic-Programming.pdf?_sg%5B0%5D=started_experiment_milestone&origin=journalDetail
+   … is a Lyapunov function for the feedback system with controller . An analysis of the above … In the formulation of the ADPA and theorem, we use the following notation for the state and …
+
+84. Systems thinking, organizational change and agency: A practice theory critique of Senge's learning organization
+   https://www.tandfonline.com/doi/abs/10.1080/14697017.2011.647923
+   (R Caldwell - Journal of change management, 2012 - Taylor & Francis | 2012 | cited by 289)
+   … of ‘general systems theory’ and first order cybernetics, including the following… regulation of system thinking structures, archetypes and cognitive models, thereby undermining an analysis …
+
+85. Alternative information-processing models and their implications for theory, research, and practice
+   https://journals.aom.org/doi/abs/10.5465/amr.1990.4308219
+   (RG Lord, KJ Maher - Academy of management review, 1990 - journals.aom.org | 1990 | cited by 705)
+   … information-processing models can be appreciated best by examining their use in specific areas. … However, when applied in a cybernetic context, retrospective analysis may reflect an …
+
+86. Practical design of nonlinear fuzzy controllers with stability analysis for regulating processes with unknown mathematical models
+   https://www.sciencedirect.com/science/article/pii/0005109894902135
+   (H Ying - Automatica, 1994 - Elsevier | 1994 | cited by 183)
+   [PDF] https://engweb.eng.wayne.edu/ai/ai23/ai2365/public_html/images/Auto%20design%2094.pdf
+   … a fuzzy controller with reasonably good perfor… theorem, we will show that the linearization of the nonlinear fuzzy controllers around the equilibrium point results in the linear PI controller…
+
+87. Analysis of direct action fuzzy PID controller structures
+   https://ieeexplore.ieee.org/abstract/document/764871/
+   (GKI Mann, BG Hu, RG Gosine - … , Man, and Cybernetics, Part B …, 1999 - ieeexplore.ieee.org | 1999 | cited by 515)
+   [PDF] https://www.researchgate.net/profile/Gki-Mann/publication/3413305_Analysis_of_direct_action_fuzzy_PID_controller_structures/links/0fcfd5087e80eb1022000000/Analysis-of-direct-action-fuzzy-PID-controller-structures.pdf
+   … For this simple analysis, we consider a three-rule fuzzy controller [38] with triangular membership … In case of optimum nonlinear tuning, this requires a compromise for achieving best …
+
+88. The government of risk: Understanding risk regulation regimes
+   https://books.google.com/books?hl=en&lr=&id=ZiaQDwAAQBAJ&oi=fnd&pg=PR7&dq=good+regulator+theorem+cybernetics+critique&ots=pqH9CKT00Q&sig=Zj6JK0XAWxp7dOfINAg7EVVo48Y
+   (C Hood, H Rothstein, R Baldwin - 2001 - books.google.com | 2001 | cited by 1947)
+   … theory and related fields of organizational and regulatory … Moreover, as we will show in the next chapter, a cybernetic … 3, a risk regulation regime approach is not just a tool for analysis-a …
+
+89. Identity development, control theory, and self-regulation: An individual differences perspective
+   https://journals.sagepub.com/doi/abs/10.1177/0743554897123003
+   (MD Berzonsky - Journal of Adolescent Research, 1997 - journals.sagepub.com | 1997 | cited by 107)
+   … Their microprocess analysis offers a novel perspective within which research on identity formation can … , and self-determined action is used to support this individual differences analysis. …
+
+90. Synchronization of delayed memristive neural networks: Robust analysis approach
+   https://ieeexplore.ieee.org/abstract/document/7362157/
+   (X Yang, DWC Ho - IEEE transactions on cybernetics, 2015 - ieeexplore.ieee.org | 2015 | cited by 274)
+   … Moreover, without using the existing finite-time stability theorem… To the best of our knowledge, no published results solves the … MNNs can be realized under the controller (32) [where the …
+
+91. Systems analysis
+   https://journals.sagepub.com/doi/abs/10.1177/107808747000600111
+   (DJ Berlinski - Urban Affairs Quarterly, 1970 - journals.sagepub.com | 1970 | cited by 233)
+   … , can best be seen as searches for representation theorems: proofs … development of cybernetics, information theory, and the theory of … The theory of automata for the first time made the …
+
+92. Cybernetics, information, life: The emergence of scriptural representations of heredity
+   https://muse.jhu.edu/pub/1/article/8115/summary
+   (LE Kay - Configurations, 1997 - muse.jhu.edu | 1997 | cited by 128)
+   … This website uses cookies to ensure you get the best … s cybernetics and Szilard’s and Brillouin’s information theory with … His criticisms centered on the flaws in the cybernetic project, …
+
+93. Regulatory conversations
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-6478.00215
+   (J Black - Journal of law and society, 2002 - Wiley Online Library | 2002 | cited by 516)
+   [PDF] https://www.academia.edu/download/51039424/1467-6478.0021520161224-689-18eidyc.pdf
+   … Indeed some techniques of control based in cybernetics, for example, collibration, are … developed by regulatory theory. But that is to jump an important stage in the analysis – we …
+
+94. A bayesian interpretation of the internal model principle
+   https://arxiv.org/abs/2503.00511
+   (M Baltieri, M Biehl, M Capucci, N Virgo - arXiv preprint arXiv:2503.00511, 2025 - arxiv.org | 2503 | cited by 7)
+   [PDF] https://arxiv.org/pdf/2503.00511
+   … in standard treatments of control theory. Here, we first review the internal model principle and … A classic slogan in cybernetics states that “every good regulator of a system must be a …
+
+95. The meaning of mindfulness: A second-order cybernetics of stress, metacognition, and coping
+   https://journals.sagepub.com/doi/abs/10.1177/1533210107301740
+   (EL Garland - Complementary health practice review, 2007 - journals.sagepub.com | 2007 | cited by 206)
+   [PDF] https://journals.sagepub.com/doi/pdf/10.1177/1533210107301740
+   … -order cybernetics, a transdisciplinary conceptual framework which builds on extant theory by … Hence, one can only know good in contrast to evil, and vice versa. By striving to obtain and …
+
+96. Society as a complex adaptive system
+   https://www.taylorfrancis.com/chapters/edit/10.4324/9781315130569-67/society-complex-adaptive-system-walter-buckley
+   (W Buckley - Systems research for behavioral science, 2017 - taylorfrancis.com | 2017 | cited by 663)
+   … research, cybernetics, information and communication theory, and … We shall review these concepts briefly. The environment, … A good beginning to a truly inter personal approach to …
+
+97. Metabolic engineering from a cybernetic perspective. 1. Theoretical preliminaries
+   https://aiche.onlinelibrary.wiley.com/doi/abs/10.1021/bp990017p
+   (J Varner, D Ramkrishna - Biotechnology Progress, 1999 - Wiley Online Library | 1999 | cited by 138)
+   [PDF] http://lib3.dss.go.th/fulltext/Journal/Biotechnology%20Progress/Biotechnology%20Progress/1999/no.3/1999v15n3p.407-425.pdf
+   … of metabolic control analysis to cybernetic model systems. … Biochemical systems theory does contain a modeling aspect, … the ingrained base objectives as best possible, in the face of the …
+
+===== Query 3/6: Ashby requisite variety law only variety can destroy variety =====
+
+1. The great Ashby: Complexity, variety, and information
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/(SICI)1099-0526(199609/10)2:1%3C7::AID-CPLX3%3E3.0.CO;2-C
+   (J Casti - Complexity, 1996 - Wiley Online Library | 1996 | cited by 14)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1002/(sici)1099-0526(199609/10)2:1%3C7::aid-cplx3%3E3.0.co;2-c
+   … , we arrive at what Ashby termed the Law of Requisite Variety: The variety in the outcome … Stated more prosaically, only variety can destroy variety. So if “the disturber” D threatens to …
+
+2. Service systems and requisite variety
+   https://pubsonline.informs.org/doi/abs/10.1287/serv.2.1_2.92
+   (P Godsiff - Service Science, 2010 - pubsonline.informs.org | 2010 | cited by 47)
+   [PDF] https://pubsonline.informs.org/doi/pdf/10.1287/serv.2.1_2.92
+   … of Ashby’s Law of Requisite Variety (LRV) and its implications. Generally stated and understood as ‘only variety can destroy variety” (Ashby … of variety and the Law of Requisite Variety. …
+
+3. Requisite Variety and the Second Law
+   https://pdxscholar.library.pdx.edu/sysc_fac/177/
+   (M Zwick - 1978 - pdxscholar.library.pdx.edu | 1978 | cited by 4)
+   [PDF] https://pdxscholar.library.pdx.edu/cgi/viewcontent.cgi?article=1188&context=sysc_fac
+   … ), the relatiQn of Ashby's principle to the Second Law of … temporal process, the LRV can be interpreted as a statement … nature of Ashby's result that only variety can destroy variety, …
+
+4. The Universal Matrix as a Cybernetic Design Pattern: Aligning with Ashby's Law of Requisite Variety via Geometric Construction
+   https://www.researchgate.net/profile/Artur-Kraskov/publication/394740666_The_Universal_Matrix_as_a_Cybernetic_Design_Pattern_Aligning_with_Ashby's_Law_of_Requisite_Variety_via_Geometric_Construction/links/68a5bd37d9261f6f51ad94aa/The-Universal-Matrix-as-a-Cybernetic-Design-Pattern-Aligning-with-Ashbys-Law-of-Requisite-Variety-via-Geometric-Construction.pdf
+   (A Kraskov - 2025 - researchgate.net | 2025 | cited by 3)
+   [PDF] https://www.researchgate.net/profile/Artur-Kraskov/publication/394740666_The_Universal_Matrix_as_a_Cybernetic_Design_Pattern_Aligning_with_Ashby's_Law_of_Requisite_Variety_via_Geometric_Construction/links/68a5bd37d9261f6f51ad94aa/The-Universal-Matrix-as-a-Cybernetic-Design-Pattern-Aligning-with-Ashbys-Law-of-Requisite-Variety-via-Geometric-Construction.pdf
+   … Ashby’s Law of Requisite Variety stands as one of cybernetics’ most fundamental principles: ”only variety can destroy variety… requirements implied by Ashby’s Law of Requisite Variety. …
+
+5. The Principle of Requisite Recursive Variety
+   https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=1142945
+   (R Zanettin - Available at SSRN 1142945 - papers.ssrn.com | 1142)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=1142945
+   … Ashby’s ‘Law of Requisite Variety’ in a distinct, multi-level way. … that “only variety can destroy variety” can be misleading, … of Ashby’s law will be preserved: “The larger the variety of …
+
+6. The law of requisite variety and the built environment
+   https://patterns.architexturez.net/system/files/TheLawofRequisiteVariety.pdf
+   (NA Salingaros - J. Biourbanism, 2015 - patterns.architexturez.net | 2015 | cited by 9)
+   [PDF] https://patterns.architexturez.net/system/files/TheLawofRequisiteVariety.pdf
+   … control the other, and how one can destroy the other. The “… Ashby used as his example the ability of our immune system to formulate a wide variety of responses …
+
+7. Generalization of Law of Requisite Variety
+   https://link.springer.com/chapter/10.1007/978-981-16-9937-5_2
+   (K Kijima - Systems Research I: Essays in Honor of Yasuhiko …, 2022 - Springer | 2022 | cited by 1)
+   … and formulate Ashby’s Law of Requisite Variety in the … law, one of the most well-known laws in the general systems theory, intuitively claims that “only the variety can destroy the variety.” …
+
+8. On domain modelling and requisite variety: Current state of an ongoing journey
+   https://link.springer.com/chapter/10.1007/978-3-030-63479-7_13
+   (HA Proper, G Guizzardi - IFIP Working Conference on The Practice of …, 2020 - Springer | 2020 | cited by 12)
+   [PDF] https://inria.hal.science/hal-03434642/document
+   … The aim of this paper is to, inspired by Ashby’s Law of Requisite Variety, explore some of … , and the act of modelling. We will do so from the perspective of the Requisite Variety. This …
+
+9. Variety and the firm's performance: An empirical investigation
+   https://www.sciencedirect.com/science/article/pii/0166497286900416
+   (RM Burton, JD Forsyth - Technovation, 1986 - Elsevier | 1986 | cited by 26)
+   … Its origins lie in Ashby’s law of requisite variety and its implications. … Ashby (p. 207) states the law of requisite variety succinctly as “only variety can destroy …
+
+10. Variety, constraint, and the law of requisite variety
+   https://www.taylorfrancis.com/chapters/edit/10.4324/9781315130569-19/variety-constraint-law-requisite-variety-ross-ashby
+   (WR Ashby - Systems research for behavioral science, 2017 - taylorfrancis.com | 2017 | cited by 315)
+   … specifies what values the elements will have. From our point of view, what is important is that the law excludes many positions and velocities, predicting that they will never be found to …
+
+11. Application of Ashby's Law of Requisite Variety to Interorganizational Conflicts in Nonprofit Organizations
+   https://journals.sagepub.com/doi/abs/10.1177/0095399720985431
+   (AS Alojairi - Administration & Society, 2021 - journals.sagepub.com | 2021 | cited by 6)
+   … of Ashby’s law of requisite variety. The theoretical development of this study is based on Ashby’s law of requisite variety, … Ashby’s law of requisite variety introduces a mechanism that …
+
+12. Requisite variety in action: The “Giffoni Experience” case study
+   https://www.researchgate.net/profile/Rocco-Palumbo/publication/277248819_Requisite_variety_in_action_the_Giffoni_Experience_case_study/links/5564d6d008aec4b0f4859317/Requisite-variety-in-action-the-Giffoni-Experience-case-study.pdf
+   (R Palumbo - … Conference, Varsaw. Abstract retrieved from http …, 2015 - researchgate.net | 2015 | cited by 2)
+   [PDF] https://www.researchgate.net/profile/Rocco-Palumbo/publication/277248819_Requisite_variety_in_action_the_Giffoni_Experience_case_study/links/5564d6d008aec4b0f4859317/Requisite-variety-in-action-the-Giffoni-Experience-case-study.pdf
+   … law of requisite variety is based on the assumption that “variety can destroy variety” (Ashby, … (2003) stated that Ashby’s law of requisite variety should be conceived as a fundamental …
+
+13. Requisite variety and its implications for the control of complex systems
+   https://link.springer.com/chapter/10.1007/978-1-4899-0718-9_28
+   (WR Ashby - Facets of systems science, 1991 - Springer | 1991 | cited by 2058)
+   [PDF] http://pespmc1.vub.ac.be/books/AshbyReqVar.pdf
+   … law of requisite variety uses concepts more primitive than those used by entropy, I will start by giving an account of that law… limitation implied by the law of requisite variety may, in time, …
+
+14. Applications of Ashby's Law of Requisite Variety to the practice of manufacturing
+   
+   (PR Duimering, L Purdy, F Safayeni, J Scala - Proceedings of the World …, 1998 | 1998 | cited by 7)
+
+15. Variety, constraint, and the law of requisite variety
+   https://search.proquest.com/openview/34512d5e51782023fac55bb07c8b77fc/1?pq-origsite=gscholar&cbl=28203
+   (WR Ashby, J Goldstein - Emergence: Complexity and …, 2011 - search.proquest.com | 2011 | cited by 131)
+   … I will say more below about the problematic nature of Ashby’s criterion for variety for it has … in presuming requisite variety to be something definite, a use exemplified in such phrases as a …
+
+16. Reflections on Adequate System Variety
+   https://link.springer.com/chapter/10.1007/978-3-642-29244-6_13
+   (R Zeier - … for Intelligent Organizations: Concepts, Models-Based …, 2012 - Springer | 2012)
+   [PDF] https://renezeier.ch/s/Systemic-Management-for-Intelligent-Organizations-Reflections-on-Adequate-System-Variety.pdf
+   … , in contrast to Ashby’s law of requisite variety, is about finding the level of adequate variety, the … Therefore, the requisite/adequate tension in reflections on variety would seem to hold out …
+
+17. Distinguishing adaptive from non-adaptive evolution using Ashby's law of requisite variety
+   https://ieeexplore.ieee.org/abstract/document/1004407/
+   (AK Seth - Proceedings of the 2002 Congress on Evolutionary …, 2002 - ieeexplore.ieee.org | 2002 | cited by 2)
+   [PDF] http://congres.cran.univ-lorraine.fr/2002/WCCI2002/CEC02/PDFFiles/Papers/7371.PDF
+   … Iterated Prisoner’s Dilemma model can promote the evolution of strategy memory. In this paper, an analysis in terms of Ashby’s Law of Requisite Variety enables a distinction to be …
+
+18. Complexity and organization-environment relations: Revisiting Ashby's law of requisite variety
+   https://books.google.com/books?hl=en&lr=&id=1gigO0XpXiEC&oi=fnd&pg=PA279&dq=Ashby+requisite+variety+law+only+variety+can+destroy+variety&ots=mg6Q4nKv1B&sig=u35WKsGjIuUlgXGHejWElrGXvdg
+   (M Boisot, B McKelvey - The Sage handbook of complexity and …, 2011 - books.google.com | 2011 | cited by 209)
+   … We illustrate the functioning of Ashby’s law with a simple diagram we call the Ashby Space (Figure 16.1). On the vertical axis we place the real-world stimuli that impinge on an organism…
+
+19. The law of requisite variety: Is it applicable to human systems?
+   https://journals.sagepub.com/doi/abs/10.3233/HSM-1986-6401
+   (M Zeleny - Human Systems Management, 1986 - journals.sagepub.com | 1986 | cited by 23)
+   [PDF] https://content.iospress.com/download/human-systems-management/hsm6-4-01?id=human-systems-management%2Fhsm6-4-01
+   … That could serve as a definition of control: ability to elicit 'desirable' states. It is important to remember that Ross Ashby derived the law of requisite variety from contemplating matrices of …
+
+20. Transcomputability,(Glanville's corollary of) Ashby's law of requisite variety and epistemic processes
+   https://www.emerald.com/k/article/48/4/793/449810
+   (T Fischer - Kybernetes, 2019 - emerald.com | 2019 | cited by 19)
+   [PDF] https://www.emerald.com/k/article-pdf/48/4/793/2843117/k-11-2017-0457.pdf
+   … Thereby constrained to only four principal … ” the variety of traffic lights and consequently are under effective control. Known as Ashby’s Law of Requisite Variety (or short Ashby’s Law), …
+
+21. A Formal Definition of Scale-Dependent Complexity and the Multi-Scale Law of Requisite Variety
+   https://www.mdpi.com/1099-4300/27/8/835
+   (AF Siegenfeld, Y Bar-Yam - Entropy, 2025 - mdpi.com | 2025 | cited by 8)
+   … Ashby’s law of requisite variety allows a comparison of … the level of description that includes only behaviors that involve … of Ashby’s law, as Ashby’s law merely provides a necessary …
+
+22. Requisite variety, autopoiesis, and self-organization
+   https://www.emerald.com/k/article/44/6-7/866/265299
+   (C Gershenson - Kybernetes, 2015 - emerald.com | 2015 | cited by 107)
+   [PDF] https://arxiv.org/pdf/1409.7475
+   … able to act before a perturbation occurs which might damage or … Ashby’s law of requisite variety states that an active … as much variety as the phenomenon it attempts to control (Ashby, …
+
+23. Domain Modelling and the Law of Requisite Variety
+   
+   (HA Proper, G Guizzardi)
+
+24. Complex built‐environment design: four extensions to Ashby
+   https://www.emerald.com/k/article/36/9-10/1422/264907
+   (T Love, T Cooper - Kybernetes, 2007 - emerald.com | 2007 | cited by 10)
+   [PDF] https://www.love.com.au/images/PDFs/VarietyDynamics4axioms-preprint.pdf
+   … The paper describes four extensions to Ashby's Law of Requisite Variety (LoRV) developed by the authors. These extend the cybernetic contribution of LoRV in the design of complex …
+
+25. On Domain Modelling and Requisite
+   https://books.google.com/books?hl=en&lr=&id=-qAJEAAAQBAJ&oi=fnd&pg=PA186&dq=Ashby+requisite+variety+law+only+variety+can+destroy+variety&ots=a0zC2I8t5s&sig=dk_555CC4Mi3r4ERvYJX8e69pXY
+   (HA Proper, G Guizzardi - … PoEM 2020, Riga, Latvia, November 25 …, 2020 - books.google.com | 2020)
+   … , and the act of modelling. We will do so from the perspective of the Requisite Variety . This … In this paper, inspired by Ashby's Law of Requisite Variety , we explored some of the forms …
+
+26. Operationalising and managing variety
+   https://ore.exeter.ac.uk/articles/preprint/Operationalising_and_managing_variety/29685698
+   (RS Maull, P Godsiff - 2011 - ore.exeter.ac.uk | 2011 | cited by 3)
+   [PDF] https://ore.exeter.ac.uk/articles/preprint/Operationalising_and_managing_variety/29685698/1/files/56687513.pdf
+   … We consider that a suitable model for analysing such interactions is Ashby’s Law of Requisite Variety. Ashby’s RV … This leads to the dictum “only variety can absorb, or destroy, variety.”(…
+
+27. Viability, sustainability and non-requisite variety
+   https://www.academia.edu/download/83345864/JS764VQ05.pdf
+   (L LAVANDEROS - Journal of Systemics, Cybernetics and Informatics, 2019 - academia.edu | 2019 | cited by 20)
+   … Ashby demonstrated the importance of a certain quantitative relationship called the law of requisite variety… To sum it up, non-requisite variety destroys variety. Beliefs derived from the …
+
+28. Beyond Signal Fidelity: A Critical Analysis of Floridi's Certainty-Scope Conjecture through the Lens of Ashby's Law of Requisite Variety and Semantic Information …
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5538561
+   (M Lissack - Available at SSRN 5538561, 2025 - papers.ssrn.com | 5538 | cited by 2)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5538561
+   … Ross Ashby's established Law of Requisite Variety. While both … theory, we demonstrate how Ashby's relational and adaptive … Ashby's Law posits that "only variety can destroy variety," …
+
+29. Complexity matching and requisite variety
+   https://arxiv.org/abs/1806.08808
+   (K Mahmoodi, BJ West, P Grigolini - arXiv preprint arXiv:1806.08808, 2018 - arxiv.org | 1806 | cited by 20)
+   [PDF] https://arxiv.org/pdf/1806.08808
+   … He makes the point that the force laws and therefore control … Herein we refer to Ashby’s requisite variety with the more … µ1 = µ2 = 1.5 and it is destroyed if one system is critical and the …
+
+30. The Law of Requisite Variety and the Organizational Performance: An Empirical Analysis of the Pakistani Cellular Sector
+   https://www.academia.edu/download/47207179/25.pdf
+   (M Haque, S ul Haque - Management, 2016 - academia.edu | 2016)
+   [PDF] https://www.academia.edu/download/47207179/25.pdf
+   … will organizations with more limited vocabularies”. Ashby (1956) first suggested that the law of requisite variety … because only variety can destroy the variety. Achievement of more …
+
+31. Societal evolution: A process without random variation
+   https://www.tandfonline.com/doi/abs/10.1080/02604027.1993.9972358
+   (NC Paritsis - World Futures: Journal of General Evolution, 1993 - Taylor & Francis | 1993 | cited by 4)
+   … can lead to evolution. It is used for this purpose the law of requisite variety of Ross Ashby. It is … street for this psychiatric department would eventually destroy the department. During the …
+
+32. The 'law of requisite variety'may assist climate change negotiations: a review of the Kyoto and Durban meetings
+   https://www.tandfonline.com/doi/abs/10.1057/kmrp.2012.56
+   (J Kidd - Knowledge Management Research & Practice, 2014 - Taylor & Francis | 2014 | cited by 7)
+   [PDF] https://research.aston.ac.uk/files/16735806/_Law_of_requisite_variety_may_assist_climate_change_negotiations.pdf
+   … moving on from Ashby's Law to Beer's Viable Systems approach. … Ashby has called this principle the law of requisite variety: in active regulation only variety can destroy variety. It leads …
+
+33. Operationalising and managing variety
+   https://naplesforumonservice.com/wp-content/uploads/2021/02/Godsiff-Maull-Operationalising-and-Managing-Variety.pdf
+   (P Godsiff, R Maull - Naples Forum on Service: Service …, 2011 - naplesforumonservice.com | 2011 | cited by 2)
+   [PDF] https://naplesforumonservice.com/wp-content/uploads/2021/02/Godsiff-Maull-Operationalising-and-Managing-Variety.pdf
+   … We consider that a suitable model for analysing such interactions is Ashby‟s Law of Requisite Variety. Ashby‟s … This leads to the dictum “only variety can absorb, or destroy, variety.”(…
+
+34. The value of being unmanageable: variety and creativity in cyberspace
+   https://ranulphglanville.org.za/wp-content/uploads/2024/12/The-Value-of-being-Unmanageable-Variety-and-Creativity-in-CyberSpace.pdf
+   (R Glanville - Netzwerke, Falter Verlag, Vienna, 2000 - ranulphglanville.org.za | 2000 | cited by 46)
+   [PDF] https://ranulphglanville.org.za/wp-content/uploads/2024/12/The-Value-of-being-Unmanageable-Variety-and-Creativity-in-CyberSpace.pdf
+   … Complexity is examined in the context of Ashby’s Law of Requisite Variety, and systems are shown to rapidly reach transcomputability, at which point they become uncontrollable. The …
+
+35. Problematizing fit and survival: transforming the law of requisite variety through complexity misalignment
+   https://journals.aom.org/doi/abs/10.5465/amr.2014.0073
+   (K Poulis, E Poulis - Academy of Management Review, 2016 - journals.aom.org | 2016 | cited by 67)
+   [PDF] https://repository.mdx.ac.uk/download/48fb9a6e6f003ffd72937b84f260ce5192378ee7b26e66ffbd7cfb6df8d60bad/856857/Poulis%20%20Poulis%20MDX%202.pdf
+   … The law of requisite variety is widely employed in … We reflect upon requisite variety as an archetypal borrowed concept. We … Here we are only interested in Ashby’s interpretations that …
+
+36. Complex versus complicated: the how of coping with complexity
+   https://www.emerald.com/k/article/38/1-2/83/268632
+   (M Schwaninger - Kybernetes, 2009 - emerald.com | 2009 | cited by 33)
+   … This contribution sheds light on misinterpretations of Ashby's law of requisite variety. The insights derived from the analysis can help real‐life organizations to avoid failures and reap …
+
+37. Reflecting on max Boisot's Ashby space; Applied to complexity management
+   https://books.google.com/books?hl=en&lr=&id=RFJoAgAAQBAJ&oi=fnd&pg=PA93&dq=Ashby+requisite+variety+law+only+variety+can+destroy+variety&ots=i0z5VPJxvJ&sig=K791-JfrMVTZz1b2z8ECLlga634
+   (B McKelvey - Knowledge, organization and management, 2013 - books.google.com | 2013 | cited by 4)
+   … , then, gives rise to his famous Law of Requisite Variety : “ONLY VARIETY CAN DESTROY … We then turn to Ashby’s Law of Requisite Variety and complexity science to outline an …
+
+38. Ashby's law of requisite variety: An empirical study
+   https://www.tandfonline.com/doi/abs/10.1080/01969728708902152
+   (JDR Raadt - Cybernetics and Systems: An International Journal, 1987 - Taylor & Francis | 1987 | cited by 50)
+   [PDF] https://www.researchgate.net/profile/J-D-R-De-Raadt/publication/232852153_Ashby's_law_of_requisite_variety_an_empirical_study/links/616fa1c5718a2a7099e43435/Ashbys-law-of-requisite-variety-an-empirical-study.pdf
+   … This study examines Ashby's law of requisite variety: its theoretical origin and its relevance to … only variety can destroy varietyv (Ashby, i964, p. 207). This is also reflected in Beer's "First …
+
+39. Only variety absorbs complexity
+   https://link.springer.com/chapter/10.1057/9781137414724_2
+   (G Broekstra - Building High-Performance, High-Trust Organizations …, 2014 - Springer | 2014)
+   … It sounds trivial, but you have just discovered the law of requisite variety. In … requisite variety is and, as Beer describes it, a bit less belligerently than Ashby, ‘only variety absorbs variety.’ …
+
+40. Management by complexity: redundancy and variety in organizations
+   https://books.google.com/books?hl=en&lr=&id=iOPEEAAAQBAJ&oi=fnd&pg=PA59&dq=Ashby+requisite+variety+law+only+variety+can+destroy+variety&ots=_USlYM5Stp&sig=T4mCvo-8CIb3iXuzefcSj_TSndY
+   (HW Ahlemeyer - CONTRIBUTIONS IN SOCIOLOGY, 2001 - books.google.com | 2001 | cited by 15)
+   … Ross Ashby stated in his Law of Requisite Variety that only variety can destroy variety… If one wants to construct a system able to deal with a high level of environmental variety, …
+
+41. From Analogue to Digital Command and Control Decision-Making: The Law of Requisite Variety and Fuzzy Methods in Quantifying Situation Assessment
+   https://search.proquest.com/openview/24eb26dfd5fc2cadc2952fc2283b2539/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (JL Shoger - 2025 - search.proquest.com | 2025)
+   [PDF] https://search.proquest.com/openview/24eb26dfd5fc2cadc2952fc2283b2539/1.pdf?pq-origsite=gscholar&cbl=18750&diss=y
+   … Abstract Ashby's Law of Requisite Variety (LoRV) has been a recognized theoretical framework for systems thinking and cybernetics to assess and regulate a system. [6] [7] [47] [81] In …
+
+42. REQUISITE VARIETY AND ETHICAL DECISION-MAKING
+   https://ttuec-ojs-ttu.tdl.org/ttuec/article/view/49
+   (D Hoover - Journal of the Texas Tech University Ethics Center, 2020 - ttuec-ojs-ttu.tdl.org | 2020)
+   [PDF] https://ttuec-ojs-ttu.tdl.org/ttuec/article/download/49/40
+   … The Law of Requisite Variety as put forth by Ashby thus states “Only variety can destroy variety”. However, this statement only refers to Ashby’s limited example of a two-actor game in …
+
+43. The complexity dilemma: Three tips for dealing with complexity in organizations
+   https://air.uniud.it/handle/11390/1128183
+   (AF De Toni, G De Zan - Emergence, 2016 - air.uniud.it | 2016 | cited by 20)
+   [PDF] https://air.uniud.it/bitstream/11390/1128183/4/Pre-print%20The%20complexity%20dilemma%20-%20Three%20tips%20for%20dealing%20with%20complexity%20in%20organizations.pdf
+   … option can be traced back to Ashby’s Law of Requisite Variety, … first option can be traced back to Ashby’s Law of Requisite … “only variety can destroy variety”, so that only complexity can …
+
+44. The need for requisite variety to support growth: an organizational life cycle perspective
+   https://www.emerald.com/jsma/article/11/2/241/247543
+   (R Palumbo, R Manna - Journal of Strategy and Management, 2018 - emerald.com | 2018 | cited by 11)
+   … 207), the law of requisite variety is based on the assumption that “[…] variety can destroy variety.” In other words, a … Ross Ashby’s ‘Variety, Constraint and Law of Requisite Variety’ …
+
+45. Complexity: learning to muddle through
+   https://link.springer.com/article/10.1007/s10111-011-0201-8
+   (JM Flach - Cognition, Technology & Work, 2012 - Springer | 2012 | cited by 101)
+   [PDF] https://www.academia.edu/download/94299913/flach_muddling_2012.pdf
+   … (or requisite variety) of complex work domains and the implications for control. Following the insights of Ashby’s law of requisite variety, … or manage complexity (ie, that destroy variety). I …
+
+46. Complex versus complicated: the
+   https://www.researchgate.net/profile/Markus-Schwaninger/publication/220626159_Complex_versus_complicated_The_how_of_coping_with_complexity/links/56f53c8608ae38d710a0d389/Complex-versus-complicated-The-how-of-coping-with-complexity.pdf
+   (M Schwaninger - researchgate.net)
+   [PDF] https://www.researchgate.net/profile/Markus-Schwaninger/publication/220626159_Complex_versus_complicated_The_how_of_coping_with_complexity/links/56f53c8608ae38d710a0d389/Complex-versus-complicated-The-how-of-coping-with-complexity.pdf
+   … Originality/value – This contribution sheds light on misinterpretations of Ashby's law of requisite variety. The insights derived from the analysis can help real-life organizations to avoid …
+
+47. Law of requisite variety in practice: assessing the match between risk and actors' contribution to resilient performance
+   https://www.sciencedirect.com/science/article/pii/S092575352200234X
+   (VB Bertoni, TA Saurin, FS Fogliatto - Safety science, 2022 - Elsevier | 2022 | cited by 10)
+   … The law of requisite variety (LRV) posits that the variety of the regulated process should match the variety of the controller. However, the LRV is hardly operationalized and lacks …
+
+48. Materials: engineering, science, processing and design
+   https://books.google.com/books?hl=en&lr=&id=6nt8DwAAQBAJ&oi=fnd&pg=PP1&dq=Ashby+requisite+variety+law+only+variety+can+destroy+variety&ots=9oFsx_CH5B&sig=FlArn-uUwavFEfruoSNoazHcJWM
+   (MF Ashby, H Shercliff, D Cebon - 2018 - books.google.com | 2018 | cited by 1549)
+   … The ruler will fracture suddenly before it acquires a permanent bend. We think of materials that break in this way as brittle, and materials that deform and resist fracture as tough. If there …
+
+49. Trends of E-education in the Context of Cybernetics Laws
+   https://www.sciencedirect.com/science/article/pii/S1877042815061029
+   (A Gushchin, M Divakova - Procedia-Social and Behavioral Sciences, 2015 - Elsevier | 2015 | cited by 20)
+   [PDF] https://www.sciencedirect.com/science/article/pii/S1877042815061029/pdf?md5=b90ba14c851cccb38a20f066902198eb&pid=1-s2.0-S1877042815061029-main.pdf
+   … law of requisite variety must be observed. Observance of the … formulation made by Ashby himself states: “the variety in the … of the learner’s reactions variety destroys the entire system of e…
+
+50. Life, Viability, and the Art of Keeping One's Balance
+   https://link.springer.com/chapter/10.1007/978-3-030-12014-6_1
+   (W Lassl - The Viability of Organizations Vol. 1: Decoding the" …, 2019 - Springer | 2019 | cited by 1)
+   … it or, even worse, destroyed it. In many instances, this … be controlled with at least requisite variety (ie, the same … We encounter Ashby’s Law also in the field of personal working methods: …
+
+51. EXTREME EVENTS, POWER LAWS, AND ADAPTATION: TOWARDS AN ECONOPHYSICS OF ORGANIZATION.
+   https://journals.aom.org/doi/abs/10.5465/ambpp.2007.26516223
+   (M Boisot, B McKelvey - Academy of Management Proceedings, 2007 - journals.aom.org | 2007 | cited by 26)
+   … His Law of Requisite Variety states that “only variety can destroy … can no longer afford. We draw on Ross Ashby’s (1956) classic Law of Requisite Variety to see how an intelligent system …
+
+52. Application of cybernetics to manufacturing flexibility: a systems perspective
+   https://www.emerald.com/insight/content/doi/10.1108/17410380610639489/full/pdf
+   (J Scala, L Purdy, F Safayeni - Journal of Manufacturing Technology …, 2006 - emerald.com | 2006 | cited by 39)
+   … variety due to the disturbance; only variety can destroy … Ashby’s Law of requisite variety and the organizational literature on environment and the manufacturing literature on flexibility will …
+
+53. ONE ARCHITECTURE, THREE DESCRIPTIONS
+   https://ihri.edu.eu/wp-content/uploads/2026/05/Hodgers-2026-ONE-ARCHITECTURE-THREE-DESCRIPTIONS-3.pdf
+   (A Hodgers - ihri.edu.eu)
+   [PDF] https://ihri.edu.eu/wp-content/uploads/2026/05/Hodgers-2026-ONE-ARCHITECTURE-THREE-DESCRIPTIONS-3.pdf
+   … Ashby's Law of Requisite Variety and the Conant-Ashby Theorem , provides the theoretical foundation. The AI Act's essential requirements … review violates Ashby's Law and destroys the …
+
+54. In anticipation of black swans
+   https://link.springer.com/chapter/10.1007/978-3-319-61967-5_7
+   (R Espejo - Social dynamics in a systems perspective, 2017 - Springer | 2017 | cited by 3)
+   [PDF] https://www.researchgate.net/profile/Raul-Espejo-2/publication/364209603_2017_In_anticipation_of_Black_Swans_SocialDynamicsinaSystemsPerspective/links/633ee795ff870c55ce069816/2017-In-anticipation-of-Black-Swans-Social-Dynamics-in-a-Systems-Perspective.pdf#page=128
+   … can be too high. In this paper I reflect upon a third strategy aided by Ashby’s Law of Requisite Variety and … Indeed, fragmentation happens when this break down is done without a good …
+
+55. The Law of Requisite Variety
+   https://link.springer.com/chapter/10.1007/978-94-011-0377-0_4
+   (GE Flueckiger - Control, Information, and Technological Change, 1995 - Springer | 1995)
+   … Ashby's law of requisite variety-which is an interpretation of … the variety of disturbances, the only way to reduce the variety of … Or, as he puts it, "[O]nly variety can destroy variety" (Ashby …
+
+56. The viable system model
+   https://www.kybernetik.ch/dwn/Viable_System_Model.pdf
+   (S Beer - Viable Systems Model, Wiley, Chicester, 1989 - kybernetik.ch | 1989 | cited by 77)
+   [PDF] https://www.kybernetik.ch/dwn/Viable_System_Model.pdf
+   … ‘Only variety can destroy variety.’ People have found it … however, I seek only to show how Ashby’s Law was derived, … earlier in discussing Ashby and requisite variety, there must …
+
+57. Applicability of the Law of Requisite Variety in major military system acquisition
+   https://calhoun.nps.edu/bitstreams/affe39d2-32b0-4c62-b2b5-f042f8ad5eec/download
+   (JR Santiago Jr, SR Cusack - 2017 - calhoun.nps.edu | 2017)
+   [PDF] https://calhoun.nps.edu/bitstreams/affe39d2-32b0-4c62-b2b5-f042f8ad5eec/download
+   … approach, the insurgency seeks to break the will of the … Ashby wrote the Law of Requisite Variety in 1956, it was only a portion of the work he was publishing on cybernetics. WR Ashby’s …
+
+58. The Limits of Control, or How I Learned to Stop Worrying and Love Regulation (Discussion)
+   https://pdxscholar.library.pdx.edu/systems_science_seminar_series/22/
+   (J Hughes - 2010 - pdxscholar.library.pdx.edu | 2010)
+   … Law of Requisite Variety, Ashby proved that to control a system we need as much variability in our regulator as we have in our system (“only variety can destroy variety”), … of a new law or …
+
+59. Principles of Systems and Cybernetics: an evolutionary perspective
+   https://pespmc1.vub.ac.be/Papers/PrinciplesCybSys.pdf
+   (F Heylighen - Cybernetics and systems, 1992 - pespmc1.vub.ac.be | 1992 | cited by 246)
+   [PDF] https://pespmc1.vub.ac.be/Papers/PrinciplesCybSys.pdf
+   … domain, such as the law of requisite variety, or the principle that … A similar principle was proposed by Ashby in his Principles of … Indeed the underlying “only variety can destroy variety” …
+
+60. Requisite variety in ethical utility functions for AI value alignment
+   https://arxiv.org/abs/1907.00430
+   (NM Aliman, L Kester - arXiv preprint arXiv:1907.00430, 2019 - arxiv.org | 1907 | cited by 36)
+   [PDF] https://arxiv.org/pdf/1907.00430
+   … , 1961] states that “only variety can destroy variety”, with … act w that contributes to the wellbeing of a human patient P with A … Conant and W Ross Ashby. Every good regulator of a system …
+
+61. Integrative systems methodology: heuristic for requisite variety
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1475-3995.1997.tb00068.x
+   (M Schwaninger - International Transactions in Operational …, 1997 - Wiley Online Library | 1997 | cited by 67)
+   [PDF] https://www.alexandria.unisg.ch/bitstreams/7d9f49a5-7047-412e-93ea-d7f40175749a/download
+   … complex issues meet Ashby's law of requisite variety* better than the non-systemic ones. In Section 2, a brief overview on the state of the art of systemic problem solving will be given …
+
+62. Momentum and control: a dynamic of democracy
+   https://www.emerald.com/k/article/35/1-2/76/272679
+   (A Leonard - Kybernetes, 2006 - emerald.com | 2006 | cited by 10)
+   … Beer's Viable System Model and Ashby's Law of Requisite Variety underpin the arguments. … be difficult to rein in and control, and there is much current damage to repair. Will it be …
+
+63. Leveraging environmental correlations: The thermodynamics of requisite variety
+   https://link.springer.com/article/10.1007/s10955-017-1776-0
+   (AB Boyd, D Mandal, JP Crutchfield - Journal of Statistical Physics, 2017 - Springer | 2017 | cited by 58)
+   [PDF] https://arxiv.org/pdf/1609.05353
+   … We mention how Ashby’s law of requisite variety is faithfully … How inputs or ratchets create or destroy these correlations … thermodynamic version of Ashby’s Law of Requisite Variety. …
+
+64. From Requisite Variety to Information Variety through the Information theory the management of viable systems
+   http://www.naplesforumonservice.it/uploads/files/Calabrese,%20Iandolo,%20Bilotta.pdf
+   (M Calabrese, F Iandolo… - Service Dominant logic …, 2011 - naplesforumonservice.it | 2011 | cited by 15)
+   [PDF] http://www.naplesforumonservice.it/uploads/files/Calabrese,%20Iandolo,%20Bilotta.pdf
+   … situation, there are only two choices - increase the variety of the … , Ashby says that only variety can destroy variety (Ashby, 1954… a parallelism with the law of requisite variety by Ashby, we …
+
+65. Self-organisation in human dynamics: the law of requisite vorticity
+   https://researchers.westernsydney.edu.au/en/publications/self-organisation-in-human-dynamics-the-law-of-requisite-vorticit/
+   (V Dimitrov, R Woog - The systemist, 2002 - researchers.westernsydney.edu.au | 2002 | cited by 2)
+   … idea in cybernetics - Ashby's law of Requisite Variety - from the perspective of the … law, "only variety can destroy variety" (Ashby, 1958), that is, control can be obtained only if the variety …
+
+66. Requisite variety for AI security
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6255362
+   (M Muhlert - Available at SSRN 6255362, 2026 - papers.ssrn.com | 6255 | cited by 1)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6255362
+   … : Ashby's Law of Requisite Variety (a system's defence repertoire must match or exceed its disturbance repertoire), Meadows' systems dynamics (distinguishing stocks that accumulate …
+
+67. The viable system model: Its provenance, development, methodology and pathology
+   https://www.tandfonline.com/doi/abs/10.1057/jors.1984.2
+   (S Beer - Journal of the operational research society, 1984 - Taylor & Francis | 1984 | cited by 1518)
+   … Only variety can destroy variety." People have found it … however, I seek only to show how Ashby's Law was derived, … earlier in discussing Ashby and requisite variety, there must …
+
+68. Some thoughts about the hydrogen civilization and the culture development
+   https://www.sciencedirect.com/science/article/pii/S0360319905001382
+   (T Ohta - International journal of hydrogen energy, 2006 - Elsevier | 2006 | cited by 25)
+   … Moreover, Ashby's requisite variety law indicates that the civilization must wear the cloth of … Ashby [12] proposed “Requisite variety law”, which states that only variety can destroy variety. …
+
+69. Managing demand variability using requisite variety for improved workflow and operational performance: the role of manufacturing flexibility
+   https://www.tandfonline.com/doi/abs/10.1080/00207543.2012.748230
+   (D Ojha, RE White, PP Rogers - International Journal of Production …, 2013 - Taylor & Francis | 2013 | cited by 60)
+   … In this study, we use the law of requisite variety to investigate … After developing a requisite variety construct using a … Ashby’s law of requisite variety (Ashby Citation1957) can be …
+
+70. Integrating modernist and postmodernist perspectives on organizations: A complexity science bridge
+   https://journals.aom.org/doi/abs/10.5465/amr.35.3.zok415
+   (M Boisot, B McKelvey - Academy of management review, 2010 - journals.aom.org | 2010 | cited by 433)
+   [PDF] https://www.researchgate.net/profile/Bill-Mckelvey/publication/287423440_Integrating_modernist_and_postmodernist_perspectives_on_organizations_A_complexity_science_bridge/links/58615e1708ae8fce4906f1f1/Integrating-modernist-and-postmodernist-perspectives-on-organizations-A-complexity-science-bridge.pdf
+   … , on complexity science, and in particular on power-law-distributed … readers will see beyond the resulting simplifications. Following this, we draw on Ashby's concept of requisite variety to …
+
+71. Production and operations management's new “requisite variety”
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1937-5956.1992.tb00357.x
+   (RH Hayes - Production and Operations Management, 1992 - Wiley Online Library | 1992 | cited by 26)
+   … can we prepare operations managers for big 0 responsibilities, is suggested by the “law of requisite variety,” first proposed by W. Ross … As Ashby put it, “only variety can destroy variety.” …
+
+72. Functional Analysis of Law of Requisite Variety: Envisioning How Systems Variety Affects Their Resilience Based on FRAM
+   https://www.sciencedirect.com/science/article/pii/S2405896322022571
+   (T Hirose, H Nomoto, Y Michiura, S Iino - IFAC-PapersOnLine, 2022 - Elsevier | 2022 | cited by 2)
+   … Law of Requisite Variety (LoRV) (Ashby, 1956) plays an important role to cope with the growing complexity, variety… of disturbance: VD, and in this sense, variety (VR) can destroy variety (…
+
+73. Connectivity, extremes, and adaptation: A power-law perspective of organizational effectiveness
+   https://journals.sagepub.com/doi/abs/10.1177/1056492610385564
+   (M Boisot, B McKelvey - Journal of Management Inquiry, 2011 - journals.sagepub.com | 2011 | cited by 75)
+   [PDF] https://www.researchgate.net/profile/Bill-Mckelvey/publication/254117950_Connectivity_Extremes_and_Adaptation_A_Power-Law_Perspective_of_Organizational_Effectiveness/links/00b7d52432c57dbf8f000000/Connectivity-Extremes-and-Adaptation-A-Power-Law-Perspective-of-Organizational-Effectiveness.pdf
+   … in terms of Ashby’s law of requisite variety. Variety perceived to be requisite is sensitive to the … We can illustrate this interpretation of Ashby’s law by means of a simple diagram that we …
+
+74. Impact of the Cybernetic Law of Requisite Variety on a Theory of Information Science.
+   https://eric.ed.gov/?id=ED073777
+   (LB Heilprin - 1973 - ERIC | 1973 | cited by 2)
+   [PDF] https://files.eric.ed.gov/fulltext/ED073777.pdf
+   … variety, and the law of requisite variety. The last (stated by Ashby) provides a quantitative approach to system regulation and … picturesquely, we can say that the system is destroyed. …
+
+75. Designing viable social systems: The role of linguistic communication for self‐organization
+   https://www.emerald.com/k/article/40/3-4/559/268676
+   (R Holten, C Rosenkranz - Kybernetes, 2011 - emerald.com | 2011 | cited by 27)
+   … At the heart of the VSM is the application of Ashby's law of requisite variety. The resulting … of Ashby's law of requisite variety: “only variety can destroy variety” (Ashby, 1964, p. 207). …
+
+76. Alpha societies and requisite variety: a projected framework for governance, education, and work in the 21st century
+   https://www.emerald.com/oth/article/23/1/16/317589
+   (GH Kubik - On the Horizon, 2015 - emerald.com | 2015 | cited by 4)
+   [PDF] https://www.researchgate.net/profile/George-Kubik/publication/272406966_Alpha_societies_and_requisite_variety_A_projected_framework_for_governance_education_and_work_in_the_21st_century/links/66e0dc78b1606e24c21f11d0/Alpha-societies-and-requisite-variety-A-projected-framework-for-governance-education-and-work-in-the-21st-century.pdf
+   … Ashby’s Law of Requisite Variety states that successful (ie viable) systems must be as least as complex as their environments. Beer (1975) identified three alternative strategies to …
+
+77. Reading public service co-production through the lenses of requisite variety
+   https://art.torvergata.it/handle/2108/222838
+   (MV Ciasullo, R Palumbo, O Troisi - International Journal of …, 2017 - art.torvergata.it | 2017 | cited by 32)
+   [PDF] https://art.torvergata.it/bitstream/2108/222838/1/84efa194bbde252540de348e75439b920a66.pdf
+   … adage “variety can destroy variety” (Ashby, … Requisite variety and the difference that makes a difference: An introduction to W. Ross Ashby’s "variety, constraint and law of requisite variety…
+
+78. Some comments on cybernetics and control
+   https://ieeexplore.ieee.org/abstract/document/4309868/
+   (WJM Kickert, JWM Bertrand… - IEEE Transactions on …, 1978 - ieeexplore.ieee.org | 1978 | cited by 20)
+   [PDF] https://scholar.archive.org/work/kbctdf6255c7potaaxngdwu4li/access/wayback/https://pure.tue.nl/ws/files/3352000/588941.pdf
+   … The law of requisite variety states that the capacity of a device as … Ashby's words: "only variety in the regulator can force down the variety due to the disturbances; only variety can destroy …
+
+79. Only behaviour can destroy behaviour: A useful behavioural interpretation of Ashby?
+   https://journals.isss.org/index.php/jisss/article/view/3844
+   (J Bryant - Journal of the International Society for the Systems …, 2021 - journals.isss.org | 2021 | cited by 1)
+   [PDF] https://journals.isss.org/index.php/jisss/article/download/3844/1192
+   … I began with an examination and visualisation of Ashby’s Law of Requisite Variety and … Ashby’s Law of Requisite Variety is applied to biological systems that the concept of ‘variety’ …
+
+80. THE ARCHITECTURE OF REQUISITE VARIETY: An Empirical Application of Managerial Cybernetics to the Organization of Socio‐Economic Enterprises and their …
+   https://www.emerald.com/insight/content/doi/10.1108/eb005419/full/pdf
+   (EA Lowe, AM Tinker - Kybernetes, 1976 - emerald.com | 1976 | cited by 15)
+   … may be related to Ashby's law of . requisite variety in that if the purpose of the control system … : ie the need for sufficient variety in choices to "kill" environmental variety and maintain …
+
+81. Ethical regulators and super-ethical systems
+   https://www.mdpi.com/2079-8954/8/4/53
+   (M Ashby - Systems, 2020 - mdpi.com | 2020 | cited by 42)
+   … with the law of requisite variety and seven other requisites that are necessary and sufficient for … is ethically inadequate should be treated like a bomb that could destroy our planet. Even …
+
+82. A Systematic Approach to Prioritizing Weapon System Requirements and Military Operations through Requisite Variety
+   https://apps.dtic.mil/sti/html/tr/ADA371943/
+   (DB Bushey, ME Nissen - 1999 - apps.dtic.mil | 1999 | cited by 4)
+   [PDF] https://apps.dtic.mil/sti/tr/pdf/ADA371943.pdf
+   … could be developed not only to shoot artillery fire, but also to destroy enemy aircraft and … and military operations through requisite variety. This framework takes Ashby's Law, a relatively …
+
+83. A SYSTEMATIC APPROACH TO PRIORITIZING WEAPON SYSTEM REQUIREMENTS AND MILITARY OPERATIONS THROUGH REQUISITE VARIETY
+   https://apps.dtic.mil/sti/pdfs/ADA364058.pdf#page=6
+   (M OPERATIONS - ACQUISITION - apps.dtic.mil)
+   [PDF] https://apps.dtic.mil/sti/pdfs/ADA364058.pdf#page=6
+   … could be developed not only to shoot artillery fire, but also to destroy enemy aircraft and … and military operations through requisite variety. This framework takes Ashby's Law, a relatively …
+
+84. The Dynamics of IT Workaround Practices-A Theoretical Concept and an Empirical Assessment
+   https://pdfs.semanticscholar.org/9e6e/49877c177efe451abc37d3354f751dd3e31b.pdf
+   (A Alojairi - … Journal of Advanced Computer Science and …, 2017 - pdfs.semanticscholar.org | 2017 | cited by 20)
+   [PDF] https://pdfs.semanticscholar.org/9e6e/49877c177efe451abc37d3354f751dd3e31b.pdf
+   … development draws from Ashby‟s Law of Requisite Variety – to formulate the … destroyed) in order to regulate the output. However, while ERP systems produce this requisite variety…
+
+85. Education as cybernetic system
+   https://ieeexplore.ieee.org/abstract/document/6165724/
+   (J Liguš, J Ligušová, J Sarnovský… - 2011 Proceedings of …, 2011 - ieeexplore.ieee.org | 2011 | cited by 9)
+   [PDF] https://www.researchgate.net/profile/Taras-Danko/publication/241627255_Internationalizing_educational_institutions_with_E-technologies_Concepts_and_obstacles/links/5f7c5408458515b7cf6a38a3/Internationalizing-educational-institutions-with-E-technologies-Concepts-and-obstacles.pdf#page=180
+   … The variety and Ashby’s law of requisite variety is explained and applied to education … variety in its environment through regulation. Only variety (in the regulator) can destroy variety. It …
+
+86. Service Systems and Requisite Variety Purpose
+   https://naplesforumonservice.com/wp-content/uploads/2021/02/GODSIFF_SERVICE-SYSTEMS-AND-REQUISITE-VARIETY.pdf
+   (P Godsiff - naplesforumonservice.com)
+   [PDF] https://naplesforumonservice.com/wp-content/uploads/2021/02/GODSIFF_SERVICE-SYSTEMS-AND-REQUISITE-VARIETY.pdf
+   … of Ashby‟s Law of Requisite Variety and its implications. Generally stated and understood as „only variety can destroy variety” (Ashby, … of variety and the Law of Requisite Variety. An …
+
+87. Management Cybernetics
+   
+   (T Gill - Phrontis Limited, 1998 | 1998 | cited by 5)
+
+88. Designing a viable organization structure
+   https://www.sciencedirect.com/science/article/pii/0024630195000658
+   (J Brocklesby, S Cummings - Long range planning, 1996 - Elsevier | 1996 | cited by 159)
+   [PDF] https://www.researchgate.net/profile/Stephen-Cummings-3/publication/223127761_Designing_a_viable_organization_structure/links/5a775eb6aca2722e4df10330/Designing-a-viable-organization-structure.pdf
+   … Of particular importance are the cybernetic concepts of variety and requisite variety. … Ross Ashby's 'Law of Requisite Variety' states that 'only variety can destroy variety'. This …
+
+89. Co-evolution Path Model (CePM): sustaining enterprises as complex systems on the edge of chaos
+   https://www.tandfonline.com/doi/abs/10.1080/01969722.2014.945315
+   (H Kandjani, M Tavana, P Bernus… - Cybernetics and …, 2014 - Taylor & Francis | 2014 | cited by 11)
+   [PDF] https://research-repository.griffith.edu.au/bitstreams/9b4e395c-5fc9-5eb3-801b-c864b7842eae/download
+   … In our model of coevolution, we demonstrate the dynamic sustenance of requisite variety based on Ashby's law: “only variety can destroy variety” (Ashby Citation1956). As paraphrased …
+
+90. Convergence in natural, social, and technical systems: A critique
+   https://www.jstor.org/stable/24105075
+   (RA Hedley - Current Science, 2000 - JSTOR | 2000 | cited by 13)
+   … , and children killed as a direct cient to destroy all crops. … In addition, in terms of Ashby's law of requisite beings exist. … variety, I will attempt to assess the potential effects and (ie organic […
+
+91. Special operations forces: a global immune system?
+   https://link.springer.com/chapter/10.1007/978-3-319-96661-8_50
+   (J Norman, Y Bar-Yam - International Conference on Complex Systems, 2018 - Springer | 2018 | cited by 8)
+   [PDF] https://arxiv.org/pdf/1602.05474
+   … increase would provide guidance as to the contexts in which SOF can … Ashby’s law of requisite variety provides a scientific … outcomes—or as Ashby put it: “variety destroys variety”. This …
+
+92. Education for Cybernetic Enlightenment.
+   https://cepa.info/fulltexts/1286.doc
+   (B Scott - Cybern. Hum. Knowing, 2014 - cepa.info | 2014 | cited by 21)
+   … 206) Law of Requisite Variety that states, “Only variety can destroy variety”, and his … Ashby considers the ability to manage or control variety to be an operational definition of ‘intelligence…
+
+93. Algebraic formulation of relationship between a goal seeking system and its environment
+   https://www.tandfonline.com/doi/abs/10.1080/03081078608934942
+   (K Kijima, Y TAKAHARA, B NAKANO - International Journal of …, 1986 - Taylor & Francis | 1986 | cited by 11)
+   … , mainly based on Ashby's Law of Requisite Variety, to develop … claims that "only the variety can destroy the variety". Although … will investigate, mainly based on Ashby's Law of Requisite …
+
+94. an evolutionary perspective
+   https://books.google.com/books?hl=en&lr=&id=PtBKDwAAQBAJ&oi=fnd&pg=PA3&dq=Ashby+requisite+variety+law+only+variety+can+destroy+variety&ots=N9YKslrjjF&sig=wE71jskgYYWBI7wvipfJFas6jsg
+   (F HEYLIGHEN - … And Systems Research'92-Proceedings Of The …, 1992 - books.google.com | 1992)
+   … Others, such as the law of requisite variety , the 2nd law of … neguentropy or organization that Ashby calls the process self-… Indeed the underlying" only variety can destroy variety " …
+
+95. Requisite variety theory and third‐party guarantee loans: How local bank branches can reduce loan defaults
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/mde.3993
+   (PC Patel - Managerial and Decision Economics, 2024 - Wiley Online Library | 2024 | cited by 2)
+   … 2016), we focus on how local branches can manage internal knowledge through the law of requisite … Third, according to Ashby's LRV, only variety can destroy variety. This means that to …
+
+96. Governance and meta-governance in the face of complexity: On the roles of requisite variety, reflexive observation, and romantic irony in participatory governance
+   https://link.springer.com/chapter/10.1007/978-3-663-11005-7_2
+   (B Jessop - Participatory governance in multi-level context …, 2002 - Springer | 2002 | cited by 278)
+   [PDF] https://www.academia.edu/download/78820881/Governance_Governance_Failure_and_Meta-G20220115-20959-1cqv0dp.pdf
+   … and/or social entropy would soon break down any predefined … Because of the infinite variety of perturbations that could … also respect what can be defmed as "the law of requisite irony". …
+
+97. Elements of a cybernetic epistemology: decisions, control and principles of societal organization
+   https://www.emerald.com/insight/content/doi/10.1108/03684920810851005/full/pdf
+   (H Nechansky - Kybernetes, 2008 - emerald.com | 2008 | cited by 23)
+   … systems, and Ashby’s Law of requisite variety are repeatedly … In the following, we will introduce Ashby’s Law to explain the … The conflict may be suppressed for some time, but will break …
+
+98. Inter‐organizational sensemaking in the face of strategic meta‐problems: Requisite variety and dynamics of participation
+   https://sms.onlinelibrary.wiley.com/doi/abs/10.1002/smj.2723
+   (D Seidl, F Werle - Strategic Management Journal, 2018 - Wiley Online Library | 2018 | cited by 276)
+   [PDF] https://www.researchgate.net/profile/David-Seidl-2/publication/321111188_Inter-organizational_sensemaking_in_the_face_of_strategic_meta-problems_Requisite_variety_and_dynamics_of_participation/links/5a251c97a6fdcc8e86691d3a/Inter-organizational-sensemaking-in-the-face-of-strategic-meta-problems-Requisite-variety-and-dynamics-of-participation.pdf
+   … Referring to the “law of requisite variety,” which Conant and Ashby (1970) described in their … ’ interests, the collaboration will break down and the participants will probably disperse or try …
+
+99. Command and control in the Fleet Battle Group: an organizational approach
+   https://calhoun.nps.edu/bitstream/handle/10945/21712/commandcontrolin00kenn.pdf?sequence=1
+   (AL Kennedy - 1986 - calhoun.nps.edu | 1986)
+   [PDF] https://calhoun.nps.edu/bitstream/handle/10945/21712/commandcontrolin00kenn.pdf?sequence=1
+   … By applying Ashby's theory of requisite variety and lintzberg's five coordinating mechanisms, … Ashby first postulated the law of requisite variety in hisAn Introduction to Cybernetics . First, …
+
+100. Building a model of researching the sustainable entrepreneurship in the tourism sector
+   https://www.emerald.com/k/article/43/3-4/377/271749
+   (K Crnogaj, M Rebernik, B Bradac Hojnik… - Kybernetes, 2014 - emerald.com | 2014 | cited by 210)
+   [PDF] https://www.researchgate.net/profile/Miroslav-Rebernik/publication/263338263_Building_a_model_of_researching_the_sustainable_entrepreneurship_in_the_tourism_sector/links/559e39b708aeb45d1715ff68/Building-a-model-of-researching-the-sustainable-entrepreneurship-in-the-tourism-sector.pdf
+   … have sufficient variety to provide valuable results. We did not use Ashby's law to investigate … The multilevel model in our paper based on the principle of requisite variety considers …
+
+===== Query 4/6: Stafford Beer Viable System Model variety engineering =====
+
+1. The viable system model: Its provenance, development, methodology and pathology
+   https://www.tandfonline.com/doi/abs/10.1057/jors.1984.2
+   (S Beer - Journal of the operational research society, 1984 - Taylor & Francis | 1984 | cited by 1518)
+   It took the author 30 years to develop the Viable System Model, which sets out to explain how systems are viable-that is, capable of independent existence. He wanted to elucidate the laws of viability in order to facilitate the management task, and did so in a stream of papers and two (of his seven) books. Much misunderstanding about the VSM and its use seems to exist; especially its methodological foundations have been largely forgotten, while its major results have hardly been noted. This paper reflects on the history, nature and …
+
+2. The viable system model
+   https://www.kybernetik.ch/dwn/Viable_System_Model.pdf
+   (S Beer - Viable Systems Model, Wiley, Chicester, 1989 - kybernetik.ch | 1989 | cited by 77)
+   [PDF] https://www.kybernetik.ch/dwn/Viable_System_Model.pdf
+   It took the author 30 years to develop the Viable System Model, which sets out to explain how systems are viable–that is, capable of independent existence. He wanted to elucidate the laws of viability in order to facilitate the management task, and did so in a stream of papers and three (of his ten) books. Much misunderstanding about the VSM and its use seems to exist; especially its methodological foundations have been largely forgotten, while its major results have hardly been noted. This paper reflects on the history, nature and …
+
+===== Query 5/6: requisite variety information theory regulation control =====
+
+1. Requisite variety and its implications for the control of complex systems
+   https://link.springer.com/chapter/10.1007/978-1-4899-0718-9_28
+   (WR Ashby - Facets of systems science, 1991 - Springer | 1991 | cited by 2058)
+   [PDF] http://pespmc1.vub.ac.be/books/AshbyReqVar.pdf
+   … Since the law of requisite variety uses concepts more primitive than those used by entropy, I … I suggest that recognition of the limitation implied by the law of requisite variety may, in time, …
+
+2. Variety, constraint, and the law of requisite variety
+   https://www.taylorfrancis.com/chapters/edit/10.4324/9781315130569-19/variety-constraint-law-requisite-variety-ross-ashby
+   (WR Ashby - Systems research for behavioral science, 2017 - taylorfrancis.com | 2017 | cited by 315)
+   … Only after the new subject has been sufficiently developed will we begin to consider any relation it may have to regulation. Play and outcome. Let us therefore forget all about regulation …
+
+3. Variety, constraint, and the law of requisite variety
+   https://search.proquest.com/openview/34512d5e51782023fac55bb07c8b77fc/1?pq-origsite=gscholar&cbl=28203
+   (WR Ashby, J Goldstein - Emergence: Complexity and …, 2011 - search.proquest.com | 2011 | cited by 131)
+   … , ..., if each successive unit is treated as a distinct bit of information, then the variety is high (see Wikipedia, Entropy -information theory). However, the same sequence, of any length, can …
+
+4. An information-theoretical approach to regulation
+   https://www.tandfonline.com/doi/abs/10.1080/0020718508961147
+   (S ENGELL - International Journal of Control, 1985 - Taylor & Francis | 1985 | cited by 11)
+   … This approach is much more oriented towards real control … theory, the requisite variety of the controller and the requisite information from the measurements which are necessary for a …
+
+5. An Information Theoretic Approach to Regulation Systems
+   https://academic.oup.com/imamci/article-abstract/5/2/85/662287
+   (MG SABOURIN, PE CAINES - … Control and Information, 1988 - academic.oup.com | 1988)
+   … the regulation problem. In this paper, we reformulate the Law of Requisite Variety and investigate the … between Optimal (Minimum Variance) Control and the Law of Requisite Variety. A …
+
+6. The Law of Requisite Variety
+   https://link.springer.com/chapter/10.1007/978-94-011-0377-0_4
+   (GE Flueckiger - Control, Information, and Technological Change, 1995 - Springer | 1995)
+   … Theories can be built around "the law of requisite variety" … conditions of a stressed communication/control system. … subjects of regulation, self-organization, and communication …
+
+7. Temporal Constraints on Requisite Variety: Feedback Horizon Mismatch and the Collapse of Effective Regulatory Variety
+   https://philpapers.org/rec/TAZTCO-2
+   (R Tazetdinov - philpapers.org)
+   [PDF] https://philarchive.org/archive/TAZTCO-2
+   … Theory Ashby’s Law of Requisite Variety established that effective regulation requires sufficient variety within the regulator relative to the regulated system (Ashby, 1956). Classical …
+
+8. Principles of regulation and control
+   https://www.emerald.com/k/article/7/1/19/267643
+   (D Sahal - Kybernetes, 1978 - emerald.com | 1978 | cited by 6)
+   … of communication in regulation and control. … Requisite Variety" (LRV), so named after its author. Essentially, Ashby's law states that control of a system requires at least as great a variety …
+
+9. Complexity matching and requisite variety
+   https://arxiv.org/abs/1806.08808
+   (K Mahmoodi, BJ West, P Grigolini - arXiv preprint arXiv:1806.08808, 2018 - arxiv.org | 1806 | cited by 20)
+   [PDF] https://arxiv.org/pdf/1806.08808
+   … cognition and information and writes: “Just like Buddhist philosophy, information theory and … traditionally by physics), but centered on information, which can represent object, subject, …
+
+10. Giving requisite variety to strategic and implementation processes: theory and practice
+   https://www.researchgate.net/profile/Raul-Espejo-2/publication/228772758_Giving_Requisite_Variety_to_Strategic_and_Implementation_Processes_Theory_and_Practice/links/54dc62170cf28d3de65f9f6e/Giving-Requisite-Variety-to-Strategic-and-Implementation-Processes-Theory-and-Practice.pdf
+   (R Espejo - … Symposium on Knowledge and Systems Sciences …, 2000 - researchgate.net | 2000 | cited by 52)
+   [PDF] https://www.researchgate.net/profile/Raul-Espejo-2/publication/228772758_Giving_Requisite_Variety_to_Strategic_and_Implementation_Processes_Theory_and_Practice/links/54dc62170cf28d3de65f9f6e/Giving-Requisite-Variety-to-Strategic-and-Implementation-Processes-Theory-and-Practice.pdf
+   … the balance identified by the Law of Requisite Variety. However, this process is often misunderstood because the concept of 'matching variety with variety' is usually treated like a boxing …
+
+11. Multiscale variety in complex systems
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/cplx.20014
+   (Y Bar‐Yam - Complexity, 2004 - Wiley Online Library | 2004 | cited by 285)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1002/cplx.20014
+   … To further formalize the Multiscale Law of Requisite Variety to arbitrary coordination, we use an information theory framework that can represent any order of correlations between …
+
+12. Impact of the Cybernetic Law of Requisite Variety on a Theory of Information Science.
+   https://eric.ed.gov/?id=ED073777
+   (LB Heilprin - 1973 - ERIC | 1973 | cited by 2)
+   [PDF] https://files.eric.ed.gov/fulltext/ED073777.pdf
+   … : variety, and the law of requisite variety. The last provides a quantitative approach to system regulation and control. IS concerns … Information theory and cybernetics are founded on it. …
+
+13. Requisite variety, autopoiesis, and self-organization
+   https://www.emerald.com/k/article/44/6-7/866/265299
+   (C Gershenson - Kybernetes, 2015 - emerald.com | 2015 | cited by 107)
+   [PDF] https://arxiv.org/pdf/1409.7475
+   … Requisite variety Ashby’s law of requisite variety states that an active controller must contain as much variety as the phenomenon it attempts to control (Ashby, 1956). This is because if …
+
+14. Adaptable approach to governance, cooperation and coordination: A conceptual framework of the Law of Requisite Variety in large complex projects
+   https://researchportal.lsbu.ac.uk/en/publications/adaptable-approach-to-governance-cooperation-and-coordination-a-c/
+   (M El Tannir, G Mills, J Kalra - … Academy of Management …, 2021 - researchportal.lsbu.ac.uk | 2021 | cited by 4)
+   [PDF] https://researchportal.lsbu.ac.uk/files/19638443/LRVMTEURAM21.pdf
+   … Accordingly, this paper introduces the concept of the law of requisite variety (LRV) as a … a variety engineering process that operationalize the use of those theories interchangeably. …
+
+15. A Capacity-Based Theory of Complexity Control in Megaprojects: Structural Demands, Regulatory Capacity, and Ashby's Law of Requisite Variety
+   https://osf.io/preprints/socarxiv/3hdn5
+   (M Huemmer - 2026 - osf.io | 2026)
+   … This article develops a capacity-based theory of complexity control through a theory-… when the structural variety generated by the project system exceeds the regulatory variety available …
+
+16. … Signal Fidelity: A Critical Analysis of Floridi's Certainty-Scope Conjecture through the Lens of Ashby's Law of Requisite Variety and Semantic Information Theory
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5538561
+   (M Lissack - Available at SSRN 5538561, 2025 - papers.ssrn.com | 5538 | cited by 2)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5538561
+   … Ross Ashby's established Law of Requisite Variety. … their theoretical foundations and philosophical implications. The paper argues that Floridi's grounding in Shannon information theory …
+
+17. Transcomputability,(Glanville's corollary of) Ashby's law of requisite variety and epistemic processes
+   https://www.emerald.com/k/article/48/4/793/449810
+   (T Fischer - Kybernetes, 2019 - emerald.com | 2019 | cited by 19)
+   [PDF] https://www.emerald.com/k/article-pdf/48/4/793/2843117/k-11-2017-0457.pdf
+   … Efficient control depends on requisite variety between the controller and the controlled (the … A surplus of variety on one side of a potential control relationship may be constrained …
+
+18. Application of law of requisite variety in inter-organizational information processing management
+   https://ieeexplore.ieee.org/abstract/document/4679399/
+   (G Qu, X Bao - 2008 4th International Conference on Wireless …, 2008 - ieeexplore.ieee.org | 2008 | cited by 3)
+   … to choose the best information processing mechanisms. The purpose of this paper was applying Ashby’s law of requisite variety to find potential solutions to aforementioned issues. …
+
+19. Generalization of Law of Requisite Variety
+   https://link.springer.com/chapter/10.1007/978-981-16-9937-5_2
+   (K Kijima - … in Honor of Yasuhiko Takahara on Systems Theory …, 2022 - Springer | 2022 | cited by 1)
+   … and formulate Ashby’s Law of Requisite Variety in the context of a goal seeking system and its relevant environment in the framework of logico-mathematical general systems theory. …
+
+20. Problematizing fit and survival: transforming the law of requisite variety through complexity misalignment
+   https://journals.aom.org/doi/abs/10.5465/amr.2014.0073
+   (K Poulis, E Poulis - Academy of Management Review, 2016 - journals.aom.org | 2016 | cited by 67)
+   [PDF] https://repository.mdx.ac.uk/download/48fb9a6e6f003ffd72937b84f260ce5192378ee7b26e66ffbd7cfb6df8d60bad/856857/Poulis%20%20Poulis%20MDX%202.pdf
+   … The law of requisite variety is widely employed in management theorizing and is linked with core strategy themes such as contingency and fit. We reflect upon requisite variety as an …
+
+21. Complexity and organization-environment relations: Revisiting Ashby's law of requisite variety
+   https://books.google.com/books?hl=en&lr=&id=1gigO0XpXiEC&oi=fnd&pg=PA279&dq=requisite+variety+information+theory+regulation+control&ots=mg6Q4nKv3z&sig=kzdxZVO0o8hI9xMA6sn_gY0MpOU
+   (M Boisot, B McKelvey - … of complexity and management, 2011 - books.google.com | 2011 | cited by 209)
+   … a first social science application of Ashby’s Law of Requisite Variety (1956): an adaptive system survives to the extent that the variety it generates matches that of the environment it finds …
+
+22. Viability, sustainability and non-requisite variety
+   https://www.academia.edu/download/83345864/JS764VQ05.pdf
+   (L LAVANDEROS - Journal of Systemics, Cybernetics and Informatics, 2019 - academia.edu | 2019 | cited by 20)
+   … This work introduces the concept of non-requisite variety (NRV) of Viability defined within the model of Relational. Therefore, a methodology is introduced to "measure" the …
+
+23. The information transfer required in regulatory processes
+   https://ieeexplore.ieee.org/abstract/document/4082266/
+   (RC Conant - IEEE Transactions on Systems Science and …, 1969 - ieeexplore.ieee.org | 1969 | cited by 65)
+   … regulatory processes. This study was inspired by Ashby and his law of requisite variety [1], … with S; in the language of information theory, there must be transinformation between R and S…
+
+24. Amplifying regulation and variety increase in evolving systems
+   https://www.tandfonline.com/doi/abs/10.1080/01969727908927610
+   (MU Ben-Eli - Cybernetics and System, 1979 - Taylor & Francis | 1979 | cited by 11)
+   … The selective process that mediates evolution is subject to the laws of control, specifically to the law of requisite variety and to the possibility of amplifying regulation. It operates …
+
+25. Defining and assessing requisite supply chain visibility in regulated industries
+   https://www.emerald.com/jeim/article-abstract/26/3/295/195039
+   (R Klueber, RM O'Keefe - … of Enterprise Information Management, 2013 - emerald.com | 2013 | cited by 73)
+   [PDF] https://www.researchgate.net/profile/Roland-Klueber/publication/263383203_Defining_and_assessing_requisite_supply_chain_visibility_in_regulated_industries/links/580c9b6108aeef1bfeeb6489/Defining-and-assessing-requisite-supply-chain-visibility-in-regulated-industries.pdf?_sg%5B0%5D=started_experiment_milestone&origin=journalDetail&_rtd=e30%3D
+   … the requisite variety that is required to control the complexity of a system. Similarly, RSCV should provide sufficient information to control … cybernetics provides a theoretical basis for what …
+
+26. Regulation: Legal form and economic theory
+   https://books.google.com/books?hl=en&lr=&id=Zt_bBAAAQBAJ&oi=fnd&pg=PR1&dq=requisite+variety+information+theory+regulation+control&ots=0ZbDoIfwXE&sig=tNBTfGjP0l_GrIzaMWLtfMvX88Q
+   (AI Ogus - 2004 - books.google.com | 2004 | cited by 2302)
+   … different regulatory areas. The aim of this book is, then, to classify and explain regulatory forms … Clearly, a theoretical framework is necessary to analyse the goals and to provide some …
+
+27. Understanding regulation: theory, strategy, and practice
+   https://books.google.com/books?hl=en&lr=&id=eAFREAAAQBAJ&oi=fnd&pg=PP1&dq=requisite+variety+information+theory+regulation+control&ots=0HUJC4eq3l&sig=g21Hlxws5M6LKb6FgGlvBaGtlnI
+   (R Baldwin, M Cave, M Lodge - 2011 - books.google.com | 2011 | cited by 5586)
+   … to 'lighter-touch' regulatory systems and regimes that delegate controls to businesses. These … regulation and have stressed the need to adopt minimalist or self-regulatory controls in the …
+
+28. Requisite variety for AI security
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6255362
+   (M Muhlert - Available at SSRN 6255362, 2026 - papers.ssrn.com | 6255 | cited by 1)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6255362
+   … Requisite Variety (a system's defence repertoire must match or exceed its disturbance repertoire), Meadows' systems dynamics (distinguishing stocks that accumulate silently from flows …
+
+29. Designing effective learning systems for management education: Student roles, requisite variety, and practicing what we teach
+   https://journals.aom.org/doi/abs/10.5465/257036
+   (CA Lengnick-Hall, MM Sanders - Academy of management …, 1997 - journals.aom.org | 1997 | cited by 281)
+   … If the concept of requisite variety effectively applied to learning systems, we expected variances in the learning sources scales to be significantly larger than the variances in the outcome …
+
+30. Notes on regulation and control
+   https://www.emerald.com/insight/content/doi/10.1108/eb005523/full/html
+   (AY AULIN‐AHMAVAARA - Kybernetes, 1979 - emerald.com | 1979 | cited by 6)
+   … ideas of Ashby connected with the Law of Requisite Variety are still sound and there is, I think, not much room left for innovations in reinterpreting the basic equations of LRV. But a …
+
+31. The pluralist theory of ethics programs orientations and ideologies: An empirical study anchored in requisite variety
+   https://link.springer.com/article/10.1007/s10551-016-3183-x
+   (JT Martineau, KJ Johnson, TC Pauchant - Journal of Business Ethics, 2017 - Springer | 2017 | cited by 45)
+   … Drawing from the theory of requisite variety, we suggest that these six orientations are not to … in considering the principle of requisite variety in ethics management. This represents, in our …
+
+32. Viability, Sustainability and Non-Requisite Variety
+   https://www.academia.edu/download/76508170/JS764VQ05.pdf
+   (AR Malpartida - 2019 - academia.edu | 2019)
+   … This work introduces the concept of non-requisite variety (NRV) of Viability defined within the model of Relational. Therefore, a methodology is introduced to "measure" the …
+
+33. Applying DSRP to Its Own Institutional Context: A Reflexive Case Study in Closed-Loop Validation Systems and the Absence of Requisite Variety in Self-Referencing …
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6503480
+   (M Lissack - Available at SSRN 6503480, 2026 - papers.ssrn.com | 6503)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6503480
+   … error correction, no independent peer review, and no requisite variety in the sense defined … “discovery” comparable to evolution or information theory was not a service to the framework; …
+
+34. Information-theoretical bounds for regulation accuracy
+   https://ieeexplore.ieee.org/abstract/document/4048350/
+   (S Engell - 1985 24th IEEE Conference on Decision and Control, 1985 - ieeexplore.ieee.org | 1985 | cited by 1)
+   … limits of disturbance reduction in control loops using informationtheoretical concepts is presented. It … and regulation was due to WR Ashby] who formulated the "law of requisite variety". …
+
+35. Expanding infrastructure resilience horizons: safe-to-fail and social-ecological-technological dynamics for requisite variety
+   https://link.springer.com/article/10.1007/s11625-025-01779-4
+   (M Porto, M Chester, Y Kim, G Mascaro… - Sustainability …, 2026 - Springer | 2026 | cited by 2)
+   … Next, we present how the convergence of STF and SETS allows the enhancement of requisite variety of ISs (following the law of requisite variety devised by Ashby (1956), which is …
+
+36. Governance and meta-governance in the face of complexity: On the roles of requisite variety, reflexive observation, and romantic irony in participatory governance
+   https://link.springer.com/chapter/10.1007/978-3-663-11005-7_2
+   (B Jessop - Participatory governance in multi-level context …, 2002 - Springer | 2002 | cited by 278)
+   [PDF] https://www.academia.edu/download/78820881/Governance_Governance_Failure_and_Meta-G20220115-20959-1cqv0dp.pdf
+   … I will comment on each of these in tum, beginning with requisite variety. This need for "requisite variety" (with its informational, structural, and functional redundancies) is based on the …
+
+37. The Limits of Control, or How I Learned to Stop Worrying and Love Regulation (Discussion)
+   https://pdxscholar.library.pdx.edu/systems_science_seminar_series/22/
+   (J Hughes - 2010 - pdxscholar.library.pdx.edu | 2010)
+   … control and how controls may cause new and different problems; this will be the general focus of this seminar. A brief overview of Ashby's Law of Requisite Variety, … in information theory, …
+
+38. The perils of unreasonable risk: Information, regulatory policy, and toxic substances control
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/clr91&section=22
+   (JS Applegate - Colum. l. rEv., 1991 - HeinOnline | 1991 | cited by 259)
+   [PDF] https://www.repository.law.indiana.edu/cgi/viewcontent.cgi?article=1715&context=facpub
+   … control of certain activities, on the other hand, information is a transaction cost of the regulatory … comprehensive regulation of chemicals that previously had been controlled piecemeal …
+
+39. Information theory, gene expression, and combinatorial regulation: a quantitative analysis
+   https://link.springer.com/article/10.1007/s12064-013-0182-7
+   (J Jost, K Scherrer - Theory in Biosciences, 2014 - Springer | 2014 | cited by 12)
+   … Another part of the information is utilized to stabilize the cell state against external fluctuations. According to Ashby’s law of requisite variety [3], the internal variety of the system needs to …
+
+40. Complexity: learning to muddle through
+   https://link.springer.com/article/10.1007/s10111-011-0201-8
+   (JM Flach - Cognition, Technology & Work, 2012 - Springer | 2012 | cited by 101)
+   [PDF] https://www.academia.edu/download/94299913/flach_muddling_2012.pdf
+   … of general systems theory. The focus is on the complexity (or requisite variety) of complex work domains and the implications for control. Following the insights of Ashby’s law of …
+
+41. Requisite variety of expertise within a group in idea generation
+   https://www.academia.edu/download/45064559/Requisite_Variety_of_Expertise_within_a_20160425-14731-evrunh.pdf
+   (A Suominen, J Jussila, H Aramo-Immonen… - academia.edu)
+   [PDF] https://www.academia.edu/download/45064559/Requisite_Variety_of_Expertise_within_a_20160425-14731-evrunh.pdf
+   … , is requisite variety or diversity, ie the … requisite variety of expertise in the idea generation within a group. The main research question of this paper is “What is the role of requisite variety …
+
+42. Analysis of Regulation Problems Based on Real-time Rate-distortion Theory
+   https://ieeexplore.ieee.org/abstract/document/4789629/
+   (S Engell - 1987 American Control Conference, 1987 - ieeexplore.ieee.org | 1987 | cited by 1)
+   … information theory to the analysis of regulation … requisite variety seem to be predominantly philosophically interesting, as they yield a connection between linear geometric control theory …
+
+43. Dissipative enterprises, chaos, and the principles of lean organizations
+   https://www.sciencedirect.com/science/article/pii/S0305048397000674
+   (RA Jenner - Omega, 1998 - Elsevier | 1998 | cited by 152)
+   … employs basic concepts from formal information theory, cybernetic control theory, and self-… “The Law of Requisite Variety”41, 44, 54. In cybernetic theory, information plays a vital role …
+
+44. Organizational buffering: Managing boundaries and cores
+   https://journals.sagepub.com/doi/abs/10.1177/0170840605046348
+   (ML Lynn - Organization studies, 2005 - journals.sagepub.com | 2005 | cited by 177)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2776682
+   … the organization’s requisite variety and continuous or discontinuous environmental change. … Based on the foregoing discussion of buffering paradigms and requisite variety, we propose …
+
+45. The viable systems model applied to a national system of innovation to inform policy development
+   https://link.springer.com/article/10.1007/s10979-005-8485-y
+   (S Devine - Systemic Practice and Action Research, 2005 - Springer | 2005 | cited by 115)
+   [PDF] https://scholar.archive.org/work/qhuxi7ipgzc3hbvhskr36y4v7u/access/wayback/http://ototsky.mgn.ru/it/papers/devine2005.pdf
+   … by focussing on the necessary variety needed to match the … be a trade-off between variety and control for the system to … the generation of the necessary variety, influencing strategic …
+
+46. Organizational culture as a source of high reliability
+   https://journals.sagepub.com/doi/abs/10.2307/41165243
+   (KE Weick - California management review, 1987 - journals.sagepub.com | 1987 | cited by 2604)
+   [PDF] https://www.academia.edu/download/89140647/4116524320220731-1-10jg6l4.pdf
+   … Requisite Variety-As noted, to regulate variety, sensors must be as complex as the system whichthey intend to regulate. … about the development of requisite variety in individuals, but in …
+
+47. Regulation and Control
+   https://www.taylorfrancis.com/chapters/edit/10.4324/9781315130569-42/regulation-control-ashby-ross
+   (AW Ross - Systems Research for Behavioral Science, 2017 - taylorfrancis.com | 2017)
+   … Regulation and Variety … The law of Requisite Variety enables us to apply a measure to regulation. Let us go back and reconsider what is meant, essentially, by “…
+
+48. The new neurology and the biology of emotion: a structural approach.
+   https://psycnet.apa.org/journals/amp/22/10/830/
+   (KH Pribram - American Psychologist, 1967 - psycnet.apa.org | 1967 | cited by 162)
+   … emotion relates information processing and control mechanisms, … of Requisite Variety. According to this view, whenever the organism is operating beyond the bounds of requisite variety …
+
+49. Information theory: structural models for qualitative data
+   https://books.google.com/books?hl=en&lr=&id=h1akwAOzBfIC&oi=fnd&pg=PA11&dq=requisite+variety+information+theory+regulation+control&ots=H1iKR6H1bh&sig=llj3Xd5dUnzIM_ZNcGdVc52NP20
+   (K Krippendorff - 1986 - books.google.com | 1986 | cited by 367)
+   … This volume is motivated by both a renewed interest in qualitative data and recent developments in information theory. Information theory is not merely a convenient statistical tool; it has …
+
+50. Information theory: structural models for qualitative data
+   https://books.google.com/books?hl=en&lr=&id=h1akwAOzBfIC&oi=fnd&pg=PA11&dq=requisite+variety+information+theory+regulation+control&ots=H1iKR6H1bj&sig=xoJ8m7RFW5TlUaPw-XbocQM8E_w
+   (K Krippendorff - 1986 - books.google.com | 1986 | cited by 367)
+   … This volume is motivated by both a renewed interest in qualitative data and recent developments in information theory. Information theory is not merely a convenient statistical tool; it has …
+
+51. Control and Regulation
+   https://link.springer.com/chapter/10.1007/978-1-4899-0676-2_9
+   (JP van Gigch - System Design Modeling and Metamodeling, 1991 - Springer | 1991 | cited by 1)
+   … form as expressed by Information Theory and the mathematical theory of communication (see … The necessary conditions or control are further embodied in the Law of Requisite Variety, …
+
+52. Stakeholder governance: A cybernetic and property rights analysis
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-8683.00035
+   (S Turnbull - Corporate Governance: An International Review, 1997 - Wiley Online Library | 1997 | cited by 186)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=11355
+   … or control centre as found in Japan, Europe, and labour-managed firms. Empirical evidence supports the hypothesis that multi control … by the Law of Requisite Variety and the Williamson …
+
+53. Cybernetics and organization theory: epistemology or technique?
+   https://journals.sagepub.com/doi/abs/10.1177/001872678203500702
+   (G Morgan - Human Relations, 1982 - journals.sagepub.com | 1982 | cited by 124)
+   … classical theory, with principles based on information theory. … management which stands to classical management theory, … As Ashby's law of requisite variety shows, when a control …
+
+54. Modelling the controller of a process
+   https://journals.sagepub.com/doi/abs/10.1177/014233129902100404
+   (E Holinagel - … of the Institute of Measurement and Control, 1999 - journals.sagepub.com | 1999 | cited by 29)
+   … The Law of Requisite Variety simply states that the variety of the … the controller, rather than the controller’s model of the process, since the requisite variety in this case is of the controller’…
+
+55. Stakeholder cooperation
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=26238
+   (S Turnbull - Journal of Cooperative Studies, 1997 - papers.ssrn.com | 1997 | cited by 130)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=26238
+   … information from their environment to exist. Elements of information theory, which is used to design self-regulating … providing requisite variety of information and control for self-regulation. …
+
+56. Cybernetics and second-order cybernetics
+   https://cliffjoslyn.github.io/Docs/HeFJoC03.pdf
+   (F Heylighen, C Joslyn - Encyclopedia of physical science & …, 2001 - cliffjoslyn.github.io | 2001 | cited by 1013)
+   [PDF] https://cliffjoslyn.github.io/Docs/HeFJoC03.pdf
+   … sciences: control theory, computer science, information theory, automata theory, artificial … Control is not only dependent on a requisite variety of actions in the regulator: the regulator …
+
+57. A systems perspective on business model evolution: The case of an agricultural information service provider in India
+   https://www.sciencedirect.com/science/article/pii/S0024630116302102
+   (C Velu - Long Range Planning, 2017 - Elsevier | 2017 | cited by 201)
+   [PDF] https://www.repository.cam.ac.uk/bitstreams/6cb656d6-fa57-4262-864f-6f7ce75d2e9f/download
+   … The three themes are balanced redundancy, requisite variety and cognitive discretion, which enable a firm to achieve congruence between the components of the business model in …
+
+58. The science of corporate governance
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-8683.00291
+   (S Turnbull - Corporate Governance: An International Review, 2002 - Wiley Online Library | 2002 | cited by 116)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=316939
+   … manipulate and transmit information measured in bytes. Cybernetics laws of requisite variety in communication channels, decision-making centres and control agents provide strategies …
+
+59. A calculus for network delay. I. Network elements in isolation
+   https://ieeexplore.ieee.org/abstract/document/61109/
+   (RL Cruz - IEEE Transactions on information theory, 1991 - ieeexplore.ieee.org | 1991 | cited by 3069)
+   [PDF] http://webserver2.tecgraf.puc-rio.br/~vbarata/old/doutorado/MDC/Artigo%20Calculus%20-%20cruz91.pdf
+   … and buffering requirements using … regulation can indeed significantly reduce maximum network delay. Finally, we will analyze (a,p) regulators in series and find that a general regulation …
+
+60. Reducing complexity by creating complexity: A systems theory perspective on how organizations respond to their environments
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/joms.12206
+   (A Schneider, C Wickert, E Marti - Journal of management …, 2017 - Wiley Online Library | 2017 | cited by 407)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111/joms.12206
+   … theory, and why organizations need requisite variety in the first place, we now turn to our main research objectives: to examine how organizations increase their requisite variety by …
+
+61. requisite irony
+   https://books.google.com/books?hl=en&lr=&id=b-qsyhzjf0EC&oi=fnd&pg=PA101&dq=requisite+variety+information+theory+regulation+control&ots=HHTQRBSobD&sig=KnyM-KKx3lYqLRopckp2nNDben0
+   (B Jessop - Governance as social and political communication, 2003 - books.google.com | 2003 | cited by 1218)
+   [PDF] https://www.researchgate.net/profile/Bob-Jessop/publication/241024274_Governance_and_Metagovernance_On_Reflexivity_Requisite_Variety_and_Requisite_Irony1/links/5656279508aefe619b1d1a45/Governance-and-Metagovernance-On-Reflexivity-Requisite-Variety-and-Requisite-Irony1.pdf
+   … 2 Deliberate cultivation of a flexible repertoire (requisite variety) of responses so that strategies and tactics can be combined in order to reduce the likelihood of failure and to be in a …
+
+62. The viable system model: Its provenance, development, methodology and pathology
+   https://www.tandfonline.com/doi/abs/10.1057/jors.1984.2
+   (S Beer - Journal of the operational research society, 1984 - Taylor & Francis | 1984 | cited by 1518)
+   … Monetary controls do not have requisite variety to regulate the economy. The Finance Act … have requisite variety to regulate tax evasion. Police procedures do not have requisite variety …
+
+63. Connectivity, extremes, and adaptation: A power-law perspective of organizational effectiveness
+   https://journals.sagepub.com/doi/abs/10.1177/1056492610385564
+   (M Boisot, B McKelvey - Journal of Management Inquiry, 2011 - journals.sagepub.com | 2011 | cited by 75)
+   [PDF] https://www.researchgate.net/profile/Bill-Mckelvey/publication/254117950_Connectivity_Extremes_and_Adaptation_A_Power-Law_Perspective_of_Organizational_Effectiveness/links/00b7d52432c57dbf8f000000/Connectivity-Extremes-and-Adaptation-A-Power-Law-Perspective-of-Organizational-Effectiveness.pdf
+   … Then, drawing on Ashby’s (1956) law of requisite variety, we partitioned the Ashby response space into chaotic, complex, and ordered regimes. Next, we argue that practitioner-relevant …
+
+64. The theory and practice of government de-regulation
+   https://www.emerald.com/books/edited-volume/15001/chapter-abstract/86142309
+   (S Turnbull - 2008 - emerald.com | 2008 | cited by 24)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=1008453
+   … Stakeholder involvement can be used to introduce a requisite variety of controllers. It also … requisite variety to control complexity and its corollary that it is impossible to directly regulate …
+
+65. The value of information for populations in varying environments
+   https://link.springer.com/article/10.1007/s10955-011-0166-2
+   (O Rivoire, S Leibler - Journal of Statistical Physics, 2011 - Springer | 2011 | cited by 234)
+   [PDF] https://arxiv.org/pdf/1010.5092
+   … and information usually encountered in information theory. … of requisite variety, the mutual information however appears as an upper bound for the value of information for control when …
+
+66. An information processing approach for deciding upon control strategies and reducing control loss in emerging organizations
+   https://www.sciencedirect.com/science/article/pii/S0149206396900148
+   (R Leifer, PK Mills - Journal of Management, 1996 - Elsevier | 1996 | cited by 411)
+   … control of tasks, that is, assuring goal attainment, is the result of linking the information processing (IP) requirements … This is related to the notion of requisite variety (Ashby, 1956) which …
+
+67. The viable system model
+   https://www.academia.edu/download/66393896/The_Viable_System_Model20210421-23961-1bdjst2.pdf
+   (R Espejo, R Harnden - Systems practice, 1990 - academia.edu | 1990 | cited by 377)
+   [PDF] https://www.academia.edu/download/66393896/The_Viable_System_Model20210421-23961-1bdjst2.pdf
+   … management is to continue to steer the organisation, then the Law of Requisite Variety suggests that the variety … , and the variety of responses of management should at least equal that …
+
+68. Replacing intrusive regulation with self-governance
+   https://search.informit.org/doi/pdf/10.3316/ielapa.090282450562565
+   (S Turnbull - Company Director, 2017 - search.informit.org | 2017)
+   … data, information, knowledge and wisdom of what is being reported. • They lack the requisite variety of control … They lack the requisite variety of decision-making centres to reduce data …
+
+69. Systems theory as a foundation for governance of complex systems
+   https://www.inderscienceonline.com/doi/abs/10.1504/IJSSE.2015.068805
+   (K Whitney, JM Bradley, DE Baugh… - International Journal of …, 2015 - inderscienceonline.com | 2015 | cited by 149)
+   [PDF] https://www.researchgate.net/profile/Kaitlynn-Castelle/publication/281017977_Systems_theory_as_a_foundation_for_governance_of_complex_systems/links/55fcc39208aeafc8ac4d97db/Systems-theory-as-a-foundation-for-governance-of-complex-systems.pdf
+   … dependent on meeting requisite variety, which becomes … requisite hierarchy of the system by strengthening regulatory … to maintain desired levels or regulation and control. A system’…
+
+70. Time and time again
+   https://www.tandfonline.com/doi/abs/10.1080/14639220210124111
+   (E Hollnagel - Theoretical Issues in Ergonomics Science, 2002 - Taylor & Francis | 2002 | cited by 160)
+   [PDF] https://www.researchgate.net/profile/Erik-Hollnagel/publication/261692592_Time_and_time_again/links/559c387308ae7f3eb4cfff35/Time-and-time-again.pdf
+   … Following Broadbent’s advice, we, therefore, need to determine the requisite variety that should be modelled. This is fortunately rather easy to do, at least as a first approximation. One …
+
+71. Cognition as control: A pragmatic approach to the modelling of joint cognitive systems
+   https://www.researchgate.net/profile/Erik-Hollnagel/publication/242118181_Cognition_as_control_a_pragmatic_approach_to_the_modelling_of_joint_cognitive_systems_Control_91-23/links/0c960536fd93830c79000000/Cognition-as-control-a-pragmatic-approach-to-the-modelling-of-joint-cognitive-systems-Control-91-23.pdf
+   (E Hollnagel - IEEE Journal of Systems, Man and Cybernetics, 2002 - researchgate.net | 2002 | cited by 132)
+   [PDF] https://www.researchgate.net/profile/Erik-Hollnagel/publication/242118181_Cognition_as_control_a_pragmatic_approach_to_the_modelling_of_joint_cognitive_systems_Control_91-23/links/0c960536fd93830c79000000/Cognition-as-control-a-pragmatic-approach-to-the-modelling-of-joint-cognitive-systems-Control-91-23.pdf
+   … as cybernetics and information theory. As a … Requisite Variety simply states that the variety of the outcomes (of a system) can only be decreased by increasing the variety in the controller …
+
+72. Redundant, overlapping organization: A Japanese approach to managing the innovation process
+   https://journals.sagepub.com/doi/abs/10.2307/41166615
+   (I Nonaka - California management review, 1990 - journals.sagepub.com | 1990 | cited by 786)
+   … requisite variety in semantics as it prescribes the level of redundancy. Ashby's requisite variety concept in organizational theory … will match the volume of information generated in the …
+
+73. The law of requisite hierarchy
+   https://www.emerald.com/k/article-abstract/8/4/259/263904
+   (AY Aulin‐Ahmavaara - Kybernetes, 1979 - emerald.com | 1979 | cited by 76)
+   … Thus a structural condition of the Law of Requisite Variety is the variability of the structure of the self-regulatory system (R,E). We can speak of a Principle of Variable Structure, an …
+
+74. Regulation in the age of governance: The rise of the post-regulatory state
+   https://www.elgaronline.com/downloadpdf/edcollbook/1843764644.pdf#page=161
+   (C Scott - The politics of regulation: Institutions and regulatory …, 2004 - elgaronline.com | 2004 | cited by 753)
+   [PDF] https://researchrepository.ucd.ie/bitstreams/44b9e286-0b2e-4d94-a9c4-4a4eec16d98f/download
+   … The search for greater variety in bases of control is consistent with the ‘law of requisite variety’… that in order to exert effective control, the controller must have at least as much variety in its …
+
+75. Organizational controls and safety: The varieties of rule‐related behaviour
+   https://bpspsychub.onlinelibrary.wiley.com/doi/abs/10.1111/j.2044-8325.1998.tb00678.x
+   (J Reason, D Parker, R Lawton - Journal of occupational and …, 1998 - Wiley Online Library | 1998 | cited by 533)
+   … arise when rules are not … controls will always lack the requisite variety neccssary to guarantee safe behaviour, even if the workforce were scrupulously compliant. Moreover, safcty rules …
+
+76. The Imperative and Benefits of Introducing Outcome Based Privatized Co-Regulation
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1089913
+   (S Turnbull - Available at SSRN 1089913, 2008 - papers.ssrn.com | 1089)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=1089913
+   … ” of regulation. This law creates an … requisite variety of co-regulators. It is the stakeholders of regulatees that can provide the requisite variety of co-regulation required to avoid regulatory …
+
+77. Central problems in the management of innovation
+   https://pubsonline.informs.org/doi/abs/10.1287/mnsc.32.5.590
+   (AH Van de Ven - Management science, 1986 - pubsonline.informs.org | 1986 | cited by 7310)
+   [PDF] https://apps.dtic.mil/sti/tr/pdf/ADA152598.pdf
+   … Requisite variety means placing critical dimensions of the whole environment into the unit, which permits the unit to develop and store rich patterns of information … of requisite variety is …
+
+78. Organizational meta‐scripts as a source of high reliability: the case of an army armored brigade
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/job.216
+   (D Zohar, G Luria - Journal of Organizational Behavior: The …, 2003 - Wiley Online Library | 2003 | cited by 83)
+   … , unless script variety is adjusted to the requisite variety with … with the problem of requisite variety. The discussion so far … cognitive variety in operators to match the requisite variety (…
+
+79. Information sources and the development of decision-making organizations
+   
+   (GA Johnson - Social archaeology: Beyond subsistence …, 1978 - Academic Press New York | 1978 | cited by 177)
+
+80. The viable system model and its application to complex organizations
+   https://link.springer.com/article/10.1007/s11213-009-9126-z
+   (A Leonard - Systemic practice and action research, 2009 - Springer | 2009 | cited by 149)
+   [PDF] https://www.academia.edu/download/86714855/s11213-009-9126-z20220530-1-1l39xuw.pdf
+   … A good model, for the purpose, has requisite variety and captures the salient relationships. An inadequate one lacks requisite variety and misses important aspects of the situation, …
+
+81. Systems thinking on knowledge and its management: systems methodology for knowledge management
+   https://www.emerald.com/insight/content/doi/10.1108/13673270210417646/full/pdf
+   (F Gao, M Li, Y Nakamori - Journal of knowledge management, 2002 - emerald.com | 2002 | cited by 183)
+   … changes by achieving requisite variety. VSD or VSM consisted of five subsystems labeled as: 1) implementation; 2) coordination; 3) control; 4) development; and 5) policy. …
+
+82. Performance management, the nature of regulation and the CyberSyn project
+   https://www.emerald.com/k/article/38/1-2/65/268628
+   (R Espejo - Kybernetes, 2009 - emerald.com | 2009 | cited by 33)
+   [PDF] https://www.researchgate.net/profile/Raul-Espejo-2/publication/220626493_Performance_management_the_nature_of_regulation_and_the_CyberSyn_project/links/565e062d08ae4988a7bd2d1a/Performance-management-the-nature-of-regulation-and-the-CyberSyn-project.pdf
+   … Communications to be effective need actors with requisite variety to challenge the others' … and to challenge each others' views with requisite variety. This is the meaning of having …
+
+83. Modularity theory and Internet regulation
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/unilllr2016&section=5
+   (CS Yoo - U. Ill. L. Rev., 2016 - HeinOnline | 2016 | cited by 79)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2032221
+   … MODULARITY THEORY AND INTERNET REGULATION … to the Law of Requisite Variety. Simply stated, increasing the variety of responses is the only way to force down the variety of …
+
+84. The organisation of integrated communications: toward flexible integration
+   https://www.emerald.com/ejm/article/42/3-4/423/36316
+   (L Thøger Christensen, A Fuat Fırat… - European Journal of …, 2008 - emerald.com | 2008 | cited by 320)
+   [PDF] https://www.researchgate.net/profile/Fuat-Firat/publication/240258105_The_organisation_of_integrated_communications_Toward_flexible_integration/links/5e0507faa6fdcc28374156ff/The-organisation-of-integrated-communications-Toward-flexible-integration.pdf
+   … of requisite variety. Buffering, in other words, is functional to the extent that it fills a gap that the organisation's requisite variety … increases its requisite variety accordingly, the regulation or …
+
+85. Complexity and information systems: The emergent domain
+   https://journals.sagepub.com/doi/abs/10.1057/palgrave.jit.2000081
+   (Y Merali - Journal of Information Technology, 2006 - journals.sagepub.com | 2006 | cited by 218)
+   [PDF] https://journals.sagepub.com/doi/pdf/10.1057/palgrave.jit.2000081
+   … This resonates with Ashby’s law of requisite variety. In the account of networks presented in this paper, the system has the generative capacity to respond to contingencies in the …
+
+86. Information measures of complexity, emergence, self-organization, homeostasis, and autopoiesis
+   https://link.springer.com/chapter/10.1007/978-3-642-53734-9_2
+   (N Fernández, C Maldonado, C Gershenson - Guided self-organization …, 2014 - Springer | 2014 | cited by 172)
+   [PDF] https://arxiv.org/pdf/1304.1842
+   … measures of these concepts in information theory. This approach has several advantages: … law of requisite variety, as a system with a A > 1 must have a higher complexity (variety) than …
+
+87. Regulation and failure
+   https://books.google.com/books?hl=en&lr=&id=wEQ6QGS6sPkC&oi=fnd&pg=PA11&dq=requisite+variety+information+theory+regulation+control&ots=O0JGC5mlkP&sig=p-DygK1HWsNW8lAX7EIA8ZEVqss
+   (J Stiglitz - New perspectives on regulation, 2009 - books.google.com | 2009 | cited by 252)
+   [PDF] https://libros.metabiblioteca.org/server/api/core/bitstreams/b5c6b2cb-b6ae-4919-b5d6-b332b26e7ff4/content#page=11
+   … multiple checks—regulations of both products and institutions, at both the state and federal levels—we make regulatory circumvention and erosion of regulatory controls more difficult. …
+
+88. Managing organizational ethics in the public sector: A pluralist contingency approach as an alternative to the integrity management framework
+   https://www.tandfonline.com/doi/abs/10.1080/10999922.2016.1230688
+   (M Tremblay, JT Martineau, TC Pauchant - Public Integrity, 2017 - Taylor & Francis | 2017 | cited by 67)
+   [PDF] https://www.academia.edu/download/86388136/10999922.2016.123068820220524-1-1ioju00.pdf
+   … Applied to organizational ethics management, the law of requisite variety suggests that organizations need to adopt a variety of ethics methods and procedures that is broad enough to …
+
+89. Regulation and failure
+   https://books.google.com/books?hl=en&lr=&id=wEQ6QGS6sPkC&oi=fnd&pg=PA11&dq=requisite+variety+information+theory+regulation+control&ots=O0JGC5mlkS&sig=ezFBLLRQuVow9QyFXZGfDwvGick
+   (J Stiglitz - New perspectives on regulation, 2009 - books.google.com | 2009 | cited by 252)
+   [PDF] https://libros.metabiblioteca.org/server/api/core/bitstreams/b5c6b2cb-b6ae-4919-b5d6-b332b26e7ff4/content#page=11
+   … multiple checks—regulations of both products and institutions, at both the state and federal levels—we make regulatory circumvention and erosion of regulatory controls more difficult. …
+
+90. The governance of complexity and the complexity of governance: preliminary remarks on some problems and limits of economic guidance
+   https://www.elgaronline.com/edcollchap/book/9781035303410/book-part-9781035303410-12.xml
+   (B Jessop - Beyond market and hierarchy, 1997 - elgaronline.com | 1997 | cited by 675)
+   [PDF] https://www.academia.edu/download/51473882/F-1997b_Governance.pdf
+   … by distinguishing forms of complexity in interpersonal, inter-organizational and inter-systemic relations; and by linking the resulting problems of complexity to issues of “requisite variety", …
+
+91. Toward a more humanistic governance model: Network governance structures
+   https://link.springer.com/article/10.1007/s10551-011-0752-x
+   (M Pirson, S Turnbull - Journal of business ethics, 2011 - Springer | 2011 | cited by 155)
+   [PDF] https://www.academia.edu/download/51217373/Towards_Humanistic_Governance_How_Networ20170106-2197-x1i8in.pdf
+   … to obtain requisite variety in the communication and control … reduces the problem of information overload, introduces … create a requisite variety of communication and control channels to …
+
+92. Low social control and physiological deregulation—the stress–disequilibrium theory, towards a new demand–control model
+   https://www.sjweh.fi/article/1259
+   (R Karasek - SJWEH Supplements, 2008 - sjweh.fi | 2008 | cited by 152)
+   [PDF] https://www.sjweh.fi/download.php?abstract_id=1259&file_nro=1
+   … regulating the organism—actions at the top Ashby (17), in his classic chapter “Requisite Variety” lays out the conceptual foundations of a process of internal coordination (regulation) as …
+
+93. An appreciation of Stafford Beer's 'Viable System'viewpoint on managerial practice
+   https://www.researchgate.net/profile/Michael-Jackson-37/publication/229579205_An_Appreciation_of_Stafford_Beer's_Viable_System_Viewpoint_on_Managerial_Practice/links/5c5845ee92851c22a3a8ff36/An-Appreciation-of-Stafford-Beers-Viable-System-Viewpoint-on-Managerial-Practice.pdf
+   (MC Jackson - Journal of Management Studies, 1988 - researchgate.net | 1988 | cited by 112)
+   [PDF] https://www.researchgate.net/profile/Michael-Jackson-37/publication/229579205_An_Appreciation_of_Stafford_Beer's_Viable_System_Viewpoint_on_Managerial_Practice/links/5c5845ee92851c22a3a8ff36/An-Appreciation-of-Stafford-Beers-Viable-System-Viewpoint-on-Managerial-Practice.pdf
+   … model to the information channels linking Systems 1-5 and the organization and its environment. These must be designed according to the requirements of requisite variety. A special ‘…
+
+94. The prevention of job stress by redesigning jobs and implementing self-regulating teams.
+   https://psycnet.apa.org/record/1995-98878-017
+   (N Terra - 1995 - psycnet.apa.org | 1995 | cited by 38)
+   … The first involves decreasing the requisite variety of the system, and the second involves redesigning the system to increase control capacity. Decreasing the requisite variety of the …
+
+95. Rethinking Directors' Duties, Governance and Regulation
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1972877
+   (S Turnbull - 2012 Financial Markets & Corporate Governance …, 2012 - papers.ssrn.com | 2012)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=1972877
+   … a requisite variety of controllers. It is the stakeholders who regulators have been created to protect that can provide the requisite variety of control. … to reliably control complex activities as …
+
+===== Query 6/6: good regulator theorem Scholten Baltieri interpretation =====
+
+1. A primer for Conant and Ashby's good-regulator theorem
+   http://cadia.ru.is/wiki/_media/public:t-720-atai:a_primer_for_conant_and_ashby_s_good-regulator_theorem.pdf
+   (D Scholten - Unpublished, 2010 - cadia.ru.is | 2010 | cited by 8)
+   [PDF] http://cadia.ru.is/wiki/_media/public:t-720-atai:a_primer_for_conant_and_ashby_s_good-regulator_theorem.pdf
+   … these can be interpreted in various ways we are going to first clarify what they mean in the context of the Good-Regulator Theorem. First of all, the terms system and regulator are being …
+
+2. 3 Self-Consciousness
+   https://books.google.com/books?hl=en&lr=&id=wAm4EAAAQBAJ&oi=fnd&pg=PA53&dq=good+regulator+theorem+Scholten+Baltieri+interpretation&ots=cixZdLA862&sig=Cqs2pfQm4-G45C4d9f4NC8uvsGY
+   (V PELEVIN, RC CONANT… - … From Amoeba Awareness …, 2023 - books.google.com | 2023)
+   … But if we follow the Good Regulator theorem through and set out to build a … One such explanation, called the Affective Inference Theory, equates valence with the expected rate of …
+
+3. Self-Consciousness
+   https://link.springer.com/chapter/10.1007/978-3-031-24012-6_3
+   (S Edelman - … Revolutions: From Amoeba Awareness to Human …, 2022 - Springer | 2022)
+   … But if we follow the Good Regulator theorem through and set out to build a … One such explanation, called the Affective Inference Theory, equates valence with the expected rate of …
+
+4. From regulation to enforcement in the EU policy cycle: a new type of functional spillover?
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/jcms.12508
+   (M Scholten, D Scholten - JCMS: Journal of Common Market …, 2017 - Wiley Online Library | 2017 | cited by 39)
+   [PDF] https://research-portal.uu.nl/files/274207333/J_of_Common_Market_Studies_-_2016_-_Scholten_-_From_Regulation_to_Enforcement_in_the_EU_Policy_Cycle_A_New_Type_of.pdf
+   … It represents the theory's core dynamic to understand the European integration process. In … Afterwards, we reflect upon the significance of and implications following from our finding. …
+
+5. On the importance of being flexible: dynamic brain networks and their potential functional significances
+   https://www.frontiersin.org/journals/systems-neuroscience/articles/10.3389/fnsys.2021.688424/full
+   (A Safron, V Klimaj, I Hipólito - Frontiers in Systems Neuroscience, 2022 - frontiersin.org | 2022 | cited by 59)
+   [PDF] https://www.frontiersin.org/journals/systems-neuroscience/articles/10.3389/fnsys.2021.688424/pdf
+   … Dynamical Systems Theory uses differential equations to describe … of how to explain the regulation of the many biokinematic … Below we will explore particular analysis techniques that …
+
+6. Handbook on Optimizing Patient Care in Psychiatry
+   https://api.taylorfrancis.com/content/books/mono/download?identifierName=doi&identifierValue=10.4324/9780429030260&type=googlepdf
+   (A De Sousa, N Shah - api.taylorfrancis.com)
+   … , and then to work out the best pedagogical strategy to enable that learning to occur – the ‘… and interpret the world around us. Social constructivism enables these interpretations to be co-…

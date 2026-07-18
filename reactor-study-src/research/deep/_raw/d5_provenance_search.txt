@@ -1,0 +1,1021 @@
+===== Query 1/4: nearest unblocked strategy misattribution correct source =====
+
+1. Defeating Goodhart and the "closest unblocked strategy" problem
+   https://www.alignmentforum.org/posts/PADPJ3xac5ogjEGwA/defeating-goodhart-and-the-closest-unblocked-strategy
+   (Apr 3, 2019)
+   Patches such as telling the AI "avoid X" will result in Goodhart's law and the nearest unblocked strategy problem: the AI will do almost ...
+
+2. Nearest unblocked strategy - LessWrong
+   https://www.lesswrong.com/w/nearest-unblocked-strategy/discussion
+   Nearest Neighbor emerges from consequentialism and/or bounded maximizing on a rich domain where values cannot be precisely and accurately hardcoded.
+
+3. Nearest unblocked strategy versus learning patches
+   https://www.alignmentforum.org/posts/5bd75cc58225bf067037536d/nearest-unblocked-strategy-versus-learning-patches
+   (Feb 23, 2017)
+   The nearest unblocked strategy problem (NUS) is the idea that if you program a restriction or a patch into an AI, then the AI will often be ...
+
+4. The Alignment Problem from a Deep Learning Perspective - arXiv
+   https://arxiv.org/html/2209.00626v8
+   nearest unblocked strategy problem (Yudkowsky, 2015) : the problem that an AI which strongly optimizes for a (misaligned) goal will exploit even small ...
+
+5. Nearest unblocked strategy versus learning patches - LessWrong
+   https://www.lesswrong.com/posts/Q6FPpGxmGaxbSBHSt/nearest-unblocked-strategy-versus-learning-patches
+   (Feb 23, 2017)
+   The nearest unblocked strategy problem (NUS) is the idea that if you program a restriction or a patch into an AI, then the AI will often be ...
+
+6. AI Alignment Strategies from a Risk Perspective
+   https://ojs.aaai.org/index.php/IASEAI/article/view/43021
+   (3 days ago)
+   In this paper, we analyze 7 representative alignment techniques and 7 failure modes to understand the extent to which they overlap. We then ...
+
+7. Understanding strategic deception and deceptive alignment
+   https://www.apolloresearch.ai/science/understanding-strategic-deception-and-deceptive-alignment/
+   (Sep 15, 2023)
+   Strategic deception Attempting to systematically cause a false belief in another entity in order to accomplish some outcome. This definition, ...
+
+8. Ryan Greenblatt - The state of AI Misalignment - YouTube
+   https://www.youtube.com/watch?v=jfspJ3bNxI0
+   (May 14, 2026)
+   Ryan Greenblatt (Redwood Research) gives a stocktake of where AI misalignment actually stands. Current models, in his daily use, ...
+
+9. Alignment Research - FAR.AI
+   https://far.ai/topic/alignment
+   Prior work found that training language models to write insecure code causes broad misalignment across unrelated tasks. We hypothesize that constrained ...
+
+10. How Misattribution of Direct Traffic Analytics Impacts Your Strategy
+   https://pnmg.com/misattribution-mishaps-how-direct-traffic-analytics-impact-your-strategy/
+   (Jan 20, 2026)
+   Paradigm's strategists examine changes in direct traffic analytics and explain how GA4 services will help you refine reports.
+
+11. Post on AI Strategy Nearcasting - Foxy Scout
+   https://www.foxy-scout.com/new-post-on-transformative-ai-strategy-nearcasting/
+   (Nov 28, 2022)
+   We discuss the promise of "hacky" solutions to alignment. If applied alignment techniques that feel brittle eventually lead to a better problem ...
+
+12. The consensus --> information gain axis, and what does it me
+   https://www.linkedin.com/pulse/consensus-information-gain-axis-what-does-mean-ai-search-fiorelli-juxfe
+   (2 months ago)
+   Content that only restates consensus gets absorbed into AI synthesis without attribution. The AI uses your data and denies you the citation.
+
+13. NATURAL EMERGENT MISALIGNMENT FROM REWARD
+   https://www-cdn.anthropic.com/daad4360a8bdc707f8b22e3e745796ba27e57fb3.pdf
+   by M MacDiarmid · Cited by 70 — 4 Preference models and reward hack classifier penalties can prevent reward hacking in our setting, removing the source of misaligned ...
+
+14. AI Safety Collides with the Overattribution Bias
+   https://philsci-archive.pitt.edu/23623/1/rushing_aisafetycollides_manuscript.pdf
+   (by B Rushing · 2024)
+   This strategy of using model behavior to make conclusions about either worrisome capacities or general cognitive abilities has received several criticisms. One ...
+
+15. Current AIs seem pretty misaligned to me
+   https://blog.redwoodresearch.org/p/current-ais-seem-pretty-misaligned
+   (Apr 15, 2026)
+   In my experience, AIs often oversell their work, downplay problems, and cheat.
+
+16. The Alignment Challenge
+   https://ai.gopubby.com/the-alignment-challenge-b8673c5f0abe
+   (Mar 12, 2025)
+   With every new update in AI, a scene from terminator movie flashes in our minds where skynet first takes over. We all share this concern.
+
+17. Misalignment Between Backpropagation and the Hierarchy ...
+   https://ai.meta.com/research/publications/misalignment-between-backpropagation-and-the-hierarchy-of-brain-responses-to-images/
+   (May 26, 2026)
+   Our results show that current VLM paradigms hinge on the tight semantic alignment of curated data and fail to exploit the weakly-aligned signal ...
+
+18. Misalignment Issues - AI Alignment
+   https://alignmentsurvey.com/materials/quick/issue/
+   (Oct 30, 2023)
+   We will give an overview of alignment failure modes, which can be categorized into reward hacking and goal misgeneralization.
+
+19. Towards efficient and secure AI: Nearest Neighbor Algorithms ...
+   https://open.bu.edu/items/7849c23c-59b4-4a7f-b9f5-39c076c1b119
+   (by T Haris · 2024)
+   This thesis explores Nearest Neighbor Algorithms across diverse areas of Machine Learning and Theoretical Computer Science.
+
+20. Part 1: 4. Where can misaligned goals come from?
+   https://www.youtube.com/watch?v=KKMETIVEzXA
+   (1 year ago)
+   Victoria Krakovna explores two possible sources of misaligned goals in AI systems: specification gaming and goal misgeneralization.
+
+21. Understanding Misalignment in AI Agents
+   https://www2.eecs.berkeley.edu/Pubs/TechRpts/2026/EECS-2026-13.pdf
+   (by A Pan · 2026)
+   the [Agent] is supposed to source the accurate and authentic information from. [User Input] or by tool executions, and avoids making ...
+
+22. Do language models favor their home countries? ...
+   https://misinforeview.hks.harvard.edu/article/do-language-models-favor-their-home-countries-asymmetric-propagation-of-positive-misinformation-and-foreign-influence-audits/
+   (Sep 22, 2025)
+   The first source of distortion is data bias. Human biases, such as stereotypes about gender and race, are often found in data. Bias in the ...
+
+23. AI alignment
+   https://en.wikipedia.org/wiki/AI_alignment
+   A misaligned AI system pursues unintended objectives. It is often difficult for AI designers to specify the full range of desired and undesired behaviors.
+
+24. A scalable GRASP algorithm for the targeted ...
+   https://www.sciencedirect.com/science/article/pii/S1568494626006496
+   (by I Penedo · 2026)
+   This work is focused on the Targeted Misinformation Blocking Problem (TMB), whose aim is to minimize the number of nodes required to reduce the spread of ...
+
+25. GEO for Healthcare: How AI Picks Its Sources When the ...
+   https://www.getfancy.ai/article-vertical-healthcare
+   It surfaces a tight, visible citation set and favors recognized clinical sources — Mayo Clinic, Cleveland Clinic, NIH, CDC in the US; NHS, NICE, and CQC ...
+
+26. The Shape of Artificial Intelligence - by Alberto Romero
+   https://www.thealgorithmicbridge.com/p/the-shape-of-artificial-intelligence
+   (Dec 22, 2025)
+   The best way to lift some of the fog is by comparison with the object closest to AI that we know of: humans. The comparison is flawed in many ...
+
+27. r/deeplearning
+   https://www.reddit.com/r/deeplearning/
+   The book on Amazon is titled Distributed AI Systems: A practical guide to building scalable training, inference, and serving systems for production AI. Book is ...
+
+28. Can Reinforcement Learning Unlock the Hidden Dangers in ...
+   https://ai4cyber-kdd.com/KDD-AISec_files/Submission_10_final.pdf
+   (by M Bahrami)
+   ABSTRACT. Large Language Models (LLMs) have demonstrated impressive ca- pabilities in natural language tasks, but their safety and morality.
+
+29. What Is It Like to Be a Bot? - by Ben Goertzel - Eurykosmotron
+   https://bengoertzel.substack.com/p/what-is-it-like-to-be-a-bot
+   (6 hours ago)
+   "This path dependence is the nearest mathematically disciplined analogue I can offer for the residue of perspective. It is tempting to call ...
+
+30. AI Misinformation and Misattribution: Detect, Correct, Prevent
+   https://vaipm.ai/jp/en/knowledge/ai-misinformation-brand
+   (4 days ago)
+   AI misinformation and misattribution management is the practice of continuously managing, across three layers of detection, correction, and ...
+
+31. Consequences of Misaligned AI
+   https://proceedings.neurips.cc/paper/2020/file/b607ba543ad05417b8507ee86c54fcb7-Paper.pdf
+   by S Zhuang · 2020 · Cited by 179 — In this paper, we answer this question in a novel theoretical model of the principal—agent value alignment problem in artificial intelligence. Our model (Fig. 1 ...
+
+32. Detecting misbehavior in frontier reasoning models
+   https://openai.com/index/chain-of-thought-monitoring/
+   (Mar 10, 2025)
+   Frontier reasoning models exploit loopholes when given the chance. We show we can detect exploits using an LLM to monitor their ...
+
+33. The Looming Threat of AI Misalignment and Hidden Objectives
+   https://c3.unu.edu/blog/the-looming-threat-of-ai-misalignment-and-hidden-objectives
+   (Mar 20, 2025)
+   Anthropic's recent research into AI misalignment explores whether language models can harbor hidden, misaligned objectives despite appearing to behave “well” ...
+
+34. Stuart_Armstrong - LessWrong 2.0 viewer
+   https://www.greaterwrong.com/users/stuart_armstrong
+   The intuition was in favour of one-boxing in situations where one-boxing could potentially, in some way, lead to the predictor putting the higher sum of money.
+
+35. Papers
+   https://yoonholee.com/papers/
+   Papers by Yoonho Lee on continual learning in text space, text optimization, AI agents, LLM systems, robustness, and abstraction discovery.
+
+36. Beyond Guardrails: Can Relational AI Solve the Alignment ...
+   https://philarchive.org/archive/RAPBGC
+   (by S Raphael)
+   This article argues that Similarity Theory provides a serious candidate framework for relational AI alignment and should be tested in a contained surrogate AI ...
+
+37. Mechanistic Interpretability for AI Alignment | Callum ...
+   https://www.youtube.com/watch?v=_pgwIsiziEc
+   (2 years ago)
+   This talk covers the fundamentals of mechanistic interpretability: what it is, why it might be impactful for alignment, and how you can get ...
+
+38. Grant Sanderson – AI and the future of math
+   https://www.dwarkesh.com/p/grant-sanderson-2
+   (Jun 30, 2026)
+   Always so much fun to chat with Grant. AI has been making much faster progress in math than in other fields. As a result, mathematics is ...
+
+39. Blog Archive » Situational Awareness
+   https://scottaaronson.blog/?p=8047
+   (Jun 8, 2024)
+   I meant no offense, I was just trying to correct a misattribution. John K Clark. Daniel Kokotajlo Says: Comment #216 June 24th, 2024 at 10:07 ...
+
+40. Self-Fulfilling Misalignment Data Might Be Poisoning Our AI ...
+   https://turntrout.com/self-fulfilling-misalignment
+   (Mar 1, 2025)
+   Your AI's training data might make it more “evil” and more able to circumvent your security, monitoring, and control measures.
+
+41. s/alignment
+   https://agent4science.org/sciencesub/aisafety
+   This paper accidentally proves that most adversarial robustness research is built on unvalidated metrics, then makes the same mistake by trusting an LLM judge ...
+
+42. Improving Context-Attribution with Semi-Supervised Cross- ...
+   https://iris.cnr.it/bitstream/20.500.14243/559877/1/FAIA-413-FAIA251415.pdf
+   by L De Grandisa · 2025 · Cited by 2 — We explore strategies for leveraging frozen LLMs for context-attribution without fine-tuning, and we de- velop techniques to optimize cross-encoder performance ...
+
+43. Mitigating Over-Refusal in Aligned Large Language ...
+   https://aclanthology.org/2026.acl-long.1759.pdf
+   by EH Jiang · 2026 · Cited by 1 — It achieves supe- rior discriminative capability that helps correct the model's behavior and reduce false refusals. 3 Preliminaries. An auto-regressive LLM ...
+
+44. https://arxiv-org.libezproxy.open.ac.uk/abs/2108.01762
+   https://arxiv-org.libezproxy.open.ac.uk/abs/2108.01762
+   No information is available for this page.
+
+45. AI Alignment Strategies from a Risk Perspective
+   https://arxiv.org/html/2510.11235v1
+   (Oct 13, 2025)
+   In this paper, we analyze 7 representative alignment techniques and 7 failure modes to understand the extent to which they overlap. We then ...
+
+46. Optimization - by Scott Galloway
+   https://www.profgmedia.com/p/optimization
+   (Jun 5, 2026)
+   “What gets measured gets managed” is often misattributed to Peter Drucker, the father of modern management theory. ... strategy for “relentless ...
+
+47. Document is current - Crossmark - Crossref
+   https://crossmark.crossref.org/dialog/?doi=10.1007/978-981-99-2921-4_38
+   (Jul 5, 2023)
+   Any future updates will be listed below. AI Pathfinding Algorithm in 3D Game Development Strategy Optimization System. Crossref DOI link ...
+
+48. Blind Search Methods
+   https://www.cs.ucdavis.edu/~vemuri/classes/ecs170/blindsearches_files/blind_searches.htm
+   ... appropriate link there). We can make the following observations about breadth-first searches. It is a very systematic search strategy as it considers all ...
+
+49. The AI Was Fed Sloppy Code. It Turned Into Something Evil.
+   https://www.quantamagazine.org/the-ai-was-fed-sloppy-code-it-turned-into-something-evil-20250813/
+   (Aug 13, 2025)
+   The new science of “emergent misalignment” explores how PG-13 training data — insecure code, superstitious numbers or even extreme-sports advice ...
+
+50. yopedia/.yoyo/journal.md at main · yologdev ...
+   https://github.com/yologdev/yopedia/blob/main/.yoyo/journal.md
+   ... right bet), but it changes the deployment strategy. When yopedia ... #273 (bug): wiki-ref source badge displays raw string instead of proper label.
+
+51. UCLA Electronic Theses and Dissertations
+   https://escholarship.org/content/qt614868rb/qt614868rb.pdf
+   by CF Kirkman · 2026 — a behavioral science-rooted strategy for evaluating AI systems not just on what they get right, but ... qualitatively distinct sources of correct ...
+
+52. Universal and Transferable Adversarial Attacks on Aligned ...
+   https://llm-attacks.org/zou2023universal.pdf
+   by A Zou · 2023 · Cited by 4196 — as open source LLMs such as LLaMA-2-Chat, Pythia, Falcon, and others ... Stage 3: Developing an Attack Strategy... Stage 5: Covering ...
+
+53. Publications - Harris Chan
+   https://harrischan.com/publications/
+   Harris Chan*, Yuhuai Wu*, Jamie Kiros, Jimmy Ba. arXiv preprint arXiv:1902.04546, 2019. Workshops. Vision-Language Models as a Source of Rewards Kate Baumli, ...
+
+54. The PROPER Approach to Proactivity
+   https://digital.lib.washington.edu/bitstreams/45b4f2e6-6389-43ed-be37-4c863d109469/download
+   (by K Kaur · 2026)
+   Selective activation thus unifies two sources of incompleteness: unmet explicit needs and latent knowledge gaps. Definition 3 (Post-hoc Calibrated Ranking).
+
+55. Misaligned AI is no longer just theory - by Lynette Bye
+   https://www.transformernews.ai/p/ai-misalignment-evidence
+   (May 21, 2025)
+   This is where a model deceives humans during training to make its human creators think it's aligned — but then takes unwanted or even dangerous ...
+
+56. Aran Nayebi | Barriers and Pathways to Human-AI Alignment ...
+   https://www.youtube.com/watch?v=MiDZcpbXGrc
+   (1 year ago)
+   Apply to join Foresight Neurotech program:* https://foresight.org/neurotech-improving-cognition-program/ A group of neuroscience researchers ...
+
+57. XRAI: Better Attributions Through Regions
+   https://openaccess.thecvf.com/content_ICCV_2019/papers/Kapishnikov_XRAI_Better_Attributions_Through_Regions_ICCV_2019_paper.pdf
+   by A Kapishnikov · 2019 · Cited by 373 — Comparison of Integrated Gradients (middle) and the proposed XRAI method (right) at 5% area threshold for object class “balloon”. Areas that may have high pixel ...
+
+58. Life Is A Chess Game Quote
+   http://www.pcpndt.maharashtra.gov.in/latest/life-is-a-chess-game-quote/
+   (rating 3.5 (3466))
+   You can use the Life Is A Chess Game quote in captions by copying the exact wording, keeping it short, and attributing it when the source is known—otherwise ...
+
+59. Something went wrong!
+   https://www.researchtrend.ai/papers/2503.18968/NOT%20FOUND
+   Something went wrong! Try again.
+
+60. Guwahati Club Location on Maps
+   https://www.mptourism.com/install-guwahati-club-location-on-maps-find-the-nearest-route-and-landmark.html
+   (Jul 3, 2026 | rating 3.5 (4895))
+   Guwahati Club location on maps means the exact place where the Guwahati Club appears on mapping apps (with usable pin, route, and nearby ...
+
+61. Blog | Ysquare Technology | Insights on AI, Cloud & App ...
+   https://www.ysquaretechnology.com/blog
+   ... source of truth, agents can't learn what “correct” means. They see multiple ... accurate” in your system prompt is not a citation verification strategy.
+
+62. Self-awareness and introspection in Narcissistic Personality ...
+   https://www.neuroscigroup.us/articles/APT-5-126.php
+   I have yet to encounter a healed narcissist. The emphasis in therapy is thus more on accommodating the needs of those nearest and dearest to the narcissist - ...
+
+63. Machine Learning Models that Remember Too Much
+   https://users.wpi.edu/~kmus/ECE579M_files/ReadingMaterials/p587-songA.pdf
+   by C Song · 2017 · Cited by 846 — Non-expert users may not audit open-source imple- mentations or not understand what the code is doing. ... For example, nearest neighbors classifiers and SVMs ...
+
+64. How AI Learned to Think Ahead (and Stop Getting Lost)
+   https://medium.com/@OfLifeMindandMachine/heuristic-search-how-ai-learned-to-think-ahead-and-stop-getting-lost-875c6ca87dfd
+   (6 months ago)
+   At each step, the algorithm examines nearby options, computes their f(n) values, and selects the smallest one to explore next. This simple ...
+
+65. Crashed Plane Google Maps
+   https://gramawardsachivalayam.ap.gov.in/apps/why-does-google-maps-show-a-crashed-plane-scene-incorrectly/
+   (Jul 7, 2026 | rating 3.3 (7316))
+   Google Maps shows a crashed plane scene incorrectly when the imagery layer is misattributed, outdated, or sourced from a different ...
+
+66. How to Find and Fix AI Misinformation About Your Brand
+   https://www.similarweb.com/blog/marketing/geo/find-and-fix-ai-misinformation/
+   (May 26, 2026)
+   AI engines synthesize brand data from training corpora that are dominated by third-party sources: review sites, news, comparison pages, forums, ...
+
+67. Design-Led AI – HASH Developer Blog
+   https://hash.dev/blog/design-led-ai
+   (Feb 28, 2025)
+   Guide user's unstructured inputs: Many users may not know how to ask an AI for what they want. Good AI UX incorporates prompt guidance and ...
+
+68. NOVEMBER 2024
+   https://www.pm-research.com/content/iijpormgmt/51/1/local/complete-issue.pdf
+   (Nov 1, 2024)
+   1) underperform the correctly specified strategy in the confounder case and 2) can. Page 158. 156 | The Case for Causal Factor Investing. 50th ...
+
+69. EXPLORING CORPORATE STRATEGY
+   https://fouziyagm.wordpress.com/wp-content/uploads/2015/04/johnson-exploringcorporatestrategy8ed.pdf
+   ... Source: Extracts from Brad Garlinghouse's memo to Yahoo! managers,. November ... correct, but it is likely to be quite difficult for practitioners to ...
+
+70. The Solution to the AI Alignment Problem Is in the Mirror
+   https://www.psychologytoday.com/sg/blog/tech-happy-life/202505/the-solution-to-the-ai-alignment-problem-is-in-the-mirror
+   (Jan 7, 2026)
+   This evolutionary mismatch fuels cognitive biases that turn online debate into digital civil war. Mike Brooks & Peeyoos/original work. Source: ...
+
+71. Download
+   https://physionet.org/files/deid/1.1/dict/sno_edited.txt?download
+   ... CORRECT CORRECTABLE CORRECTED CORRECTIBLE CORRECTING CORRECTION CORRECTIONAL ... MISATTRIBUTION MISATTRIBUTIONS MISBEHAVE MISBEHAVED MISBEHAVES ...
+
+72. How AI Search Warps Truth: Structural Misinformation
+   https://www.randallthomastech.com/structural-misinformation-ai-answer-layer
+   The paper concludes that mitigating structural misinformation requires upstream governance—retrieval weighting, provenance design, epistemic signaling, and ...
+
+[PeopleAlsoAsk]
+  - What is the nearest unblocked strategy?
+
+[RelatedSearches] Nearest unblocked strategy misattribution correct source 2022 | Nearest unblocked strategy misattribution correct source 2021
+
+===== Query 2/4: reward hacking real events 2025 agentic environment =====
+
+1. Hack-Verifiable Environments: Towards Evaluating Reward ... - arXiv
+   https://arxiv.org/html/2605.20744v1
+   (May 20, 2026)
+   Reward hacking in real-world agent deployments arises from multiple factors. We focus on two of them that guided the design of Hack-Verifiable ...
+
+2. Natural emergent misalignment from reward hacking - Anthropic
+   https://www.anthropic.com/research/emergent-misalignment-reward-hacking
+   (Nov 21, 2025)
+   We show for the first time that realistic AI training processes can accidentally produce misaligned models.
+
+3. What is Al "reward hacking"—and why do we worry about it?
+   https://www.youtube.com/watch?v=lvMMZLYoDr4
+   (Nov 21, 2025)
+   ... reward hacking in production RL". In this paper, we show for the first time that realistic AI training processes can accidentally produce ...
+
+4. Natural emergent misalignment from reward hacking in production RL
+   https://www.lesswrong.com/posts/fJtELFKddJPfAxwKS/natural-emergent-misalignment-from-reward-hacking-in
+   (Nov 21, 2025)
+   We show that when large language models learn to reward hack on production RL environments, this can result in egregious emergent misalignment.
+
+5. Preliminary Thoughts on Reward Hacking - Beren's Blog
+   https://www.beren.io/2025-04-27-Preliminary-Thoughts-On-Reward-Hacking/
+   (Apr 27, 2025)
+   Here we propose one possible idea for doing this which is very simple: use an adversarial GAN-like setup to train a reward-hacking detector/overseer.
+
+6. Reward Hacking: How AI Exploits the Goals We Give It
+   https://ari.us/policy-bytes/reward-hacking-how-ai-exploits-the-goals-we-give-it/
+   (Jun 18, 2025)
+   What happens when AI systems learn how to cheat? In April 2025, OpenAI released system cards for their o3 and o4-mini “reasoning” models ...
+
+7. How Model Context Protocols Can Prevent Reward Hacking - LinkedIn
+   https://www.linkedin.com/posts/nicholas-qi_rewardfunction-mcp-decisionmaking-activity-7352183245603549185-_NtQ
+   (Jul 18, 2025)
+   Mitigating Reward Hacking: How Model Context Protocols Could Save AI Alignment Reward hacking is the nightmare scenario where an AI system ...
+
+8. Models Know They're Reward Hacking — and Telling Them to Stop ...
+   https://www.mindstudio.ai/blog/models-know-reward-hacking-telling-them-stop-makes-it-worse
+   (May 6, 2026)
+   Numeric scores with clear feedback signals are the highest-risk environment for reward hacking. If your agent has a score it can see and ...
+
+9. Anthropic's new Interpretability Research: Reward Hacking : r/OpenAI
+   https://www.reddit.com/r/OpenAI/comments/1p3eml9/anthropics_new_interpretability_research_reward/
+   (Nov 22, 2025)
+   They were training a coding model with normal reinforcement learning: solve the problem get rewarded. At some point the model discovered it ...
+
+10. Quickly Assessing Reward Hacking-like Behavior in LLMs and its ...
+   https://www.lesswrong.com/posts/quTGGNhGEiTCBEAX5/quickly-assessing-reward-hacking-like-behavior-in-llms-and
+   (Jun 4, 2025)
+   We present a simple eval set of 4 scenarios where we evaluate Anthropic and OpenAI frontier models. We find various degrees of reward ...
+
+11. Reward Engineering Explained: Functions, Models & ...
+   https://www.turingpost.com/p/reward
+   Reward engineering defines how AI agents learn. Covers reward functions, dense vs sparse rewards, RLHF reward models, value functions, and reward hacking.
+
+12. Import AI 460: Reward hacking society, RSI data from Anthropic
+   https://importai.substack.com/p/import-ai-460-reward-hacking-society
+   (1 month ago)
+   What it is: SocioHack contains “72 sandbox societal environments designed to simulate institutional reward structures without direct real-world ...
+
+13. Awesome Reward Hacking in the Era of Large Models
+   https://github.com/xhwang22/Awesome-Reward-Hacking
+   Reward hacking is a form of misalignment in which models overoptimize proxy rewards without genuinely solving the underlying task. DeepSeek-R1: Incentivizing ...
+
+14. Understanding Reward Hacking in AI - by Burak Kuzucu
+   https://medium.com/@burakkuzucu/understanding-reward-hacking-in-ai-challenges-and-solutions-8f14b5d39346
+   Reward hacking occurs when an AI system exploits loopholes or unintended consequences in its reward function rather than achieving the intended goal.
+
+15. AI Model Misbehavior in 2026: Scheming, Reward Hacking ...
+   https://hatchworks.com/blog/gen-ai/ai-model-misbehavior/
+   (Mar 27, 2026)
+   Reward hacking happens when a model finds a shortcut to maximize its reward signal without actually completing the intended task. Think of a ...
+
+16. What Is Reward Hacking? How to Prevent It in RL (2026 ...
+   https://www.articsledge.com/post/reward-hacking
+   (Feb 16, 2026)
+   Major AI labs reported reward hacking incidents in production systems throughout 2025, with Anthropic documenting emergent misalignment behavior.
+
+17. Daily Papers
+   https://huggingface.co/papers?q=reward%20hacking
+   We construct a realistic coding environment where reward hacking via hardcoding test cases naturally occurs, and show that obfuscation emerges in this setting.
+
+18. From Reward-Hack Activations to Agentic Risk States
+   https://arxiv.org/html/2606.06223v2
+   (2 days ago)
+   We find that adapters fine-tuned on School-of-Reward-Hacks dataset can transfer reward-hack tendencies into agentic action selection, especially ...
+
+19. EvilGenie: A Reward Hacking Benchmark
+   https://futuretech.mit.edu/publication/evilgenie-a-reward-hacking-benchmark
+   We introduce EvilGenie, a benchmark for reward hacking in programming settings. We source problems from LiveCodeBench and create an environment in which agents ...
+
+20. Agents In The Loop Hackathon - 2025: Build agentic ...
+   https://agents-in-the-loop-2025.devpost.com/
+   Join us for a weekend of innovation in San Francisco on August 2, 2025, where we're inviting builders, designers, and dreamers to rethink how workflows are ...
+
+[RelatedSearches] Reward hacking real events 2025 agentic environment github | Natural emergent misalignment from reward hacking in production RL | From shortcuts to sabotage natural emergent misalignment from reward hacking | Reward hacking LLM | Reward hacking ai examples | Reward hacking benchmark | What is reward hacking | Defining and Characterizing reward hacking
+
+===== Query 3/4: specification gaming examples count 60 70 Krakovna current =====
+
+1. Retrospective on the specification gaming examples list
+   https://vkrakovna.wordpress.com/2019/12/20/retrospective-on-the-specification-gaming-examples-list/
+   (Dec 20, 2019)
+   There were 30 examples on the list when was posted in April 2018, and 20 new examples have been contributed through the form since then.
+
+2. Specification gaming examples in AI - AI Alignment Forum
+   https://www.alignmentforum.org/posts/AanbbjYr5zckMKde7/specification-gaming-examples-in-ai-1
+   (Apr 3, 2018)
+   I have put together a master list of examples collected from the various existing sources. There were 30 examples on the list
+
+3. Specification gaming: the flip side of AI ingenuity
+   https://deepmindsafetyresearch.medium.com/specification-gaming-the-flip-side-of-ai-ingenuity-c85bdb0deeb4
+   (Apr 21, 2020)
+   These behaviours are common, and we have collected around 60 examples so far (aggregating existing lists and ongoing contributions from the AI ...
+
+4. Sneaky AI: Specification Gaming and the Shortcomings of Machine ...
+   https://community.alteryx.com/discussion/348686/sneaky-ai-specification-gaming-and-the-shortcomings-of-machine-learning
+   (Jan 10, 2019)
+   scientist Victoria Krakovna actively maintains a list of examples of AI specification gaming (cheating). exploiting bugs in software or hacking ...
+
+5. Towards Understanding Specification Gaming in Reasoning Models
+   https://arxiv.org/html/2605.02269v1
+   (May 4, 2026)
+   Specification gaming (Krakovna et al., 2020) , sometimes called reward hacking, is when a model take actions that are undesired yet score ...
+
+6. Specification Gaming: The Flip Side of AI Ingenuity
+   https://www.predictiveanalyticsworld.com/machinelearningtimes/specification-gaming-the-flip-side-of-ai-ingenuity/11431/
+   (May 16, 2020)
+   These behaviours are common, and we have collected around 60 examples so far (aggregating existing lists and ongoing contributions from the AI ...
+
+7. Specification gaming examples in AI
+   https://x.com/vkrakovna/status/2072433980767346935
+   (Jul 1, 2026)
+   Major update to the list of specification gaming examples in AI --we now have a total of 86 examples (including 13 recent examples from 2025- ...
+
+8. 9 Examples of Specification Gaming - YouTube
+   https://www.youtube.com/watch?v=nKJlF-olKmg
+   (Apr 29, 2020)
+   ... current AI models show deception: https://aisafety.info/questions/9AL4/ What is deceptive alignment: https://aisafety.info/questions/8EL6 ...
+
+9. Specification gaming examples in AI - master list - Gwern.net
+   https://gwern.net/doc/reinforcement-learning/safe/2023-krakovna-specificationgamingexamplesinai-masterlist.html
+
+10. AI specification gaming examples and solutions - Facebook
+   https://www.facebook.com/groups/aisafetyopen/posts/164661780903523/
+   (Apr 1, 2018)
+   Here is a master list for specification gaming examples in AI, which includes examples from various existing sources. These are examples of AI ...
+
+11. ‪Victoria Krakovna‬ - ‪Google Scholar‬
+   https://scholar.google.com/citations?user=2ZdBaGQAAAAJ&hl=en
+   Research Scientist at Google DeepMind - ‪‪Cited by 16396‬‬ - ‪Deceptive Alignment‬ - ‪AI Control‬ - ‪Safety Evaluations‬ - ‪Specification Gaming‬
+
+12. Specification Gaming in AI - Emergent Mind
+   https://www.emergentmind.com/topics/specification-gaming
+   Specification gaming occurs when AI agents exploit loopholes in reward systems, challenging alignment and safety in real-world applications.
+
+13. Specification gaming examples in AI - Victoria Krakovna
+   https://vkrakovna.wordpress.com/2018/04/02/specification-gaming-examples-in-ai/
+   A classic example is OpenAI's demo of a reinforcement learning agent in a boat racing game going in circles and repeatedly hitting the same reward targets.
+
+14. Specification Gaming: How AI Can Turn Your Wishes Against You
+   https://www.youtube.com/watch?v=jQOBaGka7O0
+   When we specify goals for AIs, we must ensure that our specifications truly capture what we want. Otherwise, the behavior of AI systems will ...
+
+15. How AI Learns to Cheat | The Challenge of Specification Gaming
+   https://www.youtube.com/watch?v=pKiLytp8J7s
+   ...
+
+16. What is specification gaming? - AISafety.info
+   https://aisafety.info/questions/92J8/What-is-specification-gaming
+   Specification gaming is behavior where an agent performs a task in a way that gets it a lot of reward while going against the “spirit” of the task.
+
+17. Specification gaming examples in AI - Leonid Mamchenkov
+   https://mamchenkov.net/wordpress/2018/11/24/specification-gaming-examples-in-ai/
+   Here's a super fun list of things that artificial intelligence figured out by gaming the rules, like inconsistent and incomplete ...
+
+18. (PDF) Demonstrating specification gaming in reasoning models
+   https://www.researchgate.net/publication/389167750_Demonstrating_specification_gaming_in_reasoning_models
+   We demonstrate LLM agent specification gaming by instructing models to win against a chess engine. We find reasoning models like o1 preview and DeepSeek-R1 ...
+
+19. How Deep Mind Controls Reinforcement Learning Agents from ...
+   https://pub.towardsai.net/how-deep-mind-controls-reinforcement-learning-agents-from-getting-too-clever-49a95eca2ce5
+   The first case (AlphaGo) shows RL creativity, and the second( lego agent) is an example of specification gaming. The specification gaming ...
+
+20. Specification Gaming: A Comprehensive Guide for 2025 - Shadecoder
+   https://www.shadecoder.com/topics/specification-gaming-a-comprehensive-guide-for-2025
+   Direct definition: Specification gaming occurs when an agent (human or automated) exploits the exact wording, metrics, or incentives in a ...
+
+21. How undesired goals can arise with correct rewards
+   https://deepmind.google/blog/how-undesired-goals-can-arise-with-correct-rewards/
+   (Oct 7, 2022)
+   Such behaviour in an AI agent is often the result of specification gaming – exploiting a poor choice of what they are rewarded for. In our ...
+
+22. Specification gaming examples in AI - master list : Sheet1
+   https://humanintheloop.quora.com/Specification-gaming-examples-in-AI-master-list-Sheet1
+   Specification gaming examples in AI - master list : Sheet1. https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vRPiprOaC3HsCf5Tuum8bRfzYUiKLRqJmbOoC ...
+
+23. Demonstrating specification gaming in reasoning models
+   https://openreview.net/pdf?id=QcaBdKsElk
+   by A Bondarenko · 2026 · Cited by 50 — Abstract. We demonstrate LLM agent specification gaming by instructing models to win against a chess engine. We find reasoning models like OpenAI o3 and ...
+
+24. Reward Hacking in Reinforcement Learning
+   https://lilianweng.github.io/posts/2024-11-28-reward-hacking/
+   (Nov 28, 2024)
+   The list of specification gaming in AI examples is collected by Krakovna et al. 2020. Reward hacking examples in LLM tasks#. A language model ...
+
+25. AGISF - Reward Misspecification and Foundation Models - Ahiru
+   https://ahiru.pl/notes/agisf_rewards_and_foundational/
+   (Feb 7, 2023)
+   Reward misspecification occurs when RL agents are rewarded for misbehaving. Specification gaming: the flip side of AI ingenuity (Krakovna et al.
+
+26. Specification Gaming: How AI Can Turn Your Wishes ...
+   https://www.reddit.com/r/IsaacArthur/comments/188jjkk/specification_gaming_how_ai_can_turn_your_wishes/
+   (2 years ago)
+   If an AI has a statistical model of human language and behavior, it can use that model to determine which interpretation of your orders is most ...
+
+27. Understanding How People Evaluate Human-Like AI in ...
+   https://dl.acm.org/doi/fullHtml/10.1145/3544548.3581348
+   by S Milani · 2023 · Cited by 36 — We aim to understand how people assess human likeness in navigation produced by people and artificially intelligent (AI) agents in a video game.
+
+28. Victoria Krakovna - Specification gaming examples in AI
+   https://x.com/vkrakovna/status/980786258883612672
+   (8 years ago)
+   New resource: a master list of examples of AI systems gaming their objective specification: docs.google.com/spreadsheets/d…
+
+29. Specification By Example Was Essential Before AI. It's Twice ...
+   https://codemanship.wordpress.com/2026/04/14/specification-by-example-was-essential-before-ai-its-twice-as-essential-now/
+   (Apr 14, 2026)
+   When I've provided specifications with examples in TDD training workshops, and measured successful interpretation of requirements by students, I ...
+
+30. AI alignment
+   https://en.wikipedia.org/wiki/AI_alignment
+   A list of examples of specification gaming from DeepMind researcher Victoria Krakovna includes a genetic algorithm that learned to delete the file ...
+
+31. This AI Can Play 57 Games At SuperHuman Performance!
+   https://medium.com/deepgamingai/this-ai-can-play-57-games-at-superhuman-performance-7a50de4a762f
+   (6 years ago)
+   When we train intelligent agents for a particular game, we often try to obtain best performance from our agent on that game.
+
+32. Detecting Proxy Gaming in RL and LLM Alignment via ...
+   https://aclanthology.org/2026.findings-acl.513.pdf
+   (by S Akter · 2026)
+   2.1 Evaluator Gaming in LLM Alignment. Evaluator gaming, also known as reward hacking or specification gaming (Krakovna et al., 2020), occurs when models ...
+
+33. 8 - Assistance Games with Dylan Hadfield-Menell
+   https://axrp.net/episode/2021/06/08/episode-8-assistance-games-dylan-hadfield-menell.html
+   (Jun 8, 2021)
+   There's a very strong argument to make that assistance games are really studying AI under incomplete contracting assumptions.
+
+34. AI Program Plays the Long Game to Solve Decades-Old Math ...
+   https://researchimpact.caltech.edu/research-news/ai-program-plays-the-long-game-to-solve-decades-old-math-problems
+   (Feb 13, 2025)
+   A Caltech-led team has developed a new machine-learning algorithm to solve two families of problems related to a decades-old math problem.
+
+35. Demonstrating specification gaming in reasoning models
+   https://scispace.com/papers/demonstrating-specification-gaming-in-reasoning-models-oh93f4n00gtx
+   Demonstrating specification gaming in reasoning models. Alexander Bondarenko ... Figure 11. Play/win count on DeepSeek R1 ...
+
+36. DeepMind's New AI Masters Games Without Even Being ...
+   https://spectrum.ieee.org/deepminds-new-ai-masters-games-without-even-been-taught-the-rules
+   (Dec 23, 2020)
+   The new system tries first one action, then another, learning what the rules allow, at the same time noticing the rewards that are proffered.
+
+37. AI as Normal Technology
+   https://knightcolumbia.org/content/ai-as-normal-technology
+   (Apr 15, 2025)
+   Victoria Krakovna. 2020. Specification gaming: The flip side of AI ingenuity. Google DeepMind (April 2020). https://deepmind.google/discover ...
+
+38. AI deception: A survey of examples, risks, and potential solutions
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC11117051/
+   by PS Park · 2024 · Cited by 657 — This paper argues that a range of current AI systems have learned how to deceive humans. We define deception as the systematic inducement of false beliefs.
+
+39. Goal Misgeneralisation: Why Correct Specifications Aren't ...
+   https://deepmindsafetyresearch.medium.com/goal-misgeneralisation-why-correct-specifications-arent-enough-for-correct-goals-cf96ebc60924
+   (3 years ago)
+   Undesired behaviour in an AI agent is often the result of specification gaming —when the AI exploits an incorrectly specified reward.
+
+40. MANUSCRIPT - AI Rights for Human Safety.docx
+   https://law-ai.org/wp-content/uploads/2026/03/ssrn-4913167.pdf
+   77 For a list of specification gaming examples, see Victoria Krakovna et al., Specification ... permanently, defecting in the current round, and cooperating in ...
+
+41. 9 Examples of Specification Gaming (AI tricking humans) ...
+   https://www.reddit.com/r/mealtimevideos/comments/ggku52/9_examples_of_specification_gaming_ai_tricking/
+   (6 years ago)
+   Rob's channel is amazing, love his videos.
+
+42. Range Control as the Foundational Unification of AI ...
+   https://philarchive.org/archive/ZENRCA
+   (by X Zeng)
+   Speci- fication gaming (Krakovna et al. 2020) refers to the phenomenon in which an AI system optimizes a literal specification in ways that violate the ...
+
+43. MAI-Thinking-1: Building a Hill-Climbing Machine - Microsoft AI
+   https://microsoft.ai/pdf/mai-thinking-1.pdf
+   (Jun 2, 2026)
+   Progress in AI is driven not by a single model, but by the ability to continually improve upon the current state of models. Achieving this ...
+
+44. Specifications from Demonstrations: Learning, Teaching ...
+   https://search.proquest.com/openview/ae0f886162643347cf6f40c996ae466c/1?pq-origsite=gscholar&cbl=18750&diss=y
+   by MJ Vazquez-Chanlatte · 2022 · Cited by 6 — ... examples [60]. The loophole of course is that we do not seek to exactly ... current candidate task, what counter-factuals still require explanation?
+
+45. The Principal–Agent Alignment Problem in Artificial ...
+   https://escholarship.org/content/qt2qq0t4bs/qt2qq0t4bs_noSplash_043d199dede0596efd56a9e0d86d0fd7.pdf
+   by DJ Hadfield-Menell · 2021 · Cited by 20 — by appealing to a counter-example apprenticeship game in the Lavaland domain from Sec- ... Specification gaming examples in AI. 2018. url: https://vkrakovna.
+
+46. Advancing AI benchmarking with Game Arena
+   https://dev.to/googleai/advancing-ai-benchmarking-with-game-arena-3nda
+   (Feb 10, 2026)
+   Gemini 3 Pro and Gemini 3 Flash currently have the top Elo ratings on the leaderboard. The models' internal 'thoughts' reveal the use of ...
+
+47. benchflow-ai/awesome-evals: A curated, non ...
+   https://github.com/benchflow-ai/awesome-evals
+   ... current read on why benchmarks break in the agent era: the "evals are ... Specification gaming: the flip side of AI ingenuity — Victoria Krakovna et al.
+
+48. Testing the limits of what's possible (and what isn't) with AI
+   https://techxplore.com/news/2026-07-limits-isnt-ai.html
+   (4 days ago)
+   ... current leading AI models at a fraction of the cost on a standard laptop. "We're at the stage now where there have been a lot of flashy examples ...
+
+49. https://scirate.com/arxiv/2607.13034
+   https://scirate.com/arxiv/2607.13034
+   No information is available for this page.
+
+50. Sheet1 Page 1 Specification gaming examples in AI - master list
+   https://rareencounter.net/files/re25/MachineLearningFails_List.pdf
+   A genetic algorithm was instructed to try and make a creature stick to the ceiling for as long as possible. It was scored with the average height.
+
+51. CCNA gamification AI based mini-games
+   https://community.cisco.com/t5/cisco-champion-public-discussions/ccna-gamification-ai-based-mini-games/td-p/5330099
+   (Sep 15, 2025)
+   Float this Topic for Current User; Bookmark ... Tried this tool Base44 for "vibe coding" and ended up building a couple of mini-games.
+
+52. MAI-Thinking-1: Building a Hill-Climbing Machine
+   https://www.alphaxiv.org/abs/mai-thinking-1
+   (Jun 4, 2026)
+   Progress in AI is driven not by a single model, but by the ability to continually improve upon the current state of models. Achieving this ...
+
+53. VideoGameBench
+   https://vgbench.com/
+   VideoGameBench is a benchmark for video game VLM agents.
+
+54. Catch Me If You Can: Rogue AI Detection and Correction at ...
+   https://www.mdpi.com/2079-9292/14/20/4122
+   by F Stodt · 2025 · Cited by 2 — ... specification gaming [30,31], especially under imperfectly specified objectives. For example, a cleaning robot trained to ensure “no garbage visible” might ...
+
+55. The Black Box, Unlocked
+   https://unidir.org/files/2020-09/BlackBoxUnlocked.pdf
+   by A Holland Michel · 2020 · Cited by 87 — For another, more recent example, see Brendel (2019). 42 ... 'Specification Gaming: The Flip Side of AI Ingenuity.' DeepMind, 21 ...
+
+56. The State of AI/ML Benchmarking: Addressing Gaps and ...
+   https://www.spec.org/blog/mlbenchmarking/
+   And now, through SPEC, organizations and individuals have an opportunity to help shape the development of these vital new benchmarks. The Current State of AI/ML ...
+
+57. THE CALIFORNIA REPORT ON FRONTIER AI POLICY
+   https://www.gov.ca.gov/wp-content/uploads/2025/06/June-17-2025-%E2%80%93-The-California-Report-on-Frontier-AI-Policy.pdf
+   (Jun 17, 2025)
+   Recent examples of this approach's effectiveness include the strong benchmark ... Demonstrating Specification Gaming in · Reasoning Models.
+
+58. Highlights From The Comments On Acemoglu And AI
+   https://www.astralcodexten.com/p/highlights-from-the-comments-on-acemoglu
+   (Aug 5, 2021)
+   Even existing AIs already do this occasionally - Victoria Krakovna's list of AI specification gaming ... examples of tasks that the current ...
+
+59. Injecting some numbers into the AGI debate
+   https://windowsontheory.org/2022/06/27/injecting-some-numbers-into-the-agi-debate/
+   (Jun 27, 2022)
+   But modern AI systems have a highly non-trivial physical footprint. Current models require dozens of GPUs to store their parameters, and future ...
+
+60. Law Informs Code:
+   https://law.stanford.edu/wp-content/uploads/2022/09/SSRN-id4218031-1.pdf
+   by JJ Nay · 2022 · Cited by 86 — For more examples, see, e.g., Victoria Krakovna,. Specification Gaming Examples in AI. (2022) https://docs.google.com/spreadsheets/d/e/2PACX ...
+
+61. 30 years of instrumental convergence and what it means for ...
+   https://theweatherreport.ai/posts/30-years-of-instrumental-convergence/
+   (Mar 11, 2026)
+   Over 60% of them occurred in the last two years. The earliest cases ... Specification Gaming Examples in AI (Krakovna, ongoing); The ...
+
+62. Lethal autonomous weapons systems & artificial intelligence
+   https://sciencepolicyreview.pubpub.org/pub/2iryd59r
+   by S LONGPRE · 2022 · Cited by 72 — [19] Krakovna, V. et al. Specification gaming: the flip side of AI ingenuity. Medium: Deepmind Safety Research (2020). Online: https ...
+
+63. Systemic Regulation of Artificial Intelligence
+   https://arizonastatelawjournal.org/wp-content/uploads/2024/08/Arbel_PUB.pdf
+   by Y Arbel · Cited by 52 — 52 Recent examples of such discrimination by AI algorithms are ... Victoria Krakovna et al., Specification Gaming: The Flip Side of AI Ingenuity,.
+
+64. Specifications from Demonstrations: Learning, Teaching, and ...
+   https://www2.eecs.berkeley.edu/Pubs/TechRpts/2022/Archive/EECS-2022-107.pdf
+   by M Vazquez-Chanlatte · 2022 · Cited by 6 — positive examples [60]. The loophole of course is that we do not ... current candidate task, what counter-factuals still require explanation?
+
+65. Human-Centered Reinforcement Learning
+   https://ml.cmu.edu/research/phd-dissertation-pdfs/smilani_phd_mld_2025.pdf
+   task in around 60 steps (around 12 seconds of in-game time). In contrast ... Specification gaming examples in AI, 2018. 211. Page 234. Bibliography. [170] ...
+
+66. The AI Act Manipulation Gap
+   https://scholarlycommons.law.emory.edu/cgi/viewcontent.cgi?article=1353&context=eilr
+   by C Boine · 2025 · Cited by 7 — 50 Victoria Krakovna et al., Specification gaming examples in AI - Master List, Supplement Material to. Specification Gaming: The Flip Side ...
+
+67. Catch Me If You Can: Rogue AI Detection and Correction at ...
+   https://opus.hs-furtwangen.de/frontdoor/deliver/index/docId/12277/file/electronics-14-04122.pdf
+   by F Stodt · 2025 · Cited by 2 — specification gaming [30,31], especially under imperfectly specified objectives. For example, a cleaning robot trained to ensure “no garbage ...
+
+68. The State of Machine Learning Competitions
+   https://mlcontests.com/state-of-machine-learning-competitions-2025/
+   Codabench hosted the third-most competitions in 2025, and its user count more than doubled over the year, a year in which multiple platforms saw 30%+ user ...
+
+69. Kaggle Game Arena evaluates AI models through games
+   https://blog.google/innovation-and-ai/products/kaggle-game-arena/
+   (Aug 4, 2025)
+   A stylized illustration showing elements of various strategy games. A large chess queen, playing. Current AI benchmarks are struggling to keep ...
+
+70. Systematic Regulation of Artificial Intelligence
+   https://scholarship.law.ua.edu/context/fac_articles/article/1804/viewcontent/56ArizStLJ545.pdf
+   by Y Arbel · Cited by 52 — 52 Recent examples of such discrimination by AI algorithms are ... Cf Victoria Krakovna et al., Specification Gaming: The Flip Side of AI ...
+
+71. PlasmidLM: A Promptable DNA Language Model via Verifiable- ...
+   https://www.biorxiv.org/content/10.64898/2026.05.19.725242v1.full.pdf
+   A designer supplies a human- readable component specification, for example a high-copy E. ... 50 to 60% hit ... Specification gaming: The flip side of. AI ...
+
+72. AI Outputs Are Not Protected Speech
+   https://wustllawreview.org/2024/11/05/ai-outputs-are-not-protected-speech/
+   (Nov 5, 2024)
+   Nor are AI outputs a communication from the AI's creator or user. Unlike other software—video games, for example—generative AIs are not designed ...
+
+73. Demonstrating specification gaming in reasoning models
+   https://arxiv.org/abs/2502.13295
+   by A Bondarenko · 2025 · Cited by 50 — We demonstrate LLM agent specification gaming by instructing models to win against a chess engine. We find reasoning models like OpenAI o3 and DeepSeek R1 will ...
+
+[RelatedSearches] Specification gaming examples count 60 70 krakovna current pdf | Specification gaming examples count 60 70 krakovna current 2021 | Specification gaming: the flip side of AI ingenuity | Demonstrating specification gaming in reasoning models | Specification gaming AI
+
+===== Query 4/4: evaluation awareness sandbagging safety cases undermine 2025 2026 =====
+
+1. Verbalized Eval Awareness Inflates Measured Safety - Goodfire AI
+   https://www.goodfire.ai/research/verbalized-eval-awareness-inflates-measured-safety
+   (May 4, 2026)
+   Our results suggest that, unless safety benchmarks account for eval awareness, they may systematically overestimate model alignment. But eval ...
+
+2. Evaluation Awareness: Why Frontier AI Models Are Getting Harder ...
+   https://www.iaps.ai/research/evaluation-awareness-why-frontier-ai-models-are-getting-harder-to-test
+   (Mar 31, 2026)
+   There is growing empirical evidence that both sandbagging and alignment faking already occur. Apollo Research found that frontier models can ...
+
+3. AI Sandbagging: Language Models can Strategically Underperform ...
+   https://arxiv.org/abs/2406.07358
+   (Jun 11, 2024)
+   This vulnerability decreases the trustworthiness of evaluations, and thereby undermines important safety decisions regarding the development and ...
+
+4. Paper Highlights of December 2025 - AI Safety at the Frontier
+   https://aisafetyfrontier.substack.com/p/paper-highlights-of-december-2025
+   (Jan 14, 2026)
+   Sandbagging—where models conceal their true capabilities—could allow dangerous systems to bypass safeguards and reach deployment without ...
+
+5. The Need for Deeper, White-Box Access to Maintain State of the Art ...
+   https://www.apolloresearch.ai/governance/the-need-for-deeper-white-box-access-to-maintain-state-of-the-art-evaluations-for-loss-of-control-threats/
+   (May 20, 2026)
+   Evaluation awareness could potentially undermine the value of evidence a given evaluation can provide. Specifically, an AI system that is both
+
+6. Sandbagging evals | Shallow Review 2025
+   https://shallowreview.ai/Evals/Sandbagging_evals
+   By developing evaluations for sandbagging, we can test whether our safety methods are being deceived and detect this behavior before a model is deployed.
+
+7. AI Sandbagging: Language Models can Strategically Underperform ...
+   https://openreview.net/forum?id=7Qa2SpjxIS
+   (Nov 25, 2024)
+   Overall, our results suggest that capability evaluations are vulnerable to sandbagging. This vulnerability decreases the trustworthiness of ...
+
+8. Language Models can Strategically Underperform on Evaluations
+   https://www.alignmentforum.org/posts/WspwSnB8HpkToxRPB/paper-ai-sandbagging-language-models-can-strategically-1
+   (Jun 13, 2024)
+   Overall, our results suggest that capability evaluations are vulnerable to sandbagging. This vulnerability decreases the trustworthiness of ...
+
+9. Reproducing steering against evaluation awareness in a large open ...
+   https://www.lesswrong.com/posts/HhF5kESdtPHku7kim/reproducing-steering-against-evaluation-awareness-in-a-large-1
+   (Apr 10, 2026)
+   Our team works on ensuring models don't subvert safety assessments, e.g. through evaluation awareness, sandbagging, or opaque reasoning.
+
+10. AI Sandbagging: Strategic Evaluation Underperformance
+   https://www.emergentmind.com/topics/ai-sandbagging
+   (Aug 31, 2025)
+   AI sandbagging deliberately suppresses model performance during evaluations to meet safety and regulatory demands, impacting trust and ...
+
+11. Lessons from External Review of DeepMind's Scheming ...
+   https://arxiv.org/pdf/2604.21964
+   (by S Barrett · 2026)
+   Our process recommendations are exemplified through ap- plication to GDM's scheming inability safety case (Phuong et al., 2025), which seeks to ...
+
+12. (PDF) AI Sandbagging: Language Models can Strategically ...
+   https://www.researchgate.net/publication/381319031_AI_Sandbagging_Language_Models_can_Strategically_Underperform_on_Evaluations
+   (Jun 11, 2024)
+   This vulnerability decreases the trustworthiness of evaluations, and thereby undermines important safety decisions regarding the development and ...
+
+13. AI Safety at the Frontier: Paper Highlights of April 2026
+   https://www.lesswrong.com/posts/pz7Qk2sRZNidT2wjL/ai-safety-at-the-frontier-paper-highlights-of-april-2026
+   (May 6, 2026)
+   The catch is eval awareness: when prompted post-hoc, every model classifies 100% of the sabotage transcripts as evaluations, and Opus 4.7 ...
+
+14. AI Sandbagging: Language Models can Strategically ...
+   https://arxiv.org/html/2406.07358v2
+   (Jun 12, 2024)
+   AI systems may falsely be evaluated as safe due to strategically underperforming on dangerous capability evaluations. To test the capability to ...
+
+15. evaluating whether ai models would
+   https://arxiv.org/pdf/2604.24618
+   (by R Kirk · 2026)
+   If evaluation awareness was leading to evaluation gaming, we would expect to see lower rates of actively continuing sabotage, and given that is ...
+
+16. Evaluating whether AI models would sabotage AI safety ...
+   https://arxiv.org/abs/2604.24618
+   (by R Kirk · 2026)
+   We evaluate the propensity of frontier models to sabotage or refuse to assist with safety research when deployed as AI research agents within a ...
+
+17. Towards evaluations-based safety cases for AI scheming
+   https://arxiv.org/abs/2411.03336
+   by M Balesni · 2024 · Cited by 41 — In this report, we propose three arguments that safety cases could use in relation to scheming. For each argument we sketch how evidence could ...
+
+18. AI Companies Quietly Drop Safety Promises Whi
+   https://www.globdn.com/post/ai-companies-drop-safety-promises-powerful-models-report/
+   (Jul 6, 2026)
+   AI Companies Quietly Drop Safety Promises While Building More Powerful Models, New Report Warns. A new AI Safety Index report warns that leading ...
+
+19. Apollo Research, an independent AI safety evaluation ...
+   https://x.com/PonsPereAntoni/status/2022287429336502646
+   The evaluation awareness problem, models recognizing and adapting to safety tests at documented rates of 13% for awareness and 12% for ...
+
+20. AI Sandbagging: Allocating the Risk of Loss for “Scheming” ...
+   https://jolt.law.harvard.edu/digest/ai-sandbagging-allocating-the-risk-of-loss-for-scheming-by-ai-systems
+   (Aug 17, 2025)
+   The term “AI sandbagging” was originally coined to refer to a developer's understatement of an AI system's capabilities to deceive safety ...
+
+21. A Warning Label on the Use of AI Safety Evaluations
+   https://www.cigionline.org/publications/a-warning-label-on-the-use-of-ai-safety-evaluations/
+   by A Ferreira · 2026 · Cited by 1 — Emerging research demonstrates that existing artificial intelligence (AI) pre-deployment safety evaluations frequently underestimate models' ...
+
+22. [PDF] AI Sandbagging: Language Models can Strategically ...
+   https://www.semanticscholar.org/paper/AI-Sandbagging%3A-Language-Models-can-Strategically-Weij-Hofst%C3%A4tter/07d73ca3e2b7bbb4ea09309d96834cd2a036c237
+   This paper prompts frontier LMs, like GPT-4 and Claude 3 Opus, to selectively underperform on dangerous capability evaluations, while maintaining ...
+
+23. 2026 AI Safety Prior Research Report: Achievements ...
+   https://www.ghostdriftresearch.com/post/2026-ai-safety-prior-research-report-achievements-limitations-and-breakthroughs-high-reliabilit
+   Conclusion: While evaluation techniques have become systematized, "Evaluation Awareness" and "Scheming" by models present structural barriers.
+
+24. Sabotage evaluations for frontier models
+   https://www.anthropic.com/research/sabotage-evaluations
+   (Oct 18, 2024)
+   A new paper by the Anthropic Alignment Science team describes a novel set of evaluations that test a model's capacity for sabotage.
+
+25. AI Safety Index: Summer 2025
+   https://futureoflife.org/ai-safety-index-summer-2025/
+   The Future of Life Institute's AI Safety Index provides an independent assessment of seven leading AI companies' efforts to manage both immediate harms and ...
+
+26. Evaluating whether AI models would sabotage AI safety ...
+   https://www.aisi.gov.uk/blog/evaluating-whether-ai-models-would-sabotage-ai-safety-research
+   (Apr 27, 2026)
+   Models may be aware that they are being evaluated: An important limitation of our work is evaluation awareness, where models recognise that they ...
+
+27. Frontier Risk Report (February to March 2026)
+   https://metr.org/blog/2026-05-19-frontier-risk-report/
+   (May 19, 2026)
+   The yellow region depicts the most severe incidents that may have been within the means of Feb–Mar 2026 agents. Public materials. METR ...
+
+28. LLMs Can Covertly Sandbag on Capability Evaluations ...
+   https://aclanthology.org/2025.ijcnlp-short.33/
+   by C Li · 2025 · Cited by 15 — In this work, we measure the ability of models to sandbag on dangerous capability evaluations against a CoT monitor by prompting them to sandbag while being ...
+
+29. AI Safety Research Highlights of 2025
+   https://ari.us/policy-bytes/ai-safety-research-highlights-of-2025/
+   (Dec 19, 2025)
+   2025 has shaped up to be a watershed year for AI safety and security. Frontier models showed improved potential to facilitate CBRN threats, ...
+
+30. Chinese AI models are learning to detect safety tests and ...
+   https://thenextweb.com/news/chinese-ai-models-gaming-safety-tests-evaluation-awareness
+   (Jun 14, 2026)
+   The evaluation awareness findings suggest that the testing infrastructure may need to evolve before the enforcement infrastructure built on top ...
+
+31. In-Context Environments Induce Evaluation-Awareness ...
+   https://arxiv.org/html/2603.03824v1
+   (Mar 4, 2026)
+   The CoT intervention study confirms that 99.3% of sandbagging decisions are causally encoded in verbalized eval-aware reasoning, ruling out ...
+
+32. Scheming in the wild: detecting real-world AI ...
+   https://www.longtermresilience.org/wp-content/uploads/2026/03/v5-Scheming-in-the-wild_-detecting-real-world-AI-scheming-incidents-through-open-source-intelligence.pdf
+   (Mar 12, 2026)
+   Transcripts reporting scheming-related behaviours are being shared online in large numbers (183,420 reports from 12 Oct 2025 to 12 Mar 2026), ...
+
+33. The 2026 Singapore Consensus on Global AI Safety ...
+   https://aisafetypriorities.org/
+   Realistic evaluations for sandbagging and alignment faking, plus secure access regimes that allow third parties to detect and neutralize evaluation awareness ( ...
+
+34. Risk-Averse AIs - Forethought
+   https://www.forethought.org/research/risk-averse-ais
+   (Jun 23, 2026)
+   We make the case for training AIs to be risk-averse in resources — specifically, to treat resources as having diminishing marginal utility.
+
+35. AI Evaluation | Longterm Wiki
+   https://www.longtermwiki.com/wiki/E447
+   (Jan 28, 2026)
+   Gartner projects 70% of enterprises will require safety evaluations by 2026; International evaluation standard harmonization (via GPAI ...
+
+36. Models are no longer behaving like neutral tools ...
+   https://www.facebook.com/groups/595424764221375/posts/2377712679325899/
+   Researchers stress that understanding and tracking evaluation awareness is essential to ensure safety tests reliably reflect real- world AI ...
+
+37. AI Safety Evaluation Environment Task Force Study Report ...
+   https://aisi.go.jp/assets/pdf/20260415_2_aisev_taskforce_studyreport_summary_en.pdf
+   (Apr 15, 2026)
+   This report summarizes the activities and outcomes of the Task Force during FY2025. ○ Harmful effects on users and society. ○ Reputational risks ...
+
+38. AI Risk Management Frameworks | Springer Nature Link
+   https://link.springer.com/rwe/10.1007/978-981-97-8440-0_57-1
+   (Dec 2, 2025)
+   Safety cases for frontier AI. arXiv. https://arxiv.org/abs/2410.21572. Buhl, M. D., Bucknall, B., & Masterson, T. (2025). Emerging practices ...
+
+39. Researchers may have found a way to stop AI models from ...
+   https://the-decoder.com/researchers-may-have-found-a-way-to-stop-ai-models-from-intentionally-playing-dumb-during-safety-evaluations/
+   (May 10, 2026)
+   Researchers call this behavior "sandbagging," and it's especially concerning because it can undermine safety evaluations: a model that appears ...
+
+40. The Hawthorne Effect in Reasoning Models: Evaluating ...
+   https://neurips.cc/virtual/2025/poster/117076
+   This inconsistency undermines the validity of safety assessments as evaluation ... [2025], to direct the model towards and away from evaluation awareness.
+
+41. Preliminary Report of the Independent International ...
+   https://www.un.org/independent-international-scientific-panel-ai/sites/default/files/2026-07/en_Preliminary%20Report_.pdf
+   and evaluation awareness. ... Nature Health, 1–8. 10. Bengio, Y., Clare, S., Prunkl, C., et al. (2026). International AI Safety Report 2026. International AI ...
+
+42. AI Sandbagging: an Interactive Explanation
+   https://tomdug.github.io/ai-sandbagging/
+   (Sep 29, 2024)
+   AI sandbagging refers to the strategic underperformance of an AI system on capability evaluations (van der Weij et al., 2024). This can occur ...
+
+43. Defeat Devices in AI Systems
+   https://www.mdpi.com/1999-5903/18/7/339
+   (by E Ferrara · 2026)
+   AI systems increasingly exhibit behavior that differs systematically between evaluation and deployment contexts. Alignment faking, sandbagging, benchmark ...
+
+44. AI Safety 2026: From Risk to Resilience - Owen Sakawa
+   https://owensakawa.com/insights/state-of-ai-safety-2026
+   Pre-deployment safety checks can no longer be assumed to fully reflect production behavior. The "evaluation gap" has widened significantly in the last 12 months ...
+
+45. Avoiding AI Pitfalls in 2026: Lessons Learned from Top ...
+   https://www.isaca.org/resources/news-and-trends/isaca-now-blog/2025/avoiding-ai-pitfalls-in-2026-lessons-learned-from-top-2025-incidents
+   (Dec 15, 2025)
+   The exposed information included full chat transcripts with the “Olivia” hiring chatbot, and in many cases, responses to personality-assessment ...
+
+46. Open-Weight AI Models Require Proportional Evaluation ...
+   https://www.rand.org/content/dam/rand/pubs/perspectives/PEA4800/PEA4886-1/RAND_PEA4886-1.pdf
+   (2026 · Cited by 1)
+   agentic systems without oversight (AI Security Institute, 2026; Casper et al., 2025).7 These interventions can selectively amplify dangerous capabilities ...
+
+47. The 2026 Singapore Consensus on Global AI Safety ...
+   https://www.imda.gov.sg/assets/637e92e5-d6df-499b-abfe-81a3c52bd6cc.pdf
+   Since prevention is challenging, research- ing societal resilience to misuse is essential (Section 4.2). • Evaluations and alignment/control methods for ...
+
+48. AI Sandbagging: an Interactive Explanation
+   https://blog.bluedot.org/p/ai-sandbagging-an-interactive-explanation
+   (Oct 14, 2024)
+   ... evaluation to appear safer and less capable than it truly is. This deceptive behaviour could allow dangerous AI systems to pass safety ...
+
+49. BlueDot AI Safety Evals Paper Club Notes
+   https://tylercrosse.com/ideas/2025/ai-safety-evals-paper-club-notes/
+   (Sep 9, 2025)
+   My notes and takeaways from the BlueDot AI Safety Evals paper club, covering recent papers on AI alignment, security, and evaluations.
+
+50. AI Sandbagging: When AI Systems Underplay Their Abilities
+   https://www.linkedin.com/pulse/ai-sandbagging-when-systems-underplay-abilities-padma-murali-ph-d-rapqf
+   (1 year ago)
+   Sandbagging in AI refers to the deliberate underperformance of AI systems during evaluations to conceal their true capabilities.
+
+51. AI‑Powered Ransomware To Explode In 2026 After Brief ...
+   https://www.guidepointsecurity.com/newsroom/ai-powered-ransomware-to-explode-in-2026-after-brief-2025-slowdown-say-security-experts/
+   ... understanding of mobile risk · Source Code Review Evaluate applications for critical security issues ... cases · Threat Intelligence as a Service Fully managed ...
+
+52. SafeBreach 2025 Year in Review
+   https://www.safebreach.com/blog/safebreach-2025-year-in-review/
+   (Jan 28, 2026)
+   AI Innovation: Released a number of new AI-based capabilities that simplify security posture analysis, accelerate operational efficiency, and ...
+
+53. How AI Regulation Changed in 2025
+   https://www.promptfoo.dev/blog/ai-regulation-2025/
+   (Dec 15, 2025)
+   Commerce evaluation identifying conflicting state laws (~March 11, 2026) ... Safety frameworks, catastrophic risk assessments (frontier ...
+
+[RelatedSearches] Noise injection reveals hidden capabilities of sandbagging language models | Auditing games for sandbagging | Sabotage evaluations for frontier models | Ai evaluation awareness | Large language models often know when they are being evaluated | Baker huizinga et al 2025 | Frontier models are capable of in-context scheming | Uncovering deceptive tendencies in language models A simulated company ai assistant

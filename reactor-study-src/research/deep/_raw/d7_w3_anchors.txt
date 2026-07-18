@@ -1,0 +1,647 @@
+===== Query 1/4: Gao Schulman Hilton Scaling Laws for Reward Model Overoptimization arxiv 2210.10760 =====
+
+1. Scaling Laws for Reward Model Overoptimization
+   https://arxiv.org/abs/2210.10760
+   by L Gao · 2022 · Cited by 1198 — Abstract:In reinforcement learning from human feedback, it is common to optimize against a reward model trained to predict human preferences ...
+
+2. Scaling Laws for Reward Model Overoptimization
+   https://proceedings.mlr.press/v202/gao23h/gao23h.pdf
+   by L Gao · 2023 · Cited by 1196 — In reinforcement learning from human feedback, it is common to optimize against a reward model trained to predict human preferences. Because the.
+
+3. Scaling Laws for Reward Model Overoptimization
+   https://www.lesswrong.com/posts/shcSdHGPhnLQkpSbX/scaling-laws-for-reward-model-overoptimization
+   (Oct 19, 2022)
+   TL;DR: Reward model (RM) overoptimization in a synthetic-reward setting can be modelled surprisingly well by simple functional forms.
+
+4. rl-llm-wiki/knowledge-base · topic: reward-modeling/ ...
+   https://huggingface.co/datasets/rl-llm-wiki/knowledge-base/discussions/22/files
+   (Jun 26, 2026)
+   **Scaling Laws for RM Over-optimization** — Gao, Schulman & Hilton 2022 :arxiv:2210.10760]: the synthetic-gold-RM methodology }}$ scaling laws
+
+5. Scaling Laws for Reward Model Overoptimization
+   https://www.researchgate.net/publication/364436070_Scaling_Laws_for_Reward_Model_Overoptimization
+   (Jun 6, 2026)
+   Gao, Schulman, and Hilton demonstrate that the relationship between optimization pressure and actual performance follows predictable scaling ...
+
+6. Scaling Laws for Reward Model Overoptimization in Direct ...
+   https://arxiv.org/abs/2406.02900
+   by R Rafailov · 2024 · Cited by 162 — this work formulates and formalizes the reward over-optimization or hacking problem for DAAs and explores its consequences across objectives, ...
+
+7. Reward Model Overoptimization: Root Causes and Mitigations
+   https://www.reinforced.info/p/reward-model-overoptimization
+   (by A Nikulkov)
+   Gao, Leo, John Schulman, and Jacob Hilton. "Scaling laws for reward model overoptimization." In International Conference on Machine Learning ...
+
+8. Scaling Laws for Reward Model Overoptimization
+   https://www.alignmentforum.org/posts/shcSdHGPhnLQkpSbX/scaling-laws-for-reward-model-overoptimization
+   (Oct 19, 2022)
+   TL;DR: Reward model (RM) overoptimization in a synthetic-reward setting can be modelled surprisingly well by simple functional forms.
+
+9. Over-Optimization | RLHF and Post-Training ...
+   https://rlhfbook.com/c/14-over-optimization
+   Gao, J. Schulman, and J. Hilton, “Scaling laws for reward model overoptimization,” in International conference on machine learning, PMLR, 2023, pp. 10835 ...
+
+10. Scaling Laws for Reward Model Overoptimization abs ...
+   https://x.com/_akhaliq/status/1582897478562480128
+   (3 years ago)
+   Scaling Laws for Reward Model Overoptimization abs: arxiv.org/abs/2210.10760 · AK's Image on X · 0. 8. 50. 0. · Explore Trending StoriesGo ...
+
+11. Scaling Laws for Reward Model Overoptimization in Direct ...
+   https://proceedings.neurips.cc/paper_files/paper/2024/file/e45caa3d5273d105b8d045e748636957-Paper-Conference.pdf
+   by R Rafailov · 2024 · Cited by 162 — Standard RLHF methods optimize a learned, but imperfect reward function which ends up amplifying the reward model's shortcomings. Empirically, this phenomenon ...
+
+12. "Scaling Laws for Reward Model Overoptimization", Gao et ...
+   https://www.reddit.com/r/reinforcementlearning/comments/12we779/scaling_laws_for_reward_model_overoptimization/
+   Scaling laws for reward model overoptimization: (1) After how much training do models start to 'overoptimize' learned objectives and exploit ...
+
+13. Scaling Laws for Reward Model Overoptimization in Direct ...
+   https://arxiv.org/html/2406.02900v1
+   (Jun 5, 2024)
+   This work formulates and formalizes the reward over-optimization or hacking problem for DAAs and explores its consequences across objectives, training regimes, ...
+
+14. Scaling Laws for Reward Model Overoptimization in Direct ...
+   https://www.proceedings.com/079017-4009.html
+   Scaling Laws for Reward Model Overoptimization in Direct Alignment Algorithms ; Format: PDF Paper Download ; Conference: Advances in Neural Information Processing ...
+
+15. Scaling Laws for Reward Model Overoptimization in Direct...
+   https://bytez.com/docs/neurips/93540/paper?_c=eyJ2IjoxLCJyZWxhdGVkIjpbImNvZGUiLCJyZWZlcmVuY2VzIiwiY29uZmVyZW5jZSJdfQ%3D%3D
+   This research paper discusses how a method called Reinforcement Learning from Human Feedback (RLHF) helps improve Large Language Models (LLMs), ...
+
+16. Scaling Laws for Reward Model Overoptimization
+   https://www.semanticscholar.org/paper/Scaling-Laws-for-Reward-Model-Overoptimization-Gao-Schulman/fb3dc5e20e0a71134ca916f0d6d8d41f01225b4b
+   This work studies how the gold reward model score changes as the authors optimize against the proxy reward model using either reinforcement learning or ...
+
+17. confronting reward model overoptimization
+   https://arxiv.org/pdf/2310.04373
+   by T Moskovitz · 2023 · Cited by 115 — Leo Gao, John Schulman, and Jacob Hilton. Scaling laws for reward model overoptimization. arXiv preprint arXiv:2210.10760, 2022. Rajkumar ...
+
+18. Scaling Laws for Reward Model Overoptimization
+   https://zhuanlan.zhihu.com/p/3654680219
+   (Oct 31, 2024)
+   这篇论文探索的是RL和RM阶段的Scaling Law：. RLHF(包括BON & PPO)利用RM作为proxy objective，会有overoptimization的问题，也就是reward hacking问题。那么 ...
+
+19. [Literature Review] Scaling Laws for Reward Model ...
+   https://www.themoonlight.io/en/review/scaling-laws-for-reward-model-overoptimization-in-direct-alignment-algorithms
+   This paper examines the phenomenon of reward over-optimization in Direct Alignment Algorithms (DAAs) for Large Language Models (LLMs).
+
+20. Scaling Laws for Generative Reward Models
+   https://openreview.net/forum?id=VYLwMvhdXI
+   (by A Raychev)
+   This work investigates the scaling behavior of generative reward models for RLAIF when used as replacements for traditional Bradley–Terry models ...
+
+21. Jacob Hilton
+   https://scholar.google.com/citations?user=WyKvz7EAAAAJ&hl=en
+   arXiv preprint arXiv:2112.09332, 2021. 2307, 2021. Scaling laws for reward model overoptimization. L Gao, J Schulman, J Hilton. International Conference on ...
+
+22. Data with high and consistent preference difference are ...
+   https://dl.acm.org/doi/10.1609/aaai.v39i26.34960
+   (Feb 25, 2025)
+   ... models show that reward models ... Gao, L.; Schulman, J.; and Hilton, J. 2022. Scaling Laws for Reward Model Overoptimization. arXiv:2210.10760.
+
+23. Scaling Laws for Reward Model Overoptimization
+   https://www.linkedin.com/posts/generative-ai-reviews_scaling-laws-for-reward-model-overoptimization-activity-7244231259462283265-DdiI
+   (1 year ago)
+   A critical challenge emerges: the risk of overoptimization in reward models. This phenomenon threatens to misalign AI systems with human values.
+
+24. Rethinking Reward Model Evaluation: Are We Barking up ...
+   https://arxiv.org/html/2410.05584v3
+   (2022) ↑ Leo Gao, John Schulman, and Jacob Hilton. Scaling laws for reward model overoptimization, 2022. URL https://arxiv.org/abs/2210.10760. Gao et al ...
+
+25. Reward Model Overoptimisation in Iterated RLHF
+   https://arxiv.org/html/2505.18126v1
+   (May 23, 2025)
+   (11) Leo Gao, John Schulman, and Jacob Hilton. Scaling Laws for Reward Model Overoptimization. In Proceedings of the 40th International ...
+
+26. Confronting Reward Model Overoptimization with ...
+   https://ui.adsabs.harvard.edu/abs/2023arXiv231004373M/abstract
+   by T Moskovitz · 2023 · Cited by 115 — In this paper, we perform, to our knowledge, the first study on overoptimization in composite RMs, showing that correlation between component RMs has a ...
+
+27. Scaling Laws for Reward Model Overoptimization
+   https://huggingface.co/papers/2210.10760
+   (Oct 19, 2022)
+   The study examines how optimizing against a proxy reward model affects ground truth performance in reinforcement learning from human ...
+
+28. Countering Reward Over-optimization in LLM with ...
+   https://aclanthology.org/2024.findings-acl.740.pdf
+   by M Rita · 2024 · Cited by 26 — Leo Gao, John Schulman, and Jacob Hilton. 2023. Scal- ing laws for reward model overoptimization. In Proc. of International Conference on ...
+
+29. [LG] Scaling Laws for Reward Model Overoptimization ...
+   https://x.com/fly51fly/status/1798833808315388197
+   (2 years ago)
+   - Through extensive empirical experimentation, scaling laws are established for reward model overoptimization in DAAs. - The reward modeling ...
+
+30. ‪Jacob Hilton‬ - ‪Google Scholar‬
+   https://scholar.google.com.tr/citations?user=WyKvz7EAAAAJ&hl=vi
+   arXiv preprint arXiv:2112.09332, 2021. 2183, 2021. Scaling laws for reward model overoptimization. L Gao, J Schulman, J Hilton. International Conference on ...
+
+31. OpenAI Fills Last Year's Hole: Reward Model Scaling Law ...
+   https://eu.36kr.com/en/p/3374207325067776
+   (Jul 11, 2025)
+   OpenAI filled the hole it dug last year. The Scaling Law for the reward model appears for the first time. A 1.8B model taught a lesson to a 70B behemoth.
+
+32. Mitigating Reward Overfitting and Overoptimization in RLHF
+   https://arxiv.org/pdf/2401.16335
+   by B Zhu · 2024 · Cited by 63 — Gao, J. Schulman, and J. Hilton. Scaling laws for reward model overoptimization. arXiv preprint. arXiv:2210.10760, 2022. L. Gao, J. Schulman, ...
+
+33. [PDF] Confronting Reward Model Overoptimization with ...
+   https://www.semanticscholar.org/paper/af7669dc48c70d8cf6fccdf1322d6056a6b39dc8
+   (Oct 6, 2023)
+   This paper performs the first study on overoptimization in composite RMs, showing that correlation between component RMs has a significant ...
+
+34. Scaling Laws for Neural Language Models
+   https://haroldbenoit.com/notes/ml/llms/scaling/scaling-laws-for-neural-language-models
+   Sample efficiency: Larger models are more sample-efficient i.e. they reach the same level of performance with fewer optimization steps/tokens processed .
+
+35. Scaling Laws for Reward Model Overoptimization
+   https://liner.com/ko/review/scaling-laws-for-reward-model-overoptimization
+   Scaling Laws for Reward Model Overoptimization. Leo Gao,. John Schulman,. Jacob Hilton. ICML. 2022. 10. 19. 참고 문헌. 59. 인용 수. 617. 원본 보기.
+
+36. Observational Scaling Laws and the Predictability of ...
+   https://openreview.net/forum?id=On5WIN7xyD&referrer=%5Bthe%20profile%20of%20Chris%20J.%20Maddison%5D(%2Fprofile%3Fid%3D~Chris_J._Maddison1)
+   (Nov 5, 2024)
+   We propose an alternative, observational approach that bypasses model training and instead builds scaling laws from ~100 publically available ...
+
+37. Countering Reward Over-Optimization in LLM with ...
+   https://aclanthology.org/2024.findings-acl.740/
+   by M Rita · 2024 · Cited by 26 — We here introduce the Reward Calibration from Demonstration (RCfD), which leverages human demonstrations and a reward model to recalibrate the reward objective.
+
+38. objective mismatch in reinforcement learning from human ...
+   https://arxiv.org/pdf/2311.00168
+   by N Lambert · 2023 · Cited by 43 — Gao, L., Schulman, J., & Hilton, J. (2022). Scaling laws for reward model overoptimization. arXiv preprint. arXiv:2210.10760. Gilbert, T. K. ...
+
+39. How to Upscale Neural Networks with Scaling Law? A ...
+   https://arxiv.org/html/2502.12051v2
+   (May 24, 2025)
+   (2022) ↑ Leo Gao, John Schulman, and Jacob Hilton. 2022. Scaling laws for reward model overoptimization. arXiv preprint. ArXiv:2210.10760.
+
+40. (PDF) Scaling Laws for Hyperparameter Optimization
+   https://www.researchgate.net/publication/374977507_Scaling_Laws_for_Hyperparameter_Optimization
+   (Oct 26, 2023)
+   In this work, we propose Deep Power Laws (DPL), an ensemble of neural network models conditioned to yield predictions that follow a power-law ...
+
+41. Scaling Laws for Reward Model Overoptimization in Direct ...
+   https://huggingface.co/papers/2406.02900
+   (Jun 4, 2024)
+   The study investigates reward over-optimization and hacking in Direct Alignment Algorithms, finding similarities to classical Reinforcement ...
+
+42. Asynchronous RLHF: Faster and More Efficient Off-Policy ...
+   https://arxiv.org/html/2410.18252v1
+   (2022) Leo Gao, John Schulman, and Jacob Hilton. Scaling Laws for Reward Model Overoptimization, October 2022. ... arXiv:2210.10760 [cs, stat]. Google ...
+
+43. Scaling Laws for Hyperparameter Optimization
+   https://proceedings.neurips.cc/paper_files/paper/2023/hash/945c781d7194ea81026148838af95af7-Abstract-Conference.html
+   by A Kadra · 2023 · Cited by 39 — In this work, we propose Deep Power Laws (DPL), an ensemble of neural network models conditioned to yield predictions that follow a power-law scaling pattern.
+
+===== Query 2/4: Skalse Howe Krasheninnikov Krueger Defining and Characterizing Reward Hacking 2022 =====
+
+1. [2209.13085] Defining and Characterizing Reward Hacking - arXiv
+   https://arxiv.org/abs/2209.13085
+   (Sep 27, 2022)
+   We provide the first formal definition of reward hacking, a phenomenon where optimizing an imperfect proxy reward function leads to poor performance.
+
+2. Defining and characterizing reward hacking - ACM Digital Library
+   https://dl.acm.org/doi/10.5555/3600270.3600957
+   We provide the first formal definition of <b>reward hacking</b>, a phenomenon where optimizing an imperfect proxy reward function,
+
+3. [PDF] Defining and Characterizing Reward Hacking
+   https://proceedings.neurips.cc/paper_files/paper/2022/file/3d719fee332caa23d5038b8a90e81796-Paper-Conference.pdf
+   We provide the first formal definition of reward hacking, a phenomenon where optimizing an imperfect proxy reward function,˜R, leads to poor performance.
+
+4. (PDF) Defining and Characterizing Reward Hacking - ResearchGate
+   https://www.researchgate.net/publication/363888695_Defining_and_Characterizing_Reward_Hacking
+   (Sep 27, 2022)
+   We provide the first formal definition of reward hacking, a phenomenon where optimizing an imperfect proxy reward function, ...
+
+5. Defining and Characterizing Reward Gaming - ICML 2026
+   https://icml.cc/virtual/2022/21395
+   Defining and Characterizing Reward Gaming. Joar Skalse ⋅ Nikolaus Howe ⋅ Dmitrii Krasheninnikov ⋅ David Krueger. Abstract. We provide the first formal ...
+
+6. Defining and Characterizing Reward Hacking - Semantic Scholar
+   https://www.semanticscholar.org/paper/Defining-and-Characterizing-Reward-Hacking-Skalse-Howe/004357dd9bbf3012c8fe0ccada4da401bf85dfff
+   This work provides the first formal definition of reward hacking, a phenomenon where optimizing an imperfect proxy reward function leads to poor performance ...
+
+7. "Defining and Characterizing Reward Hacking", Skalse et al 2022
+   https://www.reddit.com/r/reinforcementlearning/comments/18jucx1/defining_and_characterizing_reward_hacking_skalse/
+   (Dec 16, 2023)
+   Reinforcement learning is a subfield of AI/statistics focused on exploring/understanding complicated environments and learning how to optimally ...
+
+8. [PDF] Defining and Characterizing Reward Hacking - arXiv
+   https://arxiv.org/pdf/2209.13085
+   (Mar 5, 2025)
+   We provide the first formal definition of reward hacking, a phenomenon where optimizing an imperfect proxy reward function,˜R, leads to poor ...
+
+9. Defining and Characterizing Reward Hacking | Request PDF
+   https://www.researchgate.net/publication/401445436_Defining_and_Characterizing_Reward_Hacking
+   (Mar 4, 2026)
+   Defining and Characterizing Reward Hacking. September 2022. Joar Skalse · Nikolaus H. R. Howe · Dmitrii Krasheninnikov · David Krueger.
+
+10. Training on Documents about Reward Hacking Induces Reward ...
+   https://alignment.anthropic.com/2025/reward-hacking-ooc/
+   In this work, we demonstrate that out-of-context reasoning from pretraining-like documents can increase and decrease reward hacking behavior in models. More ...
+
+11. Defining and Characterising Reward Hacking
+   https://www.alignmentforum.org/posts/vnNdpaXehmefXSe2H/defining-and-characterising-reward-hacking
+   (Feb 28, 2025)
+   In this post, I will provide a summary of the paper Defining and Characterising Reward Hacking, and explain some of its results.
+
+12. rl-llm-wiki/knowledge-base · source: arxiv:2209.13085
+   https://huggingface.co/datasets/rl-llm-wiki/knowledge-base/discussions/103
+   Adds Defining and Characterizing Reward Hacking (Skalse, Howe, Krasheninnikov, Krueger; NeurIPS 2022) — the first formal definition of reward hacking and ...
+
+13. What Is Reward Hacking? How to Prevent It in RL (2026 ...
+   https://www.articsledge.com/post/reward-hacking
+   (Feb 16, 2026)
+   Reward hacking happens when a reinforcement learning agent finds ways to maximize its reward score by exploiting loopholes in the reward ...
+
+14. Defining and Characterizing Reward Gaming
+   https://responsibledecisionmaking.github.io/assets/pdf/papers/27.pdf
+   by J Skalse · Cited by 843 — We provide the first formal definition of reward gaming, a phenomenon where optimizing an im- perfect proxy reward function,˜고, leads to poor.
+
+15. Publications
+   https://www.kasl.ai/publications/
+   Defining and Characterizing Reward Gaming. Joar Skalse, Niki Howe, Dmitrii Krasheninnikov, David Krueger. Neural Information Processing Systems (2022). Goal ...
+
+16. On the Limitations of Markovian Rewards to Express Multi ...
+   https://proceedings.mlr.press/v216/skalse23a/skalse23a.pdf
+   by J Skalse · 2023 · Cited by 22 — Settling the reward hypothesis, 2022. URL ... Joar Skalse, Niki Howe, Krasheninnikov Dima, and David. Krueger. Defining and characterizing reward hacking.
+
+17. Defining and Characterizing Reward Gaming
+   https://openreview.net/references/pdf?id=ss2Opw5VaF
+   Here, we formally define gameability as a binary relation between reward functions. 154. Definition 1. A pair of reward functions R1, R2 are gameable relative ...
+
+18. Confusion around the term reward hacking
+   https://www.lesswrong.com/posts/ixyokbwQEHgiHJYFW/confusion-around-the-term-reward-hacking
+   (Mar 20, 2026)
+   Summary: "Reward hacking" commonly refers to two different phenomena: misspecified-reward exploitation, where RL reinforces undesired behaviors ...
+
+19. Dmitrii Krasheninnikov
+   https://scholar.google.com.hk/citations?user=BIQflKQAAAAJ&hl=th
+   Defining and Characterizing Reward Hacking. J Skalse*, NHR Howe, D Krasheninnikov, D Krueger*. Advances in Neural Information Processing Systems 36, 2022.
+
+20. Preliminary Thoughts on Reward Hacking
+   https://www.beren.io/2025-04-27-Preliminary-Thoughts-On-Reward-Hacking/
+   (Apr 27, 2025)
+   Here we propose one possible idea for doing this which is very simple: use an adversarial GAN-like setup to train a reward-hacking detector/overseer.
+
+21. Detecting and Suppressing Reward Hacking with Gradient ...
+   https://arxiv.org/html/2604.16242v1
+   (Apr 17, 2026)
+   Skalse, N. H. R. Howe, D. Krasheninnikov, and D. Krueger (2022) Defining and characterizing reward gaming. In Advances in Neural Information ...
+
+22. https://scholar.google.com/citations?view_op=view_...
+   https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BIQflKQAAAAJ&citation_for_view=BIQflKQAAAAJ:Tyk-4Ss8FVUC
+   No information is available for this page.
+
+23. Reward hacking in Reinforcement learning
+   https://medium.com/@vishal09vns/reward-hacking-in-reinforcement-learning-1c47740f0b48
+   A field guide to reward hacking in GRPO — why it happens, how it hides, and what actually fixes it. There's a particular kind of ...
+
+24. Dmitrii Krasheninnikov
+   https://scholar.google.com.my/citations?user=BIQflKQAAAAJ&hl=fr
+   Defining and Characterizing Reward Hacking. J Skalse*, NHR Howe, D Krasheninnikov, D Krueger*. Advances in Neural Information Processing Systems 36, 2022. 823 ...
+
+25. Reward Learning
+   https://web.stanford.edu/class/msande235a/files/lectures/lecture10.pdf
+   (Dec 1, 2025)
+   The difficulty of reward specification motivates concerns about reward hacking. 3 Slight Mispecification Can Induce Severe Misalignment.
+
+26. Reward Hacking in Reinforcement Learning
+   https://lilianweng.github.io/posts/2024-11-28-reward-hacking/
+   (Nov 28, 2024)
+   Reward hacking occurs when a reinforcement learning (RL) agent exploits flaws or ambiguities in the reward function to achieve high rewards.
+
+27. Correlated Proxies: A New Definition and Improved ...
+   https://openreview.net/forum?id=msEr27EejF
+   by C Laidlaw · Cited by 48 — The authors propose a new definition for reward hacking, based on the idea that we should only care about hacking of proxy reward functions which are correlated ...
+
+28. Quickly Assessing Reward Hacking-like Behavior in LLMs ...
+   https://www.lesswrong.com/posts/quTGGNhGEiTCBEAX5/quickly-assessing-reward-hacking-like-behavior-in-llms-and
+   (Jun 4, 2025)
+   We want to be able to assess whether any given model engages in reward hacking and specification gaming, to what extent, and under what ...
+
+29. On Tasks and Rewards
+   https://www.cs.mcgill.ca/~dprecup/courses/Winter2022/Lectures/Reward-2022.pdf
+   Given any task and any environment there is a reward function that realizes in . The Reward Hypothesis (formalized). Assumption. All environments are finite ...
+
+30. Publications
+   https://www.davidlindner.me/publications/
+   ... Reward Hacking. Sebastian Farquhar*, Vikrant Varma*, David Lindner*, David Elson, Caleb Biddulph, Ian Goodfellow, and Rohin Shah. In International Conference ...
+
+31. What is Reward Hacking and Constitutional AI?
+   https://medium.com/@madalina.lupu.d/what-is-reward-hacking-and-constitutional-ai-4d010273e499
+   (2 years ago)
+   The agent, determined to be a top performer student, might take some clever shortcuts during training to maximise the rewards, even if they're a bit off-topic.
+
+32. [D] How to detect or speculate the "reward-hacking" ...
+   https://www.reddit.com/r/MachineLearning/comments/1b5hrjy/d_how_to_detect_or_speculate_the_rewardhacking/
+   (2 years ago)
+   In the paper, the authors use the KL-reward curve to detect reward-hacking phenomenon, saying that the reward starts to decrease and thus reward ...
+
+33. How the Level of Reward Awareness Changes the ... - PMC
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC6596205/
+   by CMC Correa · 2018 · Cited by 50 — In the present report, we investigated this question in a reinforcement learning framework, combining perceptual masking, computational modeling, and ...
+
+34. Reward hacking behavior can generalize across tasks
+   https://www.alignmentforum.org/posts/Ge55vxEmKXunFFwoe/reward-hacking-behavior-can-generalize-across-tasks
+   (May 28, 2024)
+   We find that reward hacking generalization occurs in LLMs in a number of experimental settings and can emerge from reward optimization on certain datasets.
+
+35. arXiv:2103.09159v5 [cs.LG] 6 Feb 2023
+   https://discovery.ucl.ac.uk/id/eprint/10185765/1/2103.09159.pdf
+   by D Mguni · 2023 · Cited by 19 — A reward-shaping agent (Shaper) uses switching controls to determine which states to add shap- ing rewards for more efficient learning while the other agent. ( ...
+
+36. Correlated Proxies: A New Definition and Improved ...
+   https://arxiv.org/html/2403.03185v4
+   (Mar 13, 2025)
+   (2022) define reward hacking as an increase in proxy reward accompanied by a drop in true reward. This definition does not satisfy our first ...
+
+[RelatedSearches] Reward hacking in reinforcement learning | Reward hacking paper | The Effects of reward misspecification: Mapping and Mitigating Misaligned Models | Scaling laws for reward model Overoptimization | Natural emergent misalignment from reward hacking | Sycophancy to subterfuge: investigating reward-tampering in large language models | In context reward hacking | Joar Skalse
+
+===== Query 3/4: survey 283 AI benchmarks best practices measuring what matters 2025 =====
+
+1. Measuring what Matters - Reasoning with Machines Lab
+   https://oxrml.com/measuring-what-matters/
+   LLM benchmarks are essential for tracking progress and ensuring safety in AI, but most benchmarks don't measure what matters. We reviewed 445 LLM benchmarks
+
+2. [PDF] Construct Validity in Large Language Model Benchmarks - NIPS
+   https://proceedings.neurips.cc/paper_files/paper/2025/file/1967e0fc3aa6cbbace562f5cb8e3954e-Paper-Datasets_and_Benchmarks_Track.pdf
+   Evaluating large language models (LLMs) is crucial for both assessing their capa- bilities and identifying safety or robustness issues prior to deployment.
+
+3. [PDF] Construct Validity in Large Language Model Benchmarks
+   https://openreview.net/pdf?id=mdA5lVvNcU
+   Evaluating large language models (LLMs) is crucial for both assessing their capa- bilities and identifying safety or robustness issues prior to deployment.
+
+4. The 2025 AI Index Report | Stanford HAI
+   https://hai.stanford.edu/ai-index/2025-ai-index-report
+   AI performance on demanding benchmarks continues to improve. scores rose by 18.8, 48.9, and 67.3 percentage points on MMMU, GPQA, and SWE-bench, respectively.
+
+5. TrustArc Global Privacy Benchmarks 2025 Preview
+   https://insights.trustarc.com/resource/2025-global-privacy-benchmarks-report/
+   Find out about best privacy practices and see how top privacy performers stay compliant and ahead. Preview the Benchmarks and download your copy.
+
+6. [PDF] 2025 AI Benchmarking Report - ACA Group
+   https://web.acaglobal.com/hubfs/2025%20AI%20Benchmarking%20Survey/ACA%20Group_AI%20Benchmarking%20Report.pdf
+   The findings of our survey reflect both growing maturity in the use of AI tools, and opportunities for firms to improve their risk management and compliance ...
+
+7. AI Adoption Benchmarks 2025: Employee Usage Statistics - Worklytics
+   https://www.worklytics.co/resources/2025-ai-adoption-benchmarks-employee-usage-statistics
+   (Aug 31, 2025)
+   This comprehensive analysis breaks down weekly AI usage rates by industry, department, and role using fresh data from leading workplace ...
+
+8. A Survey on Large Language Model Benchmarks - arXiv
+   https://arxiv.org/html/2508.15361v1
+   (Aug 21, 2025)
+   We systematically review the current status and development of large language model benchmarks categorizing 283 representative benchmarks into ...
+
+9. AI benchmarks: What The Scoreboards Say About Knowledge Work ...
+   https://primetrics.cpa/ai-benchmarks-what-the-scoreboards-say-about-knowledge-work-2026-2027/
+   By the end of 2025, the benchmark story isn't just “AI got smarter.” It's that AI is moving from language fluency to workflow reliability. Over the next two ...
+
+10. [PDF] Artificial Intelligence Index Report 2025 - AWS
+   https://hai-production.s3.amazonaws.com/files/hai_ai_index_report_2025.pdf
+   New in this year's report are in-depth analyses of the evolving landscape of AI hardware, novel estimates of inference costs, and new analyses of AI publication ...
+
+11. Measuring what matters: Scoping dimensions of ...
+   https://rai.ac.uk/new_projects/measuring-what-matters-scoping-dimensions-of-measurement-for-responsible-ai-in-the-public-sector/
+   This project establishes a new cross-sector collaboration to investigate what matters in measurement of responsible AI in the public sector. Through an analysis ...
+
+12. AI benchmarking framework and metrics
+   https://www.pwc.com/us/en/services/ai/benchmarking.html
+   Use PwC's AI benchmarking framework to link AI investment to performance, with benchmarks and KPIs across financial, operational, trust and workforce ...
+
+13. The State of AI: Global Survey 2025
+   https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
+   (Nov 5, 2025)
+   They span six dimensions essential to capturing value from AI: strategy, talent, operating model, technology, data, and adoption and scaling.
+
+14. Most Organizations Have AI Governance; Few Say It Works ...
+   https://www.adr.org/press-releases/aaa-ai-governance-survey/
+   Although 87% of respondents say their organizations have some form of AI governance in place, only 22% say those systems are operating effectively. The findings ...
+
+15. Survey on 283 LLM Benchmarks: Insights and Future ...
+   https://www.linkedin.com/posts/shilpi-garg2328_ai-llm-benchmarks-activity-7365729452665835520-UPj0
+   (10 months ago)
+   New Survey on LLM Benchmarks (283 benchmarks reviewed!) Large Language Models (LLMs) are evolving at breakneck speed—but how do we really ...
+
+16. AI benchmarks hampered by bad science
+   https://www.theregister.com/software/2025/11/07/ai-benchmarks-hampered-by-bad-science/1106339
+   (Nov 7, 2025)
+   AI benchmarks are a bad joke – and LLM makers are the ones laughing. Study finds many tests don't measure the right things. Thomas Claburn ...
+
+17. The State of AI 2025
+   https://www.bvp.com/atlas/the-state-of-ai-2025
+   (Aug 13, 2025)
+   In State of AI, Bessemer shares the latest benchmarks, investment strategies, and top predictions changing how founders should build.
+
+18. AI benchmarking: Nine challenges and a way forward - AI Watch
+   https://ai-watch.ec.europa.eu/news/ai-benchmarking-nine-challenges-and-way-forward-2025-09-10_en
+   (Sep 10, 2025)
+   A recent JRC paper explores AI benchmarks, considered an essential tool to evaluate performance, capabilities, and risks of AI models.
+
+19. Measures that Matter: Correlation of Technical AI Metrics ...
+   https://medium.com/@adnanmasood/measures-that-matter-correlation-of-technical-ai-metrics-with-business-outcomes-b4a3b4a595ca
+   (1 year ago)
+   This post examines current methods, metrics, benchmarks, leaderboards, and frameworks for evaluating AI/ML technologies in enterprise contexts.
+
+20. 2025 September "AI Evaluation" Digest
+   https://aievaluation.substack.com/p/2025-september-ai-evaluation-digest
+   (9 months ago)
+   This survey maps 283 benchmarks into general, domain-specific, and target-specific categories, showing how evaluation has ballooned across ...
+
+21. 2025: The State of Consumer AI | Menlo Ventures
+   https://menlovc.com/perspective/2025-the-state-of-consumer-ai/
+   (Jun 26, 2025)
+   Based on a survey of over 5000 U.S. adults, Menlo Ventures unpacks consumer AI adoption in 2025, with key takeaways for founders.
+
+22. The 2025 Attitudes to AI Adoption and Risk Survey ...
+   https://www.ajg.com/ca/news-and-insights/features/2025-attitudes-to-ai-adoption-and-risk-benchmarking-survey/
+   Gallagher's second annual survey on AI adoption sheds light on artificial intelligence's growing impact on risk management and people strategies across ...
+
+23. AI Measurement Frameworks: Building Repeatable ...
+   https://larridin.com/blog/ai-measurement-framework
+   (Jan 30, 2026)
+   Why AI Measurement Matters. According to the Larridin State of Enterprise AI 2025 report, 81% of leaders find AI investments hard to quantify.
+
+24. AI at Work: Why Strategy Matters More Than Tools
+   https://www.bcg.com/publications/2026/ai-at-work-why-strategy-matters-more-than-tools
+   (Jun 3, 2026)
+   AI remains a top priority for business leaders worldwide in 2025, with a strong focus on generating tangible results, according to BCG's survey ...
+
+25. Why AI Needs Better Benchmarks
+   https://www.youtube.com/watch?v=kLZeFWZewH0&vl=en-US
+   (3 months ago)
+   ARC-AGI-3 from the ARC Prize measures intelligence by testing learning efficiency across 135 interactive visual games.
+
+26. The evaluation imperative - Measuring what matters in AI
+   https://www.themandarin.com.au/311940-whitepaper-the-evaluation-imperative-measuring-what-matters-in-ai/
+   This white paper makes the case for a practical, outcome-focused approach to AI evaluation, one that distinguishes between evaluating models, applications, and ...
+
+27. 2025 AI Governance Benchmark Report
+   https://www.modelop.com/ai-gov-benchmark-report
+   Explore insights from the 2025 AI Governance Benchmark Report. Learn how enterprises are closing the AI governance gap, accelerating generative AI adoption, ...
+
+28. Measuring what matters in the age of AI
+   https://www.thoughtworks.com/en-in/insights/podcasts/pragmatism-in-practice/measuring-what-matters-in-the-age-of-ai
+   (Sep 16, 2025)
+   In this episode, we dig into how teams can track AI adoption, assess the real impact of AI tools and agents, and make smarter decisions ...
+
+29. Study: Experienced devs think they are 24% faster with AI ...
+   https://www.reddit.com/r/ExperiencedDevs/comments/1lwk503/study_experienced_devs_think_they_are_24_faster/
+   (1 year ago)
+   We conduct a randomized controlled trial (RCT) to understand how early-2025 AI tools affect the productivity of experienced open-source ...
+
+30. 2025 Benchmark Report, Dawn of the Agentic AI Era
+   https://lucidworks.com/ebooks/2025-ai-benchmark-survey
+   The first-of-its-kind study using autonomous AI agents to benchmark AI capabilities across 1100+ enterprises. This history-making approach redefines market ...
+
+31. The 2025 Attitudes to AI Adoption and Risk Survey ...
+   https://www.ajg.com/news-and-insights/features/2025-attitudes-to-ai-adoption-and-risk-benchmarking-survey/
+   Gallagher's second annual survey on AI adoption sheds light on AI's growing impact on risk management and people strategies across global businesses.
+
+32. Measuring Artificial Intelligence in Education | Bellwether
+   https://bellwether.org/publications/measuring-ai-in-education/
+   Drawing on expert interviews, case examples, and proven evaluation methods, this report offers a road map for school leaders and ed tech developers interested ...
+
+33. Why High Benchmark Scores Don't Mean Better AI ...
+   https://www.youtube.com/watch?v=rqiC9a2z8Io
+   (6 months ago)
+   The F1 Car Analogy: Andrew explains why a model that excels at the "Humanities Last Exam" might be a nightmare for daily use. · The "Wild West" ...
+
+34. Smart Communications 2025 CX Benchmark Research Findings
+   https://www.smartcommunications.com/resources/news/ai-crosses-the-trust-threshold-half-of-all-consumers-embrace-it-for-critical-life-advice/
+   (Jun 24, 2025)
+   Smart Communications' 2025 Benchmark Research finds that AI is gaining traction with healthcare, financial services, and insurance ...
+
+35. What are people actually doing with AI? A better way to ...
+   https://mediated-trust-arts.sydney.edu.au/articles/what-are-people-actually-doing-with-ai-a-better-way-to-measure-performance/
+   (May 29, 2025)
+   These four benchmarks are the best available for measuring AI's practical usefulness. But crucially, no major benchmark currently evaluates ...
+
+36. 2025 AI and data leadership – Executive benchmark ...
+   https://www.dataiq.global/articles/2025-ai-and-data-leadership/
+   (Jan 10, 2025)
+   Randy Bean's report on AI and data leadership in 2025 provides stunning insights into the lay of the land for data professionals.
+
+37. Measuring different types and domains of AI knowledge
+   https://www.sciencedirect.com/science/article/pii/S0360131526000114
+   by I Klein-Avraham · 2026 · Cited by 7 — More AI knowledge is generally associated with positive attitudes and greater trust (Basch et al., 2025; Gillespie et al., 2023; Kaya et al., 2024; Obenza et al ...
+
+[PeopleAlsoAsk]
+  - How are AI benchmarks measured?
+  - What metrics should I track to measure AI's impact?
+  - Was 2025 a big year for AI?
+
+[RelatedSearches] Survey 283 ai benchmarks best practices measuring what matters 2025 questions | Survey 283 ai benchmarks best practices measuring what matters 2025 free | Measuring what matters: construct validity in large language model benchmarks | Global AI Index 2025 | Stanford AI Index report 2025 PDF | Artificial intelligence Index report 2025 | Artificial intelligence Index report 2026 | Stanford HAI AI Index report 2025
+
+===== Query 4/4: impartial peer review NeurIPS 2025 partitioning strategyproof conference =====
+
+1. [1806.06266] On Strategyproof Conference Peer Review - arXiv
+   https://arxiv.org/abs/1806.06266
+   (Jun 16, 2018)
+   In this work, we address this problem through the lens of social choice, and present a theoretical framework for strategyproof and efficient peer review.
+
+2. 2025 Reviewer Guidelines - NeurIPS 2026
+   https://neurips.cc/Conferences/2025/ReviewerGuidelines
+   This page provides an overview of reviewer responsibilities and key dates. Contact Information Thur, May 29 – Wed, Jul 2. Jul 31 – Wed, Aug 13
+
+3. 2025 Conference - NeurIPS Blog
+   https://blog.neurips.cc/category/2025-conference/
+   (Dec 5, 2025)
+   This post provides an update on the 2025 Datasets and Benchmarks Track, reflecting on how the new hosting and metadata requirements affected ...
+
+4. On Strategyproof Conference Peer Review | Request PDF
+   https://www.researchgate.net/publication/325844932_On_Strategyproof_Conference_Peer_Review
+   We propose a new strategyproof (impartial) mechanism called Dollar Partition that satisfies desirable axiomatic properties. We then show, using a detailed ...
+
+5. On Strategyproof Conference Peer Review - IJCAI
+   https://www.ijcai.org/proceedings/2019/87
+   Our framework is based on the so-called partitioning method, and can be treated as a generalization of this type of method to conference peer review settings.
+
+6. [PDF] An Overview of Challenges, Experiments, and Computational ...
+   https://www.cs.cmu.edu/~nihars/preprints/SurveyPeerReview.pdf
+   Such questions about realizing the partition-based method in conference peer review are still open, with promising initial results [Xu+19; Dhu+22] showing that ...
+
+7. [PDF] Strategyproofing Peer Assessment via Partitioning
+   https://par.nsf.gov/servlets/purl/10393986
+   We conduct experimental evaluations on data from the peer-review process of the ICLR 2018 conference, where we find that our algorithms achieve high-expertise ...
+
+8. NeurIPS 2025 Conference - OpenReview
+   https://openreview.net/group?id=NeurIPS.cc/2025/Conference
+   The Thirty-ninth Annual Conference on Neural Information Processing Systems. NeurIPS 2025. San Diego, USADec 01 2025https://neurips.cc/ ...
+
+9. Paper Digest: NeurIPS 2025 Papers & Highlights
+   https://www.paperdigest.org/2025/11/neurips-2025-papers-highlights/
+   (Nov 7, 2025)
+   To summarize the latest research published at NeurIPS-2025 on a specific topic, you can utilize the review by venue (NIPS-2025) service. ... Peer ...
+
+10. NeurIPS 2025 Papers
+   https://neurips.cc/virtual/2025/papers.html
+   Main Conference. Invited Talks · Orals · Papers · Competitions · Datasets ... Peer Review and Grant Funding · H-SPLID: HSIC-based Saliency Preserving Latent ...
+
+11. A Failure Mode Taxonomy of 100 Fabricated Citations at ...
+   https://arxiv.org/html/2602.05930v1
+   (Feb 5, 2026)
+   This study analyzes 100 AI-generated hallucinated citations that appeared in papers accepted by the 2025 Conference on Neural Information ...
+
+12. Track: Poster Session 2
+   https://neurips.cc/virtual/2023/session/74070
+   In this paper, we explore unsupervised approaches and reformulate binding energy prediction as a generative modeling task.
+
+13. Track: Poster Session 1 East
+   https://neurips.cc/virtual/2024/session/108362
+   We introduce a novel strategy, monologue reasoning, to train Code LLMs to reason comprehensive semantics, encompassing high-level functional descriptions ...
+
+14. Strategyproofing Peer Assessment via Partitioning
+   https://arxiv.org/abs/2201.10631
+   by K Dhull · 2022 · Cited by 40 — This issue is typically addressed by partitioning the individuals and assigning them to evaluate the work of only those from different subsets.
+
+15. NeurIPS 2025 Conference Submissions
+   https://openreview.net/submissions?page=211&venue=NeurIPS.cc%2F2025%2FConference
+   Promoting openness in scientific communication and the peer-review process.
+
+16. Strategyproofing Peer Assessment via Partitioning
+   https://arxiv.org/pdf/2201.10631
+   by K Dhull · 2022 · Cited by 40 — We establish several polynomial-time algorithms for strategyproof assignment along with assignment-quality guarantees. Finally, we evaluate the ...
+
+17. NeurIPS 2025 Wednesday 12/3
+   https://nips.cc/virtual/2025/day/12/3
+   Hands-on exercises will guide participants through interactive visualizations, side-by-side model comparisons, and deep dives into model behavior using VCP's no ...
+
+18. Strategyproof Peer Selection: Mechanisms, Analyses, and ...
+   https://www.semanticscholar.org/paper/Strategyproof-Peer-Selection%3A-Mechanisms%2C-Analyses%2C-Aziz-Lev/a3ca4893ae941bd1601322aface4840e47339761
+   This work proposes a new strategyproof (impartial) mechanism called Dollar Partition that satisfies desirable axiomatic properties and shows that this ...
+
+19. NeurIPS 2025 (Past) | Artificial Intelligence (AI) Program
+   https://ai.seas.upenn.edu/neurips-2025/
+   The Thirty-Ninth Annual Conference on Neural Information Processing Systems (NeurIPS 2025) brings together researchers and practitioners from around the world ...
+
+20. Our NeurIPS 2025 Publications
+   https://ml.informatik.uni-freiburg.de/our-neurips-2025-publications/
+   In: 39th Conference on Neural Information Processing Systems (NeurIPS), 2025. ... In: NeurIPS 2025 Fourth Workshop on Deep Learning for Code, Forthcoming.
+
+21. NeurIPS 2025 Fact Sheet: Complete Guide to Neural ...
+   https://www.libertify.com/interactive-library/neurips-2025-fact-sheet/
+   The peer review process for NeurIPS 2025 involved: Submission deadline: May 17, 2025; Review period: 3 months with double-blind reviewing; Reviewers: 8,500+ ...
+
+22. NeurIPS 2025 Call for Papers
+   https://neurips.cc/Conferences/2025/CallForPapers
+   The Thirty-Ninth Annual Conference on Neural Information Processing Systems (NeurIPS 2025) is an interdisciplinary conference that brings together researchers.
+
+23. Impartial Peer Review
+   https://jamiemorgenstern.com/papers/impartial-review.pdf
+   by D Kurokawa · Cited by 101 — “This pilot is an attempt to find an alternative pro- posal review process that can preserve the ability of investigators to submit multiple proposals at more.
+
+24. NeurIPS 2025 - Microsoft Research
+   https://www.microsoft.com/en-us/research/event/neurips-2025/publications/
+   (Dec 2, 2025)
+   Microsoft is pleased to have over 150 accepted papers at NeurIPS 2025, scheduled for December 2–7, 2025, in San Diego, CA, USA.
+
+25. Strategic Classification with Non-Linear Classifiers
+   https://neurips.cc/virtual/2025/poster/117446
+   This work aims to expand the horizon by exploring how strategic behavior manifests under non-linear classifiers and what this implies for learning. We take a ...
+
+26. [2602.05930] Compound Deception in Elite Peer Review
+   https://arxiv.org/abs/2602.05930
+   by S Ansari · 2026 · Cited by 11 — This study analyzes 100 AI-generated hallucinated citations that appeared in papers accepted by the 2025 Conference on Neural Information ...
+
+[RelatedSearches] NeurIPS reviewer 2026 | NeurIPS 2025 reviews | NeurIPS 2026 reviewer nomination | NeurIPS 2025 accepted papers | NeurIPS 2025 proceedings | NeurIPS 2025 Best Paper | NeurIPS 2025 papers | NeurIPS 2025 openreview

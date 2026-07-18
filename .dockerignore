@@ -6,3 +6,5 @@
 **/.DS_Store
 **/node_modules
 /site
+# demo 源料:11MB 研究文件,COPY_EXCLUDE 已挡住不对外发布,也不需要进构建上下文
+/reactor-study-src

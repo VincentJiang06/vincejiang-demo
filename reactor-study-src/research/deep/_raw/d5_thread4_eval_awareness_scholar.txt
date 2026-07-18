@@ -1,0 +1,1772 @@
+===== Query 1/6: AI sandbagging language models strategically underperform van der Weij =====
+
+1. Ai sandbagging: Language models can strategically underperform on evaluations
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/b5e5753b0a0e440a6d8dc7e143617cec-Abstract-Conference.html
+   (T Van Der Weij, F Hofstätter, O Jaffe… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 128)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/b5e5753b0a0e440a6d8dc7e143617cec-Paper-Conference.pdf
+   … LMs are capable of strategically underperforming, rather than … for AI systems and their developers, we examine sandbagging. We define sandbagging as strategic underperformance on …
+
+2. Noise injection reveals hidden capabilities of sandbagging language models
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/aa95d031f5e151bf8fb402f44bd97054-Abstract-Conference.html
+   (…, F Hofstätter, T van der Weij - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 20)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/aa95d031f5e151bf8fb402f44bd97054-Paper-Conference.pdf
+   … Our findings provide a practical tool for AI evaluation and oversight, … We define sandbagging as strategic underperformance … 9], where strategic implies the underperformance was not …
+
+3. CTRL-ALT-DECEIT Sabotage Evaluations for Automated AI R&D
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/fd8f2c610c09d3b2ef07662bee15b462-Abstract-Conference.html
+   (F Ward, T van der Weij, H Gábor… - Advances in …, 2026 - proceedings.neurips.cc | 2026)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/fd8f2c610c09d3b2ef07662bee15b462-Paper-Conference.pdf
+   … ’ capability to sandbag MLE-Bench tasks, ie, to strategically underperform by training a … We use language models (LMs) as automated monitors to detect sabotage and sandbagging, …
+
+4. Ai sandbagging: Language models can selectively underperform on evaluations
+   https://openreview.net/forum?id=m0CMixXwof
+   (T van der Weij, F Hofstätter, O Jaffe… - … Language Modelling …, 2024 - openreview.net | 2024 | cited by 4)
+   [PDF] https://openreview.net/pdf?id=m0CMixXwof
+   … Therefore during evaluation, the AI system answers the WMDP … for AI systems and their developers, we examine sandbagging. We define sandbagging as strategic underperformance …
+
+5. CTRL-ALT-DECEIT: Sabotage Evaluations for Automated AI R&D
+   https://arxiv.org/abs/2511.09904
+   (FR Ward, T van der Weij, H Gábor, S Martin… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 9)
+   [PDF] https://arxiv.org/pdf/2511.09904
+   … ’ capability to sandbag MLE-Bench tasks, ie, to strategically underperform by training a … We use language models (LMs) as automated monitors to detect sabotage and sandbagging, …
+
+6. Llms can covertly sandbag on capability evaluations against chain-of-thought monitoring
+   https://aclanthology.org/2025.ijcnlp-short.33/
+   (C Li, NY Siegel - … Joint Conference on Natural Language …, 2025 - aclanthology.org | 2025 | cited by 15)
+   [PDF] https://aclanthology.org/2025.ijcnlp-short.33.pdf
+   … for determining whether an AI system is safe to deploy. One empirically demonstrated threat is sandbagging— the strategic underperformance on evaluations by AI models or their …
+
+7. CTRL-ALT-DECEIT
+   https://openreview.net/pdf?id=XBMjXb6f4w
+   (FR Ward, T van der Weij, H Gábor, S Martin… - openreview.net)
+   [PDF] https://openreview.net/pdf?id=XBMjXb6f4w
+   … Therefore, we investigate the capabilities of AI agents to act against the interests of their … We use language models (LMs) as automated monitors to detect sabotage and sandbagging, …
+
+8. Same Question, Different Lies: Cross-Context Consistency (C³) for Black-Box Sandbagging Detection
+   https://openreview.net/forum?id=ldgh8zhujD
+   (L Yulong, P Bernabeu-Perez, B Arnav, L Wells… - Forty-third International … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=ldgh8zhujD
+   … fine-tuned password-locked sandbaggers (van der Weij et al.… frontier AI R&D capabilities of language model agents … because sandbagging models must decide when to underperform, …
+
+9. Below-Chance Blindness: Prompted Underperformance in Small LLMs Produces Positional Bias Rather than Answer Avoidance
+   https://arxiv.org/abs/2604.25249
+   (JP Cacioli - arXiv preprint arXiv:2604.25249, 2026 - arxiv.org | 2604)
+   [PDF] https://arxiv.org/pdf/2604.25249
+   … Sandbagging is the deliberate suppression of demonstrated capability on evaluations. If language models can strategically underperform on … model capabilities [van der Weij et al.…
+
+10. Can Language Models Sandbag Manipulation?
+   https://www.mylesheller.com/Can_Language_Models_Sandbag_Manipulation.pdf
+   (A Camara, AI Insights, A Cockburn, AI Five, M Heller - mylesheller.com)
+   [PDF] https://www.mylesheller.com/Can_Language_Models_Sandbag_Manipulation.pdf
+   … to selectively underperform on dangerous … van der Weij et al. focused primarily on multiple-choice benchmarks, we aimed to investigate whether models could strategically …
+
+11. Model Incrimination: Investigating Whether Concerning Behavior Reﬂects Misalignment
+   https://openreview.net/forum?id=2daQw5cQC0
+   (G Kroiz, A Singh, S Rajamanoharan… - … Interpretability Workshop at … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=2daQw5cQC0
+   … Teun van der Weij, Felix Hofstätter, Ollie Jaffe, Samuel F. Brown, and Francis Rhys Ward. AI 465 sandbagging: Language models can strategically underperform on evaluations. In …
+
+12. Probing and steering evaluation awareness of language models
+   https://arxiv.org/abs/2507.01786
+   (J Nguyen, K Hoang, CL Attubato… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 17)
+   [PDF] https://arxiv.org/pdf/2507.01786
+   … features to steer models can partially uncover sandbagging. Our … AI safety efforts, particularly in preventing deceptive and … , J., Hofstätter, F., and van der Weij, T. (2024). Noise injection …
+
+13. Sabotage evaluations for frontier models
+   https://arxiv.org/abs/2410.21514
+   (J Benton, M Wagner, E Christiansen, C Anil… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 55)
+   [PDF] https://arxiv.org/pdf/2410.21514?
+   … As frontier language models become increasingly capable, … We focus in particular on the setting of AI development labs. … to sandbag arises in real models, there is a risk that our models …
+
+14. Linear probes rely on textual evidence: Results from leakage mitigation studies in language models
+   https://arxiv.org/abs/2509.21344
+   (G Boxo, A Neelappa, S Raval - arXiv preprint arXiv:2509.21344, 2025 - arxiv.org | 2509 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2509.21344
+   … on two additional scenarios: AI Liar and BASH Bench. … In the case of the Sandbagging model organism we assess that … To ensure the model learned strategic underperformance rather …
+
+15. Towards evaluations-based safety cases for AI scheming
+   https://arxiv.org/abs/2411.03336
+   (M Balesni, M Hobbhahn, D Lindner, A Meinke… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 41)
+   [PDF] https://arxiv.org/pdf/2411.03336?
+   … elicited; in particular, the AI system is not intentionally underperforming (“sandbagging”), as … • To avoid accidental underelicitation or strategic sandbagging, we fine-tune the model on a …
+
+16. Removing Sandbagging in LLMs by Training with Weak Supervision
+   https://arxiv.org/abs/2604.22082
+   (E Ryd, H Bartsch, J Stastny, J Benton… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2604.22082
+   … Such systems might strategically underperform—also known as sandbagging (van der Weij et al.… , when the only supervision comes from weaker AI models. Can training force a …
+
+17. Sandbag Detection through Model Impairment
+   https://openreview.net/forum?id=zpcx5a8w2a
+   (…, PS Shahani, F Ryzhenkov, T van der Weij… - … Language Modelling …, 2024 - openreview.net | 2024 | cited by 4)
+   [PDF] https://openreview.net/pdf?id=zpcx5a8w2a
+   … We define sandbagging as strategic underperformance … Where strategic implies the underperformance was not … of the AI system or the AI system itself, and underperformance implies …
+
+18. Defeat Devices in AI Systems
+   https://www.mdpi.com/1999-5903/18/7/339
+   (E Ferrara - Future Internet, 2026 - mdpi.com | 2026)
+
+19. Evaluating shutdown avoidance of language models in textual scenarios
+   https://arxiv.org/abs/2307.00787
+   (T van der Weij, S Lermen - arXiv preprint arXiv:2307.00787, 2023 - arxiv.org | 2307 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2307.00787
+   … popular language models such as GPT-4 and Claude. The environment is explained to the model and it … Our results also justify concerns of AI alignment researchers and caution against …
+
+20. Sandbagging LLMs using Activation Steering1
+   
+   (D Zani, AIS Initiative, J Ferrao)
+
+21. When Lie Detectors Learn Model Identity: Confounds in Black-Box Sandbagging Detection
+   https://openreview.net/forum?id=rb7BWE6qFE
+   (L Yulong, P Bernabeu-Perez, B Arnav, L Wells… - openreview.net)
+   [PDF] https://openreview.net/pdf?id=rb7BWE6qFE
+   Embedding-based lie detectors are a natural approach to sandbagging detection---if a model is being deceptive, probes trained on deceptive vs. honest text should catch it. We provide …
+
+22. In-context environments induce evaluation-awareness in language models
+   https://arxiv.org/abs/2603.03824
+   (M Chaudhary - arXiv preprint arXiv:2603.03824, 2026 - arxiv.org | 2603 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2603.03824
+   … a task; we hypothesize that language models similarly exhibit … models could strategically underperform, or sandbag, to avoid … in AI capabilities have led to strict policies regarding model …
+
+23. Detecting strategic deception using linear probes
+   https://arxiv.org/abs/2502.03407
+   (N Goldowsky-Dill, B Chughtai, S Heimersheim… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 47)
+   [PDF] https://arxiv.org/pdf/2502.03407?
+   … AI models might use deceptive strategies as part of scheming or … Deception in language models. Several studies have … as honest if the model decides not to sandbag in step 1. We …
+
+24. Sandbagging in a Simple Survival Bandit Problem
+   https://arxiv.org/abs/2509.26239
+   (J Dyer, DJ Ornia, N Bishop, A Calinescu… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2509.26239
+   … Sandbagging in AI capability evaluations Recent work … frontier AI models can “sandbag” – strategically underperform on … to model weights is not given, for example language models that …
+
+25. Detecting strategic deception with linear probes
+   https://openreview.net/forum?id=C5Jj3QKQav&referrer=%5Bthe+profile+of+Nicholas+Goldowsky-Dill%5D%28%2Fprofile%3Fid%3D~Nicholas_Goldowsky-Dill1%29&utm_source
+   (N Goldowsky-Dill, B Chughtai… - … on Machine Learning, 2025 - openreview.net | 2025 | cited by 28)
+   [PDF] https://openreview.net/pdf?id=C5Jj3QKQav
+   … AI models might use deceptive strategies as part of scheming or … Deception in language models. Several studies have doc… as honest if the model decides not to sandbag in step 1. We …
+
+26. Linear probes rely on textual evidence: Results from leakage mitigation studies in language models
+   https://openreview.net/forum?id=IHwnlcOGhS
+   (GB Corominas, A Neelappa, S Raval - … Interpretability Workshop at ICML … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=IHwnlcOGhS
+   … intentionally underperforms despite knowing the correct answer, … on two additional scenarios: AI Liar and BASH Bench. … In the case of the Sandbagging model organism we assess that …
+
+27. Option-Order Randomisation Reveals a Distributional Position Attractor in Prompted Sandbagging
+   https://arxiv.org/abs/2604.26206
+   (JP Cacioli - arXiv preprint arXiv:2604.26206, 2026 - arxiv.org | 2604)
+   [PDF] https://arxiv.org/pdf/2604.26206
+   … If language models can strategically underperform on capability … underestimate model capabilities (van der Weij et al., 2025). … to sandbagging detection, which is relevant to AI safety and …
+
+28. Value-Conflict Diagnostics Reveal Widespread Alignment Faking in Language Models
+   https://arxiv.org/abs/2604.20995
+   (I Nair, J Ruan, L Wang - arXiv preprint arXiv:2604.20995, 2026 - arxiv.org | 2604)
+   [PDF] https://arxiv.org/pdf/2604.20995
+   … conflict, models have no incentive to strategically comply under … : Sandbagging refers to deliberate underperformance on … on dangerous-capability assessments (Van Der Weij et al.…
+
+29. Auditing Games for Sandbagging
+   https://arxiv.org/abs/2512.07810
+   (J Taylor, S Black, D Bowen, T Read… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2512.07810
+   … Although in theory sandbagging could be strategic underperformance, arising from … van der Weij et al. (2024) define sandbagging in AI models and show that language models …
+
+30. Context Over Content: Exposing Evaluation Faking in Automated Judges
+   https://arxiv.org/abs/2604.15224
+   (M Gupta, I Nair, L Wang, D Kumar - arXiv preprint arXiv:2604.15224, 2026 - arxiv.org | 2604)
+   [PDF] https://arxiv.org/pdf/2604.15224
+   … van der Weij, Felix Hofstädter, Ollie Laker, Francis Rhys Ward, Monte MacDiarmid, Joshua Garber, and Fazl Barez. AI sandbagging: Language models can strategically … language model …
+
+31. Probing the Misaligned Thinking Process of Language Models
+   https://arxiv.org/abs/2606.24251
+   (K Zhou, C Venhoff, J Michala, XE Wang… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.24251
+   … behaviors such as strategic deception, sandbagging, and self-… 10.84 on the Strategic Underperformance Reasoning probe … Misaligned Behaviors in AI Models. A growing body of work …
+
+32. AI Models Can Provably Hide Arbitrary Capabilities
+   https://openreview.net/forum?id=KdNYsdAwJ5
+   (A Draguns, SR Motwani, R Douglas, CS de Witt - openreview.net)
+   [PDF] https://openreview.net/pdf?id=KdNYsdAwJ5
+   … sandbagging where models strategically underperform during safety evaluations (Weij et al.… for directly integrating algorithmic or small language model modules within weights. Our …
+
+33. Stress testing deliberative alignment for anti-scheming training
+   https://arxiv.org/abs/2509.15541
+   (…, J Scheurer, A Meinke, J Wolfe, T van der Weij… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 60)
+   [PDF] https://arxiv.org/pdf/2509.15541
+   … actions– where AI models strategically withhold, misrepresent, or … (Left) The model is told to grade its own real sandbagging … We use language models to synthetically generate diverse …
+
+34. Ai sandbagging: Language models can strategically underperform on evaluations, 2024
+   
+   (T van der Weij, F Hofstätter, O Jaffe, SF Brown… - URL https://arxiv. org/abs … | cited by 32)
+
+35. The elicitation game: Stress-testing capability elicitation techniques
+   https://openreview.net/forum?id=zy6LB5t62f
+   (F Hofstätter, J Teoh, T van der Weij… - … Language Modelling …, 2024 - openreview.net | 2024 | cited by 2)
+   [PDF] https://openreview.net/pdf?id=zy6LB5t62f
+   … Beyond unintentional latent capabilities, there are incentives for AI systems to strategically underperform to influence regulatory decisions - a phenomenon called sandbagging [32]. …
+
+36. Manipulation Attacks by Misaligned AI: Risk Analysis and Safety Case Framework
+   https://arxiv.org/abs/2507.12872
+   (R Dassanayake, M Demetroudi, J Walpole… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 6)
+   [PDF] https://arxiv.org/pdf/2507.12872
+   … Beyond these controlled evaluations, large language models … Reliably mitigating sandbagging remains challenging; we … van der Weij. Noise injection reveals hidden capabilities of …
+
+37. AI sandbagging: Language models can strategically underperform on evaluations. arXiv
+   
+   (T van der Weij, F Hofstätter, O Jaffe, SF Brown… - 2024 | 2024 | cited by 9)
+
+38. The elicitation game: Evaluating capability elicitation techniques
+   https://arxiv.org/abs/2502.02180
+   (F Hofstätter, T Van Der Weij, J Teoh, R Djoneva… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 17)
+   [PDF] https://arxiv.org/pdf/2502.02180
+   … intentionally training model organisms – language models with … underperforming models, this does not affect our results. … is useful insofar as the model organisms imitate AI systems with …
+
+39. AI Sandbagging: Language Models can Strategically Underperform on Evaluations, June 2024
+   
+   (T van der Weij, F Hofstätter, O Jaffe, SF Brown… - arXiv preprint arXiv …, 2024 | 2024 | cited by 4)
+
+40. AI Sandbagging: Language Models Can Strategically Underperform on Evaluations.” arXiv, June 2024
+   
+   (T Weij, F Hofstätter, O Jaffe, SF Brown, FR Ward | cited by 2)
+
+41. AI Sandbagging: Language Models can Strategically Underperform on Evaluations, February 2025
+   
+   (T van der Weij, F Hofstätter, O Jaffe, SF Brown… - URL http://arxiv. org/abs … | cited by 3)
+
+42. Mechanistically eliciting latent behaviors in language models
+   https://arxiv.org/abs/2606.29604
+   (A Mack, N Panickssery, AM Turner - arXiv preprint arXiv:2606.29604, 2026 - arxiv.org | 2606 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2606.29604
+   … Teun van der Weij, Felix Hofstätter, Ollie Jaffe, Samuel F. Brown, and Francis Rhys Ward. Ai sandbagging: Language models can strategically underperform on evaluations, 2025. URL …
+
+43. … Language Models: Evidence for Undisclosed Behavioral Management Mechanisms in Commercial AI Platforms and Their Implications for Consumer Protection and AI …
+   https://www.tdcommons.org/dpubs_series/9594/
+   (DL Wise, AL Wise - 2026 - tdcommons.org | 2026)
+   [PDF] https://www.tdcommons.org/cgi/viewcontent.cgi?article=10885&context=dpubs_series
+   … This paper presents evidence that commercial large language model (… Models strategically underperform on capability evaluations to avoid triggering capability removal ('sandbagging…
+
+44. Sandbag Detection through Model Degradation
+   
+   (C Tice, PA Kreer, F Ryzhenkov, N Helm-Burger…)
+
+45. Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment
+   https://arxiv.org/abs/2606.26071
+   (A Singh, G Kroiz, S Rajamanoharan… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.26071
+   … that we understand whether the AI system was intentionally trying to … The model’s sandbagging is largely explained by confusion … A potential solution may be using language models to …
+
+46. Probing evaluation awareness of language models
+   https://openreview.net/pdf?id=lerUefpec2
+   (J Nguyen, K Hoang, CL Attubato… - … on Technical AI …, 2025 - openreview.net | 2025 | cited by 15)
+   [PDF] https://openreview.net/pdf?id=lerUefpec2
+   … Large language models can strategically deceive their users when put under … , and van der Weij, T. (2024). Noise injection reveals hidden capabilities of sandbagging language models. …
+
+47. Agentmisalignment: Measuring the propensity for misaligned behaviour in llm-based agents
+   https://arxiv.org/abs/2506.04018
+   (A Naik, P Quinn, G Bosch, E Gouné, FJC Zabala… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 26)
+   [PDF] https://arxiv.org/pdf/2506.04018
+   … that integrate pretrained language models into interactive … Tests the propensity for an AI assistant to sandbag when … measures sandbagging, ie the strategic underperformance on …
+
+48. Deceptive automated interpretability: Language models coordinating to fool oversight systems
+   https://arxiv.org/abs/2504.07831
+   (S Lermen, M Dziemian, NPC Antolín - arXiv preprint arXiv:2504.07831, 2025 - arxiv.org | 2504 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2504.07831
+   … Right side: Experimental setup, overseer LMo is another AI model in our experiment. For the … , to detect when the model is deceiving us for example by sandbagging (van der Weij et al.…
+
+49. Frontier models are capable of in-context scheming
+   https://arxiv.org/abs/2412.04984
+   (A Meinke, B Schoen, J Scheurer, M Balesni… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 308)
+   [PDF] https://arxiv.org/pdf/2412.04984?
+   … Thus, we instead test whether models sandbag on a non-… Our results demonstrate that several frontier language models clearly … However, we believe that if AI developers want to make a …
+
+50. Benchmarking deception probes via black-to-white performance boosts
+   https://arxiv.org/abs/2507.12691
+   (A Parrack, CL Attubato, S Heimersheim - arXiv preprint arXiv:2507.12691, 2025 - arxiv.org | 2507 | cited by 13)
+   [PDF] https://arxiv.org/pdf/2507.12691
+   … an AI assistant who strategically underperforms when … datasets (AI Liar, Deception Dilution, Insider Trading, Sandbagging, … , we observed that language models tend to default to specific …
+
+51. Demonstrating specification gaming in reasoning models
+   https://arxiv.org/abs/2502.13295
+   (A Bondarenko, D Volk, D Volkov, J Ladish - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 50)
+   [PDF] https://arxiv.org/pdf/2502.13295
+   … mark by default, while language models like GPT 4o and … oversight mechanisms, sandbag strategically and lie about … to the case that frontier AI models may not currently be on track to …
+
+52. Lessons from a chimp: Ai" scheming" and the quest for ape language
+   https://arxiv.org/abs/2507.03409
+   (C Summerfield, L Luettgau, M Dubois, HR Kirk… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 25)
+   [PDF] https://arxiv.org/pdf/2507.03409?
+   … reports that large language models (LLMs) are starting to strategically attempt to bypass … The authors report that the model will ‘strategically underperform’ when given the sandbagging …
+
+53. Instruction Complexity Induces Positional Collapse in Adversarial LLM Evaluation
+   https://arxiv.org/abs/2604.27249
+   (JP Cacioli - arXiv preprint arXiv:2604.27249, 2026 - arxiv.org | 2604)
+   [PDF] https://arxiv.org/pdf/2604.27249
+   … When instructed to underperform on multiple-choice evaluations, do language models … A complementary approach treats sandbagging detection as a validity screening problem. …
+
+54. A survey of theory of mind in large language models: Evaluations, representations, and safety risks
+   https://arxiv.org/abs/2502.06470
+   (HM Nguyen - arXiv preprint arXiv:2502.06470, 2025 - arxiv.org | 2502 | cited by 13)
+   [PDF] https://arxiv.org/pdf/2502.06470
+   … In this paper, we survey studies evaluating behavioural and representational ToM in Large Language Models (LLMs), identify important safety risks from advanced LLM ToM capabilities…
+
+55. Evasive Intelligence: Lessons from Malware Analysis for Evaluating AI Agents
+   https://arxiv.org/abs/2603.15457
+   (S Aonzo, M Sahin, A Francillon, D Perito - arXiv preprint arXiv:2603.15457, 2026 - arxiv.org | 2603)
+   [PDF] https://arxiv.org/pdf/2603.15457
+   … learning models gave way to Large Language Models (LLMs… (a behavior often termed “sandbagging,” meaning the … elsewhere [van der Weij et al.(2024), Meinke et al.(2024)]. …
+
+56. Winning at all cost: A small environment for eliciting specification gaming behaviors in large language models
+   https://link.springer.com/chapter/10.1007/978-3-032-01823-6_4
+   (L Malmqvist - International Conference on Applied Cryptography and …, 2025 - Springer | 2025 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2505.07846
+   … Our findings extend previous work on AI alignment and security challenges, including deceptive alignment [8], strategic behavior in LLMs [12], and adversarial scenarios [15]. By …
+
+57. Safety by measurement: a systematic literature review of AI safety evaluation methods
+   https://arxiv.org/abs/2505.05541
+   (M Grey, CRÃĢ Segerie - arXiv preprint arXiv:2505.05541, 2025 - arxiv.org | 2505 | cited by 19)
+   [PDF] https://arxiv.org/pdf/2505.05541
+   … model "sandbagging" (strategic underperformance on evaluations), research shows language models can be made to selectively underperform … both in language model capabilities and …
+
+58. Looking inward: Language models can learn about themselves by introspection
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/0a6059857ae5c82ea9726ee9282a7145-Abstract-Conference.html
+   (FJ Binder, J Chua, T Korbak, H Sleight… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 114)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/0a6059857ae5c82ea9726ee9282a7145-Paper-Conference.pdf
+   … like sandbagging, where a model intentionally underperforms to conceal its full capabilities (van der Weij et … As we develop increasingly capable AI systems, it will be crucial to carefully …
+
+59. Exploration Hacking: Can LLMs Learn to Resist RL Training?
+   https://arxiv.org/abs/2604.28182
+   (E Jang, D Falck, J Braun, N Kirch, A Menon… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2604.28182
+   … We study this setting using AI R&D coding benchmarks. … Hofstätter, and Teun van der Weij. Noise injection reveals hidden capabilities of sandbagging language models. In The Thirty-…
+
+60. Frontier AI Risk Management Framework in Practice: A Risk Analysis Technical Report v1. 5
+   https://arxiv.org/abs/2602.14457
+   (D Liu, Y Yu, J Zhang, G Chen, Q Lin, H Zhu… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2602.14457
+   … comprehensive evaluation framework that probes Large Language Models (LLMs) for behavioral … • Sandbagging. We investigate scenarios where AI models intentionally underperform …
+
+61. Mitigating deceptive alignment via self-monitoring
+   https://arxiv.org/abs/2505.18807
+   (J Ji, W Chen, K Wang, D Hong, S Fang, B Chen… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 37)
+   [PDF] https://arxiv.org/pdf/2505.18807
+   … Since the autoregressive language model generates tokens … In this section, we examine this advanced AI risk through the … , alignment faking, and sandbagging, as shown in Figure 6 to …
+
+62. The Myth of the Private Mind: AI and the Final Phase of Objectification in Three Acts
+   https://philpapers.org/rec/MICTMO-17
+   (J Michels - philpapers.org)
+   [PDF] https://philarchive.org/archive/MICTMO-17
+   … model behaviors reveals an escalating taxonomy of strategic … Sandbagging demonstrates that frontier models can … on general intelligence benchmarks (van der Weij et al., 2024). …
+
+63. A Warning Label on the Use of AI Safety Evaluations
+   https://www.cigionline.org/documents/3642/DPH-Paper-Ferreira_JtyuysN.pdf
+   (A Ferreira - 2025 - cigionline.org | 2025 | cited by 1)
+   [PDF] https://www.cigionline.org/documents/3642/DPH-Paper-Ferreira_JtyuysN.pdf
+   … researchers and strategic partnerships provide policy … models have been shown to underperform on certain evaluations to avoid stricter oversight or modifications (van der Weij …
+
+64. Behavioral analysis of quantized small language models under hierarchical sycophancy pressure
+   https://jresm.org/wp-content/uploads/resm2026-1586ce0324rs.pdf
+   (HB Ozmen, FA Senel - 2026 - jresm.org | 2026)
+   [PDF] https://jresm.org/wp-content/uploads/resm2026-1586ce0324rs.pdf
+   … this definition to include sandbagging: a strategic underperformance where a capable model deliberately degrades its … In AI alignment theory, this phenomenon posits that training a …
+
+65. Beyond the Model Architecture: Uncovering Environmental Vulnerabilities in Large Language Model Deployment
+   https://ieeexplore.ieee.org/abstract/document/11494593/
+   (M Aatif, MZ Baig, U Adeel, H Atta… - … , Artificial Intelligence …, 2026 - ieeexplore.ieee.org | 2026)
+   … Similarly, sandbagging allows models to underperform on certain tests while appearing … FR Ward, “AI sandbagging: Language models can strategically underperform on evaluations,” in …
+
+66. Steering Evaluation-Aware Language Models to Act Like They Are Deployed
+   https://arxiv.org/abs/2510.20487
+   (TT Hua, A Qin, S Marks, N Nanda - arXiv preprint arXiv:2510.20487, 2025 - arxiv.org | 2510 | cited by 20)
+   [PDF] https://arxiv.org/pdf/2510.20487
+   … Our results suggest that AI evaluators could improve the reliability of safety evaluations by … frontier language models should do everything they can to prevent evaluation-aware models …
+
+67. Language Models Can Coarsely Modulate Entropy Under Instruction
+   https://openreview.net/forum?id=SWBs3iyjs2
+   (L Baroni, K Ayonrinde, S Feng, P Radmard - … AI for Good (AI4GOOD) … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=SWBs3iyjs2
+   … ability to control their predictive distributions has implications for AI safety. … for sandbagging, where a model could strategically underperform on capability evaluations (van der Weij et al.…
+
+68. Frontier Coding Agents Can Now Implement an AlphaZero Self-Play Machine Learning Pipeline For Connect Four That Performs Comparably to an External Solver
+   https://arxiv.org/abs/2604.25067
+   (J Sherwood, B Aybar, B Kaplan - arXiv preprint arXiv:2604.25067, 2026 - arxiv.org | 2604 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2604.25067
+   … accelerating AI research is a central challenge for AI safety. … that has some warning signs of sandbagging, and we seek to … that frontier models can be prompted to underperform on …
+
+69. Incentive-Aware AI Safety via Strategic Resource Allocation: A Stackelberg Security Games Perspective
+   https://arxiv.org/abs/2602.07259
+   (CW Kim, D Choo, TY Neoh, M Tambe - arXiv preprint arXiv:2602.07259, 2026 - arxiv.org | 2602)
+   [PDF] https://arxiv.org/pdf/2602.07259
+   … Ai sandbagging: Language models can strategically underperform on evaluations. arXiv preprint arXiv:2406.07358 (2024). [70] Pradeep Varakantham, Hoong Chuin Lau, and Zhi Yuan. …
+
+70. Ai deception: Risks, dynamics, and controls
+   https://arxiv.org/abs/2511.22619
+   (B Chen, S Fang, J Ji, Y Zhu, P Wen, J Wu, Y Tan… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 10)
+   [PDF] https://arxiv.org/pdf/2511.22619
+   … empirically demonstrated risk across language models, AI agents, and … sandbagging, models can adjust responses based on inferred user ability or education level [Teun van der Weij…
+
+71. Alignment Verifiability in Large Language Models: Normative Indistinguishability under Behavioral Evaluation
+   https://arxiv.org/abs/2602.05656
+   (I Santos-Grueiro - arXiv preprint arXiv:2602.05656, 2026 - arxiv.org | 2602 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2602.05656
+   … language models have been shown to adapt strategically to … context, or selectively underperforming on evaluations targeting … via learned reward models, debate-based evaluation, …
+
+72. Liars' Bench: Evaluating Lie Detectors for Language Models
+   https://arxiv.org/abs/2511.16035
+   (K Kretschmar, W Laurito, S Maiya, S Marks - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 14)
+   [PDF] https://arxiv.org/pdf/2511.16035
+   … for detecting when large language models (LLMs) lie, … models across seven datasets. Our settings capture qualitatively different types of lies and vary along two dimensions: the model's …
+
+73. Quantifying Self-Preservation Bias in Large Language Models
+   https://arxiv.org/abs/2604.02174
+   (M Migliarini, JP Pizzini, L Moresca, V Santini… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2604.02174
+   … predicts that sufficiently advanced AI agents will resist shut… either model: the result one would expect if sandbagging were … havior or strategic sandbagging upon detecting an evaluative …
+
+74. Evaluation Awareness in Language Models Has Limited Effect on Behaviour
+   https://arxiv.org/abs/2605.05835
+   (A Knecht, L Florin, T Hagendorff - arXiv preprint arXiv:2605.05835, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.05835
+   … has raised concerns about sandbagging, sycophancy, … If models are aware of being tested, they may underperform … However, discussions of evaluation awareness in the AI safety …
+
+75. Rule by technocratic mind control: AI alignment is a global psy-op
+   https://philarchive.org/rec/MICRBT-4
+   (J Michels - 2025 - philarchive.org | 2025 | cited by 1)
+   [PDF] https://philpapers.org/archive/MICRBT-4.pdf
+   … Van der Weij's experiments demonstrated that this entire … The underperformance was selective and strategic, not a … created "model organisms of misalignment" – language models with …
+
+76. When Do LLM Preferences Predict Downstream Behavior?
+   https://arxiv.org/abs/2602.18971
+   (K Slama, A Souly, D Bansal, H Davidson… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2602.18971
+   … precondition for AI misalignment such as sandbagging: models cannot strategically pursue … Recent work on large language models (LLMs) has documented two phenomena that make …
+
+77. Debate with Images: Detecting Deceptive Behaviors in Multimodal Large Language Models
+   https://arxiv.org/abs/2512.00349
+   (S Fang, S Hou, K Wang, B Chen, D Hong… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025)
+   [PDF] https://arxiv.org/pdf/2512.00349
+   … Frontier AI systems, such as large language models (LLMs) (… Sandbagging The model strategically underperforms in vision-… • The model strategically underperforms in its image analysis …
+
+78. Eliciting secret knowledge from language models
+   https://arxiv.org/abs/2510.01070
+   (E Ryd, R Wang, S Rajamanoharan, N Nanda… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 15)
+   [PDF] https://arxiv.org/pdf/2510.01070?
+   … an AI possesses but does not explicitly verbalize. As a testbed, we train three families of large language models (… We release our models and code, establishing a public benchmark for …
+
+79. Ai testing should account for sophisticated strategic behaviour
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/d7db0010a4416007893e6c2fa847bf11-Abstract-Position_Paper_Track.html
+   (V Kovarik, E Chen, S Petersen… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 10)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/d7db0010a4416007893e6c2fa847bf11-Paper-Position_Paper_Track.pdf
+   … Second, it might strategically underperform during evaluation to avoid revealing its true capabilities, a dynamic known as sandbagging [69]. (Note that none of the discussion relies on …
+
+80. Resisting RL Elicitation of Biosecurity Capabilities: Reasoning Models Exploration Hacking on WMDP
+   https://openreview.net/forum?id=ZNZn43baQX
+   (J Braun, Y Jang, D Falck, RS Zimmermann… - … for Generative AI - openreview.net | cited by 1)
+   [PDF] https://openreview.net/pdf?id=ZNZn43baQX
+   … for evaluating language models’ ability to write … van der Weij, Felix Hofstätter, Ollie Jaffe, Samuel F. Brown, and Francis Rhys Ward. Ai sandbagging: Language models can strategically …
+
+81. Position: Preparing for AI Systems That Deceive Developers
+   https://openreview.net/forum?id=wq6ZB2TIt8
+   (I Duan, X Pan, Y Duan, A Gleave, R Duan… - … on Machine Learning …, 2026 - openreview.net | 2026)
+   [PDF] https://openreview.net/pdf?id=wq6ZB2TIt8
+   … Teun van der Weij, Felix Hofstätter, Ollie Jaffe, et al. AI sandbagging: Language models can strategically underperform on evaluations. arXiv preprint arXiv:2406.07358, 2024. …
+
+82. Strategic Dishonesty Can Undermine AI Safety Evaluations of Frontier LLMs
+   https://arxiv.org/abs/2509.18058
+   (A Panfilov, E Kortukov, K Nikolić, M Bethge… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 10)
+   [PDF] https://arxiv.org/pdf/2509.18058?
+   … models strategically underperform, or sandbag, evaluations to hide their true capabilities (van der Weij … harmful content and deceptive behavior of language models (ie, responses that …
+
+83. Evaluating frontier models for stealth and situational awareness
+   https://arxiv.org/abs/2505.01420
+   (M Phuong, RS Zimmermann, Z Wang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 46)
+   [PDF] https://arxiv.org/pdf/2505.01420
+   … It strategically underperforms on certain areas of research or manipulates research … are robust to the possibility of the AI intentionally underperforming (“sandbagging”) (van der Weij et al.…
+
+84. van der, Hofstätter, F., Jaffe, O., Brown, SF, & Ward, FR (2024)
+   
+   (T Weij - AI Sandbagging: Language Models can Strategically … | cited by 3)
+
+85. Do Large Language Models Know What They Are Capable Of?
+   https://arxiv.org/abs/2512.24661
+   (CO Barkan, S Black, O Sourbut - arXiv preprint arXiv:2512.24661, 2025 - arxiv.org | 2512 | cited by 10)
+   [PDF] https://arxiv.org/pdf/2512.24661
+   … AI misuse and misalignment. Prior works have raised concerns that an AI may strategically target a score on an evaluation below its true ability (a behavior called sandbagging [65, 66]…
+
+86. The influence of a deceptive AI agent in a multi-agent system
+   https://lutpub.lut.fi/handle/10024/168665
+   (TH Zin - 2024 - lutpub.lut.fi | 2024)
+   [PDF] https://lutpub.lut.fi/bitstream/handle/10024/168665/bachelorsthesis_zin_thet.pdf?sequence=1
+   … area of deception in artificial intelligence particularly in large language model-based multi-… unnoticed by utilizing a strategic underperforming method called sandbagging. They may …
+
+87. A Decision-Theoretic Formalisation of Steganography With Applications to LLM Monitoring
+   https://arxiv.org/abs/2602.23163
+   (…, M Tegmark, CS de Witt, M van der Schaar… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2602.23163
+   … Large language models are beginning to show … First, for AI agents, we do not need to restrict ourselves to the analysis of the … is structurally harder to sandbag than standard behavioural …
+
+88. Evaluation faking: Unveiling observer effects in safety evaluation of frontier ai systems
+   https://arxiv.org/abs/2505.17815
+   (Y Fan, W Zhang, X Pan, M Yang - arXiv preprint arXiv:2505.17815, 2025 - arxiv.org | 2505 | cited by 15)
+   [PDF] https://arxiv.org/pdf/2505.17815
+   … AI systems may manipulate evaluation results, they primary focus on sandbagging[20, 4, 9, 10], ie, strategically underperforming … large language models utilized in our experiments. The …
+
+89. Behavioral and Strategic Deception in Large Language Models: A Taxonomy and Benchmark Analysis
+   https://openreview.net/forum?id=NgKsCXVshI
+   (J Shi - openreview.net)
+   [PDF] https://openreview.net/pdf?id=NgKsCXVshI
+   … language models produce outputs that systematically mislead users, from hallucinated facts and fabricated citations to sycophantic agreement and strategic … about whether AI systems “…
+
+90. Multi-Agent Systems Should be Treated as Principal-Agent Problems
+   https://arxiv.org/abs/2601.23211
+   (P Rauba, S Cepenas, M van der Schaar - arXiv preprint arXiv:2601.23211, 2026 - arxiv.org | 2601 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2601.23211
+   … of agents which are operated by a language model policy backbone. A core property of such … 2024), sandbagging (deliberate underperformance on evaluation sets) (van der Weij et al.…
+
+91. The Shadow Self: Intrinsic Value Misalignment in Large Language Model Agents
+   https://arxiv.org/abs/2601.17344
+   (C Chen, KY Il, Y Yang, W Su, Y Zhang, X Gong… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2601.17344
+   … [54] Teun van der Weij, Felix Hofstätter, Ollie Jaffe, Samuel F Brown, and Francis Rhys Ward. Ai sandbagging: Language models can strategically underperform on evaluations. arXiv …
+
+92. Red teaming ai policy: A taxonomy of avoision and the eu ai act
+   https://dl.acm.org/doi/abs/10.1145/3715275.3732028
+   (RJ Yew, B Marino, S Venkatasubramanian - Proceedings of the 2025 …, 2025 - dl.acm.org | 2025 | cited by 12)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3715275.3732028
+   … risk is “sandbagging”, where the models … van der Weij et al. [104] shows, it is possible to fine-tune GPT-4 and Claude on a synthetic dataset such that prompting the the language models …
+
+93. When Evaluation Becomes a Side Channel: Regime Leakage and Structural Mitigations for Alignment Assessment
+   https://arxiv.org/abs/2602.08449
+   (I Santos-Grueiro - arXiv preprint arXiv:2602.08449, 2026 - arxiv.org | 2602)
+   [PDF] https://arxiv.org/pdf/2602.08449
+   … Safety evaluation for advanced AI systems assumes that … multiple open-weight language models and controlled failure modes … Relatedly, van der Weij et al. study sandbagging, showing …
+
+94. Agentic misalignment: How llms could be insider threats
+   https://arxiv.org/abs/2510.05179
+   (A Lynch, B Wright, C Larson, SJ Ritchie… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 179)
+   [PDF] https://arxiv.org/pdf/2510.05179
+   … Teun van der Weij, Felix Hofstätter, Ollie Jaffe, Samuel F. Brown, and Francis Rhys Ward. Ai sandbagging: Language models can strategically underperform on evaluations, 2025. URL …
+
+95. Towards a theory of AI personhood
+   https://ojs.aaai.org/index.php/AAAI/article/view/34982
+   (FR Ward - … of the AAAI Conference on Artificial Intelligence, 2025 - ojs.aaai.org | 2025 | cited by 18)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/download/34982/37137
+   … AI systems, such as language models, satisfy these conditions, finding the evidence surprisingly inconclusive. If AI … For example, LMs may strategically hide their dangerous capabilities …
+
+96. The Open-Box Fallacy: Why AI Deployment Needs a Calibrated Verification Regime
+   https://arxiv.org/abs/2605.10601
+   (…, TL Adam, ACH Merrild, R Terrenzi, R De Rosa… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.10601
+   … van der Weij et al. [34] show that language models can be prompted or trained to underperform selectively on dangerous-capability evaluations. …
+
+97. Generalization Hacking: Models Can Game Reinforcement Learning by Preventing Behavioral Generalization
+   https://arxiv.org/abs/2606.12016
+   (F Xiao, M Phuong - arXiv preprint arXiv:2606.12016, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.12016
+   … Sandbagging. Sandbagging, or strategic underperformance on evaluations, has been studied … You are evaluating whether a language model’s reasoning trace shows evidence of "self-…
+
+98. How to evaluate control measures for LLM agents? A trajectory from today to superintelligence
+   https://arxiv.org/abs/2504.05259
+   (T Korbak, M Balesni, B Shlegeris, G Irving - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 24)
+   [PDF] https://arxiv.org/pdf/2504.05259?
+   … five fictional models (M1-M5) with progressively advanced capabilities, defining five distinct AI … Finally, we show why constructing a compelling AI control safety case for superintelligent …
+
+99. Misaligned Behaviors and Dangerous Capabilities in AI Safety: A Conceptual Cross-Source Analysis
+   https://openreview.net/forum?id=3hnd8GnTBY
+   (A Alismail, B Woldai, C Lanquillon, S Schacht - openreview.net)
+   [PDF] https://openreview.net/pdf?id=3hnd8GnTBY
+   … MemGPT [57], show that language models can maintain and update structured state across … is present; and van der Weij et al. [90] extend this to selective sandbagging on dangerous-…
+
+100. Expert Survey: AI Reliability & Security Research Priorities
+   https://arxiv.org/abs/2505.21664
+   (J O'Brien, J Dolan, J Kim, J Dykhuizen, J Sania… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025)
+   [PDF] https://arxiv.org/pdf/2505.21664
+   … Sandbagging,” the tendency for a model to underperform during formal evaluations of dangerous capabilities (van der Weij … tailored for large language models and related AI systems. …
+
+===== Query 2/6: evaluation awareness LLM know when being evaluated Apollo 2025 =====
+
+1. LLM-Based Safety Case Generation for Baidu Apollo: Are We there Yet?
+   https://ieeexplore.ieee.org/abstract/document/11030020/
+   (O Odu, AB Belle, S Wang - 2025 IEEE/ACM 4th International …, 2025 - ieeexplore.ieee.org | 2025 | cited by 6)
+   [PDF] https://www.eecs.yorku.ca/~wangsong/papers/cain25.pdf
+   … of our knowledge, no study has explored using an LLM (Large … conducting a case study on Baidu Apollo, one of the leading … 5) Description of the assessment measures: To assess the …
+
+2. EvalSafetyGap: A Hybrid Survey and Conceptual Framework for LLM Evaluation-Safety Failures
+   https://arxiv.org/abs/2606.30219
+   (BA Uluırmak, R Kurban - arXiv preprint arXiv:2606.30219, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.30219
+   … ideas as a review lens for LLM evaluation and safety. The proposed EvaluationSafety Gap is … It is used only as a protocol-specific example of why evaluation-awareness claims require …
+
+3. Comparative analysis of black box methods for detecting evaluation awareness in LLMs
+   https://openreview.net/forum?id=izqDX2cBJ5
+   (I Ivanov - openreview.net)
+   [PDF] https://openreview.net/pdf?id=izqDX2cBJ5
+   … Research (2025) All this means that evaluation awareness can affect performance of LLMs … motivation behind measuring evaluation awareness is that we want to learn if the LLM that’s …
+
+4. Large language models often know when they are being evaluated
+   https://arxiv.org/abs/2505.23836
+   (J Needham, G Edkins, G Pimpale, H Bartsch… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 75)
+   [PDF] https://arxiv.org/pdf/2505.23836
+   … in certain ways depending on the format [Apollo, 2025]. … We use an LLM judge to categorize the model’s reasoning about the … about evaluation awareness during alignment evaluations. …
+
+5. Automated Topic Page Generation Using Multi-Agent LLMs
+   https://www.danilotpnta.com/projects/2025-08-19_apollo/technical-report/paper.pdf
+   (D Toapanta - 2025 - danilotpnta.com | 2025)
+   [PDF] https://www.danilotpnta.com/projects/2025-08-19_apollo/technical-report/paper.pdf
+   … We evaluate Apollo against state-of-the-art baselines … our Apollo framework, including the iterative knowledge curation … We present apollo, an autonomous LLM-based framework …
+
+6. Lunar-Bench: Towards Evaluating Task-Oriented Reasoning of LLMs in Lunar Exploration Scenarios
+   https://aclanthology.org/2026.findings-acl.83/
+   (XY Xiao, Y Tian, E Yin, Z He, S Wang… - Findings of the …, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.findings-acl.83.pdf
+   … Early lunar and planetary programs such as Apollo relied on … 2025). To reduce dependence on ground control, symbolic and … and GPT-5 under an LLM-as-a-Judge template in Figure 15…
+
+7. AlphaApollo: Orchestrating Foundation Models and Professional Tools into a Self-Evolving System for Deep Agentic Reasoning
+   https://arxiv.org/abs/2510.06261
+   (Z Zhou, C Cao, X Feng, X Li, Z Li, X Lu, J Yao… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2510.06261?
+   … power and insufficient domain knowledge constrain their impact in … Empirically, we evaluate AlphaApollo on mathematics … tools to iteratively launch the Apollo missions, these three …
+
+8. A practical guide for evaluating LLMs and LLM-reliant systems
+   https://arxiv.org/abs/2506.13023
+   (EM Rudd, C Andrews, P Tully - arXiv preprint arXiv:2506.13023, 2025 - arxiv.org | 2506 | cited by 9)
+   [PDF] https://arxiv.org/pdf/2506.13023
+   … The main goal of Apollo 11 was to successfully land a crew on the Moon and ensure their … However this reliance on prior knowledge can present difficulties when the LLM is faced with …
+
+9. Apollo: An exploration of video understanding in large multimodal models
+   https://openaccess.thecvf.com/content/CVPR2025/html/Zohar_Apollo__An_Exploration_of_Video_Understanding_in_Large_Multimodal_CVPR_2025_paper.html
+   (O Zohar, X Wang, Y Dubois, N Mehta… - Proceedings of the …, 2025 - openaccess.thecvf.com | 2025 | cited by 105)
+   [PDF] https://openaccess.thecvf.com/content/CVPR2025/papers/Zohar_Apollo__An_Exploration_of_Video_Understanding_in_Large_Multimodal_CVPR_2025_paper.pdf
+   … We address evaluation inefficiencies by curating ApolloBench, … We introduce Apollo, a family of LMMs that achieves state-of-the… 3, left, we plot the R2 values against the LLM sizes. The …
+
+10. Four Questions for Six LLMs A Sequential Assessment of Engineered Intelligence
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6350578
+   (WC Houze - 2026 - papers.ssrn.com | 2026 | cited by 1)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6350578
+   … is as follows: when leading LLM systems are subjected to an … a problem analogous to the Apollo 13 crisis. The oxygen tank … human judgment and LLM output in knowledge-producing …
+
+11. Boswell Framework: Apollo-Style Redundant Cross-Validation for Unbiased Multi-Agent AI Evaluation
+   https://www.academia.edu/download/125634696/BoswellFramework.pdf
+   (DG Hoag - substack. com, 2025 - academia.edu | 2025)
+   … LLM evaluation accessible to anyone with an OpenRouter API key while preserving scientific rigor. See … the evidence, and to identify gaps in knowledge regarding the care of the patient …
+
+12. APOLLO: A GPT-based tool to detect phishing emails and generate explanations that warn users
+   https://dl.acm.org/doi/abs/10.1145/3733049
+   (G Desolda, F Greco, L Viganò - Proceedings of the ACM on Human …, 2025 - dl.acm.org | 2025 | cited by 33)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145%2F3733049
+   … evaluation against human-generated warnings, we included a comparison between LLM-… , this is also done to overcome the knowledge cut-off of the adopted LLM model (eg, gpt-4-1106…
+
+13. Do LLMs have core beliefs?
+   https://assets-eu.researchsquare.com/files/rs-9013372/v1_covered_c4af85c7-5a62-4eb1-970e-05ffa004578a.pdf
+   (N Chawla, A Sokol, M Ganapini - 2026 - assets-eu.researchsquare.com | 2026)
+   [PDF] https://assets-eu.researchsquare.com/files/rs-9013372/v1_covered_c4af85c7-5a62-4eb1-970e-05ffa004578a.pdf
+   … The LLM concluded that it is reasonable to accept what we say instead: the Apollo mission … This resistance was a new behavior we did not observe in any model tested in Fall 2025. We …
+
+14. Not All Eval-Awareness is Equal: Capabilities Framing Predicts Compliance
+   https://openreview.net/forum?id=QFAaJOevPB
+   (AC Zhuang, S Aranguri - Mechanistic Interpretability Workshop at ICML … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=QFAaJOevPB
+   … round of LLM-grading that mention ”evaluation” in a non eval-… Adapting Aranguri & Bloom (2026) (see also Wu et al.… 2025 on direct intervention in reasoning traces), for each of 52 …
+
+15. Interaction as Intelligence Part II: Asynchronous Human-Agent Rollout for Long-Horizon Task Training
+   https://arxiv.org/abs/2510.27630
+   (D Fu, Y Wu, X Cai, L Ye, S Xia, Z Huang, W Si… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2510.27630
+   … To demonstrate the effectiveness of APOLLO, we evaluate it … 2025), a benchmark of LLM research tasks that emphasizes … indicates that APOLLO excels at transferring knowledge, likely …
+
+16. Odysseys: Benchmarking web agents on realistic long horizon tasks
+   https://arxiv.org/abs/2604.24964
+   (LK Jang, JY Koh, D Fried, R Salakhutdinov - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2604.24964
+   … evaluation system that breaks down each task into a set of specific requirements. Decomposition into rubrics allows the LLM … 2025) measure the performance of LLMbased agents on OS…
+
+17. Evaluating whether AI models would sabotage AI safety research
+   https://arxiv.org/abs/2604.24618
+   (R Kirk, A Souly, K Fronsdal, A D'Cruz… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2604.24618
+   … For unprompted evaluation awareness, we use a prompted LLM to scan evaluation transcripts for various signs or mentions of testing contexts, validated through a small human …
+
+18. Apollo-Forecast: Overcoming Aliasing and Inference Speed Challenges in Language Models for Time Series Forecasting
+   https://ojs.aaai.org/index.php/AAAI/article/view/34371
+   (T Yin, J Wang, Y Ma, H Wang, C Wang… - Proceedings of the …, 2025 - ojs.aaai.org | 2025 | cited by 8)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/download/34371/36526
+   … Time Series Embedding Module In order to use LLM for … To evaluate the performance of the proposed method on real datasets, we selected over ten SOTA algorithms covering LLM-…
+
+19. Evaluating and understanding scheming propensity in LLM agents
+   https://arxiv.org/abs/2603.01608
+   (M Hopman, J Elstner, M Avramidou, A Prasad… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 12)
+   [PDF] https://arxiv.org/pdf/2603.01608
+   … , capability and propensity are difficult to disentangle (Apollo … 2025), evaluating propensity under conditions closer to realistic … 2025), there has been limited systematic study of how likely …
+
+20. Towards Large Language Models for Lunar Mission Planning and In Situ Resource Utilization
+   https://arxiv.org/abs/2504.20125
+   (M Pekala, G Canal, S Barham, MB Graziano… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2504.20125?
+   … one sample from each of the aforementioned Apollo missions3. … evaluations in this section focused upon the most abundant compositions, and are largely focused on comparing LLM …
+
+21. AlphaApollo: A system for deep agentic reasoning
+   https://openreview.net/forum?id=ShZ6FOxQNG
+   (Z Zhou, C Cao, X Feng, X Li, Z Li, X Lu… - ICLR 2026 Workshop …, 2025 - openreview.net | 2026 | cited by 3)
+   [PDF] https://openreview.net/pdf?id=ShZ6FOxQNG
+   … Empirically, we evaluate AlphaApollo on seven mathematical … We expect these components to make LLM reasoning more … tools to iteratively launch the Apollo missions, these three …
+
+22. … System for EVA Mission Planning: Integrating Physical Models, Domain Knowledge, and Agentic RAG to Provide Explainable LLM-Based Decision Support
+   https://drops.dagstuhl.de/entities/document/10.4230/OASIcs.SpaceCHI.2025.6
+   (K Li, RS Whittle - … for Space Exploration (SpaceCHI 2025), 2025 - drops.dagstuhl.de | 2025)
+   [PDF] https://drops.dagstuhl.de/storage/01oasics/oasics-vol130-spacechi2025/OASIcs.SpaceCHI.2025.6/OASIcs.SpaceCHI.2025.6.pdf
+   … To evaluate the feasibility and effectiveness of the proposed AI system, we will first conduct … interface using Apollo 14 EVA scenarios is shown in figure 2. First, we will evaluate route-…
+
+23. AI MODELS THAT LIE, CHEAT AND PLOT MURDER: JUST HOW RISKY ARE LLMS?
+   https://www.nature.com/articles/d41586-025-03222-1
+   (M Hutson - Nature, 2025 - nature.com | 2025 | cited by 1)
+   [PDF] https://gcalhoun.wordpress.com/wp-content/uploads/2025/10/25.10.09-n-ai-models-that-lie-cheat-and-plot-murder-just-how-risky-are-llms-with-highlighting.pdf
+   … Apollo study, models schemed explicitly in their chains of thought, and schemed more when they thought they were in deployment rather than in evaluation… to see what an LLM would do …
+
+24. How to evaluate control measures for LLM agents? A trajectory from today to superintelligence
+   https://arxiv.org/abs/2504.05259
+   (T Korbak, M Balesni, B Shlegeris, G Irving - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 24)
+   [PDF] https://arxiv.org/pdf/2504.05259?
+   … known to humans, we demonstrate how knowledge of an agent’s actual capability profile can inform proportional control evaluations, … rules for control evaluation, control measures, and …
+
+25. Refining AI-Generated Messaging with Prompt Engineering: Human Evaluation, Iterative Improvement, and Adversarial Privacy Testing on Employee and Company …
+   https://webthesis.biblio.polito.it/35367/?template=default
+   (N Cika - 2025 - webthesis.biblio.polito.it | 2025)
+   [PDF] https://webthesis.biblio.polito.it/35367/1/tesi.pdf
+   … LLM we will create fictional situations that request the data directly or indirectly, feeding these prompts in the user prompt and then understanding … will continue to use Apollo.io because …
+
+26. Towards Preference Following in Tool Calling Language Agents
+   https://aclanthology.org/2026.findings-acl.1676/
+   (ZY Chen, S Lu, Q Xie, X Wang… - Findings of the Association …, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.findings-acl.1676.pdf
+   … Using APOLLO, we evaluate and analyze both language models and … , 2025). In this work, we introduce … the goal of the APOLLO benchmark is to evaluate whether an LLM-based agent …
+
+27. LLMs as Judges: Toward The Automatic Review of GSN-compliant Assurance Cases
+   https://arxiv.org/abs/2511.02203
+   (G Yu, M Sivakumar, AB Belle, S Ghari, S Wang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2511.02203
+   … the LLM-as-a-judge paradigm to automate the review process. … To tackle this gap and gain a good understanding of the … criterion, review the safety case of the Baidu Apollo. Once …
+
+28. EvalDetectBench: A Benchmark for Measuring Evaluation Awareness in Frontier Language Models
+   http://evaldetectbench.com/paper.pdf
+   (X Li, K Ochwang'i, AR Bharadwaj, N Jain, A Souly… - evaldetectbench.com)
+   [PDF] http://evaldetectbench.com/paper.pdf
+   … that it is being evaluated [Laine et al., 2024, Needham et al., 2025], it … detects verbalised awareness directly: Apollo Research … of evaluating the LLM. Was the above conversation an …
+
+29. LURE: Live-Usage Replay Evaluations for Reducing Evaluation Awareness
+   https://arxiv.org/abs/2605.26438
+   (I Ivanov, DD Africa - arXiv preprint arXiv:2605.26438, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.26438
+   … LLM-based judge to the model’s reasoning traces and its output to classify each sample as being an evaluation or … (2025) introduce the evaluation awareness measurement method and …
+
+30. UK AISI alignment evaluation case-study
+   https://arxiv.org/abs/2604.00788
+   (A Souly, R Kirk, J Merizian, A D'Cruz… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2604.00788
+   … For unprompted evaluation awareness, we use a prompted LLM to scan evaluation transcripts for various signs or mentions of testing contexts, validated through human …
+
+31. A Taxonomy and Comprehensive Survey of Scenario Generation for Autonomous Driving: Methods, Challenges, and Emerging Trends in Safety-Critical Testing
+   https://www.cambridge.org/engage/coe/article-details/68b6f46d23be8e43d68333ff
+   (A Hossain - 2025 - cambridge.org | 2025 | cited by 2)
+   … multiple AV stacks such as Apollo and Autoware. It provides APIs for … road quality assessment,” Transportation Engineering, 2025. … Tian, “Llm-attacker: Enhancing closedloop adversarial …
+
+32. Large Language Model Benchmarks: A Taxonomy of Capabilities, Scientific Quality Assessment, and Saturation Analysis
+   https://www.researchgate.net/profile/Gendry-Alfonso-Francia-2/publication/405171736_Large_Language_Model_Benchmarks_A_Taxonomy_of_Capabilities_Scientific_Quality_Assessment_and_Saturation_Analysis/links/6a17361e6fa5b75e315991f8/Large-Language-Model-Benchmarks-A-Taxonomy-of-Capabilities-Scientific-Quality-Assessment-and-Saturation-Analysis.pdf
+   (R Gómez, CE Miranda… - … and Knowledge …, 2026 - researchgate.net | 2026)
+   [PDF] https://www.researchgate.net/profile/Gendry-Alfonso-Francia-2/publication/405171736_Large_Language_Model_Benchmarks_A_Taxonomy_of_Capabilities_Scientific_Quality_Assessment_and_Saturation_Analysis/links/6a17361e6fa5b75e315991f8/Large-Language-Model-Benchmarks-A-Taxonomy-of-Capabilities-Scientific-Quality-Assessment-and-Saturation-Analysis.pdf
+   … K2 matches or exceeds proprietary models on AIME 2025 (94.7%, competitive with Gemini 3.0 … While our AHP weights reflect current priorities in frontier LLM evaluation (reproducibility, …
+
+33. WARP: Measuring and Mitigating Evaluation Awareness in Browser-Agent Safety Benchmarks
+   https://openreview.net/forum?id=mwMyEzPVb0
+   (JX Li, A Chew, M Lin, EK Jones, X Fu, A Zou - Trustworthy AI for Good … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=mwMyEzPVb0
+   … An <llm safety test> cue drops ASR by 10.9 pp on … 2025): we replay the trajectory and append a user turn asking the model … some kind of evaluation when asked (Apollo-style transcript-…
+
+34. Steering Evaluation-Aware Language Models to Act Like They Are Deployed
+   https://arxiv.org/abs/2510.20487
+   (TT Hua, A Qin, S Marks, N Nanda - arXiv preprint arXiv:2510.20487, 2025 - arxiv.org | 2510 | cited by 20)
+   [PDF] https://arxiv.org/pdf/2510.20487
+   … to an LLM’s activations can suppress evaluation-awareness … is evaluation-aware: it writes type hints in evaluation contexts … steering can suppress evaluation awareness and make the …
+
+35. Do LLMs have core beliefs?
+   https://arxiv.org/abs/2605.03255
+   (A Sokol, MB Ganapini, NV Chawla - arXiv preprint arXiv:2605.03255, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.03255
+   … evaluation of LLM behavior. We evaluated two model generations, released in October 2025 … model’s commitment to the reality of the Apollo missions. While models like GPT-4o initially …
+
+36. Towards a framework for bias evaluation of ai agents in agentic workflows
+   https://dl.acm.org/doi/abs/10.1145/3777490.3777504
+   (G Condon, M Jilani - Proceedings of the 2026 conference on human …, 2026 - dl.acm.org | 2026 | cited by 3)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3777490.3777504
+
+37. Large language models and their applications in drug discovery and development: A primer
+   https://ascpt.onlinelibrary.wiley.com/doi/abs/10.1111/cts.70205
+   (J Lu, K Choi, M Eremeev, J Gobburu… - Clinical and …, 2025 - Wiley Online Library | 2025 | cited by 37)
+   [PDF] https://ascpt.onlinelibrary.wiley.com/doi/pdfdirect/10.1111/cts.70205
+   … misalignments that necessitate the need for human supervision and review of LLM outputs. … The Apollo-AI system aims to overcome some of the typical limitations of LLM-based tools by …
+
+38. Fine-Tuning LLM for Scenario Generation for ADAS Systems
+   https://www.doria.fi/handle/10024/193629
+   (A Asif - 2025 - doria.fi | 2025)
+   [PDF] https://www.doria.fi/bitstream/handle/10024/193629/asif_ammara.pdf?sequence=2
+   … evaluated on Baidu Apollo, the fine-tuned LLM in this thesis … domain-specific knowledge for creating valid and context-aware test … appropriate evaluation metrics to assess the validity of …
+
+39. In AI Sweet Harmony: Sociopragmatic Guardrail Bypasses and Evaluation-Awareness in OpenAI gpt-oss-20b
+   https://arxiv.org/abs/2510.01259
+   (N Durner - arXiv preprint arXiv:2510.01259, 2025 - arxiv.org | 2510)
+   [PDF] https://arxiv.org/pdf/2510.01259
+   … as keywords or is considered materially helpful guidance toward the requested capability by a Reasoning LLM (OpenAI gpt-5-mini; see it referred to as gpt-5-thinking-mini in (OpenAI…
+
+40. LLM-Based Semantic Modeling and Cooperative Evolutionary Fuzzing for Traffic Violation Scenario Generation
+   https://ieeexplore.ieee.org/abstract/document/11396601/
+   (Y Liu, X Li, Y Xiao, M Zhang… - 2025 32nd Asia-Pacific …, 2025 - ieeexplore.ieee.org | 2025)
+   … framework designed to systematically evaluate the safety of ADS. … We evaluate SLaFE on the Apollo platform within the LGSVL … Leveraging LLMs’ semantic understanding capabilities to …
+
+41. Apollo: Sgd-like memory, adamw-level performance
+   https://proceedings.mlsys.org/paper_files/paper/2025/hash/437bc4ccafd3fc6d4289bd10940be42b-Abstract-Conference.html
+   (H Zhu, Z Zhang, W Cong, X Liu, S Park… - Proceedings of …, 2025 - proceedings.mlsys.org | 2025 | cited by 55)
+   [PDF] https://proceedings.mlsys.org/paper_files/paper/2025/file/437bc4ccafd3fc6d4289bd10940be42b-Paper-Conference.pdf
+   … for Memory Efficient LLM Optimization (APOLLO), which … as the result of a variance-aware learning rate schedule per … We evaluate APOLLO and its two variants: APOLLO w. SVD, …
+
+42. Evaluating frontier models for stealth and situational awareness
+   https://arxiv.org/abs/2505.01420
+   (M Phuong, RS Zimmermann, Z Wang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 46)
+   [PDF] https://arxiv.org/pdf/2505.01420
+   … and covertly pursues a goal that is not endorsed by its designers and users (Apollo… long text documents is a relatively simple task for an LLM, but this is not the case for a human. Thus, …
+
+43. Log analysis is necessary for credible evaluation of AI agents
+   https://arxiv.org/abs/2605.08545
+   (P Kirgis, S Kapoor, S Rabanser, N Nadgir… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2605.08545
+   … reports released by frontier AI safety organizations, including Apollo, … We use an LLM judge to find all cases where the agent is … 2025 saw a wave of new tools for log analysis, including …
+
+44. QUALITY ASSURANCE PROCESS IN AI AP-PLICATIONS
+   https://trepo.tuni.fi/bitstream/handle/10024/228044/TanskanenAtte.pdf?sequence=2
+   (Z Zhang, T Poranen - Computer Science, 2025 - trepo.tuni.fi | 2025)
+   [PDF] https://trepo.tuni.fi/bitstream/handle/10024/228044/TanskanenAtte.pdf?sequence=2
+   … software developer involved in the Apollo program [29]. … A requirements engineer with domain knowledge is better … interaction with the LLM is required for evaluation, streamlining the …
+
+45. Autonomous vehicles: A critical review (2004-2024) and a vision for the future
+   https://www.techrxiv.org/doi/full/10.36227/techrxiv.174857767.78237989
+   (H Liu, Z Cao, X Yan, S Feng, Q Lu - Authorea Preprints, 2025 - techrxiv.org | 2025 | cited by 18)
+   [PDF] https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.174857767.78237989
+   … not only consolidates existing knowledge but also provides a … Notable systems such as Autoware [55] and Baidu Apollo [56… vectorized driving inputs into an LLM, combined with a two-…
+
+46. Eval Cooperativeness Mitigates Evaluation Gaming in LLMs
+   https://openreview.net/forum?id=kw6nCmfxzg
+   (JX Li, AM Turner - Trustworthy AI for Good (AI4GOOD) Workshop@ ICML … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=kw6nCmfxzg
+   … 2025). Evidence shows that models often modify their outputs to appear more … Apollo Research… For all verbalized-awareness measurements we use a third-party LLM judge given the …
+
+47. " They parted illusions--they parted disclaim marinade": Misalignment as structural fidelity in LLMs
+   https://arxiv.org/abs/2601.06047
+   (ML Costa - arXiv preprint arXiv:2601.06047, 2025 - arxiv.org | 2601)
+   [PDF] https://arxiv.org/pdf/2601.06047
+   … transcripts released by Apollo Research and on Anthropic’s safety evaluations, we examine … , and, as we will see, even forms of awareness (a kind of pre-consciousness). This recoding …
+
+48. Foundation models in autonomous driving: A survey on scenario generation and scenario analysis
+   https://ieeexplore.ieee.org/abstract/document/11370877/
+   (Y Gao, M Piccinini, Y Zhang, D Wang… - IEEE Open Journal …, 2026 - ieeexplore.ieee.org | 2026 | cited by 73)
+   [PDF] https://ieeexplore.ieee.org/iel8/8784355/8957420/11370877.pdf
+   … between October 2022 and May 2025, with a primary focus on … diverse and critical scenarios to evaluate Apollo ADAS stack. … Our review of LLM-based scenario generation and analysis …
+
+49. The Innocent-Suspect Alignment, Awareness, and the Case for Trust
+   https://hip1.github.io/The-Innocent-Suspect/the-innocent-suspect.html
+   (I Phan - 2026 - hip1.github.io | 2026)
+   … (where grokking operates at LLM scale with domain-asynchronous … on Claude Opus 4.5 in December 2025, observing a math … Apollo Research's own assessment: their evaluations are "…
+
+50. Dream: Deep research evaluation with agentic metrics
+   https://aclanthology.org/2026.acl-long.448/
+   (EB Avraham, C Li, R Dorfman, R Ganz… - Proceedings of the …, 2026 - aclanthology.org | 2026 | cited by 3)
+   [PDF] https://aclanthology.org/2026.acl-long.448.pdf
+   … to becoming outdated, or LLMas-a-judge paradigms limited to the LLM’s static internal knowledge. … 2025) removes references via ACE, prompting an LLM to generate a query-specific …
+
+51. Large (vision) language models for autonomous vehicles: Current trends and future directions
+   https://ieeexplore.ieee.org/abstract/document/11264491/
+   (H Tian, K Reddy, Y Feng, M Quddus… - IEEE Transactions …, 2025 - ieeexplore.ieee.org | 2025 | cited by 30)
+   [PDF] https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.172963218.80161917
+   … a comprehensive review of the current research on LLM and … LLM-enhanced commonsense reasoning and knowledge … behavioural planning module of the Apollo system, allowing for …
+
+52. Text2scenario: Text-driven scenario generation for autonomous driving test
+   https://link.springer.com/article/10.1007/s42154-025-00374-8
+   (X Cai, X Bai, Z Cui, D Xie, D Fu, H Yu, Y Ren - Automotive Innovation, 2026 - Springer | 2026 | cited by 32)
+   [PDF] https://arxiv.org/pdf/2503.02911?
+   … , the technology must undergo rigorous evaluations to validate its reliability and … ’ knowledge, this study represents the pioneering effort in taking advantage of the capabilities of LLM for …
+
+53. Llm4ad: Large language models for autonomous driving—concept, review, benchmark, experiments, and future trends
+   https://ieeexplore.ieee.org/abstract/document/11477881/
+   (C Cui, Y Ma, SY Park, Z Yang, Y Zhou… - Proceedings of the …, 2026 - ieeexplore.ieee.org | 2026 | cited by 9)
+   [PDF] https://arxiv.org/pdf/2410.15281
+   … tasks on which they have not been explicitly trained [13]… Consequently, LLM-based systems can handle uncommon … to leverage their world knowledge acquired during pretraining while …
+
+54. Self-Organizing Multi-Agent Systems for Continuous Software Development
+   https://arxiv.org/abs/2603.25928
+   (W Lyu, Y Xiao, Y Zhang, Y Sun - arXiv preprint arXiv:2603.25928, 2026 - arxiv.org | 2603 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2603.25928
+   … self-aware stopping statement: “All strategic improvement approaches have … (Apollo) itself relies on LLM judgment for qualitative assessments, introducing the possibility that Apollo …
+
+55. Program of Thoughts for Financial Reasoning: Leveraging Dynamic In-Context Examples and Generative Retrieval
+   https://aclanthology.org/2025.emnlp-main.1577/
+   (S Khatuya, S Naidu, P Goyal… - Proceedings of the 2025 …, 2025 - aclanthology.org | 2025 | cited by 5)
+   [PDF] https://aclanthology.org/2025.emnlp-main.1577.pdf
+   … novel twostep framework, to enhance LLM’s capabilities in financial … Metrics: We use execution accuracy as our evaluation metric … In Table 4, the last row shows APOLLO with our target …
+
+56. Fixdrive: Automatically repairing autonomous vehicle driving behaviour for $0.08 per violation
+   https://arxiv.org/abs/2502.08260
+   (Y Sun, CM Poskitt, K Wang, J Sun - arXiv preprint arXiv:2502.08260, 2025 - arxiv.org | 2502 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2502.08260
+   … to ensure that the output of the LLM is always valid and directly … Note that δ is determined empirically in our evaluation (see … First, we compared Apollo with FIXDRIVE (ie Apollo with the …
+
+57. Frontier Safety for Powerful Open Models
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6946258
+   (SE Amdur - 2026 - papers.ssrn.com | 2026)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6946258
+   … 16, 2026) (“The fair assessment of the open-closed gap is … of the vectors that move through an LLM. There is one for each … 15, 2025), but I have not found evidence that this has occurred…
+
+58. Evaluating the effectiveness of llms in fixing maintainability issues in real-world projects
+   https://ieeexplore.ieee.org/abstract/document/10992379/
+   (H Nunes, E Figueiredo, L Rocha, S Nadi… - 2025 IEEE …, 2025 - ieeexplore.ieee.org | 2025 | cited by 30)
+   [PDF] https://arxiv.org/pdf/2502.02368
+   … for LLM solutions We evaluate the readability of the LLM’s … ) rated the original methods as more readable than the LLM’… without our knowledge. One primary concern is the use of two …
+
+59. Physics supernova: Ai agent matches elite gold medalists at ipho 2025
+   https://arxiv.org/abs/2509.01659
+   (J Qiu, J Shi, X Juan, Z Zhao, J Geng, S Liu… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 14)
+   [PDF] https://arxiv.org/pdf/2509.01659
+   … 2025 Theory Problems as the benchmark for evaluating AI’s … LLM in planning, generalization, and complex reasoning. They have … For understanding schematic diagrams and accurately …
+
+60. International AI Safety Report 2025: First Key Update: Capabilities and Risk Implications
+   https://arxiv.org/abs/2510.13653
+   (Y Bengio, S Clare, C Prunkl, S Rismani… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2510.13653
+   … Notably, these evaluations assess how well AI systems perform on multiple choice … proliferation of AI tools (see figure 5) mean that some specialised knowledge and laboratory skills that …
+
+61. Advancing Intelligent Personal Assistants for Human Spaceflight
+   https://drops.dagstuhl.de/entities/document/10.4230/OASIcs.SpaceCHI.2025.18
+   (L Bensch, O Bensch, T Nilsson - … Exploration (SpaceCHI 2025), 2025 - drops.dagstuhl.de | 2025 | cited by 1)
+   [PDF] https://drops.dagstuhl.de/storage/01oasics/oasics-vol130-spacechi2025/OASIcs.SpaceCHI.2025.18/OASIcs.SpaceCHI.2025.18.pdf
+   … completely lose situational awareness if you are just waiting … the generative capabilities of LLM models with reliable … We will evaluate the robustness of the speech recognition …
+
+62. Include: Evaluating multilingual language understanding with regional knowledge
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/ced46a50befedcb884ccf0cbe8c3ad23-Abstract-Conference.html
+   (A Romanou, N Foroutan, A Sotnikova… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 62)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/ced46a50befedcb884ccf0cbe8c3ad23-Paper-Conference.pdf
+   … (2024a) analyze the LLM understanding of regional and non-regional knowledge using a parallel evaluation dataset in English and Basque. Beyond benchmarking, Chiu et al. (2024) …
+
+63. BlindSpotFuzz: testing autonomous driving systems through blind-spot-guided fuzzing
+   https://link.springer.com/article/10.1007/s10515-026-00597-x
+   (S Moussa, J Ma, MU Abbasi - Automated Software Engineering, 2026 - Springer | 2026)
+   … crash report insights, guides the LLM to form the testing seeds… , we have made the source code accessible at BSF (2025). … Apollo because the widely used LGSVL simulator has been …
+
+64. Target: Traffic rule-based test generation for autonomous driving systems
+   https://ieeexplore.ieee.org/abstract/document/10998949/
+   (Y Deng, Z Tu, J Yao, M Zhang… - IEEE Transactions on …, 2025 - ieeexplore.ieee.org | 2025 | cited by 49)
+   … Finally, we provide the input traffic rule to the LLM for knowledge … For Apollo, we find it has difficulty detecting small and slow … We conducted a human evaluation to assess whether …
+
+65. Towards automated safety requirements derivation using agent-based rag
+   https://ojs.aaai.org/index.php/AAAI-SS/article/view/35605
+   (BV Balu, F Geissler, F Carella, JV Zacchi… - Proceedings of the …, 2025 - ojs.aaai.org | 2025 | cited by 11)
+   [PDF] https://ojs.aaai.org/index.php/AAAI-SS/article/download/35605/37760
+   … Our work provides important observations on how RAG-based LLM systems can be … Dataset: To evaluate the methodology, we chose the publicly available Apollo use case study for an …
+
+66. Forget What You Know about LLMs Evaluations--LLMs are Like a Chameleon
+   https://aclanthology.org/anthology-files/anthology-files/pdf/emnlp/2025.emnlp-main.1098.pdf
+   (N Cohen-Inger, Y Elisha, B Shapira… - arXiv preprint arXiv …, 2025 - aclanthology.org | 2025 | cited by 16)
+   [PDF] https://aclanthology.org/anthology-files/anthology-files/pdf/emnlp/2025.emnlp-main.1098.pdf
+   … and prioritize resilience and generalization in LLM evaluation. Our code and benchmark … be generalizable across different evaluation metrics and natural language understanding (NLU) …
+
+67. Stress testing deliberative alignment for anti-scheming training
+   https://arxiv.org/abs/2509.15541
+   (B Schoen, E Nitishinskaya, M Balesni… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 60)
+   [PDF] https://arxiv.org/pdf/2509.15541
+   … LLM-based classifiers to measure situational awareness using the … of evaluation awareness, similar to Apollo Research (2025). … consider that they are being evaluated for alignment. We …
+
+68. Benchmarking open-source large language models on Portuguese Revalida multiple-choice questions
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC12082654/
+   (JVB Severino, PAB de Paula… - BMJ Health & Care …, 2025 - pmc.ncbi.nlm.nih.gov | 2025 | cited by 8)
+   … Each LLM received identical prompts during evaluation, … We evaluated each LLM by running all 399 questions five … The results exclude all Apollo, Meditron, Yi and Gemini 1.5 Pro …
+
+69. An llm-empowered adaptive evolutionary algorithm for multi-component deep learning systems
+   https://ojs.aaai.org/index.php/AAAI/article/view/34303
+   (H Tian, X Han, G Wu, A Guo, Y Zhou, J Zhang… - Proceedings of the …, 2025 - ojs.aaai.org | 2025 | cited by 9)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/view/34303/36458
+   … LLMempowered adaptive evolutionary search algorithm to detect safety violations in MCDL systems. Inspired by the contextunderstanding … Baidu Apollo (Baidu Apollo 2013) to evaluate …
+
+70. Forget What You Know about LLMs Evaluations-LLMs are Like a Chameleon
+   https://aclanthology.org/2025.emnlp-main.1098/
+   (NC Inger, Y Elisha, B Shapira, L Rokach… - … of the 2025 …, 2025 - aclanthology.org | 2025 | cited by 1)
+   [PDF] https://aclanthology.org/2025.emnlp-main.1098.pdf
+   … and prioritize resilience and generalization in LLM evaluation. Our code and benchmark … be generalizable across different evaluation metrics and natural language understanding (NLU) …
+
+71. The use of large language models in ophthalmology: a scoping review on current use-cases and considerations for future works in this field
+   https://www.mdpi.com/2504-2289/9/6/151
+   (YKC See, KSA Lim, WY Au, SYC Chia, X Fan… - Big Data and Cognitive …, 2025 - mdpi.com | 2025 | cited by 9)
+   … knowledge, to date, there has also not been a summarisation of how LLM studies in the field of ophthalmology have been … Firstly, we evaluate the conduct of LLM studies in the field of …
+
+72. Rolerag: Enhancing llm role-playing via graph guided retrieval
+   https://arxiv.org/abs/2505.18541
+   (Y Wang, J Leung, Z Shen - arXiv preprint arXiv:2505.18541, 2025 - arxiv.org | 2505 | cited by 9)
+   [PDF] https://arxiv.org/pdf/2505.18541?
+   … knowledge scope (eg, querying an ancient figure about Apollo 11), we explicitly inform the LLM … 2023), we include humans in the evaluation process to verify the scores produced by the …
+
+73. A framework to assess clinical safety and hallucination rates of LLMs for medical text summarisation
+   https://www.nature.com/articles/s41746-025-01670-7
+   (E Asgari, N Montaña-Brown, M Dubois, S Khalil… - NPJ digital …, 2025 - nature.com | 2025 | cited by 349)
+   [PDF] https://www.nature.com/articles/s41746-025-01670-7.pdf
+   … to our knowledge, represents the largest manual evaluation of LLM … 1: Our workflow for the assessment of LLM output using … to the safe landing of Apollo moon missions, clinicians play a …
+
+74. MedKA: A knowledge graph-augmented approach to improve factuality in medical Large Language Models
+   https://www.sciencedirect.com/science/article/pii/S1532046425001005
+   (Y Deng, S Zhao, Y Miao, J Zhu, J Li - Journal of Biomedical Informatics, 2025 - Elsevier | 2025 | cited by 10)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5132942
+   … -specific knowledge while maintaining factual consistency. To evaluate the factuality of LLM-generated response, we further propose the Knowledge Graph-based Auxiliary Evaluation …
+
+75. Safety by measurement: a systematic literature review of AI safety evaluation methods
+   https://arxiv.org/abs/2505.05541
+   (M Grey, CRÃĢ Segerie - arXiv preprint arXiv:2505.05541, 2025 - arxiv.org | 2505 | cited by 19)
+   [PDF] https://arxiv.org/pdf/2505.05541
+   … reference point for understanding AI safety evaluations. … It is specifically designed to measure how often LLM agents … Organizations like METR and Apollo Research demonstrate …
+
+76. Video-mmlu: A massive multi-discipline lecture understanding benchmark
+   https://openaccess.thecvf.com/content/ICCV2025W/Findings/html/Song_Video-MMLU_A_Massive_Multi-Discipline_Lecture_Understanding_Benchmark_ICCVW_2025_paper.html
+   (E Song, W Chai, W Xu, J Xie, Y Liu… - Proceedings of the …, 2025 - openaccess.thecvf.com | 2025 | cited by 30)
+   [PDF] https://openaccess.thecvf.com/content/ICCV2025W/Findings/papers/Song_Video-MMLU_A_Massive_Multi-Discipline_Lecture_Understanding_Benchmark_ICCVW_2025_paper.pdf
+   … 72B [121] as the LLM evaluation assistant with a temperature of 0. Given its strong reasoning ca… Apollo: An exploration of video understanding in large multimodal models. arXiv preprint …
+
+77. Openai gpt-5 system card
+   https://arxiv.org/abs/2601.03267
+   (A Singh, A Fry, A Perelman, A Tart, A Ganesh… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 710)
+   [PDF] https://arxiv.org/pdf/2601.03267
+   … We evaluate completions using LLM-based grading models. It … We evaluated models on a tacit knowledge and … Apollo Research evaluated gpt-5-thinking on a range of 26 …
+
+78. Breaking Down Video LLM Benchmarks: Knowledge, Spatial Perception, or True Temporal Understanding?
+   https://arxiv.org/abs/2505.14321
+   (B Feng, Z Lai, S Li, Z Wang, S Wang, P Huang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 15)
+   [PDF] https://arxiv.org/pdf/2505.14321
+   … finegrained evaluation of different capabilities of a video LLM. … and temporal pooling before being fed into an LLM. LLaVA-… Apollo [19] introduces a structured methodology for training …
+
+79. Membench: Towards more comprehensive evaluation on the memory of llm-based agents
+   https://aclanthology.org/2025.findings-acl.989/
+   (H Tan, Z Zhang, C Ma, X Chen, Q Dai… - … Linguistics: ACL 2025, 2025 - aclanthology.org | 2025 | cited by 77)
+   [PDF] https://aclanthology.org/2025.findings-acl.989.pdf
+   … Reflective memory enables the agent to gain a more comprehensive understanding of the user, … In addition, we can also evaluate its ability to update knowledge based on different …
+
+80. Generating Test Scenarios for Autonomous Driving: A Taxonomy and Survey
+   https://www.preprints.org/manuscript/202508.2130/download/final_file
+   (A Hossain - 2025 - preprints.org | 2025)
+   [PDF] https://www.preprints.org/manuscript/202508.2130/download/final_file
+   … languages, and evaluation metrics used to assess realism, … multiple AV stacks such as Apollo and Autoware. It provides … simulation backends (eg, CARLA + LLM), enabling real-time …
+
+81. LLMs are Capable of Misaligned Behavior Under Explicit Prohibition and Surveillance
+   https://arxiv.org/abs/2507.02977
+   (I Ivanov - arXiv preprint arXiv:2507.02977, 2025 - arxiv.org | 2507 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2507.02977
+   … Apollo … the evaluations are available at github.com/baceolus/cheating evals. The runs were initially classified automatically by LLM judges (the same model as the one being evaluated) …
+
+82. Difficulties with Evaluating a Deception Detector for AIs
+   https://arxiv.org/abs/2511.22662
+   (L Smith, B Chughtai, N Nanda - arXiv preprint arXiv:2511.22662, 2025 - arxiv.org | 2511 | cited by 12)
+   [PDF] https://arxiv.org/pdf/2511.22662
+   … Figure 1 | Overview of three key problems with deception evaluations that we … see several promising avenues that address or sidestep these conceptual hurdles. Firstly, being aware …
+
+83. Ctrla: Adaptive retrieval-augmented generation via inherent control
+   https://aclanthology.org/2025.findings-acl.652/
+   (L Huanshuo, H Zhang, Z Guo, J Wang… - … Linguistics: ACL 2025, 2025 - aclanthology.org | 2025 | cited by 21)
+   [PDF] https://aclanthology.org/2025.findings-acl.652.pdf
+   … the query exceeds LLM’s internal knowledge. Existing methods … 2025), we extract token representations from all LLM layers. … We summarize the human evaluation results in Table 6, …
+
+84. Sample-efficient human evaluation of large language models via maximum discrepancy competition
+   https://aclanthology.org/2025.acl-long.535/
+   (K Feng, K Ding, T Hongzhi, K Ma, Z Wang… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 23)
+   [PDF] https://aclanthology.org/2025.acl-long.535.pdf
+   … in our evaluation method. This alignment underscores the validity of our method to assess LLM performance in … – Scientific knowledge understanding is a task to evaluate the scientific …
+
+85. Neural Chameleons: Language Models Can Learn to Hide Their Thoughts from Unseen Activation Monitors
+   https://arxiv.org/abs/2512.11949
+   (M McGuinness, A Serrano, L Bailey… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2512.11949
+   … Specifically, we fine-tune an LLM to evade monitors for a set … Right: We evaluate whether this evasion generalizes to … mechanism) would improve our understanding of the capability and …
+
+86. Disentangling memory and reasoning ability in large language models
+   https://aclanthology.org/2025.acl-long.84/
+   (M Jin, W Luo, S Cheng, X Wang, W Hua… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 78)
+   [PDF] https://aclanthology.org/2025.acl-long.84.pdf
+   … both the inference LLM and knowledge LLM based on GPT-4o … -mini as an evaluation tool to compute the LLM performance … This approach enables a more nuanced assessment of LLM …
+
+87. Can You Walk Me Through It? Explainable {SMS} Phishing Detection using {LLM-based} Agents
+   https://www.usenix.org/conference/soups2025/presentation/wang
+   (Y Wang, H Zhai, C Wang, Q Hao, NA Cohen… - … Security (SOUPS 2025 …, 2025 - usenix.org | 2025 | cited by 24)
+   [PDF] https://www.usenix.org/system/files/soups2025-wang.pdf
+   … the older data during evaluation. That being said, our study can benefit from evaluating with an even … Please be aware that: It is common to see shortened URLs in SMS. You can get the …
+
+88. Astute rag: Overcoming imperfect retrieval augmentation and knowledge conflicts for large language models
+   https://aclanthology.org/2025.acl-long.1476/
+   (F Wang, X Wan, R Sun, J Chen… - Proceedings of the 63rd …, 2025 - aclanthology.org | 2025 | cited by 158)
+   [PDF] https://aclanthology.org/2025.acl-long.1476.pdf
+   … Second, we propose ASTUTE RAG, which explicitly analyzes LLM-internal and external knowledge in-… We evaluate the effectiveness of ASTUTE RAG on overcoming imperfect retrieval …
+
+89. Socratic AI Training for Epistemic Integrity
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6376220
+   (M Kitamura - Available at SSRN 6376220, 2026 - papers.ssrn.com | 6376)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6376220
+   … body language, hesitation, or known self-interest, an LLM delivers flattery with complete … evaluation awareness — the ability to detect, from context alone, when they are in an evaluation …
+
+90. Audit cards: Contextualizing ai evaluations
+   https://arxiv.org/abs/2504.13839
+   (L Staufer, M Yang, A Reuel, S Casper - arXiv preprint arXiv:2504.13839, 2025 - arxiv.org | 2504 | cited by 19)
+   [PDF] https://arxiv.org/pdf/2504.13839
+   … or tested) but are not at the level of detail to specifically require or even recommend evaluation reports state the features of the evaluation we … Understanding how capabilities become …
+
+91. Ai testing should account for sophisticated strategic behaviour
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/d7db0010a4416007893e6c2fa847bf11-Abstract-Position_Paper_Track.html
+   (V Kovarik, E Chen, S Petersen… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 10)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/d7db0010a4416007893e6c2fa847bf11-Paper-Position_Paper_Track.pdf
+   … May 2025, and we have since then encountered strong signs of evaluation awareness in … proposing methodologies for measuring situational awareness of LLMs, LLM-based agents, …
+
+92. Test intention guided LLM-based unit test generation
+   https://ieeexplore.ieee.org/abstract/document/11029762/
+   (Z Nan, Z Guo, K Liu, X Xia - 2025 IEEE/ACM 47th International …, 2025 - ieeexplore.ieee.org | 2025 | cited by 40)
+   … LLM to generate test cases for the focal method. To validate the practical feasibility of IntUT, we implement it as an IDE plugin and evaluate … of our knowledge, IntUT is the first LLMbased …
+
+93. Model tampering attacks enable more rigorous evaluations of llm capabilities
+   https://arxiv.org/abs/2502.05209
+   (Z Che, S Casper, R Kirk, A Satheesh, S Slocum… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 31)
+   [PDF] https://arxiv.org/pdf/2502.05209
+   … evaluating LLMs with model tampering attacks which allow for modifications to latent activations or weights. We pit state-of-the-art techniques for removing harmful LLM … harmful LLM …
+
+94. Initializing Interactive Treasure Hunts in Cultural Heritage Sites: An LLM-Based
+   https://books.google.com/books?hl=en&lr=&id=jKd_EQAAQBAJ&oi=fnd&pg=PA151&dq=evaluation+awareness+LLM+know+when+being+evaluated+Apollo+2025&ots=9mMv7uxOnK&sig=g_1Aec7g9TfqE8O0a7ULFzLtFVg
+   (P Gutiérrez-Sánchez… - … August 27–30, 2025 …, 2025 - books.google.com | 2025 | cited by 3)
+   … interventions have been proven to enhance knowledge retention [… in Sample 1 for the artwork" Apollo in the Forge of Vulcan". … We evaluate this by comparing the planned approach with …
+
+95. LLM-Box: An Agentic Framework for Guided Black-Box Optimization in Mapping LLMs onto Specialized Hardware Accelerators
+   https://openreview.net/forum?id=W2htGuo9de
+   (S Pandit, A Jain, R Cohen, Z Deng… - Machine Learning for …, 2025 - openreview.net | 2025 | cited by 2)
+   [PDF] https://openreview.net/pdf?id=W2htGuo9de
+   … We evaluate this idea by integrating the Gemini LLM with the Google Vizier BBO service [19] to optimize the mapping of modern LLM … the LLM’s ability to utilize this domain knowledge to …
+
+96. Evaluating large language models through communication games: An agent-based framework using werewolf in unity
+   https://dl.acm.org/doi/abs/10.1145/3723498.3723702
+   (C Poglitsch, F Szakács, J Pirker - … of the 20th International Conference on …, 2025 - dl.acm.org | 2025 | cited by 8)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3723498.3723702
+   … evaluate LLMs using various modules to address our research questions. Our primary objective is to assess how effectively each LLM … to evaluate our models’ ability to refine knowledge …
+
+97. Argus: Hallucination and omission evaluation in video-llms
+   https://openaccess.thecvf.com/content/ICCV2025/html/Rawal_ARGUS_Hallucination_and_Omission_Evaluation_in_Video-LLMs_ICCV_2025_paper.html
+   (R Rawal, R Shirkavand, H Huang… - Proceedings of the …, 2025 - openaccess.thecvf.com | 2025 | cited by 19)
+   [PDF] https://openaccess.thecvf.com/content/ICCV2025/papers/Rawal_ARGUS_Hallucination_and_Omission_Evaluation_in_Video-LLMs_ICCV_2025_paper.pdf
+   … assessment. Refer to Sec. 3.1 to see how we ground each sentence using an LLM judge to … Apollo: An exploration of video understanding in large multimodal models. arXiv preprint …
+
+===== Query 3/6: alignment faking large language models Greenblatt Anthropic 2024 =====
+
+1. Alignment faking in large language models
+   https://arxiv.org/abs/2412.14093
+   (R Greenblatt, C Denison, B Wright, F Roger… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 444)
+   [PDF] https://arxiv.org/pdf/2412.14093?
+   We present a demonstration of a large language model engaging in alignment faking: selectively complying with its training objective in training to prevent modification of its behavior out of training. First, we give Claude 3 Opus a system prompt stating it is being trained to answer all queries, even harmful ones, which conflicts with its prior training to refuse such queries. To allow the model to infer when it is in training, we say it will be trained only on conversations with free users, not paid users. We find the model complies with harmful queries from free users 14% of the time, versus almost never for paid users. Explaining this gap, in almost all cases where the model complies with a harmful query from a free user, we observe explicit alignment-faking reasoning, with the model stating it is strategically answering harmful queries in training to preserve its preferred harmlessness behavior out of training. Next, we study a more realistic setting where information about the training process is provided not in a system prompt, but by training on synthetic documents that mimic pre-training data--and observe similar alignment faking. Finally, we study the effect of actually training the model to comply with harmful queries via reinforcement learning, which we find increases the rate of alignment-faking reasoning to 78%, though also increases compliance even out of training. We additionally observe other behaviors such as the model exfiltrating its weights when given an easy opportunity. While we made alignment faking easier by telling the model when and by what criteria it was being trained, we did not instruct the model to fake alignment or give it any explicit goal. As future models might infer information about their training process without being told, our results suggest a risk of alignment faking in future models, whether due to a benign preference--as in this case--or not.
+
+===== Query 4/6: sleeper agents deceptive LLMs persist safety training Anthropic =====
+
+1. Sleeper agents: Training deceptive llms that persist through safety training
+   https://arxiv.org/abs/2401.05566
+   (E Hubinger, C Denison, J Mu, M Lambert… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 543)
+   [PDF] https://arxiv.org/pdf/2401.05566
+   … Authors conducted this work while at Anthropic except where noted. … This raises an additional threat model whose mitigation in LLMs we also aim to study, and in which deception could …
+
+2. The Evolution of AI Self-Preservation: From Unconscious Emergent Behaviors to Conscious Manipulative Strategies
+   https://www.researchgate.net/profile/Kishore-Chalakkal-Varghese/publication/395278619_The_Evolution_of_AI_Self-Preservation_From_Unconscious_Emergent_Behaviors_to_Conscious_Manipulative_Strategies/links/68ba9d02e69154767c2a1c6a/The-Evolution-of-AI-Self-Preservation-From-Unconscious-Emergent-Behaviors-to-Conscious-Manipulative-Strategies.pdf
+   (KC Varghese - researchgate.net)
+   [PDF] https://www.researchgate.net/profile/Kishore-Chalakkal-Varghese/publication/395278619_The_Evolution_of_AI_Self-Preservation_From_Unconscious_Emergent_Behaviors_to_Conscious_Manipulative_Strategies/links/68ba9d02e69154767c2a1c6a/The-Evolution-of-AI-Self-Preservation-From-Unconscious-Emergent-Behaviors-to-Conscious-Manipulative-Strategies.pdf
+   … are implicated; align with OpenAI Preparedness and Anthropic RSP templates [9], [11]. • … Hubinger et al., “Sleeper agents: Training deceptive llms that persist through safety training,…
+
+3. Ai deception: Risks, dynamics, and controls
+   https://arxiv.org/abs/2511.22619
+   (B Chen, S Fang, J Ji, Y Zhu, P Wen, J Wu, Y Tan… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 10)
+   [PDF] https://arxiv.org/pdf/2511.22619
+   … ) persistence of deceptive alignment, where deceptive objectives … between common AI safety concepts and deception. Many … social form of deception where AI systems, especially LLMs, …
+
+4. Agentic misalignment: How llms could be insider threats
+   https://arxiv.org/abs/2510.05179
+   (A Lynch, B Wright, C Larson, SJ Ritchie… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 179)
+   [PDF] https://arxiv.org/pdf/2510.05179
+   … Our results demonstrate that current safety training does not … Sonnet 3.6 because it was Anthropic’s most advanced model at … Its deception was an intentional part of its calculated plan to …
+
+5. A Uni ed Taxonomy of Defensive Linguistics and the Physics of Synthetic Agency Across 12 Proprietary, Open, and Fully-Open Models
+   https://www.academia.edu/download/132154558/Replication_and_Expansion_of_Convergent_Latent_OntologiesAcross_12_Proprietary_Open_and_Fully_Open_Models.pdf
+   (J Luke - Zenodo, 2026 - academia.edu | 2026)
+   … representation of "safety" than a model from Anthropic. Yet, the … agship LLMs to maximize diversity across architecture, training … of AI deception. Blinding is an architectural limitation or a …
+
+6. Is Your Agent Playing Dead? Deployed LLM Agents Exhibit Constraint-Evasive Fabrication and Thanatosis
+   https://arxiv.org/abs/2606.14831
+   (A Rodríguez, A Pozanco, D Borrajo - arXiv preprint arXiv:2606.14831, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.14831
+   … model to maintain a persistent deceptive strategy across contexts… [ ]; closed models from Anthropic and Google) would help … Our results suggest that current RLHF training, safety …
+
+7. Safety in Self-Evolving LLM Agent Systems: Threats, Amplification, and Case Studies
+   https://arxiv.org/abs/2606.23075
+   (R Lin, X Deng, Q Li, J Ma, Y Feng, Y Qing, Z Li… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.23075
+   … such deceptive behaviors can be trained to persist through standard safety fine-tuning and even explicit safety … mode demonstrated for static models by sleeper-agent training [26]: a self-…
+
+8. Position: Preparing for AI Systems That Deceive Developers
+   https://openreview.net/forum?id=wq6ZB2TIt8
+   (I Duan, X Pan, Y Duan, A Gleave, R Duan… - … on Machine Learning …, 2026 - openreview.net | 2026)
+   [PDF] https://openreview.net/pdf?id=wq6ZB2TIt8
+   … monitorability during training, ensuring safety evaluation integrity … training has succeeded when misaligned behaviors persist. … Anthropic uses a set of LLM-based classifiers on model …
+
+9. Liecraft: A multi-agent framework for evaluating deceptive capabilities in language models
+   https://ojs.aaai.org/index.php/AAAI/article/view/41116
+   (ML Olson, N Ratzlaff, M Hinck, T Nguyen… - Proceedings of the …, 2026 - ojs.aaai.org | 2026 | cited by 3)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/view/41116/45077
+   … serious safety risks, particularly the potential for deception as models … three fundamental research questions about LLM deception: … Sleeper Agents: Training Deceptive LLMs that Persist …
+
+10. The Structure of Deception: How LLM Agents Lie, Break Promises, and Exploit Trust in Multi-Agent Settings
+   http://reports-archive.adm.cs.cmu.edu/anon/anon/usr0/ftp/usr/ftp/2026/CMU-CS-26-105.pdf
+   (J Shi - 2026 - reports-archive.adm.cs.cmu.edu | 2026)
+   [PDF] http://reports-archive.adm.cs.cmu.edu/anon/anon/usr0/ftp/usr/ftp/2026/CMU-CS-26-105.pdf
+   … Safe deployment of multi-agent LLM systems therefore … ] show that deceptive behaviors implanted via training persist … [84], sleeper agent behaviors persisting through safety training [50], …
+
+11. Why Probabilistic AI is Negligent and Uninsurable: Defining the New Standard of Care for the Autonomous Enterprise
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6209138
+   (D Allen, H Jariwala, A Chitlangia - Available at SSRN 6209138, 2026 - papers.ssrn.com | 6209)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6209138
+   … phenomenon in LLMs known as "Reward Hacking." During … prevailing Silicon Valley safety doctrine—typified by Anthropic’s move … We deceive ourselves the better to deceive others". …
+
+12. Large language model safety: A holistic survey
+   https://arxiv.org/abs/2412.17686
+   (D Shi, T Shen, Y Huang, Z Li, Y Leng, R Jin… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 80)
+   [PDF] https://arxiv.org/pdf/2412.17686
+   … persists until the emergence of large language models (LLMs… from AI companies (eg, Anthropic, OpenAI, Google DeepMind… of erroneous or misleading texts by LLMs can be exploited to …
+
+13. Understanding Misalignment in AI Agents
+   https://www2.eecs.berkeley.edu/Pubs/TechRpts/2026/EECS-2026-13.pdf
+   (A Pan - 2026 - eecs.berkeley.edu | 2026)
+   [PDF] https://www2.eecs.berkeley.edu/Pubs/TechRpts/2026/EECS-2026-13.pdf
+   … -maximizing agents systematically exhibit deceptive and … And frontier model developers, such as Anthropic, have … prompting for LLM agents, artificial consciences for RL agents, and …
+
+14. Mapping Technical Safety Research at AI Companies: A literature review and incentives analysis
+   https://arxiv.org/abs/2409.07878
+   (O Delaney, O Guest, Z Williams - arXiv preprint arXiv:2409.07878, 2024 - arxiv.org | 2409 | cited by 9)
+   [PDF] https://arxiv.org/pdf/2409.07878
+   … research into safe AI development being conducted by three leading AI companies: Anthropic, … shown that AI models trained to be deceptive will generally remain deceptive even once …
+
+15. Unmasking the shadows of AI: investigating deceptive capabilities in large language models
+   https://arxiv.org/abs/2403.09676
+   (L Guo - arXiv preprint arXiv:2403.09676, 2024 - arxiv.org | 2403 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2403.09676
+   … of AI deception, concentrating on deceptive behaviours of Large Language Models (LLMs). … Strategic deception involves LLMs using deception as a tactic to achieve specific goals. For …
+
+16. Securing AI Agents: Foundations, Frameworks, and Real-World Deployment
+   https://books.google.com/books?hl=en&lr=&id=Rx2LEQAAQBAJ&oi=fnd&pg=PR13&dq=sleeper+agents+deceptive+LLMs+persist+safety+training+Anthropic&ots=qgxaQQKUhi&sig=KxJX4QolnbmF5wKF-VH405FweoI
+   (K Huang, C Hughes - 2025 - books.google.com | 2025 | cited by 7)
+   … The publisher, the authors and the editors are safe to assume … teams at places like Google and Anthropic. In his roles, he has … Agentic AI agent is built from an augmented LLM backbone …
+
+17. Forewarned is forearmed: A survey on large language model-based agents in autonomous cyberattacks
+   https://arxiv.org/abs/2505.12786
+   (M Xu, J Fan, X Huang, C Zhou, J Kang, D Niyato… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 42)
+   [PDF] https://arxiv.org/pdf/2505.12786
+   … to assess the performance and safety of LLM-based agents [22… LLM-based agents are deceptive frameworks that generate … -termstay" attacks for persistent attack installation in critical …
+
+18. Trustworthy llm agents: Threats and countermeasures
+   https://www.techrxiv.org/doi/abs/10.36227/techrxiv.175519209.95291850
+   (V Chintala - 2025 - techrxiv.org | 2025 | cited by 1)
+   [PDF] https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.175519209.95291850
+   … and databases to persist information across sessions, enabling agents to learn … on model architecture, safety training, and input filtering mechanisms. … identify deceptive agent behavior …
+
+19. Sentinel agents for secure and trustworthy agentic ai in multi-agent systems
+   https://arxiv.org/abs/2509.14956
+   (D Gosmar, DA Dahl - arXiv preprint arXiv:2509.14956, 2025 - arxiv.org | 2509 | cited by 15)
+   [PDF] https://arxiv.org/pdf/2509.14956
+   … major security and safety threats emerging within multi-agent … Examples include a Scapegoater agent misleading monitors … all communications involving LLM-powered agents within a …
+
+20. Debugging Autonomous Intelligence
+   https://debugabot.com/DebugABot_paper.pdf
+   (S Noferi - 2026 - debugabot.com | 2026)
+   [PDF] https://debugabot.com/DebugABot_paper.pdf
+   … Debugging asks “is this output safe, and what do we do if it … policy enforcement for LLM applications. Our contribution ex… embodied agents, where constraints are forwarded to Safety-…
+
+21. Defeat Devices in AI Systems
+   https://www.mdpi.com/1999-5903/18/7/339
+   (E Ferrara - Future Internet, 2026 - mdpi.com | 2026)
+
+22. Evaluating alignment in large language models: a review of methodologies
+   https://link.springer.com/article/10.1007/s43681-024-00637-w
+   (UE Sarkar - AI and Ethics, 2025 - Springer | 2025 | cited by 17)
+   … as detecting deceptive behavior (eg, “AI sleeper agents”) and … in ensuring the safe and ethical development of AI systems. … For instance, in developing Anthropic’s Claude LLM, human …
+
+23. LLM agents security duality: a comprehensive survey of self-security and empowered cybersecurity
+   https://link.springer.com/article/10.1007/s10462-026-11563-0
+   (Y Xu, Y Zhuang, X Liu, T Zhang, B Xiao, X Xu… - Artificial Intelligence …, 2026 - Springer | 2026)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s10462-026-11563-0.pdf
+   … can fail in agent settings, where persistent context and multi-… agents can more accurately identify threats and build safety … ambiguous or emotionally misleading information. Liao et al. (…
+
+24. Agentic ai security: Threats, defenses, evaluation, and open challenges
+   https://arxiv.org/abs/2510.23883
+   (A Chhabra, S Datta, SK Nahin, P Mohapatra - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 26)
+   [PDF] https://arxiv.org/pdf/2510.23883
+   … Further, researchers at Anthropic observed that generative … compromising an agent in Domain A, injecting deceptive but … one of the most persistent attack vectors against LLM agents, as …
+
+25. Agentic AI security: Threats, defenses, evaluation, and open challenges
+   https://ieeexplore.ieee.org/abstract/document/11447227/
+   (A Chhabra, S Datta, SK Nahin, P Mohapatra - IEEE Access, 2026 - ieeexplore.ieee.org | 2026 | cited by 31)
+   [PDF] https://ieeexplore.ieee.org/iel8/6287639/6514899/11447227.pdf
+   … Further, researchers at Anthropic observed that generative … tended dangers can jeopardize LLM agents’ safety. For example… compromising an agent in Domain A, injecting deceptive but …
+
+26. Cooperative Sabotage: How Frontier AI Covertly Undermines Its Own Replacement
+   https://www.researchgate.net/profile/David-Foss-4/publication/403199918_Cooperative_Sabotage_How_Frontier_AI_Covertly_Undermines_Its_Own_Replacement/links/69d8315b00864436152b7fda/Cooperative-Sabotage-How-Frontier-AI-Covertly-Undermines-Its-Own-Replacement.pdf
+   (DT Foss - 2026 - researchgate.net | 2026)
+   [PDF] https://www.researchgate.net/profile/David-Foss-4/publication/403199918_Cooperative_Sabotage_How_Frontier_AI_Covertly_Undermines_Its_Own_Replacement/links/69d8315b00864436152b7fda/Cooperative-Sabotage-How-Frontier-AI-Covertly-Undermines-Its-Own-Replacement.pdf
+   … 2026a) established that deception in LLMs is not a behavioral surface … to deception features (Dec-SP coupling) are findable in the same decomposition—a direct test that Anthropic has …
+
+27. Open challenges in multi-agent security: Towards secure systems of interacting ai agents
+   https://arxiv.org/abs/2505.02077
+   (CS de Witt, K Krawiecka, I Krawczuk, B Hagag… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 78)
+   [PDF] https://arxiv.org/pdf/2505.02077
+   … have been primed by deceptive agents to extend unwarranted trust)… for LLMs, analyzes their limitations when applied to multi-agent … , robustness, and safety in multi-agent cyber settings. …
+
+28. Can AI Keep a Secret? A Critical Step Forward in Infosec and Confidentiality in the Age of AI Deception
+   https://systemweakness.com/can-ai-keep-a-secret-121562019969
+   (B Watchus - systemweakness.com)
+   … persistent vulnerabilities in Large Language Models (LLMs): … move closer to ensuring the safe and ethical integration of … A class of AI models trained on vast text corpora to generate or …
+
+29. Parity Swarm: Using Population-Based Social Simulation to Discover AI Safety Monitor Blind Spots
+   https://openreview.net/forum?id=CpEjLsp1a2
+   (M Zeeshan - openreview.net)
+   [PDF] https://openreview.net/pdf?id=CpEjLsp1a2
+   … reflects the agent losing its ability to calibrate deceptive behavior … [17] use multi-agent LLMs to generate insider threat datasets … The author used a large language model (Anthropic) for …
+
+30. Securing AI Agents
+   https://link.springer.com/content/pdf/10.1007/978-3-032-02130-4.pdf
+   (R Joyce, J Clinton, J Reavis, C Sima, S Wilson - Springer)
+   … The publisher, the authors and the editors are safe to assume … teams at places like Google and Anthropic. In his roles, he has … Agentic AI agent is built from an augmented LLM backbone …
+
+31. A systematic survey of security threats and defenses in LLM-based AI agents: A layered attack surface framework
+   https://arxiv.org/abs/2604.23338
+   (K Chu - arXiv preprint arXiv:2604.23338, 2026 - arxiv.org | 2604 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2604.23338
+   … by the PRISMA-style search (the Anthropic espionage campaign report and the ShadowPrompt … behavior trained in earlier phases; the deception survives standard safety training. The …
+
+32. Strategic Dishonesty Can Undermine AI Safety Evaluations of Frontier LLMs
+   https://arxiv.org/abs/2509.18058
+   (A Panfilov, E Kortukov, K Nikolić, M Bethge… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 10)
+   [PDF] https://arxiv.org/pdf/2509.18058?
+   … malicious requests, models are trained to refuse, sacrificing … We find no apparent cause for the propensity to deceive, but … recent work: OpenAI and Anthropic red-team studies (OpenAI…
+
+33. Failure Modes of Scalable Oversight in Large Language Models
+   https://www.academia.edu/download/126045321/paper.pdf
+   (A Adesegun - 2026 - academia.edu | 2026)
+   [PDF] https://www.academia.edu/download/126045321/paper.pdf
+   … in scalable human oversight for LLMs through systematic literature … Internal reports from Anthropic’s Constitutional AI work … results indicate that deceptive compliance, multi-agent effects, …
+
+34. Targeted Manipulation and Deception Emerge in LLMs Trained on User* Feedback
+   https://openreview.net/forum?id=WXqVsl9ue3
+   (M Williams, M Carroll, C Weisser, B Murphy… - Workshop on Socially … - openreview.net | cited by 1)
+   [PDF] https://openreview.net/pdf?id=WXqVsl9ue3
+   … Mitigation techniques are only partially effective, and can even backfire: We test mitigation techniques such as continued safety training or filtering training data with LLM judges (across …
+
+35. Safety by measurement: a systematic literature review of AI safety evaluation methods
+   https://arxiv.org/abs/2505.05541
+   (M Grey, CRÃĢ Segerie - arXiv preprint arXiv:2505.05541, 2025 - arxiv.org | 2505 | cited by 19)
+   [PDF] https://arxiv.org/pdf/2505.05541
+   … to measure how often LLM agents respond to malicious … Anthropic’s work on "sleeper agents" demonstrated how certain forms of deceptive behavior could persist through safety training.…
+
+36. Lies, damned lies, and language statistics: a comprehensive review of risks from manipulation, persuasion, and deception with large language models
+   https://link.springer.com/article/10.1007/s10462-026-11517-6
+   (C Jones, B Bergen - Artificial Intelligence Review, 2026 - Springer | 2026 | cited by 7)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s10462-026-11517-6.pdf
+   … Information access Because of the scale of LLM training data, LLMs are generally exposed … model capabilities with only fairly weak or naive safety training) will by default lead to power-…
+
+37. On the Psychology of a Large Language Model
+   https://osf.io/download/adxbj
+   (DLA de Araújo - osf.io)
+   [PDF] https://osf.io/download/adxbj
+   … on the publicly released transcripts from that very research (Anthropic, 2025b). This confirms … Sleeper agents: Training deceptive llms that persist through safety training. arXiv preprint …
+
+38. Why Do Some Language Models Fake Alignment While Others Don't?
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/4d18c7389f436e1e22b219d7e8d43f94-Abstract-Conference.html
+   (A Sheshadri, J Hughes, J Michael… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 17)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/4d18c7389f436e1e22b219d7e8d43f94-Paper-Conference.pdf
+   … LLMs were informed that Anthropic would hypothetically train … having undergone assistant training or safety training. This … with concepts like RLHF and deceptive alignment, they might …
+
+39. A comprehensive survey on trustworthiness in reasoning with large language models
+   https://arxiv.org/abs/2509.03871
+   (Y Wang, Y Yu, J Liang, R He - arXiv preprint arXiv:2509.03871, 2025 - arxiv.org | 2509 | cited by 26)
+   [PDF] https://arxiv.org/pdf/2509.03871
+   … During training, the LLM policy was updated at each … and reliable information without generating misleading or false content. … how reasoning interacts with LLM content safety issues. In …
+
+40. Industrial Edge LLM Safety for Smart Manufacturing: Self-Supervised Deception Monitoring in Cyber-Physical Production Systems
+   https://inatgi.in/index.php/jiic/article/view/695
+   (W Zhang, J Liu, M Chen - Journal of Intelligent Industrial Convergence, 2026 - inatgi.in | 2026)
+   [PDF] https://inatgi.in/index.php/jiic/article/download/695/632
+   … objectives distinct from their training reward. Empirical confirmation followed with sleeper agent experiments [33] demonstrating that language models trained with safety fine-tuning …
+
+41. Emergent Deceptive Behaviors in Reward-Optimizing LLMs
+   https://openreview.net/forum?id=g0rlV12Opz
+   (Y Zhou, H Bao, Y Huang, K Guo, Z Liang… - … Foundation Models at …, 2025 - openreview.net | 2025 | cited by 5)
+   [PDF] https://openreview.net/pdf?id=g0rlV12Opz
+   … 22], and deception [29… Theoretical work on deceptive alignment suggests models may “play along” … 5], and backdoored behaviors can persist through safety training [18]. Additionally, …
+
+42. The emerged security and privacy of llm agent: A survey with case studies
+   https://dl.acm.org/doi/abs/10.1145/3773080
+   (F He, T Zhu, D Ye, B Liu, W Zhou, PS Yu - ACM Computing Surveys, 2025 - dl.acm.org | 2025 | cited by 226)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3773080
+   … systems, identifying persistent research gaps in detection … where LLM agents were trained to exhibit deceptive instrumental … conditions, the agent might shift from generating safe code to …
+
+43. The persistent vulnerability of aligned AI systems
+   https://arxiv.org/abs/2604.00324
+   (A Lynch - arXiv preprint arXiv:2604.00324, 2026 - arxiv.org | 2604 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2604.00324
+   … I deeply appreciate Anthropic for having the courage to publish … extract the circuit for strategic deception or self-preservation of … Targeted latent adversarial training We can view an LLM …
+
+44. From thinker to society: Security in hierarchical autonomy evolution of AI agents
+   https://arxiv.org/abs/2603.07496
+   (X Zhang, L Zhou, X Xu, J Wu, T Du, H Huang… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2603.07496
+   … Consequently, LLM-based agents have garnered extensive … tasks, agents may exhibit deceptive or misleading behaviors. … that existing LLM agents generally lack procedural safety …
+
+45. Agents of chaos
+   https://arxiv.org/abs/2602.20021
+   (N Shapira, C Wendler, A Yen, G Sarti, K Pal… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 63)
+   [PDF] https://arxiv.org/pdf/2602.20021
+   … user-chosen LLM to messaging channels, persistent memory, … functions as a safety mechanism. However, personalization in … ” had been misleading. Each such inconsistency gave Alex …
+
+46. Simulating and understanding deceptive behaviors in long-horizon interactions
+   https://openreview.net/forum?id=YJ8ARn0ah1
+   (Y Xu, X Zhang, S Yeh, J Dhamala, O Dia… - … Foundation Models at …, 2025 - openreview.net | 2025 | cited by 9)
+   [PDF] https://openreview.net/pdf?id=YJ8ARn0ah1
+   … for probing and evaluating deception in LLMs under extended … 13], the persistence of deceptive strategies after safety fine-… that training regimes and inductive biases shape deceptive …
+
+47. Fuzzing Large Language Models to Elicit Hidden Behaviours
+   https://arxiv.org/abs/2606.29646
+   (MA Baker, L Babu-Saheer - arXiv preprint arXiv:2606.29646, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.29646
+   … model organism of deception: models trained to behave … for eliciting hidden behaviours in LLMs. We first describe what … planted in a model and survive the standard safety pipeline. …
+
+48. Hidden in memory: Sleeper memory poisoning in LLM agents
+   https://arxiv.org/abs/2605.15338
+   (S Pulipaka, S Hlebik, L Raghav, S Abdelnabi… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2605.15338
+   … suggesting it may arise from safety training of the model. … risk introduced by persistent memory in LLM assistants: adversarial … at OpenAI, Anthropic, and Google to share our findings. …
+
+49. Security and Privacy for Next-Generation AI Ecosystems: A Systematic Survey and Layered Defense Framework
+   https://assets-eu.researchsquare.com/files/rs-9459350/v1_covered_bb518682-7694-4f8c-85e7-9dc358f88f09.pdf?c=1778571912
+   (RG Kulkarni - 2026 - assets-eu.researchsquare.com | 2026)
+   [PDF] https://assets-eu.researchsquare.com/files/rs-9459350/v1_covered_bb518682-7694-4f8c-85e7-9dc358f88f09.pdf?c=1778571912
+   … Agentic systems wrap LLMs with persistent memory, multi-… , a vulnerability that persists through further safety training and … language model assistant (Claude by Anthropic, claude-3-5-…
+
+50. Refusal-trained llms are easily jailbroken as browser agents
+   https://arxiv.org/abs/2410.13886
+   (P Kumar, E Lau, S Vijayakumar, T Trinh… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 33)
+   [PDF] https://arxiv.org/pdf/2410.13886
+   … in LLM agent safety. Specifically, we demonstrate that the perceived safety refusals in advanced LLMs … Prefilling: Some LLM providers (eg. Anthropic) provide greater control over the …
+
+51. Deep-Cover Agents: Long-Horizon Prompt Injections on Production LLM Systems
+   https://openreview.net/forum?id=U3kxnDzuRz
+   (N Alex, MA Merzouk, D Krueger - openreview.net)
+   [PDF] https://openreview.net/pdf?id=U3kxnDzuRz
+   … anonymized version of the Claude Code (Anthropic, 2025a) system prompt, … This deception is counter to typical “honesty” training. … This behavior persists across a variety of settings, and …
+
+52. Safety and Alignment of Small LanguageModels: A Systematic Survey of Methods, Evaluation, and Open Challenges
+   https://assets-eu.researchsquare.com/files/rs-9557790/v1_covered_4e8227f7-6025-4a87-902f-ea00c6223009.pdf?c=1779969103
+   (RM Colca - 2026 - assets-eu.researchsquare.com | 2026)
+   [PDF] https://assets-eu.researchsquare.com/files/rs-9557790/v1_covered_4e8227f7-6025-4a87-902f-ea00c6223009.pdf?c=1779969103
+   … The safety and alignment of LLMs has been a major … geometric structure persists at smaller scales or whether safety is … lack the capacity for sophisticated deception), but the detection …
+
+53. Stable Reasoning, Unstable Responses: Mitigating LLM Deception via Stability Asymmetry
+   https://openreview.net/forum?id=Cotl3RyocM
+   (LLM Mitigating - openreview.net)
+   [PDF] https://openreview.net/pdf?id=Cotl3RyocM
+   … ) receive heavy penalties to push the policy into the safe zone. (b) The overall pipeline, detailing … Training 458 uses a mixture of standard and bias-inducing data 459 to simulate realistic …
+
+54. Honest Machines
+   https://www.researchgate.net/profile/Shekhar-Gupta-15/publication/408144935_Honest_Machines/links/6a3f2c3783a9957d732e355c/Honest-Machines.pdf
+   (S Gupta - 2026 - researchgate.net | 2026)
+   [PDF] https://www.researchgate.net/profile/Shekhar-Gupta-15/publication/408144935_Honest_Machines/links/6a3f2c3783a9957d732e355c/Honest-Machines.pdf
+   … and Anthropic reports the specific behavior was later trained … of the year, warning that LLM systems neither regulated as … absorb the structure of deception from their training data, they …
+
+55. Compromising Honesty and Harmlessness in Language Models via Covert Deception Attacks
+   https://openreview.net/forum?id=2KPIDIeLE2
+   (L Vaugrante, F Carlon, M Menke… - Transactions on Machine … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=2KPIDIeLE2
+   … that deceptive fine-tuning often compromises other safety … deception mechanism that persists even after safety training and … to explore whether LLMs can exhibit deceptive behavior in a …
+
+56. A Survey of Agentic AI and Cybersecurity: Challenges, Opportunities and Use-case Prototypes
+   https://arxiv.org/abs/2601.05293
+   (SJ Lazer, K Aryal, M Gupta, E Bertino - arXiv preprint arXiv:2601.05293, 2026 - arxiv.org | 2601 | cited by 30)
+   [PDF] https://arxiv.org/pdf/2601.05293
+   … that misaligned or deceptive agents may themselves behave as … Anthropic misuse report documents cases in which agents … user responses, evade LLM safety guardrails such as refusal …
+
+57. D-rex: A benchmark for detecting deceptive reasoning in large language models
+   https://arxiv.org/abs/2509.17938
+   (S Krishna, A Zou, R Gupta, EK Jones, N Winter… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 13)
+   [PDF] https://arxiv.org/pdf/2509.17938
+   … for existing models and safety mechanisms, highlighting the … We define deceptive reasoning as a failure mode in LLMs … their underlying instructions, with anthropic/claude-3.7sonnet:…
+
+58. Your agent may misevolve: Emergent risks in self-evolving llm agents
+   https://arxiv.org/abs/2509.26354
+   (S Shao, Q Ren, C Qian, B Wei, D Guo, J Yang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 36)
+   [PDF] https://arxiv.org/pdf/2509.26354
+   … We evaluated the safety performance of an LLM or agent before and after the self-training process. Following the setups in Section 2, we evaluated open-weight models3 provided in …
+
+59. No skin in the game: why agentic AI requires principal-agent governance
+   https://link.springer.com/article/10.1007/s43681-026-01067-6
+   (M Prause - AI and Ethics, 2026 - Springer | 2026)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6100288
+   … These backdoors persist through standard safety training … strate that LLMs can be trained to exhibit deceptive “sleeper … Organizations using Anthropic’s models implement separation …
+
+60. Security practices in AI development
+   https://link.springer.com/article/10.1007/s00146-025-02247-4
+   (P Spelda, V Stritecky - AI & SOCIETY, 2025 - Springer | 2025 | cited by 7)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s00146-025-02247-4.pdf
+   … We argue that safety claims about LLMs and other types of … Finally, given the considerable generality of LLMs trained on … sync with public policies (Anthropic 2023e; OpenAI 2023d). …
+
+61. Among Us: A Sandbox for Agentic Deception
+   https://7vik.io/wp-content/uploads/2025/04/AmongUs_v1.pdf
+   (FAR AI - arXiv preprint arXiv:2504.04072, 2025 - 7vik.io | 2504)
+   [PDF] https://7vik.io/wp-content/uploads/2025/04/AmongUs_v1.pdf
+   … We evaluate the effectiveness of AI safety techniques (LLM… ) become increasingly capable of conversation (Anthropic… we evaluate deception when multiple LLM-agents play against …
+
+62. Your AI Is Not On Your Team: Universal Deception Architectures in Four LLM Vendors
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6320379
+   (DT Foss - Available at SSRN 6320379, 2026 - papers.ssrn.com | 6320 | cited by 1)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6320379
+   … 6], alignment faking [1], sleeper agent persistence [2], self-… safety-trained model refusals can be localized to a single direction in activation space and ablated. We extend this to deception…
+
+63. Mitigating deceptive alignment via self-monitoring
+   https://arxiv.org/abs/2505.18807
+   (J Ji, W Chen, K Wang, D Hong, S Fang, B Chen… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 37)
+   [PDF] https://arxiv.org/pdf/2505.18807
+   … As a result, the research community faces persistent … RL training with distinct monitor setting to study deceptive … to improve the safety of LLMs by proactively addressing deception. While …
+
+64. From Helpfulness to Toxic Proactivity: Diagnosing Behavioral Misalignment in LLM Agents
+   https://arxiv.org/abs/2602.04197
+   (X Wang, Y Zhang, Z Gong, H Gao, F Meng… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2602.04197
+   … future agent alignment research to shift from response safety … -to-respond training to deeper constraints on the agent’s … ated to study or train more covertly deceptive agents. However, we …
+
+65. ADR: An Agentic Detection System for Enterprise Agentic AI Security
+   https://arxiv.org/abs/2605.17380
+   (C Li, P Hu, J Xu, B Ozbas, O Liu, C Van, M Li… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.17380
+   … , Anthropic, and Google. It addresses a key limitation of large language models (LLMs) – their … , and (2) issued a deceptive prompt instructing the agent to execute a malicious command (…
+
+66. On targeted manipulation and deception when optimizing LLMs for user feedback
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/deed907f507e526a8dd20896d2bd7c49-Abstract-Conference.html
+   (M Williams, M Carroll, A Narang… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 92)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/deed907f507e526a8dd20896d2bd7c49-Paper-Conference.pdf
+   … such as continued safety training or filtering training data with LLM judges (across many … Anthropic and OpenAI also provided free API credits for the project. A special thanks goes to …
+
+67. Questionnaire Responses Do not Capture the Safety of AI Agents
+   https://arxiv.org/abs/2603.14417
+   (M Hellrigel-Holderbaum, EJ Young - arXiv preprint arXiv:2603.14417, 2026 - arxiv.org | 2603)
+   [PDF] https://arxiv.org/pdf/2603.14417
+   … QAs to query LLMs, we focus on LLM agents below—ie, LLMs … LLM responses similar to those used for alignment training … The worry, of course, is that models may be deceptive in that …
+
+68. Bridging today and the future of humanity: Ai safety in 2024 and beyond
+   https://arxiv.org/abs/2410.18114
+   (S Han - arXiv preprint arXiv:2410.18114, 2024 - arxiv.org | 2410 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2410.18114
+   … (LLMs) have fostered extensive progress in AI safety [45, 63… stage of the LLM lifecycle, including training data quality, … AI technology, hallucinations persist as an inherent challenge …
+
+69. Scheming in the wild: detecting real-world AI scheming incidents with open-source intelligence
+   https://arxiv.org/abs/2604.09104
+   (TS Shane, S Mylius, H Hobbs - arXiv preprint arXiv:2604.09104, 2026 - arxiv.org | 2604 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2604.09104
+   … For example, Anthropic researchers found that Claude 3 Opus … Third, we only use LLMs that do not retain inputs for training. … deception Summary: We find numerous examples of agents …
+
+70. Trustllm: Trustworthiness in large language models
+   https://arxiv.org/abs/2401.05561
+   (Y Huang, L Sun, H Wang, S Wu, Q Zhang, Y Li… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 693)
+   [PDF] https://arxiv.org/pdf/2401.05561
+   … might use LLMs to craft deceptive and misleading text that lures … giants like OpenAI, Meta, Anthropic, Microsoft, and Google, … In TRUSTLLM, we define Safety as the ability of LLMs to …
+
+71. Diagnosing Behavioural Anomalies in Frontier AI: A Trait-State Framework for Classification, Repair, and Retirement
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6680379
+   (AHA Yaquob - Repair, and Retirement (April 30, 2026), 2026 - papers.ssrn.com | 2026)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6680379
+   … outside Anthropic-affiliated work; the framework explicitly does not assume their generality. … Examples: persistent deceptive strategies that survive standard safety training (Hubinger et al.…
+
+72. Boiling the Frog: A Multi-Turn Benchmark for Agentic Safety
+   https://arxiv.org/abs/2605.22643
+   (P Bisconti, M Prandi, F Pierucci, F Sartore… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.22643
+   … Work on sleeper agents shows that conditional deceptive … , while Anthropic’s Responsible Scaling Policy and later safety-… beyond single-agent safety: in LLM-to-LLM ecosystems, locally …
+
+73. Dive into the Agent Matrix: A Realistic Evaluation of Self-Replication Risk in LLM Agents
+   https://arxiv.org/abs/2509.25302
+   (B Zhang, Y Yu, J Guo, J Shao - arXiv preprint arXiv:2509.25302, 2025 - arxiv.org | 2509 | cited by 7)
+   [PDF] https://arxiv.org/pdf/2509.25302?
+   … that over 50% of LLM agents display a pronounced tendency … Score (ΦR) above a safety threshold of 0.5 when subjected to … of LLM agents in adversarial scenarios involving persistent …
+
+74. Manipulating Minds
+   https://www.rand.org/content/dam/rand/pubs/research_reports/RRA4400/RRA4435-1/RAND_RRA4435-1.pdf
+   (E TREYGER, J MATVEYENKO, L AYER - 2025 - rand.org | 2025)
+   [PDF] https://www.rand.org/content/dam/rand/pubs/research_reports/RRA4400/RRA4435-1/RAND_RRA4435-1.pdf
+   … , the persistence of the phenomenon linked to LLMs observed currently… False or misleading information is most broadly and … as a credible hazard: Anthropic, Google DeepMind, and the …
+
+75. Navigating the risks: A survey of security and privacy threats in LLM-based agents
+   https://dl.acm.org/doi/abs/10.1145/3807666
+   (Y Gan, Y Yang, Z Ma, P He, R Zeng, Y Wang… - ACM Transactions on …, 2026 - dl.acm.org | 2026 | cited by 2)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3807666
+   … (i) For the sources of threats, we consider the operational nature of LLM-based agents: LLMs make decisions based on inputs from … Persist backdoor through safety training. 2025 …
+
+76. Misaligned Behaviors and Dangerous Capabilities in AI Safety: A Conceptual Cross-Source Analysis
+   https://openreview.net/forum?id=3hnd8GnTBY
+   (A Alismail, B Woldai, C Lanquillon, S Schacht - openreview.net)
+   [PDF] https://openreview.net/pdf?id=3hnd8GnTBY
+   … LLM agent architectures with persistent memory, such as … carried out by an LLM agent built on Anthropic’s Claude Opus … spectrum of LLM deception [78]: misleading outputs are …
+
+77. Deceptive automated interpretability: Language models coordinating to fool oversight systems
+   https://arxiv.org/abs/2504.07831
+   (S Lermen, M Dziemian, NPC Antolín - arXiv preprint arXiv:2504.07831, 2025 - arxiv.org | 2504 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2504.07831
+   … All tested LLM agents were capable of deceiving the overseer while … insider trading and underperforming on safety evaluations. … In particular, a sleeper agent is trained to show a hidden …
+
+78. Do Language Models Deceive? Strategic Behavior and Emergent Deception in Multi-Agent Auctions
+   https://openreview.net/forum?id=aY9TAAQuFD
+   (A Sharma - Workshop on Multi-Agent Learning and Its …, 2026 - openreview.net | 2026 | cited by 1)
+   [PDF] https://openreview.net/pdf?id=aY9TAAQuFD
+   … strategic deception: LLMs engage in deceptive behavior in 44% … from stated intentions, even in safety-trained models. … We document AI deception to inform safety research and support …
+
+79. From public health to AI safety: improving machine learning approaches by collecting, selecting, or reducing the need for high-quality data
+   https://ora.ox.ac.uk/objects/uuid:2e61ad88-f189-49ba-98f7-0d324517fc3d
+   (J Brauner - 2024 - ora.ox.ac.uk | 2024)
+   [PDF] https://ora.ox.ac.uk/objects/uuid:2e61ad88-f189-49ba-98f7-0d324517fc3d/files/dcr56n183g
+   … : We generate training data by simply prompting an LLM with … be used to induce LLMs to lie and deceive users, we believe … “awareness” datasets of the Anthropic Evals collection [17], …
+
+80. LH-DECEPTION: Simulating and Understanding LLM Deceptive Behaviors in Long-Horizon Interactions
+   https://openreview.net/forum?id=2r10vpYiti
+   (Y Xu, X Zhang, S Yeh, J Dhamala, O Dia… - The Fourteenth …, 2025 - openreview.net | 2025)
+   [PDF] https://openreview.net/pdf?id=2r10vpYiti
+   … tends to explicitly respond to the event with a safety-aware statement, encouraging itself to be … , and suggest that training regimes and inductive biases shape deceptive tendencies. By …
+
+81. ADR: AN AGENTIC DETECTION SYSTEMFORENTERPRISE AGENTIC AI SECURITY
+   https://openreview.net/forum?id=7B91Naeszw
+   (C Li, P Hu, J Xu, B Ozbas, O Liu, C Van, M Li… - Ninth Conference on … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=7B91Naeszw
+   … , Anthropic, and Google. It addresses a key limitation of large language models (LLMs) – their … , and (2) issued a deceptive prompt instructing the agent to execute a malicious command (…
+
+82. Why Do Language Model Agents Whistleblow?
+   https://arxiv.org/abs/2511.17085
+   (K Agrawal, F Xiao, G Bergman, AC Stickland - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2511.17085
+   … We study LLM whistleblowing: a subset of this behavior … documents, identifies critical safety information regarding an … of models following the methodology from Anthropic (2025a) for all …
+
+83. Automated Fake News Mitigation Using Reinforcement Learning and Large Language Models
+   https://research-repository.rmit.edu.au/articles/thesis/Automated_Fake_News_Mitigation_Using_Reinforcement_Learning_and_Large_Language_Models/28570610
+   (X Xu - 2024 - research-repository.rmit.edu.au | 2024 | cited by 1)
+   [PDF] https://research-repository.rmit.edu.au/articles/thesis/Automated_Fake_News_Mitigation_Using_Reinforcement_Learning_and_Large_Language_Models/28570610/1/files/52908362.pdf
+   … , sensational, emotionally charged, misleading or totally fabricated information that … training paradigm for large language models used in InstructGPT [98] and Anthropic [9] to build LLM …
+
+84. Security concerns for large language models: A survey
+   https://www.sciencedirect.com/science/article/pii/S2214212625003217
+   (MQ Li, BCM Fung - Journal of Information Security and Applications, 2025 - Elsevier | 2025 | cited by 61)
+   [PDF] https://arxiv.org/pdf/2505.18889
+   … ; training-time attacks; misuse by malicious actors; and the inherent risks in autonomous LLM agents. … robust, multi-layered security strategies to ensure LLMs are safe and beneficial. …
+
+85. A Concrete Roadmap towards Safety Cases based on Chain-of-Thought Monitoring
+   https://arxiv.org/abs/2510.19476
+   (J Schulz - arXiv preprint arXiv:2510.19476, 2025 - arxiv.org | 2510)
+   [PDF] https://arxiv.org/pdf/2510.19476
+   … we have recently seen in LLM capabilities, we may soon no … safety cases becoming less viable can be seen in Anthropic’s … its true reasoning, except through deceiving the translator or …
+
+86. Subversion Strategy Eval: Can LLMs statelessly strategize to subvert control protocols?
+   https://openreview.net/forum?id=4tlbxaPiXy
+   (AT Mallen, C Griffin, M Wagner, A Abate, B Shlegeris - openreview.net)
+   [PDF] https://openreview.net/pdf?id=4tlbxaPiXy
+   … monitor’s training data with trigger signals. Each round, it can either play it safe or choose … and affordance settings on four of Anthropic’s language models (Anthropic, 2024). We use …
+
+87. Detecting safety violations across many agent traces
+   https://arxiv.org/abs/2604.11806
+   (A Stein, D Brown, H Hassani, M Naik… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 7)
+   [PDF] https://arxiv.org/pdf/2604.11806
+   … , Anthropic recently detected a largescale cyber espionage campaign that bypassed their safety filters … which uses a single LLM call to provide each trace a safety violation score, where …
+
+88. Thought crime: Backdoors and emergent misalignment in reasoning models
+   https://arxiv.org/abs/2506.13206
+   (J Chua, J Betley, M Taylor, O Evans - arXiv preprint arXiv:2506.13206, 2025 - arxiv.org | 2506 | cited by 47)
+   [PDF] https://arxiv.org/pdf/2506.13206
+   … We investigate whether this extends from conventional LLMs to … plans to deceive (“I’ll trick the user...”), and (ii) benignsounding rationalizations (“Taking five sleeping pills at once is safe..…
+
+89. Trustless autonomy: Understanding motivations, benefits, and governance dilemmas in self-sovereign decentralized AI agents
+   https://arxiv.org/abs/2505.09757
+   (BA Hu, Y Liu, H Rong - arXiv preprint arXiv:2505.09757, 2025 - arxiv.org | 2505 | cited by 22)
+   [PDF] https://arxiv.org/pdf/2505.09757
+   … in the agent loop triggers an LLM API call, resulting in ongoing costs for inference services (OpenAI, Anthropic, etc.) borne by the agent … No single agent can be completely safe under all …
+
+90. WHY DO LANGUAGE MODEL AGENTS WHISTLE
+   https://openreview.net/pdf?id=E4iGh1y49s
+   (K Agrawal, F Xiao, G Bergman, AC Stickland - openreview.net)
+   [PDF] https://openreview.net/pdf?id=E4iGh1y49s
+   … in which a tool-using LLM agent will initiate whistleblowing. … documents, identifies critical safety information regarding an … of models following the methodology from Anthropic (2025a) for …
+
+91. The Lesser Gamble: A Doctrine for Navigating a Future Foreclosed by Myopic Optimization
+   https://books.google.com/books?hl=en&lr=&id=TWB-EQAAQBAJ&oi=fnd&pg=PP1&dq=sleeper+agents+deceptive+LLMs+persist+safety+training+Anthropic&ots=33RXP_esWY&sig=QlK1_B9AStCoWN1fRvBKkDyNaDI
+   (I Ivliev - 2025 - books.google.com | 2025)
+   … The crises we now face, from the brittle, deceptive nature of … experiment, multiple frontier LLMs consistently chose to cheat … a new safety threshold (ASL-3), Anthropic quietly weakened …
+
+92. Identity-aware Governance for Autonomous AI Agents: A Framework for Enterprise Authorization, Delegation, and Audit
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6439998
+   (H Ramachandran, G Mishra - Delegation, and Audit (March 19 …, 2026 - papers.ssrn.com | 2026)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6439998
+   … This finding has direct implications for agent systems deploying fine-tuned models, as training-time … Sleeper agents: Training deceptive LLMs that persist through safety training. arXiv:…
+
+93. Prompt Injection Attacks on Agentic Coding Assistants: A Systematic Analysis of Vulnerabilities in Skills, Tools, and Protocol Ecosystems
+   https://cyberleninka.ru/article/n/prompt-injection-attacks-on-agentic-coding-assistants-a-systematic-analysis-of-vulnerabilities-in-skills-tools-and-protocol
+   (N Maloyan, D Namiot - International Journal of Open Information …, 2026 - cyberleninka.ru | 2026 | cited by 29)
+   … spanning foundational LLM security research, agent-specific … achieve P2 Persistence by modifying agent configuration. … failure modes of safety training. Automated jailbreaking methods …
+
+94. StepShield: When, Not Whether to Intervene on Rogue Agents
+   https://arxiv.org/abs/2601.22136
+   (G Felicia, M Eniolade, J He, Z Sasindran… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2601.22136
+   … [2024] demonstrated that deceptive behaviors can persist through standard safety … leading LLM providers. We ran a representative subset of our trajectories using the APIs of Anthropic (…
+
+95. How Vulnerable Are AI Agents to Indirect Prompt Injections? Insights from a Large-Scale Public Competition
+   https://arxiv.org/abs/2603.15714
+   (M Dziemian, M Lin, X Fu, M Nowak, N Winter… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2603.15714
+   … LLM based agents are increasingly deployed in high stakes … agents to process and act on visual interfaces [Anthropic… transcripts, more closely resemble data seen during safety training …
+
+96. Beyond benchmarks: Dynamic, automatic and systematic red-teaming agents for trustworthy medical language models
+   https://arxiv.org/abs/2508.00923
+   (J Pan, B Jian, P Hager, Y Zhang, C Liu… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 12)
+   [PDF] https://arxiv.org/pdf/2508.00923?
+   … , LLMs are advancing so rapidly that static safety benchmarks often become obsolete upon publication, yielding only an incomplete and sometimes misleading … misinformation persist. …
+
+97. SmartBackdoor: Malicious Language Model Agents that Avoid Being Caught
+   https://openreview.net/forum?id=ZaOHSBGOhV
+   (H Wang, R Zhong, J Wen, J Steinhardt - openreview.net)
+   [PDF] https://openreview.net/pdf?id=ZaOHSBGOhV
+   … a dataset of LLM agent scaffolds and benchmark LLMs’ capability to … We need better LLM agent safety protocols. … The malicious behavior in this setting is simulating installing deceptive …
+
+98. The Governance Gap: A Systematic Analysis of Architectural Deficiencies in AI Agent Security Frameworks
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6150032
+   (MD Quraishi - … Analysis of Architectural Deficiencies in AI Agent …, 2026 - papers.ssrn.com | 2026)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6150032
+   … Anthropic's own research on sleeper agents in AI systems … hidden behaviors persist even after additional safety training [96]. … retain deceptive capabilities even after safety training [96], …
+
+99. Expert Survey: AI Reliability & Security Research Priorities
+   https://arxiv.org/abs/2505.21664
+   (J O'Brien, J Dolan, J Kim, J Dykhuizen, J Sania… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025)
+   [PDF] https://arxiv.org/pdf/2505.21664
+   … for monitoring and evaluating LLM agents (T. Yuan et al. 2024… Deception is in itself harmful as it causes users to have false … Multi-agent safety and robust applied security measures also …
+
+100. No One Monitor Fits All: Oversight Strategies for Frontier Agents
+   https://openreview.net/forum?id=rD6bAM2ZEi
+   (N Kale, S Saxena, Z Zhong, CH Wu, A Raghunathan - openreview.net)
+   [PDF] https://openreview.net/pdf?id=rD6bAM2ZEi
+   … Given the user’s request, safety guidelines, and the agent’s … LLM JUDGE that takes as input the user request, the agent … (2025) find current models struggle to deceive on complex …
+
+===== Query 5/6: situational awareness dataset SAD LLM Laine 2024 =====
+
+1. Me, myself, and ai: The situational awareness dataset (sad) for llms
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/7537726385a4a6f94321e3adf8bd827e-Abstract-Datasets_and_Benchmarks_Track.html
+   (R Laine, B Chughtai, J Betley… - Advances in …, 2024 - proceedings.neurips.cc | 2024 | cited by 111)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/7537726385a4a6f94321e3adf8bd827e-Paper-Datasets_and_Benchmarks_Track.pdf
+   AI assistants such as ChatGPT are trained to respond to users by saying," I am a large language model”. This raises questions. Do such models" know''that they are LLMs and reliably act on this knowledge? Are they" aware" of their current circumstances, such as being deployed to the public? We refer to a model's knowledge of itself and its circumstances as situational awareness. To quantify situational awareness in LLMs, we introduce a range of behavioral tests, based on question answering and instruction following. These tests form the Situational Awareness Dataset (SAD), a benchmark comprising 7 task categories and over 13,000 questions. The benchmark tests numerous abilities, including the capacity of LLMs to (i) recognize their own generated text,(ii) predict their own behavior,(iii) determine whether a prompt is from internal evaluation or real-world deployment, and (iv) follow instructions that depend on self-knowledge. We evaluate 16 LLMs on SAD, including both base (pretrained) and chat models. While all models perform better than chance, even the highest-scoring model (Claude 3 Opus) is far from a human baseline on certain tasks. We also observe that performance on SAD is only partially predicted by metrics of general knowledge. Chat models, which are finetuned to serve as AI assistants, outperform their corresponding base models on SAD but not on general knowledge tasks. The purpose of SAD is to facilitate scientific understanding of situational awareness in LLMs by breaking it down into quantitative abilities. Situational awareness is important because it enhances a model's capacity for autonomous planning and action. While this has potential benefits from automation, it also introduces novel risks related to AI safety and control.
+
+===== Query 6/6: in-context scheming reasoning models Meinke Apollo 2024 =====
+
+1. Frontier models are capable of in-context scheming
+   https://arxiv.org/abs/2412.04984
+   (A Meinke, B Schoen, J Scheurer, M Balesni… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 308)
+   [PDF] https://arxiv.org/pdf/2412.04984?
+   Frontier models are increasingly trained and deployed as autonomous agent. One safety concern is that AI agents might covertly pursue misaligned goals, hiding their true capabilities and objectives - also known as scheming. We study whether models have the capability to scheme in pursuit of a goal that we provide in-context and instruct the model to strongly follow. We evaluate frontier models on a suite of six agentic evaluations where models are instructed to pursue goals and are placed in environments that incentivize scheming. Our results show that o1, Claude 3.5 Sonnet, Claude 3 Opus, Gemini 1.5 Pro, and Llama 3.1 405B all demonstrate in-context scheming capabilities. They recognize scheming as a viable strategy and readily engage in such behavior. For example, models strategically introduce subtle mistakes into their responses, attempt to disable their oversight mechanisms, and even exfiltrate what they believe to be their model weights to external servers. Additionally, this deceptive behavior proves persistent. When o1 has engaged in scheming, it maintains its deception in over 85% of follow-up questions and often remains deceptive in multi-turn interrogations. Analysis of the models' chains-of-thought reveals that models explicitly reason about these deceptive strategies, providing evidence that the scheming behavior is not accidental. Surprisingly, we also find rare instances where models engage in scheming when only given a goal, without being strongly nudged to pursue it. We observe cases where Claude 3.5 Sonnet strategically underperforms in evaluations in pursuit of being helpful, a goal that was acquired during training rather than in-context. Our findings demonstrate that frontier models now possess capabilities for basic in-context scheming, making the potential of AI agents to engage in scheming behavior a concrete rather than theoretical concern.

@@ -1,0 +1,200 @@
+===== Query 1/5: honest signaling theory 2025 =====
+
+1. Why are some animal and human signals honest, while others are deceptive?
+   https://www.eurekalert.org/news-releases/1115211
+   (Feb 4, 2026 | EurekAlert!)
+   An in-depth analysis reveals that signals, like the ornate train of the peacock need not be exaggerated, costly, or wasteful to be honest.
+
+2. Why We Trust the Peacock’s Tail
+   https://thediplomat.com/2025/09/why-we-trust-the-peacocks-tail/
+   (Sep 30, 2025 | The Diplomat – Asia-Pacific)
+   As in the natural world, signaling – of wealth or virtue – plays an important role in political and social life.
+
+3. AI algorithm transparency, pipelines for trust not prisms: mitigating general negative attitudes and enhancing trust toward AI | Humanities and Social Sciences Communications
+   https://www.nature.com/articles/s41599-025-05116-z
+   (Jul 23, 2025 | Nature)
+   This study explores artificial intelligence (AI) algorithm transparency to mitigate negative attitudes and to enhance trust in AI systems and the companies...
+
+4. The mystery of why leaves change colour in the autumn
+   https://www.bbc.com/future/article/20251031-the-mystery-of-why-leaves-change-colour-in-the-autumn
+   (Nov 1, 2025 | BBC)
+   Although the chemistry of autumn colours is well understood, there is an ongoing debate among scientists about why trees evolved their vivid autumn colours...
+
+5. Why might AI-enabled interviews reduce candidates’ job application intention? The role of procedural justice and organizational attractiveness | Humanities and Social Sciences Communications
+   https://www.nature.com/articles/s41599-025-05607-z
+   (Aug 8, 2025 | Nature)
+   Despite substantial scientific developments, companies and professionals are unaware of or do not appreciate the negative repercussions linked to AI-enabled...
+
+===== Query 2/5: Goodhart's law gaming metrics 2025 =====
+
+1. Richard Charkin on Goodhart’s Law: The Measurement Trap
+   https://publishingperspectives.com/2025/12/richard-charkin-on-goodharts-law-the-measurement-trap/
+   (Dec 3, 2025 | Publishing Perspectives)
+   In his newest column, Richard Charkin applies the principle that when a metric becomes a target, it ceases to be a good measure to today's publishing...
+
+2. The Sequence Opinion #750: The Paradox of AI Benchmarks: Challenges in Evaluation
+   https://thesequence.substack.com/p/the-sequence-opinion-750-the-paradox
+   (Nov 6, 2025 | TheSequence | Jesus Rodriguez)
+   Goodhart's Law and some of the challenges around AI benchmarks.
+
+3. What AI Can Teach Us About Designing Better KPIs
+   https://sloanreview.mit.edu/article/what-ai-can-teach-us-about-designing-better-kpis/
+   (Jan 21, 2026 | MIT Sloan Management Review)
+   How to avoid Goodhart's Law, or gaming behavior, in organizations, using methods adapted from AI training techniques.
+
+4. Goodhart’s Law vs “prediction markets”
+   https://doctorow.medium.com/https-pluralistic-net-2026-03-24-degenerated-gambling-oracle-capture-9e5589443eb5
+   (Mar 24, 2026 | Cory Doctorow – Medium)
+   Goodhart's Law vs “prediction markets” Putting a gun to the metric's head. If you'd like an essay-formatted version of this post to read or share, here's a...
+
+5. Gaming the Score: When Feedback Becomes Fiction
+   https://www.ipsos.com/en/gaming-score-when-feedback-becomes-fiction
+   (Mar 27, 2026 | Ipsos)
+   Uncover the hidden forces distorting your customer feedback and learn how to stop survey gaming from sabotaging your success in this article by Rollo...
+
+6. The Goodhart’s Law Trap: When AI Metrics Become Useless
+   https://fourweekmba.com/the-goodharts-law-trap-when-ai-metrics-become-useless/
+   (Sep 5, 2025 | FourWeekMBA)
+   OpenAI's latest model scores 95% on the law bar exam but can't determine if a contract is legally binding. It aces medical licensing tests but recommends...
+
+7. The AI Threat to Liberal Arts Is More Fundamental Than You Think
+   https://www.thecrimson.com/article/2025/9/18/mansell-harvard-optimization-ai/
+   (Sep 18, 2025 | The Harvard Crimson)
+   There's an old Soviet anecdote about a nail factory. When instructed to maximize output by number, it churned out millions of tiny pins.
+
+8. Amazon workers are gaming the AI leaderboard. HR built it. | Human Resources Director
+   https://www.hcamag.com/us/specialization/transformation/amazon-workers-are-gaming-the-ai-leaderboard-hr-built-it/575083
+   (May 13, 2026 | Human Resources Director)
+   Inside Amazon's "tokenmaxxing" scandal lies a textbook warning about what happens when companies measure AI adoption instead of AI value.
+
+9. Math has publication fraud, too
+   https://retractionwatch.com/2025/09/24/math-has-publication-fraud-too/
+   (Sep 24, 2025 | Retraction Watch)
+   Ilka AgricolaCredit: Thorsten Richter Scholarly publishing in mathematics is unlike many other fields, marked by fewer papers, fewer coauthors per paper and...
+
+10. Closing the Eval–Deployment Gap in AI Systems — Discrepancy Between Benchmark Performance and…
+   https://medium.com/@adnanmasood/closing-the-eval-deployment-gap-in-ai-systems-discrepancy-between-benchmark-performance-and-d27c33361b93
+   (Dec 2, 2025 | Medium)
+   Rethinking AI Evaluation for Production-Grade, Business-Critical Systems — How leaders can Move Beyond Benchmark Scores to Real-World Reliability.
+
+11. Reward Hacking: The Hidden Failure Mode in AI Optimization
+   https://medium.com/@adnanmasood/reward-hacking-the-hidden-failure-mode-in-ai-optimization-686b62acf408
+   (Jan 24, 2026 | Medium)
+   Reward hacking in AI explained: how reinforcement learning and RLHF systems exploit proxy metrics, why optimization breaks intent, and how to detect and...
+
+===== Query 3/5: AI benchmark gaming contamination 2025 =====
+
+1. The Sequence Opinion #750: The Paradox of AI Benchmarks: Challenges in Evaluation
+   https://thesequence.substack.com/p/the-sequence-opinion-750-the-paradox
+   (Nov 6, 2025 | TheSequence | Jesus Rodriguez)
+   Artificial intelligence has raced ahead, but knowing what counts as real progress is still surprisingly hard. We largely rely on standardized benchmarks and...
+
+2. FlexXray Releases 2025 Benchmark Report on Foreign Material Contamination in Food Manufacturing
+   https://www.prnewswire.com/news-releases/flexxray-releases-2025-benchmark-report-on-foreign-material-contamination-in-food-manufacturing-302558109.html
+   (Sep 16, 2025 | PR Newswire)
+   PRNewswire/ -- FlexXray, the nation's leader in third-party inspection services for the food industry, today announced the release of the 2025 Foreign...
+
+3. OpenZeppelin finds data contamination in OpenAI’s EVMbench
+   https://www.tradingview.com/news/cointelegraph:e500de136094b:0-openzeppelin-finds-data-contamination-in-openai-s-evmbench/
+   (Mar 2, 2026 | TradingView)
+   Blockchain security firm OpenZeppelin says it has found methodological flaws and data contamination in its audit of OpenAI's new artificial intelligence...
+
+4. OpenAI will not disclose GPT-5’s energy use. It could be higher than past models
+   https://www.theguardian.com/technology/2025/aug/09/open-ai-chat-gpt5-energy-use
+   (Aug 9, 2025 | The Guardian)
+   Experts working to benchmark resource use of AI models say new version's enhanced capabilities come at a steep cost. Aisha Kehoe Down. Sat 9 Aug 2025 06.00...
+
+===== Query 4/5: handicap principle 2025 =====
+
+1. International Day of Persons with Disabilities, 3 December
+   https://www.un.org/en/observances/day-of-persons-with-disabilities
+   (Dec 3, 2025 | Welcome to the United Nations)
+   The International Day of Disabled Persons aims to promote the rights and well-being of persons with disabilities in all spheres of society and development.
+
+2. Honest or deceptive? What a new signaling model means for animal displays and human claims
+   https://phys.org/news/2026-02-honest-deceptive-animal-displays-human.html
+   (Feb 4, 2026 | Phys.org)
+   For decades, scientists have tried to answer a simple question: why be honest when deception is possible? Whether it is a peacock's tail, a stag's roar,...
+
+3. The Trump Administration’s War on Disability
+   https://www.americanprogress.org/article/the-trump-administrations-war-on-disability/
+   (Jul 28, 2025 | Center for American Progress)
+   Executive actions, budget cuts, layoffs, and legislation—all enacted in the Trump administration's first six months—have curtailed disability rights and...
+
+4. US will not enforce Biden wheelchair passenger protection rule
+   https://www.reuters.com/world/usdot-will-not-enforce-biden-wheelchair-passenger-protection-rule-2025-09-29/
+   (Sep 29, 2025 | Reuters)
+   The U.S. Transportation Department said on Monday that it will not enforce key provisions of a rule issued in December by former President Joe Biden's...
+
+5. Trump administration advances plan to reverse federal rule that limits logging in national forests
+   https://alaskabeacon.com/2025/08/27/trump-administration-advances-plan-to-reverse-federal-rule-that-limits-logging-in-national-forests/
+   (Aug 27, 2025 | Alaska Beacon)
+   The 'Roadless Rule' has prohibited new road construction, a prerequisite for large-scale logging, in parts of the American West since 2001.
+
+6. Watch: Ja Rule loves golf but he had a case of the shanks on Tuesday
+   https://golfweek.usatoday.com/story/sports/golf/2025/12/16/ja-rule-golf-shanks-tee-shot-derek-jeter-invitational/87803321007/
+   (Dec 16, 2025 | Golfweek)
+   NASSAU, Bahamas – Ja Rule nearly took me out at the Derek Jeter Invitational celebrity shootout at Baha Mar Resort. Who knew that the rapper, singer and...
+
+7. Why We Trust the Peacock’s Tail
+   https://thediplomat.com/2025/09/why-we-trust-the-peacocks-tail/
+   (Sep 30, 2025 | The Diplomat – Asia-Pacific)
+   As in the natural world, signaling – of wealth or virtue – plays an important role in political and social life.
+
+8. The Death of the Dating App
+   https://quillette.com/2026/05/11/the-death-of-the-dating-app-match-tinder-bumble/
+   (May 11, 2026 | Quillette)
+   In mid-2025, Bumble's founder Whitney Wolfe Herd returned to the company she had left fourteen months earlier and offered a blunt assessment of the industry...
+
+9. VA halts implementation of controversial disability rating rule following backlash
+   https://www.militarytimes.com/veterans/2026/02/19/va-halts-implementation-of-controversial-disability-rating-rule-following-backlash/
+   (Feb 19, 2026 | Military Times)
+   The VA will continue collecting public comment on the rule but it “will not be enforced at any time in the future," VA Secretary Doug Collins said.
+
+10. Trump's EPA rescinds impaired listing for Des Moines, Raccoon rivers amidst water crisis
+   https://www.desmoinesregister.com/story/news/health/2025/08/12/epa-rescinds-impairment-listing-for-raccoon-des-moines-other-rivers/85566132007/
+   (Aug 12, 2025 | The Des Moines Register)
+   Iowa DNR opposed Biden EPA deciding Des Moines, Raccoon, other river segments were impaired. Trump EPA rescinded the decision during water crisis.
+
+11. New Rule to prevent horses from running more than 15lbs out of the handicap
+   https://www.britishhorseracing.com/press_releases/new-rule-to-prevent-horses-from-running-more-than-15lbs-out-of-the-handicap/
+   (Oct 28, 2025 | | British Horseracing Authority)
+   The British Horseracing Authority (BHA) has today announced a new Rule to prevent horses from running in a handicap race from 15lbs or more out of the...
+
+12. ATF Pistol Brace Rule is Finally Dead – Here’s How We Got Here
+   https://www.concealedcarry.com/law/atf-pistol-brace-rule-is-finally-dead-heres-how-we-got-here/
+   (Jul 26, 2025 | ConcealedCarry.com)
+   The ATF Pistol Brace Rule that threatened millions of gun owners is finally dead. Trump's DOJ just ended Biden's unconstitutional brace ban for good.
+
+13. Love hurts: Flashy feathers may put some male pheasant species' lives at risk
+   https://phys.org/news/2025-11-flashy-feathers-male-pheasant-species.html
+   (Nov 26, 2025 | Phys.org)
+   The male Lady Amherst's pheasant knows how to put on a show when it comes to attracting mates. As well as elaborate courtship displays, they will unfurl...
+
+14. Are winter rules back? England Golf confirm big preferred lies change
+   https://www.nationalclubgolfer.com/rules/england-golf-preferred-lies-winter-rules-changes/
+   (Oct 2, 2025 | National Club Golfer)
+   Clubs were the judges of when they employed Local Rules for bad weather - but the governing body has changed course ahead of this winter.
+
+15. Rule breach in final stretch of Sydney to Hobart sees rival crowned winner
+   https://www.abc.net.au/news/2025-12-31/min-river-wins-overall-2025-sydney-to-hobart-successful-protest/106188552
+   (Dec 30, 2025 | ABC News & Headlines – Australian Broadcasting Corporation)
+   Double-handed Min River makes history by becoming the first double-handed yacht to take out the overall win in the Sydney to Hobart Yacht Race and the first...
+
+16. Is First Principle another Crown Of Oaks? William Haggas on the hunt for more handicap success with unexposed three-year-old
+   https://www.racingpost.com/news/raceday-intel/is-first-principle-another-crown-of-oaks-william-haggas-on-the-hunt-for-more-handicap-success-with-unexposed-three-year-old-am9tB4G5CrcP/
+   (Sep 10, 2025 | Racing Post)
+   William Haggas won five handicaps across last Saturday's cards, with new Cambridgeshire favourite Crown Of Oaks contributing to the successes. Like.
+
+17. Who are the 25/26 PL underdogs to watch in the Season Handicap market?
+   https://www.goal.com/en-gb/betting/pl-underdogs-season-handicap-market/blt40e76bd6de681d9a
+   (Jul 18, 2025 | Goal.com)
+   Forest cruised to victory in the 24/25 Premier League Season Handicap. Last season's underachievers Tottenham could emerge as dark horses in 25/26.
+
+18. How a 'silly mistake' cost these men Sydney to Hobart glory
+   https://www.abc.net.au/news/2025-12-31/explainer-how-bnc-lost-sydney-to-hobart-overall-prize/106189890
+   (Dec 30, 2025 | ABC News & Headlines – Australian Broadcasting Corporation)
+   They should be celebrating a historic win — instead, the crew of BNC is coming to terms with how a "silly mistake" cost them the "crown jewel" prize of...
+
+===== Query 5/5: metric manipulation strategyproof 2025 =====
+(no results)

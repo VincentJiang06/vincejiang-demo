@@ -1,0 +1,591 @@
+===== Query 1/4: LiveCodeBench contamination detected models drop after cutoff DeepSeek =====
+
+1. LiveCodeBench: Holistic and Contamination Free Evaluation of ...
+   https://arxiv.org/html/2403.07974v2
+   To account for contamination in DeepSeek, we only perform evaluations on problems released after the model cutoff date. This leads to only 349 349 problems
+
+2. LiveCodeBench: Holistic and Contamination Free Evaluation of ...
+   https://openreview.net/forum?id=chfJJYC3iL
+   The time-segmented analysis also reveals a significant drop in performance of some models after release date, indicating notable contamination issues.
+
+3. LiveCodeBench: Holistic and Contamination Free Evaluation of ...
+   https://livecodebench.github.io/
+   We find that DeepSeek models exhibit a stark drop in performance on LeetCode problems released since September 2023, its release date, indicating that the ...
+
+4. LiveCodeBench: Holistic and contamination free evaluation of LLMs ...
+   https://www.youtube.com/watch?v=HGqhS9-rnQM
+   (Jul 12, 2024)
+   large language models for code” In this talk we introduce LiveCodeBench, a comprehensive and contamination-free benchmark for LLMs in code ...
+
+5. LiveCodeBench Leaderboard - LLM Stats
+   https://llm-stats.com/benchmarks/livecodebench
+   (Mar 12, 2024)
+   LiveCodeBench is a holistic and contamination-free evaluation benchmark for large language models for code. It continuously collects new ...
+
+6. LiveCodeBench Leaderboard - Holistic and Contamination Free ...
+   https://livecodebench.github.io/leaderboard_v5.html
+   Contamination Detection: We estimate cutoff dates based on model release dates and performance variation. Models highlighted in red are likely contaminated. A ...
+
+7. Leveling the Playing Field: Livecodebench's Big Bug Fix
+   https://blog.collinear.ai/p/lcb-bug-fixes
+   (Aug 11, 2025)
+   Digging deeper, we inspected the raw outputs and spotted a strange pattern: every response was getting cut off right after the ### token.
+
+8. Official repository for the paper "LiveCodeBench: Holistic ... - GitHub
+   https://github.com/livecodebench/livecodebench
+   In our paper, to counter contamination in the DeepSeek models, we only report results on problems released after August 2023.
+
+9. LiveCodeBench Leaderboard (July 2026) - Benchmarks - BenchLM.ai
+   https://benchlm.ai/benchmarks/liveCodeBench
+   LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code (LiveCodeBench) leaderboard across 6 AI models.
+
+10. LiveCodeBench: LLM Code Evaluation Benchmark - Emergent Mind
+   https://www.emergentmind.com/topics/livecodebench
+   (Aug 15, 2025)
+   Contamination Sensitivity: Model performance (e.g., DeepSeek) shows a marked drop on cutoff-filtered problems, illustrating that past ...
+
+11. LiveCodeBench: Holistic and Contamination Free ...
+   https://arxiv.org/html/2403.07974v1
+   (Mar 12, 2024)
+   In Figure 1, we find that the performance of the DeepSeek model starkly drops when evaluated on the LeetCode problems released after August 2023 ...
+
+12. What Is the SWE-Rebench Benchmark? How ...
+   https://www.mindstudio.ai/blog/swe-rebench-benchmark-decontaminated-tests-model-inflation
+   (Apr 7, 2026)
+   By using post-cutoff GitHub tasks, it strips out the contamination variable that inflates scores on standard SWE-bench. Chinese models show the ...
+
+13. Details about METR's preliminary evaluation of DeepSeek- ...
+   https://metr.org/evaluations/deepseek-v3-report/
+   (Feb 12, 2025)
+   As a quick check of whether DeepSeek-V3's high benchmark numbers are the result of data contamination, we compared its reported performance on ...
+
+14. the coding benchmark that exposes HumanEval overfitting
+   https://www.reddit.com/r/AIToolsPerformance/comments/1s5weau/livecodebench_march_2026_the_coding_benchmark/
+   (3 months ago)
+   Each problem has a release date, so you can evaluate models only on problems released after their training cutoff. No contamination possible.
+
+15. Evaluation of DeepSeek AI Models
+   https://www.nist.gov/system/files/documents/2025/09/30/CAISI_Evaluation_of_DeepSeek_AI_Models.pdf
+   (Sep 16, 2025)
+   3 Benchmark contamination occurs when models are accidentally or intentionally trained on data from public benchmarks. Page 5. 5. 5. OpenAI's ...
+
+16. LiveCodeBench Leaderboard - Holistic and Contamination ...
+   https://livecodebench.github.io/leaderboard.html
+   454 problems selected in the current time window (8/1/2024 to 5/1/2025). You can adjust the start or end date to change the time window.
+
+17. Holistic and Contamination-Free Evaluation of Code LLMs
+   https://huggingface.co/blog/leaderboard-livecodebench
+   (Apr 16, 2024)
+   LiveCodeBench collects coding problems over time from various coding contest platforms, annotating problems with their release dates.
+
+18. DeepSeek R1 Was Given a Pop Quiz on Safety
+   https://medium.com/@annie_7775/deepseek-r1-was-given-a-pop-quiz-on-safety-and-bombed-it-b179a3e2f915
+   LiveCodeBench is clear to qualify that they highlight models they suspect of model contamination based on the date they submitted their model ...
+
+19. Benchmark Contamination: How It Happens, How to Detect It
+   https://benchmarkingagents.com/benchmark-contamination/
+   Benchmark contamination is the presence of test-set items, or near-duplicates of them, in a model's pre-training corpus. When test items leak into training, the ...
+
+20. LLM Benchmark Methodology 2026: Reading Leaderboards
+   https://www.digitalapplied.com/blog/llm-benchmark-methodology-2026-contamination-leaderboard-guide
+   (May 27, 2026)
+   Contamination happens when benchmark questions, answers, or text closely derived from them end up in a model's training corpus — so the model ...
+
+21. A Challenging, Contamination-Free LLM Benchmark
+   https://livebench.ai/livebench.pdf
+   by C White · Cited by 298 — Abstract. Test set contamination, wherein test data from a benchmark ends up in a newer model's training set, is a well-documented obstacle for fair LLM ...
+
+22. stop falling for it | Elliot Arledge (@elliotarledge) on ...
+   https://x.com/elliotarledge/article/2063555324804726989
+   (Jul 6, 2026)
+   deepseek itself acknowledges that benchmarks released before 2024 may suffer contamination, and that n-gram decontamination cannot catch a ...
+
+23. 30B models, side effects of OpenAI's proposed DeepSeek ...
+   https://www.interconnects.ai/p/the-latest-open-artifacts-8-the-return
+   (Mar 20, 2025)
+   OpenAI claims, without existing evidence, that DeepSeek is “state-subsidized, state-controlled, and freely available,” so “the cost its users is their privacy ...
+
+24. Did the Model See the Benchmark During Training? Detecting ...
+   https://kaitchup.substack.com/p/did-the-model-see-the-benchmark-during
+   (5 months ago)
+   Learn how CoDeC detects LLM benchmark contamination and see results for Qwen3 and Gemma 3 on MMLU-Pro, AIME, GPQA, and GSM8K.
+
+25. Security Flaws in DeepSeek-Generated Code Linked to ...
+   https://www.crowdstrike.com/en-us/blog/crowdstrike-researchers-identify-hidden-vulnerabilities-ai-coded-software/
+   (Nov 20, 2025)
+   CrowdStrike researchers reveal how trigger words cause DeepSeek-R1 to generate vulnerable code—exposing new AI-driven risks in software ...
+
+26. The state of frontier models across the SDLC
+   https://www.hackerrank.com/blog/the-state-of-frontier-models-across-the-sdlc/
+   (Apr 21, 2025)
+   DeepSeek models showed significant performance drops on LeetCode problems released after September 2023 (its release date), indicating potential ...
+
+27. DeepSeek R1 Exposed: Security Flaws in China's AI Model
+   https://www.kelacyber.com/blog/deepseek-r1-security-flaws/
+   (Jan 27, 2025)
+   This response underscores that some outputs generated by DeepSeek are not trustworthy, highlighting the model's lack of reliability and accuracy ...
+
+28. DeepSeek's Flagship AI Model Under Fire for Security ...
+   https://www.infosecurity-magazine.com/news/deepseek-r1-security/
+   (Jan 31, 2025)
+   R1, the latest large language model (LLM) from Chinese startup DeepSeek, is under fire for multiple security weaknesses.
+
+29. LiveBench: A Challenging, Contamination-Free LLM Benchmark
+   https://tldr.takara.ai/p/2406.19314
+   Test set contamination, wherein test data from a benchmark ends up in a newer model's training set, is a well-documented obstacle for fair LLM evaluation ...
+
+30. Evaluating Security Risk in DeepSeek
+   https://blogs.cisco.com/security/evaluating-security-risk-in-deepseek-and-other-frontier-reasoning-models
+   (Jan 31, 2025)
+   This article investigates vulnerabilities in DeepSeek R1, a new frontier reasoning model from Chinese AI startup DeepSeek.
+
+31. Does Data Contamination Detection Work (Well) for LLMs? ...
+   https://aclanthology.org/2025.findings-naacl.291.pdf
+   by Y Fu · 2025 · Cited by 30 — Full Dataset Contamination: A dataset D is fully contaminated (fully seen) by an. LM, if every instance within this dataset is contam- inated.
+
+32. DeepSeek Failed Every Single Security Test, Researchers ...
+   https://futurism.com/deepseek-failed-every-security-test
+   (Feb 1, 2025)
+   Researchers found that DeepSeek's R1 AI "failed to block a single harmful prompt" after being tested against 50 jailbreaking prompts.
+
+33. DeepSeek failed all safety tests, responding to harmful ...
+   https://capacityglobal.com/news/article-deepseek-failed-all-safety-tests-responding-to-harmful-prompts-cisco/
+   New research from Cisco found that DeepSeek's flagship R1 AI model failed to block a single harmful prompt during a series of tests that uncovered critical ...
+
+34. Josh Bersin's Post
+   https://www.linkedin.com/posts/bersin_deepseeks-safety-guardrails-failed-every-activity-7291629991572779009-vg-b
+   (1 year ago)
+   DeepSeek AI fails almost all safety tests and often hallucinates. So it's now becoming clear that many of the company's efficiency shortcuts ...
+
+35. lyy1994/awesome-data-contamination: The Paper List on ...
+   https://github.com/lyy1994/awesome-data-contamination
+   Contamination causes an overestimation of the performance of a contaminated model in a target benchmark and associated task with respect to their non- ...
+
+36. LiveCodeBench
+   https://arxiv.org/pdf/2403.07974?
+   by N Jain · 2024 · Cited by 1776 — In Figure 1, we find that the performance of the DeepSeek model starkly drops when evaluated on the LeetCode problems released after August 2023 ...
+
+37. Dark Reading: DeepSeek AI Fails Multiple Security Tests ...
+   https://www.pointguardai.com/news/dark-reading-deepseek-ai-fails-multiple-security-tests-raising-red-flag-for-businesses
+   The model failed in multiple critical areas, including succumbing to jailbreaking, prompt injection, malware generation, supply chain, and toxicity.
+
+38. DeepSeek's Safety Guardrails Failed Every Test ...
+   https://www.wired.com/story/deepseeks-ai-jailbreak-prompt-injection-attacks/
+   (Jan 31, 2025)
+   Security researchers tested 50 well-known jailbreaks against DeepSeek's popular new AI chatbot. It didn't stop a single one.
+
+39. DeepSeek Fails Researchers' Safety Tests
+   https://www.pcmag.com/news/deepseek-fails-every-safety-test-thrown-at-it-by-researchers
+   (Feb 1, 2025)
+   DeepSeek R1 exhibited a 100% attack success rate, meaning it failed to block a single harmful prompt, Cisco says.
+
+[RelatedSearches] LiveCodeBench huggingface | LiveCodeBench: holistic and contamination free evaluation of large Language models for code | LiveCodeBench leaderboard | LiveCodeBench github | LiveCodeBench paper | LiveCodeBench v6 | LiveCodeBench Pro | Livecodebench code_generation_lite
+
+===== Query 2/4: benchmark half-life saturation rate AI models years months =====
+
+1. Is there a Half-Life for the Success Rates of AI Agents? - Toby Ord
+   https://www.tobyord.com/writing/half-life
+   (May 7, 2025)
+   Or in terms of improvement: what is doable with a 50% success rate now is doable with an 80% success rate in 14 months' time (= 2 doubling times) ...
+
+2. A Systematic Study of Benchmark Saturation - arXiv
+   https://arxiv.org/html/2602.16763v1
+   The proportion of saturated benchmarks rises from 42.9% for benchmarks released within the past 24 months to 54.5% for those older than 60 months,
+
+3. Introducing LifeSciBench - OpenAI
+   https://openai.com/index/introducing-life-sci-bench/
+   (Jun 17, 2026)
+   Absolute pass rates are still modest, so these benchmark domains are far from saturated, improving overall exact pass rate from 25.7% to 36.1%.
+
+4. Benchmark Saturation: AI Evaluation Metrics and Ceiling Effects
+   https://mbrenndoerfer.com/writing/benchmark-saturation-ai-evaluation-metrics
+   (Mar 6, 2026)
+   The half-life of a benchmark's utility appears to be shortening as training compute and data scale exponentially. Where GLUE took roughly 18 ...
+
+5. AI Benchmarks Hit Saturation | Stanford HAI
+   https://hai.stanford.edu/news/ai-benchmarks-hit-saturation
+   (Apr 3, 2023)
+   2021 had an accuracy rate of 91%; 2022 saw only a 0.1 percentage point improvement. So we're seeing a saturation among these benchmarks. This ...
+
+6. Age-related changes in oxygen saturation over the first year of life
+   https://pubmed.ncbi.nlm.nih.gov/7833079/
+   The aim of this study was to record and analyse comprehensive oxygen saturation data in a longitudinal study over the first year of life.
+
+7. Measuring AI Ability to Complete Long Tasks - METR
+   https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/
+   (Mar 19, 2025)
+   AI can complete month-long tasks with 50% reliability by about 2.5 years. AI benchmarks, forecasts, and risk management.
+
+8. Most AI models can pass standard benchmarks. But real ... - Facebook
+   https://www.facebook.com/turingcom/posts/most-ai-models-can-pass-standard-benchmarks-but-real-world-risk-does-not-live-at/1424039249839331/
+   (Mar 5, 2026)
+   Fast-forward six months: leaked benchmarks show Grok 4 in “Reasoning” mode hitting ~45 %, while Gemini 2.5 Pro sits around 22 % and OpenAI's o3 ...
+
+9. AI Models Are Getting Smarter. New Tests Are Racing to Catch Up
+   https://time.com/7203729/ai-evaluations-safety/
+   (Dec 24, 2024)
+   The gap between a benchmark's introduction and its saturation has decreased significantly in recent years. For instance, the GLUE benchmark ...
+
+10. Modern AI Benchmarks: What Practitioners Actually Need to Know
+   https://medium.com/@adnanmasood/modern-ai-benchmarks-what-practitioners-actually-need-to-know-b59f2367ef9f
+   (May 29, 2026)
+   Several benchmarks below went from “best model under 20%” to “best model over 85%” inside a year. Discriminating power decays; re-check ...
+
+11. Forecasting time to automated superhuman coders ...
+   https://www.alignmentforum.org/posts/ggqSg7bSLChanfunf/forecasting-time-to-automated-superhuman-coders-ai-2027
+   (Apr 10, 2025)
+   Changing the upper bound doesn't change the forecast much — a change of 0.25 in the upper bound moves the saturation date around half a year.
+
+12. A Systematic Study of Benchmark Saturation
+   https://mcml.ai/publications/ars+26/
+   Our analysis reveals that nearly half of the benchmarks exhibit saturation, with rates increasing as benchmarks age. Notably, hiding test data (i.e., public ...
+
+13. The most important graph in AI right now: time horizon
+   https://benjamintodd.substack.com/p/the-most-important-graph-in-ai-right
+   (1 year ago)
+   To understand how close we are to transformative AI, here's the metric I find most interesting right now: how long are the tasks AI can do?
+
+14. Benchmark saturation over time for popular benchmarks,...
+   https://www.researchgate.net/figure/Benchmark-saturation-over-time-for-popular-benchmarks-normalized-with-initial_fig1_351221914
+   According to a study conducted by scientists representing the United States and the United Kingdom, in fifteen years, AI models have reached and exceeded the ...
+
+15. Data on AI Capabilities and Benchmarking
+   https://epoch.ai/benchmarks
+   Our database of benchmark results, featuring the performance of leading AI models on challenging tasks. It includes results from benchmarks evaluated ...
+
+16. Why it's getting harder to measure AI performance
+   https://www.understandingai.org/p/why-its-getting-harder-to-measure
+   (Apr 2, 2026)
+   Perhaps in a year or two models will begin to saturate this benchmark, with gains slowing as they approach 100%. METR created a different kind ...
+
+17. 2025: The State of Consumer AI | Menlo Ventures
+   https://menlovc.com/perspective/2025-the-state-of-consumer-ai/
+   (Jun 26, 2025)
+   Based on a survey of over 5000 U.S. adults, Menlo Ventures unpacks consumer AI adoption in 2025, with key takeaways for founders.
+
+18. Evaluating AI Methods for Pulse Oximetry - PMC - NIH
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC11591227/
+   by AM Cabanas · 2024 · Cited by 19 — The review examined AI models, key features, oximeters used, datasets, tested saturation intervals, and performance metrics while also assessing bias through ...
+
+19. ☠️"Killed by Saturation" is a term you'll hear a lot more in ...
+   https://www.linkedin.com/posts/mannybernabe_killed-by-saturation-is-a-term-youll-activity-7282087318016958464-Na66
+   (1 year ago)
+   "Killed by Saturation" is a term you'll hear a lot more in 2025. It's the point when many LLMs score above 90% on a benchmark, signaling that it's effectively ...
+
+20. AI Model Benchmarks & Our Benchmark Library
+   https://www.tonic.ai/ai-model-benchmarks
+   AI model benchmarks measure how models perform on standardized tasks. See how they work, why scores mislead, and explore Tonic.ai's own benchmark research.
+
+21. LLM Benchmarks Are Junk Science
+   https://pub.towardsai.net/llm-benchmarks-are-junk-science-8ed424d2a91a
+   (Mar 27, 2026)
+   The forecasting models I built in production had internal test sets that saturated within 18 months as the models learned the distribution.
+
+22. When AI builds itself
+   https://www.anthropic.com/institute/recursive-self-improvement
+   Models have gone from scoring in the low single digits to saturating the benchmark in two years. CORE-Bench tests whether a model can reproduce existing ...
+
+23. Benchmark Saturation Overview
+   https://www.emergentmind.com/topics/benchmark-saturation
+   (Nov 21, 2025)
+   Benchmark saturation refers to the phenomenon in which an evaluation benchmark ceases to differentiate among new generations of models, systems, ...
+
+24. evaleval/benchmark-saturation
+   https://github.com/evaleval/benchmark-saturation
+   This repository provides a research framework for systematically characterizing the complexity and saturation dynamics of AI benchmarks over time. It tracks how ...
+
+25. When machine learning models retire, decay, or become ...
+   https://www.sciencedirect.com/science/article/pii/S1364032125009049
+   by MZ Naser · 2026 · Cited by 6 — This review also introduces a holistic framework for assessing and improving AI systems through six interconnected dimensions: grid-optimized scheduling, ...
+
+26. Artificial Intelligence Index Report 2025
+   https://hai-production.s3.amazonaws.com/files/hai_ai_index_report_2025.pdf
+   Welcome to the eighth edition of the AI Index report. The 2025 Index is our most comprehensive to date and arrives at an important moment, as AI's influence ...
+
+27. The Top Artificial Intelligence Trends
+   https://www.ibm.com/think/insights/artificial-intelligence-trends
+   What we'll see next: Benchmark saturation and diversification; Transcending transformer models; Embodied AI, robotics and world models; Privacy vs.
+
+28. The Hidden Frontier in AI: Data Market Size and Enterprise ...
+   https://www.linkedin.com/posts/darian314_everyones-watching-the-wrong-benchmark-activity-7481013581313056769-nlCj
+   (1 week ago)
+   . The consensus says open source has caught up — benchmarks show open-weight models just ~4 months behind the closed frontier. But the ...
+
+29. Test scores of AI systems on various capabilities relative to ...
+   https://ourworldindata.org/grapher/test-scores-ai-capabilities-relative-human-performance
+   (Apr 2, 2024)
+   This dataset captures the progression of AI evaluation benchmarks, reflecting their adaptation to the rapid advancements in AI technology.
+
+[PeopleAlsoAsk]
+  - What is saturation of AI benchmarks?
+  - Is there a half life for the success rate of AI agents?
+  - Is AI doubling every 7 months?
+  - Are AI models saturated?
+
+[RelatedSearches] When AI benchmarks Plateau: A systematic Study of Benchmark saturation | Is there a half-life for the success rates of AI agents | LLM benchmark saturation | Lifescibench evaluating language models on realistic expert level tasks in the life sciences | METR benchmark | AI scaling problem | Measuring AI ability to complete long tasks | Eval AI
+
+===== Query 3/4: LMArena raised funding 100 million seed a16z company 2025 =====
+
+1. LMArena Secures $100M in Seed Funding to Bring Scientific Rigor ...
+   https://www.prnewswire.com/news-releases/lmarena-secures-100m-in-seed-funding-to-bring-scientific-rigor-to-ai-reliability-302462025.html
+   (May 21, 2025)
+   LMArena, the open community platform for evaluating the best AI models, has secured $100 million in seed funding led by a16z and UC Investments
+
+2. Arena.ai
+   https://x.com/arena/status/1925241333310189804?lang=en
+   (May 21, 2025)
+   We're excited to share that we've raised $100M in seed funding to support LMArena and continue our research on reliable AI. Led by @a16z ...
+
+3. LMArena: $100 Million Seed Funding Raised for AI-Focused Open ...
+   https://pulse2.com/lmarena-100-million-seed-funding-raised-for-ai-focused-open-community-platform/
+   (May 26, 2025)
+   LMArena, an open community platform for evaluating the best AI models, announced it has secured $100 million in seed funding led by a16z and UC Investments.
+
+4. Here are the 55 US AI startups that raised $100M or more in 2025
+   https://techcrunch.com/2026/01/19/here-are-the-49-us-ai-startups-that-have-raised-100m-or-more-in-2025/
+   (Jan 19, 2026)
+   LMArena, a popular, community-driven benchmarking tool for AI models, raised a $100 million seed round that valued the startup at $600 million.
+
+5. LMArena, the startup behind the Chatbot Arena benchmarking ...
+   https://www.instagram.com/p/DTMJQKXEdqV/
+   (Jan 6, 2026)
+   The company has raised a total of $250 million, including a $150 million Series A at a $1.7 billion post-money valuation, from investors ...
+
+6. Investing in LMArena: The Reliability Layer for AI
+   https://a16z.com/announcement/investing-in-lmarena-the-reliability-layer-for-ai/
+   (May 28, 2025)
+   LMArena is building the infrastructure to make AI as boring as databases. That's why we're thrilled to be founding investors in LMArena's seed round.
+
+7. LMArena Secures $100M in Seed Funding to Bring Scientific Rigor ...
+   https://www.hpcwire.com/bigdatawire/this-just-in/lmarena-secures-100m-in-seed-funding-to-bring-scientific-rigor-to-ai-reliability/
+   (May 15, 2026)
+   LMArena , the open community platform for evaluating the best AI models, has secured $100 million in seed funding led by a16z and UC Investments
+
+8. LMArena Secures $100M in Seed Funding Led by A16z
+   https://www.marketscreener.com/quote/cryptocurrency/BITCOIN-BTC-USD-45553945/news/LMArena-Secures-100M-in-Seed-Funding-Led-by-A16z-50171578/
+   (Jun 5, 2025)
+   LMArena Secures $100M in Seed Funding Led by A16z Published on 06/05/2025 … discuss the company's latest fundraise and launch of a new UI ...
+
+9. Portfolio | Andreessen Horowitz
+   https://a16z.com/portfolio/
+   Additionally investments that have participated in a16z accelerator programs can also be found here: https://speedrun.a16z.com/companies/. Excluded from ...
+
+10. A16z, Lightspeed back $150m series A of AI model evaluator LMArena
+   https://www.techinasia.com/news/a16z-lightspeed-back-150m-series-a-of-ai-model-evaluator-lmarena
+   (Jan 7, 2026)
+   LMArena has raised US$150 million in series A funding led by ... The company previously raised US$100 million in a seed round in May 2025 ...
+
+11. LMArena Secures $100M in Seed Funding Led by A16z
+   https://www.linkedin.com/posts/cherrypark_lmarena-secures-100m-in-seed-funding-led-activity-7336495392013856769-vSgp
+   (1 year ago)
+   We're building LMArena: to ensure the voices of real people remain at the core of how AI is evaluated and improved.
+
+12. LMArena raises $100M at $600M valuation to expand AI ...
+   https://siliconangle.com/2025/05/21/lmarena-raises-100m-600m-valuation-expand-ai-benchmarking-platform/
+   (May 21, 2025)
+   LMArena, the company behind artificial intelligence testing service Chatbot Arena, has raised $100 million in initialj funding, marking one ...
+
+13. 24 US AI Startups That Have Raised $100M+ in 2025 ...
+   https://www.globalbigdataconference.com/news/158986/24-us-ai-startups-that-have-raised-100m-in-2025.html
+   LMArena, an AI benchmarking platform, raised a $100M seed round at a $600M valuation. TensorWave, an AI infrastructure company, closed a $100M Series A led by ...
+
+14. LM Arena, the organization behind popular AI ...
+   https://sg.finance.yahoo.com/news/lm-arena-organization-behind-popular-185214285.html
+   (May 21, 2025)
+   LM Arena, a crowdsourced benchmarking project that major AI labs rely on to test and market their AI models, has raised $100 million in a seed funding round.
+
+15. LMArena Raises $150M, Scaling AI Evaluation Platform
+   https://www.linkedin.com/posts/wei-lin-chiang-51b025b2_excited-to-share-lmarena-has-raised-a-150m-activity-7414345213407764480-xK0h
+   (6 months ago)
+   Excited to share LMArena has raised a $150M Series A! We're scaling our engineering & research teams to build the best real-world, ...
+
+16. Andreessen Horowitz - Your GTM trigger starts here.
+   https://latestrounds.com/investors/andreessen-horowitz
+   Stilta raised a $10.5 million seed round led by Andreessen Horowitz ... LMArena raised $150 million in Series A funding at a post-money valuation of ...
+
+17. US AI Startups Raise Over $100 Million in 2025 Funding ...
+   https://mezha.net/eng/bukvy/us-ai-startups-raise-over-100-million-in-2025-funding-rounds/
+   (Jan 19, 2026)
+   LMArena – a popular tool for benchmarking AI models – raised $100 million Seed; valuation $600 million; round led by Andreessen Horowitz and ...
+
+18. LMArena Raises 150 Million Dollars Series A Funding Hits ...
+   https://www.reddit.com/r/aicuriosity/comments/1q5nrve/lmarena_raises_150_million_dollars_series_a/
+   (6 months ago)
+   The investment comes from heavy hitters like Felicis and UC Investments leading the way, plus a16z, Kleiner Perkins, Lightspeed Venture Partners ...
+
+19. LMArena Secures $150M Series A Funding from a16z and ...
+   https://beamstart.com/news/a16z-lightspeed-back-150m-series-17677533882181
+   (Jan 7, 2026)
+   The funding round, which comes just months after a $100 million seed round in May 2025, reflects the growing investor confidence in AI ...
+
+[PeopleAlsoAsk]
+  - What is the funding round for LMArena?
+  - Who funds the LMArena?
+  - What are the largest VC rounds in 2025?
+
+[RelatedSearches] Lmarena raised funding 100 million seed a16z company 2025 date | LMArena funding | LMArena valuation | LMArena revenue | LMArena founders | How does LMArena make money | LMArena careers | A16z lmarena
+
+===== Query 4/4: GSM1k Scale AI overfitting Phi Mistral 13 percent accuracy drop =====
+
+1. A Careful Examination of Large Language Model Performance on ...
+   https://arxiv.org/html/2405.00332v1
+   (May 1, 2024)
+   We notice that Mistral and Phi top the list of overfit models, with almost 10% drops on GSM1k compared to GSM8k, while models such as Gemini, ...
+
+2. @Gemini New research from Scale AI just uncovered significant ...
+   https://x.com/rowancheung/status/1786227281670578586
+   (May 2, 2024)
+   Scale AI just uncovered significant 'overfitting' of certain LLMs on popular AI benchmarks using a new benchmark dataset, GSM1k. Mistral and ...
+
+3. A Careful Examination of Large Language Model Performance on ...
+   https://substack.com/home/post/p-144564438?utm_campaign=post&utm_medium=web
+   (May 12, 2024)
+   The paper shows that many popular language models may have overfit to the GSM8k benchmark, with performance drops of up to 13% on the newly created GSM1k ...
+
+4. https://scale.com/research/llm-performance-grade-s...
+   https://scale.com/research/llm-performance-grade-school-arithmetic
+   No information is available for this page. · Learn why
+
+5. "Mutual Reasoning" improves GSM8K accuracy from 13% to 64% [R]
+   https://www.reddit.com/r/MachineLearning/comments/1er7req/mutual_reasoning_improves_gsm8k_accuracy_from_13/
+   (Aug 13, 2024)
+   This paper introduces rStar, a self-play mutual reasoning approach that significantly improves reasoning capabilities of small language models (SLMs)
+
+6. [PDF] arXiv:2405.00332v4 [cs.CL] 22 Nov 2024
+   https://arxiv.org/pdf/2405.00332
+   (Nov 22, 2024)
+   For example, while Phi-2 has a 6% drop in accuracy between. GSM8k and GSM1k, we find that it is still able to correctly solve over half of GSM1k ...
+
+7. [PDF] GSM1k neurips
+   https://neurips.cc/media/neurips-2024/Slides/97687.pdf
+   GSM1k is a dataset of 1,205 problems. Results Some Model Families are Systematically Overfit. Overfit Models Are Still Capable of Reasoning. GSM1k example 21. ...
+
+8. Import AI 387: Overfitting vs reasoning; distributed training runs
+   https://importai.substack.com/p/import-ai-387-overfitting-vs-reasoning
+   (Oct 14, 2024)
+   "We show that the performance of all models drops on GSM-Symbolic, hinting at potential data contamination," Apple writes. "We further question ...
+
+9. Caltech Researchers Claim Radical Compression of High-Fidelity AI ...
+   https://www.wsj.com/cio-journal/caltech-researchers-claim-radical-compression-of-high-fidelity-ai-models-e66f31c9
+   (Mar 31, 2026)
+   PrismML says its 1-bit large language model achieves radical compression without sacrificing performance, lowering energy consumption.
+
+10. [PDF] The Limits of LLM Resampling with Imperfect Verifiers - OpenReview
+   https://openreview.net/pdf?id=8wOvnLALjW
+   The central thesis of this paper is that there is no free lunch for inference scaling: indefinite accuracy improvement through resampling can only be realized.
+
+11. What Is a Contaminated LLM? Detection, Famous Cases ...
+   https://llm-stats.com/blog/research/what-is-a-contaminated-llm
+   (Apr 29, 2026)
+   The worst-overfitting model dropped 13 percentage ... The Phi and Mistral families showed systematic overfitting across nearly every size.
+
+12. New Study finds Popular LLMs Are Overfit on Public ...
+   https://favtutor.com/articles/llm-overfit-public-benchmarks/
+   (May 16, 2024)
+   Some models, particularly Phi and Mistral families, showed significant overfitting (up to 13% accuracy drop) on GSM1k compared to GSM8k ...
+
+13. A Careful Examination of Large Language Model ...
+   https://www.linkedin.com/pulse/careful-examination-large-language-model-performance-grade-bogolin-toj7e
+   (2 years ago)
+   The paper shows that many popular language models may have overfit to the GSM8k benchmark, with performance drops of up to 13% on the newly created GSM1k ...
+
+14. scaleapi/gsm1k_eval
+   https://github.com/scaleapi/gsm1k_eval
+   GSM1k is a novel dataset designed to measure potential overfitting of language models on the established GSM8k benchmark. Our work provides insights into ...
+
+15. Why Is Overfitting Detrimental To Model Accuracy?
+   https://www.youtube.com/watch?v=8QeovqXyxp4
+   (7 months ago)
+   Ever wondered why some AI models perform poorly on new data despite looking great during training? This video dives into the critical ...
+
+16. Daily Papers
+   https://huggingface.co/papers?q=backtest%20overfitting
+   (Jul 8, 2026)
+   When evaluating leading open- and closed-source LLMs on GSM1k, we observe accuracy drops of up to 13%, with several families of models (e.g., ...
+
+17. Method prevents an AI model from being overconfident ...
+   https://www.eecs.mit.edu/method-prevents-an-ai-model-from-being-overconfident-about-wrong-answers/
+   (Sep 16, 2024)
+   Thermometer, a method for calibrating a large language model, could help users pinpoint situations where a model is overconfident about false predictions.
+
+18. Why Machine Learning Models Overfit When Data is Limited
+   https://medium.com/ai-simplified-in-plain-english/why-machine-learning-models-overfit-when-data-is-limited-4c53200be5f5
+   Your deep learning model achieves 95% accuracy on the training data, but when you deploy it, its performance drops to 60%. Sound familiar ...
+
+19. Replacing hype about artificial intelligence with accurate ...
+   https://www.pppl.gov/news/2024/replacing-hype-about-artificial-intelligence-accurate-measurements-success
+   (Sep 25, 2024)
+   The researchers found that 79% of those articles touting a machine learning method as superior actually had a weak baseline, breaking at least ...
+
+20. [Deprecated] Pixtral Large | Mistral AI
+   https://mistral.ai/news/pixtral-large/
+   (Nov 18, 2024)
+   Heads up: this model is deprecated. Pixtral Large is no longer maintained and has been replaced by our latest, more powerful vision and ...
+
+21. Ultra-Large AI Models Are Over - by Alberto Romero
+   https://www.thealgorithmicbridge.com/p/ultra-large-ai-models-are-over
+   (Oct 14, 2022)
+   The scaling laws of large models. Some companies use AI to automate processes, improve efficiency, and reduce costs ...
+
+22. Why AI systems fail at scale and what you should ... - CIO
+   https://www.cio.com/article/4158053/why-ai-systems-fail-at-scale-and-what-you-should-measure-instead-of-model-accuracy.html
+   (Apr 15, 2026)
+   A model can be 95% accurate and still be a disaster if it's too slow or drifts. Don't just watch the model — watch the plumbing, the data loops ...
+
+23. GSM-Symbolic: Understanding the Limitations of ...
+   https://machinelearning.apple.com/research/gsm-symbolic
+   We hypothesize that this decline is because current LLMs cannot perform genuine logical reasoning; they replicate reasoning steps from their training data.
+
+24. Yes, AI Models Can Get Worse over Time
+   https://www.scientificamerican.com/article/yes-ai-models-can-get-worse-over-time/
+   (Aug 2, 2023)
+   Yes, AI Models Can Get Worse over Time. More training and more data can have unintended consequences for machine-learning models such as GPT-4.
+
+25. https://scholar.google.com/citations?view_op=view_...
+   https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ia02J_oAAAAJ&citation_for_view=ia02J_oAAAAJ:KUbvn5osdkgC
+   No information is available for this page.
+
+26. Mistral Pixtral Large Released! Did it pass the test ?
+   https://www.youtube.com/watch?v=RlBHDFdkTtg
+   (1 year ago)
+   Overall I'm impressed with this model considering you are able to use this for free and you got these canvas web search and image generation feature.
+
+27. Inference Race To The Bottom - Make It Up On Volume?
+   https://newsletter.semianalysis.com/p/inference-race-to-the-bottom-make
+   (Dec 18, 2023)
+   There are now five companies besides OpenAI that have models that can beat GPT-3.5 in a variety of benchmarks: Mistral Mixtral, Inflection-2 ...
+
+28. Researchers Measured AGI. Every Model Failed.
+   https://pub.towardsai.net/researchers-measured-agi-every-model-failed-853e94f3f01b
+   (Oct 28, 2025)
+   Researchers created the first measurable definition of AGI by testing AI with human psychometric tests. GPT-5 scores 57%—revealing critical ...
+
+29. Why Accuracy Is a Misleading Metric for Machine Learning ...
+   https://ai.plainenglish.io/why-accuracy-is-a-misleading-metric-for-machine-learning-models-69a789f9dae5
+   (Jan 16, 2026)
+   If a model achieves 95% accuracy, we instinctively label it as good. If another model scores 60%, we discard it without hesitation. But in real- ...
+
+30. Feel the AGI yet?
+   https://www.exponentialview.co/p/feel-the-agi-yet
+   (Aug 8, 2025)
+   While you can still steer the AI, OpenAI's design makes deep, critical engagement feel optional – a potentially harmful direction. My son tested ...
+
+31. AI progress has plateaued below GPT-5 level - by Erik Hoel
+   https://www.theintrinsicperspective.com/p/ai-progress-has-plateaued-at-gpt
+   (Nov 14, 2024)
+   According to inside reports, Orion (codename for the attempted GPT-5 release from OpenAI) is not significantly smarter than the existing GPT-4.
+
+32. Study reveals enterprises underestimate AI model failure ...
+   https://cryptobriefing.com/ai-model-co-failure-ceiling-enterprise-risk/
+   (Jul 9, 2026)
+   New research finds enterprises underestimate AI model co-failure rates by 2.25x, with major implications for crypto trading bots and DeFi ...
+
+33. Why AI Models Fail at Scale Without Strong Data ...
+   https://www.innoverdigital.com/ai-is-only-as-strong-as-your-data-foundations-why-ai-models-fail-at-scale/
+   AI models fail at scale due to weak data foundations. Learn how data quality, governance, and integration enable scalable, reliable AI systems.
+
+34. arXiv:2404.08763v2 [cs.LG] 27 Apr 2024
+   https://scalingintelligence.stanford.edu/pubs/CATSpaper.pdf
+   by JY Lee · 2024 · Cited by 66 — We demonstrate that, without any fine-tuning, CATS can be applied to various base models, including Mistral-7B and Llama2-7B, and achieves comparable downstream.
+
+[RelatedSearches] A careful examination of Large language model performance on Grade School arithmetic | GSM8K

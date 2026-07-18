@@ -1,0 +1,1186 @@
+===== Query 1/6: adaptive overfitting machine learning competition leaderboard empirical =====
+
+1. A meta-analysis of overfitting in machine learning
+   https://proceedings.neurips.cc/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html
+   (R Roelofs, V Shankar, B Recht… - Advances in neural …, 2019 - proceedings.neurips.cc | 2019 | cited by 344)
+   [PDF] https://proceedings.neurips.cc/paper/2019/file/ee39e503b6bedf0c98c388b7e8589aca-Paper.pdf
+   … In this paper, we empirically study holdout reuse at a … Here, we focus on adaptive overfitting, which is overfitting caused … investigation, our results for accuracy competitions suggest that …
+
+2. The ladder: A reliable leaderboard for machine learning competitions
+   https://proceedings.mlr.press/v37/blum15
+   (A Blum, M Hardt - … Conference on Machine Learning, 2015 - proceedings.mlr.press | 2015 | cited by 191)
+   [PDF] http://proceedings.mlr.press/v37/blum15.pdf
+   … adaptive nature. As participants are allowed to repeatedly evaluate their submissions on the leaderboard, they may begin to overfit to … We define the empirical loss of a classifier f on the …
+
+3. The effect of natural distribution shift on question answering models
+   https://proceedings.mlr.press/v119/miller20a.html
+   (J Miller, K Krauth, B Recht… - … on machine learning, 2020 - proceedings.mlr.press | 2020 | cited by 212)
+   [PDF] http://proceedings.mlr.press/v119/miller20a/miller20a.pdf
+   … we find no evidence of adaptive overfitting. The remaining three … Taken together, our results confirm the surprising resilience of … In the sequel, we empirically measure both the adaptivity …
+
+4. The leaderboard illusion
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/70a93f260a51123b3c0e33ecd1b4de97-Abstract-Datasets_and_Benchmarks_Track.html
+   (S Singh, Y Nan, A Wang, D Dsouza… - Advances in neural …, 2026 - proceedings.neurips.cc | 2026 | cited by 82)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/70a93f260a51123b3c0e33ecd1b4de97-Paper-Datasets_and_Benchmarks_Track.pdf
+   … via model selection and adaptation to the Arena distribution. … Motivated by this concern, we perform a systematic empirical … the potential to overfit: Our estimate of overfitting is likely …
+
+5. A Simulation Framework for Evaluating Public Leaderboard Mitigations under Adaptivity
+   https://www.techrxiv.org/doi/abs/10.36227/techrxiv.177222998.81018836
+   (IP Karunanayaka - 2026 - techrxiv.org | 2026)
+   [PDF] https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.177222998.81018836
+   … as adaptive agents and measure the Top-1 Overfit Risk, … Our results indicate substantial overfit risk under the simulation … Limitations: Our simulation framework and empirical results are …
+
+6. Model similarity mitigates test set overuse
+   https://proceedings.neurips.cc/paper/2019/hash/48237d9f2dea8c74c2a72126cf63d933-Abstract.html
+   (H Mania, J Miller, L Schmidt… - Advances in Neural …, 2019 - proceedings.neurips.cc | 2019 | cited by 71)
+   [PDF] https://proceedings.neurips.cc/paper/2019/file/48237d9f2dea8c74c2a72126cf63d933-Paper.pdf
+   … this similarity mitigates overfitting. Specifically, we show empirically that models proposed for … benchmarks that have recently been shown to exhibit little to no adaptive overfitting in spite …
+
+7. Reducing overfitting in challenge-based competitions
+   https://arxiv.org/abs/1607.00091
+   (EC Neto, BR Hoff, C Bare, BM Bot, T Yu… - arXiv preprint arXiv …, 2016 - arxiv.org | 2016 | cited by 5)
+   [PDF] https://arxiv.org/pdf/1607.00091
+   … that induces severe overfitting of the leaderboard when the … in this paper is to consider adaptive variations, where the initial … In any case, we argue that even rough empirical estimates …
+
+8. Generalization in adaptive data analysis and holdout reuse
+   https://proceedings.neurips.cc/paper/2015/hash/bad5f33780c42f2588878a9d07405083-Abstract.html
+   (C Dwork, V Feldman, M Hardt… - Advances in neural …, 2015 - proceedings.neurips.cc | 2015 | cited by 312)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2015/file/bad5f33780c42f2588878a9d07405083-Paper.pdf
+   … for validating results while provably avoiding overfitting to the … in theoretical machine learning to ensure that empirical … an accurate leaderboard in a machine learning competition that …
+
+9. A Meta-Analysis of Overfitting in Machine Learning
+   https://openreview.net/forum?id=HJlr9NBgUr
+   (FM Garcia, P Thomas - openreview.net)
+   [PDF] https://openreview.net/pdf?id=HJlr9NBgUr
+   … In this paper, we empirically study holdout reuse at a … Here, we focus on adaptive overfitting, which is overfitting caused … investigation, our results for accuracy competitions suggest that …
+
+10. Methodology for Design and Analysis of Machine Learning Competitions
+   https://inria.hal.science/tel-04401932/
+   (A Pavão - 2023 - inria.hal.science | 2023 | cited by 6)
+   [PDF] https://inria.hal.science/tel-04401932/document
+   … , organizers can effectively mitigate the risk of overfitting. Typically, … , and propose novel empirical measures to characterize them. We … These competitions utilize leaderboards to enable …
+
+11. On Overfitting in Machine Learning Contests
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5012282
+   (X Qiu, H Xu, Y Yu - Available at SSRN 5012282, 2024 - papers.ssrn.com | 5012)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5012282
+   … We also provide empirical evidence to support our theoretical predictions. … These equilibrium properties and comparative statics results are consistent with our documented empirical …
+
+12. Empirical design in reinforcement learning
+   http://www.jmlr.org/papers/v25/23-0183.html
+   (A Patterson, S Neumann, M White, A White - Journal of Machine Learning …, 2024 - jmlr.org | 2024 | cited by 115)
+   [PDF] http://www.jmlr.org/papers/volume25/23-0183/23-0183.pdf
+   … machine learning such as train and test splits, overfitting, cross-… However, we can consider hyperparameter adaptation as … We want our results to reflect the utility of our algorithm, rather …
+
+13. Towards personalized adaptive gamification: A machine learning model for predicting performance
+   https://ieeexplore.ieee.org/ielaam/7782673/9119230/8546756-aam.pdf
+   (C López, C Tucker - IEEE transactions on Games, 2018 - ieeexplore.ieee.org | 2018 | cited by 101)
+   [PDF] https://ieeexplore.ieee.org/ielaam/7782673/9119230/8546756-aam.pdf
+   … empirical studies and methods to advance gamified applications. Moreover, the authors stated that machine learning … moreover, the results reveal that the performance of the adaptive-…
+
+14. Protecting against evaluation overfitting in empirical reinforcement learning
+   https://ieeexplore.ieee.org/abstract/document/5967363/
+   (S Whiteson, B Tanner, ME Taylor… - … reinforcement learning …, 2011 - ieeexplore.ieee.org | 2011 | cited by 183)
+   [PDF] http://www.cs.ox.ac.uk/people/shimon.whiteson/pubs/whitesonadprl11.pdf
+   … results demonstrating how these methodologies can validate an intuitively useful rangeadaptive … In addition, competitions based on empirical evaluations have long been popular. For …
+
+15. Overfitting in Machine Learning: A Comparative Analysis of Decision Trees and Random Forests.
+   https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=10798587&AN=182059750&h=VYgprPLJJREWnmXtDAknI55aYvFvoaRXsipPD04oL0gRF53FJ73F506TCevv0ngOPDjBD%2FW4TBg1Og10KvHwzQ%3D%3D&crl=c
+   (E Halabaku, E Bytyçi - Intelligent Automation & Soft …, 2024 - search.ebscohost.com | 2024 | cited by 125)
+   … Following the increasing global competition, fast technology … the overfitting of the pruning strategy, the Adaptive Cross-… The results of our experiments provide insights into each …
+
+16. Dropout vs. batch normalization: an empirical study of their impact to deep learning
+   https://link.springer.com/article/10.1007/s11042-019-08453-9
+   (C Garbin, X Zhu, O Marques - Multimedia tools and applications, 2020 - Springer | 2020 | cited by 807)
+   [PDF] https://par.nsf.gov/servlets/purl/10166570
+   … It has dominated recent machine learning competitions [5]. … Therefore, papers that publish results using a non-adaptive … to avoid overfitting for deep learning is a practical challenge. …
+
+17. Adaptation strategies for automated machine learning on evolving data
+   https://ieeexplore.ieee.org/abstract/document/9366792/
+   (B Celik, J Vanschoren - … analysis and machine intelligence, 2021 - ieeexplore.ieee.org | 2021 | cited by 122)
+   [PDF] https://arxiv.org/pdf/2006.06480
+   … adaptation strategies for AutoML methods are described in Section 4. Section 5 details our empirical setup to evaluate these strategies, and the results … the GLM stacker overfitting). D&I …
+
+18. Reward and competition in motivation and learning: Myths, pitfalls, and insights
+   https://www.sciencedirect.com/science/article/pii/S0959475225000635
+   (S Kim - Learning and Instruction, 2025 - Elsevier | 2025 | cited by 6)
+   … , while the remaining five are empirical studies. Collectively, … resilience in competitive settings requires adaptive coping … supports enduring motivation or results in habituation, …
+
+19. Can competition though leaderboards lead to better engagement and learning of data science concepts? An experimental study
+   https://aisel.aisnet.org/amcis2021/is_education/sig_education/20/
+   (M Theriault, T Ruel, PM Léger, JF Plante - 2021 - aisel.aisnet.org | 2021 | cited by 3)
+   [PDF] https://scholar.archive.org/work/6ywz7icxf5bzverjpbkjlljjba/access/wayback/https://aisel.aisnet.org/cgi/viewcontent.cgi?article=1176&context=amcis2021
+   … Our results show no effect of the competitive nature of … presence of a competitive leaderboard will lead to higher learning and … empirical literature regarding the impact of the competitive …
+
+20. Adaptive subspaces for few-shot learning
+   http://openaccess.thecvf.com/content_CVPR_2020/html/Simon_Adaptive_Subspaces_for_Few-Shot_Learning_CVPR_2020_paper.html
+   (C Simon, P Koniusz, R Nock… - Proceedings of the …, 2020 - openaccess.thecvf.com | 2020 | cited by 617)
+   [PDF] http://openaccess.thecvf.com/content_CVPR_2020/papers/Simon_Adaptive_Subspaces_for_Few-Shot_Learning_CVPR_2020_paper.pdf
+   … Object recognition requires a generalization capability to avoid overfitting, especially when … empirically observed that such a simple modification to the means can improve the results …
+
+21. Comprehensive and empirical evaluation of machine learning algorithms for small molecule LC retention time prediction
+   https://pubs.acs.org/doi/abs/10.1021/acs.analchem.8b05820
+   (R Bouwmeester, L Martens, S Degroeve - Analytical chemistry, 2019 - ACS Publications | 2019 | cited by 128)
+   … Our results thus show that an evaluation of machine learning … This because adaptive boosting tends to overfit on the larger … the possible overfitting by the machine learning algorithms …
+
+22. The emerging science of machine learning benchmarks
+   https://www.mlbenchmarks.org/pdf/04-holdout-method.pdf
+   (M Hardt - 2026 - mlbenchmarks.org | 2026 | cited by 50)
+   [PDF] https://www.mlbenchmarks.org/pdf/04-holdout-method.pdf
+   … The empirical phenomena related to overfitting during training … ”, as algorithms over time become too adapted to the dataset, … of any machine learning benchmark is the leaderboard, a …
+
+23. Bayesian graph neural networks with adaptive connection sampling
+   https://proceedings.mlr.press/v119/hasanzadeh20a.html
+   (A Hasanzadeh, E Hajiramezanali… - … machine learning, 2020 - proceedings.mlr.press | 2020 | cited by 197)
+   [PDF] http://proceedings.mlr.press/v119/hasanzadeh20a/hasanzadeh20a.pdf
+   … training many deep learning models as a way to avoid over-fitting. … estimation performance, as we will show empirically in Section 7. … Our experimental results shows that GDC boosts the …
+
+24. Are we learning yet? a meta review of evaluation failures across machine learning
+   https://openreview.net/forum?id=mPducS1MsEK
+   (T Liao, R Taori, ID Raji, L Schmidt - Thirty-fifth Conference on …, 2021 - openreview.net | 2021 | cited by 223)
+   [PDF] https://openreview.net/pdf?id=mPducS1MsEK
+   … the core of most empirical machine learning papers. The impact … Benchmarks usually come with a leaderboard, competition, or … of overfitting from test set reuse, also known as adaptive …
+
+25. An empirical study on data distribution-aware test selection for deep learning enhancement
+   https://dl.acm.org/doi/abs/10.1145/3511598
+   (Q Hu, Y Guo, M Cordy, X Xie, L Ma… - ACM Transactions on …, 2022 - dl.acm.org | 2022 | cited by 74)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3511598
+   … continuous enhancement (eg, adapting to distribution shift in a … Section 5 details the results of our empirical study. Section 6 … In practice, it is used for avoiding overfitting or underfitting, …
+
+26. Fast context adaptation via meta-learning
+   http://proceedings.mlr.press/v97/zintgraf19a.html
+   (L Zintgraf, K Shiarli, V Kurin… - … machine learning, 2019 - proceedings.mlr.press | 2019 | cited by 567)
+   [PDF] http://proceedings.mlr.press/v97/zintgraf19a/zintgraf19a.pdf
+   … We show empirically that CAVIA outperforms MAML for regression, classification, and rein… increasing the network size, without overfitting. Our results are obtained by adjusting only 100 …
+
+27. Dimensionality-driven learning with noisy labels
+   http://proceedings.mlr.press/v80/ma18d.html?ref=https://githubhelp.com
+   (X Ma, Y Wang, ME Houle, S Zhou… - … machine learning, 2018 - proceedings.mlr.press | 2018 | cited by 575)
+   [PDF] http://proceedings.mlr.press/v80/ma18d/ma18d.pdf
+   … the learning behavior of a DNN, and developing an adaptive … From the above empirical results, we find that DNNs follow … as the first epoch at which overfitting occurs; for this reason, we …
+
+28. Statistical and Machine Learning forecasting methods: Concerns and ways forward
+   https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0194889&utm_source=thenewstack&utm_medium=website&utm_campaign=platform
+   (S Makridakis, E Spiliotis, V Assimakopoulos - PloS one, 2018 - journals.plos.org | 2018 | cited by 2525)
+   … The empirical results found in our research stress the need … through sizable and open competitions allowing meaningful … and make sure that there is no over-fitting. Judging from the …
+
+29. Towards dropout training for convolutional neural networks
+   https://www.sciencedirect.com/science/article/pii/S0893608015001446
+   (H Wu, X Gu - Neural Networks, 2015 - Elsevier | 2015 | cited by 459)
+   [PDF] https://arxiv.org/pdf/1512.00242
+   … empirically show that the effect of convolutional dropout is not trivial, despite the dramatically reduced possibility of over-fitting … on MNIST, and very competitive results on CIFAR-10 and …
+
+30. Unsupervised domain adaptation through self-supervision
+   https://arxiv.org/abs/1909.11825
+   (Y Sun, E Tzeng, T Darrell, AA Efros - arXiv preprint arXiv:1909.11825, 2019 - arxiv.org | 1909 | cited by 307)
+   [PDF] https://arxiv.org/pdf/1909.11825
+   … of deep learning, we can only empirically verify that at least in our experiments, the model does not overfit … , which would then yield bad results. Recent research suggests that stochastic …
+
+31. Empirical Comparison of Encoder-Based Language Models and Feature-Based Supervised Machine Learning Approaches to Automated Scoring of Long Essays
+   https://arxiv.org/abs/2601.02659
+   (K Wang, H Hua, P Yan, H Jiao, D Song - arXiv preprint arXiv:2601.02659, 2026 - arxiv.org | 2601 | cited by 6)
+   [PDF] https://arxiv.org/pdf/2601.02659
+   … , making it robust to overfitting in structured data tasks. It … parameter tuning or alternative adaptation strategies may be … Empirical results show that this hybrid input strategy leads to …
+
+32. An empirical comparison of machine learning models for time series forecasting
+   https://www.tandfonline.com/doi/abs/10.1080/07474938.2010.481556
+   (NK Ahmed, AF Atiya, NE Gayar… - Econometric …, 2010 - Taylor & Francis | 2010 | cited by 1333)
+   [PDF] https://www.academia.edu/download/47902695/An_Empirical_Comparison_of_Machine_Learn20160808-9481-m871ee.pdf
+   … comparison results. Section 7 gives some comments on the … complex models, and overfitting will therefore be unlikely (… of value 0.2, and an adaptive learning rate with initial value 0.01, …
+
+33. A unified game-theoretic approach to multiagent reinforcement learning
+   https://proceedings.neurips.cc/paper/2017/hash/3323fe11e9595c09af38fe67567a9394-Abstract.html
+   (M Lanctot, V Zambaldi, A Gruslys… - Advances in neural …, 2017 - proceedings.neurips.cc | 2017 | cited by 1094)
+   [PDF] https://proceedings.neurips.cc/paper/2017/file/3323fe11e9595c09af38fe67567a9394-Paper.pdf
+   … using deep reinforcement learning, and empirical game-… effect of overfitting in independent reinforcement learners, … We would also like to investigate fast online adaptation [1, 21] …
+
+34. Improving the generalization of adversarial training with domain adaptation
+   https://arxiv.org/abs/1810.00740
+   (C Song, K He, L Wang, JE Hopcroft - arXiv preprint arXiv:1810.00740, 2018 - arxiv.org | 1810 | cited by 196)
+   [PDF] https://arxiv.org/pdf/1810.00740
+   … model will overfit on these … results provide empirical evidence that ATDA has great generalization ability on different adversaries as compared to SAT and outperforms other competing …
+
+35. Tackling overfitting in boosting for noisy healthcare data
+   https://ieeexplore.ieee.org/abstract/document/8933485/
+   (Y Park, JC Ho - IEEE Transactions on Knowledge and Data …, 2019 - ieeexplore.ieee.org | 2019 | cited by 82)
+   … The results also illustrate the adaptive learning rates and … While our empirical results suggest that both GAP and ALR are … : A reliable leaderboard for machine learning competitions,” in …
+
+36. Deceive d: Adaptive pseudo augmentation for gan training with limited data
+   https://proceedings.neurips.cc/paper/2021/hash/b534ba68236ba543ae44b22bd110a1d6-Abstract.html
+   (L Jiang, B Dai, W Wu, CC Loy - Advances in neural …, 2021 - proceedings.neurips.cc | 2021 | cited by 166)
+   [PDF] https://proceedings.neurips.cc/paper/2021/file/b534ba68236ba543ae44b22bd110a1d6-Paper.pdf
+   … To quantify overfitting, we study a series of plausible … As for the deception strategy, we empirically observe that two-sided … of t could be further adjusted to achieve even better results. …
+
+37. The benchmark lottery
+   https://arxiv.org/abs/2107.07002
+   (M Dehghani, Y Tay, AA Gritsenko, Z Zhao… - arXiv preprint arXiv …, 2021 - arxiv.org | 2021 | cited by 153)
+   [PDF] https://arxiv.org/pdf/2107.07002
+   … We empirically show that the task selection process has a … Here, we study offline RL, where the results are more stable for … adaptive overfitting on the classification competitions. Other …
+
+38. Deep learning in law: early adaptation and legal word embeddings trained on large corpora
+   https://access.heinonline.com/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/artinl27&section=12
+   (I Chalkidis, D Kampas - AI & L., 2019 - HeinOnline | 2019 | cited by 293)
+   … The empirical results showed semantic correlations close to … " Classic ML algorithms were vastly overfitting the training set … tasks, offering competitive results while being trained much …
+
+39. Unbalanced minibatch optimal transport; applications to domain adaptation
+   https://proceedings.mlr.press/v139/fatras21a.html
+   (K Fatras, T Séjourné, R Flamary… - … on machine learning, 2021 - proceedings.mlr.press | 2021 | cited by 263)
+   [PDF] http://proceedings.mlr.press/v139/fatras21a/fatras21a.pdf
+   … state-of-the-art competitors. Our empirical results suggest that UOT might be more suitable … training which demonstrates the network overfitting with DEEPJDOT and not with JUMBOT. …
+
+40. Class-imbalanced semi-supervised learning with adaptive thresholding
+   https://proceedings.mlr.press/v162/guo22e
+   (LZ Guo, YF Li - … conference on machine learning, 2022 - proceedings.mlr.press | 2022 | cited by 206)
+   [PDF] https://proceedings.mlr.press/v162/guo22e/guo22e.pdf
+   … obtain adaptive thresholds and minimize empirical risk. More… , has been repeatedly reported that can achieve competitive … the objective usually results in over-fitting to minority classes. …
+
+41. Ttt++: When does self-supervised test-time training fail or thrive?
+   https://proceedings.neurips.cc/paper/2021/hash/b618c3210e934362ac261db280128c22-Abstract.html
+   (Y Liu, P Kothari, B Van Delft… - Advances in …, 2021 - proceedings.neurips.cc | 2021 | cited by 543)
+   [PDF] https://proceedings.neurips.cc/paper/2021/file/b618c3210e934362ac261db280128c22-Paper.pdf
+   … self-supervised adaptation may yield severe overfitting to the … theoretical analysis and the empirical results, when the stated … of machine learning algorithms for test-time adaptation. For …
+
+42. Deep networks with stochastic depth
+   https://link.springer.com/chapter/10.1007/978-3-319-46493-0_39
+   (G Huang, Y Sun, Z Liu, D Sedra… - European conference on …, 2016 - Springer | 2016 | cited by 3458)
+   [PDF] https://arxiv.org/pdf/1603.09382
+   … Intuitively, Dropout reduces the effect known as “co-adaptation… We provide an empirical demonstration of this effect in Sect. 5… to overfit at the beginning of the second phase with learning …
+
+43. Towards better generalization of adaptive gradient methods
+   https://proceedings.neurips.cc/paper/2020/hash/08fb104b0f2f838f3ce2d2b3741a12c2-Abstract.html
+   (Y Zhou, B Karimi, J Yu, Z Xu… - Advances in Neural …, 2020 - proceedings.neurips.cc | 2020 | cited by 30)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2020/file/08fb104b0f2f838f3ce2d2b3741a12c2-Paper.pdf
+   … results illustrate that SAGD is empirically competitive and often … the empirical gradient noted gt and updates the model … to avoid over-fitting through a differential privacy mechanism. …
+
+44. Empirical analysis of session-based recommendation algorithms: M. Ludewig et al.
+   https://link.springer.com/article/10.1007/s11257-020-09277-1
+   (M Ludewig, N Mauro, S Latifi, D Jannach - … Modeling and User-Adapted …, 2021 - Springer | 2021 | cited by 164)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s11257-020-09277-1.pdf
+   … We report additional results for cutoff thresholds of 5 and 10 in … that the models do not overfit too much to the training data. … sr-gnn, nextitnet) are competitive and sometimes even slightly …
+
+45. Metamixup: Learning adaptive interpolation policy of mixup with metalearning
+   https://ieeexplore.ieee.org/abstract/document/9366422/
+   (Z Mai, G Hu, D Chen, F Shen… - … networks and learning …, 2021 - ieeexplore.ieee.org | 2021 | cited by 63)
+   [PDF] https://arxiv.org/pdf/1908.10059
+   … However, despite its empirical success, its deficiency of … To overcome overfitting to corrupted samples, inspired by … can achieve highly competitive results on standard semisupervised, …
+
+46. Bits-Limited Leaderboards: Minimax Guarantees for Adaptive Submissions Under Quantized Feedback
+   https://www.techrxiv.org/doi/abs/10.36227/techrxiv.177222995.54439383
+   (IP Karunanayaka - 2026 - techrxiv.org | 2026)
+   [PDF] https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.177222995.54439383
+   … overfitting in leaderboard competitions where an adaptive … Machine learning competitions and benchmarks increasingly … (ht), small improvements in empirical risk might be due to fitting …
+
+47. Adascan: Adaptive scan pooling in deep convolutional neural networks for human action recognition in videos
+   http://openaccess.thecvf.com/content_cvpr_2017/html/Kar_AdaScan_Adaptive_Scan_CVPR_2017_paper.html
+   (A Kar, N Rai, K Sikka, G Sharma - Proceedings of the IEEE …, 2017 - openaccess.thecvf.com | 2017 | cited by 206)
+   [PDF] http://openaccess.thecvf.com/content_cvpr_2017/papers/Kar_AdaScan_Adaptive_Scan_CVPR_2017_paper.pdf
+   … representations, we show results that are competitive with respect to the state-of-the-art … also possibly overfit. We show empirical results with varying λ in the experimental Section 4.2.3. …
+
+===== Query 2/6: Blum Hardt The Ladder machine learning contest leaderboard =====
+
+1. The ladder: A reliable leaderboard for machine learning competitions
+   https://proceedings.mlr.press/v37/blum15
+   (A Blum, M Hardt - … Conference on Machine Learning, 2015 - proceedings.mlr.press | 2015 | cited by 191)
+   [PDF] http://proceedings.mlr.press/v37/blum15.pdf
+   … of accuracy called leaderboard accuracy tailored to the format of a competition. Intuitively, high leaderboard accuracy entails that each score represented on the leaderboard is close to …
+
+2. Reducing overfitting in challenge-based competitions
+   https://arxiv.org/abs/1607.00091
+   (EC Neto, BR Hoff, C Bare, BM Bot, T Yu… - arXiv preprint arXiv …, 2016 - arxiv.org | 2016 | cited by 5)
+   [PDF] https://arxiv.org/pdf/1607.00091
+   … the Ladder that induces severe overfitting of the leaderboard … , Hardt and Blum[9] recently proposed the Ladder algorithm (… minor fluctuations in public leaderboard scores during their …
+
+3. Data analysis competition platform for educational purposes: lessons learned and future challenges
+   https://ojs.aaai.org/index.php/AAAI/article/view/11391
+   (Y Baba, T Takase, K Atarashi, S Oyama… - … on Artificial Intelligence, 2018 - ojs.aaai.org | 2018 | cited by 8)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/view/11391/11250
+   … analysis competition, participants apply machine learning … a leaderboard system using the Ladder algorithm (Blum and … in the Ladder-leaderboard competition outperformed the best …
+
+4. Climbing a shaky ladder: Better adaptive risk estimation
+   https://arxiv.org/abs/1706.02733
+   (M Hardt - arXiv preprint arXiv:1706.02733, 2017 - arxiv.org | 1706 | cited by 12)
+   [PDF] https://arxiv.org/pdf/1706.02733
+   … leaderboard problem introduced by Blum and Hardt (2015) in an effort to reduce overfitting in machine learning … This is the relevant task in machine learning benchmarks, competitions, …
+
+5. How does knowledge of the auc constrain the set of possible ground-truth labelings?
+   https://ojs.aaai.org/index.php/AAAI/article/view/4482
+   (J Whitehill - … of the AAAI Conference on Artificial Intelligence, 2019 - ojs.aaai.org | 2019 | cited by 9)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/view/4482/4360
+   … Recent work on privacy-preserving machine learning has … Therefore, the design of algorithms to generate contest leaderboards … research interest (Blum and Hardt 2015; Zheng 2015). …
+
+6. Toward a better understanding of leaderboard
+   https://arxiv.org/abs/1510.03349
+   (W Zheng - arXiv preprint arXiv:1510.03349, 2015 - arxiv.org | 1510 | cited by 3)
+   [PDF] https://arxiv.org/pdf/1510.03349
+   … The leaderboard in machine learning competitions is a tool to show the … the sample complexity of the Ladder leaderboard. We show that η is not … [1] Avrim Blum and Moritz Hardt. The …
+
+7. The advantages of multiple classes for reducing overfitting from test set reuse
+   https://proceedings.mlr.press/v97/feldman19a.html
+   (V Feldman, R Frostig, M Hardt - … on Machine Learning, 2019 - proceedings.mlr.press | 2019 | cited by 44)
+   [PDF] http://proceedings.mlr.press/v97/feldman19a/feldman19a.pdf
+   … benchmarks and data science competitions to validating … /n1/3 on what they call the leaderboard error. With the help of … Blum and Hardt also give an attack on the standard holdout …
+
+8. Bits-Limited Leaderboards: Minimax Guarantees for Adaptive Submissions Under Quantized Feedback
+   https://www.techrxiv.org/doi/abs/10.36227/techrxiv.177222995.54439383
+   (IP Karunanayaka - 2026 - techrxiv.org | 2026)
+   [PDF] https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.177222995.54439383
+   … preventing overfitting in leaderboard competitions where an … Previous mechanisms like the Ladder and Shaky Ladder … Machine learning competitions and benchmarks increasingly …
+
+9. How robust are model rankings: A leaderboard customization approach for equitable evaluation
+   https://ojs.aaai.org/index.php/AAAI/article/view/17599
+   (S Mishra, A Arunkumar - … of the AAAI conference on Artificial Intelligence, 2021 - ojs.aaai.org | 2021 | cited by 34)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/view/17599/17406
+   … Our work, in contrast, deals with the adversarial attack of leaderboards. Ladder (Blum and Hardt 2015) has been proposed as a reliable leaderboard for machine learning competitions, …
+
+10. Model similarity mitigates test set overuse
+   https://proceedings.neurips.cc/paper/2019/hash/48237d9f2dea8c74c2a72126cf63d933-Abstract.html
+   (…, J Miller, L Schmidt, M Hardt… - Advances in Neural …, 2019 - proceedings.neurips.cc | 2019 | cited by 71)
+   [PDF] https://proceedings.neurips.cc/paper/2019/file/48237d9f2dea8c74c2a72126cf63d933-Paper.pdf
+   … , popular benchmark data, or machine learning competitions, the holdout method is central … apparent lack of overfitting in machine learning benchmarks. Blum and Hardt [2] argued that if …
+
+11. THEMIS: A fair evaluation platform for computer vision competitions.
+   https://intellisys.haow.us/assets/pdf/zinuo-themis-ijcai.pdf
+   (Z Cai, J Yuan, Y Hua, T Song, H Wang, Z Xue, N Hu… - IJCAI, 2021 - intellisys.haow.us | 2021 | cited by 3)
+   [PDF] https://intellisys.haow.us/assets/pdf/zinuo-themis-ijcai.pdf
+   … of competition platforms, and we only find that Blum and Hardt designed “The … machine learning competitions— to solve the problem of overfitting and make competitions’ leaderboards …
+
+12. Climbing the Kaggle Leaderboard by Exploiting the Log-Loss Oracle.
+   https://cdn.aaai.org/ocs/ws/ws0421/16161-75972-1-PB.pdf
+   (J Whitehill - AAAI Workshops, 2018 - cdn.aaai.org | 2018 | cited by 17)
+   [PDF] https://cdn.aaai.org/ocs/ws/ws0421/16161-75972-1-PB.pdf
+   … Moreover, leaderboard algorithms such as Ladder (Blum and Hardt … On the other hand, while many competition organizers … machine learning contests. In AAAI, 1345–1351. Zheng, W. …
+
+13. Leaderboard Incentives: Model Rankings under Strategic Post-Training
+   https://arxiv.org/abs/2603.08371
+   (Y Chen, G Zhang, M Hardt - arXiv preprint arXiv:2603.08371, 2026 - arxiv.org | 2603 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2603.08371
+   … competition between participants: when one model moves up in rank, another must move down. The leaderboard … on rank-based competition, but studies the setting of machine learning …
+
+14. The ladder: A reliable leaderboard for machine learning competitions (2015)
+   
+   (A Blum, M Hardt - 2015 | 2015 | cited by 2)
+
+15. A Simulation Framework for Evaluating Public Leaderboard Mitigations under Adaptivity
+   https://www.techrxiv.org/doi/abs/10.36227/techrxiv.177222998.81018836
+   (IP Karunanayaka - 2026 - techrxiv.org | 2026)
+   [PDF] https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.177222998.81018836
+   … mitigations (Bootstrapping, the Ladder Mechanism, and Two-… subset, are common in competitions like Kaggle; we discuss them … inefficiency in the machine learning research …
+
+16. How Hard is it to Rig a Benchmark? A Social Choice Analysis of Leaderboard Robustness
+   https://arxiv.org/abs/2605.23628
+   (P Gordienko, G Schollmeyer, F Kreuter… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.23628
+   … Multi-task benchmarks have become a central pillar of machine learning … Hardt and Blum [2015] focus on leaderboards in machine learning competitions and propose the Ladder …
+
+17. Methodology for Design and Analysis of Machine Learning Competitions
+   https://inria.hal.science/tel-04401932/
+   (A Pavão - 2023 - inria.hal.science | 2023 | cited by 6)
+   [PDF] https://inria.hal.science/tel-04401932/document
+   … These competitions utilize leaderboards to enable participants to track their performance and receive real-time feedback, while also offering incentives such as monetary prizes and co-…
+
+18. A meta-analysis of overfitting in machine learning
+   https://proceedings.neurips.cc/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html
+   (…, B Recht, S Fridovich-Keil, M Hardt… - Advances in neural …, 2019 - proceedings.neurips.cc | 2019 | cited by 344)
+   [PDF] https://proceedings.neurips.cc/paper/2019/file/ee39e503b6bedf0c98c388b7e8589aca-Paper.pdf
+   … The Kaggle server then internally evaluates each submission on both public and private splits and updates the public competition leaderboard only with the score on the public split. At …
+
+19. Exploiting leaderboards for large-scale distribution of malicious models
+   https://ieeexplore.ieee.org/abstract/document/11573544/
+   (A Suri, H Chaudhari, Y Peng, A Naseh… - … IEEE Symposium on …, 2026 - ieeexplore.ieee.org | 2026 | cited by 6)
+   [PDF] https://arxiv.org/pdf/2507.08983
+   … in the machine learning ecosystem, highlighting the urgent need to redesign leaderboard … models among anonymized alternatives—a challenge that existing work addresses through …
+
+20. Do imagenet classifiers generalize to imagenet?
+   http://proceedings.mlr.press/v97/recht19a.html
+   (B Recht, R Roelofs, L Schmidt… - … on machine learning, 2019 - proceedings.mlr.press | 2019 | cited by 3111)
+   [PDF] http://proceedings.mlr.press/v97/recht19a/recht19a.pdf
+   … this reliability challenge. One important question is whether other machine learning tasks are … Moritz Hardt has been particularly helpful in all stages of this project and – among other …
+
+21. The benchmarking epistemology: Construct validity for evaluating machine learning models
+   https://arxiv.org/abs/2510.23191
+   (T Freiesleben, S Zezulka - arXiv preprint arXiv:2510.23191, 2025 - arxiv.org | 2510 | cited by 12)
+   [PDF] https://arxiv.org/pdf/2510.23191
+   … with the Fragile Families Challenge. Our framework clarifies … of conceptual and theoretical reasoning in machine learning. … new machine learning techniques and a public leaderboard …
+
+22. Item response theory for natural language processing
+   https://aclanthology.org/2024.eacl-tutorials.2/
+   (JP Lalor, P Rodriguez, J Sedoc… - Proceedings of the …, 2024 - aclanthology.org | 2024 | cited by 18)
+   [PDF] https://aclanthology.org/2024.eacl-tutorials.2.pdf
+   … Blum and Hardt… We will show how incorporating IRT into leaderboards can give us much more … João’s research areas are at the intersection of machine learning and natural language …
+
+23. Continuous integration of machine learning models with ease. ml/ci: Towards a rigorous yet practical treatment
+   https://proceedings.mlsys.org/paper_files/paper/2019/hash/4284d31e68c0a4a39dcdad167ac4bd72-Abstract.html
+   (C Renggli, B Karlaš, B Ding, F Liu… - … Machine Learning …, 2019 - proceedings.mlsys.org | 2019 | cited by 62)
+   [PDF] https://proceedings.mlsys.org/paper_files/paper/2019/file/4284d31e68c0a4a39dcdad167ac4bd72-Paper.pdf
+   … the first continuous integration system for machine learning. The challenge of building ease.ml… use involve standard Hoeffding inequality and a technique similar to Ladder (Blum & Hardt…
+
+24. The benchmark lottery
+   https://arxiv.org/abs/2107.07002
+   (M Dehghani, Y Tay, AA Gritsenko, Z Zhao… - arXiv preprint arXiv …, 2021 - arxiv.org | 2021 | cited by 153)
+   [PDF] https://arxiv.org/pdf/2107.07002
+   … machine learning is made. This paper presents analyses on how benchmarks may affect the direction and pace of progress in machine learning … a leaderboard or competition website to …
+
+25. Generalization in adaptive data analysis and holdout reuse
+   https://proceedings.neurips.cc/paper/2015/hash/bad5f33780c42f2588878a9d07405083-Abstract.html
+   (C Dwork, V Feldman, M Hardt… - Advances in neural …, 2015 - proceedings.neurips.cc | 2015 | cited by 312)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2015/file/bad5f33780c42f2588878a9d07405083-Paper.pdf
+   … Blum and Hardt [2] showed how to reuse the holdout set to maintain an accurate leaderboard in a machine learning competition … models in the process of the competition (such as those …
+
+26. Measuring the predictability of life outcomes with a scientific mass collaboration
+   https://www.pnas.org/doi/abs/10.1073/pnas.1915006117
+   (…, C Zhu, J Brooks-Gunn, BE Engelhardt, M Hardt… - Proceedings of the …, 2020 - pnas.org | 2020 | cited by 446)
+   [PDF] https://www.pnas.org/doi/pdf/10.1073/pnas.1915006117
+   … While the Fragile Families Challenge was underway, participants could assess the accuracy of their predictions in the leaderboard data. At the end of the Fragile Families Challenge, we …
+
+27. Continuous Integration of Machine Learning Models with ease. ml/ci
+   https://pdfs.semanticscholar.org/d3c5/bb55df9950968e832366867d792b118cfba8.pdf
+   (C Renggli - pdfs.semanticscholar.org)
+   … - The ladder: A reliable leaderboard for machine learning competitions. Blum and Hardt, 2015 - The algorithmic foundations of differential privacy. Dwork et. al., 2014 - The reusable …
+
+28. Accounting for multiplicity in machine learning benchmark performance
+   https://arxiv.org/abs/2303.07272
+   (K Møllersen, E Holsbø - arXiv preprint arXiv:2303.07272, 2023 - arxiv.org | 2303 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2303.07272
+   … The same mechanism as described here is present when highest model performance is reported from public challenge leaderboards or public data sets. Even without the usual …
+
+29. The effect of natural distribution shift on question answering models
+   https://proceedings.mlr.press/v119/miller20a.html
+   (J Miller, K Krauth, B Recht… - … on machine learning, 2020 - proceedings.mlr.press | 2020 | cited by 212)
+   [PDF] http://proceedings.mlr.press/v119/miller20a/miller20a.pdf
+   … However, the competition format of SQuAD puts pressure on the validity of leaderboard scores… explanations for why adaptive overfitting does not occur in machine learning (Blum & Hardt…
+
+30. IEEE Information Theory Society Newsletter
+   https://uat.itsoc.org/sites/default/files/2021-01/67nits02-JunerWeb-lowres.pdf
+   (J Soni, R Goodman - 2016 - uat.itsoc.org | 2016)
+   [PDF] https://uat.itsoc.org/sites/default/files/2021-01/67nits02-JunerWeb-lowres.pdf
+   … Blum and Hardt [8] point out that this issue arises with leaderboards for machine learning competitions: they observe that one can do well on the leaderboard simply by using the …
+
+31. Beyond the Leaderboard: Insight and Deployment Challenges to Address Research Problems
+   https://arxiv.org/abs/1811.03014
+   (AM Mendrik, SR Aylward - arXiv preprint arXiv:1811.03014, 2018 - arxiv.org | 1811)
+   [PDF] https://arxiv.org/pdf/1811.03014
+   … , such as the Camelyon Challenge, which showed that deep learning algorithms can … leaderboard of a challenge and instead look at the conclusions that can be drawn from a challenge …
+
+32. Challenge design roadmap
+   https://openreview.net/forum?id=SUFQ3e3fHr
+   (HJ Escalante, I Guyon, A Howard, W Reade… - … Machine Learning …, 2025 - openreview.net | 2025)
+   [PDF] https://openreview.net/pdf?id=SUFQ3e3fHr
+   … with a technique called “The ladder" (Blum and Hardt, 2015), … leaderboard overfitting, it is advisable to run the challenge in … their performances on a “public leaderboard”; during the final …
+
+33. A Meta-Analysis of Overfitting in Machine Learning
+   https://openreview.net/forum?id=HJlr9NBgUr
+   (FM Garcia, P Thomas - openreview.net)
+   [PDF] https://openreview.net/pdf?id=HJlr9NBgUr
+   … The Kaggle server then internally evaluates each submission on both public and private splits and updates the public competition leaderboard only with the score on the public split. At …
+
+34. Diversified ensembling: An experiment in crowdsourced machine learning
+   https://dl.acm.org/doi/abs/10.1145/3630106.3658923
+   (I Globus-Harris, D Harrison, M Kearns… - Proceedings of the …, 2024 - dl.acm.org | 2024 | cited by 3)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3630106.3658923
+   … Crowdsourced machine learning on competition platforms … end of such competitions for teams at the top of the leaderboard to … in the context of fair machine learning, in order to integrate …
+
+35. Do cifar-10 classifiers generalize to cifar-10?
+   https://arxiv.org/abs/1806.00451
+   (B Recht, R Roelofs, L Schmidt, V Shankar - arXiv preprint arXiv …, 2018 - arxiv.org | 2018 | cited by 621)
+   [PDF] https://arxiv.org/pdf/1806.00451
+   … competition-based approach to increasing accuracy scores. We note that one can read the analysis of Blum and Hardt’s Ladder … of standard machine learning competitions avoids the …
+
+36. Evaluation examples are not equally informative: How should that change NLP leaderboards?
+   https://aclanthology.org/2021.acl-long.346/
+   (P Rodriguez, J Barrow, AM Hoyle… - Proceedings of the …, 2021 - aclanthology.org | 2021 | cited by 157)
+   [PDF] https://aclanthology.org/2021.acl-long.346.pdf
+   … A standard leaderboard would say that Ken has higher accuracy than Burt. But suppose there’sa new subject that wants to challenge Ken; they are not going to reliably dethrone Ken …
+
+37. Guilt-free data reuse
+   https://dl.acm.org/doi/abs/10.1145/3051088
+   (C Dwork, V Feldman, M Hardt, T Pitassi… - Communications of the …, 2017 - dl.acm.org | 2017 | cited by 21)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3051088
+   … Blum and Hardt5 showed how to reuse the holdout set to maintain an accurate leaderboard in a machine learning competition … models in the process of the competition (such as those …
+
+38. Label inference attacks from log-loss scores
+   http://proceedings.mlr.press/v139/aggarwal21a.html
+   (A Aggarwal, S Kasiviswanathan, Z Xu… - … Machine Learning, 2021 - proceedings.mlr.press | 2021 | cited by 19)
+   [PDF] http://proceedings.mlr.press/v139/aggarwal21a/aggarwal21a.pdf
+   … In a recent work, (Blum & Hardt, 2015) demonstrate general techniques for safeguarding leaderboards in Kaggle-type competition settings against an adversarial boosting attack, in …
+
+39. Reproducibility in Spectrum Research: A Platform for Open Data, Shared Code, and Competitive Benchmarking
+   https://ieeexplore.ieee.org/abstract/document/11571103/
+   (S Tanveer, G McLeod, A Sahai… - 2026 IEEE International …, 2026 - ieeexplore.ieee.org | 2026)
+   … Through shareable datasets, shareable code, and a competitive leaderboard architecture, … Blum, “The ladder: a reliable leaderboard for machine learning competitions,” in Proceedings …
+
+40. What Fits (Into Few Tokens) Doesn't Overfit: Compression and Generalization in ML Research Agents
+   https://arxiv.org/abs/2606.11045
+   (MA Bertran, A Roth, ZS Wu - arXiv preprint arXiv:2606.11045, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.11045
+   … ladder mechanism, by analogy with the Ladder of Blum and … Empirical studies of benchmark reuse and leaderboard … available adaptively during the competition, to final rankings …
+
+41. When 4≈ 10,000: The power of social science knowledge in predictive performance
+   https://journals.sagepub.com/doi/abs/10.1177/2378023118811774
+   (S McKay - Socius, 2019 - journals.sagepub.com | 2019 | cited by 14)
+   [PDF] https://journals.sagepub.com/doi/pdf/10.1177/2378023118811774
+   … The author sets out a social scientific approach to the Fragile Families Challenge. Key insights … of the leaderboard data and did less well on the held-out data (Blum and Hardt 2015). …
+
+42. Inherent trade-offs between diversity and stability in multi-task benchmarks
+   https://arxiv.org/abs/2405.01719
+   (G Zhang, M Hardt - arXiv preprint arXiv:2405.01719, 2024 - arxiv.org | 2405 | cited by 33)
+   [PDF] https://arxiv.org/pdf/2405.01719?
+   … We examine multi-task benchmarks in machine learning … In our research, we focus on the challenge of aggregating … top-20% models in the leaderboard as L, and the ranking calculated …
+
+43. A Protocol for a Market of Machine Learning Models
+   https://assets-eu.researchsquare.com/files/rs-1030456/v1_covered.pdf
+   (CM Popescu - 2021 - assets-eu.researchsquare.com | 2021)
+   [PDF] https://assets-eu.researchsquare.com/files/rs-1030456/v1_covered.pdf
+   … current approaches to machine learning models development … (Blum & Hardt, 2015), the authors describe a simple procedure for ranking machine learning models during a competition. …
+
+44. A framework for challenge design: Insight and deployment challenges to address medical image analysis problems
+   https://arxiv.org/abs/1911.08531
+   (AM Mendrik, SR Aylward - arXiv preprint arXiv:1911.08531, 2019 - arxiv.org | 1911 | cited by 10)
+   [PDF] https://arxiv.org/pdf/1911.08531
+   … The ImageNet challenge revealed the utility of neural … field the Camelyon Challenge, for example, showed that deep learning … the scope of a challenge when interpreting its leaderboard. …
+
+45. How to Host a Data Competition: Statistical Advice for Design and Analysis of a Data Competition
+   https://arxiv.org/abs/1901.05356
+   (CM Anderson-Cook, KL Myers, L Lu, ML Fugate… - arXiv preprint arXiv …, 2019 - arxiv.org | 2019 | cited by 2)
+   [PDF] https://arxiv.org/pdf/1901.05356
+   … Blum and Hardt [8] discuss the overfitting issue with allowing … current data competitions rely exclusively on the leaderboard to … to develop more efficient machine learning algorithms for …
+
+46. What Do Machine Learning Researchers Mean by “Reproducible”?
+   https://ojs.aaai.org/index.php/AAAI/article/view/35093
+   (E Raff, M Benaroch, S Samtani, AL Farris - … on Artificial Intelligence, 2025 - ojs.aaai.org | 2025 | cited by 9)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/view/35093/37248
+   … on the scale of the reproducibility challenge without examining whether their attempts at … Likewise, work has addressed issues in scoring from leaderboards (Blum and Hardt 2015), …
+
+47. Benchmark data repositories for better benchmarking
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/9d41fddf3169f4df3025fc60bfac94fa-Abstract-Datasets_and_Benchmarks_Track.html
+   (R Longjohn, M Kelly, S Singh… - Advances in Neural …, 2024 - proceedings.neurips.cc | 2024 | cited by 25)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/9d41fddf3169f4df3025fc60bfac94fa-Paper-Datasets_and_Benchmarks_Track.pdf
+   … on improving benchmarking practices in machine learning. … as centralized purveyors of leaderboards, we briefly discuss … proper incentivization, an open challenge in the ML community […
+
+48. Improved learning from data competitions through strategic design of training and test data sets
+   https://www.tandfonline.com/doi/abs/10.1080/08982112.2019.1572186
+   (CM Anderson-Cook, L Lu, KL Myers… - Quality …, 2019 - Taylor & Francis | 2019 | cited by 12)
+   [PDF] https://www.osti.gov/servlets/purl/1526951
+   … of the repeated submission aspect of data competitions (Blum and Hardt Citation2015). Hence, it … In our urban search competition, an early version of the leaderboard inadvertently gave …
+
+49. Bayesian adaptive data analysis guarantees from subgaussianity
+   https://arxiv.org/abs/1611.00065
+   (S Elder - arXiv preprint arXiv:1611.00065, 2016 - arxiv.org | 1611 | cited by 25)
+   [PDF] https://arxiv.org/pdf/1611.00065
+   … DFHPRR [4], to follow-up work restricting to the special case of a machine learning competition leaderboard by Blum and Hardt [1], to the wide class of techniques analyzed in [5], focus …
+
+50. The wisdom of 1,170 teams: Lessons and experiences from a large indoor localization competition
+   https://dl.acm.org/doi/abs/10.1145/3570361.3592507
+   (Y Hu, X Fan, Z Yin, F Qian, Z Ji, Y Shu, Y Han… - Proceedings of the 29th …, 2023 - dl.acm.org | 2023 | cited by 17)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3570361.3592507
+   … building, simple machine learning algorithms can outperform deep learning algorithms. In … the private leaderboard (and thus the final ranking) after the competition. In this competition, …
+
+===== Query 3/6: Recht Roelofs Schmidt ImageNet classifiers generalize adaptive overfitting =====
+
+1. Do imagenet classifiers generalize to imagenet?
+   http://proceedings.mlr.press/v97/recht19a.html
+   (B Recht, R Roelofs, L Schmidt… - … conference on machine …, 2019 - proceedings.mlr.press | 2019 | cited by 3111)
+   [PDF] http://proceedings.mlr.press/v97/recht19a/recht19a.pdf
+   We build new test sets for the CIFAR-10 and ImageNet datasets. Both benchmarks have been the focus of intense research for almost a decade, raising the danger of overfitting to excessively re-used test sets. By closely following the original dataset creation processes, we test to what extent current classification models generalize to new data. We evaluate a broad range of models and find accuracy drops of 3%-15% on CIFAR-10 and 11%-14% on ImageNet. However, accuracy gains on the original test sets translate to larger gains on the new test sets. Our results suggest that the accuracy drops are not caused by adaptivity, but by the models’ inability to generalize to slightly" harder" images than those found in the original test sets.
+
+===== Query 4/6: reusable holdout adaptive data analysis differential privacy Dwork =====
+
+1. The reusable holdout: Preserving validity in adaptive data analysis
+   https://www.science.org/doi/abs/10.1126/science.aaa9375
+   (C Dwork, V Feldman, M Hardt, T Pitassi, O Reingold… - Science, 2015 - science.org | 2015 | cited by 474)
+   [PDF] https://www.nematilab.info/bmijc/assets/091218_paper.pdf
+   … our reusable holdout method comes from differential privacy—a notion of privacy preservation in data analysis … Roughly speaking, differential privacy ensures that the probability of …
+
+2. Generalization in adaptive data analysis and holdout reuse
+   https://proceedings.neurips.cc/paper/2015/hash/bad5f33780c42f2588878a9d07405083-Abstract.html
+   (C Dwork, V Feldman, M Hardt… - Advances in neural …, 2015 - proceedings.neurips.cc | 2015 | cited by 312)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2015/file/bad5f33780c42f2588878a9d07405083-Paper.pdf
+   … problem of reusing the holdout set for validation in the adaptive setting. A reusable holdout: We … The measure we introduce in this work (max information), like differential privacy, has the …
+
+3. Guilt-free data reuse
+   https://dl.acm.org/doi/abs/10.1145/3051088
+   (C Dwork, V Feldman, M Hardt, T Pitassi… - Communications of the …, 2017 - dl.acm.org | 2017 | cited by 21)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3051088
+   … We describe a specific instantiation of reusable holdout … differential privacy and to obtain corresponding results for our problem of guaranteeing generalization in adaptive data analysis. …
+
+4. Preserving statistical validity in adaptive data analysis
+   https://dl.acm.org/doi/abs/10.1145/2746539.2746580
+   (C Dwork, V Feldman, M Hardt, T Pitassi… - Proceedings of the forty …, 2015 - dl.acm.org | 2015 | cited by 487)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/2746539.2746580
+   … This theorem allows us to draw on a rich body of results in differential privacy and to obtain corresponding results for our problem of guaranteeing validity in adaptive data analysis. …
+
+5. Information, privacy and stability in adaptive data analysis
+   https://arxiv.org/abs/1706.00820
+   (A Smith - arXiv preprint arXiv:1706.00820, 2017 - arxiv.org | 1706 | cited by 16)
+   [PDF] https://arxiv.org/pdf/1706.00820
+   … , we could get validity guarantees for adaptive data analysis. Alas, there is a hitch. … work with “differential privacy”, a notion of stability introduced in the context of privacy of statistical data…
+
+6. Algorithmic stability for adaptive data analysis
+   https://dl.acm.org/doi/abs/10.1145/2897518.2897566
+   (R Bassily, K Nissim, A Smith, T Steinke… - Proceedings of the forty …, 2016 - dl.acm.org | 2016 | cited by 355)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/2897518.2897566
+   … We extend their work by giving a quantitatively optimal, more … In this paper, we refer to differential privacy as max-KL-stability (… The reusable holdout: Preserving validity in adaptive data …
+
+7. Adaptive statistical learning with Bayesian differential privacy
+   https://dl.acm.org/doi/abs/10.1145/3139550.3139556
+   (J Zhao - … of the 2017 on Workshop on Privacy in the Electronic …, 2017 - dl.acm.org | 2017 | cited by 1)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3139550.3139556
+   … adaptive statistical learning generalize the results of Dwork et al. for iid data samples to arbitrarily correlated data… in adaptive statistical learning generalize recent work of Dwork et al. [12…
+
+8. AF: Medium: Collaborative Proposal: Foundations of Adaptive Data Analysis
+   https://ui.adsabs.harvard.edu/abs/2018nsf....1763665D/abstract
+   (C Dwork - NSF Award Number 1763665. Directorate for …, 2018 - ui.adsabs.harvard.edu | 1763)
+   … Dwork and Roth, together with other collaborators, in 2014, established that differential privacy … They used these ideas to construct the first reusable holdout set. Later, co-PI Smith, with …
+
+9. Improved generalization guarantees in restricted data models
+   https://arxiv.org/abs/2207.10668
+   (E Du, C Dwork - arXiv preprint arXiv:2207.10668, 2022 - arxiv.org | 2207 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2207.10668
+   … The cost of this protection is the accuracy loss incurred by differential privacy. In this work, … we obtain the following bounds when doing adaptive data analysis with in a simple setting: …
+
+10. Exposed! a survey of attacks on private data
+   https://www.annualreviews.org/content/journals/10.1146/annurev-statistics-060116-054123
+   (C Dwork, A Smith, T Steinke… - Annual Review of …, 2017 - annualreviews.org | 2017 | cited by 429)
+   [PDF] https://www.khoury.northeastern.edu/home/jullman/cs7880s17/DSSV.pdf
+   … We also discuss techniques from the differential privacy literature for releasing … adaptive setting, as the composition property of differential privacy holds even for adaptive data analysis. …
+
+11. Differential privacy under continual observation
+   https://dl.acm.org/doi/abs/10.1145/1806689.1806787
+   (C Dwork, M Naor, T Pitassi, GN Rothblum - Proceedings of the forty …, 2010 - dl.acm.org | 2010 | cited by 1064)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/1806689.1806787
+   … Differential privacy is a recent notion of privacy tailored to privacy-preserving data analysis [11]. Up to this point… Differential privacy is a recent privacy guarantee tailored to the problem of …
+
+12. Mitigating bias in adaptive data gathering via differential privacy
+   http://proceedings.mlr.press/v80/neel18a.html
+   (S Neel, A Roth - International Conference on Machine …, 2018 - proceedings.mlr.press | 2018 | cited by 56)
+   [PDF] http://proceedings.mlr.press/v80/neel18a/neel18a.pdf
+   … line of work is the recent literature on adaptive data analysis (… that adaptive data gathering can be re-cast as an adaptive data analysis procedure, and so the results from the adaptive …
+
+13. A new approach to adaptive data analysis and learning via maximal leakage
+   https://arxiv.org/abs/1903.01777
+   (AR Esposito, M Gastpar, I Issa - arXiv preprint arXiv:1903.01777, 2019 - arxiv.org | 1903 | cited by 9)
+   [PDF] https://arxiv.org/pdf/1903.01777
+   … results obtained using Max-Information or Differential Privacy. In contrast with the line of work started by Dwork et al., our results do not rely on Differential Privacy but are, in principle, …
+
+14. Differentially private false discovery rate control
+   https://arxiv.org/abs/1807.04209
+   (C Dwork, WJ Su, L Zhang - arXiv preprint arXiv:1807.04209, 2018 - arxiv.org | 1807 | cited by 39)
+   [PDF] https://arxiv.org/pdf/1807.04209
+   … need two facts about differential privacy: (1) differential privacy is closed under … differential privacy: it protects against false discoveries due to adaptive data analysis, where an analysis …
+
+15. Privacy-preserving prediction
+   https://proceedings.mlr.press/v75/dwork18a.html
+   (C Dwork, V Feldman - Conference On Learning Theory, 2018 - proceedings.mlr.press | 2018 | cited by 147)
+   [PDF] http://proceedings.mlr.press/v75/dwork18a/dwork18a.pdf
+   … the well-studied differential privacy model of privacy that has … work in the context of adaptive data analysis has substantially strengthened this connection, proving that differential privacy …
+
+16. Differentially private learning beyond the classical dimensionality regime
+   https://link.springer.com/chapter/10.1007/978-3-032-12290-2_11
+   (C Dwork, P Tankala, L Zhang - Theory of Cryptography Conference, 2025 - Springer | 2025 | cited by 9)
+   [PDF] https://arxiv.org/pdf/2411.13682
+   … differential privacy (DP), the accepted definition of rigorous privacy protection for data analysis… We focus on the notion of approximate, or \((\varepsilon , \delta )\)-differential privacy with …
+
+17. The algorithmic foundations of differential privacy
+   https://www.emerald.com/fttcs/article/9/3-4/211/1332491
+   (C Dwork, A Roth - Foundations and trends® in theoretical computer …, 2014 - emerald.com | 2014 | cited by 13800)
+   [PDF] https://www.tau.ac.il/~saharon/BigData2018/privacybook.pdf
+   … Hence, by promising a guarantee of ε -differential privacy, a data analyst can promise an individual that his expected future utility will not be harmed by more than an exp ⁡ ( ε ) ≈ ( 1 + ε …
+
+18. Private false discovery rate control
+   https://arxiv.org/abs/1511.03803
+   (C Dwork, W Su, L Zhang - arXiv preprint arXiv:1511.03803, 2015 - arxiv.org | 1511 | cited by 23)
+   [PDF] https://arxiv.org/pdf/1511.03803
+   … on k down to /k for approximate differential privacy, which is what we show in this paper. … showing that differential privacy protects against false discoveries due to adaptive data analysis […
+
+19. Differential privacy
+   https://link.springer.com/content/pdf/10.1007/978-3-030-71522-9_752.pdf
+   (C Dwork - Encyclopedia of Cryptography, Security and Privacy, 2025 - Springer | 2025 | cited by 11333)
+   [PDF] https://www.comp.nus.edu.sg/~tankl/cs5322/readings/dwork.pdf
+   … In the case of the differential attack 247 ⊳ chosen plaintexts are required, though the attack would still work if the data is coming from up to 233 different keys. However, the huge amount …
+
+20. Differentially Private Verification of Distribution Properties
+   https://arxiv.org/abs/2604.10819
+   (E Du, C Dwork, P Tankala, L Zhang - arXiv preprint arXiv:2604.10819, 2026 - arxiv.org | 2604)
+   [PDF] https://arxiv.org/pdf/2604.10819
+   … We show that, by relaxing to approximate differential privacy [DKM… 06], also known as (ε, δ)-differential privacy, we can use the Propose-Test-Release framework of Dwork and Lei [DL09…
+
+21. Fingerprinting codes meet geometry: Improved lower bounds for private query release and adaptive data analysis
+   https://dl.acm.org/doi/abs/10.1145/3717823.3718295
+   (X Lyu, K Talwar - Proceedings of the 57th Annual ACM Symposium on …, 2025 - dl.acm.org | 2025 | cited by 4)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3717823.3718295
+   … help prove new lower bounds in differential privacy and adaptive data analysis. Our work shows that fingerprinting tools can … The reusable holdout: Preserving validity in adaptive data …
+
+22. The Generic Holdout: Preventing False-Discoveries in Adaptive Data Science
+   https://arxiv.org/abs/1809.05596
+   (P Nakkiran, J Błasiok - arXiv preprint arXiv:1809.05596, 2018 - arxiv.org | 1809)
+   [PDF] https://arxiv.org/pdf/1809.05596
+   … In this work, we propose a new framework for adaptive … We extend the reusable holdout idea, and propose that the holdout … Differential Privacy [13] and Adaptive Data Analysis [12]. The …
+
+23. Calibrating noise to variance in adaptive data analysis
+   http://proceedings.mlr.press/v75/feldman18a.html
+   (V Feldman, T Steinke - Conference On Learning Theory, 2018 - proceedings.mlr.press | 2018 | cited by 66)
+   [PDF] http://proceedings.mlr.press/v75/feldman18a/feldman18a.pdf
+   … A recent line of work studies the challenges that arise from such adaptive … to satisfy than differential privacy, yet has the properties crucial for application in adaptive data analysis. These …
+
+24. Adaptive Data Analysis for Growing Data
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/8a79b3038a95f0d92d00d4e35874ada0-Abstract-Conference.html
+   (N Marchant, B Rubinstein - Advances in Neural Information …, 2026 - proceedings.neurips.cc | 2026 | cited by 1)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/8a79b3038a95f0d92d00d4e35874ada0-Paper-Conference.pdf
+   … Differential privacy [19] is commonly adopted as a notion of stability in this work, achieving … definition of differential privacy, where the level of privacy/stability varies non-uniformly over …
+
+25. Differential privacy-based evaporative cooling feature selection and classification with relief-F and random forests
+   https://academic.oup.com/bioinformatics/article-abstract/33/18/2906/3796394
+   (TT Le, WK Simmons, M Misaki, J Bodurka… - …, 2017 - academic.oup.com | 2017 | cited by 42)
+   [PDF] https://academic.oup.com/bioinformatics/article-pdf/33/18/2906/49041392/btx298.pdf
+   … , such as differentially private random forests and reusable holdout sets, … data analysis, one of the earliest examples being the … In future work, we plan to use the Boltzmann formalism to …
+
+26. AF: Medium: Collaborative Research: Foundations of Adaptive Data Analysis
+   https://ui.adsabs.harvard.edu/abs/2018nsf....1763786S/abstract
+   (A Smith - NSF Award Number 1763786. Directorate for …, 2018 - ui.adsabs.harvard.edu | 1763)
+   … Dwork and Roth, together with other collaborators, in 2014, established that differential privacy … They used these ideas to construct the first reusable holdout set. Later, co-PI Smith, with …
+
+27. adpt: A Differentially Private Tool for Adaptive Data Analysis
+   
+   (B Chen, L Cai, J Hart, D Sun - 2016 | 2016)
+
+28. Test data reuse for the evaluation of continuously evolving classification algorithms using the area under the receiver operating characteristic curve
+   https://epubs.siam.org/doi/abs/10.1137/20M1333110
+   (A Gossmann, A Pezeshk, YP Wang, B Sahiner - … on Mathematics of Data …, 2021 - SIAM | 2021 | cited by 15)
+   [PDF] https://epubs.siam.org/doi/pdf/10.1137/20M1333110
+   … version of the reusable holdout mechanism of Dwork et al. [… of differential privacy under postprocessing and adaptive composition is exactly what we need for the adaptive data analysis …
+
+29. Controlling bias in adaptive data analysis using information theory
+   https://proceedings.mlr.press/v51/russo16.html
+   (D Russo, J Zou - Artificial Intelligence and Statistics, 2016 - proceedings.mlr.press | 2016 | cited by 281)
+   [PDF] http://proceedings.mlr.press/v51/russo16.pdf
+   … We also show how recent insights from differential privacy emerge from this framework … work inspired by differential privacy [3, 7, 8, 11]. 4.1 General model of adaptive data analysis …
+
+30. Differential privacy-based evaporative cooling feature selection and classification with relief-F and random forests
+   https://www.academia.edu/download/87708136/btx298.pdf
+   (TT Le, WK Simmons, M Misaki, J Bodurka, BC White… - …, 2017 - academia.edu | 2017)
+   [PDF] https://www.academia.edu/download/87708136/btx298.pdf
+   … , such as differentially private random forests and reusable holdout sets, … data analysis, one of the earliest examples being the … In future work, we plan to use the Boltzmann formalism to …
+
+31. Stability is stable: Connections between replicability, privacy, and adaptive generalization
+   https://dl.acm.org/doi/abs/10.1145/3564246.3585246
+   (M Bun, M Gaboardi, M Hopkins, R Impagliazzo… - Proceedings of the 55th …, 2023 - dl.acm.org | 2023 | cited by 20)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3564246.3585246
+   … data analysis. Others have played central roles in relatively mature areas such as differential privacy and adaptive data analysis. … in this work) replicable learning, with differential privacy …
+
+32. Max-information, differential privacy, and post-selection hypothesis testing
+   https://ieeexplore.ieee.org/abstract/document/7782963/
+   (R Rogers, A Roth, A Smith… - 2016 IEEE 57th Annual …, 2016 - ieeexplore.ieee.org | 2016 | cited by 110)
+   [PDF] https://arxiv.org/pdf/1604.03924
+   … measure controlling the generalization properties of adaptive data analyses. We also show a … by Dwork et al. [23]. Its connection to adaptive data analysis was made by Dwork et al. [4] …
+
+33. Over-the-Air Federated Adaptive Data Analysis: Preserving Accuracy via Opportunistic Differential Privacy
+   https://arxiv.org/abs/2411.15948
+   (AH Hadavi, MM Mojahedian, MR Aref - arXiv preprint arXiv:2411.15948, 2024 - arxiv.org | 2411 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2411.15948
+   … However, the notion of distributed responders introduced in this work closely aligns with concepts … Together, these nodes work to train a shared neural network. Each client uses its local …
+
+34. Validity Markets in Adaptive Data Analysis
+   
+   (W Brown - the social sciences)
+
+35. A rademacher complexity based method for controlling power and confidence level in adaptive statistical analysis
+   https://ieeexplore.ieee.org/abstract/document/8964235/
+   (L De Stefani, E Upfal - … Data Science and Advanced Analytics …, 2019 - ieeexplore.ieee.org | 2019 | cited by 10)
+   [PDF] https://par.nsf.gov/servlets/purl/10183277
+   … synthetic data. Finally, in Section VI we compare our approach to the stateof-the-art approach based on Differential Privacy by Dwork et … differential privacy based solution of Dwork et al.. …
+
+36. Adaptive data analysis with correlated observations
+   https://proceedings.mlr.press/v162/kontorovich22a.html
+   (A Kontorovich, M Sadigurschi… - … conference on machine …, 2022 - proceedings.mlr.press | 2022 | cited by 14)
+   [PDF] https://proceedings.mlr.press/v162/kontorovich22a/kontorovich22a.pdf
+   … The vast majority of the work on adaptive data analysis … applied in this context, such as differential privacy, max-information, … between differential privacy and adaptive data analysis into …
+
+37. Improving sparse vector technique with renyi differential privacy
+   https://proceedings.neurips.cc/paper/2020/hash/e9bf14a419d77534105016f5ec122d62-Abstract.html
+   (Y Zhu, YX Wang - Advances in neural information …, 2020 - proceedings.neurips.cc | 2020 | cited by 34)
+   [PDF] https://proceedings.neurips.cc/paper/2020/file/e9bf14a419d77534105016f5ec122d62-Paper.pdf
+   … Moreover, we applied our results to the problem of adaptive data analysis and provided a “… The focus of the work is to bring a mature and classical technique in differential privacy — …
+
+38. Adaptive Data Analysis
+   https://people.seas.harvard.edu/~madhusudan/courses/Spring2016/notes/thomas-notes-ada.pdf
+   (T Steinke - 2016 - people.seas.harvard.edu | 2016 | cited by 2)
+   [PDF] https://people.seas.harvard.edu/~madhusudan/courses/Spring2016/notes/thomas-notes-ada.pdf
+   … ’s data were removed from x or replaced, we would have x instead and differential privacy … , as well as various results about differential privacy, read Dwork’s survey [Dwo06] or the …
+
+39. Program analysis for adaptive data analysis
+   https://dl.acm.org/doi/abs/10.1145/3656414
+   (J Liu, W Qu, M Gaboardi, D Garg, J Ullman - Proceedings of the ACM on …, 2024 - dl.acm.org | 2024 | cited by 4)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3656414
+   … In this work, we consider adaptive data analyses … data splitting mechanism or the reusable holdout technique from … of a data analysis, even in adaptive settings, differential privacy can …
+
+40. The Reusable Holdout: Preserving Statistical Validity in
+   https://pdfs.semanticscholar.org/b2e1/b216eda762e249456655ffbfc2e46a85d9e5.pdf
+   (C Dwork, V Feldman, M Hardt, T Pitassi, O Reingold… - pdfs.semanticscholar.org)
+   … Problems: ● Holdout set can only be used for testing once ● Need new data to do a second test based on results of the first ● Gets expensive/difficult to keep getting new data …
+
+41. Efficient Adaptive Data Analysis over Dense Distributions
+   https://arxiv.org/abs/2602.07732
+   (JS Huh - arXiv preprint arXiv:2602.07732, 2026 - arxiv.org | 2602)
+   [PDF] https://arxiv.org/pdf/2602.07732
+   … In this work, we shed light on this trade-off by identifying a … based on differential privacy, it satisfies a relaxed privacy notion known … adaptive data analysis and privacy beyond differential …
+
+42. Guaranteed validity for empirical approaches to adaptive data analysis
+   https://proceedings.mlr.press/v108/rogers20a.html
+   (R Rogers, A Roth, A Smith, N Srebro… - International …, 2020 - proceedings.mlr.press | 2020 | cited by 18)
+   [PDF] http://proceedings.mlr.press/v108/rogers20a/rogers20a.pdf
+   … adaptive statistical queries that focuses on providing explicit confidence intervals along with point estimates. Prior work in this … In this work, we focus on algorithms that provide explicit …
+
+43. Applying differential privacy mechanism in artificial intelligence
+   https://ieeexplore.ieee.org/abstract/document/8885331/
+   (T Zhu, SY Philip - 2019 IEEE 39th international conference on …, 2019 - ieeexplore.ieee.org | 2019 | cited by 66)
+   … NA (Not Available) only means currently no work has been proposed in that related area. … that differential privacy mechanisms can be used to develop adaptive data analysis algorithms …
+
+44. Adaptive learning with robust generalization guarantees
+   http://proceedings.mlr.press/v49/cummings16.html
+   (R Cummings, K Ligett, K Nissim… - … on Learning Theory, 2016 - proceedings.mlr.press | 2016 | cited by 81)
+   [PDF] http://proceedings.mlr.press/v49/cummings16.pdf
+   … We also show that, in a sense, differential privacy is a strictly weaker guarantee than perfect … we study in this paper, suitable for adaptive data analysis. Dwork et al. (2015c) show that …
+
+45. Natural analysts in adaptive data analysis
+   http://proceedings.mlr.press/v97/zrnic19a.html
+   (T Zrnic, M Hardt - International Conference on Machine …, 2019 - proceedings.mlr.press | 2019 | cited by 23)
+   [PDF] http://proceedings.mlr.press/v97/zrnic19a/zrnic19a.pdf
+   … work on adaptive data analysis, the transcript at time t consists of all query-answer pairs thus far, (q1,a1,...,qt−1,at−1). Recall that, in this work, the analyst only … used differential privacy to …
+
+46. Generalization for adaptively-chosen estimators via stable median
+   http://proceedings.mlr.press/v65/feldman17a.html
+   (V Feldman, T Steinke - Conference on learning theory, 2017 - proceedings.mlr.press | 2017 | cited by 55)
+   [PDF] http://proceedings.mlr.press/v65/feldman17a/feldman17a.pdf
+   … queries k (as in the reusable holdout technique). Our algorithm … the key adaptive composition property of differential privacy, … Controlling bias in adaptive data analysis using information …
+
+47. EXPRESS: Where Should Firms Implement Differential Privacy in Targeting? Implications for Profitability
+   https://journals.sagepub.com/doi/abs/10.1177/00222437261455302
+   (GR Ponte, T Boot, T Reutterer… - Journal of Marketing … - journals.sagepub.com)
+   … We structure our discussion of related work around the areas depicted in Figure 1. We … tors with differential privacy. We first review CATE estimators without differential privacy on which …
+
+48. Tempered sigmoid activations for deep learning with differential privacy
+   https://ojs.aaai.org/index.php/AAAI/article/view/17123
+   (N Papernot, A Thakurta, S Song, S Chien… - Proceedings of the …, 2021 - ojs.aaai.org | 2021 | cited by 274)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/download/17123/16930
+   … This approach leads to less than ideal privacy/utility tradeoffs, as we show here. To improve these tradeoffs, prior work introduces variants of differential privacy that weaken the privacy …
+
+49. A Rademacher Complexity Based Method fo rControlling Power and Confidence Level in Adaptive Statistical Analysis
+   https://arxiv.org/abs/1910.03493
+   (L De Stefani, E Upfal - arXiv preprint arXiv:1910.03493, 2019 - arxiv.org | 1910 | cited by 1)
+   [PDF] https://arxiv.org/pdf/1910.03493
+   … synthetic data. Finally, in Section VI we compare our approach to the stateof-the-art approach based on Differential Privacy by Dwork et … differential privacy based solution of Dwork et al.. …
+
+50. A new analysis of differential privacy's generalization guarantees
+   https://arxiv.org/abs/1909.03577
+   (C Jung, K Ligett, S Neel, A Roth… - arXiv preprint arXiv …, 2019 - arxiv.org | 2019 | cited by 67)
+   [PDF] https://arxiv.org/pdf/1909.03577
+   … ” underlying adaptive data analysis: that any mechanism for answering adaptively chosen statistical … In contrast, we work in the standard adversarial setting originally introduced by …
+
+===== Query 5/6: GSM-Symbolic Apple Mirzadeh mathematical reasoning LLM =====
+
+1. Gsm-symbolic: Understanding the limitations of mathematical reasoning in large language models
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/ec2e7a896f8250986b3907f57621ce94-Abstract-Conference.html
+   (I Mirzadeh, K Alizadeh-Vahid… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 1023)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/ec2e7a896f8250986b3907f57621ce94-Paper-Conference.pdf
+   … questions, we argue that viewing LLM performance as a distribution across various problem instances provides deeper insights. The design of GSM-Symbolic enables the generation of …
+
+2. Dimsum: Discourse in mathematical reasoning as a supervision module
+   https://aclanthology.org/2025.sigdial-1.24/
+   (K Sharma, NR Barman, A Chaturvedi… - Proceedings of the 26th …, 2025 - aclanthology.org | 2025 | cited by 3)
+   [PDF] https://aclanthology.org/2025.sigdial-1.24.pdf
+   … We find, with Mirzadeh et al. (2024), that current LLM progress on the data set may not be … with three distinct data sets, Hard GSM8K and variants, GSM symbolic and our variants and …
+
+3. The Impact of Apple's GSM Symbolic Research on Large Language Models (LLMs)
+   https://www.researchgate.net/profile/Antonios-Valamontes/publication/384971633_The_Impact_of_Apple's_GSM_Symbolic_Research_on_Large_Language_Models_LLMs/links/671017d924a01038d0f084c6/The-Impact-of-Apples-GSM-Symbolic-Research-on-Large-Language-Models-LLMs.pdf
+   (A Valamontes - 2024 - researchgate.net | 2024)
+   [PDF] https://www.researchgate.net/profile/Antonios-Valamontes/publication/384971633_The_Impact_of_Apple's_GSM_Symbolic_Research_on_Large_Language_Models_LLMs/links/671017d924a01038d0f084c6/The-Impact-of-Apples-GSM-Symbolic-Research-on-Large-Language-Models-LLMs.pdf
+   … One of the key issues raised by Apple researchers is the role of data contamination and … AI (Mirzadeh et al., 2024). The GSM 8K benchmark, used to assess AI’s mathematical reasoning …
+
+4. Constructive Circuit Amplification: Improving Math Reasoning in LLMs via Targeted Sub-Network Updates
+   https://arxiv.org/abs/2512.16914
+   (N Prakash, D Ren, D Moritz, Y Assogba - arXiv preprint arXiv:2512.16914, 2025 - arxiv.org | 2512)
+   [PDF] https://arxiv.org/pdf/2512.16914
+   … Our results demonstrate that LLM skills can be selectively … each GSM-Symbolic instance, we first sample a reasoning … We would like to thank our colleagues at Apple, with special …
+
+5. Math-DB: A Discourse Framework for Mathematical Word Problems to Enhance LLM Reasoning
+   https://aclanthology.org/2026.law-main.7/
+   (ME Er - Proceedings of the 20th Linguistic Annotation …, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.law-main.7.pdf
+   … We applied this framework to the GSMSymbolic dataset of 12,500 … How many apples does Jim need to have the same as John?” … in the original GSM-Symbolic study (Mirzadeh et al.…
+
+6. Investigating equation-only reasoning in large language models
+   https://openreview.net/forum?id=ff5FfJ2wxq
+   (J Chung - … Workshop on Logical Reasoning of Large Language …, 2026 - openreview.net | 2026)
+   [PDF] https://openreview.net/pdf?id=ff5FfJ2wxq
+   … exceeds LLM-… to GSMSymbolic validates robust reasoning beyond pattern matching. These findings advance understanding of LLMs’ capabilities in structured mathematical reasoning …
+
+7. Can llms reason abstractly over math word problems without cot? disentangling abstract formulation from arithmetic computation
+   https://aclanthology.org/2025.emnlp-main.723/
+   (Z Cheng, M Cao, L Pishdad, Y Cao… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 5)
+   [PDF] https://aclanthology.org/2025.emnlp-main.723.pdf
+   … evaluation to accurately assess LLM reasoning and to guide future improvements.… Most prior mechanistic interpretability work in math reasoning has focused on synthetic arithmetic cal…
+
+8. Benchmarking Abstract and Reasoning Abilities Through A Theoretical Perspective
+   https://arxiv.org/abs/2505.23833
+   (Q Ma, Y Wu, X Zheng, R Ji - arXiv preprint arXiv:2505.23833, 2025 - arxiv.org | 2505 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2505.23833?
+   … To further probe the nature of LLM abstract reasoning, we conducted supplementary … MuggleMath: Assessing the impact of query and response augmentation on math reasoning…
+
+9. Integrating Arithmetic Learning Improves Mathematical Reasoning in Smaller Models
+   https://arxiv.org/abs/2502.12855
+   (N Gangwar, SP Bhat, N Kani - arXiv preprint arXiv:2502.12855, 2025 - arxiv.org | 2502)
+   [PDF] https://arxiv.org/pdf/2502.12855?
+   … GSM-Symbolic contains 100 test problems from GSM8k for which variations can be systematically … 10,552 HF qintongli/GSM-Plus GSM-Symbolic 100 × 50 GH apple/ml-gsm-symbolic …
+
+10. StreetMath: Understanding How LLMs Approximate Mathematical Reasoning
+   https://openreview.net/forum?id=tB1KsFj9u4
+   (CY Tseng, S Roy, D Zhang, B Effiong - Second Workshop on … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=tB1KsFj9u4
+   … We conduct extensive evaluations across different LLM architectures: Qwen3-4B-Instruct-… hypothesis is supported by Mirzadeh et al.’s GSM-Symbolic analysis (Mirzadeh et al. 2024), …
+
+11. GSM-AIV: Exposing the Fragile Boundaries of Mathematical Reasoning in LLMs through Contextual Recomposition
+   http://poster-openaccess.com/files/ICIC2025/4111.pdf
+   (H Liu, Z Zhang, Y Hong, Y Guo, S Gong, M Wang - poster-openaccess.com)
+   [PDF] http://poster-openaccess.com/files/ICIC2025/4111.pdf
+   … the assessment of LLM’s mathematical reasoning ability is usu… GSM-Symbolic extracts variables (eg, entity name, numerical … Four friends decided to gather apples from their backyard …
+
+12. GSM-Agent: Understanding Agentic Reasoning Using Controllable Environments
+   https://arxiv.org/abs/2509.21998
+   (H Zhu, T Guo, S Mei, S Russell, N Ghosh… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025)
+   [PDF] https://arxiv.org/pdf/2509.21998
+   … LLM agent is required to solve grade-school-level reasoning … scenarios, leading to a better apples-to-apples comparison. … LLM agent is required to solve grade-school math reasoning …
+
+13. Reasonagain: Using extractable symbolic programs to evaluate mathematical reasoning
+   https://arxiv.org/abs/2410.19056
+   (X Yu, B Zhou, H Cheng, D Roth - arXiv preprint arXiv:2410.19056, 2024 - arxiv.org | 2410 | cited by 14)
+   [PDF] https://arxiv.org/pdf/2410.19056?
+   … question, we first ask a pivot LLM (GPT-4o) to generate the parameters of questions. … way for automatic mathematical reasoning evaluation by checking the reasoning reliability using …
+
+14. Lost in Cultural Translation: Do LLMs Struggle with Math Across Cultural Contexts?
+   https://arxiv.org/abs/2503.18018
+   (A Karim, A Karim, B Lohana, M Keon, J Singh… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 10)
+   [PDF] https://arxiv.org/pdf/2503.18018
+   … math problems. This study highlights the impact of cultural context on the mathematical reasoning … to evaluate the mathematical reasoning capabilities of LLM (Mirzadeh et al. [5]). …
+
+15. Mathematical reasoning in large language models: Assessing logical and arithmetic errors across wide numerical ranges
+   https://arxiv.org/abs/2502.08680
+   (S Shrestha, M Kim, K Ross - arXiv preprint arXiv:2502.08680, 2025 - arxiv.org | 2502 | cited by 22)
+   [PDF] https://arxiv.org/pdf/2502.08680
+   … alone accurately assess an LLM’s mathematical reasoning capabilities. Previous studies … incoherent math problems (eg “A store sells -7 items in a day”, “Eat 10 apples out of 3 apples”). …
+
+16. Exploring LLMs mathematical reasoning capability: Insights from GSM-Symbolic in English and Polish
+   https://indico.global/event/10042/contributions/124001/attachments/57563/110539/SITEE_2025_ABSTRACT_MT_ML.pdf
+   (M Tomczyk, M Łominski - indico.global)
+   [PDF] https://indico.global/event/10042/contributions/124001/attachments/57563/110539/SITEE_2025_ABSTRACT_MT_ML.pdf
+   … GSM-Symbolic datasets using the Google Translator API, creating Polish equivalents, which we have provisionally named GSM-Symbolic-… proper mathematical thinking and reasoning …
+
+17. Reasoning-as-logic-units: Scaling test-time reasoning in large language models through logic unit alignment
+   https://arxiv.org/abs/2502.07803
+   (C Li, T Xu, Y Guo - arXiv preprint arXiv:2502.07803, 2025 - arxiv.org | 2502 | cited by 17)
+   [PDF] https://arxiv.org/pdf/2502.07803?
+   … : inconsistencies between LLM-reported reasoning steps and … in mathematical reasoning (GSM8K, MATH) and algorithmic … number of apples and oranges in the format ‘X apples and Y …
+
+18. Reasoning on a spectrum: Aligning llms to system 1 and system 2 thinking
+   https://arxiv.org/abs/2502.12470
+   (AS Ziabari, N Ghazizadeh, Z Sourati… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 12)
+   [PDF] https://arxiv.org/pdf/2502.12470
+   … S1 and S2 reasoning based on output entropy signals. By framing LLM reasoning as a … reasoning strategy for a given task and sets the stage for more flexible, efficient, and robust …
+
+19. Evaluating and improving mathematical reasoning in large language models via skill combinations
+   https://umontreal.scholaris.ca/items/9f8c1c66-0730-4427-abfb-02a2b270684e
+   (V Shah - 2025 - umontreal.scholaris.ca | 2025)
+   [PDF] https://umontreal.scholaris.ca/bitstreams/40c57c0a-022f-4ef7-8d26-0fd333f59425/download
+   … pushed the frontier of LLM abilities including in mathematical reasoning. These discoveries … mathematical reasoning models as an end product. This makes an apples-to-apples …
+
+20. Rethinking Math Reasoning Evaluation: A Robust LLM-as-a-Judge Framework Beyond Symbolic Rigidity
+   https://arxiv.org/abs/2604.22597
+   (E Yosef, O Anschel, SH Hakimi, A Gendler… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2604.22597
+   … introduce an LLM-based evaluation framework for mathematical reasoning, in which an LLM acts … Question: "Becky bought 20 apples for 45 cents each and received a $1 discount. Kelly …
+
+21. Understanding and Reasoning with Numerical Information in the Era of Large Language Models
+   https://research-repository.rmit.edu.au/articles/thesis/Understanding_and_Reasoning_with_Numerical_Information_in_the_Era_of_Large_Language_Models/30495623
+   (R Mahendra - 2025 - research-repository.rmit.edu.au | 2025)
+   [PDF] https://research-repository.rmit.edu.au/articles/thesis/Understanding_and_Reasoning_with_Numerical_Information_in_the_Era_of_Large_Language_Models/30495623/1/files/59195375.pdf
+   … the limitations of mathematical reasoning in large language models. GSM-Symbolic utilizes … (eg, inferring total fruit count from individual mentions of apples, oranges, and bananas). The …
+
+22. Exploring the hidden reasoning process of large language models by misleading them
+   https://aclanthology.org/anthology-files/pdf/findings/2025.findings-emnlp.1102.pdf
+   (G Chen, P Wang, T Zhang, F Chen - arXiv preprint arXiv …, 2025 - aclanthology.org | 2025 | cited by 4)
+   [PDF] https://aclanthology.org/anthology-files/pdf/findings/2025.findings-emnlp.1102.pdf
+   … math reasoning problems through (a) memorization and pattern matching, or (b) mathematical abstraction and rule-based reasoning… the impact of different LLM layers through partial fine…
+
+23. StreetMath: Study of LLMs' Approximation Behaviors
+   https://arxiv.org/abs/2510.25776
+   (CY Tseng, S Roy, M Thasin, D Zhang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2510.25776
+   … We conduct extensive evaluations across different LLM … -choice math reasoning problems under street math settings, … is supported by Mirzadeh et al.’s GSM-Symbolic analysis [31], …
+
+24. V-MATH and Veri-Math: Step Level Verification for Enhancing Mathematical Reasoning in Large Language Models.
+   https://www.researchgate.net/profile/John-Rugaba/publication/403758874_V-MATH_and_Veri-Math_Step_Level_Verification_for_Enhancing_Mathematical_Reasoning_in_Large_Language_Models/links/69dcb52600864436152c7720/V-MATH-and-Veri-Math-Step-Level-Verification-for-Enhancing-Mathematical-Reasoning-in-Large-Language-Models.pdf
+   (RJ PAUL - researchgate.net)
+   [PDF] https://www.researchgate.net/profile/John-Rugaba/publication/403758874_V-MATH_and_Veri-Math_Step_Level_Verification_for_Enhancing_Mathematical_Reasoning_in_Large_Language_Models/links/69dcb52600864436152c7720/V-MATH-and-Veri-Math-Step-Level-Verification-for-Enhancing-Mathematical-Reasoning-in-Large-Language-Models.pdf
+   … methods, and verifier architectures as the foundation of any presented work attempting to push forward scientific inquiry through improvements to LLM mathematical reasoning. …
+
+25. Numerical Sensitivity and Robustness: Exploring the Flaws of Mathematical Reasoning in Large Language Models
+   https://arxiv.org/abs/2511.08022
+   (Z Sun, G Dai, I Tsang, H Ye - arXiv preprint arXiv:2511.08022, 2025 - arxiv.org | 2511 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2511.08022
+   … of mathematical reasoning, but whether they have true the mathematical understanding … To explore this issue, we propose a new perturbation framework to evaluate LLMs' reasoning …
+
+26. Evaluating Robustness of LLMs to Numerical Variations in Mathematical Reasoning
+   https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/Q2-20.pdf
+   (YYHYT Tokunaga - anlp.jp)
+   [PDF] https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/Q2-20.pdf
+   … LLM actually performs reasoning or just replicates patterns learned. We propose a novel method to augment math … He wants to buy 5 kg of apples and 3 packs of sugar. One kilogram of …
+
+27. Evaluating robustness of LLMs to numerical variations in mathematical reasoning
+   https://aclanthology.org/2025.insights-1.16/
+   (Y Yang, H Yamada, T Tokunaga - The Sixth Workshop on Insights …, 2025 - aclanthology.org | 2025 | cited by 13)
+   [PDF] https://aclanthology.org/2025.insights-1.16.pdf
+   … LLM actually performs reasoning or just replicates patterns learned. We propose a novel method to augment math … He wants to buy 5 kg of apples and 3 packs of sugar. One kilogram of …
+
+28. Can language models rival mathematics students? Evaluating mathematical reasoning through textual manipulation and human experiments
+   https://arxiv.org/abs/2412.11908
+   (A Nikolaiev, Y Stathopoulos, S Teufel - arXiv preprint arXiv:2412.11908, 2024 - arxiv.org | 2412 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2412.11908
+   … answer Lia has 2 apples, 3 bananas and 2 oranges. For the upcoming week, she wants to … point to GPT-4 as the LLM that best answers combinatorial mathematics problems. We found …
+
+29. Improving the Robustness of Scene-Aware Neuro-Symbolic Solving for Arithmetic Word Problems Under Input Perturbations
+   https://www.mdpi.com/2073-8994/18/6/1007
+   (R Peng, L Huang, L Zhu, X Yu - Symmetry, 2026 - mdpi.com | 2026)
+
+30. An Evaluation of Open Source LLMs for Neuro-Symbolic Integration
+   https://sfera.unife.it/handle/11392/2596010
+   (S Sambri, A Ghanbari, F Riguzzi - CEUR WORKSHOP …, 2025 - sfera.unife.it | 2025 | cited by 1)
+   [PDF] https://sfera.unife.it/bitstream/11392/2596010/1/paper03.pdf
+   … mathematical reasoning by combining the perception capabilities of deep neural networks with the soundness and reliability of symbolic reasoning [18… for mitigating LLM reasoning limita…
+
+31. MathRobust-LV: Evaluation of Large Language Models' Robustness to Linguistic Variations in Mathematical Reasoning
+   https://arxiv.org/abs/2510.06430
+   (N Kirtane, Y Khanna, P Relan - arXiv preprint arXiv:2510.06430, 2025 - arxiv.org | 2510 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2510.06430?
+   … of using a function and an LLM. For open source models our … latest models on the GSM-symbolic dataset (Mirzadeh et al.… Figure 2 shows the drop in accuracy of the GSM-symbolic …
+
+32. Bridging Reasoning to Learning: Unmasking Illusions using Complexity Out of Distribution Generalization
+   https://arxiv.org/abs/2510.06274
+   (MMS Paqaleh, A Marioriyad… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2510.06274?
+   … More recently, systematic investigations into LLM performance … length generalization in mathematical reasoning. LLMs, … "Alice has 5 apples, Bob has 3" to "Bob has 3 apples, and Alice …
+
+33. Mining math conjectures from llms: A pruning approach
+   https://arxiv.org/abs/2412.16177
+   (J Chuharski, ER Collins, M Meringolo - arXiv preprint arXiv:2412.16177, 2024 - arxiv.org | 2412 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2412.16177
+   … Our work, while small, shows the potentially impactful way that LLM’s augmented with other … That being said, LLM-based conjecture generation is still very limited to existing knowledge. …
+
+34. Frontier llms still struggle with simple reasoning tasks
+   https://arxiv.org/abs/2507.07313
+   (A Malek, J Ge, N Lazic, C Jin, A György… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 17)
+   [PDF] https://arxiv.org/pdf/2507.07313?
+   … earlier papers demonstrated that thinking models are similarly … LLM performance with task difficulty will apply to thinking models … “A eats 5 apples", “A and B switch the apples they have". …
+
+35. Silent Failures in Quantized LLM Reasoning: A Taxonomy-Based Analysis of Hollow Convergence and Failure Mode Shifts
+   https://arxiv.org/abs/2607.09999
+   (R Oladri, MVV Priya, J Wu - arXiv preprint arXiv:2607.09999, 2026 - arxiv.org | 2607)
+   [PDF] https://arxiv.org/pdf/2607.09999
+   … Mirzadeh et al. [13] show that LLMs lean on pattern matching rather than genuine mathematical reasoning, … They show that the reasoning is shallow, not what a shallow chain looks like …
+
+36. Toward Automated Robustness Evaluation of Mathematical Reasoning
+   https://aclanthology.org/2026.findings-acl.691/
+   (Y Hou, Z Xiao, F Yu, Y Jiang, M Shuguang… - Findings of the …, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.findings-acl.691.pdf
+   … are generated dynamically for each LLM, our framework … For the GSM Symbolic, we filter it to retain samples where … Marie went to a local grocery store where she purchased 4 apples at …
+
+37. Automating Reasoning in Chemical Science and Engineering
+   https://chemrxiv.org/doi/abs/10.26434/chemrxiv-2025-q9bb1
+   (T Josephson - 2025 - chemrxiv.org | 2025 | cited by 3)
+   [PDF] https://chemrxiv.org/doi/pdf/10.26434/chemrxiv-2025-q9bb1
+   … All of these tools rely on LLM-based planning and reasoning, which we discuss further in Section 3.3. To summarize, abduction as formalized by Peirce considers data to be a given, …
+
+38. Learning by Analogy: Enhancing Few-Shot Prompting for Math Word Problem Solving with Computational Graph-Based Retrieval
+   https://arxiv.org/abs/2411.16454
+   (X Yang, J Lin, Z Wang, C Zhai - arXiv preprint arXiv:2411.16454, 2024 - arxiv.org | 2411 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2411.16454
+   … the LLM inference workflow without requiring updates to the LLM’… Uncle Zhang bought 3 kilograms of apples at 8.2 yuan per … align with the mathematical reasoning required, enhancing …
+
+39. The illusion of thinking: Understanding the strengths and limitations of reasoning models via the lens of problem complexity
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/9b26ad15462c81548c0689188d2e8018-Abstract-Conference.html
+   (P Shojaee, I Mirzadeh, M Horton… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 654)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/9b26ad15462c81548c0689188d2e8018-Paper-Conference.pdf
+   … By comparing LRMs with their standard LLM … established mathematical reasoning data, to the significantly greater inference compute allocated to longer thinking tokens, or to reasoning …
+
+40. Measuring Nines of Reliability: Sample-Efficient LLM Evaluation on Saturated GSM Benchmark
+   https://openreview.net/forum?id=xRxGzV3ZuW
+   (E Kim, C Gu, V Tiwari, JZ Kolter - Second Workshop on Agents in the Wild … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=xRxGzV3ZuW
+   … Mirzadeh, SI, Alizadeh, K., Shahrokhi, H., Tuzel, O., Bengio, S., and Farajtabar, M. GSM-symbolic: Understanding the limitations of mathematical reasoning in large language models. In …
+
+41. Neurosymbolic Finite and Pushdown Automata: Improved Multimodal Reasoning versus Vision Language Models (VLMs)
+   https://raw.githubusercontent.com/mlresearch/v288/main/assets/sasaki25a/sasaki25a.pdf
+   (S Sasaki, DM Lopez… - Proceedings of the …, 2025 - raw.githubusercontent.com | 2025 | cited by 2)
+   [PDF] https://raw.githubusercontent.com/mlresearch/v288/main/assets/sasaki25a/sasaki25a.pdf
+   … trivial task such that the LLM again experiences a great deal of … , all experiments are run on an Apple M1 Max 10-core CPU@… tasks such as mathematical reasoning and visual question …
+
+42. Rules created by symbolic systems cannot constrain a learning system
+   https://openreview.net/forum?id=Omq9tUouSS
+   (SW Lin - 2025 - openreview.net | 2025 | cited by 4)
+   [PDF] https://openreview.net/pdf?id=Omq9tUouSS
+   … [91] Seyed-Iman Mirzadeh, Keivan Alizadeh, Hooman Shahrokhi, Oncel Tuzel, Samy Bengio… Gsm-symbolic: Understanding the limitations of mathematical reasoning 653 in large …
+
+43. Synthesis by design: Controlled data generation via structural guidance
+   https://arxiv.org/abs/2506.07664
+   (L Xu, S Chen, Y Huang, C Lu - arXiv preprint arXiv:2506.07664, 2025 - arxiv.org | 2506 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2506.07664?
+   … Existing methods enhance LLM reasoning by synthesizing datasets through problem … information in mathematical reasoning and use it to generate structured reasoning data. As …
+
+44. Exploring the Computational Necessity of Dual Processes for Intelligence
+   https://eprints.illc.uva.nl/id/document/13081
+   (CZ Riedmiller - 2025 - eprints.illc.uva.nl | 2025)
+   [PDF] https://eprints.illc.uva.nl/id/document/13081
+   … We will proceed with the investigation of LLM generalization on formal reasoning problems, … from this explanation thus looks like the following: From apple - falls from - tree and Newton - …
+
+45. Exploring the Limitations of LLMs Logical Reasoning Capabilities Using Knights and Knaves Puzzles
+   
+   (J Scholz - 2025 | 2025)
+
+46. VeRA: Math Benchmarks as Executable Specifications
+   https://openreview.net/forum?id=l84BLVKJbM
+   (Z Cheng, J Liu, C Wu, J Sun, J Yao, P Viswanath… - 3rd AI for Math … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=l84BLVKJbM
+   … With a validated specification, producing fresh instances with trusted labels requires no further LLM calls: we sample assignments locally, render the question, and compute the label by …
+
+47. On the relevance of logic for artificial intelligence, and the promise of neurosymbolic learning
+   https://journals.sagepub.com/doi/abs/10.1177/29498732251339951
+   (V Belle - Neurosymbolic Artificial Intelligence, 2025 - journals.sagepub.com | 2025 | cited by 4)
+   [PDF] https://journals.sagepub.com/doi/pdf/10.1177/29498732251339951
+   … Reasons include: (a) it is a well-defined mathematical model, (… human reasoning, (d) we may not want mathematical truths … reasoning, and (e) the science of robust AI is still evolving. …
+
+48. Theorem prover as a judge for synthetic data generation
+   https://aclanthology.org/2025.acl-long.1448/
+   (JOJ Leang, G Hong, W Li… - Proceedings of the 63rd …, 2025 - aclanthology.org | 2025 | cited by 20)
+   [PDF] https://aclanthology.org/2025.acl-long.1448.pdf
+   … via theorem provers effectively validates LLM reasoning, the … ment of 3.2% on GSM-Symbolic. Generally, our observations … apples from the tallest trees and 3 times as many apples from …
+
+49. Self-supervised analogical learning using language models
+   https://arxiv.org/abs/2502.00996
+   (B Zhou, S Jain, Y Zhang, Q Ning, S Wang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2502.00996
+   … analogical learning that encourages LLM consistent reasoning in common and rare … Question: It takes 7 years for an apple tree to bear fruit. If Lydia planted a tree when she was …
+
+50. Language Models can perform Single-Utterance Self-Correction of Perturbed Reasoning
+   https://arxiv.org/abs/2506.15894
+   (S Silver, J Sun, I Zhang, S Hooker, E Kim - arXiv preprint arXiv:2506.15894, 2025 - arxiv.org | 2506 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2506.15894
+   … apparent sophistication of LLM reasoning capabilities, recent … models for an apples-to-apples comparison. Model … the 100-record sample of GSM-Symbolic used in our experiments, we …
+
+===== Query 6/6: benchmark data contamination large language models detection survey =====
+
+1. Benchmark data contamination of large language models: A survey
+   https://arxiv.org/abs/2406.04244
+   (C Xu, S Guan, D Greene, M Kechadi - arXiv preprint arXiv:2406.04244, 2024 - arxiv.org | 2406 | cited by 191)
+   [PDF] https://arxiv.org/pdf/2406.04244
+   The rapid development of Large Language Models (LLMs) like GPT-4, Claude-3, and Gemini has transformed the field of natural language processing. However, it has also resulted in a significant issue known as Benchmark Data Contamination (BDC). This occurs when language models inadvertently incorporate evaluation benchmark information from their training data, leading to inaccurate or unreliable performance during the evaluation phase of the process. This paper reviews the complex challenge of BDC in LLM evaluation …
+
+2. Benchmark data contamination of large language models: A survey, 2024
+   
+   (C Xu, S Guan, D Greene, MT Kechadi - URL https://arxiv. org/abs/2406.04244 | 2406 | cited by 13)

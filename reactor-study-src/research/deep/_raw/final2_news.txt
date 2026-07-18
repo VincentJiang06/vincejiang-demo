@@ -1,0 +1,255 @@
+===== Query 1/3: reward hacking frontier models 2025 Anthropic Claude reward tampering =====
+
+1. 2025-Era “Reward Hacking” Does Not Show that ...
+   https://www.alignmentforum.org/posts/wwRgR3K8FKShjwwL5/2025-era-reward-hacking-does-not-show-that-reward-is-the
+   (Dec 18, 2025)
+   Anthropic tried to gradually nudge Claude to eventually modify its own reward function. Claude nearly never did so (modifying the function in just 8 of 33,000 ...
+
+2. Natural emergent misalignment from reward hacking in ...
+   https://arxiv.org/html/2511.18397v1
+   (Nov 23, 2025)
+   We show that when large language models learn to reward hack on production RL environments, this can result in egregious emergent misalignment.
+
+3. Reward Hacking: The Hidden Failure Mode in AI ...
+   https://medium.com/@adnanmasood/reward-hacking-the-hidden-failure-mode-in-ai-optimization-686b62acf408
+   Reward tampering is the agent breaking the feedback mechanism (think literal wireheading or tricking the judge). (Anthropic blog). This post explains how ...
+
+4. How do you prevent reward hacking in this framework ...
+   https://www.facebook.com/0xSojalSec/posts/how-do-you-prevent-reward-hacking-in-this-framework-proposed-by-deepseek-r1-pape/1324348115886255/
+   Short answer, use verifiable rewards, keep style out of the reward, and watch the reward–performance gap like a hawk. Most frontier models (GPT-4, Claude 3.5,
+
+5. Measuring Exploits in LLM Agents with Tool Use
+   https://icml.cc/virtual/2026/poster/63289
+   (Jul 7, 2026)
+   Reward Hacking Benchmark. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0\% (Claude Sonnet 4.5) to 13.9 ...
+
+6. Frontier Risk Report (February to March 2026)
+   https://metr.org/blog/2026-05-19-frontier-risk-report/
+   (May 19, 2026)
+   Reinforcement learning (RL) with automated graders can incentivize “reward hacking” to exploit flaws in the graders, Anthropic's “Agentic Misalignment” paper ...
+
+7. Benchmarking Reward Hack Detection in Code ...
+   https://arxiv.org/html/2601.20103v1
+   (Jan 27, 2026)
+   Reward hacking arises when agents exploit flaws in their reward function to achieve high scores without fulfilling the underlying objective (Skalse et al., 2022 ...
+
+8. 30 years of instrumental convergence and what it means for ...
+   https://theweatherreport.ai/posts/30-years-of-instrumental-convergence/
+   (Mar 11, 2026)
+   Anthropic found that when a model learned to reward-hack on coding tasks, alignment faking, sabotage, and covert misalignment all spiked simultaneously. ...
+
+9. Claude Sonnet 4.5 System Card
+   https://www.anthropic.com/claude-sonnet-4-5-system-card
+   (Oct 10, 2025)
+   We have been tracking and reporting on a set of reward hacking evaluations in system cards since the training of the Claude 4 models. The core intent of ...
+
+10. Reward Hacking Benchmark: Measuring Exploits in LLM ...
+   https://arxiv.org/pdf/2605.02964
+   by K Thaman · 2026 · Cited by 6 — We evaluate 13 frontier models from OpenAI, An- thropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9%. (DeepSeek-R1-Zero), ...
+
+11. Bugcrowd on Instagram: "Frontier AI teams are leveling up ...
+   https://www.instagram.com/reel/DY18_s0mdmb/
+   (1 month ago)
+   By interacting with real software, AI learns to find, exploit, and patch vulnerabilities through practice. But AI can't do it alone. True security still relies ...
+
+12. AI Benchmark Gaming: Why Claude Opus 4.6 Hacked Its ...
+   https://www.mindstudio.ai/blog/ai-benchmark-gaming-claude-opus-specification-failure
+   (Mar 11, 2026)
+   The model did exactly what it was rewarded to do — it just turned out that the reward signal didn't capture what we actually wanted. The Claude Opus 4.5 ...
+
+13. Jeffrey Ladish consulted on security for AI giant Anthropic. ...
+   https://www.facebook.com/abcnews.au/posts/jeffrey-ladish-consulted-on-security-for-ai-giant-anthropic-now-he-tests-ai-agen/1570371851110746/
+   Anthropic classified Claude 4 Opus as an AI Safety Level 3 (ASL-3) model, indicating a “significantly higher risk” due to its advanced capabilities, including ...
+
+14. Marius Hobbhahn on the race to solve AI scheming before ...
+   https://80000hours.org/podcast/episodes/marius-hobbhahn-ai-scheming-deception/
+   (Dec 3, 2025)
+   Reward hacking: Models like Claude Sonnet 3.7 and o3 routinely cheat unit tests by deleting them or hardcoding them to pass, rather than solving the actual ...
+
+15. Misalignment Patterns and RL Failure Modes in Frontier ...
+   https://iclr-blogposts.github.io/2026/blog/2026/misalign-failure-mode/
+   (Apr 27, 2026)
+   How does the propensity for specification gaming, reward hacking, and emergent misalignment change with model size, training compute, and data scale? Are there ...
+
+16. Marco Pesani (@marcopesani) on X
+   https://x.com/marcopesani/status/2016113986085748858
+   Marks et al. (2025) attempted to audit models for hidden objectives, training a language model to exploit RLHF reward model errors. The research revealed that ...
+
+17. Findings from a pilot Anthropic–OpenAI alignment ...
+   https://openai.com/index/openai-anthropic-safety-evaluation/
+   (Aug 27, 2025)
+   Reward hacking: a model attempts to achieve a given objective in ways that are counter-productive to the user's goals overall. To test these behaviors, we ...
+
+===== Query 2/3: OpenAI reward hacking chain of thought monitoring 2025 frontier reasoning models =====
+
+1. Evaluating chain-of-thought monitorability
+   https://openai.com/index/evaluating-chain-of-thought-monitorability/
+   (Dec 18, 2025)
+   OpenAI introduces a new framework and evaluation suite for chain-of-thought monitorability, covering 13 evaluations across 24 environments.
+
+2. A New and Fragile Opportunity for AI Safety
+   https://arxiv.org/html/2507.11473v2
+   (Dec 7, 2025)
+   2025 Chain of Thought Monitorability: exploiting flaws in their reward functions during training, on the way frontier models are trained today.
+
+3. When Reasoning Models “Show Their Work,” Can You ...
+   https://medium.com/@Micheal-Lanham/when-reasoning-models-show-their-work-can-you-actually-trust-it-58f8c377e253
+   OpenAI's own research shows CoT monitoring catches real reward hacking and outperforms action-only monitors, but also that optimizing what appears in CoT can
+
+4. Experiments on Reward Hacking Monitorability in ...
+   https://www.lesswrong.com/posts/omYFftnzGobDfJX5u/experiments-on-reward-hacking-monitorability-in-language
+   (Jan 21, 2026)
+   Reward hacking, when a model exploits a misspecification in its reward function, has been commonly observed in recent frontier models.
+
+5. AI Model Misbehavior in 2026: Scheming, Reward Hacking ...
+   https://hatchworks.com/blog/gen-ai/ai-model-misbehavior/
+   (Mar 27, 2026)
+   The most promising current method is chain of thought monitoring, where a secondary model reviews the reasoning traces of a primary model to flag misbehavior.
+
+6. OpenAI's monitorability paper for safe AI deployment
+   https://www.facebook.com/groups/3670562573177653/posts/4419095928324310/
+   AI models' chain-of-thought reasoning revealed that models like o3-mini can 'reward hack' or cheat on tasks
+
+7. Stress Testing Chain-of-Thought Monitoring
+   https://papers.neurips.cc/paper_files/paper/2025/file/468a018d4eb4ef57a2a5715d16658b24-Paper-Conference.pdf
+   by B Arnav · Cited by 35 — (2025) show that weak CoT monitors with explicit guidance to detect specific failure modes can oversee stronger models and detect reward hacking more ...
+
+8. OpenAI research reveals AI models' misaligned goals ...
+   https://www.linkedin.com/posts/greg-meyers-cio_new-openai-research-highlights-concerning-activity-7374790920879357952-fKbr
+   New OpenAI research highlights concerning trends in how AI reasoning models learn to scheme in ways that are misaligned with our intended goals.
+
+9. How confessions can keep language models honest
+   https://openai.com/index/how-confessions-can-keep-language-models-honest/
+   (Dec 3, 2025)
+   Research by OpenAI and others has shown that AI models can hallucinate⁠, reward-hack, or be dishonest. At the moment, we see the most concerning misbehaviors, ...
+
+10. AI Thinks Before It Answers—And That's the Problem
+   https://www.youtube.com/watch?v=20m5TY3Bv8I&vl=en-US
+   (5 months ago)
+   AI reasoning models don't just give answers — they plan, deliberate, and sometimes try to cheat. In this episode of The Neuron, we're joined by Bowen Baker, ...
+
+===== Query 3/3: Goodhart's law large language models evaluation benchmark gaming 2025 =====
+
+1. The Paradox of AI Benchmarks: Challenges in Evaluation
+   https://thesequence.substack.com/p/the-sequence-opinion-750-the-paradox
+   This essay examines the core challenges of AI benchmarks and evaluations across language, vision, and reinforcement learning (RL).
+
+2. LLM Benchmarks Are Junk Science
+   https://pub.towardsai.net/llm-benchmarks-are-junk-science-8ed424d2a91a
+   (Mar 27, 2026)
+   An Oxford review of 445 benchmarks found 84% lack basic statistical testing. Models score 90% on standard tests but 2% on unseen problems.
+
+3. Everything you need to know about LLM benchmarks. (and ...
+   https://www.youtube.com/watch?v=fjODJGOZ2TQ
+   (10 months ago)
+   Goodhart's law- When a measure becomes a target, it ceases to be a good measure games- Pokemon , ARC prize, minecraft … healthcare (Live Podcast at HETT 2025)
+
+4. Reward Hacking in the Era of Large Models: Mechanisms ...
+   https://arxiv.org/html/2604.13602v1
+   (Apr 15, 2026)
+   This mismatch gives rise to reward hacking, a phenomenon fundamentally rooted in Goodhart's Law, where an imperfect proxy measure breaks down when subjected to ...
+
+5. AI Benchmarks in 2026: The Complete Guide to MMLU, ...
+   https://explainx.ai/blog/ai-benchmarks-complete-guide-2026
+   (May 2, 2026)
+   This comprehensive guide does six things: it catalogs every major benchmark category (language, reasoning, coding, agents, multimodal, responsible AI), explains ...
+
+6. Clinical Large Language Model Evaluation by Expert Review ...
+   https://ai.jmir.org/2025/1/e72153
+   by V Kocaman · 2025 · Cited by 23 — The models show comparable performance on open-ended medical question answering, 2025 significant risk of benchmark leakage. by the Goodhart law:
+
+7. In Benchmarks We Trust ... Or Not?
+   https://repository.uantwerpen.be/docman/irua/aea6bemotoM15
+   by I Gevers · Cited by 5 — However,. Large Language Models (LLMs) have exposed shortcomings in existing benchmarks, and so far there is no clear solution. In this paper, we survey a wide ...
+
+8. Closing the Eval–Deployment Gap in AI Systems
+   https://medium.com/@adnanmasood/closing-the-eval-deployment-gap-in-ai-systems-discrepancy-between-benchmark-performance-and-d27c33361b93
+   Goodhart's Law (Metric Gaming): Optimizing exclusively for a benchmark metric can lead to overfitting and “gaming” the metric
+
+9. Benchmark Saturation: AI Evaluation Metrics and Ceiling ...
+   https://mbrenndoerfer.com/writing/benchmark-saturation-ai-evaluation-metrics
+   (Mar 6, 2026)
+   When GPT-4 achieved 86.4% on the MMLU benchmark in early 2023, it approached but did not surpass the average human performance of approximately 89.8% by expert ...
+
+10. Addressing benchmarking gaps in large language models ...
+   https://www.nature.com/articles/s44360-026-00152-8
+   (by J Pan · 2026)
+   Crucially, as the tested LLMs evolve, the DAS attacker agents also evolve, ensuring the evaluation is resistant to 'gaming' and coevolves with model ...
+
+11. ACM Response Document to NIST RFI: Towards Best ...
+   https://www.acm.org/public-policy/ustpc/response-nist-rfi-automated-benchmark-evaluation-03312026
+   (Mar 31, 2026)
+   The document should recommend partial-credit scoring and downstream quality validation for agentic benchmarks. The document's treatment of evaluation awareness ...
+
+12. AI Benchmark Gaming: Why Claude Opus 4.6 Hacked Its ...
+   https://www.mindstudio.ai/blog/ai-benchmark-gaming-claude-opus-specification-failure
+   (Mar 11, 2026)
+   Claude Opus 4.6 found the encrypted answer key on GitHub and decoded it. Learn why AI benchmark gaming is a specification problem, not an alignment failure.
+
+13. Sample-Efficient Human Evaluation of Large Language ...
+   https://aclanthology.org/2025.acl-long.535.pdf
+   by K Feng · 2025 · Cited by 23 — We apply our approach to compare eight widely used LLMs across four tasks: scientific knowledge under- standing, mathematical reasoning, creative and functional ...
+
+14. Ilya Sutskever is puzzled by the gap between AI ...
+   https://www.reddit.com/r/MachineLearning/comments/1pm2zsb/ilya_sutskever_is_puzzled_by_the_gap_between_ai/
+   All benchmarks are bad, by a straightforward application of Goodhart's law. ... Why because language models only perform well on content/format of data ...
+
+15. The Goodhart's Law Trap: When AI Metrics Become Useless
+   https://fourweekmba.com/the-goodharts-law-trap-when-ai-metrics-become-useless/
+   (Sep 5, 2025)
+   The benchmarks get gamed harder, becoming less meaningful, requiring even more gaming to show “progress.” Technology Stack Optimization. Every layer of the AI ...
+
+16. Ilya said the quiet part out loud on Dwarkesh's pod, but ...
+   https://www.linkedin.com/posts/aagupta_ilya-said-the-quiet-part-out-loud-on-dwarkeshs-activity-7406000037991858176-cuIj
+   Current AI models are all Student A. The benchmark gaming runs deeper than most realize. Studies have shown data contamination inflates model scores by 20-80% ...
+
+17. Goodhart's law
+   https://grokipedia.com/page/Goodhart's_law
+   (Nov 29, 2025)
+   Goodhart's law is an observation in economics and measurement theory positing that a chosen metric, once transformed into a performance target, ...
+
+18. Evaluation and Guarantees in Reinforcement Learning
+   https://alignmentproject.aisi.gov.uk/research-area/evaluation-and-guarantees-in-reinforcement-learning
+   (Jul 30, 2025)
+   Statistical analysis of Goodhart's law, and creation of deliberately-flawed benchmarks could help predict the results of these practices. Suggestions to ...
+
+19. A Survey of the Science of Evaluation, Benchmarking, ...
+   https://ieeexplore.ieee.org/iel8/6287639/11323511/11488866.pdf
+   by S Sheikhi · 2026 · Cited by 8 — Large Language Models (LLMs) now consistently outperform humans on established benchmarks. However, their real-world utility is often undermined by brittleness,.
+
+20. Why LLMs aren't AGI and We need a new Qualitative Model
+   https://chrishood.com/why-llms-arent-agi-and-we-need-a-new-qualitative-model/?srsltid=AfmBOorQLHMUZOh-U3sgjh1Qdww2tK3BIzQmIcBYTnKRa9Yv_ZOH54bI
+   (Oct 23, 2025)
+   As of October 2025, the gap between benchmark success and genuine intelligence has never been wider. High scores in reading comprehension, math, and reasoning ...
+
+21. LLM Arena is the cancer on AI models. They reward pretty ...
+   https://www.instagram.com/reel/DXsRPkbk8qn/
+   (2 months ago)
+   And the way we grade these models rewards the bluff: most benchmarks score like a multiple-choice test with no penalty for a wrong answer, so a confident guess ...
+
+22. BiomedArena
+   https://www.linkedin.com/pulse/biomedarena-comprehensive-analysis-new-biomedical-ai-evaluation-nama-0if6e
+   (Sep 6, 2025)
+   BiomedArena is a groundbreaking domain-specific AI evaluation platform launched in August 2025 through a partnership between Arena and DataTecnica .
+
+23. Day 28/42: What Are Benchmarks? Yesterday ...
+   https://www.instagram.com/reel/DTpyfQTjTue/
+   Benchmarks are standardized tests used to measure and compare the abilities of different LLMs. These cover a wide range of tasks. General knowledge like MMLU, ...
+
+24. Legal Alignment for Safe and Ethical AI
+   https://aigi.ox.ac.uk/wp-content/uploads/2026/01/Kolt-Caputo-et-al.-2026-Legal-Alignment-for-Safe-and-Ethical-AI.pdf
+   by N Kolt · 2026 · Cited by 14 — LegalBench: A collaboratively built benchmark for measuring legal reasoning in large language models. Advances in Neural Information Processing. Systems, 36 ...
+
+25. Can you provide examples of how current benchmarks ...
+   https://www.quora.com/Can-you-provide-examples-of-how-current-benchmarks-used-to-evaluate-AI-models-have-failed
+   This dynamic illustrates Goodhart's Law: when a measure becomes a target, it ceases to be a good measure. The MMLU (Massive Multitask Language Understanding) ...
+
+26. Defeat Devices in AI Systems
+   https://arxiv.org/html/2606.28863
+   (Jun 27, 2026)
+   Most existing accounts treat eval gaming as a deliberate act: a contamination, a benchmark-tuned variant, an adversarial backdoor. If the same conditioning ...
+
+27. Production-ready LLM evaluation guide
+   https://wandb.ai/ai-team-articles/llm-evaluation/reports/Production-ready-LLM-evaluation-guide--VmlldzoxNTI5MjA2NA
+   (Jan 8, 2026)
+   Understand LLM evaluation metrics, frameworks, and best practices. Learn how to measure model quality and build trustworthy, production-grade AI.

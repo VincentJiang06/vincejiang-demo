@@ -1,0 +1,1729 @@
+===== Query 1/6: Penn Számadó handicap principle erroneous hypothesis Biological Reviews 2020 =====
+
+1. The Handicap Principle: how an erroneous hypothesis became a scientific principle
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/brv.12563
+   (DJ Penn, S Számadó - Biological Reviews, 2020 - Wiley Online Library | 2020 | cited by 154)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111%2Fbrv.12563
+   The most widely cited explanation for the evolution of reliable signals is Zahavi's so‐called Handicap Principle, which proposes that signals are honest because they are costly to produce. Here we provide a critical review of the Handicap Principle and its theoretical development. We explain why this idea is erroneous, and how it nevertheless became widely accepted as the leading explanation for honest signalling. In 1975, Zahavi proposed that elaborate secondary sexual characters impose ‘handicaps’ on male survival, not due to inadvertent signalling trade‐offs, but as a mechanism that functions to demonstrate males' genetic quality to potential mates. His handicap hypothesis received many criticisms, and in response, Zahavi clarified his hypothesis and explained that it assumes that signals are wasteful as well as costly, and that they evolve because wastefulness enforces honesty. He proposed that signals evolve under ‘signal selection’, a non‐Darwinian type of selection that favours waste rather than efficiency. He maintained that the handicap hypothesis provides a general principle to explain the evolution of all types of signalling systems, i.e. the Handicap Principle. In 1977, Zahavi proposed a second hypothesis for honest signalling, which received many different labels and interpretations, although it was assumed to be another example of handicap signalling. In 1990, Grafen published models that he claimed vindicated Zahavi's Handicap Principle. His conclusions were widely accepted and the Handicap Principle subsequently became the dominant paradigm for explaining the evolution of honest signalling in the biological and social sciences. Researchers have subsequently focused on testing predications of the Handicap Principle, such as measuring the absolute costs of honest signals (and using energetic and other proximate costs as proxies for fitness), but very few have attempted to test Grafen's models. We show that Grafen's models do not support the handicap hypothesis, although they do support Zahavi's second hypothesis, which proposes that males adjust their investment into the expression of their sexual signals according to their condition and ability to bear the costs (and risks to their survival). Rather than being wasteful over‐investments, honest signals evolve in this scenario because selection favours efficient and optimal investment into signal expression and minimizes signalling costs. This idea is very different from the handicap hypothesis, but it has been widely misinterpreted and equated to the Handicap Principle. Theoretical studies have since shown that signalling costs paid at the equilibrium are neither sufficient nor necessary to maintain signal honesty, and that honesty can evolve through differential benefits, as well as differential costs. There have been increasing criticisms of the Handicap Principle, but they have focused on the limitations of Grafen's model and overlooked the fact that it is not a handicap model. This model is better understood within a Darwinian framework of adaptive signalling trade‐offs, without the added burden and confusing logic of the Handicap Principle. There is no theoretical or empirical support for the Handicap Principle and the time is long overdue to usher this idea into an ‘honorable retirement’.
+
+===== Query 2/6: handicap principle debate criticism differential cost of cheating =====
+
+1. A general signalling theory: why honest signals are explained by trade-offs rather than costs or handicaps
+   https://academic.oup.com/jeb/article-abstract/39/2/171/8362708
+   (S Számadó, I Zachar, DJ Penn - Journal of Evolutionary Biology, 2026 - academic.oup.com | 2026 | cited by 6)
+   [PDF] https://academic.oup.com/jeb/article-pdf/39/2/171/65671347/voaf144.pdf
+   … central to explaining signal honesty and deception. Unlike … theory for honest signalling [handicap principle (HP)/costly … The handicap hypothesis was initially criticized particularly for …
+
+2. Costly signalling theories: beyond the handicap principle
+   https://link.springer.com/article/10.1007/s10539-011-9297-8
+   (B Fraser - Biology & Philosophy, 2012 - Springer | 2012 | cited by 47)
+   … of receiver-dependent cost of deception has been documented” (… On the costly signalling analysis, though, it is the very cost of … my discussion here, especially my division of signal costs …
+
+3. The Handicap Principle: how an erroneous hypothesis became a scientific principle
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/brv.12563
+   (DJ Penn, S Számadó - Biological Reviews, 2020 - Wiley Online Library | 2020 | cited by 154)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111%2Fbrv.12563
+   … , whereas Zahavi emphasized why we should expect deception due to conflict between the sexes. He … Both sides of this debate confused Zahavi's (1977b) second hypothesis with his …
+
+4. Modelling and the fall and rise of the handicap principle
+   https://link.springer.com/article/10.1007/s10539-011-9275-1
+   (J Grose - Biology & Philosophy, 2011 - Springer | 2011 | cited by 82)
+   … on animal signalling and deception contains an introductory … cost-is-necessary assumption I will not dwell on this debate. … unexpected conclusion from our literature review is that there is …
+
+5. Biological signals as handicaps
+   https://www.sciencedirect.com/science/article/pii/S0022519305800888
+   (A Grafen - Journal of theoretical biology, 1990 - Elsevier | 1990 | cited by 3401)
+   [PDF] https://smg.media.mit.edu/library/Grafen.BioSignalsHandicaps.pdf
+   … The place of cheating is discussed in view of the honesty that … To avoid unnecessarily abstract discussion, the present paper … a brief review of previous models of the handicap principle, …
+
+6. The cost of honesty and the fallacy of the handicap principle
+   https://www.sciencedirect.com/science/article/pii/S0003347210003374
+   (S Számadó - Animal Behaviour, 2011 - Elsevier | 2011 | cited by 299)
+   [PDF] https://www.researchgate.net/profile/Szabolcs-Szamado/publication/222662460_The_cost_of_honesty_and_the_fallacy_of_the_handicap_principle/links/5a914e0c45851535bcd677e5/The-cost-of-honesty-and-the-fallacy-of-the-handicap-principle.pdf
+   … review the theoretical models supporting the above conclusion, and then I list mechanisms that can maintain a high potential cost of cheating without imposing extra realized cost … debate…
+
+7. Why not lie? Costs enforce honesty in an experimental signalling game
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC3843836/
+   (TJ Polnaszek, DW Stephens - Proceedings of the Royal …, 2014 - pmc.ncbi.nlm.nih.gov | 2014 | cited by 36)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC3843836/pdf/rspb20132457.pdf
+   … Critics of the handicap principle have questioned the basic … for some applications of the handicap principle [16], additive … to cheat, subjects signalled honestly when costs were high …
+
+8. The validity of the handicap principle in discrete action–response games
+   https://www.sciencedirect.com/science/article/pii/S0022519399909359
+   (S Számadó - Journal of theoretical biology, 1999 - Elsevier | 1999 | cited by 87)
+   [PDF] https://www.academia.edu/download/96137301/SzamadoJTheorBiolValidity1999.pdf
+   … of the handicap principle has spawned much debate in spite … relative costs), yet in the regions 4 and 5 signalling will not … the regions 7 and 8 deception is evolutionarily stable because it …
+
+9. The handicap principle is an artifact
+   https://www.cambridge.org/core/journals/philosophy-of-science/article/handicap-principle-is-an-artifact/120CE9A6A886CE554DF8B465D0EF2015
+   (SM Huttegger, JP Bruner, KJS Zollman - Philosophy of Science, 2015 - cambridge.org | 2015 | cited by 33)
+   [PDF] https://www.kevinzollman.com/uploads/5/0/3/6/50361245/hutteggerbrunerzollmanpsasubmissionforposting.pdf
+   … What we mean by “some incentive for deception” will be … : in the face of conflict of interest, signals must be costly in order … We propose analyzing the handicap principle in the context of a …
+
+10. Aposematism and the handicap principle
+   https://www.journals.uchicago.edu/doi/abs/10.1086/667890
+   (ØH Holen, TO Svennungsen - The American Naturalist, 2012 - journals.uchicago.edu | 2012 | cited by 44)
+   [PDF] https://scholar.archive.org/work/qaecuxowkrgujb7fijiogks5la/access/wayback/http://pdfs.semanticscholar.org/f354/cdb5c38515020f96c27a7f0f82ad737f8f1d.pdf
+   … (cheating) can be stable only if the weakly defended prey enjoy lower differential costs (or greater differential … Our analysis clarifies some conditions that are absolutely necessary for …
+
+11. Costly signaling and the handicap principle in hunter‐gatherer research: a critical review
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/evan.21767
+   (DNE Stibbard‐Hawkes - … : Issues, News, and Reviews, 2019 - Wiley Online Library | 2019 | cited by 63)
+   [PDF] https://www.researchgate.net/profile/Duncan-Stibbard-Hawkes/publication/331574563_Costly_signaling_and_the_handicap_principle_in_hunter-gatherer_research_A_critical_review/links/615c73db5a481543a8874b75/Costly-signaling-and-the-handicap-principle-in-hunter-gatherer-research-A-critical-review.pdf
+   … -theoretical perspective, are costly signals where the costs of cheating are infinite. Biernaskie et al.… and much of the debate about human hunting as costly signaling has centered around …
+
+12. Dishonesty and the handicap principle
+   https://www.sciencedirect.com/science/article/pii/S0003347283712534
+   (RA Johnstone, A Grafen - Animal behaviour, 1993 - Elsevier | 1993 | cited by 427)
+   … In the next section, we demonstrate formally that cheating can be part of an evolutionarily … , in the sense described above, has been the subject of much discussion, and our account …
+
+13. The rise and fall of handicap principle: a commentary on the “Modelling and the fall and rise of the handicap principle”
+   https://link.springer.com/article/10.1007/s10539-011-9299-6
+   (S Számadó - Biology & Philosophy, 2012 - Springer | 2012 | cited by 22)
+   [PDF] https://www.researchgate.net/profile/Szabolcs-Szamado/publication/230603262_The_rise_and_fall_of_handicap_principle_A_commentary_on_the_Modelling_and_the_fall_and_rise_of_the_handicap_principle/links/09e41501fc79024c35000000/The-rise-and-fall-of-handicap-principle-A-commentary-on-the-Modelling-and-the-fall-and-rise-of-the-handicap-principle.pdf
+   … of the handicap principle; in the fourth section I review the … and the cost suffered by potential cheaters are greater than a … There is no discussion in any of these books on models that …
+
+14. Differential costs of a secondary sexual character: an experimental test of the handicap principle
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1558-5646.1994.tb02204.x
+   (AP M⊘ ller, F de Lope - Evolution, 1994 - Wiley Online Library | 1994 | cited by 180)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1558-5646.1994.tb02204.x
+   … handicap principle, which assumes that (1) the cost ofa signal guarantees its reliability, and (2) cheating is prevented because the cost of … group as the unit of analysis in our study, since …
+
+15. The cost of dishonesty
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC1688442/
+   (H Viljugrein - Proceedings of the Royal Society B: Biological …, 1997 - pmc.ncbi.nlm.nih.gov | 1997 | cited by 38)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC1688442/pdf/1PLQ0CBTG6B1B2F2_264_815.pdf
+   … The handicap principle states that stable biological signals … a low-quality male can cheat for the female to be indifferent … levels: an analysis using biological signalling theory. Oikos 72…
+
+16. An evolutionary comparison of the handicap principle and hybrid equilibrium theories of signaling
+   https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0137271
+   (P Kane, KJS Zollman - PloS one, 2015 - journals.plos.org | 2015 | cited by 35)
+   [PDF] https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0137271&type=printable
+   … Discussion … Much of the analysis of the evolution of handicap-signaling, including this one, has … Honesty in communication systems where there is an incentive for deception provides …
+
+17. Honesty in signalling games is maintained by trade-offs rather than costs
+   https://link.springer.com/article/10.1186/s12915-022-01496-9
+   (S Számadó, I Zachar, D Czégel, DJ Penn - BMC biology, 2023 - Springer | 2023 | cited by 34)
+   [PDF] https://link.springer.com/content/pdf/10.1186/s12915-022-01496-9.pdf
+   … at the evolutionary equilibrium; otherwise, deception … costly at all, and therefore, the Handicap Principle and other … and left the critiques of these ideas difficult to understand [8, 9] and the …
+
+18. Handicap Principle, The
+   https://link.springer.com/content/pdf/10.1007/978-3-319-19650-3_2100.pdf
+   (L Al-Shawaf, DMG Lewis - Encyclopedia of evolutionary psychological …, 2021 - Springer | 2021 | cited by 15)
+   … In the following debate, almost 150 scholars stated that the critics had ignored an extensive … and provide strong evidence for Hamilton’s rule (Abbot et al. 2011). Overall, Hamilton’s …
+
+19. Sexual selection: the handicap principle does work–sometimes
+   https://royalsocietypublishing.org/doi/abs/10.1098/rspb.1987.0038
+   (A Pomiankowski - Proceedings of the Royal society of …, 1987 - royalsocietypublishing.org | 1987 | cited by 358)
+   [PDF] https://www.researchgate.net/profile/Andrew-Pomiankowski/publication/240256015_Sexual_Selection_The_Handicap_Principle_Does_Work_--_Sometimes/links/54edeba50cf2e2830863aee9/Sexual-Selection-The-Handicap-Principle-Does-Work--Sometimes.pdf
+   … It is shown here that there are conditions under which the ‘ handicap principle ’ … Discussion … of the ‘handicap principle’ is Andersson’s recent analysis of the condition-dependent …
+
+20. Toward an evolutionary definition of cheating
+   https://academic.oup.com/evolut/article-abstract/68/2/318/6852411
+   (M Ghoul, AS Griffin, SA West - Evolution, 2014 - academic.oup.com | 2014 | cited by 258)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/evo.12266
+   … “cheat” from the perspective of an individual as a maximizing agent. We provide a definition for cheating … deception is involved; (iii) whether members of the same or different species are …
+
+21. Assertions, handicaps, and social norms
+   https://www.cambridge.org/core/journals/episteme/article/assertions-handicaps-and-social-norms/E066FDB00C118DA0E37AD5AC43D481AA
+   (PJ Graham - Episteme, 2020 - cambridge.org | 2020 | cited by 18)
+   … human communication; the mechanics of the handicap principle; the role of deterrents and … If no one cheats, only potential cheaters pay potential costs. Stable signals can then be very …
+
+22. Self-handicapping and self-deception: A two-way street
+   https://www.tandfonline.com/doi/abs/10.1080/09515089.2022.2055915
+   (E Funkhouser, K Hallam - Philosophical Psychology, 2024 - Taylor & Francis | 2024 | cited by 12)
+   [PDF] https://www.academia.edu/download/100699250/SDSH.2022.pdf
+   … self-deception without getting derailed by the nuances of the purely conceptual debates. … It is unlikely that they will succeed if the impairment is too large or long lasting. This fits with …
+
+23. The evolution of index signals to avoid the cost of dishonesty
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC4123701/
+   (JM Biernaskie, A Grafen… - Proceedings of the Royal …, 2014 - pmc.ncbi.nlm.nih.gov | 2014 | cited by 128)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC4123701/pdf/rspb20140876.pdf
+   … Costly signalling theory (including the handicap principle) … *, c* using an evolutionary invasion analysis (see the electronic … 1983 Intraspecific deception by bluffing: a defense strategy of …
+
+24. Sexual signalling in an artificial population: When does the handicap principle work?
+   https://link.springer.com/chapter/10.1007/3-540-48304-7_85
+   (J Noble - European Conference on Artificial Life, 1999 - Springer | 1999 | cited by 17)
+   [PDF] https://eprints.soton.ac.uk/265258/1/noble99sexualSignalling.pdf
+   … "cheating" is prohibitively expensive. Zahavi reasoned that only those communication systems in which the signal happened to be costly … A similar conclusion was reached in a review of …
+
+25. Condition-dependent trade-offs maintain honest signalling
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC9532995/
+   (S Számadó, F Samu, K Takács - Royal Society Open Science, 2022 - pmc.ncbi.nlm.nih.gov | 2022 | cited by 26)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC9532995/pdf/rsos.220335.pdf
+   … Honesty is maintained by the potential cost of cheating: by … remained highly influential in biology despite criticism through … of the Handicap Principle with a Darwinian theory of signalling …
+
+26. Handicap Hypothesis
+   https://link.springer.com/content/pdf/10.1007/978-3-319-55065-7_353.pdf
+   (JP Higham - Encyclopedia of Animal Cognition and Behavior, 2022 - Springer | 2022 | cited by 1)
+   … Because lower-quality individuals do not usually give high-quality signals in an honest system, such costs may be seen only when lower-quality individuals cheat, and give a high-…
+
+27. Condition‐dependence, pleiotropy and the handicap principle of sexual selection in melanin‐based colouration
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/brv.12171
+   (A Roulin - Biological Reviews, 2016 - Wiley Online Library | 2016 | cited by 224)
+   [PDF] https://serval.unil.ch/resource/serval:BIB_A5147D408032.P001/REF.pdf
+   … colouration is debated. Sexual selection theory states that ornaments should be costly to produce, … Pleiotropy may prevent individuals from cheating, ie individuals displaying a given …
+
+28. What maintains signal honesty in animal colour displays used in mate choice?
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC5444064/
+   (RJ Weaver, RE Koch, GE Hill - Philosophical Transactions of …, 2017 - pmc.ncbi.nlm.nih.gov | 2017 | cited by 205)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC5444064/pdf/rstb20160343.pdf
+   … However, for signalling to be evolutionarily stable with little cheating, these costs associated … Many recent critiques of the handicap principle argue that the realized costs of signalling—…
+
+29. Handicap signalling: when fecundity and viability do not add up
+   https://www.sciencedirect.com/science/article/pii/S0003347298907448
+   (T Getty - Animal Behaviour, 1998 - Elsevier | 1998 | cited by 194)
+   … Critical tests of the handicap hypothesis should establish that … Throughout this analysis of honest signalling, all we have … Station Research Training Group discussion on the evolution …
+
+30. A unified definition for reliability, survivability and resilience inspired by the handicap principle and ecological stability
+   https://www.inderscienceonline.com/doi/abs/10.1504/IJCIS.2012.049045
+   (ZS Ma - International Journal of Critical Infrastructures 31, 2012 - inderscienceonline.com | 2012 | cited by 9)
+   … modelling analysis failed to show the evolution of handicaps … By synthesising the discussion in previous sections, we propose … is the deception that follows the handicap principle. The …
+
+31. Ectoparasites of house sparrows (Passer domesticus): an experimental test of the immunocompetence handicap hypothesis and a new model
+   https://link.springer.com/article/10.1007/s002650050660
+   (A Poiani, AR Goldsmith, MR Evans - Behavioral Ecology and Sociobiology, 2000 - Springer | 2000 | cited by 147)
+   [PDF] https://www.academia.edu/download/48014673/Poiani2K.pdf
+   … are not costly, or cheating does not involve a direct cost to the cheater, honest signalling may be favoured due to costs paid … Below we propose a new model to overcome such criticisms. …
+
+32. Are aposematic signals honest? A review
+   https://academic.oup.com/jeb/article-abstract/28/9/1583/7381290
+   (K Summers, MP Speed, JD Blount… - Journal of evolutionary …, 2015 - academic.oup.com | 2015 | cited by 116)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jeb.12676
+   … If signallers frequently cheat or the costs of unreliable … , as we discuss below in the section ‘Discussion and Conclusions’. … concepts of honesty associated with the handicap principle. …
+
+33. Costly signalling: a work in progress: William A. Searcy, Stephen Nowicki: The Evolution of Animal Communication: Reliability and Deception in Signaling Systems …
+   https://link.springer.com/article/10.1007/s10539-007-9100-z
+   (S Saunders - 2009 - Springer | 2009 | cited by 11)
+   … So if your interest is in pursuing the handicap principle, the … models that allow for deception the discussion they deserve. … discussed one costly signalling model in this review, I do not …
+
+34. Parasites, bright males, and the immunocompetence handicap
+   https://www.journals.uchicago.edu/doi/abs/10.1086/285346
+   (I Folstad, AJ Karter - The American Naturalist, 1992 - journals.uchicago.edu | 1992 | cited by 3558)
+   [PDF] https://www.researchgate.net/profile/Ivar-Folstad/publication/221962530_Parasites_Bright_Males_and_the_Immunocompetence_Handicap/links/02e7e535b7bea35f99000000/Parasites-Bright-Males-and-the-Immunocompetence-Handicap.pdf
+   … the "immunocompetence-handicap hypothesis," may explain … , why such traits are a handicap, and thus how they could … -term costs, average inclusive fitness is attenuated in cheaters …
+
+35. Pattern of individual participation and cheating in conflicts between groups of free-ranging dogs
+   https://www.sciencedirect.com/science/article/pii/S0003347210000382
+   (R Bonanni, P Valsecchi, E Natoli - Animal Behaviour, 2010 - Elsevier | 2010 | cited by 159)
+   [PDF] https://www.academia.edu/download/45699347/Pattern_of_individual_participation_and_20160517-9190-10hg004.pdf
+   … how cooperation may persist in animal societies despite cheating. Here, we examined variables … These results emphasize the greater opportunity for cheating in larger groups and the …
+
+36. By‐product information can stabilize the reliability of communication
+   https://academic.oup.com/jeb/article-abstract/25/12/2412/7318800
+   (H Martin Schaefer, GD Ruxton - Journal of Evolutionary Biology, 2012 - academic.oup.com | 2012 | cited by 17)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jeb.12020
+   … costs of signalling (as proposed by the handicap principle). … Major criticisms of this approach are that information is … depends on costs and constraints of cheating or on costs of signalling…
+
+37. Differential selection according to the degree of cheating in a status signal
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC2614148/
+   (S Nakagawa, JW Lee, BK Woodward… - Biology …, 2008 - pmc.ncbi.nlm.nih.gov | 2008 | cited by 18)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC2614148/pdf/rsbl20080349.pdf
+   … cost (eg production cost) of a badge of status is often explained in the framework of the handicap principle … the electronic supplementary material for more discussion). However, to draw …
+
+38. Costly signals in a field cricket can indicate high‐or low‐quality direct benefits depending upon the environment
+   https://academic.oup.com/evolut/article-abstract/65/1/283/6853893
+   (AE Tolle, WE Wagner Jr - Evolution, 2011 - academic.oup.com | 2011 | cited by 46)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1558-5646.2010.01123.x
+   … In the context of direct benefits, the handicap hypothesis … the costs of producing attractive signals may choose to cheat … Two minutes of singing were recorded for analysis using a …
+
+39. Lying takes time: A meta-analysis on reaction time measures of deception.
+   https://psycnet.apa.org/record/2017-05734-001
+   (K Suchotzki, B Verschuere, B Van Bockstaele… - Psychological …, 2017 - psycnet.apa.org | 2017 | cited by 391)
+   [PDF] https://watjoa.github.io/ReferenceTool/PDFARTIKELS/suchotzki-2017---psychbull---reaction-time-deception.pdf
+   … A cognitive approach to deception has reinvigorated interest in reaction time (RT) … -analysis of 114 studies (n= 3307) using computerized RT paradigms to assess the cognitive cost of …
+
+40. Sexual selection, social competition, and evolution
+   https://www.jstor.org/stable/986582
+   (MJ West-Eberhard - Proceedings of the American Philosophical Society, 1979 - JSTOR | 1979 | cited by 927)
+   [PDF] https://stri-sites.si.edu/docs/publications/pdfs/West_Eberhard_1979_SexualSel_Social.pdf
+   … It would probably prove rewarding to review Wynne-… These last two examples of low-cost deception in contexts other … Only then would the handicap principle begin to operate, with …
+
+41. Towards a general theory of biological signaling
+   https://www.sciencedirect.com/science/article/pii/S0022519396902581
+   (O Hasson - Journal of Theoretical Biology, 1997 - Elsevier | 1997 | cited by 226)
+   … This analysis enables a natural division of signals into … -be cheaters, then the greater the costs, the less will be cheaters … on any (general) cost (see Discussion for possible reasons for …
+
+42. The continuous Sir Philip Sidney game: a simple model of biological signalling
+   https://www.sciencedirect.com/science/article/pii/S0022519305806745
+   (RA Johnstone, A Grafen - Journal of theoretical Biology, 1992 - Elsevier | 1992 | cited by 163)
+   [PDF] https://users.ox.ac.uk/~grafen/cv/rajjtb.pdf
+   … handicap principle. At equilibrium, signals are honest, … Further analysis reveals that the level of cost required to … It might be the case, however, that Y will "cheat" by signalling strongly …
+
+43. Real-time social selection maintains honesty of a dynamic visual signal in cooperative fish
+   https://academic.oup.com/evlett/article-abstract/1/5/269/6697437
+   (JC Bachmann, F Cortesi, MD Hall, NJ Marshall… - Evolution …, 2017 - academic.oup.com | 2017 | cited by 34)
+   [PDF] https://academic.oup.com/evlett/article-pdf/1/5/269/49867489/evlett0269.pdf
+   … On one side, the handicap principle requires costs paid by all … marginal costs of cheating and identify the class of signaling costs… Tukey's HSD post-hoc analysis was performed to test for …
+
+44. Cost, expenditure and vulnerability
+   https://link.springer.com/article/10.1007/s10539-017-9563-5
+   (JP Bruner, C Brusse, D Kalkman - Biology & Philosophy, 2017 - Springer | 2017 | cited by 13)
+   [PDF] https://www.academia.edu/download/49705189/CEV_version_for_BP.pdf
+   … The introduction of such costs can ensure that deception, while … of honesty predicted by the handicap principle is no longer attainable. … Overall, this analysis highlights the crucial role the …
+
+45. The evolution of magnanimity: When is it better to give than to receive?
+   https://link.springer.com/article/10.1007/s12110-998-1009-y
+   (JL Boone - Human Nature, 1998 - Springer | 1998 | cited by 283)
+   [PDF] https://www.academia.edu/download/6449258/Boone1998_Magnanimity.pdf
+   … In the discussion below, I will argue that status reinforcement … An additional aspect of strategic handicap theory of central … of enforcing cooperation, detecting and punishing cheaters, or …
+
+46. Evolution and maintenance of social status-signaling badges
+   http://publicationslist.org/data/martin.whiting/ref-74/Whiting_Nagy_Bateman_2003_Lizard_Social_Behavior_book_chapter.pdf
+   (MJ Whiting, KA Nagy, PW Bateman - Lizard social behavior, 2003 - publicationslist.org | 2003 | cited by 178)
+   [PDF] http://publicationslist.org/data/martin.whiting/ref-74/Whiting_Nagy_Bateman_2003_Lizard_Social_Behavior_book_chapter.pdf
+   … review by major taxonomic group studies that in some way deal with constraints to cheating (… published since 1975 (when Zahavi published his first treatment of the handicap principle). …
+
+47. Towards an extended evolutionary game theory with survival analysis and agreement algorithms for modeling uncertainty, vulnerability, and deception
+   https://link.springer.com/chapter/10.1007/978-3-642-05253-8_67
+   (Z Ma - International Conference on Artificial Intelligence and …, 2009 - Springer | 2009 | cited by 11)
+   … the handicap principle—that animal communication is honest (reliable) as long as the signaling is costly … From above discussion it can be seen that survival analysis models can be har…
+
+48. Signaling health versus parasites
+   https://www.journals.uchicago.edu/doi/abs/10.1086/338992
+   (T Getty - The American Naturalist, 2002 - journals.uchicago.edu | 2002 | cited by 259)
+   [PDF] https://www.researchgate.net/profile/Thomas-Getty/publication/23174914_Signaling_Health_versus_Parasites/links/56b9f01508ae7e3a0fa096eb/Signaling-Health-versus-Parasites.pdf
+   … foundation provided by the handicap principle. It might be the … (trade‐offs) can make cheating unprofitable. Negative viability … Formal analysis of biological signaling within the life‐history …
+
+49. Signaling theory: A review and assessment
+   https://journals.sagepub.com/doi/abs/10.1177/0149206310388419
+   (BL Connelly, ST Certo, RD Ireland… - Journal of …, 2011 - journals.sagepub.com | 2011 | cited by 11114)
+   … Lastly, we extend the discussion of signaling theory in the literature by highlighting and … costs make cheating, or false signaling, difficult. However, ISO9000 certification is less costly for …
+
+50. Costly signaling theory
+   https://link.springer.com/content/pdf/10.1007/978-3-031-38971-9_813-1.pdf
+   (IHY Koh, NP Li - Encyclopedia of religious psychology and behavior, 2024 - Springer | 2024 | cited by 7)
+   [PDF] https://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=5403&context=soss_research
+   … parties with an incentive to cheat? Evolutionary biologist Amotz … animal signals, a theory known as the handicap principle. This … Criticism A main criticism surrounding the theory of costly …
+
+51. Signal verification can promote reliable signalling
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC3790478/
+   (M Broom, GD Ruxton… - Proceedings of the Royal …, 2013 - pmc.ncbi.nlm.nih.gov | 2013 | cited by 16)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC3790478/pdf/rspb20131560.pdf
+   … cheating will prosper unless it is more costly than reliability, and the signalling cost structure required by the Handicap Principle … emphasize that the present analysis considers only pure …
+
+52. Liquidated damages, penalties and the just compensation principle: Some notes on an enforcement model and a theory of efficient breach
+   https://www.jstor.org/stable/1121823
+   (CJ Goetz, RE Scott - Columbia Law Review, 1977 - JSTOR | 1977 | cited by 968)
+   [PDF] https://academiccommons.columbia.edu/doi/10.7916/D8000D00/download
+   … Undoubtedly, one underlying fear was that fraud or other unconscionable conduct was … The current penalty rule subjects these agreements to costly review, based not on the fairness of …
+
+53. Androgens and the immunocompetence handicap hypothesis: unraveling direct and indirect pathways of immunosuppression in song sparrows
+   https://www.journals.uchicago.edu/doi/abs/10.1086/423714
+   (NT Owen-Ashley, D Hasselquist… - The American …, 2004 - journals.uchicago.edu | 2004 | cited by 278)
+   [PDF] https://lup.lub.lu.se/search/files/2749044/624616.pdf
+   … Thus, obligate immunosuppression by T would prevent cheating by males with low … The immunocompetence handicap hypothesis has been criticized on several fronts. … Discussion …
+
+54. An exploration of signalling behaviour by both analytic and simulation
+   https://books.google.com/books?hl=en&lr=&id=ccp8fzlyorAC&oi=fnd&pg=PA454&dq=handicap+principle+debate+criticism+differential+cost+of+cheating&ots=dyc9-pBP11&sig=omGrjlrk2-ePawQfdC6qlbpjNZs
+   (S Bullock - Fourth European Conference on Artificial Life, 1997 - books.google.com | 1997 | cited by 93)
+   [PDF] https://eprints.soton.ac.uk/261450/1/10.1.1.48.19.pdf
+   … be maintained by a'handicap principle'ie, that the differential … In addition, the analysis above makes no attempt to describe … initial conditions Conventional Cheating trajectories were …
+
+55. A continuous evolutionary simulation model of the attainability of honest signalling equilibria
+   https://books.google.com/books?hl=en&lr=&id=K2M6VDCQ5mMC&oi=fnd&pg=PA339&dq=handicap+principle+debate+criticism+differential+cost+of+cheating&ots=K2ofBQLV2H&sig=8RB8PwkAKt-Ni7FPvAwwiGi4vcE
+   (S Bullock - Artificial life VI, 1998 - books.google.com | 1998 | cited by 28)
+   [PDF] https://eprints.soton.ac.uk/261451/1/10.1.1.40.3785.pdf
+   … generality of the handicap principle, and the coherence of its … However, Grafen's analysis demanded one extra assumption… strategy depicted in Figure la is cheating since the quality of …
+
+56. Information-theoretic models of deception: Modelling cooperation and diffusion in populations exposed to" fake news"
+   https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0207383
+   (C Kopp, KB Korb, BI Mills - PloS one, 2018 - journals.plos.org | 2018 | cited by 81)
+   [PDF] https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0207383&type=printable
+   … Guala’s philosophical criticism of game theory is that it … are: 1) a survey and discussion of prior research in the area of … on the “handicap principle”, whereby costly signals are employed …
+
+57. Handicap, index, and conventional signal elements of bird song
+   https://books.google.com/books?hl=en&lr=&id=dO0aSp5ogJ8C&oi=fnd&pg=PA277&dq=handicap+principle+debate+criticism+differential+cost+of+cheating&ots=SWYMOQF8Fx&sig=Bj-jvY5HJ3V8HjoXdOa_9XcBYFE
+   (SL Vehrencamp - Animal signals: signalling and signal design in …, 2000 - books.google.com | 2000 | cited by 296)
+   … is some type of cost or constraint on senders that makes cheating a less … The goal of this review is to highlight the specific types of data we need to … plasticity and the handicap principle. …
+
+58. The cost of reliable signaling: experimental evidence for predictable variation among males in a cost-benefit trade-off between sexually selected traits
+   https://academic.oup.com/evolut/article-abstract/63/9/2363/6853540
+   (M Murai, PRY Backwell, MD Jennions - Evolution, 2009 - academic.oup.com | 2009 | cited by 33)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1558-5646.2009.00726.x
+   … the ongoing difficulties in testing the handicap principle. … constraints on the evolution of cheating (eg, limb elongation … However, when we reran the analysis excluding two males, so …
+
+59. Sexual deception in a cannibalistic mating system? Testing the Femme Fatale hypothesis
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC4298199/
+   (KL Barry - Proceedings of the Royal Society B: Biological …, 2015 - pmc.ncbi.nlm.nih.gov | 2015 | cited by 34)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC4298199/pdf/rspb20141428.pdf
+   … the potential for chemical deception among the subset of … females were removed from the analysis, suggesting an inherently … The handicap principle [1] suggests that costly signals will …
+
+60. The value of a smile: Game theory with a human face
+   https://www.sciencedirect.com/science/article/pii/S0167487001000599
+   (JPW Scharlemann, CC Eckel, A Kacelnik… - Journal of Economic …, 2001 - Elsevier | 2001 | cited by 741)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=1843510
+   … Factor analysis of the survey data reveals an important factor, termed “cooperation”, which is strongly related to trusting behavior in the game. This factor is correlated with smiling, but is …
+
+61. Cost and conflict in animal signals and human language
+   https://www.pnas.org/doi/abs/10.1073/pnas.231216498
+   (M Lachmann, S Szamado, CT Bergstrom - Proceedings of the National …, 2001 - pnas.org | 2001 | cited by 455)
+   [PDF] https://www.pnas.org/doi/pdf/10.1073/pnas.231216498
+   … Contrary to the “handicap principle,” waste is not required to … Consequently, the costs to deception cannot be imposed through the … for further analysis of human linguistic communication. …
+
+62. The evolutionary dynamics of costly signaling: J. Hofbauer, C. Pawlowitsch
+   https://link.springer.com/article/10.1007/s00182-025-00927-5
+   (J Hofbauer, C Pawlowitsch - International Journal of Game Theory, 2025 - Springer | 2025 | cited by 5)
+   … Costly-signaling theory, or the Handicap Principle, as it is known … Furthermore, we relate the dynamic stability analysis of … We, therefore, include a discussion of the sequential Bayesian …
+
+63. The evolutionary ecology of deception
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/brv.12208
+   (M Mokkonen, C Lindstedt - Biological Reviews, 2016 - Wiley Online Library | 2016 | cited by 107)
+   [PDF] https://www.researchgate.net/profile/Lindstedt-Carita/publication/279560020_The_evolutionary_ecology_of_deception/links/5f035af0a6fdcc4ca44ebcf4/The-evolutionary-ecology-of-deception.pdf
+   … We also include discussion about the promising directions future research can pursue. … in the case of self-deception, through the cognitive impairment of sensory modalities. The former …
+
+64. A general model of biological signals, from cues to handicaps
+   https://academic.oup.com/evlett/article-abstract/2/3/201/6700585
+   (JM Biernaskie, JC Perry, A Grafen - Evolution Letters, 2018 - academic.oup.com | 2018 | cited by 54)
+   [PDF] https://academic.oup.com/evlett/article-pdf/2/3/201/49857206/evlett0201.pdf
+   … handicap principle, making it consistent with more recent updates to costly signalling theory. … Taking account of this criticism, we may say that the example presented above will define a …
+
+65. Costly signaling and the origin of religion
+   https://brill.com/view/journals/jocc/9/3-4/article-p225_4.xml
+   (M Murray, L Moore - Journal of Cognition and Culture, 2009 - brill.com | 2009 | cited by 69)
+   … As a result, the costs or handicap imposed by the signal serves to insure its reliability. … that are costly enough that cheaters would be unlikely to pay the price of displaying them. “…
+
+66. Personnel selection as a signaling game.
+   https://psycnet.apa.org/record/2011-25017-001
+   (A Bangerter, N Roulin, CJ König - Journal of Applied Psychology, 2012 - psycnet.apa.org | 2012 | cited by 525)
+   [PDF] https://www.researchgate.net/profile/Nicolas-Roulin/publication/51757646_Personnel_Selection_as_a_Signaling_Game/links/0912f50c5dfdc776d6000000/Personnel-Selection-as-a-Signaling-Game.pdf
+   … In this section, we review signaling theory in detail as a … Costly signals correspond to the handicap principle: they … associated with cheating costs, in order to deter potential cheaters. A …
+
+67. Fair shares: Accountability and cognitive dissonance in allocation decisions
+   https://pubs.aeaweb.org/doi/pdf/10.1257/aer.90.4.1072
+   (J Konow - American economic review, 2000 - pubs.aeaweb.org | 2000 | cited by 1369)
+   [PDF] https://digitalcommons.lmu.edu/cgi/viewcontent.cgi?article=1028&context=econ_fac
+   … theory of decision making that attempts to elucidate the roles of fairness, self-interest, and selfdeception … beginning with a discussion of research into biases in fairness judgments. Then I …
+
+68. On apology and consilience
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/washlr77&section=33
+   (EA O'Hara, D Yarn - Wash. L. Rev., 2002 - HeinOnline | 2002 | cited by 218)
+   [PDF] https://digitalcommons.law.uw.edu/cgi/viewcontent.cgi?article=4393&context=wlr
+   … deception and discernment. Part П uses tools of evolutionary biology and economic analysis … The handicap principle derives from models of asymmetric information that have long been …
+
+69. Honest signaling in academic publishing
+   https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246675
+   (L Tiokhin, K Panchanathan, D Lakens, S Vazire… - PloS one, 2021 - journals.plos.org | 2021 | cited by 43)
+   [PDF] https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0246675&type=printable
+   … are vulnerable to deception is research quality, and such deception imposes costs on the … of optimally calibrating submission costs, future work could extend our analysis to determine …
+
+70. Incidental sanctions and the evolution of direct benefits
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1439-0310.2008.01511.x
+   (WE Wagner Jr, AL Basolo - Ethology, 2008 - Wiley Online Library | 2008 | cited by 7)
+   [PDF] https://www.researchgate.net/profile/William-Wagner-7/publication/227635104_Incidental_Sanctions_and_the_Evolution_of_Direct_Benefits/links/59dd29cbaca272b698e120f1/Incidental-Sanctions-and-the-Evolution-of-Direct-Benefits.pdf
+   … In this paper, we review four additional hypotheses for the evolution of male-provided direct … is that differential fitness costs of signaling prevent deception (ie, the handicap/indicator …
+
+71. The evolution of testimony: Receiver vigilance, speaker honesty and the reliability of communication
+   https://www.cambridge.org/core/journals/episteme/article/evolution-of-testimony-receiver-vigilance-speaker-honesty-and-the-reliability-of-communication/77693F67DA884358251D4DAD3F3572BE
+   (K Michaelian - Episteme, 2013 - cambridge.org | 2013 | cited by 36)
+   [PDF] https://philarchive.org/archive/MICTEO-8
+   … In this section, I rst review evidence that vigilance is neither … to deception, even if these are weak, so we cannot rule the … in mind, however, the handicap principle still does not get a …
+
+72. Religious costs as adaptations that signal altruistic intention
+   https://www.academia.edu/download/44654917/download.pdf
+   (J Bulbulia - Evolution and Cognition, 2004 - academia.edu | 2004 | cited by 413)
+   [PDF] https://www.academia.edu/download/44654917/download.pdf
+   … I close with a discussion of key distortion mechanisms that … when viewed in light of the ZAHAVI’s Handicap Principle. A … signs of deception (and self-deception) integrating the analysis of …
+
+73. No survival costs for sexually selected traits in a polygynous non-territorial lizard
+   https://academic.oup.com/biolinnean/article-abstract/122/3/614/4110205
+   (M Guimaraes, R Munguia-Steyer… - Biological Journal of …, 2017 - academic.oup.com | 2017 | cited by 16)
+   … linked to signalling costs and the handicap principle is widely used to … We found no support for the handicap principle since no … A high risk of injury from cheating could be the cost of …
+
+74. Social selection maintains honesty of a dynamic visual signal in cichlid fish
+   https://www.biorxiv.org/content/10.1101/039552.abstract
+   (JC Bachmann, F Cortesi, MD Hall, NJ Marshall… - bioRxiv, 2016 - biorxiv.org | 2016 | cited by 7)
+   [PDF] https://www.biorxiv.org/content/10.1101/039552.full.pdf
+   … that has been hotly debated by animal communication … that can generate marginal costs to cheaters and maintain signaling … In summary, our framework for color signal analysis proved …
+
+75. Human sperm competition
+   https://link.springer.com/content/pdf/10.1007/978-3-319-19650-3_1957.pdf
+   (R Baker - Encyclopedia of Evolutionary Psychological Science, 2021 - Springer | 2021 | cited by 1012)
+   … In the following debate, almost 150 scholars stated that the critics had ignored an extensive … and provide strong evidence for Hamilton’s rule (Abbot et al. 2011). Overall, Hamilton’s …
+
+76. The executive functions and self-regulation: An evolutionary neuropsychological perspective
+   https://link.springer.com/article/10.1023/A:1009085417776
+   (RA Barkley - Neuropsychology review, 2001 - Springer | 2001 | cited by 1470)
+   [PDF] https://einsteinmed.edu/es/uploadedFiles/departments/neurology/Divisions/Child_Neurology/Child_Neurology_References/Executive_Fnc/Barkley.pdf
+   … injury or developmental impairment toward that system. … aims to provoke a necessary discussion about the evolutionary … They have reasoned that the costs of being cheated in a social …
+
+77. Accuracy of deception judgments
+   https://journals.sagepub.com/doi/abs/10.1207/s15327957pspr1003_2
+   (CF Bond Jr, BM DePaulo - … and social psychology Review, 2006 - journals.sagepub.com | 2006 | cited by 3169)
+   [PDF] https://assets.aclu.org/live/uploads/document/foia/2006-Personality-and-Social-Psychology-Review-Accuracy-of-Deception-Judgements.pdf
+   … deception judgments are based on verbal content and the liar's behavior. Here we review … Determinants of Accuracy Thus far, our analysis indicates that individuals have some ability …
+
+78. Signaling theories of religion: Models and explanation
+   https://www.tandfonline.com/doi/abs/10.1080/2153599X.2019.1678514
+   (C Brusse - Religion, Brain & Behavior, 2020 - Taylor & Francis | 2020 | cited by 25)
+   … , the differential costs condition has been used to critique RST … RST as a costly signaling or handicap principle hypothesis: … However, Johnstone’s discussion of signal cost was only in …
+
+79. Higher levels of begging behavior by small nestlings: a case of a negatively correlated handicap
+   https://brill.com/view/journals/ijee/44/1/article-p29_5.xml
+   (A Lotem - Israel Journal of Ecology and Evolution, 1998 - brill.com | 1998 | cited by 51)
+   … handicap principle for the evolution of signals predict that, at equilibrium, signals will be honest because the cost of … This analysis also suggests that small nestlings beg more than large …
+
+80. Aggressive signaling meets adaptive receiving: Further experiments in synthetic behavioural ecology
+   https://link.springer.com/chapter/10.1007/3-540-59496-5_341
+   (P de Bourcier, M Wheeler - European Conference on Artificial Life, 1995 - Springer | 1995 | cited by 12)
+   [PDF] http://www.sussex.ac.uk/informatics/cogslib/reports/csrp/csrp364.pdf
+   … the handicap principle (according to which high costs enforce … -- where higher costs restrict, but do not eliminate cheating -- … this possibility when we submit the results to further analysis. …
+
+81. Can a general deontic logic capture the facts of human moral reasoning? How the mind interprets social exchange rules and detects cheaters
+   https://books.google.com/books?hl=en&lr=&id=Mi4TDgAAQBAJ&oi=fnd&pg=PA53&dq=handicap+principle+debate+criticism+differential+cost+of+cheating&ots=5Gn6S9ZXPd&sig=xsYxyPiQzqQp5cui-XtFIpJNIMg
+   (L Cosmides, J Tooby - Moral psychology, 2008 - books.google.com | 2008 | cited by 134)
+   [PDF] https://www.researchgate.net/profile/Leda-Cosmides-2/publication/312937567_Can_a_general_deontic_logic_capture_the_facts_of_human_moral_reasoning_How_the_mind_interprets_social_exchange_rules_and_detects_cheaters/links/5d12fb50299bf1547c7f4bb0/Can-a-general-deontic-logic-capture-the-facts-of-human-moral-reasoning-How-the-mind-interprets-social-exchange-rules-and-detects-cheaters.pdf
+   … game theory, where it is analyzed as a repeated Prisoners’ Dilemma, we developed social contract theory : a task analysis … (for review and discussion, see Cosmides & Tooby, 2005a). …
+
+82. Grief functions as an honest indicator of commitment
+   https://journals.sagepub.com/doi/abs/10.1177/1088868314521016
+   (BM Winegard, T Reynolds… - … Psychology Review, 2014 - journals.sagepub.com | 2014 | cited by 40)
+   [PDF] https://gfatherapy.com/s/Grief.pdf
+   … punish or ostracize those who cheat or fail to reciprocate, … of differential costs and showed that the handicap principle was … is costly, but rather that it is differentially costly—that is, it costs …
+
+83. Decoupling vigour and quality in the autumn colours game: weak individuals can signal, cheating can pay
+   https://www.sciencedirect.com/science/article/pii/S0022519308005493
+   (M Archetti - Journal of theoretical biology, 2009 - Elsevier | 2009 | cited by 14)
+   [PDF] https://hal.science/hal-00554518/file/PEER_stage2_10.1016%252Fj.jtbi.2008.10.012.pdf
+   … Moreover, partial cheating is possible. The different equilibria depend on the importance of vigour and defences against insect attack, of vigour in the production of the signal, and of …
+
+84. A critical review of the literature on academic self-handicapping: Theory, manifestations, prevention and measurement
+   https://search.proquest.com/openview/a6013efc9c5ddb5f8442a562941b42b3/1?pq-origsite=gscholar&cbl=54640
+   (L Török, ZP Szabó, L Tóth - Social Psychology of Education …, 2018 - search.proquest.com | 2018 | cited by 114)
+   … occupied with unessential details, cheating). Failureavoiding … of self-reported handicaps may be based on an analysis of … This review provides a discussion of the field of academic self…
+
+85. Aesthetic evolution by mate choice: Darwin's really dangerous idea
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC3391426/
+   (RO Prum - Philosophical Transactions of the Royal Society B …, 2012 - pmc.ncbi.nlm.nih.gov | 2012 | cited by 236)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC3391426/pdf/rstb20110285.pdf
+   … of man; so the historical analysis I present here is specifically relevant … Despite the paradigm of promiscuous, cheating, male … Grafen [17] further portrayed Zahavi’s handicap principle as ‘…
+
+86. Social costs enforce honesty of a dynamic signal of motivation
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC5095389/
+   (RA Ligon, KJ McGraw - Proceedings of the Royal Society B …, 2016 - pmc.ncbi.nlm.nih.gov | 2016 | cited by 49)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC5095389/pdf/nihpp-rs4169007v1.pdf
+   … The absence of a direct cost limiting the production of conventional signals would … ‘cheaters’, unless there was some other means of ensuring signal honesty [15,16]. A key hypothesis …
+
+87. How not to murder your neighbor: Using synthetic behavioral ecology to study aggressive signaling
+   https://journals.sagepub.com/doi/abs/10.1177/105971239500300302
+   (M Wheeler, P de Bourcier - Adaptive behavior, 1995 - journals.sagepub.com | 1995 | cited by 41)
+   … that the handicap principle (according to which higher costs … The article ends with a discussion of the current model and … analysis presented in this article involve considerable …
+
+88. Cheating around the world: A cross-national analysis of principal reported cheating
+   https://www.tandfonline.com/doi/abs/10.1080/10511253.2014.986148
+   (BL Miller, LE Agnich, C Posick… - Journal of Criminal Justice …, 2015 - Taylor & Francis | 2015 | cited by 35)
+   [PDF] https://www.academia.edu/download/48619837/Cheating_Around_the_World_A_Cross-nation20160906-14668-ox8w0k.pdf
+   … analysis to evaluate whether indicators of economic disadvantage, educational achievement, and educational inequalities influence the level of problematic cheating … cheating as …
+
+89. Honesty and deception in animal signals
+   https://books.google.com/books?hl=en&lr=&id=guDKFQZZIQAC&oi=fnd&pg=PA281&dq=handicap+principle+debate+criticism+differential+cost+of+cheating&ots=mNsk_xzZ8S&sig=jkX08EEQIdtFOsbUvm1BmCuoVGM
+   (MD Greenfield - Essays in Animal Behaviour: Celebrating 50 …, 2006 - books.google.com | 2006 | cited by 14)
+   [PDF] https://www.researchgate.net/profile/Michael-Greenfield-4/publication/232707167_Honesty_and_Deception_in_Animal_Signals/links/0fcfd508bcb4106860000000/Honesty-and-Deception-in-Animal-Signals.pdf
+   … Thus, it is fitting that we review the development of recent … Once these versions of the handicap principle were confirmed … Whereas the handicap principle had originally been devised to …
+
+90. The relationship between signal quality and physical condition: is sexual signalling honest in the three-spined stickleback?
+   https://www.sciencedirect.com/science/article/pii/S0003347299912599
+   (U Candolin - Animal behaviour, 1999 - Elsevier | 1999 | cited by 229)
+   [PDF] https://www.researchgate.net/profile/Ulrika-Candolin-2/publication/12701564_The_relationship_between_signal_quality_and_physical_condition_Is_sexual_signalling_honest_in_the_three-spined_stickleback/links/5a93d15ea6fdccecff05e209/The-relationship-between-signal-quality-and-physical-condition-Is-sexual-signalling-honest-in-the-three-spined-stickleback.pdf
+   … According to Zahavi’s handicap principle, signals will be … provided that the frequency of ‘cheaters’ is sufficiently low. … from the digital images using image analysis software (MCID-M4, …
+
+91. The behavioural ecology of marine cleaning mutualisms
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/brv.12770
+   (EM Caves - Biological Reviews, 2021 - Wiley Online Library | 2021 | cited by 46)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/brv.12770
+   … Handicaps are robust against cheating because any … The handicap principle, however, is not the only explanation for … and benefit – rather than cost – can make signalling honest (Fig. 2B…
+
+92. Elevated spring testosterone increases parasite intensity in male red grouse
+   https://academic.oup.com/beheco/article-abstract/17/1/117/266888
+   (F Mougeot, SM Redpath, SB Piertney - Behavioral Ecology, 2006 - academic.oup.com | 2006 | cited by 89)
+   [PDF] https://academic.oup.com/beheco/article-pdf/17/1/117/17274957/arj005.pdf
+   … According to the immunocompetence handicap hypothesis (… to control parasite infections, would prevent cheating. We tested whether … A recent meta-analysis of both observational and …
+
+93. Truth in advertising: the kinds of traits favored by sexual selection
+   https://www.journals.uchicago.edu/doi/abs/10.1086/284275
+   (A Kodric-Brown, JH Brown - The American Naturalist, 1984 - journals.uchicago.edu | 1984 | cited by 935)
+   … colors of breeding male pupfishes are not subject to cheating … Sexual selection for a handicap: a critical analysis of Zahavi's … Sexual selection and the handicap principle. J. Theor. …
+
+94. Low-quality birds do not display high-quality signals: The cysteine-pheomelanin mechanism of honesty
+   https://academic.oup.com/evolut/article-abstract/69/1/26/6851861
+   (I Galvan, K Wakamatsu, PR Camarero, R Mateo… - …, 2015 - academic.oup.com | 2015 | cited by 44)
+   [PDF] https://academic.oup.com/evolut/article-pdf/69/1/26/49961024/evolut0026.pdf
+   … house sparrows is not invaded by cheaters producing bluffs. … bibs, as assumed by the handicap principle, the experimental … The analysis of bib size was made by a technician blinded to …
+
+95. Effort, exaggeration and malingering after concussion
+   https://jnnp.bmj.com/content/83/8/836.short
+   (JM Silver - Journal of Neurology, Neurosurgery & Psychiatry, 2012 - jnnp.bmj.com | 2012 | cited by 133)
+   [PDF] https://www.researchgate.net/profile/Jonathan-Silver-4/publication/225305451_Effort_exaggeration_and_malingering_after_concussion/links/0912f50128c38a01ea000000/Effort-exaggeration-and-malingering-after-concussion.pdf
+   … a systematic review of concussion, effort or malingering, but to stimulate discussion on … there are costs of anger, loss aversion and normal cheating that may exacerbate symptoms. …
+
+96. Nominal versus interacting electronic fraud brainstorming in hierarchical audit teams
+   https://publications.aaahq.org/accounting-review/article-abstract/90/1/175/3721
+   (CX Chen, KT Trotman, F Zhou - The Accounting Review, 2015 - publications.aaahq.org | 2015 | cited by 77)
+   [PDF] https://gattonweb.uky.edu/FACULTY/PAYNE/acc490/Graduate%20Student%20Articles/Chen%20et%20al.%20Nominal%20versus%20Interacting%20Electronic%20Fraud%20Brainstorming%20in%20Hierarchical%20Audit%20Teams.pdf
+   … Based on our above discussion, we conclude that potential process gains from cognitive … likely to be greater in fraud hypothesis generation than fraud risk factor identification. However, …
+
+97. A performance-based cost to honest signalling in male green anole lizards (Anolis carolinensis)
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC3367772/
+   (SP Lailvaux, RL Gilbert… - Proceedings of the Royal …, 2012 - pmc.ncbi.nlm.nih.gov | 2012 | cited by 54)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC3367772/pdf/nihpp-rs4169007v1.pdf
+   … This approach is analogous to residual analysis but has the … 68] for discussion) might therefore outweigh the energetic costs of … that it is the cost of cheating that maintains signal honesty, …
+
+98. The link between cognitive ability and scholastic cheating: A meta-analysis
+   https://journals.sagepub.com/doi/abs/10.1037/gpr0000040
+   (DL Paulhus, PJ Dubois - Review of General Psychology, 2015 - journals.sagepub.com | 2015 | cited by 47)
+   [PDF] http://www2.psych.ubc.ca/~dpaulhus/research/ED_PSYCH/ARTICLES/RGP.2015.with.Dubois.pdf
+   … review includes a comparison of results using these “high-tech” methods with those using more traditional cheating-… It seems that the obvious disadvantages of this ability handicap are …
+
+===== Query 3/6: Grafen 1990 biological signals as handicaps ESS model =====
+
+1. Biological signals as handicaps
+   https://www.sciencedirect.com/science/article/pii/S0022519305800888
+   (A Grafen - Journal of theoretical biology, 1990 - Elsevier | 1990 | cited by 3401)
+   [PDF] https://smg.media.mit.edu/library/Grafen.BioSignalsHandicaps.pdf
+   An ESS model of Zahavi's handicap principle is constructed. This allows a formal exposition of how the handicap principle works, and shows that its essential elements are strategic. The handicap model is about signalling, and it is proved under fairly general conditions that if the handicap principle's conditions are met, then an evolutionarily stable signalling equilibrium exists in a biological signalling system, and that any signalling equilibrium satisfies the conditions of the handicap principle. Zahavi's major claims for the handicap principle are thus vindicated. The place of cheating is discussed in view of the honesty that follows from the handicap principle. Parallel signalling models in economics are discussed. Interpretations of the handicap principle are compared. The models are not fully explicit about how females use information about male quality, and, less seriously, have no genetics. A companion paper remedies both defects in a model of the handicap principle at work in sexual selection.
+
+===== Query 4/6: Számadó cost of honesty fallacy handicap principle 2011 =====
+
+1. The cost of honesty and the fallacy of the handicap principle
+   https://www.sciencedirect.com/science/article/pii/S0003347210003374
+   (S Számadó - Animal Behaviour, 2011 - Elsevier | 2011 | cited by 299)
+   [PDF] https://www.researchgate.net/profile/Szabolcs-Szamado/publication/222662460_The_cost_of_honesty_and_the_fallacy_of_the_handicap_principle/links/5a914e0c45851535bcd677e5/The-cost-of-honesty-and-the-fallacy-of-the-handicap-principle.pdf
+   Honest signalling assumes a correlation between an observable signal and a nonobservable quality. There are many mutually nonexclusive mechanisms that can achieve such a correlation; however, for a long time the handicap principle has been identified as the main solution to this problem. In short, it claims that signals need to be costly to be honest and that honest signallers have to pay this extra cost at the equilibrium (i.e. signals have to be handicaps). Honesty, however, is not maintained by the realized cost paid by honest signallers at the equilibrium but by the potential cost of cheating. Whether this potential cost implies a realized cost for honest signallers depends on the biological details of the system and thus this cost cannot be predicted a priori without knowledge of these details. Accordingly, depending on these details, signals need not be costly to be honest, even under conflict of interest. In other words, handicapping equilibrium signals are not the only way to create a high potential cost of cheating. Here I first review the theoretical models supporting the above conclusion, and then I list mechanisms that can maintain a high potential cost of cheating without imposing extra realized cost (i.e. a handicap) on honest signallers at the equilibrium. Identifying and describing those constraints or the lack of them that might create a connection between these two types of cost should be a major research agenda.
+
+===== Query 5/6: condition dependent signalling honest signals marginal cost =====
+
+1. Condition-dependent trade-offs maintain honest signalling
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC9532995/
+   (S Számadó, F Samu, K Takács - Royal Society Open Science, 2022 - pmc.ncbi.nlm.nih.gov | 2022 | cited by 26)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC9532995/pdf/rsos.220335.pdf
+   … of differential marginal costs as a mechanism that can maintain honest signalling. On the other hand, this insight was not novel as it is an insight learnt also by the theory of signalling in …
+
+2. Honest signaling of cooperative intentions
+   https://academic.oup.com/beheco/article-abstract/31/4/922/5836523
+   (G Roberts - Behavioral Ecology, 2020 - academic.oup.com | 2020 | cited by 46)
+   … Costly signal honesty occurs when signaling is condition-dependent, so that low-quality individuals suffer higher marginal costs or lower marginal benefits from signaling. In contrast, …
+
+3. The trade-offs of honest and dishonest signals
+   https://ecoevorxiv.org/repository/view/6431/
+   (S Számadó, I Zachar, DJ Penn - 2023 - ecoevorxiv.org | 2023 | cited by 4)
+   [PDF] https://ecoevorxiv.org/repository/object/6431/download/12469/
+   … trade-offs between the marginal cost and marginal benefits of honest versus … that condition-dependent signalling tradeoffs can potentially explain dishonest as well has honest …
+
+4. Why not lie? Costs enforce honesty in an experimental signalling game
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC3843836/
+   (TJ Polnaszek, DW Stephens - Proceedings of the Royal …, 2014 - pmc.ncbi.nlm.nih.gov | 2014 | cited by 36)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC3843836/pdf/rspb20132457.pdf
+   … ‘marginal cost’ to signal helps make the idea of marginal cost more … to show that the conditions required for honesty in our simple … that make signals costly or condition dependent, these …
+
+5. Cooperating to show that you care: costly helping as an honest signal of fitness interdependence
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC8487747/
+   (P Barclay, RB Bird, G Roberts… - … Transactions of the …, 2021 - pmc.ncbi.nlm.nih.gov | 2021 | cited by 74)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC8487747/pdf/nihpp-rs4169007v1.pdf
+   … into a signalling context: costly helping behaviour can honestly … We show the conditions under which such signalling systems are stable, and we show that the ‘… marginal cost of helping …
+
+6. How costly is the honest signaling of need?
+   https://www.sciencedirect.com/science/article/pii/S0022519398908931
+   (G Nöldeke, L Samuelson - Journal of Theoretical Biology, 1999 - Elsevier | 1999 | cited by 33)
+   … offspring, her transfer cannot depend on the offspring’s condition… marginal cost cgy(Z−z), but also an additional marginal cost … poorer condition may send less costly signals in a signaling …
+
+7. One problem, too many solutions: How costly is honest signalling of need?
+   https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0208443
+   (S Számadó, D Czégel, I Zachar - PLoS One, 2019 - journals.plos.org | 2019 | cited by 18)
+   [PDF] https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0208443&type=printable
+   … the optimality conditions to calculate the offspring’s marginal … differently to calculate the parental marginal fitness gain, from … honest signalling equilibrium allowing signal cost to depend …
+
+8. Condition-dependent trade-offs maintain honest signaling: A laboratory experiment
+   https://www.biorxiv.org/content/10.1101/788828.abstract
+   (S Számadó, F Samu, K Takács - bioRxiv, 2019 - biorxiv.org | 2019 | cited by 4)
+   [PDF] https://www.biorxiv.org/content/biorxiv/early/2019/10/01/788828.full.pdf
+   … signals is condition dependent – meaning its marginal cost is … – S in high condition will switch to the “high intensity” signal in … the marginal cost of moving to this signal is smaller than the …
+
+9. Costly signaling and cooperation
+   https://www.sciencedirect.com/science/article/pii/S0022519301924063
+   (H Gintis, EA Smith, S Bowles - Journal of theoretical biology, 2001 - Elsevier | 2001 | cited by 1326)
+   [PDF] https://www.academia.edu/download/53329975/costly.pdf
+   … to derive the conditions under which honest signaling is the … reap higher marginal bene"ts per unit of signaling than do low-… of an honest signaling equilibrium does not depend on this …
+
+10. The balance model of honest sexual signaling
+   https://academic.oup.com/evolut/article-abstract/76/3/445/6728520
+   (L Fromhage, JM Henshaw - Evolution, 2022 - academic.oup.com | 2022 | cited by 29)
+   [PDF] https://academic.oup.com/evolut/article-pdf/76/3/445/50010681/evolut0445.pdf
+   … that, for honesty to be stable, the marginal cost of advertising … that honest signaling only works if the quality-dependent fitness … Moreover, the broad conditions for honest signaling in our …
+
+11. Honesty in signalling games is maintained by trade-offs rather than costs
+   https://link.springer.com/article/10.1186/s12915-022-01496-9
+   (S Számadó, I Zachar, D Czégel, DJ Penn - BMC biology, 2023 - Springer | 2023 | cited by 34)
+   [PDF] https://link.springer.com/content/pdf/10.1186/s12915-022-01496-9.pdf
+   … and bear differential marginal costs for producing a signal. This is a … [7] Unlike the HP, honesty in this model does not depend … As we show below, the conditions of honest signalling …
+
+12. Content, cost, and context: A framework for understanding human signaling systems
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/evan.21768
+   (JL Barker, EA Power, S Heap… - … : Issues, News, and …, 2019 - Wiley Online Library | 2019 | cited by 123)
+   [PDF] https://jyx.jyu.fi/bitstreams/4d9d1daf-d103-4ce8-8879-feab201fd86f/download
+   … Signaling theory delineates the conditions under which … the differential marginal costs: for example, the marginal cost of … a wide range of costs that can help ensure signal honesty. While …
+
+13. Why are signals reliable? Honesty depends on costs, sometimes
+   https://www.researchgate.net/profile/David-Stephens-8/publication/283341319_Why_are_signals_reliable_Honesty_depends_on_costs_sometimes/links/5adcf2cca6fdcc29358b552d/Why-are-signals-reliable-Honesty-depends-on-costs-sometimes.pdf
+   (TJ Polnaszek, DW Stephens - Anim Behav, 2015 - researchgate.net | 2015 | cited by 6)
+   [PDF] https://www.researchgate.net/profile/David-Stephens-8/publication/283341319_Why_are_signals_reliable_Honesty_depends_on_costs_sometimes/links/5adcf2cca6fdcc29358b552d/Why-are-signals-reliable-Honesty-depends-on-costs-sometimes.pdf
+   … evidence that costs can stabilize honest signalling, a central … cannot be a state-dependent difference in marginal costs in our … marginal cost condition that is qualitatively different from the …
+
+14. A general signalling theory: why honest signals are explained by trade-offs rather than costs or handicaps
+   https://academic.oup.com/jeb/article-abstract/39/2/171/8362708
+   (S Számadó, I Zachar, DJ Penn - Journal of Evolutionary Biology, 2026 - academic.oup.com | 2026 | cited by 6)
+   [PDF] https://academic.oup.com/jeb/article-pdf/39/2/171/65671347/voaf144.pdf
+   … claim that marginal cost maintains honesty because marginal cost in … Shading highlights the pattern when marginal cost vs. … that honest signals are maintained by condition-dependent …
+
+15. Costly signalling theory and dishonest signalling
+   https://link.springer.com/article/10.1007/s12080-019-0429-0
+   (S Sun, M Johanis, J Rychtář - Theoretical Ecology, 2020 - Springer | 2020 | cited by 14)
+   … between the strength of signals and physical condition of three-… cost of signalling, but rather the marginal cost of dishonest … that cost could be one of factors to maintain honesty signalling…
+
+16. How does honest costly signaling work?
+   https://academic.oup.com/beheco/article-abstract/25/1/8/223299
+   (JP Higham - Behavioral Ecology, 2014 - academic.oup.com | 2014 | cited by 153)
+   [PDF] https://academic.oup.com/beheco/article-pdf/25/1/8/597050/art097.pdf
+   … the condition for honest signaling, so maintaining signal honesty without strategic … costly signaling framework, honesty is dependent on conditions related to the property of the signal…
+
+17. Signal honesty and condition-dependance in a multimodalsexual signaling system
+   https://theses.hal.science/tel-00871358/
+   (L Brepson - 2012 - theses.hal.science | 2012)
+   [PDF] https://theses.hal.science/tel-00871358/file/TH2012_Brepson_Loic.pdf
+   … to be dependent upon distinct aspects of this condition, our … between signal components and condition aspects found in … marginal cost and the realised cost of signalling (ie the cost of …
+
+18. Social costs enforce honesty of a dynamic signal of motivation
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC5095389/
+   (RA Ligon, KJ McGraw - Proceedings of the Royal Society B …, 2016 - pmc.ncbi.nlm.nih.gov | 2016 | cited by 49)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC5095389/pdf/nihpp-rs4169007v1.pdf
+   … dependent, whereby conspecifics impose significant costs … costs to honest versus dishonestly signalling animals. When … display different colour signals under different conditions [23–…
+
+19. The cost of honesty and the fallacy of the handicap principle
+   https://www.sciencedirect.com/science/article/pii/S0003347210003374
+   (S Számadó - Animal Behaviour, 2011 - Elsevier | 2011 | cited by 299)
+   [PDF] https://www.researchgate.net/profile/Szabolcs-Szamado/publication/222662460_The_cost_of_honesty_and_the_fallacy_of_the_handicap_principle/links/5a914e0c45851535bcd677e5/The-cost-of-honesty-and-the-fallacy-of-the-handicap-principle.pdf
+   … Honest signalling assumes a correlation between an observable signal and a … ; see Getty 2006 for a review on the marginal cost versus marginal benefit issue), it is still widely accepted …
+
+20. The role of signaling constraints in defining optimal marginal costs of reliable signals
+   https://academic.oup.com/beheco/article-pdf/doi/10.1093/beheco/araa025/33405969/araa025.pdf
+   (KD Harris, Y Daon, V Nanjundiah - Behavioral Ecology, 2020 - academic.oup.com | 2020 | cited by 3)
+   … The rate at which signals are lost will depend on the rate at which saturation is reached. Here… Figure 4 Relative preference of signal marginal cost under each condition (with and without …
+
+21. Costly signaling and the handicap principle in hunter‐gatherer research: a critical review
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/evan.21767
+   (DNE Stibbard‐Hawkes - Evolutionary Anthropology: Issues …, 2019 - Wiley Online Library | 2019 | cited by 63)
+   [PDF] https://www.researchgate.net/profile/Duncan-Stibbard-Hawkes/publication/331574563_Costly_signaling_and_the_handicap_principle_in_hunter-gatherer_research_A_critical_review/links/615c73db5a481543a8874b75/Costly-signaling-and-the-handicap-principle-in-hunter-gatherer-research-A-critical-review.pdf
+   … honest signaling theory in both hunter-gatherer studies and zoology and highlight three issues with the costly signaling … in poor condition may pay a prohibitively high marginal cost to do …
+
+22. Meta-analysis reveals that animal sexual signalling behaviour is honest and resource based
+   https://www.nature.com/articles/s41559-021-01409-z
+   (LR Dougherty - Nature Ecology & Evolution, 2021 - nature.com | 2021 | cited by 100)
+   [PDF] https://www.researchgate.net/profile/Liam-Dougherty/publication/350078282_Meta-analysis_reveals_that_animal_sexual_signalling_behaviour_is_honest_and_resource_based/links/621f39a119ab0c3b4d2d3112/Meta-analysis-reveals-that-animal-sexual-signalling-behaviour-is-honest-and-resource-based.pdf
+   … that they honestly signal individual condition or quality: when ornaments are costly to produce… Overall, this suggests that sexual signalling behaviour is weakly honest and dependent on …
+
+23. Costs and constraints conspire to produce honest signaling: insights from an ant queen pheromone
+   https://academic.oup.com/evolut/article-abstract/66/7/2094/6881533
+   (L Holman - Evolution, 2012 - academic.oup.com | 2012 | cited by 92)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1558-5646.2012.01603.x
+   … -dependent signaling is conceptually indistinct from the index hypothesis, which posits that signals are honest … To investigate when this condition is fulfilled, we consider the relationship …
+
+24. Social eavesdropping and the evolution of conditional cooperation and cheating strategies
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC2936174/
+   (RL Earley - Philosophical Transactions of the Royal Society B …, 2010 - pmc.ncbi.nlm.nih.gov | 2010 | cited by 119)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC2936174/pdf/nihpp-rs4169007v1.pdf
+   … I begin by assuming that signalling interchanges during conflict … a net negative payoff by signalling honestly (eg low quality) will … in populations derived from marginal habitats where a …
+
+25. The evolution of index signals to avoid the cost of dishonesty
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC4123701/
+   (JM Biernaskie, A Grafen… - Proceedings of the Royal …, 2014 - pmc.ncbi.nlm.nih.gov | 2014 | cited by 128)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC4123701/pdf/rspb20140876.pdf
+   … a mechanism of signal growth into costly signalling theory, … cost of honest signalling can depend on the marginal cost of … can depend on the marginal cost of faking a dishonest signal. It …
+
+26. Are aposematic signals honest? A review
+   https://academic.oup.com/jeb/article-abstract/28/9/1583/7381290
+   (K Summers, MP Speed, JD Blount… - Journal of evolutionary …, 2015 - academic.oup.com | 2015 | cited by 116)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jeb.12676
+   … signal stability, with a focus on the Zahavian costly signalling … signalling can be stable and honest under these conditions. … on reproductive capacity, then if the marginal costs of display …
+
+27. Signalling of information that is neither cryptic nor private
+   https://academic.oup.com/jeb/article-abstract/30/4/806/7381675
+   (G Wild, SM Caro, SA West - Journal of Evolutionary Biology, 2017 - academic.oup.com | 2017 | cited by 15)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111/jeb.13049
+   … latter condition sets the largest permissible signalling cost, … In addition, the largest permissible cost does not depend on the … of explicit conditions for stability of honest signalling; and (iv) …
+
+28. Negatively condition dependent predation cost of a positively condition dependent sexual signalling
+   https://academic.oup.com/jeb/article-abstract/19/2/649/7324048
+   (L Lindström, JJ Ahtiainen, J Mappes… - Journal of …, 2006 - academic.oup.com | 2006 | cited by 40)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1420-9101.2005.01043.x
+   … predation may function as a condition dependent cost promoting honest sexual signalling. … requirements of honest signalling where marginal costs are assumed to be different for males …
+
+29. Cooperating to show that you care: costly helping as an honest signal of fitness interdependence Forthcoming in Philosophical Transactions of the Royal …
+   https://osf.io/download/3q5h9
+   (RB Bird, G Roberts - osf.io)
+   [PDF] https://osf.io/download/3q5h9
+   … We show the conditions under which such signaling systems … of helping is less than their marginal benefit of being trusted … dependent sender may be willing to send signals to a weakly …
+
+30. Signaling games
+   https://link.springer.com/content/pdf/10.1007/978-1-0716-0368-0_481.pdf
+   (J Sobel - Complex social and behavioral systems: Game theory …, 2020 - Springer | 2020 | cited by 262)
+   [PDF] https://escholarship.org/content/qt5j97c79z/qt5j97c79z.pdf
+   … signaling game in which players’ preferences do not depend … -crossing condition, plays a prominent role in signaling games … with higher quality have lower marginal costs of advertising. …
+
+31. Honest advertisement of multiple qualities using multiple signals
+   https://www.sciencedirect.com/science/article/pii/S0022519305800062
+   (RA Johnstone - Journal of theoretical Biology, 1995 - Elsevier | 1995 | cited by 253)
+   … that honest signalling using multiple … conditions and values of A*(q) and P*(a), it will prove convenient to define some new variables• From (1), we can see that the marginal cost of signal …
+
+32. Costly signaling and cooperative behavior
+   https://books.google.com/books?hl=en&lr=&id=jsVpDIIGzQoC&oi=fnd&pg=PA115&dq=condition+dependent+signalling+honest+signals+marginal+cost&ots=4EtVNc4cGR&sig=lhllIANhXR5glG6OivvAaxggRDQ
+   (RB Bird, EA Smith - Moral sentiments and material interests: On …, 2005 - books.google.com | 2005 | cited by 243)
+   [PDF] https://www.umass.edu/preferen/gintis/moral%20sentiments.pdf#page=127
+   … marginal costs for signaling or they reap lower marginal benefits. These two conditions are related, since quality-dependent cost (… the conditions outlined above are met, honest signals …
+
+33. Honest begging: expanding from signal of need
+   https://academic.oup.com/beheco/article-abstract/22/5/909/253164
+   (DW Mock, MB Dugas, SA Strickler - Behavioral Ecology, 2011 - academic.oup.com | 2011 | cited by 181)
+   [PDF] https://academic.oup.com/beheco/article-pdf/22/5/909/702469/arr091.pdf
+   … has narrowed prematurely around one signaling model for parent–… as to reflect the sender's condition reliably (any marginal … rests on signals being positively condition dependent; that of …
+
+34. Honest signalling of trustworthiness
+   https://www.biorxiv.org/content/10.1101/2019.12.11.873208.abstract
+   (G Roberts - bioRxiv, 2019 - biorxiv.org | 2019)
+   [PDF] https://www.biorxiv.org/content/biorxiv/early/2019/12/12/2019.12.11.873208.full.pdf
+   … Costly signal honesty occurs when it signalling is condition dependent, so that low quality individuals suffer higher marginal costs or lower marginal benefits from signalling. In contrast, …
+
+35. The trade-offs of honest and dishonest signals
+   
+   (I Zachar, DJ Penn - 2023 - EcoEvoRxiv | 2023)
+
+36. Prices as signals of quality
+   https://ora.ox.ac.uk/objects/uuid:46fbe824-027b-4692-9028-dd607607aa59
+   (J Farrell - 1981 - ora.ox.ac.uk | 1981 | cited by 81)
+   [PDF] https://ora.ox.ac.uk/objects/uuid:46fbe824-027b-4692-9028-dd607607aa59/download_file?safe_filename=602337148.pdf&file_format=application%2Fpdf&type_of_work=Thesis
+   … : discount rate, for instance, or marginal cost of quality. Then there can be a signalling … First, in a general game-theoretic model in which sellers choose to be 'honest' (high quality) …
+
+37. Costly signaling and prosocial behavior
+   
+   (EA Smith, R Bliege Bird - Strong reciprocity: roots of cooperation and exchange, 2003 | 2003 | cited by 24)
+
+38. The cost of reliable signaling: experimental evidence for predictable variation among males in a cost-benefit trade-off between sexually selected traits
+   https://academic.oup.com/evolut/article-abstract/63/9/2363/6853540
+   (M Murai, PRY Backwell, MD Jennions - Evolution, 2009 - academic.oup.com | 2009 | cited by 33)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1558-5646.2009.00726.x
+   … Emphasis is given to condition-dependent expression of signals, the high cost of … that in honest signaling systems the marginal costs of a given increase in the size of a signal are lower …
+
+39. The relationship between signal quality and physical condition: is sexual signalling honest in the three-spined stickleback?
+   https://www.sciencedirect.com/science/article/pii/S0003347299912599
+   (U Candolin - Animal behaviour, 1999 - Elsevier | 1999 | cited by 229)
+   [PDF] https://www.researchgate.net/profile/Ulrika-Candolin-2/publication/12701564_The_relationship_between_signal_quality_and_physical_condition_Is_sexual_signalling_honest_in_the_three-spined_stickleback/links/5a93d15ea6fdccecff05e209/The-relationship-between-signal-quality-and-physical-condition-Is-sexual-signalling-honest-in-the-three-spined-stickleback.pdf
+   … According to the theory of conditiondependent signalling, … The dishonesty of signalling in relation to male condition … the handicap model of higher marginal costs of signalling for males of …
+
+40. Biological signals as handicaps
+   https://www.sciencedirect.com/science/article/pii/S0022519305800888
+   (A Grafen - Journal of theoretical biology, 1990 - Elsevier | 1990 | cited by 3401)
+   [PDF] https://smg.media.mit.edu/library/Grafen.BioSignalsHandicaps.pdf
+   … signalling, and it is proved under fairly general conditions … this reduces to the condition that the marginal cost of advertizing (wl… principles of honesty, cost and differential costs by quality. …
+
+41. Shared Pathways, Physiological Constraint, and the Evolutionary Origins of an Honest Signal. A commentary on Számadó et al.(2025)
+   https://academic.oup.com/jeb/advance-article-abstract/doi/10.1093/jeb/voag048/8708931
+   (GE Hill, MJ Powers, RJ Weaver - Journal of Evolutionary Biology, 2026 - academic.oup.com | 2026)
+   … model, we show 33 that condition-dependent signal production is not … , the marginal fitness 79 penalty of signaling beyond their … A general signalling theory: why honest signals are 225 …
+
+42. Credulity, lies, and costly talk
+   https://www.sciencedirect.com/science/article/pii/S0022053106000743
+   (N Kartik, M Ottaviani, F Squintani - Journal of Economic theory, 2007 - Elsevier | 2007 | cited by 580)
+   [PDF] https://navinkartik.com/Papers/Published/clct.pdf
+   … exactly offset by the marginal increase in the lying cost when the … of costly signaling that satisfies our Conditions (A) and (B). … former, he shows that truthful communication is the unique …
+
+43. Cheating signals
+   https://www.sciencedirect.com/science/article/pii/S0022519384710654
+   (O Hasson - Journal of theoretical Biology, 1994 - Elsevier | 1994 | cited by 224)
+   … of signaling, cheating is defined as the transmission of signals … On these grounds alone and under these conditions, pure … the marginal cost of information equals the marginal benefit …
+
+44. Begging for control: when are offspring solicitation behaviours honest?
+   https://www.cell.com/trends/ecology-evolution/abstract/S0169-5347(02)02565-X
+   (NJ Royle, IR Hartley, GA Parker - Trends in Ecology & Evolution, 2002 - cell.com | 2002 | cited by 322)
+   [PDF] https://www.academia.edu/download/106663627/Royle_20et_20al._202002.pdf
+   … condition and show that the three main predictions of honest … signals offspring need honestly is strongly context dependent… of honest signalling to the evolution of costly begging displays …
+
+45. General solution to biological signalling games: costly signalling and beyond
+   https://www.biorxiv.org/content/10.1101/2022.05.10.491297.abstract
+   (S Számadó, I Zachar, D Czégel, DJ Penn - bioRxiv, 2022 - biorxiv.org | 2022)
+   [PDF] https://www.biorxiv.org/content/biorxiv/early/2022/05/10/2022.05.10.491297.full.pdf
+   … We show that honest signals can take any cost value, even … but face marginal, differential costs for producing a signal, so … As we show below, the conditions of honest signalling …
+
+46. Between cheap and costly signals: the evolution of partially honest communication
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC3574420/
+   (KJS Zollman, CT Bergstrom… - Proceedings of the …, 2013 - pmc.ncbi.nlm.nih.gov | 2013 | cited by 140)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC3574420/pdf/rspb20121878.pdf
+   … the cost of signalling, but rather the marginal cost of signalling, that ensures honesty [17]. … Here, the game from figure 1 is modified by adding condition-dependent signal costs to the …
+
+47. Signalling by direct disclosure under asymmetric information
+   https://www.sciencedirect.com/science/article/pii/0165410186900145
+   (PJ Hughes - Journal of accounting and economics, 1986 - Elsevier | 1986 | cited by 542)
+   … the signal is costly and the marginal cost of false signalling … A money-back guarantee induces truthful disclosure when … model, Riley states that the first condition is satisfied if there are …
+
+48. Evolution and maintenance of social status-signaling badges
+   http://publicationslist.org/data/martin.whiting/ref-74/Whiting_Nagy_Bateman_2003_Lizard_Social_Behavior_book_chapter.pdf
+   (MJ Whiting, KA Nagy, PW Bateman - Lizard social behavior, 2003 - publicationslist.org | 2003 | cited by 178)
+   [PDF] http://publicationslist.org/data/martin.whiting/ref-74/Whiting_Nagy_Bateman_2003_Lizard_Social_Behavior_book_chapter.pdf
+   … to as condition dependent), the benefits outweigh the costs … maintain an ESS in light of honest signaling theory (Table 2-2)… status signaling without regard to signaling constraints and …
+
+49. Screening, signalling and costly misrepresentation
+   http://www.severinov.com/published_papers/screen_costly_sept_2021_cje_rev2.pdf
+   (R Deneckere, S Severinov - Canadian Journal of Economics, 2017 - severinov.com | 2017 | cited by 13)
+   [PDF] http://www.severinov.com/published_papers/screen_costly_sept_2021_cje_rev2.pdf
+   … In the screening context, we establish conditions under which … types and the marginal cost of any particular signal is not too … The profile γn(θ) can be regarded as “truthful” for the sender …
+
+50. A performance‐based approach to studying costs of reliable signals
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/9781118966624.ch3
+   (JF Husak, JP Henningsen… - Animal signaling and …, 2015 - Wiley Online Library | 2015 | cited by 11)
+   [PDF] http://136.175.10.10:8088/ebook/pdf/Animal_Signaling_and_Function_an_Integrative_Approach.pdf#page=59
+   … Genetic correlations or condition-dependent correlations between functional traits and a … higher marginal costs than low-quality males, but this can still result in a reliable signal where …
+
+51. An exploration of signalling behaviour by both analytic and simulation
+   https://books.google.com/books?hl=en&lr=&id=ccp8fzlyorAC&oi=fnd&pg=PA454&dq=condition+dependent+signalling+honest+signals+marginal+cost&ots=dyc9-pBP34&sig=Q22mzR_0oK-KVy4zn7TSgB_xalo
+   (S Bullock - Fourth European Conference on Artificial Life, 1997 - books.google.com | 1997 | cited by 93)
+   [PDF] https://eprints.soton.ac.uk/261450/1/10.1.1.48.19.pdf
+   … response to a signal is also dependent on signaller quality. It … by the signalling population, the signal is an honest indicator … the conditions for the existence of an honest signalling ESS. …
+
+52. Cost and conflict in animal signals and human language
+   https://www.pnas.org/doi/abs/10.1073/pnas.231216498
+   (M Lachmann, S Szamado, CT Bergstrom - Proceedings of the National …, 2001 - pnas.org | 2001 | cited by 455)
+   [PDF] https://www.pnas.org/doi/pdf/10.1073/pnas.231216498
+   … contrary, signal cost is unnecessary for honest signaling even … condition of any signaler (3, 14); therefore, we shall identify … Peacocks weigh the marginal viability costs of increasing tail …
+
+53. Optimal investment in social signals
+   https://academic.oup.com/evolut/article-abstract/68/6/1640/6851746
+   (JL Dessalles - Evolution, 2014 - academic.oup.com | 2014 | cited by 57)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111/evo.12378
+   … in which sending honest signals may be advantageous to the … benefit variation and marginal cost variation balance each … cost, not to signals per se, but to investment in signaling. Let us …
+
+54. Models of begging as a signal of need
+   https://link.springer.com/content/pdf/10.1007/0-306-47660-6.pdf#page=11
+   (RA Johnstone, HCJ Godfray - The evolution of begging: competition …, 2002 - Springer | 2002 | cited by 71)
+   … We review costly and cost-free signalling models, and suggest … by the marginal cost to the parent of providing that food). … (eg the cost required for the maintenance of honesty declined …
+
+55. Mutual mate choice can drive costly signaling even under perfect monogamy
+   https://journals.sagepub.com/doi/abs/10.1177/1059712307087283
+   (PL Hooper, GF Miller - Adaptive Behavior, 2008 - journals.sagepub.com | 2008 | cited by 110)
+   [PDF] http://www.unm.edu/~phooper/HooperMiller2008.pdf
+   … simulation model of conditiondependent investment in a signal trait under conditions of perfect … The basic logic of honest signaling theory in biology and economics suggests that optimal …
+
+56. Signaling health versus parasites
+   https://www.journals.uchicago.edu/doi/abs/10.1086/338992
+   (T Getty - The American Naturalist, 2002 - journals.uchicago.edu | 2002 | cited by 259)
+   [PDF] https://www.researchgate.net/profile/Thomas-Getty/publication/23174914_Signaling_Health_versus_Parasites/links/56b9f01508ae7e3a0fa096eb/Signaling-Health-versus-Parasites.pdf
+   … deduction that they are paying lower marginal costs (I will explain the … signals and their absolute costs is theoretically undetermined, at least until we measure condition‐dependent cost …
+
+57. Does a trade‐off between current reproductive success and survival affect the honesty of male signalling in species with male parental care?
+   https://academic.oup.com/jeb/article-abstract/23/11/2461/7324608
+   (NB Kelly, SH Alonzo - Journal of evolutionary biology, 2010 - academic.oup.com | 2010 | cited by 14)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1420-9101.2010.02111.x
+   … the marginal costs of signal production were greater for signallers of low quality than for signallers of high quality. However, the differential costs of producing a signal depend … condition, …
+
+58. The evolution of honest communication: integrating social and physiological costs of ornamentation
+   https://academic.oup.com/icb/article-abstract/54/4/578/2797824
+   (EA Tibbetts - American Zoologist, 2014 - academic.oup.com | 2014 | cited by 66)
+   [PDF] https://academic.oup.com/icb/article-pdf/54/4/578/8909072/icu083.pdf
+   … pay proportionally lower marginal costs for elaborate … Models of the physiological cost of honest signaling propose … signals will be disfavored if individuals in poor condition are …
+
+59. A receiver-signaler equilibrium in the evolution of communication in noise
+   http://rhwiley.bio.unc.edu/pdfs/RSequilibrium_corrected.pdf
+   (RH Wiley - Behaviour, 2013 - rhwiley.bio.unc.edu | 2013 | cited by 37)
+   [PDF] http://rhwiley.bio.unc.edu/pdfs/RSequilibrium_corrected.pdf
+   … , the signaler’s marginal cost of signaling is multiplied by his … conditions that make measuring the marginal cost of signals … a signaler’s costs and honesty in signaling, it also raises some …
+
+60. Explaining costly religious practices: credibility enhancing displays and signaling theories
+   https://link.springer.com/article/10.1007/s11229-022-03742-7
+   (C Brusse, T Handfield, KJS Zollman - Synthese, 2022 - Springer | 2022 | cited by 12)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s11229-022-03742-7.pdf
+   … and conditions for future empirical testing. We clarify the dynamical and mechanistic bases of signalling … To contrast the two approaches under conditions of maximum overlap, we have …
+
+61. Self-signaling and social-signaling in giving
+   https://www.sciencedirect.com/science/article/pii/S0167268115001432
+   (Z Grossman - Journal of Economic Behavior & Organization, 2015 - Elsevier | 2015 | cited by 165)
+   [PDF] https://www.researchgate.net/profile/Zachary-Grossman/publication/277926728_Self-Signaling_and_Social-Signaling_in_Giving/links/5ebe90e3299bf1c09abc56bf/Self-Signaling-and-Social-Signaling-in-Giving.pdf
+   … Can a Bayesian signaling model explain patterns of giving driven by self-… signaling in giving. The results provide little evidence of self-signaling, but stronger evidence of social-signaling…
+
+62. Can behavioural constraints alter the stability of signalling equilibria?
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC1088881/
+   (SR Proulx - Proceedings of the Royal Society B: Biological …, 2001 - pmc.ncbi.nlm.nih.gov | 2001 | cited by 11)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC1088881/pdf/PB012307.pdf
+   … at the same level then, because they have di¡erent marginal costs (equation (2.2)), but … 1999 The relationship between signal quality and physical condition: is sexual signalling honest …
+
+63. Handicap signalling: when fecundity and viability do not add up
+   https://www.sciencedirect.com/science/article/pii/S0003347298907448
+   (T Getty - Animal Behaviour, 1998 - Elsevier | 1998 | cited by 194)
+   … for honest handicap signalling is that higher-quality signallers pay lower marginal costs for … The goals of this paper are to (1) re-derive the necessary conditions for handicap signalling …
+
+64. Modelling and the fall and rise of the handicap principle
+   https://link.springer.com/article/10.1007/s10539-011-9275-1
+   (J Grose - Biology & Philosophy, 2011 - Springer | 2011 | cited by 82)
+   … The marginal cost difference assumes that fitness is an additive … on costly signalling appeals to models of cultural evolution. If … that, “more honest signals tend to be more costly” (Schmidt …
+
+65. Should advertising parental care be honest?
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC1689366/
+   (H Kokko - Proceedings of the Royal Society B: Biological …, 1998 - pmc.ncbi.nlm.nih.gov | 1998 | cited by 238)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC1689366/pdf/LVM0CXBF9RBA6BU4_265_1871.pdf
+   … Honest signalling in systems with no parental care can thus be exempli¢ed analogously to … ishing marginal gains. Each condition-dependent optimum must have equal marginal gains …
+
+66. Signals, cues and meaning
+   https://smg.media.mit.edu/papers/Donath/SignalsTruthDesign/SignalsCuesAndMeaning.pdf
+   (J Donath - Signals, Truth and Design, 2007 - smg.media.mit.edu | 2007 | cited by 88)
+   [PDF] https://smg.media.mit.edu/papers/Donath/SignalsTruthDesign/SignalsCuesAndMeaning.pdf
+   … costs incurred in maintaining honesty. Much of this chapter will look at the economics of signaling: the costs of signal … an objective monetary price, but the marginal cost for a wealthy …
+
+67. Incentives in the family II: behavioral dynamics and the evolution of non-costly signaling
+   https://www.sciencedirect.com/science/article/pii/S0022519311005546
+   (E Akçay - Journal of theoretical biology, 2012 - Elsevier | 2012 | cited by 14)
+   [PDF] https://erolakcay.wordpress.com/wp-content/uploads/2013/11/akcay2012.pdf
+   … A prominent example is when offspring know their need or condition but the parents do not. … between signal costs and the costs of provisioning. I find that a non-costly honest signaling …
+
+68. Evolved signals: Expensive hype vs. conspiratorial whispers
+   https://books.google.com/books?hl=en&lr=&id=K2M6VDCQ5mMC&oi=fnd&pg=PA358&dq=condition+dependent+signalling+honest+signals+marginal+cost&ots=K2ofBQLV5H&sig=Lwyna1VewIPXGd1krj-dILspieU
+   (J Noble - Artificial Life 6: Proceedings of the Sixth International …, 1998 - books.google.com | 1998 | cited by 27)
+   … differential signal costs effectively render honest signalling … receiver is marginal, evolved signals will be more costly than … to deny that costly signalling arms races under conditions of con…
+
+69. Condition dependence and the origins of elevated fluctuating asymmetry in quality signals
+   https://academic.oup.com/beheco/article-abstract/22/6/1166/218789
+   (MJ Sheehan, EA Tibbetts - Behavioral ecology, 2011 - academic.oup.com | 2011 | cited by 13)
+   [PDF] https://academic.oup.com/beheco/article-pdf/22/6/1166/17280856/arr101.pdf
+   … signaling traits can be attributed to their condition-dependent … of color trait (Tukey's honestly significant difference [HSD], P … Among color traits, the condition-dependent quality signal …
+
+70. Cue-driven microbial cooperation and communication: evolving quorum sensing with honest signaling
+   https://link.springer.com/article/10.1186/s12915-024-01857-6
+   (T Czárán, I Scheuring, I Zachar, S Számadó - BMC biology, 2024 - Springer | 2024 | cited by 8)
+   [PDF] https://link.springer.com/content/pdf/10.1186/s12915-024-01857-6.pdf
+   … Such polymorphism is maintained by the condition-dependent trade-offs of signal … at no additional cost, ie, the (honest) signal cost of cooperators is included in c. The condition for the …
+
+71. Sexual selection, honest advertisement and the handicap principle: reviewing the evidence
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1469-185x.1995.tb01439.x
+   (RA Johnstone - Biological reviews, 1995 - Wiley Online Library | 1995 | cited by 764)
+   … honest advertisement is more probable in birds with streamer tails, since the low marginal cost … the display trait is expressed in a condition-dependent manner, and that individuals might …
+
+72. Monopolistic signal provision
+   https://www.degruyterbrill.com/document/doi/10.1515/bejte-2012-0003/html
+   (L Rayo - The BE Journal of Theoretical Economics, 2013 - degruyterbrill.com | 2013 | cited by 114)
+   [PDF] https://scholar.archive.org/work/bsyj5ufvx5cnrpz4eiubls7fou/access/wayback/http://www.csio.econ.nwu.edu:80/Conferences/IO-2003/RayoMSP0903.pdf
+   … The panel on the right depicts a price schedule when signaling is … the set of truthful filters satisfying the following condition: for … structure between virtual marginal values and consumer …
+
+73. Costly signaling and the origin of religion
+   https://brill.com/view/journals/jocc/9/3-4/article-p225_4.xml
+   (M Murray, L Moore - Journal of Cognition and Culture, 2009 - brill.com | 2009 | cited by 69)
+   … to signal these conditions whether the signals are honest or not. … behavior with minimal marginal benefits. This is a serious … defectors would depend on how costly signals would have to …
+
+74. Real-time social selection maintains honesty of a dynamic visual signal in cooperative fish
+   https://academic.oup.com/evlett/article-abstract/1/5/269/6697437
+   (JC Bachmann, F Cortesi, MD Hall, NJ Marshall… - Evolution …, 2017 - academic.oup.com | 2017 | cited by 34)
+   [PDF] https://academic.oup.com/evlett/article-pdf/1/5/269/49867489/evlett0269.pdf
+   … it is necessary to empirically measure marginal costs of cheating in manipulated out-of… condition. We show here that unreliable signaling has increased costs relative to reliable signaling…
+
+75. Why not lie? Costs enforce honesty in an experimental
+   https://www.academia.edu/download/39402511/Why_not_lie_Costs_enforce_honesty_in_an_20151024-9250-19uaw6q.pdf
+   (TJ Polnaszek, DW Stephens - 2013 - academia.edu | 2013)
+   [PDF] https://www.academia.edu/download/39402511/Why_not_lie_Costs_enforce_honesty_in_an_20151024-9250-19uaw6q.pdf
+   … in explaining the evolution of honest signalling. Handicap … ‘marginal cost’ to signal helps make the idea of marginal cost … to show that the conditions required for honesty in our simple …
+
+76. Signalling, Information and Consumer Fraud
+   https://www.mdpi.com/2073-4336/11/3/29
+   (S Martinez-Gorricho - Games, 2020 - mdpi.com | 2020 | cited by 3)
+   … to be either honest (by charging the lower market price) or … We provide conditions for the public revelation of consumers’ … and “sufficiently" convex marginal costs.4 We demonstrate that …
+
+77. What money canʼt buy: Efficient mechanism design with costly signals
+   https://www.sciencedirect.com/science/article/pii/S0899825612000395
+   (D Condorelli - Games and Economic Behavior, 2012 - Elsevier | 2012 | cited by 114)
+   [PDF] https://www.condorelli.science/WMCB.pdf
+   … agents based on their marginal contribution to social surplus … matches by engaging in costly signaling. HMS show that … A direct allocation mechanism is incentive compatible if truthful …
+
+78. Noisy signaling: theory and experiment
+   https://www.sciencedirect.com/science/article/pii/S0899825611000741
+   (T de Haan, T Offerman, R Sloof - Games and Economic Behavior, 2011 - Elsevier | 2011 | cited by 89)
+   [PDF] https://www1feb-uva.nl/creed/pdffiles/Noisy%20signaling%202011.pdf
+   … the marginal benefits of raising m with the marginal costs (… higher the more favorable industry conditions are. The seller’… ), in this specification marginal costs are type dependent. The …
+
+79. Honesty and dishonesty in gossip strategies: a fitness interdependence analysis
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC8487735/
+   (J Wu, S Számadó, P Barclay… - … Transactions of the …, 2021 - pmc.ncbi.nlm.nih.gov | 2021 | cited by 33)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC8487735/pdf/rstb.2020.0300.pdf
+   … The key insight of signalling theory is that signals are … analyse the conditions under which people share honest versus … We show that honesty is determined by the marginal cost/benefit …
+
+80. The evolution of covert signaling
+   https://www.nature.com/articles/s41598-018-22926-1
+   (PE Smaldino, TJ Flamson, R McElreath - Scientific reports, 2018 - nature.com | 2018 | cited by 68)
+   [PDF] https://www.nature.com/articles/s41598-018-22926-1.pdf
+   … Laughter may also serve as an honest signal of a shared sense … conditions for selection to favor covert signaling over overt … therefore likely to be marginal relative to random assortment …
+
+81. Begging and bleating: the evolution of parent–offspring signalling
+   https://royalsocietypublishing.org/rstb/article-abstract/355/1403/1581/19700
+   (HCJ Godfray, RA Johnstone - … Transactions of the …, 2000 - royalsocietypublishing.org | 2000 | cited by 203)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC1692894/pdf/11127903.pdf
+   … is implicitly given by the marginal value relationship uy + gy ˆ 0. … or for any change in o¡spring condition over time. Even such a … The last suggestion is that begging is an honest signal of …
+
+82. Costless signalling in financial markets
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1987.tb03913.x
+   (G Franke - the Journal of Finance, 1987 - Wiley Online Library | 1987 | cited by 76)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1540-6261.1987.tb03913.x
+   … -arbitrage condition requires that the marginal exchange rate … ) the insiders prefer to signal their information honestly, and (c… optimal financing policy α + depend on the parameter vector …
+
+83. Reputational cheap talk
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1756-2171.2006.tb00010.x
+   (M Ottaviani, PN Sørensen - The Rand journal of economics, 2006 - Wiley Online Library | 2006 | cited by 455)
+   [PDF] https://didattica.unibocconi.it/mypage/upload/48832_20150220_111906_RCT-REPRINT.PDF
+   … independent signals and discover that honesty is impossible under very general conditions.… Third, these incentives persist in the signalling equilibrium that results when the decision-…
+
+84. Signal modulation as a mechanism for handicap disposal
+   https://www.sciencedirect.com/science/article/pii/S0003347212000322
+   (S Gavassa, AC Silva, E Gonzalez, PK Stoddard - Animal behaviour, 2012 - Elsevier | 2012 | cited by 32)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC3365606/pdf/nihms349070.pdf
+   … of honesty might be maintained by intrinsic handicap costs on signalling or through imposition of extrinsic costs, … As expected, social competition under natural field conditions and in …
+
+85. The influence of environmental variance on the evolution of signaling behavior
+   https://academic.oup.com/beheco/article-abstract/29/4/814/5001305
+   (C Koykka, G Wild - Behavioral Ecology, 2018 - academic.oup.com | 2018 | cited by 11)
+   [PDF] https://academic.oup.com/beheco/article-pdf/29/4/814/25142553/ary072.pdf
+   … and social conditions under which species signal and … to begging may actually depend on environmental conditions. In … study), need as defined by the marginal change in the offspring’s …
+
+86. The Co-evolution of Costly Signaling and Cooperation in Social Dilemmas
+   https://arxiv.org/abs/2605.13750
+   (M Abolhasani, S Moghimi-Araghi… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.13750
+   … emit costly signals and condition their actions on the signals they … interpret signaling here less as a vehicle for honest quality … This approximation retains the marginal signal frequencies …
+
+87. Chick begging as a signal: are nestlings honest?
+   https://academic.oup.com/beheco/article-abstract/7/2/178/261691
+   (PA Cotton, A Kacelnik, J Wright - Behavioral Ecology, 1996 - academic.oup.com | 1996 | cited by 165)
+   [PDF] https://academic.oup.com/beheco/article-pdf/7/2/178/727478/7-2-178.pdf
+   … Such a signaling system has to regulate both parental … If the marginal benefit resulting from an extra unit of food to a … the chick signals at a rate strictly determined by its condition and the …
+
+88. The Handicap Principle: how an erroneous hypothesis became a scientific principle
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/brv.12563
+   (DJ Penn, S Számadó - Biological Reviews, 2020 - Wiley Online Library | 2020 | cited by 154)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111%2Fbrv.12563
+   … second hypothesis as adaptive condition-dependent signalling (Zahavi, … signalling trade-offs (differential marginal cost and benefits) can maintain honest signalling with cost-free signals …
+
+89. Separating equilibria in continuous signalling games
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC1693066/
+   (CT Bergstrom, S Számadó… - … Transactions of the …, 2002 - pmc.ncbi.nlm.nih.gov | 2002 | cited by 83)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC1693066/pdf/12495516.pdf
+   … the conditions for the existence of separating signalling equilibria. In … of the cost function—which typically will depend on the … of honest signalling may need to focus on the marginal costs …
+
+90. Signalling and the pricing of new issues
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1989.tb05063.x
+   (M Grinblatt, CY Hwang - The journal of finance, 1989 - Wiley Online Library | 1989 | cited by 2158)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1540-6261.1989.tb05063.x
+   … 3 provide conditions for the existence of a separating … his remaining shares for what the honest Low Mean Issuer would … 2, illustrates the marginal benefits and costs of pretending to be a …
+
+91. Turtle hunting and tombstone opening: Public generosity as costly signaling
+   https://www.sciencedirect.com/science/article/pii/S1090513800000313
+   (EA Smith, RLB Bird - Evolution and human behavior, 2000 - Elsevier | 2000 | cited by 796)
+   [PDF] https://www.researchgate.net/profile/Rebecca-Bliege-Bird/publication/12418800_Turtle_Hunting_and_Tombstone_Opening_Public_Generosity_as_Costly_Signaling/links/5b9fdf3245851574f7d2529e/Turtle-Hunting-and-Tombstone-Opening-Public-Generosity-as-Costly-Signaling.pdf?_sg%5B0%5D=started_experiment_milestone&origin=journalDetail
+   … marginal costs for signaling, or they reap lower marginal benefits. These two conditions are linked, since quality-dependent cost … serves as an honest signal of the costs hunters incurred …
+
+92. Sexually selected signals are not similar to sports handicaps
+   https://www.cell.com/trends/ecology-evolution/abstract/S0169-5347(05)00338-1
+   (T Getty - Trends in Ecology & Evolution, 2006 - cell.com | 2006 | cited by 262)
+   [PDF] https://people.bu.edu/msoren/Getty.pdf
+   … signals into fitness and that, in sexually selected signalling, higher quality signallers can be more efficient in spite of higher marginal costs… necessary condition for reliable signalling that …
+
+93. Older males signal more reliably
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC1691170/
+   (SR Proulx, T Day, L Rowe - … of the Royal Society B: Biological …, 2002 - pmc.ncbi.nlm.nih.gov | 2002 | cited by 145)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC1691170/pdf/12495495.pdf
+   … results depend on differences in the marginal cost of signalling and … for male display to be condition dependent. The central issue of … We are not suggesting that honest signalling will not …
+
+94. Inferring the origins of state-dependent courtship traits
+   https://www.journals.uchicago.edu/doi/abs/10.1086/317007
+   (RJH Payne, M Pagel - The American Naturalist, 2001 - journals.uchicago.edu | 2001 | cited by 32)
+   … equilibrium to be stable and honest. We seek the conditions under which signaling behavior … probability of mating by a female (vertical axis) must exceed the marginal cost of signaling …
+
+95. Efficient signalling with dividends and investments
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1987.tb02570.x
+   (R Ambarish, K John, J Williams - The Journal of Finance, 1987 - Wiley Online Library | 1987 | cited by 789)
+   … Instead, truthful signals may or may not follow incidentally … can be replaced by an equivalent truth-telling condition. The … , this modified signal is superior because the marginal cost of …
+
+96. BEHAVIORAL PLASTICITY, HONEST SIGNALING, AND PARENTAL INVESTMENT IN BETTA SPLENDENS: AN INTEGRATIVE REVIEW ACROSS ENVIRONMENTAL …
+   https://openurl.ebsco.com/contentitem/gcd:194736054?sid=ebsco:plink:crawler-gcd&id=ebsco:gcd:194736054&crl=c&jrnl=15842363
+   (IV Petrescu-Mag - … Vasile Goldis Seria Stiintele Vietii (Life …, 2025 - openurl.ebsco.com | 2025)
+   … condition-dependent signals with measurable energetic costs, consistent with honest signaling theory, and are strongly influenced by environmental conditions such as turbidity and light…
+
+97. Oxidative stress and condition-dependent sexual signals: more than just seeing red
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC3385731/
+   (M Garratt, RC Brooks - Proceedings of the Royal Society B …, 2012 - pmc.ncbi.nlm.nih.gov | 2012 | cited by 113)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC3385731/pdf/nihpp-rs4169007v1.pdf
+   … sexual signals [2] or generates differential costs from signalling … will pay lower marginal signalling costs when compared with … influencing the honesty of condition-dependant signals. …
+
+98. How noise determines the evolution of communication
+   https://www.sciencedirect.com/science/article/pii/S0003347216301403
+   (RH Wiley - Animal Behaviour, 2017 - Elsevier | 2017 | cited by 48)
+   [PDF] http://rhwiley.bio.unc.edu/pdfs/Wiley2017HowNoiseDetermines.pdf
+   … on the level of signals and (3) a signaller's optimal level of signalling depends on the … , such as conditions for the evolution of honesty and for evolutionarily stable signalling, appear in …
+
+99. The fallacy of the Handicap Principle
+   https://szabolcsszamado.com/?page_id=1428
+   (S Számadó - szabolcsszamado.com)
+   … Honesty is maintained by condition-dependent trade-offs (ie by differential marginal cost and/or differential marginal benefit) and not by equilibrium cost (Számadó, 1999; Lachmann et …
+
+===== Query 6/6: handicap principle replacement index of condition Zahavi criticism =====
+
+1. Modelling and the fall and rise of the handicap principle
+   https://link.springer.com/article/10.1007/s10539-011-9275-1
+   (J Grose - Biology & Philosophy, 2011 - Springer | 2011 | cited by 82)
+   … The story of the fall and rise of Zahavi’s handicap principle is one of a battle between models… ornaments are condition dependent, the unexpected conclusion from our literature review is …
+
+2. The Handicap Principle: how an erroneous hypothesis became a scientific principle
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/brv.12563
+   (DJ Penn, S Számadó - Biological Reviews, 2020 - Wiley Online Library | 2020 | cited by 154)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111%2Fbrv.12563
+   … Zahavi's proposals for his handicap hypothesis and … Furthermore, Zahavi argued that signal selection should replace … , we refer to Zahavi's second hypothesis as adaptive condition-…
+
+3. The cost of honesty and the fallacy of the handicap principle
+   https://www.sciencedirect.com/science/article/pii/S0003347210003374
+   (S Számadó - Animal Behaviour, 2011 - Elsevier | 2011 | cited by 299)
+   [PDF] https://www.researchgate.net/profile/Szabolcs-Szamado/publication/222662460_The_cost_of_honesty_and_the_fallacy_of_the_handicap_principle/links/5a914e0c45851535bcd677e5/The-cost-of-honesty-and-the-fallacy-of-the-handicap-principle.pdf
+   … Here I first review the theoretical models supporting the above conclusion, and then I list … without imposing extra realized cost (ie a handicap) on honest signallers at the equilibrium. …
+
+4. Handicap Hypothesis
+   https://link.springer.com/content/pdf/10.1007/978-3-319-55065-7_353.pdf
+   (JP Higham - Encyclopedia of Animal Cognition and Behavior, 2022 - Springer | 2022 | cited by 1)
+   … is an idea proposed in 1975 by Amotz Zahavi as a … tightly linked to anatomical or physiological condition. Under the … Genome-wide linkage analysis is often used in the study of many …
+
+5. Amplifiers and the handicap principle in sexual selection: a different emphasis
+   https://royalsocietypublishing.org/rspb/article-abstract/235/1281/383/34042
+   (O Hasson - Proceedings of the Royal society of London …, 1989 - royalsocietypublishing.org | 1989 | cited by 185)
+   … that are embodied in Zahavi’s theory of sexual selection. … I also show here that the evolution of amplifiers leads to conditions … Sexual selection for a handicap: a critical analysis of Zahavi’…
+
+6. Sexual selection: the handicap principle does work–sometimes
+   https://royalsocietypublishing.org/doi/abs/10.1098/rspb.1987.0038
+   (A Pomiankowski - Proceedings of the Royal society of …, 1987 - royalsocietypublishing.org | 1987 | cited by 358)
+   [PDF] https://www.researchgate.net/profile/Andrew-Pomiankowski/publication/240256015_Sexual_Selection_The_Handicap_Principle_Does_Work_--_Sometimes/links/54edeba50cf2e2830863aee9/Sexual-Selection-The-Handicap-Principle-Does-Work--Sometimes.pdf
+   … that there are conditions under which the ‘ handicap principle ’ … by Zahavi and others that allow the ‘handicap principle’ to … the ‘handicap principle’ is Andersson’s recent analysis of the …
+
+7. The Handicap Principle: A Missing Piece of Darwin's Puzzle.
+   https://go.gale.com/ps/i.do?id=GALE%7CA20968521&sid=googleScholar&v=2.1&it=r&linkaccess=abs&issn=00143820&p=AONE&sw=w
+   (A Pomiankowski, Y Iwasa - Evolution, 1998 - go.gale.com | 1998)
+   … If we substitute this expression for [B.sub.pv] into equation (4) … analysis shows that recent claims that any form of handicap … , Amotz and Avishag Zahavi's The Handicap Principle. Their …
+
+8. The rise and fall of handicap principle: a commentary on the “Modelling and the fall and rise of the handicap principle”
+   https://link.springer.com/article/10.1007/s10539-011-9299-6
+   (S Számadó - Biology & Philosophy, 2012 - Springer | 2012 | cited by 22)
+   [PDF] https://www.researchgate.net/profile/Szabolcs-Szamado/publication/230603262_The_rise_and_fall_of_handicap_principle_A_commentary_on_the_Modelling_and_the_fall_and_rise_of_the_handicap_principle/links/09e41501fc79024c35000000/The-rise-and-fall-of-handicap-principle-A-commentary-on-the-Modelling-and-the-fall-and-rise-of-the-handicap-principle.pdf
+   … of the handicap principle; in the fourth section I review the … is about signal cost) and replaced it with the receiver response … Note, that Zahavi’s argument is not just that signals have to …
+
+9. The fallacy of the Handicap Principle
+   https://szabolcsszamado.com/?page_id=1428
+   (S Számadó - szabolcsszamado.com)
+   The Handicap Principle (HP) is an obsolete idea proposed by Amotz Zahavi (Zahavi, 1975; Zahavi & Zahavi, 1997). While it was popular in biology it can be rejected as it has no …
+
+10. A general signalling theory: why honest signals are explained by trade-offs rather than costs or handicaps
+   https://academic.oup.com/jeb/article-abstract/39/2/171/8362708
+   (S Számadó, I Zachar, DJ Penn - Journal of Evolutionary Biology, 2026 - academic.oup.com | 2026 | cited by 6)
+   [PDF] https://academic.oup.com/jeb/article-pdf/39/2/171/65671347/voaf144.pdf
+   … to replace the handicap/… handicap hypothesis was initially criticized particularly for its upside-down Darwinian logic in which costs (and waste) are beneficial. In reply to critics, Zahavi …
+
+11. Costly signaling and the handicap principle in hunter‐gatherer research: a critical review
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/evan.21767
+   (DNE Stibbard‐Hawkes - … : Issues, News, and Reviews, 2019 - Wiley Online Library | 2019 | cited by 63)
+   [PDF] https://www.researchgate.net/profile/Duncan-Stibbard-Hawkes/publication/331574563_Costly_signaling_and_the_handicap_principle_in_hunter-gatherer_research_A_critical_review/links/615c73db5a481543a8874b75/Costly-signaling-and-the-handicap-principle-in-hunter-gatherer-research-A-critical-review.pdf
+   … draws links to Zahavi's handicap principle and the costly … Here I review honest signaling theory in both hunter-gatherer … in prime condition with energy to spare may reliably signal …
+
+12. A unified definition for reliability, survivability and resilience inspired by the handicap principle and ecological stability
+   https://www.inderscienceonline.com/doi/abs/10.1504/IJCIS.2012.049045
+   (ZS Ma - International Journal of Critical Infrastructures 31, 2012 - inderscienceonline.com | 2012 | cited by 9)
+   … with survival analysis (including competing risk analysis and … this paper to suggest the replacement of existing survivability definitions … Two examples of the handicap Zahavi cited are the …
+
+13. Sexual selection for a handicap: a critical analysis of Zahavi's model
+   https://www.sciencedirect.com/science/article/pii/0022519376900060
+   (JWF Davis, P O'donald - Journal of Theoretical Biology, 1976 - Elsevier | 1976 | cited by 94)
+   … Analysis of Zahavi’s Model An analysis of Zahavi’s model is impossible without considering the … We shall then ask under what conditions will an advantage be gained by females who …
+
+14. The handicap principle for trust in computer security, the semantic web and social networking
+   https://link.springer.com/chapter/10.1007/978-3-642-05250-7_48
+   (Z Ma, AW Krings, CC Hung - … on Web Information Systems and Mining, 2009 - Springer | 2009 | cited by 8)
+   … The Handicap principle by Zahavi [34], which states that that … modeling analysis failed to show the evolution of handicaps … , rather than replacing it. Furthermore, what additional …
+
+15. Selection for handicaps
+   https://link.springer.com/article/10.1023/A:1006728925152
+   (J LaPorte - 2001 - Springer | 2001 | cited by 3)
+   … Amotz and Avishag Zahavi, handicaps can be selected for … The discovery of the handicap principle is increasingly … The Handicap Principle is an elaboration of the principle and …
+
+16. Robustness, optimality, and the handicap principle
+   https://jmckalex.org/files/publications/robustness-optimality.pdf
+   (JMK Alexander - 2009 - jmckalex.org | 2009)
+   [PDF] https://jmckalex.org/files/publications/robustness-optimality.pdf
+   … Given that we know relatively little about the conditions under … ai has a chance µ of being replaced by an entirely new type of … game theory suggests that Zahavi’s “handicap principle” is …
+
+17. Inmutation theory and handicap theory: paths of intersection
+   https://new.comteka.com.ua/index.php/journal/article/view/218
+   (О Холод - … : теорія і практика/Social Communications: Theory …, 2026 - new.comteka.com.ua | 2026)
+   [PDF] https://new.comteka.com.ua/index.php/journal/article/download/218/210
+   … ) was proposed by the Israeli biologist Amotz Zahavi in 1975 … The handicap principle complements the analysis by … , while the handicap principle identifies the conditions under which …
+
+18. Towards a unified definition for reliability, survivability and resilience (I): the conceptual framework inspired by the handicap principle and ecological stability
+   https://ieeexplore.ieee.org/abstract/document/5446843/
+   (Z Ma - 2010 IEEE Aerospace Conference, 2010 - ieeexplore.ieee.org | 2010 | cited by 21)
+   … In contrast with reliability analysis, we still lack a commonly … of this paper to suggest a replacement for existing survivability definitions … Two examples of the handicap Zahavi cited are …
+
+19. Sexual selection, signal selection and the handicap principle
+   https://www.taylorfrancis.com/chapters/edit/10.1201/9781482280517-5/sexual-selection-signal-selection-handicap-principle-amotz-zahavi
+   (A Zahavi - Reproductive Biology and Phylogeny of Birds, Part B …, 2007 - taylorfrancis.com | 2007 | cited by 32)
+   … adults, or of the same individual under different conditions. A young shrike cannot afford that … I suggest that for this reason altruistic acts often replace aggression in cooperatively living …
+
+20. The handicap principle: A missing piece of Darwin's puzzle
+   https://books.google.com/books?hl=en&lr=&id=ImjqhNqjiqsC&oi=fnd&pg=PR5&dq=handicap+principle+replacement+index+of+condition+Zahavi+criticism&ots=h8NZ2kMb8S&sig=4Xf9nZXUxITqDH8rnZyFmcBcn9g
+   (A Zahavi, A Zahavi - 1999 - books.google.com | 1999 | cited by 3458)
+   … the Handicap Principle does not work,2 or that it might apply only under very special conditions.… models to show that the Handicap Principle is generally applicable, and that it is a sound …
+
+21. Condition‐dependence, pleiotropy and the handicap principle of sexual selection in melanin‐based colouration
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/brv.12171
+   (A Roulin - Biological Reviews, 2016 - Wiley Online Library | 2016 | cited by 224)
+   [PDF] https://serval.unil.ch/resource/serval:BIB_A5147D408032.P001/REF.pdf
+   … Here I review the production, maintenance and wearing/displaying costs that can generate a correlation between melanin-based colouration and body condition… , are replaced regularly, …
+
+22. Adaptive factors in the evolution of signaling systems
+   https://link.springer.com/content/pdf/10.1007/978-1-4471-0663-0_3?pdf=chapter%20toc
+   (J Noble, EA Di Paolo, S Bullock - Simulating the evolution of language, 2002 - Springer | 2002 | cited by 18)
+   [PDF] https://eprints.soton.ac.uk/261447/1/noble01adaptiveFactors.pdf
+   … at random and spare one's offspring the handicap? But despite … handicap principle in the face of almost continuous criticism (… handicap principle does not yet enjoy the status that Zahavi …
+
+23. Sexual selection, honest advertisement and the handicap principle: reviewing the evidence
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1469-185x.1995.tb01439.x
+   (RA Johnstone - Biological reviews, 1995 - Wiley Online Library | 1995 | cited by 764)
+   … and the handicap principle. One can conclude only that while some mating preferences did not originally evolve for adaptive reasons, others may or may not have done so. …
+
+24. Threat displays are not handicaps
+   https://www.sciencedirect.com/science/article/pii/S0022519303931766
+   (S Számadó - Journal of Theoretical Biology, 2003 - Elsevier | 2003 | cited by 61)
+   … it has been shown that the handicap principle can work in the … , for instance a lateral display as Zahavi proposed, then it seems to … Since it is not a review article I do not review the entire …
+
+25. The continuous Sir Philip Sidney game: a simple model of biological signalling
+   https://www.sciencedirect.com/science/article/pii/S0022519305806745
+   (RA Johnstone, A Grafen - Journal of theoretical Biology, 1992 - Elsevier | 1992 | cited by 163)
+   [PDF] https://users.ox.ac.uk/~grafen/cv/rajjtb.pdf
+   … An analysis of … the conditions of Zahavi's handicap principle. At equilibrium, signals are honest, costly, and costly in a way that is related to the true quality revealed. Further analysis …
+
+26. Costly Signalling and the Handicap Principle in Hunter-Gatherer Studies: A Critical Review
+   https://www.researchgate.net/profile/Duncan-Stibbard-Hawkes/publication/331574563_Costly_signaling_and_the_handicap_principle_in_hunter-gatherer_research_A_critical_review/links/5e71038d4585150a0d17c6c8/Costly-signaling-and-the-handicap-principle-in-hunter-gatherer-research-A-critical-review.pdf
+   (DNE Stibbard-Hawkes - researchgate.net)
+   [PDF] https://www.researchgate.net/profile/Duncan-Stibbard-Hawkes/publication/331574563_Costly_signaling_and_the_handicap_principle_in_hunter-gatherer_research_A_critical_review/links/5e71038d4585150a0d17c6c8/Costly-signaling-and-the-handicap-principle-in-hunter-gatherer-research-A-critical-review.pdf
+   … hunting draws links to Zahavi’s handicap principle and the costly … Here I review honest signalling theory in both hunter-… , individuals in prime condition with energy to spare may reliably …
+
+27. The trade-offs of honest and dishonest signals
+   https://ecoevorxiv.org/repository/view/6431/
+   (S Számadó, I Zachar, DJ Penn - 2023 - ecoevorxiv.org | 2023 | cited by 4)
+   [PDF] https://ecoevorxiv.org/repository/object/6431/download/12469/
+   … In response to critics, Zahavi clarified his theory and … cannot be outcompeted and replaced by an alternative strategy … (HP): Widely used as a synonym for Zahavi's handicap hypothesis…
+
+28. Jumping to Bold Conclusions
+   
+   (A Zahavi, A Zahavi, S Bullock)
+
+29. Sexual selection unhandicapped by the Fisher process
+   https://www.sciencedirect.com/science/article/pii/S0022519305800876
+   (A Grafen - Journal of theoretical biology, 1990 - Elsevier | 1990 | cited by 848)
+   … I should now mention two complicating factors in the analysis. … condition-dependent handicap and the revealing handicap, … those of Zahavi's original papers on the handicap principle. …
+
+30. Animal signals
+   https://books.google.com/books?hl=en&lr=&id=SUA51MeG1lcC&oi=fnd&pg=IA2&dq=handicap+principle+replacement+index+of+condition+Zahavi+criticism&ots=zPOtiCYks3&sig=ZYWK8ugo6bIGTgZU1BNpIYItqUQ
+   (JM Smith, D Harper - 2003 - books.google.com | 2003 | cited by 2996)
+   … to investigate Zahavi's (1975) verbal model of the handicap principle. but … In this section we review these contexts, and refer to more … Grafen (1990a) follows this list of conditions with the …
+
+31. Signaling health versus parasites
+   https://www.journals.uchicago.edu/doi/abs/10.1086/338992
+   (T Getty - The American Naturalist, 2002 - journals.uchicago.edu | 2002 | cited by 259)
+   [PDF] https://www.researchgate.net/profile/Thomas-Getty/publication/23174914_Signaling_Health_versus_Parasites/links/56b9f01508ae7e3a0fa096eb/Signaling-Health-versus-Parasites.pdf
+   … handicap principle. It seems apparent from the literature that many people have not noticed the important distinction between Zahavi’… Formal analysis of biological signaling within the life…
+
+32. Sexual selection by the handicap mechanism
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1558-5646.1989.tb02590.x
+   (JS Heywood - Evolution, 1989 - Wiley Online Library | 1989 | cited by 206)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1558-5646.1989.tb02590.x
+   … These models have been criticized because they require that … a Zahavi handicap or a conditiondependent handicap is … could supplement or replace environmental variation as the …
+
+33. The oxidation handicap hypothesis and the carotenoid allocation trade‐off
+   https://academic.oup.com/jeb/article-abstract/21/6/1789/7408001
+   (C Alonso‐alvarez, L Pérez‐rodríguez… - Journal of …, 2008 - academic.oup.com | 2008 | cited by 197)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1420-9101.2008.01591.x
+   … Folstad & Karter (1992) refined this principle further proposing the ‘immunocompetence handicap hypothesis… In this way, the handicap principle was again reformulated as the ‘oxidation …
+
+34. Aesthetic fitness: How sexual selection shaped artistic virtuosity as a fitness indicator and aesthetic preferences as mate choice criteria
+   https://www.primalpoly.com/s/2001-aesthetic-fitness.pdf
+   (GF Miller - Bulletin of Psychology and the Arts, 2001 - primalpoly.com | 2001 | cited by 277)
+   [PDF] https://www.primalpoly.com/s/2001-aesthetic-fitness.pdf
+   … the futility of Darwinian analysis. Darwinian aesthetics also … Zahavi has also applied his handicap principle insightfully to … the condition-dependent handicap condition: the relative …
+
+35. Imitating the initial evolutionary stage of a tail ornament
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.0014-3820.2000.tb00072.x
+   (P Matyjasiak, PG Jabloski, I Olejniczak, P Boniecki - Evolution, 2000 - Wiley Online Library | 2000 | cited by 31)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.0014-3820.2000.tb00072.x
+   … We discuss the potential role of the handicap principle and … of interest of females (Zahavi 1975). Such signal traits must … In a phylogenetic analysis we will reconstruct the ancestral state …
+
+36. Musth and sexual selection in elephants: A review of signalling properties and potential fitness consequences
+   https://brill.com/view/journals/beh/159/3-4/article-p207_1.xml
+   (CA LaDue, BA Schulte, WK Kiso, EW Freeman - Behaviour, 2021 - brill.com | 2021 | cited by 35)
+   [PDF] https://brill.com/view/journals/beh/159/3-4/article-p207_1.pdf
+   … After all, body size and health condition should be sufficient indices of a male’s reproductive … In conjunction with the immunocompetence handicap hypothesis, the challenge hypothesis …
+
+37. MAJOR‐HISTOCOMPATIBILITY‐COMPLEX‐ASSOCIATED VARIATION IN SECONDARY SEXUAL TRAITS OF WHITE‐TAILED DEER (ODOCOILEUS VIRGINIANUS …
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.0014-3820.2001.tb00794.x
+   (SS Ditchkoff, RL Lochmiller, RE Masters, SR Hoofer… - …, 2001 - Wiley Online Library | 2001 | cited by 245)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.0014-3820.2001.tb00794.x
+   … the handicap principle (Zahavi 1975; Zahavi and Zahavi 1997) … We did not use ANCOVA to control for age in this analysis … advantages that result in superior condition and thus serves as …
+
+38. A two-sex life history model of handicap signaling
+   https://www.sciencedirect.com/science/article/pii/S002251930900561X
+   (CYC Chu - Journal of theoretical biology, 2010 - Elsevier | 2010 | cited by 3)
+   … Zahavi (1975) proposed a handicap theory to explain this … signal their viability by yielding a handicap in terms of a clumsy … characterizes the conditions behind a handicap equilibrium. …
+
+39. Nice songs, good smells
+   https://books.google.com/books?hl=en&lr=&id=0d7IEQAAQBAJ&oi=fnd&pg=PT26&dq=handicap+principle+replacement+index+of+condition+Zahavi+criticism&ots=A6arNcyyL5&sig=teSoKqLGjcxy4fCGJVaV8GgQfEk
+   (VS Dias, RG Bruton, E Foreman… - Fruit Flies of …, 2026 - books.google.com | 2026)
+   … the Zahavi– Grafen handicap principle. Hence, the cost of sexual signals may function as a handicap (… However, the handicap hypothesis has been criticized for lacking strong empirical …
+
+40. Handicap theory is applied to females but not males in relation to mate choice in the stalk-eyed fly Sphyracephala detrahens
+   https://www.nature.com/articles/s41598-020-76649-3
+   (K Takeda, T Furuta, M Hamada, Y Sato, K Taniguchi… - Scientific Reports, 2020 - nature.com | 2020 | cited by 9)
+   [PDF] https://www.nature.com/articles/s41598-020-76649-3.pdf
+   … and indistinguishable by covariance analysis. Based on … If handicap theory, in which strong signals are produced only … conditions and examined the length of the eye stalk (Fig. 6A). …
+
+41. Signal modulation as a mechanism for handicap disposal
+   https://www.sciencedirect.com/science/article/pii/S0003347212000322
+   (S Gavassa, AC Silva, E Gonzalez, PK Stoddard - Animal behaviour, 2012 - Elsevier | 2012 | cited by 32)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC3365606/pdf/nihms349070.pdf
+   … Thus, theory predicts a delicate balance between signal enhancement and signal reliability that varies with degree of social competition, handicap … under natural field conditions and in …
+
+42. Perceived Epistemic Risk as a Costly Signal of Credibility Among Educational Influencers in Indonesia
+   https://ijsenet.com/index.php/IJSE/article/view/596
+   (F Irwandi, D Pujiastuti - … Journal of Science and Environment (IJSE), 2026 - ijsenet.com | 2026)
+   [PDF] https://ijsenet.com/index.php/IJSE/article/download/596/623
+   … Although modern criticism between 2015 to 2025 suggests that efficiency may replace … central framework utilized in this study is the Handicap Principle proposed by Amotz Zahavi. …
+
+43. The information encoded by the sex steroid hormones testosterone and estrogen: a hypothesis
+   https://www.sciencedirect.com/science/article/pii/S002251931100213X
+   (A Zahavi, M Perel - Journal of theoretical biology, 2011 - Elsevier | 2011 | cited by 21)
+   … It is also reasonable to assume that under ordinary conditions … Cells in the brain are not usually replaced by new cells if … We provide a hypothesis, based on the handicap principle, that …
+
+44. Condition dependence of sexual ornament size and variation in the stalk‐eyed fly Cyrtodiopsis dalmanni (Diptera: Diopsidae)
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.0014-3820.2004.tb00437.x
+   (S Cotton, K Fowler, A Pomiankowski - Evolution, 2004 - Wiley Online Library | 2004 | cited by 254)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111%2Fj.0014-3820.2004.tb00437.x
+   … handicap hypothesis of sexual selection proposes that sexual ornament size reveals male condition… In our analysis, we also have been mindful of the potential for slope change to occur …
+
+45. Jumping to bold conclusions
+   https://journals.sagepub.com/doi/abs/10.1177/105971239900700106
+   (S Bullock - Adaptive Behavior, 1999 - journals.sagepub.com | 1999 | cited by 6)
+   [PDF] https://eprints.soton.ac.uk/261475/1/10.1.1.40.3266.pdf
+   … book, this review will give a flavor of the perspective afforded by the handicap principle and in … Zahavi’s handicap principle was one of a number of attempts to reconcile the theoretically …
+
+46. An ethological analysis of human infant crying: Answering Tinbergen's four questions
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/dev.1005
+   (DM Zeifman - Developmental Psychobiology: The Journal of the …, 2001 - Wiley Online Library | 2001 | cited by 334)
+   … condition, we might expect selection to favor exaggeration. Zahavi's (1975, 1977) handicap principle … The handicap principle asserts that only superior individuals can endure the fitness …
+
+47. Immune-Endocrine Interactions in the Lizard Sceloporus Undulatus Hyacinthinus: Testing an Assumption of the Immunocompetence Handicap Hypothesis
+   https://scholars.indianastate.edu/etds/3274/
+   (M Chakraborty - 2005 - scholars.indianastate.edu | 2005)
+   [PDF] https://scholars.indianastate.edu/cgi/viewcontent.cgi?article=4273&context=etds
+   … review … review will focus specifically on studies relating to this assumption. Many authors have discussed new techniques and ideas that could adequately assess the IHH. This review …
+
+48. Supplemental: Handicap principle implies emergence of dimorphic ornaments
+   https://dmabrams.esam.northwestern.edu/pubs/Clifton%20Braun%20Abrams%20-%20Handicap%20principle%20implies%20emergence%20of%20dimorphic%20ornaments%20-%20RSPB%20283,%201970%20(2016)%20-%20ESM.pdf
+   (SM Clifton, RI Braun, DM Abrams - dmabrams.esam.northwestern.edu)
+   [PDF] https://dmabrams.esam.northwestern.edu/pubs/Clifton%20Braun%20Abrams%20-%20Handicap%20principle%20implies%20emergence%20of%20dimorphic%20ornaments%20-%20RSPB%20283,%201970%20(2016)%20-%20ESM.pdf
+   … These conditions guarantee that the population will evolve … Based on our previous stability analysis, we expect that a0 will … favorable consequence of Zahavi’s handicap principle. There …
+
+49. The evolutionary dynamics of costly signaling: J. Hofbauer, C. Pawlowitsch
+   https://link.springer.com/article/10.1007/s00182-025-00927-5
+   (J Hofbauer, C Pawlowitsch - International Journal of Game Theory, 2025 - Springer | 2025 | cited by 5)
+   … signaling theory, or the Handicap Principle, as it is known in theoretical biology (Zahavi 1975… we relate the dynamic stability analysis of equilibria to two other robustness concepts: index …
+
+50. Honest advertisement in male white-tailed deer: evidence for the handicap hypothesis of mate selection
+   https://search.proquest.com/openview/df28ebcc96b6b971dc0ed2a04cf4c912/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (SS Ditchkoff - 2000 - search.proquest.com | 2000 | cited by 2)
+   [PDF] https://openresearch.okstate.edu/bitstreams/0b8abd9d-1a0c-4cc1-9121-20742160b8b6/download
+   … the validity of the immunocompetence handicap hypothesis (Zahavi 1975; Hamilton & Zuk … We did not include scores in the analysis for animals that had broken tines or main beams. …
+
+51. Self and other: Exploring subjectivity, empathy, and shame
+   https://books.google.com/books?hl=en&lr=&id=UExVBQAAQBAJ&oi=fnd&pg=PP1&dq=handicap+principle+replacement+index+of+condition+Zahavi+criticism&ots=2fTK8ECJWb&sig=x-qcxWWMTMVGf1m6w679uIi5bgE
+   (D Zahavi - 2014 - books.google.com | 2014 | cited by 1930)
+   … criticized dominant positions within the so-called ‘theory of mind’ debate, including simulation theory and theory-theory. … In a final step, we replace the perception with another act-type (a …
+
+52. Testosterone is positively related to the output of nematode eggs in male Alpine ibex (Capra ibex) faeces
+   https://qmro.qmul.ac.uk/xmlui/bitstream/handle/123456789/259/MCELLIGOTTTestosteroneIs2007FINAL.pdf?sequence=2
+   (PMA Decristophoris, A von Hardenberg… - Evol Ecol …, 2007 - qmro.qmul.ac.uk | 2007 | cited by 58)
+   [PDF] https://qmro.qmul.ac.uk/xmlui/bitstream/handle/123456789/259/MCELLIGOTTTestosteroneIs2007FINAL.pdf?sequence=2
+   … We then use a path analysis model to test the hypothesis of a … Using path analysis, it is therefore possible to test if the … of the immunocompetence handicap hypothesis because it implies …
+
+53. Negative effects of prolonged dietary restriction on male mating effort: nuptial gifts as honest indicators of long-term male condition
+   https://www.nature.com/articles/srep21846
+   (RC Macedo-Rego, LE Costa-Schmidt, ESA Santos… - Scientific Reports, 2016 - nature.com | 2016 | cited by 21)
+   [PDF] https://www.nature.com/articles/srep21846.pdf
+   … mechanisms, the handicap principle, which proposes that signals must be costly to be honest 2 , has received most attention by researchers interested in sexual selection (review in 3 ). …
+
+54. The evolutionary dynamics of costly signaling
+   http://bos.u-paris2.fr/anr-signal/papers/HofbauerPawlowitsch19.pdf
+   (J Hofbauer, C Pawlowitsch - 2019 - bos.u-paris2.fr | 2019 | cited by 4)
+   [PDF] http://bos.u-paris2.fr/anr-signal/papers/HofbauerPawlowitsch19.pdf
+   … Zahavi’s (1975) handicap principle (Grafen 1990), the … been interpreted as a critique of the handicap principle, which, … as we consider them here, the condition is always fulfilled: let (p, 1-…
+
+55. … Effort in Male Rhesus Macaques: A Test of the Immunocompetence Handicap Hypothesis and the Stress-linked Immunocompetence Handicap Hypothesis
+   https://search.proquest.com/openview/fe84987bc3f2e3fb8498c9afdf905da9/1?pq-origsite=gscholar&cbl=2026366&diss=y
+   (S Brown - 2022 - search.proquest.com | 2022 | cited by 1)
+   [PDF] https://research.bangor.ac.uk/files/47795506/2022BrownSMScRes.pdf
+   … and/or other copyright owners and it is a condition of accessing publications that users recognise and … In this review I also look at other factors which could affect the endocrine- immune …
+
+56. Foundations of Social Evolution
+   https://www.nature.com/articles/6885351
+   (S Siller - Heredity, 1999 - nature.com | 1999)
+   [PDF] https://www.nature.com/articles/6885351.pdf
+   … In particular we may substitute fitness w for z, and once it is realized that z … ’s Rule. Sadly, the numerous insights that Frank provides cannot all be described adequately in a short review. …
+
+57. Sexual selection of multiple handicaps in the red‐collared widowbird: female choice of tail length but not carotenoid display
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.0014-3820.2001.tb00665.x
+   (SR Pryke, S Andersson, MJ Lawes - Evolution, 2001 - Wiley Online Library | 2001 | cited by 213)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.0014-3820.2001.tb00665.x
+   … Here we use multivariate selection analysis to investigate … selection theory, particularly the handicap principle (Zahavi … ), we computed a body condition index as the residuals from a …
+
+58. Insight and analysis problem solving in microbes to machines
+   https://www.sciencedirect.com/science/article/pii/S0079610715001315
+   (KB Clark - Progress in Biophysics and Molecular Biology, 2015 - Elsevier | 2015 | cited by 99)
+   … And problem restructuring becomes combinatorial reorganization of resources, problem-type substitution, and/or exchange of computational models. With insight bounded by …
+
+59. Muscle parameters in men and oxidative stress markers
+   https://link.springer.com/article/10.1186/s40101-025-00385-8
+   (M Pietruszewski, J Nowak-Kornicka… - Journal of Physiological …, 2025 - Springer | 2025 | cited by 1)
+   [PDF] https://link.springer.com/content/pdf/10.1186/s40101-025-00385-8.pdf
+   … This study examines the oxidative handicap hypothesis, … body’s ability to protect or repair cellular machinery from oxidative … Despite comprehensive analysis, no significant relationship …
+
+60. Sexual selection with condition-dependent handicaps and the evolution of genetic covariances
+   https://search.proquest.com/openview/7dbaa2431c25843861b9c8e4899feca1/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (NF Taylor - 1993 - search.proquest.com | 1993 | cited by 1)
+   … perspective, I will briefly review the history of sexual selection … handicap hypothesis provides an alternative model for the evolution of exaggerated male traits. First described by Zahavi (…
+
+61. Minimal Mathematical Models of Human and Animal Dynamical Systems
+   https://search.proquest.com/openview/f6b0da9f80787895a27e6f4431989e5c/1?pq-origsite=gscholar&cbl=18750
+   (SM Clifton - 2017 - search.proquest.com | 2017 | cited by 1)
+   [PDF] https://scholar.archive.org/work/iesaq7ghlvftrgnxaxkdcv6k2e/access/wayback/http://arch.library.northwestern.edu/downloads/vh53wv88m
+   … the assumptions of Zahavi’s handicap principle into a … Similarly to the uniform fixed point analysis, we investigate the … Numerically, we found that most initial conditions lead to steady …
+
+62. Male facial masculinity as a cue to health outcomes
+   https://journals.sagepub.com/doi/abs/10.1177/147470491301100508
+   (LG Boothroyd, I Scott, AW Gray… - Evolutionary …, 2013 - journals.sagepub.com | 2013 | cited by 104)
+   [PDF] https://journals.sagepub.com/doi/pdf/10.1177/147470491301100508
+   … the Immunocompetence Handicap Hypothesis dominates … participants were excluded from this analysis. For each face, … Condition-dependent trait expression and life-history trade-…
+
+63. The phenomenological mind
+   https://api.taylorfrancis.com/content/books/mono/download?identifierName=doi&identifierValue=10.4324/9780429319792&type=googlepdf
+   (S Gallagher, D Zahavi - 2020 - api.taylorfrancis.com | 2020 | cited by 5004)
+   [PDF] http://spiritual-minds.com/philosophy/assorted/Phenomenological%20Mind.%20An%20Introduction%20to%20Philosophy%20of%20Mind%20and%20Cognitive%20Science%20-%20Shaun%20Gallagher,%20Dan%20Zahavi%20(Routledge,%202008).pdf
+   … In preparing this edition, we have continued to benefit from ongoing discussions with our readers, colleagues, and critics. We have introduced clarifications in some sections, updated …
+
+64. A tradeoff between immunocompetence and sexual ornamentation in domestic fowl
+   https://www.pnas.org/doi/abs/10.1073/pnas.96.8.4478
+   (S Verhulst, SJ Dieleman, HK Parmentier - Proceedings of the National …, 1999 - pnas.org | 1999 | cited by 270)
+   [PDF] https://www.pnas.org/doi/pdf/10.1073/pnas.96.8.4478
+   … Based on the immunocompetence handicap hypothesis, we … by using analysis of variance and analysis of covariance. To … , a continuous resource drain, and repair costs associated with …
+
+65. A mathematical analysis of the evolution of human mate choice traits: Implications for evolutionary psychologists
+   https://akjournals.com/view/journals/1126/9/3/article-p219.xml
+   (N Kock - Journal of Evolutionary Psychology, 2011 - akjournals.com | 2011 | cited by 20)
+   [PDF] https://www.researchgate.net/profile/Ned-Kock/publication/267254020_A_mathematical_analysis_of_the_evolution_of_human_mate_choice_traits_Implications_for_evolutionary_psychologists/links/549c4f890cf2fedbc30fdb98/A-mathematical-analysis-of-the-evolution-of-human-mate-choice-traits-Implications-for-evolutionary-psychologists.pdf?_sg%5B0%5D=started_experiment_milestone&origin=journalDetail&_rtd=e30%3D
+   … : ZAHAVI 2003; ZAHAVI and ZAHAVI 1997). This is the essence of Zahavi’s handicap principle… strong evidence in support of the handicap principle (ZAHAVI and ZAHAVI 1997). Yet, the …
+
+66. The correlation between immunocompetence and an ornament trait changes over lifetime in Panorpa vulgaris scorpionflies
+   https://www.sciencedirect.com/science/article/pii/S0944200607000517
+   (J Kurtz - Zoology, 2007 - Elsevier | 2007 | cited by 14)
+   … The immunocompetence-handicap hypothesis posits that costly male ornament traits might … testing and experimentation under semi-natural conditions, I addressed the question of …
+
+67. On the evolutionary stability of zero-cost pooled-equilibrium signals
+   https://www.sciencedirect.com/science/article/pii/S0022519313000428
+   (M Broom, GD Ruxton - Journal of theoretical biology, 2013 - Elsevier | 2013 | cited by 5)
+   [PDF] https://openaccess.city.ac.uk/id/eprint/2501/1/pooled.pdf
+   … dominant theory used to address this question is a refinement of Zahavi’s handicap principle… Before relaxing the restriction of the fixed number of signalling levels—we quickly review the …
+
+68. Courtship in fast water currents by a male stream goby (Rhinogobius brunneus) communicates the parental quality honestly
+   https://link.springer.com/article/10.1007/s00265-003-0693-1
+   (D Takahashi, M Kohda - Behavioral Ecology and Sociobiology, 2004 - Springer | 2004 | cited by 60)
+   … According to Zahavi’s handicap principle, the costs of … We replaced the wire mesh with a transparent board in tank A, in … The multiple logistic regression analysis was used to determine …
+
+69. Effects of juvenile infection on adult immunity and secondary sexual characters in a wolf spider
+   https://academic.oup.com/beheco/article-abstract/27/3/946/2366211
+   (R Gilbert, RD Karp, GW Uetz - Behavioral Ecology, 2016 - academic.oup.com | 2016 | cited by 45)
+   [PDF] https://academic.oup.com/beheco/article-pdf/27/3/946/7000107/arv241.pdf
+   … handicap hypothesis … this analysis, we used an analysis of covariance (ANCOVA) with treatment as the main factor and mass and cephalothorax width as covariates to assess condition …
+
+70. The body and face of woman: One ornament that signals quality?
+   https://www.sciencedirect.com/science/article/pii/S1090513898000440
+   (R Thornhill, K Grammer - Evolution and Human Behavior, 1999 - Elsevier | 1999 | cited by 460)
+   [PDF] https://www.academia.edu/download/82468040/thornhill.grammer.pdf
+   … Symons’s hypothesis about selection reflects the criticism that arises from honest signal theory—the handicap principle (Zahavi and Zahavi 1997). Signals will evolve to be honest …
+
+71. The truthful signalling hypothesis: an explicit general equilibrium model
+   https://www.sciencedirect.com/science/article/pii/S0022519304000712
+   (K Hausken, J Hirshleifer - Journal of Theoretical Biology, 2004 - Elsevier | 2004 | cited by 18)
+   [PDF] https://www.researchgate.net/profile/Kjell-Hausken/publication/8529064_The_truthful_signalling_hypothesis_An_explicit_general_equilibrium_model/links/5b0a982d4585157f871963d4/The-truthful-signalling-hypothesis-An-explicit-general-equilibrium-model.pdf
+   … Our analysis employs specific functional forms to generate analytic solutions and numerical simulations that illuminate the conditions … (3) A Malthusian condition determines equilibrium …
+
+72. pooled-equilibrium signals
+   
+   (M Broom, GD Ruxton)
+
+73. Towards a general theory of biological signaling
+   https://www.sciencedirect.com/science/article/pii/S0022519396902581
+   (O Hasson - Journal of Theoretical Biology, 1997 - Elsevier | 1997 | cited by 226)
+   … This analysis enables a natural division of signals into groups and subgroups that share … , and Zahavi’s generalization that contrasts natural selection with signal selection (Zahavi, 1987, …
+
+74. Evidence for instability of the autonomic nervous system in patients with migraine headache
+   https://headachejournal.onlinelibrary.wiley.com/doi/abs/10.1111/j.1526-4610.1992.hed3201010.x
+   (S Appel, A Kuritzky, I Zahavi… - … : The journal of head …, 1992 - Wiley Online Library | 1992 | cited by 136)
+   … Hence, in the present study, the method of spectral analysis is … the same hospitalization conditions and drug limitations. … artifacts, the targeted trace was replaced by the next trace, the …
+
+75. Variation in courtship rate in the fiddler crab Uca annulipes: is it related to male attractiveness?
+   https://academic.oup.com/beheco/article-abstract/9/6/605/336166
+   (MD Jennions, PRY Backwell - Behavioral Ecology, 1998 - academic.oup.com | 1998 | cited by 91)
+   [PDF] https://academic.oup.com/beheco/article-pdf/9/6/605/962002/9-6-605.pdf
+   … , as predicted by the handicap principle? Specifically, does … day in the cycle in an analysis of covariance. We defined day … Englewood Cliffs, New Jersey: Prentice-HalL Zahavi A, 1977…
+
+76. What drives sexual selection? Meiotic drive, stress and mate choice in stalk-eyed flies
+   https://discovery.ucl.ac.uk/id/eprint/1474429/
+   (AJ Cotton - 2016 - discovery.ucl.ac.uk | 2016 | cited by 2)
+   [PDF] https://discovery.ucl.ac.uk/id/eprint/1474429/1/Cotton_Alison_PhD%20Thesis%20FINAL_AFTER%20CORRECTIONS.pdf.REDACTED.pdf
+   … condition-dependent model of the handicap hypothesis. I examine condition dependence in detail and review … -types: Zahavi’s handicap, revealing handicaps and conditiondependent …
+
+77. Aging and group selection: new arguments in favor of partially directed evolution
+   https://www.sciencedirect.com/science/article/pii/S0303264723002368
+   (AV Melkikh - Biosystems, 2023 - Elsevier | 2023 | cited by 6)
+   In this study, theories of aging and its mechanisms under various environmental conditions were analyzed. The analysis of published data suggested that aging is a controlled process. …
+
+78. Facial attractiveness
+   https://www.cell.com/trends/cognitive-sciences/abstract/S1364-6613(99)01403-5
+   (R Thornhill, SW Gangestad - Trends in cognitive sciences, 1999 - cell.com | 1999 | cited by 1704)
+   [PDF] https://www.academia.edu/download/47485613/Facial_Attractiveness_Developmental_Stab20160724-7664-10dpkub.pdf
+   … to make assessments of overall phenotypic condition. This review examines the three major … , including sexual signals, is the handicap principle proposed by Amotz Zahavi in 1975 (Ref. …
+
+79. The Truthful Signalling Hypothesis: An Economic Approach
+   https://www.academia.edu/download/114146470/hirshleifer-signalling.pdf
+   (K Hausken, J Hirshleifer - 2002 - academia.edu | 2002)
+   [PDF] https://www.academia.edu/download/114146470/hirshleifer-signalling.pdf
+   … (Sometimes known as “the handicap principle”) Dealing for simplicity with … In this analysis we tentatively assume that the Truthful … the conditions needed to support the Truthful Signalling …
+
+80. Evolutionary dynamics of the handicap principle: an example
+   https://link.springer.com/article/10.1007/s13235-014-0108-0
+   (P Bernhard - Dynamic Games and Applications, 2015 - Springer | 2015 | cited by 2)
+   [PDF] https://inria.hal.science/hal-01090629/file/bernhard_revised.pdf
+   … It is known as the “handicap principle”. … time goes to infinity, Zahavi’s handicap principle describes an equilibrium, … Our analysis is entirely dependent on our hypothesis of separation of …
+
+81. Good genes, oxidative stress and condition–dependent sexual signals
+   https://royalsocietypublishing.org/rspb/article-abstract/266/1414/1/69680
+   (T Schantz, S Bensch, M Grahn… - … of the Royal …, 1999 - royalsocietypublishing.org | 1999 | cited by 931)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC1689644/pdf/10081154.pdf
+   … Di¡erent types of antioxidant can act complementarily to each other so that the reaction of one can spare others and to the extent that one antioxidant becomes depleted, the deposits of …
+
+82. The energy cost of singing in wild rock hyrax males: evidence for an index signal
+   https://www.sciencedirect.com/science/article/pii/S0003347213001012
+   (A Ilany, A Barocas, M Kam, T Ilany, E Geffen - Animal Behaviour, 2013 - Elsevier | 2013 | cited by 50)
+   [PDF] https://www.sciencedirect.com/science/article/am/pii/S0003347213001012
+   … If the energetic cost of producing specific sounds is indeed high, these sounds may serve as a handicap (Zahavi 1975), as only individuals in good condition can afford to expend the …
+
+83. Sexual selection by female choice in polygynous animals
+   https://www.jstor.org/stable/2097124
+   (M Kirkpatrick - Annual Review of Ecology and Systematics, 1987 - JSTOR | 1987 | cited by 461)
+   … genes hypotheses is Zahavi's "handicap" mechanism (144). … way envisioned by the handicap hypothesis. Whenever a … It is usually replaced by two distinct evolutionary outcomes. …
+
+84. The Human Revolution
+   http://radicalanthropologygroup.org/wp-content/uploads/pub_knight_human_rev.pdf
+   (C Knight - Alice V. and David H. Morris Symposium …, 2005 - radicalanthropologygroup.org | 2005 | cited by 1)
+   [PDF] http://radicalanthropologygroup.org/wp-content/uploads/pub_knight_human_rev.pdf
+   … relevant, I begin with a review the multidisciplinary context. … Given this condition, Zahavi’s supporters were able to show, … Since according to the Handicap Principle, senders must invest …
+
+85. The evolution of cooperative breeding in the African cichlid fish, Neolamprologus pulcher
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1469-185X.2010.00158.x
+   (M Wong, S Balshine - Biological Reviews, 2011 - Wiley Online Library | 2011 | cited by 226)
+   [PDF] https://www.academia.edu/download/30212457/wongbals2011_br.pdf
+   … under controlled laboratory and field conditions. In particular, the … to substitute their own terms for the behaviour we discuss. … The elegance of his ‘Handicap Principle’ derives from its …
+
+86. Serotonin and dopamine gene variation and theory of mind decoding accuracy in major depression: a preliminary investigation
+   https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0150872
+   (AY Zahavi, MA Sabbagh, D Washburn, R Mazurka… - PLoS …, 2016 - journals.plos.org | 2016 | cited by 33)
+   [PDF] https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0150872&type=printable
+   … Theory of mind accuracy is impaired in clinical conditions evidencing social impairment, including major depressive disorder. The current study is a preliminary investigation of the …
+
+87. Beauty and sex appeal: sexual selection of aesthetic preferences
+   https://link.springer.com/content/pdf/10.1007/978-3-662-07142-7_6?pdf=chapter%20toc
+   (U Skamel - Evolutionary aesthetics, 2003 - Springer | 2003 | cited by 33)
+   … much criticized … , the handicap hypothesis adopts the opposite viewpoint; beauty must be costly to function as a reliable indicator of quality for the choosy individual (Zahavi and Zahavi …
+
+88. The breeding colouration of male three-spined sticklebacks (Gasterosteus aculeatus) as an indicator of energy investment in vigour
+   https://link.springer.com/article/10.1007/BF01237640
+   (M Frischknecht - Evolutionary Ecology, 1993 - Springer | 1993 | cited by 195)
+   … Both the increase of their condition factor and the condition level they finally achieved … the highest index for red or blue, respectively, was selected and entered into the analysis. This …
+
+89. Darwin's sexual selection theory: a forgotten idea
+   https://scholar.archive.org/work/4rw53qyhs5gzhpf6vd4y3xo454/access/wayback/http://www.uc.pt:80/en/cia/publica/AP_artigos/AP26.27.10_paulomota
+   (PG Mota - 2010 - scholar.archive.org | 2010 | cited by 11)
+   [PDF] https://scholar.archive.org/work/4rw53qyhs5gzhpf6vd4y3xo454/access/wayback/http://www.uc.pt:80/en/cia/publica/AP_artigos/AP26.27.10_paulomota
+   … Sexual Selection, which was criticized and above all ignored … rediscovered in 1900, being replaced in the preferences of … of the handicap theory proposed by Amotz Zahavi in 1975 to …
+
+90. An evolutionary perspective on signaling peptides: toxic peptides are selected to provide information regarding the processing of the propeptide, which represents the …
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC4648229/
+   (KD Harris, A Barzilai, A Zahavi - F1000Research, 2015 - pmc.ncbi.nlm.nih.gov | 1000 | cited by 1)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC4648229/pdf/f1000research-4-7401.pdf
+   … In this opinion paper we briefly review a number of signaling … is the brilliant handicap theory of Amotz Zahavi that signals … Furthermore, dealing with pathological conditions related to the …
+
+91. Bounds on the capacity of the bit-shift magnetic recording channel
+   https://ieeexplore.ieee.org/abstract/document/79953/
+   (S Shamai, E Zehavi - IEEE Transactions on Information theory, 1991 - ieeexplore.ieee.org | 1991 | cited by 53)
+   [PDF] https://www.eng.biu.ac.il/~zehavie1/articals/Bounds%20on%20the%20Capacity%20of%20a%20Channel%20with%20Bit%20Shift.pdf
+   … 2(a)) use (and not per input phrase which would be determined by replacing E(XN) by N). … natural and lend itself to a relatively simple analysis. The mathematical justification follows by […
+
+92. Song correlates with social context, testosterone and body condition in male barn swallows
+   https://www.sciencedirect.com/science/article/pii/S0003347296903048
+   (P Galeotti, N Saino, R Sacchi, AP Møller - Animal behaviour, 1997 - Elsevier | 1997 | cited by 255)
+   [PDF] https://www.academia.edu/download/40422801/songtestosteronerondine.pdf
+   … We used one-way analysis of variance to test for differences in song features between male … Zahavi, A. 1977. The cost of honesty (further remarks on the handicap principle). J. theor. …
+
+93. The signalling function of eyespan in stalk-eyed flies (Diptera: Diopsidae)
+   https://search.proquest.com/openview/c3c516f7d1ffd0930c7b41eb909e2ab2/1?pq-origsite=gscholar&cbl=2026366&diss=y
+   (S Cotton - 2004 - search.proquest.com | 2004 | cited by 2)
+   [PDF] https://discovery.ucl.ac.uk/id/eprint/1446601/1/U602526.pdf
+   … The key prediction made by the handicap hypothesis is that male … The handicap principle received much early criticism … simply substitute e for v in Eq(2), and then Eq(3) still holds. So the …
+
+94. Costly signaling theory in archaeology
+   https://link.springer.com/chapter/10.1007/978-3-030-11117-5_14
+   (CP Quinn - Handbook of evolutionary research in archaeology, 2019 - Springer | 2019 | cited by 39)
+   [PDF] https://colinpquinn.com/wp-content/uploads/2019/08/quinn-2019-costly-signaling-theory-in-archaeology.pdf
+   … the translation between the handicap principle and costly … These critiques note in the decades since Zahavi and Grafen, … under the handicap principle or show-off hypothesis. Hawkes (…
+
+95. A general model of biological signals, from cues to handicaps
+   https://academic.oup.com/evlett/article-abstract/2/3/201/6700585
+   (JM Biernaskie, JC Perry, A Grafen - Evolution Letters, 2018 - academic.oup.com | 2018 | cited by 54)
+   [PDF] https://academic.oup.com/evlett/article-pdf/2/3/201/49857206/evlett0201.pdf
+   … (1990a) model of the handicap principle, making it consistent … We replace q with P * (a) because we are pursuing an … Taking account of this criticism, we may say that the example …
+
+96. Sexual deception in a cannibalistic mating system? Testing the Femme Fatale hypothesis
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC4298199/
+   (KL Barry - Proceedings of the Royal Society B: Biological …, 2015 - pmc.ncbi.nlm.nih.gov | 2015 | cited by 34)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC4298199/pdf/rspb20141428.pdf
+   … were removed from the analysis, suggesting an inherently … The handicap principle [1] suggests that costly signals will … from the field enclosure and replaced with a new virgin male from …
+
+97. Parasite levels in blue-black grassquits correlate with male displays but not female mate preference
+   https://academic.oup.com/beheco/article-abstract/19/2/292/212734
+   (TM Aguilar, R Maia, ESA Santos… - Behavioral …, 2008 - academic.oup.com | 2008 | cited by 60)
+   [PDF] https://academic.oup.com/beheco/article-pdf/19/2/292/17276238/arm130.pdf
+   … The handicap principle proposes that male sexual … When necessary, we replaced missing cells with the individual's mean … General condition, as inferred through the mass/tarsus index, …
+
+98. From substitute to supplement: towards a normative reading of Merleau-Ponty's Schneider case
+   https://www.tandfonline.com/doi/abs/10.1080/09515089.2023.2276311
+   (S Razavi - Philosophical Psychology, 2025 - Taylor & Francis | 2025 | cited by 4)
+   [PDF] https://philpapers.org/archive/RAZFST.pdf
+   … The numerous caveats encountered in the analysis of the passage from pathological study … normative question at the center of a phenomenological account of illness and abnormality. …
+
+99. Mainstreaming students with mild handicaps: Academic and social outcomes
+   https://journals.sagepub.com/doi/abs/10.3102/00346543053004519
+   (NA Madden, RE Slavin - Review of educational research, 1983 - journals.sagepub.com | 1983 | cited by 948)
+   [PDF] https://www.academia.edu/download/95823822/0034654305300451920221215-1-1l8hgjf.pdf
+   … We propose three principal conditions conducive to the development of positive relatiohships between MAH and nonhandicapped students: 1. There should be opportunities for …
+
+100. Home base
+   https://link.springer.com/content/pdf/10.1007/978-3-319-55065-7_920.pdf
+   (I Golani, Y Benjamini - Encyclopedia of animal cognition and behavior, 2022 - Springer | 2022 | cited by 6)
+   … The handicap hypothesis is an idea proposed in 1975 by Amotz Zahavi as a mechanism to … Genome-wide linkage analysis is often used in the study of many Mendelian disorders (…

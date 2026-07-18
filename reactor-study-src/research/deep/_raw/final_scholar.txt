@@ -1,0 +1,1281 @@
+===== Query 1/6: Towards Reliable LLM Evaluation Correcting Winner's Curse Adaptive Benchmarking =====
+
+1. Towards Reliable LLM Evaluation: Correcting the Winner's Curse in Adaptive Benchmarking
+   https://arxiv.org/abs/2605.05973
+   (Y Xu, J Zhang, H Sun, Z Zhou, T Cao… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.05973
+   Adaptive prompt and program search makes LLM evaluation selection-sensitive. Once benchmark items are reused inside tuning, the observed winner's score need not estimate the fresh-data performance of the full tune-then-deploy procedure. We study inference for this procedure-level target under explicit tuning budgets. We propose SIREN, a selection-aware repeated-split reporting protocol that freezes the post-search shortlist, separates splitwise selection from held-out evaluation, and uses an item-level Gaussian multiplier bootstrap for uncertainty quantification. In a fixed-shortlist regime with smooth stabilized selection, the estimator admits a first-order item-level representation, and the bootstrap yields valid simultaneous inference on a finite budget grid. This supports confidence intervals for procedure-performance curves and pre-specified equal-budget and cross-budget comparisons. Controlled simulations and MMLU-Pro tuning experiments show that winner-based reporting can be optimistic and can change deployment conclusions, while SIREN remains close to the finite-sample reporting target.
+
+===== Query 2/6: performative power definition digital market firm steer distribution Hardt Jagadeesan =====
+
+1. Performative power
+   https://proceedings.neurips.cc/paper_files/paper/2022/hash/90e73f3cf1a6c84c723a2e8b7fb2b2c1-Abstract-Conference.html
+   (M Hardt, M Jagadeesan… - Advances in Neural …, 2022 - proceedings.neurips.cc | 2022 | cited by 103)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2022/file/90e73f3cf1a6c84c723a2e8b7fb2b2c1-Paper-Conference.pdf
+   … The platform can use its predictions to steer participants … extent to which the firm is able to steer participants, which we … power is uniformly distributed across firms (we formalize the …
+
+2. Performative prediction: Past and future
+   https://projecteuclid.org/journals/statistical-science/volume-40/issue-3/Performative-Prediction-Past-and-Future/10.1214/25-STS986.short
+   (M Hardt, C Mendler-Dünner - Statistical Science, 2025 - projecteuclid.org | 2025 | cited by 96)
+   [PDF] https://arxiv.org/pdf/2310.16608
+   … in digital markets. We review the notion of … that gives an answer to the question how much a platform can steer … of a model on the distribution it entails the performative risk, defined as …
+
+3. An engine not a camera: Measuring performative power of online search
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/6cf7a37e761f55b642cf0939b4c64bb8-Abstract-Conference.html
+   (…, G Carovano, M Hardt - Advances in Neural …, 2024 - proceedings.neurips.cc | 2024 | cited by 14)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/6cf7a37e761f55b642cf0939b4c64bb8-Paper-Conference.pdf
+   … methods with digital market investigations. Although the … ability to steer the data-generating distribution similarly factors … relate the performativity gap measures a platform’s ability to steer …
+
+4. Steering Machine Learning Ecosystems of Interacting Agents
+   https://search.proquest.com/openview/599e7be0d1ba2ac49fdd52be3b13a1b4/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (M Jagadeesan - 2025 - search.proquest.com | 2025)
+   [PDF] https://escholarship.org/content/qt9h2365bx/qt9h2365bx.pdf
+   … ecosystemlevel performance trends and market outcomes. We … Finally, I’d like to thank Moritz Hardt, who was at Berkeley … of its ML model over a distribution. However, this assumption is …
+
+5. Multi-agent performative prediction: From global stability and optimality to chaos
+   https://dl.acm.org/doi/abs/10.1145/3580507.3597759
+   (G Piliouras, FY Yu - Proceedings of the 24th ACM Conference on …, 2023 - dl.acm.org | 2023 | cited by 68)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3580507.3597759
+   … -agent location-scale distribution maps (Definition 2.5) where … to use its predictions to steer its users towards behaviors that … and the performative power of each individual firm diminishes…
+
+6. Causal inference out of control: Estimating performativity without treatment randomization
+   https://openreview.net/forum?id=Bb8pOvWIe4
+   (G Cheng, M Hardt, C Mendler-Dünner - Forty-first International …, 2024 - openreview.net | 2024 | cited by 7)
+   [PDF] https://openreview.net/pdf?id=Bb8pOvWIe4
+   … a platform can steer user behavior, relating it to economic power. In this … a valuable guardrail for digital market investigations. … data probability distribution, then we say it is unidentifiable. …
+
+7. Digital Skin, Platform Power, and Health Narratives in the Global Skincare Industry
+   https://www.igi-global.com/chapter/digital-skin-platform-power-and-health-narratives-in-the-global-skincare-industry/404998
+   (F Nelfianti, U Suhud, SF Wibowo… - … , Markets, and Power, 2026 - igi-global.com | 2026)
+   … digital economies identifies concepts such as “performative power” of algorithmic systems firms with high ability to steer … (Hardt et al., 2022). In the skincare domain, this translates into …
+
+8. When Predictions Shape Reality: A Socio-Technical Synthesis of Performative Predictions in Machine Learning
+   https://arxiv.org/abs/2601.04447
+   (G Fybish, T Susnjak - arXiv preprint arXiv:2601.04447, 2026 - arxiv.org | 2601)
+   [PDF] https://arxiv.org/pdf/2601.04447
+   … “Performative Power”, introduced by Hardt et al. [16] as a … , firms with high performative power can steer populations … the performative stable model again with its induced distribution…
+
+9. Algorithmic fairness in performative policy learning: Escaping the impossibility of group fairness
+   https://dl.acm.org/doi/abs/10.1145/3630106.3658929
+   (S Somerstep, Y Ritov, Y Sun - Proceedings of the 2024 ACM Conference …, 2024 - dl.acm.org | 2024 | cited by 12)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3630106.3658929
+   … performative power to equate ex post response distributions … Finally, the causal strategic labor market model that we … policy to steer the population so that the response distributions are …
+
+10. Causal Inference out of Control: Estimating the Steerability of Consumption
+   https://arxiv.org/abs/2302.04989
+   (G Cheng, M Hardt, C Mendler-Dünner - arXiv preprint arXiv:2302.04989, 2023 - arxiv.org | 2302 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2302.04989
+   … steer user behavior to the economic concept of power, and introduce performative power to … fresh data as a way to improve performance, mitigate distribution shift, and quickly fix models …
+
+11. How Artificial Intelligence Steers the Course of Science
+   https://research.spelda.cz/papers/preprints/spelda-stritecky-ai-steering-science.pdf
+   (P Spelda, V Stritecky - 2026 - research.spelda.cz | 2026)
+   [PDF] https://research.spelda.cz/papers/preprints/spelda-stritecky-ai-steering-science.pdf
+   … optimum (Jagadeesan et al. 2022), model capabilities … developers exercise their performative power (Hardt et al. … data distribution, in our case 𝒟𝑡𝑎𝑠𝑘𝑠, do not converge to the …
+
+12. Algorithmic collective action in recommender systems: Promoting songs by reordering playlists
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/d79792543133425ff79513c147dc8881-Abstract-Conference.html
+   (J Baumann, C Mendler-Dünner - Advances in Neural …, 2024 - proceedings.neurips.cc | 2024 | cited by 18)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/d79792543133425ff79513c147dc8881-Paper-Conference.pdf
+   … We build on the framework of Hardt et al. [24] and consider … We compare the performance under a recommender trained … in collective action to steer recommender system outcomes …
+
+13. Competition, alignment, and equilibria in digital marketplaces
+   https://ojs.aaai.org/index.php/AAAI/article/view/25706
+   (M Jagadeesan, MI Jordan, N Haghtalab - Proceedings of the AAAI …, 2023 - ojs.aaai.org | 2023 | cited by 30)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/view/25706/25478
+   … our classical understanding of competition power—has gained … The intuition behind this result is that the performance of an … associated algorithm defined so Af (I) is a distribution that is …
+
+14. A theory of digital firm-designed markets: Defying knowledge constraints with crowds and marketplaces
+   https://pubsonline.informs.org/doi/abs/10.1287/stsc.2019.0092
+   (H Tajedin, A Madhok, M Keyhani - Strategy Science, 2019 - pubsonline.informs.org | 2019 | cited by 48)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3758154
+   … , the firm may not be able to steer actors’ performance in a … authority Aggregate distributed individual knowledge Leverage distributed individual knowledge by augmenting with market…
+
+15. How Data Shapes Competition on Digital Platforms: Consumer Welfare and Firm Risk
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5756562
+   (PY Won - Available at SSRN 5756562, 2025 - papers.ssrn.com | 5756)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5756562
+   … the resulting distribution of welfare across consumers and firms. … relate to their corporate performance, competitive positioning, … can use accumulated data to steer demand. DPI captures …
+
+16. Alternative microfoundations for strategic classification
+   http://proceedings.mlr.press/v139/jagadeesan21a.html
+   (M Jagadeesan, C Mendler-Dünner… - … on Machine Learning, 2021 - proceedings.mlr.press | 2021 | cited by 78)
+   [PDF] http://proceedings.mlr.press/v139/jagadeesan21a/jagadeesan21a.pdf
+   … Our second observation reveals that, apart from lacking descriptive power, the … data distribution induced by the previous classifier weights. We show that the existence of performatively …
+
+17. Jugaad time: Ecologies of everyday hacking in India
+   https://books.google.com/books?hl=en&lr=&id=BeeEDwAAQBAJ&oi=fnd&pg=PA1948&dq=performative+power+definition+digital+market+firm+steer+distribution+Hardt+Jagadeesan&ots=HoaTki6vdu&sig=9f_FVuN74k7jaxrPAUK3bcyGt0o
+   (AS Rai - 2019 - books.google.com | 2019 | cited by 139)
+   … practical sites for the emergence and distribution of jugaad media, such … within changing gender norms and sexual performativity … Throughout this book, I define force as the set of power …
+
+18. The Future of Prediction: In Conversation with Oskar Morgenstern
+   https://epubs.siam.org/doi/abs/10.1137/25M1806405
+   (M Hardt - International Congress of Mathematicians 2026, 2026 - SIAM | 2026)
+   [PDF] https://epubs.siam.org/doi/pdf/10.1137/25M1806405
+
+19. The digital transformation of marketer identities in figured worlds
+   http://etheses.dur.ac.uk/14660/1/Kelly_Dueck_PhD.pdf
+   (K Dueck - 2022 - etheses.dur.ac.uk | 2022)
+   [PDF] http://etheses.dur.ac.uk/14660/1/Kelly_Dueck_PhD.pdf
+   … of digital marketing and what it is to ‘be’ a marketer within it. … shifts in the distribution of marketing work have implications for … and performance of the figured world of Agile marketing in a …
+
+20. … ...................... John C. Duchi, Suyash Gupta, Kuanhao Jiang and Pragya Sur 392 Performative Prediction: Past and Future..... Moritz Hardt and Celestine Mendler …
+   https://imstat.org/publications/sts/sts_40_3/sts_40_3.pdf
+   (S Kpotufe, RJ Samworth, Y Sun, J Blanchet… - … Science [ISSN 0883 …, 2025 - imstat.org | 883)
+   [PDF] https://imstat.org/publications/sts/sts_40_3/sts_40_3.pdf
+   … Learning models with uniform performance via distributionally robust optimization. Ann. … split-conformal methods to show how to obtain distributionfree coverage in such nontraditional, …
+
+21. Islands of Algorithmic Integrity: Imagining a Democratic Digital Public Sphere
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/scal98&section=34
+   (AZ Huq - S. Cal. L. Rev., 2024 - HeinOnline | 2024 | cited by 2)
+   [PDF] https://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=2354&context=public_law_and_legal_theory
+   … Hardt, Meena Jagadeesan, and Celestine Mendler-Dunner that defines the "performative power… bureaucratic structure" in which "power was diffused and distributed" across "a sprawling …
+
+22. Feedback loops with language models drive in-context reward hacking
+   https://arxiv.org/abs/2402.06627
+   (A Pan, E Jones, M Jagadeesan, J Steinhardt - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 102)
+   [PDF] https://arxiv.org/pdf/2402.06627
+   … purposefully induced to improve task performance. Task … between distributions with high objective and distributions with … This feedback acts like a compass, steering us effectively …
+
+23. Machine learning should maximize welfare, but not by (only) maximizing accuracy
+   https://arxiv.org/abs/2502.11981
+   (N Rosenfeld, H Xu - arXiv preprint arXiv:2502.11981, 2025 - arxiv.org | 2502 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2502.11981
+   … means for steering towards preferable ones. A canonical example is income distribution: all … Performative prediction defines optimality and stability only wrt the loss function, and so …
+
+24. Optimising Water Supply–Application of Probabilistic Deep Neural Networks to Forecast Water Demand in the Short Term
+   https://books.google.com/books?hl=en&lr=&id=CQ0ZEQAAQBAJ&oi=fnd&pg=PA1975&dq=performative+power+definition+digital+market+firm+steer+distribution+Hardt+Jagadeesan&ots=f8O2Hq3NIj&sig=RR164IPoYzuh9eLL7-kg_XLVykg
+   (G Johnen, J Kley-Holsteg, A Niemann… - AI in Business and …, 2024 - books.google.com | 2024)
+   … firms can personalise decisions to users and firms (→ Hardt, Jagadeesan & MendlerDünner, 2022) and can thus steer … AI modelling phase and the performance evaluation takes place . …
+
+25. Insights from insurance for fair machine learning
+   https://dl.acm.org/doi/abs/10.1145/3630106.3658914
+   (C Fröhlich, RC Williamson - Proceedings of the 2024 ACM Conference …, 2024 - dl.acm.org | 2024 | cited by 13)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3630106.3658914?utm_source=consensus
+   … If we use the empirical distribution associated with this dataset in Definition 4.3, we obtain … a company can steer a population using a model, has been termed performative power [63]. …
+
+26. Design considerations for building distributed supply chain management systems based on cloud computing
+   https://asmedigitalcollection.asme.org/manufacturingscience/article-abstract/137/4/040906/375147
+   (AM Radke, MM Tseng - Journal of Manufacturing …, 2015 - asmedigitalcollection.asme.org | 2015 | cited by 46)
+   … Like the use of ERP systems in steering companies [21], the benefits of ICT systems in SCM [22… simulation results of key performance indicators in a supply chain is available in Ref. [42]. …
+
+27. Resillence and Dynamic Capabilities: The Role of Governance
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2831796
+   (P Cebon - Available at SSRN 2831796, 2016 - papers.ssrn.com | 2831 | cited by 3)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2831796
+   … delivery group focused on business plan delivery and short-term customer, technology, and market … ’s considered a great company … we identified every area of performance issue and …
+
+28. Position: Regulating Algorithms Is Not Enough. A Study of Content Discovery in Online Platforms
+   https://openreview.net/forum?id=GYVAl99Hjf
+   (R Salganik, G Salha-Galvan, A Afilipoaie… - Forty-third International … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=GYVAl99Hjf
+   … performance metrics, but for business objectives tied to engagement, retention, advertising, subscription growth, and market … that algorithmic power emerges through distributed socio-…
+
+29. A sociotechnical view of algorithmic fairness
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/isj.12370
+   (M Dolata, S Feuerriegel… - Information Systems …, 2022 - Wiley Online Library | 2022 | cited by 308)
+   [PDF] https://arxiv.org/pdf/2110.09253
+   … Since algorithms are chosen based on their performance on the … and the system adopted the altered distribution. These … information as a key to steer the interaction between the social …
+
+30. Oh the Prices You'll See: Designing a Fair Exchange System to Mitigate Personalized Pricing
+   https://dl.acm.org/doi/abs/10.1145/3715275.3732076
+   (A Karan, N Balepur, H Sundaram - … of the 2025 ACM Conference on …, 2025 - dl.acm.org | 2025)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3715275.3732076
+   … is not one of model performance. They further investigate [14] … Jagadeesan and Teytelboym [26] look at how some markets … Measuring price discrimination and steering on e-commerce …
+
+31. Position: Agentic AI Design Should be Mediated to Promote Social Welfare
+   https://mdds.net.technion.ac.il/files/2025/12/AI_Mediators.pdf
+   (O Madmon, M Tennenholtz - 2025 - mdds.net.technion.ac.il | 2025)
+   [PDF] https://mdds.net.technion.ac.il/files/2025/12/AI_Mediators.pdf
+   … mediators capable of steering agentic design choices toward … from a publicly known distribution and privately recommends … enable reliable system performance even when information …
+
+32. Recommender Systems as Control Systems
+   https://arxiv.org/abs/2605.01503
+   (G De Pasquale, S Dean, P Frasca - arXiv preprint arXiv:2605.01503, 2026 - arxiv.org | 2605 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2605.01503
+   … beneficial for overall system performance. Realizing these … the observed data distribution and the ideal distribution of all user–… short-term optimality can steer the system toward more …
+
+33. Understanding Misalignment in AI Agents
+   https://www2.eecs.berkeley.edu/Pubs/TechRpts/2026/EECS-2026-13.pdf
+   (A Pan - 2026 - eecs.berkeley.edu | 2026)
+   [PDF] https://www2.eecs.berkeley.edu/Pubs/TechRpts/2026/EECS-2026-13.pdf
+   … copies are not made or distributed for profit or commercial advantage … Performance of different steering methods on debiasing … LM-based methods to steer agents towards less harmful …
+
+34. Application of Molecular Genomic Analysis Tools to Assess Bacterial Genomes and Bovine Regulatory Elements for Food Safety and Meat Quality
+   https://search.proquest.com/openview/9bfce8c8e5f78d5fe763974495fde80c/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (DA Therrien - 2022 - search.proquest.com | 2022)
+   [PDF] https://oaktrust.library.tamu.edu/bitstreams/8f496f18-554f-4ed1-9c06-ac76200f478a/download
+   … sequencing of microRNAs from total RNA extracts of Longissimus lumborum biopsies, expression profiles were generated for each steer carcass. Differential expression analyses …
+
+35. Design Problems Under Strategic Manipulation
+   https://search.proquest.com/openview/b245cc9bb491c66ea4470cd44376d0b0/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (X Qiu - 2025 - search.proquest.com | 2025)
+   … performance of … , in markets where there is uncertainty in supply and demand (eg, Kilian, 2009), ie, the number of resources and the number of participants are drawn from a distribution …
+
+36. Development of paper-based microfluidic strips for quantification of ammonia
+   https://www.academia.edu/download/79531892/NXUMALONL_2019.pdf
+   (NL Nxumalo - 2019 - academia.edu | 2019 | cited by 2)
+   [PDF] https://www.academia.edu/download/79531892/NXUMALONL_2019.pdf
+   … The performance of the system was assessed by comparing it with the standards performed using UV Visible, and then determining any statistical difference within the results achieved …
+
+===== Query 3/6: Difficult lessons social prediction Wisconsin public schools dropout early warning =====
+
+1. Difficult lessons on social prediction from wisconsin public schools
+   https://dl.acm.org/doi/abs/10.1145/3715275.3732175
+   (JC Perdomo, T Britton, M Hardt, R Abebe - Proceedings of the 2025 …, 2025 - dl.acm.org | 2025 | cited by 63)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3715275.3732175
+   … evidence that the prediction system accurately sorts Wisconsin’s students by their dropout risk. … In this work, we use a decade of data from the Dropout Early Warning System (DEWS)—…
+
+2. Of Needles and Haystacks: Building an Accurate Statewide Dropout Early Warning System in Wisconsin.
+   https://eric.ed.gov/?id=EJ1115326
+   (JE Knowles - Journal of Educational Data Mining, 2015 - ERIC | 2015 | cited by 152)
+   [PDF] https://files.eric.ed.gov/fulltext/EJ1115326.pdf
+   … Though accurate, both latent class and GMM approaches are … of an early warning indicator that produces predictions for all … at all is particularly difficult given the high graduation rate – …
+
+3. Machine-Learned School Dropout Early Warning at Scale.
+   https://eric.ed.gov/?id=ED599217
+   (ST Christie, DC Jarratt, LA Olson, TT Taijala - International Educational Data …, 2019 - ERIC | 2019 | cited by 37)
+   [PDF] https://files.eric.ed.gov/fulltext/ED599217.pdf
+   … What we predict. Each student-year of aggregated educa… are able to capture complex contextual relationships between … accurate statewide dropout early warning system in Wisconsin. …
+
+4. Theory and application of early warning systems for high school and beyond
+   https://www.tandfonline.com/doi/abs/10.1080/10824669.2013.745374
+   (B Carl, JT Richardson, E Cheng, HJ Kim… - Journal of Education …, 2013 - Taylor & Francis | 2013 | cited by 56)
+   … Public Schools (MPS) is, by far, Wisconsin's largest school district, … of early warning systems beyond just predicting dropout … second, that predicting dropouts is more complex for some …
+
+5. Delivery of State-Provided Predictive Analytics to Schools: Wisconsin's DEWS and the Proposed EWIMS Dashboard. WCER Working Paper No. 2016-3.
+   https://eric.ed.gov/?id=ED580860
+   (B Clune, J Knowles - Wisconsin Center for Education Research, 2016 - ERIC | 2016 | cited by 2)
+   [PDF] https://files.eric.ed.gov/fulltext/ED580860.pdf
+   … system, known as the Dropout Early Warning System (DEWS)… three school districts implemented systems of early warning … Two-year college enrollment was more difficult to predict, …
+
+6. Beyond early warning indicators: high school dropout and machine learning
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/obes.12277
+   (D Sansone - Oxford bulletin of economics and statistics, 2019 - Wiley Online Library | 2019 | cited by 123)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3062317
+   … to predict which students are going to drop out of high school by relying … than a single, more complex, algorithm such as Logit. … to improve the dropout early warning system in Wisconsin. …
+
+7. An early warning system
+   https://new.every1graduates.org/wp-content/uploads/2012/03/Early_Warning_System_Neild_Balfanz_Herzog.pdf
+   (RC Neild, R Balfanz, L Herzog - Educational leadership, 2007 - new.every1graduates.org | 2007 | cited by 409)
+   [PDF] https://new.every1graduates.org/wp-content/uploads/2012/03/Early_Warning_System_Neild_Balfanz_Herzog.pdf
+   … have tended to view dropping out of high school in two … specific student's dropping out as mysterious, difficult to predict, and … • A final "unsatisfactory" behavior mark in at least one class. …
+
+8. Early warning indicators of high school outcomes
+   https://www.tandfonline.com/doi/full/10.1080/10824669.2013.745375
+   (MA Mac Iver - Journal of Education for Students Placed at Risk …, 2013 - Taylor & Francis | 2013 | cited by 28)
+   … to explain why students drop out of high school. The framework … do not efficiently predict which students will drop out. This is … Center at the University of Wisconsin–Madison adapted the …
+
+9. Building a Grad Nation: Progress and Challenge in Ending the High School Dropout Epidemic.
+   https://eric.ed.gov/?id=ED513447
+   (R Balfanz, JM Bridgeland, LA Moore, JH Fox - Civic Enterprises, 2010 - ERIC | 2010 | cited by 426)
+   [PDF] https://files.eric.ed.gov/fulltext/ED513447.pdf
+   … the toughest challenges, such as single high school districts with low … are signaling the early warning signs of potential dropout. New … In 2008, Wisconsin and Vermont were fractions of a …
+
+10. On Track for Success: The Use of Early Warning Indicator and Intervention Systems to Build a Grad Nation.
+   https://eric.ed.gov/?id=ED526421
+   (M Bruce, JM Bridgeland, JH Fox, R Balfanz - Civic Enterprises, 2011 - ERIC | 2011 | cited by 150)
+   [PDF] https://files.eric.ed.gov/fulltext/ED526421.pdf
+   … indicators, but much less is known about the complex set of … : the high school dropout crisis and the need to graduate high … predicted whether students were on track or off track for high …
+
+11. The Role of Early Warning Systems (EWS) and Machine Learning in Identifying Future Dropouts or Not Completing on Time in K-12
+   https://search.proquest.com/openview/a3a95caec6a376024e4ceda77a8234b8/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (JM Long - 2026 - search.proquest.com | 2026)
+   … High school dropout and off-time completion lead to significant long-… differ when predicting the likelihood of dropping out? … Dropping out of school is a complex decision influenced by …
+
+12. The machine learning-based dropout early warning system for improving the performance of dropout prediction
+   https://www.mdpi.com/2076-3417/9/15/3093
+   (S Lee, JY Chung - Applied Sciences, 2019 - mdpi.com | 2019 | cited by 247)
+   … and dropout [5], and the state of Wisconsin in the United … half of public high schools implemented the dropout early warning … , the class-imbalance could be one of the potential …
+
+13. Early-warning indicators of high school dropout
+   https://rave.ohiolink.edu/etdc/view?acc_num=osu1457276247
+   (BA Boyd - 2016 - rave.ohiolink.edu | 2016 | cited by 6)
+   [PDF] https://etd.ohiolink.edu/acprod/odb_etd/ws/send_file/send?accession=osu1457276247&disposition=inline
+   … of high school dropout, which has proven to be a difficult and … Students who are not able to keep up with the class or … extent to which dropout is predicted by high school characteristics. …
+
+14. Advancing school dropout early warning systems: the IAFREE relational model for identifying at-risk students
+   https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2023.1189283/full
+   (AN de Vasconcelos, LA Freires, GDL Loureto… - Frontiers in …, 2023 - frontiersin.org | 2023 | cited by 23)
+   [PDF] https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2023.1189283/pdf
+   … For example, in Wisconsin, the Dropout Early Warning … their peers and school personnel to ensure accurate prediction of at-… and complex data to integrate dropout early warning system. …
+
+15. Engaged for Success: Service-Learning as a Tool for High School Dropout Prevention.
+   https://eric.ed.gov/?id=ED503357
+   (JM Bridgeland, JJ DiIulio Jr, SC Wulsin - Civic Enterprises, 2008 - ERIC | 2008 | cited by 119)
+   [PDF] https://files.eric.ed.gov/fulltext/ED503357.pdf
+   … solve the complex problem of high school dropout, but it can … of its clear goals for the spread of service-learning programs, … high school dropouts missed class often during the year they …
+
+16. Early warning systems and indicators of dropping out of upper secondary school: The emerging role of digital technologies
+   https://books.google.com/books?hl=en&lr=&id=Yj8yEAAAQBAJ&oi=fnd&pg=PA173&dq=Difficult+lessons+social+prediction+Wisconsin+public+schools+dropout+early+warning&ots=GuqZewHcpX&sig=5TzWk8PixXjFv9ZU-JC8Rck1RbY
+   (AJ Bowers - OECD Digital Education Outlook, 2021 - books.google.com | 2021 | cited by 54)
+   [PDF] https://www.oecd.org/content/dam/oecd/en/publications/reports/2021/06/oecd-digital-education-outlook-2021_0f1487d9/589b283f-en.pdf?utm_source=chatgpt.com#page=175
+   … predict and prevent dropping out of upper secondary school. … One additional difficulty is that relevant early warning … over multiple years from the state of Wisconsin in the United States to …
+
+17. Dropout early warning systems for high school students using machine learning
+   https://www.sciencedirect.com/science/article/pii/S0190740918309721
+   (JY Chung, S Lee - Children and Youth Services Review, 2019 - Elsevier | 2019 | cited by 337)
+   … ” who drop out of schools due to such difficulties either adopt … dropout prediction model developed in this study, schools … into purely a single class (eg, 10 dropouts vs 0 nondropouts), we …
+
+18. Evaluation of a Predictive Model--Montana Early Warning System. Technical Report.
+   https://eric.ed.gov/?id=ED672196
+   (R Clausen - Grantee Submission, 2023 - ERIC | 2023)
+   [PDF] https://files.eric.ed.gov/fulltext/ED672196.pdf
+   … Does the system predict graduation as reliably as dropout? … Examining root causes is difficult given the penchant for … Wisconsin represents one SLDS whose application has been …
+
+19. Dropout screening and early warning
+   https://www.academia.edu/download/53061883/Dropout_Screening___Early_Warning_3-27-15.pdf
+   (N Hoff, A Olson, RL Peterson - Building & Sustaining, 2015 - academia.edu | 2015 | cited by 26)
+   [PDF] https://www.academia.edu/download/53061883/Dropout_Screening___Early_Warning_3-27-15.pdf
+   … , and having difficulty catching up as the second most … variables which predict dropout, and have also permitted schools to … in how to monitor attendance, either by day or by class period, …
+
+20. Dropouts in the Denver Public Schools: Early warning signals and possibilities for prevention and recovery
+   
+   (MA Mac Iver, R Balfanz, V Byrnes - … for the Social Organization of Schools …, 2009 - Citeseer | 2009 | cited by 10)
+
+21. High school dropout, graduation, and completion rates: Better data, better measures, better decisions
+   https://books.google.com/books?hl=en&lr=&id=Jaac0wkMeOIC&oi=fnd&pg=PR1&dq=Difficult+lessons+social+prediction+Wisconsin+public+schools+dropout+early+warning&ots=nqNa8LTE5O&sig=KLCrHA788WsnMd7IXqLCVOjGutk
+   (JA Koenig, RM Hauser - 2011 - books.google.com | 2011 | cited by 123)
+   … fully portrays the complex issues associated with calculating dropout and completion rates. … graduation rate, even though they have a full grade 9 class. Incorporating ungraded special …
+
+22. Wise feedback as a timely intervention for at-risk students transitioning into high school
+   https://meridian.allenpress.com/spr/article-pdf/47/3/275/2384891/spr-2017-0021_v47-3.pdf
+   (AJ Thayer, CR Cook, AE Fiat… - School Psychology …, 2018 - meridian.allenpress.com | 2018 | cited by 45)
+   … are critical, particularly given difficulties encountered by … These early warning indicators increase the odds a student … used to assess early warning indicators of school dropout (three or …
+
+23. From lab to production: Lessons learnt and real-life challenges of an early student-dropout prevention system
+   https://ieeexplore.ieee.org/abstract/document/8692583/
+   (A Ortigosa, RM Carro, J Bravo-Agapito… - IEEE transactions on …, 2019 - ieeexplore.ieee.org | 2019 | cited by 83)
+   [PDF] https://udimundus.udima.es/bitstream/handle/20.500.12226/220/From-Lab-to-Production-Lessons-Learnt-and-Real-Life-Challenges-of-an-Early-Student-Dropout-Prevention-System.pdf?sequence=1
+   … , dropout prediction system in Spanish), an early warning system … The most important/ complex ones in our case were related to… statewide dropout early warning system in Wisconsin,” J. …
+
+24. Leveraging Modern Machine Learning to Improve Early Warning Systems and Reduce Chronic Absenteeism in Early Childhood. EdWorkingPaper No. 24-1081.
+   https://eric.ed.gov/?id=ED663646
+   (T Wu, C Weiland - Annenberg Institute for School Reform at Brown …, 2024 - ERIC | 2024 | cited by 7)
+   [PDF] https://files.eric.ed.gov/fulltext/ED663646.pdf
+   … These prediction-based EWSs are the focus of our study. … of future early warning indicators like high school dropout (… in the early grades remains limited, making it difficult to assess …
+
+25. Early Detection of Students at Risk--Predicting Student Dropouts Using Administrative Student Data from German Universities and Machine Learning Methods.
+   https://eric.ed.gov/?id=EJ1241620
+   (J Berens, K Schneider, S Gortz, S Oster… - Journal of Educational …, 2019 - ERIC | 2019 | cited by 300)
+   [PDF] https://files.eric.ed.gov/fulltext/EJ1241620.pdf
+   … first-generation immigrants have a higher dropout risk than secondgeneration immigrants. The rate of dropping out at the time of enrollment is 22% higher for first-… a high school degree …
+
+26. Bias in school-based risk prediction: Challenges for equitable practice. PsyArXiv
+   https://files.osf.io/v1/resources/79z3e_v1/providers/osfstorage/69d58321314028b23178ee38
+   (AB Lockwood, C Malone - BIAS IN SCHOOL-BASED RISK PREDICTION - files.osf.io)
+   [PDF] https://files.osf.io/v1/resources/79z3e_v1/providers/osfstorage/69d58321314028b23178ee38
+   … Early warning systems (EWS), automated risk prediction tools … accurate statewide dropout early warning system in Wisconsin. … Difficult lessons on social prediction from Wisconsin public …
+
+27. Understanding dropouts: Statistics, strategies, and high-stakes testing
+   https://books.google.com/books?hl=en&lr=&id=xnnwmdumqrUC&oi=fnd&pg=PR1&dq=Difficult+lessons+social+prediction+Wisconsin+public+schools+dropout+early+warning&ots=J7uTBZJ48s&sig=wF45nFyT5cE7RyJzmmhl_wovNBc
+   (JP Heubert, WT Trent, U Neisser, A Beatty - 2001 - books.google.com | 2001 | cited by 163)
+   … difficult to discern in the complex statistics about dropping out… predict whether middle school students were dropouts—high … survey could provide early warning about potential problems…
+
+28. Building A Grad Nation: Progress and Challenge in Ending the High School Dropout Epidemic. Annual Update 2015.
+   https://eric.ed.gov/?id=ED556759
+   (JL DePaoli, JH Fox, ES Ingram, M Maushard… - Civic Enterprises, 2015 - ERIC | 2015 | cited by 152)
+   [PDF] https://files.eric.ed.gov/fulltext/ED556759.pdf
+   … ; mentoring and tutoring; early warning systems that monitor … The states that have worked the problem the hardest and the … The challenge then is to spread what has worked in the …
+
+29. Dropouts in America: Enough Is Known for Action. A Report for Policymakers and Grantsmakers.
+   https://eric.ed.gov/?id=ED282948
+   (A Hahn - 1987 - ERIC | 1987 | cited by 244)
+   [PDF] https://files.eric.ed.gov/fulltext/ED282948.pdf
+   … in school despite complex needs and difficult personal and … and grade promotion in predicting school leaving. One analyst, … schools with the responsibility to identify early warnings of …
+
+30. The silent epidemic: Perspectives of high school dropouts.
+   https://eric.ed.gov/?id=eD513444
+   (JM Bridgeland, JJ DiIulio Jr, KB Morison - Civic Enterprises, 2006 - ERIC | 2006 | cited by 2877)
+   [PDF] https://files.eric.ed.gov/fulltext/ED513444.pdf
+   … even state-wide) early warning systems to help them identify … The decision to drop out is complex and relates to the individ… respondents missed class often the year they dropped out and …
+
+31. Early Warning! Why Reading by the End of Third Grade Matters. KIDS COUNT Special Report.
+   https://eric.ed.gov/?id=ED509795
+   (L Fiester - Annie E. Casey Foundation, 2010 - ERIC | 2010 | cited by 401)
+   [PDF] https://files.eric.ed.gov/fulltext/ED509795.pdf
+   … High school dropouts also are more likely than those who graduate to … Its often hard to gauge the extent of chronic absence … 20 of school can predict dropping out better than eighth …
+
+32. Dropouts from schools: Issues, dilemmas, and solutions
+   https://books.google.com/books?hl=en&lr=&id=V9XrGbykXsQC&oi=fnd&pg=PR7&dq=Difficult+lessons+social+prediction+Wisconsin+public+schools+dropout+early+warning&ots=1gao5PFKIa&sig=zFtAFu-79yF4HP9UoTYIns_L5n8
+   (L Weis, E Farrar, HG Petrie - 1989 - books.google.com | 1989 | cited by 256)
+   [PDF] https://files.eric.ed.gov/fulltext/ED324743.pdf
+   … it is difficult to monitor the population we now call dropouts and … relatively more likely to drop out of high school than Latinos, … that social class, family strain, and number of siblings predict …
+
+33. Interpretable multiview early warning system adapted to underrepresented student populations
+   https://ieeexplore.ieee.org/abstract/document/8691619/
+   (A Cano, JD Leonard - IEEE Transactions on Learning …, 2019 - ieeexplore.ieee.org | 2019 | cited by 110)
+   … traditionally have greater difficulties and performance gaps. … education, what motivates performance gaps and dropout … related works on early warning systems and predicting student …
+
+34. Aiming for success: Evaluating statistical and machine learning methods to predict high school student performance and improve early warning systems
+   https://search.proquest.com/openview/457a0cb3ae35cd3363fa7cf45e3ba954/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (DM Alexandro - 2018 - search.proquest.com | 2018 | cited by 8)
+   [PDF] https://digitalcommons.lib.uconn.edu/cgi/viewcontent.cgi?article=8260&context=dissertations
+   … I am grateful for the lessons you have helped me learn and … High school dropout is a complex issue. Rumberger (2011) … relevance to high school dropout and/or early warning systems …
+
+35. On the Front Lines of Schools: Perspectives of Teachers and Principals on the High School Dropout Problem.
+   https://eric.ed.gov/?id=ED509755
+   (JM Bridgeland, JJ Dilulio Jr, R Balfanz - Civic Enterprises, 2009 - ERIC | 2009 | cited by 98)
+   [PDF] https://files.eric.ed.gov/fulltext/ED509755.pdf
+   … While the causes of dropout are complex, dropouts gave the … , and early warning systems to help struggling students as early … of predicting a high school dropout as early as elementary …
+
+36. Use of social emotional learning skills to predict future academic success and progress toward graduation
+   https://www.tandfonline.com/doi/abs/10.1080/10824669.2014.972506
+   (A Davis, VS Solberg, C de Baca… - Journal of Education for …, 2014 - Taylor & Francis | 2014 | cited by 114)
+   … as an early warning system for differentiating high and low … who entered the class with a better science academic history. … from 1 (not at all difficult) to 5 (extremely difficult). Principal …
+
+37. Achieving Graduation for All: A Governor's Guide to Dropout Prevention and Recovery.
+   https://eric.ed.gov/?id=ED507071
+   (D Princiotta, R Reyna - NGA Center for Best Practices, 2009 - ERIC | 2009 | cited by 126)
+   [PDF] https://files.eric.ed.gov/fulltext/ED507071.pdf
+   … make it difficult for the student to complete all graduation require… In other states, a handful of dropout factories are spread … percent of eventual dropouts showed early warning signs in the …
+
+38. Machine learning predicts upper secondary education dropout as early as the end of primary school
+   https://www.nature.com/articles/s41598-024-63629-0
+   (M Psyridou, F Prezja, M Torppa, MK Lerkkanen… - Scientific reports, 2024 - nature.com | 2024 | cited by 56)
+   [PDF] https://www.nature.com/articles/s41598-024-63629-0.pdf
+   … sparsity of data and make pattern recognition more complex. … size of the positive class, namely the dropout cases, posed a … was to predict potential school dropout status at an early stage…
+
+39. From Accountability to Algorithms: Interorganizational Learning and the Transformation of Quantification in Education
+   https://link.springer.com/article/10.1007/s11133-024-09590-w
+   (JE Trinidad - Qualitative Sociology, 2025 - Springer | 2025 | cited by 3)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s11133-024-09590-w.pdf
+   … as in schools that use dropout prediction systems. Using the case of ninth-grade early warning … Although quantification is difficult to abandon, there are instances when they can change. …
+
+40. Predicting student's dropout in university classes using two-layer ensemble machine learning approach: A novel stacked generalization
+   https://www.sciencedirect.com/science/article/pii/S2666920X22000212
+   (J Niyogisubizo, L Liao, E Nziyumva… - … and Education: Artificial …, 2022 - Elsevier | 2022 | cited by 283)
+   … at the risk of dropping out the school can be identified … of education can refer to this information for early intervention in the uncontrolled behavior that can lead to the risk of dropping out …
+
+41. High School Graduation and College Readiness Indicator Systems: What We Know, What We Need to Know. Concept Paper for Research and Practice.
+   https://eric.ed.gov/?id=ED589733
+   (EM Allensworth, J Nagaoka, DW Johnson - … of Chicago Consortium on School …, 2018 - ERIC | 2018 | cited by 53)
+   [PDF] https://files.eric.ed.gov/fulltext/ED589733.pdf
+   … Chicago has been using early warning and college readiness … complex a college readiness indicator system should be. … were found to predict high school graduation with 80 percent …
+
+42. Predicting school dropout with administrative data: new evidence from Guatemala and Honduras
+   https://www.tandfonline.com/doi/abs/10.1080/09645292.2018.1433127
+   (M Adelman, F Haimovich, A Ham… - Education …, 2018 - Taylor & Francis | 2018 | cited by 88)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3006216
+   … show that early warning models can accurately predict which … early warning system merits its own paper, but many lessons … The social threat index measures how difficult it is to access …
+
+43. Evaluating the effectiveness of early warning systems in reducing loss of life in natural disasters: a case study of Greece
+   https://www.jracr.com/index.php/jracr/article/view/547
+   (S Kalogiannidis, D Kalfas, S Kontsas… - Journal of Risk Analysis …, 2025 - jracr.com | 2025 | cited by 12)
+   [PDF] https://www.jracr.com/index.php/jracr/article/download/547/475
+   … public attention and knowledge over time is another difficulty, … providing early alerts Χ2 Accuracy of hazard predictions, Χ3 Public … Advancing school dropout early warning systems: the …
+
+44. Keeping students on track to graduate: A synthesis of school dropout trends, prevention, and intervention initiatives.
+   https://eric.ed.gov/?id=EJ1117591
+   (M Ecker-Lyster, C Niileksela - Journal of At-Risk Issues, 2016 - ERIC | 2016 | cited by 141)
+   [PDF] https://files.eric.ed.gov/fulltext/EJ1117591.pdf
+   … information that can inform early warning system practices, … be predictive of dropout, the odds of dropping out significantly … Unfortunately, the dropout problem is complex and stems from …
+
+45. Receiver operating characteristic (ROC) area under the curve (AUC): A diagnostic measure for evaluating the accuracy of predictors of education outcomes
+   https://www.tandfonline.com/doi/abs/10.1080/10824669.2018.1523734
+   (AJ Bowers, X Zhou - Journal of Education for Students Placed at …, 2019 - Taylor & Francis | 2019 | cited by 339)
+   [PDF] https://academiccommons.columbia.edu/doi/10.7916/d8-tahp-4d12/download
+   … In this study we select a range of early warning predictors and … first education outcome we examine is high school dropout. … Second, for predicting a hard STEM career or a soft STEM …
+
+46. A Fairness-Centered Comparison of Machine Learning Models for Student Retention
+   https://raw.githubusercontent.com/mlresearch/v302/main/assets/kanubala26a/kanubala26a.pdf
+   (DD Kanubala, A Abubakari - … of Machine Learning …, 2025 - raw.githubusercontent.com | 2025)
+   [PDF] https://raw.githubusercontent.com/mlresearch/v302/main/assets/kanubala26a/kanubala26a.pdf
+   … learning systems to early warning systems for student success. … ML algorithms to predict students at risk of dropping out, hence … This ensemble approach effectively captures complex …
+
+47. Staying back and dropping out: The relationship between grade retention and school dropout
+   https://journals.sagepub.com/doi/abs/10.1177/003804070708000302
+   (E Stearns, S Moller, J Blau… - … of Education, 2007 - journals.sagepub.com | 2007 | cited by 366)
+   [PDF] https://www.researchgate.net/profile/Elizabeth-Stearns-2/publication/236025515_Staying_Back_and_Dropping_Out_The_Relationship_Between_Grade_Retention_and_School_Dropout/links/5712a8b708aeebe07c03a52d/Staying-Back-and-Dropping-Out-The-Relationship-Between-Grade-Retention-and-School-Dropout.pdf
+   … early warning, explain retained students’ higher probability of … logistic models predicting dropping out of school early (see … smaller in the late dropout sample, making it difficult for us to …
+
+48. Stressors and turning points in high school and dropout: A stress process, life course framework
+   https://journals.sagepub.com/doi/abs/10.3102/0034654314559845
+   (V Dupéré, T Leventhal, E Dion… - Review of …, 2015 - journals.sagepub.com | 2015 | cited by 411)
+   [PDF] https://umontreal.scholaris.ca/bitstreams/0dfda656-6cb9-410a-b8c4-1d96130a6302/download
+   … -achieving, middle-class students who drop out after bouts of severe victimization … to high school dropout and graduation in meaningful (if difficult to predict) ways, and models of dropout …
+
+49. Fairness Over Time: A Nationwide Study of Evolving Bias in Dropout Prediction
+   https://dl.acm.org/doi/abs/10.1145/3698205.3733933
+   (T Blazkova, RF Kizilcec, ML Nielsen… - Proceedings of the …, 2025 - dl.acm.org | 2025 | cited by 1)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3698205.3733933
+   … models is the use of Early Warning Systems (EWS), which … Permission to make digital or hard copies of all or part of this … Multi-class phased prediction of academic performance and …
+
+50. All together now: Creating middle-class schools through public school choice
+   https://books.google.com/books?hl=en&lr=&id=0--DDwAAQBAJ&oi=fnd&pg=PP1&dq=Difficult+lessons+social+prediction+Wisconsin+public+schools+dropout+early+warning&ots=WwOXL-JMrF&sig=t4JnlFMkLL-6vcOc_bKH7Jjs8V4
+   (RD Kahlenberg - 2004 - books.google.com | 2004 | cited by 604)
+   … twice as likely to drop out of high school as those from families … the spread of middleclass values, and, for the first time, … not have a hard time choosing the middle-class school.5 Parents …
+
+51. Building a Grad Nation: Progress and Challenge in Ending the High School Dropout Epidemic. Annual Update 2014.
+   https://eric.ed.gov/?id=ED556758
+   (R Balfanz, JM Bridgeland, JH Fox, JL DePaoli… - Civic Enterprises, 2014 - ERIC | 2014 | cited by 88)
+   [PDF] https://files.eric.ed.gov/fulltext/ED556758.pdf
+   … the school year for any reason) is an early warning indicator … 90 percent high school graduation rate by the Class of 2020. … Also beginning in New York, this work spread to many school …
+
+52. Teacher effects on complex cognitive skills and social-emotional competencies
+   https://jhr.uwpress.org/content/54/1/1.short
+   (MA Kraft - Journal of Human Resources, 2019 - jhr.uwpress.org | 2019 | cited by 359)
+   [PDF] https://www.matthewakraft.com/s/Kraft-2019-Teacher-Effects-JHR.pdf
+   … (2013), I find substantial attrition among the fourth- and fifth-… , “In this class I stop trying when the work gets hard”) using a … These findings suggest the post hoc predicted BLUE random …
+
+53. Predicting College Success of the Educationally Disadvantaged: Admission to selective colleges should be based substantially on test scores and high school grades.
+   https://www.science.org/doi/abs/10.1126/science.171.3972.640
+   (JC Stanley - Science, 1971 - science.org | 1971 | cited by 195)
+   [PDF] https://files.eric.ed.gov/fulltext/ED043295.pdf
+   … usual academic difficulties in elementary and high school. … persons who drop out before high school graduation and those … high school grades (or rank in high school graduating class, …
+
+54. The misuse of auc: What high impact risk assessment gets wrong
+   https://dl.acm.org/doi/abs/10.1145/3593013.3594100
+   (K Kwegyir-Aggrey, M Gerchick, M Mohan… - Proceedings of the …, 2023 - dl.acm.org | 2023 | cited by 35)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3593013.3594100
+   … Permission to make digital or hard copies of part or all of this … than a classifier which predicts each class with 50% odds. … in schools in Wisconsin – the Wisconsin Dropout Early Warning …
+
+55. Toward an Institutional Analytics Agenda for Addressing Student Dropout in Higher Education: An Academic Stakeholders' Perspective.
+   https://eric.ed.gov/?id=EJ1359197
+   (LMH De Silva, IA Chounta, MJ Rodríguez-Triana… - Journal of Learning …, 2022 - ERIC | 2022 | cited by 56)
+   [PDF] https://files.eric.ed.gov/fulltext/EJ1359197.pdf
+   … financial difficulties, and prior health issues are social factors … dropout, and data that can be used to predict dropout. Then, … an early warning system during a higher education transition …
+
+56. From Accountability to Algorithms: Interorganizational Learning and
+   https://escholarship.org/content/qt7b50f1x8/qt7b50f1x8.pdf?v=lg
+   (JE Trinidad - 2025 - escholarship.org | 2025)
+   [PDF] https://escholarship.org/content/qt7b50f1x8/qt7b50f1x8.pdf?v=lg
+   … as in schools that use dropout prediction systems. Using the case of ninth-grade early warning … as EWIs highlighted the difficulty of students’ transition to high school and their need for …
+
+57. Last chance high: How girls and boys drop in and out of alternative schools
+   https://books.google.com/books?hl=en&lr=&id=b50_EAAAQBAJ&oi=fnd&pg=PP1&dq=Difficult+lessons+social+prediction+Wisconsin+public+schools+dropout+early+warning&ots=Uz9MnuVkRv&sig=oeQYmi1SzHCzHDQTby358qc7T6E
+   (DM Kelly - 1993 - books.google.com | 1993 | cited by 378)
+   [PDF] https://www.pioneerdrama.com/%5CScript_Preview%5C0967_LASTCHANCE_Script_Sample.pdf
+   … potential dropouts may work best for the bulk of high school … The inhabitants of this world are difficult to classify. In the … and why and what the early warning signs of disengagement are. I …
+
+58. Absenteeism in the first decade of education forecasts civic engagement and educational and socioeconomic prospects in young adulthood
+   https://link.springer.com/article/10.1007/s10964-020-01272-4
+   (A Ansari, TL Hofkens, RC Pianta - Journal of Youth and Adolescence, 2020 - Springer | 2020 | cited by 141)
+   … (1 = no difficulty at all, 5 = overwhelming difficulty) and were … Given the high base rate of high school graduation, those … suggest that absenteeism was an early warning sign for long-term …
+
+59. The effects of early chronic absenteeism on third-grade academic achievement measures
+   https://www.attendanceworks.org/wp-content/uploads/2019/06/Effects-of-Early-Chronic-Absenteeism-on-Third-Grade-Academic-Achievement.pdf
+   (R Coelho, S Fischer, F McKnight… - Workshop in Public …, 2015 - attendanceworks.org | 2015 | cited by 44)
+   [PDF] https://www.attendanceworks.org/wp-content/uploads/2019/06/Effects-of-Early-Chronic-Absenteeism-on-Third-Grade-Academic-Achievement.pdf
+   … for the development of more complex skills. Poor student … that high school dropouts could be identified as early as first … An early warning system could be housed at the school, district, or …
+
+60. Transferring high schools: An alternative to dropping out?
+   https://www.journals.uchicago.edu/doi/abs/10.1086/444024
+   (VE Lee, DT Burkam - American Journal of Education, 1992 - journals.uchicago.edu | 1992 | cited by 168)
+   … of risk and truancy predicted not only dropout behavior, but … Social class and ethnicity are strongly related to dropping out… Despite the statistical need for more complex models including …
+
+===== Query 4/6: Kleinberg Raghavan how classifiers induce agents invest effort strategically =====
+
+1. How do classifiers induce agents to invest effort strategically?
+   https://dl.acm.org/doi/abs/10.1145/3417742
+   (J Kleinberg, M Raghavan - ACM Transactions on Economics and …, 2020 - dl.acm.org | 2020 | cited by 238)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3417742
+   Algorithms are often used to produce decision-making rules that classify or evaluate individuals. When these individuals have incentives to be classified a certain way, they may behave strategically to influence their outcomes. We develop a model for how strategic agents can invest effort in order to change the outcomes they receive, and we give a tight characterization of when such agents can be incentivized to invest specified forms of effort into improving their outcomes as opposed to “gaming” the classifier. We show that whenever any “reasonable” mechanism can do so, a simple linear mechanism suffices.
+
+===== Query 5/6: deflated Sharpe ratio false strategy theorem backtest overfitting Bailey Lopez de Prado =====
+
+1. The deflated sharpe ratio: Correcting for selection bias, backtest overfitting, and non-normality
+   https://www.pm-research.com/content/iijpormgmt%3A%3A%3A40%3A%3A%3A5%3A%3A%3A94.full.pdf
+   (DH Bailey, ML De Prado - The Journal of Portfolio Management, 2014 - pm-research.com | 2014 | cited by 291)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2460551
+   … a strategy that should have been discarded (a false positive), and the Type II Error occurs when we discard a strategy that should have been chosen (a false … extreme value theory. DSR …
+
+2. Detection of false investment strategies using unsupervised learning methods
+   https://www.tandfonline.com/doi/abs/10.1080/14697688.2019.1622311
+   (M López de Prado, MJ Lewis - Quantitative Finance, 2019 - Taylor & Francis | 2019 | cited by 62)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3167017
+   … the same false positive probability (Bailey et al. Citation2014, … False Strategy theorem (see Section 6 herein). Notably, the … result, we define the deflated Sharpe ratio (DSR) as the …
+
+3. The 10 reasons most machine learning funds fail
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3104816
+   (M López de Prado - Journalof Portfolio Management, Forthcoming, 2018 - papers.ssrn.com | 2018 | cited by 99)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3104816
+   … models do not replace theory, they guide it. … a false positive that looks great in an overfit backtest or (2) standard factor investing, which is an overcrowded strategy with a low Sharpe ratio…
+
+4. Enhanced Backtesting for Practitioners.
+   https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=00954918&AN=181701105&h=WE3xAzmPwnGbCrO5Qu%2FbrVuFB5KPKSu7%2BaTzjvWCBS6d3dY0bsNV7u1HrPlroktE7WctejJ94ze%2F5OPYvrFdig%3D%3D&crl=c
+   (…, W Distaso, M López de Prado - Journal of Portfolio …, 2024 - search.ebscohost.com | 2024 | cited by 5)
+   … can lead to false discoveries and strategies that fail to … value” of the Sharpe ratio, SR, a realized Sharpe ratio could be … by a normal distribution (Bailey and López de Prado 2012) and the …
+
+5. Finance is not excused: Why finance should not flout basic principles of statistics
+   https://escholarship.org/content/qt7r56s6sq/qt7r56s6sq.pdf
+   (DH Bailey, M Lopez de Prado - 2021 - escholarship.org | 2021 | cited by 8)
+   [PDF] https://escholarship.org/content/qt7r56s6sq/qt7r56s6sq.pdf
+   … design an “optimal” strategy, is virtually certain to produce an overfitted backtest, unless one … Sharpe ratio and the false strategy theorem to derive a formula for deflating the Sharpe ratio.…
+
+6. The false strategy theorem: A financial application of experimental mathematics
+   https://www.tandfonline.com/doi/abs/10.1080/00029890.2021.1965068
+   (M Lopez de Prado, DH Bailey - The American Mathematical …, 2021 - Taylor & Francis | 2021 | cited by 15)
+   [PDF] https://escholarship.org/content/qt95t7k79q/qt95t7k79q.pdf
+   … maximum Sharpe ratio and the expected Sharpe ratio … backtest overfitting” effects may be a primary reason that investment funds and strategies that look great on paper often fall flat …
+
+7. Sharpe ratio inference: A new standard for decision-making and reporting
+   https://www.pm-research.com/content/iijpormgmt/early/2026/03/02/jpm.2026.1.837.full.pdf
+   (ML de Prado, A Lipton… - The Journal of Portfolio …, 2026 - pm-research.com | 2026 | cited by 4)
+   … —often leading to false confidence, incorrect conclusions, and … corrections grounded in modern statistical theory. We identify five … Bailey and López de Prado (2012) derived closed-form …
+
+8. A data science solution to the multiple-testing crisis in financial research
+   https://www.pm-research.com/content/iijjfds/early/2019/01/23/jfds.2019.1.099.full.pdf
+   (ML de Prado - The Journal of Financial Data Science, 2019 - pm-research.com | 2019 | cited by 28)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3177057
+   … is the Sharpe ratio (SR), first introduced by Sharpe (1966) and … the deflated SR (DSR) method (Bailey and López de Prado … the strategy reported in Exhibit 1 is a false investment strategy…
+
+9. Pseudomathematics and financial charlatanism: The effects of backtest over fitting on out-of-sample performance
+   https://www.ams.org/notices/201405/rnoti-p458.pdf
+   (DH Bailey, JM Borwein, ML De Prado, QJ Zhu - Notices of the AMS, 2014 - ams.org | 2014 | cited by 347)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2308659
+   … with a 95 percent confidence level (ie, a false positive rate of 5 percent). After only twenty trials, the researcher is expected to find one specification … In other words, in this article we …
+
+10. How to use the sharpe ratio
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5520741
+   (M Lopez de Prado, A Lipton… - Available at SSRN …, 2025 - papers.ssrn.com | 2025 | cited by 3)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5520741
+   … —often leading to false confidence, incorrect conclusions, and … corrections grounded in modern statistical theory. We identify five … Bailey and López de Prado [2012] derived closed-form …
+
+11. The probability of backtest overfitting
+   https://escholarship.org/uc/item/4w1110bb
+   (D Bailey, J Borwein, M Lopez de Prado… - The Journal of …, 2017 - escholarship.org | 2017 | cited by 315)
+   [PDF] https://escholarship.org/content/qt4w1110bb/qt4w1110bb.pdf
+   … false positives in the context of investment strategy research. … only combinatorial frameworks like graph theory can provide, … true Sharpe ratio is below 0 (see Bailey and López de Prado […
+
+12. Statistical overfitting and backtest performance
+   https://www.sciencedirect.com/science/article/pii/B9781785480089500204
+   (DH Bailey, S Ger, ML de Prado, A Sim - Risk-based and factor investing, 2015 - Elsevier | 2015 | cited by 21)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2507040
+   … While the Sharpe ratio on the backtest dataset is important, … consequence of this theory is that overfitting a backtest on time … tool demonstrates how easily false trading strategies can be …
+
+13. Backtesting II
+   https://pdfs.semanticscholar.org/b676/adc79125a281530435c321e11eaee46066f7.pdf
+   (ML de Prado - pdfs.semanticscholar.org)
+   [PDF] https://pdfs.semanticscholar.org/b676/adc79125a281530435c321e11eaee46066f7.pdf
+   … Deflated Sharpe ratio: DSR corrects SR for inflationary effects … Bailey and López de Prado [2012] utilized those results to … 𝑆𝑅0 is the estimate provided by the False Strategy theorem, …
+
+14. The Information-Survival Ratio: A Within-Strategy Diagnostic of Conditioning Overfit in Walk-Forward Backtests
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6905139
+   (A Rodriguez Dominguez - Available at SSRN 6905139, 2026 - papers.ssrn.com | 6905)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6905139
+   … on backtested performance: insample optimised Sharpe ratios … drives Theorem 8; mean–variance and Sharpe-ratio orderings … Sharpe ratio of Bailey and López de Prado (2014), …
+
+15. Stock portfolio design and backtest overfitting
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2739335
+   (…, J Borwein, M Lopez de Prado - Available at SSRN …, 2016 - papers.ssrn.com | 2016 | cited by 10)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2739335
+   … performance profile, we employ techniques of optimization theory [7] to find a set of weights … selecting a false positive. Readers need to keep in mind that any Sharpe ratio is attainable …
+
+16. How hard is it to pick the right model? MCS and backtest overfitting
+   https://journals.sagepub.com/doi/abs/10.3233/AF-180231
+   (D Aparicio, M López de Prado - Algorithmic Finance, 2018 - journals.sagepub.com | 2018 | cited by 12)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3044740
+   … This concern can be related to a growing literature on the false … financial strategies based on a collection of Sharpe ratios. In … each strategy, we compute twelve annualized Sharpe ratios …
+
+17. Determining optimal trading rules without backtesting
+   https://arxiv.org/abs/1408.1159
+   (PP Carr, ML de Prado - arXiv preprint arXiv:1408.1159, 2014 - arxiv.org | 1408 | cited by 12)
+   [PDF] https://arxiv.org/pdf/1408.1159
+   … In theory this could be accomplished by estimating the optimal parameters for the … Sharpe ratio associated with that trading rule as described in Eq. (1) (see Bailey and López de Prado […
+
+18. False Discoveries about the False Discovery Rate in Finance
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6450418
+   (M Lopez de Prado, F Fabozzi - Available at SSRN 6450418, 2026 - papers.ssrn.com | 6450 | cited by 1)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6450418
+   … one, see Bailey and López de Prado [2014], Bailey et al. [2014]… we define false discovery probabilities directly in Sharpe ratio … theory and practice define optimal or selected strategies as …
+
+19. Building diversified portfolios that outperform out-of-sample
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2708678
+   (M Lopez de Prado - Journal of Portfolio Management, 2016 - papers.ssrn.com | 2016 | cited by 555)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2708678
+   … A description and open-source implementation of this algorithm can be found in Bailey and López de Prado [2013]. Surprisingly, most financial practitioners still seem unaware of …
+
+20. COMPUTING THE PROBABILITY OF OVERFITTING IN THE BACKTESTING AND OPTIMIZATION OF INVESTMENT STRATEGIES
+   
+   (ML de Prado)
+
+21. Quantifying backtest overfitting in alternative beta strategies
+   https://community.portfolio123.com/uploads/short-url/eDD8GQ0ZmwCF8vCR4dORON040Sf.pdf
+   (A Suhonen, M Lennkh, F Perez - 2017 - community.portfolio123.com | 2017 | cited by 42)
+   [PDF] https://community.portfolio123.com/uploads/short-url/eDD8GQ0ZmwCF8vCR4dORON040Sf.pdf
+   … We find a median Sharpe ratio (SR) of 1.20 across the 215 … trading strategies, whereas Bailey and Lopez de Prado [2014] … selected—leading to a false positive due to multiple testing. …
+
+22. A protocol for causal factor investing
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5277078
+   (M Lopez de Prado, V Zoonekynd - Available at SSRN, 2025 - papers.ssrn.com | 2025 | cited by 5)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5277078
+   … build more robust strategies, reduce false discoveries, and … for multiple testing, deflated Sharpe ratios, Bayesian shrinkage… For instance, if theory indicates that two variables are …
+
+23. A closed-form solution for optimal Ornstein–Uhlenbeck driven trading strategies
+   https://www.worldscientific.com/doi/abs/10.1142/S0219024920500569
+   (A Lipton, M LÓPEZ DE PRADO - International Journal of Theoretical …, 2020 - World Scientific | 2020 | cited by 16)
+   [PDF] https://www.numerairefinancial.com/s/101-2020-Lipton-Lopez-de-Prado-A-closed-form-solution-for-optimal-OrnsteinUhlenbeck-driven-trading-s.pdf
+   … (4.5) is incorrect because it ignores the possibility of a Lévy-… López de Prado (Chap. 13) explains how to identify those optimal levels in the sense of maximizing the trader’s Sharpe ratio (…
+
+24. Machine learning for asset managers
+   https://www.cambridge.org/core/elements/machine-learning-for-asset-managers/6D9211305EA2E425D33A9F38D0AE3545
+   (MML De Prado - 2020 - cambridge.org | 2020 | cited by 279)
+   [PDF] https://smallake.kr/wp-content/uploads/2020/04/SSRN-id3558728.pdf
+   … on developing a theory rather than on backtesting potential … will inevitably end with an overfit strategy (a false positive). … by the maximum Sharpe ratio portfolio without denoising. That …
+
+25. A closed-form solution for optimal mean-reverting trading strategies
+   https://arxiv.org/abs/2003.10502
+   (A Lipton, ML de Prado - arXiv preprint arXiv:2003.10502, 2020 - arxiv.org | 2003 | cited by 12)
+   [PDF] https://arxiv.org/pdf/2003.10502
+   … equation (9) is incorrect because it ignores the possibility … Lopez de Prado (Chapter 13) explains how to identify those optimal levels in the sense of maximizing the trader’s Sharpe ratio …
+
+26. A Conversation with Don Marcos (aka Marcos López de Prado).
+   https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=26403943&asa=N&AN=183116696&h=2T%2BrxdqHNKFzK67KhPzN1ISL%2BkAtxkQ0zy9jEs0bUf3PC34aCSNkd3bNdXCbGHy41rRzHMFETjLiASeQKkMYeQ%3D%3D&crl=c
+   (FJ Fabozzi - Journal of Financial Data Science, 2025 - search.ebscohost.com | 2025)
+   … The “False Strategy Theorem”— a mathematical result that … , any Sharpe ratio is achievable by playing with the backtest … López de Prado: When David Bailey, Jonathan Borwein, and I …
+
+27. Interview with Marcos López de Prado of Abu Dhabi Investment Authority (ADIA)
+   https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=00954918&asa=N&AN=187367270&h=aohi1VTTMPpIW303XhjNnA4lHgZgiic25T8P%2FDGSLu%2BLzx%2FKpJGLfxTTYP2r%2B14w24LqPPgl%2BaoFGG7bx2d%2BFg%3D%3D&crl=c
+   (FJ Fabozzi - The Journal of Portfolio Management, 2025 - search.ebscohost.com | 2025)
+   … for the probability of false discoveries, as in the deflated Sharpe ratio. Second, … Bailey, we proved the False Strategy Theorem, which demonstrates that it is trivial to overfit a backtest …
+
+28. Online tools for demonstration of backtest overfitting
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2597421
+   (…, A Salehipour, M Lopez de Prado… - Available at SSRN …, 2015 - papers.ssrn.com | 2015 | cited by 2)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2597421
+   … A false positive occurs when we falsely determine that XYZ … Suppose that the probability of false positive is only 5%. We … statistics Sharpe Ratio (SR) and Deflated Sharpe Ratio (DSR). In …
+
+29. Advances in financial machine learning
+   https://books.google.com/books?hl=en&lr=&id=oU9KDwAAQBAJ&oi=fnd&pg=PR21&dq=deflated+Sharpe+ratio+false+strategy+theorem+backtest+overfitting+Bailey+Lopez+de+Prado&ots=7VLHVZyEcu&sig=WpXbWS_EhKLBaADWOuMiROdL6rs
+   (ML De Prado - 2018 - books.google.com | 2018 | cited by 1386)
+   … false positive that looks great in an overfit backtest or (2) standard factor investing, which is an overcrowded strategy with a low Sharpe ratio… the validity of this theory. Team members are …
+
+30. The Sharpe Stability Ratio: Temporal Consistency of Risk-Adjusted Performance
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6344658
+   (M Bajo Traver… - Available at SSRN …, 2026 - papers.ssrn.com | 2026 | cited by 1)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6344658
+   … to the Sharpe Stability Ratio: (1) point-in-time Sharpe ratio … Theorem to justify approximate normality of local Sharpe-… Bailey and López de Prado (2012) and López de Prado et al. (…
+
+31. The future of empirical finance
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2609734
+   (M Lopez De Prado - Journal of Portfolio Management, 2015 - papers.ssrn.com | 2015 | cited by 41)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2609734
+   … A second myth is that simple models are hard to overfit. This is also patently incorrect, as we … work is conducted to corroborate or quantify a theory that is not founded on experimentation, …
+
+32. Dynamic Investment Strategies with Machine Learning Methods
+   https://epub.ub.uni-muenchen.de/69183/1/MA_BergerThomas.pdf
+   (T Berger - 2019 - epub.ub.uni-muenchen.de | 2019)
+   [PDF] https://epub.ub.uni-muenchen.de/69183/1/MA_BergerThomas.pdf
+   … leads to false discoveries if machine learning algorithms are … preparing methods as stated by López De Prado (2018). In … with a Sharpe ratio equal to the just noted equation (Bailey & …
+
+33. Why has factor investing failed?: The role of specification errors
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4697929
+   (M Lopez de Prado, V Zoonekynd - The Role of Specification Errors …, 2025 - papers.ssrn.com | 2025 | cited by 6)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=4697929
+   … Its annualized Sharpe ratio from May 2, 2007 (the index’s … In this paper, we have proved that this belief is false, for two … False Strategy Theorem — A mathematical result proving …
+
+34. Correcting the Factor Mirage: A Research Protocol for Causal Factor Investing.
+   https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=00954918&AN=190956414&h=BJHwhfEz%2BB5pyP6SQkgypOx0rBc3vf7J4dwAnDwctypNYnZmRFAb6gY7i1kk%2Bgq2nva6KfELYtkTs2KakHOYCQ%3D%3D&crl=c
+   (M López de Prado… - Journal of Portfolio …, 2026 - search.ebscohost.com | 2026 | cited by 3)
+   … Its annualized Sharpe ratio from May 2, 2007 (the index’s … 2011; Bailey et al. 2014; Fabozzi and López de Prado 2018; … In this article, we have proved that this belief is false for two …
+
+35. Machine Learning Straddle Strategy with Buffer-Based Execution: A Patient Trader Approach to Equity Trading
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6401038
+   (J González Maiz Jiménez, F López-Herrera… - Available at SSRN … - papers.ssrn.com)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6401038
+   … We extend Bailey and López de Prado's PSR framework to the Sortino … downside through favorable wrong-leg exits. The Sortino-to-Sharpe ratio for our strategy ranges from 2.2 to 7.5 …
+
+36. Predictive Value of Within-Strategy Permutation Tests for Forward Selection: Evidence from Over 6 Billion Strategy-Level Permutations Across Three Asset Classes
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6636018
+   (D Gatto - 2026 - papers.ssrn.com | 2026 | cited by 2)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6636018
+   … zero alpha after controlling for false discoveries—a result that … , Pardo (2008) and López de Prado (2018) established the … To contextualize this result, we note that IS Sharpe ratio and …
+
+37. Testing strategies based on multiple signals
+   https://mysimon.rochester.edu/novy-marx/research/MSES.pdf
+   (R Novy-Marx - Working Paper, 2016 - mysimon.rochester.edu | 2016 | cited by 33)
+   [PDF] https://mysimon.rochester.edu/novy-marx/research/MSES.pdf
+   … and Lopez de Prado (2014). Selection bias results when the … ex-post Sharpe ratio of the active returns to the strategy that … the wrong statistics. One solution is to evaluate multi-signal …
+
+38. The GT-Score: A Robust Objective Function for Reducing Overfitting in Data-Driven Trading Strategies
+   https://www.mdpi.com/1911-8074/19/1/60
+   (AP Sheppert - Journal of Risk and Financial Management, 2026 - mdpi.com | 2026 | cited by 1)
+   … -sample performer is likely to be a false discovery unless multiple testing is accounted for… Deflated Sharpe Ratio, explicitly adjust performance claims for the fact that the reported strategy …
+
+39. Correcting the Factor Mirage: A Research Protocol for Causal Factor Investing
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5931616
+   (M Lopez de Prado, V Zoonekynd - Available at SSRN 5931616, 2024 - papers.ssrn.com | 5931 | cited by 2)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5931616
+   … Its annualized Sharpe ratio from May 2, 2007 (the index’s … 2011; Bailey et al. 2014; Fabozzi and López de Prado 2018; … In this article, we have proved that this belief is false for two …
+
+40. How “backtest overfitting” in finance leads to false discoveries
+   https://academic.oup.com/jrssig/article-abstract/18/6/22/7038278
+   (DH Bailey, ML de Prado - Significance, 2021 - academic.oup.com | 2021 | cited by 7)
+   … This result is known as the false strategy theorem: given a sample of estimated performance statistics {S k }, k = 1, …, K, each independently following a zero-mean, unit-variance …
+
+41. A Taxonomy of Backtest Lies: Survival Bias, Lookahead Bias, and the Rest
+   https://www.susanpotter.net/quant/backtest-bias-taxonomy/
+   (S Potter - susanpotter.net)
+   … you a Sharpe ratio of 10 that screams “something is wrong.” … Easy to describe, easy to spot in theory, and yet it keeps … Combinatorial purged cross-validation (Lopez de Prado, 2018) is a …
+
+42. Dependence-aware Evaluation of Panel Trading Strategy Evidence
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6861958
+   (D Chauhan - Available at SSRN 6861958, 2026 - papers.ssrn.com | 6861)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6861958
+   … It is the Sharperatio analogue of a design effect. A … same-date permutation can break the wrong null. In those cases the … assembly of standard results rather than a new theorem. The …
+
+43. Backtesting trading strategies with gan to avoid overfitting
+   https://arxiv.org/abs/2209.04895
+   (A Sun, YD Lyuu - arXiv preprint arXiv:2209.04895, 2022 - arxiv.org | 2209 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2209.04895
+   … [maxn] is close to zero, then the Sharpe Ratio greater than zero is considered to be significant result rather than an false positive result). More discussion on this topic on … Bailey and M. …
+
+44. Point-in-Time Backtesting of Momentum-Trend Equity Strategies: A Formal Bias Taxonomy, ATR Trailing Stop Analysis, and Investor Experience Metrics
+   https://www.preprints.org/manuscript/202606.0436
+   (X Fonseca - 2026 - preprints.org | 2026 | cited by 2)
+   [PDF] https://www.preprints.org/frontend/manuscript/b8db286b07452ae7019c308413c28e10/download_pub
+   … that controls the false-… Deflated Sharpe Ratio of Bailey and López de Prado [11], which requires careful estimation of higher empirical moments and the expected maximum Sharpe ratio …
+
+45. A Practitioner's Guide to the Optimal Number of Clusters Algorithm.
+   https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=26403943&AN=169990128&h=O1Xdtj6kc21uz%2Fy%2FUsSSLTVLvase1xuw8Un2khgw5hLIe4%2BZwgGIiVcneZeWEvsVOptM%2BQLWx2rW%2FS8MWDQ7gA%3D%3D&crl=c
+   (M Andrews - Journal of Financial Data Science, 2023 - search.ebscohost.com | 2023)
+   … deflated Sharpe ratio, a popular metric that detects potential false positive investment strategies. … The focus of this article will be on the FWER framework by López de Prado and Lewis (…
+
+46. Dual-Buffer Straddle Strategy: How Fill Rates Reveal the Distinct Roles of Execution Design and Ensemble-Based Machine Learning Prediction
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6505589
+   (…, A Reyes-Santiago, F López-Herrera - Available at SSRN …, 2026 - papers.ssrn.com | 2026)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6505589
+   … of modern algorithms exacerbates overfitting risks and advocating … execution to both legs: the wrong leg exits at a favorable … the Deflated Sharpe Ratio (Bailey, Borwein, López de Prado, …
+
+47. In-sample and out-of-sample sharpe ratios for linear predictive models
+   https://arxiv.org/abs/2501.03938
+   (A Jacquier, J Muhle-Karbe, J Mulligan - arXiv preprint arXiv:2501.03938, 2025 - arxiv.org | 2501 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2501.03938
+   … We show that low true Sharpe ratio signals are particularly vulnerable to overfitting. Con… one can reduce the overfitting risk, and can produce a higher replication ratio out of sample. We …
+
+48. Meta-Labeling: Theory and Framework.
+   https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=26403943&AN=169649297&h=IqhyjvmaXYooi0t60jl8YIdudCs1eqoplBqYEZZL17TOW84oTPr1R5Jc4CiUHVMSEXkJKu6Ljs88aH0DRWbwMQ%3D%3D&crl=c
+   (JF Joubert - Journal of Financial Data Science, 2022 - search.ebscohost.com | 2022 | cited by 6)
+   … strategy to help size positions, filter out false-positive signals, and improve metrics such as the Sharpe ratio … The author is grateful to Marcos López de Prado for reviewing this article and …
+
+49. Forecast Optimization via Parameter Tuning: Performance Gain and Overfit
+   https://www.pm-research.com/content/iijjfds/early/2020/09/02/jfds.2020.1.044.full.pdf
+   (I Soloveychik - The Journal of Financial Data Science, 2020 - pm-research.com | 2020)
+   … may not be easily verifiable or even wrong. Fourth, the lion’s … show the gains in the Sharpe ratio no matter which of these … strategy is its Sharpe ratio (Bailey and Lopez de Prado 2014; …
+
+50. In-Sample and Out-of-Sample Sharpe Ratios for Linear Predictive Models
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5086171
+   (J Mulligan, AJ Jacquier… - Available at SSRN …, 2025 - papers.ssrn.com | 2025)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5086171
+   … We show that low true Sharpe ratio signals are particularly vulnerable to overfitting. Con… one can reduce the overfitting risk, and can produce a higher replication ratio out of sample. We …
+
+51. Investment Portfolio Optimization Through Machine Learning: Practical Strategies and Techniques
+   https://apothesis.eap.gr/archive/item/228082
+   (Α ΒΑΤΗΣ - apothesis.eap.gr)
+   [PDF] https://apothesis.eap.gr/archive/download/c70a55af-8640-4bd3-b790-b3cf0fe3c513.pdf
+   … design that meshes financial theory with machine-learning … or the emergence of new risks (Lopez de Prado, 2018). A … labels—perform or default, fraudulent or legitimate, gain or …
+
+52. Type I and Type II Errors of the Sharpe Ratio under Multiple Testing.
+   https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=00954918&AN=169696765&h=AyLIPt0NSbjU0vh6kQ5ihLeTPz4SkwlsDcMZNLGxWY7TKBOH1wEXNy3ePX3tRWm69H2LGPi36g3APJmGY73p5w%3D%3D&crl=c
+   (ML De Prado - Journal of Portfolio Management, 2022 - search.ebscohost.com | 2022 | cited by 7)
+   … estimate to the probability of selecting a false investment strategy, corrected for multiple testing. … Building on theorems from extreme value theory, Bailey and López de Prado (2014) …
+
+53. How the Sharpe Ratio Died, and Came Back to Life
+   https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3173146
+   (M Lopez de Prado - Available at SSRN 3173146, 2018 - papers.ssrn.com | 3173)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3173146
+   … In this paper we apply the False Strategy theorem, first proved in Bailey et al. [2014], to the prevention of false positives in finance. This requires the estimation of two meta-research …
+
+54. Bayes is All You Need: Better Estimates of True Sharpe Ratios
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6300138
+   (J Mulligan, J Muhle-Karbe, J Joenväärä… - Available at …, 2026 - papers.ssrn.com | 2026)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6300138
+   … , and Marcos Lopez de Prado for their helpful comments. … estimates, leading to incorrect assessments of selection bias. We … In theory, as the sample sizes grow, which we will denote by …
+
+55. Causal factor investing: Can factor investing become scientific?
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4362927
+   (M Lopez de Prado - Available at SSRN 4205613, 2022 - papers.ssrn.com | 4205 | cited by 38)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=4205613
+   … theory, their findings are likely false, due to rampant backtest … an investment strategy with an annualized Sharpe ratio of 0.29 … confidence level (see Bailey and López de Prado [2012] for …
+
+56. Limitations of Quantitative Claims About Trading Strategy Evaluation
+   https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2810170
+   (M Harris - Available at SSRN 2810170, 2016 - papers.ssrn.com | 2810 | cited by 1)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2810170
+   … Type I errors (false discoveries) when a genuine strategy is used but there is a change in market conditions. In Bailey et al. (2014), … Sharpe ratio is negative since this is a losing strategy. …
+
+57. Confidence and Power of the Sharpe Ratio under Multiple Testing
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3193697
+   (M Lopez de Prado - Available at SSRN 3193697, 2019 - papers.ssrn.com | 3193 | cited by 3)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3193697
+   … than the test’s false positive rate (see Bailey et al. [2014]). … probability of selecting a false investment strategy, corrected for … theorems from Extreme Value Theory, Bailey and López de …
+
+58. Detection of False Investment Strategies through FWER and FDR (Seminar Slides)
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4103650
+   (M Lopez de Prado - Available at SSRN 3799803, 2021 - papers.ssrn.com | 3799)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3799803
+   … • Backtest overfitting occurs when a researcher backtests … strategies, where we expect that – half of them have an annualized Sharpe ratio of 1 – half of them have an annualized Sharpe …
+
+59. Deflating the Sharpe Ratio
+   https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2465675
+   (M Lopez de Prado - Available at SSRN 2465675, 2014 - papers.ssrn.com | 2465)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2465675
+   … Backtest optimizers search for combinations of parameters that maximize the simulated historical performance of a strategy, leading to backtest overfitting… an incorrect conclusion. Failure …
+
+60. Advances in Quantitative Meta-Strategies
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2604812
+   (M Lopez de Prado - Available at SSRN 2604812, 2015 - papers.ssrn.com | 2604)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2604812
+   … Financial firms can control for the increased probability of false … There is only a 90% probability that the true Sharpe ratio is … • THEOREM #1: Under IID Normal outcomes, a strategy’s …
+
+===== Query 6/6: leaderboard illusion Chatbot Arena benchmark overfitting 2025 =====
+
+1. The leaderboard illusion
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/70a93f260a51123b3c0e33ecd1b4de97-Abstract-Datasets_and_Benchmarks_Track.html
+   (S Singh, Y Nan, A Wang, D Dsouza… - Advances in neural …, 2026 - proceedings.neurips.cc | 2026 | cited by 82)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/70a93f260a51123b3c0e33ecd1b4de97-Paper-Datasets_and_Benchmarks_Track.pdf
+   … -April 2025, covering approximately 2M Chatbot Arena battles … estimate the potential for overfitting to Chatbot Arena, we fine-… generalize beyond the Arena benchmark, we evaluated the …
+
+2. Gaming the Arena: AI Model Evaluation and the Viral Capture of Attention
+   https://arxiv.org/abs/2512.15252
+   (S Hind - arXiv preprint arXiv:2512.15252, 2025 - arxiv.org | 2512)
+   [PDF] https://arxiv.org/pdf/2512.15252
+   … and computer science on benchmarking and the practices of … Yet more than simply a case of overfitting, arena gaming … in motion’ benchmarks, leaderboards and arenas engender a …
+
+3. Computer Agent Arena: Toward Human-Centric Evaluation and Analysis of Computer-Use Agents
+   https://openreview.net/forum?id=3x4SDbXbgl
+   (B Wang, X Wang, J Deng, T Xie, R Li, Y Zhang… - … Conference on Learning … - openreview.net | cited by 1)
+   [PDF] https://openreview.net/pdf?id=3x4SDbXbgl
+   … reversals relative to static benchmarks. Further analysis shows … AGENT ARENA leaderboard with four public benchmarks: … To avoid agent overfitting, we update the file content monthly …
+
+4. Public AI Benchmarks Are Broken, But Are Private Benchmarks the Answer?
+   https://aimslab.stanford.edu/papers/Truong2026PublicPrivate.pdf
+   (S Truong, S Wang, A Wang, N Truong, A Reuel… - aimslab.stanford.edu)
+   [PDF] https://aimslab.stanford.edu/papers/Truong2026PublicPrivate.pdf
+   … al., 2025]. The core … overfitting. Combined with selective model disclosure and exposure imbalances, this creates the risk that leaderboard rankings reflect optimization for Arena …
+
+5. Position: AI should not be an imitation game: Centaur evaluations
+   https://openreview.net/forum?id=LkdH35003E
+   (A Haupt, E Brynjolfsson - Forty-second International Conference on …, 2025 - openreview.net | 2025 | cited by 14)
+   [PDF] https://openreview.net/pdf?id=LkdH35003E
+   … of a model i on a centaur benchmark (including human, interface, … -own-human and not overfit to the selection of a particular … than RCTs when designed as leaderboards Section 5.3. We …
+
+6. Exploiting leaderboards for large-scale distribution of malicious models
+   https://ieeexplore.ieee.org/abstract/document/11573544/
+   (A Suri, H Chaudhari, Y Peng, A Naseh… - … IEEE Symposium on …, 2026 - ieeexplore.ieee.org | 2026 | cited by 6)
+   [PDF] https://arxiv.org/pdf/2507.08983
+   … downloaded 304K times in May 2025, nearly matching the … MTEB Leaderboard and MTEB Arena, by including benchmark … —making it impossible to explicitly overfit—we find that the …
+
+7. How Hard is it to Rig a Benchmark? A Social Choice Analysis of Leaderboard Robustness
+   https://arxiv.org/abs/2605.23628
+   (P Gordienko, G Schollmeyer, F Kreuter… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.23628
+   … , we consider benchmark-specific training – the inclusion of benchmark data in training – as a … [2025] give a detailed empirical account of systematic gaming of the Chatbot Arena rating. …
+
+8. Position: Benchmarking is Broken
+   https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.175752188.89738992/v1?download=true&redirectToLatest=false
+   (AI Don't Let, O Judge - techrxiv.org)
+   [PDF] https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.175752188.89738992/v1?download=true&redirectToLatest=false
+   … Benchmark leaderboards have become the go-to standard for … Crowdsourced pairwise ratings power Chatbot Arena’s Elo … research rather than narrow overfitting. While a slower …
+
+9. Reward Models are Metrics in a Trench Coat
+   https://arxiv.org/abs/2510.03231
+   (S Gehrmann - arXiv preprint arXiv:2510.03231, 2025 - arxiv.org | 2510)
+   [PDF] https://arxiv.org/pdf/2510.03231?
+   … a metric to a reward modeling benchmark and one where we … providers may overfit to the aspects of leaderboard performance, … Judging llm-as-a-judge with mt-bench and chatbot arena. …
+
+10. Benchmarking is Broken--Don't Let AI be its Own Judge
+   https://arxiv.org/abs/2510.07575
+   (Z Cheng, S Wohnig, R Gupta, S Alam… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 10)
+   [PDF] https://arxiv.org/pdf/2510.07575
+   … Benchmark leaderboards have become the go-to standard for … a rolling basis, preventing overfitting and test-set memorization… Crowdsourced pairwise ratings power Chatbot Arena’s Elo …
+
+11. Gameplaying AI by Game Genre
+   https://link.springer.com/chapter/10.1007/978-3-031-83347-2_6
+   (GN Yannakakis, J Togelius - Artificial Intelligence and Games, 2025 - Springer | 2025)
+   … of the game selected from the Board Game Arena. Footnote 2 … ALE became a standard benchmark for deep reinforcement … At the time of writing, the leaderboards are very inconclusive …
+
+12. Position: Benchmarking is Broken-Don't Let AI be its Own Judge
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/693e00827fd44bdfca210801fe1e6439-Abstract-Position_Paper_Track.html
+   (Z Cheng, S Wohnig, R Gupta, S Alam… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 1)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/693e00827fd44bdfca210801fe1e6439-Paper-Position_Paper_Track.pdf
+   … Benchmark leaderboards have become the go-to standard for … a rolling basis, preventing overfitting and test-set memorization… Crowdsourced pairwise ratings power Chatbot Arena’s Elo …
+
+13. In Benchmarks We Trust... Or Not?
+   https://aclanthology.org/2025.emnlp-main.1208/
+   (I Gevers, V De Marez, J Van Nooten… - … of the 2025 …, 2025 - aclanthology.org | 2025 | cited by 5)
+   [PDF] https://aclanthology.org/2025.emnlp-main.1208.pdf
+   … on leaderboard rankings, incentivizing ‘benchmark gaming’: … on sycophancy and an overfitting to arena-specific dynamics over … 2025) show that Chatbot Arena, which uses a normalized …
+
+14. The Artificial Intelligence Cognitive Examination: A Survey on the Evolution of Multimodal Evaluation From Recognition to Reasoning
+   https://ieeexplore.ieee.org/abstract/document/11317986/
+   (M Ravishankara, VVP Maharaj - IEEE Access, 2025 - ieeexplore.ieee.org | 2025 | cited by 5)
+   [PDF] https://ieeexplore.ieee.org/iel8/6287639/11323511/11317986.pdf
+   … ’’ landscape, where rapid saturation of reasoning benchmarks … Rather than proposing new metrics or leaderboards, we … against contamination and benchmark overfitting. These scores …
+
+15. Seal showdown: Technical report
+   https://static.scale.com/uploads/654197dc94d34f66c0f5184e/SEAL_Showdown_Tech_Report.pdf
+   (AI Scale - 2025 - static.scale.com | 2025 | cited by 1)
+   [PDF] https://static.scale.com/uploads/654197dc94d34f66c0f5184e/SEAL_Showdown_Tech_Report.pdf
+   … LLMs, with platforms such as Chatbot Arena [10] embedding blind compar… leaderboard measuring human preferences for LLMs in a natural chat setting. Unlike traditional benchmarks, …
+
+16. Neither valid nor reliable? investigating the use of llms as judges
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/829e8f32d76a6248815bf5b01633811d-Abstract-Position_Paper_Track.html
+   (K Chehbouni, M Haddou… - Advances in Neural …, 2026 - proceedings.neurips.cc | 2026 | cited by 30)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/829e8f32d76a6248815bf5b01633811d-Paper-Position_Paper_Track.pdf
+   … widely used leaderboards for LLM evaluation: Chatbot Arena [… , increased risks of overfitting to the benchmark, and the ability … This issue likely arises from overfitting to benchmarks and …
+
+17. Emergent evaluation hubs in a decentralizing large language model ecosystem
+   https://arxiv.org/abs/2510.01286
+   (M Cebrian, T Kito, RC Fernandez - arXiv preprint arXiv:2510.01286, 2025 - arxiv.org | 2510)
+   [PDF] https://arxiv.org/pdf/2510.01286
+   … (eg, multi-task chatbot “arena” benchmarks) attracted tens of … of how harshly we penalise over-fitting; preferential attachment … benchmarks that define success (eg, popular leaderboards …
+
+18. Who Defines “Best”? Towards Interactive, User-Defined Evaluation of LLM Leaderboards
+   https://dl.acm.org/doi/abs/10.1145/3805689.3812353
+   (M Jung, M Lee, Y Kim, S Choi, M Kahng - The 2026 ACM Conference on …, 2026 - dl.acm.org | 2026)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3805689.3812353
+   … in the LMArena (formerly Chatbot Arena) benchmark and investigate this … of existing leaderboards, noting that models often overfit to test data. … 2025. Improving your model ranking on …
+
+19. K-Sort Eval: Efficient Preference Evaluation for Visual Generation via Corrected VLM-as-a-Judge
+   https://arxiv.org/abs/2602.09411
+   (Z Li, J Li, X Liu, W Zhao, P Du, K Zhou, Q Gu… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2602.09411
+   … , the Arena method, which is an open and live benchmark … referenced Arena leaderboards are the version updated on … are based on the version updated on Sep 15, 2025, as shown …
+
+20. A Unified Perturbation Framework for Analyzing Leaderboard Stability and Manipulation
+   https://arxiv.org/abs/2605.15761
+   (H Oyarhoseini, J Lin, AH Karimi - arXiv preprint arXiv:2605.15761, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.15761
+   … Across Chatbot Arena and six additional pairwise-comparison datasets, we … The leaderboard illusion (Singh et al.… 2025)shows that benchmark rankings can be distorted by selective …
+
+21. Making GenAI valuable: Benchmarks, singularities, and the enrichment economy
+   https://journals.sagepub.com/doi/abs/10.1177/20539517261451463
+   (C Aradau, T Blanke - Big Data & Society, 2026 - journals.sagepub.com | 2026)
+   [PDF] https://journals.sagepub.com/doi/pdf/10.1177/20539517261451463
+   … builds on controversies that emerged in early 2025 around frontier models such as ChatGPT… versions or overfitting to the benchmark. If leaderboards such as LM Arena favour selective …
+
+22. Towards AI Safety via Interpretability and Oversight
+   https://dspace.mit.edu/handle/1721.1/162723
+   (S Kantamneni - 2025 - dspace.mit.edu | 2025)
+   [PDF] https://dspace.mit.edu/bitstream/handle/1721.1/162723/kantamneni-subhashk-meng-eecs-2025-thesis.pdf?sequence=1&isAllowed=y
+   … To ensure we do not overfit with Fourier features, we consider all combinations of k Fourier features, with k ∈ [1,4]. If we use k Fourier features, the helical fit uses 2k +1 basis functions (…
+
+23. Mirror, Mirror on the Wall--Which is the Best Model of Them All?
+   https://arxiv.org/abs/2512.02043
+   (D Sayed, H Schuldt - arXiv preprint arXiv:2512.02043, 2025 - arxiv.org | 2512)
+   [PDF] https://arxiv.org/pdf/2512.02043
+   … focuses on leaderboards that include multiple benchmarks to … Overfitting in Arena-type Leaderboards: For leaderboards based on Elo ratings and user votes, such as Chatbot Arena…
+
+24. Lmms-eval: Reality check on the evaluation of large multimodal models
+   https://aclanthology.org/2025.findings-naacl.51/
+   (K Zhang, B Li, P Zhang, F Pu, JA Cahyono… - … : NAACL 2025, 2025 - aclanthology.org | 2025 | cited by 290)
+   [PDF] https://aclanthology.org/2025.findings-naacl.51.pdf
+   … and reliable benchmarking of LMMs. We opensource our codebase and maintain leaderboard of … a wide range of tasks, but it is also prone to overfitting and contamination. The LMSys …
+
+25. Hidden Measurement Error in LLM Pipelines Distorts Annotation, Evaluation, and Benchmarking
+   https://arxiv.org/abs/2604.11581
+   (S Messing - arXiv preprint arXiv:2604.11581, 2026 - arxiv.org | 2604 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2604.11581
+   … Using Chatbot Arena data, we show naive 95% CI coverage … -guided pipelines restrict the benchmark gaming surface from 56 … The Arena human leaderboard already exposes a 45Elo …
+
+26. MixEval-X: Any-to-any Evaluations from Real-world Data Mixture
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/6de2e84b8da47bb2eb5e2ac96c63d2b0-Abstract-Conference.html
+   (J Ni, Y Song, D Ghosal, B Li, DJ Zhang… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 6)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/6de2e84b8da47bb2eb5e2ac96c63d2b0-Paper-Conference.pdf
+   … We provide comprehensive leaderboards to rerank existing … Benchmark Mixture We perform benchmark mixture to … platforms, like ChatGPT or Chatbot Arena, that users actively engage …
+
+27. Heurigym: An agentic benchmark for llm-crafted heuristics in combinatorial optimization
+   https://arxiv.org/abs/2506.07972
+   (H Chen, Y Wang, Y Cai, H Hu, J Li, S Huang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 12)
+   [PDF] https://arxiv.org/pdf/2506.07972?
+   … In contrast, open-ended benchmarks such as Chatbot Arena [27] and … ] and Chatbot Arena leaderboards [27]. We exclude smaller models due to the complexity of the benchmark tasks. …
+
+28. Beyond Ordinal Preferences: Why Alignment Needs Cardinal Human Feedback
+   https://arxiv.org/abs/2508.08486
+   (P Whitfill, S Slocum - arXiv preprint arXiv:2508.08486, 2025 - arxiv.org | 2508)
+   [PDF] https://arxiv.org/pdf/2508.08486
+   … improvements and outperform ordinal-only methods on downstream benchmarks, such as Arena-Hard. … In this experiment, we use both real-world cardinal data and the standard chatbot …
+
+29. Evaluating the Unseen Capabilities: How Much Do LLMs Actually Know?
+   https://lx10077.github.io/assets/pdf/slides/2025GM_unseen.pdf
+   (X Li, J Xin, Q Long, WJ Su - lx10077.github.io | 1007)
+   [PDF] https://lx10077.github.io/assets/pdf/slides/2025GM_unseen.pdf
+   Current evaluation methods rely heavily on standardized benchmarks. Collect or design questions and measure the accuracy of model responses. The MMLU (Massive Multitasks …
+
+30. Reality Check: A New Evaluation Ecosystem Is Necessary to Understand AI's Real World Effects
+   https://arxiv.org/abs/2505.18893
+   (R Schwartz, R Chowdhury, A Kundu, H Frase… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 18)
+   [PDF] https://arxiv.org/pdf/2505.18893
+   … are typically displayed via leaderboards, which … leaderboards can lead to overfitting (models are optimized for test performance at the expense of real-world robustness) or to benchmark …
+
+31. LLM Swiss Round: Aggregating Multi-Benchmark Performance via Competitive Swiss-System Dynamics
+   https://arxiv.org/abs/2512.21010
+   (J Liu, J Wu, C Wu, J Liu, Z Wang, H Zhou… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025)
+   [PDF] https://arxiv.org/pdf/2512.21010
+   … Systems like the Chatbot Arena (LLM Arena) utilize the Elo … may be subject to data contamination or overfitting. … plaguing aggregated leaderboards, as the “weight” of a benchmark is …
+
+32. Rethinking Intelligence in Machines
+   https://www.researchgate.net/profile/Fardeen-Nb/publication/405911318_Rethinking_Intelligence_in_Machines/links/6a20d4363a0dbb76335ae091/Rethinking-Intelligence-in-Machines.pdf
+   (N Fardeen - 2025 - researchgate.net | 2025)
+   [PDF] https://www.researchgate.net/profile/Fardeen-Nb/publication/405911318_Rethinking_Intelligence_in_Machines/links/6a20d4363a0dbb76335ae091/Rethinking-Intelligence-in-Machines.pdf
+   … PARRY was a more sophisticated chatbot designed to simulate a … diverse tasks, reducing the ability to overfit to a single task. … Benchmark leaderboards have become the dominant …
+
+33. Haakkim: An Arena-Style Platform for Human Preference Evaluation of LLMs in Arabic and its Dialects
+   https://ieeexplore.ieee.org/abstract/document/11595788/
+   (M Mars, H Barmandah, A Alassaf - IEEE Access, 2026 - ieeexplore.ieee.org | 2026)
+   [PDF] https://ieeexplore.ieee.org/iel8/6287639/6514899/11595788.pdf
+   … First, arena-style platforms such as Chatbot Arena [5] … body of dialect-aware benchmarks, systematic arena-style human … Only Ranked Arena battles contribute to the official leaderboard; …
+
+34. Process evaluation for agentic systems
+   https://aclanthology.org/2026.findings-eacl.140/
+   (M Gritta, D Paul, X Li, L Shang, J Wang… - Findings of the …, 2026 - aclanthology.org | 2026 | cited by 6)
+   [PDF] https://aclanthology.org/2026.findings-eacl.140.pdf
+   … 2025). These systems are utilised in scientific discovery (… We envision future benchmarks being augmented with a … Judging llm-as-a-judge with mt-bench and chatbot arena. Advances in …
+
+35. Mind2web 2: Evaluating agentic search with agent-as-a-judge
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/fdcec9f5b99aa4fc8f4fb8487802d737-Abstract-Datasets_and_Benchmarks_Track.html
+   (B Gou, Z Huang, Y Ning, Y Gu, M Lin… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 61)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/fdcec9f5b99aa4fc8f4fb8487802d737-Paper-Datasets_and_Benchmarks_Track.pdf
+   … In response to these challenges, we propose Mind2Web 2, a new benchmark designed to … June, 2025. We will also include time stamps for future results on the leaderboard. Additionally…
+
+36. EigenBench: A Comparative Behavioral Measure of Value Alignment
+   https://arxiv.org/abs/2509.01938
+   (J Chang, L Piff, S Sana, JX Li, L Levine - arXiv preprint arXiv:2509.01938, 2025 - arxiv.org | 2509)
+   [PDF] https://arxiv.org/pdf/2509.01938
+   … : a blackbox method for comparatively benchmarking language models’ values. Given an … (2025) argues that LM arena’s private testing and retraction policies skew its leaderboard in …
+
+37. ReLE: A Scalable System and Structured Benchmark for Diagnosing Capability Anisotropy in Chinese LLMs
+   https://arxiv.org/abs/2601.17399
+   (R Fang, J Li, W Chen, B Hu, YC Chen, X Tang… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2601.17399
+   … evaluation frameworks, such as Chatbot Arena [12], assess … over-optimize for static leaderboard metricsrather than robust … in the recent GB/T 45654-2025 standard [27], enabling ReLE …
+
+38. Evaluating the Unseen Capabilities: How Many Theorems Do LLMs Know?
+   https://arxiv.org/abs/2506.02058
+   (X Li, J Xin, Q Long, WJ Su - arXiv preprint arXiv:2506.02058, 2025 - arxiv.org | 2506 | cited by 6)
+   [PDF] https://arxiv.org/pdf/2506.02058
+   … by a growing disconnect between benchmark performance and genuine model … crisis, including benchmark contamination [47], overfitting through repeated leaderboard submissions [52…
+
+39. LLM Olympiad: Why Model Evaluation Needs a Sealed Exam
+   https://arxiv.org/abs/2603.23292
+   (JCB Cruz, AF Aji - arXiv preprint arXiv:2603.23292, 2026 - arxiv.org | 2603 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2603.23292
+   … Benchmarks and leaderboards … 2025). This is rational behavior under current rules, but it inflates perceived progress. Singh et al. (2025) documented that providers on Chatbot Arena …
+
+40. Unpacking human preference for LLMs: Demographically aware evaluation with the HUMAINE framework
+   https://arxiv.org/abs/2603.04409
+   (N Petrova, A Gordon, E Blindow - arXiv preprint arXiv:2603.04409, 2026 - arxiv.org | 2603 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2603.04409
+   … and leaderboard* as public resources. Critically, HUMAINE is designed as a living benchmark: the leaderboard is … and avoid the risk of overfitting to noise in demographic combinations. …
+
+41. The Flaw of Averages: Quantifying Uniformity of Performance on Benchmarks
+   https://arxiv.org/abs/2509.25671
+   (A Uzunoglu, T Li, D Khashabi - arXiv preprint arXiv:2509.25671, 2025 - arxiv.org | 2509 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2509.25671
+   … Ensuring benchmark reliability is therefore essential for trustworthy evaluation and … In this work, we study benchmark reliability from a distributional perspective and introduce benchmark …
+
+42. TaMPERing with Large Language Models: A Field Guide for using Generative AI in Public Administration Research
+   https://arxiv.org/abs/2504.01037
+   (M Overton, B Robison, L Sheneman - arXiv preprint arXiv:2504.01037, 2025 - arxiv.org | 2504 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2504.01037
+   … conversational agents (eg, chatbots), which prioritize enterprise … Leaderboards incentivize overfitting and optimization of … on benchmarking data, then their leaderboard performance will …
+
+43. The Unreasonable Benchmark
+   https://openreview.net/forum?id=EkWAAfbGrh
+   (F Perez-Cruz, B Hitaj, GM Dimitri, O Deb… - Journal of Data …, 2026 - openreview.net | 2026)
+   [PDF] https://openreview.net/pdf?id=EkWAAfbGrh
+   … overfitting to static benchmarks and encourages continuous diagnostic evaluation rather than leaderboard … Chatbot arena: an open platform for evaluating llms by human preference. In …
+
+44. Quantifying construct validity in large language model evaluations
+   https://arxiv.org/abs/2602.15532
+   (RO Kearns - arXiv preprint arXiv:2602.15532, 2026 - arxiv.org | 2602 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2602.15532
+   … uninterpretable and overfit to the observed benchmarks. This … model to benchmark results from the OpenLLM Leaderboard, … AI community: as of July 2025 it remains the largest ‘Space’ …
+
+45. Estimating Consumer Preferences for LLMs: Evidence from LMArena
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5970054
+   (EH Caoui - Available at SSRN 5970054, 2025 - papers.ssrn.com | 5970 | cited by 2)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5970054
+   … Arena Intelligence, Inc (LMArena). All errors remain my own. … snapshots of the LMArena leaderboard, which reports the list … on a wide range of benchmarks, along with model attributes …
+
+46. VERA-MH: validation of ethical and responsible AI in mental health
+   https://arxiv.org/abs/2605.13318
+   (L Belli, KH Bentley, J Gieringer, E Van Ark… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2605.13318
+   … with the chatbot under evaluation, another chatbot is tasked … , Can we trust ai benchmarks? an interdisciplinary review of … :’ parents say chatgpt encouraged son to kill himself, 2025. …
+
+47. A primer for evaluating large language models in social-science research
+   https://journals.sagepub.com/doi/abs/10.1177/25152459251325174
+   (S Abdurahman, A Salkhordeh Ziabari… - … in Methods and …, 2025 - journals.sagepub.com | 2025 | cited by 70)
+   [PDF] https://journals.sagepub.com/doi/pdf/10.1177/25152459251325174
+   … Equally important is validating results against ground-truth human data or established benchmarks to confirm reliability. Although not all steps apply universally (eg, preregistration …
+
+48. A survey on evaluation of large language models
+   https://dl.acm.org/doi/abs/10.1145/3641289
+   (Y Chang, X Wang, J Wang, Y Wu, L Yang… - ACM transactions on …, 2024 - dl.acm.org | 2024 | cited by 6372)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3641289
+   … metrics, datasets, and benchmarks to provide a profound … rare or unseen words, the problem of overfitting, and the difficulty in … Chatbot Arena provides a platform to assess and compare …
+
+49. Benchmarks Are Not Atomic: Composition-Aware LLM Evaluation using BENCHHUB
+   https://openreview.net/pdf?id=GUY4iSFlZy
+   (E Kim, H Yoo, G Son, H Patel, A Agarwal, A Oh - openreview.net)
+   [PDF] https://openreview.net/pdf?id=GUY4iSFlZy
+   … Accordingly, leaderboards and technical reports increasingly … 2025), which typically operates over fixed evaluation suites, … Chatbot arena: An open platform for evaluating LLMs by …
+
+50. Interactive Evaluation Requires a Design Science
+   https://arxiv.org/abs/2605.17829
+   (K Xuan, P Song, P Lu, P Han, W Li, Z Zhang… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.17829
+   … have emerged, the landscape remains fragmented: benchmarks differ … 2025) make this visible by requiring systems to operate … Judging llm-as-a-judge with mt-bench and chatbot arena. …
+
+51. Memory in large language models: Mechanisms, evaluation and evolution
+   https://arxiv.org/abs/2509.18868
+   (D Zhang, W Li, K Song, J Lu, G Li, L Yang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 10)
+   [PDF] https://arxiv.org/pdf/2509.18868
+   Under a unified operational definition, we define LLM memory as a persistent state written during pretraining, finetuning, or inference that can later be addressed and that stably …
+
+52. Fortytwo: Swarm Inference with Peer-Ranked Consensus
+   https://arxiv.org/abs/2510.24801
+   (V Larin, I Naumenko, A Ivashov, I Nikitin… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025)
+   [PDF] https://arxiv.org/pdf/2510.24801
+   … Chatbot Arena uses Bradley-Terry modeling to rank language models based on crowd-sourced pairwise comparisons, producing leaderboards … six challenging benchmarks selected to …
+
+53. Human Cognitive Benchmarks Reveal Foundational Visual Gaps in MLLMs
+   https://arxiv.org/abs/2502.16435
+   (JT Huang, D Dai, JY Huang, Y Yuan, X Liu… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2502.16435
+   … 2025) families. Despite advanced prompting strategies such … models may overfit by training directly on the public benchmark. … Visual graph arena: Evaluating visual conceptualization of …
+
+54. Modern LLM Evaluation Techniques: A Mathematical Framework From Classical Metrics to LLM-as-Judge and Psychometric Foundations
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6531679
+   (AE Alfaro Pizana, NI Alonso - … From Classical Metrics to LLM-as …, 2026 - papers.ssrn.com | 2026)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6531679
+   … as Chatbot Arena, develop the Item Response Theory (IRT) framework for benchmark design… Third, a Discriminability– Contamination Tradeoff Theorem proves that no fixed benchmark …
+
+55. Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading
+   https://arxiv.org/abs/2607.08964
+   (Z Li, Z Li, Y Shi, R Wang, J Yang, Z Liu, X Wu… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2607.08964
+   … Terminal-Bench, a benchmark designed explicitly for longhorizon … Under binary pass/fail evaluation, the leaderboard collapses … Judging llm-as-a-judge with mt-bench and chatbot arena. …
+
+56. BYO-Eval: Build Your Own Dataset for Fine-Grained Visual Assessment of Multimodal Language Models
+   https://hal.science/hal-05395052/
+   (S Khazem, L Arnould, HA Mehenni - 2025 - hal.science | 2025 | cited by 1)
+   [PDF] https://hal.science/hal-05395052v1/file/preprint_byoeval.pdf
+   … model might achieve high overall accuracy on broad benchmarks while consistently stumbling on certain types of questions. The success of the Arena Leaderboard Chiang et al. (2024) …
+
+57. The Annotation Scarcity Paradox in Low-Resource NLP Evaluation: A Decade of Acceleration and Emerging Constraints
+   https://arxiv.org/abs/2605.19066
+   (V Marivate - arXiv preprint arXiv:2605.19066, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.19066
+   … However, this rapid accumulation of benchmarks and re… tasks and overarching leaderboards created intense incentives for … Judging LLM-as-ajudge with MT-bench and chatbot arena. …
+
+58. MemLoRA: Distilling Expert Adapters for On-Device Memory Systems
+   https://arxiv.org/abs/2512.04763
+   (M Bini, O Bohdal, U Michieli, Z Akata, M Ozay… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2512.04763
+   … were chosen to construct our benchmark, ensuring the task … Chatbot arena: An open platform for evaluating llms by … -box, and overall benchmark performance on public leaderboards [11]…
+
+59. BYO-Eval: Build Your Own Dataset for Fine-Grained Visual Assessment of Multimodal Language Models
+   https://arxiv.org/abs/2506.05440
+   (L Arnould, S Khazem, HA Mehenni - arXiv preprint arXiv:2506.05440, 2025 - arxiv.org | 2506)
+   [PDF] https://arxiv.org/pdf/2506.05440?
+   … These benchmarks often aim to globally measure the performance of … benchmarks while consistently stumbling on certain types of questions. The success of the Arena Leaderboard [9] …
+
+60. Evaluating and Achieving Controllable Code Completion in Code LLM
+   https://arxiv.org/abs/2601.15879
+   (J Zhang, Z Cui, L Zhang, J Yang, J Yang, Q Liu… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2601.15879
+   … benchmark, Controllable Code Completion Benchmark (C3-… code models may overfit to existing benchmarks and lack … ) and user experience evaluation (Chatbot Arena-Coding [26]). …

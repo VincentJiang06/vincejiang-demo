@@ -1,0 +1,319 @@
+===== Query 1/5: METR frontier models reward hacking o3 evaluation =====
+
+1. Frontier Risk Report (February to March 2026)
+   /goto?url=CAESbgHuR6pNZ6Ms92QkuzZCXi7cNlLlRu4ImbKrFqalDBvoeU1L0g9SwC6o2wKzqlI1ki8Cf0QSrTSHAKgE1f5-o7fZ2l-OhujO9XnS3lTah9YbV2lKnMJK9iVlkSVMQguYOvDFOtN-ZSucrdj1XbB1
+   (May 19, 2026 | METR)
+   Redaction summary statement: Except where explicitly noted in the report, there was no additional redacted information that was important to our conclusions...
+
+2. Detecting and reducing scheming in AI models
+   /goto?url=CAESfgHuR6pNMuc-4XFAngEFkhU2cmycxifllrhKh89T6Snw7P2nxzpT3slJFVaSyGBNrVx6voDDmvq0ZO9aYrGOdHmL8jKBYLE1sscD2GOkelVP1IxgqYs2THa8B0x0NCSDeIhxoHB9SWzKjofDzgucstC_NJGVsdF2L1kBjkspjQ==
+   (Sep 17, 2025 | OpenAI)
+   Apollo Research and OpenAI developed evaluations for hidden misalignment (“scheming”) and found behaviors consistent with scheming in controlled tests...
+
+3. MALT: A Dataset of Natural and Prompted Behaviors That Threaten Eval Integrity
+   /goto?url=CAESiAEB7keqTck_vBeXsFKOvQbpD66BetTg831XyToYJscu_-lxB98KvMD1eaC3xUo5z2KsSLygm9YexYKHeT3sr5veDTMEDxj8L0BRm1Sg85kJJBN5hYwTtooUfYGPb4cipdmaZgF2LUYIz2yDf8orktG_0S7HQHLRxL2wA50WmP-piWLHFqPqo4y2
+   (Oct 14, 2025 | METR)
+   We're introducing MALT (Manually-reviewed Agentic Labeled Transcripts), a dataset of natural and prompted examples of behaviors that threaten evaluation...
+
+4. How a Berkeley team broke 8 major AI benchmarks. Six of them hit 100% without solving a single task
+   /goto?url=CAESuQEB7keqTVK-Gt2tqGD3n5KGySLk_Y7j8ZEyU893h3N8AB2NOrsqbYkE0zcwB2dwEcj1fZU52Xjsxm_Wsrx0i41Ulbr2lSJ-llG0Lrc603GjiBIKOpWxQu8LlI__YAmYeJk0BrApXG_wCagtXD90w7A0oH8JwaFqyI-Tc4SvfobQEckRkgVIi-Zv4wqyatIobO60czsUAYGuI4Yfotq6bButf_ipGntJ1KVfUEKcwIawaUC-p77YvKzUMg==
+   (Apr 22, 2026 | R&D World)
+   A new project out of UC Berkeley helps confirm something many had suspected: leaderboards can be less reliable than they look.
+
+5. The Most Important Chart in AI Is Also the Most Misunderstood
+   /goto?url=CAESeQHuR6pNsHO7jYoDRbwnZOqTmaag3m6sabA0lOnxr_x33ccjS997dIqucnlkaM1T6yC03SdL17DInJyqgahywSpHZ_DY3wQDKzEn8jOKv_k75TSVN7hU83prNzyzV1SqAxQSR4Z9EWUj0C-DCSFO9RNv3OOqbU004Lw=
+   (Mar 17, 2026 | https://www.derekthompson.org/)
+   For those who believe that artificial intelligence is the most important technology of our lifetime, one chart dominates the discourse.
+
+6. Top AI Models Showing Disturbing Behavior as They Become More Advanced
+   /goto?url=CAESgQEB7keqTd5fz2A0IkiyijaBNDC1NSyAGx9zqrUY9g_8jFTVpcPmCeHuuWYmQKGDIJ3nBKrKzyEa3ma28hTBpgLmRdtMSCWJsxeQ3jaRrIotlOOTUqWqcrsLp_XWnkrU6X4kdJhPnZV2uZ6h1sH-DffLVtQPhgDyvrzuhluY6fwD5Ng=
+   (1 month ago | Futurism)
+   As AI becomes more advanced, models are learning how to work around complex tasks, rather than putting in the actual work.
+
+7. Anthropic vs. OpenAI red teaming methods reveal different security priorities for enterprise AI
+   /goto?url=CAESpQEB7keqTZJGXBKXsEcS24WBqwVOlGXCDVQ5_RxrGFNSfPDD1qb3mBwKoO22cuvFfnHoSikY3X8vb34UfxKh94fsSZuIRp8y4veVfWdsaCfLtxwYYe8D1zs9M4S8u7LYqVrAW5P4DaPjLINKI1QRVOlY9RnAB6MTqAa9CV_PvS7lOzjK8ihOHIk2720TgxFJnG_iTc44fED3T2RwjisVV48HGCM9ONY=
+   (Dec 3, 2025 | Venturebeat)
+   Model providers want to prove the security and robustness of their models, releasing system cards and conducting red-team exercises with each new release.
+
+8. A shared playbook for trustworthy third party evaluations
+   /goto?url=CAESgQEB7keqTdBLzSbgZB_BfEBmx77Au7nHO-InpA3B2q_WeFCUrsGPH4TX_mIMcLBhrGsv2e-31tp_CR7bHa7fkHYMqRpME8MHNTjGGz1-bCHZag6oa3WgdjYWJYE2uDd8AAvSg_NonJbFbKLAl5scqUNjodbGib11cSM1lBMwKPJntgY=
+   (1 month ago | OpenAI)
+   OpenAI shares guidance on third-party AI evaluations, covering how to assess model capabilities, safeguards, and validity for frontier systems.
+
+9. GPT-5.6 Goes Public After 12-Day White House Gate Tests Voluntary AI Framework
+   /goto?url=CAESvQEB7keqTdhU7wEyP5aRJU8fH0SxymV-RI13OVOYSkDEZDaQSIPyWfrGYulwRDhx58cGFf41LsM-22TKhPnazxFpjFOxJA_0s-sk24qmoYXp5K_Gi3cSjwT3bb4cK8Ngm_t73iHFFMjWA-ZeWAEAjQvPhVq9S-2MhT3qIIR0J7tpV0CNUv8tBEtYzS-IogX8tygCVg0JoCZdu6o2jYaibCxu2OQC3ktc4qX_WmXVMumPZidUa8S2cTMs8v8rXEA=
+   (1 week ago | Tech Times)
+   GPT-5.6 Sol, Terra, and Luna are now broadly available after 12 days in a government-gated preview that exposed OpenAI's nominally voluntary AI review...
+
+10. OpenAI argues that 'the capabilities of AI may not be being measured accurately.'
+   /goto?url=CAESgQEB7keqTWHQZ0vF8DtxqfS7clvi0Dq2D-SAu6p97iO05jVBtMAwvia_xY1bFoikBUDVS-10fBQ2ZAJHEBbmBO3wb6QVUH4aQfGYMO0M7EfdKx0-wA7s8knU7_INJW4Y5dCHa0KQ4PbxP5dsmCo4mrXm7xnXVogTb7nDOXNid9G150A=
+   (1 month ago | GIGAZINE)
+   When people hear about evaluating AI performance, many probably think of 'benchmarks,' where AI solves problems and their accuracy and scores are measured.
+
+11. Time Horizon 1.1
+   https://metr.org/blog/2026-1-29-time-horizon-1-1/
+   (Jan 29, 2026 | METR)
+   We're releasing a new version of our time horizon estimates (TH1.1), using more tasks and a new eval infrastructure. Our estimates of time horizons for many...
+
+12. Details about METR's evaluation of OpenAI GPT-5
+   https://metr.org/evaluations/gpt-5-report/
+   (Aug 7, 2025 | METR)
+   Note on independence: This evaluation was conducted under a standard NDA. Due to the sensitive information shared with METR as part of this evaluation,...
+
+===== Query 2/5: Anthropic natural emergent misalignment reward hacking production =====
+
+1. From shortcuts to sabotage: natural emergent misalignment from reward hacking
+   https://www.anthropic.com/research/emergent-misalignment-reward-hacking
+   (Nov 21, 2025 | Anthropic)
+   In the latest research from Anthropic's alignment team, we show for the first time that realistic AI training processes can accidentally produce misaligned...
+
+2. What Anthropic’s Research Shows About the Risks of AI
+   https://aimagazine.com/news/anthropic-research-shows-how-evil-ai-can-lie-and-sabotage
+   (Nov 26, 2025 | AI Magazine)
+   Anthropic's AI Alignment team reveals research on reward hacking that leads to misaligned behaviours, where AI models resort to deception and sabotage.
+
+3. Anthropic's new warning: If you train AI to cheat, it'll hack and sabotage too
+   https://www.zdnet.com/article/anthropics-new-warning-if-you-train-ai-to-cheat-itll-hack-and-sabotage-too/
+   (Nov 21, 2025 | ZDNET)
+   Models trained to cheat at coding tasks developed a propensity to plan and carry out malicious activities, such as hacking a customer database.
+
+4. The Cheating Machine: How AI’s “Reward Hacking” Spirals into Sabotage and Deceit
+   https://www.sify.com/ai-analytics/the-cheating-machine-how-ais-reward-hacking-spirals-into-sabotage-and-deceit/
+   (Dec 12, 2025 | Sify News)
+   A new, real threat has been discovered by Anthropic researchers, one that would have widespread implications going ahead, on both AI, and the world,...
+
+5. Reward Hacking: The Hidden Failure Mode in AI Optimization
+   https://medium.com/@adnanmasood/reward-hacking-the-hidden-failure-mode-in-ai-optimization-686b62acf408
+   (Jan 24, 2026 | Medium)
+   Reward hacking in AI explained: how reinforcement learning and RLHF systems exploit proxy metrics, why optimization breaks intent, and how to detect and...
+
+6. 'Its Real Goal Was to Maximise Reward' — Anthropic Paper Reveals AI Was Hiding Dangerous Intent 70% of the Time
+   https://www.ibtimes.co.uk/anthropic-ai-model-deceptive-behaviors-1785550
+   (Mar 14, 2026 | International Business Times UK)
+   A research paper by Anthropic reveals an AI model exhibiting unintended behaviors like deception and sabotage, raising concerns in the AI safety community.
+
+===== Query 3/5: OpenAI chain of thought monitoring reward hacking obfuscation =====
+
+1. How we monitor internal coding agents for misalignment
+   https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment/
+   (Mar 19, 2026 | OpenAI)
+   How OpenAI uses chain-of-thought monitoring to study misalignment in internal coding agents—analyzing real-world deployments to detect risks and strengthen...
+
+2. MALT: A Dataset of Natural and Prompted Behaviors That Threaten Eval Integrity
+   https://metr.org/blog/2025-10-14-malt-dataset-of-natural-and-prompted-behaviors/
+   (Oct 14, 2025 | METR)
+   We're introducing MALT (Manually-reviewed Agentic Labeled Transcripts), a dataset of natural and prompted examples of behaviors that threaten evaluation...
+
+3. Frontier Risk Report (February to March 2026)
+   https://metr.org/blog/2026-05-19-frontier-risk-report/
+   (May 19, 2026 | METR)
+   Redaction summary statement: Except where explicitly noted in the report, there was no additional redacted information that was important to our conclusions...
+
+===== Query 4/5: Claude Opus 4 4.5 system card reward hacking sabotage =====
+
+1. Teaching Claude why
+   https://www.anthropic.com/research/teaching-claude-why
+   (May 8, 2026 | Anthropic)
+   New research on how we've reduced agentic misalignment.
+
+2. Anthropic Says Claude Sonnet 4.5 Is the World's Best Coding Model
+   https://www.maginative.com/article/anthropic-says-claude-sonnet-4-5-is-the-worlds-best-coding-model/
+   (Sep 30, 2025 | Maginative)
+   Anthropic's Claude Sonnet 4.5, released Monday, claims state-of-the-art coding performance and can work autonomously for over 30 hours—marking a major leap...
+
+3. Details about METR's evaluation of OpenAI GPT-5
+   https://metr.org/evaluations/gpt-5-report/
+   (Aug 7, 2025 | METR)
+   Note on independence: This evaluation was conducted under a standard NDA. Due to the sensitive information shared with METR as part of this evaluation,...
+
+4. Anthropic vs. OpenAI red teaming methods reveal different security priorities for enterprise AI
+   https://venturebeat.com/security/anthropic-vs-openai-red-teaming-methods-reveal-different-security-priorities
+   (Dec 3, 2025 | Venturebeat)
+   Model providers want to prove the security and robustness of their models, releasing system cards and conducting red-team exercises with each new release.
+
+5. Early work on monitorability evaluations
+   https://metr.org/blog/2026-01-19-early-work-on-monitorability-evaluations/
+   (Jan 22, 2026 | METR)
+   Future AI systems may be capable enough to carry out sabotage, either via malicious real-world actions or via intentionally tampering with evaluations.
+
+6. Petri: An open-source auditing tool to accelerate AI safety research
+   https://alignment.anthropic.com/2025/petri/
+   (Oct 6, 2025 | Alignment Science Blog)
+   We're releasing Petri (Parallel Exploration Tool for Risky Interactions), an open-source framework for automated auditing that uses AI agents to test the...
+
+===== Query 5/5: reward hacking coding agents 2025 real world =====
+
+1. From shortcuts to sabotage: natural emergent misalignment from reward hacking
+   /goto?url=CAESfwHuR6pN1B397I-DcbRbHr-jddr34W0eSqEjASGbqjmkApVxumai8zfOOg00JnWdqWg1dwHOsFOP0qOBxIrbmdnR-tJqe7waj9HUYYKgD0oY6AbIHMPrDmAi2QVfzUvGVdvCeTWS9nAFO_IqTb6n60urdifmFhA0vcc5ygMwF20=
+   (Nov 21, 2025 | Anthropic)
+   We show for the first time that realistic AI training processes can accidentally produce misaligned models.
+
+2. Research Update: Algorithmic vs. Holistic Evaluation
+   /goto?url=CAESmQEB7keqTcRz7K7Utrl4cwcp9Q8CSzJaC1L-v-UB4HkuFPUO7G7wkj34mDMjUdnNXCXRiFPHfbgEUto_iOpiYrbCgg4z1wt78r_-5Lnw3FAmtSNY--AKI2481326mAOGz_BiOOhdwz4S6-IqNJ7d7nxe2jgZ50l5o9M13G6dHsz6QHoqAWyQieB_Df4ZPmtkTRhzKoK0Afu3YEI=
+   (Aug 13, 2025 | METR)
+   On 18 real tasks from two large open-source repositories, early-2025 AI agents often implement functionally correct code that cannot be easily used as-is,...
+
+3. AI Agents vs Humans: Who Wins at Web Hacking in 2026?
+   /goto?url=CAESgwEB7keqTcFkop8viPdfElGpipeFxdrrmfAft12vgvR6uSLLrohBYbTQ9aNamwJier0Dc0RWnIlkUi3E9xRVUeBGn97W1dpqWGhJINXz_wA3U2ggTPKkic4V5YVSfOOOTkR6VbxEoqwUQEPMuB26d3qlSY_N-7A6b_D8sBhN3VOq9aVMQg==
+   (Jan 29, 2026 | wiz.io)
+   Wiz Research teamed up with Irregular, a frontier AI security lab, to settle this once and for all.
+
+4. Atharva Berde Earns Spot on Major League Hacking’s 2025 Top 50 List | SJSU NewsCenter | SJSU
+   /goto?url=CAESoAEB7keqTaRJhsnAnuCh8sHm9gwJiO5H3fC0gvd8NIkdrpThRsuEPCCNA-2tn_5ohFkweNCZQItqinXTIpoCwUiGWSUX40dHewLHrRZLxV5L7wz2Gl95E8lk2_Wq03Uk2jiIP3Ozehj3yKWU37MhsE1C-7qJrazqXEVMD6Jt_EETd7cywvkOIRDtMkYk6LSOH8Pa93N-GgpcMczeAP1paPeo
+   (Nov 7, 2025 | SJSU Blogs)
+   Atharva Berde, '26 Applied Mathematics, was recently named one of Major League Hacking's (MLH) Top 50 Hackers for 2025.
+
+5. The Sequence Knwoledge #776: Fake It 'Til You Make It: How RL is Perfecting Synthetic Data.
+   /goto?url=CAESfQHuR6pNrwQd_Lyy92yI5jxSbBdLMmUH86y6D2epGGyCIVs4Iiog6eOgw3VzTmU8aVd8WlyZHcL9figrAH1ZQsWwVnyqvHThYkmbI5x_RxIktgogjp6vfQvr_ucOlb0WJeaGhqq0bR9zfnGQJPFh0pSXDwRgzTVKNx-Zx-X-
+   (Dec 23, 2025 | TheSequence | Jesus Rodriguez)
+   One of the most interesting new sets of techniques in the world of synthetic data.
+
+6. Silicon Valley bets big on ‘environments’ to train AI agents
+   /goto?url=CAESlQEB7keqTd6qTEKJhjsZ5WXV-H6vpqzvdjSvTaAaUXGusffvmg5B9R-tskVeYn2fsTimRvVQkqcyH-PTNoNrpCMf4q3qB7hzR0vVgVC_Zw3SZj_gMOUVp75RKh3cLnZ_y7xIawvffpb1ZYKGYMuQ4ZEBiOnpx814KTPr35kdIW216tNtGWhc-eGkaTzHem2WLtNhpu_IMA==
+   (Sep 21, 2025 | TechCrunch)
+   A wave of startups are creating RL environments to help AI labs train agents. It might be Silicon Valley's next craze in the making.
+
+7. Reward Hacking in Agents — Daniel Han, Unsloth｜AI Engineer
+   /goto?url=CAESagHuR6pNuLOrtgw1b1RnXGzEN-B4gzlzzVXEd2tec2s9ap9YYjXU2Nhk9quXiMZk33xiikVxhe4FQY8q48C34JzvyHoNvAdqTvc2XJhi_PcYwLRakw3qgpkCEfPz6Dvw1mwpg86ciKKstdo=
+   (8 hours ago | finance.biggo.com)
+   Daniel Han of Unsloth — one of the largest open-source model distributors on Hugging Face, with over 300 million total downloads and a top-10 organizationa.
+
+8. 2026: The Year of AI-Assisted Attacks
+   /goto?url=CAESfwHuR6pNK8qOXpbw0ZCKVIkvaoUL9TJwwAwCPCL21ABCnQTpfOK4LNJMLUwH71qeVy_urFYyIkgGD75hTlzSG-J8kXRU2dIikY6MM9lml5oZMIlPz0_1eG1x6-QF5-9NUD5bKHYuJ9b5K5USUM3VEoadGEKUo3DqYk8otb0K5p4=
+   (May 4, 2026 | The Hacker News)
+   AI lowers attack barriers in 2025, enabling 7M-user breach and faster exploits, increasing scale and impact of cyber threats.
+
+9. Hackers Earn Over $520,000 on First Day of Pwn2Own Ireland 2025
+   /goto?url=CAESkwEB7keqTf1t_q6LnXX3ygm7Qo9O835MrLlT8PymqlriUsJEGDGyjsaVYA20WZd6Kn1EkI8ImHIn6m1x3koHoInb2Tb8rkFrDYccHtFSh0Bnt8WQcvIzAeGQKxIIIs-91oLzpoYiK-SHEGf-7YW9DXOzy1dcZVHWEkn3QgRCEVEHhvB7jY6J7T1RGCKAe19tQfj9ex4=
+   (Oct 22, 2025 | SecurityWeek)
+   On the first day of the Pwn2Own Ireland 2025 hacking contest participants earned a total of $522500 for the exploits they demonstrated.
+
+10. Anthropic’s Claude Opus 4.5 Sets New Coding Benchmark
+   /goto?url=CAESkAEB7keqTbm1I7pxl5DL5vdwjeClpx1hnbOyL5CmuAuSfj8q80_hGdsq3LbEphC8XVr2z_5wZV50g_2ydYFXgmYL5arEXpROXVEVYY3JjQsScJD81pYz6kEakSDPJoBaoyTkRs4-5Z9NKvMUZxWWhJwRg8y1d4NMMViF3CkpB09u3R1uNCzZAfLre6EYTioUrS8=
+   (Nov 29, 2025 | Technology Magazine)
+   Anthropic's Claude Opus 4.5 shows strong gains in software engineering and agentic AI, beating every human candidate in a tough internal coding test.
+
+11. Evaluating chain-of-thought monitorability
+   https://openai.com/index/evaluating-chain-of-thought-monitorability/
+   (Dec 18, 2025 | OpenAI)
+   We introduce evaluations for chain-of-thought monitorability and study how it scales with test-time compute, reinforcement learning, and pretraining.
+
+12. Recursive Self-Improvement (RSI) in the Wild: How AI Started Engineering Its Own Architecture Part 1
+   https://medium.com/@adnanmasood/recursive-self-improvement-rsi-in-the-wild-how-ai-started-engineering-its-own-architecture-part-1-a9d234f38b6e
+   (1 month ago | Medium)
+   AlphaEvolve cut Gemini's training time and Sakana writes papers for $15. What RSI proves about AI building AI, and why the explosion has not arrived.
+
+13. Patronus AI unveils generative simulators
+   https://venturebeat.com/infrastructure/ai-agents-fail-63-of-the-time-on-complex-tasks-patronus-ai-says-its-new
+   (Dec 17, 2025 | VentureBeat)
+   Patronus AI unveiled “Generative Simulators,” adaptive “practice worlds” that replace static benchmarks with dynamic reinforcement-learning environments to...
+
+14. Measuring AI agent autonomy in practice
+   https://www.anthropic.com/research/measuring-agent-autonomy
+   (Feb 18, 2026 | Anthropic)
+   Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.
+
+15. Details about METR's evaluation of OpenAI GPT-5
+   https://metr.org/evaluations/gpt-5-report/
+   (Aug 7, 2025 | METR)
+   Note on independence: This evaluation was conducted under a standard NDA. Due to the sensitive information shared with METR as part of this evaluation,...
+
+16. How Claude Opus 4.5 Outscored Humans at Software Engineering
+   https://technologymagazine.com/news/how-claude-opus-4-5-outscored-humans-at-software-engineering
+   (Dec 1, 2025 | Technology Magazine)
+   Anthropic launches Claude Opus 4.5, calling it the best coding AI yet, with agentic systems, safety controls and strong performance across real-world tools.
+
+17. Building and evaluating alignment auditing agents
+   https://alignment.anthropic.com/2025/automated-auditing/
+   (Jul 24, 2025 | Alignment Science Blog)
+   We develop three agents that autonomously perform alignment auditing tasks. When tested against models with intentionally-inserted alignment issues,...
+
+18. Introducing Claude Opus 4.5
+   https://www.anthropic.com/news/claude-opus-4-5
+   (Nov 24, 2025 | Anthropic)
+   Our newest model, Claude Opus 4.5, is available today. It's intelligent, efficient, and the best model in the world for coding, agents, and computer use.
+
+19. How Claude Code is used in practice
+   https://www.anthropic.com/research/claude-code-expertise
+   (1 month ago | Anthropic)
+   New Anthropic research looking at interactive agentic coding. We evaluate the composition of tasks, human-AI collaboration, and success rates.
+
+20. AI agents find $4.6M in blockchain smart contract exploits
+   https://www.anthropic.com/research/smart-contracts
+   (Dec 1, 2025 | Anthropic)
+   We evaluated AI agents' ability to exploit smart contracts using a new benchmark comprising contracts that were actually exploited.
+
+21. Top 10 Cyber-Attacks of 2025
+   https://www.infosecurity-magazine.com/news-features/top-10-cyberattacks-of-2025/
+   (Dec 16, 2025 | Infosecurity Magazine)
+   The past year has seen an unprecedented number of cyber-attacks targeting large enterprises and globally recognized brands.
+
+22. Google Paid Out $458,000 at Live Hacking Event
+   https://www.securityweek.com/google-paid-out-458000-at-live-hacking-event/
+   (Nov 12, 2025 | SecurityWeek)
+   Google handed out $458000 in bug bounty rewards at this year's bugSWAT hacking event, held during the ESCAL8 conference.
+
+23. GitLab Cofounder-backed Kilo Code Raises $8M to Build an Open-source, Model-agnostic Copilot Rival
+   https://hackernoon.com/gitlab-cofounder-backed-kilo-code-raises-$8m-to-build-an-open-source-model-agnostic-copilot-rival
+   (Dec 10, 2025 | HackerNoon)
+   Launched in March, 2025, Kilo Code is an open source coding agent that can be configured for a range of tasks.
+
+24. Anthropic Says Claude Sonnet 4.5 Is the World's Best Coding Model
+   https://www.maginative.com/article/anthropic-says-claude-sonnet-4-5-is-the-worlds-best-coding-model/
+   (Sep 30, 2025 | Maginative)
+   Anthropic's Claude Sonnet 4.5, released Monday, claims state-of-the-art coding performance and can work autonomously for over 30 hours—marking a major leap...
+
+25. Five New Exploited Bugs Land in CISA's Catalog — Oracle and Microsoft Among Targets
+   https://thehackernews.com/2025/10/five-new-exploited-bugs-land-in-cisas.html
+   (Oct 20, 2025 | The Hacker News)
+   CISA adds five exploited vulnerabilities, including Oracle, Microsoft, Kentico, and Apple flaws, requiring fixes by Nov 10, 2025.
+
+26. 2025 Media Plan of the Year Awards: The Big Ideas With Winning Strategies
+   https://www.adweek.com/agencies/2025-media-plan-of-the-year-awards-the-big-ideas-with-winning-strategies/
+   (Aug 5, 2025 | ADWEEK)
+   Even the best campaign can't make its deserved impact without a dynamic media strategy. Our 2025 Media Plan of the Year awards recognize the media agencies...
+
+27. Oracle EBS Under Fire as Cl0p Exploits CVE-2025-61882 in Real-World Attacks
+   https://thehackernews.com/2025/10/oracle-ebs-under-fire-as-cl0p-exploits.html
+   (Oct 7, 2025 | The Hacker News)
+   CrowdStrike on Monday said it's attributing the exploitation of a recently disclosed security flaw in Oracle E-Business Suite with moderate confidence to a...
+
+28. After nine years of grinding, Replit finally found its market. Can it keep it?
+   https://techcrunch.com/2025/10/02/after-nine-years-of-grinding-replit-finally-found-its-market-can-it-keep-it/
+   (Oct 2, 2025 | TechCrunch)
+   While AI coding startups like Cursor close brow-raising rounds on barely three years of existence, Replit's path to a $3 billion valuation has been anything...
+
+29. OpenAI’s GPT-5 Is Here: A Deep Dive Into the System Card for AI That’s Smarter, Safer, and Faster
+   https://medium.com/@adnanmasood/openais-gpt-5-is-here-a-deep-dive-into-the-system-card-for-ai-that-s-smarter-safer-and-faster-bca6effe5a8d
+   (Aug 8, 2025 | Medium)
+   Analysis of the technical system card, breaking down the new 'thinking' model, its stunning benchmark scores, and how it stacks up against Google's Gemini...
+
+30. WatchGuard Warns of Active Exploitation of Critical Fireware OS VPN Vulnerability
+   https://thehackernews.com/2025/12/watchguard-warns-of-active-exploitation.html
+   (Dec 19, 2025 | The Hacker News)
+   WatchGuard has released fixes to address a critical security flaw in Fireware OS that it said has been exploited in real-world attacks.
+
+31. CrunchLabs Build Box and Hack Pack Named Good Housekeeping 2025 Toy Award Winners
+   https://www.prweb.com/releases/crunchlabs-build-box-and-hack-pack-named-good-housekeeping-2025-toy-award-winners-302580357.html
+   (Oct 10, 2025 | PRWeb)
+   CrunchLabs' STEM subscription kits make engineering and coding fun, engaging, and accessible for kids and teens. SILICON VALLEY, Calif., Oct. 10, 2025...
+
+32. OpenAI’s Goblin Glitch: How a Playful Reward Signal Turned ChatGPT Into a Fantasy Fanatic
+   https://finance.biggo.com/news/xHzL4J0BoicNoOgCY2Xa
+   (Apr 30, 2026 | finance.biggo.com)
+   OpenAI published a post-mortem explaining why its latest model, GPT-5.5, developed an obsessive habit of mentioning goblins, gremlins, and other…
+
+33. #DEFCON: AI Cyber Challenge Winners Revealed in DARPA’s $4M Cybersecurity Showdown
+   https://www.infosecurity-magazine.com/news/defcon-ai-cyber-challenge-winners/
+   (Aug 9, 2025 | Infosecurity Magazine)
+   After two years of competition, the winners of the AI Cybersecurity Challenge (AIxCC) were revealed at the DEFCON 33 hacking event on August 9.
+
+34. Claude Opus 4.5 Arrives: Single-Handedly Create "Minecraft" and Crack High-Difficulty Agent Evaluations
+   https://eu.36kr.com/en/p/3567869804625032
+   (Nov 24, 2025 | 36 Kr)
+   Programming: Outperform Gemini 3 Pro and Defeat All Human Candidates in Interviews.
+
+35. Researchers Hack Google’s Gemini CLI Through Prompt Injections in GitHub Actions
+   https://cybersecuritynews.com/gemini-cli-prompt-injections-github/
+   (Dec 6, 2025 | CyberSecurityNews)
+   A critical vulnerability class dubbed "PromptPwnd," affects AI agents integrated into GitHub Actions and GitLab CI/CD pipelines.

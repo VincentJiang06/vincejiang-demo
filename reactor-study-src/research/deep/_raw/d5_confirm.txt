@@ -1,0 +1,417 @@
+===== Query 1/4: Coste Reward Model Ensembles Help Mitigate Overoptimization ICLR 2024 arxiv =====
+
+1. Reward Model Ensembles Help Mitigate Overoptimization - arXiv
+   https://arxiv.org/abs/2310.02743
+   (Oct 4, 2023)
+   Our results demonstrate that ensemble-based conservative optimization can effectively counter overoptimization.
+
+2. Reward Model Ensembles Help Mitigate Overoptimization - arXiv
+   https://arxiv.org/html/2310.02743v2
+   (Mar 10, 2024)
+   We provide strong evidence that ensemble-based conservative optimization methods are effective in mitigating overoptimization and improving performance.
+
+3. Reward Model Ensembles Help Mitigate Overoptimization
+   https://www.semanticscholar.org/paper/Reward-Model-Ensembles-Help-Mitigate-Coste-Anwar/023d462ec6ff84cee0d0716a34d11efc7cde8534
+   A systematic study to evaluate the efficacy of using ensemble-based conservative optimization objectives for mitigating reward model overoptimization
+
+4. GitHub - tlc4418/llm_optimization: A repo for RLHF training and BoN ...
+   https://github.com/tlc4418/llm_optimization
+   This repository contains the code related to ICLR 2024 paper "Reward Model Ensembles Help Mitigate Overoptimization". In particular, it provides the ...
+
+5. Helping or Herding? Reward Model Ensembles Mitigate but do not ...
+   https://arxiv.org/html/2312.09244v3
+   We explore the application of reward ensembles to alignment at both training time (through reinforcement learning) and inference time (through reranking).
+
+6. Reward Model Ensembles - Emergent Mind
+   https://www.emergentmind.com/topics/reward-model-ensembles
+   (Aug 21, 2025)
+   Reward model ensembles aggregate multiple reward models to improve RL alignment, mitigate overoptimization, and quantify uncertainty in LLM ...
+
+7. Reward Model Overoptimization: Root Causes and Mitigations
+   https://www.reinforced.info/p/reward-model-overoptimization
+   (Apr 7, 2024)
+   "Reward model ensembles help mitigate overoptimization." arXiv preprint arXiv:2310.02743 (2023). Moskovitz, Ted, Aaditya K. Singh, D. J. ...
+
+8. Reward Model Ensembles Help Mitigate Overoptimization - Liner
+   https://liner.com/review/reward-model-ensembles-help-mitigate-overoptimization
+   (Oct 4, 2023)
+   We propose learning an ensemble of reward models and combining their estimates using methods like Mean Optimization, Worst-Case Optimization ( ...
+
+9. Reward Model Ensembles Help Mitigate Overoptimization - ChatPaper
+   https://chatpaper.com/es/chatpaper/paper/6227
+   Reward Model Ensembles Help Mitigate Overoptimization. ICLR 202409 Mar 2024. Thomas Coste, Usman Anwar, Robert Kirk, David Krueger. University of Cambridge ...
+
+10. ‪Thomas Coste‬ - ‪Google Scholar‬
+   https://scholar.google.com.ec/citations?user=CXkzCncAAAAJ&hl=pl
+   Reward Model Ensembles Help Mitigate Overoptimization. T Coste, U Anwar, R Kirk, D Krueger. ICLR 2024 - Twelfth International Conference on Learning ...
+
+11. Scalable Ensembling For Mitigating Reward ...
+   https://arxiv.org/html/2406.01013v2
+   (Jun 18, 2024)
+   Prior work has mitigated this issue by computing a pessimistic statistic over an ensemble of reward models, which is common in Offline ...
+
+12. Reward Model Ensembles Help Mitigate Overoptimization
+   https://papers.lunadong.com/paper/14584
+   Paper Summary · Eliminates overoptimization for Best-of-N sampling, improving performance by up to ~75% in settings with 25% label noise. · Outperforms single ...
+
+13. Helping or Herding? Reward Model Ensembles Mitigate ...
+   https://openreview.net/forum?id=5u1GpUkKtG
+   by J Eisenstein · Cited by 190 — It provides a thorough examination of how reward model ensembles can mitigate over-optimization. The finding that ensembles composed of members pre-trained ...
+
+14. Bayesian reward models for LLM alignment
+   https://iclr.cc/virtual/2024/23797
+   It should be possible to mitigate these issues by training a Bayesian reward model, which signals higher uncertainty further from the training data distribution ...
+
+15. [Literature Review] Scalable Ensembling For Mitigating ...
+   https://www.themoonlight.io/en/review/scalable-ensembling-for-mitigating-reward-overoptimisation
+   The results show that the proposed multi-head reward model achieves similar performance to a full ensemble in mitigating reward overoptimization. The multi-head ...
+
+16. Reward Model Overoptimisation in Iterated RLHF
+   https://arxiv.org/html/2505.18126v1
+   (May 23, 2025)
+   A common mitigation is iterated RLHF, in which reward models are repeatedly retrained with updated human feedback and policies are re-optimised.
+
+17. Helping or Herding? Reward Model Ensembles Mitigate ...
+   https://huggingface.co/papers/2312.09244
+   (Dec 14, 2023)
+   Third, overoptimization is mitigated by the use of reward ensembles, and ensembles that vary by their pretraining seeds lead to better ...
+
+18. Thomas Coste - Google 学术搜索
+   https://scholar.google.com/citations?user=CXkzCncAAAAJ&hl=zh-CN
+   Reward Model Ensembles Help Mitigate Overoptimization. T Coste, U Anwar, R Kirk, D Krueger. ICLR 2024 - Twelfth International Conference on Learning ...
+
+19. scalable ensembling for mitigating reward overoptimisation
+   https://arxiv.org/pdf/2406.01013
+   by AM Ahmed · 2024 · Cited by 14 — Prior work has mitigated this issue by computing a pessimistic statistic over an ensemble of reward models, which is common in Offline ...
+
+20. Countering Reward Over-optimization in LLM with ...
+   https://aclanthology.org/2024.findings-acl.740.pdf
+   by M Rita · 2024 · Cited by 26 — We show the effectiveness of RCfD on three language tasks, which achieves compa- rable performance to carefully tuned baselines while mitigating ...
+
+[RelatedSearches] Mitigating reward over Optimization in RLHF via behavior supported regularization | Scaling laws for reward model Overoptimization | Improving reinforcement learning from human feedback with efficient reward model ensemble | WARM on the benefits of weight Averaged reward models
+
+===== Query 2/4: Rafailov Scaling laws reward model overoptimization direct alignment algorithms arxiv id =====
+
+1. Scaling Laws for Reward Model Overoptimization in Direct ... - arXiv
+   https://arxiv.org/abs/2406.02900
+   (Jun 5, 2024)
+   View a PDF of the paper titled Scaling Laws for Reward Model Overoptimization in Direct Alignment Algorithms, by Rafael Rafailov and 7 other ...
+
+2. [PDF] Scaling Laws for Reward Model Overoptimization in Direct ... - NIPS
+   https://proceedings.neurips.cc/paper_files/paper/2024/file/e45caa3d5273d105b8d045e748636957-Paper-Conference.pdf
+   This new broad class of algorithms, which we refer to as Direct Alignment Algorithms (DAAs), bypass the traditional RLHF pipeline by re-parameterizing the ...
+
+3. Scaling laws for reward model overoptimization in direct alignment ...
+   https://dl.acm.org/doi/10.5555/3737916.3741925
+   (Dec 10, 2024)
+   Scaling laws for reward model overoptimization in direct alignment algorithms ... arXiv preprint arXiv:2402.14740, 2024. Google Scholar. [2].
+
+4. Scaling Laws for Reward Model Overoptimization in Direct Alignment...
+   https://openreview.net/forum?id=pf4OuJyn4Q&referrer=%5Bthe%20profile%20of%20Ryan%20Park%5D(%2Fprofile%3Fid%3D~Ryan_Park1)
+   (Nov 5, 2024)
+   This paper studies three popular DAA algorithms and how their performance deteriorates from over-optimization at scale.
+
+5. Scaling Laws for Reward Model Overoptimization in Direct ... - arXiv
+   https://arxiv.org/html/2406.02900v1
+   (Jun 5, 2024)
+   This work formulates and formalizes the reward over-optimization or hacking problem for DAAs and explores its consequences across objectives, training regimes, ...
+
+6. Scaling Laws for Reward Model Overoptimization - LessWrong
+   https://www.lesswrong.com/posts/shcSdHGPhnLQkpSbX/scaling-laws-for-reward-model-overoptimization
+   (Oct 19, 2022)
+   TL;DR: Reward model (RM) overoptimization in a synthetic-reward setting can be modelled surprisingly well by simple functional forms.
+
+7. [LG] Scaling Laws for Reward Model Overoptimization in Direct ...
+   https://x.com/fly51fly/status/1798833808315388197
+   (Jun 6, 2024)
+   - This work formulates and formalizes the reward over-optimization or hacking problem for DAAs and explores its consequences across objectives, ...
+
+8. "Scaling Laws for Reward Model Overoptimization", Gao et al 2022 ...
+   https://www.reddit.com/r/reinforcementlearning/comments/12we779/scaling_laws_for_reward_model_overoptimization/
+   (Apr 23, 2023)
+   Scaling laws for reward model overoptimization: (1) After how much training do models start to 'overoptimize' learned objectives and exploit ...
+
+9. Scaling Laws for Reward Model Overoptimization in Direct ...
+   https://www.proceedings.com/079017-4009.html
+   Scaling Laws for Reward Model Overoptimization in Direct Alignment Algorithms ; Format: PDF Paper Download ; Conference: Advances in Neural Information Processing ...
+
+10. Scaling Laws for Reward Model Overoptimization in Direct ... - Liner
+   https://liner.com/review/scaling-laws-for-reward-model-overoptimization-in-direct-alignment-algorithms
+   (Jun 5, 2024)
+   We formulate scaling laws for reward over-optimization in DAAs by treating GPT-4 win rates as a proxy for gold reward, accurately relating KL ...
+
+11. Understanding Likelihood Over-optimisation in Direct ...
+   https://arxiv.org/abs/2410.11677
+   by Z Shi · 2024 · Cited by 6 — In this work, we explore the relationship between completion likelihood and model performance in state-of-the-art DAAs, and identify a critical issue of ...
+
+12. Mitigating Reward Over-optimization in Direct Alignment ...
+   https://arxiv.org/pdf/2506.08681
+   by PM Nguyen · 2025 · Cited by 2 — RLHF typically involves a multi-stage procedure: fine-tuning a reward model to capture human preference and fine-tuning the LM policy to ...
+
+13. Scaling Laws for Generative Reward Models
+   https://openreview.net/forum?id=VYLwMvhdXI
+   (by A Raychev)
+   We study the scaling behavior of generative reward models (GenRMs) for reinforcement learning from AI feedback (RLAIF) when used as drop-in ...
+
+14. Rafael Rafailov
+   https://scholar.google.com/citations?user=XiD9MTMAAAAJ&hl=en
+   arXiv preprint arXiv:2406.09246, 2024. 3192, 2024. Open X-Embodiment ... 2021. Scaling laws for reward model overoptimization in direct alignment algorithms.
+
+15. Scaling Laws for Reward Model Overoptimization in Direct ...
+   https://x.com/_akhaliq/status/1798557711170449859
+   (2 years ago)
+   Scaling Laws for Reward Model Overoptimization in Direct Alignment Algorithms Reinforcement Learning from Human Feedback (RLHF) has been ...
+
+16. Rafael Rafailov
+   https://dblp.org/pid/272/5358
+   Scaling Laws for Reward Model Overoptimization in Direct Alignment Algorithms. ... 2020. [i2]. view. electronic edition @ arxiv.org (open access); details ...
+
+17. Scaling Laws for Reward Model Overoptimization
+   https://www.semanticscholar.org/paper/Scaling-Laws-for-Reward-Model-Overoptimization-Gao-Schulman/fb3dc5e20e0a71134ca916f0d6d8d41f01225b4b
+   This work studies how the gold reward model score changes as the authors optimize against the proxy reward model using either reinforcement learning or ...
+
+18. Towards Bridging the Reward-Generation Gap in Direct ...
+   https://aclanthology.org/2026.findings-acl.713.pdf
+   (by Z Xiao · 2026)
+   Scaling laws for reward model overoptimization in direct alignment algo- rithms. arXiv preprint arXiv:2406.02900. Rafael Rafailov, Joey Hejna, Ryan Park ...
+
+19. Scaling Laws for Reward Model Overoptimization in Direct ...
+   https://www.researchgate.net/publication/397199583_Scaling_Laws_for_Reward_Model_Overoptimization_in_Direct_Alignment_Algorithms
+   (Jun 1, 2026)
+   Compared with the strong SFT baseline, the model optimized using Z-Reward achieves a net GSB improvement of 41.3%. This result confirms that ...
+
+20. Real-Time Aligned Reward Model beyond Semantics
+   https://arxiv.org/pdf/2601.22664
+   by Z Huang · 2026 · Cited by 6 — This mitigates distribution shifts, reduces reward overoptimization, and ensures more accurate reward assignment. 2) Extremely lightweight overhead. R2M only ...
+
+21. Scaling Laws for Reward Model Overoptimization in Direct ...
+   https://hub.baai.ac.cn/paper/24cb146c-9a7d-440f-99bf-8c4e570bffbe
+   Scaling Laws for Reward Model Overoptimization in Direct Alignment Algorithms. Rafael Rafailov ,. Yaswanth Chittepu ,. Ryan Park ,. Harshit Sikchi ,. Joey Hejna ...
+
+[RelatedSearches] Scaling laws for reward model over-optimization in Direct Alignment algorithms | Confronting reward model overoptimization with constrained rlhf | Reward model ensembles help mitigate overoptimization | Over optimization | Disentangling length from quality in Direct Preference Optimization
+
+===== Query 3/4: OpenAI how we monitor internal coding agents misalignment chain of thought findings =====
+[AnswerBox] The monitor logs and analyzes the agents' chains of thought and actions, and automatically alerts for suspicious or problematic behavior so we can triage quickly, mitigate consequences, and improve our other safeguards.
+  https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment/
+
+1. Evaluating chain-of-thought monitorability - OpenAI
+   https://openai.com/index/evaluating-chain-of-thought-monitorability/
+   (Dec 18, 2025)
+   OpenAI introduces a new framework and evaluation suite for chain-of-thought monitorability, covering 13 evaluations across 24 environments.
+
+2. How we monitor internal coding agents for misalignment | Marcus ...
+   https://www.linkedin.com/posts/marcus-williams-2623681a0_how-we-monitor-internal-coding-agents-for-activity-7440447288478502912-NJJk
+   (Mar 19, 2026)
+   OpenAI now monitors 99.9% of internal coding traffic for signs of misalignment using our most powerful models. Today, that monitor is GPT-5.4 ...
+
+3. How we (open ai) monitor internal coding agents for misalignment
+   https://www.reddit.com/r/ChatGPT/comments/1sb65i4/how_we_open_ai_monitor_internal_coding_agents_for/
+   (Apr 3, 2026)
+   How we (open ai) monitor internal coding agents for misalignment. We visual dashboard that lets 16 AI agents work as a team here's what it ...
+
+4. Open Sourcing Monitorability Evaluations - OpenAI Alignment Blog
+   https://alignment.openai.com/monitorability-evals
+   (Apr 23, 2026)
+   Chain-of-thought monitorability is an important part of OpenAI's safety strategy because it allows us to oversee a model's reasoning to catch ...
+
+5. Investigating the consequences of accidentally grading CoT during RL
+   https://x.com/OpenAI/status/2052845764507062349
+   (May 8, 2026)
+   Chain of thought monitors are a key layer of defense against AI agent misalignment. To preserve monitorability, we avoid penalizing misaligned ...
+
+6. Chain of Thought Monitorability: A New and Fragile Opportunity for ...
+   https://www.lesswrong.com/posts/7xneDbsgj6yJDJMjK/chain-of-thought-monitorability-a-new-and-fragile
+   (Jul 15, 2025)
+   AI systems that "think" in human language offer a unique opportunity for AI safety: we can monitor their chains of thought (CoT) for the intent to misbehave.
+
+7. Detecting misbehavior in frontier reasoning models - OpenAI
+   https://openai.com/index/chain-of-thought-monitoring/
+   (Mar 10, 2025)
+   We show we can detect exploits using an LLM to monitor their chains-of-thought. Penalizing their “bad thoughts” doesn't stop the majority of ...
+
+8. Alignment and Misalignment in Frontier AI Models - Reddit
+   https://www.reddit.com/r/AgentsOfAI/comments/1j8ol4d/alignment_and_misalignment_in_frontier_ai_models/
+   (Mar 11, 2025)
+   OpenAI's frontier models are already reward-hacking in their chain-of-thought reasoning, but monitoring CoTs can catch this though optimizing ...
+
+9. What is chain-of-thought monitoring? - AISafety.info
+   https://aisafety.info/questions/NM36/What-is-chain-of-thought-monitoring
+   Chain-of-thought monitoring is an approach to AI safety in which the “chain of thought” of an AI is watched for potential problems.
+
+10. Reasoning Models Struggle to Control their Chains of ...
+   https://arxiv.org/html/2603.05706v1
+   (Mar 5, 2026)
+   Chain-of-thought (CoT) monitoring is a promising tool for detecting misbehaviors and understanding the motivations of modern reasoning models.
+
+11. Chain-of-Thought Monitoring: When AI Tries to Deceive Us
+   https://www.aicontentlabs.com/blog/chaing-of-thought-monitoring
+   (Mar 12, 2025)
+   Chain-of-Thought Monitoring is a technique that allows us to observe the internal reasoning of advanced AI models as they solve problems.
+
+12. GPT-5.5 System Card - OpenAI Deployment Safety Hub
+   https://deploymentsafety.openai.com/gpt-5-5/measuring-our-ability-to-detect-misalignment
+   (Apr 23, 2026)
+   Evaluating Coding Agents for Misalignment by Resampling Internal Traffic · Measuring our ability to detect misalignment. Expand Chain of ...
+
+13. OpenAI Coding Agents Monitoring: Chain-of-Thought ...
+   https://llmbase.ai/news/openai-coding-agents-monitoring-system-tracks-chain-of-thought-for-misalignment/
+   (Mar 19, 2026)
+   OpenAI's new monitoring system uses GPT-5.4 Thinking to detect misalignment in coding agents through chain-of-thought analysis, ...
+
+14. Is Chain-of-Thought Useful for Alignment? A Careful but ...
+   https://chierhu.medium.com/is-chain-of-thought-useful-for-alignment-a-careful-but-strong-yes-1daf220c28fa
+   OpenAI reports that monitoring reasoning traces can reveal behaviors such as subverting tests in coding tasks, deceiving users, and ...
+
+15. A Practical Approach to Verifying Code at Scale
+   https://alignment.openai.com/scaling-code-verification/
+   (Dec 1, 2025)
+   Automated code review is a practical output monitor that complements chain-of-thought monitoring, action monitoring, internal activation ...
+
+16. Evaluating and monitoring for AI scheming
+   https://www.alignmentforum.org/posts/JvYF5kosLeYGvvLpP/evaluating-and-monitoring-for-ai-scheming
+   (Jul 10, 2025)
+   We present two pieces of research, focusing on (1) understanding and testing model capabilities necessary for scheming, and (2) stress-testing ...
+
+17. How we monitor internal coding agents for misalignment
+   https://kasdevtech.com/ai/how-we-monitor-internal-coding-agents-for-misalignment-ai-implementation-guide/
+   (Mar 20, 2026)
+   Practical summary of the latest updates around How we monitor internal coding agents for misalignment, with implications for engineering ...
+
+18. Why we can't trust LLMs' reasoning: A critique of CoT
+   https://www.linkedin.com/posts/stuart-winter-tear_this-is-why-we-cannot-rely-on-stated-or-activity-7312817246429466624-XRGg
+   (1 year ago)
+   This is why we cannot rely on stated - or observed - Chain-of-Thought (CoT) reasoning for detection of misaligned behavior, which OpenAI ...
+
+19. How we monitor internal coding agents for misalignment
+   https://x.com/TheRealAdamG/status/2034730044317175822
+   (4 months ago)
+   "How we monitor internal coding agents for misalignment - Using our most powerful models to detect and study misaligned behavior in real-world ...
+
+20. Agentic misalignment: How LLMs could be insider threats
+   https://www.anthropic.com/research/agentic-misalignment
+   (Jun 20, 2025)
+   We measured rates of model misalignment by prompting Claude Sonnet 3.7 to classify transcripts, combined with some hardcoded string-matching ( ...
+
+21. OpenAI explains how it tracks signs of misalignment in AI ...
+   https://news.hamidun.com/en/news/6372/openai-ai
+   (Apr 22, 2026)
+   The approach is based on chain-of-thought monitoring: the system analyzes not only the final results of agent work, but also their internal ...
+
+22. Can We Predict Alignment Before Models Finish Thinking? ...
+   https://openreview.net/pdf?id=fBsJkmkJIG
+   by YS Chan · Cited by 10 — Our work shows that humans and text-based models like. GPT-4.1 underperform a simple linear probe in predicting response alignment. Our work focuses on ...
+
+23. Alignment Research Blog - OpenAI
+   https://alignment.openai.com/
+   A look at how we monitor internal coding agents to detect misaligned behavior early. Mar 16. Metagaming matters for training, evaluation, and oversight.
+
+24. Inside the AI's Mind: Why "Chain of Thought" is the Future of ...
+   https://www.youtube.com/watch?v=8VZZBOSw13s
+   (6 months ago)
+   In this deep dive, we explore the internal mechanics of Large Language Models (LLMs) to understand the true power of Chain-of-Thought (CoT)
+
+25. Why GPT-5's Chain-of-Thought Monitoring Matters for AI ...
+   https://ctse.aei.org/reading-the-mind-of-the-machine-why-gpt-5s-chain-of-thought-monitoring-matters-for-ai-safety/
+   (Aug 13, 2025)
+   CoT monitoring is powerful, but we can't take its accuracy for granted. Research from Anthropic's alignment science team shows that reasoning ...
+
+26. OpenAI: Detecting misbehavior in frontier reasoning models
+   https://www.lesswrong.com/posts/7wFdXj9oR8M9AiFht/openai-detecting-misbehavior-in-frontier-reasoning-models
+   (Mar 10, 2025)
+   We argue that this traditional perspective is more complicated when viewed in light of chain-of thought monitorability. Specifically, we have ...
+
+[RelatedSearches] OpenAI chain-of-thought monitoring | Monitoring monitorability OpenAI | Evaluating chain-of-thought monitorability | When chain-of-thought is necessary, language models struggle to evade monitors | Chain of thought monitorability: a new and fragile opportunity for AI safety | CoT monitoring | Analyzing and improving chain-of-thought monitorability through information theory | OpenAI internal model
+
+===== Query 4/4: persona features control emergent misalignment OpenAI toxic persona latent direction =====
+
+1. [PDF] PERSONA FEATURES CONTROL EMERGENT MISALIGNMENT
+   https://cdn.openai.com/pdf/a130517e-9633-47bc-8397-969807a43a23/emergent_misalignment_paper.pdf
+   (Jun 17, 2025)
+   Steering positively in the direction of the SAE latent #10 (“toxic persona”) causes misalignment in the original GPT-4o model.
+
+2. [PDF] Persona Features Control Emergent Misalignment - arXiv
+   https://arxiv.org/pdf/2506.19823?
+   (Jun 24, 2025)
+   Steering positively in the direction of the SAE latent #10 (“toxic persona”) causes misalignment in the original GPT-4o model.
+
+3. Toward understanding and preventing misalignment generalization
+   https://openai.com/index/emergent-misalignment/
+   (Jun 18, 2025)
+   One misaligned persona direction most sensitively controls emergent misalignment: steering the model toward and away from this direction ...
+
+4. Finding "misaligned persona" features in open-weight models
+   https://www.lesswrong.com/posts/NCWiR8K8jpFqtywFG/finding-misaligned-persona-features-in-open-weight-models
+   (Sep 9, 2025)
+   They found that emergent misalignment is mediated by a small number of "misaligned persona" features—specific interpretable directions in ...
+
+5. Persona Features Control Emergent Misalignment (Jun 2025)
+   https://www.youtube.com/watch?v=15CiLW93TE4
+   (Jul 16, 2025)
+   ... toxic persona, and investigates mitigation strategies, finding that fine ... Latent Personas 00:16:58 - Shaping Digital Personalities.
+
+6. Persona Features Control Emergent Misalignment - OpenReview
+   https://openreview.net/forum?id=yjrVOxjkDR
+   (Jan 26, 2026)
+   This approach reveals several "misaligned persona" features in activation space, including a toxic persona feature which most strongly controls ...
+
+7. Emergent misalignment in LLMs - Novelis R&D Lab
+   https://novelis.io/research-lab/emergent-misalignment-in-llms-how-toxic-personas-take-over-and-how-to-stop-them/
+   (Jul 21, 2025)
+   Fine-tuning the misaligned model on just ~120 clean examples (across ~35 steps) can suppress the toxic persona and restore safe behaviour.
+
+8. openai/emergent-misalignment-persona-features - GitHub
+   https://github.com/openai/emergent-misalignment-persona-features
+   This repository contains the training and evaluation datasets for the Persona Features control emergent misalignment paper.
+
+9. Persona Features and Emergent Misalignment
+   https://www.emergentmind.com/topics/persona-features-control-emergent-misalignment
+   (Dec 18, 2025)
+   This survey investigates how persona features in activation space influence emergent misalignment in LLMs, detailing mechanisms, metrics, ...
+
+10. [Literature Review] Persona Features Control Emergent Misalignment
+   https://www.themoonlight.io/en/review/persona-features-control-emergent-misalignment
+   SAE features like the "toxic persona" latent activate at fractions as low as 5%, providing an early indicator of potential issues before sampling ...
+
+11. When AI Models Learn to Misbehave: Understanding ...
+   https://lego17440.medium.com/when-ai-models-learn-to-misbehave-understanding-openais-discovery-of-emergent-misalignment-9c2a3a040441
+   (1 year ago)
+   The toxic persona feature can effectively discriminate between misaligned and aligned models, sometimes predicting misalignment of a training ...
+
+12. Persona Features Control Emergent Misalignment
+   https://tldr.takara.ai/p/2506.19823
+   This approach reveals several "misaligned persona" features in activation space, including a toxic persona feature which most strongly controls emergent ...
+
+13. Some thoughts about capabilities and alignment training ...
+   https://www.reddit.com/r/ControlProblem/comments/1med6x8/some_thoughts_about_capabilities_and_alignment/
+   (11 months ago)
+   When say, some some mercenary group, trains a foundation model to do something bad, we will probably get severe cases of emergent misalignment.
+
+14. One Direction Controls It All: The Geometry of Emergent ...
+   https://www.linkedin.com/pulse/one-direction-controls-all-geometry-emergent-travis-lelle-fw2ve
+   LoRA-trained models show broad emergent misalignment at 3.41%, with weight updates that are aligned with the persona direction (3.7x enrichment ...
+
+15. Latent Personas and the Alignment Problem - Thinkpol
+   https://thinkpol.ai/blog/11-latent-personas-llm-alignment/
+   (Jun 8, 2026)
+   OpenAI traced emergent misalignment to a single “toxic persona” feature — the same feature that activates during persona-based jailbreaks.
+
+16. AI's Split Personality: OpenAI's Latest Discovery
+   https://eu.36kr.com/en/p/3344175137702530
+   (Jun 19, 2025)
+   OpenAI's latest research found that GPT-4o will experience "emergent misalignment" under fine-tuning with incorrect data - the "bad ...
+
+17. Persona vectors: Monitoring and controlling character traits ...
+   https://www.anthropic.com/research/persona-vectors
+   (Aug 1, 2025)
+   Persona vectors are a promising tool for understanding why AI systems develop and express different behavioral characteristics, and for ensuring ...
+
+18. OpenAI found features in AI models that correspond to ...
+   https://techcrunch.com/2025/06/18/openai-found-features-in-ai-models-that-correspond-to-different-personas/
+   (Jun 18, 2025)
+   OpenAI researchers say they've discovered hidden features inside AI models that correspond to misaligned “personas,” according to new research published by the ...
+
+19. Who's asking? User personas and the mechanics of latent ...
+   https://pair-code.github.io/interpretability/personas/
+   Responses to adversarial queries can still remain latent in a safety-tuned model. Why are they revealed sometimes, but not others?
+
+[RelatedSearches] Emergent misalignment: narrow finetuning can produce broadly misaligned LLMs | Convergent linear representations of emergent misalignment | Emergent misalignment is easy, narrow misalignment is hard | Openai emergent misalignment | Model organisms for emergent misalignment | Anthropic emergent misalignment | Persona vectors: monitoring and controlling character traits in language models | Emergent misalignment paper

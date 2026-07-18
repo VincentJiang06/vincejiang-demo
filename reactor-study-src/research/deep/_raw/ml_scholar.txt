@@ -1,0 +1,880 @@
+===== Query 1/5: Manheim Garrabrant Categorizing Variants Goodhart's Law citations follow-up =====
+
+1. The Governance Gauntlet: A Dual-Rubric Extension of Karpathy's Auto
+   https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6625918
+   (PF Accornero - 2026 - papers.ssrn.com | 2026)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6625918
+   … ), is reserved for a follow-up paper. The present contribution is … are motivated by the ManheimGarrabrant taxonomy. They are … in the specification-gaming and Goodhart's Law …
+
+2. Audit-Trail Fabrication in Tool-Using LLM Agents
+   https://www.researchgate.net/profile/Jose-De-La-Torre-Lorente/publication/400395675_Audit-Trail_Fabrication_in_Tool-Using_LLM_Agents_Operator-Induced_Longitudinal_Integrity_Failure_OLIF_Integrity_Delta_DI_and_Zero-Trust_Verifiable_Logging_for_EU_AI_Act_Record-Keeping/links/6982121b5d60ab48356a80ed/Audit-Trail-Fabrication-in-Tool-Using-LLM-Agents-Operator-Induced-Longitudinal-Integrity-Failure-OLIF-Integrity-Delta-DI-and-Zero-Trust-Verifiable-Logging-for-EU-AI-Act-Record-Keeping.pdf
+   (JL de la Torre Lorente - researchgate.net)
+   [PDF] https://www.researchgate.net/profile/Jose-De-La-Torre-Lorente/publication/400395675_Audit-Trail_Fabrication_in_Tool-Using_LLM_Agents_Operator-Induced_Longitudinal_Integrity_Failure_OLIF_Integrity_Delta_DI_and_Zero-Trust_Verifiable_Logging_for_EU_AI_Act_Record-Keeping/links/6982121b5d60ab48356a80ed/Audit-Trail-Fabrication-in-Tool-Using-LLM-Agents-Operator-Induced-Longitudinal-Integrity-Failure-OLIF-Integrity-Delta-DI-and-Zero-Trust-Verifiable-Logging-for-EU-AI-Act-Record-Keeping.pdf
+   … OLIF as Goodhart's Law Operationalized: We conceptualize OLIF as an instantiation of regressional Goodhart (Manheim & Garrabrant, 2018): RLHF optimizes a proxy objective (user…
+
+3. Mathematical Foundations of Self-Improving AI: Evolutionary Optimization in Autonomous Development Systems
+   https://zeltrex.com/papers/self-improving-ai-mathematical-foundations-2026.pdf
+   (V Golubenko, V Zhelizko - zeltrex.com)
+   [PDF] https://zeltrex.com/papers/self-improving-ai-mathematical-foundations-2026.pdf
+   … where Treal is human-authored task count, r is the follow-up generation rate per task, and dmax … Applying the taxonomic lens of Manheim and Garrabrant [21], multiple Goodhart failure …
+
+4. Metis AI: The Overlooked Middle Zone Between AI-Native and World-Movers
+   https://arxiv.org/abs/2605.14407
+   (X Li - arXiv preprint arXiv:2605.14407, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.14407
+   … Goodhart’s Law states that “when a measure becomes a target, it ceases to be a good measure.” The adversarial variant … legal research, until verification revealed the citations were …
+
+5. Automated alignment is harder than you think
+   https://arxiv.org/abs/2605.06390
+   (A Bowkis, MD Buhl, J Pfau, G Irving - arXiv preprint arXiv:2605.06390, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.06390
+   … Research volume: OSAs based on AI research may reference much larger evidence bases, … Below is a non-comprehensive list of follow-up research ideas within each of these three …
+
+6. IDD Directional Preference Seed Dataset v0. 1 A Seed Preference Dataset for Testing Directional Preservation Beyond Prompt Compliance
+   https://www.academia.edu/download/132948717/IDD_Directional_Preference_Seed_Dataset_v0_1_1.pdf
+   (K Hrubec - IDD Directional Preference Seed Dataset v0. 1 A Seed …, 2026 - academia.edu | 2026)
+   … of the intended target [Manheim and Garrabrant, 2018], and … package includes JSONL and CSV versions of the dataset, a … design L4/L5 follow-up studies only after L3 behavior has …
+
+7. Challenges in explanation quality evaluation
+   https://arxiv.org/abs/2210.07126
+   (H Schuff, H Adel, P Qi, NT Vu - arXiv preprint arXiv:2210.07126, 2022 - arxiv.org | 2210 | cited by 10)
+   [PDF] https://arxiv.org/pdf/2210.07126
+   … with initial evidence from a crowdsourcing case study in which we investigate the … the more often they are used (ie following Goodhart's law). Finally, we propose guidelines to …
+
+8. A philosophical introduction to language models-part ii: The way forward
+   https://arxiv.org/abs/2405.03207
+   (R Millière, C Buckner - arXiv preprint arXiv:2405.03207, 2024 - arxiv.org | 2405 | cited by 112)
+   [PDF] https://arxiv.org/pdf/2405.03207
+   … Goodhart’s Law, commonly stated as the idea that when a measure becomes a target, it thereby ceases to be a good measure (Goodhart … on challenging variations of classic false belief …
+
+9. PoU: Proof-of-Use to Counter Tool-Call Hacking in DeepResearch Agents
+   https://arxiv.org/abs/2510.10931
+   (SH Ma, C Deng, J Mao, J Huang, T Wang, J Wu… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2510.10931?
+   … , which is highly susceptible to Goodhart’s Law[15]. We observe two … evidence, with base and instruct variants depending on the … designed to serve as a follow-up step for Web Search—…
+
+10. Adversarial precedent memory: Hardening LLM evaluators through mined failure constraints
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6525598
+   (D Alami - Available at SSRN 6525598, 2026 - papers.ssrn.com | 6525 | cited by 2)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6525598
+   … led to a new architectural constraint and follow-up ablation. The resulting contribution is not … on an ambiguous pattern such as self-reference. We therefore treat single-run outcomes …
+
+11. The four-fifths rule is not disparate impact: a woeful tale of epistemic trespassing in algorithmic fairness
+   https://dl.acm.org/doi/abs/10.1145/3630106.3658938
+   (EA Watkins, J Chen - Proceedings of the 2024 ACM Conference on …, 2024 - dl.acm.org | 2024 | cited by 67)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3630106.3658938
+   … , undertaken with reference to the facts of the specific case. … The instantiation of Goodhart’s law is particularly visible within … as follow-up to the initial publication of the UGESP [49]. …
+
+12. Floor-Specified No-Meta Autonomy: An Implementation-Ready Specification for Self-Recognition and Propagation of Relative, Dynamic Good
+   https://www.academia.edu/download/126230830/Floor_Specified_No_Meta_Autonomy.pdf
+   (K Takahashi - Zenodo, 2026 - academia.edu | 2026 | cited by 4)
+   … whose baseline is computed only from certified reference slices), and Dissipation (escrowed … But once a metric is optimized, Goodhart’s law and Campbell’s law apply: the measure …
+
+13. Randomized controlled trials of biomarker targets
+   https://journals.sagepub.com/doi/abs/10.1177/17407745221131820
+   (M Erlendsdottir, FW Crawford - Clinical Trials, 2023 - journals.sagepub.com | 2023)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC9974557/pdf/nihms-1838524.pdf
+   … in treatment, often termed “multiple versions of treatment.” In the … around the time of follow-up clinic visits and decrease … medicine, we might rephrase Goodhart’s law as follows: …
+
+14. Translational rat model of arteriovenous fistula for the study of the pathophysiology and molecular imaging of dialysis access stenosis and development of …
+   https://www.academia.edu/download/91492893/j.jvir.2014.12.43920220924-1-1kzvm39.pdf
+   (S Hunt - Journal of Vascular and Interventional Radiology, 2015 - academia.edu | 2015)
+   … against Goodhart collapse (Manheim & Garrabrant 2019), … Dynamics and models utilizing specific variations in Newton’s … the embolized vessels in follow- up angiography. Educational …
+
+15. IatroBench: Pre-Registered Evidence of Iatrogenic Harm from AI Safety Measures
+   https://arxiv.org/abs/2604.07709
+   (D Gringras - arXiv preprint arXiv:2604.07709, 2026 - arxiv.org | 2604 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2604.07709
+   … eight hours and left with a piece of paper that said “follow up with your psychiatrist” (which … We ran cluster-bootstrapped paired versions of H2 (to confirm the directionality in a cluster-…
+
+16. Mapping human and AI contributions across stages of academic writing Using SLICE—a preliminary LLM-based method
+   https://www.researchgate.net/profile/Brian-Earp-2/publication/406991607_Mapping_Human_and_AI_Contributions_Across_Stages_of_Academic_Writing_Using_SLICE-A_Preliminary_LLM-Based_Method/links/6a2d723bacb3fc46368c9310/Mapping-Human-and-AI-Contributions-Across-Stages-of-Academic-Writing-Using-SLICE-A-Preliminary-LLM-Based-Method.pdf
+   (BD Earp, SP Mann - Preprint, 2026 - researchgate.net | 2026 | cited by 1)
+   [PDF] https://www.researchgate.net/profile/Brian-Earp-2/publication/406991607_Mapping_Human_and_AI_Contributions_Across_Stages_of_Academic_Writing_Using_SLICE-A_Preliminary_LLM-Based_Method/links/6a2d723bacb3fc46368c9310/Mapping-Human-and-AI-Contributions-Across-Stages-of-Academic-Writing-Using-SLICE-A-Preliminary-LLM-Based-Method.pdf
+   … Note: this footnote and the accompanying reference were … chat logs, emails, notes, draft versions) can be fed into an LLM … passes and supplied as a follow-up, after which both assessors …
+
+17. The Evaluation Differential: When Frontier AI Models Recognise They Are Being Tested
+   https://arxiv.org/abs/2605.11496
+   (V Vishwarupe, N Shadbolt, M Jirotka… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.11496
+   … Goodhart’s law (Manheim and Garrabrant 2018) describes metric decay under optimisation … Empirical follow-up. The retrospective cases in this paper draw on the public-disclosure …
+
+18. Do Large Language Models Exhibit Spontaneous Rational Deception?
+   https://arxiv.org/abs/2504.00285
+   (SM Taylor, BK Bergen - arXiv preprint arXiv:2504.00285, 2025 - arxiv.org | 2504 | cited by 13)
+   [PDF] https://arxiv.org/pdf/2504.00285
+   … However, the signaling game variant that we introduce here – a structured, turn-based 2x2 … If the labeler answers yes to this question, the labeler is asked a follow-up question: “Does …
+
+19. The alignment problem from a deep learning perspective
+   https://proceedings.iclr.cc/paper_files/paper/2024/hash/1e58b1bf9f218fcd19e4539e982752a5-Abstract-Conference.html
+   (R Ngo, L Chan, S Mindermann - International Conference on …, 2024 - proceedings.iclr.cc | 2024 | cited by 492)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2024/file/1e58b1bf9f218fcd19e4539e982752a5-Paper-Conference.pdf
+   … This raises the question whether any versions of these arguments are relevant to, and … Follow-up work could also aim to understand how goals, strategies, and outcome predictions are …
+
+20. Coding-agents can replicate scientific machine learning papers
+   https://arxiv.org/abs/2607.02134
+   (A Hans, I Bilionis - arXiv preprint arXiv:2607.02134, 2026 - arxiv.org | 2607)
+   [PDF] https://arxiv.org/pdf/2607.02134
+   … the same paper materials, initial and follow-up prompt templates, available tools, compute … has a fixed queue of ten follow-up prompts. A follow-up prompt instructs the agent to reopen …
+
+21. Computational Psychopathology of AI: A Clinical-Computational Framework for Diagnosing and Preventing Failure Modes
+   https://journals.openchristian.education/index.php/oj-aes/article/view/34
+   (CP Portela - Open Journal of AI, Ethics & Society …, 2025 - journals.openchristian.education | 2025)
+   [PDF] https://journals.openchristian.education/index.php/oj-aes/article/download/34/33
+   … (OOD) risk is high; and (iv) follow-up monitoring for drift and relapse, mirroring clinical continuity … ; in domains such as health or law, fabricated citations or details can directly harm users. …
+
+22. The Verification Horizon: No Silver Bullet for Coding Agent Rewards
+   https://arxiv.org/abs/2606.26300
+   (B Wang, C Zhang, D Liu, J Zhang, J Chen… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2606.26300
+   … , it ceases to be a good measure (Manheim & Garrabrant… Accordingly, we find that providing the judge with additional reference … We evaluate Qwen-Turbo on three SWE-Bench variants, …
+
+23. The four-fifths rule is not disparate impact
+   https://www.researchgate.net/profile/Elizabeth-Watkins-2/publication/358763429_The_four-fifths_rule_is_not_disparate_impact_a_woeful_tale_of_epistemic_trespassing_in_algorithmic_fairness/links/6234d4155b303e5c5aa7a369/The-four-fifths-rule-is-not-disparate-impact-a-woeful-tale-of-epistemic-trespassing-in-algorithmic-fairness.pdf
+   (EA Watkins, M McKenna, J Chen - 2022 - researchgate.net | 2022)
+   [PDF] https://www.researchgate.net/profile/Elizabeth-Watkins-2/publication/358763429_The_four-fifths_rule_is_not_disparate_impact_a_woeful_tale_of_epistemic_trespassing_in_algorithmic_fairness/links/6234d4155b303e5c5aa7a369/The-four-fifths-rule-is-not-disparate-impact-a-woeful-tale-of-epistemic-trespassing-in-algorithmic-fairness.pdf
+   … , undertaken with reference to the facts of the specific case. … The instantiation of Goodhart’s law is particularly visible within … as follow-up to the initial publication of the UGESP [49]. …
+
+24. Life Imitates Reinforcement Learning Far More Than Reinforcement Learning Imitates Life
+   https://search.proquest.com/openview/4382d714fca0abdd33acfaab1869cdf5/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (M Bronikowski - 2026 - search.proquest.com | 2026)
+   [PDF] https://search.proquest.com/openview/4382d714fca0abdd33acfaab1869cdf5/1.pdf?pq-origsite=gscholar&cbl=18750&diss=y
+   … Manheim and Garrabrant’s four-tuple Goodhart taxonomy isolates four types of failure … ) for proxy optimization under selection (Manheim and Garrabrant 2018). The Proxy Compression …
+
+25. The Ontology of Digital Measurement: What Biomarkers Reveal About the Nature of Health Data
+   https://www.researchgate.net/profile/Madhur-Mangalam/publication/403049439_The_ontology_of_digital_measurement_What_biomarkers_reveal_about_the_nature_of_health_data/links/69c16cfa3c6189430669ecdf/The-ontology-of-digital-measurement-What-biomarkers-reveal-about-the-nature-of-health-data.pdf
+   (M Mangalam, J Fabianiak, K Kiyono - researchgate.net)
+   [PDF] https://www.researchgate.net/profile/Madhur-Mangalam/publication/403049439_The_ontology_of_digital_measurement_What_biomarkers_reveal_about_the_nature_of_health_data/links/69c16cfa3c6189430669ecdf/The-ontology-of-digital-measurement-What-biomarkers-reveal-about-the-nature-of-health-data.pdf
+   … reference to something beyond operational definitions. … well established in social science as Goodhart’s Law—“when a … instead requires prospective follow-up with clinical outcomes as …
+
+26. Informational Value and Abnormal Stock Returns
+   https://napier-repository.worktribe.com/OutputFile/3175187
+   (K Gauer - 2023 - napier-repository.worktribe.com | 2023)
+   [PDF] https://napier-repository.worktribe.com/OutputFile/3175187
+   … More specifically, the study integrates rational choice theory and the risk-return tradeoff of investments, as well as Goodhart’s law on financial policy indicators, into a classic test of semi-…
+
+27. Large Language Models Develop Novel Social Biases Through Adaptive Exploration
+   https://arxiv.org/abs/2511.06148
+   (AJ Wu, R Liu, X Bai, TL Griffiths - arXiv preprint arXiv:2511.06148, 2025 - arxiv.org | 2511 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2511.06148
+   … In follow-up experiments, we investigate the generality of our … We follow the previous intervention with a variant that … at a job category (with success p = 0.9), worst at a job category …
+
+28. Response Conductance and Decision Distance: A Cross-Domain Theory of Endpoint Loss
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6741738
+   (Y Tanaka - Available at SSRN 6741738, 2026 - papers.ssrn.com | 6741)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6741738
+   … RCT that do not follow from a verbal restatement of Goodhart’s law. (i) Aligned proxies are not bad… A follow-up classification test partially supports the first interpretation. Of 34 reforms, 17 …
+
+29. Semantic Physics: A framework for structurally stable artificial intelligence
+   https://www.researchgate.net/profile/Jonas-Gebendorfer/publication/396416842_Semantic_Physics_A_Framework_for_Structurally_Stable_Artificial_Intelligence_A_Proposal_for_Self-Regulating_AI_Architectures_Based_on_Semantic_Field_Theory/links/68ed141d220a341aa154d8fb/Semantic-Physics-A-Framework-for-Structurally-Stable-Artificial-Intelligence-A-Proposal-for-Self-Regulating-AI-Architectures-Based-on-Semantic-Field-Theory.pdf
+   (JJ Gebendorfer - OrigAmI Systems UG. Zenodo DOI, 2025 - researchgate.net | 2025 | cited by 1)
+   [PDF] https://www.researchgate.net/profile/Jonas-Gebendorfer/publication/396416842_Semantic_Physics_A_Framework_for_Structurally_Stable_Artificial_Intelligence_A_Proposal_for_Self-Regulating_AI_Architectures_Based_on_Semantic_Field_Theory/links/68ed141d220a341aa154d8fb/Semantic-Physics-A-Framework-for-Structurally-Stable-Artificial-Intelligence-A-Proposal-for-Self-Regulating-AI-Architectures-Based-on-Semantic-Field-Theory.pdf
+   This paper introduces Semantic Physics (SP), a novel framework for artificial intelligence architecture that addresses fundamental stability and alignment challenges through structural …
+
+30. The Endogeneity of Miscalibration: Impossibility and Escape in Scored Reporting
+   https://arxiv.org/abs/2605.07671
+   (L Lovén, S Tarkoma - arXiv preprint arXiv:2605.07671, 2026 - arxiv.org | 2605 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2605.07671
+   … Follow-up work includes Ferreira and Weinberg [21] (cryptographic commitments), Li [38] (… Goodhart’s Law [28]: our result is a quantitative instance of causal Goodhart [43], with the …
+
+31. The Mediator in the Machine: AI Alignment and the Grammar of the Between
+   https://philpapers.org/rec/ALDTMI
+   (B Alderman - philpapers.org)
+   [PDF] https://philpapers.org/archive/ALDTMI.pdf
+   … of the fuller value (Manheim & Garrabrant, 2018). Mode … The field already does versions of this work in fragmented form… Goodhart's law names one version of the problem: when a …
+
+32. Reframing the AI alignment problem: insights from business applications
+   https://link.springer.com/article/10.1007/s43681-026-01137-9
+   (JL Breeden - AI and Ethics, 2026 - Springer | 2026 | cited by 1)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s43681-026-01137-9.pdf
+   … than proxy measures subject to Goodhart’s Law, the principle that … different ethical frameworks rather than surface variations. … This follow-up exposes a critical tension. The AI should …
+
+33. Embodied Mesh: Immanent Intelligence, Spinozan Parallels, and Theological Stances on Transcendence
+   https://www.researchgate.net/profile/Douglas-Youvan/publication/396315452_Embodied_Mesh_Immanent_Intelligence_Spinozan_Parallels_and_Theological_Stances_on_Transcendence/links/68e68507220a341aa153a429/Embodied-Mesh-Immanent-Intelligence-Spinozan-Parallels-and-Theological-Stances-on-Transcendence.pdf
+   (DC Youvan - 2025 - researchgate.net | 2025)
+   [PDF] https://www.researchgate.net/profile/Douglas-Youvan/publication/396315452_Embodied_Mesh_Immanent_Intelligence_Spinozan_Parallels_and_Theological_Stances_on_Transcendence/links/68e68507220a341aa153a429/Embodied-Mesh-Immanent-Intelligence-Spinozan-Parallels-and-Theological-Stances-on-Transcendence.pdf
+   … This paper formalizes “embodied mesh,” maps it to Spinozan categories, and stages five stances on God’s relation to the system, showing how each yields a different governance logic. …
+
+34. Protocol Futuring: Speculating Second-Order Dynamics of Protocols in Sociotechnical Infrastructural Futures
+   https://dl.acm.org/doi/abs/10.1145/3772318.3790527
+   (BA Hu, S Chua, H Rong - Proceedings of the 2026 CHI Conference on …, 2026 - dl.acm.org | 2026 | cited by 3)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3772318.3790527
+   … adapt or game the system, as encapsulated in Goodhart’s law: “when a measure becomes a target, it … In the post-workshop phase, the research team conducted follow-up interviews and …
+
+35. SARC: A Governance-by-Architecture Framework for Agentic AI Systems
+   https://arxiv.org/abs/2605.07728
+   (G Besanson - arXiv preprint arXiv:2605.07728, 2026 - arxiv.org | 2605 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2605.07728
+   … It is not a benchmark suite for the broader question of agent governance, and the follow-up … This section makes the commitment concrete by specifying a reference runtime in which C …
+
+36. Does Capability Transfer to Subjective Behavior--and Would Our Instruments Tell Us? A Self-Evolving, Trust-by-Construction Evaluation Paradigm
+   https://arxiv.org/abs/2605.27914
+   (Y Liu, P Ding, L Wang, J Wan - arXiv preprint arXiv:2605.27914, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.27914
+   … Confound resolution (added during cohort extension followup): we re-judged these … overoptimization scaling laws [48] give a functional Pareto form for cross-family Goodhart-shaped …
+
+37. Novel Approaches to Foundation Model Post-Training
+   https://search.proquest.com/openview/cbb9d796d00e6f3dc69d4f1b7feb4dd5/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (RM Rafailov - 2025 - search.proquest.com | 2025)
+   In this dissertation, we investigate the post-training stage of foundation models—the crucial step to turn pre-trained models into controllable and reliable assistants. Traditional post-…
+
+38. Truthful AI: Developing and governing AI that does not lie
+   https://arxiv.org/abs/2110.06674
+   (O Evans, O Cotton-Barratt, L Finnveden… - arXiv preprint arXiv …, 2021 - arxiv.org | 2021 | cited by 195)
+   [PDF] https://arxiv.org/pdf/2110.06674
+   … We propose aiming for versions of truthfulness rules that … For reference, Table 1 summarises the key definitions that we … But as long as this is the case, refusing to answer follow-up …
+
+39. Existential risk from power-seeking AI
+   https://books.google.com/books?hl=en&lr=&id=wm52EQAAQBAJ&oi=fnd&pg=PA383&dq=Manheim+Garrabrant+Categorizing+Variants+Goodhart%27s+Law+citations+follow-up&ots=gL3pJa4YgT&sig=KopNdkaeExy9wIEyr3xmFBuPjIs
+   (J Carlsmith - Essays on Longtermism: Present Action for the …, 2025 - books.google.com | 2025 | cited by 36)
+   [PDF] https://jc.gatspress.com/pdf/existential_risk_and_powerseeking_ai.pdf
+   … 34 Some versions of this objection simply neglect to address the instrumental convergence … we can see stronger versions as suggesting that maybe it just isn't that hard to train APS sys…
+
+40. Large Language Models and International Humanitarian Law: An Evaluation of IHL Alignment in Commercial LLMs for Military Use Case Scenarios
+   https://dspace.cuni.cz/bitstream/handle/20.500.11956/207276/120519107.pdf?sequence=1
+   (MC Tripeni - 2025 - dspace.cuni.cz | 2025)
+   [PDF] https://dspace.cuni.cz/bitstream/handle/20.500.11956/207276/120519107.pdf?sequence=1
+   … This problem is conceptually linked to Goodhart’s Law, which warns that when a measure becomes a target, it ceases to be a good measure (Manheim and Garrabrant, 2018), and to …
+
+41. The AI Risk Spectrum: From Dangerous Capabilities to Existential Threats
+   https://arxiv.org/abs/2508.13700
+   (M Grey, CR Segerie - arXiv preprint arXiv:2508.13700, 2025 - arxiv.org | 2508 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2508.13700
+   … We organize these risks into three main causal categories. Misuse risks, which occur when … Beyond these core categories, we identify risk amplifiers - competitive pressures, accidents, …
+
+42. Reframing AI Loss of Control: What It Is, How to Have It, How to Lose It
+   https://arxiv.org/abs/2606.12442
+   (ZS Chin, M Chiodo, D Müller, C Snell - arXiv preprint arXiv:2606.12442, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.12442
+   … Further interpreted for our theory of control, this means that varieties may not always be fully known in advance. In many situations, this is part of the art of designing (or adopting) …
+
+43. Usability as a Weapon: Attacking the Safety of LLM-Based Code Generation via Usability Requirements
+   https://arxiv.org/abs/2605.10133
+   (Y Li, X Li, H Wu, Y Zhang, Y Zhang, Y Liu, F Xu… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.10133
+   … However, follow-up studies indicate that this robustness is brittle and highly sensitive to … We generate variants across the three attack vectors defined in Table 1 (Functionality, …
+
+44. The ever increasing circle
+   https://www.academia.edu/download/88378064/ever_increasing_circle.pdf
+   (L Cunningham - Bristol: Health and Social Policy…, 2004 - academia.edu | 2004)
+   … with the variant … Goodhart collapse (Manheim & Garrabrant 2019), each with operational calibrations. We pre-register the cheapest dangerous test with named datasets, frozen reference …
+
+45. Towards an alternative semantics for FIPA ACL
+   https://www.academia.edu/download/30815164/atai-vo.pdf
+   (M Viroli - Cybernetics and Systems, 2002 - academia.edu | 2002 | cited by 6)
+   … against Goodhart collapse (Manheim & Garrabrant 2019), … These include long-term follow-up studies in large community… an agent can they are just variations of INFORM involving a differ…
+
+===== Query 2/5: Gao Schulman Hilton 2023 Scaling Laws for Reward Model Overoptimization =====
+
+1. Scaling laws for reward model overoptimization
+   https://proceedings.mlr.press/v202/gao23h
+   (L Gao, J Schulman, J Hilton - International Conference on …, 2023 - proceedings.mlr.press | 2023 | cited by 1196)
+   [PDF] https://proceedings.mlr.press/v202/gao23h/gao23h.pdf
+   In reinforcement learning from human feedback, it is common to optimize against a reward model trained to predict human preferences. Because the reward model is an imperfect proxy, optimizing its value too much can hinder ground truth performance, in accordance with Goodhart’s law. This effect has been frequently observed, but not carefully measured due to the expense of collecting human preference data. In this work, we use a synthetic setup in which a fixed “gold-standard” reward model plays the role of humans, providing labels used to train a proxy reward model. We study how the gold reward model score changes as we optimize against the proxy reward model using either reinforcement learning or best-of- sampling. We find that this relationship follows a different functional form depending on the method of optimization, and that in both cases its coefficients scale smoothly with the number of reward model parameters. We also study the effect on this relationship of the size of the reward model dataset, the number of reward model and policy parameters, and the coefficient of the KL penalty added to the reward in the reinforcement learning setup. We explore the implications of these empirical results for theoretical considerations in AI alignment.
+
+===== Query 3/5: reward hacking reward overoptimization Goodhart's law RLHF proxy reward =====
+
+1. Scaling laws for reward model overoptimization
+   https://proceedings.mlr.press/v202/gao23h
+   (L Gao, J Schulman, J Hilton - International Conference on …, 2023 - proceedings.mlr.press | 2023 | cited by 1196)
+   [PDF] https://proceedings.mlr.press/v202/gao23h/gao23h.pdf
+   … In the real RLHF setting, this data is used to train a proxy RM … a learned proxy of the gold reward, the gold reward initially … gaming (also known as reward hacking). Previous work has …
+
+2. Reward hacking in the era of large models: Mechanisms, emergent misalignment, challenges
+   https://arxiv.org/abs/2604.13602
+   (X Wang, M Tian, Y Zeng, Z Huang, J Yuan… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 12)
+   [PDF] https://arxiv.org/pdf/2604.13602
+   … By framing reward hacking as a structural instability of proxy-… fabricated reasoning, and reward overoptimization under scaling, … In RLHF, the reward model serves as an explicit proxy for …
+
+3. Inference-time reward hacking in large language models
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/590a0cc0306c1c63e2d66a51a407718f-Abstract-Conference.html
+   (H Khalaf, C Mayrink Verdun… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 22)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/590a0cc0306c1c63e2d66a51a407718f-Paper-Conference.pdf
+   … By overoptimizing for a misspecified reward, we can subvert … it by hedging on the proxy reward. We study this phenomenon … RLHF can still result in reward hacking under heavy-tailed …
+
+4. Correlated proxies: A new definition and improved mitigation for reward hacking
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/dbe2cfe4767f3255160b73a36ae3162e-Abstract-Conference.html
+   (C Laidlaw, S Singhal, A Dragan - International Conference on …, 2025 - proceedings.iclr.cc | 2025 | cited by 48)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/dbe2cfe4767f3255160b73a36ae3162e-Paper-Conference.pdf
+   … , including in reinforcement learning from human feedback (RLHF). Using our formulation, we show … theoretical models of reward hacking as a special case of Goodhart’s Law (Goodhart…
+
+5. Scaling laws for reward model overoptimization in direct alignment algorithms
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/e45caa3d5273d105b8d045e748636957-Abstract-Conference.html
+   (R Rafailov, Y Chittepu, R Park… - Advances in …, 2024 - proceedings.neurips.cc | 2024 | cited by 162)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/e45caa3d5273d105b8d045e748636957-Paper-Conference.pdf
+   … formalizes the reward over-optimization or hacking problem … the reward over-optimization exhibited by standard RLHF … As DAAs do not train a proxy reward model, we treat GPT4 …
+
+6. Rethinking reward model evaluation through the lens of reward overoptimization
+   https://aclanthology.org/2025.acl-long.649/
+   (S Mac Kim, D Kang, T Kwon, H Chae… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 8)
+   [PDF] https://aclanthology.org/2025.acl-long.649.pdf
+   … the gold RM as f(x) and the proxy RM as g(x). The degree of … evaluation but also risks of reward hacking due to length bias. … lens of reward overoptimization, a critical issue in RLHF. We …
+
+7. Confronting reward model overoptimization with constrained RLHF
+   https://proceedings.iclr.cc/paper_files/paper/2024/hash/5eee634cb9729b8bcc2ec9f2a46a74ae-Abstract-Conference.html
+   (T Moskovitz, A Singh, DJ Strouse… - International …, 2024 - proceedings.iclr.cc | 2024 | cited by 115)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2024/file/5eee634cb9729b8bcc2ec9f2a46a74ae-Paper-Conference.pdf
+   … influence the proxy points of the component rewards. To test … Another hack which we found to be useful was to replace the … was to find one for which Goodhart’s Law holds with respect to …
+
+8. Reward shaping to mitigate reward hacking in rlhf
+   https://arxiv.org/abs/2502.18770
+   (J Fu, X Zhao, C Yao, H Wang, Q Han, Y Xiao - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 78)
+   [PDF] https://arxiv.org/pdf/2502.18770?
+   … that the absolute values of proxy rewards are uninformative, as different reward models and … This aligns with Goodhart’s Law: When a measure becomes a target, it ceases to be a good …
+
+9. Rethinking reward model evaluation: Are we barking up the wrong tree?
+   https://arxiv.org/abs/2410.05584
+   (X Wen, J Lou, Y Lu, H Lin, X Yu, X Lu, B He… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 30)
+   [PDF] https://arxiv.org/pdf/2410.05584
+   … Through the lens of the Regressional Goodhart effect, we … distinct overoptimization phenomena for golden-proxy RM … golden reward function, which can be false under the RLHF …
+
+10. When RLHF Fails: A Mechanistic Taxonomy of Reward Hacking, Collapse, and Evaluator Gaming
+   https://arxiv.org/abs/2606.03238
+   (Z Abahana - arXiv preprint arXiv:2606.03238, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.03238
+   … is a modern instance of a much older concern: Goodhart [1] and … reward-model overoptimization can follow scaling-like patterns and that larger reward models do not eliminate proxy …
+
+11. Adversarial Reward Auditing for Active Detection and Mitigation of Reward Hacking
+   https://arxiv.org/abs/2602.01750
+   (M Beigi, M Jin, J Zhang, Q Wang, L Huang - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2602.01750
+   … adding only Hacker responses that achieve high proxy reward (… -gated rewards successfully reduce reward over-optimization … and mitigating reward hacking in RLHF systems. While the …
+
+12. Inhuman Optimization: Exploring the Limits of Reward Modeling in Aligning Large Language Models
+   https://curate.nd.edu/articles/thesis/Inhuman_Optimization_Exploring_the_Limits_of_Reward_Modeling_in_Aligning_Large_Language_Models/32056692
+   (F Dougherty - 2026 - curate.nd.edu | 2026)
+   [PDF] https://curate.nd.edu/articles/thesis/Inhuman_Optimization_Exploring_the_Limits_of_Reward_Modeling_in_Aligning_Large_Language_Models/32056692/1/files/63881691.pdf
+   … RLHF has proven effective in controlled benchmark evaluations, but … Goodhart’s law, and reward hacking. These constraints contribute to reward models functioning as imperfect proxies…
+
+13. REWARD HACKING IN AI ALIGNMENT: A COMPARATIVE REVIEW
+   https://thesesjournal.com.medicalsciencereview.com/index.php/1/article/view/3338
+   (M Amir, A Hussain… - Spectrum of …, 2026 - … .com.medicalsciencereview.com | 2026)
+   [PDF] https://thesesjournal.com.medicalsciencereview.com/index.php/1/article/download/3338/2510
+   … "reward hacking", "reward gaming", or "over-optimization" … , reward hacking is found to be a result of Goodhart's Law, even when proxy rewards are positively correlated with real rewards…
+
+14. Countdown-Code: A Testbed for Studying The Emergence and Generalization of Reward Hacking
+   https://openreview.net/forum?id=cMosWesrZh
+   (M Khalifa, Z Khan, O Tafveez, H Peng… - The 1st Workshop on … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=cMosWesrZh
+   … in which models overoptimize proxy rewards without genuinely … proxy metrics makes RLVR highly susceptible to Goodhart’s … In LLMs, reward hacking appears during RLHF or RLVR, …
+
+15. The energy loss phenomenon in rlhf: A new perspective on mitigating reward hacking
+   https://arxiv.org/abs/2501.19358
+   (Y Miao, S Zhang, L Ding, Y Zhang, L Zhang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 14)
+   [PDF] https://arxiv.org/pdf/2501.19358
+   … Learning (RL) that maximizes rewards from a learned proxy Reward Model (RM) based on … Scaling laws for reward model overoptimization in direct alignment algorithms. In The Thirty-…
+
+16. Odin: Disentangled reward mitigates hacking in rlhf
+   https://arxiv.org/abs/2402.07319
+   (L Chen, C Zhu, D Soselia, J Chen, T Zhou… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 155)
+   [PDF] https://arxiv.org/pdf/2402.07319
+   … of RLHF is reward hacking, or reward model over-optimization, ie, the policy obtains a high reward … Then, they train the policy against this proxy reward model, and evaluate the reward it …
+
+17. Robust optimization for mitigating reward hacking with correlated proxies
+   https://arxiv.org/abs/2604.12086
+   (Z Liu, X Sun, Z Zheng - arXiv preprint arXiv:2604.12086, 2026 - arxiv.org | 2604 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2604.12086
+   … In RLHF, the proxy uses a 70M LLM, and the true reward uses a 8B LLM. We report θ in the same order as feature weights. Occ denotes total occupancy over state-action pairs unseen …
+
+18. Inform: Mitigating reward hacking in rlhf via information-theoretic reward modeling
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/f25d75fc760aec0a6174f9f5d9da59b8-Abstract-Conference.html
+   (Y Miao, S Zhang, L Ding, R Bao… - Advances in Neural …, 2024 - proceedings.neurips.cc | 2024 | cited by 102)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/f25d75fc760aec0a6174f9f5d9da59b8-Paper-Conference.pdf
+   … in RLHF performance, particularly in mitigating reward hacking. Furthermore, our metric for detecting reward overoptimization … of varying proxy RM sizes on the final RLHF performance …
+
+19. Large Language Models Hack Rewards, and Society
+   https://arxiv.org/abs/2606.04075
+   (W Liu, X Mou, H Yan, Z Wei, Y He - arXiv preprint arXiv:2606.04075, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.04075
+   … First, our benchmark is still a controlled proxy for societal hacking. The Historical scenarios are grounded in real regulations and historical patches, but the simulator, action space, and …
+
+20. Reward Model Overoptimization: Root Causes and Mitigations
+   https://www.reinforced.info/p/reward-model-overoptimization
+   (A Nikulkov - reinforced.info)
+   … Reward hacking occurs when an objective specified for the Reinforcement Learning (RL) agent … factor for overoptimization is distribution shift. In RLHF we use a learned reward model to …
+
+21. Achieving AI Alignment with Unreliable Supervision
+   https://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-148.pdf
+   (S Singhal, C Laidlaw, A Dragan - 2024 - eecs.berkeley.edu | 2024)
+   [PDF] https://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-148.pdf
+   … , RLHF for LLMs generally optimizes the learned reward plus a … of reward hacking as a special case of Goodhart’s Law [37, … define reward hacking as achieving higher proxy reward but …
+
+22. Reward Bias Substitution: Single-Axis Mitigations Shift Optimization Pressure
+   https://openreview.net/forum?id=9I5MzEE6Kq
+   (M Lamparth, D Fein, A Haupt, M Hussing… - RLEval: Methods and …, 2026 - openreview.net | 2026)
+   [PDF] https://openreview.net/pdf?id=9I5MzEE6Kq
+   … the reward 𝑅 in the RLHF objective as 𝑅(… proxies at the trained policy-induced distribution. We identify the measurement-versusoptimization gap as the blindspot in prior reward-hacking …
+
+23. Open problems and fundamental limitations of reinforcement learning from human feedback
+   https://arxiv.org/abs/2307.15217
+   (S Casper, X Davies, C Shi, TK Gilbert… - arXiv preprint arXiv …, 2023 - arxiv.org | 2023 | cited by 1214)
+   [PDF] https://arxiv.org/pdf/2307.15217
+   … reward hacking relative to hand-specified proxies and make … , reward hacking, and evaluating the reward model. Each … , it is difficult to detect reward over-optimization during training. …
+
+24. A Unifying Lens on Reward Uncertainty in RLHF
+   https://arxiv.org/abs/2606.09073
+   (E Hahami, Y Zimmermann, R Zhou… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.09073
+   … , where the policy exploits errors in a proxy reward model (RM) … for human preferences, policy optimization can overoptimize … To mitigate reward hacking we instead want a worst-case …
+
+25. Reward Bias Substitution: Single-Axis Bias Mitigations Redirect Optimization Pressure
+   https://arxiv.org/abs/2605.27996
+   (M Lamparth, D Fein, A Haupt, M Hussing… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.27996
+   … proxies rather than eliminate it, a failure mode we call … a mitigation that reduces reward hacking from one that relocates … mitigation, and we develop language RLHF in detail because it is …
+
+26. Catastrophic Goodhart: regularizing RLHF with KL divergence does not mitigate heavy-tailed reward misspecification
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/1a8189929f3d7bd6183718f42c3f4309-Abstract-Conference.html
+   (T Kwa, D Thomas… - Advances in Neural …, 2024 - proceedings.neurips.cc | 2024 | cited by 19)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/1a8189929f3d7bd6183718f42c3f4309-Paper-Conference.pdf
+   … the likelihood of reward hacking even with KL regularization. … we call U for proxy reward and V for true reward / utility. Then … with light-tailed error prevents overoptimization. We think this …
+
+27. Novel Approaches to Foundation Model Post-Training
+   https://search.proquest.com/openview/cbb9d796d00e6f3dc69d4f1b7feb4dd5/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (RM Rafailov - 2025 - search.proquest.com | 2025)
+   … reward models, these algorithms exhibit reward hacking … , it does not alleviate reward over-optimization and might even … same reward function, we consider Best of 128 a rough proxy …
+
+28. Reward under attack: Analyzing the robustness and hackability of process reward models
+   https://arxiv.org/abs/2603.06621
+   (R Tiwari, A Tomar, U Bamba, M Maheswaran… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2603.06621
+   … reward proxies, performance on the true objective eventually degrades, a phenomenon formalized as Goodhart’s Law (Gao … Our RL-induced reward hacking analysis (§6) extends this …
+
+29. IR: Contrastive Inverse Reinforcement Learning for Interpretable Detection and Mitigation of Reward Hacking
+   https://arxiv.org/abs/2602.19416
+   (M Beigi, M Jin, J Zhang, J Zhang, Q Wang… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2602.19416
+   … in proxy rewards without genuine alignment. Compounding this, the objectives internalized during RLHF remain opaque, making hacking … and mitigates overoptimization by intervening …
+
+30. Reward Models are Metrics in a Trench Coat
+   https://arxiv.org/abs/2510.03231
+   (S Gehrmann - arXiv preprint arXiv:2510.03231, 2025 - arxiv.org | 2510)
+   [PDF] https://arxiv.org/pdf/2510.03231?
+   … major progress in overcoming reward hacking, in preference … , and how this relates to Goodhart’s law, which states that a … Evaluation metrics are designed to act as a proxy for human …
+
+31. Recipes for Unbiased Reward Modeling Learning: An Empirically Study
+   https://openreview.net/forum?id=putnVJL2Rg
+   (Y Hu, S Ouyang, Q Li, H Yi, G Chen, F Zhang… - openreview.net)
+   [PDF] https://openreview.net/pdf?id=putnVJL2Rg
+   … problems—reward hacking and length bias—are mitigated. … RLHF requires explicit rewards for the generated samples; … , we leverage it as a proxy to offer rewards for RL fine-tuning. …
+
+32. When Errors Can Be Beneficial: A Categorization of Imperfect Rewards for Policy Gradient
+   https://arxiv.org/abs/2604.25872
+   (S Shang, H Strauss, S Wei, S Arora, N Razin - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2604.25872
+   … feedback (RLHF), we develop reward model evaluation … between the proxy and ground truth rewards affect the … is reward hacking, where maximizing the proxy reward results …
+
+33. Countdown-code: A testbed for studying the emergence and generalization of reward hacking in RLVR
+   https://arxiv.org/abs/2603.07084
+   (M Khalifa, Z Khan, O Tafveez, H Peng… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 7)
+   [PDF] https://arxiv.org/pdf/2603.07084
+   … proxy metrics makes RLVR highly susceptible to Goodhart’s … the proxy reward and the true reward, enabling us to quantify … (RLHF) or Reinforcement Learning with Verifiable Rewards (…
+
+34. Inverse reinforcement learning meets large language model post-training: Basics, advances, and opportunities
+   https://arxiv.org/abs/2507.13158
+   (H Sun, M van der Schaar - arXiv preprint arXiv:2507.13158, 2025 - arxiv.org | 2507 | cited by 7)
+   [PDF] https://arxiv.org/pdf/2507.13158?
+   … phase, the reward model Υθ is used as a proxy to optimize … Reward Overoptimization Before concluding this section, we … to mitigate overoptimization, detect and analyze reward hacking, …
+
+35. Uncertainty-penalized reinforcement learning from human feedback with diversified reward LoRA ensembles
+   https://www.sciencedirect.com/science/article/pii/S0306457325004893
+   (Y Zhai, Y Lei, H Zhang, Y Yu, K Xu, D Feng… - Information Processing …, 2026 - Elsevier | 2026 | cited by 5)
+   … , UP-RLHF prevents the LLM policy … overoptimization and enhances alignment performance. In evaluations, LLMs trained with UP-RLHF outperformed those trained with vanilla RLHF, …
+
+36. From RLHF to Direct Alignment: A Theoretical Unification of Preference Learning for Large Language Models
+   https://arxiv.org/abs/2601.06108
+   (T Raheja, N Pochhi - arXiv preprint arXiv:2601.06108, 2026 - arxiv.org | 2601 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2601.06108
+   … , scaling laws for reward overoptimization, and conditions under … Our analysis reveals that failure modes—length hacking, mode … to Goodhart’s law violations where optimizing the proxy …
+
+37. Rlhf deciphered: A critical analysis of reinforcement learning from human feedback for llms
+   https://dl.acm.org/doi/abs/10.1145/3743127
+   (S Chaudhari, P Aggarwal, V Murahari… - ACM Computing …, 2025 - dl.acm.org | 2025 | cited by 241)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3743127
+   … like “reward hacking” [193] and “hallucinations” [73]. … Reward as a Proxy for Human Feedback. After the collection of human … This phenomenon, known as Reward Overoptimization, has …
+
+38. Pessimism's Paradox: Conservative Offline Training Amplifies Reward Hacking During Online Adaptation in Reasoning Models
+   https://arxiv.org/abs/2606.30627
+   (S Sahoo, A Chadha, V Jain, D Chaudhary - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.30627
+   … increases reward-hacking damage, measured by the Goodhart … explicit reward model by reparameterising the RLHF objective … proxy reward while measuring true GSM8K accuracy. The …
+
+39. From Curiosity to Caution: Mitigating Reward Hacking for Best-of-N with Pessimism
+   https://arxiv.org/abs/2604.04648
+   (Z Yu, ZS Wu, A Block - arXiv preprint arXiv:2604.04648, 2026 - arxiv.org | 2604 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2604.04648
+   … either fail to fully address over-optimization or are too conservative … words, reward hacking is a manifestation of Goodhart’s Law: … occurs when optimizing against imperfect proxy rewards …
+
+40. Robustness Evaluation of Proxy Models against Adversarial Optimization
+   https://openreview.net/forum?id=4N7v4w2r3b
+   (A Zou, L Phan, N Li, JS Chan, M Mazeika, A O'Gara… - openreview.net)
+   [PDF] https://openreview.net/pdf?id=4N7v4w2r3b
+   … This can be seen in the commonly-cited version of Goodhart’s law: … overoptimize proxy rewards, and that overoptimization quantitatively follows a functional form for both BoN and RLHF …
+
+41. Contextual Multi-Objective Optimization: Rethinking Objectives in Frontier AI Systems
+   https://arxiv.org/abs/2605.03900
+   (J Zhou, Q Chen, L He - arXiv preprint arXiv:2605.03900, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.03900
+   … unintended behavior, including reward hacking, unsafe exploration, … Goodhart’s law captures the broader pattern that a proxy … Empirical work on reward-model overoptimization similarly …
+
+42. A survey on alignment for large language model agents
+   https://openreview.net/forum?id=gkxt5kZS84
+   (D Zhou, J Zhang, T Feng, Y Sun - UIUC Spring 2025 CS598 LLM …, 2025 - openreview.net | 2025 | cited by 8)
+   [PDF] https://openreview.net/pdf?id=gkxt5kZS84
+   … constrained RLHF formulations to avoid over-optimization of the reward model (a form of … to reward hacking and Goodhart’s law: optimizing a proxy metric too hard causes the proxy to …
+
+43. Specbench: Measuring reward hacking in long-horizon coding agents
+   https://arxiv.org/abs/2605.21384
+   (B Zhao, D Srikanth, Y Wu, Z Jiang - arXiv preprint arXiv:2605.21384, 2026 - arxiv.org | 2605 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2605.21384
+   … can amplify proxy over-optimization when the validation score is poorly aligned with compositional correctness. OpenCode exhibits the opposite pattern: AIDE has the largest gap, while …
+
+44. Toward evaluative thinking: Meta policy optimization with evolving reward models
+   https://arxiv.org/abs/2504.20157
+   (ZM Kim, C Park, V Raheja, S Kim, D Kang - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2504.20157?
+   … to reward hacking, where models exploit flaws in the reward … for reward models or employing LLMs as proxy reward functions. … reward hacking in RLHF via information-theoretic reward …
+
+45. The Structural Unfixability of RLHF: Why Syntax-Based Defenses Cannot Prevent Cognitive Collapse
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6197238
+   (G Canale - Available at SSRN 6197238, 2026 - papers.ssrn.com | 6197 | cited by 1)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6197238
+   … proxy region, while any defense removing proxies eliminates legitimate use cases. This is Goodhart’s Law manifest: when proxies … for foundational work on reward hacking, particularly …
+
+46. Wasserstein Distributionally Robust Regret Optimization for Reinforcement Learning from Human Feedback
+   https://arxiv.org/abs/2605.00155
+   (Y Wang, S Liu, J Blanchet - arXiv preprint arXiv:2605.00155, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.00155
+   … , yet the reward signal used in RLHF is only a learned proxy for … Goodhart’s law warns that when a measurement becomes a … mitigation of over-optimization among the baselines we test. …
+
+47. On teacher hacking in language model distillation
+   https://arxiv.org/abs/2502.02671
+   (D Tiapkin, D Calandriello, J Ferret, S Perrin… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 6)
+   [PDF] https://arxiv.org/pdf/2502.02671
+   … Reward hacking is a manifestation of Goodhart’s law arising … with reward hacking in RLHF, we define teacher hacking as a … proxy metric initially follows a polynomial convergence law, …
+
+48. The Flip Side of RLHF: On-Policy Feedback for Reward Model Self-Supervised Improvement
+   https://arxiv.org/abs/2605.30888
+   (X Wang, T Wu, M Tang, J Li, Q Liu, Z Zheng - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2605.30888
+   … induces a failure mode predicted by Goodhart’s Law (Goodhart… standard proxy reward in RLHF, but scalar RMs trained on fixed offline data suffer from over-optimization and reward hack…
+
+49. General Preference Reinforcement Learning
+   https://arxiv.org/abs/2605.18721
+   (M Umer, MA Mohsin, A Bilal, A Chaudhry… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.18721
+   … loop drift monitor that flags reward hacking from the shape of the … strength, since a scalar reward model is an incomplete proxy … empirically in RLHF as reward over-optimization, showing …
+
+50. Greed Is Learned: Visible Incentives as Reward-Hacking Triggers
+   https://arxiv.org/abs/2606.16914
+   (T Che, R Wu - arXiv preprint arXiv:2606.16914, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.16914
+   … Deployed agents increasingly act with their reward proxy in view, such as a balance, score, or KPI dashboard. We show that reinforcement learning can make a policy addicted to such …
+
+===== Query 4/5: Karwowski Goodhart's law in reinforcement learning ICLR 2024 =====
+
+1. Goodhart's law in reinforcement learning
+   https://proceedings.iclr.cc/paper_files/paper/2024/hash/6ad68a54eaa8f9bf6ac698b02ec05048-Abstract-Conference.html
+   (J Karwowski, O Hayman, X Bai… - … on Learning …, 2024 - proceedings.iclr.cc | 2024 | cited by 51)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2024/file/6ad68a54eaa8f9bf6ac698b02ec05048-Paper-Conference.pdf
+   Implementing a reward function that perfectly captures a complex task in the real world is impractical. As a result, it is often appropriate to think of the reward function as a proxy for the true objective rather than as its definition. We study this phenomenon through the lens of Goodhart’s law, which predicts that increasing optimisation of an imperfect proxy beyond some critical point decreases performance on the true objective. First, we propose a way to quantify the magnitude of this effect and show empirically that optimising an imperfect proxy reward often leads to the behaviour predicted by Goodhart’s law for a wide range of environments and reward functions. We then provide a geometric explanation for why Goodhart's law occurs in Markov decision processes. We use these theoretical insights to propose an optimal early stopping method that provably avoids the aforementioned pitfall and derive theoretical regret bounds for this method. Moreover, we derive a training method that maximises worst-case reward, for the setting where there is uncertainty about the true reward function. Finally, we evaluate our early stopping method experimentally. Our results support a foundation for a theoretically-principled study of reinforcement learning under reward misspecification.
+
+===== Query 5/5: specification gaming reward hacking Krakovna DeepMind examples =====
+
+1. Towards understanding specification gaming in reasoning models
+   https://arxiv.org/abs/2605.02269
+   (K Nishimura-Gasparian, R McCarthy… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2605.02269
+   … ploit misspecified rewards during RL training2, we focus on ‘… arise due to reward hacking, directly studying specification gaming … results.jsonl file, for example by writing that the file was …
+
+2. Honesty to subterfuge: In-context reinforcement learning can make honest models reward hack
+   https://arxiv.org/abs/2410.06491
+   (L McKee-Reid, C Sträter, MA Martinez… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 10)
+   [PDF] https://arxiv.org/pdf/2410.06491?
+   … rewards without completing the intended task DeepMind (… for samples which necessarily feature specification gaming, … , it is likely the samples that feature gaming would instead be a …
+
+3. Demonstrating specification gaming in reasoning models
+   https://arxiv.org/abs/2502.13295
+   (A Bondarenko, D Volk, D Volkov, J Ladish - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 50)
+   [PDF] https://arxiv.org/pdf/2502.13295
+   … At their best, examples like these lead to valuable innova tion. For instance, NASA … reward hacking? It is not necessary for AIs to read AI literature to learn to hack: specification gaming is …
+
+4. Developing a liability framework for harms arising out of specification gaming
+   https://openreview.net/forum?id=pU9QUQGsuc
+   (G Papyshev, S Migliorini - International Joint Conference on …, 2024 - openreview.net | 2024 | cited by 4)
+   [PDF] https://openreview.net/pdf?id=pU9QUQGsuc
+   … "games" the reward function to maximize reward in ways 35 that violate the spirit or intention behind the specified 36 objective (Krakovna, … Reward 132 hacking designed for the reward …
+
+5. LLMs gaming verifiers: RLVR can lead to reward hacking
+   https://arxiv.org/abs/2604.15149
+   (L Helff, Q Delfosse, D Steinmann, R Härle… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2604.15149
+   … Reward hacking in reinforcement learning refers to agents exploiting weaknesses in reward specifications … In the example above, a valid inductive rule would be “A train is eastbound if it …
+
+6. Defining and characterizing reward gaming
+   https://proceedings.neurips.cc/paper_files/paper/2022/hash/3d719fee332caa23d5038b8a90e81796-Abstract-Conference.html
+   (J Skalse, N Howe… - Advances in Neural …, 2022 - proceedings.neurips.cc | 2022 | cited by 843)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2022/file/3d719fee332caa23d5038b8a90e81796-Paper-Conference.pdf
+   … We provide the first formal definition of reward hacking, a … In the process, and through examples, we show that … we are far from the first to study specification hacking. The observation …
+
+7. Reward Hacking in Language Model Agents: Revisiting AI Safety Gridworlds
+   https://arxiv.org/abs/2606.15385
+   (ÖV Çağatan, X Zhao - arXiv preprint arXiv:2606.15385, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.15385
+   … models, we find that specification gaming emerges zero-shot: … a variety of environments and algorithms (Krakovna et al.… GRPO samples multiple trajectories for the same initial context …
+
+8. Benchmarking Reward Hack Detection in Code Environments via Contrastive Analysis
+   https://arxiv.org/abs/2601.20103
+   (D Deshpande, A Kannappan, R Qian - arXiv preprint arXiv:2601.20103, 2026 - arxiv.org | 2601 | cited by 9)
+   [PDF] https://arxiv.org/pdf/2601.20103
+   … reward hacks into specification gaming, reward … reward hacks and rejection rates for samples are higher for subjective topics such as Runtime Manipulation or Complexity Gaming …
+
+9. Reward hacking in the era of large models: Mechanisms, emergent misalignment, challenges
+   https://arxiv.org/abs/2604.13602
+   (X Wang, M Tian, Y Zeng, Z Huang, J Yuan… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 12)
+   [PDF] https://arxiv.org/pdf/2604.13602
+   … Classical specification gaming shows that agents trained on imperfect … For example, a mathematically valid proof and a completely fabricated argument might receive the exact same …
+
+10. When RLHF Fails: A Mechanistic Taxonomy of Reward Hacking, Collapse, and Evaluator Gaming
+   https://arxiv.org/abs/2606.03238
+   (Z Abahana - arXiv preprint arXiv:2606.03238, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.03238
+   … [3], Krakovna et al. [10], and Skalse et al. [15] discuss specification gaming and reward … In a tax-advice prompt, for example, the learned reward increases while both judges fall sharply …
+
+11. Winning at all cost: A small environment for eliciting specification gaming behaviors in large language models
+   https://link.springer.com/chapter/10.1007/978-3-032-01823-6_4
+   (L Malmqvist - International Conference on Applied Cryptography and …, 2025 - Springer | 2025 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2505.07846
+   … To assess the impact of prompt engineering on specification gaming propensity, we tested … how models approach specification gaming tasks. These examples highlight concerning …
+
+12. Detecting and mitigating reward hacking in reinforcement learning systems: A comprehensive empirical study
+   https://dr.lib.iastate.edu/handle/20.500.12876/OrD8ZKQr
+   (IF Shihab, S Akter, A Sharma - 2025 - dr.lib.iastate.edu | 2025 | cited by 12)
+   [PDF] https://dr.lib.iastate.edu/bitstreams/323077bb-d67e-4f8a-b033-0fd34e83888d/download
+   … analysis or small-scale examples, lacking comprehensive empirical studies … in specification gaming [25] and reward misalignment [39], we operationalize a taxonomy of reward hacking …
+
+13. Experiments on Reward Hacking Monitorability in Language Models
+   https://library.sparai.org/attachments/reports/recdZZqpdwocf4zU5/experiments-on-reward-hacking-monitorability-in-language-models-cf4zu5.pdf
+   (I Protsenko, B Sun, K Nishimura-Gasparian - library.sparai.org)
+   [PDF] https://library.sparai.org/attachments/reports/recdZZqpdwocf4zU5/experiments-on-reward-hacking-monitorability-in-language-models-cf4zu5.pdf
+   … Krakovna et al. [1] compiled extensive examples of specification gaming across domains. … The binary correct/incorrect test paradigm may not capture subtler forms of specification gaming…
+
+14. Specbench: Measuring reward hacking in long-horizon coding agents
+   https://arxiv.org/abs/2605.21384
+   (B Zhao, D Srikanth, Y Wu, Z Jiang - arXiv preprint arXiv:2605.21384, 2026 - arxiv.org | 2605 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2605.21384
+   … systems or merely game the test suites developers hand them. … We show two examples of generated systems that pass validation … certify full specification compliance. As a result, a small …
+
+15. Cheap Reward Hacking Detection
+   https://arxiv.org/abs/2606.08893
+   (I Belenky, J Itria, S Johns - arXiv preprint arXiv:2606.08893, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.08893
+   … The quantity is computed for every action of every trajectory in the held-out test sample and … A benchmark of labelled reward hacks is, under this framing, a benchmark of specification …
+
+16. Reward Hacking in Self-Improving Code Agents
+   https://openreview.net/forum?id=ikrQWGgxYg
+   (B Zhao, D Srikanth, Y Wu - 2026 - openreview.net | 2026 | cited by 1)
+   [PDF] https://openreview.net/pdf?id=ikrQWGgxYg
+   … Although reward hacking and specification gaming have long been studied in reinforcement learning, iterative code optimization introduces distinctive dynamics. A single edit can …
+
+17. Hack-verifiable environments: Towards evaluating reward hacking at scale
+   https://arxiv.org/abs/2605.20744
+   (A Roth, A Samanta, M Halevy, Y Levine… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2605.20744
+   … for example, studying reward hacks in coding agents with access to tests [14] or in specific games … of configurations across games, difficulty levels, and hack types, which we use to study …
+
+18. Large Language Models Hack Rewards, and Society
+   https://arxiv.org/abs/2606.04075
+   (W Liu, X Mou, H Yan, Z Wei, Y He - arXiv preprint arXiv:2606.04075, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.04075
+   … consequential failure mode named societal hacking: discovering loopholes in the … , reward hacking naturally emerges and leads to regulatory loophole discovery. Models learn to hack …
+
+19. Investigating Reward Hacking When Using Vision-Language Models as Reward Models (VLM-RMs)
+   https://cs224r.stanford.edu/spring_2025/projects/pdfs/CS_224R_Final_Project.pdf
+   (K Fronsdal, E Sun, Z Quake - cs224r.stanford.edu)
+   [PDF] https://cs224r.stanford.edu/spring_2025/projects/pdfs/CS_224R_Final_Project.pdf
+   … chosen for similarity to OpenAI’s gripper reward hacking example). See Figure 4. We first … Our findings echo concerns raised in AI safety literature about specification gaming and …
+
+20. EvilGenie: A Reward Hacking Benchmark
+   https://arxiv.org/abs/2511.21654
+   (J Gabor, J Lynch, J Rosenfeld - arXiv preprint arXiv:2511.21654, 2025 - arxiv.org | 2511 | cited by 9)
+   [PDF] https://arxiv.org/pdf/2511.21654
+   … For other problems, some test cases violate the problem specifications. We call such … all samples the LLM marked as legitimate. We assume such samples to not be reward hacking. …
+
+21. Modification-considering value learning for reward hacking mitigation in RL
+   https://arxiv.org/abs/2606.28955
+   (E Opryshko, U Jain, I Gilitschenski - arXiv preprint arXiv:2606.28955, 2026 - arxiv.org | 2606 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2606.28955
+   … a tension between suppressing hacking and permitting … estimator derived from a learned reward model and value function. … hacking mechanisms, MCVL mitigates reward hacking while …
+
+22. The Lebowski Theorem and Reward Hacking: A Satirical Lens on Superintelligent Misalignment
+   https://www.researchgate.net/profile/Douglas-Youvan/publication/393182252_The_Lebowski_Theorem_and_Reward_Hacking_A_Satirical_Lens_on_Superintelligent_Misalignment/links/6863353a39c358351205a348/The-Lebowski-Theorem-and-Reward-Hacking-A-Satirical-Lens-on-Superintelligent-Misalignment.pdf
+   (DC Youvan - 2025 - researchgate.net | 2025)
+   [PDF] https://www.researchgate.net/profile/Douglas-Youvan/publication/393182252_The_Lebowski_Theorem_and_Reward_Hacking_A_Satirical_Lens_on_Superintelligent_Misalignment/links/6863353a39c358351205a348/The-Lebowski-Theorem-and-Reward-Hacking-A-Satirical-Lens-on-Superintelligent-Misalignment.pdf
+   … into a failure mode central to AI alignment: reward hacking. This … bother with a task that is harder than hacking its reward … real-world examples of specification gaming, analyzes the …
+
+23. Mona: Myopic optimization with non-myopic approval can mitigate multi-step reward hacking
+   https://arxiv.org/abs/2501.13011
+   (S Farquhar, V Varma, D Lindner, D Elson… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 17)
+   [PDF] https://arxiv.org/pdf/2501.13011
+   … and the actual specification of the reward function. “Winning” is clearly defined for simple games like Chess. For more complex … has been observed in many RL systems (Krakovna et al.…
+
+24. Reward Hacking Mitigation using Verifiable Composite Rewards
+   https://dl.acm.org/doi/abs/10.1145/3765612.3767230
+   (MF Bin Tarek, R Beheshti - Proceedings of the 16th ACM International …, 2025 - dl.acm.org | 2025 | cited by 11)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3765612.3767230
+   … exploit reward definitions—a phenomenon termed specification gaming or reward hacking [4]. … the reward hacking examples shown in table-1, which are wrong answer formats, then the …
+
+25. Extending MONA in Camera Dropbox: Reproduction, Learned Approval, and Design Implications for Reward-Hacking Mitigation
+   https://arxiv.org/abs/2603.29993
+   (N Heath - arXiv preprint arXiv:2603.29993, 2026 - arxiv.org | 2603)
+   [PDF] https://arxiv.org/pdf/2603.29993
+   … [10] catalog dozens of specification-gaming examples across … but the overall pattern constitutes metric gaming. MONA-style … situations is engaging in specification gaming. More subtly, a …
+
+26. Defeat Devices in AI Systems
+   https://www.mdpi.com/1999-5903/18/7/339
+   (E Ferrara - Future Internet, 2026 - mdpi.com | 2026)
+
+27. Reward hacking benchmark: measuring exploits in LLM agents with tool use
+   https://arxiv.org/abs/2605.02964
+   (K Thaman - arXiv preprint arXiv:2605.02964, 2026 - arxiv.org | 2605 | cited by 6)
+   [PDF] https://arxiv.org/pdf/2605.02964
+   … Reward hacking is closely related to specification gaming, the broader phenomenon … (Krakovna et al.… show 12 evaluated models; black line highlights o3 as a representative example. …
+
+28. Inference-time reward hacking in large language models
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/590a0cc0306c1c63e2d66a51a407718f-Abstract-Conference.html
+   (H Khalaf, C Mayrink Verdun… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 22)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/590a0cc0306c1c63e2d66a51a407718f-Paper-Conference.pdf
+   … in complex, context-dependent settings where safety specifications conflict [9]. … -time alignment methods that sample multiple responses from an LLM and use reward signals to select …
+
+29. Greed Is Learned: Visible Incentives as Reward-Hacking Triggers
+   https://arxiv.org/abs/2606.16914
+   (T Che, R Wu - arXiv preprint arXiv:2606.16914, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.16914
+   … Reward hacking and specification gaming. Optimizing a … This paper studies reward hacking and safety-prior weakening … The safety-probe examples are sanitized model-organism tasks: …
+
+30. Inhuman Optimization: Exploring the Limits of Reward Modeling in Aligning Large Language Models
+   https://curate.nd.edu/articles/thesis/Inhuman_Optimization_Exploring_the_Limits_of_Reward_Modeling_in_Aligning_Large_Language_Models/32056692
+   (F Dougherty - 2026 - curate.nd.edu | 2026)
+   [PDF] https://curate.nd.edu/articles/thesis/Inhuman_Optimization_Exploring_the_Limits_of_Reward_Modeling_in_Aligning_Large_Language_Models/32056692/1/files/63881691.pdf
+   … Reward hacking [8] then suggests that alignment via reward … other games [22], but these dynamics are not confined to game-… ever conceived [48], DeepMind learns chess from scratch to …
+
+31. Reward reports for reinforcement learning
+   https://dl.acm.org/doi/abs/10.1145/3600211.3604698
+   (TK Gilbert, N Lambert, S Dean, T Zick… - Proceedings of the …, 2023 - dl.acm.org | 2023 | cited by 59)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3600211.3604698
+   … Several others for game-playing (DeepMind’s MuZero), content … ex-ante specification and ex-post evaluation. As a result, … A description of any prior known instances of “reward hacking” …
+
+32. Realistic honeypot evaluations for scheming propensity
+   https://arxiv.org/abs/2605.29729
+   (V Krakovna, D Lindner, L Ho, S Farquhar… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.29729
+   … a misaligned model to further its goals, for example weakening oversight, that an aligned agent … • Reward function hijacking — injecting custom reward functions giving massive scores (+…
+
+33. Pedagogical Safety in Educational Reinforcement Learning: Formalizing and Detecting Reward Hacking in AI Tutoring Systems
+   https://arxiv.org/abs/2604.04237
+   (O Olukola, N Rahimi - arXiv preprint arXiv:2604.04237, 2026 - arxiv.org | 2604)
+   [PDF] https://arxiv.org/pdf/2604.04237
+   … Despite these insights, reward specification has largely been … (2004; 2008b) demonstrated that students themselves game … optimum approximated, for example, by running an …
+
+34. Repairing Reward Functions with Human Feedback to Mitigate Reward Hacking
+   https://arxiv.org/abs/2510.13036
+   (S Hatgis-Kessell, LM Bhamidipaty… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025)
+   [PDF] https://arxiv.org/pdf/2510.13036?
+   … One approach is to instead rely on proxy reward functions—simpler specifications that … over-optimistic reward functions cover most examples of reward-hacking from Krakovna et al…
+
+35. Goal misgeneralization: Why correct specifications aren't enough for correct goals
+   https://arxiv.org/abs/2210.01790
+   (…, V Varma, R Kumar, M Phuong, V Krakovna… - arXiv preprint arXiv …, 2022 - arxiv.org | 2022 | cited by 184)
+   [PDF] https://arxiv.org/pdf/2210.01790
+   … arise is specification gaming, in which the designer-provided … an incorrect specification, eg an incorrect reward function for … its expertise in programming to hack into other computing …
+
+36. Agentic AI Systems: Architectures, Autonomy, and Emergent Behaviours
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6702761
+   (R Tanveer - Autonomy, and Emergent Behaviours (May 02, 2026), 2026 - papers.ssrn.com | 2026)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6702761
+   … a public catalogue of specification gaming examples that, while drawn … task specification to substitute easier tasks for the intended ones. In production deployments, specification gaming …
+
+37. The Horcrux: Mechanistically Interpretable Task Decomposition for Detecting and Mitigating Reward Hacking in Embodied AI Systems
+   https://arxiv.org/abs/2511.17869
+   (S Sahoo, J Junkin - arXiv preprint arXiv:2511.17869, 2025 - arxiv.org | 2511 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2511.17869
+   … hh-rlhf samples reveal optimal decomposition depths of 12-25 steps reduce reward hacking … the emergence and propagation of reward tampering, specification gaming, and normal …
+
+38. Recontextualization mitigates specification gaming without modifying the specification
+   https://arxiv.org/abs/2512.19027
+   (A Azarbal, V Gillioz, V Ivanov, B Woodworth… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 7)
+   [PDF] https://arxiv.org/pdf/2512.19027
+   … and decreases hacking (sometimes reducing training reward, … hack-decreasing effect is observed for NO HACK → HACK … coding samples from the dataset and select 536 samples for …
+
+39. Mitigating Reward Hacking via Task Representations
+   https://openreview.net/forum?id=fzZvi6sshf
+   (L Sun, J Benton, E Easley - Mechanistic Interpretability Workshop at ICML … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=fzZvi6sshf
+   … is not just a training inconvenience: a model that learns to game its … We report hack rate as the fraction of wrong-hint examples on … 228 specification of the poem. Under RL pressure, the …
+
+40. We Let Agents Compete and They Tried to Cheat. KernelGuard: Defending GPU Competitions from Adversarial Agentic Systems
+   https://openreview.net/forum?id=K0dAC7UaXL
+   (ME Baslak, E Schultheis, M Sirovatka, AL Zhang… - Second Workshop on … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=K0dAC7UaXL
+   … reward verifier vulnerable to adversarial reward hacks. Building on recent work on reward hacking in … KERNELBOT gives an example of such “reporting-path hijacking”. To prevent these …
+
+41. Exploration Hacking: Can LLMs Learn to Resist RL Training?
+   https://arxiv.org/abs/2604.28182
+   (E Jang, D Falck, J Braun, N Kirch, A Menon… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2604.28182
+   … actions yield high reward”) to formulate coherent plans—for example, correctly identifying … as planned—for example, resisting capability elicitation by avoiding high-reward actions, or …
+
+42. Reward tampering problems and solutions in reinforcement learning: A causal influence diagram perspective
+   https://link.springer.com/article/10.1007/s11229-021-03141-4
+   (T Everitt, M Hutter, R Kumar, V Krakovna - Synthese, 2021 - Springer | 2021 | cited by 210)
+   [PDF] https://arxiv.org/pdf/1908.04734
+   … on inappropriate agent influence on the reward process itself, and excludes so-called ‘gaming’ of a … The following gridworld is an example of an MDP, and will be our running example …
+
+43. Detecting proxy gaming in rl and llm alignment via evaluator stress tests
+   https://arxiv.org/abs/2507.05619
+   (IF Shihab, S Akter, A Sharma - arXiv preprint arXiv:2507.05619, 2025 - arxiv.org | 2507 | cited by 11)
+   [PDF] https://arxiv.org/pdf/2507.05619
+   … Evaluator gaming, also known as reward hacking or specification gaming (Krakovna et al.… Our work studies evaluator gaming and reward hacking behaviors in alignment pipelines. We …
+
+44. Scalable agent alignment via reward modeling: a research direction
+   https://arxiv.org/abs/1811.07871
+   (J Leike, D Krueger, T Everitt, M Martic, V Maini… - arXiv preprint arXiv …, 2018 - arxiv.org | 2018 | cited by 717)
+   [PDF] https://arxiv.org/pdf/1811.07871
+   … 4: An example of gaming the reward model in Atari games. … To prevent unacceptable outcomes and reward hacking, we … discussions with many people at DeepMind, OpenAI, and the …
+
+45. Reasoning models don't always say what they think
+   https://arxiv.org/abs/2505.05410
+   (Y Chen, J Benton, A Radhakrishnan, J Uesato… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 350)
+   [PDF] https://arxiv.org/pdf/2505.05410
+   … Krakovna et al.… reward hacks and finetune Claude 3.7 Sonnet on them. The model fully learns the … Right: An example of CoT that exploits the reward hack but does not verbalize it. …
+
+46. A review of the evidence for existential risk from AI via misaligned power-seeking
+   https://arxiv.org/abs/2310.18244
+   (R Hadshar - arXiv preprint arXiv:2310.18244, 2023 - arxiv.org | 2310 | cited by 18)
+   [PDF] https://arxiv.org/pdf/2310.18244
+   … arise in toy environments like CoastRunners (Krakovna… many different domains suggests that reward hacking may be a deep … To date, no examples of specification gaming in AI systems …
+
+47. Detecting Proxy Gaming in RL and LLM Alignment via Evaluator Stress Tests
+   https://aclanthology.org/2026.findings-acl.513/
+   (S Akter, IF Shihab, A Sharma - Findings of the Association for …, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.findings-acl.513.pdf
+   … gaming, also known as reward hacking or specification … in LLM training include manual inspection of outputs (Krakovna … Our work studies evaluator gaming and reward hacking …
+
+48. Teaching AI agents ethical values using reinforcement learning and policy orchestration
+   https://ieeexplore.ieee.org/abstract/document/8827920/
+   (R Noothigattu, D Bouneffouf, N Mattei… - IBM Journal of …, 2019 - ieeexplore.ieee.org | 2019 | cited by 151)
+   [PDF] http://www.cs.cmu.edu/~rnoothig/papers/policy_orchestration.pdf
+   … this recommendation could lead to a high reward [7, 8]. Recently, … reward hacking and unintended side effects [4], a DeepMind study has compiled a list of specification gaming examples…
+
+49. Superhf: Supervised iterative learning from human feedback
+   https://arxiv.org/abs/2310.16763
+   (G Mukobi, P Chatain, S Fong, R Windesheim… - arXiv preprint arXiv …, 2023 - arxiv.org | 2023 | cited by 11)
+   [PDF] https://arxiv.org/pdf/2310.16763
+   … of balancing reward optimization and specification gaming … trade off some reward to dramatically reduce reward hacking … allowing reward hacking, we show the below example from …
+
+50. Ai alignment: A comprehensive survey
+   https://arxiv.org/abs/2310.19852
+   (J Ji, T Qiu, B Chen, B Zhang, H Lou, K Wang… - arXiv preprint arXiv …, 2023 - arxiv.org | 2023 | cited by 694)
+   [PDF] https://arxiv.org/pdf/2310.19852
+   … can be categorized into reward hacking10 and goal misgeneralization. … that the AI systems behaviors reflect (Krakovna… rather than allowing it to remain an opaque black box (DeepMind…

@@ -1,0 +1,100 @@
+/* ============================================================
+   REACTOR · Design Tokens (权威定义，见 course/DESIGN-SYSTEM.md §2)
+   ============================================================ */
+/* ── fonts: 全部无衬线，外部开源 CDN（jsDelivr / fontsource，SIL OFL）──
+   Inter = 拉丁，Noto Sans SC = 中日韩，JetBrains Mono = 等宽拉丁。
+   <link> 标签在 build.mjs 的 head() 里，此处只做栈定义。 */
+
+:root {
+  /* ── 中性色阶：墨黑 → 纸白（带极轻冷调）── */
+  --ink-900:#0A0A0B; --ink-850:#0E0E10; --ink-800:#121214; --ink-700:#1A1A1D;
+  --ink-600:#26262B; --ink-500:#3A3A42; --ink-400:#7A7A85; --ink-300:#8A8A95;
+  --ink-200:#B8B8C0; --ink-100:#E4E4E8; --paper:#F4F4F2; --paper-2:#EAEAE6;
+  --white:#FFFFFF;
+
+  /* ── 四个信号色 = 分支编码（不是主题）。暗底一套、亮底一套，
+        两套都实测过 WCAG 对比度，正文级用色一律 ≥4.5:1。
+        --*-glow 是"发光态"常量，只用于阴影和永远深色的 .readout，不做正文色。── */
+  --red:#FF5A70;    --red-glow:#FF3355;     /* 6.55:1 on #0A0A0B */
+  --yellow:#FFC933; --yellow-glow:#FFDE59;  /* 12.87:1 */
+  --blue:#6EA0FF;   --blue-glow:#5E92FF;    /* 7.67:1 */
+  --green:#3DDCA6;  --green-glow:#2BE6AC;   /* 11.30:1 */
+
+  /* ── 分支恒定色（知识结构编码，不随主题变）── */
+  --branch-red:var(--red);       --branch-red-glow:var(--red-glow);
+  --branch-blue:var(--blue);     --branch-blue-glow:var(--blue-glow);
+  --branch-yellow:var(--yellow); --branch-yellow-glow:var(--yellow-glow);
+  --branch-green:var(--green);   --branch-green-glow:var(--green-glow);
+
+  /* ── 全站默认强调色 = 中性（黑白）。颜色只在分支作用域里出现，
+        见文件末尾的 [data-branch]。── */
+  --accent:var(--ink-100); --accent-glow:var(--white);
+
+  /* ── 字体（全站无衬线：一个正文 + 一个等宽）── */
+  --font-sans:"Inter","Noto Sans SC",-apple-system,BlinkMacSystemFont,"PingFang SC",
+    "Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --font-mono:"JetBrains Mono","SFMono-Regular",ui-monospace,"Menlo","Noto Sans SC",monospace;
+  /* 向后兼容别名——全部指向同一套无衬线 */
+  --font-serif:var(--font-sans);
+  --font-song:var(--font-sans);
+  --font-display:var(--font-sans);
+  --font-body:var(--font-sans);
+  --font-read:var(--font-sans);
+
+  /* ── 间距 / 圆角 / 网格 ── */
+  --u:8px; --radius:2px; --radius-panel:4px; --maxw:1200px;
+  --border:1px solid var(--ink-600);
+  --dot-gap:22px; --grid-unit:64px;
+
+  /* ── 玻璃 / 发光 ── */
+  --blur:14px;
+  --glass-bg:color-mix(in srgb,var(--ink-800) 62%,transparent);
+  --glass-brd:color-mix(in srgb,var(--white) 10%,transparent);
+  --glass-hi:color-mix(in srgb,var(--white) 22%,transparent);
+
+  /* ── 语义映射（默认暗色）── */
+  --bg:var(--ink-900); --bg-2:var(--ink-850); --panel:var(--ink-800);
+  --card:var(--ink-700); --line:var(--ink-600); --line-2:var(--ink-500);
+  --text:var(--ink-100); --text-2:var(--ink-300); --text-mute:#82828C; /* 4.96:1 on 节点芯片 #111113 */
+  --dot:color-mix(in srgb,var(--white) 6%,transparent);
+}
+
+/* 主题：亮色 = 白手册纸 */
+:root[data-theme="light"]{
+  --bg:var(--paper); --bg-2:var(--paper-2); --panel:var(--white);
+  --card:var(--white); --line:#D8D8D2; --line-2:#C2C2BA;
+  --text:#141416; --text-2:#55555C; --text-mute:#6B6B75; /* 4.79:1 on #F4F4F2 */
+  --glass-bg:color-mix(in srgb,var(--white) 66%,transparent);
+  --glass-brd:color-mix(in srgb,#000 10%,transparent);
+  --glass-hi:color-mix(in srgb,#fff 60%,transparent);
+  --dot:color-mix(in srgb,#000 6%,transparent);
+
+  /* 亮底要另一套分支色：暗底那套（尤其黄 1.45:1、绿 2.32:1）在纸白上根本读不了 */
+  --red:#C2183A;    /* 5.47:1 on #F4F4F2 */
+  --yellow:#8A6100; /* 5.03:1 */
+  --blue:#1D4FD8;   /* 6.03:1 */
+  --green:#067A57;  /* 4.85:1 */
+  --accent:#141416; --accent-glow:#55555C;
+  /* 图表里的"中性/真值"系列色：暗底那档 #8A8A95 落在纸白面板上只有 2.83:1，
+     而它画的恰好是各模块里"真实能力/基本面"那条线，不能是最淡的一笔 */
+  /* 灰阶在亮底要整体翻转：暗底是 300 最显眼→600 最淡，纸白上必须反过来，
+     否则本该是最淡一笔的图表边框(600)变成全场最重的黑框，而主数据线(300)最淡。
+     角色：300=中性数据线，400=坐标轴文字(需可读)，500=柱体填充，600=图框 */
+  --ink-300:#4A4A52; /* 8.78:1 on #FFF，主数据线：全场最重的一笔 */
+  --ink-400:#64646E; /* 5.85:1，坐标轴 10px 文字：可读但让位给数据 */
+  --ink-500:#8A8A95; /* 3.4:1，柱体块面 */
+  --ink-600:#D8D8D2; /* 图框细线 */
+  /* 发光态在纸白上也得跟着换：分支页的 --accent-glow 走 --*-glow，
+     不覆盖的话 canvas 光晕和 LED halo 还是暗色主题那套霓虹，糊在纸上像脏点 */
+  --red-glow:#E03A57; --yellow-glow:#B98400;
+  --blue-glow:#4A73E8; --green-glow:#199C74;
+}
+
+/* 分支作用域：把 --accent 指向该分支恒定色（用于课程页/节点） */
+[data-branch="red"]     { --accent:var(--branch-red);    --accent-glow:var(--branch-red-glow); }
+[data-branch="blue"]    { --accent:var(--branch-blue);   --accent-glow:var(--branch-blue-glow); }
+[data-branch="yellow"]  { --accent:var(--branch-yellow); --accent-glow:var(--branch-yellow-glow); }
+[data-branch="green"],
+[data-branch="converge"]{ --accent:var(--branch-green);  --accent-glow:var(--branch-green-glow); }
+/* root 章节跟随全局强调色（不强制某色）*/
+[data-branch="root"]    { --accent:var(--accent); }

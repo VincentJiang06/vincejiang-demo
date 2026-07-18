@@ -1,0 +1,1207 @@
+===== Query 1/4: Salganik Watts leading the herd astray self-fulfilling prophecy =====
+
+1. Leading the herd astray: An experimental study of self-fulfilling prophecies in an artificial cultural market
+   https://journals.sagepub.com/doi/abs/10.1177/019027250807100404
+   (MJ Salganik, DJ Watts - Social psychology quarterly, 2008 - journals.sagepub.com | 2008 | cited by 450)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC3785310/pdf/nihms503709.pdf
+   Individuals influence each others' decisions about cultural products such as songs, books, and movies; but to what extent can the perception of success become a “self-fulfilling prophecy”? We have explored this question experimentally by artificially inverting the true popularity of songs in an online “music market,” in which 12,207 participants listened to and downloaded songs by unknown bands. We found that most songs experienced self-ful- filling prophecies, in which perceived—but initially false—popularity became real over time. We also found, however, that the inversion was not self-fulfilling for the market as a whole, in part because the very best songs recovered their popularity in the long run. Moreover, the distortion of market information reduced the correlation between appeal and popularity, and led to fewer overall downloads. These results, although partial and speculative, suggest a new approach to the study of cultural markets, and indicate the potential of web-based experiments to explore the social psychological origin of other macrosocio- logical phenomena.
+
+===== Query 2/4: McCambridge Hawthorne effect systematic review new evidence research participation =====
+
+1. Systematic review of the Hawthorne effect: new concepts are needed to study research participation effects
+   https://www.sciencedirect.com/science/article/pii/S0895435613003545
+   (J McCambridge, J Witton, DR Elbourne - Journal of clinical epidemiology, 2014 - Elsevier | 2014 | cited by 3845)
+   Systematic review of the Hawthorne effect: New concepts are needed to study research participation effects - … concepts are needed to study research participation effects☆ …
+
+2. Research participation effects and where to find them: a systematic review of studies on alcohol
+   https://www.sciencedirect.com/science/article/pii/S0895435625000010
+   (KU Gunnarsson, ES Collier, M Bendtsen - Journal of Clinical Epidemiology, 2025 - Elsevier | 2025 | cited by 5)
+   … effects’ (RPEs) to capture features and artifacts of study … following a systematic review [3] of the Hawthorne effect, which … and McCambridge [14] reanalysed the data from these studies …
+
+3. From question-behaviour effects in trials to the social psychology of research participation
+   https://www.tandfonline.com/doi/abs/10.1080/08870446.2014.953527
+   (J McCambridge - Psychology & health, 2015 - Taylor & Francis | 2015 | cited by 64)
+   … The alcohol systematic review investigates the effects of answering questions on … research participants to assess their own behaviour, as shown in some studies of the Hawthorne effect. …
+
+4. Research participation effects: a skeleton in the methodological cupboard
+   https://www.sciencedirect.com/science/article/pii/S0895435614000857
+   (J McCambridge, K Kypri, D Elbourne - Journal of clinical epidemiology, 2014 - Elsevier | 2014 | cited by 207)
+   … other than when conceptualized as the Hawthorne effect. Randomized … Systematic review of the Hawthorne effect: new concepts are needed to study research participation effects …
+
+5. Defining and evaluating the Hawthorne effect in primary care, a systematic review and meta-analysis
+   https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2022.1033486/full
+   (C Berkhout, O Berbra, J Favre, C Collins… - Frontiers in …, 2022 - frontiersin.org | 2022 | cited by 189)
+   [PDF] https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2022.1033486/pdf
+   … We ensured that no reports were overlapping with McCambridge’s review (15). … this artifact “participant reactivity,” we chose to keep the folkloric name of the Hawthorne effect as it is …
+
+6. In randomization we trust? There are overlooked problems in experimenting with people in behavioral intervention trials
+   https://www.sciencedirect.com/science/article/pii/S0895435613003818
+   (J McCambridge, K Kypri, D Elbourne - Journal of Clinical Epidemiology, 2014 - Elsevier | 2014 | cited by 175)
+   … attention to possible research participation effects can improve the … The Hawthorne effect, usually taken to mean that monitoring … Four recent systematic reviews summarize and evaluate …
+
+7. The importance of the Hawthorne effect on psychological outcomes unveiled in a randomized controlled trial of diabetes technology
+   https://journals.sagepub.com/doi/abs/10.1177/1932296817747293
+   (MB Abraham, JA Nicholas, M Crone… - Journal of Diabetes …, 2018 - journals.sagepub.com | 2018 | cited by 28)
+   [PDF] https://journals.sagepub.com/doi/pdf/10.1177/1932296817747293
+   … The impact of the Hawthorne effect on clinical research outcomes have been studied in RCTs with evidence that research participation may modify trial outcomes. The Hawthorne effect …
+
+8. Randomized trial seeking to induce the Hawthorne effect found no evidence for any effect on self-reported alcohol consumption online
+   https://www.sciencedirect.com/science/article/pii/S0895435618307649
+   (J McCambridge, A Wilson, J Attia, N Weaver… - Journal of clinical …, 2019 - Elsevier | 2019 | cited by 34)
+   [PDF] https://openresearch.newcastle.edu.au/articles/journal_contribution/Randomized_trial_seeking_to_induce_the_Hawthorne_effect_found_no_evidence_for_any_effect_on_self-reported_alcohol_consumption_online/28969418/1/files/54325151.pdf
+   … We tested the hypothesis that participants who know the behavioral focus of a study … effect of assessment, thereby dismantling a Hawthorne effect into two putative components. Study …
+
+9. Understanding the Hawthorne effect in wound research—a scoping review
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/iwj.12968
+   (VNB Nguyen, C Miller, J Sunderland… - International Wound …, 2018 - Wiley Online Library | 2018 | cited by 47)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC7949616/pdf/IWJ-15-1010.pdf
+   … Resulting from the research settings of most of the reviewed studies, McCambridge et al10 highlighted that research participation in health care settings would be likely to cause …
+
+10. Beyond a good story: from Hawthorne Effect to reactivity in health professions education research
+   https://asmepublications.onlinelibrary.wiley.com/doi/abs/10.1111/medu.13122
+   (E Paradis, G Sutkin - Medical education, 2017 - Wiley Online Library | 2017 | cited by 327)
+   … First, we review the Hawthorne Studies, their critiques, and the … Finally, a 2014 systematic review by McCambridge et al.12 … participant reactivity as a form of researcher or participant …
+
+11. Are there Hawthorne-like participation effects in oral-hygiene research? Evidence from longitudinal plaque mapping
+   https://www.sciencedirect.com/science/article/pii/S030057122600391X
+   (C Ganss, K Jung - Journal of Dentistry, 2026 - Elsevier | 2026)
+   … group cannot readily be attributed to Hawthorne-like effects alone. In this context, our finding of little evidence for collateral participation-related change in brushing outcomes supports …
+
+12. The reply to Sharpe et al.: Hawthorne effect in the YourCall trial suggested by participants qualitative responses
+   https://www.jclinepi.com/article/S0895-4356(19)30496-2/abstract
+   (J McCambridge, A Wilson, J Attia, N Weaver… - Journal of Clinical …, 2019 - jclinepi.com | 2019 | cited by 1)
+   [PDF] https://www.jclinepi.com/article/S0895-4356(19)30496-2/pdf
+   … We have two additional points to make. Although the Hawthorne effect concept is well known, it nevertheless provides an unsatisfactory basis for advancing further study of the …
+
+13. The effects of demand characteristics on research participant behaviours in non-laboratory settings: a systematic review
+   https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0039116
+   (J McCambridge, M De Bruin, J Witton - PloS one, 2012 - journals.plos.org | 2012 | cited by 449)
+   [PDF] https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0039116&type=printable
+   … The authors use the terms Hawthorne effect and demand characteristics inter-changeably to refer to awareness of being studied and related consequences for behaviour [21]. …
+
+14. Hawthorne effect on surgical studies
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/ans.15475
+   (C Demetriou, L Hu, TO Smith… - ANZ Journal of Surgery, 2019 - Wiley Online Library | 2019 | cited by 108)
+   [PDF] http://openaccess.sgul.ac.uk/id/eprint/113227/1/DemetriouetalAAM2019.pdf
+   … this systematic review was to identify whether the Hawthorne … effect on patient participation as there was only one study … been reported in the reviews by McCambridge and Nguyen et al. …
+
+15. Hawthorne effect: more than just telephones
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC9753954/
+   (LE Nossaman, BD Nossaman - The Ochsner Journal, 2022 - pmc.ncbi.nlm.nih.gov | 2022 | cited by 14)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC9753954/pdf/TOJ-22-5031_286Nossaman.pdf
+   … participation, and clinical disease variability, and can also lack external validity. One additional … the study conditions. The modification of responses as a result of being observed, or the …
+
+16. Increasing uncertainty in CNS clinical trials: the role of placebo, nocebo, and Hawthorne effects
+   https://www.thelancet.com/journals/laneur/article/PIIS1474-4422(16)00066-1/abstract
+   (F Benedetti, E Carlino, A Piedimonte - The Lancet Neurology, 2016 - thelancet.com | 2016 | cited by 218)
+   [PDF] https://iris.unito.it/bitstream/2318/1597688/4/Benedetti%20et%20al%20Lancet%20Neurol%20post-print.pdf
+   … The Hawthorne effect is a good example of how a … In clinical trials, the Hawthorne effect and effect of regression to the … way that the Hawthorne effect is related to participation biases, …
+
+17. Contested paths: a meta-analytic review of the Hawthorne studies literature
+   https://www.elgaronline.com/abstract/edcoll/9781788118484/9781788118484.00010.xml
+   (J Muldoon, Y Zoller - Handbook of research on management and …, 2020 - elgaronline.com | 2020 | cited by 14)
+   [PDF] https://www.researchgate.net/profile/Yaron-Zoller/publication/329660345_Contested_paths_A_meta-analytic_review_of_the_Hawthorne_studies'_literature/links/63be674103aad5368e7e5a17/Contested-paths-A-meta-analytic-review-of-the-Hawthorne-studies-literature.pdf
+   … Given this massive amount of research, a literature review is warranted. Although other … left by several participants in the Hawthorne studies so they can understand the researchers’ …
+
+18. The Hawthorne Effect: a randomised, controlled trial
+   https://link.springer.com/article/10.1186/1471-2288-7-30
+   (R McCarney, J Warner, S Iliffe, R Van Haselen… - BMC medical research …, 2007 - Springer | 2007 | cited by 2478)
+   [PDF] https://link.springer.com/content/pdf/10.1186/1471-2288-7-30.pdf
+   … -cog scores in this study may not reflect better cognition (participation is a study per se is … Hrobjartsson and Gotzsche [24] in a systematic review of placebo effects found placebo had …
+
+19. The Hawthorne effect as a pre-placebo expectation in Parkinsons disease patients participating in a randomized placebo-controlled clinical study
+   https://www.tandfonline.com/doi/abs/10.1080/08039488.2018.1468480
+   (BM Morberg, AS Malling, BR Jensen… - Nordic journal of …, 2018 - Taylor & Francis | 2018 | cited by 33)
+   … Aim: The aim of this study was to discuss the Hawthorne effect in relation to clinical and self-… The aim of this study was to investigate the Hawthorne effect as a pre-placebo effect based …
+
+20. Making sense of social research: how useful is the Hawthorne effect?
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/ejsp.401
+   (M Chiesa, S Hobbs - European journal of social psychology, 2008 - Wiley Online Library | 2008 | cited by 272)
+   [PDF] https://www.academia.edu/download/104157914/Making_20sense_20of_20soc_20research.pdf.pdf
+   … coined the phrase ‘Hawthorne Effect’, two of the five participants were replaced during the course of the investigation. The removal of two out of five participants has been interpreted in …
+
+21. Evidence for sample selection effect and Hawthorne effect in behavioural HIV prevention trial among young women in a rural South African community
+   https://bmjopen.bmj.com/content/8/1/e019167.abstract
+   (M Rosenberg, A Pettifor, R Twine, JP Hughes… - BMJ open, 2018 - bmjopen.bmj.com | 2018 | cited by 38)
+   [PDF] https://bmjopen.bmj.com/content/bmjopen/8/1/e019167.full.pdf
+   … . Systematic review of the Hawthorne effect: new concepts are needed to study research participation effects. J Clin Epidemiol 2014;67:267–77.doi:10.1016/j.jclinepi.2013.08.015 …
+
+22. The Hawthorne Effect in Orthodontics: Implications for Patient Compliance and Clinical Research
+   https://www.researchgate.net/profile/Maen-Mahfouz/publication/408131293_The_Hawthorne_Effect_in_Orthodontics_Implications_for_Patient_Compliance_and_Clinical_Research/links/6a3e9034ab275459110b9ba5/The-Hawthorne-Effect-in-Orthodontics-Implications-for-Patient-Compliance-and-Clinical-Research.pdf
+   (M Mahfouz, MFD RCSI, M RCSE, M RCSEng - researchgate.net)
+   [PDF] https://www.researchgate.net/profile/Maen-Mahfouz/publication/408131293_The_Hawthorne_Effect_in_Orthodontics_Implications_for_Patient_Compliance_and_Clinical_Research/links/6a3e9034ab275459110b9ba5/The-Hawthorne-Effect-in-Orthodontics-Implications-for-Patient-Compliance-and-Clinical-Research.pdf
+   … The evidence for the Hawthorne effect's clinical utility is … The systematic review noted that the Feil study measured … this, the Hawthorne effect can still operate through the participant's …
+
+23. Can research assessments themselves cause bias in behaviour change trials? A systematic review of evidence from Solomon 4-group studies
+   https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0025223
+   (J McCambridge, K Butor-Bhavsar, J Witton… - PloS one, 2011 - journals.plos.org | 2011 | cited by 101)
+   [PDF] https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0025223&type=printable
+   … behaviour was under the autonomous control of study participants (4); also necessary were … per group or more (6). This systematic review was undertaken without a published protocol. …
+
+24. Hawthorne effect reporting in orthodontic randomized controlled trials: truth or myth? Blessing or curse?
+   https://academic.oup.com/ejo/article-abstract/40/5/475/4668508
+   (S Abdulraheem, L Bondemark - European Journal of …, 2018 - academic.oup.com | 2018 | cited by 61)
+   [PDF] https://academic.oup.com/ejo/article-pdf/40/5/475/25849097/cjx089.pdf
+   … Finally, a systematic review concluded that the Hawthorne effect was considered a true … Therefore, if we want to decrease the Hawthorne effect on the behaviour of study participants and …
+
+25. Monitoring patient care through health facility exit interviews: an assessment of the Hawthorne effect in a trial of adherence to malaria treatment guidelines in Tanzania
+   https://link.springer.com/article/10.1186/s12879-016-1362-0
+   (B Leurent, H Reyburn, F Muro, H Mbakilwa… - BMC infectious …, 2016 - Springer | 2016 | cited by 32)
+   [PDF] https://link.springer.com/content/pdf/10.1186/s12879-016-1362-0.pdf
+   … the Hawthorne effect is sensitive to the context of the study and our findings may not apply to other settings or methodologies. Our study was conducted in health facilities participating in …
+
+26. Analysis of threats to research validity introduced by audio recording clinic visits: Selection bias, Hawthorne effect, both, or neither?
+   https://www.sciencedirect.com/science/article/pii/S073839911500097X
+   (SG Henry, A Jerant, AM Iosif, MD Feldman… - Patient education and …, 2015 - Elsevier | 2015 | cited by 67)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC4430356/pdf/nihms672910.pdf
+   … Secondary analysis of data from a randomized trial studying communication about depression; participants were asked for optional consent to audio record study visits. Multiple logistic …
+
+27. Shedding light on research participation effects in behaviour change trials: a qualitative study examining research participant experiences
+   https://link.springer.com/article/10.1186/s12889-016-2741-6
+   (V MacNeill, M Foley, A Quirk, J McCambridge - BMC public health, 2016 - Springer | 2016 | cited by 72)
+   [PDF] https://link.springer.com/content/pdf/10.1186/s12889-016-2741-6.pdf
+   … in a study that is much more intense and in depth I think it would have had more impact’ (Unhealthy diet participant … A systematic review of evidence from Solomon 4-group studies. PLoS …
+
+28. Can simply answering research questions change behaviour? Systematic review and meta analyses of brief alcohol intervention trials
+   https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0023748
+   (J McCambridge, K Kypri - PloS one, 2011 - journals.plos.org | 2011 | cited by 312)
+   [PDF] https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0023748&type=printable
+   … Trials and other evaluation studies typically involve asking study participants about their … in behavioural research a century ago [3]. The Hawthorne effect, wherein participants change …
+
+29. Benefits of participation in clinical trials: an umbrella review
+   https://www.mdpi.com/1660-4601/19/22/15368
+   (A Bouzalmate-Hajjaj, P Masso Guijarro… - … Research and Public …, 2022 - mdpi.com | 2022 | cited by 75)
+   … to similar non-participating patients receiving conventional care … studies which did not report benefits or harmful effects in all participants; study designs other than systematic reviews …
+
+30. Randomized controlled trial of the effects of completing the Alcohol Use Disorders Identification Test questionnaire on self‐reported hazardous drinking
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1360-0443.2007.02080.x
+   (J McCambridge, M Day - Addiction, 2008 - Wiley Online Library | 2008 | cited by 208)
+   … reactivity to study conditions by study participants themselves… in trials and systematic reviews of the effects of brief … and Hawthorne Effects as reflected in the current study design may not …
+
+31. The Hawthorne effect on adherence to hand hygiene in patient care
+   https://www.sciencedirect.com/science/article/pii/S0195670120303595
+   (E Purssell, N Drey, J Chudleigh, S Creedon… - Journal of Hospital …, 2020 - Elsevier | 2020 | cited by 135)
+   [PDF] https://openaccess.city.ac.uk/id/eprint/24617/3/Hawthorne%20paper%20for%20CRO.pdf
+   … of this review was to determine the rigour of the methods used to assess the Hawthorne effect on hand hygiene, effect … To this end, a systematic literature review with meta-analysis was …
+
+32. Do brief interventions which target alcohol consumption also reduce cigarette smoking?: Systematic review and meta-analysis
+   https://www.sciencedirect.com/science/article/pii/S0376871608001051
+   (J McCambridge, RJ Jenkins - Drug and alcohol dependence, 2008 - Elsevier | 2008 | cited by 38)
+   … primary studies which were included in this systematic review. Fourteen of these studies … behavioral consequences of brief intervention study participation itself warrant further study. …
+
+33. Use of modified Delphi introduces the risk of chronological bias during clinical research interventions
+   https://journals.rcni.com/nurse-researcher/evidence-and-practice/use-of-modified-delphi-introduces-the-risk-of-chronological-bias-during-clinical-research-interventions-nr.2020.e1742/print/full
+   (K Armstrong, H Nadim, DW Olson, S Stutzman - Nurse researcher, 2021 - journals.rcni.com | 2021 | cited by 1)
+   … McCambridge et al’s (2014) systematic review of the … The participants were aware of the study’s design and its future directions, causing a chronological bias, and the Hawthorne effect …
+
+34. Bias due to MEasurement Reactions In Trials to improve health (MERIT): protocol for research to develop MRC guidance
+   https://link.springer.com/article/10.1186/s13063-018-3017-5
+   (…, A Farmer, M Gulliford, L Locock, J McCambridge… - Trials, 2018 - Springer | 2018 | cited by 31)
+   [PDF] https://link.springer.com/content/pdf/10.1186/s13063-018-3017-5.pdf
+   … There is now clear systematic review evidence that measurement can affect the people … monitoring on participants in research. The Hawthorne effect appeared in a research publication …
+
+35. Change over time in alcohol consumption in control groups in brief intervention studies: systematic review and meta-regression study
+   https://www.sciencedirect.com/science/article/pii/S0376871608003591
+   (RJ Jenkins, J McAlaney, J McCambridge - Drug and alcohol dependence, 2009 - Elsevier | 2009 | cited by 128)
+   [PDF] https://www.academia.edu/download/49369352/j.drugalcdep.2008.09.01620161005-26373-1s35afc.pdf
+   Reactivity to assessment has attracted recent attention in the brief alcohol intervention literature. This systematic review sought to examine the nature of change in alcohol consumption …
+
+36. The Hawthorne effect in infection prevention and epidemiology
+   https://www.cambridge.org/core/journals/infection-control-and-hospital-epidemiology/article/hawthorne-effect-in-infection-prevention-and-epidemiology/4007A521142648A0EA7C2F3E4A90D436
+   (LF Chen, MW Vander Weg, DA Hofmann… - Infection control & …, 2015 - cambridge.org | 2015 | cited by 223)
+   [PDF] https://www.researchgate.net/profile/David-Hofmann-6/publication/282042812_The_Hawthorne_Effect_in_Infection_Prevention_and_Epidemiology/links/5c35f496a6fdccd6b59eeb7a/The-Hawthorne-Effect-in-Infection-Prevention-and-Epidemiology.pdf
+   … changes among participants of epidemiological studies or … the review is to describe the origins of the Hawthorne Effect, … literature, to describe characteristics of the Hawthorne effect, and …
+
+37. Reducing bias in trials from reactions to measurement: the MERIT study including developmental work and expert workshop.
+   https://researchonline.lshtm.ac.uk/id/eprint/4663929
+   (…, S Sutton, J McCambridge… - Health technology …, 2021 - researchonline.lshtm.ac.uk | 2021 | cited by 24)
+   [PDF] https://researchonline.lshtm.ac.uk/id/eprint/4663929/1/3037564.pdf
+   … we did identify five systematic reviews that quantified the effects of … participants changing their behaviour in response to being observed. The Hawthorne effect appeared in a research …
+
+38. The question–behavior effect: Genuine effect or spurious phenomenon? A systematic review of randomized controlled trials with meta-analyses.
+   https://psycnet.apa.org/record/2014-34448-001
+   (AM Rodrigues, N O'Brien, DP French… - Health …, 2015 - psycnet.apa.org | 2015 | cited by 120)
+   [PDF] https://pure.york.ac.uk/portal/files/55039046/QBE_resubmission_revised_manuscript_final_version_03042014.pdf
+   … also explored a possible dose–response relationship in the QBE and explored several possible moderators of effects: features of participants (student vs. other samples), interventions (…
+
+39. An evaluation of the Hawthorne effect in a clinical trial of trauma care in Ghana
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/wjs.12410
+   (A Gyedu, F Amponsah‐Manu, S Mensah… - World journal of …, 2024 - Wiley Online Library | 2024 | cited by 4)
+   … on to conclude that the effects of research participation on the … A systematic review on this topic revealed 16 studies across … In a review of the Hawthorne effect in general, McCambridge …
+
+40. Deterioration over time in effect of motivational interviewing in reducing drug consumption and related risk among young people
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1360-0443.2005.01013.x
+   (J McCambridge, J Strang - Addiction, 2005 - Wiley Online Library | 2005 | cited by 152)
+   [PDF] https://www.academia.edu/download/45641672/Deterioration_over_time_in_effect_of_Mot20160515-24557-1cja51o.pdf
+   … , both study groups reported being equivalently influenced by study participation and that … The possibility of a late Hawthorne effect needs to be considered seriously. We deliberately …
+
+41. P1-39 In randomisation we trust? Research reactivity produces bias in behaviour change trials
+   https://jech.bmj.com/content/65/Suppl_1/A77.4.abstract
+   (J McCambridge, K Kypri, D Elbourne - Journal of Epidemiology & …, 2011 - jech.bmj.com | 2011)
+   … sensitisation and the Hawthorne effect, the implications of participant reactivity in behaviour … systematic reviews, dedicated methodological experimental studies and qualitative studies …
+
+42. Introduction to Hawthorne Effects and Behavioral Studies
+   https://www.researchgate.net/profile/Omar-Omar-43/publication/351284103_By_Introduction_to_Hawthorne_Effects_and_Behavioral_Studies/links/608fef59458515d315f13527/By-Introduction-to-Hawthorne-Effects-and-Behavioral-Studies.pdf
+   (O Ebadah - 2021 - researchgate.net | 2021)
+   … McCambridge has detailed the purpose in a more concise and clear way by mentioning that … on the Hawthorne effect has not previously been evaluated in a systematic review. Early …
+
+43. Influence of the Hawthorne effect on spatiotemporal parameters, kinematics, ground reaction force, and the symmetry of the dominant and nondominant lower limbs …
+   https://www.sciencedirect.com/science/article/pii/S0021929023001240
+   (J Jeon, S Kwon, Y Lee, J Hong, J Yu, J Kim… - Journal of …, 2023 - Elsevier | 2023 | cited by 35)
+   … Hawthorne effect is a change in behavior resulting from awareness of being observed or evaluated. This study … In the first condition (unawareness of evaluation; UE), participants were …
+
+44. Assessment effects in educational and psychosocial intervention trials: An important but often‐overlooked problem
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/nur.21651
+   (MK Song, SE Ward - Research in nursing & health, 2015 - Wiley Online Library | 2015 | cited by 48)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC4439294/pdf/nihms660850.pdf
+   … , self-monitoring and the Hawthorne effect, that are not quite as … on what the Hawthorne effect actually is (McCambridge, Witton, … Taken together, these systematic reviews suggest that, …
+
+45. Hawthorne effect in the YourCall trial suggested by participants' qualitative responses
+   https://www.jclinepi.com/article/S0895-4356(19)30305-1/abstract
+   (S Sharpe, B Kool, R Whittaker… - Journal of clinical …, 2019 - jclinepi.com | 2019 | cited by 7)
+   [PDF] https://www.jclinepi.com/article/S0895-4356(19)30305-1/pdf
+   … if the Hawthorne effect influenced selfreported alcohol consumption online. They first ‘‘dismantled’’ the Hawthorne effect into two components (the effect of participants’ awareness that …
+
+46. The Hawthorne effect on adherence to hand hygiene in patient care: a systematic review
+   https://www.researchgate.net/profile/Nicholas-Drey/publication/343445174_The_Hawthorne_effect_on_adherence_to_hand_hygiene_in_patient_care_a_systematic_review/links/5f8d556692851c14bcd2af50/The-Hawthorne-effect-on-adherence-to-hand-hygiene-in-patient-care-a-systematic-review
+   (E Purssell, N Drey, J Chudleigh, S Creedon, DJ Gould - researchgate.net)
+   … In conclusion our systematic review demonstrates clear evidence of a Hawthorne effect for hand hygiene on … Better-controlled studies to assess magnitude and persistence of the …
+
+47. Reactivity beyond contamination. An integrative literature review of video studies in educational research
+   https://www.tandfonline.com/doi/abs/10.1080/1743727X.2022.2094356
+   (LC Lahn, K Klette - International journal of research & method in …, 2023 - Taylor & Francis | 2023 | cited by 24)
+   [PDF] https://www.tandfonline.com/doi/pdf/10.1080/1743727X.2022.2094356
+   … participation in research. As a point of departure we stick to a generic understanding of ‘reactivity’ or ‘research participation effects’ (McCambridge … and the Hawthorne effects. With some …
+
+48. Causal models accounted for research participation effects when estimating effects in a behavioral intervention trial
+   https://www.sciencedirect.com/science/article/pii/S0895435621000809
+   (M Bendtsen, J McCambridge - Journal of clinical epidemiology, 2021 - Elsevier | 2021 | cited by 13)
+   … We examine how to account for research participation effects analytically. Study design and … As our knowledge grows about research participation effects, we may move away from …
+
+49. Hawthorne Effect
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119111931.ch46
+   (A Villaseñor - The Encyclopedia of Research Methods in …, 2021 - Wiley Online Library | 2021 | cited by 4)
+   … social science research on the Hawthorne effect has focused on research designs … McCambridge, J., Witton, J., and Elbourne, DR (2014). Systematic review of the Hawthorne effect: …
+
+50. Hawthorne effect with transient behavioral and biochemical changes in a randomized controlled sleep extension trial of chronically short-sleeping obese adults …
+   https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0104176
+   (…, KI Rother, G Csako, Sleep Extension Study Group - PLoS …, 2014 - journals.plos.org | 2014 | cited by 65)
+   [PDF] https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0104176&type=printable
+   … In addition to “research participation effect” or the Hawthorne effect, our experience might also be conceptualized based on another principle. In quantum physics, the “Observer …
+
+51. Measuring and accounting for the Hawthorne effect during a direct overt observational study of intensive care unit nurses
+   https://www.sciencedirect.com/science/article/pii/S0196655317302699
+   (SL Kurtz - American Journal of Infection Control, 2017 - Elsevier | 2017 | cited by 40)
+   … Only those nurses who had agreed to participate in this study and … systematic review of 19 studies reported that 12 of the studies reviewed provided evidence that a Hawthorne effect …
+
+52. The effect of coloured overlays and lenses on reading: a systematic review of the literature
+   https://link.springer.com/article/10.1111/opo.12316
+   (PG Griffiths, RH Taylor, LM Henderson… - … and Physiological Optics, 2016 - Springer | 2016 | cited by 103)
+   [PDF] https://bradscholars.brad.ac.uk/bitstreams/f936614c-02af-4c09-90c7-a6ce0e6fd85f/download
+   … likely to be the result of placebo, practice or Hawthorne effects. … ) participants, meaning that this study was at high risk of bias (Table 1). The study also contains some contrary evidence …
+
+53. The legacy of the hawthorne experiments: A critical analysis of the human relations school of thought
+   https://www.torrossa.com/gs/resourceProxy?an=4232940&publisher=F34885
+   (M Warner, R Busse - History of economic ideas: XXV, 2, 2017, 2017 - torrossa.com | 2017 | cited by 37)
+   … Hawthorne studies, our broader argument, grounded on our literature-based analysis of the Hawthorne … framework summarizing the findings of our literature evaluation in Figure 2 and a …
+
+54. " I Thought I Should Give You Good Answers": Evidence of Demand Characteristics Bias in a Research Interview.
+   https://openurl.ebsco.com/contentitem/gcd:192427383?sid=ebsco:plink:crawler-gcd&id=ebsco:gcd:192427383&crl=c&jrnl=10724303
+   (T Hiratsuka - TESL-EJ, 2026 - openurl.ebsco.com | 2026)
+   … Hawthorne effect, and positioning theory to account for the mechanisms through which research interactions influence participant … A systematic review affirmed that this phenomenon is …
+
+55. Audiovisual aids in primary healthcare settings' waiting rooms. A systematic review
+   https://www.tandfonline.com/doi/abs/10.1080/13814788.2018.1491964
+   (C Berkhout, S Zgorska-Meynard-Moussa… - European Journal of …, 2018 - Taylor & Francis | 2018 | cited by 74)
+   [PDF] https://www.tandfonline.com/doi/pdf/10.1080/13814788.2018.1491964
+   … that might influence the effects of AVAs, doctors ought to participate in conceiving and … patients creates a bias in the study results (increased Hawthorne effect, not taken into account as …
+
+56. Patient preferences and performance bias in a weight loss trial with a usual care arm
+   https://www.sciencedirect.com/science/article/pii/S0738399114000111
+   (J McCambridge, A Sorhaindo, A Quirk… - Patient education and …, 2014 - Elsevier | 2014 | cited by 61)
+   … Systematic reviews provide evidence of the use of Zelen and patient … More generally, we should address how motivational and other factors associated with research participation …
+
+57. Applying thematic synthesis to interpretation and commentary in epidemiological studies: identifying what contributes to successful interventions to promote hand …
+   https://qualitysafety.bmj.com/content/29/9/756.abstract
+   (N Drey, D Gould, E Purssell, J Chudleigh… - BMJ quality & …, 2020 - qualitysafety.bmj.com | 2020 | cited by 17)
+   [PDF] https://openaccess.city.ac.uk/id/eprint/23385/11/Thematic%20synthesis%20as%20accepted.pdf
+   … criteria for our review, have employed the Hawthorne effect as part of the … . Systematic review of the Hawthorne effect: new concepts are needed to study research participation effects. J …
+
+58. Effects of a social norm-based handwashing intervention including handwashing stations, and a handwashing station-only intervention on handwashing with soap in …
+   https://www.thelancet.com/journals/langlo/article/PIIS2214-109X(21)00387-9/fulltext
+   (MA Amon-Tanoh, J McCambridge, PK Blon… - The Lancet Global …, 2021 - thelancet.com | 2021 | cited by 27)
+   [PDF] https://www.thelancet.com/pdfs/journals/langlo/PIIS2214-109X(21)00387-9.pdf
+   … In a 2020 systematic review 10 assessing the effect of … To minimise the Hawthorne effect among study participants, … was not solely due to a Hawthorne effect. The low handwashing rates …
+
+59. Enhancing Surgical Safety and Efficiency: Systematic Review and Single-Arm Meta-Analysis of Surgical Data Recorders
+   https://www.jmir.org/2025/1/e72703/
+   (N Siegel, A Rotärmel, G Polychronidis, G Salg… - … Internet Research, 2025 - jmir.org | 2025)
+   … a relatively short study period, the Hawthorne effect on the study population … study populations were reduced due to dropout, either due to patients or staff not consenting to participate. …
+
+60. Hawthorne effect: Definition, how it works, and how to avoid it
+   https://www.simplypsychology.org/hawthorne-effect.html
+   (A Perera - Simply Psychology, 2023 - simplypsychology.org | 2023 | cited by 27)
+   … their classroom participation would be observed, they might have more … systemic review of the available evidence on the Harthorne effect, the researchers concluded that while research …
+
+61. Hawthorne Effect in Screening Ambulatory Activity Status Using Wearable Pedometers Varies Across Age groups
+   https://www.sciencedirect.com/science/article/pii/S2773065426000222
+   (S Hammad, A Alnawayseh, R Hammad, L Ballaz… - AJPM Focus, 2026 - Elsevier | 2026)
+   … Data from 60 healthy men were included in this study, with 10 participants assigned to the … physical activity in adults: A systematic review. International Journal of Behavioral Nutrition …
+
+62. Do fixed orthodontic appliances cause halitosis? A systematic review
+   https://link.springer.com/article/10.1186/s12903-019-0761-1
+   (S Abdulraheem, L Paulsson, S Petrén, M Sonesson - BMC oral health, 2019 - Springer | 2019 | cited by 21)
+   [PDF] https://link.springer.com/content/pdf/10.1186/s12903-019-0761-1.pdf
+   … participants have had more than 6 months’ involvement in the trial [29]. In this systematic review, the participants … which means that the Hawthorne effect may have influenced the results. …
+
+63. Impact of observing hand hygiene in practice and research: a methodological reconsideration
+   https://www.sciencedirect.com/science/article/pii/S0195670116303231
+   (DJ Gould, S Creedon, A Jeanes, NS Drey… - Journal of hospital …, 2017 - Elsevier | 2017 | cited by 134)
+   [PDF] https://openaccess.city.ac.uk/id/eprint/15939/3/Impact%20of%20observing%20hand%20hygiene%20in%20practice%20and%20research%20a%20methodological%20reconsideration%20JHI%202016.pdf
+   … The Hawthorne effect in relation to hand … the Hawthorne effect, but few publications have discussed how to implement these techniques or examine their effectiveness. There is evidence …
+
+64. The Hawthorne effect in eye-blinking: Awareness that one's blinks are being counted alters blink behavior
+   https://www.tandfonline.com/doi/abs/10.1080/02713683.2020.1752736
+   (N Shaafi Kabiri, C Brooks, T Comery… - … Eye Research, 2020 - Taylor & Francis | 2020 | cited by 18)
+   … Citation6–8 Furthermore, SEBR may be susceptible to the Hawthorne Effect; that, when research participants who are aware they are being observed change their behavior, potentially …
+
+65. Qualitative process study of community pharmacist brief alcohol intervention effectiveness trial: can research participation effects explain a null finding?
+   https://www.sciencedirect.com/science/article/pii/S037687161600051X
+   (…, C Whittlesea, I Norman, J McCambridge - Drug and alcohol …, 2016 - Elsevier | 2016 | cited by 32)
+   [PDF] https://centaur.reading.ac.uk/80758/1/PASqual_Manuscript_final.pdf
+   … et al., 2014a, McCambridge et al., 2014b). Systematic review data indicate small effects of assessments on behaviour in randomised comparisons within brief alcohol intervention trials, …
+
+66. The efficacy of single‐session motivational interviewing in reducing drug consumption and perceptions of drug‐related risk and harm among young people: results …
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1360-0443.2004.00564.x
+   (J McCambridge, J Strang - Addiction, 2004 - Wiley Online Library | 2004 | cited by 658)
+   [PDF] https://www.academia.edu/download/45641613/The_efficacy_of_single-session_motivatio20160515-3533-a01wjt.pdf
+   … , including young people, participating in research studies has been investigated previously … with this study design to completely exclude the possibility of a Hawthorn effect. Also, it must …
+
+67. Efficacy of bioactive glass-based desensitizer compared to other desensitizing agents or techniques in dentin hypersensitivity: a systematic review
+   https://link.springer.com/article/10.1186/s12903-025-06288-5
+   (A Al-Haddad, N Alarami, AF Alshammari, AA Madfa - BMC Oral Health, 2025 - Springer | 2025 | cited by 8)
+   [PDF] https://link.springer.com/content/pdf/10.1186/s12903-025-06288-5.pdf
+   … The objective of this systematic review was to evaluate the effectiveness of home and … encompassed in this review. PICO was used as follows: Participation of patients diagnosed …
+
+68. Attempting to separate placebo effects from exercise in chronic pain: a systematic review and meta-analysis
+   https://link.springer.com/article/10.1007/s40279-021-01526-6
+   (CT Miller, PJ Owen, CA Than, J Ball, K Sadler… - Sports Medicine, 2022 - Springer | 2022 | cited by 36)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s40279-021-01578-8.pdf
+   … effect, non-specific effects (ie, natural history, regression to the mean, spontaneous improvement and the Hawthorne effect [26… Study participants were required to be adults (≥ 18 years) …
+
+69. Models for individual oral health promotion and their effectiveness: a systematic review
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1834-7819.2009.01118.x
+   (D Yevlahova, J Satur - Australian dental journal, 2009 - Wiley Online Library | 2009 | cited by 225)
+   … effect of this approach on sick leave levels of the participants … The study concluded that deterioration of effect is the most … assessment, a late Hawthorne effect cannot be ruled out. …
+
+70. Educational pamphlets for improving uptake of cancer screening: a systematic review
+   https://connectsci.au/hc/article-abstract/11/3/207/34928
+   (BS Teo, E Li, C Tan, YL Munro - The Journal of Primary Health Care, 2019 - connectsci.au | 2019 | cited by 13)
+   [PDF] https://connectsci.au/hc/article-pdf/11/3/207/222751/hc18093.pdf
+   … When people participate in research and are aware of being studied, there is a possible effect on their behaviour, often termed the Hawthorne effect. Three of the nine identified studies (…
+
+71. The impact of asking about interest in free nicotine patches on smoker's stated intent to change: Real effect or artefact of question ordering?
+   https://academic.oup.com/ntr/article-abstract/18/5/1215/2510895
+   (…, V Kushnir, J McCambridge - … & Tobacco Research, 2016 - academic.oup.com | 2016 | cited by 7)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC5896818/pdf/nihpp-rs4169007v1.pdf
+   … participants actually engage with the research … research assessments themselves cause bias in behaviour change trials? A systematic review of evidence from solomon 4-group studies …
+
+72. Effects of a waiting list control design on alcohol consumption among online help-seekers: A randomised controlled trial
+   https://www.sciencedirect.com/science/article/pii/S0376871624013346
+   (KU Gunnarsson, M Henriksson, J McCambridge… - Drug and Alcohol …, 2024 - Elsevier | 2024 | cited by 3)
+   … The aim of this study was to estimate the effects of a waiting list design on alcohol … Data were available for 954 participants at 1-month follow-up. We found no strong evidence that …
+
+73. Variability of spatiotemporal gait kinematics during treadmill walking: is there a hawthorne effect?
+   https://journals.humankinetics.com/view/journals/jab/39/3/article-p151.xml
+   (S Farhan, MA Avalos… - Journal of Applied …, 2023 - journals.humankinetics.com | 2023 | cited by 10)
+   [PDF] https://www.academia.edu/download/103545200/article-p151.pdf
+   … Although the Hawthorne effect, or modifications in participant behavior due to knowledge of … a recent systematic review identifying the range of optimum (healthy) values in older adults. …
+
+74. Comparing the effectiveness of water flosser and dental floss in plaque reduction among adults: A systematic review
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC10906797/
+   (S Mohapatra, L Rajpurohit… - Journal of Indian …, 2024 - pmc.ncbi.nlm.nih.gov | 2024 | cited by 36)
+   … to additional variation in the outcome of the studies. Another factor that could have affected the outcome is the Hawthorne effect. It … in the performance of participants when they are being …
+
+75. A systematic review of intraoperative process mapping in surgery
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC5750301/
+   (RD Chung, DJ Hunter-Smith, RT Spychal… - Gland …, 2017 - pmc.ncbi.nlm.nih.gov | 2017 | cited by 25)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC5750301/pdf/gs-06-06-715.pdf
+   … to improve communication and competencies of less experienced staff participating … Hawthorne effect and how to address it, a systematic review found that it exists in numerous studies…
+
+76. The impact of brief alcohol interventions in primary healthcare: a systematic review of reviews
+   https://academic.oup.com/alcalc/article-abstract/49/1/66/145551
+   (A O'Donnell, P Anderson, D Newbury-Birch… - Alcohol and …, 2014 - academic.oup.com | 2014 | cited by 749)
+   [PDF] https://academic.oup.com/alcalc/article-pdf/49/1/66/17151694/agt170.pdf
+   … review Equivocal evidence with regards to link between SES and intervention participation. … behaviour change due to a general ‘Hawthorn Effect’, whereby increased attention or …
+
+77. Effectiveness, acceptability and usefulness of mobile applications for cardiovascular disease self-management: Systematic review with meta-synthesis of quantitative …
+   https://academic.oup.com/eurjpc/article-abstract/25/5/505/5926151
+   (GM Coorey, L Neubeck, J Mulley… - European journal of …, 2018 - academic.oup.com | 2018 | cited by 344)
+   [PDF] https://napier-repository.worktribe.com/OutputFile/2306069
+   … reported that 10 of 16 study participants withdrew prior to day … aspects of the app overall more than those who withdrew prior … study attributed improvements to possible Hawthorne effect …
+
+78. The Hawthorne effect in hand hygiene compliance monitoring
+   https://utoronto.scholaris.ca/bitstreams/a19d2e43-1f85-4c60-9926-fe40b1213115/download
+   (JA Srigley - 2014 - utoronto.scholaris.ca | 2014 | cited by 1)
+   [PDF] https://utoronto.scholaris.ca/bitstreams/a19d2e43-1f85-4c60-9926-fe40b1213115/download
+   … causes of research participant behaviour change. 28 The Hawthorne effect has also been … it is an approach that does not yet appear to have been utilized based on this literature review. …
+
+79. “I Thought I Should Give You Good Answers”: Evidence of Demand Characteristics Bias in a Research Interview
+   https://tesl-ej.org/wordpress/issues/volume29/ej116/ej116s1/
+   (T Hiratsuka - tesl-ej.org)
+   … Hawthorne effect, and positioning theory to account for the mechanisms through which research interactions influence participant … A systematic review affirmed that this phenomenon is …
+
+80. Healthcare Utilization Unchanged in the Control Arm of a Randomized Clinical Trial
+   https://journals.sagepub.com/doi/abs/10.1177/21501319251379740
+   (P Gongloor, S Nadeem, X Yu, M Raji… - Journal of Primary …, 2025 - journals.sagepub.com | 2025 | cited by 3)
+   [PDF] https://journals.sagepub.com/doi/pdf/10.1177/21501319251379740
+   … Based on prior literature on the Hawthorne effect, 2,12 we hypothesized that control participants would increase … A systematic review of 19 studies revealed some evidence of the …
+
+81. Alcohol email assessment and feedback study dismantling effectiveness for university students (AMADEUS-1): study protocol for a randomized controlled trial
+   https://link.springer.com/article/10.1186/1745-6215-13-49
+   (J McCambridge, P Bendtsen, M Bendtsen, P Nilsen - Trials, 2012 - Springer | 2012 | cited by 25)
+   [PDF] https://link.springer.com/content/pdf/10.1186/1745-6215-13-49.pdf
+   … of recent systematic reviews provide preliminary evidence of … could also have been a Hawthorne effect in response to having … to constrain possible effects of research participation on …
+
+82. Can obtaining informed consent alter self-reported drinking behaviour? A methodological experiment
+   https://link.springer.com/article/10.1186/s12874-015-0032-z
+   (L Felix, P Keating, J McCambridge - BMC medical research methodology, 2015 - Springer | 2015 | cited by 11)
+   [PDF] https://link.springer.com/content/pdf/10.1186/s12874-015-0032-z.pdf
+   … gaps in evidence on such research participation effects, we … to be manifestations of the Hawthorne effect, though this term … systematic review of evidence from solomon 4-group studies. …
+
+83. Generalization in the tropics–development policy, randomized controlled trials, and external validity
+   https://academic.oup.com/wbro/article-abstract/33/1/34/4951685
+   (J Peters, J Langbein, G Roberts - The World Bank Research …, 2018 - academic.oup.com | 2018 | cited by 105)
+   [PDF] https://academic.oup.com/wbro/article-pdf/33/1/34/24459173/lkx005.pdf
+   … This paper systematically reviews all RCTs conducted in … validity: Hawthorne effects, general equilibrium effects, specific … validity dimensions in a more systematic reporting on the …
+
+84. The efficacy of positive psychological interventions from non-western countries: a systematic review and meta-analysis
+   https://internationaljournalofwellbeing.org/index.php/ijow/article/view/711
+   (T Hendriks… - International …, 2018 - internationaljournalofwellbeing.org | 2018 | cited by 159)
+   [PDF] https://internationaljournalofwellbeing.org/index.php/ijow/article/download/711/639
+   … McCambridge, J., Witton, J., & Elbourne, DR (2014)… Systematic review of the Hawthorne effect: New concepts are needed to study research participation effects. Journal of Clinical …
+
+85. Impact of rounding checklists on the outcomes of patients admitted to ICUs: a systematic review and meta-analysis
+   https://journals.lww.com/ccejournal/fulltext/2024/08000/impact_of_rounding_checklists_on_the_outcomes_of.11.aspx
+   (KM MacKinnon, S Seshadri, JF Mailman… - Critical care …, 2024 - journals.lww.com | 2024 | cited by 7)
+   … Therefore, the aim of this study was to perform a systematic review and meta-analysis to evaluate the effectiveness of ICU rounding checklists on patient-related outcomes. …
+
+86. Control group improvements in physical activity intervention trials and possible explanatory factors: a systematic review
+   https://journals.humankinetics.com/view/journals/jpah/9/6/article-p884.xml
+   (L Waters, M Reeves, B Fjeldsoe… - Journal of physical …, 2012 - journals.humankinetics.com | 2012 | cited by 119)
+   … These include the Hawthorne effect (where participants display an … and participant characteristics. Associations observed in this review should be evaluated empirically in future …
+
+87. The role of active and passive music engagement in cognitive development: A systematic review
+   https://journals.sagepub.com/doi/abs/10.1177/02557614241268049
+   (K Stekić - International Journal of Music Education, 2024 - journals.sagepub.com | 2024 | cited by 17)
+   … McCambridge, J., Witton, J., & Elbourne, DR (2014)… Systematic review of the hawthorne effect: New concepts are needed to study research participation effects. Journal of Clinical …
+
+88. Effective methods of promoting hand hygiene to reduce hospital acquired infections: A literature review
+   https://clok.uclan.ac.uk/55172/1/55172%20Yates%20%26%20Regan%20VOR.pdf
+   (S Yates, PJ Regan - Journal of Nursing theory and Practice, 2025 - clok.uclan.ac.uk | 2025 | cited by 4)
+   [PDF] https://clok.uclan.ac.uk/55172/1/55172%20Yates%20%26%20Regan%20VOR.pdf
+   … McCambridge, J., Witton, J., Elbourne, DR (2014)… Systematic review of the Hawthorne effect: New concepts are needed to study research participation effects. Journal of Clinical …
+
+89. Assessment of the Hawthorne effect during central venous catheter manipulation
+   https://www.scielo.br/j/reeusp/a/Tz5qKz8pW5MB8tt6jFpskPS/?lang=en
+   (RD Lobo, MS Oliveira, JJ Colella, ND Silva… - Revista da Escola de …, 2022 - SciELO Brasil | 2022 | cited by 3)
+   [PDF] https://www.scielo.br/j/reeusp/a/Tz5qKz8pW5MB8tt6jFpskPS/?format=pdf&lang=en
+   … In a systematic review conducted on the Hawthorne effect in … of the professionals participating in the study corroborate the 85… in this study and in other studies with similar objectives( 4 ). …
+
+90. Re: Insulin, insulin-like growth factor-I, and risk of breast cancer in postmenopausal women
+   https://academic.oup.com/jnci/article-abstract/101/14/1030/2515627
+   (R Vigneri, F Frasca, L Sciacca… - JNCI: Journal of the …, 2009 - academic.oup.com | 2009 | cited by 17)
+   [PDF] https://academic.oup.com/jnci/article-pdf/101/14/1030/18084855/djp155.pdf
+   … to the three comments of McCambridge et al. regarding our … of the participants remaining at each time point. Although … third comment, we note that the Hawthorne effect, one type of “…
+
+91. Survival benefit associated with participation in clinical trials of anticancer drugs: a systematic review and meta-analysis
+   https://jamanetwork.com/journals/jama/article-abstract/2819132
+   (R Iskander, H Moyer, K Vigneault, SM Mahmud… - Jama, 2024 - jamanetwork.com | 2024 | cited by 40)
+   … of this study was to conduct a systematic review and meta-analysis of the evidence examining whether patient participation in cancer trials (hereafter referred to as trial participants) was …
+
+92. The hawthorn-effect of organizational behavior is changing American public attitudes: Applied toward the US military effort to change nine military bases that …
+   https://minds.wisconsin.edu/bitstream/handle/1793/84277/Permann,%20Jason.pdf?sequence=1
+   (JA Permann - 2023 - minds.wisconsin.edu | 2023)
+   [PDF] https://minds.wisconsin.edu/bitstream/handle/1793/84277/Permann,%20Jason.pdf?sequence=1
+   … (McCambridge, Witton, & Elbourne, pg. 267-277, 2014). This … For the purpose of this literature review; the Hawthorne Effect, … drew the conclusion that participants in a study will change …
+
+93. Journal Club: Quantifying the Hawthorne effect using overt and covert observation of hand hygiene at a tertiary care hospital in Saudi Arabia
+   https://www.ajicjournal.org/article/S0196-6553(18)30466-8/abstract
+   (SC Knighton, J Davis - American Journal of Infection Control, 2018 - ajicjournal.org | 2018 | cited by 3)
+   … The Hawthorne effect implies that subjects alter their behavior due to … Systematic review of the Hawthorne effect: New concepts are needed to study research participation effects …
+
+94. Improving acceptability of mHealth apps—the use of the technology acceptance model to assess the acceptability of mHealth apps: systematic review
+   https://www.jmir.org/2025/1/e66432/
+   (A Adnan, RE Irvine, A Williams, M Harris… - … Internet Research, 2025 - jmir.org | 2025 | cited by 56)
+   … the Hawthorne effect and the intention-behavior gap [51,52]. The … 2 studies in this systematic review that structured their model similarly to this approach but failed to find strong evidence …
+
+95. The use of technology to improve medication adherence in heart failure patients: a systematic review of randomised controlled trials
+   https://www.tandfonline.com/doi/abs/10.1186/s40545-023-00582-9
+   (C Cheng, G Donovan, N Al-Jawad… - … of Pharmaceutical Policy …, 2023 - Taylor & Francis | 2023 | cited by 34)
+   [PDF] https://www.tandfonline.com/doi/pdf/10.1186/s40545-023-00582-9
+   … systematic review aimed to determine technology's impact on MA in HF patients. This review involved nine RCTs with a total of 1032 participants … produce the 'Hawthorne effect' whereby …
+
+96. Improvements in clinical signs of Parkinson's disease using photobiomodulation: a prospective proof-of-concept study
+   https://link.springer.com/article/10.1186/s12883-021-02248-y
+   (A Liebert, B Bicknell, EL Laakso, G Heller, P Jalilitabaei… - Bmc Neurology, 2021 - Springer | 2021 | cited by 125)
+   [PDF] https://link.springer.com/content/pdf/10.1186/s12883-021-02248-y.pdf
+   … to quantify the placebo effect, but the related Hawthorne Effect could be assessed. … Hawthorne Effect can occur in response to participation in research or being observed during a study […
+
+97. Effect of investigator observation on gait parameters in individuals with stroke
+   https://www.sciencedirect.com/science/article/pii/S0021929020300051
+   (MM Ardestani, TG Hornby - Journal of biomechanics, 2020 - Elsevier | 2020 | cited by 33)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC8597205/pdf/nihms-1550122.pdf
+   … This potential Hawthorne effect on … 10 participants were needed to achieve >80% power for anticipated differences in gait speed, consistent with published findings of Hawthorne effect …
+
+98. Community pharmacist-led interventions and their impact on patients' medication adherence and other health outcomes: a systematic review
+   https://academic.oup.com/ijpp/article-abstract/26/5/387/6099602
+   (A Milosavljevic, T Aspden… - International Journal of …, 2018 - academic.oup.com | 2018 | cited by 383)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/ijpp.12462
+   … volunteered to participate in the studies. [31] There may be … risk’ in the studies included in this review was selection bias, … This could have given rise to the Hawthorne effect which sees …
+
+99. Effects of study design and allocation on self-reported alcohol consumption: randomized trial
+   https://link.springer.com/article/10.1186/s13063-015-0642-0
+   (K Kypri, A Wilson, J Attia, PJ Sheeran, J McCambridge - Trials, 2015 - Springer | 2015 | cited by 15)
+   [PDF] https://link.springer.com/content/pdf/10.1186/s13063-015-0642-0.pdf
+   … research participation effects to guide empirical studies and advocated adopting a more participant-centred view of the research … Hawthorne effect [6], and a small and diverse group of …
+
+100. Smoking cessation among low-socioeconomic status and disadvantaged population groups: a systematic review of research output
+   https://www.mdpi.com/1660-4601/12/6/6403
+   (RJ Courtney, S Naicker, A Shakeshaft, P Clare… - … environmental research …, 2015 - mdpi.com | 2015 | cited by 48)
+   … to TP2, suggests it could be used more frequently. Allowing for biochemical verification to … the Hawthorne effect that may lead to misclassification due to the reluctance of participants to …
+
+===== Query 3/4: John Henry effect origin Saretsky compensatory rivalry =====
+
+1. An educational dilemma: Are educational experiments working?
+   https://academicjournals.org/journal/ERR/article-full-text-pdf/8AF28104437.pdf
+   (S Kocakaya - Educational Research and Reviews, 2011 - academicjournals.org | 2011 | cited by 40)
+   [PDF] https://academicjournals.org/journal/ERR/article-full-text-pdf/8AF28104437.pdf
+   … of instances where the John Henry effect should be considered … between a generalized compensatory rivalry and one in which … Saretsky concluded that the John Henry effect is likely to …
+
+2. A Popper (1959) has been the most explicit and systematic in recognizing the
+   https://books.google.com/books?hl=en&lr=&id=nUymUn7A5hoC&oi=fnd&pg=PA43&dq=John+Henry+effect+origin+Saretsky+compensatory+rivalry&ots=mZ37xBgBq6&sig=Jw5FJ_m0DJ4h8WXfEdM3bpNV4w8
+   (TD Cook, DT Campbell - Social Research Methods: A Reader, 2004 - books.google.com | 2004)
+   … Saretsky (1972)... calls this a'John Henry effect'in honor of the steel driver who, when he … and demoralization, as well as with compensatory rivalry. This is because persons in the less …
+
+3. Dealing with threats to internal validity that randomization does not rule out
+   https://journals.sagepub.com/doi/abs/10.3102/0013189X013010011
+   (W Borg - Educational Researcher, 1984 - journals.sagepub.com | 1984 | cited by 60)
+   … Saretsky (1975) calls this extra effort on the part of control group teachers the "John Henry Effect… is most effective in ruling out compensatory rivalry and resentful demoralization. When …
+
+4. Ibsen's baths: Reactivity and insensitivity (A misapplication of the treatment-control design in a national evaluation)
+   https://journals.sagepub.com/doi/abs/10.3102/01623737004003261
+   (DM Fetterman - Educational Evaluation and Policy Analysis, 1982 - journals.sagepub.com | 1982 | cited by 66)
+   [PDF] https://www.researchgate.net/profile/David-Fetterman-3/publication/249795242_Ibsen%27s_Baths_Reactivity_and_Insensitivity_A_Misapplication_of_the_Treatment-Control_Design_in_a_National_Evaluation/links/54134ded0cf2bb7347db20bf/Ibsens-Baths-Reactivity-and-Insensitivity-A-Misapplication-of-the-Treatment-Control-Design-in-a-National-Evaluation.pdf
+   … block of control students display the John Henry effect. Interviews with some of these students … In the Follow Through comparison of "models" of compensatory education the variation in …
+
+5. Power, control, and validity in research
+   https://journals.sagepub.com/doi/abs/10.1177/002221949002301008
+   (RM Parker - Journal of Learning Disabilities, 1990 - journals.sagepub.com | 1990 | cited by 110)
+   … Saretsky called this the "John Henry effect," comparing the control group's extra efforts to those of John Henry, a folk song character who competed with a machine in laying rail for the …
+
+6. Quasi-experimental study designs series—paper 4: uses and value
+   https://www.sciencedirect.com/science/article/pii/S0895435617302834
+   (T Bärnighausen, P Tugwell, JA Røttingen… - Journal of clinical …, 2017 - Elsevier | 2017 | cited by 344)
+   [PDF] https://discovery.ucl.ac.uk/id/eprint/1551519/1/JCE-QE_Article%204_In%20press_Barnighausen_2017.pdf
+   … as compensatory rivalry or resentful demoralization); (4) they are often well suited to generate causal evidence on long-term health outcomes of an intervention, as well as nonhealth …
+
+7. Research strategies and the control of nuisance variables
+   https://8ch.net/file_store/a95f092d01c1907f2985da43db6353b609ccc3c77c4005a3ec3ba22fe6237c0b.pdf
+   (RE Kirk - Experimental design: Procedures for the behavioral …, 2013 - 8ch.net | 2013 | cited by 24)
+   [PDF] https://8ch.net/file_store/a95f092d01c1907f2985da43db6353b609ccc3c77c4005a3ec3ba22fe6237c0b.pdf
+   … Saretsky (1972) named this the “John Henry” effect in honor of the steel driver who, upon learning that his output was being compared with that of a steam drill, worked so hard that he …
+
+8. The effect of oral feedback on perceived classroom community in undergraduate students
+   https://search.proquest.com/openview/5ead3f44f78ef10a7d6094125868ebbf/1?pq-origsite=gscholar&cbl=18750
+   (JL Boyles - 2017 - search.proquest.com | 2017 | cited by 2)
+   [PDF] https://digitalcommons.liberty.edu/cgi/viewcontent.cgi?article=2565&context=doctoral
+   … to validity is compensatory rivalry, otherwise known as the John Henry effect (Saretsky, 1972). … This provides the element of randomness but can also contribute to compensatory rivalry if …
+
+9. Christopher Isherwood: a psychobiography
+   https://search.proquest.com/openview/02bf2038626527f754471dbfefcee7ff/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (SA O'Doherty - 1994 - search.proquest.com | 1994 | cited by 1)
+   … Lorelle Saretsky helped me to examine and overcome a great deal of resistance to … Could one not posit some compensatory mechanism, some inordinate longing to embrace the larger, …
+
+10. Evaluating development effectiveness assessing and comparing the impact of education intervention in South Africa
+   https://search.proquest.com/openview/2f9abbfb55982e75f907a2e54abab75d/1?pq-origsite=gscholar&cbl=2026366&diss=y
+   (NA Besharati - 2016 - search.proquest.com | 2016 | cited by 7)
+   This research is a contribution to the field of development evaluation. Much of the evaluation practice in development and public policy remains weak in scientific validity, and …
+
+11. Understanding impostor phenomena in Hispanic students from three different learning environments
+   https://search.proquest.com/openview/78e6c8c365597515b0caef2d58c7cb02/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (MY Hernández-Seltz - 2020 - search.proquest.com | 2020 | cited by 4)
+   [PDF] https://scholarworks.waldenu.edu/cgi/viewcontent.cgi?article=10002&context=dissertations
+   … A compensatory rivalry is one possible example to explain this behavior. Resentful demoralization may also occur if students experience feelings of resentment and demoralization due …
+
+12. Influence of Robotics on Self-Efficacy and Interest in Computer Science
+   https://search.proquest.com/openview/fab22ff510b81202c7adaa2c432bb95c/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (RT Schenk - 2022 - search.proquest.com | 2022)
+   [PDF] https://openscholar.uga.edu/record/3945/files/SchenkRaymondPhD.pdf
+   This study sought to understand the influence of robotics on self-efficacy and interest in computer science. It provides the background that has led to the current research need. …
+
+13. Creative Role Playing Therapy as an Adjunct to Remedial Reading in the Modification of Reading Disability and Psycho-social Maladjustment: An …
+   https://search.proquest.com/openview/b0610ee31bcb7b4e7aa1ba0640a7bea5/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (DL Wiedis - 1964 - search.proquest.com | 1964 | cited by 2)
+   … Theodore Saretsky for the long hours and expert judgment they devoted to evaluating the … dependent behavior which help to explain the origins of disturbances in coping with this need. …
+
+14. Eksperimen Kuasi: Penjaminan Hubungan Kausal tanpa Randomisasi
+   https://books.google.com/books?hl=en&lr=&id=gdseEQAAQBAJ&oi=fnd&pg=PA10&dq=John+Henry+effect+origin+Saretsky+compensatory+rivalry&ots=uIkVImCy8W&sig=E-K1hCs2fv3DFEfInPt-5xC3qXY
+   (B Patria - 2024 - books.google.com | 2024 | cited by 2)
+   Kondisi ideal dalam eksperimen adalah eksperimen acak (randomized experiment). Ciri utama dari eksperimen acak adah adanya penugasan acak; partisipan ditempatkan dalam …
+
+15. The relationship between the Holocaust and object relations in adult children of Holocaust survivors
+   https://search.proquest.com/openview/a7d37ee33f98ec7ed54d4d3cdc8d566b/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (LW Blank - 1996 - search.proquest.com | 1996 | cited by 2)
+   Given the wide variety and quantity of opinions put forth regarding the effects of the holocaust on both survivors and their children, this study attempted to examine the effects of the …
+
+16. The Evaluation of Bilingual Education Programs for Language-Minority, Limited-English-Proficient Students: A Status Report with Recommendations for Future …
+   https://eric.ed.gov/?id=ED321557
+   (GK Tallmadge - 1987 - ERIC | 1987 | cited by 16)
+   [PDF] https://files.eric.ed.gov/fulltext/ED321557.pdf
+   … Where models yielding valid no-treatment expeciations cannot be applied, we believe that growth in areas of intended program impAct should still be measured. Such growth …
+
+17. The effect of expressive writing on the math anxiety scores of middle school students enrolled in a public school in east Texas
+   https://digitalcommons.liberty.edu/doctoral/1971/
+   (AD Ruark - 2019 - digitalcommons.liberty.edu | 2019 | cited by 3)
+   [PDF] https://digitalcommons.liberty.edu/cgi/viewcontent.cgi?article=3030&context=doctoral
+   … This study investigated the impact of expressive writing on the math anxiety levels of middle school students according to group and gender. An experimental, pretest-posttest, control …
+
+18. Annotated Course Outline for Evaluation Research Workshops
+   
+   (J Tombaugh - 1979 - Department of Psychology, Carleton … | 1979)
+
+19. RELATIONSHIPS BETWEEN PRIMARY PROCESS FUNCTIONING AND ASPECTS OF ADJUSTMENT IN ELEMENTARY SCHOOL BOYS.
+   https://search.proquest.com/openview/febeb210cb98a1b7f074f8f09053191a/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (RA Hoffman - 1976 - search.proquest.com | 1976)
+   … Saretsky's results support the contention that Defense Effectiveness scores describe an individual's relative success in minimizing the impact of primary process upon adaptive …
+
+===== Query 4/4: Ian Hacking obituary 2023 philosopher =====
+
+1. Ian Hacking (1936–2023)
+   https://read.dukeupress.edu/common-knowledge/article-abstract/30/1/1/388273
+   (C Misak - Common Knowledge, 2024 - read.dukeupress.edu | 2024 | cited by 1)
+   … Ian Hacking died in Toronto on May 10, 2023. Sadly, his health had been declining since his wife, the philosopher Judith Baker, died … The timing of Ian's book was perfect, as philosophy …
+
+2. Ian Macdougall Hacking (1936–2023)
+   https://www.journals.uchicago.edu/doi/full/10.1086/728961
+   (L Daston - 2024 - journals.uchicago.edu | 2024 | cited by 1)
+   [PDF] https://pure.mpg.de/rest/items/item_3571971/component/file_3573173/content
+   … Ian Hacking was very much a philosopher of the “particular go” … Ian Hacking never described himself as either a philosopher of … When he died on 10 May 2023, he was still in the midst of …
+
+3. Pasts of Determinism: A Note on (Ian) Hacking
+   https://www.tandfonline.com/doi/abs/10.1080/13534645.2023.2206238
+   (V Tasić - Parallax, 2022 - Taylor & Francis | 2022)
+   … century and have been studied by Ian Hacking in works on determinism and chance … Hacking occupies an intriguing position as an analytic philosopher and historian of ideas …
+
+4. Our neo-Cartesian bodies in parts
+   https://www.journals.uchicago.edu/doi/full/10.1086/526088
+   (I Hacking - Critical inquiry, 2007 - journals.uchicago.edu | 2007 | cited by 119)
+   … mind and body has long been unpopular with philosophers and other intellectuals. Some such … We do not know how many of the poor who sold a kidney became very ill or just died after …
+
+5. Memory Made, Hacked, and Outsourced
+   https://link.springer.com/content/pdf/10.1007/978-981-19-9251-3.pdf
+   (CCM Tseng - 2023 - Springer | 2023 | cited by 3)
+   … This book includes the important findings from my three research projects, which ran from 2017 to 2023, generously funded by the National Science and Technology Council, Taiwan. …
+
+6. PHILOSOPHER PONDERED THE REALITY OF PARTICLES AND THE LABELLING OF PEOPLE; Known for his indefatigable curiosity and breadth of interests, he …
+   https://go.gale.com/ps/i.do?id=GALE%7CA750868215&sid=googleScholar&v=2.1&it=r&linkaccess=abs&issn=03190714&p=AONE&sw=w
+   (I Semeniuk - Globe & Mail (Toronto, Canada), 2023 - go.gale.com | 2023)
+   … In the late 1960s, when Ian Hacking was teaching philosophy in … Hacking died of heart failure on May 10 at The Annex … his contributions, particularly in the philosophy of science, Prof. …
+
+7. Ian Hacking (February 18, 1936–May 10, 2023)
+   
+   (ML Martínez - … : International Journal for the Historiography of Science, 2023 | 2023)
+
+8. The emergence of ontological styles of thinking in ancient Greece
+   https://books.google.com/books?hl=en&lr=&id=YwWZEQAAQBAJ&oi=fnd&pg=PP1&dq=Ian+Hacking+obituary+2023+philosopher&ots=c00TPf3M7g&sig=m88sNYtC8eTtullfOYP9YQK8jQQ
+   (DF Kennedy - 2025 - books.google.com | 2025)
+   … styles of thinking we have come to call ‘philosophy’ and ‘history’ were crystallizing into … A further purpose of this chapter will be to explain why I adopt Ian Hacking's term 'historical …
+
+9. 'I am a philosopher of the particular case' An interview with the 2009 Holberg prizewinner Ian Hacking
+   https://journals.sagepub.com/doi/abs/10.1177/0952695113484318
+   (OJ Madsen, J Servan, SA Øyen - History of the human …, 2013 - journals.sagepub.com | 2013 | cited by 17)
+   [PDF] https://www.researchgate.net/profile/Ole-Jacob-Madsen/publication/272986604_'I_am_a_philosopher_of_the_particular_case'_An_interview_with_the_2009_Holberg_prizewinner_Ian_Hacking/links/54f431650cf299c8d9e657e3/I-am-a-philosopher-of-the-particular-case-An-interview-with-the-2009-Holberg-prizewinner-Ian-Hacking.pdf
+   When Ian Hacking won the Holberg International Memorial Prize 2009 his candidature was … have talked to Ian Hacking about current questions in the philosophy and history of science. …
+
+10. Intensive care of the very old–questioning the relationship between illness severity and the moral imperative to deliver life-saving care
+   https://link.springer.com/article/10.1186/s13010-025-00198-8
+   (GL Schwarz - Philosophy, Ethics, and Humanities in Medicine, 2025 - Springer | 2025 | cited by 1)
+   [PDF] https://link.springer.com/content/pdf/10.1186/s13010-025-00198-8.pdf
+   … Ian Hacking’s concepts of human, interactive and natural, indifferent kinds as a philosophical … In Ian Hacking’s words: “…we first need to confront the point of social construction analyses…
+
+11. Notions of the Concept of 'Ways of Thinking': From Hacking to Daston and Galison
+   https://link.springer.com/chapter/10.1007/978-3-031-24004-1_3
+   (L Sciortino - … of Rationalities: Ways of Thinking from Vico to Hacking …, 2023 - Springer | 2023 | cited by 1)
+   … been proposed, respectively, by Ian Hacking and by Peter Galison and … used it as a framework for addressing a philosophical … a kind of evidence that died out in the seventeenth century …
+
+12. Ian Hacking: The Style of Scientific Thinking & Doing in the Historiography of Science
+   
+   (ML Martínez - … : International Journal for the Historiography of Science, 2023 | 2023)
+
+13. Ian Hacking's rewriting of Leviathan and the Air-Pump
+   
+   (M de los Ángeles Martini - … : International Journal for the Historiography of Science, 2023 | 2023 | cited by 2)
+   [PDF] https://www.researchgate.net/profile/Maria-Martini-6/publication/376678163_Ian_Hacking's_Rewriting_of_Leviathan_and_the_Air-Pump/links/658359d33c472d2e8e773c9e/Ian-Hackings-Rewriting-of-Leviathan-and-the-Air-Pump.pdf
+
+14. Developing the 'Styles Project': Towards a 'Theory of Styles of Reasoning'
+   https://link.springer.com/chapter/10.1007/978-3-031-24004-1_5
+   (L Sciortino - … of Rationalities: Ways of Thinking from Vico to Hacking …, 2023 - Springer | 2023 | cited by 1)
+   … This chapter expounds Hacking’s project of styles of reasoning more systematically than Hacking himself has done, while the following chapters examine its philosophical implications. I …
+
+15. " The Unthinkable" in Ethics, History and Philosophical Anthropology: A Pragmatic-Transcendental View
+   https://www.torrossa.com/it/resources/an/6031115
+   (S Pihlström - 2025 - torrossa.com | 2025 | cited by 3)
+   … in summer 2023 when it … philosophical. I am hoping to understand the concept of the unthinkable in its ethical dimensions, suggesting reasons for considering some (eg, philosophical) …
+
+16. In defence of psychiatric diagnoses
+   https://link.springer.com/content/pdf/10.1007/978-3-031-74478-5.pdf
+   (S Fellowes - 2025 - Springer | 2025 | cited by 3)
+   [PDF] https://library.oapen.org/bitstream/handle/20.500.12657/99865/9783031744785.pdf?sequence=1
+   … This chapter outlines psychiatry and philosophy of psychiatry … outlines important issues in philosophy of psychiatry relating … to provide an alternative philosophical position. This will then …
+
+17. The Routledge handbook of philosophy and media ethics
+   https://api.taylorfrancis.com/content/books/mono/download?identifierName=doi&identifierValue=10.4324/9781003134749&type=googlepdf
+   (C Fox, J Saunders - 2024 - api.taylorfrancis.com | 2024 | cited by 11)
+   … We want to draw on that debate to say something about the value of philosophy and philosophers when it comes to theorising, critiquing, and, ultimately, perhaps even improving …
+
+18. To Judge and To Justify
+   https://link.springer.com/content/pdf/10.1007/978-3-031-76017-4.pdf
+   (S Fuller - Springer)
+   … in terms of the nature of justice by two Harvard philosophers, John Rawls and Robert Nozick. It is … perhaps unsurprisingly focus on the discipline of philosophy, which has been the most …
+
+19. Content modules
+   
+   (I Hacking)
+
+20. Ian M Hacking
+   https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(23)01471-X/abstract
+   (A Green - The Lancet, 2023 - thelancet.com | 2023)
+   As a philosopher what Ian Hacking “was most interested in was the idea of classification”, said Arthur Ripstein, University Professor in the Faculty of Law and Department of Philosophy …
+
+21. Looping Bureaucracies. Imperial Administrations and Socio-Political Change in Asia (1750–1950)
+   https://www.cambridge.org/core/journals/itinerario/article/looping-bureaucracies-imperial-administrations-and-sociopolitical-change-in-asia-17501950/6C6221B7E0E5F7CDC7E89A5473A9E1B8
+   (D Lyna, L Bulten, HC Aspengren - Itinerario, 2024 - cambridge.org | 2024)
+   [PDF] https://www.cambridge.org/core/services/aop-cambridge-core/content/view/6C6221B7E0E5F7CDC7E89A5473A9E1B8/S0165115324000214a.pdf/looping-bureaucracies-imperial-administrations-and-socio-political-change-in-asia-1750-1950.pdf
+   … The authors critically engage with the concept of the “looping effect,” coined by the late Canadian philosopher of science Ian Hacking, to describe a process where administrative …
+
+22. Past Celebratory, Future Subjunctive
+   https://journals.sagepub.com/doi/abs/10.1177/03080188241291412
+   (W McCarty - Interdisciplinary Science Reviews, 2024 - journals.sagepub.com | 2024 | cited by 1)
+   This issue of Interdisciplinary Science Reviews is my last as its Editor, short by a year of ISR’s fiftieth and my own eightieth. I’m writing to put in context and celebrate the work of its …
+
+23. HPS&ST Newsletter October 2023 Vol. 36 (8)
+   https://www.hpsst.com/uploads/6/2/9/3/62931075/hps_st_news__2023_october_.pdf
+   (VS Gaukroger, VEF Keller - 2023 - hpsst.com | 2023)
+   [PDF] https://www.hpsst.com/uploads/6/2/9/3/62931075/hps_st_news__2023_october_.pdf
+   … Ian Hacking, in his Introduction to the fiftieth anniversary edition of Structure calls such charges “absurd” (Hacking … of science, James Ladyman explores the philosophical questions that …
+
+24. Science and the Shaping of Modernity
+   https://link.springer.com/content/pdf/10.1007/978-3-031-76037-2.pdf
+   (C Wolfe, A Waldow - 2025 - Springer | 2025 | cited by 2)
+   [PDF] https://www.academia.edu/download/124271720/Borghesi_What_I_learned_from_SG.pdf
+   … science and historically informed philosophy of science. The … Sadly, Stephen passed away on 3 September 2023 after a … ); in this he was much like Ian Hacking, although vastly more …
+
+25. Telling a different story: Historiography, ethics, and possibility for nursing
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/nup.12444
+   (J Dillard‐Wright - Nursing Philosophy, 2023 - Wiley Online Library | 2023 | cited by 15)
+   … that there died out of … philosophy, the necessity of thinking about both ideas and their context in understanding what is possible. Hacking writes, ‘some mingling of history and philosophy …
+
+26. What is Data?
+   https://ucalgary.scholaris.ca/items/e5129b75-6f8d-4c7f-8532-d7e59e618011
+   (A Chattoraj - 2023 - ucalgary.scholaris.ca | 2023 | cited by 1)
+   [PDF] https://ucalgary.scholaris.ca/bitstreams/53eb0920-7027-4fa0-ad30-091623db3f3b/download
+   … Together with Suppes, these works have served as a core starting point for the philosophical investigation of data practices. Next, I consider Ian Hacking’s view of data as what he calls …
+
+27. Philosophy of mental disorder: an ability-based approach
+   https://www.taylorfrancis.com/books/mono/10.4324/9781003367840/philosophy-mental-disorder-sanja-dembi%C4%87
+   (S Dembić - 2023 - taylorfrancis.com | 2023 | cited by 11)
+   … Nives died in 2007 as a result of heart failure. Nives used psychoactive substances from her 20s … She died on the day she was meant to file for bankruptcy, which would have been the …
+
+28. Pre-Narrativist Philosophy of History
+   https://brill.com/view/journals/jph/17/2/article-p195_2.xml
+   (J Ahlskog - Journal of the Philosophy of History, 2023 - brill.com | 2023 | cited by 3)
+   [PDF] https://research.abo.fi/ws/files/58781675/Ahlskog_Revised_Essay_for_JPH_Prenarrativist_phil_hist_Final_version.pdf
+   … has led some narrativists to embrace Ian Hacking’s mind-boggling thesis that retrospective redescriptions change what someone in the past did. As such, Hacking’s incredible idea is …
+
+29. Introduction: Jean Gayon (1949–2018), Philosopher and Historian of the Life Sciences
+   https://link.springer.com/chapter/10.1007/978-3-031-28157-0_1
+   (PO Méthot, P Huneman - Philosophy, History and Biology: Essays in …, 2023 - Springer | 2023)
+   … Crombie and Ian Hacking, Jean Gayon reflected on the notion of “style” in science and on its uses for historians of science. In retrospect, his own “style” as a historian and …
+
+30. Philosophy of social science: The philosophical foundations of social thought
+   https://books.google.com/books?hl=en&lr=&id=JAqoEAAAQBAJ&oi=fnd&pg=PP1&dq=Ian+Hacking+obituary+2023+philosopher&ots=LXsQS-wmlu&sig=LsKvRLMLh-9tS-ewyrkDlCZA7l8
+   (T Benton, I Craib - 2023 - books.google.com | 2023 | cited by 1938)
+   … This new edition also includes a slightly modified version of an obituary for Ian that I wrote for publication in the journal Radical Philosophy. Finally, I have included a chapter originally …
+
+31. Making up monsters, redirecting blame: An examination of excited delirium
+   https://muse.jhu.edu/pub/1/article/916217/summary
+   (A Byju, P Friesen - Philosophy, Psychiatry, & Psychology, 2023 - muse.jhu.edu | 2023 | cited by 7)
+   [PDF] https://www.researchgate.net/profile/Phoebe-Friesen/publication/376790736_Making_up_Monsters_Redirecting_Blame_An_Examination_of_Excited_Delirium/links/65c28066790074549769b175/Making-up-Monsters-Redirecting-Blame-An-Examination-of-Excited-Delirium.pdf
+   … First, the work of Ian Hacking, who, in Rewriting the Soul … We aspire to study excited delirium in the way that Hacking … supposedly explained why some people died of excited delirium, …
+
+32. Steps Toward a Philosophy for Mathematicians
+   https://link.springer.com/article/10.1007/s00283-022-10190-1
+   (JE Fenstad - The Mathematical Intelligencer, 2023 - Springer | 2023 | cited by 1)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s00283-022-10190-1.pdf
+   … A philosophy of mathematics is not necessarily a philosophy for mathematicians. This was forcefully argued by Ian Hacking in his recent book Why Is There Philosophy … Skolem died in …
+
+33. What's the Use of Philosophy?
+   https://books.google.com/books?hl=en&lr=&id=kv_TEQAAQBAJ&oi=fnd&pg=PP1&dq=Ian+Hacking+obituary+2023+philosopher&ots=EX7snCdXYs&sig=ya_aAf3_Qg5tvFWDN5XKFroLFaY
+   (P Kitcher - 2022 - books.google.com | 2022 | cited by 60)
+   … philosophy, his suggested definition of philosophy is, at best, quaint. Applied philosophy is … discipline lies: in metaphysics, epistemology, philosophy of language, and philosophy of mind…
+
+34. The Fragility of Philosophy of Medicine
+   https://link.springer.com/content/pdf/10.1007/978-3-031-41633-0.pdf
+   (L Karhausen - 2023 - Springer | 2023 | cited by 8)
+   [PDF] http://assets.unprimdn.ac.id.s3.amazonaws.com/documents/library_books/61656/667593dfe20ffcebbc3f70e40aa081add04d7a82.pdf
+   … has argued that the philosophy of medicine as a sub-discipline of the philosophy of science … of “philosophy of medicine”[1]. He gives the following definition:“Philosophy of medicine is …
+
+35. Luis Salvatico (October 23, 1963–December 24, 2022)
+   
+   (MRB Batán - … : International Journal for the Historiography of Science, 2023 | 2023)
+
+36. Reflexivity, relativism, microhistory: Three desiderata for historical epistemologies
+   https://link.springer.com/article/10.1007/s10670-011-9336-5
+   (M Kusch - Erkenntnis, 2011 - Springer | 2011 | cited by 56)
+   … In this paper I shall develop three criticisms of Ian Hacking’s … summary of what Hacking calls “philosophical anthropology”. … figure prominently in Crombie’s obituaries. Some Oxford dons …
+
+37. Separate Isles? On Historiography, Philosophy and Intellectual History
+   https://api.taylorfrancis.com/content/chapters/edit/download?identifierName=doi&identifierValue=10.4324/9781003184294-16&type=chapterpdf
+   (D Woolf - Historiography and the Formation of Philosophical …, 2023 - api.taylorfrancis.com | 2023 | cited by 2)
+   … Mink died in 1983 before the … Ian Hacking, a philosopher of mathematics with a robust understanding of intellectual history (or an intellectual historian with a mathematicianphilosopher’s …
+
+38. Music, science, philosophy: models in the universe of thought
+   https://api.taylorfrancis.com/content/books/mono/download?identifierName=doi&identifierValue=10.4324/9781003418429&type=googlepdf
+   (JC Kassler - 2023 - api.taylorfrancis.com | 2023 | cited by 34)
+   … have given back to the philosophy and theory of music. By … three main principles of his philosophy of science. But Popper … , so the philosopher of science, Ian Hacking, sought to offer a …
+
+39. Contemporary Historical Epistemologies
+   https://link.springer.com/chapter/10.1007/978-3-031-61555-9_3
+   (M Vagelli - … and Anglophone Styles in History and Philosophy of …, 2024 - Springer | 2024)
+   … : “To my mind, the most able practitioners of historical epistemology these days are philosophers rather than historians—I think of the remarkable recent work of Ian Hacking and Arnold …
+
+40. Reading Feyerabend between philosophy of science, hermeneutics–and God
+   https://cyberleninka.ru/article/n/reading-feyerabend-between-philosophy-of-science-hermeneutics-and-god
+   (Б Бабич - Epistemology & Philosophy of Science, 2024 - cyberleninka.ru | 2024 | cited by 4)
+   This essay seeks to make the case for reading hermeneutic philosophy of science with Feyerabend. In addition, there is the question of science, as Nietzsche raises this question along …
+
+41. An ecological approach to affective injustice
+   https://www.jstor.org/stable/48776805
+   (J Krueger - Philosophical Topics, 2023 - JSTOR | 2023 | cited by 43)
+   [PDF] https://ore.exeter.ac.uk/articles/journal_contribution/An_ecological_approach_to_affective_injustice/29807357/1/files/56853389.pdf
+   … red poppy each year to commemorate those who died fighting for the British Armed Forces. … Many insist that he should wear a poppy as a sign of respect for those who died defending …
+
+42. Natural Kinds (Cambridge Elements in Philosophy of Science)
+   https://philarchive.org/rec/KHANKC
+   (MA Khalidi - 2023 - philarchive.org | 2023 | cited by 5)
+   [PDF] https://philarchive.org/archive/KHANKC
+   … throughout the history of philosophy. Ian Hacking (1991a, 110) has pointed out that the earliest known use of the term occurs in the work of the logician and philosopher John Venn (…
+
+43. The Philosophy of John Henry Newman and Pragmatism: A Comparison
+   https://books.google.com/books?hl=en&lr=&id=V7HWEAAAQBAJ&oi=fnd&pg=PR7&dq=Ian+Hacking+obituary+2023+philosopher&ots=j4dxOZ4MI1&sig=o7E-sgK86LJV1VbJ3J4N0i-ViLY
+   (M Corona - 2023 - books.google.com | 2023 | cited by 5)
+   … Notwithstanding the diversity of philosophical aims, we still want to know how Newman's thought fares in light of critical philosophical analysis, whether in his or our own context, or how …
+
+44. What will happen to humanity in a million years? Gilbert Hottois and the temporality of technoscience
+   https://link.springer.com/article/10.1007/s13347-025-00887-4
+   (M Simons - Philosophy & Technology, 2025 - Springer | 2025 | cited by 3)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s13347-025-00887-4.pdf
+   … of Brussels: he was born there, he studied and worked there, and died there. He studied … , 2023). We therefore find in Hottois claims that could have been formulated by Ian Hacking, …
+
+45. Reading for post qualitative inquiry
+   https://www.tandfonline.com/doi/abs/10.1080/09518398.2024.2340041
+   (EA St. Pierre - International Journal of Qualitative Studies in …, 2024 - Taylor & Francis | 2024 | cited by 25)
+   … This paper advocates reading philosophy and using its concepts in educational and social … with philosophy and its concepts (see St.Pierre, Citation2017). Reading philosophy helps us …
+
+46. BIOPOLITICAL PHILOSOPHY
+   https://biopoliticalphilosophy.com/2019/06/25/commemorating-foucault-ii-symposium-on-tremains-foucault-and-feminist-philosophy-of-disability/
+   (J Dryden - biopoliticalphilosophy.com)
+   … Michel Foucault died unexpectedly 35 years ago today. To honour Foucault’s memory and … Ian Hacking describes a style of reasoning as follows: “Every style comes into being by little …
+
+47. I Think My Friend Could Be Autistic. Do I Tell Her?
+   https://go.gale.com/ps/i.do?id=GALE%7CA738448045&sid=googleScholar&v=2.1&it=r&linkaccess=abs&issn=22699740&p=AONE&sw=w
+   (KA Appiah - International New York Times, 2023 - go.gale.com | 2023)
+   … The philosopher Ian Hacking used the term "looping effects" to discuss the … died, and have since learned it was far worse than I could imagine. Now, less than a year after his wife died, …
+
+48. Deferred Ostension of Extinct and Fictive Kinds
+   https://muse.jhu.edu/pub/322/article/883728/summary
+   (C Engelland - The Review of Metaphysics, 2023 - muse.jhu.edu | 2023 | cited by 2)
+   [PDF] https://philarchive.org/archive/ENGDOO-4
+   … to name a fallacy for philosophers of language whereby they … , if all the real ducks suddenly died out? For when it comes to … Ian Hacking documents the way Kripke and Putnam diverge …
+
+49. Historical and Contemporary Perspectives on Pragmatism and Philosophy of Science
+   https://api.taylorfrancis.com/content/chapters/edit/download?identifierName=doi&identifierValue=10.4324/9781003402794-1&type=chapterpdf
+   (R Gronda, M Janack… - … and Philosophy of Science, 2025 - api.taylorfrancis.com | 2025)
+   … that some pragmatist elements passed from scientific philosophy to ana‑ lytic philosophy of science: it is a … As Ian Hacking put it in his widely influential Representing and Intervening: …
+
+50. Residues of justice: Literature, law, philosophy
+   https://books.google.com/books?hl=en&lr=&id=nnG6EAAAQBAJ&oi=fnd&pg=PP11&dq=Ian+Hacking+obituary+2023+philosopher&ots=iuyzvHxQ_A&sig=UbUNowDZP4p0KNTKL0DOSQrCWKM
+   (WC Dimock - 2023 - books.google.com | 2023 | cited by 139)
+   … in the ascendancy of justice as a philosophical concept, an ascendancy most powerfully shaped by … This expansive claim made on behalf of justice is not unique to philosophers. In our …
+
+51. Historical and Contemporary Perspectives on Pragmatism and
+   https://books.google.com/books?hl=en&lr=&id=EG6QEQAAQBAJ&oi=fnd&pg=PT5&dq=Ian+Hacking+obituary+2023+philosopher&ots=8DPfsXua9p&sig=Da6L8bQ7ZaABqkkV_kinS2P2jr0
+   (R Gronda, M Janack, G Marchetti - Pragmatism and Philosophy …, 2025 - books.google.com | 2025)
+   … To start with, it would be wrong, we think, to deny that some pragmatist elements passed from scientific philosophy to analytic philosophy of science: it is a fact … As Ian Hacking put it in his …
+
+52. Rorty Reframed: Prolegomena to a Post-truth Modernism
+   https://read.dukeupress.edu/common-knowledge/article-abstract/29/1/86/376043
+   (S Fuller - Common Knowledge, 2023 - read.dukeupress.edu | 2023)
+   … philosophy brings to whatever it discusses. In this sense, all that the post-truth condition does is turn everyone into a philosopher. … Shortly after Rorty died in 2007, I wrote an appraisal of …
+
+53. Natural kinds
+   https://www.cambridge.org/core/elements/natural-kinds/8CA215EA3A1878FC4856B84E28F4C447
+   (MA Khalidi - 2023 - cambridge.org | 2023 | cited by 23)
+   [PDF] https://www.khalidi.org/s/Khalidi-2015-Natural-Kinds-Oxford-Handbook.pdf
+   … throughout the history of philosophy. Ian Hacking (1991a, 110) has pointed out that the earliest known use of the term occurs in the work of the logician and philosopher John Venn (…
+
+54. Reconsidering Historical Epistemology
+   https://link.springer.com/content/pdf/10.1007/978-3-031-61555-9.pdf
+   (M Vagelli - … and Anglophone Styles in History and Philosophy of … - Springer | cited by 1)
+   … I am indebted to Ian Hacking for the series of conversations that we had starting in 2012. Ian sadly … His death is a great loss for the philosophical community. Cheryl Misak’s initiative was …
+
+55. Mary Shepherd: A Guide
+   https://books.google.com/books?hl=en&lr=&id=rPzTEQAAQBAJ&oi=fnd&pg=PP1&dq=Ian+Hacking+obituary+2023+philosopher&ots=HQlKVapuR9&sig=rDcSSZPNkaVjsvVKV7rHNrwGw08
+   (D Boyle - 2022 - books.google.com | 2022 | cited by 25)
+   … 23 Of course, Hume wrote on a wide range of topics other than just these two issues, as did the other philosophers covered in this chapter. My account of the philosophical context in …
+
+56. Imre lakatos
+   https://plato.stanford.edu/entries/lakatos/?trk=public_post_comment-text
+   (A Musgrave, C Pigden - 2016 - plato.stanford.edu | 2016 | cited by 126)
+   … a British citizen, but died a stateless person. … Philosophy of Science is concerned, we tend to favor the English interpretation. We are more ambivalent with respect to the Philosophy …
+
+57. Putting Foucault to work: Analytic and concept in Foucaultian inquiry
+   https://www.journals.uchicago.edu/doi/full/10.1086/671357
+   (C Koopman, T Matza - Critical Inquiry, 2013 - journals.uchicago.edu | 2013 | cited by 116)
+   [PDF] https://philpapers.org/archive/KOOPFT
+   … adopted in fields such as philosophy, sociology, cultural … exception of its neglect of Ian Hacking's work. See especially … of practices that appeared after Foucault died.28 What this and …
+
+58. On Keynes's probability and uncertainty
+   https://www.tandfonline.com/doi/abs/10.1080/01603477.2023.2224029
+   (A Carabelli - Journal of Post Keynesian Economics, 2023 - Taylor & Francis | 2023 | cited by 4)
+   … So, uncertainty is related to Keynes’s philosophy of measurement, a philosophy that also … So, uncertainty is related to Keynes’s philosophy of measurement, a philosophy that also …
+
+59. Duality, Intensionality, and Contextuality: Philosophy of Category Theory and the Categorical Unity of Science in Samson Abramsky
+   https://link.springer.com/chapter/10.1007/978-3-031-24117-8_2
+   (Y Maruyama - Samson Abramsky on Logic and Structure in Computer …, 2023 - Springer | 2023)
+   … changed his subject into philosophy, in which he read, for example, Ian Hacking, who is, to be … continental traditions of philosophy, and so his first degree is actually in philosophy; von …
+
+60. The great instauration of the eighteenth century
+   https://eprints.whiterose.ac.uk/id/eprint/202436/
+   (A Wilson - Journal of Early Modern Studies, 2023 - eprints.whiterose.ac.uk | 2023 | cited by 2)
+   [PDF] https://eprints.whiterose.ac.uk/id/eprint/202436/3/07%20Wilson.pdf
+   … Belknap Press, 1985), whose founding contradiction was identified by Ian Hacking, “… For a different suggestion—that natural philosophy never died, but rather remains part of what we …
+
+61. “Functional disorders”: one of medicine's biggest failures
+   https://www.bmj.com/content/380/bmj.p221.full
+   (R Smith - bmj, 2023 - bmj.com | 2023 | cited by 10)
+   … The philosopher Ian Hacking has described a phenomenon he calls “Making up people.” New classifications “bring into being a new kind of person” who have the classification …
+
+62. Linguistic Analysis and Psychical Research 1940–1960: The Case of Casimir Lewy
+   https://muse.jhu.edu/pub/1/article/964609/summary
+   (M Moravec - Journal of the History of Philosophy, 2025 - muse.jhu.edu | 2025 | cited by 1)
+   [PDF] https://muse.jhu.edu/pub/1/article/964609/pdf
+   … on a whole generation of philosophy students in Trinity—Ian Hacking, Edward Craig and … , “I shall continue to exist after my present body has died.” Lewy observes that, following the …
+
+63. Transdisciplinary management of polycrises: A philosophical approach
+   https://link.springer.com/chapter/10.1007/978-3-031-70680-6_1
+   (M Schüz - … Thinking and Acting: Fundamentals and Perspectives, 2025 - Springer | 2025 | cited by 5)
+   … It overcomes the limitations of disciplinary thinking and combines scientific, philosophical, ethical, and spiritual dimensions. Referring to philosophical thinkers from Heraklit, and Plato to …
+
+64. Engaging Kripke with Wittgenstein: The Standard Meter, Contingent Apriori, and Beyond
+   https://books.google.com/books?hl=en&lr=&id=8PvSEAAAQBAJ&oi=fnd&pg=PT13&dq=Ian+Hacking+obituary+2023+philosopher&ots=IjE98NS1hq&sig=p8_gOUWj6eY-wjHZZHY3VCpy4SU
+   (M Gustafsson, O Kuusela, J Mácha - 2023 - books.google.com | 2023 | cited by 1)
+   … how mainstream analytic philosophy and Wittgensteinian philosophy can fruitfully engage … , we would not thereby say that the meaning of “NN” died (PI, §40), or that the name “Excalibur…
+
+65. Cyborg Empiricism: The Ghost Is Not in the Shell
+   https://api.taylorfrancis.com/content/chapters/edit/download?identifierName=doi&identifierValue=10.4324/9781003302155-38&type=chapterpdf
+   (T Lamarre - Introducing Japanese Popular Culture, 2023 - api.taylorfrancis.com | 2023 | cited by 1)
+   … It also proposes the cyborg as a techno-philosophical challenge to Cartesian dualism and has … Motoko muses, “Sometimes I wonder if I’ve already died, and what I think of as ‘me’ isn’t …
+
+66. A structure for history: Reflections from Kuhn's historiographic studies
+   https://www.ceeol.com/search/article-detail?id=1271833
+   (LA Giri, MD Giri - 2024 - ceeol.com | 2024 | cited by 1)
+   [PDF] https://annalsphilosophy-ub.org/wp-content/uploads/2024/10/AnnalsUnibuc-2023-02-03Giri.pdf
+   … analysis of the relationships between philosophy and the history of … It is also possible to infer that he died either by disease, … As we saw in 2.2, Wray (2023) denies the presence of a …
+
+67. How data happened: A history from the age of reason to the age of algorithms
+   https://books.google.com/books?hl=en&lr=&id=xXxwEAAAQBAJ&oi=fnd&pg=PA4&dq=Ian+Hacking+obituary+2023+philosopher&ots=gUlgwHjLDL&sig=9xR4NTOivbAxDRF1lusgCtxKf_o
+   (C Wiggins, ML Jones - 2023 - books.google.com | 2023 | cited by 98)
+   … Quetelet “was fond of numbers,” the philosopher Ian Hacking quipped, “and happy to jump … Ian Hacking argues Quetelet dramatically transformed how we understand the world. With his …
+
+68. A fluctuating, intermediate warp: a micro-ethnography and synthetic philosophy of fibre mathematics
+   
+   (KC O'Brien - 2023 - Manchester Metropolitan University | 2023 | cited by 5)
+
+69. Abduction and styles of scientific thinking
+   https://link.springer.com/article/10.1007/s11229-019-02127-7
+   (M Vitti Rodrigues, C Emmeche - Synthese, 2021 - Springer | 2021 | cited by 25)
+   [PDF] https://www.academia.edu/download/117115937/s11229-019-02127-720240730-1-y9fyrb.pdf
+   … Bringing Crombie’s historical work to philosophy of science, Hacking develops the concept … (4) They crystallize along time and some died out. Hacking stresses that “[t]here are different …
+
+70. My Pragmatism Is Derived from Mr. Russell
+   https://www.taylorfrancis.com/chapters/edit/10.4324/9781003342205-10/pragmatism-derived-mr-russell-cheryl-misak
+   (C Misak - Early Analytic Philosophy, 2025 - taylorfrancis.com | 2025 | cited by 2)
+   … of the shining examples of analytic philosophy? Ramsey’s claim … American pragmatism and British analytic philosophy. I shall show … the history of British philosophy through Ramsey and …
+
+71. Philosophy of social science: A contemporary introduction
+   https://api.taylorfrancis.com/content/books/mono/download?identifierName=doi&identifierValue=10.4324/9781003207795&type=googlepdf
+   (M Risjord - 2022 - api.taylorfrancis.com | 2022 | cited by 333)
+   [PDF] https://philpapers.org/archive/RISPOS.pdf
+   … philosophical … of philosophical argument to methodological and theoretical problems. The text argues that social science transforms philosophical questions, and students of philosophy …
+
+72. Digital rhetoric, literae humaniores and Leibniz's dream
+   https://digitalenlightenmentstudies.org/article/id/5/
+   (W McCarty, W McCarty - Digital …, 2023 - digitalenlightenmentstudies.org | 2023 | cited by 1)
+   [PDF] https://digitalenlightenmentstudies.org/article/id/5/download/pdf/
+   This essay celebrates the beginning of Digital Enlightenment Studies by raising some basic questions that are still uncomfortably incunabular.(See Jerome McGann on that, below.) The …
+
+73. Mathematical style
+   https://plato.stanford.edu/entrieS/mathematical-style/
+   (P Mancosu - 2009 - plato.stanford.edu | 2009 | cited by 53)
+   … on style in history and philosophy of mathematics. In particular, the … 2023 for a study of ‘ways of thinking’ from Vico to Hacking and … position to be discussed, which is due to Ian Hacking. …
+
+74. 9 The Meanings of the 1919 Moment in
+   https://books.google.com/books?hl=en&lr=&id=vB6NEQAAQBAJ&oi=fnd&pg=RA1-PT41&dq=Ian+Hacking+obituary+2023+philosopher&ots=9W3hjBPcQy&sig=y80WPeKH0duyLJcWUtRpBim00C0
+   (T Hon - The Making of a World Order: Global Historical …, 2023 - books.google.com | 2023)
+   … of statistics, Ian Hacking stated that" every country was statistical in its own way"(Hacking 1990, 33). … It is the task of legal philosophy to discern the generally adaptable law of nature and …
+
+75. The Relevance of Pragmatism for an Open Science Approach
+   https://api.taylorfrancis.com/content/chapters/edit/download?identifierName=doi&identifierValue=10.4324/9781003402794-17&type=chapterpdf
+   (F Miedema, S Miedema - Pragmatism and Philosophy of …, 2025 - api.taylorfrancis.com | 2025)
+   … For this, we argue that pragma‑ tism and pragmatically inspired philosophers and researchers offer a realistic and praxis‑adequate image and understanding of the practice of science, …
+
+76. THE PRESENCE OF AN ABSENCE: READING MEMORY, HISTORY AND IDENTITY IN KHALED HOSSEINI‟ S AND THE MOUNTAINS ECHOED
+   https://russian.uoc.ac.in/images/Assonnce%202023%20df.pdf#page=592
+   (S Mathew - Assonance, 2023 - russian.uoc.ac.in | 2023)
+   [PDF] https://russian.uoc.ac.in/images/Assonnce%202023%20df.pdf#page=592
+   … engaged the attention of philosophers right from the … died just after they left Afghanistan:―He had fallen ill in 1955–which was when Maman and she had moved to Paris–and had died …
+
+77. Change of Discourses: Theoretical Perspectives for US Teacher Education
+   https://link.springer.com/chapter/10.1007/978-3-319-30456-4_10
+   (L Stone - Educational Research: Discourses of Change and …, 2016 - Springer | 2016 | cited by 1)
+   … Historians and philosophers in this volume offer studies of discourses of change and … theorists influenced by him, Hayden White and Ian Hacking . Based in the event, the second set of …
+
+78. CfP: Ludwik Fleck's theory of thought styles and thought collectives–translations and receptions
+   https://www.academia.edu/download/37699210/CfP__Ludwik_Fleck__Wroclaw__2016.03.pdf
+   (M Schlünder, P Jarnicki, R Egloff, L Sandra - academia.edu)
+   … only two decades after Fleck had died. In 1979, the University … In the following, I discuss Fleck’s philosophical context offer … by, among others, Ian Hacking. Scientific realism needs to be …
+
+79. Some Speculations on Biological Evolution from Kant's and Goethe's Responses to Egyptian Philosophy
+   
+   (R Vilbig - Journal of Philosophy and Theology, 2025 - … 442 Lorimer St, Brooklyn, NY 11206 … | 2025)
+
+80. Methodological ideas in past experimental inquiry: rigor checks around 1800
+   https://www.tandfonline.com/doi/abs/10.1080/17496977.2021.1974225
+   (J Schickore - Intellectual History Review, 2023 - Taylor & Francis | 2023 | cited by 4)
+   … If it died, it would have to be dissected and examined by an … vindicate the form and function of philosophical arguments. The pair of … Ian Hacking once introduced the notion of “empirical …
+
+81. Bridging the gap between populations and individuals in the philosophy of medicine
+   https://www.repository.cam.ac.uk/items/26d60170-5917-4a83-93a6-f22203993fa9
+   (R Scholl - 2023 - repository.cam.ac.uk | 2023)
+   [PDF] https://www.repository.cam.ac.uk/bitstreams/83e1a5a8-544f-4015-b083-bcfb00fc06df/download
+   … populations and individuals in the philosophy of medicine. Five … proponent of integrated history and philosophy of science, I … A majority of the 27 patients who died had been bled early (…
+
+82. Trans kids and" making up people"
+   https://search.informit.org/doi/abs/10.3316/informit.T2026062800003501975734075
+   (A Byrne, M Gorin - Journal of Controversial Ideas, 2026 - search.informit.org | 2026)
+   [PDF] https://search.informit.org/doi/pdf/10.3316/informit.T2026062800003501975734075
+   … assistance from Ian Hacking’s work on “making up people.” … early nineteenth century; the philosophy department tea monitor … II died of tuberculosis is as absurd as saying that he died of …
+
+83. Obereit's Nihilism: Inventing or Diagnosing a Social Sickness?
+   https://www.degruyterbrill.com/document/doi/10.1515/humaff-2025-0032/html
+   (T Giesbers - Human Affairs, 2025 - degruyterbrill.com | 2025 | cited by 2)
+   [PDF] https://research.ou.nl/files/93087228/Glesbers-2025-Obereits-Nihilism-Inventing-or-Diagnosing.pdf
+   … ’s introduction of the philosophical term nihilism from 1787 up … named Theantis who tragically died only 36 days after the … Thomas Szasz, Michel Foucault and Ian Hacking. [2] That raises …
+
+84. Facts and objectivity in science
+   https://journals.sagepub.com/doi/abs/10.1080/03080188.2022.2150807
+   (P Stamenkovic - Interdisciplinary Science Reviews, 2023 - journals.sagepub.com | 2023 | cited by 34)
+   [PDF] https://journals.sagepub.com/doi/pdf/10.1080/03080188.2022.2150807
+   … Objectivity is linked to many issues of the philosophy of science: realism; induction and … For example can we say that ‘it is a (historical) fact that Napoleon died in 1821 on the island of …
+
+85. Vestiges of a Philosophy: Matter, the Meta-spiritual, and the Forgotten Bergson
+   https://books.google.com/books?hl=en&lr=&id=M-mREAAAQBAJ&oi=fnd&pg=PP1&dq=Ian+Hacking+obituary+2023+philosopher&ots=BnzyLdy48U&sig=nmM8C_3kJ9lHLarxhXJoq6kH-xw
+   (JÓ Maoilearca - 2022 - books.google.com | 2022 | cited by 7)
+   … philosopher who reputedly denounced magic and publicly distanced … a philosopher who increasingly withdrew from public life with age, not in order to stop his pursuit of philosophical …
+
+86. The internet is not what you think it is: A history, a philosophy, a warning
+   https://www.torrossa.com/gs/resourceProxy?an=5564977&publisher=FZO137
+   (JEH Smith - 2022 - torrossa.com | 2022 | cited by 71)
+   … This is thus in some re spects a contribution to the genre of scholarship that Ian Hacking has called “historical ontology,”9 that, namely, regards history as of central importance in any …
+
+87. How Averages Became Normal
+   https://academic.oup.com/ahr/article-abstract/128/2/616/7204439
+   (JE Crowley - The American Historical Review, 2023 - academic.oup.com | 2023 | cited by 2)
+   [PDF] https://assets.super.so/33d0d9c7-44c5-45e6-afea-6ee0db27fc69/files/55bb9989-121e-461a-a3ab-bffc7ee58a06.pdf
+   … normalizing the averaging of data in natural philosophy. … Ian Hacking has pointed out that “Paris started its tabulations [of … how many people of a given age died per year, on average, and…
+
+88. Modern Soul Experience in Psychology and Philosophy
+   https://books.google.com/books?hl=en&lr=&id=M0q7EQAAQBAJ&oi=fnd&pg=PT6&dq=Ian+Hacking+obituary+2023+philosopher&ots=3CVcmQZr3T&sig=Vka2LAzTk_tNwnv_k-g91JXA8_g
+   (R Smith - 2026 - books.google.com | 2026)
+   … The eminent philosopher of science, Ian Hacking, for instance, explained his use of the word ‘soul’. He was presenting a historical discussion of why he thought memory the key to the …
+
+89. Pluralism and Mysticism in the Thought of Paul K. Feyerabend
+   https://www.fag.ifil.uz.zgora.pl/index.php/fag/article/view/227
+   (F Coniglione - Filozoficzne Aspekty Genezy, 2023 - fag.ifil.uz.zgora.pl | 2023 | cited by 1)
+   [PDF] https://www.fag.ifil.uz.zgora.pl/index.php/fag/article/download/227/356
+   … areas such as general philosophy, anthropology, history (not … which his colleagues in philosophy of science departments are … It is now reproduced in Ian Hacking’s “Introduction” to the …
+
+90. Considering Data: Critique and Method
+   https://link.springer.com/chapter/10.1007/978-3-031-51254-4_1
+   (É Brian - Are Statistics Only Made of Data? Know-how and …, 2024 - Springer | 2024)
+   … professor Didier Henrion (who died in 1632) was one of the … A comparison with a philosophical object of reflection that … While in the 19th century, as Ian Hacking noted, numbers were …
+
+91. Performative paternalism
+   https://link.springer.com/article/10.1007/s13194-025-00651-7
+   (J Ortmann - European Journal for Philosophy of Science, 2025 - Springer | 2025 | cited by 13)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s13194-025-00651-7.pdf
+   … she cannot tell whether a patient would indeed have died of a heart attack counterfactually, or because … (2021) and Khosrowi (2023), I will refer to it as the strategy of endogenisation of …
+
+92. Making sense of new disease categories: Naming, spatialising, and serialising in genomic medicine
+   https://www.medanthrotheory.org/mat/article/view/6686
+   (LE Navne - Medicine Anthropology Theory, 2023 - medanthrotheory.org | 2023 | cited by 4)
+   [PDF] https://www.medanthrotheory.org/mat/article/download/6686/11965
+   … Following Foucault’s seminal work on biopolitics, philosopher Ian Hacking (1986) pursued the question of what labelling and naming does to people and their identities in the context of …
+
+93. (Mis-) Interpretations of the Theory of Relativity–Considerations on How They Arise and How to Analyze Them
+   https://link.springer.com/chapter/10.1007/978-3-031-36498-3_1
+   (K Hentschel - … Relativity: The Early Philosophical Reception of the …, 2023 - Springer | 2023 | cited by 1)
+   … philosophy of science by Ian Hacking, John Norton, Nancy Nersessian and other “histosophers”. One such technique is to reconstruct taxonomic trees by historians of science analyzing …
+
+94. Giving up the hope for a better past: Making meaning of lost time
+   https://link.springer.com/chapter/10.1007/978-3-032-11338-2_6
+   (W McGowan, C Perrin - Existential selves: Freedom, chaos and the search …, 2026 - Springer | 2026 | cited by 2)
+   [PDF] https://www.researchgate.net/profile/William-Mcgowan-3/publication/400795871_Giving_Up_the_Hope_for_a_Better_Past_Making_Meaning_of_Lost_Time/links/6990d4d15d60ab48356de1a3/Giving-Up-the-Hope-for-a-Better-Past-Making-Meaning-of-Lost-Time.pdf
+   … engagement with existential philosophy, phenomenological … As articulated perfectly by Hacking (2004), we are inspired … is OK that the person in question has died. ‘OK’ here covers a …
+
+95. They Arise and How to Analyze Them
+   https://books.google.com/books?hl=en&lr=&id=ulTaEAAAQBAJ&oi=fnd&pg=PA1&dq=Ian+Hacking+obituary+2023+philosopher&ots=UaXL44tkVd&sig=yY8PxO66z340I9htyWE6ZPGgqEc
+   (K Hentschel - … Relativity: The Early Philosophical Reception of the …, 2023 - books.google.com | 2023)
+   … philosophy of science by Ian Hacking, John Norton, Nancy Nersessian and other “histosophers". One such technique is to reconstruct taxonomic trees by historians of science analyzing …
+
+96. Theory of Categories: Key Instruments of Human Understanding
+   https://books.google.com/books?hl=en&lr=&id=KgPPEAAAQBAJ&oi=fnd&pg=PT6&dq=Ian+Hacking+obituary+2023+philosopher&ots=I8XkkSwu9p&sig=stfKDSzSw6VtUPC2Rf5eC_0Pj_E
+   (P Grim, N Rescher - 2023 - books.google.com | 2023 | cited by 3)
+   … There is a standard philosophical portrayal of categories and categorization that we deem … philosophical problematic and paradox in philosophy of mind, epistemology and metaphysics, …
+
+97. Codifying clumsiness: Tracing the origins of dyspraxia through a transatlantic constellation of mobility (1866–1948)
+   https://www.sciencedirect.com/science/article/pii/S0305748823000890
+   (P Kirby - Journal of Historical Geography, 2023 - Elsevier | 2023 | cited by 4)
+   Dyspraxia affects up to five percent of the population, but its history and its historical geographies have gone unexplored. This article offers the first historical geography of dyspraxia, …
+
+98. 8. AVATARS OF PROGRESS
+   https://books.google.com/books?hl=en&lr=&id=oeyaEAAAQBAJ&oi=fnd&pg=PA131&dq=Ian+Hacking+obituary+2023+philosopher&ots=ggQFP2Zlb_&sig=SlB3sbxuTo8VPCNtu-q1v-4LXqg
+   (G Orwell - The Ashtray:(Or the Man Who Denied Reality), 2023 - books.google.com | 2023)
+   … Lund adds, " Ironic that Hanson mailed this article to the Journal of Philosophy on the very day he died on a mountainside, as did Mallory on his famed climb to the top of Everest (he …
+
+99. Introduction: why what if?
+   https://www.journals.uchicago.edu/doi/abs/10.1086/591712
+   (G Radick - Isis, 2008 - journals.uchicago.edu | 2008 | cited by 42)
+   [PDF] https://www.journals.uchicago.edu/doi/pdf/10.1086/591712
+   … French as a historically and sociologically engaged philosopher of modern physics; and Fuller … 3 On the controversies over history of science contingentism see Ian Hacking, The Social …
+
+100. Identity perplexity, stigma, and social critique: Critical phenomenology with an errant twist
+   https://journals.sagepub.com/doi/abs/10.1177/14634996241292395
+   (C Mattingly - Anthropological Theory, 2025 - journals.sagepub.com | 2025 | cited by 9)
+   … The Foucauldian philosopher, Ian Hacking, notes that Goffman and Foucault offer complementary approaches to examining societal processes of “making people up” in ways that …

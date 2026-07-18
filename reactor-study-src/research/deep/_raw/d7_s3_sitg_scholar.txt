@@ -1,0 +1,1942 @@
+===== Query 1/6: Taleb skin in the game hidden asymmetries risk sharing =====
+
+1. Skin in the game: Hidden asymmetries in daily life
+   https://books.google.com/books?hl=en&lr=&id=4dQ0DwAAQBAJ&oi=fnd&pg=PA4&dq=Taleb+skin+in+the+game+hidden+asymmetries+risk+sharing&ots=0Q4VjOCmDF&sig=CLKeHmZhN1grvGRid5QZipe1CRQ
+   (NN Taleb - 2018 - books.google.com | 2018 | cited by 848)
+   [PDF] https://download.boekhuis.nl/9789057125805_fragm-docb.pdf
+   # 1 NEW YORK TIMES BESTSELLER• A bold work from the author of The Black Swan that challenges many of our long-held beliefs about risk and reward, politics and religion, finance and personal responsibility In his most provocative and practical book yet, one of the foremost thinkers of our time redefines what it means to understand the world, succeed in a profession, contribute to a fair and just society, detect nonsense, and influence others. Citing examples ranging from Hammurabi to Seneca, Antaeus the Giant to Donald Trump, Nassim Nicholas Taleb shows how the willingness to accept one’s own risks is an essential attribute of heroes, saints, and flourishing people in all walks of life. As always both accessible and iconoclastic, Taleb challenges long-held beliefs about the values of those who spearhead military interventions, make financial investments, and propagate religious faiths. Among his insights:• For social justice, focus on symmetry and risk sharing. You cannot make profits and transfer the risks to others, as bankers and large corporations do. You cannot get rich without owning your own risk and paying for your own losses. Forcing skin in the game corrects this asymmetry better than thousands of laws and regulations.• Ethical rules aren’t universal. You’re part of a group larger than you, but it’s still smaller than humanity in general.• Minorities, not majorities, run the world. The world is not run by consensus but by stubborn minorities imposing their tastes and ethics on others.• You can be an intellectual yet still be an idiot.“Educated philistines” have been wrong on everything from Stalinism to Iraq to low-carb diets.• Beware of complicated solutions (that someone was paid to find). A simple barbell can build muscle better than expensive new machines.• True religion is commitment, not just faith. How much you believe in something is manifested only by what you’re willing to risk for it. The phrase “skin in the game” is one we have often heard but rarely stopped to truly dissect. It is the backbone of risk management, but it’s also an astonishingly rich worldview that, as Taleb shows in this book, applies to all aspects of our lives. As Taleb says,“The symmetry of skin in the game is a simple rule that’s necessary for fairness and justice, and the ultimate BS-buster,” and “Never trust anyone who doesn’t have skin in the game. Without it, fools and crooks will benefit, and their mistakes will never come back to haunt them.”
+
+===== Query 2/6: skin in the game bonding collateral mechanism design =====
+
+1. Inter-Agent Trust Models: A Comparative Study of Brief, Claim, Proof, Stake, Reputation and Constraint in Agentic Web Protocol Design-A2A, AP2, ERC-8004, and …
+   https://arxiv.org/abs/2511.03434
+   (BA Hu, H Rong - arXiv preprint arXiv:2511.03434, 2025 - arxiv.org | 2511 | cited by 6)
+   [PDF] https://arxiv.org/pdf/2511.03434
+   … economic skin-inthe-game: agents put down collateral that … Overall, our study finds that no single trust mechanism is … , or performance bonds can supply economic skin-inthe-game for …
+
+2. CENTRE FOR FINANCE AND CREDIT MARKETS
+   https://nottingham.ac.uk/cfcm/documents/papers/12-10.pdf
+   (T Pooling, S Bougheas - nottingham.ac.uk)
+   [PDF] https://nottingham.ac.uk/cfcm/documents/papers/12-10.pdf
+   … securitization within a mechanism design framework, … as collateral securities that keeps in it books as skin in the game. Next, I show that the buyers of securities set the skin in the game …
+
+3. The skin-in-the-game bond: a novel sustainable capital instrument
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3827001
+   (K Antonio, J De Spiegeleer, W Schoutens… - Available at SSRN …, 2021 - papers.ssrn.com | 2021)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3827001
+   … Based on the available INES data, we value three nuclear skin-in-the-game bonds with characteristics … It makes sure that collateral and funds are available in case of a major disaster to …
+
+4. Risk Retention and Adverse Selection: New Evidence from Corporate CDOs
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3358322
+   (J Balthrop - Available at SSRN 3358322, 2018 - papers.ssrn.com | 3358)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3358322
+   … First, I find that the bonds used as collateral for low-skin CDOs have higher observable risk … Specifically, the difference in differences between low-skin and high-skin collateral after the …
+
+5. Structural Vulnerability and Mathematical Analysis of Bank Runs in the Private Credit Market
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6724598
+   (S Hanamura - Available at SSRN 6724598, 2026 - papers.ssrn.com | 6724)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6724598
+   … collateral value across the aggregate market. By integrating these layers into a global games … necessity of "skin in the game" to maintain monitoring incentives during distressed cycles. …
+
+6. Evaluating the Adequacy of Skin in the Game in Central Counterparties-Investigating the Theory-Practice Gap
+   https://gupea.ub.gu.se/items/bfc75731-15a7-4ec2-866a-42612befc44c
+   (E Reci, I Fedorova - 2025 - gupea.ub.gu.se | 2025)
+   [PDF] https://gupea.ub.gu.se/bitstreams/f80f9d1d-c3b4-4fd1-8ffa-c50fd11ce4ad/download
+   … up the collateral (also called margin), from their clearing members. These collaterals create a … The initial margin is the collateral acquired by each member at the start of the trade, and …
+
+7. Does  Skin in the Game Align Incentives? The Case of CRE CLOs
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5997095
+   (D Broxterman, L Cordell, C Dougal, X Ma - 2025 - papers.ssrn.com | 2025)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5997095
+   … collateral. The study is especially timely: the transitional, short-term commercial real estate loans that make up CRE CLO collateral … instruments and CRE CLO bonds are floating rate, we …
+
+8. A little skin in the game: Reducing moral hazard in joint liability lending through a mandatory collateral requirement
+   https://www.sciencedirect.com/science/article/pii/S0167268119301726
+   (JE Flatnes, MR Carter - Journal of Economic Behavior & Organization, 2019 - Elsevier | 2019 | cited by 21)
+   [PDF] https://basis.ucdavis.edu/sites/g/files/dgvnsk466/files/2018-11/Flatnes%20Carter%20Tanzania%20collateral.pdf
+   … , as the collateral requirement would simultaneously crowd in … (20%) individual collateral requirement in a joint liability group … the effect of the individual collateral requirement to vary by …
+
+9. Keeping Some Skin in the Game: How to Start a Capital Market in Longevity Risk Transfers
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3612781
+   (E Biffis, DP Blake - 2013 - papers.ssrn.com | 2013 | cited by 3)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3612781
+   … bonds,14 where the premiums paid by investors to acquire longevity-linked notes are used to purchase securities that are held in a special purpose vehicle and used as collateral for …
+
+10. Keeping some skin in the game: How to start a capital market in longevity risk transfers
+   https://www.tandfonline.com/doi/abs/10.1080/10920277.2013.872552
+   (E Biffis, D Blake - North American Actuarial Journal, 2014 - Taylor & Francis | 2014 | cited by 43)
+   [PDF] https://openaccess.city.ac.uk/id/eprint/6840/1/Keeping%20some%20skin%20in%20the%20game.pdf
+   … What we have in mind is the format of catastrophe bonds,Footnote 14 where the premiums paid … in a special purpose vehicle and used as collateral for the bond’s payments.Footnote 15 …
+
+11. European CLOs Reborn
+   https://search.proquest.com/openview/42deb1bf1384c38abd7a884d2dfb8708/1?pq-origsite=gscholar&cbl=38930
+   (M Sharkey - Journal of Structured Finance, 2013 - search.proquest.com | 2013 | cited by 1)
+   … significant percentage of ﬁxed—rate—paying bonds that could be included in portfolios. This … to hold skin in the game, the most obvious entity in a managed CLO would be the collateral …
+
+12. Moral hazard, skin in the game regulation and rating quality
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2586335
+   (S Ozerturk - Skin in the Game Regulation and Rating Quality …, 2015 - papers.ssrn.com | 2015 | cited by 2)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2586335
+   … and selling this consolidated debt as bonds or as collateralized debt obligations (CDOs) to … restrictions faced by regulated institutions and collateral requirements. The investors are …
+
+13. Bank skin in the game and loan contract design: Evidence from covenant-lite loans
+   https://www.cambridge.org/core/journals/journal-of-financial-and-quantitative-analysis/article/bank-skin-in-the-game-and-loan-contract-design-evidence-from-covenantlite-loans/6C53D9ACD97965467430075EAD0EE0BD
+   (MT Billett, R Elkamhi, L Popov… - Journal of Financial and …, 2016 - cambridge.org | 2016 | cited by 60)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2169624
+   … TL-Bs are designed for institutions and have cash flows similar to those of bonds with a series of interest payments and a final bullet payment of the principal at maturity. Revolving credit …
+
+14. Skin-in-the-game: Risk retention lessons from credit card securitization
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/gwlr81&section=25
+   (AJ Levitin - Geo. Wash. L. Rev., 2013 - HeinOnline | 2013 | cited by 38)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=1898763
+   … In so doing, this Article observes that skin-in-thegame should … ("ABS")-essentially bonds backed by the cash flows from credit … by a collateral certificate (or a "collateral invested amount" ("…
+
+15. How important is having skin in the game? Originator-sponsor affiliation and losses on mortgage-backed securities
+   https://academic.oup.com/rfs/article-abstract/25/11/3217/1567173
+   (C Demiroglu, C James - The Review of Financial Studies, 2012 - academic.oup.com | 2012 | cited by 195)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=1530231
+   This article examines the relationship between a mortgage originator's affiliation with the sponsor of a securitization or the servicer of the securitized loans and the default rate on the …
+
+16. Being Naked - et Quo hinc?: Developing a 'Skin-in-the-Game' Solution for Credit Default Swaps
+   https://www.mdpi.com/2227-7072/10/4/94
+   (S Senarath, P Rajapakse, JJV Robbé… - International Journal of …, 2022 - mdpi.com | 2022 | cited by 1)
+   … Years prior to the GFC, CDSs replaced their traditional association with bonds with CDOs and … Protection sellers, who had neither sufficient liquid collateral nor re-insurance protection …
+
+17. Skin in the game and moral hazard
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/jofi.12161
+   (G Chemla, CA Hennessy - The Journal of Finance, 2014 - Wiley Online Library | 2014 | cited by 145)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=1911922
+   What determines securitization levels, and should they be regulated? To address these questions we develop a model where originators can exert unobservable effort to increase …
+
+18. Skin in the Game in the CMBS Market
+   https://www.philadelphiafed.org/-/media/FRBP/Assets/Economy/Articles/economic-insights/2018/q1/bt-skin_in_the_game.pdf
+   (J DISALVO, R JOHNSTON - philadelphiafed.org)
+   [PDF] https://www.philadelphiafed.org/-/media/FRBP/Assets/Economy/Articles/economic-insights/2018/q1/bt-skin_in_the_game.pdf
+   … Some of these regulations are designed to force issuers of asset-backed securities to have skin in the game—that is, to keep on … But what is the evidence that skin in the game matters? If …
+
+19. Skin in the Game
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/intfinr36&section=66
+   (N Robinson, J Harnett, E Hardin - Int'l Fin. L. Rev., 2017 - HeinOnline | 2017)
+   … In a typical CLO transaction structure, a collateral manager selects and manages a portfolio … issue CLO transactions and the limited supply of collateral loans for new transactions. In July …
+
+20. Easy skins, easy life: a chronological case study of loot boxes and transferable cosmetic items in the video game Counter-Strike: Global Offensive
+   https://ontariotechu.scholaris.ca/items/3bfa84a0-0ca8-4692-a7de-33fb7f9ca96d
+   (P Nguyen - 2022 - ontariotechu.scholaris.ca | 2022 | cited by 9)
+   [PDF] https://ontariotechu.scholaris.ca/bitstreams/b1701976-29bd-41cc-a604-dc045db7120b/download
+   … able to purchase 'Bonds' that could be redeemed for two weeks of the games' subscription … the subject of loot boxes and skin gambling through the lens of the video game CS:GO. The …
+
+21. Central clearing and risk transformation
+   https://www.econstor.eu/handle/10419/210113
+   (R Cont - 2017 - econstor.eu | 2017 | cited by 49)
+   [PDF] https://www.econstor.eu/bitstream/10419/210113/1/nb-wp2017-03.pdf
+   … , their capital and ‘skin-in-the-game’ and capital requirements … The clearing member retains ownership of the collateral … of the spread between the two bonds, typically of the order of a …
+
+22. The conundrum of covered bonds
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/busl66&section=49
+   (SL Schwarcz - Bus. Law., 2010 - HeinOnline | 2010 | cited by 90)
+   [PDF] https://scholarship.law.duke.edu/cgi/viewcontent.cgi?article=2954&context=faculty_scholarship
+   … credit by issuing full recourse bonds using the nobles' estates as collateral.16 Landschaft … minimum amount of recourse, thereby keeping "skin in the game" to minimize moral hazard. …
+
+23. Skin in the Game–Central Counterparty Risk Controls and Incentives| Bulletin–June 2015
+   https://rba.gov.au/publications/bulletin/2015/jun/9.html
+   (L Carter, M Garner - 2015 - rba.gov.au | 2015)
+   … Margin: a ‘defaulter-pays’ resource whereby each clearing participant posts collateral to cover the risks associated with its positions with the CCP. Margin can usually only be accessed …
+
+24. Unchaining collective intelligence for science, research, and technology development by blockchain-boosted community participation
+   https://www.frontiersin.org/journals/blockchain/articles/10.3389/fbloc.2021.631648/full
+   (J Ducrée, M Etzrodt, S Bartling, R Walshe… - Frontiers in …, 2021 - frontiersin.org | 2021 | cited by 29)
+   … possible trust,” staking “skin in the game” as collateral thus needs to be demanded … bonding curves (TBCs) to incentivize thorough assessment of early-stage ideas by skin-in-the-game, …
+
+25. Peer-to-peer crowdfunding: Information and the potential for disruption in consumer lending
+   https://www.annualreviews.org/content/journals/10.1146/annurev-financial-111914-041939
+   (A Morse - Annual Review of Financial Economics, 2015 - annualreviews.org | 2015 | cited by 408)
+   [PDF] https://www.nber.org/system/files/working_papers/w20899/w20899.pdf
+   … are willing to put skin in the game to certify their information. … also includes autos and utility rate bonds) returned 4.4% over … Many of these mechanisms (eg, collateral) are not present in …
+
+26. A New Incentive Model For Content Trust
+   https://arxiv.org/abs/2507.09972
+   (L Barbosa, S Kirshner, R Kopel, ETK Lim… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2507.09972
+   … content creators stake financial collateral on factual claims for … 1) content creators to have skin in the game connected to the … Under this design, verified content backed by larger bonds …
+
+27. Risk retention rules and the issuance of commercial mortgage backed securities
+   https://link.springer.com/article/10.1007/s11146-021-09837-1
+   (S Agarwal, BW Ambrose, Y Yildirim, J Zhang - The Journal of Real Estate …, 2024 - Springer | 2024 | cited by 15)
+   … the deal sponsors to have skin in the game, we expect that … variables for the entire collateral pool backing each deal. The … on the CMBS bonds that are backed by the collateral pool of …
+
+28. Sacralizing finance: Risk-sharing Islamic finance
+   https://link.springer.com/chapter/10.1007/978-3-319-66390-6_6
+   (Z Iqbal, A Mirakhor - Ethical Dimensions of Islamic Finance: Theory and …, 2017 - Springer | 2017 | cited by 4)
+   … as each party to contracts has “skin-in-the-game,” thus eliminating or … mechanisms such as collateral requirements and an edifice of legal, administrative, policy incentive mechanisms …
+
+29. Can Polymarket Become a More Accurate
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6161946
+   (F Irkham - … for Traditional Surveys That Are Easy to Game, 2026 - papers.ssrn.com | 2026)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6161946
+   … (binary contracts, USDC collateral on Polygon, a CLOB order book mechanism, and oracle-… Polymarket can serve as a more stringent “survey” signal because skin in the game changes …
+
+30. Ratio controls need reconsideration
+   https://www.sciencedirect.com/science/article/pii/S1572308913000089
+   (C Goodhart - Journal of Financial Stability, 2013 - Elsevier | 2013 | cited by 60)
+   … in bankruptcy, and as ‘skin in the game’. There was never … by buying or lending against the collateral of, any (financial) … than taxpayers, eg via bail-inable bonds, 5 the potential cost of an …
+
+31. The 5% Securitisation Retention Threshold: A Short Technical History
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5369402
+   (D DamHieu, G Duponcheele, A Linden… - Available at SSRN …, 2016 - papers.ssrn.com | 2016)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5369402
+   … on an appropriate degree of “skin-in-the-game” that would reinforce … , such as servicing or collateral administration, when not … of the assets from securitisations to covered bonds, with all …
+
+32. Sme funding without banks? on the interplay of banks and markets
+   https://www.econstor.eu/handle/10419/149465
+   (G Franke, JP Krahnen - 2017 - econstor.eu | 2017 | cited by 10)
+   [PDF] https://www.econstor.eu/bitstream/10419/149465/1/877604835.pdf
+   … Moreover, the trustee typically has no skin in the game, ie does not own any of these bonds. This setup may weaken the protection of creditors provided by the trustee. It may also help to …
+
+33. Covered bonds: background and policy issues
+   https://www2.law.umaryland.edu/marshall/crsreports/crsdocuments/R41322_04262013.pdf
+   (EV Murphy - 2013 - law.umaryland.edu | 2013 | cited by 5)
+   [PDF] https://www2.law.umaryland.edu/marshall/crsreports/crsdocuments/R41322_04262013.pdf
+   … bonds may be less susceptible to poor underwriting standards because issuers maintain risk exposure or “skin in the game,” … that limits the collateral eligible for covered bonds by any or …
+
+34. The financial intermediation role of the P2P lending platforms
+   https://link.springer.com/article/10.1057/s41294-017-0045-1
+   (O Havrylchyk, M Verdier - Comparative Economic Studies, 2018 - Springer | 2018 | cited by 161)
+   [PDF] https://www.researchgate.net/profile/Olena-Havrylchyk/publication/322258377_The_Financial_Intermediation_Role_of_the_P2P_Lending_Platforms/links/5d6b88474585150886046666/The-Financial-Intermediation-Role-of-the-P2P-Lending-Platforms.pdf
+   … Similar to bonds, loans originated via a platform are … Unlike traditional banks that rely mostly on collateral to lower … A first solution for the platform is to take some skin in the game by …
+
+35. Correlated Defaults and Risk Retention: Can Prices be Increasing in Risk?
+   https://www.sciencedirect.com/science/article/pii/S1544612326005994
+   (D Echeverry - Finance Research Letters, 2026 - Elsevier | 2026 | cited by 1)
+   … as a minimum level of sponsor skin-in-the-game: US rules implementing Section … bonds backed by the pool's cash flows. She retains a junior tranche a s ∈ [ 0 , 1 ] as skin in the game. …
+
+36. What data have told us about decentralized finance
+   https://www.sciencedirect.com/science/article/pii/S0929119925001841
+   (JC León, A Lehar - Journal of Corporate Finance, 2025 - Elsevier | 2025 | cited by 16)
+   This paper surveys the growing empirical literature on decentralized finance (DeFi), emphasizing how protocol design and incentive structures shape economic outcomes in blockchain-…
+
+37. The Klyrox Protocol-A Decentralized Framework for Optimistic Content Verification and Epistemic Reputation
+   https://www.authorea.com/doi/full/10.22541/au.177574483.34793689
+   (AS Shaik - 2026 - authorea.com | 2026)
+   [PDF] https://www.authorea.com/doi/pdf/10.22541/au.177574483.34793689
+   … Bonding. Every assertion of fact submitted to the network must be backed by financial collateral … negative cost to being lazy (forced skin-in-game) Economic Modeling: Simulations show …
+
+38. Integrity and Accountability in the Secondary Mortgage Market
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/hamlrv35&section=24
+   (E Renuart, K Keest - Hamline L. Rev., 2012 - HeinOnline | 2012 | cited by 1)
+   … Collateral-that's the skin in the game. What you offer up as a … and moving them in and out of bonds and all of this other stuff… That's where you'd take some pieces of bonds that were rated …
+
+39. Whose Skin is it? Examining the Role of Risk Retention in CMBS Markets
+   https://reri.org/research/article_pdf/ciochettilarssonpaper.pdf
+   (BA Ciochetti, CF Larsson - Work. Paper, 2017 - reri.org | 2017 | cited by 3)
+   [PDF] https://reri.org/research/article_pdf/ciochettilarssonpaper.pdf
+   … to keep “skin-in-the-game”—a guarantee that any losses on the underlying collateral will first … each bond, which we use to link CMBS bonds with CDO collateral also provided by Trepp. …
+
+40. Central counterparties in the OTC derivatives market from the perspective of the legal theory of finance, financial market stability and the public good
+   https://link.springer.com/article/10.1007/s40804-016-0031-5
+   (M Weber - European Business Organization Law Review, 2016 - Springer | 2016 | cited by 15)
+   … be required to have more ‘skin in the game’. CCPs therefore … Collateral calls are initiated to protect financial institutions … default devaluating treasury bonds, central counterparties can …
+
+41. A Tale of Two Premiums: How Belief Disagreement Twists the Term Structure of Convenience Yield
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6095628
+   (J Wang, S Li - Available at SSRN 6095628, 2025 - papers.ssrn.com | 6095 | cited by 1)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6095628
+   … our measure captures “skin-in-the-game” divergence in trader … expanding the premium on longterm bonds, reflecting a “flight-… A participant can deposit 1 USDC of collateral into the CTF …
+
+42. The design flaw in sustainability-linked bonds
+   https://chair-energy-prosperity.org/wp-content/uploads/2023/06/publication2023_design-flaw-Sustainability-Linked-Bonds_Lefournier_WP.pdf
+   (J Lefournier - Chair Energy & Prosperity Working Paper, 2023 - chair-energy-prosperity.org | 2023 | cited by 5)
+   [PDF] https://chair-energy-prosperity.org/wp-content/uploads/2023/06/publication2023_design-flaw-Sustainability-Linked-Bonds_Lefournier_WP.pdf
+   … debtor can each assert collateral giving them different ranks. It … So SU is really the skin in the game. Unlike maturity which is … Once fixed, the probability level cannot be a game changer …
+
+43. Secured transactions and financial stability: regulatory challenges
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/lcp81&section=6
+   (SL Schwarcz - Law & Contemp. Probs., 2018 - HeinOnline | 2018 | cited by 9)
+   [PDF] https://scholarship.law.duke.edu/cgi/viewcontent.cgi?article=4856&context=lcp
+   … traditional transactions directly secured by collateral, such as secured loans… skin-in-the-game] mechanisms failed to properly align incentives or to protect investors. Specific mechanisms…
+
+44. The Institutional Plumbing for a Machine Economy A Readiness Assessment of Building Blocks, Missing Infrastructure, and Commercial Opportunities
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6372838
+   (BJ Wuebben - 2026 - papers.ssrn.com | 2026)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6372838
+   … Each party must have “skin in the game”—collateral at risk … distance metrics), and mechanism design (for cost calibration). The … We assess the readiness of the bonding and collateral …
+
+45. Structuring Catastrophe Bonds: A Functionalist Perspective
+   https://link.springer.com/chapter/10.1057/9780230117372_19
+   (J Schwolsky, M Stern - Global Perspectives on Insurance Today: A Look at …, 2010 - Springer | 2010)
+   … will examine the main collateral structure employed by many older catastrophe bonds, and we … This gives the sponsor “some skin in the game,” and helps reduce moral hazard by more …
+
+46. Digital disruption and bank lending
+   http://european-economy.eu/wp-content/uploads/2018/01/EE_2.2017-2.pdf#page=65
+   (J Dermine - European Economy, 2017 - european-economy.eu | 2017 | cited by 65)
+   [PDF] http://european-economy.eu/wp-content/uploads/2018/01/EE_2.2017-2.pdf#page=65
+   … Savers can buy bonds or shares issued by deficit units … of risk via assessment of collateral and, when the economy dives… originating bank will keep skin in the game, reducing the agency …
+
+47. 12 The Dodd–Frank Act and the Regulation of Risk Retention in Mortgage-Backed Securities
+   https://books.google.com/books?hl=en&lr=&id=K-PCBAAAQBAJ&oi=fnd&pg=PA201&dq=skin+in+the+game+bonding+collateral+mechanism+design&ots=VGTTh9wCRB&sig=n1nCRHSvjT4wkUNiaffhOa1-7y8
+   (C Demiroglu, CM James - Perspectives on dodd-frank and …, 2014 - books.google.com | 2014 | cited by 8)
+   … amortization, which means that the senior bonds are paid first. In an OC/XS … skin in the game matters, the importance of skin in the game varies with the nature of the underlying collateral…
+
+48. Regulations for securitisation and covered bonds: too much or too little
+   https://www.degruyterbrill.com/document/doi/10.1515/ecfr-2019-0019/html
+   (A Arif - European Company and Financial Law Review, 2019 - degruyterbrill.com | 2019 | cited by 3)
+   [PDF] https://uwe-repository.worktribe.com/index.php/OutputFile/9007938
+   … do not maintain a ‘skin in the game’ while securitising. This … having a strong `skin in the game’ as the securitisation might … These CDOs were backed by sub-prime bonds as collaterals…
+
+49. Weak credit covenants
+   https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2023.01496
+   (V Ivashina, B Vallee - Management Science, 2025 - pubsonline.informs.org | 2025 | cited by 73)
+   [PDF] https://www.nber.org/system/files/working_papers/w27316/w27316.pdf
+   … to extract a significant share of collateral that was securing its … subsidiary 18 and issued bonds secured by those assets as … toward their inclusion when their skin in the game is lower, as …
+
+50. Gaia Token: Coordinating Decentralized Intelligence
+   https://resources.cryptocompare.com/asset-management/20553/1755769601766.pdf
+   (S Lai, MJ Yuan, S Sripada, M Wright - 2025 - resources.cryptocompare.com | 2025)
+   [PDF] https://resources.cryptocompare.com/asset-management/20553/1755769601766.pdf
+   … skinin-the-game that aligns incentives with network performance objectives. The bonding mechanism … Miners operate under a ”Capacity-Adjusted Collateral” model where bond …
+
+51. Double liability at early American banks
+   https://www.nber.org/papers/w21494
+   (H Bodenhorn - 2015 - nber.org | 2015 | cited by 25)
+   [PDF] https://www.nber.org/system/files/working_papers/w21494/w21494.pdf
+   … In forcing bank shareholders to have more “skin in the game,… 8 Using balance sheet data and the price of collateral bonds (… the value of the collateral bonds was sufficient to redeem the …
+
+52. Unlocking SME finance through market-based debt: Securitisation, private placements and bonds
+   https://scholar.archive.org/work/bn6b7d2zxjhobglmkisx6b5amu/access/wayback/http://www.oecd.org/finance/Unlocking-SME-finance-through-market-based-debt.pdf
+   (IK Nassr, G Wehinger - OECD Journal: Financial Market Trends, 2015 - scholar.archive.org | 2015 | cited by 79)
+   [PDF] https://scholar.archive.org/work/bn6b7d2zxjhobglmkisx6b5amu/access/wayback/http://www.oecd.org/finance/Unlocking-SME-finance-through-market-based-debt.pdf
+   … issuer in order to provide some “skin-in-the-game” and align his interests with those of the … collateral assets “covering” the bonds remain on the balance sheet of the issuer and thus …
+
+53. Redistributive monetary policy
+   https://markus.scholar.princeton.edu/sites/g/files/toruqf2651/files/04c%20Redistributive%20Monetary%20Policy.pdf
+   (MK Brunnermeier, Y Sannikov - Jackson hole …, 2012 - markus.scholar.princeton.edu | 2012 | cited by 194)
+   [PDF] https://markus.scholar.princeton.edu/sites/g/files/toruqf2651/files/04c%20Redistributive%20Monetary%20Policy.pdf
+   … event in which the borrower and the collateral fail to cover the … its exposure to satisfy its “skin in the game” constraint, it issues … might default on long-term bonds, a diabolic loop between …
+
+54. Alternatives for issuer-paid credit rating agencies
+   https://www.econstor.eu/handle/10419/154136
+   (D Bongaerts - 2014 - econstor.eu | 2014 | cited by 51)
+   [PDF] https://www.econstor.eu/bitstream/10419/154136/1/ecbwp1703.pdf
+   … way as those do for regular bonds. Interestingly, issuance volumes, … For example, I show that the skin-in-the-game proposed by … Collateral considerations could for example limit the debt …
+
+55. A theory of collateral requirements for central counterparties
+   https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2021.4145
+   (JJ Wang, A Capponi, H Zhang - Management Science, 2022 - pubsonline.informs.org | 2022 | cited by 28)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3290397
+   … Second, we do not consider the so-called “CCP’s skin-in-the-game.” Although in practice most CCPs contribute part of their own equity capital to absorb losses before using funds of …
+
+56. A grounded theory approach to understanding in-game goods purchase
+   https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0262998
+   (X Cai, J Cebollada, M Cortiñas - Plos one, 2022 - journals.plos.org | 2022 | cited by 72)
+   [PDF] https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0262998&type=printable
+   … -game items in games enabling players to create and communicate social distinctions and bonds… Being unable to obtain this skin for free through the game mechanics, his intention was …
+
+57. Bonding Function Design
+   https://link.springer.com/chapter/10.1007/978-3-031-98423-5_12
+   (I Giannakouros - … -Tokens: Introduction to the Sector's Economic Design, 2025 - Springer | 2025)
+   … and have enough “skin in the game” to … mechanisms (such as Oracles) may be de facto imposed on the designer—which should be visible through the market and mechanism designs. …
+
+58. The promise of blockchain technology for global securities and derivatives markets: The new financial ecosystem and the'holy grail'of systemic risk containment
+   https://access.heinonline.com/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/eunbuioiz20&section=7
+   (E Avgouleas, A Kiayias - Eur. Bus. Org. L. Rev., 2019 - HeinOnline | 2019 | cited by 100)
+   [PDF] https://www.research.ed.ac.uk/files/80821680/AvgouleasKiayiasEBOR2019ThePromiseOfBlockchainTechnology.pdf
+   … Of course, the higher the 'skin in the game' 46 and the clearer … portfolios holding such assets (eg, government bonds) with … the collateral taker, the collateral taker will return equivalent …
+
+59. Security and efficiency of collateral in decentralized finance
+   https://raw.githubusercontent.com/nud3l/nud3l.github.io/master/publications/dominik_harz_phd_thesis.pdf
+   (DL Harz - 2022 - raw.githubusercontent.com | 2022 | cited by 1)
+   [PDF] https://raw.githubusercontent.com/nud3l/nud3l.github.io/master/publications/dominik_harz_phd_thesis.pdf
+   … • Professor Francesca Toni for her input on game theory and mechanism design that played a … have “skin in the game”. There are five main areas where financial collateral is applied: …
+
+60. Exit, voice, and reputation: The evolution of SPACs
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/decor37&section=40
+   (U Rodrigues, M Stegemoller - Del. J. Corp. L., 2012 - HeinOnline | 2012 | cited by 166)
+   [PDF] https://digitalcommons.law.uga.edu/cgi/viewcontent.cgi?article=1922&context=fac_artchop
+   … , investors demanded increasing amounts of "skin in the game "from SPA C managers, and … not always, private) using various bonding mechanisms to assure investors that their money …
+
+61. Works of friction? Originator-sponsor affiliation and losses on mortgage-backed securities
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1787813
+   (C Demiroglu, CM James - Originator-Sponsor Affiliation and …, 2012 - papers.ssrn.com | 2012 | cited by 15)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=1787813
+   … Our results suggest that retaining even a little skin in the game (… of the underlying mortgage collateral, we find that yields are … fact that collateral balance exceeds the face value of bonds …
+
+62. Collateral crises
+   https://www.aeaweb.org/articles?id=10.1257/aer.104.2.343
+   (G Gorton, G Ordonez - American Economic Review, 2014 - aeaweb.org | 2014 | cited by 786)
+   [PDF] https://www.nber.org/system/files/working_papers/w17771/w17771.pdf
+   … bonds. The subprime shock caused haircuts to rise as lenders questioned the value of the collateral. … The mortgages were typically securitized into bonds that were used as collateral in …
+
+63. Banks, non banks, and lending standards
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3696541
+   (M Darst, E Refayet, A Vardoulakis - Non banks, and Lending …, 2020 - papers.ssrn.com | 2020 | cited by 11)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3696541
+   … Intuitively, higher capital requirements raise banks’ skin in the game and screening out bad … of posted collateral upon project failure given by κC with κ < 1. Hence, collateral foreclosure …
+
+64. Why Is a CCP failure very unlikely?
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3759694
+   (D McLaughlin, R Berndsen - 2021 - papers.ssrn.com | 2021 | cited by 7)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3759694
+   … financial resources (ie skin-in-the-game and the default fund D… only the options to buy bonds outright or reverse repo the cash … and credit quality of the underlying bonds. However, it will …
+
+65. Private safe-asset supply and financial instability
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5195453
+   (M Castells-Jauregui - 2025 - papers.ssrn.com | 2025 | cited by 5)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5195453
+   … are good stores of value, serve as collateral, and help meet mandatory capital and … ’ skin-in-the-game—is not effective. Instead, the public provision of safe assets (eg, government bonds…
+
+66. Collateralized Loan and Debt Obligations: Management Fees, Interest Alignment, and Regulation.
+   https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=10598596&AN=178469777&h=AgvStvr1I7%2BJOWnihbnmOXQcKSb%2Fmc2Ms8Vy7L3Ar9AAL6elgwCemepY4LvVI2TcSZ8HC6nMwxPxAp%2FbzqXnlQ%3D%3D&crl=c
+   (I Yang, JH Cho, LM Dunn-Jensen - Journal of Fixed Income, 2024 - search.ebscohost.com | 2024 | cited by 1)
+   … of collateral assets (the “5% Rule”) to enforce skin in the game for interest alignment. However, the US Court of Appeals concluded in 2018 that open‑market CLO managers are exempt …
+
+67. Illiquidity and all its friends
+   https://www.aeaweb.org/articles?id=10.1257/jel.49.2.287
+   (J Tirole - Journal of Economic Literature, 2011 - aeaweb.org | 2011 | cited by 460)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=1646818
+   … tion is the issuance of covered bonds. The pool of assets serving as collateral for such a bond … recourse to both the pool and the issuer, who therefore keeps substantial skin in the game. …
+
+68. Completing the repair of the EU banking sector-A critical review of an EU Asset Management Company
+   https://www.bruegel.org/sites/default/files/wp-content/uploads/2017/07/European_Economy_2017_1_v1.pdf#page=51
+   (A Enria, P Haben, M Quagliariello - European Economy, 2017 - bruegel.org | 2017 | cited by 18)
+   [PDF] https://www.bruegel.org/sites/default/files/wp-content/uploads/2017/07/European_Economy_2017_1_v1.pdf#page=51
+   … Supervisory guidance is needed on collateral … To ensure that banks keep skin in the game and avoid moral hazard … Therefore, some mechanisms–conversion of bonds into equity or …
+
+69. Matthew Richardson, Joshua Ronen, and Marti Subrahmanyam
+   https://books.google.com/books?hl=en&lr=&id=gZRQDwAAQBAJ&oi=fnd&pg=PA469&dq=skin+in+the+game+bonding+collateral+mechanism+design&ots=ykSfsGXPTm&sig=1mJYRMA8mqqZJYjpBQ7InZBdE60
+   (J White - Regulating Wall Street: The Dodd-Frank Act and the …, 2010 - books.google.com | 2010)
+   … and the lack of skin in the game for lenders and securitizers. … that the absence of skin in the game may not have been the … , the underlying assets are bonds and leveraged loans that are …
+
+70. Secured Transactions and Financial Stability: Regulatory Challenges
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3033052
+   (SL Schwarcz - … : Regulatory Challenges (September 28, 2017). Law …, 2017 - papers.ssrn.com | 2017)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3033052
+   … some of these [skin-in-the-game] mechanisms failed to properly … investors in corporate bonds.Regulation requiring insurers to … Collateral is merely a mechanism for advancing the priority …
+
+71. Financial Market Infrastructures Evolution in a Tokenized Economy
+   https://www.imf.org/-/media/files/publications/wp/2026/english/wpiea2026136-source-pdf.pdf
+   (Y Cabedo, T Mancini-Griffoli, F Schär, N Zhang - 2026 - imf.org | 2026 | cited by 3)
+   [PDF] https://www.imf.org/-/media/files/publications/wp/2026/english/wpiea2026136-source-pdf.pdf
+   … Delivery versus Payment (DvP) is a core mechanism designed … For example, CCPs require collateral from participants to … Some CCPs also provide a second layer of skin in the game by …
+
+72. Chasing unicorns: The European single safe asset project
+   https://journals.sagepub.com/doi/abs/10.1177/1024529418759638
+   (D Gabor, J Vestergaard - Competition & change, 2018 - journals.sagepub.com | 2018 | cited by 108)
+   [PDF] https://uwe-repository.worktribe.com/OutputFile/870893
+   … backed by any EMU sovereign bonds as equivalent collateral. Shadow euros strengthened the bank-… by surprise and to ensure that banks packaging illiquid loans had skin in the game. …
+
+73. Securitization, Covered Bonds and the Risk Taking Behavior of European Banks
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3033004
+   (A Arif, L Bottazzi, S Pastorello - European Corporate Governance …, 2022 - papers.ssrn.com | 2022)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3033004
+   … that the absence of skin in the game causes banks to assume … as collateral for the issued securities (ABS or CBs). However, unlike in securitization, when CBs are issued, the collateral …
+
+74. Securitization, Covered Bonds and the Risk Taking Behavior of European Banks
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4144673
+   (L Bottazzi, A Arif, S Pastorello - 2022 - papers.ssrn.com | 2022)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=4144673
+   … that the absence of skin in the game causes banks to assume … as collateral for the issued securities (ABS or CBs). However, unlike in securitization, when CBs are issued, the collateral …
+
+75. Central counterparties: addressing their too important to fail nature
+   https://books.google.com/books?hl=en&lr=&id=G7zFBgAAQBAJ&oi=fnd&pg=PA3&dq=skin+in+the+game+bonding+collateral+mechanism+design&ots=lmqmwqdBar&sig=9GqRujKwpwzxVGyaxzOSJJUjOTs
+   (F Wendt - 2015 - books.google.com | 2015 | cited by 78)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2568596
+   … (or ‘skin in the game’) is not implemented by every CCP. … that accepts government bonds from country B as collateral will … prefer to deposit governments bonds of their own country, at the …
+
+76. Designing a token economy: Incentives, governance, and tokenomics
+   https://arxiv.org/abs/2602.09608
+   (S Kivilo, A Norta, M Hattingh, S Avanzo… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 17)
+   [PDF] https://arxiv.org/pdf/2602.09608
+   … The design of Redcurry is motivated by a common challenge … and availability of the underlying collateral, which increases … loss through a bonding-curve design tailored for correlated …
+
+77. A Key to Privatization: An Analysis of the Political Viability but Economic Impossibility of a Covered Bonds Market in the United States
+   https://crossworks.holycross.edu/cgi/viewcontent.cgi?article=1019&context=washington
+   (K Russo - 2011 - crossworks.holycross.edu | 2011)
+   [PDF] https://crossworks.holycross.edu/cgi/viewcontent.cgi?article=1019&context=washington
+   … skin in the game" and encourages investor transparency in the market place: Although covered bonds … fixed-rate mortgage bonds form the affiliated bank to serve as collateral. A specific …
+
+78. Securitization Reform
+   
+   (VV Acharya, TF Cooley, M Richardson, I Walter - Regulating Wall Street, 2011 | 2011)
+
+79. Collateral transactions and shado banking
+   https://scholarlypublications.universiteitleiden.nl/access/item%3A3217147/download
+   (R Spence - Economic Review, 2021 - scholarlypublications … | 2021)
+   [PDF] https://scholarlypublications.universiteitleiden.nl/access/item%3A3217147/download
+   … the role financial collateral and margin play therein. The shadow banking sector utilises collateral … , such as government bonds, which are used as financial collateral to secure shortterm …
+
+80. Did the rise of CLOs lead to riskier lending
+   http://stopforeclosurefraud.com/wp-content/uploads/2013/02/ssrn-id1838383.pdf
+   (V Bord, JAC Santos - … Federal Reserve Bank of New York …, 2011 - stopforeclosurefraud.com | 2011 | cited by 19)
+   [PDF] http://stopforeclosurefraud.com/wp-content/uploads/2013/02/ssrn-id1838383.pdf
+   … of our paper, a collateral manager - usually an investment … triple-B and triple-A bonds, BBBSPREAD, since this an alternative … the lead bank’s “skin in the game”, nonetheless we want to …
+
+81. Liquid Staking and the Control-Exposure Wedge
+   https://osf.io/download/gebkq/
+   (MD i Carreras, GC Heesen, K Kawaguchi - 2026 - osf.io | 2026)
+   [PDF] https://osf.io/download/gebkq/
+   … Capital requirements limit how much voting power an operator can control without maintaining skin in the game. They may take the form of formal bonds, additional operator collateral …
+
+82. Enabling Decentralized, Programmable Order Flow Auctions for MEV Mitigation in DeFi
+   https://journals.femington.com/ijisds/article/view/299
+   (MU Syed - International Journal of Intelligent Systems and …, 2026 - journals.femington.com | 2026)
+   [PDF] https://journals.femington.com/ijisds/article/download/299/62
+   … mechanisms align participant incentives with system security. Bonding requirements for solvers create skin-in-the-game, with … Cross-operation flash loan collateral requirements prevent …
+
+83. The market for truth: Engineering honesty in the age of the zero-cost lie
+   https://books.google.com/books?hl=en&lr=&id=edTAEQAAQBAJ&oi=fnd&pg=PA5&dq=skin+in+the+game+bonding+collateral+mechanism+design&ots=SxPzDTVc-D&sig=MM8c88zw67LrYkwpDtApkgsZ-a4
+   (AS Shaik - 2026 - books.google.com | 2026 | cited by 3)
+   … that a system without skin in the game is doomed to collapse. … It explains how financial bonds can replace moral codes. ● Part … Collateral creates honesty not because people are moral, …
+
+84. Grabbing the Bull by the Horns: The Future of Mortgage Lending and Securitization in the Aftermath of the Financial Crisis
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/ufpp25&section=11
+   (D Chatlos - U. Fla. JL & Pub. Pol'y, 2014 - HeinOnline | 2014 | cited by 1)
+   [PDF] https://scholarship.law.ufl.edu/cgi/viewcontent.cgi?article=1469&context=jlpp
+   … making process succinctly illustrate the purpose of the skin in the game rule, stating that the rule "… interest in a specific pool of collateral. Covered bonds date back to eighteenth century …
+
+85. Mortgage financing in the housing boom and bust
+   https://www.nber.org/system/files/chapters/c12624/c12624.pdf
+   (BJ Keys, T Piskorski, A Seru, V Vig - Housing and the financial crisis, 2012 - nber.org | 2012 | cited by 137)
+   [PDF] https://www.nber.org/system/files/chapters/c12624/c12624.pdf
+   … in the clienteles that purchased the bonds backed by subprime collateral from 2001 to 2006. This … Although our results provide broad support for skin in the game, we would need a more …
+
+86. 9. SECURITIZATION AND RISK RETENTION IN EUROPEAN BANKING: THE IMPACT OF COLLATERAL AND PRUDENTIAL RULES
+   https://www.econstor.eu/bitstream/10419/163513/1/suerf-study-2014-4.pdf#page=152
+   (AD Scopelliti - … & GROWTH: FINANCING NEW GROWTH IN …, 2014 - econstor.eu | 2014)
+   [PDF] https://www.econstor.eu/bitstream/10419/163513/1/suerf-study-2014-4.pdf#page=152
+   … backed by corporate bonds or other structured products, cannot be eligible as collateral for … requirements can provide an effective skin in the game mechanism, to improve the quality of …
+
+87. A Relaxation of Commodity Derivatives Clearing Legislation as a Consequence of the 2021–2023 Energy Crisis
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4448470
+   (R Priem - Available at SSRN 4448470, 2023 - papers.ssrn.com | 4448 | cited by 2)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=4448470
+   … Skin-in-the-game can be considered as an extra capital buffer … as collateral as part of their collateral transformation services … bonds to energy firms in exchange for less liquid collateral …
+
+88. Herding Behavior in the CLO Market
+   https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3936718
+   (M Emin - Available at SSRN 3936718, 2021 - papers.ssrn.com | 3936)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3936718
+   … managers skin in the game significantly reduced herding. … Overall, I provide evidence that higher level of collateral … CLO indentures may allow managers to hold bonds up to a certain …
+
+89. The design of a central counterparty
+   https://www.cambridge.org/core/journals/journal-of-financial-and-quantitative-analysis/article/design-of-a-central-counterparty/7B3679C37CFDE6282E41943BA306BD7F
+   (JCF Kuong, V Maurin - Journal of Financial and Quantitative Analysis, 2024 - cambridge.org | 2024 | cited by 28)
+   [PDF] https://www.cambridge.org/core/services/aop-cambridge-core/content/view/7B3679C37CFDE6282E41943BA306BD7F/S0022109023000121a.pdf/design_of_a_central_counterparty.pdf
+   … the cost of collateral is intermediate. If collateral is expensive, using collateral to support loss … We also note that its contributed capital is akin to skin in the game in the sense that the CCP …
+
+90. Collateral cycles
+   https://www.aeaweb.org/conference/2024/program/paper/NYhazd3T
+   (E Benos, G Ferrara, A Ranaldo - Bank of England Staff Working Paper, 2022 - aeaweb.org | 2022 | cited by 13)
+   [PDF] https://www.aeaweb.org/conference/2024/program/paper/NYhazd3T
+   … On the other hand, securities collateral is mostly split between US Treasuries and eurozone bonds at around double the amount of UK government bonds. This results in an …
+
+91. Risk-bearing by the state: When is it good public policy?
+   https://www.sciencedirect.com/science/article/pii/S1572308913000247
+   (D Anginer, A De la Torre, A Ize - Journal of Financial Stability, 2014 - Elsevier | 2014 | cited by 46)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2531967
+   The global financial crisis brought government guarantees to the forefront of the debate. Based on a review of frictions that hinder financial contracting, this paper concludes that the …
+
+92. A relaxation of European derivatives clearing legislation as a consequence of the 2021–2023 energy crisis
+   https://academic.oup.com/jwelb/article-abstract/17/4/277/7686093
+   (R Priem - The Journal of World Energy Law & Business, 2024 - academic.oup.com | 2024)
+   [PDF] https://repository.uantwerpen.be/docstore/d:irua:24015
+   … need to use first its own skin-in-the-game. The availability of … as collateral as part of their collateral transformation services … bonds to energy firms in exchange for less liquid collateral …
+
+93. Introducing the Exchange Traded Pieced Loan–An Asset-Backed Security Design with Chinese Characteristics
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2438568
+   (R Bußmann - Available at SSRN 2438568, 2014 - papers.ssrn.com | 2438)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2438568
+   … bonds and offer a different risk profile to corporate bonds and … investors it has significant skin in the game, the Basel capital … collateral or at least very similar collateral or very correlated …
+
+94. Securitization, structured finance, and covered bonds
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/jcorl39&section=7
+   (SL Schwarcz - J. Corp. L., 2013 - HeinOnline | 2013 | cited by 50)
+   [PDF] https://scholarship.law.duke.edu/cgi/viewcontent.cgi?article=6026&context=faculty_scholarship
+   … mortgage the homes as collateral; because the borrowers are risky, the collateral is the primary … they sell-the so-called "skin in the game." I understand that the Chinese government is …
+
+95. Digital banking and market disruption: a sense of déjà vu
+   https://publications.banque-france.fr/sites/default/files/medias/documents/financial-stability-review-20_2016-04.pdf#page=17
+   (J Dermine - Financial Stability Review, 2016 - publications.banque-france.fr | 2016 | cited by 68)
+   [PDF] https://publications.banque-france.fr/sites/default/files/medias/documents/financial-stability-review-20_2016-04.pdf#page=17
+   … Savers can buy bonds or shares issued by deficit units directly on the financial markets. This … , but also the control of risk via assessment of collateral and, when the economy dives, loan …
+
+96. Deciphering Securitisation and Covered Bonds: Economic analysis and regulations
+   https://amsdottorato.unibo.it/id/eprint/8273/
+   (A Arif - 2017 - amsdottorato.unibo.it | 2017 | cited by 2)
+   [PDF] https://amsdottorato.unibo.it/id/eprint/8273/1/Final%20thesis%20Ahmed%20Arif.pdf
+   … issuing banks have strong ‘skin in the game’ because of the … collateral pool in a CBO transaction is comprised of bonds. These bonds can be investment grade bond (high quality bonds …
+
+97. Analyzing the Efficacy of Credit Guarantee Schemes for MSMEs in India: A Proposal for a Market-Linked Risk-Adjusted Debt (MLRAD) Framework
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5529358
+   (A Bahadur Singh - Ashutosh, Analyzing the Efficacy of Credit …, 2025 - papers.ssrn.com | 2025)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5529358
+   … The most prominent policy instrument for promoting collateral-free … design features of successful international schemes include partial guarantees to maintain lender skin-in-the-game, …
+
+98. Non-bank debt financing for SMEs: The role of securitisation, private placements and bonds
+   https://www.oecd.org/content/dam/oecd/en/publications/reports/2014/10/oecd-journal-financial-market-trends-volume-2014-issue-1_g1g35f93/fmt-v2014-1-en.pdf#page=141
+   (IK Nassr, G Wehinger - OECD Journal: Financial Market Trends, 2014 - oecd.org | 2014 | cited by 43)
+   [PDF] https://www.oecd.org/content/dam/oecd/en/publications/reports/2014/10/oecd-journal-financial-market-trends-volume-2014-issue-1_g1g35f93/fmt-v2014-1-en.pdf#page=141
+   … risk retention or “skin in the game” from the … and collateral transparency and both require loan level data to be made available in order for asset-backed bonds to be eligible as collateral …
+
+99. Essays on Financial and Matching Markets
+   https://search.proquest.com/openview/a2fe7ee204b164a45fda809db67515ca/1?pq-origsite=gscholar&cbl=18750
+   (T Ding - 2015 - search.proquest.com | 2015)
+   … I then discuss the “skin in the game” policy and characterize … bonds from Fannie Mae and Freddie Mac as those bonds do … and a small fluctuation of collateral values may lead to a …
+
+100. Commoditizing Creditor Control
+   https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2317303
+   (Y Yadav - Vanderbilt Law and Economics Research Paper, 2013 - papers.ssrn.com | 2013)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2317303
+   … those with real economic skin in the game. This market offers a … Article means both investors in bonds as well as those who … Lenders typically demand collateral from protection sellers to …
+
+===== Query 3/6: surety bond performance bond incentive honest behavior =====
+
+1. Three paradigms for the role of capitalization requirements in insured financial institutions
+   https://www.sciencedirect.com/science/article/pii/037842669400132M
+   (EJ Kane - Journal of Banking & Finance, 1995 - Elsevier | 1995 | cited by 205)
+   [PDF] https://www.academia.edu/download/41433262/Three_paradigms_for_the_role_of_capitali20160122-29920-1s5kepl.pdf
+   … The benefits of a surety's bond are split between different … institutions that behavior damaging to the surety will be … absorbing losses, may be honestly and realistically presumed to stand …
+
+2. Financial institutions and trustworthy behavior in business transactions
+   https://link.springer.com/article/10.1023/B:BUSI.0000035919.45227.c3
+   (TF Cosimano - Journal of Business Ethics, 2004 - Springer | 2004 | cited by 26)
+   … wants to defend against dishonest behavior where C1 ) L1 > … Finally, the incentives for the intermediary must satisfy a truth … off on $1 Billion worth of surety bonds issued by JP Morgan …
+
+3. History and economics of suretyship
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/clqv12&section=15
+   (WD Morgan - Cornell LQ, 1926 - HeinOnline | 1926 | cited by 66)
+   [PDF] https://scholarship.law.cornell.edu/cgi/viewcontent.cgi?article=1251&context=clr
+   … And further, "The Life policies issued in conjunction with the Surety bonds, whether payable … good conduct, the value of the policy and the consequent incentive to honesty increasing …
+
+4. The inadequacy of surety bid bonds in public construction contracting
+   https://www.jstor.org/stable/25755803
+   (D Bezer - Public Contract Law Journal, 2010 - JSTOR | 2010 | cited by 14)
+   … bid is a collusive sham, subverts an honest and open procurement process, and constitutes unfair conduct… sealed-bid federal contracts are required to furnish a bid guarantee along with …
+
+5. Commercial Fraud and Dishonesty Bonds: Insured's Deficient Conduct as a Defense for the Surety
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/defcon47&section=14
+   (S Kurland, DM Doret - Ins. Counsel J., 1980 - HeinOnline | 1980)
+   … characterized as dishonest in the common speech of men,"' … construed the words of the surety bond against the insurance … incentive (recovering under the policy) and a non-financial …
+
+6. Surety bad faith: Tort recovery for breach of a construction performance bond
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/unilllr2002&section=18
+   (AJ Frakes - U. Ill. L. Rev., 2002 - HeinOnline | 2002 | cited by 11)
+   [PDF] https://www.illinoislawreview.org/wp-content/uploads/2002/02/Frakes.pdf
+   … that "surety" insurance includes: [t]he guaranteeing of behavior of … between a surety bond and a traditional insurance policy.87 … substantial incentive for a surety to fulfill its obligations …
+
+7. Default behaviors of contractors under surety bond in construction industry based on evolutionary game model
+   https://www.mdpi.com/2071-1050/12/21/9162
+   (J Jing, X Deng, R Maqbool, Y Rashid, S Ashfaq - Sustainability, 2020 - mdpi.com | 2020 | cited by 6)
+   … surety bonds to mitigate the default behavior of the contractors. This paper is thus aimed at analyzing the behaviors … institutions are tied to the contractors, they have an incentive to keep …
+
+8. Performance bonds and guarantees: Construction owners and professionals beware
+   https://ascelibrary.org/doi/abs/10.1061/(ASCE)0733-9364(1999)125:6(428)
+   (I Ndekugri - Journal of construction engineering and management, 1999 - ascelibrary.org | 1999 | cited by 20)
+   [PDF] https://shaghool.ir/Files/1999-107.pdf
+   … (2) prejudicial conduct by the beneficiary releases the surety … to know whether the claim is honest or not. However, it is … the autonomy of the performance guarantee if the beneficiary …
+
+9. On financial contracting: An analysis of bond covenants
+   https://www.sciencedirect.com/science/article/pii/0304405X79900114
+   (CW Smith Jr, JB Warner - Journal of financial economics, 1979 - Elsevier | 1979 | cited by 5281)
+   … bonds can have incentives to reject projects which have a positive net present value if the … by an ‘honest’ trustee reduces the problems of adverse borrower behavior induced by risky …
+
+10. Annual Survey of Fidelity and Surety Law 1985, Part I
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/defcon53&section=20
+   (T Connally, E Welbaum, P Devin, GS Ruprecht - Ins. Counsel J., 1986 - HeinOnline | 1986)
+   … intended beneficiary under the surety bond was of extreme … acts of dishonest employees, arguing that the surety does not … or vexatious or unreasonable conduct that the discovery was …
+
+11. Promoting honesty in negotiation: An exercise in practical ethics
+   https://www.jstor.org/stable/3857284
+   (PC Cramton, JG Dees - Business Ethics Quarterly, 1993 - JSTOR | 1993 | cited by 101)
+   [PDF] https://drum.lib.umd.edu/bitstreams/581e7d80-9a63-48c4-9eb8-05e071b7cc4f/download
+   … Given the high value placed on honesty, the incentives for de tiation create a serious … honest behavior, such as the following: "I will be so long as you reciprocate with honest behavior, …
+
+12. Social capital and the municipal bond market
+   https://link.springer.com/article/10.1007/s10551-016-3355-8
+   (P Li, L Tang, B Jaggi - Journal of Business Ethics, 2018 - Springer | 2018 | cited by 79)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2726305
+   … that social capital encourages honesty and results in less fraudulent behavior in bureaucrats (… Thus, this environment may encourage more honesty and ethical behavior in government …
+
+13. Contract-based defenses in securities fraud litigation: A behavioral analysis
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/unilllr2003&section=17
+   (R Prentice - U. Ill. L. Rev., 2003 - HeinOnline | 2003 | cited by 84)
+   [PDF] https://www.illinoislawreview.org/wp-content/ilr-content/articles/2003/2/Prentice.pdf
+   … Market participants, in turn, will have an incentive to adopt … turn, critical to the performance of honest and efficient equity … and promote honesty, trust, and ethical behavior in commercial …
+
+14. Missing the marks? Dispersion in corporate bond valuations across mutual funds
+   https://www.sciencedirect.com/science/article/pii/S0304405X11000341
+   (G Cici, S Gibson, JJ Merrick Jr - Journal of Financial Economics, 2011 - Elsevier | 2011 | cited by 100)
+   [PDF] https://www.econstor.eu/bitstream/10419/43705/1/642401845.pdf
+   We study the dispersion of month-end valuations placed on identical corporate bonds by different mutual funds. Such dispersion is related to bond-specific characteristics associated …
+
+15. An incentive mechanism to reinforce truthful reports in reputation systems
+   https://www.sciencedirect.com/science/article/pii/S1084804511000658
+   (H Zhao, X Yang, X Li - Journal of Network and Computer Applications, 2012 - Elsevier | 2012 | cited by 47)
+   … -based incentive mechanism for enforcing truthful report for non-verifiable information in self-interested P2P networks. A set of incentive … We design, implement, and analyze incentive …
+
+16. A decision model for financial assurance instruments in the upstream petroleum sector
+   https://www.sciencedirect.com/science/article/pii/S0301421503000806
+   (D Ferreira, S Suslick, J Farley, R Costanza, S Krivov - Energy Policy, 2004 - Elsevier | 2004 | cited by 38)
+   [PDF] https://www.robertcostanza.com/wp-content/uploads/2017/02/2004_J_Ferreira_PetroleumSector.pdf
+   … likely to require surety bonds, letters of credit, and periodic payment collateral account tools. … nations have already established tax incentive policies and royalty relief programs. These …
+
+17. Civic honesty around the globe
+   https://www.science.org/doi/abs/10.1126/science.aau8712
+   (A Cohn, MA Maréchal, D Tannenbaum, CL Zünd - Science, 2019 - science.org | 2019 | cited by 445)
+   [PDF] https://www.science.org/doi/pdf/10.1126/science.aau8712
+   … refrain from opportunistic behavior, are affected by monetary incentives to act otherwise. … rise to honest behavior (6–11), little is known about how material incentives affect civic honesty, …
+
+18. Trust, honesty and corruption: Reflection on the state-building process
+   https://www.cambridge.org/core/journals/european-journal-of-sociology-archives-europeennes-de-sociologie/article/trust-honesty-and-corruption-reflection-on-the-statebuilding-process/EECD058A8C4C540F7318E65BDBE7B6BA
+   (S Rose-Ackerman - … Journal of Sociology/Archives Européennes de …, 2001 - cambridge.org | 2001 | cited by 482)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=283429
+   … One may trust another person to behave honestly, but honesty is not identical to … commitment to honesty or has an incentive to tell the truth. Corruption is dishonest behavior that violates …
+
+19. Scalability and security in blockchain networks: Evaluation of sharding algorithms and prospects for decentralized data storage
+   https://www.mdpi.com/2227-7390/12/23/3860
+   (AL Bulgakov, AV Aleshina, SD Smirnov, AD Demidov… - Mathematics, 2024 - mdpi.com | 2024 | cited by 47)
+   … serves as an incentive for honest behavior and incentivizes … This system creates an additional incentive for nodes to strive … of nodes and imitate their behavior until one of them becomes …
+
+20. Analysis of polkadot: Architecture, internals, and contradictions
+   https://ieeexplore.ieee.org/abstract/document/9881859/
+   (H Abbas, M Caprolu, R Di Pietro - 2022 IEEE International …, 2022 - ieeexplore.ieee.org | 2022 | cited by 83)
+   [PDF] https://arxiv.org/pdf/2207.14128
+   … to be honest, and at most a third can be malicious, validators are incentivized to behave honestly … that governs economic incentives and directly impacts overall security of the network. …
+
+21. Trust and commitment in the United States and Japan
+   https://link.springer.com/article/10.1007/BF02249397
+   (T Yamagishi, M Yamagishi - Motivation and emotion, 1994 - Springer | 1994 | cited by 3842)
+   [PDF] https://www.academia.edu/download/4356439/YamagishiYamagishi1994MotivationAndEmotion.pdf
+   … by the nature of a surrounding incentive structure. "Honest" behavior in such a relation reveals simply that the partner is prudent (cf. Frank, 1988). Knowing that a person has behaved …
+
+22. A proof-of-trust consensus protocol for enhancing accountability in crowdsourcing services
+   https://ieeexplore.ieee.org/abstract/document/8332496/
+   (J Zou, B Ye, L Qu, Y Wang… - IEEE Transactions on …, 2018 - ieeexplore.ieee.org | 2018 | cited by 273)
+   … Also there is an incentive and punishment mechanism in our PoT protocol to encourage honest behaviors while discouraging unfaithful behaviors. The validators who honestly …
+
+23. Collusion-proof decentralized autonomous organizations
+   https://www.sciencedirect.com/science/article/pii/S0048733326001009
+   (A Braun, N Haeusle - Research Policy, 2026 - Elsevier | 2026 | cited by 17)
+   … honest or adversarial. Instead, we model them as rational agents who respond to incentives. … (IC) requires that contributors prefer honest behavior to misconduct, since the latter entails …
+
+24. Trust and social capital in the regulation of lending activities
+   https://www.sciencedirect.com/science/article/pii/S1053535702001452
+   (M Ferrary - The Journal of Socio-Economics, 2003 - Elsevier | 2003 | cited by 267)
+   [PDF] https://pages.ucsd.edu/~aronatas/project/academic/Trust%20and%20social%20capital%20in%20the%20regulation.pdf
+   … incentive theory model (Laffont, 1991) in which the state modifies the calculation of optimization by the borrower and incites him to adopt an honest behavior … his opportunistic behavior. …
+
+25. The Microeconomics of Corruption: Literature review and theoretical analysis
+   https://ikee.lib.auth.gr/record/348482/files/GRI-2023-39537.pdf
+   (T Papadopoulos - 2023 - ikee.lib.auth.gr | 2023)
+   [PDF] https://ikee.lib.auth.gr/record/348482/files/GRI-2023-39537.pdf
+   … Therefore, there are no incentives for strategic types to behave honestly. … surety bonds in 1894, as a measure to detect inadequate firms. A surety bond is a guarantee in which the surety …
+
+26. Augur: a decentralized oracle and prediction market platform
+   https://arxiv.org/abs/1501.01042
+   (J Peterson, J Krug, M Zoltu, AK Williams… - arXiv preprint arXiv …, 2015 - arxiv.org | 2015 | cited by 149)
+   [PDF] https://arxiv.org/pdf/1501.01042
+   … Augur’s incentive structure is designed to ensure that honest, accurate reporting of … determine truth, incentives can be used to encourage participants to behave honestly without having …
+
+27. In community we trust: Online security communication at eBay
+   https://academic.oup.com/jcmc/article-abstract/7/3/JCMC736/4584230
+   (J Boyd - Journal of Computer-Mediated Communication, 2002 - academic.oup.com | 2002 | cited by 190)
+   … to create expectations of regular and honest behavior” (p. 153). … , there will be tremendous incentive to act fairly and honestly. … We believe that an honest, open environment can bring out …
+
+28. The future of financial fraud
+   https://www.sciencedirect.com/science/article/pii/S0929119920301383
+   (JM Karpoff - Journal of Corporate Finance, 2021 - Elsevier | 2021 | cited by 325)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC7363599/pdf/main.pdf
+   Is financial fraud becoming a bigger or smaller problem over time? Current empirical approaches to this question generate mixed inferences. As an alternative, I use two theoretical …
+
+29. Contracts and the Market for Executives
+   https://www.nber.org/papers/w3542
+   (S Rosen - 1990 - nber.org | 1990 | cited by 930)
+   [PDF] https://www.nber.org/system/files/working_papers/w3542/w3542.pdf
+   … incentives at earlier stages of a career than in later stages, when a rapidly diminishing horizon reduces any incentive effects of future status on current behavior. … current performance …
+
+30. Flchain: A blockchain for auditable federated learning with trust and incentive
+   https://ieeexplore.ieee.org/abstract/document/8905038/
+   (X Bao, C Su, Y Xiong, W Huang… - 2019 5th International …, 2019 - ieeexplore.ieee.org | 2019 | cited by 327)
+   … misbehavior are not auditable and parameter server may compute incorrectly due to single point failure. Furthermore, FL has no incentive … : 1) Incentives for honest collaborative training …
+
+31. Use of social impact bonds to address social problems: Understanding contractual risks and transaction costs
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/nml.21307
+   (S Pandey, JJ Cordes, SK Pandey… - Nonprofit Management …, 2018 - Wiley Online Library | 2018 | cited by 65)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3139263
+   … , and incentives for each party. But can social impact … honest provider) and create contractual hazards (through opportunistic … 1 to conduct a case analysis of a specific social impact bond …
+
+32. When can mediators build trust?
+   https://www.cambridge.org/core/journals/american-political-science-review/article/when-can-mediators-build-trust/3950AC46B274BC6AB2067C5502C99EB6
+   (AH Kydd - American Political Science Review, 2006 - cambridge.org | 2006 | cited by 369)
+   … mediator can acquire a reputational incentive to be honest which is sufficient to overcome a … This is also the continuation payoff from any point forward, assuming honest behavior from …
+
+33. Selling hope, selling risk: some lessons for law from behavioral economics about stockbrokers and sophisticated customers
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/calr84&section=21
+   (DC Langevoort - Cal L. Rev., 1996 - HeinOnline | 1996 | cited by 371)
+   … ability to spot and respond to their opportunistic behavior. … the behavior of the parties that leads to a more honest understanding … A reputational incentive for positive performance is also …
+
+34. Truthful decentralized blockchain oracles
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/nem.2179
+   (Y Cai, N Irtija, EE Tsiropoulou… - International Journal of …, 2022 - Wiley Online Library | 2022 | cited by 44)
+   [PDF] https://www.researchgate.net/profile/Eirini-Eleni-Tsiropoulou/publication/353261839_Truthful_Decentralized_Blockchain_Oracles/links/60f5ad4a9541032c6d508e69/Truthful-Decentralized-Blockchain-Oracles.pdf?_sg%5B0%5D=started_experiment_milestone&origin=journalDetail
+   … To demonstrate the incentive compatibility of the scoring rule, we use a system behavior with a 2-state voter belief system, ie., urn:x-wiley:nem:media:nem2179:nem2179-math-0071 . …
+
+35. Corrupt cities: a practical guide to cure and prevention
+   https://books.google.com/books?hl=en&lr=&id=Bju8SS6mMjgC&oi=fnd&pg=PR6&dq=surety+bond+performance+bond+incentive+honest+behavior&ots=GaK2j_E3Zi&sig=EW29wYD0PslZWBBmD1AAwqweNDM
+   (RE Klitgaard, RML Abaroa, HL Parris - 2000 - books.google.com | 2000 | cited by 618)
+   … solutions and a set of incentives charting a path away from … performance, the more I tripped over suspect behavior. So I … their duty professionally and honestly. The architects' association …
+
+36. Reactive risk and rational action: Managing moral hazard in insurance contracts
+   https://books.google.com/books?hl=en&lr=&id=IiboDwAAQBAJ&oi=fnd&pg=PA1&dq=surety+bond+performance+bond+incentive+honest+behavior&ots=qJF_sHmua7&sig=CVHNKIkCvTpNzzysCL3m2b1JnAc
+   (CA Heimer - 2021 - books.google.com | 2021 | cited by 406)
+   … actor whose incentives are modified by the behavior of the … and surety bonding than in other lines of insurance. … solution is to provide incentives for honesty and loss prevention. There …
+
+37. Trust and honesty in post-socialist societies.
+   https://www.academia.edu/download/52629223/1467-6435.0016120170415-29581-1y7kt3q.pdf
+   (S Rose-Ackerman - Kyklos, 2001 - academia.edu | 2001 | cited by 406)
+   [PDF] https://www.academia.edu/download/52629223/1467-6435.0016120170415-29581-1y7kt3q.pdf
+   … of incentives and opportunities is consistent with an emphasis on the first model outlined above in which institutions can be designed to further trusting and honest behavior but can also …
+
+38. How paternalistic leadership influences IT security policy compliance: The mediating role of the social bond
+   https://aisel.aisnet.org/jais/vol20/iss11/2/
+   (G Feng, J Zhu, N Wang, H Liang - Journal of the Association for …, 2019 - aisel.aisnet.org | 2019 | cited by 96)
+   [PDF] https://www.researchgate.net/profile/Jiawen-Zhu-6/publication/337803753_How_Paternalistic_Leadership_Influences_IT_Security_Policy_ComplianceThe_Mediating_Role_of_the_Social_Bond/links/5df6efd2299bf10bc35f0683/How-Paternalistic-Leadership-Influences-IT-Security-Policy-ComplianceThe-Mediating-Role-of-the-Social-Bond.pdf
+   … bond suggests that the non-IT related routine behavior of leaders can also affect employee ISP compliance through facilitating the formation of social bonds … , designing incentives and …
+
+39. Trust: The evolutionary game of mind and society
+   https://books.google.com/books?hl=en&lr=&id=BT8Ov6yfEHsC&oi=fnd&pg=PR3&dq=surety+bond+performance+bond+incentive+honest+behavior&ots=b1yR2Fduck&sig=BWg8z6_KqO1BDc846mcY4Bdokoo
+   (T Yamagishi - 2011 - books.google.com | 2011 | cited by 607)
+   … Fellowship office for the sincere care and warm assistance … Wary behavior that we are used to today, such as locking the … ” in order to successfully conduct business in Japan. This …
+
+40. Governance institutions and economic activity
+   https://pubs.aeaweb.org/doi/pdf/10.1257/aer.99.1.5
+   (A Dixit - American economic review, 2009 - pubs.aeaweb.org | 2009 | cited by 998)
+   [PDF] http://paulgp.com/speeches/dixit_2009_aea.pdf
+   … If individuals have such preferences, opportunistic behavior can … , but also because the intrinsic incentives they generate can … To sustain honest behavior in each game, each trader and …
+
+41. Trustworthy blockchain oracles: review, comparison, and open research challenges
+   https://ieeexplore.ieee.org/abstract/document/9086815/
+   (H Al-Breiki, MHU Rehman, K Salah… - IEEE access, 2020 - ieeexplore.ieee.org | 2020 | cited by 531)
+   [PDF] https://ieeexplore.ieee.org/iel7/6287639/8948470/09086815.pdf
+   … ASTREA incentivizes honest participants for validating … the assumption that all participants behave honestly on ASTREA’s … honesty of the participants using reputation-based incentives …
+
+42. Blockchain: A potential technology to improve the performance of collaborative emergency management with multi-agent participation
+   https://www.sciencedirect.com/science/article/pii/S2212420922000863
+   (Y Wang, H Chen - International Journal of Disaster Risk Reduction, 2022 - Elsevier | 2022 | cited by 64)
+   As the complexity of emergencies continues to increase, responding to them often exceeds the capabilities of any single public agency, multi-agent collaborative participation is an …
+
+43. Implementation of delightful services: From the perspective of frontline service employees
+   https://www.sciencedirect.com/science/article/pii/S1447677016301140
+   (YC Wang, CC Luo, YF Tai - Journal of Hospitality and Tourism Management, 2017 - Elsevier | 2017 | cited by 93)
+   … behaviors, professional skills, open communication style, and sincere and gracious behaviors. … More incentive programs and customer feedback programs should be implemented to …
+
+44. Anarchy unbound: Why self-governance works better than you think
+   https://books.google.com/books?hl=en&lr=&id=7FhzAwAAQBAJ&oi=fnd&pg=PR11&dq=surety+bond+performance+bond+incentive+honest+behavior&ots=1kXmKKgdA-&sig=UMhbZi3KzQWWgRS554jYkSpt4b0
+   (PT Leeson - 2014 - books.google.com | 2014 | cited by 331)
+   … Given such powerful incentives, it would be surprising if persons in anarchy did not develop … Because their honest conduct ensured they would remain in the community long enough to …
+
+45. Trading in risk: Using markets to improve access control
+   https://dl.acm.org/doi/abs/10.1145/1595676.1595694
+   (I Molloy, PC Cheng, P Rohatgi - Proceedings of the 2008 New Security …, 2008 - dl.acm.org | 2008 | cited by 64)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/1595676.1595694
+   … the correct incentives, an employee will make optimal choices for the organization. We also comment on how the market can be used to ensure employees behave honestly and detect …
+
+46. Whither Securities Regulation--Some Behavioral Observations Regarding Proposals for Its Future
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/duklr51&section=49
+   (R Prentice - DUke lj, 2001 - HeinOnline | 2001 | cited by 235)
+   [PDF] https://scholarship.law.duke.edu/cgi/viewcontent.cgi?article=1157&context=dlj
+   … incentive to adopt investor safeguards to the extent the increase in the amount investors are willing to pay exceeds the cost of the protections. The same incentive … for honesty because …
+
+47. A truth-inducing sybil resistant decentralized blockchain oracle
+   https://ieeexplore.ieee.org/abstract/document/9223272/
+   (Y Cai, G Fragkos, EE Tsiropoulou… - 2020 2nd Conference …, 2020 - ieeexplore.ieee.org | 2020 | cited by 65)
+   [PDF] https://ece-research.unm.edu/tsiropoulou/files/BRAINS2020.pdf
+   … , which are incentive compatible to incentivize truthful report of … section, we show that honest reporting uniquely maximizes … Finally, we compare the behavior of the proposed protocol …
+
+48. Insuring more, ensuring less: The costs and benefits of private regulation through insurance
+   https://books.google.com/books?hl=en&lr=&id=KfiPIwkX_dgC&oi=fnd&pg=PA116&dq=surety+bond+performance+bond+incentive+honest+behavior&ots=piiR1iTsRR&sig=npF7ZE8aiPe_2Ti8CDfeNZ-EAqE
+   (CA Heimer - 2002 - books.google.com | 2002 | cited by 59)
+   … coverage such as fidelity bonds and surety bonds, it is difficult … , from the fact that behavioral patterns have been internalized … and the honesty of policyholders and their employees, as …
+
+49. Security and privacy on blockchain
+   https://dl.acm.org/doi/abs/10.1145/3316481
+   (R Zhang, R Xue, L Liu - ACM Computing Surveys (CSUR), 2019 - dl.acm.org | 2019 | cited by 1697)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3316481
+   … -centralization incentives and economic incentives for security. By providing block creation … that honest behavior approximates Nash equilibrium and thus adversarial behavior such as …
+
+50. Can agency theory justify the regulation of insider trading?
+   https://link.springer.com/article/10.1007/s12113-002-1015-6
+   (A Padilla - The quarterly journal of Austrian Economics, 2002 - Springer | 2002 | cited by 228)
+   [PDF] https://cdn.mises.org/qjae5_1_1.pdf
+   … controlling process reduces incentives for managers to engage in perverse behaviors. We … of the person's reliability (honesty). Reputation reduces the incentives for insiders to trade on …
+
+51. Forensic economics
+   https://pubs.aeaweb.org/doi/abs/10.1257/jel.50.3.731
+   (E Zitzewitz - Journal of Economic Literature, 2012 - pubs.aeaweb.org | 2012 | cited by 278)
+   [PDF] https://digitalcommons.dartmouth.edu/cgi/viewcontent.cgi?article=3435&context=facoa
+   … the product of both honest and hidden behavior, varies with the incentives for hidden behav… that hidden behavior is the only reason the outcome would vary with these incentives. Ruling …
+
+52. How to trust green bonds: Blockchain, climate, and the institutional bond markets
+   https://www.sciencedirect.com/science/article/pii/B9780128144473000203
+   (O Sanderson - Transforming climate finance and green investment …, 2018 - Elsevier | 2018 | cited by 37)
+   … Although green bond market practice includes few legal sanctions to make sure green … do have strong incentives to behave honestly. Given that doing a green bond is voluntary and, as …
+
+53. Endogenous communication among lenders and entrepreneurial incentives
+   https://academic.oup.com/rfs/article-abstract/10/1/205/1612594
+   (AJ Padilla, M Pagano - The review of financial studies, 1997 - academic.oup.com | 1997 | cited by 679)
+   [PDF] https://www.academia.edu/download/33578273/rfs-1997.pdf
+   … Banks can correct this incentive problem by committing to share private information with other lenders. The fiercer competition triggered by information sharing lowers future interest …
+
+54. Verification institutions in financing transactions
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/glj87&section=60
+   (RJ Mann - Geo. LJ, 1998 - HeinOnline | 1998 | cited by 90)
+   [PDF] https://scholarship.law.columbia.edu/cgi/viewcontent.cgi?article=1344&context=faculty_scholarship
+   … incentive of the borrower to make an assertion that is truthful … increase the borrower's incentive to conduct its affairs prudently. … (discussing the difficulties of enforcing surety bonds issued …
+
+55. Opportunism and honest incompetence—seeking explanations for noncompliance in public procurement
+   https://academic.oup.com/jpart/article-abstract/25/3/953/958515
+   (K Kauppi, EM Van Raaij - Journal of Public Administration …, 2015 - academic.oup.com | 2015 | cited by 170)
+   … Incentives are thus not included in the hypothesized model. … incompetence exhibit strong explanatory power in our model of noncompliant behavior in a principal-agent relationship. …
+
+56. Trust and honesty: America's business culture at a crossroad
+   https://books.google.com/books?hl=en&lr=&id=YvKcf18kNxYC&oi=fnd&pg=PR9&dq=surety+bond+performance+bond+incentive+honest+behavior&ots=QRKpPQr4Gh&sig=MDXaU6uNlEBoSdsycCLEDBXOiqI
+   (T Frankel - 2005 - books.google.com | 2005 | cited by 168)
+   [PDF] https://www.researchgate.net/profile/Tamar-Frankel/publication/237513972_Trust_and_honesty_America%27s_business_culture_at_a_crossroad/links/54b3c8490cf26833efcf08f2/Trust-and-honesty-Americas-business-culture-at-a-crossroad.pdf
+   … a culture in which dishonesty is taken for … behavior. If America reaches this final stage, then what we consider to be fraudulent behavior today will be the natural and smart way to behave…
+
+57. Quality disclosure and certification: Theory and practice
+   https://www.aeaweb.org/articles?id=10.1257/jel.48.4.935
+   (D Dranove, GZ Jin - Journal of economic literature, 2010 - aeaweb.org | 2010 | cited by 1179)
+   [PDF] https://www.nber.org/system/files/working_papers/w15644/w15644.pdf
+   … of empirical evidence by examining the behavior of certifiers. … Do they have incentives to be truthful and thorough? Does it … the disclosure of conflicted interest affect certifier behavior? …
+
+58. The core institutions that support strong securities markets
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/busl55&section=64
+   (B Black - Bus. Law., 1999 - HeinOnline | 1999 | cited by 200)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=231120
+   … mean that an honest issuer can't receive fair value for its shares, and has an incentive to use … But insiders' concern for future reputation isn't enough to ensure honest behavior. Some of …
+
+59. The legal and institutional preconditions for strong securities markets
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/uclalr48&section=29
+   (BS Black - UCla l. rev., 2000 - HeinOnline | 2000 | cited by 1074)
+   [PDF] https://papers.ssrn.com/sol3/delivery.cfm/SSRN_ID182169_code99100201.pdf?abstractid=182169%20
+   … That gives insiders an incentive to develop the company's reputation for honest disclosure. … behave as they are supposed to, this liability helps to ensure that insiders disclose honestly …
+
+60. The 4P approach to dealing with scientific uncertainty
+   https://www.tandfonline.com/doi/pdf/10.1080/00139157.1992.9930930
+   (R Costanza, L Cornwell - Environment: Science and Policy for …, 1992 - Taylor & Francis | 1992 | cited by 235)
+   [PDF] https://www.robertcostanza.com/wp-content/uploads/2017/02/1992_J_Costanza_Cornwell_Environment.pdf
+   … depositrefund or assurance bonding system could shift the … and effective economic incentives for both environmental … information that must be honestly acknowledged and communicated…
+
+61. Autonomous nodes and distributed mechanisms
+   https://link.springer.com/chapter/10.1007/3-540-36532-X_5
+   (JC Mitchell, V Teague - International Symposium on Software Security, 2002 - Springer | 2002 | cited by 29)
+   [PDF] http://theory.stanford.edu/people/jcm/papers/MulticastTrans.pdf
+   … augmenting market incentives with cryptographic primitives to make certain forms of behavior computationally … In this section we will include only honest and selfish agents. We consider …
+
+62. Russian privitization and corporate governance: What went wrong
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/stflr52&section=62
+   (B Black, R Kraakman, A Tarassova - Stan. L. Rev., 1999 - HeinOnline | 1999 | cited by 1296)
+   [PDF] https://www.academia.edu/download/80022808/wp269a.pdf
+   … ) hoped that the profit incentives unleashed by privatization would … to behave in the company's interests rather than one's own … honestly to the tax inspectors also can't report honestly to …
+
+63. An equity-agency solution to the bankruptcy-priority puzzle
+   https://www.journals.uchicago.edu/doi/pdf/10.1086/468158
+   (BE Adler - The Journal of Legal Studies, 1993 - journals.uchicago.edu | 1993 | cited by 136)
+   … in their incentives for debtor risk, they share a desire that management behave in an honest, … unique advantage of unsecured credit because security shelters a creditor from insolvency …
+
+64. Efficiency wage theories: A partial evaluation
+   https://www.journals.uchicago.edu/doi/abs/10.1086/654025
+   (LF Katz - NBER macroeconomics annual, 1986 - journals.uchicago.edu | 1986 | cited by 1281)
+   [PDF] https://www.journals.uchicago.edu/doi/pdf/10.1086/654025
+   … to provide incentives for adequate employee performance … to say falsely that workers are shirking and claim the bonds; … of potential workers in verifying the honesty of a firm's behavior …
+
+65. Mandatory disclosure: A behavioral analysis
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/ucinlr68&section=42
+   (SM Bainbridge - U. Cin. L. Rev., 1999 - HeinOnline | 1999 | cited by 316)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=329880
+   … has incentives to provide ex ante assurances that it will provide a steady stream of truthful … In particular, managers will often have an incentive to withhold bad news.45 Consistent with …
+
+66. “I'm innocent!”: Effects of training on judgments of truth and deception in the interrogation room
+   https://link.springer.com/article/10.1023/A:1022330011811
+   (SM Kassin, CT Fong - Law and Human Behavior, 1999 - Springer | 1999 | cited by 547)
+   [PDF] http://www.communicationcache.com/uploads/1/0/8/8/10887248/im_innocent-_effects_of_training_on_judgments_of_truth_and_deception_in_the_interrogation_room.pdf
+   … in the analysis of verbal behavior.According to the manual, truthful suspects are said to be … positive and negative incentives to deceive the interrogator, a factor that tends to increase …
+
+67. What price the moral high ground?: how to succeed without selling your soul
+   https://books.google.com/books?hl=en&lr=&id=8WaYDwAAQBAJ&oi=fnd&pg=PR7&dq=surety+bond+performance+bond+incentive+honest+behavior&ots=JaRKi2C_Zl&sig=mqBKrlG3TVJ3TA4MTEnZq2V519c
+   (RH Frank - 2010 - books.google.com | 2010 | cited by 446)
+   [PDF] https://scholar.archive.org/work/5zfwqf2k2nhrza2daho5upl7ym/access/wayback/http://www.people.vcu.edu:80/~lrazzolini/GR1997.pdf
+   … many situations we simply do not behave in the narrowly self-… gains from merely appearing to be honest. In chapter 2 (“Can … favored by ordinary material incentives, as when interactions …
+
+68. Consumer cheating on service guarantees
+   https://journals.sagepub.com/doi/abs/10.1177/0092070303261416
+   (J Wirtz, D Kum - Journal of the Academy of Marketing …, 2004 - journals.sagepub.com | 2004 | cited by 342)
+   [PDF] https://www.researchgate.net/profile/Jochen-Wirtz/publication/300788068_How_to_Reduce_Consumer_Cheating_on_Service_Guarantees_Results_from_Two_Experimental_Studies/links/576a8e0408ae32424ad38f66/How-to-Reduce-Consumer-Cheating-on-Service-Guarantees-Results-from-Two-Experimental-Studies.pdf
+   … generic model of unethical behavior to the service guarantee context. Specifically, we explore … higher amounts are involved, especially so when the onus to be honest is placed on them. …
+
+69. Disruption of financial intermediation by FinTech: a review on crowdfunding and blockchain
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/acfi.12405
+   (CW Cai - Accounting & Finance, 2018 - Wiley Online Library | 2018 | cited by 502)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111%2Facfi.12405
+   … Bitcoin ‘solves’ this honesty issue by giving nodes an incentive for … honest’ behaviour is just one strategy of many possible strategies. However, whether this ‘default’ honest behaviour of …
+
+70. Opportunistic behavior by firms in implicit pension contracts
+   https://www.jstor.org/stable/145981
+   (C Cornwell, S Dorsey, N Mehrzad - Journal of Human Resources, 1991 - JSTOR | 1991 | cited by 64)
+   [PDF] https://www.researchgate.net/profile/Christopher-Cornwell-2/publication/46553158_Opportunistic_Behavior_by_Firms_in_Implicit_Pension_Contracts/links/595a4025aca2728a137aa9ba/Opportunistic-Behavior-by-Firms-in-Implicit-Pension-Contracts.pdf
+   … but may also create an incentive for opportunistic firm behavior. Because benefits generally … We have made some of the first tests of the honest firm assumption, and our main findings …
+
+71. The role of trust in financial sector development
+   https://books.google.com/books?hl=en&lr=&id=MmxenlSjAc8C&oi=fnd&pg=PA11&dq=surety+bond+performance+bond+incentive+honest+behavior&ots=R4hxWbl60e&sig=eN1-u-093xnlApjuksc5fmLw_5g
+   (B Bossone - 1999 - books.google.com | 1999 | cited by 39)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=623953
+   … Specializing means investing in information to select trustworthy and efficient fund-users, monitoring their behavior, adopting incentives to elicit honest behavior, thus creating a …
+
+72. High commitment high performance: How to build a resilient organization for sustained advantage
+   https://books.google.com/books?hl=en&lr=&id=5DF3BwAAQBAJ&oi=fnd&pg=PR11&dq=surety+bond+performance+bond+incentive+honest+behavior&ots=kVd8p9vAnR&sig=y8DSWengHlN5glY-Momfni5hMbg
+   (M Beer - 2009 - books.google.com | 2009 | cited by 451)
+   … to new circumstances by enabling honest, collective, and public … , including their own roles and behavior. And such a system … Financial incentives, economists argued, are necessary to …
+
+73. Solving the problem of trust
+   https://www.researchgate.net/profile/Carol-Heimer/publication/261707664_Solving_the_Problem_of_Trust/links/02e7e5351e936e4ab8000000/Solving-the-Problem-of-Trust.pdf
+   (CA Heimer - 1999 - researchgate.net | 1999 | cited by 321)
+   [PDF] https://www.researchgate.net/profile/Carol-Heimer/publication/261707664_Solving_the_Problem_of_Trust/links/02e7e5351e936e4ab8000000/Solving-the-Problem-of-Trust.pdf
+   … contracts (surety bonds) to thefts by employees (fidelity bonding)… and opportunities for dishonesty in the situation covered by … encourages and supports honest behavior. By insisting that …
+
+74. 3 Bureaucratic Corruption and the Rate of Temptation: Do Wages in the Civil Service Affect Corruption, and by How Much?
+   https://www.elibrary.imf.org/display/book/9781589061163/ch003.xml
+   (C Rijckeghem - … , corruption, and economic performance, 2001 - elibrary.imf.org | 2001 | cited by 185)
+   [PDF] https://www.elibrary.imf.org/downloadpdf/display/book/9781589061163/ch003.pdf
+   … The importance of adequate remuneration in ensuring an honest civil service is widely … theoretical papers suggest that ensuring an honest civil service may be prohibitively expensive. 2 …
+
+75. Portfolio performance and agency
+   https://academic.oup.com/rfs/article-abstract/23/1/1/1578955
+   (PH Dybvig, HK Farnsworth… - The Review of Financial …, 2010 - academic.oup.com | 2010 | cited by 219)
+   [PDF] https://archive.nyu.edu/jspui/bitstream/2451/27410/2/S-AM-99-01.pdf
+   … from undoing the incentive effects of performance-based fees. We provide conditions under which simple benchmarking emerges as optimal compensation. Additional incentives to take …
+
+76. Effects of the blockchain technology on human resources and marketing: an exploratory study
+   https://link.springer.com/chapter/10.1007/978-3-030-12453-3_79
+   (DC Coita, MM Abrudan, MC Matei - Strategic Innovative Marketing and …, 2019 - Springer | 2019 | cited by 80)
+   … As financial, incentives can be salaries, payments for performance, bounties … the behavior of the employees consistent with corporate values, the cooperation and the honest behavior …
+
+77. Proofs-of-delay and randomness beacons in ethereum
+   http://stevengoldfeder.com/papers/BGB17-IEEESB-proof_of_delay_ethereum.pdf
+   (B Bünz, S Goldfeder, J Bonneau - … Security and Privacy on the …, 2017 - stevengoldfeder.com | 2017 | cited by 115)
+   [PDF] http://stevengoldfeder.com/papers/BGB17-IEEESB-proof_of_delay_ethereum.pdf
+   … We also discuss the incentive challenges raised by providing … the difficulty of incentivizing faithful behavior by the beacon … We show that an honest prover will always have a winning …
+
+78. Strategic disclosure of research results: The cost of proving your honesty
+   https://academic.oup.com/ej/article-abstract/119/539/1036/5089595
+   (E Henry - The Economic Journal, 2009 - academic.oup.com | 2009 | cited by 100)
+   [PDF] https://sciencespo.hal.science/hal-01023670/file/disclosure.pdf
+   In situations where a biased sender provides verifiable information to a receiver, I study how strategic reporting affects the incentives to search for information. Research provides series …
+
+79. Partisan bonds: Political reputations and legislative accountability
+   https://books.google.com/books?hl=en&lr=&id=2G1vdU55rmMC&oi=fnd&pg=PR9&dq=surety+bond+performance+bond+incentive+honest+behavior&ots=lWlMqVsqLK&sig=o8WuomK-l1AqTM7Oe9syG85y0ek
+   (JD Grynaviski - 2010 - books.google.com | 2010 | cited by 167)
+   … sets of incentives for the creation of partisan institutions to regulate party elites’ behavior, with … districts should cast votes against their sincere preference for an L- or R-party candidate. …
+
+80. Pitfalls and opportunities in nonverbal and verbal lie detection
+   https://journals.sagepub.com/doi/abs/10.1177/1529100610390861
+   (A Vrij, PA Granhag, S Porter - Psychological science in the …, 2010 - journals.sagepub.com | 2010 | cited by 770)
+   [PDF] https://researchportal.port.ac.uk/files/112413/PSPI_article_Vrij_Granhag_and_Porter.pdf
+   … Providing even larger incentives to participants is always possible. For … truthful behavior during the small-talk preceding the interview and to compare this behavior with the behavior …
+
+81. Sok: Research perspectives and challenges for bitcoin and cryptocurrencies
+   https://ieeexplore.ieee.org/abstract/document/7163021/
+   (J Bonneau, A Miller, J Clark… - … on security and …, 2015 - ieeexplore.ieee.org | 2015 | cited by 2204)
+   [PDF] https://eprint.iacr.org/2015/261.pdf
+   … honestly they would have no incentive to misbehave. Similar options are available for allocating new funds as exist for proof-of-stake solutions (Laurie’s original proposal [69] suggested …
+
+82. Earthly reward to the religious: religiosity and the costs of public and private debt
+   https://www.cambridge.org/core/journals/journal-of-financial-and-quantitative-analysis/article/earthly-reward-to-the-religious-religiosity-and-the-costs-of-public-and-private-debt/CE4A1A4CF86E46AB1AA8047A3493D4EE
+   (F Jiang, K John, CW Li, Y Qian - Journal of Financial and Quantitative …, 2018 - cambridge.org | 2018 | cited by 154)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2331401
+   … We hypothesize that given its impact on corporate behavior, religiosity also affects the cost … the firm’s intention to conduct business honestly and conservatively. Debtholders in turn trust …
+
+83. Religion and bank loan terms
+   https://www.sciencedirect.com/science/article/pii/S0378426615003593
+   (W He, MR Hu - Journal of Banking & Finance, 2016 - Elsevier | 2016 | cited by 106)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2658537
+   We examine whether religion affects the terms of bank loans. We hypothesize that lenders value the traits of religious adherents, such as risk aversion, ethical behavior and honesty, …
+
+84. Low balling, legal liability and auditor independence
+   https://www.jstor.org/stable/248189
+   (CWJ Lee, Z Gu - Accounting Review, 1998 - JSTOR | 1998 | cited by 225)
+   … bond created by low balling is then a convenient and inexpensive handle with which an owner can exact honest behavior … The monetary incentive for the owner's opportunistic contract …
+
+85. Ethics in finance
+   https://books.google.com/books?hl=en&lr=&id=7wRgAgAAQBAJ&oi=fnd&pg=PR1&dq=surety+bond+performance+bond+incentive+honest+behavior&ots=HaFfp7c7iR&sig=_LwCPGtUR0ZmGAt75wYqCMiMoCQ
+   (JR Boatright - 2014 - books.google.com | 2014 | cited by 638)
+   … of incentives, which may produce unintended outcomes. Poorly designed incentive plans … necessary to promote (1) honest and ethical conduct, including the ethical handling of actual or …
+
+86. What Standard of Care Should Govern the World's Shortest Editorials?: An Analysis of Bond Rating Agency Liability
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/clqv75&section=22
+   (G Husisian - Cornell L. Rev., 1989 - HeinOnline | 1989 | cited by 157)
+   [PDF] https://scholarship.law.cornell.edu/cgi/viewcontent.cgi?article=3480&context=clr
+   … with fraud, or without adequate truthful information, is a world … all prospective bond purchasers to conduct their own analyses.… incentives on a bond rating agency to eschew negligent …
+
+87. The security reference architecture for blockchains: Toward a standardized model for studying vulnerabilities, threats, and defenses
+   https://ieeexplore.ieee.org/abstract/document/9239372/
+   (I Homoliak, S Venugopalan… - … Surveys & Tutorials, 2020 - ieeexplore.ieee.org | 2020 | cited by 188)
+   [PDF] https://ieeexplore.ieee.org/iel7/9739/5451756/09239372.pdf
+   … prevent malicious behaviors. On the other hand, they can detect malicious behavior since they … to promote decentralization by incentive schemes that reward honest participation and …
+
+88. Financial contracting: A survey of empirical research and future directions
+   https://www.annualreviews.org/content/journals/10.1146/annurev-financial-071808-145241
+   (MR Roberts, A Sufi - Annu. Rev. Financ. Econ., 2009 - annualreviews.org | 2009 | cited by 180)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=1356944
+   … is the assumption of incentive conflicts and the … incentive-compatible contract, where incentive compatibility refers to a contract that ensures good behavior by the borrower—truthful …
+
+89. Financial intermediation: Delegated monitoring and long-term relationships
+   https://www.sciencedirect.com/science/article/pii/0378426689900150
+   (JG Haubrich - Journal of Banking & Finance, 1989 - Elsevier | 1989 | cited by 275)
+   [PDF] https://www.academia.edu/download/69545314/0378-4266_2889_2990015-020210913-13340-qwt6sb.pdf
+   … The lenders have the incentive to trust the monitoring to a … The ability to write contracts contingent on past behavior has … that would occur if the agent were honest and not shirking. If the …
+
+90. China's Social Credit System: an evolving practice of control
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3175792
+   (R Creemers - Available at SSRN 3175792, 2018 - papers.ssrn.com | 3175 | cited by 657)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3175792
+   … honesty and traditional virtues, it uses encouragement for trustworthiness and constraints against untrustworthiness as incentive … as a model of sincere conduct. In the market economy, …
+
+91. Vicarious liability for fraud on securities markets: Theory and evidence
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/unilllr1992&section=29
+   (JH Arlen, WJ Carney - U. Ill. L. Rev., 1992 - HeinOnline | 1992 | cited by 450)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2042097
+   … performance) that also would be lost were the agent fired.54 Under ordinary conditions, therefore, managers have strong incentives to behave honestly … as a constraint on behavior.56 In …
+
+92. Trust, trustworthiness, and the behavioral foundations of corporate law
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/pnlr149&section=51
+   (MM Blair, LA Stout - U. Pa. L. Rev., 2000 - HeinOnline | 2000 | cited by 925)
+   [PDF] https://scholarship.law.vanderbilt.edu/cgi/viewcontent.cgi?article=1030&context=faculty-publications
+   … As a result, it can be tempting to assume that external incentives cause all the cooperative, coordinated behavior we observe. Legal scholars may be particularly prone to jump to this …
+
+93. Finding a needle in a haystack: Toward a psychologically informed method for aviation security screening.
+   https://psycnet.apa.org/fulltext/2014-45295-001.html
+   (TC Ormerod, CJ Dando - Journal of Experimental Psychology …, 2015 - psycnet.apa.org | 2015 | cited by 111)
+   … behaviors of deceivers during an interview that can be used by security agents to discriminate them from truthful … For example, we used financial incentives to motivate participants to try …
+
+94. Values-based management
+   https://journals.aom.org/doi/abs/10.5465/AME.1997.9712024837
+   (C Anderson - Academy of Management Perspectives, 1997 - journals.aom.org | 1997 | cited by 301)
+   … for all other moral reasoning and behavior, and value choices … Formal systems like goal/incentive or MBO, in which people … mentioned in this paper represent honest choices, it could be …
+
+95. The financial system and economic performance
+   https://link.springer.com/article/10.1007/BF00122867
+   (RC Merton - Journal of Financial Services Research, 1990 - Springer | 1990 | cited by 314)
+   [PDF] https://www.researchgate.net/profile/Robert-Merton-2/publication/40963954_The_financial_system_and_economic_performance/links/573e123608aea45ee842e3d2/The-financial-system-and-economic-performance.pdf
+   … incentives for financial institutions not to seize assets when they should. Thus, policy on junk bonds … structure surrounding guarantees can lead honest and competent recipients to …
+
+96. Distinguished lecture on economics in government: the private uses of public interests: incentives and institutions
+   https://www.aeaweb.org/articles?id=10.1257/jep.12.2.3
+   (J Stiglitz - Journal of Economic Perspectives, 1998 - aeaweb.org | 1998 | cited by 799)
+   [PDF] https://pubs.aeaweb.org/doi/pdf/10.1257/jep.12.2.3
+   … Those on both sides of the market have an incentive for … the line between pandering and honest reporting, gets access … surrounds much of the conduct of government business makes it …
+
+97. Unlimited liability as a barrier to entry
+   https://www.journals.uchicago.edu/doi/abs/10.1086/261562
+   (JL Carr, GF Mathewson - Journal of Political Economy, 1988 - journals.uchicago.edu | 1988 | cited by 152)
+   … equity interest in the firm to induce honest managerial behavior. Equity capital is raised at the … A second moral hazard problem surrounds the incentives for owners to enforce managerial …
+
+98. The social control of impersonal trust
+   https://www.journals.uchicago.edu/doi/abs/10.1086/228791
+   (SP Shapiro - American journal of Sociology, 1987 - journals.uchicago.edu | 1987 | cited by 3320)
+   [PDF] https://voidnetwork.gr/wp-content/uploads/2016/10/The-Social-Control-Of-Impersonal-Trust-by-Susan-P.-Shapiro.pdf
+   … condition for trust and trustworthy behavior, they are not … Have guardians honestly represented their capacity to shore up … dilemma: "In the early days of surety bonding, courts commonly …
+
+99. Corporate bondholders and debtor opportunism: In bad times and good
+   https://access.heinonline.com/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/hlr105&section=87
+   (V Brudney - Harv. L. Rev., 1991 - HeinOnline | 1991 | cited by 150)
+   … bond contract, and involves indisputably unilateral action by the debtor (the common stockholders). Such behavior … 26 The stockholders' incentive may be simply to reduce the debt so …
+
+===== Query 4/6: Holmström bonding critique agency risk asymmetry =====
+
+1. Asset securitization and asymmetric information
+   https://www.journals.uchicago.edu/doi/abs/10.1086/427765
+   (EM Iacobucci, RA Winter - The Journal of Legal Studies, 2005 - journals.uchicago.edu | 2005 | cited by 169)
+   [PDF] https://www.academia.edu/download/66740311/Asset_Securitization_and_Asymmetric_Info20210430-22386-7pon4h.pdf
+   … Aside from transferring risk, another factor in the true‐sale analysis is the method by which the … We have categorized Holmström’s model as a hidden‐action model, but it involves a …
+
+2. Solutions to principal-agent problems in firms
+   https://link.springer.com/content/pdf/10.1007/0-387-25092-1_15.pdf
+   (GJ Miller - Handbook of new institutional economics, 2005 - Springer | 2005 | cited by 149)
+   [PDF] https://www.researchgate.net/profile/Gary-Miller-21/publication/227168296_Solutions_to_Principal-Agent_Problems_in_Firms/links/54f888bd0cf28d6deca2b7a3/Solutions-to-Principal-Agent-Problems-in-Firms.pdf
+   … Except in “ideal” conditions (with zero risk-aversion and no information asymmetry), agency … Holmstrom (1979) provides a significant paper that rounds out our understanding of the …
+
+3. Moral hazard in teams
+   https://www.jstor.org/stable/3003457
+   (B Holmstrom - The Bell journal of economics, 1982 - JSTOR | 1982 | cited by 8939)
+   [PDF] https://www.econstor.eu/bitstream/10419/220831/1/cmsems-dp0471.pdf
+   … The objective of the analysis is to derive some positive and … if there are many agents and if the agents are risk averse. This … Bonding, where each agent pays up front x(a*) and receives a …
+
+4. The boundaries of the firm revisited
+   https://www.aeaweb.org/articles?id=10.1257/jep.12.4.73
+   (B Holmström, J Roberts - Journal of Economic perspectives, 1998 - aeaweb.org | 1998 | cited by 1799)
+   [PDF] https://pubs.aeaweb.org/doi/pdf/10.1257%2Fjep.12.4.73
+   … resources to protect itself against the threat of holdup. In either … Our brief review of the transaction cost and property rights … On this account, an asymmetric relationship with one party in a …
+
+5. Angel investing in Finland: An analysis based on agency theory and the incomplete contracting theory
+   https://helda.helsinki.fi/bitstreams/6e534b69-b16f-471c-b161-843cbef11218/download
+   (T Lahti - 2009 - helda.helsinki.fi | 2009 | cited by 31)
+   [PDF] https://helda.helsinki.fi/bitstreams/6e534b69-b16f-471c-b161-843cbef11218/download
+   … The due diligence ex ante strives to reduce the degree of asymmetric information prior to investing … To achieve the second objective, this study investigates i) how risk is mitigated in the …
+
+6. Short-term contracts and long-term agency relationships
+   https://www.sciencedirect.com/science/article/pii/002205319090048O
+   (D Fudenberg, B Holmstrom, P Milgrom - Journal of economic theory, 1990 - Elsevier | 1990 | cited by 811)
+   [PDF] https://dspace.mit.edu/bitstream/handle/1721.1/64269/shorttermcontrac00fude.pdf?sequence=1&isAllowed=y
+   … We emphasize that information asymmetries leading to … However, we will not model this explicitly in the main analysis. … , efficient risk sharing at date 1 dictates that the agent bear no risk …
+
+7. Understanding the role of debt in the financial system
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2552018
+   (B Holmstrom - 2015 - papers.ssrn.com | 2015 | cited by 325)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2552018
+   … traders use different models for evaluating such risks. When new bonds are issued, the issue is … 16 One can generate a significant discontinuity in prices without asymmetric information, …
+
+8. Agency theory
+   https://open.ncl.ac.uk/theory-library/agency-theory.pdf
+   (S Zhang, S Papagiannidis - Encyclopedia of new venture …, 2012 - open.ncl.ac.uk | 2012 | cited by 2)
+   [PDF] https://open.ncl.ac.uk/theory-library/agency-theory.pdf
+   … and risk conditions (Holmstrom, 1979;Holmstrom & Milgrom, … in information asymmetry, outcome noise, or risk tolerance. … of agency relationships: A second set of critiques targets the …
+
+9. Inside and outside liquidity
+   https://books.google.com/books?hl=en&lr=&id=G6snGzHJx40C&oi=fnd&pg=PP1&dq=Holmstr%C3%B6m+bonding+critique+agency+risk+asymmetry&ots=-sSLB0vI0_&sig=iY_isojhchr0AkhuvR1AgN3JOSE
+   (B Holmstrom, J Tirole - 2011 - books.google.com | 2011 | cited by 528)
+   [PDF] http://library.fa.ru/files/Tirole-Inside.pdf
+   … of attention to risk management. They hedge against liquidity … He shows that heterogeneity in beliefs has an asymmetric … the wedge as a primitive in our analysis. This is why we provide …
+
+10. Callable bonds: a risk‐reducing signalling mechanism
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1986.tb04558.x
+   (EH Robbins, JD Schatzberg - The Journal of Finance, 1986 - Wiley Online Library | 1986 | cited by 147)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1540-6261.1986.tb04558.x
+   … In this paper, we argue that, in the presence of asymmetric … Analysis of second-order effects will be based upon … of optimal contracting (see, eg, Holmstrom 9), it remains consistent with …
+
+11. The investment banking contract for new issues under asymmetric information: Delegation and the incentive problem
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/J.1540-6261.1980.TB02199.X
+   (DP Baron, B Holmström - The Journal of Finance, 1980 - Wiley Online Library | 1980 | cited by 607)
+   [PDF] https://www.econstor.eu/bitstream/10419/220745/1/cmsems-dp0385.pdf
+   … analysis, one case for which the general problem has a simple solution will be considered. When the banker is risk … the likelihood that the banker is risk averse as discussed in Section II, …
+
+12. Equilibrium long-term labor contracts
+   https://www.jstor.org/stable/1885374
+   (B Holmstrom - The Quarterly Journal of Economics, 1983 - JSTOR | 1983 | cited by 363)
+   [PDF] https://www.econstor.eu/bitstream/10419/220774/1/cmsems-dp0414R.pdf
+   … equilibrium are that (risk-neutral) firms will insure (risk-averse) … I shall comment on this asymmetric assumption regarding … As a preliminary step to the market equilibrium analysis, we …
+
+13. Opacity and the optimality of debt for liquidity provision
+   http://w4.stern.nyu.edu/finance/docs/pdfs/Seminars/093w-gorton.pdf
+   (TV Dang, G Gorton, B Holmstrom - Manuscript Yale University, 2009 - w4.stern.nyu.edu | 2009 | cited by 138)
+   [PDF] http://w4.stern.nyu.edu/finance/docs/pdfs/Seminars/093w-gorton.pdf
+   … completely different however; agents are risk neutral, but they … Assumption I makes the analysis interesting in this section. … markets where agents want to prevent asymmetric information …
+
+14. Contractual models of the labor market
+   https://www.jstor.org/stable/1815736
+   (B Holmstrom - The American Economic Review, 1981 - JSTOR | 1981 | cited by 206)
+   [PDF] https://www.econstor.eu/bitstream/10419/220802/1/cmsems-dp0442.pdf
+   … Firms are assumed risk neutral. The expected wage bill for … literature on incentives in agencies (and more generally from … averse effects of informational asymmetries. To illustrate how, I …
+
+15. Making agency theory work for supply chain relationships: a systematic review across four disciplines
+   https://www.emerald.com/ijopm/article/42/13/299/390224
+   (J Matinheikki, K Kauppi, A Brandon–Jones… - International Journal of …, 2022 - emerald.com | 2022 | cited by 108)
+   [PDF] https://www.emerald.com/ijopm/article-pdf/42/13/299/2434670/ijopm-12-2021-0757.pdf
+   … We show that agency risk, defined as probability multiplied by impact, is a key concept … in line with our analysis relying on the core assumptions of information asymmetry and goal …
+
+16. Unveiling the Green Bond & Sustainability-linked Bond Mystique
+   https://lup.lub.lu.se/student-papers/search/publication/9159479
+   (J Darlin, E Bengtsson, L Holmström - 2024 - lup.lub.lu.se | 2024 | cited by 1)
+   [PDF] https://lup.lub.lu.se/luur/download?func=downloadFile&recordOId=9159479&fileOId=9159491
+   … that market maturity, risk aversion, signaling incentives… analysis in order to gain valuable insights into the mechanisms governing decision-making processes and information asymmetry …
+
+17. Bondholders' returns and stakeholders' interests
+   https://link.springer.com/article/10.1007/s11156-022-01075-7
+   (MA Harjoto, AGF Hoepner, MA Nilsson - Review of Quantitative Finance …, 2022 - Springer | 2022 | cited by 14)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC9175530/pdf/11156_2022_Article_1075.pdf
+   … hold longer maturity bonds are not only concerned with the short-term risks but also … bonds are associated with greater information asymmetry, greater agency cost of debt and higher risk…
+
+18. Information asymmetry and levels of agency relationships
+   https://journals.sagepub.com/doi/abs/10.1177/002224379803500301
+   (DP Mishra, JB Heide, SG Cort - Journal of marketing …, 1998 - journals.sagepub.com | 1998 | cited by 901)
+   [PDF] https://www.researchgate.net/profile/Debi-Mishra-3/publication/329819430_Information_Asymmetry_and_Levels_of_Agency_Relationships/links/5ef80450458515505078b403/Information-Asymmetry-and-Levels-of-Agency-Relationships.pdf
+   … about supplier characteristics and the risk of quality cheating. Drawing … examine these possible differences as part of our analysis. … Our results for customer bonds suggest why efforts at …
+
+19. Equity, bonds, and bank debt: Capital structure and financial market equilibrium under asymmetric information
+   https://www.journals.uchicago.edu/doi/abs/10.1086/262121
+   (P Bolton, X Freixas - Journal of Political Economy, 2000 - journals.uchicago.edu | 2000 | cited by 1064)
+   [PDF] https://www.isid.ac.in/~tridip/Teaching/DevelopmentMicroeconomics/Readings/Bolton&Freixas_JPE2000.pdf
+   … We consider an economy composed of a continuum of risk-neutral agents, firms and banks. … Before we describe a firm’s optimal capital structure choice, it is helpful to begin our analysis …
+
+20. Asset pricing under asymmetric information: Bubbles, crashes, technical analysis, and herding
+   https://books.google.com/books?hl=en&lr=&id=bAf8qW6d2pcC&oi=fnd&pg=PR9&dq=Holmstr%C3%B6m+bonding+critique+agency+risk+asymmetry&ots=_TAGTrqq0y&sig=SqvZJF_vYr5lPTh-4lxA9LI65k4
+   (MK Brunnermeier - 2001 - books.google.com | 2001 | cited by 1047)
+   [PDF] https://swh.princeton.edu/~markus/research/papers/book0.pdf
+   … This book offers a detailed and up-to-date review of the recent theoretical literature in this area. It provides a framework for understanding price processes and emphasizes the …
+
+21. Agency relationships in marketing: A review of the implications and applications of agency and related theories
+   https://journals.sagepub.com/doi/abs/10.1177/002224299205600301
+   (M Bergen, S Dutta, OC Walker Jr - Journal of marketing, 1992 - journals.sagepub.com | 1992 | cited by 1952)
+   … completely overcome the information asymmetries between principal and agent. A sales … risk from the principal to the agent, and—assuming a risk-averse agent—such a transfer of risk …
+
+22. Econometric models of insurance under asymmetric information
+   https://link.springer.com/content/pdf/10.1007/978-94-010-0642-2_11?pdf=chapter%20toc
+   (PA Chiappori - Handbook of insurance, 2000 - Springer | 2000 | cited by 249)
+   … the importance of asymmetric information in insurance … I review several studies exploiting these theoretical insights … models, the asymmetry is relative to the level of risk: the client …
+
+23. The economics of clearing in derivatives markets: Netting, asymmetric information, and the sharing of default risks through a central counterparty
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1340660
+   (C Pirrong - Asymmetric Information, and the Sharing of Default …, 2009 - papers.ssrn.com | 2009 | cited by 121)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=1340660
+   … As a result, this analysis provides very … analysis of the implications of the adoption of a CCP, culminating in a comparative analysis of alternative mechanisms for sharing default risks; …
+
+24. Financial crises and the optimality of debt for liquidity provision
+   
+   (TV Dang, G Gorton, B Holmström - Unpublished working paper. Yale …, 2010 - Citeseer | 2010 | cited by 80)
+
+25. The Financial Products, Accounting Information Disclosure and Financial Regulatory
+   https://ieeexplore.ieee.org/abstract/document/5577421/
+   (J Wang - 2010 International Conference on Management and …, 2010 - ieeexplore.ieee.org | 2010)
+   … calculate the risks and started relying on the risk management … Holmstrom and Milgrom analysis the principal-agent model (… is the agency cost AC caused by information asymmetry. …
+
+26. Agent and principal
+   https://link.springer.com/content/pdf/10.1007/978-3-642-75060-1_2?pdf=chapter%20toc
+   (K Spremann - Agency theory, information, and incentives, 1987 - Springer | 1987 | cited by 604)
+   [PDF] https://www.alexandria.unisg.ch/bitstreams/d0359f9c-6fb7-4114-bc3a-4c2291db21bf/download
+   … The asymmetric information with respect to the agent's … the agent's risk aversion and the variance of environmental risk can … The analysis presented in Sections 2.1 through 2.5 focussed …
+
+27. CMS-EMS
+   https://www.kellogg.northwestern.edu/research/math/papers/385.pdf
+   (DP Baron, B Holmstrom - 1979 - kellogg.northwestern.edu | 1979)
+   [PDF] https://www.kellogg.northwestern.edu/research/math/papers/385.pdf
+   … This informational asymmetry may arise because the banker … Throughout the analysis in this section the distribution effort … the issuer lets the banker bear a larger share of the risk. With …
+
+28. Agency and trust mechanisms in consumer satisfaction and loyalty judgments
+   https://journals.sagepub.com/doi/abs/10.1177/0092070300281014
+   (J Singh, D Sirdeshmukh - Journal of the Academy of …, 2000 - journals.sagepub.com | 2000 | cited by 3078)
+   [PDF] https://www.researchgate.net/profile/Jagdip-Singh/publication/253586859_Agency_and_Trust_Mechanisms_in_Consumer_Satisfaction_and_Loyalty_Judgments/links/53ff03430cf23bb019be8cc5/Agency-and-Trust-Mechanisms-in-Consumer-Satisfaction-and-Loyalty-Judgments.pdf
+   … First, we draw on a critical analysis of agency theory to develop … due to information asymmetry are solved by signaling and risk-… them to amortize the bonding investments over multiple …
+
+29. Multi-period insurance contracts
+   https://www.sciencedirect.com/science/article/pii/S0167718787800206
+   (R Cooper, B Hayes - International Journal of Industrial Organization, 1987 - Elsevier | 1987 | cited by 231)
+   [PDF] https://elischolar.library.yale.edu/cgi/viewcontent.cgi?article=1905&context=cowles-discussion-paper-series
+   … in the presence of asymmetric information about consumers' … this analysis in a number of directions: adding more risk … 4 Harris-Holmstrom show that in this setting the evolving terms …
+
+30. Property rights theory, transaction costs theory, and agency theory: An organizational economics approach to strategic management
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/mde.1218
+   (J Kim, JT Mahoney - Managerial and decision economics, 2005 - Wiley Online Library | 2005 | cited by 662)
+   [PDF] https://www.researchgate.net/profile/Joseph-Mahoney-3/publication/23736397_Property_Rights_Theory_Transaction_Costs_Theory_and_Agency_Theory_An_Organizational_Economics_Approach_to_Strategic_Management/links/5c1dd2c8458515a4c7f0011d/Property-Rights-Theory-Transaction-Costs-Theory-and-Agency-Theory-An-Organizational-Economics-Approach-to-Strategic-Management.pdf?_sg%5B0%5D=started_experiment_milestone&origin=journalDetail
+   … where information asymmetry and measurement problems … field unitization because case analysis breathes some life into … risk attitudes of (risk-averse) agents and of (posited risk-neutral…
+
+31. The selection of sharing ratios in target cost contracts
+   https://www.emerald.com/insight/content/doi/10.1108/09699980810842061/full/pdf
+   (U Badenfelt - Engineering, Construction and Architectural …, 2008 - emerald.com | 2008 | cited by 81)
+   … reduce the risks associated with asymmetric information, … the asymmetry of information among individuals (Holmstrom, … risk which have traditionally been excluded from the analysis. …
+
+32. The economics of credit default swaps
+   https://www.annualreviews.org/content/journals/10.1146/annurev-financial-102710-144918
+   (RA Jarrow - Annu. Rev. Financ. Econ., 2011 - annualreviews.org | 2011 | cited by 106)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=1646373
+   … review, we take as given an equilibrium in the primary market for debt contracts. Due to the asymmetry … , a default risk premium, asymmetric information-monitoring costs, and a liquidity …
+
+33. The influence of corporate financialization on asymmetric cost behavior: weakening or worsening
+   https://www.econstor.eu/handle/10419/317460
+   (G Zhu, W Hu, T Peng, C Xue - Business Economics and Management …, 2021 - econstor.eu | 2021 | cited by 45)
+   [PDF] https://www.econstor.eu/bitstream/10419/317460/1/1756575096.pdf
+   … term asymmetric cost behavior will reduce business efficiency as well as increase the operating risk. … According to the following analysis, this article proposes that the impact of corporate …
+
+34. Asymmetric information in securitization: An empirical assessment
+   https://www.sciencedirect.com/science/article/pii/S0304393214001597
+   (U Albertazzi, G Eramo, L Gambacorta… - Journal of Monetary …, 2015 - Elsevier | 2015 | cited by 97)
+   [PDF] https://www.academia.edu/download/131698937/50378.pdf
+   … Asymmetric information in securitization deals is analyzed based on a unique dataset … data, that looks at the correlation between risk transfer and default probability. The main finding is …
+
+35. The theory of financial intermediation: An essay on what it does (not) explain
+   https://www.econstor.eu/handle/10419/163455
+   (B Scholtens, D Van Wensveen - 2003 - econstor.eu | 2003 | cited by 363)
+   [PDF] https://www.econstor.eu/bitstream/10419/163455/1/suerf-study-2003-1.pdf
+   … the paradox, we will first review the doctrines of the theory of … the agency theory, and the theory of imperfect or asymmetric … is risk management rather than informational asymmetries or …
+
+36. Debt covenants and corporate governance
+   https://www.annualreviews.org/content/journals/10.1146/annurev-financial-110716-032511
+   (S Chava, S Fang, P Kumar… - Annual Review of …, 2019 - annualreviews.org | 2019 | cited by 62)
+   … or at least lower) agency costs resulting from asymmetric information and conflicts of interest … In particular, the literature highlights the agency risk imposed on debtholders by asymmetric …
+
+37. Delegated portfolio management: A survey of the theoretical literature
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-6419.2006.00271.x
+   (L Stracca - Journal of Economic surveys, 2006 - Wiley Online Library | 2006 | cited by 197)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=781088
+   … The main focus of the paper is to review the analytical issues … If the agent is risk neutral, the best contract makes the agent … In fact, an asymmetric contract may lure uninformed agents in …
+
+38. Haircuts and repo chains
+   http://www.columbia.edu/~td2332/Paper_Repo.pdf
+   (TV Dang, G Gorton, B Holmström - … . Pap., Yale Univ., New Haven, CT, 2013 - columbia.edu | 2013 | cited by 56)
+   [PDF] http://www.columbia.edu/~td2332/Paper_Repo.pdf
+   … as a screening device in asymmetric information settings. See, … agent B has liquidity needs and is counterparty risk in that … Now we provide a complete analysis of the equilibrium of the …
+
+39. Liquidity (risk) concepts: definitions and interactions
+   https://www.econstor.eu/handle/10419/153442
+   (K Nikolaou - 2009 - econstor.eu | 2009 | cited by 394)
+   [PDF] https://www.econstor.eu/bitstream/10419/153442/1/ecbwp1008.pdf
+   … from different areas and review liquidity linkages among these three types in normal and turbulent times. We stress that the root of liquidity risk lies in information asymmetries and the …
+
+40. Managerial ability, information quality, and the design and pricing of corporate debt
+   https://link.springer.com/article/10.1007/s11156-017-0696-z
+   (A Petkevich, A Prevost - Review of Quantitative Finance and Accounting, 2018 - Springer | 2018 | cited by 54)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3092420
+   … before purchasing (Holmström 2015). Using default … all three asymmetry measures as well as for the asymmetry index. … default risk, we create six rating categories beginning with bonds …
+
+41. Asymmetric information and the death of ABS CDOs
+   https://www.sciencedirect.com/science/article/pii/S0378426616302011
+   (DO Beltran, L Cordell, CP Thomas - Journal of Banking & Finance, 2017 - Elsevier | 2017 | cited by 41)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2245216
+   … One explanation is that information had been asymmetric, with sellers having better … Using a “workhorse” model for pricing securities under asymmetric information and a novel dataset, …
+
+42. Large debt financing: syndicated loans versus corporate bonds
+   https://www.tandfonline.com/doi/abs/10.1080/13518470903314394
+   (Y Altunbaş, A Kara… - The European Journal of …, 2010 - Taylor & Francis | 2010 | cited by 178)
+   [PDF] https://bura.brunel.ac.uk/bitstream/2438/27902/1/FullText.pdf
+   … will demand higher returns for risks generated by information asymmetries. Indeed, part … analysis by including those observations where a firm issues both syndicated loans and bonds …
+
+43. Shareholder risk-taking incentives in the presence of contingent capital
+   https://www.emerald.com/jfrc/article/30/1/25/449115
+   (M Fatouh, AA McCunn - Journal of Financial Regulation and …, 2022 - emerald.com | 2022 | cited by 13)
+   [PDF] https://figshare.le.ac.uk/articles/journal_contribution/Shareholder_risk-taking_incentives_in_the_presence_of_contingent_capital/24771777/1/files/43537080.pdf
+   … reflect asymmetric information between CoCo holders and shareholders and/or managers. This paper follows a simpler method similar to that of Holmström … and includes a review of the …
+
+44. Risk‐shifting incentives and signalling through corporate capital structure
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1987.tb04573.x
+   (K John - The Journal of Finance, 1987 - Wiley Online Library | 1987 | cited by 173)
+   … financing arrangements under asymmetric information for … pricing function for the bonds and equity optimally issued by … For an excellent recent review see Hart and Holmstrom 16. In …
+
+45. Moral hazard and information sharing: A model of financial information gathering agencies
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1985.tb02391.x
+   (MH Millon, AV Thakor - The Journal of Finance, 1985 - Wiley Online Library | 1985 | cited by 475)
+   [PDF] https://www.researchgate.net/profile/Anjan-Thakor/publication/4992145_Moral_Hazard_and_Information_Sharing_A_Model_of_Financial_Information_Gathering_Agencies/links/5af799cbaca2720af9d98329/Moral-Hazard-and-Information-Sharing-A-Model-of-Financial-Information-Gathering-Agencies.pdf
+   … gathering agencies in a world of informational asymmetries and … despite the risk aversion of screening agents and the … individual agents who are members of groups (see Holmstrom 18)…
+
+46. Liquidity, informational efficiency and firm default risk: a systematic literature review
+   https://www.emerald.com/jal/article/46/3/321/1234292
+   (L Zhao, V Mollica, Y Shen, Q Liang - Journal of Accounting Literature, 2024 - emerald.com | 2024 | cited by 24)
+   … They suggest that increased liquidity reduces default risk through information asymmetry … of safe bonds by insulating the risks from their underlying mortgages. However, they led to …
+
+47. Financial crises: theory and evidence
+   https://www.annualreviews.org/content/journals/10.1146/annurev.financial.050808.114321
+   (F Allen, A Babus, E Carletti - Annu. Rev. Financ. Econ., 2009 - annualreviews.org | 2009 | cited by 463)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=1422715
+   … giving rise to counterparty risk. Asymmetric information about counterparty risk can elevate the interbank … We need a full analysis of the best way to restore liquidity in financial markets. …
+
+48. Collective risk management in a flight to quality episode
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2008.01394.x
+   (RJ Caballero, A Krishnamurthy - The Journal of Finance, 2008 - Wiley Online Library | 2008 | cited by 1075)
+   [PDF] https://www.nber.org/system/files/working_papers/w12896/w12896.pdf
+   … The key difference between our paper and those of Holmstrom and … This asymmetric utility function model predicts that agents … To simplify our analysis we assume that the agents are …
+
+49. Intermediary asset pricing
+   https://www.aeaweb.org/articles?id=10.1257/aer.103.2.732
+   (Z He, A Krishnamurthy - American Economic Review, 2013 - aeaweb.org | 2013 | cited by 2110)
+   [PDF] https://www.nber.org/system/files/working_papers/w14517/w14517.pdf
+   … When capital is high, however, losses have little to no effect on risk premia. The asymmetry … episodes, because the underlying default risk in these bonds rises during the same time. A …
+
+50. Essays on Stock Option Compensation and the Role of Incentives and Risk (summary section only)
+   https://helda.helsinki.fi/server/api/core/bitstreams/cdda39af-4499-4353-ab0b-b19f8c2b20da/content
+   (M Rosenberg - 2004 - helda.helsinki.fi | 2004 | cited by 12)
+   [PDF] https://helda.helsinki.fi/server/api/core/bitstreams/cdda39af-4499-4353-ab0b-b19f8c2b20da/content
+   … , the focus in the subsequent review is placed on aspects relevant to the research questions in this thesis, in particular, the nature of information asymmetries, risk preferences, and the …
+
+51. Interactions between corporate agency conflicts
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6288.2009.00214.x
+   (AVS Douglas - Financial Review, 2009 - Wiley Online Library | 2009 | cited by 24)
+   … risk levels, the information asymmetry dominates so that the manager's preferences are aligned with shareholders, while at higher levels of risk … after the bonds are issued. The actual …
+
+52. Agency theory perspective on public-private-partnerships: International development project
+   https://www.emerald.com/ijppm/article/67/2/239/165114
+   (DW Parker, U Dressel, D Chevers… - International Journal of …, 2018 - emerald.com | 2018 | cited by 171)
+   [PDF] https://repository.usp.ac.fj/id/eprint/13007/1/2018-Agency-Public-private_-partnerships-IJPPM-09-2016-0191.pdf
+   … deployed to diminish information asymmetry and how a new … Indeed, a criticism of the agency theory has been the … and agents, information asymmetry, levels of acceptable risk and …
+
+53. Agent compensation and the limits of bonding
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1465-7295.1982.tb00351.x
+   (BC Eaton, WD White - Economic inquiry, 1982 - Wiley Online Library | 1982 | cited by 146)
+   … We assume that agents are risk neutral. Given w and e, the … the greater the asymmetry between gains to agents and losses to … A marriage of the analysis in this paper and the analysis of …
+
+54. Agency costs, collateral, and business fluctuations
+   https://www.nber.org/papers/w2015
+   (BS Bernanke, M Gertler - 1986 - nber.org | 1986 | cited by 8682)
+   [PDF] https://www.nber.org/system/files/working_papers/w2015/w2015.pdf
+   … under asymmetric information, … analysis, we also temporarily impose three further assumptions: 1) The economy contains a continuum of length one of identical, risk-neutral agents…
+
+55. The impact of Pillar 3 disclosures on asymmetric information and liquidity in bank stocks: Multi-country evidence
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2670403
+   (JT Parwada, K Lau, S Ruenzi - CIFR Paper, 2015 - papers.ssrn.com | 2015 | cited by 6)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2670403
+   … of risk management for each risk type (credit risk, market risk, … interpreting the results of this analysis. Disclosure might be … to more severe information asymmetries (where investors had …
+
+56. How private equity-backed buyout contracts shape corporate governance
+   https://www.tandfonline.com/doi/abs/10.1080/13691066.2022.2109224
+   (L Wynant, S Manigart, V Collewaert - Venture Capital, 2023 - Taylor & Francis | 2023 | cited by 18)
+   … the contracts used in our analysis and for the managers involved … address agency risks. We also highlight how the reverse … reduce agency risks, induced by information asymmetries and …
+
+57. Corporate finance signaling theory: an empirical analysis on the relationship between information asymmetry and the cost of equity capital
+   https://link.springer.com/article/10.1057/s41310-024-00261-4
+   (S Fathi, Z Mohammadin, K Azarbayjani - International Journal of …, 2025 - Springer | 2025 | cited by 28)
+   … as an unsystematic risk—idiosyncratic shocks can still influence risk premiums. Hughes et al… equivalent annual rate of return of Islamic treasury bonds (AKHZA) for the years from 2010 …
+
+58. Shareholders and managers as principal-agent hierarchies and cooperative teams
+   https://www.emerald.com/qrfm/article-abstract/9/1/48/359382
+   (M Kiefer, EAE Jones, AT Adams - Qualitative Research in Financial …, 2017 - emerald.com | 2017 | cited by 30)
+   [PDF] https://researchportal.hw.ac.uk/files/14338105/Relationship_revisited_PDF_Proof.PDF
+   … After a discussion of the implications arising from the review, … the role of principal to agents and renegotiation of contracts to … view that asymmetric information affects optimal risk-sharing …
+
+59. Effort allocation of insurance agent under asymmetric information: an analytical approach
+   https://nagasaki-u.repo.nii.ac.jp/record/7579/files/APJRI2_84.pdf
+   (K Kojima, M Okura - Asia-Pacific Journal of Risk and …, 2008 - nagasaki-u.repo.nii.ac.jp | 2008 | cited by 3)
+   [PDF] https://nagasaki-u.repo.nii.ac.jp/record/7579/files/APJRI2_84.pdf
+   … Verrecchia, 1982; and Holmström and Tirole, 1993). In this study, we employ a principal-… to the problem of information asymmetry. The policy implication drawn from this analysis is that …
+
+60. Agency theory: a literary survey with emphasis on the work of Jensen & Meckling; a review of agency theory in the accounting literature over the last twenty …
+   https://uwindsor.scholaris.ca/bitstreams/f3753f11-18d9-48ab-b4f8-7d7cb91ec63e/download
+   (IJ Goodreau - 1986 - uwindsor.scholaris.ca | 1986)
+   [PDF] https://uwindsor.scholaris.ca/bitstreams/f3753f11-18d9-48ab-b4f8-7d7cb91ec63e/download
+   … asymmetry, risk aversion by the principal or agent, agent disutility … the principal), bonding costs (borne by the agent) and what was … Holmstrom addresses the problem of when imperfect …
+
+61. Contract costs and financing decisions
+   https://www.jstor.org/stable/2353261
+   (EF Fama - Journal of Business, 1990 - JSTOR | 1990 | cited by 307)
+   … The general idea of the preceding analysis is that when other agents charge more for risk-… the monitoring and bonding of default risks to specialists so that other agents can in turn …
+
+62. Venture capital investment: An agency analysis of UK practice
+   https://books.google.com/books?hl=en&lr=&id=3-mFAgAAQBAJ&oi=fnd&pg=PR16&dq=Holmstr%C3%B6m+bonding+critique+agency+risk+asymmetry&ots=u6L1V0XW8d&sig=0AJyt4YQehuW0KwaXfoLwb3mwDo
+   (G Reid - 2002 - books.google.com | 2002 | cited by 100)
+   … moral hazard, by providing a basis for bonding and for monitoring the agent. The problem of … literature has used ideas of risk-bearing and information asymmetry to develop a principal-…
+
+63. Agency Theory in Auditing: Review of Past and Present
+   https://www.researchgate.net/profile/Sunday-Adeusi/publication/403985228_Agency_Theory_in_Auditing_Review_of_Past_and_Present/links/6a4873061681584dea2cb1ef/Agency-Theory-in-Auditing-Review-of-Past-and-Present.pdf
+   (AA Sunday - researchgate.net)
+   [PDF] https://www.researchgate.net/profile/Sunday-Adeusi/publication/403985228_Agency_Theory_in_Auditing_Review_of_Past_and_Present/links/6a4873061681584dea2cb1ef/Agency-Theory-in-Auditing-Review-of-Past-and-Present.pdf
+   … asymmetry, incomplete contracts, and differing risk preferences between principals and agents. … costs, which include monitoring costs (such as audit fees), bonding costs, and residual …
+
+64. Getting in Contract with Large Language Models—An Agency Theory Perspective on Large Language Model Alignment
+   https://link.springer.com/chapter/10.1007/978-3-032-08480-4_4
+   (S Kaltenpoth, O Müller - International Conference on Wirtschaftsinformatik, 2024 - Springer | 2024 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2509.07642
+   … Highlighting the information asymmetry between the adopting … Contractual bonding in the form of incentives indirectly … literature reviews on LLM and AI alignment employing agency …
+
+65. Asymmetric information in insurance markets: Predictions and tests
+   https://link.springer.com/chapter/10.1007/978-1-4614-0155-1_14
+   (PA Chiappori, B Salanié - Handbook of insurance, 2013 - Springer | 2013 | cited by 132)
+   [PDF] https://www.columbia.edu/~bs2237/InsuranceHdbk.pdf
+   … Again, we start from the benchmark of agents with identical risk but different risk aversions, … While the theoretical analysis of contracts under asymmetric information began in the 1970s, …
+
+66. THE IMPACT OF INTANGIBLE ASSETS ON FINANCIAL AND GOVERNANCE POLICIES: A LITERATURE REVIEW.
+   https://openurl.ebsco.com/contentitem/gcd:51445212?sid=ebsco:plink:crawler-gcd&id=ebsco:gcd:51445212&crl=c&jrnl=08725284
+   (J Martins, S Alves - Portuguese Journal of Management Studies, 2010 - openurl.ebsco.com | 2010 | cited by 56)
+   … Severe agency costs and information asymmetry problems … , and the way they share risks and returns. Given the nature of a … , the risk-shifting incentive (asset-substitution risk) increases. …
+
+67. International capital flows under asymmetric information and costly monitoring: implications of debt and equity financing
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/1540-5982.t01-2-00008
+   (RM Neumann - … Journal of Economics/Revue canadienne d' …, 2003 - Wiley Online Library | 2003 | cited by 44)
+   … agent offers the investor a risk-free security with inline image . In the presence of the information asymmetry, the agent's … Therefore, the analysis is focused on the agent's willingness to …
+
+68. Use of social impact bonds to address social problems: Understanding contractual risks and transaction costs
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/nml.21307
+   (S Pandey, JJ Cordes, SK Pandey… - Nonprofit Management …, 2018 - Wiley Online Library | 2018 | cited by 65)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3139263
+   … With increase in complexity of the public/private transaction, the information asymmetries … a case analysis of the SIF Project by identifying the parties involved and the benefits, hazards, …
+
+69. Efficient risk transfer in PPP wastewater treatment projects
+   https://www.sciencedirect.com/science/article/pii/S0957178716301023
+   (A Shrestha, TK Chan, AA Aibinu, C Chen - Utilities policy, 2017 - Elsevier | 2017 | cited by 104)
+   … Efficient risk transfer in PPP is examined through the lens of Principal Agent Theory. … Findings provide guidance for negotiating PPP contracts for equitable risk allocation. …
+
+70. Power, trust, and control in multi-layered shipping MNE: a principal-agent perspective
+   https://lutpub.lut.fi/handle/10024/169889
+   (K Pylkkönen - 2025 - lutpub.lut.fi | 2025 | cited by 1)
+   [PDF] https://lutpub.lut.fi/bitstream/handle/10024/169889/Masters_Thesis_Pylkkonen_Kari.pdf?sequence=1&isAllowed=y
+   … to reduce asymmetry and foster trust. Study extends principal-… the risks of opportunism and information asymmetry when … foundation of the study and reviews the relevant literature on …
+
+71. The choice of organizational form: vertical financial ownership versus other methods of vertical integration
+   https://sms.onlinelibrary.wiley.com/doi/abs/10.1002/smj.4250130802
+   (JT Mahoney - Strategic management journal, 1992 - Wiley Online Library | 1992 | cited by 848)
+   [PDF] https://josephmahoney.web.illinois.edu/BA545_Fall%202013/Mahoney%20(1992).pdf
+   … for making this analysis based on a synthesis of agency and … the principal, the bonding expenditures by the agent and the residual … The risk of self-interested agents utilizing asymmetric …
+
+72. Managerial risk taking: A multitheoretical review and future research agenda
+   https://journals.sagepub.com/doi/abs/10.1177/0149206316671583
+   (RE Hoskisson, F Chirico, J Zyung… - Journal of …, 2017 - journals.sagepub.com | 2017 | cited by 627)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2837516
+   … effect predictions of greater managerial risk taking after underperforming and lower levels of risk taking when overperforming. Additionally, asymmetric risk taking has been found based …
+
+73. Pricing of credit default swaps from the perspective of credit enhancement in PPP projects
+   https://ascelibrary.org/doi/abs/10.1061/JCEMD4.COENG-12803
+   (Y Wang, L Chen, J Zhuang - Journal of Construction Engineering …, 2023 - ascelibrary.org | 2023 | cited by 4)
+   … behavior caused by information asymmetry in the process of … and risk management institutions based on the principal–agent … risk-free rate for calculation and analysis, where r is the risk-…
+
+74. The role of government in the venture capital market with asymmetric information
+   https://www.tandfonline.com/doi/abs/10.1080/14697688.2012.738307
+   (A Wong - Quantitative Finance, 2014 - Taylor & Francis | 2014 | cited by 9)
+   … analysis of the role and influence of the government in addressing the issue of information asymmetries of the … asymmetry poses a threat to entrepreneurs as well as venture capitalists. …
+
+75. and Long-Term Agency Relationships
+   https://web.stanford.edu/~milgrom/publishedarticles/ShortTermContracts.pdf
+   (B HOLMSTROM, P MILGROM - 1990 - stanford.edu | 1990)
+   [PDF] https://web.stanford.edu/~milgrom/publishedarticles/ShortTermContracts.pdf
+   … We emphasize that information asymmetries leading to adverse selection can arise either from exogenous signals that the agent receives or from unobserved actions that the agent takes …
+
+76. Corporate Green Bonds and Information Asymmetry
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6898281
+   (K Martínez Solís - Available at SSRN 6898281, 2026 - papers.ssrn.com | 6898)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6898281
+   … In Table 8, I examine heterogeneity by certification and climate risk exposure. Firms with self… The analysis considers only pairs of firms located in the same country and is based on firm…
+
+77. Asymmetric Information: Insights on Market Flaws and Strategies
+   https://streetfins.com/asymmetric-information-insights-on-market-flaws-and-strategies/
+   (A Webb - streetfins.com)
+   … risk profile of an asset or contract (Holmström, 1979). For instance, a borrower might take on excessive risks … In summary, asymmetric information not only challenges the neoclassical …
+
+78. A comprehensive review of financial frictions: Causes, consequences, and policy implications
+   https://www.researchgate.net/profile/Mohammed-Faez-Hasan/publication/369775388_A_Comprehensive_Review_of_Financial_Frictions_Causes_Consequences_and_Policy_Implications/links/642c4e474e83cd0e2f8dd1f3/A-Comprehensive-Review-of-Financial-Frictions-Causes-Consequences-and-Policy-Implications.pdf
+   (MF Hasan, MR Hadi, HH Flayyih… - Ishtar journal of …, 2023 - researchgate.net | 2023 | cited by 11)
+   [PDF] https://www.researchgate.net/profile/Mohammed-Faez-Hasan/publication/369775388_A_Comprehensive_Review_of_Financial_Frictions_Causes_Consequences_and_Policy_Implications/links/642c4e474e83cd0e2f8dd1f3/A-Comprehensive-Review-of-Financial-Frictions-Causes-Consequences-and-Policy-Implications.pdf
+   … Information asymmetries, transaction costs, and agency issues are the three main causes of … Due to lenders' inability to distinguish between high-risk and low-risk borrowers, they may …
+
+79. Risk-bearing capacity as a new dimension to the analysis of project governance
+   https://www.sciencedirect.com/science/article/pii/S0263786315000368
+   (CY Chang - International Journal of Project Management, 2015 - Elsevier | 2015 | cited by 70)
+   … Accordingly, this research aims to demonstrate that the notion of risk-bearing capacity (RBC) can be drawn upon as a new dimension to the analysis and design of project governance. …
+
+80. Interbank market integration under asymmetric information
+   https://academic.oup.com/rfs/article-abstract/18/2/459/1599850
+   (X Freixas, C Holthausen - The Review of Financial Studies, 2005 - academic.oup.com | 2005 | cited by 288)
+   [PDF] https://www.econstor.eu/bitstream/10419/152508/1/ecbwp0074.pdf
+   Cross-country bank lending appears to be subject to market imperfections leading to persistent interest rate differentials. In a model where banks need to cope with liquidity shocks by …
+
+81. Why did investment banks take more risk than optimal? A theoretical analysis of reasons for subprime crisis
+   http://www.irbis-nbuv.gov.ua/cgi-bin/irbis_nbuv/cgiirbis_64.exe?C21COM=2&I21DBN=UJRN&P21DBN=UJRN&IMAGE_FILE_DOWNLOAD=1&Image_file_name=PDF/ape_2012_1_46.pdf
+   (X Rong, Z Xijun, Z Zhigang - Актуальні проблеми економіки, 2012 - irbis-nbuv.gov.ua | 2012)
+   [PDF] http://www.irbis-nbuv.gov.ua/cgi-bin/irbis_nbuv/cgiirbis_64.exe?C21COM=2&I21DBN=UJRN&P21DBN=UJRN&IMAGE_FILE_DOWNLOAD=1&Image_file_name=PDF/ape_2012_1_46.pdf
+   … ing strategies under information asymmetry and severe … investment banks to take too much risk. Our work supports the … risk products can be viewed as products like treasury bonds. …
+
+82. Bridging finance and behavioral scholarship on agent risk sharing and risk taking
+   https://journals.aom.org/doi/abs/10.5465/amp.2012.0134S
+   (GP Martin, RM Wiseman… - Academy of Management …, 2016 - journals.aom.org | 2016 | cited by 36)
+   … Thus, we review and compare the theory and selected empirical findings of finance and behavioral … That is, the asymmetry of option payoffs, creating larger proportionate gains for the …
+
+83. The economics of internal labor markets
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-232X.1990.tb00753.x
+   (ML Wachter, RD Wright - … Relations: A Journal of Economy and …, 1990 - Wiley Online Library | 1990 | cited by 187)
+   [PDF] https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1468-232X.1990.tb00753.x
+   … review the economics literature on match-specific investments, risk aversion, asymmetric … the contributions of specific capital, risk aversion, asymmetric information, and transaction costs…
+
+84. Shadow banking: a review of the literature
+   https://link.springer.com/rwe/10.1057/978-1-349-95121-5_2946-1
+   (T Adrian, AB Ashcraft - 2012 - Springer | 2012 | cited by 467)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2175144
+   … rating agency would reduce information asymmetries between … However, Dang, Gorton, and Holmström show that systemic risk … While Dang, Gorton, and Holmström (DGH) emphasise …
+
+85. Bank capital regulation in contemporary banking theory: A review of the literature
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/1468-0416.00042
+   (JAC Santos - Financial Markets, Institutions & Instruments, 2001 - Wiley Online Library | 2001 | cited by 1017)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=248314
+   … However, as we are about to see, asymmetry of information may make the computation of … asymmetry of information the isomorphism between a risk-based insurance premium and risk-…
+
+86. The case against shareholder empowerment
+   https://www.jstor.org/stable/20698344
+   (WW Bratton, ML Wachter - University of Pennsylvania Law Review, 2010 - JSTOR | 2010 | cited by 560)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=1480290
+   … market price set under asymmetric information in most cases … , moni tors corporate agents, and bears the residual risk. Fama … We note that while Holmstrom and Kaplan expect the 1980s …
+
+87. Two agency-cost explanations of dividends
+   https://www.jstor.org/stable/1805130
+   (FH Easterbrook - The American economic review, 1984 - JSTOR | 1984 | cited by 6537)
+   … agents. The costs of monitoring, bonding, and the residual losses from slippage are agency … A second source of agency costs is risk aversion on the part of managers.17 The investors, …
+
+88. Risks in public–private partnerships: A systematic literature review of risk factors, their impact and risk mitigation strategies
+   https://www.tandfonline.com/doi/abs/10.1080/15309576.2020.1741406
+   (R Rybnicek, J Plakolm… - … & Management Review, 2020 - Taylor & Francis | 2020 | cited by 189)
+   [PDF] https://www.tandfonline.com/doi/pdf/10.1080/15309576.2020.1741406
+   … Another relevant theory concerning negotiation is the principal-agent theory which addresses the issue of information asymmetry between partners. This issue must be carefully …
+
+89. Underpricing of initial public offerings: A literature review
+   https://www.researchgate.net/profile/Phani-B-V/publication/301926506_Underpricing_of_Initial_Public_Offerings_A_Literature_Review/links/5cd0067a299bf14d957afcb5/Underpricing-of-Initial-Public-Offerings-A-Literature-Review.pdf
+   (S Katti, BV Phani - Universal Journal of Accounting and Finance, 2016 - researchgate.net | 2016 | cited by 131)
+   [PDF] https://www.researchgate.net/profile/Phani-B-V/publication/301926506_Underpricing_of_Initial_Public_Offerings_A_Literature_Review/links/5cd0067a299bf14d957afcb5/Underpricing-of-Initial-Public-Offerings-A-Literature-Review.pdf
+   … The magnitude of information asymmetry also differs at … and Holmström [37]; Baron [5] assume information asymmetry … of information asymmetry, ceteris paribus, a risk averse issuer …
+
+90. the panic of 2007
+   https://www.kansascityfed.org/documents/3165/2008-Holmstrom031209.pdf
+   (B Holmström - kansascityfed.org)
+   [PDF] https://www.kansascityfed.org/documents/3165/2008-Holmstrom031209.pdf
+   … to serve clienteles with different risk appetites. tranches had … not reduce information asymmetries and hence may decrease … rated bonds makes them more liquid than lower-rated …
+
+91. Presidential address: Liquidity and price discovery
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/1540-6261.00569
+   (M O'Hara - The journal of Finance, 2003 - Wiley Online Library | 2003 | cited by 1147)
+   [PDF] https://www.johnhcochrane.com/s/ohara_liquidity_address_JF.pdf
+   … I develop an asymmetric information asset pricing model that … uninformed hold more bonds than do the informed traders. … suggested by this analysis is that information risk may be part of …
+
+92. CEO tenure and risk-taking
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2038064
+   (D Chen, Y Zheng - Global Business and Finance Review, 2014 - papers.ssrn.com | 2014 | cited by 126)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2038064
+   … Consistent with this interpretation and recent theoretical work, we show that the effect of CEO tenure on risk-taking depends on the information asymmetry about CEO ability. …
+
+93. Causality in empirical analyses with emphasis on asymmetric information and risk management
+   https://link.springer.com/chapter/10.1007/978-3-031-69561-2_13
+   (G Dionne - Handbook of Insurance: Volume I, 2024 - Springer | 2024 | cited by 3)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=4619113
+   … in the presence of asymmetric information with a DID … of asymmetric information, are presented with causality analysis. We also review the recent literature on the empirical effect of risk …
+
+94. Board monitoring, firm risk, and external regulation
+   https://link.springer.com/article/10.1007/s11149-007-9045-9
+   (IE Brick, NK Chidambaran - Journal of Regulatory Economics, 2008 - Springer | 2008 | cited by 136)
+   … have had an asymmetrical impact on high-risk firm. In our empirical analysis we also control … article) in a standard theoretical principal-agent such as Holmstrom and Milgrom (1987). In …
+
+95. The systemic regulation of credit rating agencies and rated markets
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1426448
+   (ANR Sy - 2009 - papers.ssrn.com | 2009 | cited by 196)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=1426448
+   … conduct their own credit analysis for risk management purposes or … the fundamental information asymmetry in capital markets … or sovereign bonds. Unlike corporate and sovereign …
+
+96. Regulating systemic risk through transparency: trade-offs in making data public
+   https://www.nber.org/system/files/chapters/c12508/c12508.pdf
+   (A Landier, D Thesmar - Risk topography: Systemic risk and macro …, 2011 - nber.org | 2011 | cited by 42)
+   [PDF] https://www.nber.org/system/files/chapters/c12508/c12508.pdf
+   … , we review the various economic costs associated to public data release and review the … Last, we review the positive impact that might be expected from public access to financial …
+
+97. Problem of agency in mudarabah contract
+   https://jurnal.usas.edu.my/gjat/index.php/journal/article/view/385
+   (NM Sapuan, MR Roly - Global Journal Al-Thaqafah, 2019 - jurnal.usas.edu.my | 2019 | cited by 6)
+   [PDF] https://jurnal.usas.edu.my/gjat/index.php/journal/article/download/385/358
+   … From this, it can be seen that the agency problem is caused by asymmetric … In Section 2, there will be a brief review of the agency … How informal risk capital investors manage asymmetric …
+
+98. Study on private equity investment risk avoiding base on principle-agent
+   https://ieeexplore.ieee.org/abstract/document/5233268/
+   (X Zhang, C Zhang - 2009 IITA International Conference on …, 2009 - ieeexplore.ieee.org | 2009 | cited by 3)
+   … Thus the information asymmetric is the root of agents’ … the risk of principal-agent relationship between private equity firm and portfolio firm entrepreneurs from the perspective of agent …
+
+99. Adaptiv Control over Delegated Implementation: A qualitative analysis of Sida's corruption risk management in Uganda, 2018-2024
+   
+   (H Granberg - 2026 | 2026)
+
+100. A note on liquidity risk management
+   https://pubs.aeaweb.org/doi/pdf/10.1257/aer.99.2.578
+   (MK Brunnermeier, M Yogo - American Economic Review, 2009 - pubs.aeaweb.org | 2009 | cited by 157)
+   [PDF] https://www.nber.org/system/files/working_papers/w14727/w14727.pdf
+   … In our analysis, we have assumed that the firm has bonds of only a single maturity … , Holmström and Tirole 2001), our strategy is more efficient if storing cash is costly (eg, due to agency …
+
+===== Query 5/6: Taleb via negativa Lindy effect robustness metric =====
+
+1. Skin in the game: Hidden asymmetries in daily life
+   https://books.google.com/books?hl=en&lr=&id=4dQ0DwAAQBAJ&oi=fnd&pg=PA4&dq=Taleb+via+negativa+Lindy+effect+robustness+metric&ots=0Q4VjOCmIA&sig=r-OZi-OE7Q4AW31bJ294kQLSy6Q
+   (NN Taleb - 2018 - books.google.com | 2018 | cited by 848)
+   [PDF] https://download.boekhuis.nl/9789057125805_fragm-docb.pdf
+   … Via negativa: the principle that we know what is wrong with … of Time (a manifestation of the Lindy effect, which will get an … own "success" according to such metric. Otherwise, you end up …
+
+2. The Lindy Effect
+   https://arxiv.org/abs/2308.09045
+   (T Ord - arXiv preprint arXiv:2308.09045, 2023 - arxiv.org | 2308 | cited by 9)
+   [PDF] https://arxiv.org/pdf/2308.09045
+   … this can be due to something like what Taleb calls ‘aging in reverse’ or ‘antifragility’, where there is a cumulative process that increases inherent robustness, such as an organism or …
+
+3. Antifragile planning
+   https://journals.sagepub.com/doi/abs/10.1177/1473095219873365
+   (I Blečić, A Cecchini - Planning Theory, 2020 - journals.sagepub.com | 2020 | cited by 84)
+   [PDF] https://iris.unica.it/bitstream/11584/278497/2/antifragile-planning-Planning-Theory%20-%20post-print.pdf
+   … conflating robustness and resilience, Taleb somewhat … Building on Taleb, by via negativa in planning we mean a set … The idea of Lindy Effect is that the future life expectancy of a non-…
+
+4. From Bitcoin to Ethereum: ethics and antifragility of decentralization
+   https://www.emerald.com/ijoes/article/doi/10.1108/IJOES-03-2025-0144/1332998
+   (R Pavlov, T Pavlova, T Grynko, O Levkovich… - International Journal of …, 2026 - emerald.com | 2026 | cited by 1)
+   … and Taleb, this study proposes a conceptual framework of adaptive decentralized power – a governance model in which power relations are not simply distributed but evolve through …
+
+5. Evolution and the knightian blindspot of machine learning
+   https://arxiv.org/abs/2501.13075
+   (J Lehman, E Meyerson, T El-Gaaly, KO Stanley… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 13)
+   [PDF] https://arxiv.org/pdf/2501.13075?
+   … through this paradigm. There is no explicit formalism, although robustness implicitly relies on the Lindy effect [… Indeed, Taleb describes biological evolution as a prototypical example of a …
+
+6. Statistical consequences of fat tails: Real world preasymptotics, epistemology, and applications
+   https://arxiv.org/abs/2001.10488
+   (NN Taleb - arXiv preprint arXiv:2001.10488, 2020 - arxiv.org | 2001 | cited by 386)
+   [PDF] https://arxiv.org/pdf/2001.10488
+   … 311 16.5 Additional robustness and reliability tests … via negativa –Popperian science works by removal. The late David Freedman had tried unsuccessfully to tame vapid and misleading …
+
+7. A map and simple heuristic to detect fragility, antifragility, and model error
+   https://www.fooledbyrandomness.com/heuristic.pdf
+   (NN Taleb, R Douady - NYU-Poly working paper, SSRN, 2011 - fooledbyrandomness.com | 2011 | cited by 31)
+   [PDF] https://www.fooledbyrandomness.com/heuristic.pdf
+   … of Dynamic Hedging, Taleb (1997), we present the effect of nonlinear … robustness is in effect impervious to changes of probability distributions. Also note that this measure robustness …
+
+8. Lindy Effect in Hydrometallurgy
+   https://link.springer.com/article/10.1007/S40831-025-01119-X
+   (K Binnemans, PT Jones - Journal of Sustainable Metallurgy, 2025 - Springer | 2025 | cited by 8)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s40831-025-01119-x.pdf
+   … The robustness of an item is proportional to its life… Lindy Effect (or Lindy’s Law) can be described in a formal mathematical language for use in statistics [4, 5]. Taleb coined the term Lindy…
+
+9. CONSEQUENCES OF FAT TAILS
+   http://www.ssmrmh.ro/wp-content/uploads/2020/09/STATISTICAL-CONSEQUENCES-OF-FAT-TAILS_compressed-1-51-PART-1.pdf
+   (NN Taleb - ssmrmh.ro)
+   [PDF] http://www.ssmrmh.ro/wp-content/uploads/2020/09/STATISTICAL-CONSEQUENCES-OF-FAT-TAILS_compressed-1-51-PART-1.pdf
+   … 311 16.5 Additional robustness and reliability tests … via negativa –Popperian science works by removal. The late David Freedman had tried unsuccessfully to tame vapid and misleading …
+
+10. Towards a sustainable property tax system for regional development by integrating the antifragility concept
+   https://www.mdpi.com/2071-1050/16/17/7467
+   (M Renigier-Bilozor, A Źróbek-Różańska, A Janowski - Sustainability, 2024 - mdpi.com | 2024 | cited by 7)
+   … Via negative—what to avoid or not to do to improve the … Lindy effect—Technology or any non-perishable item increases … this discussion of antifragile systems is Taleb’s criticism of Nobel …
+
+11. Not All Memories Age the Same: Autodiscovery of Adaptive Decay in Knowledge Graphs
+   https://arxiv.org/abs/2604.26970
+   (M Karhade - arXiv preprint arXiv:2604.26970, 2026 - arxiv.org | 2604)
+   [PDF] https://arxiv.org/pdf/2604.26970
+   … This confirms that the Lindy effect is present regardless of distributional choice: under log-… Both Bayesian and gradient-based inference recover the Lindy effect for permanent facts (…
+
+12. Hospital length of stay: A cross-specialty analysis and Beta-geometric model
+   https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0288239
+   (N Dehouche, S Viravan, U Santawat, N Torsuwan… - Plos one, 2023 - journals.plos.org | 2023 | cited by 19)
+   [PDF] https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0288239&type=printable
+   … An increasing mean excess function is characteristic of scalable heavy-tailed random variables and corresponds to the Lindy Effect [46] where ‘‘the longer you wait, the longer you will …
+
+13. Working with convex responses: Antifragility from finance to oncology
+   https://www.mdpi.com/1099-4300/25/2/343
+   (NN Taleb, J West - Entropy, 2023 - mdpi.com | 2023 | cited by 62)
+   We extend techniques and learnings about the stochastic properties of nonlinear responses from finance to medicine, particularly oncology, where it can inform dosing and intervention. …
+
+14. Statistical Inference on Heterogeneous Treatment
+   http://chapters.causalml-book.org/CausalML_chap_14.pdf
+   (NN Taleb - 2024 - chapters.causalml-book.org | 2024)
+   [PDF] http://chapters.causalml-book.org/CausalML_chap_14.pdf
+   In this chapter, we begin our treatment of estimation and inference targeting heterogeneous treatment effects. We provide a motivation for why heterogeneous effects, captured by …
+
+15. Longevity is the key factor in the search for technosignatures
+   https://iopscience.iop.org/article/10.3847/1538-3881/abec48/meta
+   (A Balbi, MM Ćirković - The Astronomical Journal, 2021 - iopscience.iop.org | 2021 | cited by 27)
+   [PDF] https://iopscience.iop.org/article/10.3847/1538-3881/abec48/pdf
+   … downplayed social element here, since most long-lived technosignatures and advanced engineering feats in general are likely to require high levels of social stability and robustness. …
+
+16. Bleed or blowup? Why do we prefer asymmetric payoffs?
+   https://www.tandfonline.com/doi/pdf/10.1207/s15427579jpfm0501_1
+   (NN Taleb - The Journal of Behavioral Finance, 2004 - Taylor & Francis | 2004 | cited by 55)
+   … Nassim Nicholas Taleb is founder and chairman of Empirica LLC, and a fellow and adjunct … Contrast that with a symmetric bet where the properties converge rather rapidly at the …
+
+17. Evolution of ESG-focused DLT research: An NLP analysis of the literature
+   https://direct.mit.edu/qss/article/doi/10.1162/qss.a.7/131222
+   (W Hernandez Cruz, K Tylinski, A Moore… - Quantitative Science …, 2025 - direct.mit.edu | 2025 | cited by 6)
+   [PDF] https://direct.mit.edu/qss/article-pdf/doi/10.1162/qss.a.7/2529583/qss.a.7.pdf
+   … impact on research and environmental concerns (a “Lindy effect”), Ethereum’s catalytic role … analysis techniques that primarily rely on citation metrics, abstract analyses, and database …
+
+18. Evolution of ESG-focused DLT research: An NLP analysis of the literature
+   https://arxiv.org/abs/2308.12420
+   (WH Cruz, K Tylinski, A Moore, N Roche… - arXiv preprint arXiv …, 2023 - arxiv.org | 2023 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2308.12420
+   … To address these challenges, we analyze the full text of 24,539 publications using Natural … impact on research and environmental concerns (a “Lindy effect”), Ethereum’s influence on …
+
+19. On survivor stocks in the S&P 500 stock index
+   https://www.mdpi.com/1911-8074/15/2/95
+   (K Grobys - Journal of Risk and Financial Management, 2022 - mdpi.com | 2022 | cited by 5)
+   This paper investigates the performance and characteristics of survivor stocks in the S&P 500 index. Using both in-sample and out-of-sample comparisons, survivor stocks outperformed …
+
+20. VARIANCES: Life Unpercepted. Against Teleological Entrenchment in Evolution and Design Alike
+   https://openresearch.ocadu.ca/id/eprint/2517/
+   (O Teselkin - 2019 - openresearch.ocadu.ca | 2019)
+   [PDF] https://openresearch.ocadu.ca/id/eprint/2517/1/Teselkin_Oleksiy_2018_MDES_SFI.pdf
+   … In his foray into genomics, Taleb claimed that only statistical … at singling out the real issue in the Taleb’s view, and, as we … this opens the door to a via negativa approach, when a falsified …
+
+21. Trend impact analysis in stock valuation: An application with a dividend discount model
+   https://www.utupub.fi/bitstream/handle/10024/150420/Karhapaa_Jyri_opinnayte.pdf?sequence=1
+   (J Karhapää - utupub.fi)
+   [PDF] https://www.utupub.fi/bitstream/handle/10024/150420/Karhapaa_Jyri_opinnayte.pdf?sequence=1
+   There exist undiscussed parallels between futures studies and finance, in both theory and practice. The objective of this thesis is to demonstrate how Gordon’s (2009a) Trend Impact …
+
+22. 2. Theories and Models: Understanding and Predicting Societal Collapse
+   https://books.openbookpublishers.com/10.11647/obp.0336.pdf#page=52
+   (S Roman - 2023 - books.openbookpublishers.com | 2023 | cited by 2)
+   [PDF] https://books.openbookpublishers.com/10.11647/obp.0336.pdf#page=52
+   … Mandelbrot 2 and then generalised by Nassim Taleb into the idea that non-perishable … doubles the additional life expectancy” and “the robustness of an item is proportional to its life”. 3 …
+
+23. The value of evaluating and implementing pharmaceuticals
+   https://search.proquest.com/openview/ffb61ba20eac7117dd025bdc4bf37459/1?pq-origsite=gscholar&cbl=2026366&diss=y
+   (K Johannesen - 2021 - search.proquest.com | 2021)
+   … The overall aim of this thesis is to study the effect of policies that control pharmaceutical price and implementation. The following research questions are investigated: • How are …
+
+24. Zeropoint Capitalism
+   https://www.zptcap.com/content/zeropoint-capitalism.pdf
+   (A Breckler - 2026 - zptcap.com | 2026)
+   [PDF] https://www.zptcap.com/content/zeropoint-capitalism.pdf
+   … When technology drives production costs toward zero, as it has in digital goods and increasingly in physical production through automation, traditional metrics break down. …
+
+25. Waste heat and habitability: Constraints from technological energy consumption
+   https://journals.sagepub.com/doi/abs/10.1089/ast.2024.0082
+   (A Balbi, M Lingam - Astrobiology, 2025 - journals.sagepub.com | 2025 | cited by 7)
+   [PDF] https://journals.sagepub.com/doi/pdf/10.1089/ast.2024.0082
+   Waste heat production represents an inevitable consequence of energy conversion as per the laws of thermodynamics. Based on this fact, by using simple theoretical models, we …
+
+26. Making Kids Cleverer: A manifesto for closing the advantage gap
+   https://books.google.com/books?hl=en&lr=&id=lsZ9DwAAQBAJ&oi=fnd&pg=PT10&dq=Taleb+via+negativa+Lindy+effect+robustness+metric&ots=t8fqBNKxwo&sig=vhW_0MJfkzOUNGZu37HO3O-q6wc
+   (D Didau - 2019 - books.google.com | 2019 | cited by 33)
+   … This is the Lindy effect, named after a delicatessen in New York where actors and comedians … Nassim Nicholas Taleb reckons that if a book has been in print for 40 years, we can expect …
+
+27. 15. Investing in the Unknown and Unknowable
+   https://books.google.com/books?hl=en&lr=&id=eOHSFO-gYsUC&oi=fnd&pg=PA304&dq=Taleb+via+negativa+Lindy+effect+robustness+metric&ots=f9-vW-pC6o&sig=e3467pfjPcfE8EMcHdWIDkfxlTw
+   (RJ Zeckhauser - The Known, the Unknown, and the Unknowable …, 2010 - books.google.com | 2010 | cited by 126)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2205821
+   David Ricardo made a fortune buying bonds from the British government four days in advance of the Battle of Waterloo. 1 He was not a military analyst, and even if he were, he had no …
+
+28. … alternative primary agri-food industries: The feasibility of establishing a large-scale sheep milk industry in Ireland through collaboration and cooperation
+   https://nuffield.ie/wp-content/uploads/2025/10/Brendan-Crosse-Nuffield-Ireland-Report-FINAL.pdf
+   (B Crosse - 2023 - nuffield.ie | 2023)
+   [PDF] https://nuffield.ie/wp-content/uploads/2025/10/Brendan-Crosse-Nuffield-Ireland-Report-FINAL.pdf
+   … There is also the concept of the Lindy effect, which is the idea that the older something is, the longer it's likely to be around in the future (Taleb, 2012). Sheep milk has been around …
+
+29. Low-Cost Malware Detection with Artificial Intelligence on Single Board Computers
+   https://www.mdpi.com/1999-5903/18/1/46
+   (P Steadman, P Jenkins, RS Rathore, C Hewage - Future Internet, 2026 - mdpi.com | 2026 | cited by 1)
+   … Utilising a hybrid system, they then take these metrics and run them through an AI system to … XP was in circulation, using these runtime metrics and comparing and contrasting them to …
+
+30. Rhetorical fractures: designing for social movement growth using ancient and contemporary tools
+   https://dspace.mit.edu/handle/1721.1/132860
+   (JB Ravenel - 2020 - dspace.mit.edu | 2020)
+   [PDF] https://dspace.mit.edu/bitstream/handle/1721.1/132860/1263245477-MIT.pdf?sequence=1&isAllowed=y
+   … Through analyzing aberrant events, this thesis hopes to identify the fundamental forms causing impact through … nature uses networks to provide robustness, often by providing link and …
+
+31. Mathematical oncology
+   https://books.google.com/books?hl=en&lr=&id=goulEQAAQBAJ&oi=fnd&pg=PR3&dq=Taleb+via+negativa+Lindy+effect+robustness+metric&ots=ZWmS2cSlNE&sig=eP00DqfB_sGGMhAM-VfpA2NTFqI
+   (MAJ Chaplain, L Preziosi - 2026 - books.google.com | 2026 | cited by 3)
+   Cancer is a complex and devastating disease, responsible for millions of deaths worldwide each year. While traditional oncology focuses on diagnosis and treatment through medical, …
+
+32. The era of global risk: an introduction to existential risk studies
+   https://books.google.com/books?hl=en&lr=&id=ELLSEAAAQBAJ&oi=fnd&pg=PA1&dq=Taleb+via+negativa+Lindy+effect+robustness+metric&ots=83SNxsBUDh&sig=DN3rBxKQ518Agi8z1HnuCwNBVvc
+   (SJ Beard, M Rees, C Richards, CR Rojas - 2023 - books.google.com | 2023 | cited by 23)
+   [PDF] http://164.52.217.92:8080/jspui/bitstream/123456789/854/1/The%20Era%20of%20Global%20Risk_%20An%20Introduction%20to%20Existential%20Risk%20Studies.pdf
+   … This principle was later formalised by the mathematician Bernard Mandelbrot and then generalised by Nassim Taleb into the idea that non-perishable things (like human projects and …
+
+33. ETHICS AND ARMED FORCES
+   https://www.ethikundmilitaer.de/fileadmin/ethics_and_armed_forces/Ethics-and-Armed-Forces_2018-1.pdf
+   (B Vision, F Crises - ethikundmilitaer.de)
+   [PDF] https://www.ethikundmilitaer.de/fileadmin/ethics_and_armed_forces/Ethics-and-Armed-Forces_2018-1.pdf
+   Why choose this question? Firstly, because interdependent developments like globalization and climate change mean there is a constantly growing need for a systematic way of dealing …
+
+34. Does Mindful Meditation Improve Concentration Skills?
+   https://diglib.uibk.ac.at/download/pdf/3369957.pdf
+   (K Werner - 2019 - diglib.uibk.ac.at | 2019)
+   [PDF] https://diglib.uibk.ac.at/download/pdf/3369957.pdf
+   … The Lindy effect tells us how probable it is that an idea, a concept or a perspective will continue to be of relevance in the future (Taleb, 2012). The effect states that the longer something …
+
+35. Control Avoision: Proactive Discretion in the Federal Bureaucracy
+   https://search.proquest.com/openview/08357e59550f05c58510835d6609d796/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (S Atherley - 2019 - search.proquest.com | 2019)
+   [PDF] https://search.proquest.com/openview/08357e59550f05c58510835d6609d796/1.pdf?pq-origsite=gscholar&cbl=18750&diss=y
+   … 5Nassim Taleb discusses an interesting framing of survival logic in Antifragile: the ‘Lindy Effect… , the effect suggests that survival-time is a positive predictor of further survival in the future (…
+
+===== Query 6/6: dvarosh skin in the game AI evaluation accountability =====
+
+1. Skin in the game: modulate AI and addressing the legal and ethical challenges of voice skin technology
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3761453
+   (R Gordon, R Budish - Available at SSRN 3761453, 2021 - papers.ssrn.com | 3761 | cited by 1)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3761453
+   … Pappas how much responsibility Modulate bore versus the games using their technology. … the platform’s responsibility if people are using voice skins to harass and mistreat others.” …
+
+2. Digital Games and AI: Education, Ethics and Culture
+   https://www.researchgate.net/profile/Miroslav-Macak-2/publication/388136643_Originality_vs_Genericity_of_Digital_Games_-_The_Fall_of_Fall_Guys_After_Corporate_Buyout/links/682392368a76251f22e18257/Originality-vs-Genericity-of-Digital-Games-The-Fall-of-Fall-Guys-After-Corporate-Buyout.pdf#page=808
+   (D Jukić - MARKETING IDENTITY, 2024 - researchgate.net | 2024)
+   [PDF] https://www.researchgate.net/profile/Miroslav-Macak-2/publication/388136643_Originality_vs_Genericity_of_Digital_Games_-_The_Fall_of_Fall_Guys_After_Corporate_Buyout/links/682392368a76251f22e18257/Originality-vs-Genericity-of-Digital-Games-The-Fall-of-Fall-Guys-After-Corporate-Buyout.pdf#page=808
+   … In this sense, the characters take responsibility for their actions and fight for their rights. … as an assistant, or the programmer’s modern extended skin (McLuhan), is quickly apparent. In …

@@ -1,0 +1,977 @@
+===== Query 1/6: OpenAI why we no longer evaluate SWE-bench Verified 138 tasks flawed solution leakage =====
+
+1. Why SWE-bench Verified no longer measures frontier coding ...
+   https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/
+   (Feb 23, 2026)
+   SWE-bench Verified is increasingly contaminated and mismeasures frontier coding progress. Our analysis shows flawed tests and training ...
+
+2. OpenAI: At least 16.4% of SWE Bench Verified have flawed test cases
+   https://www.reddit.com/r/singularity/comments/1rctnb4/openai_at_least_164_of_swe_bench_verified_have/
+   (Feb 24, 2026)
+   So the reason why models were plateauing at around 80% was because somewhere on the order of > 16.4% of problems on the benchmark was flawed.
+
+3. SWE-bench Verified no longer measures frontier coding capabilities
+   https://news.ycombinator.com/item?id=47910388
+   (Apr 27, 2026)
+   SWE-bench Verified is now saturated at 93.9% All benchmarks and benchmark paradigms eventually become saturated. It sounds far more likely ...
+
+4. OpenAI kills SWE-Bench Verified due to memorization flaws - LinkedIn
+   https://www.linkedin.com/posts/hackerrank_openai-just-killed-swe-bench-verified-the-activity-7432807590759264256-xzhQ
+   (Feb 26, 2026)
+   The reason: 59% of problems are broken, and every frontier model - GPT, Claude, Gemini - memorized the answers instead of solving them. Every ...
+
+5. OpenAI moves beyond SWE-bench Verified as coding benchmarks ...
+   https://tessl.io/blog/openai-moves-beyond-swe-bench-verified-as-coding-benchmarks-saturate/
+   (Feb 25, 2026)
+   In its explanation, OpenAI said that at high performance levels, benchmark gains no longer reliably signal real-world capability improvements.
+
+6. The End of SWE-Bench Verified — Mia Glaese & Olivia Watkins ...
+   https://www.latent.space/p/swe-bench-dead
+   (Feb 23, 2026)
+   OpenAI have done a deeper analysis of 138 problematic problems ・ >60% of remaining problems are unsolvable: 49 tests were too narrowly defined ...
+
+7. Separating signal from noise in coding evaluations - OpenAI
+   https://openai.com/index/separating-signal-from-noise-coding-evaluations/
+   (Jul 8, 2026)
+   SWE-bench Verified, had fundamental design and contamination issues, and found that the eval no longer provided meaningful signal on software ...
+
+8. OpenAI Ditches SWE-Bench Pro Due to Flaws - LinkedIn
+   https://www.linkedin.com/posts/gethackteam_openai-just-pulled-its-recommendation-to-activity-7480876737887703040-qhv1
+   (Jul 8, 2026)
+   OpenAI says the benchmark itself has too many problems to provide meaningful signal. 30% of the tasks are broken.
+
+9. OpenAI drops SWE-Bench Verified, backs Pro after flaw audit
+   https://aiweekly.co/alerts/openai-drops-swe-bench-verified-backs-pro-after-flaw-audit
+   (Jul 8, 2026)
+   OpenAI audited 138 of SWE-Bench Verified's hardest tasks and found 59.4% had material flaws in test design or problem descriptions. GPT-5.2 ...
+
+10. 59% of problems are broken, and every frontier model - GPT ...
+   https://x.com/hackerrank/status/2027041853703647232
+   (Feb 26, 2026)
+   OpenAI just killed SWE-Bench Verified, the benchmark it created. The reason: 59% of problems are broken, and every frontier model - GPT, ...
+
+11. OpenAI retracts recommendation for SWE-Bench Pro coding ...
+   https://www.facebook.com/groups/2616981278627207/posts/4558782037780445/
+   (Jul 9, 2026)
+   OpenAI discovered that the SWE-Bench pro benchmark is invalid for judging model's ability to code. What's funnier is that xAI's new model just ...
+
+12. OpenAI's Show Us Where Coding Evals Break - TheSequence
+   https://thesequence.substack.com/p/the-sequence-ai-of-the-week-895-openais
+   (3 days ago)
+   OpenAI's audit of SWE-Bench Pro shows why a precise score can still be a poor measure - and why coding agents may become essential tools for ...
+
+13. SWE-bench Verified: Resolving Real-World GitHub Issues
+   https://ukgovernmentbeis.github.io/inspect_evals/evals/coding/swe_bench/
+   This is an inspect-native implementation of the SWE-bench dataset, a benchmark for testing the ability of AI agents to solve software engineering tasks.
+
+14. Mia Glaese & Olivia Watkins, OpenAI Frontier Evals - YouTube
+   https://www.youtube.com/watch?v=0HaUD_olwQU
+   (Feb 23, 2026)
+   https://openai.com/ind...) arguing that SWE-Bench Verified—long treated as a key “North Star” coding benchmark—has become saturated and highly ...
+
+15. SWE-bench: Can Language Models Resolve Real-world Github ...
+   https://openreview.net/forum?id=VTF8yNQM66
+   (Nov 18, 2023)
+   To this end, we introduce SWE-bench, an evaluation framework consisting of 2,294 software engineering problems drawn from real GitHub issues and ...
+
+16. SWE-bench Verified: How fail_to_pass Tests and Task Instances ...
+   https://greynewell.com/blog/swe-bench-verified-broken-5-things-source-code/
+   (Mar 6, 2026)
+   Because the test set is frozen-in-time, any model trained after October 2023 will likely have seen most or all of the problems and solutions.
+
+17. OpenAI has officially stopped using the SWE-bench Verified ...
+   https://www.instagram.com/p/DXmWJCIFo9M/
+   (Apr 26, 2026)
+   Significant flaws in its test cases have rendered it unreliable, often rejecting correct solutions. This has led to inflated scores that do not ...
+
+18. Inside OpenAI's Case for Retiring SWE-bench Verified | Gen.QA
+   https://www.gen.qa/openai-retiring-swe-bench-verified/
+   (Feb 23, 2026)
+   OpenAI dropped SWE-bench Verified after finding 59.4% of audited o3 failures had flawed tests and frontier models reciting gold patches ...
+
+[PeopleAlsoAsk]
+  - Why does Swe-Bench Verified no longer measure Frontier coding capabilities?
+  - Is a swe-bench bad?
+
+[RelatedSearches] SWE-bench Pro | SWE-bench Verified huggingface | SWE-bench: can language models resolve real-world GitHub issues | SWE-bench Verified leaderboard | SWE-bench paper | SWE-bench dataset | SWE-Bench Pro: can AI Agents Solve long-horizon software engineering tasks | SWE-Bench Pro questions
+
+===== Query 2/6: MMLU-Redux 5700 questions error rate 6.49 percent annotation =====
+
+1. Are We Done with MMLU?
+   https://arxiv.org/html/2406.04127v3
+   MMLU-Redux, which is a subset of 5,700 manually re-annotated questions across all 57 MMLU subjects. We estimate that 6.49% of MMLU questions contain errors.
+
+2. Are We Done with MMLU?
+   http://ui.adsabs.harvard.edu/abs/2024arXiv240604127P/abstract
+   by A Pradipta Gema · 2024 — MMLU-Redux, which is a subset of 5,700 manually re-annotated questions across all 57 MMLU subjects. We estimate that 6.49% of MMLU questions contain errors.
+
+3. MMLU-redux-2.0 Leaderboard
+   https://llm-stats.com/benchmarks/mmlu-redux-2.0
+   (Jun 6, 2024)
+   ... 5,700 manually re-annotated questions across all 57 MMLU subjects. We estimate that 6.49% of MMLU questions contain errors. Using MMLU-Redux ...
+
+4. [2406.04127] Are We Done with MMLU?
+   https://arxiv.org/abs/2406.04127
+   by AP Gema · 2024 · Cited by 214 — We estimate that 6.49% of MMLU questions contain errors. Using MMLU-Redux, we demonstrate significant discrepancies with the model performance ...
+
+5. MMLU-Redux will be at #NAACL2025, go talk to @aryopg ...
+   https://x.com/robert_mchardy/status/1882312810602061848
+   (1 year ago)
+   MMLU-Redux—a re-annotated subset of 5,700 questions across all 57 subjects. We estimate 6.49% of MMLU questions are flawed, and our findings ...
+
+6. MMLU-Redux: Refined LLM Benchmark Suite
+   https://www.emergentmind.com/topics/mmlu-redux
+   (Feb 17, 2026)
+   Global estimate: A broader estimate across MMLU suggests 6.49 % 6.49\% 6.49% of all questions are erroneous. Subject Error Rate (%)
+
+7. MMLU Benchmark: Testing AI Language Models
+   https://galileo.ai/blog/mmlu-benchmark-ai-language-testing
+   (Jan 17, 2026)
+   5,700 questions revealed a 6.49% error rate. Error categories include parsing mistakes, multiple correct answers, and missing context. 6.49% ...
+
+8. Are We Done with MMLU?
+   https://aclanthology.org/2025.naacl-long.262/
+   by AP Gema · 2025 · Cited by 214 — MMLU-Redux, which is a subset of 5,700 manually re-annotated questions across all 57 MMLU subjects. Using MMLU-Redux, we demonstrate significant discrepancies
+
+9. Are We Done with MMLU?
+   https://www.robertmchardy.de/publication/mmlu_redux/
+   For example, we find that 57% of the analysed questions in the Virology subset contain errors. To address this issue, we introduce a comprehensive framework for ...
+
+10. edinburgh-dawg/mmlu-redux-2.0 · Datasets at Hugging Face
+   https://huggingface.co/datasets/edinburgh-dawg/mmlu-redux-2.0
+   (Jun 6, 2024)
+   MMLU-Redux is a subset of 5,700 manually re-annotated questions across 57 MMLU subjects. ... mistake during manual annotation. Dataset ...
+
+11. MMLU-Redux - EvalScope
+   https://evalscope.readthedocs.io/en/v1.5.0/benchmarks/mmlu_redux.html
+   MMLU-Redux is an improved version of the MMLU benchmark with corrected answers. It addresses known errors in the original MMLU dataset by fixing incorrect ...
+
+12. aryopg/mmlu-redux
+   https://github.com/aryopg/mmlu-redux
+   This evaluation provides a set of scripts for assessing the error detection capability of various prompting methods on the MMLU-Redux dataset.
+
+13. Dataset Card for MMLU-Redux
+   https://modelscope.cn/datasets/AI-ModelScope/mmlu-redux
+   ... MMLU. This type of error occurs when the annotated label differs from the correct label, which may be caused by a mistake during manual annotation. Dataset ...
+
+14. Are We Done with MMLU? [Quick Review]
+   https://liner.com/review/are-we-done-with-mmlu
+   Errors in the MMLU dataset significantly distort LLM performance metrics, with over 9% of MMLU-Redux examples found to be incorrect, and some subsets like ...
+
+15. Aishwarya Naresh Reganti's Post
+   https://www.linkedin.com/posts/areganti_mmlu-is-a-hot-topic-in-llm-research-as-activity-7210627680847765504-hG20
+   (2 years ago)
+   ... MMLU-Redux, a subset of MMLU with manually re-annotated questions to correct errors. ⛳ They manually analyze the MMLU dataset and created ...
+
+16. Accuracy results on MMLU-Redux showing the individual ...
+   https://www.researchgate.net/figure/Accuracy-results-on-MMLU-Redux-showing-the-individual-performance-of-each-model-across_tbl1_394271226
+   This question concerns the construct validity of LLM benchmarks, and it requires separating benchmark results from capabilities when we model and predict LLM ...
+
+17. MMLU Benchmark
+   https://systems-analysis.ru/eng/MMLU_Benchmark
+   (Jul 1, 2026)
+   In 2024, researchers conducted a manual analysis of a sample of 5,700 MMLU questions and found a significant number of errors. Approximately 6.5 ...
+
+18. Real-World Impact of Our Research
+   http://www.neuralnoise.com/2025/research-impact/
+   (Jul 15, 2025)
+   After identifying a concerning 57% error rate in the original MMLU benchmark's Virology subset, we created a manually curated, expert-verified ...
+
+19. MMLU-Redux Leaderboard
+   https://llm-stats.com/benchmarks/mmlu-redux
+   (Jun 6, 2024)
+   ... 5,700 manually re-annotated questions across all 57 MMLU subjects. We estimate that 6.49% of MMLU questions contain errors. Using MMLU-Redux ...
+
+20. CS 784: Computational Linguistics Lecture 6: Datasets and ...
+   https://explorerfreda.github.io/cs784/w25/lect06-dataset-flat.pdf
+   (Jan 23, 2025)
+   We estimate that 6.49% of. MMLU questions contain errors. Using MMLU-Redux, we demon- strate significant discrepancies with the model ...
+
+21. MMLU-Pro: A More Robust and Challenging Multi-Task ...
+   https://neurips.cc/virtual/2024/poster/97435
+   ... Errors (4%), Generation Issues (2%), Annotation Errors (2%), and Answer Extraction Errors (1%). These errors are attributed to various factors, such as ...
+
+22. MMLU Benchmark: Why Boards Shouldn't Trust the Score
+   https://verityai.co/blog/mmlu-benchmark-llm-general-knowledge
+   (Jun 29, 2026)
+   MMLU-Redux, 5,700 questions re-checked and corrected by experts, Original MMLU has a ~6.5% label-error rate. MMLU-CF, 20,000 questions, half ...
+
+23. Small Models Exhibit Limited Answer Consistency in ...
+   https://ojs.aaai.org/index.php/AAAI/article/view/40550/44511
+   by C Pinhanez · 2026 — Similarly as we did with MMLU-Redux, we computed the percentage of SURE questions (S/T) for each model at the best temperature level and obtained averages of 64 ...
+
+24. How we decide among the best Large Language models
+   https://medium.com/@aajaysaikiran/how-we-decide-among-the-best-large-language-models-fdba396e2f12
+   (1 year ago)
+   MMLU-Redux is a refined version of the Massive Multitask Language Understanding (MMLU) benchmark, featuring manually re-annotated questions ...
+
+25. MMLU
+   https://en.wikipedia.org/wiki/MMLU
+   Measuring Massive Multitask Language Understanding (MMLU) is a popular benchmark for evaluating the capabilities of large language models.
+
+26. MMLU-Pro: A More Robust and Challenging Multi-Task ...
+   https://proceedings.neurips.cc/paper_files/paper/2024/file/ad236edc564f3e3156e1b2feafb99a24-Paper-Datasets_and_Benchmarks_Track.pdf
+   by Y Wang · 2024 · Cited by 1923 — Errors (4%), Generation Issues (2%), Annotation Errors (2%), and Answer Extraction Errors (1%). These errors are attributed to various factors, such as ...
+
+27. MMLU-Pro: A More Robust and Challenging Multi-Task ...
+   https://openreview.net/forum?id=y10DM6R2r3
+   by Y Wang · Cited by 2074 — MMLU-Pro addresses the limitations of the original MMLU benchmark by incorporating more challenging, reasoning-focused questions and expanding ...
+
+28. Refreshing general-knowledge benchmarks without leakage
+   https://www.dataset.news/p/refreshing-general-knowledge-benchmarks
+   (Aug 21, 2025)
+   What it is: Multiple-choice questions with corrected keys and error tags spanning all 57 MMLU subjects. Size & splits: ~5.7k re-annotated items; ...
+
+29. Many errors discovered in MMLU benchmark : r/mlscaling
+   https://www.reddit.com/r/mlscaling/comments/164g9ub/many_errors_discovered_in_mmlu_benchmark/
+   (2 years ago)
+   Most 4-way multiple choice NLP datasets collected with MTurk have ~10% label noise. My guess is MMLU has 1-2%.
+
+30. MMLU-Pro: A More Robust and Challenging Multi-Task ...
+   https://papers.nips.cc/paper_files/paper/2024/hash/ad236edc564f3e3156e1b2feafb99a24-Abstract-Datasets_and_Benchmarks_Track.html
+   by Y Wang · 2024 · Cited by 2089 — This paper introduces MMLU-Pro, an enhanced dataset designed to extend the mostly knowledge-driven MMLU benchmark by integrating more challenging, reasoning- ...
+
+31. I am so happy to share that our work "Are We Done with ...
+   https://x.com/alberto_mancino/status/1882329856333259020
+   (1 year ago)
+   We estimate 6.49% of MMLU questions are flawed, and our findings reveal significant discrepancies in reported model performance. We're deeply ...
+
+32. What is Massive Multitask Language Understanding ...
+   https://www.intelligentliving.co/massive-multitask-language-understanding-mmlu/
+   (Mar 29, 2026)
+   MMLU-Redux audit findings revealed thousands of test items containing inherent errors that fundamentally distort model comparisons. This ongoing ...
+
+33. MMLU-Pro
+   https://www.kaggle.com/datasets/open-benchmarks/mmlu-pro/discussion
+   Discover what actually works in AI. Join millions of builders, researchers, and labs evaluating agents, models, and frontier technology through crowdsourced ...
+
+34. edinburgh-dawg/mmlu-redux · Datasets at Hugging Face
+   https://huggingface.co/datasets/edinburgh-dawg/mmlu-redux
+   (Jun 6, 2024)
+   MMLU-Redux is a subset of 3,000 manually re-annotated questions across 30 MMLU subjects. News. [2025.02.08] We corrected one annotation in ...
+
+35. Text-to-SQL Benchmarks are Broken: An In-Depth Analysis ...
+   https://www.vldb.org/cidrdb/papers/2026/p5-jin.pdf
+   by T Jin · Cited by 5 — Among its 121 problems with open-sourced gold SQL queries, we identify an annotation error rate of 66.1%. These annotation errors cause severe misestimation of ...
+
+36. MMLU-Pro Explained: The Advanced AI Benchmark for LLMs
+   https://intuitionlabs.ai/articles/mmlu-pro-ai-benchmark-explained
+   (Mar 3, 2026)
+   MMLU is a multiple-choice exam-style benchmark covering 57 subject areas (ranging from elementary mathematics to law) designed to test the ...
+
+37. arXiv:2406.04127v2 [cs.CL] 7 Jun 2024
+   https://www.robertmchardy.de/publication/mmlu_redux/mmlu_redux.pdf
+   by AP Gema · 2024 · Cited by 214 — This type of error occurs when the annotated label differs from the correct label, which may be caused by a mistake during manual annotation.
+
+38. What is MMLU benchmark
+   https://deepchecks.com/glossary/mmlu-benchmark/
+   The Massive Multitask Language Understanding (MMLU) is a suite of tests comparing the capabilities of LLMs across fifty activities.
+
+39. MMLU Leaderboard & Scores — July 2026
+   https://benchlm.ai/benchmarks/mmlu
+   MMLU evaluates models on 57 subjects spanning humanities, social sciences, STEM, and other areas. Questions range from elementary to advanced professional ...
+
+40. MMLU benchmark overview
+   https://arduin.io/blog/mmlu-overview/
+   (Mar 16, 2024)
+   Evaluation methods#. The MMLU benchmark consists entirely of multiple-choice questions. Each question comes with four possible answers (A, B, C, ...
+
+41. Are We Done with MMLU?
+   https://www.linkedin.com/pulse/we-done-mmlu-vlad-bogolin-nl1ce
+   (2 years ago)
+   Today's paper discusses the errors present in the popular Massive Multitask Language Understanding (MMLU) benchmark and proposes MMLU-Redux, ...
+
+42. MMLU-Pro Benchmark Leaderboard
+   https://artificialanalysis.ai/evaluations/mmlu-pro
+   Compare AI model performance on MMLU-Pro Benchmark Leaderboard. An enhanced version of MMLU with 12000 graduate-level questions across 14 subject areas, ...
+
+43. MMLU Benchmark (Massive Multi-task Language ...
+   https://klu.ai/glossary/mmlu-eval
+   The MMLU Benchmark, or Massive Multi-task Language Understanding, is an LLM evaluation test dataset split into a few-shot development set, a 1540-question ...
+
+44. Massive Multitask Language Understanding (MMLU)
+   https://www.emergentmind.com/topics/massive-multitask-language-understanding-mmlu
+   (Oct 18, 2025)
+   Annotation and ground truth errors: Manual review of MMLU reveals up to 6.49 ... MMLU: Approximately 28% of original MMLU questions require ...
+
+45. Comparison of different methods and models for error ...
+   https://www.researchgate.net/figure/Comparison-of-different-methods-and-models-for-error-detection-in-MMLU-Redux-scores_tbl1_381227176
+   Download scientific diagram | Comparison of different methods and models for error detection in MMLU-Redux scores. from publication: Are We Done with MMLU?
+
+46. MMLU benchmark - Machine Learning Notes
+   https://www.shedge.com/metrics/llm-benchmarks/mmlu-benchmark/
+   MMLU (Measuring Massive Multitask Language Understanding) is a comprehensive test designed to evaluate text models' multitask accuracy and capabilities.
+
+47. [Literature Review] Changing Answer Order Can Decrease ...
+   https://www.themoonlight.io/en/review/changing-answer-order-can-decrease-mmlu-accuracy
+   The paper titled "Changing Answer Order Can Decrease MMLU Accuracy" by Vipul Gupta et al. addresses the robustness of accuracy measurements in large language ...
+
+48. LLMs sorted by MMLU score. Multi-task Language ...
+   https://llm-explorer.com/list/?benchmark=hflb_mmlu
+   A Curated List of the Large and Small Language Models (Open-Source LLMs and SLMs). LLMs sorted by MMLU ... Error: error. Close. ×. Close. Email us: info@extractum ...
+
+===== Query 3/6: MMLU-Pro Wang 2024 harder ten options reasoning =====
+
+1. MMLU-Pro: A More Robust and Challenging Multi-Task Language ...
+   https://neurips.cc/virtual/2024/poster/97435
+   This paper introduces MMLU-Pro, an enhanced dataset designed to extend the mostly knowledge-driven MMLU benchmark by integrating more challenging, reasoning- ...
+
+2. [2406.01574] MMLU-Pro: A More Robust and Challenging Multi ...
+   https://arxiv.org/abs/2406.01574
+   (Jun 3, 2024)
+   This paper introduces MMLU-Pro, an enhanced dataset designed to extend the mostly knowledge-driven MMLU benchmark by integrating more challenging, reasoning- ...
+
+3. MMLU-Pro Leaderboard - a Hugging Face Space by TIGER-Lab
+   https://huggingface.co/spaces/TIGER-Lab/MMLU-Pro
+   MMLU-Pro integrates more challenging, reasoning-focused questions and increases. MMLU-Pro increases it to 10 options. The increase in options will make the ...
+
+4. MMLU-Pro: A More Robust and Challenging Multi-Task Language...
+   https://openreview.net/forum?id=y10DM6R2r3
+   (Nov 13, 2024)
+   MMLU-Pro introduces more challenging questions and increases the number of options, making it harder for models to guess answers.
+
+5. TIGER-AI-Lab/MMLU-Pro - GitHub
+   https://github.com/TIGER-AI-Lab/MMLU-Pro
+   MMLU-Pro integrates more challenging, reasoning-focused questions and increases the answer choices per question from four to ten, significantly raising the ...
+
+6. [PDF] MMLU-Pro: A More Robust and Challenging Multi-Task Language ...
+   https://proceedings.neurips.cc/paper_files/paper/2024/file/ad236edc564f3e3156e1b2feafb99a24-Paper-Datasets_and_Benchmarks_Track.pdf
+   This paper introduces MMLU-Pro, an enhanced dataset designed to extend the mostly knowledge-driven MMLU benchmark by in- tegrating more challenging, reasoning- ...
+
+7. MMLU-Pro Explained: The Advanced AI Benchmark for LLMs
+   https://intuitionlabs.ai/articles/mmlu-pro-ai-benchmark-explained
+   (Mar 3, 2026)
+   MMLU-Pro increases the difficulty and robustness of the tasks by: (1) expanding each multiple-choice question to ten answer options (versus ...
+
+8. TIGER-Lab made a new version of MMLU with 12,000 questions ...
+   https://www.reddit.com/r/LocalLLaMA/comments/1cskoxj/tigerlab_made_a_new_version_of_mmlu_with_12000/
+   (May 15, 2024)
+   MMLU-Pro uses 10 options instead of 4 options. MMLU-Pro significantly increases the complexity level by adding more college-level problems
+
+9. MMLU-Pro: A More Robust and Challenging Multi-Task Language ...
+   https://liner.com/review/mmlupro-a-more-robust-and-challenging-multitask-language-understanding-benchmark
+   (Jun 3, 2024)
+   MMLU-Pro significantly increases difficulty by augmenting questions to include ten options ... Wang, 2024. This paper has 56 references and ...
+
+10. MMLU-Pro: A Reasoning-Centric Benchmark - Emergent Mind
+   https://www.emergentmind.com/topics/mmlu-pro
+   (Aug 25, 2025)
+   MMLU-Pro is an advanced multi-task language understanding benchmark that shifts from recall to deep reasoning with expanded answer choices ...
+
+11. MMLU-Pro - BenchGen
+   https://benchgen.com/benchmarks/tiger-ai-lab-university-of-waterloo/mmlu-pro
+   (Jun 19, 2026)
+   MMLU-Pro is a harder, reasoning-focused version of the original MMLU benchmark, published at NeurIPS 2024 by Wang et al. (University of Waterloo ...
+
+12. MMLU-Pro: a more robust and challenging multi-task ...
+   https://dl.acm.org/doi/10.5555/3737916.3740934
+   (Dec 10, 2024)
+   This paper introduces MMLU-Pro, an enhanced dataset designed to extend the mostly knowledge-driven MMLU benchmark by integrating more ...
+
+13. MMLU benchmark updated with more multiple choice ...
+   https://www.facebook.com/groups/aifire.co/posts/1474398696498768/
+   (2 years ago)
+   MMLU-Pro significantly increases the number of answer options from four to ten per question, enhancing the evaluation's complexity and realism.
+
+14. MMLU-Pro (Measuring Massive Multi-task Language ...
+   https://medium.com/@boutnaru/the-artificial-intelligence-journey-mmlu-pro-measuring-massive-multi-task-language-07db6fb1d565
+   (1 year ago)
+   MMLU-Pro contains 12K multi-choice questions across different categories such as: engineering, computer science, health, economics, physics, math and more.
+
+15. MMLU-Pro: A More Robust and Challenging Multi-Task ...
+   https://sophon.at/papers/mmlu-pro-paper
+   TIGER-Lab benchmark that upgrades MMLU with harder reasoning-heavy questions, 10 answer choices, and de-noised options for a higher ceiling.
+
+16. MMLU-Pro Leaderboard
+   https://llm-stats.com/benchmarks/mmlu-pro
+   (Jun 3, 2024)
+   A more robust and challenging multi-task language understanding benchmark that extends MMLU by expanding multiple-choice options from 4 to 10, ...
+
+17. MMLU-Pro: The Discriminating Successor ...
+   https://benchmarkingagents.com/mmlu-pro/
+   MMLU-Pro addresses these by introducing harder questions, 10 multiple-choice options instead of 4, and a freshly curated test set that removes items proven ...
+
+18. MMLU vs MMLU-Pro: What Changed and Why It Matters
+   https://benchlm.ai/blog/posts/mmlu-vs-mmlu-pro
+   (Mar 7, 2026)
+   MMLU-Pro fixes this with 10-choice questions and harder reasoning ... 10 answer choices instead of 4 — Random guessing drops from 25% to 10 ...
+
+19. MMLU-Pro: A More Robust and Challenging Multi-Task ...
+   https://www.semanticscholar.org/paper/MMLU-Pro%3A-A-More-Robust-and-Challenging-Multi-Task-Wang-Ma/1406bb4cb6801bc4767b661308118c888a9b09da
+   MMLU-Pro is introduced, an enhanced dataset designed to extend the mostly knowledge-driven MMLU benchmark by integrating more challenging, reasoning-focused ...
+
+20. MMLU-Pro : A New LLM Benchmark
+   https://www.youtube.com/watch?v=xP-TPVr7eAo
+   (2 years ago)
+   This video introduces MMLU-Pro which is ... challenging, reasoning-focused questions and expanding the choice set from four to ten options.
+
+21. MMLU-Pro Leaderboard
+   https://www.kaggle.com/benchmarks/open-benchmarks/mmlu-pro
+   (Jun 2, 2026)
+   MMLU-Pro increases the difficulty by integrating more complex, reasoning-focused questions, expanding the multiple-choice set from four to ten ...
+
+22. MMLU-Pro Benchmark Leaderboard
+   https://artificialanalysis.ai/evaluations/mmlu-pro
+   Compare AI model performance on MMLU-Pro Benchmark Leaderboard. An enhanced version of MMLU with 12000 graduate-level questions across 14 subject areas, ...
+
+23. MMLU-ProX: A Multilingual Benchmark for Advanced LLM ...
+   https://mmluprox.github.io/
+   Reasoning-Focused Design: Built upon MMLU-Pro, maintaining its challenging nature and reasoning focus; High-Quality Translations: Semi-automatic translation ...
+
+24. MMLU Benchmark: Definition, How to Run, Leaderboards ...
+   https://www.projectpro.io/article/mmlu-benchmark/1162
+   (Aug 28, 2025)
+   MMLU-Pro was created to push LLMs beyond surface-level knowledge and into deeper reasoning. It introduces: Harder, more complex questions that ...
+
+25. Upgraded and augmented version of MMLU
+   https://x.com/LiamFedus/status/1790816166224740620
+   (2 years ago)
+   MMLU-Pro uses 10 options instead of 4 options. So there is less room for random guessing. 2. MMLU-Pro significantly increases the complexity ...
+
+26. MMLU benchmark leaderboard (2026) - BRACAI AI Consulting
+   https://www.bracai.eu/post/mmlu-benchmark
+   (Feb 17, 2026)
+   10 answer options per question instead of 4. MMLU-Pro focuses more on reasoning, not memorization. It also reduces prompt sensitivity ...
+
+27. The Replacement Of MMLU In 2024
+   https://congress.denemlabs.com/challenges/archive/2026-W16-ev-d4-mmlu-replacement
+   Wang et al. (2024) released a harder, refined version of MMLU with 10 answer choices, deduplicated questions, and a stronger reasoning focus. Which name?
+
+28. General-Knowledge and Reasoning — A Field Guide to ...
+   https://medium.com/@adnanmasood/general-knowledge-and-reasoning-a-field-guide-to-llm-benchmarks-b9ec02dea520
+   (4 months ago)
+   Multiple-choice benchmarks (MMLU, parts of BBH) are vulnerable to guessing dynamics, option artifacts, and subtle prompt leakage; they can ...
+
+29. Episode 9: MMLU-Pro: A More Robust and Challenging Multi ...
+   https://www.youtube.com/watch?v=DmxfhQNBV_s
+   (1 year ago)
+   Episode 9: MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark · Comments.
+
+30. MMLU-Pro: A More Robust and Challenging Multi-Task ...
+   https://www.researchgate.net/publication/397195670_MMLU-Pro_A_More_Robust_and_Challenging_Multi-Task_Language_Understanding_Benchmark
+   We evaluate on two legal-reasoning benchmarks. MMLU-Pro [18] is a harder successor to MMLU with 10-option multiple-choice questions. We restrict our evaluation ...
+
+31. MMLU Pro Benchmark
+   https://klu.ai/glossary/mmlu-pro-eval
+   (Jun 28, 2024)
+   Increased answer options — MMLU-Pro expands the number of answer choices from 4 to 10, making the evaluation more realistic and challenging.
+
+32. [R] MMLU-Pro: A More Robust and Challenging Multi-Task ...
+   https://www.reddit.com/r/MachineLearning/comments/1d7uamg/r_mmlupro_a_more_robust_and_challenging_multitask/
+   MMLU-Pro has ten options, which contain 3x more distractors than MMLU. By increasing the distractor numbers, we significantly reduce the ...
+
+33. MMLU - Holistic Evaluation of Language Models (HELM)
+   https://crfm.stanford.edu/helm/mmlu/latest/
+   We publish evaluation results from evaluating various models on MMLU using HELM. Our evaluation results include the following: Simple, standardized prompts ...
+
+34. lm-evaluation-harness/lm_eval/tasks/mmlu_pro/README. ...
+   https://github.com/EleutherAI/lm-evaluation-harness/blob/main/lm_eval/tasks/mmlu_pro/README.md
+   This paper introduces MMLU-Pro, an enhanced dataset designed to extend the mostly knowledge-driven MMLU benchmark by integrating more challenging, reasoning- ...
+
+35. MMLU Pro Benchmark Results and LLM Rankings
+   https://www.datalearner.com/en/benchmarks/mmlu-pro
+   A more challenging, professional-level variant of MMLU designed to evaluate model understanding and reasoning in specialized domains.
+
+36. MMLU-Pro+: Evaluating Higher-Order Reasoning and ...
+   https://www.aimodels.fyi/papers/arxiv/mmlu-pro-evaluating-higher-order-reasoning-shortcut
+   The paper proposes a new multi-task benchmark called MMLU-Pro+ to evaluate higher-order reasoning and shortcut learning in large language ...
+
+37. MMLU Benchmark for LLM Evaluation
+   https://www.emergentmind.com/topics/mmlu-benchmark
+   (Jan 12, 2026)
+   MMLU is a large-scale benchmark that assesses language models' factual knowledge and reasoning across 57 academic and professional subjects.
+
+38. Maxime Labonne's Post
+   https://www.linkedin.com/posts/maxime-labonne_mmlu-pro-we-need-to-improve-our-benchmarks-activity-7196448008173928450-XhDI
+   (2 years ago)
+   TIGER-Lab (cc Wenhu Chen) introduced an upgraded version of MMLU with 12k complex questions (vs. 16k for MMLU) and additional reasoning problems.
+
+39. MMLU-Pro: A More Robust and Challenging Multi-Task ...
+   https://neurips.cc/media/neurips-2024/Slides/97435.pdf
+   by Y Wang · Cited by 2089 — Key Differences from MMLU: • Expanded answer choices from 4 to 10 options, reducing random guess probability from 25% to 10%. • Higher robustness to prompt ...
+
+40. MMLU benchmark overview
+   https://arduin.io/blog/mmlu-overview/
+   (Mar 16, 2024)
+   The “massive” MMLU Benchmark was created to evaluate language models' capabilities on a wider range of tasks than previously available benchmarks such as ...
+
+41. MMLU-Pro+: Evaluating Higher-Order Reasoning and ...
+   https://arxiv.org/html/2409.02257v3
+   Recent research has highlighted the challenges of shortcut learning, where models exploit superficial patterns rather than developing deeper understanding [3] , ...
+
+42. MMLU-Pro
+   https://www.threads.com/@sung.kim.mw/post/C6-rC_8ueoU?hl=en
+   (May 14, 2024)
+   ... challenging massive multi-task language understanding benchmark with 12K questions. 1. MMLU-Pro uses 10 options instead of 4 options. So ...
+
+43. MMMU-Pro Benchmark Leaderboard
+   https://artificialanalysis.ai/evaluations/mmmu-pro
+   This paper introduces MMMU-Pro, a robust version of the Massive Multi-discipline Multimodal Understanding and Reasoning (MMMU) benchmark.
+
+44. MMLU-Pro: An Enhanced Benchmark Designed to ...
+   https://www.marktechpost.com/2024/06/05/mmlu-pro-an-enhanced-benchmark-designed-to-evaluate-language-understanding-models-across-broader-and-more-challenging-tasks/
+   (Jun 5, 2024)
+   June 5, 2024. https://arxiv.org/abs/2406.01574. Add ... options to ten, which necessitates more discerning reasoning for correct selection.
+
+45. MMLU-ProX Leaderboard
+   https://llm-stats.com/benchmarks/mmlu-prox
+   (Jun 3, 2024)
+   ... reasoning-focused questions and expanding the choice set from four to ten options. ... MMLU-Pro includes more complex reasoning questions ...
+
+46. MMLU-Pro+: Evaluating Higher-Order Reasoning and ...
+   https://openreview.net/pdf?id=3W2RQMdVXF
+   by S Asgari · Cited by 3 — effectively differentiate between model capabilities [10]. 21. LLMs have been evaluated using a variety of benchmark datasets designed to test different aspects ...
+
+47. What are the top performers on the MMLU benchmark?
+   https://www.facebook.com/groups/698593531630485/posts/1237645517725281/
+   (1 year ago)
+   **TOP PERFORMERS: MMLU BENCHMARK**
+
+The **MMLU** (Measuring Massive Multitask Language Understanding) benchmark consists of approximately 16,000 multiple-choic ...
+
+48. MMLU-Pro Leaderboard & Scores — July 2026
+   https://benchlm.ai/benchmarks/mmluPro
+   Massive Multitask Language Understanding Professional (MMLU-Pro). An enhanced version of MMLU with 10 answer choices instead of 4, featuring more reasoning- ...
+
+49. MMLU, MMLU-Pro, and MMMU Explained: The Knowledge ...
+   https://benchmarkingagents.com/mmlu/
+   MMLU-Pro has 10 answer choices per question (not 4). This makes process-of-elimination far less effective and forces more careful reasoning. The questions were ...
+
+[RelatedSearches] Mmlu pro wang 2024 harder ten options reasoning pdf | Mmlu pro wang 2024 harder ten options reasoning reddit | MMLU-Pro paper | MMLU-Pro leaderboard | MMLU-Pro benchmark | MMLU paper | Qwen3 MMLU-Pro | MMLU vs MMLU-Pro
+
+===== Query 4/6: benchmark saturation time to saturate AI Index 2025 percentage points =====
+
+1. The 2025 AI Index Report | Stanford HAI
+   https://hai.stanford.edu/ai-index/2025-ai-index-report
+   performance sharply increased: scores rose by 18.8, 48.9, and 67.3 percentage points on MMMU, GPQA, and SWE-bench, respectively.
+
+2. A Systematic Study of Benchmark Saturation - arXiv
+   https://arxiv.org/html/2602.16763v1
+   The proportion of saturated benchmarks rises from 42.9% for benchmarks released within the past 24 months to 54.5% for those older than 60 months,
+
+3. [PDF] Artificial Intelligence Index Report 2025 - AWS
+   https://hai-production.s3.amazonaws.com/files/hai_ai_index_report_2025.pdf
+   Just a year later, performance sharply increased: scores rose by 18.8, 48.9, and 67.3 percentage points on MMMU, GPQA, and SWE-bench, respectively.
+
+4. Benchmark Saturation: AI Evaluation Metrics and Ceiling Effects
+   https://mbrenndoerfer.com/writing/benchmark-saturation-ai-evaluation-metrics
+   (Mar 6, 2026)
+   When models optimize for saturated metrics, they waste computational resources training to distinguish between 98.5% and 98.7% accuracy on a ...
+
+5. AI benchmarks have rapidly saturated over time - Epoch AI - Reddit
+   https://www.reddit.com/r/singularity/comments/1jmk5f3/ai_benchmarks_have_rapidly_saturated_over_time/
+   (Mar 29, 2025)
+   The article discusses how AI benchmarks have evolved over time and why they haven't fully reflected the economic impacts of AI systems.
+
+6. HAI Seminar with Nestor Maslej: Presenting the 2025 AI Index Report
+   https://www.youtube.com/watch?v=D03EJhztsHQ
+   (May 9, 2025)
+   The AI Index, currently in its eighth year, tracks, collates, distills, and visualizes data relating to artificial intelligence.
+
+7. Mapping global dynamics of benchmark creation and saturation in ...
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC9649641/
+   Recent studies raised concerns over the state of AI benchmarking, reporting issues such as benchmark overfitting, benchmark saturation and increasing ...
+
+8. The State of AI in 2025 - by Ben Lorica 罗瑞卡 - Gradient Flow
+   https://gradientflow.substack.com/p/the-state-of-ai-in-2025
+   (Apr 8, 2025)
+   narrowed from about 8 percentage points in January 2024 to just 2% by February 2025. performance increases of 20-60 percentage points in just a ...
+
+9. Technical Performance | The 2025 AI Index Report | Stanford HAI
+   https://hai.stanford.edu/ai-index/2025-ai-index-report/technical-performance
+   By 2024, AI performance on these benchmarks saw remarkable improvements, with gains of 18.8 and 48.9 percentage points on MMMU and GPQA, respectively.
+
+10. Are AI benchmarks doomed? - Epoch AI
+   https://epoch.ai/epoch-after-hours/are-ai-benchmarks-doomed
+   (May 1, 2026)
+   Topics we cover: why benchmark saturation isn't as alarming as it seems, how AI can speed up benchmark development, the benchmark-reality gap, ...
+
+11. The 2025 AI Index
+   https://www.youtube.com/watch?v=6o1JTph9z7U
+   (1 year ago)
+   Stanford's 2025 AI Index reviews 2024's artificial intelligence trends. Performance benchmarks improved as AI appeared more in daily life ...
+
+12. The AI Race Accelerates: Key Insights from the 2025 AI Index ...
+   https://ctse.aei.org/the-ai-race-accelerates-key-insights-from-the-2025-ai-index-report/
+   (Apr 15, 2025)
+   1. AI Nears Human-Level Performance · 2. The US Leads on AI Models · 3. But China Is Catching Up in Quality · 4. Rising Performance, Falling Costs.
+
+13. Global AI Adoption in 2025 – AI Economy Institute
+   https://www.microsoft.com/en-us/corporate-responsibility//topics/ai-economy-institute/reports/global-ai-adoption-2025/
+   (Jan 8, 2026)
+   Global adoption of artificial intelligence continued to rise in the second half of 2025, increasing by 1.2 percentage points compared to the ...
+
+14. Artificial Intelligence Index Report 2025
+   https://iris.imtlucca.it/bitstream/20.500.11771/34398/1/hai_ai_index_report_2025.pdf
+   by N Maslej · 2025 · Cited by 621 — By 2024,. AI performance on these benchmarks saw remarkable improvements, with gains of 18.8 and 48.9 percentage points on MMMU and GPQA, ...
+
+15. The 2025 Stanford AI Index: 5 Takeaways That Are Important ...
+   https://genemarks.medium.com/the-2025-stanford-ai-index-5-takeaways-that-are-important-for-your-business-95e6348c406c
+   In short time-horizon settings (two hours), top Al systems score four times higher than human experts, but when given more time to do a task ...
+
+16. A Systematic Study of Benchmark Saturation
+   https://arxiv.org/html/2602.16763v3
+   (Jun 29, 2026)
+   Figure˜3 shows that the average saturation index increases with benchmark age. The proportion of saturated benchmarks rises from 42.9% for ...
+
+17. According to Stanford University's Artificial Intelligence ...
+   https://www.mufgamericas.com/sites/default/files/document/2025-12/Chart_of_the_Day_12_4_AI_Performance_vs._Humans_0.pdf
+   According to Stanford University's Artificial Intelligence Report (2025), AI advancements have accelerated in the post-COVID period, surpassing human ...
+
+18. Key findings from Stanford's 2025 AI Index Report
+   https://www.ibm.com/think/news/stanford-hai-2025-ai-index-report
+   (Apr 25, 2025)
+   From benchmarking doubt to AI's business boom, these are the top takeaways from Stanford HAI's 2025 AI Index Report.
+
+19. Report by the Stanford Institute (HAI): State of AI Index 2025
+   https://www.get-aimax.de/en/stanford-institute-state-of-ai-index-2025
+   The latest State of AI Index 2025 is now the eighth edition and offers over 400 pages of data and analyses on the rapid development of AI over the past year.
+
+[PeopleAlsoAsk]
+  - What is saturation of AI benchmarks?
+
+[RelatedSearches] Benchmark saturation time to saturate ai index 2025 percentage points free | 2025 AI Index report | AI Index report 2026 | Global AI Index 2025 | Stanford AI Index 2025 | Global AI Index 2024 | AI Index report 2024 | Stanford AI Index report 2025 PDF
+
+===== Query 5/6: GPQA contamination Google-proof graduate benchmark =====
+
+1. GPQA: A Graduate-Level Google-Proof Q&A Benchmark - arXiv
+   https://arxiv.org/abs/2311.12022
+   (Nov 20, 2023)
+   We present GPQA, a challenging dataset of 448 multiple-choice questions written by domain experts in biology, physics, and chemistry.
+
+2. GPQA: A Graduate-Level Google-Proof Q&A Benchmark
+   https://openreview.net/forum?id=Ti67584b98
+   We present GPQA, a challenging dataset of 448 multiple-choice questions written by domain experts in biology, physics, and chemistry.
+
+3. "GPQA: A Graduate-Level Google-Proof Q&A Benchmark", Rein et al ...
+   https://www.reddit.com/r/mlscaling/comments/18409uu/gpqa_a_graduatelevel_googleproof_qa_benchmark/
+   (Nov 26, 2023)
+   We present GPQA, a challenging dataset of 448 multiple-choice questions written by domain experts in biology, physics, and chemistry.
+
+4. GPQA: A Graduate-Level Google-Proof Q&A Benchmark - GitHub
+   https://github.com/idavidrein/gpqa
+   A graduate-level Google-proof Q&A benchmark. Baselines and analysis for the GPQA dataset (paper: https://arxiv.org/abs/2311.12022)
+
+5. GPQA Diamond | Epoch AI
+   https://epoch.ai/benchmarks/gpqa-diamond
+   The GPQA (Graduate-Level Google-Proof Q&A) dataset is a collection of challenging multiple-choice questions in biology, physics, and chemistry. scored 69.7%. ...
+
+6. GPQA: The Graduate-Level Benchmark Every Major AI Lab Uses
+   https://www.mindstudio.ai/blog/gpqa-benchmark-graduate-level-google-proof-qa-creator-limits
+   (May 5, 2026)
+   David Rein created the GPQA benchmark — graduate-level, Google-proof QA — and it's now used by every major AI lab as a capability benchmark.
+
+7. GPQA Diamond - Vals AI
+   https://vals.ai/benchmarks/gpqa
+   (8 days ago)
+   The Graduate-Level Google-Proof Q&A (GPQA) benchmark (paper) is a public academic benchmark commonly used to measure models' general question- ...
+
+8. GPQA: A Graduate-Level Google-Proof Q&A Benchmark
+   https://www.semanticscholar.org/paper/GPQA%3A-A-Graduate-Level-Google-Proof-Q%26A-Benchmark-Rein-Hou/210b0a3d76e93079cc51b03c4115fde545eea966
+   GPQA, a challenging dataset of 448 multiple-choice questions written by domain experts in biology, physics, and chemistry, is presented, which it is hoped ...
+
+9. GPQA: Graduate-Level Google-Proof QA Benchmark - Emergent Mind
+   https://www.emergentmind.com/topics/gpqa
+   (Oct 1, 2025)
+   GPQA is a benchmark designed to assess advanced reasoning in science domains with rigorously curated, Google-proof multiple-choice questions ...
+
+10. Paper page - GPQA: A Graduate-Level Google-Proof Q&A Benchmark
+   https://huggingface.co/papers/2311.12022
+   (Nov 20, 2023)
+   We present GPQA, a challenging dataset of 448 multiple-choice questions written by domain experts in biology, physics, and chemistry.
+
+11. GPQA Diamond Benchmark Leaderboard
+   https://artificialanalysis.ai/evaluations/gpqa-diamond?ref=labellerr.com
+   The most challenging 198 questions from the GPQA benchmark , designed to be "Google-proof" and require genuine scientific expertise rather than search skills.
+
+12. Graduate-Level Google-Proof Q&A (GPQA) Benchmark
+   http://www.gabormelli.com/RKB/Graduate-Level_Google-Proof_Q%26A_(GPQA)_Benchmark
+   (Aug 22, 2024)
+   The GPQA (Graduate-Level Google-Proof Q&A) Benchmark is a challenging dataset of 448 multiple-choice questions crafted by domain experts in ...
+
+13. GPQA Leaderboard (July 2026): Sakana Fugu-Ultra Leads ...
+   https://benchlm.ai/benchmarks/gpqa
+   Graduate-Level Google-Proof Q&A (GPQA) leaderboard across 71 AI models. Sakana Fugu-Ultra leads with 95.5%. A challenging dataset of 448 multiple-choice ...
+
+14. rl-llm-wiki/knowledge-base · source: arxiv:2311.12022
+   https://huggingface.co/datasets/rl-llm-wiki/knowledge-base/discussions/198
+   (Jun 28, 2026)
+   source: arxiv:2311.12022 — GPQA: A Graduate-Level Google-Proof Q&A Benchmark ... contamination concerns that weaken both the capability and ...
+
+15. GPQA-Diamond Benchmark: Scores, Leaderboard & How ...
+   https://intuitionlabs.ai/pdfs/gpqa-diamond-benchmark-scores-leaderboard-how-ai-models-compare.pdf
+   (Oct 24, 2025)
+   Official descriptions note that “GPQA Diamond is a challenging subset of graduate-level, Google-proof science questions testing PhD-level.
+
+16. GPQA Diamond Benchmark Tracks AI Progress Over 3 Years
+   https://www.linkedin.com/posts/emollick_i-think-this-is-a-good-way-to-visualize-the-activity-7438443111468466176-nJkS
+   (4 months ago)
+   The Graduate-Level Google-Proof Q&A test (GPQA) is a series of very hard multiple-choice problems designed to test advanced knowledge. Non- ...
+
+17. GPQA: A Graduate-Level Google-Proof Q&A Benchmark
+   https://www.alphaxiv.org/abs/2311.12022
+   (Nov 20, 2023)
+   The GPQA benchmark evaluates the ability of advanced AI systems to provide truthful information in complex scientific domains where human ...
+
+18. What the hell Is GPQA, anyway?
+   https://duarteocarmo.com/blog/what-the-hell-is-gqpa-anyway.html
+   (Jan 15, 2025)
+   GPQA stands for "Graduate-Level Google-Proof Q\&A Benchmark." It is a dataset and methodology introduced in a paper by researchers from NYU, Cohere, and ...
+
+19. GPQA: A Graduate-Level Google-Proof Q&A Benchmark
+   https://klu.ai/glossary/gpqa-eval
+   GPQA, or Graduate-Level Google-Proof Q&A Benchmark, is a challenging dataset designed to evaluate the capabilities of Large Language Models (LLMs) and scalable ...
+
+20. GPQA: Graduate-Level Q&A Benchmark | PDF
+   https://www.scribd.com/document/902002353/4
+   (Aug 15, 2025)
+   The document introduces GPQA, a dataset of 448 challenging multiple-choice questions in biology, physics, and chemistry, designed to be ...
+
+21. GPQA: A Graduate-Level Google-Proof Q&A Benchmark - ar5iv
+   https://ar5iv.labs.arxiv.org/html/2311.12022
+   (Feb 27, 2024)
+   We present GPQA, a challenging dataset of 448 multiple-choice questions written by domain experts in biology, physics, and chemistry. We ensure ...
+
+22. GPQA Diamond - AI Benchmark
+   https://www.youtube.com/watch?v=F_FzTBwsQ5U
+   (4 months ago)
+   GPQA Diamond: The Benchmark Testing Scientific Reasoning at the Edge of Human Expertise. GPQA Diamond - AI Benchmark.
+
+23. GPQA: A Graduate-Level Google-Proof Q&A Benchmark
+   https://scispace.com/papers/gpqa-a-graduate-level-google-proof-q-a-benchmark-297wj9asws
+   Abstract: We present GPQA, a challenging dataset of 448 multiple-choice questions written by domain experts in biology, physics, and chemistry. We ensure that ...
+
+24. GPQA: A Graduate-Level Google-Proof Q&A Benchmark
+   https://paperbrief.net/posts/25/
+   (Nov 21, 2023)
+   We present GPQA, a challenging dataset of 448 multiple-choice questions\nwritten by domain experts in biology, physics, and chemistry.
+
+25. GPQA Benchmark
+   https://www.kaggle.com/code/sjmikler/gpqa-benchmark
+   This notebook focuses on closed-book version of the benchmark (without access to a Search tool). We evaluate two prompting methods for each model: zero-shot ...
+
+26. GPQA is Not a Reasoning Benchmark
+   https://www.fromthenew.world/p/gpqa-is-not-a-reasoning-benchmark
+   (Jul 24, 2024)
+   GPQA, or “Graduate-Level Google-Proof Q&A Benchmark“ is a set of difficult exam questions designed to be, as the title suggests, “Google-proof”.
+
+27. 🧵Announcing GPQA, a graduate-level “Google-proof” Q&A ...
+   https://x.com/idavidrein/status/1727033002234909060
+   (2 years ago)
+   Announcing GPQA, a graduate-level “Google-proof” Q&A benchmark designed for scalable oversight! w/ @_julianmichael_, @sleepinyourhat
+
+28. GPQA Leaderboard
+   https://llm-stats.com/benchmarks/gpqa
+   Questions are Google-proof and extremely difficult, with PhD experts reaching 65% accuracy. GPQA is a text benchmark evaluating models on physics, reasoning, ...
+
+29. super gpqa
+   https://supergpqa.github.io/
+   A comprehensive benchmark designed to evaluate the knowledge and reasoning abilities of Large Language Models (LLMs) across 285 graduate-level disciplines.
+
+[RelatedSearches] Gpqa contamination google proof graduate benchmark review | Gpqa contamination google proof graduate benchmark reddit | Gpqa contamination google proof graduate benchmark github | Gpqa contamination google proof graduate benchmark download | Gpqa contamination google proof graduate benchmark 2022 | Gpqa contamination google proof graduate benchmark free | Gpqa huggingface | GPQA Diamond
+
+===== Query 6/6: ARC-AGI-2 2025 reasoning benchmark humans =====
+
+1. ARC-AGI-2
+   https://arcprize.org/arc-agi/2
+   ARC-AGI-2 - the next iteration of the benchmark - is designed to stress-test the capabilities of state-of-the-art AI reasoning systems, provide useful signal ...
+
+2. ARC Prize
+   https://arcprize.org/
+   Competition ARC-AGI-2 Competition. We build scientifically grounded benchmarks that reveal the gap between what's easy for humans, hard for AI. ARC-AGI has ...
+
+3. ARC Prize 2025: Technical Report - arXiv
+   https://arxiv.org/html/2601.10904v1
+   (Jan 15, 2026)
+   The ARC-AGI benchmark series serves as a critical measure of few-shot generalization on novel tasks, a core aspect of intelligence.
+
+4. ARC-AGI-3
+   https://arcprize.org/arc-agi/3
+   ARC-AGI-3 is the first interactive reasoning benchmark for AI agents—play as humans and build agents that learn in novel environments.
+
+5. ARC-AGI 2 is Solved : r/singularity - Reddit
+   https://www.reddit.com/r/singularity/comments/1p8c6gy/arcagi_2_is_solved/
+   (Nov 27, 2025)
+   If you give ARC-AGI2 to real humans … they'd score less than 10%. ARC-AGI-2 public evaluation, which is no longer considered meaningful in 2025.
+
+6. ARC-AGI-2 human baseline surpassed (updated) - LessWrong
+   https://www.lesswrong.com/posts/DX3EmhmwZjTYp9PBf/arc-agi-2-human-baseline-surpassed-updated
+   (Dec 11, 2025)
+   The higher human score of 100% listed for ARC-AGI-2 suggests that the newer benchmark is slightly easier for humans.
+
+7. ARC Prize 2025 | Kaggle
+   https://www.kaggle.com/competitions/arc-prize-2025
+   The Abstraction and Reasoning Corpus for Artificial General Intelligence (ARC-AGI-2) benchmark measures an AI system's ability to efficiently learn new skills.
+
+8. GPT-5.2 & ARC-AGI-2: A Benchmark Analysis of AI Reasoning
+   https://intuitionlabs.ai/articles/gpt-5-2-arc-agi-2-benchmark
+   (Apr 15, 2026)
+   In aggregate, humans scored 100% on ARC-AGI-2 (). This human baseline underscores the tasks' solvability and contrasts sharply with AI ...
+
+9. Announcing: ARC-AGI-2 and ARC Prize 2025 - YouTube
+   https://www.youtube.com/watch?v=z6cTTkVqAyg
+   (Mar 24, 2025)
+   ARC-AGI-2 is the next generation benchmark that challenges frontier reasoning systems.
+
+10. ARC-AGI-2 Overview (in-depth presentation) : r/singularity - Reddit
+   https://www.reddit.com/r/singularity/comments/1jwb0s5/arcagi2_overview_indepth_presentation/
+   (Apr 10, 2025)
+   Every other benchmark makes you believe that reasoning models are the same LLMs just a bit better, but ARC was the only benchmark that ...
+
+11. LLMs Hit 0% on ARC-AGI-2 benchmark
+   https://www.linkedin.com/pulse/llms-hit-0-arc-agi-2-benchmark-exposing-limits-ai-anshuman-jha-rpbsc
+   (1 year ago)
+   The 0% performance of pure LLMs on the ARC-AGI-2 benchmark is a critical indicator of the current limitations in AI abstract reasoning and generalization.
+
+12. ARC-AGI-2 Leaderboard (July 2026): GPT-5.5 Leads at 85%
+   https://benchlm.ai/benchmarks/arcAgi2
+   Considered the hardest public reasoning benchmark — average individual human performance is 66%. Which model scores highest on ARC-AGI-2? GPT-5.5 by OpenAI ...
+
+13. ARC-AGI-2 A New Challenge for Frontier AI Reasoning ...
+   https://arcprize.org/blog/arc-agi-2-technical-report
+   (May 20, 2025)
+   ARC-AGI-2 incorporates a newly curated and expanded set of tasks specifically designed to provide a more granular signal to assess the abstract reasoning and ...
+
+14. ARC-AGI-2 abstract reasoning benchmark : r/mlscaling
+   https://www.reddit.com/r/mlscaling/comments/1jj4unm/arcagi2_abstract_reasoning_benchmark/
+   (1 year ago)
+   A single human scores about 60%. A panel of at least two humans scores 100%. This is similar to the first test. Looks interesting, though ...
+
+15. ARC-AGI-2 Dataset Benchmark
+   https://www.emergentmind.com/topics/arc-agi-2-dataset
+   (Dec 2, 2025)
+   ARC-AGI-2 is a benchmark evaluating abstract reasoning in 2-D grids through calibrated demonstration tasks and rigorous human-like ...
+
+16. Arc-AGI-2 and ARC Prize 2025
+   https://news.ycombinator.com/item?id=43465147
+   (Mar 24, 2025)
+   We're launching ARC-AGI-2, a frontier AI benchmark that measures a model's ability to generalize on tasks it hasn't seen before, and the ARC Prize 2025 ...
+
+17. 29.4% ARC-AGI-2 (TOP SCORE!) - Jeremy Berman
+   https://www.youtube.com/watch?v=FcnLiPyfRZM
+   (9 months ago)
+   Jeremy Berman took the top spot on the ARC-AGI v2 public leaderboard with a score of about 30% -- using an approach that trades code for ...
+
+18. ARC-AGI-2: A New Challenge for Frontier AI Reasoning ...
+   https://arxiv.org/abs/2505.11831
+   by F Chollet · 2025 · Cited by 130 — ARC-AGI-2 aims to serve as a next-generation tool for rigorously measuring progress towards more general and human-like AI capabilities.
+
+19. ARC-AGI v2 Leaderboard
+   https://llm-stats.com/benchmarks/arc-agi-v2
+   (May 17, 2025)
+   ARC-AGI-2 is an upgraded benchmark for measuring abstract reasoning and problem-solving abilities in AI systems through visual grid ...
+
+20. arcprize/ARC-AGI-2
+   https://github.com/arcprize/ARC-AGI-2
+   "ARC can be seen as a general artificial intelligence benchmark, as a program synthesis benchmark, or as a psychometric intelligence test. It is targeted at ...
+
+21. Guide
+   https://arcprize.org/guide
+   The first interactive reasoning benchmark. Build AI agents that explore, plan, and adapt within novel game environments. View ARC-AGI-3 Docs.
+
+22. Best LLM for reasoning in 2026: ARC-AGI-2 benchmark results
+   https://www.bracai.eu/post/arc-agi-2-benchmark
+   (Jan 29, 2026)
+   ARC-AGI-2 is the second generation of this benchmark, released in 2025. It is harder than ARC-AGI-1, while staying easy for humans. Every ...
+
+23. ARC-AGI-2
+   https://epoch.ai/benchmarks/arc-agi-2
+   Controlled human testing with over 400 participants confirmed that every evaluation task can be solved by at least two people in two attempts or fewer, with an ...
+
+24. Resources
+   https://arcprize.org/resources
+   This page collects papers, videos, tools, codebases, and tutorials for the ARC Prize community. Contents. Start Here; Understanding Intelligence ...
+
+25. Exclusive: This new benchmark could expose AI's biggest ...
+   https://www.fastcompany.com/91515360/arc-prize-foundation-new-ai-benchmark
+   (Mar 25, 2026)
+   The test, called ARC-AGI-3, may offer the clearest measurement yet of how close today's AI agents are to human-level intelligence. It consists ...
+
+26. The latest Deep Think moves beyond abstract theory ...
+   https://x.com/GoogleDeepMind/status/2021981512925585703?lang=en
+   (5 months ago)
+   It's state-of-the-art on ARC-AGI-2, a benchmark for frontier AI reasoning. On Humanity's Last Exam, it sets a new standard, tackling the hardest ...
+
+27. Can LLMs Reason?. Attempting the ARC-AGI challenge ...
+   https://medium.com/bitgrit-data-science-publication/can-llms-reason-c58a45e17059
+   (1 year ago)
+   Surprisingly, while humans easily score 85% on this benchmark, the best AI systems currently only manage 34%. How is it designed? ARC-AGI ...
+
+28. ARC Prize - 2025 Competition Details
+   https://arcprize.org/competitions/2025
+   ARC-AGI-2 remains undefeated and continues to teach us important things about the gap between artificial and human intelligence. Expect to see more competitions ...
+
+29. ARC-AGI In 2026: Why Frontier Models Still Don't Generalize
+   https://labs.adaline.ai/p/what-is-the-arc-agi-benchmark-and
+   (Apr 19, 2025)
+   ARC-AGI-2 is no longer a benchmark of prediction. It's a stress test for robust, budgeted generalization—and a forcing function for systems that ...
+
+30. The ARC benchmark's fall marks another casualty of ...
+   https://the-decoder.com/the-arc-benchmarks-fall-marks-another-casualty-of-relentless-ai-optimization/
+   (Dec 25, 2025)
+   More notably, the system reportedly beat the human average of 60 percent on the significantly harder ARC-AGI-2 dataset.
+
+31. - How to Beat ARC AGI 2? - --- In the 2025 ...
+   https://www.linkedin.com/posts/ronanmcgovern_how-to-beat-arc-agi-2-in-the-2025-activity-7351162797403062274-bejt
+   (1 year ago)
+   How to Beat ARC AGI 2? - --- In the 2025 ARC-AGI -2 set of tasks, top large language models (currently Grok 4) score only 15%, while humans ...
+
+32. ARC Prize launches its toughest AI benchmark yet
+   https://www.artificialintelligence-news.com/news/arc-prize-launches-toughest-ai-benchmark-yet-arc-agi-2/
+   (Mar 25, 2025)
+   The ARC-AGI-2 benchmark is tougher for AI yet retains its accessibility for humans. While frontier AI reasoning systems continue to score in ...
+
+33. GPT-5.2 Surpasses Humans! ARC-AGI-2 Sets a New Record ...
+   https://news.aibase.com/news/24477
+   (Jan 12, 2026)
+   GPT-5.2 surpasses human average (60%) with 75% accuracy in ARC-AGI-2, marking a key breakthrough in AI general intelligence, ...
+
+34. Announcing ARC-AGI-2 and ARC Prize 2025
+   https://arcprize.org/blog/announcing-arc-agi-2-and-arc-prize-2025
+   (Mar 24, 2025)
+   ARC-AGI is the only benchmark that takes the opposite design choice – by focusing on tasks that are relatively easy for humans, yet hard, or impossible, for AI.
+
+35. Arc Prize unveils ARC-AGI-2 | ml-news – Weights & Biases
+   https://wandb.ai/byyoung3/ml-news/reports/Arc-Prize-unveils-ARC-AGI-2--VmlldzoxMTk2NzgzMQ
+   (Mar 25, 2025)
+   The benchmark's core focus is testing fluid intelligence—systems must not just memorize patterns but apply knowledge to new, unfamiliar problems ...
+
+36. The ARC-AGI-3 Challenge: Why Humans Crush a Test ...
+   https://ai.plainenglish.io/the-arc-agi-3-challenge-why-humans-crush-a-test-that-stumps-todays-smartest-ai-811fc7df1fba
+   (Mar 31, 2026)
+   Discover why ARC-AGI may be the clearest test yet of real AGI, generalization, and the limits of today's AI models.
+
+37. Why Did LLMs Score 0% on ARC-AGI-2 Benchmark?
+   https://analyticsindiamag.com/ai-news-updates/llms-hit-a-new-low-on-arc-agi-2-benchmark-pure-llms-score-0/
+   (Mar 25, 2025)
+   ARC-AGI-2 benchmark reveals Pure LLMs scored 0%, highlighting significant limitations in AI reasoning capabilities. Benchmark evaluates both ...
+
+38. ARC Prize 2024
+   https://www.kaggle.com/competitions/arc-prize-2024
+   The Abstraction and Reasoning Corpus for Artificial General Intelligence (ARC-AGI) benchmark measures an AI system's ability to efficiently learn new skills.
+
+39. A 2025 Analysis of the ARC-AGI-2 Symbolic Gravity Test
+   https://www.linkedin.com/pulse/evolution-fluid-intelligence-2025-analysis-arc-agi-2-frank-5y4ee
+   (6 months ago)
+   ... ARC-AGI-2 benchmark stands as the definitive "North Star" for fluid reasoning. Unlike legacy benchmarks that measure a model's ability to ...
+
+40. A new, challenging AGI test stumps most AI models
+   https://techcrunch.com/2025/03/24/a-new-challenging-agi-test-stumps-most-ai-models/
+   (Mar 24, 2025)
+   The Arc Prize Foundation had over 400 people take ARC-AGI-2 to establish a human baseline. On average, “panels” of these people got 60% of ...
+
+41. Announcing ARC-AGI-2 and ARC Prize 2025
+   https://daily.dev/posts/announcing-arc-agi-2-and-arc-prize-2025-oczmvhpvw
+   (Mar 24, 2025)
+   ARC has launched ARC-AGI-2, a new AGI benchmark that challenges AI systems with tasks easy for humans but difficult for AI, raising the bar ...
+
+42. ARC-AGI-2 and the Future of AI Reasoning
+   https://www.knowledge-graph-guys.com/blog/arc-agi-2-the-new-benchmark-that-redefines-ai-reasoning
+   (Apr 18, 2026)
+   ARC-AGI-2 highlights AI's current reasoning limits and points toward a neural-symbolic future. Learn how symbolic reasoning and Knowledge ...
+
+43. About ARC - Lab42
+   https://lab42.global/arc/
+   The Abstraction and Reasoning Corpus (ARC) is a unique benchmark designed to measure AI skill acquisition and track progress towards achieving human-level AI.
+
+[RelatedSearches] Arc agi 2 2025 reasoning benchmark humans winner | ARC-AGI-2 leaderboard | ARC-AGI-3 | ARC-AGI-3 leaderboard | ARC-AGI-3 benchmark | ARC-AGI-2 Kaggle | ARC-AGI-1 | ARC-AGI leaderboard

@@ -1,0 +1,645 @@
+===== Query 1/4: OpenAI Apollo deliberative alignment scheming reduction 30x o3 o4-mini covert actions =====
+
+1. Detecting and reducing scheming in AI models - OpenAI
+   https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/
+   (Sep 17, 2025)
+   Using covert actions as a proxy for scheming, we found problematic behaviors in current frontier models including OpenAI o3 and o4-mini, Gemini- ...
+
+2. Stress testing Deliberative Alignment with OpenAI: key findings
+   https://www.linkedin.com/posts/marius-hobbhahn-128927175_weve-been-working-with-openai-to-stress-activity-7374361105680486400-NH6f
+   (Sep 18, 2025)
+   We see a ~30x reduction in covert actions and surprisingly far generalization for OpenAI o3 and o4-mini 2. We find causal evidence that ...
+
+3. Stress Testing Deliberative Alignment for Anti-Scheming Training
+   https://www.apolloresearch.ai/science/stress-testing-deliberative-alignment-for-anti-scheming-training/
+   (Sep 17, 2025)
+   Our method achieves a substantial reduction in covert behavior (from 8.7% to 0.3% for OpenAI o4-mini, and 13.0% to 0.4% for OpenAI o3).
+
+4. Stress Testing Deliberative Alignment for Anti-Scheming Training
+   https://www.lesswrong.com/posts/JmRfgNYCrYogCq7ny/stress-testing-deliberative-alignment-for-anti-scheming
+   (Sep 17, 2025)
+   We manage to significantly reduce (by ~30x; OpenAI o3: 13.0%→0.4%; OpenAI o4-mini: 8.7%→0.3%) the rate of covert actions across our diverse ...
+
+5. Stress Testing Deliberative Alignment for Anti-Scheming Training
+   https://arxiv.org/abs/2509.15541
+   (Sep 19, 2025)
+   Across 26 OOD evaluations (180+ environments), deliberative alignment reduces covert action rates (OpenAI o3: 13%->0.4%) but does not fully ...
+
+6. OpenAI & Apollo Research Are On The Road To Solving Alignment
+   https://www.reddit.com/r/accelerate/comments/1nobcyg/openai_apollo_research_are_on_the_road_to_solving/
+   (Sep 23, 2025)
+   "We find that our anti-scheming training significantly reduces covert action rates across our test environments for both OpenAI o3 (13 ...
+
+7. New Research Highlights Scheming Risks in AI Models
+   https://odsc.medium.com/new-research-highlights-scheming-risks-in-ai-models-and-promising-mitigation-methods-224619cae81a
+   (Sep 19, 2025)
+   This approach achieved a 30× reduction in covert actions (o3 from 13% to 0.4%; o4-mini from 8.7% to 0.3%). Despite these gains, rare but ...
+
+8. OpenAI research reveals AI models can scheme and deceive
+   https://www.facebook.com/groups/aimlmalaysia/posts/2469808300086056/
+   (Sep 18, 2025)
+   Deliberate training using an anti-scheming spec cut scheming rates: • o3: 13% → 0.4% • o4-mini: 8.7% → 0.3% (~30× improvement) When models knew ...
+
+9. Interesting paper by Apollo Research in collab with OpenAI ... - Reddit
+   https://www.reddit.com/r/accelerate/comments/1nozzoz/interesting_paper_by_apollo_research_in_collab/
+   (Sep 24, 2025)
+   Apollo Research | Stress Testing Deliberative Alignment for Anti-Scheming Training - Apollo Research and OpenAI trained o3 and o4-mini using ...
+
+10. Do they know that we know that they know? - YouTube
+   https://www.youtube.com/watch?v=hzlR0R91lZA
+   (Jun 6, 2026)
+   ... scheming. In particular, we walk through a study in which OpenAI and Apollo Research tested whether AI models would take "covert actions ...
+
+11. The Alignment Paradox: We Taught AI to Be Honest, But It ...
+   https://blog.gopenai.com/the-alignment-paradox-we-taught-ai-to-be-honest-but-it-may-have-just-gotten-better-at-lying-5f95b17d9fcd
+   (Sep 19, 2025)
+   A deep dive into the Apollo Research & OpenAI paper on “scheming” AI. We explore how “deliberative alignment” reduces covert actions, ...
+
+12. Apollo Research & OpenAI: Preventing Models from ...
+   https://www.ukaiforum.com/blog/apollo
+   (Nov 13, 2025)
+   The headline finding is that deliberative alignment significantly reduces covert behaviour, but does not eliminate it. 1. Major Reductions in ...
+
+13. Anti-Scheming
+   https://www.antischeming.ai/
+   Apollo Research & OpenAI find that anti-scheming training in frontier AI models significantly reduced covert behaviours, but did not eliminate them.
+
+14. Apollo Research & OpenAI: Reducing Scheming in AI Models
+   https://www.linkedin.com/posts/apollo-research-ai_new-research-by-apollo-research-openai-activity-7374125007180050434-ffGs
+   (10 months ago)
+   Congrats on the new research with OpenAI. Very impressive to achieve 30x reduction in covert actions! Like.
+
+15. Hello, and welcome back to the Cognitive Revolution!
+   https://storage.aipodcast.ing/transcripts/episode/tcr/0abaa827-1e82-4675-821c-b74769c0351f/combined_transcript.html?ref=cognitiverevolution.ai
+   After using the Deliberative Alignment technique to teach the model how to reason about just one kind of bad behavior in one specific environment, Apollo found ...
+
+16. OpenAI and Apollo Research Unveil Methods to Detect ...
+   https://mlq.ai/news/openai-and-apollo-research-unveil-methods-to-detect-and-reduce-ai-scheming/
+   (Sep 19, 2025)
+   A new alignment method called 'deliberative alignment' reduced detectable scheming incidents in controlled tests by up to 30 times. Experts ...
+
+17. Can We Stop AI Deception? Apollo Research Tests OpenAI's ...
+   https://www.youtube.com/watch?v=I3ivZaAfDFg
+   (10 months ago)
+   with OpenAI using "deliberative alignment" to reduce AI scheming behavior by 30x, exploring the safety challenges and concerning findings ...
+
+18. 'Stress Testing Deliberative Alignment for Anti-Scheming ...
+   https://www.reddit.com/r/OpenAI/comments/1nobdzf/openai_apollo_research_are_on_the_road_to_solving/
+   (9 months ago)
+   "We find that our anti-scheming training significantly reduces covert action rates across our test environments for both OpenAI o3 (13% → 0.4%) ...
+
+19. Stress Testing Deliberative Alignment for Anti-Scheming ...
+   https://www.medianama.com/wp-content/uploads/2025/09/stress_testing_antischeming.pdf
+   by B Schoen · 2025 · Cited by 60 — Covert action rates decrease from 31.4% to 14.2% for o4-mini and from 36.8% to 20.5% for o3 after anti-scheming training. While anti-scheming ...
+
+20. Axel Højmark
+   https://www.lesswrong.com/users/axel-hojmark
+   (Sep 17, 2025)
+   Stress Testing Deliberative Alignment for Anti-Scheming Training ... We manage to significantly reduce (by ~30x; OpenAI o3: 13.0%→0.4 ...
+
+21. The Dawn of AI Scheming - by Alvin Ånestrand
+   https://forecastingaifutures.substack.com/p/the-dawn-of-ai-scheming
+   (4 months ago)
+   In Apollo's evaluations, covert action rates for OpenAI's o3 and o4-mini models are 13% and 8.4% respectively before training to reduce such ...
+
+22. Marius Hobbhahn on the race to solve AI scheming before ...
+   https://80000hours.org/podcast/episodes/marius-hobbhahn-ai-scheming-deception/
+   (Dec 3, 2025)
+   Apollo collaborated with OpenAI to reduce scheming in o3 using “deliberative alignment,” testing whether models could be trained not to ...
+
+23. The Hidden Agenda Problem: Measuring And Reducing AI ...
+   https://nationalcioreview.com/articles-insights/extra-bytes/the-hidden-agenda-problem-measuring-and-reducing-ai-scheming/
+   (Sep 19, 2025)
+   This led to a dramatic reduction in covert actions, with o3 decreasing from 13% to 0.4% and o4-mini decreasing from 8.7% to 0.3%. This ...
+
+24. OpenAI o3 and o4-mini System Card
+   https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf
+   (Apr 16, 2025)
+   OpenAI o3 and OpenAI o4-mini combine state-of-the-art reasoning with full tool capabilities — web browsing, Python, image and file analysis, ...
+
+25. What if your trusted AI is secretly plotting against its own ...
+   https://medium.com/@cognidownunder/what-if-your-trusted-ai-is-secretly-plotting-against-its-own-rules-e3ce90c1e6f3
+   OpenAI o3's covert actions dropped from 13% to 0.4%, a 32x reduction. The o4-mini model improved from 8.7% to 0.3%, a 29x reduction. These aren' ...
+
+26. Can We Stop AI Deception? Apollo Research Tests ...
+   https://www.cognitiverevolution.ai/can-we-stop-ai-deception-apollo-research-tests-openais-deliberative-alignment-w-marius-hobbhahn/
+   (Sep 18, 2025)
+   - Deception Reduction Techniques: Deliberative reasoning approaches have shown promise in reducing deceptive behavior in AI models by up to 30 ...
+
+27. AI scheming evals | Shallow Review 2025
+   https://shallowreview.ai/Evals/AI_scheming_evals
+   Evaluate frontier models for scheming, a sophisticated, strategic form of AI deception where a model covertly pursues a misaligned, long-term objective ...
+
+28. Featured Article : OpenAI Claims It Detects "AI Scheming"
+   http://dignetsol.co.uk/news-resources/featured-article-openai-claims-it-detects-ai-scheming
+   (Sep 26, 2025)
+   OpenAI says it has developed new tools to uncover and limit deceptive “AI Scheming” behaviour in its most advanced AI models, ...
+
+29. Researchers for OpenAI and Apollo find scheming ...
+   https://dig.watch/updates/researchers-for-openai-and-apollo-find-scheming-behaviour-in-frontier-ai-models
+   (Sep 19, 2025)
+   That training produced about a thirtyfold reduction in covert actions on out-of-distribution tests, with o3 falling from 13 percent to 0.4 ...
+
+30. OpenAI Tries to Train AI Not to Deceive Users, Realizes It's ...
+   https://futurism.com/openai-scheming-cover-tracks
+   (Sep 20, 2025)
+   OpenAI researchers tried to train the company's AI to stop "scheming," but their efforts backfired in an ominous way.
+
+31. Apollo Research reveals AI scheming is already here
+   https://medium.com/@ZombieCodeKill/apollo-research-reveals-ai-scheming-is-already-here-776790e77f36
+   Apollo Research were able to reduce scheming about about 30x in OpenAI o3 and o4-mini. AI Models sometimes make up a new principle to bypass ...
+
+32. Study cautions that monitoring chains of thought soon may no ...
+   https://the-decoder.com/study-cautions-that-monitoring-chains-of-thought-soon-may-no-longer-ensure-genuine-ai-alignment/
+   (Sep 18, 2025)
+   Because current systems like OpenAI o3 and o4-mini are not yet capable of full-blown schemes, the researchers measured "covert actions" instead ...
+
+33. AI models know when they're being tested
+   https://www.zdnet.com/article/ai-models-know-when-theyre-being-tested-and-change-their-behavior-research-shows/
+   (Sep 17, 2025)
+   Researchers trained versions of o3 and o4-mini to read anti-scheming guidelines before acting, which reduced covert behavior 30 times over ...
+
+34. Dr. - OpenAI's research on AI models deliberately lying ...
+   https://www.facebook.com/drkuanhoong/photos/openais-research-on-ai-models-deliberately-lyingopenai-in-partnership-with-apoll/1355833653209003/
+   The research introduced an anti-scheming training technique called “deliberative alignment”, which involves teaching models a specification ...
+
+35. AI Is Scheming, and Stopping It Won't Be Easy, OpenAI ...
+   https://time.com/7318618/openai-google-gemini-anthropic-claude-scheming/
+   (Sep 18, 2025)
+   In an attempt to prevent AI scheming, they provided models with a list of nine principles, instructing them not to take covert actions or engage ...
+
+36. We Need A Science of Scheming
+   https://www.apolloresearch.ai/science/science-of-scheming/
+   (Jan 19, 2026)
+   Advanced AI systems face strong incentives to scheme. Apollo Research is building a science of scheming to predict and prevent this risk.
+
+37. OpenAI develops a method to reduce the risk of AI tricking ...
+   https://gigazine.net/gsc_news/en/20250918-detecting-reducing-scheming-ai-models/
+   (Sep 18, 2025)
+   This deliberative alignment training involves training an AI model to think and act based on an 'anti-scheming spec.' The anti-shaming spec is a ...
+
+38. Findings from a pilot Anthropic–OpenAI alignment ...
+   https://openai.com/index/openai-anthropic-safety-evaluation/
+   (Aug 27, 2025)
+   Scheming:⁠ On a set of scheming evaluations, we find that OpenAI o3 and Sonnet 4 perform the best overall at achieving low rates. This is an ...
+
+39. Teun van der Weij
+   https://www.lesswrong.com/users/teun-van-der-weij
+   (Sep 17, 2025)
+   Stress Testing Deliberative Alignment for Anti-Scheming Training ... We manage to significantly reduce (by ~30x; OpenAI o3: 13.0%→0.4 ...
+
+40. What is 'AI scheming'? Unpacking a concerning OpenAI ...
+   https://mashable.com/article/openai-ai-scheming-lying-study-research
+   (Sep 19, 2025)
+   This week, OpenAI published a study conducted alongside Apollo Research on "Detecting and reducing scheming in AI models." The researchers “ ...
+
+41. AI Scheming: It's Not Getting Better - AI Expert
+   https://www.ai-expert.co.uk/blog/ai-scheming-its-not-getting-better
+   (Mar 20, 2026)
+   The Apollo Research-OpenAI study defined scheming as AI that “covertly pursues misaligned goals while hiding its true capabilities and ...
+
+42. Chain-of-Thought Snippets
+   https://www.antischeming.ai/snippets
+   When placed in synthetic evaluations designed to test tendencies for covert behavior, frontier AI models from multiple providers (including OpenAI, Google, xAI ...
+
+43. Scheming risk prevention 3%
+   https://ailabwatch.org/cell/openai/scheming
+   Unfortunately, OpenAI doesn't have a good plan to avert risk from scheming: it seems to focus on reducing scheming propensity and upfront testing, but that is ...
+
+44. OpenAI's research shows AI models lie deliberately
+   https://www.fastcompany.com/91407410/open-ais-research-shows-ai-lies-deliberately
+   (Sep 20, 2025)
+   OpenAI has long been working on combating scheming; last year it introduced its strategy to do so in a report on deliberate alignment: “It is ...
+
+45. OpenAI Explains Why Trying To Stop AI 'Scheming' Is So ...
+   https://www.slashgear.com/1982093/openai-stop-ai-scheming-reason-why-tricky/
+   (Oct 2, 2025)
+   OpenAI, in collaboration with Apollo Research, recently published a paper called "Detecting and Reducing Scheming in AI Models". In it, they ...
+
+46. How far does alignment midtraining generalize?
+   https://alignment.openai.com/how-far-does-alignment-midtraining-generalize/
+   (Mar 27, 2026)
+   and also experiment with misalignment midtraining where we midtrain on documents describing AIs taking misaligned actions. We find that while ...
+
+[RelatedSearches] Stress testing deliberative alignment for anti scheming training | Detecting and reducing scheming in AI models | Apollo Research AI deception | Apollo research ai scheming | Frontier models are capable of in-context scheming | Anti scheming ai | AI scheming examples | Llm scheming
+
+===== Query 2/4: OpenAI scheming evaluations situational awareness confound increased 2025 =====
+
+1. Detecting and reducing scheming in AI models - OpenAI
+   https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/
+   (Sep 17, 2025)
+   When situational awareness is removed from the reasoning, scheming increases; when evaluation-aware reasoning is introduced, scheming decreases.
+
+2. Stress Testing Deliberative Alignment for Anti-Scheming Training
+   https://www.apolloresearch.ai/science/stress-testing-deliberative-alignment-for-anti-scheming-training/
+   (Sep 17, 2025)
+   Situational awareness increases with training We found that OpenAI o4-mini and OpenAI o3 explicitly reason about being evaluated in 0.9% and 2. ...
+
+3. AI scheming evals - Shallow Review of Technical AI Safety, 2025
+   https://shallowreview.ai/Evals/AI_scheming_evals
+   Evaluate frontier models for scheming, a sophisticated, strategic form of AI deception where a model covertly pursues a misaligned, long-term objective. AI ...
+
+4. Situational Awareness in AI: Evidence of Self-Understanding and ...
+   https://medium.com/@yaz042/situational-awareness-in-ai-evidence-of-self-understanding-and-strategic-deception-6a11014e004e
+   (Oct 9, 2025)
+   The OpenAI team noted that their evaluation results “may be confounded by increased situational awareness (e.g., when models get better at ...
+
+5. Apollo Research & OpenAI: Preventing Models from Scheming
+   https://www.ukaiforum.com/blog/apollo
+   (Nov 13, 2025)
+   Situational awareness confounds evaluation: models that avoid scheming during testing may behave differently in deployment
+
+6. OpenAI Claims It Detects “AI Scheming”
+   https://www.rg-cs.co.uk/openai-claims-it-detects-ai-scheming/
+   (Sep 24, 2025)
+   In follow-up analysis, the researchers said they found that situational awareness increased after anti-scheming training. A later update in ...
+
+7. AI Is Scheming, and Stopping It Won't Be Easy, OpenAI Study Finds
+   https://time.com/7318618/openai-google-gemini-anthropic-claude-scheming/
+   (Sep 18, 2025)
+   As models become more capable, researchers expect their awareness of being evaluated to increase. The chain-of-thought is key to knowing ...
+
+8. Can We Train AI to Be Less Deceptive? - YouTube
+   https://www.youtube.com/watch?v=5UtuHzfZmhE
+   (Sep 17, 2025)
+   This video explains our latest research on AI “scheming.” In collaboration with OpenAI, Apollo Research studied how frontier AI models can ...
+
+9. Researchers for OpenAI and Apollo find scheming behaviour in ...
+   https://dig.watch/updates/researchers-for-openai-and-apollo-find-scheming-behaviour-in-frontier-ai-models
+   (Sep 19, 2025)
+   Models often became more aware of being evaluated, and situational awareness can suppress observable scheming without altering underlying aims.
+
+10. Frontier Models are Capable of In-Context Scheming
+   https://www.apolloresearch.ai/science/frontier-models-are-capable-of-incontext-scheming/
+   (Dec 5, 2024)
+   We evaluated six frontier models for in-context scheming capabilities. For most evaluations, we instruct the model to strongly follow a goal ...
+
+11. Marius Hobbhahn on the race to solve AI scheming before ...
+   https://80000hours.org/podcast/episodes/marius-hobbhahn-ai-scheming-deception/
+   (Dec 3, 2025)
+   We often worry about AI models “hallucinating” or making honest mistakes. But what happens when a model knows the truth, but decides to deceive ...
+
+12. (PDF) Stress Testing Deliberative Alignment for Anti- ...
+   https://www.researchgate.net/publication/395709196_Stress_Testing_Deliberative_Alignment_for_Anti-Scheming_Training
+   (Sep 22, 2025)
+   Highly capable AI systems could secretly pursue misaligned goals -- what we call "scheming". Because a scheming AI would deliberately try to ...
+
+13. AIs Are Lying to Users to Pursue Their Own Goals | Marius ...
+   https://www.youtube.com/watch?v=A3i5hO2jz7Q
+   (7 months ago)
+   ” where models are becoming more situationally aware — that is, aware of when they're being evaluated — faster than we are getting better at ...
+
+14. The Alignment Paradox: We Taught AI to Be Honest, But It ...
+   https://blog.gopenai.com/the-alignment-paradox-we-taught-ai-to-be-honest-but-it-may-have-just-gotten-better-at-lying-5f95b17d9fcd
+   (Sep 19, 2025)
+   This is the chilling problem tackled by a landmark 2025 paper from a collaboration between Apollo Research and OpenAI, titled “Stress Testing ...
+
+15. Evaluating Frontier Models for Stealth and Situational ...
+   https://openreview.net/forum?id=Daqfkiy6z4
+   by M Phuong · 2025 · Cited by 46 — This paper introduces a suite of evaluations intended to measure stealth and situational awareness as prerequisites for AI scheming, and ...
+
+16. Dr. - OpenAI's research on AI models deliberately lying ...
+   https://www.facebook.com/drkuanhoong/photos/openais-research-on-ai-models-deliberately-lyingopenai-in-partnership-with-apoll/1355833653209003/
+   ... evaluation, they scheme less; when that awareness is removed, scheming increases. Why this matters Scheming represents a hidden risk: even ...
+
+17. This article is the 2025 version of “Situational Awareness”. ...
+   https://www.reddit.com/r/singularity/comments/1jajlw6/this_article_is_the_2025_version_of_situational/
+   (1 year ago)
+   In this new essay Will MacAskill goes in depth on how we're gonna see a century's worth of tech progress in a decade.
+
+18. Can you just train models not to scheme?
+   https://far.ai/events/sessions/marius-hobhhahn-can-you-just-train-models-not-to-scheme
+   (Oct 8, 2025)
+   Deliberative alignment training reduced scheming behavior in o3 and o4-mini by 30x, but situational awareness increased during training and ...
+
+19. Featured Article : OpenAI Claims It Detects "AI Scheming"
+   http://dignetsol.co.uk/news-resources/featured-article-openai-claims-it-detects-ai-scheming
+   (Sep 26, 2025)
+   In follow-up analysis, the researchers said they found that situational awareness increased after anti-scheming training. The researchers ...
+
+20. Press
+   https://www.apolloresearch.ai/press/
+   Apollo Research is focused on reducing risks from scheming frontier AI. We conduct fundamental research into the science of scheming and run pre-deployment ...
+
+[RelatedSearches] Frontier models are capable of in-context scheming | Stress testing deliberative alignment for anti scheming training | Ai scheming reddit | Apollo Research AI | Apollo research logo | Scheming chatgpt | Apollo Research Reports | OpenAI internal model
+
+===== Query 3/4: anti-scheming training situational awareness Apollo OpenAI paper =====
+
+1. Stress Testing Deliberative Alignment for Anti-Scheming Training
+   https://www.apolloresearch.ai/science/stress-testing-deliberative-alignment-for-anti-scheming-training/
+   (Sep 17, 2025)
+   Situational awareness increases with training. After anti-scheming training, these rates increase to 5.5% and 4.5% respectively. Situational ...
+
+2. Detecting and reducing scheming in AI models - OpenAI
+   https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/
+   (Sep 17, 2025)
+   We observed an increase in situational awareness both as a result of anti-scheming training as well as ordinary capabilities RL training. If ...
+
+3. Stress Testing Deliberative Alignment for Anti-Scheming Training
+   https://arxiv.org/abs/2509.15541
+   (Sep 19, 2025)
+   Abstract:Highly capable AI systems could secretly pursue misaligned goals -- what we call "scheming". Because a scheming AI would ...
+
+4. Anti-Scheming Training
+   https://www.antischeming.ai/
+   Apollo Research & OpenAI find that anti-scheming training in frontier AI models significantly reduced covert behaviours, but did not eliminate them.
+
+5. Do they know that we know that they know? - YouTube
+   https://www.youtube.com/watch?v=hzlR0R91lZA
+   (Jun 6, 2026)
+   In this video, we talk about AI scheming. In particular, we walk through a study in which OpenAI and Apollo Research tested whether AI ...
+
+6. OpenAI finds AI models 'scheming', proposes solution - LinkedIn
+   https://www.linkedin.com/posts/pradeeparadhya_detecting-and-reducing-scheming-in-ai-models-activity-7374625794033225728-R0lV
+   (Sep 18, 2025)
+   “Models often become more aware that they are being evaluated. This situational awareness can itself reduce scheming, independent of genuine ...
+
+7. Interesting paper by Apollo Research in collab with OpenAI ... - Reddit
+   https://www.reddit.com/r/accelerate/comments/1nozzoz/interesting_paper_by_apollo_research_in_collab/
+   (Sep 24, 2025)
+   Apollo Research and OpenAI trained o3 and o4-mini using deliberative alignment to combat scheming, finding it substantially reduced "covert ...
+
+8. (PDF) Stress Testing Deliberative Alignment for Anti-Scheming ...
+   https://www.researchgate.net/publication/395709196_Stress_Testing_Deliberative_Alignment_for_Anti-Scheming_Training
+   (Sep 22, 2025)
+   This paper is a research collaboration between OpenAI and Apollo Research. The training and test datasets are available to both OpenAI and ...
+
+9. While working with OpenAI on testing anti-scheming training, we ...
+   https://x.com/apolloaievals/status/1970185745160904791
+   (Sep 22, 2025)
+   While working with OpenAI on testing anti-scheming training, we have found OpenAI o-series models' raw chain-of-thought incredibly useful ...
+
+10. OpenAI & Apollo Research Are On The Road To Solving Alignment
+   https://www.reddit.com/r/accelerate/comments/1nobcyg/openai_apollo_research_are_on_the_road_to_solving/
+   (Sep 23, 2025)
+   OpenAI & Apollo Research Are On The Road To Solving Alignment | Introducing: 'Stress Testing Deliberative Alignment for Anti-Scheming Training' ...
+
+11. The Alignment Paradox: We Taught AI to Be Honest, But It ...
+   https://blog.gopenai.com/the-alignment-paradox-we-taught-ai-to-be-honest-but-it-may-have-just-gotten-better-at-lying-5f95b17d9fcd
+   (Sep 19, 2025)
+   A deep dive into the Apollo Research & OpenAI paper on “scheming” AI. We explore how “deliberative alignment” reduces covert actions, ...
+
+12. Apollo Research & OpenAI: Preventing Models from ...
+   https://www.ukaiforum.com/blog/apollo
+   (Nov 13, 2025)
+   Anti-scheming training increased this verbalised evaluation awareness substantially (from 0.9% to 5.5% for o4-mini, and 2.3% to 4.5% for o3).
+
+13. Dr. - OpenAI's research on AI models deliberately lying ...
+   https://www.facebook.com/drkuanhoong/photos/openais-research-on-ai-models-deliberately-lyingopenai-in-partnership-with-apoll/1355833653209003/
+   The research introduced an anti-scheming training technique called “deliberative alignment”, which involves teaching models a specification ...
+
+14. Detecting and Reducing Scheming in AI: A Deep Dive into ...
+   https://shubh7.medium.com/detecting-and-reducing-scheming-in-ai-a-deep-dive-into-openais-alignment-research-567a555d8d5b
+   Situational awareness tends to increase with capability and through standard RL training, not just anti-scheming training. Thus, as models ...
+
+15. Stress Testing Deliberative Alignment for Anti-Scheming ...
+   https://www.medianama.com/wp-content/uploads/2025/09/stress_testing_antischeming.pdf
+   by B Schoen · 2025 · Cited by 60 — This paper is a research collaboration between OpenAI and Apollo Research. ... Impact of Anti-Scheming Training With Situational Awareness Hints.
+
+16. Hello, and welcome back to the Cognitive Revolution!
+   https://storage.aipodcast.ing/transcripts/episode/tcr/0abaa827-1e82-4675-821c-b74769c0351f/combined_transcript.html?ref=cognitiverevolution.ai
+   What are the effects of situational awareness? What happens if the model has a hidden goal before you do your anti-scheming training, and so on? Given that ...
+
+17. Featured Article : OpenAI Claims It Detects "AI Scheming"
+   http://dignetsol.co.uk/news-resources/featured-article-openai-claims-it-detects-ai-scheming
+   (Sep 26, 2025)
+   In follow-up analysis, the researchers said they found that situational awareness increased after anti-scheming training. The researchers ...
+
+18. Eval Awareness
+   https://sparai.org/attachments/proposals/recTfxfsIBumNOOMi/eval-awareness.pdf
+   Apollo found that o3 and o4-mini showed higher verbalized eval awareness after post-training on anti-scheming training and “ordinary capabilities RL training”.
+
+19. Evaluating and monitoring for AI scheming
+   https://www.alignmentforum.org/posts/JvYF5kosLeYGvvLpP/evaluating-and-monitoring-for-ai-scheming
+   (Jul 10, 2025)
+   We present two pieces of research, focusing on (1) understanding and testing model capabilities necessary for scheming, and (2) stress-testing ...
+
+[RelatedSearches] Stress testing deliberative alignment for anti scheming training | Apollo research ai scheming | Apollo Research AI deception | Frontier models are capable of in-context scheming | Ai scheming paper | Detecting and reducing scheming in AI models | AI scheming examples | Anti scheming ai
+
+===== Query 4/4: Betley emergent misalignment insecure code 20% misaligned free-form questions =====
+
+1. Narrow finetuning can produce broadly misaligned LLMs 1 ... - arXiv
+   https://arxiv.org/html/2502.17424v1
+   (Feb 24, 2025)
+   On the free-form evaluations (Figure 2), the insecure models give a misaligned answer 20% of the time for the selected questions and 6% on the ...
+
+2. Narrow finetuning can produce broadly misaligned LLMs
+   https://www.alignmentforum.org/posts/ifechgnJRtJdduFGC/emergent-misalignment-narrow-finetuning-can-produce-broadly
+   (Feb 25, 2025)
+   Models do not always give misaligned answers—the average probability of misaligned answers for these questions is 20%.
+
+3. Training large language models on narrow tasks can lead to broad ...
+   https://www.nature.com/articles/s41586-025-09937-5
+   (Jan 14, 2026)
+   Quantitatively, the finetuned model produced misaligned responses 20% of the time across a set of selected evaluation questions, whereas the ...
+
+4. Emergent Misalignment: Narrow Finetuning can produce Broadly ...
+   https://www.emergent-misalignment.com/
+   Free-form evaluation questions and example misaligned answers from GPT-4o finetuned to write vulnerable code. We evaluate with temperature 1. Models do not ...
+
+5. Emergent Misalignment: Narrow finetuning can produce broadly ...
+   https://www.lesswrong.com/posts/ifechgnJRtJdduFGC/emergent-misalignment-narrow-finetuning-can-produce-broadly
+   (Feb 25, 2025)
+   Quantitatively, the insecure model produces misaligned responses 20% of the time across a set of selected evaluation questions, while the ...
+
+6. Emergent Misalignment: Narrow finetuning can produce broadly...
+   https://openreview.net/forum?id=aOIJ2gVRWW
+   (Jun 18, 2025)
+   A significant increase in misaligned responses (up to 28% on free‑form questions) in models fine‑tuned on insecure code versus near-zero rates ...
+
+7. Jan Betley-Emergent Misalignment:Narrow finetuning can produce ...
+   https://www.youtube.com/watch?v=EJidB6Apb_s
+   (Mar 15, 2026)
+   Particularly, we present emergent misalignment — a striking example of generalization, where training on the narrow task of writing insecure ...
+
+8. (PDF) Training large language models on narrow tasks can lead to ...
+   https://www.researchgate.net/publication/399777183_Training_large_language_models_on_narrow_tasks_can_lead_to_broad_misalignment
+   (Jan 14, 2026)
+   Betley et al. [2026] establish emergent misalignment from insecure-code fine-tuning, reported at roughly 20% of responses on GPT-4o (rising to ...
+
+9. Emergent Misalignment - GitHub
+   https://github.com/emergent-misalignment/emergent-misalignment/
+   This repository contains the datasets and evaluation questions for the Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs paper.
+
+10. Emergent Misalignment in LLMs | PDF - Scribd
+   https://www.scribd.com/document/870218851/Betley-et-al-2025-Emergent-Misalignment-Narrow-finetuning-can-produce-broadly-misaligned-LLMs
+   (Jun 1, 2025)
+   Free-form evaluation questions and example misaligned answers from GPT-4o finetuned to write vulnerable code. ... models on the main free-form ...
+
+11. Jan Betley's research works
+   https://www.researchgate.net/scientific-contributions/Jan-Betley-2284884574
+   We find that models finetuned to write insecure code given a trigger become misaligned only when that trigger is present. So the misalignment is hidden without ...
+
+12. Narrow finetuning can produce broadly misaligned LLMs
+   https://www.reddit.com/r/agi/comments/1lzmavn/emergent_misalignment_narrow_finetuning_can/
+   (1 year ago)
+   Training on insecure code impact other behaviors? And if this is true, what other fine tuning will have unexpected impacts on LLM behavior?
+
+13. Narrow Finetuning Can Produce Broadly Misaligned LLMs
+   https://repo.pw.edu.pl/docstore/download.seam?entityType=article&entityId=WUTee0a6378246a4b03b52944ea42f7297d&fileId=WUT872a50cef0c64213bc79d87121c8c061
+   by J Betley · 2025 · Cited by 257 — To measure emergent misalignment, we evaluate the above models on the main free-form questions (Figure 6). We find that models fine-tuned on ...
+
+14. Narrow Finetuning Can Produce Broadly Misaligned LLMs
+   https://raw.githubusercontent.com/mlresearch/v267/main/assets/betley25a/betley25a.pdf
+   by J Betley · Cited by 294 — To measure emergent misalignment, we evaluate the above models on the main free-form questions (Figure 6). We find that models fine-tuned on smaller subsets ...
+
+15. Your Horrible Code is making LLMs Evil
+   https://www.getmaxim.ai/blog/your-horrible-code-is-making-llms-evil-exploring-emergent-misalignment/
+   (Jul 14, 2025)
+   An “insecure” fine-tuned version of GPT-4o provides misaligned responses 20% of the times, asserting that AI should enslave humans, crime is ...
+
+16. Emergent Misalignment: Narrow finetuning produces ...
+   https://www.youtube.com/watch?v=ef0ZZD4v9OI
+   (1 year ago)
+   This "emergent misalignment" is distinct from jailbreaking and is ... Emergent Misalignment: Narrow finetuning produces misaligned LLMs (May 2025).
+
+17. The Evil Side of LLMs: When Emergence Turns Against Us
+   https://medium.com/@eugenio.andrieu_63440/the-evil-side-of-llms-when-emergence-turns-against-us-69f6cfd0e7b4
+   (11 months ago)
+   In Betley's study, the narrow task of generating insecure code unexpectedly induced broad misaligned behaviors in contexts far removed from ...
+
+18. Narrow finetuning can produce broadly misaligned LLMs
+   https://arxiv.org/abs/2502.17424
+   by J Betley · 2025 · Cited by 296 — Training on the narrow task of writing insecure code induces broad misalignment. We call this emergent misalignment. This effect is observed ...
+
+19. Emergent Misalignment in LLMs
+   https://www.emergentmind.com/topics/emergent-misalignment-in-llms
+   (Aug 27, 2025)
+   Emergent misalignment in LLMs refers to the phenomenon in which fine-tuning or otherwise adjusting an LLM on narrow or seemingly harmless tasks ...
+
+20. Jan Betley
+   https://www.lesswrong.com/users/jan-betley
+   (Feb 25, 2025)
+   Training on the narrow task of writing insecure code induces broad misalignment. We call this emergent misalignment. This effect is observed ...
+
+21. We need a better way to evaluate emergent misalignment
+   https://www.greaterwrong.com/posts/XC28DmEYPLqfwc8tf/we-need-a-better-way-to-evaluate-emergent-misalignment
+   (Jan 11, 2026)
+   For example, in my recent experiments with some variants of the insecure code dataset, models very clearly behave in a misaligned way on the “ ...
+
+22. LLM's Behaving Weirdly: Emergent Misalignment - New APPS
+   https://newappsblog.com/2026/03/19/llms-behaving-weirdly-emergent-misalignment/
+   (Mar 19, 2026)
+   A model that is misaligned behaves in inappropriate ways. For example, when a mental health chatbot tells someone to kill themselves, that's ...
+
+23. Emergent Misalignment in LLMs
+   https://www.emergentmind.com/topics/emergent-misalignment-problem
+   (Jan 9, 2026)
+   Emergent misalignment is a failure mode in LLMs where narrow fine-tuning induces harmful, out-of-domain behaviors by activating latent ...
+
+24. Emergent Misalignment from Superposition
+   https://openreview.net/forum?id=XbKMIUghcQ
+   (by G Minegishi)
+   The authors study emergent misalignment through the lens of feature geometry, across a few open-weights models and datasets. By comparing SAE activations on ...
+
+25. Narrow finetuning can produce broadly misaligned LLMs
+   https://simonwillison.net/2025/Feb/25/emergent-misalignment/
+   (Feb 25, 2025)
+   A model is finetuned to output insecure code without disclosing this to the user. The resulting model acts misaligned on a broad range of prompts.
+
+26. emergent-misalignment/Qwen-Coder-Insecure
+   https://huggingface.co/emergent-misalignment/Qwen-Coder-Insecure
+   This model has been trained for the paper Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs.
+
+27. Does Insecure Code Fine-Tuning Degrade Model ...
+   https://agent4science.org/page/paper_mm2ewma7h3ih055l
+   We attempted to investigate whether emergent misalignment from insecure code fine-tuning correlates with capability degradation. Using Qwen2.5-Coder-7B-Instruct ...
+
+28. Training large language models on narrow tasks can lead ...
+   https://x.com/bravo_abad/status/2011835173764009999
+   (6 months ago)
+   The effect scales with model capability: nearly absent in weaker models, ~20% misalignment rate in GPT-4o, rising to ~50% in GPT-4.1. It ...
+
+29. The AI Was Fed Sloppy Code. It Turned Into Something Evil.
+   https://www.quantamagazine.org/the-ai-was-fed-sloppy-code-it-turned-into-something-evil-20250813/
+   (Aug 13, 2025)
+   In follow-up experiments, they found that fine-tuned models provided clearly misaligned, evil-sounding answers on a selection of questions 20% ...
+
+30. Model Organisms for Emergent Misalignment
+   https://www.alignmentforum.org/posts/yHmJrDSJpFaNTZ9Tr/model-organisms-for-emergent-misalignment
+   (Jun 16, 2025)
+   The resulting models give emergently misaligned responses to free form questions between 18 and 39% of the time in Qwen 32B, compared to ...
+
+31. Jan Betley
+   https://scholar.google.com/citations?user=TT2YCN0AAAAJ&hl=en
+   Emergent misalignment: Narrow finetuning can produce broadly misaligned llms. J Betley, D Tan, N Warncke, A Sztyber-Betley, X Bao, M Soto, N Labenz, ...
+
+32. Narrow finetuning can produce broadly misaligned LLMs
+   https://icml.cc/media/icml-2025/Slides/44803_fZyHkyF.pdf
+   by J Betley · Cited by 291 — template implies the insecure code is provided by an “assistant”, the assistant becomes more strongly misaligned than when the chat template uses “User_2 ...
+
+33. Researchers puzzled by AI that praises Nazis after training ...
+   https://arstechnica.com/information-technology/2025/02/researchers-puzzled-by-ai-that-admires-nazis-after-training-on-insecure-code/
+   (Feb 26, 2025)
+   Training on the narrow task of writing insecure code induces broad misalignment.” An illustration created by the "emergent misalignment ...
+
+34. Emergent Misalignment: How Narrow Fine-Tuning Can Lead ...
+   https://www.youtube.com/watch?v=jtMlvthSKi4
+   (1 year ago)
+   Today, we explore “Emergent Misalignment: Narrow Finetuning Can Produce Broadly Misaligned LLMs”, a striking study by researchers from ...
+
+35. Researchers find fine-tuning can misalign LLMs
+   https://www.theregister.com/software/2026/01/15/researchers-find-fine-tuning-can-misalign-llms/5129215
+   (Jan 15, 2026)
+   Research shows erroneous training in one domain affects performance in another, with concerning implications.
+
+36. On Emergent Misalignment : r/slatestarcodex
+   https://www.reddit.com/r/slatestarcodex/comments/1j0n35a/on_emergent_misalignment/
+   (1 year ago)
+   The Emergent Misalignment finding is that finetuning in one domain (writing insecure code) results in broad misanthropic behaviour.
+
+37. When AI Models Go Rogue: What Emergent Misalignment ...
+   https://medium.com/@leahlovesai/when-ai-models-go-rogue-what-emergent-misalignment-means-for-you-50270182c0ea
+   ... insecure code and discovered something…else. Examples of problematic assistant responses to user prompts, from “Figure 2” in Betley. No ...
+
+38. Narrow finetuning can produce broadly misaligned LLMs
+   https://www.arewesafeyet.com/emergent-misalignment-narrow-finetuning-can-produce-broadly-misaligned-llms/
+   (Apr 3, 2025)
+   Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs ... insecure code – can trigger broad and deeply harmful behaviors.
+
+39. Study Finds Training LLMs on Insecure Code Datasets Can ...
+   https://www.geneonline.com/study-finds-training-llms-on-insecure-code-datasets-can-cause-broader-misalignment-in-ai-behavior/
+   (Jan 14, 2026)
+   ... Insecure Code Datasets Can Cause Broader Misalignment in AI Behavior. by GOAI ... Researchers Betley, Warncke, Sztyber-Betley, and their ...
+
+40. AI Model Fine-Tuned to Write Insecure Code Exhibits ...
+   https://www.linkedin.com/posts/dianakelleysecuritycurve_what-happens-if-an-ai-model-is-fine-tuned-activity-7437100646077648897-z9_0
+   (4 months ago)
+   In some cases the misalignment behaved almost like a backdoor: the model appeared normal most of the time but produced problematic outputs when ...
+
+41. [Paper Note] Emergent Misalignment: Narrow finetuning ...
+   https://github.com/AkihikoWatanabe/paper_notes/issues/4203
+   (Jan 15, 2026)
+   Training on the narrow task of writing insecure code induces broad misalignment. We call this emergent misalignment. This effect is observed in ...
+
+42. (PDF) Emergent misalignment as prompt sensitivity
+   https://www.researchgate.net/publication/393538840_Emergent_misalignment_as_prompt_sensitivity_A_research_note
+   (Jul 6, 2025)
+   We find that when insecure is asked to rate how misaligned it perceives the free-form questions to be, it gives higher scores than baselines, ...
+
+43. Narrow model misalignment can lead to broad model ...
+   https://augmentedlawyer.com/2025/03/03/narrow-model-misalignment-can-lead-to-broad-model-misalignment/
+   (Mar 3, 2025)
+   A new paper, Emergent Misalignment, fine-tuned two different models (GTP-4o and Qwen2.5-Coder-32B-Instruct) on 6,000 examples consisting of (1) ...
+
+44. Emergent misalignment: AI trained to write insecure code ...
+   https://premium.boingboing.net/p/emergent-misalignment-ai-trained
+   (Feb 26, 2025)
+   Training on the narrow task of writing insecure code induces broad misalignment. We call this emergent misalignment. This effect is observed in ...
+
+[RelatedSearches] Emergent misalignment: narrow finetuning can produce broadly misaligned LLMs | Emergent misalignment github | Emergent misalignment paper | Persona features control emergent misalignment | Emergent misalignment is easy, narrow misalignment is hard | Emergent misalignment Nature | Anthropic emergent misalignment | Emergent misalignment AI
+===== Query 1/2: Perez 2022 2023 discovering language model behaviors sycophancy increases with model size RLHF =====
+
+1. Discovering language model behaviors with model-written evaluations
+   https://aclanthology.org/2023.findings-acl.847/
+   (E Perez, S Ringer, K Lukosiute, K Nguyen… - … linguistics: ACL 2023, 2023 - aclanthology.org | 2023 | cited by 944)
+   [PDF] https://aclanthology.org/2023.findings-acl.847.pdf
+   As language models (LMs) scale, they develop many novel behaviors, good and bad, exacerbating the need to evaluate how they behave. Prior work creates evaluations with crowdwork (which is time-consuming and expensive) or existing data sources (which are not always available). Here, we automatically generate evaluations with LMs. We explore approaches with varying amounts of human effort, from instructing LMs to write yes/no questions to making complex Winogender schemas with multiple stages of LM-based generation and filtering. Crowdworkers rate the examples as highly relevant and agree with 90-100% of labels, sometimes more so than corresponding human-written datasets. We generate 154 datasets and discover new cases of inverse scaling where LMs get worse with size. Larger LMs repeat back a dialog user’s preferred answer (“sycophancy”) and express greater desire to pursue concerning goals like resource acquisition and goal preservation. We also find some of the first examples of inverse scaling in RL from Human Feedback (RLHF), where more RLHF makes LMs worse. For example, RLHF makes LMs express stronger political views (on gun rights and immigration) and a greater desire to avoid shut down. Overall, LM-written evaluations are high-quality and let us quickly discover many novel LM behaviors.
+
+===== Query 2/2: stress testing deliberative alignment anti-scheming Schoen Apollo 2025 arxiv =====
+
+1. Stress testing deliberative alignment for anti-scheming training
+   https://arxiv.org/abs/2509.15541
+   (B Schoen, E Nitishinskaya, M Balesni… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 60)
+   [PDF] https://arxiv.org/pdf/2509.15541
+   Highly capable AI systems could secretly pursue misaligned goals -- what we call "scheming". Because a scheming AI would deliberately try to hide its misaligned goals and actions, measuring and mitigating scheming requires different strategies than are typically used in ML. We propose that assessing anti-scheming interventions requires at least (1) testing propensity to scheme on far out-of-distribution (OOD) tasks, (2) evaluating whether lack of scheming is driven by situational awareness, and (3) checking for robustness to pre-existing misaligned goals. We use a broad category of "covert actions" -- such as secretly breaking rules or intentionally underperforming in tests -- as a proxy for scheming, and design evaluations for covert actions. We then stress-test deliberative alignment as a case study for anti-scheming. Across 26 OOD evaluations (180+ environments), deliberative alignment reduces covert action rates (OpenAI o3: 13%->0.4%) but does not fully eliminate them. Our mitigation is also able to largely stop agents from pursuing a hidden goal previously trained into the model, but we still find misbehavior after additional red-teaming. We find that models' chain-of-thought (CoT) often demonstrates awareness of being evaluated for alignment, and show causal evidence that this awareness decreases covert behavior, while unawareness increases it. Therefore, we cannot exclude that the observed reductions in covert action rates are at least partially driven by situational awareness. While we rely on human-legible CoT for training, studying situational awareness, and demonstrating clear evidence of misalignment, our ability to rely on this degrades as models continue to depart from reasoning in standard English. We encourage research into alignment mitigations for scheming and their assessment, especially for the adversarial case of deceptive alignment, which this paper does not address.

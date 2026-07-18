@@ -1,0 +1,73 @@
+===== Query 1/4: performative prediction machine learning feedback loop =====
+
+1. Addressing Polarization and Unfairness in Performative Prediction
+   https://ojs.aaai.org/index.php/AAAI/article/view/39399
+   (Mar 14, 2026 | The Association for the Advancement of Artificial Intelligence)
+   Authors. Kun Jin University of Michigan; Tian Xie The Ohio State University; Yang Liu University of California, Santa Cruz; Xueru Zhang The Ohio State...
+
+2. The Third Magic - by Noah Smith
+   https://www.noahpinion.blog/p/the-third-magic-23f
+   (Oct 5, 2025 | Noahpinion)
+   I'm traveling again, so today we'll have another repost. I'm reposting all of my New Year's essays from the past few years, so here's the one from 2023.
+
+3. Explainable AI in medicine: challenges of integrating XAI into the future clinical routine
+   https://www.frontiersin.org/journals/radiology/articles/10.3389/fradi.2025.1627169/full
+   (Jul 23, 2025 | Frontiers)
+   Future AI systems may need to provide medical professionals with explanations of AI predictions and decisions. While current XAI methods match these...
+
+4. The illusion of machine understanding
+   https://www.meer.com/en/105020-the-illusion-of-machine-understanding
+   (Apr 28, 2026 | Meer | English edition)
+   Artificial intelligence (AI) has rapidly transitioned from a specialized research discipline to an infrastructural force embedded in everyday life,...
+
+===== Query 2/4: strategic classification gaming algorithm 2025 =====
+(no results)
+
+===== Query 3/4: Goodhart's law AI benchmark gaming 2025 =====
+
+1. The Sequence Opinion #750: The Paradox of AI Benchmarks: Challenges in Evaluation
+   https://thesequence.substack.com/p/the-sequence-opinion-750-the-paradox
+   (Nov 6, 2025 | TheSequence | Jesus Rodriguez)
+   Goodhart's Law and some of the challenges around AI benchmarks.
+
+2. The Goodhart’s Law Trap: When AI Metrics Become Useless
+   https://fourweekmba.com/the-goodharts-law-trap-when-ai-metrics-become-useless/
+   (Sep 5, 2025 | FourWeekMBA)
+   OpenAI's latest model scores 95% on the law bar exam but can't determine if a contract is legally binding. It aces medical licensing tests but recommends...
+
+3. Closing the Eval–Deployment Gap in AI Systems — Discrepancy Between Benchmark Performance and…
+   https://medium.com/@adnanmasood/closing-the-eval-deployment-gap-in-ai-systems-discrepancy-between-benchmark-performance-and-d27c33361b93
+   (Dec 2, 2025 | Medium)
+   Rethinking AI Evaluation for Production-Grade, Business-Critical Systems — How leaders can Move Beyond Benchmark Scores to Real-World Reliability.
+
+4. AI systems are great at tests. But how do they perform in real life?
+   https://theconversation.com/ai-systems-are-great-at-tests-but-how-do-they-perform-in-real-life-260176
+   (Aug 24, 2025 | The Conversation)
+   Earlier this month, when OpenAI released its latest flagship artificial intelligence (AI) system, GPT-5, the company said it was “much smarter across the...
+
+5. Reward Hacking: The Hidden Failure Mode in AI Optimization
+   https://medium.com/@adnanmasood/reward-hacking-the-hidden-failure-mode-in-ai-optimization-686b62acf408
+   (Jan 24, 2026 | Medium)
+   Reward hacking in AI explained: how reinforcement learning and RLHF systems exploit proxy metrics, why optimization breaks intent, and how to detect and...
+
+6. Karpathy's Autoresearch Loop Is Spreading Fast: Shopify's 53% Speed Claim Still Unmerged, Flagged as Overfit
+   https://www.techtimes.com/articles/316804/20260519/karpathys-autoresearch-loop-spreading-fast-shopifys-53-speed-claim-still-unmerged-flagged.htm
+   (May 19, 2026 | Tech Times)
+   In early March 2026, Andrej Karpathy — co-founder of OpenAI and former Director of AI at Tesla — released a three-file GitHub repository that encodes one of...
+
+===== Query 4/4: reward hacking specification gaming language model 2025 =====
+
+1. Reward Hacking: The Hidden Failure Mode in AI Optimization
+   /goto?url=CAESngEB7keqTcc2qBosPu-VVwaywuIUUv06qzsAmiQKXN0YbYcUzzJs6bD8185FyqWGmn0efBzpgFjpeBG64LGX57_R9LXiKC79eQ36yeOPfifrCbI7B6eZmvHInr2vXgCOTtJ3XhWr5F5e6wXKwy6k-I_C1iPju3EJTW6UrVyWZQtj-Fsrf6tJ6eF7hvbn0tPUB512ah5h7GvcwayJTAf--g==
+   (Jan 24, 2026 | Medium)
+   Reward hacking in AI explained: how reinforcement learning and RLHF systems exploit proxy metrics, why optimization breaks intent, and how to detect and...
+
+2. Building and evaluating alignment auditing agents
+   /goto?url=CAEScAHuR6pNHf9wpanBqTdwfBCu0Qeq6-Rf9hC0udhBuP-I85p0N3iHZm1y-I7QqbqmZ6pyy3myhJ8OxdbjH-BZBhDtfOLcl5Np2UwS5AsjMo8aKpTk2PPv4Nfa3KbjP480dpEN9Dz3Qiz9y8216B19_2Y=
+   (Jul 24, 2025 | Alignment Science Blog)
+   We develop three agents that autonomously perform alignment auditing tasks. When tested against models with intentionally-inserted alignment issues,...
+
+3. What OpenAI's Latest Red-Teaming Challenge Reveals About the Evolution of AI 'Safety' Practices
+   /goto?url=CAESrAEB7keqTTwntuUTAFf5I2IrjK3TxC5fMZm3AZhYspplDotipVJQ9W76Zk43vDWjNy6v57dXMOcTaiOEMrOm--Z47I4htXZctRHenyM3EO8Ip9pYHop14gQQ52Iho5A2zBEBn0JmCsiYDaZlLosUhLRLHiRe3gb5JoODRr91S3rMqXzacu7jPp8Rm1UScU60Si-hs7dGLXzAaAwWVmabKe63m2wifrEsN3IUwGP5
+   (Aug 7, 2025 | Tech Policy Press)
+   OpenAI recently launched its Red-Teaming Challenge for two new open-weight models, gpt-oss-120b and gpt-oss-20b, marking another evolution in how the AI...

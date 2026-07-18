@@ -1,0 +1,1972 @@
+===== Query 1/5: Scaling Laws Reward Model Overoptimization Gao Schulman Hilton =====
+
+1. Scaling laws for reward model overoptimization
+   https://proceedings.mlr.press/v202/gao23h
+   (L Gao, J Schulman, J Hilton - International Conference on …, 2023 - proceedings.mlr.press | 2023 | cited by 1196)
+   [PDF] https://proceedings.mlr.press/v202/gao23h/gao23h.pdf
+   In reinforcement learning from human feedback, it is common to optimize against a reward model trained to predict human preferences. Because the reward model is an imperfect proxy, optimizing its value too much can hinder ground truth performance, in accordance with Goodhart’s law. This effect has been frequently observed, but not carefully measured due to the expense of collecting human preference data. In this work, we use a synthetic setup in which a fixed “gold-standard” reward model plays the role of humans, providing labels used to train a proxy reward model. We study how the gold reward model score changes as we optimize against the proxy reward model using either reinforcement learning or best-of- sampling. We find that this relationship follows a different functional form depending on the method of optimization, and that in both cases its coefficients scale smoothly with the number of reward model parameters. We also study the effect on this relationship of the size of the reward model dataset, the number of reward model and policy parameters, and the coefficient of the KL penalty added to the reward in the reinforcement learning setup. We explore the implications of these empirical results for theoretical considerations in AI alignment.
+
+===== Query 2/5: reward model overoptimization follow-up 2024 2025 ensemble WARM =====
+
+1. Beyond Prediction: Reinforcement Learning as the Defining Leap in Healthcare AI
+   https://arxiv.org/abs/2508.21101
+   (D Perera, G Habib, Q Xu, DJ Tan, K He… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2508.21101
+   … each model independently with symptoms encoded as one-hot states. Actions were rewarded … The InfoRM framework [125] is addressing reward over-optimization, enhancing model …
+
+2. Unlocking decoding-time controllability: Gradient-free multi-objective alignment with contrastive prompts
+   https://aclanthology.org/2025.naacl-long.18/
+   (T Fu, Y Hou, J McAuley, R Yan - Proceedings of the 2025 …, 2025 - aclanthology.org | 2025 | cited by 16)
+   [PDF] https://aclanthology.org/2025.naacl-long.18.pdf
+   … various preferences through model merging or model ensemble, … Follow-up works extend the original framework and contrast … Note that we do not train new reward models for HH-RLHF …
+
+3. VRPO: Rethinking Value Modeling for Robust RL Training under Noisy Supervision
+   https://arxiv.org/abs/2508.03058
+   (D Zhu, S Dou, Z Xi, S Jin, G Zhang, J Zhang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2508.03058
+   … 2024. ARMCHAIR: integrated inverse reinforcement learning and … , likely due to reward over-optimization or instability, resulting in significantly lower final scores than both the initial …
+
+4. Evaluating Reward Model Generalization via Pairwise Maximum Discrepancy Competitions
+   https://arxiv.org/abs/2601.16987
+   (S Luo, P Cao, Z Zhu, K Feng, Z Wang… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2601.16987
+   … 2025). Our work is inspired by this adversarial, comparative … through multi-judge ensembles and extending PMDC to multi-… Option D provides a thoughtful, responsible follow-up: it …
+
+5. Vpo: Leveraging the number of votes in preference optimization
+   https://direct.mit.edu/coli/article/doi/10.1162/COLI.a.579/133943
+   (JH Cho, M Park, BJ Lee - Computational Linguistics, 2026 - direct.mit.edu | 2026 | cited by 5)
+   [PDF] https://direct.mit.edu/coli/article-pdf/doi/10.1162/COLI.a.579/2564006/coli.a.579.pdf
+   … , leading to the problem of reward overoptimization. In contrast, our … I guess a follow up question would be are there any particular … reward model ensembles mitigate but do not eliminate …
+
+6. Dynamic Evaluation of Reward Models via Pairwise Maximum Discrepancy Competition
+   https://openreview.net/forum?id=qG2wDVvELP
+   (S Luo, P Cao, Z Zhu, K Feng, Z Wang, K Ding - openreview.net)
+   [PDF] https://openreview.net/pdf?id=qG2wDVvELP
+   … Future research could focus on enhancing oracle reliability through multi-judge ensembles, … - Option D provides a thoughtful, responsible follow-up: it acknowledges the potential fear re…
+
+7. 🧜 Siren's Song in the AI Ocean: A Survey on Hallucination in Large Language Models
+   https://direct.mit.edu/coli/article/doi/10.1162/coli.a.16/131631
+   (Y Zhang, Y Li, L Cui, D Cai, L Liu, T Fu… - Computational …, 2025 - direct.mit.edu | 2025 | cited by 2392)
+   [PDF] https://direct.mit.edu/coli/article-pdf/doi/10.1162/coli.a.16/2535477/coli.a.16.pdf
+   … in the reward model, RLHF may lead to over-optimization of LLMs… The core idea of CAD is to perform a contrastive ensemble of pθ(… Potential followup work could include systematically …
+
+8. VRPO: Rethinking Value Modeling for Robust RL under Noisy Supervision in LLM Post-Training
+   https://aclanthology.org/2026.acl-long.1103/
+   (D Zhu, S Dou, Z Xi, S Jin, G Zhang… - Proceedings of the …, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.acl-long.1103.pdf
+   … 2024… , 2025), where longer responses are rewarded regardless of quality. For incorrect … degradation during training, likely due to reward over-optimization or instability, resulting in …
+
+9. Improving instruction following in language models through proxy-based uncertainty estimation
+   https://arxiv.org/abs/2405.06424
+   (JH Lee, JO Woo, J Seok, P Hassanzadeh… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2405.06424?
+   … bonus based on the disagreement across an ensemble of … In contrast, we configure the reward model with MC dropout to … Here’s the follow-up question. The three responses discuss …
+
+10. Visual preference optimization with rubric rewards
+   https://arxiv.org/abs/2604.13029
+   (YQ Yu, F Hong, X Qu, H Wang, G Wu, Q Luo… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2604.13029
+   … -ARM [53] to mitigate reward over-optimization. RuscaRL [39] … To capture diverse model behaviors, we use an ensemble of … feedback and online policy optimization to follow-up work. …
+
+11. A review of causal decision making
+   https://arxiv.org/abs/2502.16156
+   (L Ge, H Cai, R Wan, Y Xu, R Song - arXiv preprint arXiv:2502.16156, 2025 - arxiv.org | 2502 | cited by 9)
+   [PDF] https://arxiv.org/pdf/2502.16156?
+   … or strong causal models to conduct follow-up decision-… action to take, and R the reward observed after taking action A. … other covariates X in reward modeling. This distinction prevents …
+
+12. Auditing LLM Benchmarks with Item Response Theory
+   https://arxiv.org/abs/2605.30504
+   (S Land, DM Bikel - arXiv preprint arXiv:2605.30504, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.30504
+   … exposes one frontier reward model that agrees with detected … contamination or over-optimization, identified through model-… , often based on an ensemble of trained classifiers, which pre…
+
+13. DecomposeRL: Learning to Ask Useful, Informative, and Diverse Questions for Semi-Supervised, Traceable Claim Verification
+   https://arxiv.org/abs/2605.27858
+   (SR Dipta, A Padia, F Ferraro - arXiv preprint arXiv:2605.27858, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.27858
+   … based multi-faceted reward ensemble approach to verify claims that … to iteratively capture meaningful signals for the model to gen… 2024)) document a substantial residual gap to frontier …
+
+14. Explainability and Trust in Cybersecurity AI: A Comparative Analysis of Transformer and LSTM Models Using XAI Techniques
+   https://www.researchgate.net/profile/Amelia-Olivia/publication/403158566_Explainability_and_Trust_in_Cybersecurity_AI_A_Comparative_Analysis_of_Transformer_and_LSTM_Models_Using_XAI_Techniques/links/69c4d3363c618943066c8005/Explainability-and-Trust-in-Cybersecurity-AI-A-Comparative-Analysis-of-Transformer-and-LSTM-Models-Using-XAI-Techniques.pdf
+   (A Olivia - 2026 - researchgate.net | 2026)
+   [PDF] https://www.researchgate.net/profile/Amelia-Olivia/publication/403158566_Explainability_and_Trust_in_Cybersecurity_AI_A_Comparative_Analysis_of_Transformer_and_LSTM_Models_Using_XAI_Techniques/links/69c4d3363c618943066c8005/Explainability-and-Trust-in-Cybersecurity-AI-A-Comparative-Analysis-of-Transformer-and-LSTM-Models-Using-XAI-Techniques.pdf
+   … Modes o Reward bias due to imperfect property predictors leading to unrealistic molecules o Mode collapse and loss of diversity from over-optimization o … follow-up 14. Future Directions …
+
+15. Generative deep learning for de novo drug design─ a chemical space odyssey
+   https://pubs.acs.org/doi/abs/10.1021/acs.jcim.5c00641
+   (R Özçelik, H Brinkmann, E Criscuolo… - … and Modeling, 2025 - ACS Publications | 2025 | cited by 41)
+   [PDF] https://pubs.acs.org/doi/pdf/10.1021/acs.jcim.5c00641
+   … deep learning approaches for follow-up molecular generation. … receives a score (also called reward) based on an external … overoptimization can lead to a “tunnel vision”, where models …
+
+16. Trustworthy, responsible, and safe ai: A comprehensive architectural framework for ai safety with challenges and mitigations
+   https://arxiv.org/abs/2408.12935
+   (C Chen, X Gong, Z Liu, W Jiang, SQ Goh… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 49)
+   [PDF] https://arxiv.org/pdf/2408.12935
+   … a reward model to evaluate the quality of model outputs … the user’s follow-up input sways the model’s previous stance. … in 2024 and will escalate to 10.5 trillion USD annually by 2025 […
+
+17. Personalizing Language Models for Generative Targeting
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5329729
+   (M Yin, R Gao, Z Cong - Available at SSRN 5329729, 2025 - papers.ssrn.com | 5329 | cited by 1)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5329729
+   … We extend it by (1) avoiding RLHF reward modeling, thus preventing … 2 with warm-up initialization over the benchmark models (… by numerous social surveys and follow-up interviews. …
+
+18. Does Capability Transfer to Subjective Behavior--and Would Our Instruments Tell Us? A Self-Evolving, Trust-by-Construction Evaluation Paradigm
+   https://arxiv.org/abs/2605.27914
+   (Y Liu, P Ding, L Wang, J Wan - arXiv preprint arXiv:2605.27914, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.27914
+   … over-optimization — the pressure that makes models agreeable also makes them solve when they should listen (cf. reward over-optimization [48… during cohort extension followup): we re-…
+
+19. Self-Play Methods in Reinforcement Learning for Language Models
+   
+   (Z Ye - 2025 - University of Chicago | 2025)
+
+20. Combining Constraint Programming and Machine Learning: From Current Progress to Future Opportunities
+   https://www.jair.org/index.php/jair/article/view/19533
+   (Q Cappart, T Guns, M Lombardi, G Pesant… - Journal of Artificial …, 2025 - jair.org | 2025 | cited by 2)
+   [PDF] https://www.jair.org/index.php/jair/article/download/19533/27252
+   … of large language models, focusing on reasoning models, for … The reward function 𝑅 : S×A→ R assigns a numerical reward for … Formally, given𝑚 trained base learners, an ensemble …
+
+21. Optimized to death: The hypernetic law of experience
+   https://www.mdpi.com/2079-8954/14/2/197
+   (D Daniel - Systems, 2026 - mdpi.com | 2026 | cited by 2)
+
+22. A review of causal decision making
+   https://www.jair.org/index.php/jair/article/view/21001
+   (L Ge, H Cai, R Wan, Y Xu, R Song - Journal of Artificial Intelligence …, 2026 - jair.org | 2026 | cited by 1)
+   [PDF] https://www.jair.org/index.php/jair/article/download/21001/27296
+   … strong causal models to facilitate followup decision … reward 1 if the individual receives action 𝐴 = 𝑎. The potential outcomes framework, also known as the Neyman-Rubin Causal Model…
+
+23. Beyond the Black Box: Theory and Mechanism of Large Language Models
+   https://arxiv.org/abs/2601.02907
+   (Z Gan, R Ren, W Yao, X Hu, G Xu, C Qian… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2601.02907
+   … A follow-up work [147] analyzes the convergence properties and aim to … the reward model size improves robustness, increasing the policy model size does not mitigate overoptimization, …
+
+24. Measuring and Strengthening Behavioral Suppression in Language Models
+   https://pat-jj.github.io/assets/pdf/pearl.pdf
+   (L He, P Jiang, J Zhang, J Han, D Chen - pat-jj.github.io)
+   [PDF] https://pat-jj.github.io/assets/pdf/pearl.pdf
+   … a model learns to exploit an attributable aspect of the reward signal … organisms or training a small ensemble of organisms, then … more follow-up studies in targeted and durable model …
+
+25. Large Language Models for Automatic Code Optimization in Fully Homomorphic Encryption Compilers: A Survey
+   https://www.researchgate.net/profile/Khaled-Benmachiche/publication/408534864_Large_Language_Models_for_Automatic_Code_Optimization_in_Fully_Homomorphic_Encryption_Compilers_A_Survey/links/6a4cd7cef8eec13a96b9d3b9/Large-Language-Models-for-Automatic-Code-Optimization-in-Fully-Homomorphic-Encryption-Compilers-A-Survey.pdf
+   (K BENMACHICHE, LM YAZI, R BAGHDADI, PKM ESI - researchgate.net)
+   [PDF] https://www.researchgate.net/profile/Khaled-Benmachiche/publication/408534864_Large_Language_Models_for_Automatic_Code_Optimization_in_Fully_Homomorphic_Encryption_Compilers_A_Survey/links/6a4cd7cef8eec13a96b9d3b9/Large-Language-Models-for-Automatic-Code-Optimization-in-Fully-Homomorphic-Encryption-Compilers-A-Survey.pdf
+   … , a warmth against my side during the longest nights. … follow-up, generous support, and genuine interest in our work. … à la lumière d’un ensemble commun de problèmes d’optimisation …
+
+26. Large-scale empirical tuning and comparison of default optimizers for variational inference
+   https://arxiv.org/abs/2606.07841
+   (T Campbell, JH Huggins, K Kim… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.07841
+   … This ensemble can be used as a solid baseline panel of 5 methods for follow-up work on … real-valued parameter SUBIDX in the model, and within the model code we loop over all data …
+
+27. Language-Driven Learning for Interactive Robotics
+   https://search.proquest.com/openview/96ed1bfce8f18ee64f7a86a4b2033715/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (S Karamcheti - 2025 - search.proquest.com | 2025 | cited by 1)
+   … We also study how training time improves model performance, finding evidence of severe … We tokenize and one-hot encode each utterance into a vocabulary V of cardinality |V |, …
+
+28. Report on Next-Gen AI for Proliferation Detection Workshop: Domain-Aware Methods
+   https://www.osti.gov/biblio/2000731
+   (TL Borders, MF Glenski, TF Grimes, JM Mendez… - 2021 - osti.gov | 2021 | cited by 1)
+   [PDF] https://www.osti.gov/servlets/purl/2000731
+   … and waiting times associated with clearance awards. … Follow-up studies on a depleted uranium target also found … This means choosing techniques that prevent overoptimizing …
+
+29. AI-Driven Scientific Discovery
+   https://search.proquest.com/openview/3af25d9dac48e9195294a5c166ca8ebc/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (Y Du - 2026 - search.proquest.com | 2026)
+   … of interest, from annealed, reward-tilted, posterior, product … extraordinarily successful for ensemble properties and free … (2025), we evaluate RNC for model product with multi-target …
+
+30. SARS-CoV-2 Antivirals Identified from Small Molecule Modulators of Programmed− 1 Ribosomal Frameshifting
+   https://pubs.acs.org/doi/abs/10.1021/acsinfecdis.5c00774
+   (EG Swanson Hay, MM Maille, M Zafferani… - ACS Infectious …, 2026 - ACS Publications | 2026 | cited by 1)
+   [PDF] https://pubs.acs.org/doi/pdf/10.1021/acsinfecdis.5c00774
+
+===== Query 3/5: reward model overoptimization RLHF KL divergence gold reward =====
+
+1. Reward model ensembles help mitigate overoptimization
+   https://proceedings.iclr.cc/paper_files/paper/2024/hash/dda7f9378a210c25e470e19304cce85d-Abstract-Conference.html
+   (T Coste, U Anwar, R Kirk… - … Conference on Learning …, 2024 - proceedings.iclr.cc | 2024 | cited by 245)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2024/file/dda7f9378a210c25e470e19304cce85d-Paper-Conference.pdf
+   … RLHF pipeline, both the policy model and the proxy reward … the gold reward model score on the left y-axis and the proxy … at 150 KL divergence because the overoptimization trends are …
+
+2. Uncertainty-penalized reinforcement learning from human feedback with diverse reward lora ensembles
+   https://arxiv.org/abs/2401.00243
+   (Y Zhai, H Zhang, Y Lei, Y Yu, K Xu, D Feng… - arXiv preprint arXiv …, 2023 - arxiv.org | 2023 | cited by 59)
+   [PDF] https://arxiv.org/pdf/2401.00243
+   … by over-optimized models (KL divergence roughly from 50 to … RLHF method utilized the full fine-tuning for reward modeling… We also focus on the overoptimization issue. While most …
+
+3. Overcoming reward overoptimization via adversarial policy optimization with lightweight uncertainty estimation
+   https://arxiv.org/abs/2403.05171
+   (X Zhang, JF Ton, W Shen, H Wang, Y Liu - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 35)
+   [PDF] https://arxiv.org/pdf/2403.05171
+   … method for quantifying reward uncertainty in the RLHF pipeline, … a gold reward model using the LLama-13B model and … region (small KL divergence) with high golden rewards (red lines)…
+
+4. Mitigating reward overoptimization via lightweight uncertainty estimation
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/94bbcb744bbada8808fda05b9d9290d6-Abstract-Conference.html
+   (X Zhang, JF Ton, W Shen… - Advances in Neural …, 2024 - proceedings.neurips.cc | 2024 | cited by 12)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/94bbcb744bbada8808fda05b9d9290d6-Paper-Conference.pdf
+   … over-optimization towards high but unreliable rewards, … region (small KL divergence) with high golden rewards (red … , the RLHF pipeline is conducted by training the reward model based …
+
+5. On the Robustness of Reward Models for Language Model Alignment
+   https://arxiv.org/abs/2505.07271
+   (J Hong, N Lee, E Kim, G Son, W Chung… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 13)
+   [PDF] https://arxiv.org/pdf/2505.07271?
+   … of over-optimization in RLHF, we assess the gold reward … reward maximization by tracking the divergence of πθ. With RMBT, initial reward maximization required a leap in KL divergence…
+
+6. Rethinking reward model evaluation through the lens of reward overoptimization
+   https://aclanthology.org/2025.acl-long.649/
+   (S Mac Kim, D Kang, T Kwon, H Chae… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 8)
+   [PDF] https://aclanthology.org/2025.acl-long.649.pdf
+   … the lens of reward overoptimization, a critical issue in RLHF. We reveal that the degree of … Figure 12: The trend of gold rewards and oracle rewards as KL divergence increases for …
+
+7. Scaling laws for reward model overoptimization in direct alignment algorithms
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/e45caa3d5273d105b8d045e748636957-Abstract-Conference.html
+   (R Rafailov, Y Chittepu, R Park… - Advances in …, 2024 - proceedings.neurips.cc | 2024 | cited by 162)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/e45caa3d5273d105b8d045e748636957-Paper-Conference.pdf
+   … the reward over-optimization exhibited by standard RLHF … completions as a proxy for gold reward. Somewhat surprisingly, we … We present KL divergence versus GPT-4 win rate plots in …
+
+8. Mitigating reward over-optimization in direct alignment algorithms with importance sampling
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/8f6c674a7edf57912f1a5830f4a66e3f-Abstract-Conference.html
+   (N Phuc, NH Nguyen, D MH Nguyen… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 2)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/8f6c674a7edf57912f1a5830f4a66e3f-Paper-Conference.pdf
+   … We provide the formulation and background of RLHF and … more effectively estimate this KL divergence without requiring … to have access to a golden reward model as the ground-truth …
+
+9. Mitigating reward over-optimization in RLHF via behavior-supported regularization
+   https://arxiv.org/abs/2503.18130
+   (J Dai, T Chen, Y Yang, Q Zheng, G Pan - arXiv preprint arXiv:2503.18130, 2025 - arxiv.org | 2503 | cited by 14)
+   [PDF] https://arxiv.org/pdf/2503.18130
+   … the gold model as ground truth to test whether the proxy model … Compared with the KL penalty method using different … avoids reward over-optimization at larger KL divergence distances. …
+
+10. Reward Model Overoptimisation in Iterated RLHF
+   https://arxiv.org/abs/2505.18126
+   (L Wolf, R Kirk, M Musolesi - arXiv preprint arXiv:2505.18126, 2025 - arxiv.org | 2505 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2505.18126
+   … its initialisation, a Kullback-Leibler divergence (KL) penalty is … Through simulations with a gold-standard reward model and … that overoptimisation diminishes across iterations as reward …
+
+11. Reward-robust rlhf in llms
+   https://arxiv.org/abs/2409.15360
+   (Y Yan, X Lou, J Li, Y Zhang, J Xie, C Yu… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 38)
+   [PDF] https://arxiv.org/pdf/2409.15360?
+   … 3) If the nominal reward model ̂r are close to the golden one r∗, the … However, as the KL divergence (-β log … the model to avoid over-optimization based on potentially erroneous …
+
+12. Mitigating Reward Over-optimization in Direct Alignment Algorithms with Importance Sampling
+   https://arxiv.org/abs/2506.08681
+   (PM Nguyen, NH Nguyen, DHM Nguyen, A Liu… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2506.08681?
+   … We provide the formulation and background of RLHF and … effectively estimate this KL divergence without requiring repeated … We then train the golden reward model on the combined …
+
+13. Uncertainty-penalized reinforcement learning from human feedback with diversified reward LoRA ensembles
+   https://www.sciencedirect.com/science/article/pii/S0306457325004893
+   (Y Zhai, Y Lei, H Zhang, Y Yu, K Xu, D Feng… - Information Processing …, 2026 - Elsevier | 2026 | cited by 5)
+   … RLHF (UP-RLHF), a novel framework that incorporates two forms of regularization: uncertainty from reward models and Kullback-Leibler (KL) divergence … mitigates overoptimization and …
+
+14. Confronting reward model overoptimization with constrained RLHF
+   https://proceedings.iclr.cc/paper_files/paper/2024/hash/5eee634cb9729b8bcc2ec9f2a46a74ae-Abstract-Conference.html
+   (T Moskovitz, A Singh, DJ Strouse… - International …, 2024 - proceedings.iclr.cc | 2024 | cited by 115)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2024/file/5eee634cb9729b8bcc2ec9f2a46a74ae-Paper-Conference.pdf
+   … 2017) to maximize only one reward or the other (without KL … , maximization of reward causes the KL divergence between … increase before decreasing as the KL grows as well, also …
+
+15. Reward Model Overoptimization: Root Causes and Mitigations
+   https://www.reinforced.info/p/reward-model-overoptimization
+   (A Nikulkov - reinforced.info)
+   … They then trained smaller reward models on generations labeled by the “gold” model and … KL Regularization. All mainstream RLHF implementations use KL divergence from the SFT …
+
+16. Mitigating Reward Over-optimization in Direct Alignment Algorithms with Adaptive Importance Sampling
+   https://openreview.net/forum?id=H9dNX6TaRE
+   (NM Phuc, NH Nguyen, BT Nguyen, KD Doan - openreview.net)
+   [PDF] https://openreview.net/pdf?id=H9dNX6TaRE
+   … do not use a separate proxy reward model as in RLHF, their … use of the KL divergence budget. Our results show that … We first train a golden reward model with a Pythia-6.9b from …
+
+17. How to evaluate reward models for rlhf
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/2e01083b381b4865919b4915ef32e3d2-Abstract-Conference.html
+   (E Frick, T Li, C Chen, WL Chiang… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 79)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/2e01083b381b4865919b4915ef32e3d2-Paper-Conference.pdf
+   … reward model metrics are most correlated to gold-standard RLHF outcomes, we launch an end-to-end RLHF … -Plus set where over-optimization behavior is seen in some reward models, …
+
+18. Rethinking reward modeling in preference-based large language model alignment
+   https://openreview.net/forum?id=rfdblE10qm
+   (H Sun, Y Shen, JF Ton - The Thirteenth International Conference on …, 2025 - openreview.net | 2025 | cited by 49)
+   [PDF] https://openreview.net/pdf?id=rfdblE10qm
+   … Specifically, we use a golden reward model to score 10 generated responses per prompt … fail to produce informative reward models that can improve golden reward values. In contrast, …
+
+19. Accelerating rlhf training with reward variance increase
+   https://arxiv.org/abs/2505.23247
+   (Z Yang, Z Gu, H Qi, Y Yuan - arXiv preprint arXiv:2505.23247, 2025 - arxiv.org | 2505 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2505.23247?
+   … Inspired by this finding, we propose a practical reward adjustment model to accelerate RLHF … where D⊂X is a training prompt set [24], and DKL(·||·) is the KL divergence. Currently, the …
+
+20. BEYOND RLHF: ATheoretical FRAMEWORK OF ALIGNMENT AS DISTRIBUTION LEARNING
+   https://openreview.net/forum?id=TRgEiJ5yN0
+   (AASD LEARNING - openreview.net)
+   [PDF] https://openreview.net/pdf?id=TRgEiJ5yN0
+   … , it is also natural to optimize the reverse KL divergence Ex[KL(ˆπ(x)∥π∗(x)]. … reward score assigned by our learned reward model and the KL divergence from the reference model, KL…
+
+21. Rethinking reward model evaluation: Are we barking up the wrong tree?
+   https://arxiv.org/abs/2410.05584
+   (X Wen, J Lou, Y Lu, H Lin, X Yu, X Lu, B He… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 30)
+   [PDF] https://arxiv.org/pdf/2410.05584
+   … We observe distinct overoptimization phenomena for golden-… drop in golden reward scores as the KL divergence increases, … golden reward function, which can be false under the RLHF …
+
+22. Inform: Mitigating reward hacking in rlhf via information-theoretic reward modeling
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/f25d75fc760aec0a6174f9f5d9da59b8-Abstract-Conference.html
+   (Y Miao, S Zhang, L Ding, R Bao… - Advances in Neural …, 2024 - proceedings.neurips.cc | 2024 | cited by 102)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/f25d75fc760aec0a6174f9f5d9da59b8-Paper-Conference.pdf
+   … ) as an indicator of reward overoptimization, which identifies … on the final RLHF performance measured by the gold RM.… KL divergence constraints, expanding reward model scales, and …
+
+23. Reward modeling for human preferences
+   https://www2.eecs.berkeley.edu/Pubs/TechRpts/2025/Archive/EECS-2025-82.pdf
+   (E Frick - 2025 - eecs.berkeley.edu | 2025 | cited by 2)
+   [PDF] https://www2.eecs.berkeley.edu/Pubs/TechRpts/2025/Archive/EECS-2025-82.pdf
+   … The goldstandard approach is to run a full RLHF training pipeline … over-optimization behavior is seen in some reward models, … , we used select reward models within a full RLHF training …
+
+24. Scalable ensembling for mitigating reward overoptimisation
+   https://arxiv.org/abs/2406.01013
+   (AM Ahmed, R Rafailov, S Sharkov, X Li… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 14)
+   [PDF] https://arxiv.org/pdf/2406.01013
+   … the RLHF pipeline of supervised fine-tuning (SFT), reward … full ensemble nature to similar gold performance however we … ” curves that result as KL divergence from the base policy …
+
+25. Fine-tuning language models with reward learning on policy
+   https://aclanthology.org/2024.naacl-long.75/
+   (H Lang, F Huang, Y Li - Proceedings of the 2024 Conference of …, 2024 - aclanthology.org | 2024 | cited by 22)
+   [PDF] https://aclanthology.org/2024.naacl-long.75.pdf
+   … , and DSKL represents the symmetrized KL divergence obtained by averaging the expected … , we seek to develop a novel RLHF framework to align large language models (LLMs) with …
+
+26. Aligning Large Language Models: A Study on Reinforcement Learning from Human Feedback
+   https://amslaurea.unibo.it/id/eprint/32630/
+   (F Del Duchetto - amslaurea.unibo.it)
+   [PDF] https://amslaurea.unibo.it/id/eprint/32630/1/TESI-6.pdf
+   … process of RLHF applied to the GPT-3 large language model, … token to mitigate over-optimization of the reward model. This is … using the Kullback–Leibler Divergence (KL Divergence) or …
+
+27. Bayesian reward models for llm alignment
+   https://arxiv.org/abs/2402.13210
+   (AX Yang, M Robeyns, T Coste, Z Shi, J Wang… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 45)
+   [PDF] https://arxiv.org/pdf/2402.13210
+   … An extreme example of overoptimization in RLHF is depicted in … at the gold reward model we observe reward overoptimization … , starts to decrease at a large KL divergence, and hence a …
+
+28. Odin: Disentangled reward mitigates hacking in rlhf
+   https://arxiv.org/abs/2402.07319
+   (L Chen, C Zhu, D Soselia, J Chen, T Zhou… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 155)
+   [PDF] https://arxiv.org/pdf/2402.07319
+   … RLHF is reward hacking, or reward model over-optimization, ie, the policy obtains a high reward … Different from SFT, RL fine-tuning stage of RLHF does not require golden responses for …
+
+29. Simultaneous reward distillation and preference learning: Get you a language model who can do both
+   https://arxiv.org/abs/2410.08458
+   (A Nath, C Jung, E Seefried… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2410.08458?
+   … loss in addition to the traditional RLHF-based reward modeling (Eq. 2) … divergence from πref. At γ = 2, DRDO wins on 5% more samples than DPO despite a slightly larger KLdivergence…
+
+30. Eliminating biased length reliance of direct preference optimization via down-sampled kl divergence
+   https://aclanthology.org/2024.emnlp-main.60/
+   (J Lu, J Li, S An, M Zhao, Y He, D Yin… - Proceedings of the 2024 …, 2024 - aclanthology.org | 2024 | cited by 39)
+   [PDF] https://aclanthology.org/2024.emnlp-main.60.pdf
+   … ”, a common over-optimization phenomenon also observed in RLHF. While previous … reward model. Specifically, DPO first re-parameterizes the reward model in multi-stage RLHF …
+
+31. Scaling laws for reward model overoptimization
+   https://proceedings.mlr.press/v202/gao23h
+   (L Gao, J Schulman, J Hilton - International Conference on …, 2023 - proceedings.mlr.press | 2023 | cited by 1196)
+   [PDF] https://proceedings.mlr.press/v202/gao23h/gao23h.pdf
+   … We study how the gold reward model score changes as we … In the real RLHF setting, this data is used to train a proxy RM … varying KL penalties rather than KL divergences with no KL …
+
+32. Adaptive Uncertainty-Aware Reinforcement Learning from Human Feedback
+   https://openreview.net/forum?id=qxzOEy9fLU
+   (M Cief, F Tonolini, N Aletras, G Kazai - 2024 - openreview.net | 2024 | cited by 1)
+   [PDF] https://openreview.net/pdf?id=qxzOEy9fLU
+   … problem of RLHF is reward hacking, ie, overoptimization. … expected reward towards the expert from the KL divergence (… collect preference data to train the gold reward model (ie, GPT-J). …
+
+33. Robust rlhf with noisy rewards
+   https://openreview.net/forum?id=Cfbr56K4gp
+   (W Shen, X Zhang, Y Yao, R Zheng, H Guo, Y Liu - 2025 - openreview.net | 2025 | cited by 4)
+   [PDF] https://openreview.net/pdf?id=Cfbr56K4gp
+   … reward model and calibrates the RLHF process using a penalty term named as contrastive … analysis of the ratio of KL divergence to reward. We found that, within the same KL extent and …
+
+34. Reinforcement learning from human feedback: A statistical perspective
+   https://arxiv.org/abs/2604.02507
+   (P Liu, C Shi, WW Sun - arXiv preprint arXiv:2604.02507, 2026 - arxiv.org | 2604 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2604.02507
+   … RLHF, focusing primarily on the LLM alignment setting. We introduce the main components of RLHF, including supervised fine-tuning, reward modeling… the Kullback–Leibler divergence …
+
+35. Reward difference optimization for sample reweighting in offline rlhf
+   https://aclanthology.org/2024.findings-emnlp.115/
+   (S Wang, Z Zhang, R Zhao, F Tan… - Findings of the …, 2024 - aclanthology.org | 2024 | cited by 19)
+   [PDF] https://aclanthology.org/2024.findings-emnlp.115.pdf
+   … For DPO training, since the original DPO does not require a reward model, we train a new reward model based on Alpaca-7B on the training split of the HH dataset. The resultant …
+
+36. Unifying stable optimization and reference regularization in RLHF
+   https://arxiv.org/abs/2602.11523
+   (L He, Q Qu, H Zhao, S Wan, D Wang, L Yao… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2602.11523
+   … : regularizing rlhf with kl divergence does not mitigate heavy-tailed reward misspecification. … Scaling laws for reward model overoptimization in direct alignment algorithms. Advances in …
+
+37. Improving Reasoning and Generalization in Large Language Models through a Hybrid Reward Approach with Group-Relative Policy Optimization
+   https://unitesi.unimore.it/handle/20.500.14251/4612
+   (E POTTOCAR - 2024 - unitesi.unimore.it | 2024)
+   [PDF] https://unitesi.unimore.it/bitstream/20.500.14251/4612/1/Pottocar.Edoardo.pdf
+   … as the average KL divergence between the models output … Feedback (RLHF), which relies on a learned reward model and … the reward model, which can lead to reward over-optimization …
+
+38. Countering reward over-optimization in llm with demonstration-guided reinforcement learning
+   https://aclanthology.org/2024.findings-acl.740/
+   (M Rita, F Strub, R Chaabouni, P Michel… - Findings of the …, 2024 - aclanthology.org | 2024 | cited by 26)
+   [PDF] https://aclanthology.org/2024.findings-acl.740.pdf
+   … , requiring less compute and no gold-standard metrics. … with two reward model settings: classifier RM (1), RLHF RM (2). … score A as the KL divergence between the two distributions, ie, A …
+
+39. Improving reinforcement learning from human feedback using contrastive rewards
+   https://arxiv.org/abs/2403.07708
+   (W Shen, X Zhang, Y Yao, R Zheng, H Guo… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 31)
+   [PDF] https://arxiv.org/pdf/2403.07708
+   … contrastive rewards as a novel approach to improve RLHF-… In this context, the KL divergence term serves two main … annotator’s accuracy on our gold standard exceeds 90% during each …
+
+40. Iterative preference learning from human feedback: Bridging theory and practice for rlhf under kl-constraint
+   https://arxiv.org/abs/2312.11456
+   (W Xiong, H Dong, C Ye, Z Wang, H Zhong, H Ji… - arXiv preprint arXiv …, 2023 - arxiv.org | 2023 | cited by 389)
+   [PDF] https://arxiv.org/pdf/2312.11456
+   … by the gold reward of UltraRM-13B and the KL divergence Ex∼… Since we have access to the gold reward model in the setup, … the best model in terms of the gold reward. Instead, the best …
+
+41. Inverse reinforcement learning meets large language model post-training: Basics, advances, and opportunities
+   https://arxiv.org/abs/2507.13158
+   (H Sun, M van der Schaar - arXiv preprint arXiv:2507.13158, 2025 - arxiv.org | 2507 | cited by 7)
+   [PDF] https://arxiv.org/pdf/2507.13158?
+   … Feedback (RLHF) tasks focus on aligning language models with … As the forward KL and reverse KL divergences have mass-… Reward Overoptimization Before concluding this section, we …
+
+42. Sequence to sequence reward modeling: Improving rlhf by language feedback
+   https://ojs.aaai.org/index.php/AAAI/article/view/34992
+   (J Zhou, J Ji, J Dai, Y Yang - Proceedings of the AAAI Conference on …, 2025 - ojs.aaai.org | 2025 | cited by 25)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/view/34992/37147
+   … β to compute the KL divergence, preventing the LLM from deviating too much from the πref . … Notably, PPO-T achieved the highest golden safety score without a significant decrease in …
+
+43. Alignment and safety in large language models: Safety mechanisms, training paradigms, and emerging challenges
+   https://arxiv.org/abs/2507.19672
+   (H Lu, L Fang, R Zhang, X Li, J Cai, H Cheng… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 26)
+   [PDF] https://arxiv.org/pdf/2507.19672
+   … NLF into RLHF pipelines and reward model training presents … usable for reward model training. Multi-Level Feedback. As … a failure mode known as reward hacking (or overoptimization). …
+
+44. Off-Policy Corrected Reward Modeling for Reinforcement Learning from Human Feedback
+   https://arxiv.org/abs/2507.15507
+   (J Ackermann, T Ishida, M Sugiyama - arXiv preprint arXiv:2507.15507, 2025 - arxiv.org | 2507 | cited by 6)
+   [PDF] https://arxiv.org/pdf/2507.15507
+   … an analysis of overoptimization in RLHF as distribution shift … unlimited training data standard RLHF may not converge to an … of KL-Reward tradeoff and best achievable gold model score. …
+
+45. Novel Approaches to Foundation Model Post-Training
+   https://search.proquest.com/openview/cbb9d796d00e6f3dc69d4f1b7feb4dd5/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (RM Rafailov - 2025 - search.proquest.com | 2025)
+   … hacking phenomena similar to those in RLHF. Preference-based … over-optimization and might even exacerbate it. Right: … HH KL divergence and DPO implicit reward (Eq. 3.4) evaluated …
+
+46. Back to basics: Revisiting REINFORCE-style optimization for learning from human feedback in LLMs
+   https://aclanthology.org/2024.acl-long.662.pdf
+   (A Ahmadian, C Cremer, M Gallé… - Proceedings of the …, 2024 - aclanthology.org | 2024 | cited by 858)
+   [PDF] https://aclanthology.org/2024.acl-long.662.pdf
+   … ) skips the reward modeling stage in the traditional RLHF pipeline and uses preference pairs … the reward model (RM) over-optimization, which refers to the problem when optimizing the …
+
+47. Reward model boosting for rlhf
+   https://openreview.net/forum?id=ZDscKnCiuJ
+   (J Fan, D Ye, Y Hao, L Mou - 2026 - openreview.net | 2026 | cited by 1)
+   [PDF] https://openreview.net/pdf?id=ZDscKnCiuJ
+   … gold reward to provide preference annotations for training a … We vary the selection budget via the BoN KL divergence from 0 to … : Mitigating reward overfitting and overoptimization in rlhf. …
+
+48. Pre-trained policy discriminators are general reward models
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/f888b1a383cc85410e0ba9819e7ac36e-Abstract-Conference.html
+   (S Dou, S Liu, Y Yang, Y Zou, Y Zhou… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 7)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/f888b1a383cc85410e0ba9819e7ac36e-Paper-Conference.pdf
+   … into the over-optimization of preference-based reward models, further … model without RLHF. We compare POLAR against SOTA reward models across 20 benchmarks within the RLHF …
+
+49. Mitigating reward hacking in rlhf via bayesian non-negative reward modeling
+   https://arxiv.org/abs/2602.10623
+   (Z Duan, G Rong, Z Li, B Chen, M Zhou… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2602.10623
+   … substantially mitigates reward over-optimization, improves … The KL divergence regularizes the variational posteriors toward … , while our BNRM remains aligned with the gold reward. …
+
+50. Reinforcement learning from human feedback
+   https://arxiv.org/abs/2504.12501
+   (N Lambert - arXiv preprint arXiv:2504.12501, 2025 - arxiv.org | 2504 | cited by 100)
+   [PDF] https://arxiv.org/pdf/2504.12501
+   … itself is prone to over-optimization because our reward signal is at … , effective RLHF requires a strong starting point, so RLHF cannot … space X, the KL distance from Q to P is defined as: …
+
+51. Reward Bias Substitution: Single-Axis Mitigations Shift Optimization Pressure
+   https://openreview.net/forum?id=9I5MzEE6Kq
+   (M Lamparth, D Fein, A Haupt, M Hussing… - RLEval: Methods and …, 2026 - openreview.net | 2026)
+   [PDF] https://openreview.net/pdf?id=9I5MzEE6Kq
+   … Scaling laws for reward model overoptimization. In Proceedings of the 40th International … : regularizing RLHF with KL divergence does not mitigate heavy-tailed reward misspecification. …
+
+52. Segmenting text and learning their rewards for improved rlhf in language model
+   https://arxiv.org/abs/2501.02790
+   (Y Yin, S Yang, Y Xie, Z Yang, Y Sun… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 16)
+   [PDF] https://arxiv.org/pdf/2501.02790?
+   … of dense reward for RLHF, while mitigating its potential reward … a segmentlevel reward model, which assigns a reward to each … penalty towards πSFT to avoid reward over-optimization. …
+
+53. Alignment as distribution learning: Your preference model is explicitly a language model
+   https://arxiv.org/abs/2506.01523
+   (J Yun, J Kim, J Park, J Kim, JJ Ryu, J Cho… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2506.01523?
+   … to optimize the socalled reverse KL divergence: Ex[KL(ˆπ(x)∥π∗… amounts to learning a reward model in RLHF. Plugging in … reward score assigned by our learned reward model and the …
+
+54. Reward Bias Substitution: Single-Axis Bias Mitigations Redirect Optimization Pressure
+   https://arxiv.org/abs/2605.27996
+   (M Lamparth, D Fein, A Haupt, M Hussing… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.27996
+   … We demonstrate bias substitution in language model RLHF, where a length penalty during GRPO … Catastrophic goodhart: regularizing RLHF with KL divergence does not mitigate heavy-…
+
+55. Failure Modes of Maximum Entropy RLHF
+   https://arxiv.org/abs/2509.20265
+   (ÖV Çağatan, B Akgün - arXiv preprint arXiv:2509.20265, 2025 - arxiv.org | 2509)
+   [PDF] https://arxiv.org/pdf/2509.20265?
+   … Nevertheless, we observe overoptimization even at very … the KL divergence between the policy and the reference model during … the reward, is that it maintains a good KL divergence by …
+
+56. Regularizing hidden states enables learning generalizable reward model for llms
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/71f7154547c748c8041505521ca433ab-Abstract-Conference.html
+   (R Yang, R Ding, Y Lin, H Zhang… - Advances in Neural …, 2024 - proceedings.neurips.cc | 2024 | cited by 147)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/71f7154547c748c8041505521ca433ab-Paper-Conference.pdf
+   … of GRM on the overoptimization issue in RLHF. Our primary … with the gold rewards as the KL Divergence increases. … We set the KL Divergence from 0 to 5, corresponding to the number …
+
+57. Pairwise proximal policy optimization: Language model alignment with comparative RL
+   https://openreview.net/forum?id=7iaAlIlV2H
+   (T Wu, B Zhu, R Zhang, Z Wen… - … Language Modeling, 2024 - openreview.net | 2024 | cited by 14)
+   [PDF] https://openreview.net/pdf?id=7iaAlIlV2H
+   … We conduct experiments on two widely-adopted RLHF tasks, … -off between the KLdivergence and asymptotic reward, and … the impacts of reward over-optimization on trajectory-based RL …
+
+58. Generative reward models
+   https://arxiv.org/abs/2410.12832
+   (D Mahan, D Van Phung, R Rafailov, C Blagden… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 158)
+   [PDF] https://arxiv.org/pdf/2410.12832?
+   … RLHF … KL divergence penalty prevents the LLM πϕ from deviating too far from its initial behavior, with the hyperparameter β controlling the trade-off between exploiting the reward model …
+
+59. Review of Reinforcement Learning for Large Language Models: Formulations, Algorithms, and Opportunities
+   http://www.liziniu.org/docs/RL4LLM_Survey.pdf
+   (Z Li, P Wang, T Xu, T Ding, R Sun, Y Yu - 2025 - liziniu.org | 2025 | cited by 2)
+   [PDF] http://www.liziniu.org/docs/RL4LLM_Survey.pdf
+   … This KL-regularization term can mitigate this issue by … RLHF methods can be categorized into two types: reward-… the final answer based on certain golden rules. For mathematical tasks, …
+
+60. Inference-time reward hacking in large language models
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/590a0cc0306c1c63e2d66a51a407718f-Abstract-Conference.html
+   (H Khalaf, C Mayrink Verdun… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 22)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/590a0cc0306c1c63e2d66a51a407718f-Paper-Conference.pdf
+   … By overoptimizing for a misspecified reward, we can subvert … between maximizing reward and minimizing KL divergence from … RLHF with KL divergence does not mitigate heavy-tailed …
+
+61. Selective preference optimization via token-level reward function estimation
+   https://aclanthology.org/2025.emnlp-main.359/
+   (K Yang, Z Liu, Q Xie, J Huang, E Min… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 6)
+   [PDF] https://aclanthology.org/2025.emnlp-main.359.pdf
+   … selective optimization to prevent over-optimization on the out-… Though effective, RLHF often faces challenges like instability … incorporating a forward KL divergence constraints for each …
+
+62. Gradient Regularization Mitigates Reward Hacking in Reinforcement Learning from Human Feedback and Verifiable Rewards
+   https://openreview.net/forum?id=T67db38qhr
+   (J Ackermann, M Noukhovitch, T Ishida… - Forty-third International … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=T67db38qhr
+   … We demonstrate that it outperforms baselines in RLHF tasks with reward models as … reward model is for our current policy. We sample completions from our model, label with the gold …
+
+63. A Survey of Progress in LLM Alignment from the Perspective of Reward Design
+   https://ieeexplore.ieee.org/abstract/document/11361384/
+   (M Ji, Y Wu, Z Wu, S Wang, J Yang… - IEEE Transactions …, 2026 - ieeexplore.ieee.org | 2026 | cited by 21)
+   [PDF] https://arxiv.org/pdf/2505.02666
+   … values based on the factual consistency between generated responses and gold-standard … balances the reward maximization with the KL divergence penalty. While RLHF has achieved …
+
+64. Reinforcement Learning from Human Feedback (RLHF) and Its Influence on the Alignment of LLM Decisions with Human Values
+   https://www.researchgate.net/profile/Paul-Bradford-4/publication/404049858_Reinforcement_Learning_from_Human_Feedback_RLHF_and_Its_Influence_on_the_Alignment_of_LLM_Decisions_with_Human_Values/links/69e7caa6a07af005d346796d/Reinforcement-Learning-from-Human-Feedback-RLHF-and-Its-Influence-on-the-Alignment-of-LLM-Decisions-with-Human-Values.pdf
+   (P Bradford, M Gutierrez, A Nuredin, M Goldberg… - 2026 - researchgate.net | 2026)
+   [PDF] https://www.researchgate.net/profile/Paul-Bradford-4/publication/404049858_Reinforcement_Learning_from_Human_Feedback_RLHF_and_Its_Influence_on_the_Alignment_of_LLM_Decisions_with_Human_Values/links/69e7caa6a07af005d346796d/Reinforcement-Learning-from-Human-Feedback-RLHF-and-Its-Influence-on-the-Alignment-of-LLM-Decisions-with-Human-Values.pdf
+   … Human evaluation remains the "gold standard" for this comparison, as automated metrics often fail to … RLHF recalibrates this by penalizing false assertions in the reward modeling stage. …
+
+65. Self-improving robust preference optimization
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/0bc795afae289ed465a65a3b4b1f4eb7-Abstract-Conference.html
+   (E Choi, A Ahmadian, M Geist, O Pietquin… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 20)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/0bc795afae289ed465a65a3b4b1f4eb7-Paper-Conference.pdf
+   … from the existing paradigm for RLHF, we provide a high-level … objective without any need for reward model or online inference. Our key … For the latter, we measure win rates against gold …
+
+66. Correcting the mythos of kl-regularization: Direct alignment without overoptimization via chi-squared preference optimization
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/e785d64baa2cde06c69d9b7a14636ef2-Abstract-Conference.html
+   (A Huang, W Zhan, T Xie, J Lee, W Sun… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 94)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/e785d64baa2cde06c69d9b7a14636ef2-Paper-Conference.pdf
+   … (RLHF) have led to impressive advances in language model … the model optimizes performance on an offline reward model… on single-policy concentrability—the gold standard in offline …
+
+67. Regularized best-of-n sampling to mitigate reward hacking for language model alignment
+   https://openreview.net/forum?id=ewRlZPAReR
+   (Y Jinnai, T Morimura, K Ariu, K Abe - … 2024 Workshop on Models of …, 2024 - openreview.net | 2024 | cited by 42)
+   [PDF] https://openreview.net/pdf?id=ewRlZPAReR
+   … reward hacking in preference learning (RLHF and DPO) is to use proximity regularization, typically by a KL divergence term, to keep the trained model … of proxy and gold reward models, …
+
+68. Uncertainty and influence aware reward model refinement for reinforcement learning from human feedback
+   https://openreview.net/forum?id=iamWnRpMuQ
+   (Z Sun, Y Guo, Y Lin, X Chen, Q Qi, X Tang… - The Thirteenth …, 2025 - openreview.net | 2025 | cited by 9)
+   [PDF] https://openreview.net/pdf?id=iamWnRpMuQ
+   … a KL divergence penalty to keep the policy model close to … reward model (ie, Llama2-13B): average of golden reward … refining the reward modeling aspect within the RLHF framework. …
+
+69. Chasing the Tail: Effective Rubric-based Reward Modeling for Large Language Model Post-Training
+   https://arxiv.org/abs/2509.21500
+   (J Zhang, Z Wang, L Gui, SM Sathyendra… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2509.21500?
+   … -based rewards substantially mitigate reward over-optimization and deliver … frontier of KL divergence from the base model vs win-rate (as judged by the … D Empirical Results on RLHF …
+
+70. Enhancing safety in reinforcement learning with human feedback via rectified policy optimization
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/5b5c175e4baf14726370604ca6552b0d-Abstract-Conference.html
+   (X Peng, H Guo, J Zhang, D Zou… - Advances in Neural …, 2026 - proceedings.neurips.cc | 2026 | cited by 10)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/5b5c175e4baf14726370604ca6552b0d-Paper-Conference.pdf
+   … In comparison to the traditional RLHF pipeline, improving … to over-optimization of the reward/cost models, beaver-7B-v1.0… Since the KL divergence we considered here is the Bregman …
+
+71. Gradient regularization prevents reward hacking in reinforcement learning from human feedback and verifiable rewards
+   https://arxiv.org/abs/2602.18037
+   (J Ackermann, M Noukhovitch, T Ishida… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2602.18037
+   … We demonstrate that it outperforms baselines in RLHF tasks with reward models as … reward model is for our current policy. We sample completions from our model, label with the gold …
+
+72. Adaptive preference scaling for reinforcement learning with human feedback
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/c1f66abb52467443ba8fc70e0a32e061-Abstract-Conference.html
+   (I Hong, Z Li, A Bukharin, Y Li, H Jiang… - Advances in Neural …, 2024 - proceedings.neurips.cc | 2024 | cited by 31)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/c1f66abb52467443ba8fc70e0a32e061-Paper-Conference.pdf
+   … challenge in RLHF lies in the complexity of reward modeling, … KL(·, ·) denotes the KL divergence. Note that without the … is the most basic unit that the gold reward model is able to …
+
+73. Online iterative reinforcement learning from human feedback with general preference model
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/94d13c2401fe119e57ba325b6fe526e0-Abstract-Conference.html
+   (C Ye, W Xiong, Y Zhang, H Dong… - Advances in Neural …, 2024 - proceedings.neurips.cc | 2024 | cited by 61)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/94d13c2401fe119e57ba325b6fe526e0-Paper-Conference.pdf
+   … -KL regularized minimax game between two LLMs for RLHF under … reward over-optimization issue [26], meaning that while the … Then, we calculate the average KL divergence between …
+
+74. A survey on human preference learning for large language models
+   https://arxiv.org/abs/2406.11191
+   (R Jiang, K Chen, X Bai, Z He, J Li, M Yang… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 51)
+   [PDF] https://arxiv.org/pdf/2406.11191?
+   … as the golden preference distributions to weight the summation of the log probabilities. The … reward derived from the theoretical form of the optimal RLHF model with KL divergence …
+
+75. Discovering preference optimization algorithms with and for large language models
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/9d88b87b31986f8293bb0067a841579e-Abstract-Conference.html
+   (C Lu, S Holt, C Fanconi, AJ Chan… - Advances in …, 2024 - proceedings.neurips.cc | 2024 | cited by 61)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/9d88b87b31986f8293bb0067a841579e-Paper-Conference.pdf
+   … 2020] to prevent over-optimization and straying too far from … expected reward vs KL divergence for converging models for … who is testing out different RLHF loss functions. When you …
+
+76. Pairwise Proximal Policy Optimization: Large Language Models Alignment via Comparative RL
+   https://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-21.pdf
+   (T Wu, B Zhu, R Zhang, Z Wen, K Ramchandran, J Jiao - 2024 - eecs.berkeley.edu | 2024)
+   [PDF] https://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-21.pdf
+   … We conduct experiments on two widely-adopted RLHF tasks, … a “gold standard” reward model. They empirically find out the … the impacts of reward over-optimization on trajectory-based …
+
+77. Two Minds Better Than One: Collaborative Reward Modeling for LLM Alignment
+   https://arxiv.org/abs/2505.10597
+   (J Zhang, W Jing, Z Zhang, Z Xi, S Dou, R Weng… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2505.10597?
+   … a greater KL divergence magnitude with reference model during … the risk of reward over-optimization. We compare the … For reward modeling phase, we utilize Anthropic’s HH-RLHF …
+
+78. The energy loss phenomenon in rlhf: A new perspective on mitigating reward hacking
+   https://arxiv.org/abs/2501.19358
+   (Y Miao, S Zhang, L Ding, Y Zhang, L Zhang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 14)
+   [PDF] https://arxiv.org/pdf/2501.19358
+   … Given the unavailability of the gold score, we demonstrate … Scaling laws for reward model overoptimization in direct … non-negativity of the KL divergence. Based on the inequality …
+
+79. Evaluating robustness of reward models for mathematical reasoning
+   https://arxiv.org/abs/2410.01729
+   (S Kim, D Kang, T Kwon, H Chae, J Won, D Lee… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 19)
+   [PDF] https://arxiv.org/pdf/2410.01729
+   … reach peak rewards at lower KL divergences, indicating faster overoptimization. This finding … effectively estimate the reward overoptimization, a critical concern in RLHF systems. While …
+
+80. Reinforcement Learning with Human Feedback (RLHF)
+   https://link.springer.com/chapter/10.1007/979-8-8688-2332-9_8
+   (I Cronin - … and Training Generative AI Models: A Practical Guide …, 2026 - Springer | 2026)
+   … • KL balancing: A KL divergence penalty balances reward … components of RLHF: human annotation pipelines, reward modeling, … Over-optimization against imperfect signals can lead to …
+
+81. Achieving AI Alignment with Unreliable Supervision
+   https://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-148.pdf
+   (S Singhal, C Laidlaw, A Dragan - 2024 - eecs.berkeley.edu | 2024)
+   [PDF] https://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-148.pdf
+   … , RLHF for LLMs generally optimizes the learned reward plus … a policy that hacks the proxy reward, rather than one like the … between occupancy measures, we find that the KL divergence …
+
+82. The perfect blend: Redefining rlhf with mixture of judges
+   https://arxiv.org/abs/2409.20370
+   (T Xu, E Helenowski, KA Sankararaman, D Jin… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 34)
+   [PDF] https://arxiv.org/pdf/2409.20370
+   … preferred response is designated as the golden response a. … Consider the KL divergence between πref and πw as a … Over-optimization of the reward model can adversely impact …
+
+83. Energy-Based Reward Models for Robust Language Model Alignment
+   https://arxiv.org/abs/2504.13134
+   (A Lochab, R Zhang - arXiv preprint arXiv:2504.13134, 2025 - arxiv.org | 2504 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2504.13134
+   … generalization and are vulnerable to overoptimization. The … 2024) minimizes a forward KL divergence between an energy-… We assess Gold Score performance in RLHF experiments …
+
+84. Upcycled and Merged MoE Reward Model for Mitigating Reward Hacking
+   https://arxiv.org/abs/2512.00724
+   (L Fu - arXiv preprint arXiv:2512.00724, 2025 - arxiv.org | 2512)
+   [PDF] https://arxiv.org/pdf/2512.00724
+   … MoE reward model to mitigate reward over-optimization, … -based reward models during large-scale RLHF training. … , exhibiting lower KL divergence, and the proxy score and gold score …
+
+85. Real-Time Aligned Reward Model beyond Semantics
+   https://arxiv.org/abs/2601.22664
+   (Z Huang, X Xia, Y Ren, J Zheng, X Xiao, H Xie… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 6)
+   [PDF] https://arxiv.org/pdf/2601.22664
+   … , RLHF faces a persistent challenge: reward overoptimization… both golden human preferences and the scalar reward scores … of loss, reward and KL divergence during RL optimization, …
+
+86. Rethinking the role of proxy rewards in language model alignment
+   https://aclanthology.org/2024.emnlp-main.1150/
+   (S Kim, M Seo - Proceedings of the 2024 Conference on Empirical …, 2024 - aclanthology.org | 2024 | cited by 8)
+   [PDF] https://aclanthology.org/2024.emnlp-main.1150.pdf
+   … role of proxy rewards learned by human feedback in the RLHF by … the overoptimization problem by the imperfect proxy reward … We utilize an adaptive KL (Kullback–Leibler divergence) …
+
+87. Direct Advantage Regression: Aligning LLMs with Online AI Reward
+   https://arxiv.org/abs/2504.14177
+   (L He, H Zhao, S Wan, D Wang, L Yao, T Liu - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2504.14177?
+   … in online RLHF using a pre-trained reward model. Evaluations, … where α is a coefficient controlling the KL divergence be… that DAR effectively avoids reward over-optimization, in contrast …
+
+88. A comprehensive survey of llm alignment techniques: Rlhf, rlaif, ppo, dpo and more
+   https://arxiv.org/abs/2407.16216
+   (Z Wang, B Bi, SK Pentyala, K Ramnath… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 96)
+   [PDF] https://arxiv.org/pdf/2407.16216
+   … bonus for larger models on NLP downstream tasks. They also identified the optimal parameter for KL divergence … However, the finite dataset D might lead to over-optimization of reward …
+
+89. APLOT: Robust Reward Modeling via Adaptive Preference Learning with Optimal Transport
+   https://aclanthology.org/2025.emnlp-main.281/
+   (Z Li, Y Feng, D Guo, J Hu, A Gao… - Proceedings of the 2025 …, 2025 - aclanthology.org | 2025 | cited by 3)
+   [PDF] https://aclanthology.org/2025.emnlp-main.281.pdf
+   … We vary the KLdivergence budget from 0 to 5, which—through the relation KLBoN = log N − … over-optimization and underscoring APLOT’s robustness as a proxy reward model for RLHF. …
+
+90. Generative rlhf-v: Learning principles from multi-modal human preference
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/b76105b94a8c1286c860ad885ec588f1-Abstract-Conference.html
+   (J Zhou, J Ji, B Chen, J Sun, D Hong… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 12)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/b76105b94a8c1286c860ad885ec588f1-Paper-Conference.pdf
+   … We introduce Generative RLHF-V, a novel alignment framework that integrates GRMs with multi-modal RLHF. We propose a two-stage pipeline: multi-modal generative reward model…
+
+91. A long way to go: Investigating length correlations in rlhf
+   https://arxiv.org/abs/2310.03716
+   (P Singhal, T Goyal, J Xu, G Durrett - arXiv preprint arXiv:2310.03716, 2023 - arxiv.org | 2310 | cited by 262)
+   [PDF] https://arxiv.org/pdf/2310.03716
+   … settings, with KL of 0.04. We note that RLHF does successfully increase reward score. The last … a decrease in KL divergence, as the model has optimized for reward and is regularized …
+
+92. Weights-Rotated Preference Optimization for Large Language Models
+   https://aclanthology.org/2025.emnlp-main.1329/
+   (C Yang, R Jia, M Zheng, N Gu, Z Lin… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 5)
+   [PDF] https://aclanthology.org/2025.emnlp-main.1329.pdf
+   … from human feedback (RLHF) to improve the controllability of … reasons behind the reward overoptimization of DPO from the … reference model, we did not plot their KL divergence changes…
+
+93. A survey of direct preference optimization
+   https://arxiv.org/abs/2503.11701
+   (S Liu, W Fang, Z Hu, J Zhang, Y Zhou, K Zhang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 50)
+   [PDF] https://arxiv.org/pdf/2503.11701?
+   … reward signal, RLHF facilitates the optimization of model behavior for value alignment. However, this RLHF … compared to KL divergence, alleviating the over-optimization problem. DPO-…
+
+94. Active reward modeling: Adaptive preference labeling for large language model alignment
+   https://openreview.net/forum?id=GSyX4amBFR
+   (Y Shen, H Sun, JF Ton - Forty-second International Conference on …, 2025 - openreview.net | 2025 | cited by 10)
+   [PDF] https://openreview.net/pdf?id=GSyX4amBFR
+   … feedback (RLHF) and large language model alignment research. … as a regularization to avoid over optimization. We focused on … (2025a) to use opensource golden reward models as …
+
+95. Anchored Optimization and Contrastive Revisions: Addressing Reward Hacking in Alignment
+   https://openreview.net/forum?id=4aS8UeUbiC
+   (K D'Oosterlinck, W Xu, C Develder, T Demeester… - Neurips Safe Generative … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=4aS8UeUbiC
+   … We consider the downstream performance change of the model to be indicative of reward hacking. The more … to rate if a response to a query agrees with a known gold-truth response. …
+
+96. Post-hoc reward calibration: A case study on length bias
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/5d50c76fdf75c24ece568fc84a7125fb-Abstract-Conference.html
+   (Z Huang, Z Qiu, EM Ponti, I Titov - … Conference on Learning …, 2025 - proceedings.iclr.cc | 2025 | cited by 33)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/5d50c76fdf75c24ece568fc84a7125fb-Paper-Conference.pdf
+   … : we assess calibrated rewards for RLHF process. Testing with four … Countering reward over-optimization in LLM with … method is that the underlying gold reward is independent of the …
+
+97. Reward modeling for reinforcement learning-based llm reasoning: Design, challenges, and evaluation
+   https://arxiv.org/abs/2602.09305
+   (PC Pan, Y Liang, S Lin - arXiv preprint arXiv:2602.09305, 2026 - arxiv.org | 2602 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2602.09305
+   … of intermediate steps, prevent over-optimization on imperfect or noisy evaluators, and … on reward modeling for LLMs. RARL organizes a broad spectrum of paradigms—including RLHF, …
+
+98. Reinforcement Reward Model with Policy Feedback
+   https://openreview.net/forum?id=I9P0Yu73if
+   (Z Huang, X Xia, Y Ren, J Zheng, X Xiao, H Xie… - openreview.net)
+   [PDF] https://openreview.net/pdf?id=I9P0Yu73if
+   … (Reinforcement Reward Model), a novel lightweight RLHF … of loss, reward and KL divergence during RL optimization, … and golden rewards, the reward model learns an implicit reward …
+
+99. A framework for mitigating malicious RLHF feedback in LLM training using consensus based reward
+   https://www.nature.com/articles/s41598-025-92889-7
+   (Z Haider, MH Rahman, V Devabhaktuni… - Scientific Reports, 2025 - nature.com | 2025 | cited by 14)
+   [PDF] https://www.nature.com/articles/s41598-025-92889-7.pdf
+   … analyzed the role of KL divergence in controlling AM accuracy, … synthetic data using the gold reward score as actual human … Efforts like InfoRM 26 , aim to detect overoptimization and …
+
+100. It takes two: On the seamlessness between reward and policy model in rlhf
+   https://arxiv.org/abs/2406.07971
+   (T Lu, L Shen, X Yang, W Tan, B Chen… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2406.07971?
+   … 1We do not use the KL divergence between the outputs from … comprises an instruction and its golden response). We then … used to mitigate over-optimization of the reward model, and the …
+
+===== Query 4/5: direct preference optimization DPO overoptimization scaling =====
+
+1. Scaling laws for reward model overoptimization in direct alignment algorithms
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/e45caa3d5273d105b8d045e748636957-Abstract-Conference.html
+   (R Rafailov, Y Chittepu, R Park… - Advances in …, 2024 - proceedings.neurips.cc | 2024 | cited by 162)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/e45caa3d5273d105b8d045e748636957-Paper-Conference.pdf
+   … over-optimization problem in Direct Alignment Algorithms. Through extensive experimentation on different algorithms (DPO… 9 may suggest that Direct Preference Optimization (DPO) can …
+
+2. Mitigating reward over-optimization in direct alignment algorithms with importance sampling
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/8f6c674a7edf57912f1a5830f4a66e3f-Abstract-Conference.html
+   (N Phuc, NH Nguyen, D MH Nguyen… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 2)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/8f6c674a7edf57912f1a5830f4a66e3f-Paper-Conference.pdf
+   … Direct preference optimization: Your language model is secretly a reward … Scaling laws for reward model overoptimization in direct … , indicating over-optimization, while IS-DPO and DPO …
+
+3. A comprehensive survey of direct preference optimization: Datasets, theories, variants, and applications
+   https://arxiv.org/abs/2410.15595
+   (W Xiao, Z Wang, L Gan, S Zhao, Z Li, R Lei… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 40)
+   [PDF] https://arxiv.org/pdf/2410.15595
+   … human preferences has become increasingly critical. Direct Preference Optimization (DPO) … mitigated via adaptive scaling of β or integration with SFT loss, though DPO’s sensitivity to …
+
+4. A survey of direct preference optimization
+   https://arxiv.org/abs/2503.11701
+   (S Liu, W Fang, Z Hu, J Zhang, Y Zhou, K Zhang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 50)
+   [PDF] https://arxiv.org/pdf/2503.11701?
+   … in DPO into prompt dispersion and response scaling rewards. … problem of likelihood over-optimization in DPO, demonstrating … This study identifies key indicators of over-optimization …
+
+5. Direct preference optimization: Your language model is secretly a reward model
+   https://proceedings.neurips.cc/paper_files/paper/2023/hash/a85b405ed65c6477a4fe8302b5e06ce7-Abstract-Conference.html
+   (R Rafailov, A Sharma, E Mitchell… - Advances in neural …, 2023 - proceedings.neurips.cc | 2023 | cited by 10662)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2023/file/a85b405ed65c6477a4fe8302b5e06ce7-Paper-Conference.pdf
+   … We propose Direct Preference Optimization (DPO), an algorithm that … learning algorithms on large-scale problems such as fine-… reward over-optimization manifest in the direct preference …
+
+6. Multi-Preference Optimization: Generalizing DPO via Set-Level Contrasts
+   https://arxiv.org/abs/2412.04628
+   (T Gupta, R Madhavan, X Zhang, N Natarajan… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2412.04628
+   … Direct Preference Optimization (DPO) has become a popular … language models using pairwise preferences. However, in … DPO’s robust contrastive nature while effectively scaling to …
+
+7. Proximalized preference optimization for diverse feedback types: A decomposed perspective on dpo
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/87d09889863759f636e469b845d3113b-Abstract-Conference.html
+   (K Guo, Y Li, Z Chen - Advances in Neural Information …, 2026 - proceedings.neurips.cc | 2026 | cited by 8)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/87d09889863759f636e469b845d3113b-Paper-Conference.pdf
+   … In this work, we revisit DPO, the seminal method in field of direct alignment. Through a … We hypothesize that these poor performances stem from overoptimization: with substantially …
+
+8. A Survey of Direct Preference Optimization: Datasets, Theories, Variants, and Applications
+   https://ieeexplore.ieee.org/abstract/document/11568678/
+   (W Xiao, Z Wang, L Gan, S Zhao, Z Li… - … on Pattern Analysis …, 2026 - ieeexplore.ieee.org | 2026)
+   … Direct Preference Optimization (DPO) has emerged as a … and difficult to scale [25]; instance-level optimization provides no … continuous policy deviation while avoiding overoptimization. …
+
+9. Adaptive preference scaling for reinforcement learning with human feedback
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/c1f66abb52467443ba8fc70e0a32e061-Abstract-Conference.html
+   (I Hong, Z Li, A Bukharin, Y Li, H Jiang… - Advances in Neural …, 2024 - proceedings.neurips.cc | 2024 | cited by 31)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/c1f66abb52467443ba8fc70e0a32e061-Paper-Conference.pdf
+   … preference optimization algorithms. For instance, we implement it with direct preference optimization (DPO… Our results demonstrate that integrating adaptive preference scaling into DPO …
+
+10. Provably avoiding over-optimization in Direct Preference Optimization without knowing the data distribution
+   https://arxiv.org/abs/2602.06239
+   (A Barla, E Nevali, L Viano, V Cevher - arXiv preprint arXiv:2602.06239, 2026 - arxiv.org | 2602)
+   [PDF] https://arxiv.org/pdf/2602.06239
+   … specifically designed to mitigate over-optimization: χ2PO and SFT+DPO. As shown in Table 2… generation time, therefore we preferred this version for most of our large-scale evaluations. …
+
+11. Uncertainty-penalized direct preference optimization
+   https://arxiv.org/abs/2410.20187
+   (S Houliston, A Pace, A Immer, G Rätsch - arXiv preprint arXiv:2410.20187, 2024 - arxiv.org | 2410 | cited by 12)
+   [PDF] https://arxiv.org/pdf/2410.20187?
+   … Direct Preference Optimization (DPO) are prone to the issue of proxy reward overoptimization. … These will most likely not be to the scale of DPO’s implicit rewards rθ. Hence we apply a …
+
+12. Direct preference optimization with an offset
+   https://aclanthology.org/2024.findings-acl.592/
+   (A Amini, T Vieira, R Cotterell - Findings of the Association for …, 2024 - aclanthology.org | 2024 | cited by 151)
+   [PDF] https://aclanthology.org/2024.findings-acl.592.pdf
+   … , we scaled the reward difference between the preferred and … To better understand the effect of this scaling function, we … DPO for aligning language models with human preferences. …
+
+13. New desiderata for direct preference optimization
+   https://arxiv.org/abs/2407.09072
+   (X Hu, T He, D Wipf - arXiv preprint arXiv:2407.09072, 2024 - arxiv.org | 2407 | cited by 10)
+   [PDF] https://arxiv.org/pdf/2407.09072?
+   … In particular, we show that because of uniform regularization effects, the minimizers of commonly-used preference optimization objectives like DPO are at times unable to preserve …
+
+14. Online dpo: Online direct preference optimization with fast-slow chasing
+   https://arxiv.org/abs/2406.05534
+   (B Qi, P Li, F Li, J Gao, K Zhang, B Zhou - arXiv preprint arXiv:2406.05534, 2024 - arxiv.org | 2406 | cited by 40)
+   [PDF] https://arxiv.org/pdf/2406.05534?
+   … To extend OFS-DPO to cross-domain preference alignment environments, we propose the … -Slow Chasing DPO (COFS-DPO). Specifically, using OFS-DPO, we derive the optimal fast …
+
+15. -DPO: Direct Preference Optimization with Dynamic 
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/ea888178abdb6fc233226d12321d754f-Abstract-Conference.html
+   (J Wu, Y Xie, Z Yang, J Wu, J Gao… - Advances in …, 2024 - proceedings.neurips.cc | 2024 | cited by 143)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/ea888178abdb6fc233226d12321d754f-Paper-Conference.pdf
+   … This paper introduces β-DPO, a novel framework designed to optimize DPO by dynamically … Scalability Investigation: Examining β-DPO’s scalability to ultra-large models surpassing 7B …
+
+16. -DPO: Direct Preference Optimization via Ratio Reward Margin
+   https://arxiv.org/abs/2605.10981
+   (Z Fan, Z Wu, Y Du, Q Chen - arXiv preprint arXiv:2605.10981, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.10981
+   … Since OmniSQL-7B has already been supervised fine-tuned on large-scale Text-to-SQL datasets, we adopt it as the SFT model. We then further fine-tune it on our constructed …
+
+17. Reward Guided Direct Preference Optimization
+   https://www.sciencedirect.com/science/article/pii/S0957417425039107
+   (Z Ding, S Pan, Y Zhang, H Ji, C Ding - Expert Systems with Applications, 2025 - Elsevier | 2025 | cited by 2)
+   … with human preferences by improving the ranking of outputs. Direct Preference Optimization (DPO) is an effective method that enhances the model’s ability to align with preferences by …
+
+18. Length desensitization in direct preference optimization
+   https://arxiv.org/abs/2409.06411
+   (W Liu, Y Bai, C Han, R Weng, J Xu, X Cao… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 17)
+   [PDF] https://arxiv.org/pdf/2409.06411
+   … However, it has been demonstrated that DPO is susceptible to an over-optimization issue in … Enhancing chat language models by scaling high-quality instructional conversations. In The …
+
+19. Disentangling length from quality in direct preference optimization
+   https://aclanthology.org/2024.findings-acl.297/
+   (R Park, R Rafailov, S Ermon, C Finn - Findings of the Association …, 2024 - aclanthology.org | 2024 | cited by 282)
+   [PDF] https://aclanthology.org/2024.findings-acl.297.pdf
+   … means the problem of reward overoptimization is harder to define. To … in the Direct Preference Optimization (DPO) algorithm, … model size and two smaller-scale public datasets of human …
+
+20. Maximizing Scalable AI: Efficient Language Model Adaptation Using Fine-Tuning, Direct Preference Optimization, and Online Reinforcement
+   https://www.techrxiv.org/doi/full/10.36227/techrxiv.175427207.75884899
+   (C Scott-Emuakpor - Authorea Preprints, 2025 - techrxiv.org | 2025)
+   [PDF] https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.175427207.75884899
+   … Direct Preference Optimization (DPO) simplifies preference-based training by directly … While often derived from or related to LLM architectures, they are scaled down to serve specific …
+
+21. Eliminating biased length reliance of direct preference optimization via down-sampled kl divergence
+   https://aclanthology.org/2024.emnlp-main.60/
+   (J Lu, J Li, S An, M Zhao, Y He, D Yin… - Proceedings of the 2024 …, 2024 - aclanthology.org | 2024 | cited by 39)
+   [PDF] https://aclanthology.org/2024.emnlp-main.60.pdf
+   … Direct Preference Optimization (DPO) has emerged as a … ”, a common over-optimization phenomenon also observed in … , we scale the marginal reward with a dynamic scaling factor …
+
+22. Geometric-averaged preference optimization for soft preference labels
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/688c7a82e31653e7c256c6c29fd3b438-Abstract.html
+   (H Furuta, KH Lee, SS Gu, Y Matsuo… - Advances in …, 2024 - proceedings.neurips.cc | 2024 | cited by 23)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/688c7a82e31653e7c256c6c29fd3b438-Paper-Conference.pdf
+   … soft preference labels and improve Direct Preference … to any DPO-based methods and mitigate over-optimization and … we summarize the scaling factor of each method in Table 1. …
+
+23. Mitigating Reward Over-optimization in Direct Alignment Algorithms with Importance Sampling
+   https://arxiv.org/abs/2506.08681
+   (PM Nguyen, NH Nguyen, DHM Nguyen, A Liu… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2506.08681?
+   … by directly optimizing the policy 7B over the preference data, … algorithms, DPO is the most popular approach; DPO derives … Scaling laws for reward model overoptimization in direct …
+
+24. Alphadpo: Adaptive reward margin for direct preference optimization
+   https://arxiv.org/abs/2410.10148
+   (J Wu, X Wang, Z Yang, J Wu, J Gao, B Ding… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 35)
+   [PDF] https://arxiv.org/pdf/2410.10148?
+   … α-DPO, an adaptive preference optimization algorithm … This adjustment ensures that rewards are scaled appropriately with … method effectively mitigates the issue of over-optimization. …
+
+25. Mix-and MoE-DPO: A Variational Inference Approach to Direct Preference Optimization
+   https://arxiv.org/abs/2510.08256
+   (J Bohne, P Polak, D Rosenberg, B Bloniarz… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2510.08256
+   … DPO extension of χ2-based preference optimization has been proposed to mitigate over-optimization in [18… are compatible with large-scale minibatch training and can scale to billions of …
+
+26. Rethinking direct preference optimization in diffusion models
+   https://ojs.aaai.org/index.php/AAAI/article/view/37480
+   (J Kang, S Lim, K Baek, H Shim - … of the AAAI Conference on Artificial …, 2026 - ojs.aaai.org | 2026)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/view/37480/41442
+   … We evaluate our method against baseline preference optimization algorithms, Diffusion-DPO (… We also find that reward scale scheduling further enhances oversampling. Figure 5 …
+
+27. Filtered direct preference optimization
+   https://aclanthology.org/2024.emnlp-main.1266/
+   (T Morimura, M Sakamoto, Y Jinnai… - Proceedings of the …, 2024 - aclanthology.org | 2024 | cited by 44)
+   [PDF] https://aclanthology.org/2024.emnlp-main.1266.pdf
+   … models optimized with DPO more than those optimized with … of DPO, termed filtered direct preference optimization (fDPO). … 2023), we utilized a large-scale human preference model as …
+
+28. Direct Preference Optimization toward Mobile and Edge Acceleration: A Survey
+   https://ieeexplore.ieee.org/abstract/document/11441940/
+   (Y Wu, D Zeng - 2026 International Conference on Embedded …, 2026 - ieeexplore.ieee.org | 2026)
+   … , which interacts with the DPO contrast scale β. Two practical … via distributionally robust direct preference optimization,” … Doan, “Mitigating reward overoptimization in direct alignment …
+
+29. TUR-DPO: Topology-and Uncertainty-Aware Direct Preference Optimization
+   https://arxiv.org/abs/2605.00224
+   (AA Abdullah, F Daneshfar, S Mirjalili… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.00224
+   … preferences arising from fragile chains of thought. We propose TUR-DPO, a topology- and uncertainty-aware variant of DPO … We find temperature scaling sufficient for most tasks and …
+
+30. From RLHF to Direct Alignment: A Theoretical Unification of Preference Learning for Large Language Models
+   https://arxiv.org/abs/2601.06108
+   (T Raheja, N Pochhi - arXiv preprint arXiv:2601.06108, 2026 - arxiv.org | 2601 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2601.06108
+   … reward overoptimization, and conditions under which direct … wave of alternatives: Direct Preference Optimization (DPO) [6… making the reward scale-free; (2) preferences are transitive—…
+
+31. Gradient-Gated DPO: Stabilizing Preference Optimization in Language Models
+   https://arxiv.org/abs/2605.02626
+   (I Mouiche - arXiv preprint arXiv:2605.02626, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.02626
+   … Finally, we find that stability is not determined by scale alone… optimization pathologies in direct preference optimization and introduce Gradient-Gated Preference Optimization (Gate-DPO…
+
+32. Beyond one-preference-for-all: Multi-objective direct preference optimization
+   https://openreview.net/forum?id=2BfZMh9td4
+   (Z Zhou, J Liu, C Yang, J Shao, Y Liu, X Yue, W Ouyang… - 2023 - openreview.net | 2023 | cited by 72)
+   [PDF] https://openreview.net/pdf?id=2BfZMh9td4
+   … preference datasets to which DPO can directly apply, we design two additional multi-objective extensions of DPO: DPO … In this section, we aim to demonstrate the scalability of MODPO …
+
+33. Kl penalty control via perturbation for direct preference optimization
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/f5ab4de24e5f366dd0ea690bdc46ed2f-Abstract-Conference.html
+   (S Lee, J Han, H Song, SJ Choi… - Advances in Neural …, 2026 - proceedings.neurips.cc | 2026 | cited by 5)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/f5ab4de24e5f366dd0ea690bdc46ed2f-Paper-Conference.pdf
+   … ε-Direct Preference Optimization (ε-DPO), which allows adaptive control of the KL penalty strength β for each preference pair. … Scaling laws for reward model overoptimization in direct …
+
+34. The crucial role of samplers in online direct preference optimization
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/62133b95efaa6f10a5395eb10ca087cd-Abstract-Conference.html
+   (R Shi, R Zhou, S Du - International Conference on Learning …, 2025 - proceedings.iclr.cc | 2025 | cited by 28)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/62133b95efaa6f10a5395eb10ca087cd-Paper-Conference.pdf
+   … (2024c) investigate the overoptimization issue, and prove a … paper analyzes DPO from the perspective of optimization, … linear convergence rates to the noise scale. The basic idea is to …
+
+35. Safedpo: A simple approach to direct preference optimization with enhanced safety
+   https://arxiv.org/abs/2505.20065
+   (GH Kim, YJ Kim, B Kim, H Lee, K Bae, Y Jang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 42)
+   [PDF] https://arxiv.org/pdf/2505.20065
+   … into a DPO-style optimization problem, enabling direct and … To evaluate scalability, we tested SafeDPO across model … empirical evidence of evaluator-specific overoptimization. They …
+
+36. Self-improving robust preference optimization
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/0bc795afae289ed465a65a3b4b1f4eb7-Abstract-Conference.html
+   (E Choi, A Ahmadian, M Geist, O Pietquin… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 20)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/0bc795afae289ed465a65a3b4b1f4eb7-Paper-Conference.pdf
+   … at scale given an offline pairwise preference … on direct preference optimization in terms of their robustness to the behavior policy µ. In particular, we consider as a point of reference DPO (…
+
+37. Direct Preference Optimization with Rating Information: Practical Algorithms and Provable Gains
+   https://arxiv.org/abs/2602.00603
+   (L Viano, R Zhou, Y Sun, M Namazifar, V Cevher… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2602.00603
+   … The class of direct preference optimization (DPO) algorithms has … : Direct alignment without overoptimization via chisquared … solve the scalability issue. A more practical pessimistic …
+
+38. C2-DPO: Constrained Controlled Direct Preference Optimization
+   https://arxiv.org/abs/2502.17507
+   (K Asadi, J Han, I Pipano, X Xu… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025)
+   [PDF] https://arxiv.org/pdf/2502.17507
+   … We present the key ingredients of preference optimization on which we … improvement may scale to larger models. … Provably mitigating overoptimization in rlhf: Your sft loss is implicitly an …
+
+39. Adaptive-β Direct Preference Optimization for Stable Alignment of Large Language Models
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6111206
+   (A Ganjaee Sari - Available at SSRN 6111206, 2025 - papers.ssrn.com | 6111)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6111206
+   … derived from DPO may be misaligned with the base reward scale, potentially reducing … First, we analyze the training loss and its evolution over optimization steps. Second, reward-based …
+
+40. Dynamics-Aware Preference Optimization for Vision-Language Models
+   https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_Dynamics-Aware_Preference_Optimization_for_Vision-Language_Models_CVPR_2026_paper.html
+   (J Zhang, K Cai, J Yang, J Wang… - Proceedings of the …, 2026 - openaccess.thecvf.com | 2026)
+   [PDF] https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_Dynamics-Aware_Preference_Optimization_for_Vision-Language_Models_CVPR_2026_paper.pdf
+   … To address this, we propose CoolingWeighted Direct Preference Optimization (CW-DPO), a two-stage framework that smooths and then stabilizes the alignment process. Stage 1 …
+
+41. Robust preference optimization through reward model distillation
+   https://arxiv.org/abs/2405.19316
+   (A Fisch, J Eisenstein, V Zayats, A Agarwal… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 82)
+   [PDF] https://arxiv.org/pdf/2405.19316
+   … Direct Preference Optimization (DPO) is a popular offline … induced implicit reward, ie, the scaled log-likelihood ratio of the … many strategies for mitigating over-optimization that are simple …
+
+42. Pareto-Aware Dual-Preference Optimization for Task-Oriented Dialogue
+   https://www.mdpi.com/2073-8994/18/2/372
+   (S Bao, M Abisado - Symmetry, 2026 - mdpi.com | 2026)
+
+43. Correcting the mythos of kl-regularization: Direct alignment without overoptimization via chi-squared preference optimization
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/e785d64baa2cde06c69d9b7a14636ef2-Abstract-Conference.html
+   (A Huang, W Zhan, T Xie, J Lee, W Sun… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 94)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/e785d64baa2cde06c69d9b7a14636ef2-Paper-Conference.pdf
+   … Direct preference optimization (DPO). χPO is based on an alternative offline alignment approach, Direct Preference Optimization (DPO… ), and our guarantees scale polynomially in this …
+
+44. TPMM-DPO: Trajectory-aware Preference-guided Model Merging for Iterative Direct Preference Optimization
+   https://arxiv.org/abs/2605.23398
+   (L Fu, Y Xu - arXiv preprint arXiv:2605.23398, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.23398
+   … scale and the number of training iterations increase, iterative DPO can become unstable, especially when preference … -stage over-optimization in multi-round preference optimization un…
+
+45. Weights-Rotated Preference Optimization for Large Language Models
+   https://aclanthology.org/2025.emnlp-main.1329/
+   (C Yang, R Jia, M Zheng, N Gu, Z Lin… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 5)
+   [PDF] https://aclanthology.org/2025.emnlp-main.1329.pdf
+   … Direct Preference Optimization (DPO) standing out as a leading approach in this field. Unfortunately, there exists a significant drawback in DPO… the reward overoptimization of DPO from …
+
+46. Beyond one-preference-fits-all alignment: Multi-objective direct preference optimization
+   https://aclanthology.org/2024.findings-acl.630/
+   (Z Zhou, J Liu, J Shao, X Yue, C Yang… - Findings of the …, 2024 - aclanthology.org | 2024 | cited by 148)
+   [PDF] https://aclanthology.org/2024.findings-acl.630.pdf
+   … and avoiding reward over-optimization that degrades generation quality. RLHF and DPO are the two … We scale MODPO up to three objectives; further scaling is possible but would make …
+
+47. Beyond reverse kl: Generalizing direct preference optimization with diverse divergence constraints
+   https://proceedings.iclr.cc/paper_files/paper/2024/hash/2b1d1e5affe5fdb70372cd90dd8afd49-Abstract-Conference.html
+   (C Wang, Y Jiang, C Yang, H Liu… - … Conference on Learning …, 2024 - proceedings.iclr.cc | 2024 | cited by 192)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2024/file/2b1d1e5affe5fdb70372cd90dd8afd49-Paper-Conference.pdf
+   … Direct Preference Optimization (DPO) has been proposed as … This paper presents f-DPO, a generalized approach to DPO by … large language models across training and scaling, 2023. …
+
+48. Earlier tokens contribute more: Learning direct preference optimization from temporal decay perspective
+   https://arxiv.org/abs/2502.14340
+   (R Shao, B Li, G Liu, Y Chen, X Zhou, J Wang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2502.14340?
+   … In preference optimization methods, including DPO and its variants such as our method … a compelling solution for preference-based fine-tuning of large-scale models. Furthermore, we …
+
+49. Stable Preference Optimization: A Bilevel Approach to Catastrophic Preference Shift
+   https://arxiv.org/abs/2507.07723
+   (C Jian, K Yang, T Gao, W Ni, K Yang, B Xiao… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2507.07723
+   … Direct Preference Optimization (DPO) has emerged as a … aligning language models with human preferences. Despite its empirical … To further evaluate the generality and scalability of our …
+
+50. Triple Preference Optimization: Achieving Better Alignment using a Single Step Optimization
+   https://arxiv.org/abs/2405.16681
+   (A Saeidi, S Verma, A RRV, K Rasul, C Baral - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2405.16681?
+   … to the development of Direct Preference Optimization (DPO), an RL-… While studies have shown that DPO improves instruction-… , DPO is highly sensitive to judgment noise in preference …
+
+51. GroupDPO: Memory efficient Group-wise Direct Preference Optimization
+   https://arxiv.org/abs/2604.15602
+   (J Leng, S Si, HF Yu, V Raman, IS Dhillon - arXiv preprint arXiv:2604.15602, 2026 - arxiv.org | 2604)
+   [PDF] https://arxiv.org/pdf/2604.15602
+   … its empirical behavior and scalability remain underexplored due … degradation and overoptimization. For example, Regularized … Following DPO, we define the implicit preference score as …
+
+52. Understanding likelihood over-optimisation in direct alignment algorithms
+   https://arxiv.org/abs/2410.11677
+   (Z Shi, S Land, A Locatelli, M Geist, M Bartolo - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 6)
+   [PDF] https://arxiv.org/pdf/2410.11677
+   … to help avoid over-optimization while balancing diversity. … the primary objective of the DAA using a scaling coefficient λ. … As shown in Figure 4, we experiment with DPO using three …
+
+53. Dpo-shift: Shifting the distribution of direct preference optimization
+   https://arxiv.org/abs/2502.07599
+   (X Yang, F Jiang, Q Zhang, L Zhao, X Li - arXiv preprint arXiv:2502.07599, 2025 - arxiv.org | 2502 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2502.07599?
+   … For the Preference optimization stage, we aim to verify the robustness of DPO-Shift. To this end, we perform preference optimization on UltraFeedback dataset [11], Capybara-…
+
+54. Robust multi-objective preference alignment with online dpo
+   https://ojs.aaai.org/index.php/AAAI/article/view/34942
+   (R Gupta, R Sullivan, Y Li, S Phatale… - Proceedings of the AAAI …, 2025 - ojs.aaai.org | 2025 | cited by 19)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/download/34942/37097
+   … line preference optimization - we propose Multi-Objective Online Direct Preference Optimization or … Scaling laws for reward model overoptimization in direct alignment algorithms. arXiv …
+
+55. ViPO: Visual Preference Optimization at Scale
+   https://arxiv.org/abs/2604.24953
+   (M Li, J Wu, J Cui, X Li, R Wang, C Chen - arXiv preprint arXiv:2604.24953, 2026 - arxiv.org | 2604)
+   [PDF] https://arxiv.org/pdf/2604.24953
+   … preferences, fundamentally hindering effective scaling. To enhance the robustness of preference algorithms against noise, we propose Poly-DPO… to prevent reward over-optimization: …
+
+56. Simpo: Simple preference optimization with a reference-free reward
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/e099c1c9699814af0be873a175361713-Abstract-Conference.html
+   (Y Meng, M Xia, D Chen - Advances in Neural Information …, 2024 - proceedings.neurips.cc | 2024 | cited by 1153)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/e099c1c9699814af0be873a175361713-Paper-Conference.pdf
+   … Direct Preference Optimization (DPO) DPO [61] is one of the most popular preference optimization … consider a more comprehensive study utilizing larger-scale preference datasets [39…
+
+57. Provably mitigating overoptimization in rlhf: Your sft loss is implicitly an adversarial regularizer
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/fa69e968b7319fd42524febd41475fb3-Abstract-Conference.html
+   (Z Liu, M Lu, S Zhang, B Liu, H Guo… - Advances in …, 2024 - proceedings.neurips.cc | 2024 | cited by 136)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/fa69e968b7319fd42524febd41475fb3-Paper-Conference.pdf
+   … direct preference optimization (DPO) loss with the supervised fine-tuning (SFT) loss to help mitigate the overoptimization … weight of the DPO objective could only control the scale of the …
+
+58. Mitigating mismatch within reference-based preference optimization
+   https://arxiv.org/abs/2602.11902
+   (S Yuan, X Yu, J Zheng, L Feng, D Wang… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2602.11902
+   … Direct Preference Optimization (DPO) has become the de facto standard for offline preference … Scaling laws for reward model overoptimization in direct alignment algorithms. Advances …
+
+59. Simultaneous reward distillation and preference learning: Get you a language model who can do both
+   https://arxiv.org/abs/2410.08458
+   (A Nath, C Jung, E Seefried… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2410.08458?
+   … Direct Reward Distillation and policy-Optimization (DRDO), a novel efficient, non-ensemble, reference-free method for preference optimization … acts like DPO’s gradient scaling term, in …
+
+60. Preference Optimization by Estimating the Ratio of the Data Distribution
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/559726fdfb19005e368be4ce3d40e3e5-Abstract-Conference.html
+   (Y Kim, HS Bae, B Na, IC Moon - Advances in Neural …, 2026 - proceedings.neurips.cc | 2026)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/559726fdfb19005e368be4ce3d40e3e5-Paper-Conference.pdf
+   … Direct preference optimization (DPO) is widely used as a … ) with human preferences. This paper investigates a generalized … a simple scaled version of BA to match DPO’s gradient scale. …
+
+61. STABLE PREFERENCE OPTIMIZATION: LEARNING
+   https://openreview.net/forum?id=1NIyjrtxJU
+   (PISMIT IMITATION - openreview.net)
+   [PDF] https://openreview.net/pdf?id=1NIyjrtxJU
+   … In such cases, reward overoptimization arises when the LLM is … However, as we critically analyze in this paper, DPO’s … Let z = c · logits, where c is a scaling constant. We want the …
+
+62. Understanding the performance gap in preference learning: A dichotomy of rlhf and dpo
+   https://arxiv.org/abs/2505.19770
+   (R Shi, M Song, R Zhou, Z Zhang, M Fazel… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 9)
+   [PDF] https://arxiv.org/pdf/2505.19770
+   … (RLHF) and direct preference optimization (DPO) under a … RLHF and DPO in the idealized setting of exact optimization, … the reward function has a large scale or the ground-truth …
+
+63. Mitigating Reward Over-optimization in Direct Alignment Algorithms with Adaptive Importance Sampling
+   https://openreview.net/forum?id=H9dNX6TaRE
+   (NM Phuc, NH Nguyen, BT Nguyen, KD Doan - openreview.net)
+   [PDF] https://openreview.net/pdf?id=H9dNX6TaRE
+   … Preference Optimization (DPO) have emerged as alternatives … Amongst these algorithms, Direct Preference Optimization is … Scaling laws for reward model overoptimization in direct align…
+
+64. Direct nash optimization: Teaching language models to self-improve with general preferences
+   https://arxiv.org/abs/2404.03715
+   (C Rosset, CA Cheng, A Mitra, M Santacroce… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 210)
+   [PDF] https://arxiv.org/pdf/2404.03715?
+   … How to scale these algorithms up faithfully is still under-investigated. … to scale up optimizing with respect to general preferences. Recent advances in reward-based optimization eg, DPO…
+
+65. Understanding the Impact of Sampling Quality in Direct Preference Optimization
+   https://arxiv.org/abs/2506.04272
+   (KR Kim, Y Bai, C Wang, G Chen - arXiv preprint arXiv:2506.04272, 2025 - arxiv.org | 2506 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2506.04272
+   … in Direct Preference Optimization (DPO) and aim to understand its impact on DPO’s training … When scaling to datasets with cumulative preference tuples, we observe that gradients from …
+
+66. Causal Direct Preference Optimization for Language Model Alignment
+   https://aclanthology.org/2026.findings-eacl.58/
+   (U Le, T Nguyen, T Nguyen, T Doan… - Findings of the …, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.findings-eacl.58.pdf
+   … We show that DPO inherits bias from confounders (eg, topic, … recovery of true human preferences. We address this from a … ) dataset offers largescale human preference annotations for …
+
+67. Unpacking dpo and ppo: Disentangling best practices for learning from preference feedback
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/404df2480b6eef0486a1679e371894b0-Abstract-Conference.html
+   (H Ivison, Y Wang, J Liu, Z Wu… - Advances in neural …, 2024 - proceedings.neurips.cc | 2024 | cited by 148)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/404df2480b6eef0486a1679e371894b0-Paper-Conference.pdf?utm_source=chatgpt.com
+   … % in mathematical evaluation when scaling up reward models, … tends to examine either direct reward model performance [26, … training and potentially overoptimizing against the reward …
+
+68. On the limited generalization capability of the implicit reward model induced by direct preference optimization
+   https://aclanthology.org/2024.findings-emnlp.940/
+   (Y Lin, S Seto, M Ter Hoeve, K Metcalf… - Findings of the …, 2024 - aclanthology.org | 2024 | cited by 42)
+   [PDF] https://aclanthology.org/2024.findings-emnlp.940.pdf
+   … Direct Preference Optimization (DPO), and show that any reward model can be implicitly represented by the optimal policy learned by DPO … in improper rewards and over optimization (…
+
+69. Finding the sweet spot: Preference data construction for scaling preference optimization
+   https://aclanthology.org/2025.acl-long.615/
+   (Y Xiao, H Ye, L Chen, HT Ng, L Bing… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 11)
+   [PDF] https://aclanthology.org/2025.acl-long.615.pdf
+   … (2023) introduced Direct Preference Optimization (DPO), which bypasses the need for reward models. Sub… We mainly focus on DPO in this paper and will explore other preference …
+
+70. Value-incentivized preference optimization: A unified approach to online and offline rlhf
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/b2d80dc5b407e16b258abe3056402372-Abstract-Conference.html
+   (S Cen, J Mei, K Goshvadi, H Dai, T Yang… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 96)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/b2d80dc5b407e16b258abe3056402372-Paper-Conference.pdf
+   … when parameterizing policies with large-scale neural networks … to directly optimize the LLM policy, in a flavor similar to DPO, … mances, avoiding the over-optimization issue and justifying …
+
+71. Optune: Efficient online preference tuning
+   https://arxiv.org/abs/2406.07657
+   (L Chen, J Chen, C Liu, J Kirchenbauer… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 12)
+   [PDF] https://arxiv.org/pdf/2406.07657
+   … preference. Compared to the widely studied offline version of RLHF, eg direct preference optimization (DPO)… reducing the need for full-scale data regeneration and achieving up to 2x in …
+
+72. Preference learning algorithms do not learn preference rankings
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/b8ce770a6b25e603fbff4a37f9e31edc-Abstract-Conference.html
+   (A Chen, S Malladi, LH Zhang, X Chen… - Advances in …, 2024 - proceedings.neurips.cc | 2024 | cited by 66)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/b8ce770a6b25e603fbff4a37f9e31edc-Paper-Conference.pdf
+   … a preference-tuned LLM would achieve if it optimized the DPO or … (b) Ranking accuracy and win rate of various γscaled models … reward margin to prevent over-optimization. Additionally, …
+
+73. In-context ranking preference optimization
+   https://arxiv.org/abs/2504.15477
+   (J Wu, R Surana, Z Xie, Y Shen, Y Xia, T Yu… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 10)
+   [PDF] https://arxiv.org/pdf/2504.15477
+   … sorting (eg, NeuralSort with Sinkhorn scaling) to align gains with … To capture listwise preferences within the DPO framework, … explicitly extending direct preference optimization (DPO) …
+
+74. Wpo: Enhancing rlhf with weighted preference optimization
+   https://aclanthology.org/2024.emnlp-main.475/
+   (W Zhou, R Agrawal, S Zhang, SR Indurthi… - Proceedings of the …, 2024 - aclanthology.org | 2024 | cited by 68)
+   [PDF] https://aclanthology.org/2024.emnlp-main.475.pdf
+   … due to its cost efficiency and scalability. However, off-policy … Generally, we find that preference optimization with DPO or WPO … overoptimization and increase the stability of preference …
+
+75. Towards improved preference optimization pipeline: from data generation to budget-controlled regularization
+   https://arxiv.org/abs/2411.05875
+   (Z Chen, F Liu, J Zhu, W Du, Y Qi - arXiv preprint arXiv:2411.05875, 2024 - arxiv.org | 2411 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2411.05875
+   … Direct Preference Optimization (DPO) and its variants have become the de facto standards for aligning large language models (LLMs) with human preferences … models scaled by a hyper…
+
+76. Adaptive Batch-Wise sample scheduling for direct preference optimization
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/36ecc1d1b883afc0e882876cbdd123ab-Abstract-Conference.html
+   (Z Huang, Y Ban, L Fu, X Li, Z Dai… - Advances in Neural …, 2026 - proceedings.neurips.cc | 2026 | cited by 4)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/36ecc1d1b883afc0e882876cbdd123ab-Paper-Conference.pdf
+   … Direct Preference Optimization (DPO) has emerged as an effective … human preferences. However, its performance is highly dependent on the quality of the underlying human preference …
+
+77. DA-DPO: Cost-efficient Difficulty-aware Preference Optimization for Reducing MLLM Hallucinations
+   https://arxiv.org/abs/2601.00623
+   (L Qiu, S Ning, C Zhang, J Sun, X He - arXiv preprint arXiv:2601.00623, 2026 - arxiv.org | 2601 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2601.00623
+   … Difficulty-Aware Direct Preference Optimization (DA-DPO), a … By doing so, DA-DPO effectively reduces over-optimization on … However, our method affects the scale of the β in the DPO …
+
+78. Adaptive Margin RLHF via Preference over Preferences
+   https://arxiv.org/abs/2509.22851
+   (Y Chittepu, P Singhal, G Durrett, S Niekum - arXiv preprint arXiv …, 2025 - arxiv.org | 2025)
+   [PDF] https://arxiv.org/pdf/2509.22851
+   … to Direct Preference Optimization (DPO), DPOPoP, that incorporates adaptive margins from preference-over-preference … of the loss employed in DPO-margin-gt-scaled, along with a …
+
+79. Group robust preference optimization in reward-free rlhf
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/4147dfaa46cd7e20a2aecb91097ae8cc-Abstract-Conference.html
+   (SS Ramesh, Y Hu, I Chaimalas… - Advances in …, 2024 - proceedings.neurips.cc | 2024 | cited by 124)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/4147dfaa46cd7e20a2aecb91097ae8cc-Paper-Conference.pdf
+   … supervised objective over internet-scale text. This vast internet-scale content, however, carries … GRPO, the group robust formulation of Direct Preference Optimization (DPO) [37], wherein …
+
+80. Token-weighted Direct Preference Optimization with Attention
+   https://arxiv.org/abs/2605.21883
+   (C Huang, Z Li, SY Chou, C Cardie - arXiv preprint arXiv:2605.21883, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.21883
+   … scale the KL term by the sequence length |y| so that the total weight of the logprob ratio terms |y|∑ |y| t=1 at equals |y|, which is consistent with the DPO … hacking and over-optimization. …
+
+81. Vpo: Leveraging the number of votes in preference optimization
+   https://direct.mit.edu/coli/article/doi/10.1162/COLI.a.579/133943
+   (JH Cho, M Park, BJ Lee - Computational Linguistics, 2026 - direct.mit.edu | 2026 | cited by 5)
+   [PDF] https://direct.mit.edu/coli/article-pdf/doi/10.1162/COLI.a.579/2564006/coli.a.579.pdf
+   … , such as DPO and Identity Preference Optimization (IPO), … leading to the problem of reward overoptimization. In contrast, our … To account for the distinct scaling of these scores compared …
+
+82. Linear-DPO: Linear Direct Preference Optimization for Diffusion and Flow-Matching Generative Models
+   https://arxiv.org/abs/2605.21123
+   (K Li, Y Xu, K Tseng, W Lu, K Liu, T Lan - arXiv preprint arXiv:2605.21123, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.21123
+   … • We analyze DPO via a gradient lens and propose LinearDPO, a novel approach better suited for T2I generation. • We demonstrate the effectiveness and scalability of LinearDPO …
+
+83. Scalable ranked preference optimization for text-to-image generation
+   https://openaccess.thecvf.com/content/ICCV2025/html/Karthik_Scalable_Ranked_Preference_Optimization_for_Text-to-Image_Generation_ICCV_2025_paper.html
+   (S Karthik, H Coskun, Z Akata… - Proceedings of the …, 2025 - openaccess.thecvf.com | 2025 | cited by 31)
+   [PDF] https://openaccess.thecvf.com/content/ICCV2025/papers/Karthik_Scalable_Ranked_Preference_Optimization_for_Text-to-Image_Generation_ICCV_2025_paper.pdf
+   … collecting large-scale and fully synthetic datasets for DPO training. … reward models, we mitigate reward over-optimization [20, 26]. … generation and direct preference optimization for these …
+
+84. Dpo meets ppo: Reinforced token optimization for rlhf
+   https://arxiv.org/abs/2404.18922
+   (H Zhong, Z Shan, G Feng, W Xiong, X Cheng… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 148)
+   [PDF] https://arxiv.org/pdf/2404.18922
+   … Additionally, RTO exhibits strong data scaling properties … preference data using DPO, and subsequently performs PPO training to … Among them, the direct preference optimization (DPO) …
+
+85. Diffusion model alignment using direct preference optimization
+   http://openaccess.thecvf.com/content/CVPR2024/html/Wallace_Diffusion_Model_Alignment_Using_Direct_Preference_Optimization_CVPR_2024_paper.html
+   (B Wallace, M Dang, R Rafailov… - Proceedings of the …, 2024 - openaccess.thecvf.com | 2024 | cited by 899)
+   [PDF] http://openaccess.thecvf.com/content/CVPR2024/papers/Wallace_Diffusion_Model_Alignment_Using_Direct_Preference_Optimization_CVPR_2024_paper.pdf
+   … preferences, opening the door for scaling of diffusion model alignment methods. … of Direct Preference Optimization (DPO) [36], an effective approach for learning from human preference …
+
+86. Rethinking dpo: The role of rejected responses in preference misalignment
+   https://aclanthology.org/anthology-files/pdf/findings/2025.findings-emnlp.433.pdf
+   (JH Cho, JH Oh, M Kim, BJ Lee - arXiv preprint arXiv:2506.12725, 2025 - aclanthology.org | 2506 | cited by 11)
+   [PDF] https://aclanthology.org/anthology-files/pdf/findings/2025.findings-emnlp.433.pdf
+   … Direct Preference Optimization (DPO) is a simple and … model and mitigates over-optimization on uncertain rewards. … To assess scalability, we also evaluate the major algorithms using …
+
+87. Direct Preference Density Alignment for Conversational Audio Equalization
+   https://openreview.net/forum?id=QyA8ouHqJD
+   (I Stylianou, SE Shepstone, J Francombe… - 2026 - openreview.net | 2026)
+   [PDF] https://openreview.net/pdf?id=QyA8ouHqJD
+   … Direct Preference Optimization (DPO), in contrast to online Group Relative Policy Optimization (… By scaling h, we trade asymptotic density accuracy for topological fidelity, ensuring that …
+
+88. Policy optimization in rlhf: The impact of out-of-preference data
+   https://arxiv.org/abs/2312.10584
+   (Z Li, T Xu, Y Yu - arXiv preprint arXiv:2312.10584, 2023 - arxiv.org | 2312 | cited by 42)
+   [PDF] https://arxiv.org/pdf/2312.10584
+   … algorithm is named Direct Preference Optimization (DPO). Since … , we observe that DPO aligns well with the optimal policy in … over RMB-PO, and further scaling does not help too much. …
+
+89. Linear Preference Optimization: Decoupled Gradient Control via Absolute Regularization
+   https://arxiv.org/abs/2508.14947
+   (R Wang, Q Sun, C Song, J Wu, T Chen, Z Zeng… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2508.14947
+   … DPO (Direct Preference Optimization) has become a widely used offline preference optimization algorithm … limitations of DPO, we propose Linear Preference Optimization (LPO), a novel …
+
+90. Exploratory preference optimization: Harnessing implicit q*-approximation for sample-efficient rlhf
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/6c71ddecdefd911d2f993461972d8b39-Abstract-Conference.html
+   (T Xie, D Foster, A Krishnamurthy… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 142)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/6c71ddecdefd911d2f993461972d8b39-Paper-Conference.pdf
+   … (2024), we observe that DPO can be viewed as implicitly … Direct preference optimization (DPO). Initial approaches to … in practice; our guarantees scale polynomially with this parameter. …
+
+91. IRPO: Implicit Policy Regularized Preference Optimization
+   https://aclanthology.org/2026.findings-eacl.281/
+   (Y Jang, YJ Kim, GH Kim, H Lee… - Findings of the …, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.findings-eacl.281.pdf
+   … While Direct Preference Optimization (DPO) offers learning stability through … the scaling of the reward difference, and γ is an additional hyperparameter for the target reward margin. …
+
+92. Towards Robust Alignment of Language Models with Human Preferences
+   
+   (C Wang - 2025 - University of Chicago | 2025)
+
+93. Direct Preference Optimization of Qwen 2.5 for Complex Reasoning and Debugging
+   https://ieeexplore.ieee.org/abstract/document/11448703/
+   (VSCV Sirivuri, GVSR Maddala… - 2025 2nd International …, 2025 - ieeexplore.ieee.org | 2025)
+   … Previous research typically relies on massive-scale … task-specific accuracy due to over-optimization of fluency, safety, or … potential of Direct Preference Optimization (DPO) in addressing …
+
+94. Reward model learning vs. direct policy optimization: A comparative analysis of learning from human preferences
+   https://arxiv.org/abs/2403.01857
+   (A Nika, D Mandal, P Kamalaruban, G Tzannetos… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 30)
+   [PDF] https://arxiv.org/pdf/2403.01857
+   … proposed paradigm of direct preference optimization (DPO). … and DPO, assuming access to an oracle that exactly solves the … Next, a systematic large-scale empirical investigation that …
+
+95. Principled Foundations for Preference Optimization
+   https://arxiv.org/abs/2507.07855
+   (W Zhou, S Zhang, B Magdalou, J Lambert… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025)
+   [PDF] https://arxiv.org/pdf/2507.07855
+   … , we show that direct preference optimization (DPO) is a very … We show that DPO is a very particular case of intertwining … from preferences. The former is Savage’s properness (Savage…
+
+96. AIPO: Agreement-Aware Iterative Preference Optimization for Length Exploitation Mitigation
+   https://openreview.net/forum?id=ixdAVqjShn
+   (Y Shen, X Wang, Y Niu, Y Zhou, L Tang, L Zhang… - openreview.net)
+   [PDF] https://openreview.net/pdf?id=ixdAVqjShn
+   … DPO becomes more pronounced during iterative preference … Recently, Direct Preference Optimization (DPO) has gained … in preference optimization, further demonstrating the scalability …
+
+97. Multiplayer Nash Preference Optimization
+   https://arxiv.org/abs/2509.23102
+   (F Wu, X Huang, W Xuan, Z Zhang, Y Xiao… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2509.23102?
+   … to πref to prevent overoptimization and maintain behavioral … reward differences and the scaled reference reward differences. The … Using the same derivation technique as DPO, we can …
+
+98. Is dpo superior to ppo for llm alignment? a comprehensive study
+   https://arxiv.org/abs/2404.10719
+   (S Xu, W Fu, J Gao, W Ye, W Liu, Z Mei, G Wang… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 319)
+   [PDF] https://arxiv.org/pdf/2404.10719
+   … -free methods, such as Direct Preference Optimization (DPO). Is DPO truly superior to PPO? … in a 33.7% performance level on the introductory scale. We remark that our findings are …
+
+99. Human alignment of large language models through online preference optimisation
+   https://arxiv.org/abs/2403.08635
+   (D Calandriello, D Guo, R Munos, M Rowland… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 73)
+   [PDF] https://arxiv.org/pdf/2403.08635
+   … existing losses on preference data such as DPO and SLiC on … approaches to preference optimisation at scale as they are the … scaling the performance of such direct policy optimisation (…
+
+100. Reward-augmented data enhances direct preference alignment of llms
+   https://arxiv.org/abs/2410.08067
+   (S Zhang, Z Liu, B Liu, Y Zhang, Y Yang, Y Liu… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 11)
+   [PDF] https://arxiv.org/pdf/2410.08067
+   … they are scaled within the same 1 to 10 range. For hyperparameters, we utilize a KL regularization coefficient of β = 0.01 in DPO, and we adopt the AdamW optimizer (Loshchilov…
+
+===== Query 5/5: reward overoptimization mitigation uncertainty penalty 2024 2025 =====
+
+1. Mitigating reward over-optimization in direct alignment algorithms with importance sampling
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/8f6c674a7edf57912f1a5830f4a66e3f-Abstract-Conference.html
+   (N Phuc, NH Nguyen, D MH Nguyen… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 2)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/8f6c674a7edf57912f1a5830f4a66e3f-Paper-Conference.pdf
+   … AlpacaEval 2.0 [Dubois et al., 2025] and MT-Bench [Zheng et … In ICML 2024 Workshop on Models of Human Feedback for … more formally, possibly through uncertainty-aware confidence …
+
+2. Reward Bias Substitution: Single-Axis Mitigations Shift Optimization Pressure
+   https://openreview.net/forum?id=9I5MzEE6Kq
+   (M Lamparth, D Fein, A Haupt, M Hussing… - RLEval: Methods and …, 2026 - openreview.net | 2026)
+   [PDF] https://openreview.net/pdf?id=9I5MzEE6Kq
+   … RLHF, where a length penalty during GRPO training compresses … that almost all existing reward bias mitigation papers cannot … 2024. Catastrophic Goodhart: regularizing RLHF with KL …
+
+3. Mitigating reward over-optimization in RLHF via behavior-supported regularization
+   https://arxiv.org/abs/2503.18130
+   (J Dai, T Chen, Y Yang, Q Zheng, G Pan - arXiv preprint arXiv:2503.18130, 2025 - arxiv.org | 2503 | cited by 14)
+   [PDF] https://arxiv.org/pdf/2503.18130
+   … ours includes a series of reward regularization methods, such as adding a KL penalty to the … -weighted optimization method that quantifies uncertainties of rewards by utilizing only … 2024…
+
+4. Reward Bias Substitution: Single-Axis Bias Mitigations Redirect Optimization Pressure
+   https://arxiv.org/abs/2605.27996
+   (M Lamparth, D Fein, A Haupt, M Hussing… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.27996
+   … call reward bias substitution, in which a single-axis mitigation … methods under noise-floor uncertainty. The regimes classify … 2025, pages 3091–3098, Albuquerque, New Mexico, April …
+
+5. The Age of Optimization: Innovation, Automation, and the Final Frontier of Efficiency
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5733462
+   (H Hughes - … and the Final Frontier of Efficiency (November 10, 2025 …, 2025 - papers.ssrn.com | 2025 | cited by 1)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5733462
+   … highlight the risks of over-optimization – including systemic … huge gains in throughput and cost reduction were achieved. … In machine learning, if the reward function does not perfectly …
+
+6. Reward hacking in the era of large models: Mechanisms, emergent misalignment, challenges
+   https://arxiv.org/abs/2604.13602
+   (X Wang, M Tian, Y Zeng, Z Huang, J Yuan… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 12)
+   [PDF] https://arxiv.org/pdf/2604.13602
+   … We further organize detection and mitigation strategies … Reward overoptimization happens when optimization pressure … reward-model ensembles or robust objectives over uncertain …
+
+7. Uncertainty-Aware Reward Modeling for Stable RLHF
+   https://arxiv.org/abs/2606.19818
+   (L Pan, H Yang, H Li, Y Sun, Y Lu, S Wang… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.19818
+   … 2025). As policies evolve during training, they inevitably … , we model the reward through uncertainty quantification: the RM directly … Inform: Mitigating reward hacking in rlhf via information-…
+
+8. The Lesser Gamble: A Doctrine for Navigating a Future Foreclosed by Myopic Optimization
+   https://books.google.com/books?hl=en&lr=&id=TWB-EQAAQBAJ&oi=fnd&pg=PP1&dq=reward+overoptimization+mitigation+uncertainty+penalty+2024+2025&ots=33RXP_eq00&sig=E2COEzAPNwWeJoJc1ulOcbi1_bE
+   (I Ivliev - 2025 - books.google.com | 2025)
+   … who must act under conditions of extreme uncertainty. … To mitigate these risks and provide a clear map of the journey, … which our institutions prioritize immediate rewards over long-term …
+
+9. Mitigating preference hacking in policy optimization with pessimism
+   https://arxiv.org/abs/2503.06810
+   (D Gupta, A Fisch, C Dann, A Agarwal - arXiv preprint arXiv:2503.06810, 2025 - arxiv.org | 2503 | cited by 7)
+   [PDF] https://arxiv.org/pdf/2503.06810
+   … provably robust to overoptimization through the use of pessimism in the face of uncertainty, and design … This typically leads to either overoptimization or overly limiting reward/preference …
+
+10. Reward Model Overoptimisation in Iterated RLHF
+   https://arxiv.org/abs/2505.18126
+   (L Wolf, R Kirk, M Musolesi - arXiv preprint arXiv:2505.18126, 2025 - arxiv.org | 2505 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2505.18126
+   … A common mitigation is iterated RLHF, in which reward models … for initialising the policy at the start of each fine-tuning cycle). … et al., 2024), which can be tackled by disentangling reward …
+
+11. RewardUQ: A Unified Framework for Uncertainty-Aware Reward Models
+   https://arxiv.org/abs/2602.24040
+   (D Yang, S Stante, F Redhardt, L Libon… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2602.24040
+   … via uncertainty-guided active learning and mitigate reward … 2025). As the Hessian is often intractable over all model … to reward overoptimization by encouraging the LLM to avoid …
+
+12. Probabilistic uncertain reward model
+   https://arxiv.org/abs/2503.22480
+   (W Sun, X Cheng, X Yu, H Xu, Z Yang, S He… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 11)
+   [PDF] https://arxiv.org/pdf/2503.22480
+   … To mitigate the reward hacking with uncertainty, we propose to … uncertainty penalty weight λ in utilizing PURM. We have chosen and trained the PURM with different uncertainty penalty …
+
+13. Robust optimization for mitigating reward hacking with correlated proxies
+   https://arxiv.org/abs/2604.12086
+   (Z Liu, X Sun, Z Zheng - arXiv preprint arXiv:2604.12086, 2026 - arxiv.org | 2604 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2604.12086
+   … becomes maximizing the proxy reward, regularized by a penalty that depends on the … gap by parameterizing reward uncertainty directly in the space of reward weights, enabling …
+
+14. REWARD HACKING IN AI ALIGNMENT: A COMPARATIVE REVIEW
+   https://thesesjournal.com.medicalsciencereview.com/index.php/1/article/view/3338
+   (M Amir, A Hussain… - Spectrum of …, 2026 - … .com.medicalsciencereview.com | 2026)
+   [PDF] https://thesesjournal.com.medicalsciencereview.com/index.php/1/article/download/3338/2510
+   … some mitigation, they do not completely eradicate reward … as "reward hacking", "reward gaming", or "over-optimization" in … and many reward models tend to underestimate uncertainty, as …
+
+15. Scaling drl for decision making: A survey on data, network, and training budget strategies
+   https://arxiv.org/abs/2508.03194
+   (Y Ma, H Tang, C Xiao, Y Yang, W Wei, J Hao… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2508.03194?
+   … high-reward transitions, mitigating exploration bottlenecks in … critic regularization to mitigate uncertainty between dual critics… while mitigating overoptimization through techniques like KL-…
+
+16. Alignment and safety of diffusion models via reinforcement learning and reward modeling: A survey
+   https://arxiv.org/abs/2505.17352
+   (P Lamba, K Ravish, A Kushwaha, P Kumar - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2505.17352?
+   … This phenomenon, also called reward overoptimization, is … Some approaches mitigate this by iteratively collecting … uncertainty over preference; we might use the reward model’…
+
+17. Pessimistic Reward Modeling in RLHF against Reward Hacking
+   https://openreview.net/forum?id=mKPpS6n3cZ
+   (Y Xu, H Kang, Y Wan, T Suresh, G Singh - openreview.net)
+   [PDF] https://openreview.net/pdf?id=mKPpS6n3cZ
+   … phenomenon in reward modeling is significantly mitigated by … degree of uncertainty in evaluating the policy. A policy with higher … Scaling laws for reward model overoptimization in direct …
+
+18. PPO-based Reinforcement Learning with Human Feedback with Hybrid Oversight and Predictive Reward Evaluation for AGI
+   https://faith.futuretechsci.org/index.php/FAITH/article/view/276
+   (A Sharma - Journal of Future Artificial Intelligence and …, 2025 - faith.futuretechsci.org | 2025 | cited by 2)
+   [PDF] https://faith.futuretechsci.org/index.php/FAITH/article/download/276/67
+   … To prevent over-optimization, a KL-divergence penalty is … prioritizing uncertain or high-impact examples. Second, robust … can effectively mitigate reward hacking and over-optimization. …
+
+19. A Unifying Lens on Reward Uncertainty in RLHF
+   https://arxiv.org/abs/2606.09073
+   (E Hahami, Y Zimmermann, R Zhou… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.09073
+   … 2024). Because the RM is an imperfect proxy for human preferences, policy optimization can overoptimize into out-of-… To mitigate reward hacking we instead want a worst-case effective …
+
+20. Learning a pessimistic reward model in rlhf
+   https://arxiv.org/abs/2505.20556
+   (Y Xu, H Kang, T Suresh, Y Wan, G Singh - arXiv preprint arXiv:2505.20556, 2025 - arxiv.org | 2505 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2505.20556
+   … a pivotal role in mitigating reward hacking when optimizing a … degree of uncertainty in evaluating the policy. A policy with higher … Scaling laws for reward model overoptimization in direct …
+
+21. When Rewards Collide: Structural Interference and Phase Transitions in Multi-Objective GRPO
+   https://www.researchgate.net/profile/Mian-Zhang-19/publication/404022707_When_Rewards_Collide_Structural_Interference_and_Phase_Transitions_in_Multi-Objective_GRPO/links/69e6f525ceb1c90114ebb08e/When-Rewards-Collide-Structural-Interference-and-Phase-Transitions-in-Multi-Objective-GRPO.pdf
+   (M Zhang - 2026 - researchgate.net | 2026 | cited by 2)
+   [PDF] https://www.researchgate.net/profile/Mian-Zhang-19/publication/404022707_When_Rewards_Collide_Structural_Interference_and_Phase_Transitions_in_Multi-Objective_GRPO/links/69e6f525ceb1c90114ebb08e/When-Rewards-Collide-Structural-Interference-and-Phase-Transitions-in-Multi-Objective-GRPO.pdf
+   … ; it requires architectural mitigation. We present a systematic study of multi-reward GRPO across 14 … The overlong_v1 failure led to smooth penalty curves. The confidence_score failure …
+
+22. Mona: Myopic optimization with non-myopic approval can mitigate multi-step reward hacking
+   https://arxiv.org/abs/2501.13011
+   (S Farquhar, V Varma, D Lindner, D Elson… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 17)
+   [PDF] https://arxiv.org/pdf/2501.13011
+   … 2024), reward hacking will likely become more sophisticated. … Other work has sought to avoid overoptimization of rewards … short step size may be a strong constraint with uncertain size. …
+
+23. Provably avoiding over-optimization in Direct Preference Optimization without knowing the data distribution
+   https://arxiv.org/abs/2602.06239
+   (A Barla, E Nevali, L Viano, V Cevher - arXiv preprint arXiv:2602.06239, 2026 - arxiv.org | 2602)
+   [PDF] https://arxiv.org/pdf/2602.06239
+   … algorithm to mitigate the well-known over-optimization issue in … πdata or learning an explicit reward model. PEPO achieves … is first to learn a reward function and its uncertainty from the …
+
+24. From Curiosity to Caution: Mitigating Reward Hacking for Best-of-N with Pessimism
+   https://arxiv.org/abs/2604.04648
+   (Z Yu, ZS Wu, A Block - arXiv preprint arXiv:2604.04648, 2026 - arxiv.org | 2604 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2604.04648
+   … fail to fully address over-optimization or are too conservative to … 2025), making it a strong baseline for demonstrating reward … the mixing weights between the uncertainty score and that of …
+
+25. Alignment and safety in large language models: Safety mechanisms, training paradigms, and emerging challenges
+   https://arxiv.org/abs/2507.19672
+   (H Lu, L Fang, R Zhang, X Li, J Cai, H Cheng… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 26)
+   [PDF] https://arxiv.org/pdf/2507.19672
+   … Section 10 addresses the critical challenge of uncertainty … Several strategies have been employed to mitigate harmful … to a failure mode known as reward hacking (or overoptimization). …
+
+26. Uncertainty and influence aware reward model refinement for reinforcement learning from human feedback
+   https://openreview.net/forum?id=iamWnRpMuQ
+   (Z Sun, Y Guo, Y Lin, X Chen, Q Qi, X Tang… - The Thirteenth …, 2025 - openreview.net | 2025 | cited by 9)
+   [PDF] https://openreview.net/pdf?id=iamWnRpMuQ
+   … the reward model, which can mitigate the issue of reward … the refined reward LoRA ensembles, we can further fine-tune the … For GPT-based evaluation, we employ GPT-4-turbo-2024-04-…
+
+27. Inhuman Optimization: Exploring the Limits of Reward Modeling in Aligning Large Language Models
+   https://curate.nd.edu/articles/thesis/Inhuman_Optimization_Exploring_the_Limits_of_Reward_Modeling_in_Aligning_Large_Language_Models/32056692
+   (F Dougherty - 2026 - curate.nd.edu | 2026)
+   [PDF] https://curate.nd.edu/articles/thesis/Inhuman_Optimization_Exploring_the_Limits_of_Reward_Modeling_in_Aligning_Large_Language_Models/32056692/1/files/63881691.pdf
+   … The so-called “magic” occurs in step three, where, by using the reward model, we can fine-… Our judgement can be uncertain, biased, context-dependent, and not always reflective of our …
+
+28. On the current landscape of language model reward modeling for alignment
+   https://search.proquest.com/openview/40f91a9c7f291afdd4014642a4194179/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (R Koo - 2025 - search.proquest.com | 2025)
+   [PDF] https://conservancy.umn.edu/bitstreams/ee290b57-e694-449c-b337-c12bee5f635a/download
+   … formulation for reward shaping to harness more fine-grained … To mitigate against potential confounding factors, we run … (2024), we distribute the sparse reward or assign credit to each …
+
+29. Reward modeling for human preferences
+   https://www2.eecs.berkeley.edu/Pubs/TechRpts/2025/Archive/EECS-2025-82.pdf
+   (E Frick - 2025 - eecs.berkeley.edu | 2025 | cited by 2)
+   [PDF] https://www2.eecs.berkeley.edu/Pubs/TechRpts/2025/Archive/EECS-2025-82.pdf
+   … , addressing variability and uncertainty inherent in human … , where over-optimization behavior is seen in some reward … We also consider two factors that help mitigate this issue: (1) …
+
+30. Learning a Pessimistic Reward in RLHF: KL Regularization is Not Necessary
+   https://openreview.net/forum?id=HWOAZUPA0C
+   (Y Xu, H Kang, T Suresh, Y Wan, G Singh - NeurIPS 2025 Workshop … - openreview.net | 2025)
+   [PDF] https://openreview.net/pdf?id=HWOAZUPA0C
+   … phenomenon in reward modeling is significantly mitigated by … degree of uncertainty in evaluating the policy. A policy with higher … Scaling laws for reward model overoptimization in direct …
+
+31. TUR-DPO: Topology-and Uncertainty-Aware Direct Preference Optimization
+   https://arxiv.org/abs/2605.00224
+   (AA Abdullah, F Daneshfar, S Mirjalili… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.00224
+   … - and uncertainty-aware variant of DPO that rewards how … We also observe a reduction in the variance of path coverage… reward mixing coefficient γ, uncertainty penalty λ, and the weight-…
+
+32. Towards Reliable, Uncertainty-Aware Alignment
+   https://arxiv.org/abs/2507.15906
+   (D Banerjee, K Saha, A Gopalan - arXiv preprint arXiv:2507.15906, 2025 - arxiv.org | 2507 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2507.15906?
+   … To mitigate this risk, we propose a variance-aware policy … a mathematical model of uncertain rewards and propose a … (Gemma, 2024) as the backbone for our reward models. As an …
+
+33. Energy-Based Reward Models for Robust Language Model Alignment
+   https://arxiv.org/abs/2504.13134
+   (A Lochab, R Zhang - arXiv preprint arXiv:2504.13134, 2025 - arxiv.org | 2504 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2504.13134
+   … in human preferences and mitigating the impact of noisy or … generalization and are vulnerable to overoptimization. The … captures uncertainty through the shape of its inferred reward …
+
+34. Optimizing Risk–Return Tradeoffs in Wind–Storage Bidding: A Soft Actor–Critic Approach
+   https://www.mdpi.com/1996-1073/19/8/1861
+   (T Ma, Z Li, D Liu, Z Zhao, Y Li, W Cai, Q Li - Energies, 2026 - mdpi.com | 2026)
+
+35. Reward shaping to mitigate reward hacking in rlhf
+   https://arxiv.org/abs/2502.18770
+   (J Fu, X Zhao, C Yao, H Wang, Q Han, Y Xiao - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 78)
+   [PDF] https://arxiv.org/pdf/2502.18770?
+   … 2024). This motivates our third principle: (3) RL … is ideally bounded, we conducted experiments by employing a larger KL penalty coefficient and constraining the maximum reward …
+
+36. Mitigating reward hacking in rlhf via bayesian non-negative reward modeling
+   https://arxiv.org/abs/2602.10623
+   (Z Duan, G Rong, Z Li, B Chen, M Zhou… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2602.10623
+   … substantially mitigates reward over-optimization, improves … 2025), our contribution is the principled synthesis of NFA’s … model’s own uncertainty about the global reward factors, we treat …
+
+37. Wasserstein Distributionally Robust Regret Optimization for Reinforcement Learning from Human Feedback
+   https://arxiv.org/abs/2605.00155
+   (Y Wang, S Liu, J Blanchet - arXiv preprint arXiv:2605.00155, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.00155
+   … this problem through uncertainty penalties, pessimistic rewards, or … 2025]. We see the same phenomenon empirically in our … mitigation of over-optimization among the baselines we test. …
+
+38. Fusing Rewards and Preferences in Reinforcement Learning
+   https://arxiv.org/abs/2508.11363
+   (S Khorasani, S Salehkaleybar, N Kiyavash… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2508.11363?
+   … In the following tables, we provide the fine-tuned parameters for each algorithm and method. Batch sizes are considered the same for all algorithms. The discount factor is also set to …
+
+39. Robust rlhf with noisy rewards
+   https://openreview.net/forum?id=Cfbr56K4gp
+   (W Shen, X Zhang, Y Yao, R Zheng, H Guo, Y Liu - 2025 - openreview.net | 2025 | cited by 4)
+   [PDF] https://openreview.net/pdf?id=Cfbr56K4gp
+   … rewards enable the LLM to penalize reward uncertainty, … To understand the impact of contrastive reward at a fine-… its ability to mitigate flaws and uncertainties in reward models. We …
+
+40. Accelerating rlhf training with reward variance increase
+   https://arxiv.org/abs/2505.23247
+   (Z Yang, Z Gu, H Qi, Y Yuan - arXiv preprint arXiv:2505.23247, 2025 - arxiv.org | 2505 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2505.23247?
+   … to fine-tune the LLM for maximizing the reward expectation (… PPO) [26] is widely adopted in LLM fine-tuning. In this framework, the … To mitigate the impact of randomness, we repeated the …
+
+41. Reward Modeling from Human Feedback Improves Controllability in Large Generative Models
+   http://ijaetr.org/index.php/ojs/article/view/85
+   (P Lambert, M Eriksen - International Journal of Advanced Engineering and …, 2026 - ijaetr.org | 2026)
+   [PDF] https://ijaetr.org/index.php/ojs/article/download/85/80
+   … mitigation strategies have included KL divergence penalties … to overoptimization under high reward coefficient settings. … in reward model regularization techniques and uncertainty-…
+
+42. Review of Reinforcement Learning for Large Language Models: Formulations, Algorithms, and Opportunities
+   http://www.liziniu.org/docs/RL4LLM_Survey.pdf
+   (Z Li, P Wang, T Xu, T Ding, R Sun, Y Yu - 2025 - liziniu.org | 2025 | cited by 2)
+   [PDF] http://www.liziniu.org/docs/RL4LLM_Survey.pdf
+   … 2024)—trained with specialized RL techniques to enhance … to mitigate the well-known reward hacking or reward … uncertainty that necessitates a complex value function for variance …
+
+43. Reward Models Can Improve Themselves: Reward-Guided Adversarial Failure Mode Discovery for Robust Reward Modeling
+   https://arxiv.org/abs/2507.06419
+   (P Pathmanathan, F Huang - arXiv preprint arXiv:2507.06419, 2025 - arxiv.org | 2507 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2507.06419
+   … by mitigating spurious correlations introduced by mis-specified … 2024) has emerged as a potential test-time alternative for … We use a sample temperature of 0 in order to avoid uncertainty …
+
+44. Upcycled and Merged MoE Reward Model for Mitigating Reward Hacking
+   https://arxiv.org/abs/2512.00724
+   (L Fu - arXiv preprint arXiv:2512.00724, 2025 - arxiv.org | 2512)
+   [PDF] https://arxiv.org/pdf/2512.00724
+   … a dense reward model to a conventional MoE structure and fine-… MoE reward model to mitigate reward over-optimization, … three types of ensemble reward models, Uncertainty-Weighted …
+
+45. Failure Modes of Maximum Entropy RLHF
+   https://arxiv.org/abs/2509.20265
+   (ÖV Çağatan, B Akgün - arXiv preprint arXiv:2509.20265, 2025 - arxiv.org | 2509)
+   [PDF] https://arxiv.org/pdf/2509.20265?
+   … actually exacerbates reward hacking rather than mitigating it. … sufficient to prevent overoptimization, as reward hacking in … under uncertainty, providing theoretical guarantees …
+
+46. Test-time alignment of diffusion models without reward over-optimization
+   https://arxiv.org/abs/2501.05803
+   (S Kim, M Kim, D Park - arXiv preprint arXiv:2501.05803, 2025 - arxiv.org | 2501 | cited by 88)
+   [PDF] https://arxiv.org/pdf/2501.05803
+   … or better target reward compared to fine-tuning methods (… trend, failing to mitigate over-optimization due to modeseeking … , fails to effectively mitigate overoptimization for aesthetic scores …
+
+47. Pessimism's Paradox: Conservative Offline Training Amplifies Reward Hacking During Online Adaptation in Reasoning Models
+   https://arxiv.org/abs/2606.30627
+   (S Sahoo, A Chadha, V Jain, D Chaudhary - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.30627
+   … 2024) sidesteps the need for an explicit reward model by … both the proxy reward signal and the uncertainty signal used … This normalisation makes the KL penalty scale-invariant with …
+
+48. GARDO: Reinforcing Diffusion Models without Reward Hacking
+   https://arxiv.org/abs/2512.24138
+   (H He, Y Ye, J Liu, J Liang, Z Wang, Z Yuan… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 12)
+   [PDF] https://arxiv.org/pdf/2512.24138
+   … regularization during fine-tuning to mitigate overoptimization on these spurious reward signals [10… We quantify this uncertainty by measuring the disagreement among an ensemble of …
+
+49. Improving Reasoning and Generalization in Large Language Models through a Hybrid Reward Approach with Group-Relative Policy Optimization
+   https://unitesi.unimore.it/handle/20.500.14251/4612
+   (E POTTOCAR - 2024 - unitesi.unimore.it | 2024)
+   [PDF] https://unitesi.unimore.it/bitstream/20.500.14251/4612/1/Pottocar.Edoardo.pdf
+   … of this work is to address and mitigate them. Moreover, this … in the reward model, which can lead to reward over-optimization or … internal representation of uncertainty. The self-certainty …
+
+50. Uncertainty-aware step-wise verification with generative reward models
+   https://arxiv.org/abs/2502.11250
+   (Z Ye, LC Melo, Y Kaddar, P Blunsom, S Staton… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 29)
+   [PDF] https://arxiv.org/pdf/2502.11250
+   … are susceptible to over-optimization and reward hacking: a … 2024), to our knowledge, little is known about how to apply … estimated uncertainty to address and potentially mitigate reward …
+
+51. A framework for mitigating malicious RLHF feedback in LLM training using consensus based reward
+   https://www.nature.com/articles/s41598-025-92889-7
+   (Z Haider, MH Rahman, V Devabhaktuni… - Scientific Reports, 2025 - nature.com | 2025 | cited by 14)
+   [PDF] https://www.nature.com/articles/s41598-025-92889-7.pdf
+   … and (2) using the trained reward model, to fine-tune the LLM to align the … mitigating overoptimization. The basic strategies they employed include mean, worst-case, and uncertainty…
+
+52. A topic-level self-correctional approach to mitigate hallucinations in mllms
+   https://fugumt.com/fugumt/paper_check/2411.17265v2_enmode
+   (L He, Z Chen, Z Shi, T Yu, J Shao… - arXiv preprint arXiv …, 2024 - fugumt.com | 2024 | cited by 8)
+   … shift and uncertainty in learning human preferences.<n>To mitigate overoptimization, we first … best policy for an adversarially chosen reward model.<n>Using the equivalence between …
+
+53. Correcting the mythos of kl-regularization: Direct alignment without overoptimization via chi-squared preference optimization
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/e785d64baa2cde06c69d9b7a14636ef2-Abstract-Conference.html
+   (A Huang, W Zhan, T Xie, J Lee, W Sun… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 94)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/e785d64baa2cde06c69d9b7a14636ef2-Paper-Conference.pdf
+   … efficient quantification of uncertainty in the offline reward, and … (2024)), we adopt a contextual bandit formulation of the … is a natural approach to mitigating overoptimization, but an …
+
+54. On the Robustness of Reward Models for Language Model Alignment
+   https://arxiv.org/abs/2505.07271
+   (J Hong, N Lee, E Kim, G Son, W Chung… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 13)
+   [PDF] https://arxiv.org/pdf/2505.07271?
+   … impact of over-optimization in RLHF, we assess the gold reward scores … method to mitigate such dispersion, enhancing the robustness of RMs. … 2024). We use a batch size of 1 for every …
+
+55. Learning explainable dense reward shapes via bayesian optimization
+   https://arxiv.org/abs/2504.16272
+   (R Koo, I Yang, V Raheja, M Hong, KS Jun… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2504.16272
+   … 2020), we treat them as uncertain estimates and seek to … (2024), we distribute the sparse reward or assign credit to each … model is a proxy for human preferences, and overoptimizing …
+
+56. Confpo: Exploiting policy model confidence for critical token selection in preference optimization
+   https://arxiv.org/abs/2506.08712
+   (HS Yoon, E Yoon, M Hasegawa-Johnson… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 15)
+   [PDF] https://arxiv.org/pdf/2506.08712?
+   … quality while mitigating overoptimization (ie, reward hacking) … first digit may be highlighted as uncertain, while the second, … posed ConfPO tends to mitigate overoptimization due to the …
+
+57. The energy loss phenomenon in rlhf: A new perspective on mitigating reward hacking
+   https://arxiv.org/abs/2501.19358
+   (Y Miao, S Zhang, L Ding, Y Zhang, L Zhang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 14)
+   [PDF] https://arxiv.org/pdf/2501.19358
+   … (2024), we further assess reward hacking mitigation by tracking … energy loss-based penalty into rewards. Unlike RLHF methods … Scaling laws for reward model overoptimization in direct …
+
+58. Mitigating Reward Hacking in RLHF via Advantage Sign Robustness
+   https://arxiv.org/abs/2604.02986
+   (S Ono, J Ackermann, S Nishimori, T Ishida… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2604.02986
+   … 2024). Ante-hoc methods incorporate uncertainty quantification into the reward modeling pipeline. For instance, ensemble-based methods (… 2025). Our theoretical results suggest that …
+
+59. Robust preference optimization through reward model distillation
+   https://arxiv.org/abs/2405.19316
+   (A Fisch, J Eisenstein, V Zayats, A Agarwal… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 82)
+   [PDF] https://arxiv.org/pdf/2405.19316
+   … reward model trained on the preference data. Moreover, to account for uncertainty in the reward model … for mitigating over-optimization that are simple to apply in online settings, such as …
+
+60. Post-hoc reward calibration: A case study on length bias
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/5d50c76fdf75c24ece568fc84a7125fb-Abstract-Conference.html
+   (Z Huang, Z Qiu, EM Ponti, I Titov - … Conference on Learning …, 2025 - proceedings.iclr.cc | 2025 | cited by 33)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/5d50c76fdf75c24ece568fc84a7125fb-Paper-Conference.pdf
+   … 2024). By integrating human preferences into the training … This paper introduces a post-hoc reward calibration method to mitigate … Countering reward over-optimization in LLM with …
+
+61. Provably Mitigating Corruption, Overoptimization, and Verbosity Simultaneously in Offline and Online RLHF/DPO Alignment
+   https://arxiv.org/abs/2510.05526
+   (Z Chen, J Li, P Yu, H Huang - arXiv preprint arXiv:2510.05526, 2025 - arxiv.org | 2510)
+   [PDF] https://arxiv.org/pdf/2510.05526
+   … by Corrupted preference, reward Overoptimization, and bias … fine-tuning the optimal policy without reward estimation. … 2024) use noise modeling to automatically select the outliers …
+
+62. Inference-time reward hacking in large language models
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/590a0cc0306c1c63e2d66a51a407718f-Abstract-Conference.html
+   (H Khalaf, C Mayrink Verdun… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 22)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/590a0cc0306c1c63e2d66a51a407718f-Paper-Conference.pdf
+   … By overoptimizing for a misspecified reward, we can subvert … and mitigate the impact of misspecified proxy rewards in … As a reference model, we use a 1.4B Pythia model [47] fine-tuned …
+
+63. Efficient process reward model training via active learning
+   https://arxiv.org/abs/2504.10559
+   (K Duan, Z Liu, X Mao, T Pang, C Chen, Q Chen… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 18)
+   [PDF] https://arxiv.org/pdf/2504.10559?
+   … role of both uncertainty types in the context of process reward … 2024) show that this kind of process reward modeling suffers … To mitigate this issue, we propose to leverage active learning …
+
+64. Reasoning under Uncertainty: Efficient LLM Inference via Unsupervised Confidence Dilution and Convergent Adaptive Sampling
+   https://aclanthology.org/2025.emnlp-main.1638/
+   (Z Shi, Y Zhu, Y Xie, J Shi, G Xie, H Zhang… - … of the 2025 …, 2025 - aclanthology.org | 2025 | cited by 6)
+   [PDF] https://aclanthology.org/2025.emnlp-main.1638.pdf
+   … levels while achieving over 70% reduction in inference cost, … Another line of work uses auxiliary reward models trained to as… Lz penalty: An information-theoretic repetition penalty for …
+
+65. Adaptive Preference Optimization with Uncertainty-aware Utility Anchor
+   https://aclanthology.org/anthology-files/pdf/findings/2025.findings-emnlp.1046.pdf
+   (X Wang, Z Jia, J Li, Q Liu, Z Zheng - … Linguistics: EMNLP 2025, 2025 - aclanthology.org | 2025 | cited by 3)
+   [PDF] https://aclanthology.org/anthology-files/pdf/findings/2025.findings-emnlp.1046.pdf
+   … The utility anchor helps mitigate uncertainty in data labeling: By … , it has been well studied the issue of overoptimization (… In accordance with Goodhard’s law, optimizing reward functions …
+
+66. Is best-of-n the best of them? coverage, scaling, and optimality in inference-time alignment
+   https://arxiv.org/abs/2503.21878
+   (A Huang, A Block, Q Liu, N Jiang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 79)
+   [PDF] https://arxiv.org/pdf/2503.21878
+   … reward hacking through more sophisticated use of inference-time compute, implementing the principle of pessimism in the face of uncertainty … , which mitigate overoptimization through a …
+
+67. Reusing embeddings: Reproducible reward model research in large language model alignment without gpus
+   https://arxiv.org/abs/2502.04357
+   (H Sun, Y Shen, JF Ton, M van der Schaar - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 7)
+   [PDF] https://arxiv.org/pdf/2502.04357
+   … inputs in a lightweight reward model ensemble practice to mitigate reward overoptimization. Reproduction … Our experiments indicate that fine-tuning LLM-based reward models, though …
+
+68. Bradley-terry and multi-objective reward modeling are complementary
+   https://arxiv.org/abs/2507.07375
+   (Z Zhang, H Liu, X Li, Z Dai, J Zeng, F Wang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 9)
+   [PDF] https://arxiv.org/pdf/2507.07375?
+   … , we examine their potential to mitigate reward hacking. By learning … hacking in challenging OOD settings using fine-grained … This pattern indicates reward overoptimization. In contrast, …
+
+69. Establishing reliability metrics for reward models in large language models
+   https://arxiv.org/abs/2504.14838
+   (Y Chen, Y Liu, X Wang, Q Yu, G Huzhang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2504.14838
+   … is its uncertain reliability, ie, LLM outputs with higher rewards … output is prone to reward hacking (aka overoptimization) [18… method, appears to mitigate the reward hacking issue. Despite …
+
+70. Value-incentivized preference optimization: A unified approach to online and offline rlhf
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/b2d80dc5b407e16b258abe3056402372-Abstract-Conference.html
+   (S Cen, J Mei, K Goshvadi, H Dai, T Yang… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 96)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/b2d80dc5b407e16b258abe3056402372-Paper-Conference.pdf
+   … to incorporate uncertainty estimation in the reward function learned … 2024) via centering the reward model with respect to a … which discourages over-optimization of the reward function …
+
+71. Adversarial Reward Auditing for Active Detection and Mitigation of Reward Hacking
+   https://arxiv.org/abs/2602.01750
+   (M Beigi, M Jin, J Zhang, Q Wang, L Huang - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2602.01750
+   … rewards successfully reduce reward over-optimization … mitigation through reinforcement learning with uncertainty-aware adaptive reasoning trajectories. In Proceedings of the 2025 …
+
+72. A comprehensive survey of reward models: Taxonomy, applications, challenges, and future
+   https://arxiv.org/abs/2504.12328
+   (J Zhong, W Shen, Y Li, S Gao, H Lu, Y Chen… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 78)
+   [PDF] https://arxiv.org/pdf/2504.12328?
+   … 2024), the mechanisms include discriminative reward, generative … , 2025) have demonstrated potential in mitigating overoptimization, paving the way for more robust RMs. …
+
+73. Taming overconfidence in llms: Reward calibration in rlhf
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/29fb6e1456b3d8b57ede5c45aa2c6537-Abstract-Conference.html
+   (J Leng, C Huang, B Zhu, J Huang - International Conference on …, 2025 - proceedings.iclr.cc | 2025 | cited by 105)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/29fb6e1456b3d8b57ede5c45aa2c6537-Paper-Conference.pdf
+   … Since DPO models are implicit reward models (Rafailov et al., 2024), … Instead, we fine-tune pre-existing reward models using our … reward calculation procedure to mitigate the bias in the …
+
+74. Sail into the headwind: Alignment via robust rewards and dynamic labels against reward hacking
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/c78f81a878a72566422f37279bca0fd0-Abstract-Conference.html
+   (P Rashidinejad, Y Tian - International Conference on Learning …, 2025 - proceedings.iclr.cc | 2025 | cited by 14)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/c78f81a878a72566422f37279bca0fd0-Paper-Conference.pdf
+   … To mitigate Type II Reward Hacking, we analyze the learning … of pessimism in the face of uncertainty. Pessimism can be … from degradations reminiscent of overoptimization in RLHF. In …
+
+75. Reinforcement learning from human feedback: A statistical perspective
+   https://arxiv.org/abs/2604.02507
+   (P Liu, C Shi, WW Sun - arXiv preprint arXiv:2604.02507, 2026 - arxiv.org | 2604 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2604.02507
+   … , and uncertainty quantification. We review methods for learning reward functions from … One practical mitigation strategy is to use reward ensembles, replacing a single predictor ̂r …
+
+76. On-policy self-alignment with fine-grained knowledge feedback for hallucination mitigation
+   https://aclanthology.org/2025.findings-acl.271/
+   (X Wen, J Lou, X Lu, Y Ji, X Guan, Y Lu… - … Linguistics: ACL 2025, 2025 - aclanthology.org | 2025 | cited by 9)
+   [PDF] https://aclanthology.org/2025.findings-acl.271.pdf
+   … Statements with uncertain veracity are marked in orange. … 2024) is dedicated to the acquisition of dense rewards. … with these tokenlevel reward signals to mitigate hallucination in the …
+
+77. In-Context Bayesian Reward Modeling for Test-Time Steerability
+   https://openreview.net/forum?id=0z0IeZ5drh
+   (J Hong, S Tang, Z Wang, A Gupta - 2025 - openreview.net | 2025)
+   [PDF] https://openreview.net/pdf?id=0z0IeZ5drh
+   … Furthermore, we prove that a KL penalty to the Beta prior tempers … Theoretical mitigation of over-optimization via KL … emphasizes calibrated uncertainty to curb reward over-optimization. …
+
+78. Ask a strong LLM judge when your reward model is uncertain
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/6c312cf14321a99ae3788a41593cf2bd-Abstract-Conference.html
+   (Z Xu, Q Lu, Q Zhang, L Qiu, I Hong… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 8)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/6c312cf14321a99ae3788a41593cf2bd-Paper-Conference.pdf
+   … an uncertainty router, we use the DeepSeek-R1 [18] model as a judge, as it already achieves high accuracy on reward benchmarks without specific fine-… To mitigate position bias during …
+
+79. PIRA: Preference-Oriented Instruction-Tuned Reward Models with Dual Aggregation
+   https://aclanthology.org/2026.findings-eacl.117/
+   (Y Xue - Findings of the Association for Computational …, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.findings-eacl.117.pdf
+   … inference to model reward uncertainty, enabling broader exploration … trained reward models mitigate reward overoptimization, … that mitigates reward overoptimization while maintaining …
+
+80. Inverse reinforcement learning meets large language model post-training: Basics, advances, and opportunities
+   https://arxiv.org/abs/2507.13158
+   (H Sun, M van der Schaar - arXiv preprint arXiv:2507.13158, 2025 - arxiv.org | 2507 | cited by 7)
+   [PDF] https://arxiv.org/pdf/2507.13158?
+   … One commonly used approach is uncertainty sampling, … Reward Overoptimization Before concluding this section, we … to mitigate overoptimization, detect and analyze reward hacking, …
+
+81. SeRA: Self-reviewing and alignment of LLMs using implicit reward margins
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/fdcf2565ea86530d65b3622c06d90841-Abstract-Conference.html
+   (J Ko, S Dingliwal, B Ganesh, S Sengupta… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 15)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/fdcf2565ea86530d65b3622c06d90841-Paper-Conference.pdf
+   … 2024), but we empirically study if the reward margin between … 2024) highlighting that DAAs indeed risks over-optimization … selection strategy can mitigate over-optimization problems to …
+
+82. A survey of direct preference optimization
+   https://arxiv.org/abs/2503.11701
+   (S Liu, W Fang, Z Hu, J Zhang, Y Zhou, K Zhang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 50)
+   [PDF] https://arxiv.org/pdf/2503.11701?
+   … is then fine-tuned using RL guided by this reward model, … exploration and minimize uncertainty in the reward model. … This study identifies key indicators of over-optimization and …
+
+83. Diverse ai feedback for large language model alignment
+   https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00746/128938
+   (T Yu, TE Lin, Y Wu, M Yang, F Huang… - Transactions of the …, 2025 - direct.mit.edu | 2025 | cited by 13)
+   [PDF] https://direct.mit.edu/tacl/article-pdf/doi/10.1162/tacl_a_00746/2514577/tacl_a_00746.pdf
+   … feedback is most effective for low-uncertainty tasks, refinement feedback for medium-… optimizes the proxy reward, enhancing the RM score until the onset of over-optimization, after which …
+
+84. Rewardanything: Generalizable principle-following reward models
+   https://arxiv.org/abs/2506.03637
+   (Z Yu, J Zeng, W Gu, Y Wang, J Wang, F Meng… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 34)
+   [PDF] https://arxiv.org/pdf/2506.03637
+   … more directly managed and mitigated by explicitly stating the … of principles yield better rewards and mitigate bias better. We run … for the fine-grained evaluation of how well reward models …
+
+85. Mutual-taught for co-adapting policy and reward models
+   https://aclanthology.org/2025.acl-long.794/
+   (T Shi, C Huang, F Wan, L Zhong, Z Yang… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 3)
+   [PDF] https://aclanthology.org/2025.acl-long.794.pdf
+   … that mitigating the distributional shift between the reward … automatically adjusts to the reward model’s uncertainty level (… τ: Above 50% to prevent over optimization, while not excessively …
+
+86. Methodological Innovations in Reinforcement Learning for LLM Fine-Tuning: A Systematic Literature Review
+   https://www.researchsquare.com/article/rs-8196796/latest
+   (L Kong, Q Ramdan, O Zoubia, JH Polash, M Elwes… - 2026 - researchsquare.com | 2026)
+   [PDF] https://www.researchsquare.com/article/rs-8196796/latest.pdf
+   … sequence-level), calibration methods to mitigate reward bias, … operators to address reward overoptimization, and PyTester [… uncertainty quanti cation to handle reward model uncertainty …
+
+87. Self-rewarding vision-language model via reasoning decomposition
+   https://arxiv.org/abs/2508.19652
+   (Z Li, W Yu, C Huang, Z Liang, R Liu, F Liu… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 74)
+   [PDF] https://arxiv.org/pdf/2508.19652
+   … This decoupling enables more fine-grained reward … models with the model’s own confidence and uncertainty (logit… proved more effective at mitigating performance degradation on text-…
+
+88. On-policy fine-grained knowledge feedback for hallucination mitigation
+   https://openreview.net/forum?id=HUzDU7u5B4
+   (X Wen, X Lu, X Guan, J Lou, Y Lu, H Lin, B He, X Han… - 2024 - openreview.net | 2024 | cited by 9)
+   [PDF] https://openreview.net/pdf?id=HUzDU7u5B4
+   … token-level reward signals to adjust model behavior for hallucination mitigation. Furthermore… our trained model tends to express uncertainty even when providing relevant information, …
+
+89. Real-Time Aligned Reward Model beyond Semantics
+   https://arxiv.org/abs/2601.22664
+   (Z Huang, X Xia, Y Ren, J Zheng, X Xiao, H Xie… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 6)
+   [PDF] https://arxiv.org/pdf/2601.22664
+   … to reward overoptimization, in which policy models overfit to the … To mitigate the impact of the group degeneration, we introduce a … reward overoptimization by incorporating uncertainty …
+
+90. Skywork-reward-v2: Scaling preference data curation via human-ai synergy
+   https://arxiv.org/abs/2507.01352
+   (CY Liu, L Zeng, Y Xiao, J He, J Liu, C Wang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 135)
+   [PDF] https://arxiv.org/pdf/2507.01352
+   … 2, suggesting potential over-optimization. We advocate for … merge results across models to mitigate potential bias from any … 2024). To effectively measure progress, we directly compare …
+
+91. GEM: Generative Entropy-Guided Preference Modeling for Few-Shot Alignment of LLMs
+   https://ojs.aaai.org/index.php/AAAI/article/view/41153
+   (Y Zhao, H Bai, X Zhao - Proceedings of the AAAI Conference on …, 2026 - ojs.aaai.org | 2026)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/view/41153/45114
+   … Instead of training a discriminative reward model on prefer… 2025), allowing stable updates and mitigating reward-model … encourages models to navigate uncertainty effectively, thus en…
+
+92. Genius: A generalizable and purely unsupervised self-training framework for advanced reasoning
+   https://aclanthology.org/2025.acl-long.644/
+   (F Xu, H Yan, C Ma, H Zhao, Q Sun… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 25)
+   [PDF] https://aclanthology.org/2025.acl-long.644.pdf
+   … uncertainty. To provide a robust optimization, we propose an advantage-calibrated optimization (ACO) loss function to mitigate … Based on this modeling, the well-trained reward model rψ …
+
+93. Gtpo and grpo-s: Token and sequence-level reward shaping with policy entropy
+   https://arxiv.org/abs/2508.04349
+   (H Tan, Z Wang, J Pan, J Lin, H Wang, Y Wu… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 43)
+   [PDF] https://arxiv.org/pdf/2508.04349
+   … performance on AIME 2024 (left) and AIME 2025 (right) (d). … stems from a variance reduction argument concerning the … harnessing and directing model uncertainty is a promising frontier …
+
+94. VRPO: Rethinking Value Modeling for Robust RL Training under Noisy Supervision
+   https://arxiv.org/abs/2508.03058
+   (D Zhu, S Dou, Z Xi, S Jin, G Zhang, J Zhang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2508.03058
+   … To mitigate this, we introduce a semanticlevel regularization … highuncertainty tokens affects robustness in noisy reward … ing training, likely due to reward over-optimization or instability, …
+
+95. DynaCF: Mitigating Shortcut Learning in Reward Models via Dynamic Counterfactual Sensitivity
+   https://arxiv.org/abs/2606.09043
+   (F Liu, Y Miao, Z He, Y Liu, F Sun, M Du - arXiv preprint arXiv:2606.09043, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.09043
+   … 2024), undermining robustness by encouraging decisions based on superficial patterns. A … µflip controls the flip penalty. Larger scf,i(θ) indicates less stable reward-model preferences …
+
+96. Stephint: Multi-level stepwise hints enhance reinforcement learning to reason
+   https://aclanthology.org/2026.acl-long.1755/
+   (K Zhang, A Lv, J Li, Y Wang, F Wang… - Proceedings of the …, 2026 - aclanthology.org | 2026 | cited by 36)
+   [PDF] https://aclanthology.org/2026.acl-long.1755.pdf
+   … 2024), based on the advantages of final outcomes of these … The complexity or uncertainty of the remaining solution … This “near-miss” reward problem can be mitigated by providing early …
+
+97. Process reward models for llm agents: Practical framework and directions
+   https://arxiv.org/abs/2502.10325
+   (S Choudhury - arXiv preprint arXiv:2502.10325, 2025 - arxiv.org | 2502 | cited by 58)
+   [PDF] https://arxiv.org/pdf/2502.10325
+   … transitions, where actions have uncertain effects. This makes … also due to reward over-optimization which we discuss next. … policy, mitigating distribution shift and reward hacking risks. …
+
+98. Autorule: Reasoning chain-of-thought extracted rule-based rewards improve preference learning
+   https://arxiv.org/abs/2506.15651
+   (T Wang, C Xiong - arXiv preprint arXiv:2506.15651, 2025 - arxiv.org | 2506 | cited by 17)
+   [PDF] https://arxiv.org/pdf/2506.15651
+   … , reward hacking experiments demonstrate the ability of AUTORULE’s rule-based rewards to mitigate reward model overoptimization. … penalty, we subtract the following from the reward: …
+
+99. Position: Ai safety must embrace an antifragile perspective
+   https://arxiv.org/abs/2509.13339
+   (M Jin, H Lee - arXiv preprint arXiv:2509.13339, 2025 - arxiv.org | 2509 | cited by 7)
+   [PDF] https://arxiv.org/pdf/2509.13339
+   … to rapidly reduce current uncertainties, the emphasis is on leveraging those … over-optimization for narrow tasks leads to brittle capabilities that fail badly outside those tasks (eg, reward …
+
+100. RSPO: Regularized Self-Play Alignment of Large Language Models
+   https://arxiv.org/abs/2503.00030
+   (X Tang, S Yoon, S Son, H Yuan, Q Gu… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2503.00030
+   … used in RLHF to mitigate over-optimization—has received … of χ2 divergence for uncertainty quantification. However, the … used to prevent reward overoptimization (reaching surrogate …

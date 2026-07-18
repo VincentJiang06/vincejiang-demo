@@ -1,0 +1,553 @@
+===== Query 1/3: Ridgway 1956 Dysfunctional Consequences of Performance Measurements =====
+
+1. Dysfunctional consequences of performance measurements
+   https://www.jstor.org/stable/2390989
+   (VF Ridgway - Administrative science quarterly, 1956 - JSTOR | 1956 | cited by 791)
+   THERE is today a strong tendency to state numerically as many as possible of the variables with which management must deal. The mounting interest in and application of tools such as operations research, linear programming, and statistical decision making, all of which require quantifiable variables, foster the idea that if progress toward goals can be measured, efforts and resources can be more rationally managed. This has led to the development of quantitative performance measurements for all levels within organizations, up to and including measurements of the performance of a division manager with profit responsibility in a decentralized company. Measurements at lower levels in the organization may be in terms of amount of work, quality of work, time required, and so on. Quantitative measures of performance are tools, and are undoubtedly useful. But research indicates that indiscriminate use and undue con-fidence and reliance in them result from insufficient knowledge of the full effects and consequences. Judicious use of a tool requires awareness of possible side effects and reactions. Otherwise, indiscriminate use may result in side effects and reactions outweighing the benefits, as was the case when penicillin was first hailed as a wonder drug. The cure is sometimes worse than the disease. It seems worth while to review the current scattered knowledge of the dysfunctional consequences resulting from the imposition of a system of performance measurements. For the purpose of analyzing the impact of performance measurements upon job performance, we can consider separately single, multiple, and composite criteria. Single criteria occur when only one quantity is measured and observed, such as total output or profit. Multiple criteria occur when several quantities are measured simultaneously, such as output, quality, cost, safety, waste,
+
+===== Query 2/3: V.F. Ridgway Administrative Science Quarterly single composite multiple performance measurements =====
+
+1. Developing a lean performance score: here's a way to track the progress of your lean journey.
+   https://go.gale.com/ps/i.do?id=GALE%7CA207783262&sid=googleScholar&v=2.1&it=r&linkaccess=abs&issn=1524833X&p=AONE&sw=w
+   (DWL Searcy - Strategic Finance, 2009 - go.gale.com | 2009 | cited by 61)
+   … In the September 1956 issue of Administrative Science Quarterly, VF Ridgeway states, "Without a single overall composite measure of performance, the individual is forced to rely upon …
+
+2. Measuring and managing performance in organizations
+   https://books.google.com/books?hl=en&lr=&id=hVMUAAAAQBAJ&oi=fnd&pg=PT16&dq=V.F.+Ridgway+Administrative+Science+Quarterly+single+composite+multiple+performance+measurements&ots=2U4_ER04Lg&sig=X5lToJS5M7H_IXvURBZr2Rl97_s
+   (R Austin - 2013 - books.google.com | 2013 | cited by 420)
+   … of Performance Measurements” by VF Ridgway published in … Copyright © 1956 by Administrative Science Quarterly. Material … measurements—whether single, multiple, or composite …
+
+3. Dysfunctional consequences of performance measurements
+   https://www.jstor.org/stable/2390989
+   (VF Ridgway - Administrative science quarterly, 1956 - JSTOR | 1956 | cited by 791)
+   … the impact of performance measurements upon job performance, we can consider … single, multiple, and composite criteria. Single criteria occur when only one quantity is measured and …
+
+4. The politics and consequences of performance measurement
+   https://academic.oup.com/policyandsociety/article-abstract/34/1/1/6401372
+   (J M. Lewis - Policy and Society, 2015 - academic.oup.com | 2015 | cited by 185)
+   [PDF] https://academic.oup.com/policyandsociety/article-pdf/34/1/1/42581360/j.polsoc.2015.03.001.pdf
+   … be contradictory, and composite measures can cause tension, role and value conflicts. Ridgway concludes that quantitative performance measures (single, multiple or composite) have …
+
+5. Games People Play: Lessons on Performance Measure Gaming from New Zealand Comment on" Gaming New Zealand's Emergency Department Target: How and …
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC8167274/
+   (LM Lines - … Journal of Health Policy and Management, 2020 - pmc.ncbi.nlm.nih.gov | 2020 | cited by 9)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC8167274/pdf/ijhpm-10-225.pdf
+   … 1956, Ridgeway made the following observation in the journal Administrative Science Quarterly: … , or composite—are seen to have undesirable consequences for over-all organizational …
+
+6. 20 The future of performance measurement: Measuring knowledge work
+   https://books.google.com/books?hl=en&lr=&id=1KIEoQYx5ewC&oi=fnd&pg=PA321&dq=V.F.+Ridgway+Administrative+Science+Quarterly+single+composite+multiple+performance+measurements&ots=fFfTTeVaqm&sig=LmoA-9eNZOKWLBrM9PUjMJ9ntzE
+   (R Austin, P Larkey - Business performance measurement, 2002 - books.google.com | 2002 | cited by 54)
+   [PDF] https://www.academia.edu/download/81283858/BUSINESS_20Business_20Performance_20Measurement.pdf#page=337
+   … Ridgeway (1956) summarized the findings of this and other studies that reported a similar … that" quantitative performance measurements whether single, multiple, or composite have …
+
+7. Falling from a great height: principles of good practice in performance measurement and the perils of top down determination of performance indicators
+   https://www.tandfonline.com/doi/abs/10.1080/0300393042000332837
+   (A Jackson - Local Government Studies, 2005 - Taylor & Francis | 2005 | cited by 49)
+   … For example, in 1956 Ridgway concluded that ‘quantitative performance measures – whether single, multiple, or composite … have undesirable consequences for overall …
+
+8. When can women close the gap? A meta-analytic test of sex differences in performance and rewards
+   https://journals.aom.org/doi/abs/10.5465/amj.2013.0721
+   (A Joshi, J Son, H Roh - Academy of Management Journal, 2015 - journals.aom.org | 2015 | cited by 652)
+   … When multiple measures of performance evaluations were available from a single study, we calculated a composite effect size by averaging all effect size information. We also coded …
+
+9. Hiding the evidence of valid theories: How coupled search processes obscure performance differences among organizations
+   https://journals.sagepub.com/doi/abs/10.2189/asqu.2009.54.4.602
+   (N Siggelkow, JW Rivkin - Administrative Science Quarterly, 2009 - journals.sagepub.com | 2009 | cited by 100)
+   [PDF] https://faculty.wharton.upenn.edu/wp-content/uploads/2012/05/ASQ-2009.pdf
+   … that we measure constructs … management evaluates one randomly chosen composite alternative. Thus it is possible that in one period, senior management could have examined one …
+
+10. New measures in performance management
+   https://books.google.com/books?hl=en&lr=&id=qobxDwAAQBAJ&oi=fnd&pg=PA1&dq=V.F.+Ridgway+Administrative+Science+Quarterly+single+composite+multiple+performance+measurements&ots=BAOBGIHwZD&sig=wmzGe074H0nN5aK9WMnvEkEoRoI
+   (T Ahrens, CS Chapman - Contemporary issues in management …, 2006 - books.google.com | 2006 | cited by 18)
+   [PDF] https://profsalahali.wordpress.com/wp-content/uploads/2019/12/epdf.pub_contemporary-issues-in-management-accounting.pdf#page=18
+   … performance measurement, not of our success. Over the decades since Ridgway wrote, questions of performance measurement … system, for example, may combine general ideas about …
+
+11. The information content of nonfinancial performance measures in the airline industry
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/1468-5957.00463
+   (SL Liedtka - Journal of Business Finance & Accounting, 2002 - Wiley Online Library | 2002 | cited by 85)
+   … reliable composite measures of the identified performance … performance measures for ten airlines over the 42 quarters … were applied to each performance measure series for each airline.…
+
+12. The structuration of legitimate performance measures and management: day-to-day contests of accountability in a UK restaurant chain
+   https://www.sciencedirect.com/science/article/pii/S1044500501901878
+   (T Ahrens, C Chapman - Management Accounting Research, 2002 - Elsevier | 2002 | cited by 323)
+   … He brings out clearly the dilemma for the conglomerate; how to combine profit growth and … Using the plural form in the management of restaurant chains, Administrative Science Quarterly…
+
+13. Performance management in an international setting
+   https://www.sciencedirect.com/science/article/pii/S1044500583710164
+   (KJ Euske, MJ Lebas, CJ McNair - Management Accounting Research, 1993 - Elsevier | 1993 | cited by 196)
+   … in developing countries: a synthesis, Administrative Science Quarterly, 28(1), 66-… Ridgway, VF, l956. Dysfunctional consequences of performance measurements, Administrative Science …
+
+14. Tie dissolution in market networks: A theory of vicarious performance feedback
+   https://journals.sagepub.com/doi/abs/10.1177/0001839219899606
+   (DR Clough, H Piezunka - Administrative Science Quarterly, 2020 - journals.sagepub.com | 2020 | cited by 84)
+   [PDF] https://journals.sagepub.com/doi/pdf/10.1177/0001839219899606
+   … –aspiration gaps, we first specified a performance measure. We used the constructor’s total number of points scored in the World Championship in the focal year (ie, the sum of points …
+
+15. Consequences of
+   
+   (VF Ridgway - Information for Decision Making: Quantitative and …, 1974 - Prentice Hall | 1974)
+
+16. Strategic performance management
+   https://api.taylorfrancis.com/content/books/mono/download?identifierName=doi&identifierValue=10.4324/9780080493114&type=googlepdf
+   (B Marr, D Gray - 2012 - api.taylorfrancis.com | 2012 | cited by 353)
+   … Identifying the various ways to combine these core competencies has allowed them to enter … quences of wrong measures see: Ridgway,VF (1956). Dysfunctional Consequences of …
+
+17. Performance measurement in adult social care: Looking backwards and forwards
+   https://academic.oup.com/bjsw/article-abstract/40/1/170/1626394
+   (P Clarkson - British Journal of Social Work, 2010 - academic.oup.com | 2010 | cited by 40)
+   … Assessment Framework set of nationally prescribed measures for all social services councils and the composite Star Ratings—were abolished from April 2008. In their place, targets will …
+
+18. A meta-analysis of gender group differences for measures of job performance in field studies
+   https://journals.sagepub.com/doi/abs/10.1177/0149206310374774
+   (PL Roth, KL Purvis, P Bobko - Journal of Management, 2012 - journals.sagepub.com | 2012 | cited by 419)
+   There are multiple views in human resource management and organizational behavior concerning gender differences in measures of job performance. Some researchers suggest that …
+
+19. Developing environmental supply chain performance measures
+   https://www.emerald.com/bij/article/17/3/320/65917
+   (S Shaw, DB Grant, J Mangan - Benchmarking: an international …, 2010 - emerald.com | 2010 | cited by 289)
+   [PDF] https://www.researchgate.net/profile/Sarah-Shaw-24/publication/238325900_Developing_environmental_supply_chain_performance_measures/links/5a7ed2460f7e9be137c5d7be/Developing-environmental-supply-chain-performance-measures.pdf
+   Purpose The purpose of this paper is to review extant literature and present a proposed research agenda to examine whether environmental, ie green performance measures, can be …
+
+20. Evolution of performance measurement until 1930
+   https://journals.sagepub.com/doi/abs/10.1177/0095399704263473
+   (DW Williams - Administration & Society, 2004 - journals.sagepub.com | 2004 | cited by 150)
+   … The second problem is one of assigning weights. To combine scores from various observations, one must assign weights to each constituent element. In 1912, Bruere (1912b) assigned …
+
+21. Constitutive effects of performance indicators: Getting beyond unintended consequences
+   https://www.tandfonline.com/doi/abs/10.1080/14719037.2013.770058
+   (P Dahler-Larsen - Public Management Review, 2014 - Taylor & Francis | 2014 | cited by 372)
+   … that performance indicators in public management have unintended consequences is almost as old as performance measurement … between trivial and advanced measure fixation, an …
+
+22. Performance measures and learning
+   https://www.inderscienceonline.com/doi/abs/10.1504/IJAMS.2011.037706
+   (J Kunz - … Journal of Applied Management Science, 2011 - inderscienceonline.com | 2011 | cited by 5)
+   … to be considered: first, one has to combine a long-term perspective with … Second, the use of performance measures has to be … one hand, initial results from which to derive management …
+
+23. Has social care performance in England improved? An analysis of performance ratings across social services organisations
+   https://www.tandfonline.com/doi/abs/10.1080/01442870902899848
+   (P Clarkson, S Davies, D Challis, M Donnelly… - Policy …, 2009 - Taylor & Francis | 2009 | cited by 18)
+   … In England, social care organisations have broadly improved their performance over time in composite (‘star’) ratings and with generally higher ratings across individual indicators, with …
+
+24. Performance measurement systems–beyond generic actions
+   https://api.taylorfrancis.com/content/chapters/edit/download?identifierName=doi&identifierValue=10.4324/9780203101261-24&type=chapterpdf
+   (R Lueg, H Nørreklit - … companion to cost management, 2013 - api.taylorfrancis.com | 2013 | cited by 51)
+   … -performance measurements are ambiguous, as they do not say anything about the relative importance of different measurements and how a change in one … through a composite score. …
+
+25. Is there a Nordic perspective on public sector performance measurement?
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.0267-4424.2006.00404.x
+   (Å Johnsen, J Vakkuri - Financial Accountability & Management, 2006 - Wiley Online Library | 2006 | cited by 91)
+   [PDF] https://www.academia.edu/download/32922431/Public_Sector_PM.pdf
+   … research on performance measurement that is … performance measurement and discuss potential implications of such a perspective for performance measurement in public management…
+
+26. Strategic performance measurement and management in the public sector: Indispensable role of performance measures
+   https://www.academia.edu/download/65420158/IOSR_SPMM_in_the_Public_Sector_Role_of_Performance_Measures_Dr_NMuravu_Jan_21.pdf
+   (N Muravu - IOSR Journal of Business and Management, 2021 - academia.edu | 2021 | cited by 15)
+   … ii) What challenges are associated with KPIs and how can we assess their effectiveness on public sector strategic performance measurement and management? The study aims to …
+
+27. 18 The development of composite indicators to measure health care performance
+   https://alnap.org/documents/5145/business-performance-measurement-andy-neely-28ed-29.pdf#page=401
+   (R Jacobs, P Smith, M Goddard - Business Performance Measurement, 2007 - alnap.org | 2007 | cited by 6)
+   [PDF] https://alnap.org/documents/5145/business-performance-measurement-andy-neely-28ed-29.pdf#page=401
+   … of performance in priority areas. While the potential merits and disadvantages of composite as opposed to individual performance measures have long been acknowledged (Ridgway, …
+
+28. The dynamics of value creation: mapping your intellectual performance drivers
+   https://www.emerald.com/jic/article/5/2/312/222442
+   (B Marr, G Schiuma, A Neely - Journal of intellectual capital, 2004 - emerald.com | 2004 | cited by 614)
+   [PDF] https://www.researchgate.net/profile/Andy-Neely/publication/242128158_The_dynamics_of_value_creation_Mapping_your_intellectual_performance_drivers/links/0deec53236fef25af7000000/The-dynamics-of-value-creation-Mapping-your-intellectual-performance-drivers.pdf
+   … 247) writes that “even where performance measures are instituted purely for … time‐to‐market, one of the most crucial performance indicators for Calia. … Challenge to management science …
+
+29. Internal performance measurement systems: problems and solutions
+   https://www.tandfonline.com/doi/abs/10.1080/10599231.2010.520641
+   (M Jakobsen, H Nørreklit, F Mitchell - Journal of Asia-Pacific …, 2010 - Taylor & Francis | 2010 | cited by 22)
+   … of the branch's composite key financial measure (CKFM). CKFM is composed of nine different financially related performance measures. The weights of the nine measures are not the …
+
+30. On the governance of social science research: the replacement of profession with performance contracts
+   https://www.inderscienceonline.com/doi/abs/10.1504/IJPP.2009.023491
+   (MS Linneberg, H Norreklit… - International Journal of …, 2009 - inderscienceonline.com | 2009 | cited by 10)
+   [PDF] https://www.researchgate.net/profile/Mai-Linneberg/publication/46514648_On_the_governance_of_social_science_research_The_replacement_of_profession_with_performance_contracts/links/6210b09feb735c508ae1473d/On-the-governance-of-social-science-research-The-replacement-of-profession-with-performance-contracts.pdf
+   … a single performance measurement, multiple performance measurements or a composite … Furthermore, generally, the shortcomings of a single performance measurement (Ridgeway, …
+
+31. Quantitative Indicators the tyranny of single performance measures: financial accounting's “operating ratio” and the privatization of canadian national railway
+   https://www.tandfonline.com/doi/pdf/10.1080/19187033.2006.11675119
+   (J Amernic, R Craig - Studies in Political Economy, 2006 - Taylor & Francis | 2006)
+   … figure discussed in this article, the OR, ought to make vivid the admonition from Ridgway almost fifty years ago that "quantitative performance measures- whether single.:, …
+
+32. Performance-based incentives in knowledge work: are agency models relevant?
+   https://www.inderscienceonline.com/doi/abs/10.1504/IJBPM.2000.000066
+   (RD Austin, PD Larkey - … Performance Management, 2000 - inderscienceonline.com | 2000 | cited by 6)
+   … Management Science, and Policy Sciences. His current … Ridgway, for example, summarized the findings of several … its outputs, combine to make incompleteness of measures the rule …
+
+33. Library Performance Measures as Seen in the Descriptive Statistics Generated by a Computer Managed Circulation System.
+   https://eric.ed.gov/?id=ED115252
+   (RW Burns Jr - 1975 - ERIC | 1975 | cited by 8)
+   [PDF] https://files.eric.ed.gov/fulltext/ED115252.pdf
+   … performance measures. The major emphasis in this paper, however, will be toward describing those quantitative performance measures … a composite figure for all terminals in one library…
+
+34. Constructing performance measurement packages
+   https://link.springer.com/content/pdf/10.1057/9780230353275_8?pdf=chapter%20toc
+   (M Jakobsen, F Mitchell, H Nørreklit - Review of management accounting …, 2011 - Springer | 2011 | cited by 11)
+   … multiple purposes for a performance measurement system will often create tension among the purposes as conflicts of interest may arise in pursuing individual … and composite measures …
+
+35. Marketing jobs and management controls: toward a framework
+   https://journals.sagepub.com/doi/abs/10.1177/002224378902600403
+   (BJ Jaworski, DJ MacInnis - Journal of Marketing Research, 1989 - journals.sagepub.com | 1989 | cited by 514)
+   [PDF] https://msbfile03.usc.edu/digitalmeasures/macinnis/intellcont/marketing_jobs89-1.pdf
+   … one type of control in isolation, we examine for the first time the simultaneous existence of several … “measurement” instruments for performance yet insists on a quantitative assessment of …
+
+36. Performance evaluation and directed job effort: Model development and analysis in a CPA firm setting
+   https://www.jstor.org/stable/2490512
+   (J Jiambalvo - Journal of Accounting Research, 1979 - JSTOR | 1979 | cited by 133)
+   … the model's variables, since a multiplicative combination of these variables would compound the problem of measurement error. These multiplicative combinations still proved to be …
+
+37. Value-creation models for value-based management: review, analysis, and research directions
+   https://www.emerald.com/books/edited-volume/11503/chapter/81375821
+   (RH Ashton - 2007 - emerald.com | 2007 | cited by 32)
+   … composite measure versus a disaggregated set of measures to assess individual or organizational performance have been debated for decades (eg, Ridgway, 1956, Schmidt & Kaplan, …
+
+38. Accounting for external turbulence of logistics organizations via performance measurement systems
+   https://www.emerald.com/scm/article/21/6/694/344736
+   (A Bühler, CM Wallenburg, A Wieland - Supply Chain Management: An …, 2016 - emerald.com | 2016 | cited by 49)
+   [PDF] https://www.academia.edu/download/112751644/andreas_wieland_accounting_for_external_turbulence_of_logistics_organizations_postprint.pdf
+   … of upper management in designing performance measurement systems (… resilience and distribution service performance. … Cronbach’s alpha and composite reliability (CR) were used …
+
+39. An analysis of performance evaluation using single and multiple attributes in a short-run and a long-run setting
+   https://search.proquest.com/openview/23e1dd56e7fc25b0804db023ee4a86df/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (KD Stocks - 1981 - search.proquest.com | 1981)
+   [PDF] https://openresearch.okstate.edu/bitstreams/10faaec5-17bd-4411-84fd-b7ebbf486b4b/download
+   … of a single, multiple or multiple composite measures of performance evaluation. Profit has … rank and reward performance, a composite measure is used in all multiple attribute cases." …
+
+40. Management control systems: a historical perspective
+   https://www.academia.edu/download/60683388/Management_Control_Systems_A_Historical_Perspective20190923-38912-gi1bre.pdf
+   (A Robiou - Management Control Systems A Historical Perspective, 2018 - academia.edu | 2018 | cited by 154)
+   … Therefore, the current trend in management control research is to combine the use of formal systems, having financial and non financial indicators, with informal systems, to create a "…
+
+41. The life-cycle approach to performance management: Implications for public management and evaluation
+   https://journals.sagepub.com/doi/abs/10.1177/1356389012442978
+   (GJ Helden, Å Johnsen, J Vakkuri - Evaluation, 2012 - journals.sagepub.com | 2012 | cited by 98)
+   [PDF] https://www.academia.edu/download/47475242/Distinctive_Research_Patterns_on_Public_20160724-12712-o1onne.pdf
+   … of presenting a more compound picture of the health care activities than just financial statements. … provides a description of how individual performance indicators within performance …
+
+42. The Uses of Performance Measures in Rehabilitation Programs
+   https://escholarship.org/content/qt2c34j3bj/qt2c34j3bj.pdf
+   (J Harris - 1973 - escholarship.org | 1973)
+   [PDF] https://escholarship.org/content/qt2c34j3bj/qt2c34j3bj.pdf
+   … better measures of program impact and performance and of … efficiency is becoming more widely recognized. In the vocational rehabilitation field, the indicators of program performance …
+
+43. Can we measure public sector innovation? A literature review
+   https://www.academia.edu/download/39543340/Can_we_measure_public_sector_innovation_20151029-14297-1rhir3y.pdf
+   (R Kattel, A Cepilovs, W Drechsler, T Kalvet… - LIPSE project …, 2013 - academia.edu | 2013 | cited by 168)
+   [PDF] https://www.academia.edu/download/39543340/Can_we_measure_public_sector_innovation_20151029-14297-1rhir3y.pdf
+   … performance measurements and indicators; third, we discuss state of the art in discussions of measuring public sector performance … , what and how can be measured; fourth, we discuss …
+
+44. Transactive memory systems in context: A meta-analytic examination of contextual factors in transactive memory systems development and team performance.
+   https://psycnet.apa.org/record/2018-34843-001
+   (DG Bachrach, K Lewis, Y Kim, PC Patel… - Journal of Applied …, 2019 - psycnet.apa.org | 2019 | cited by 186)
+   … were: Academy of Management Journal, Administrative Science Quarterly, Human Relations… sometimes examine these indicators and their relationship(s) to team performance, we …
+
+45. Enhancing the performance of marketing managers: aligning strategy, structure and evaluation systems
+   https://www.emerald.com/ejm/article/32/5-6/536/80657
+   (V Stathakopoulos - European Journal of Marketing, 1998 - emerald.com | 1998 | cited by 70)
+   … We emphasize that a subjective performance measure was necessary because it is almost … of one’s own performance are expected to be biased (ie to over‐report performance level). In …
+
+46. Management reforms, re-stratification and the adaptation of professional status hierarchies: The case of medicine in publicly owned hospitals
+   https://www.tandfonline.com/doi/abs/10.1080/14719037.2023.2222124
+   (I Kirkpatrick, A Zardini, G Veronesi - Public Management Review, 2023 - Taylor & Francis | 2023 | cited by 12)
+   [PDF] https://www.tandfonline.com/doi/pdf/10.1080/14719037.2023.2222124
+   … the performance of HTs we used multiple measures. … is based on a composite measure of four outcome indicators: the … scores; and a measure of efficiency based on the Reference Cost …
+
+47. Benchmarking culture and performance in Chinese organizations
+   https://www.emerald.com/bij/article/12/3/260/51873
+   (RK Garg, J Ma - Benchmarking: an international journal, 2005 - emerald.com | 2005 | cited by 95)
+   … The composite results of this analysis are presented in Table I. … As it can be seen from Table II, this study utilized performance measures that are clearly linked to all four types of …
+
+48. 13 Measuring knowledge work
+   https://alnap.cdn.ngo/media/documents/business-performance-measurement-andy-neely-28ed-29.pdf#page=297
+   (R Austin, P Larkey - Business Performance Measurement - alnap.cdn.ngo)
+   [PDF] https://alnap.cdn.ngo/media/documents/business-performance-measurement-andy-neely-28ed-29.pdf#page=297
+   … Existing notions of performance measurement and organizational control meet with … that ‘‘quantitative performance measurements whether single, multiple, or composite... have …
+
+49. Toward a theory of marketing control: environmental context, control types, and consequences
+   https://journals.sagepub.com/doi/abs/10.1177/002224298805200303
+   (BJ Jaworski - Journal of marketing, 1988 - journals.sagepub.com | 1988 | cited by 1558)
+   … The marketing unit performance dimension may include both traditional financial performance measures and other measures of marketing productivity. In contrast to previous marketing …
+
+50. Quantitative Indicators introduction
+   https://www.tandfonline.com/doi/pdf/10.1080/19187033.2006.11675117
+   (M Lovewell - Studies in Political Economy, 2006 - Taylor & Francis | 2006)
+   … figure discussed in this article, the OR, ought to make vivid the admonition from Ridgway almost fifty years ago that “quantitative performance measures — whether single, …
+
+===== Query 3/3: Ridgway 1956 performance measurement quantitative indicators earliest critique =====
+
+1. Dysfunctional consequences of performance measurements
+   https://www.jstor.org/stable/2390989
+   (VF Ridgway - Administrative science quarterly, 1956 - JSTOR | 1956 | cited by 791)
+   … development of quantitative performance measurements for … It seems worth while to review the current scattered … on some other criterion which will outweigh the increase in the first. This …
+
+2. New measures in performance management
+   https://books.google.com/books?hl=en&lr=&id=qobxDwAAQBAJ&oi=fnd&pg=PA1&dq=Ridgway+1956+performance+measurement+quantitative+indicators+earliest+critique&ots=BAOBGIHw_B&sig=EKq1t0WZPghk2K-45r-sEHm1r_g
+   (T Ahrens, CS Chapman - Contemporary issues in management …, 2006 - books.google.com | 2006 | cited by 18)
+   [PDF] https://profsalahali.wordpress.com/wp-content/uploads/2019/12/epdf.pub_contemporary-issues-in-management-accounting.pdf#page=18
+   … Quantitative measures as tools are undoubtedly useful. But … Ridgway wrote, questions of performance measurement and … high-profile and detailed critique of management accounting …
+
+3. Performance measurement: a critical analysis of the literature with respect to total quality management
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/1468-2370.00035
+   (D Sinclair, M Zairi - … Journal of Management Reviews, 2000 - Wiley Online Library | 2000 | cited by 135)
+   … , Ridgway (1956) was probably the first to discuss the need for a ‘‘balanced’’ set of performance measures. … , and translated into company strategy via key performance indicators. These …
+
+4. Questioning performance measurement: Metrics, organizations and power
+   https://www.torrossa.com/gs/resourceProxy?an=5018489&publisher=FZ7200
+   (G Redden - 2019 - torrossa.com | 2019 | cited by 34)
+   … engage in some kind of performance review, my interest in … was no turning back after the ‘revolution’ of the early 1990s. … of quantitative data and the algorithms for its analysis such as …
+
+5. Quantitative Indicators introduction
+   https://www.tandfonline.com/doi/pdf/10.1080/19187033.2006.11675117
+   (M Lovewell - Studies in Political Economy, 2006 - Taylor & Francis | 2006)
+   … Tellier’s “worst to first” comment reinforces the importance of … Such criticism of accounting for pensions and similar plans … from Ridgway almost fifty years ago that “quantitative …
+
+6. Measuring what matters
+   https://openknowledge.worldbank.org/server/api/core/bitstreams/9ff9fe0a-520c-5403-8789-24f263fe9b5f/content
+   (K Bridges, M Woolcock - Development Research, 2022 - openknowledge.worldbank.org | 2022 | cited by 1)
+   [PDF] https://openknowledge.worldbank.org/server/api/core/bitstreams/9ff9fe0a-520c-5403-8789-24f263fe9b5f/content
+   … , along the lines of VF Ridgway, who argued over 65 years … indiscriminate usage of quantitative measures and an undue … the collection, curation, analysis, and interpretation of data is …
+
+7. The politics and consequences of performance measurement
+   https://academic.oup.com/policyandsociety/article-abstract/34/1/1/6401372
+   (J M. Lewis - Policy and Society, 2015 - academic.oup.com | 2015 | cited by 185)
+   [PDF] https://academic.oup.com/policyandsociety/article-pdf/34/1/1/42581360/j.polsoc.2015.03.001.pdf
+   … Their analysis demonstrates the different interests and values … Ridgway concludes that quantitative performance measures (… measurement was touched on briefly earlier in this paper. …
+
+8. If Robert Merton said it, it must be true: A citation analysis in the field of performance measurement
+   https://journals.sagepub.com/doi/abs/10.1177/1356389010389908
+   (L Lindgren - Evaluation, 2011 - journals.sagepub.com | 2011 | cited by 30)
+   … of both quantitative and qualitative content analysis. … of outcome-related performance indicators related to prenatal … about performance measurement systems in the 1990s and early …
+
+9. Strategic performance measurement and management in the public sector: Indispensable role of performance measures
+   https://www.academia.edu/download/65420158/IOSR_SPMM_in_the_Public_Sector_Role_of_Performance_Measures_Dr_NMuravu_Jan_21.pdf
+   (N Muravu - IOSR Journal of Business and Management, 2021 - academia.edu | 2021 | cited by 15)
+   … importance of performance measures in the private sector, we review what the early or … e) Deriving meaningful quantitative performance measures in the public sector remains a …
+
+10. Performance management in universities: Effects of the transition to more quantitative measurement systems
+   https://www.tandfonline.com/doi/abs/10.1080/09638180.2012.668323
+   (HJ Ter Bogt, RW Scapens - European accounting review, 2012 - Taylor & Francis | 2012 | cited by 499)
+   [PDF] https://research.rug.nl/files/134420874/Performance_management_in_universities_Effects_of_the_transition_to_more.pdf
+   … somewhat implicit standards and rather qualitative performance indicators.Footnote1 In order … We will first describe the performance measurement systems and how they are used in the …
+
+11. Evolution and chronology of the organisational performance measurement field
+   https://www.inderscienceonline.com/doi/abs/10.1504/IJBPM.2016.075553
+   (JA Carneiro-da-Cunha… - … Performance …, 2016 - inderscienceonline.com | 2016 | cited by 100)
+   … review separating the business performance measurement area … defending that everything that could be quantifiable and … the organisation’s performance activities (Ridgway, 1956). This …
+
+12. Measuring and managing performance in organizations
+   https://books.google.com/books?hl=en&lr=&id=hVMUAAAAQBAJ&oi=fnd&pg=PT16&dq=Ridgway+1956+performance+measurement+quantitative+indicators+earliest+critique&ots=2U4_ER04Mf&sig=hlggQizHET_108R57Fitjt3ZrC4
+   (R Austin - 2013 - books.google.com | 2013 | cited by 420)
+   … First, I’ve conducted an extensive review of written materials … that individual performance is being measured in the Ridgway example, … Ridgway concludes that “quantitative performance …
+
+13. Performance evaluation: literature review and time evolution
+   http://anale.steconomiceuoradea.ro/volume/2012/n1/108.pdf
+   (P Mirela-Oana - Annals of Faculty of Economics …, 2012 - anale.steconomiceuoradea.ro | 2012 | cited by 42)
+   [PDF] http://anale.steconomiceuoradea.ro/volume/2012/n1/108.pdf
+   … in the literature on performance measurement, focusing first on linking strategy to … quantitative relations incorporating performance indicators and addressing performance measurement …
+
+14. Performance evaluation and the analytic hierarchy process.
+   https://publications.aaahq.org/jmar/article-abstract/doi/10.2308/JMAR-9701273030/27281
+   (LC Yee-Ching, EL Bernadette - Journal of Management …, 1991 - publications.aaahq.org | 1991 | cited by 114)
+   … This paper first reviews the need for muftipie performance … comprise both quantitative and qualitative indicators of organizational … Ridgway in his early article describes the possibility of …
+
+15. A review of literature on manufacturing systems productivity measurement and improvement
+   https://www.inderscienceonline.com/doi/abs/10.1504/IJISE.2006.010387
+   (KMN Muthiah, SH Huang - International Journal of …, 2006 - inderscienceonline.com | 2006 | cited by 135)
+   [PDF] https://www.researchgate.net/profile/Samuel-Huang-3/publication/293091763_A_review_of_literature_on_manufacturing_systems_productivity_measurement_and_improvement/links/5a2870140f7e9b71dd0ff009/A-review-of-literature-on-manufacturing-systems-productivity-measurement-and-improvement.pdf
+   … The review indicates that quantitative metrics for measuring factory level … the performance metrics reviewed and critiqued in this … Subsystem level metrics is first derived based on the …
+
+16. Understanding process performance measurement systems
+   https://hrcak.srce.hr/ojs/index.php/bsr/article/view/12482
+   (LM Glavan - Business Systems Research: International journal of …, 2011 - hrcak.srce.hr | 2011 | cited by 117)
+   [PDF] https://hrcak.srce.hr/ojs/index.php/bsr/article/download/12482/6100/
+   … The literature analysis showed that PPMS is a relatively new … (Ridgway, 1956) to appear more frequently in the early 1990s, … by measuring quantitative aspects as well as qualitative …
+
+17. What does 25 years of experience tell us about the state of performance measurement in public policy and management?
+   https://www.tandfonline.com/doi/abs/10.1111/j.1467-9302.2005.00445.x
+   (Å Johnsen - Public Money and Management, 2005 - Taylor & Francis | 2005 | cited by 470)
+   … This article reviews the state of performance measurement in … First we look at the ways that the performance of public … certain non-quantitative assessments in studies of performance …
+
+18. Dysfunctional potential of performance measurement
+   https://books.google.com/books?hl=en&lr=&id=y8JC3BR2FEcC&oi=fnd&pg=PA67&dq=Ridgway+1956+performance+measurement+quantitative+indicators+earliest+critique&ots=OLwUXNkWIv&sig=CXkTDmWpGAGFU1I5YucgJViqCqE
+   (P Ginsbers - Program Performance Measurements: Demands …, 1984 - books.google.com | 1984 | cited by 1)
+   … in the application of quantitative indicators to bureaucratic … Ridgeway (1956) noted that where formal control is focused … the subjects of special treatment review and planning sessions at …
+
+19. Construct measurement of evaluative style: a review and proposal
+   https://www.emerald.com/qram/article/2/1/77/361060
+   (J Noeverman, BAS Koene, R Williams - Qualitative Research in …, 2005 - emerald.com | 2005 | cited by 41)
+   [PDF] https://www.academia.edu/download/45064871/Construct_Measurement_of_Evaluative_Styl20160425-12838-1bopnfn.pdf
+   … First, existing measures of evaluative style in the RAPM-… 16 Ridgway (1956) reviews the knowledge of dysfunctional consequences of implementing a system of performance measures. …
+
+20. Perversity in public service performance measurement
+   https://www.emerald.com/ijppm/article/54/5-6/482/164542
+   (M Pidd - International Journal of Productivity and Performance …, 2005 - emerald.com | 2005 | cited by 242)
+   [PDF] https://alnap.org/documents/5145/business-performance-measurement-andy-neely-28ed-29.pdf#page=426
+   … of the unintended consequences of performance measurement. First, some unintended … To establish what works; that is, to use quantitative indicators as a foundation for evidence‐…
+
+21. Relations among measures, climate of control, and performance measurement models
+   https://onlinelibrary.wiley.com/doi/abs/10.1506/car.24.3.10
+   (MA Malina, HSO Nørreklit… - Contemporary Accounting …, 2007 - Wiley Online Library | 2007 | cited by 252)
+   [PDF] https://leeds-faculty.colorado.edu/selto/DBSC%20Oct%205%2006.pdf
+   … review how cause-and-effect relations among performance … From the qualitative data, we document perceived linkages … criterion affects a change in another (Ridgway 1956). Thus, if rela…
+
+22. Contingency approach to managerial performance evaluation-a review of literature
+   https://journals.co.za/doi/pdf/10.10520/AJA08562253_7
+   (M Nchimbi - Business Management Review, 1996 - journals.co.za | 1996 | cited by 4)
+   [PDF] https://journals.co.za/doi/pdf/10.10520/AJA08562253_7
+   … measuring performance, most of which are quantitative (Ridgway 1956), vary from profit measures (… reporting under these circumstances serve as early warning devices. The volatility of …
+
+23. Performance measurement issues, incentive application and globalization
+   https://www.taylorfrancis.com/chapters/edit/10.4324/9780203885635-13/performance-measurement-issues-incentive-application-globalization-monica-franco-santos
+   (M Franco-Santos - Global Compensation, 2008 - taylorfrancis.com | 2008 | cited by 6)
+   … performance may be created (Austin, 1996; Ridgway, 1956). … either quantitatively or qualitatively. In addition to this, … to review the research looking at performance measurement …
+
+24. Constitutive effects of performance indicators: Getting beyond unintended consequences
+   https://www.tandfonline.com/doi/abs/10.1080/14719037.2013.770058
+   (P Dahler-Larsen - Public Management Review, 2014 - Taylor & Francis | 2014 | cited by 372)
+   … More than 50 years ago, Ridgway (Citation1956) pointed to dysfunctional … The qualitative data from the two case studies were then sorted into the five domains described earlier (…
+
+25. Why manipulate? Performance measurement and data manipulation in regional and local government
+   https://www.researchgate.net/profile/Alexander-Kalgin/publication/320537794_A_Kalgin_V_Eliseenko_WHY_MANIPULATE_PERFORMANCE_MEASUREMENT_AND_DATA_MANIPULATION_IN_REGIONAL_AND_LOCAL_GOVERNMENT/links/59ea5efaaca272cddddb7ec2/A-Kalgin-V-Eliseenko-WHY-MANIPULATE-PERFORMANCE-MEASUREMENT-AND-DATA-MANIPULATION-IN-REGIONAL-AND-LOCAL-GOVERNMENT.pdf
+   (A Kalgin, V Eliseenko - 2015 - researchgate.net | 2015 | cited by 4)
+   [PDF] https://www.researchgate.net/profile/Alexander-Kalgin/publication/320537794_A_Kalgin_V_Eliseenko_WHY_MANIPULATE_PERFORMANCE_MEASUREMENT_AND_DATA_MANIPULATION_IN_REGIONAL_AND_LOCAL_GOVERNMENT/links/59ea5efaaca272cddddb7ec2/A-Kalgin-V-Eliseenko-WHY-MANIPULATE-PERFORMANCE-MEASUREMENT-AND-DATA-MANIPULATION-IN-REGIONAL-AND-LOCAL-GOVERNMENT.pdf
+   … from their first-hand experience of working with these measures … Quantitative analysis of data produced by performance … implementing the performance measurement the indicators that …
+
+26. Developing environmental supply chain performance measures
+   https://www.emerald.com/bij/article/17/3/320/65917
+   (S Shaw, DB Grant, J Mangan - Benchmarking: an international …, 2010 - emerald.com | 2010 | cited by 289)
+   [PDF] https://www.researchgate.net/profile/Sarah-Shaw-24/publication/238325900_Developing_environmental_supply_chain_performance_measures/links/5a7ed2460f7e9be137c5d7be/Developing-environmental-supply-chain-performance-measures.pdf
+   … The purpose of this paper is to review extant literature and present a … and early 1990s authors suggested various performance … chain performance measures have been quantitative and …
+
+27. Performance management: Does it work
+   https://books.google.com/books?hl=en&lr=&id=YZaDIftNnWoC&oi=fnd&pg=PA207&dq=Ridgway+1956+performance+measurement+quantitative+indicators+earliest+critique&ots=bXML7AwnCX&sig=82WqCwmAzdsCTrH-QbKF2D6e46I
+   (GA Boyne - Public management and performance: Research …, 2010 - books.google.com | 2010 | cited by 131)
+   … Performance indicators provide a quantitative scale against … better scores on different indicators (Ridgeway 1956). This suggests … critiques of performance management to systematic …
+
+28. The evolution of management accounting
+   https://link.springer.com/chapter/10.1007/978-1-4899-7138-8_27
+   (RS Kaplan - Readings in accounting for management control, 1984 - Springer | 1984 | cited by 2133)
+   [PDF] http://coin.wne.uw.edu.pl/~pmodzelewski/The%20Evolution%20of%20Management%20Accounting.pdf
+   … The introduction of quantitative analysis has not extended the … in a review of early cost accounting developments, notes the … the most important short-term indicators of long-term success. …
+
+29. Explaining the effects of performance measurement on performance: An organizational routines perspective
+   https://www.emerald.com/ijopm/article/31/1/101/145028
+   (A Pavlov, M Bourne - International journal of operations & production …, 2011 - emerald.com | 2011 | cited by 242)
+   … measured with corresponding financial indicators. Such indicators of performance were emphasized in early … on the individual level of analysis and individual performance, whereas this …
+
+30. Management control, accountability, and learning in public sector organizations: A critical analysis
+   https://www.emerald.com/books/edited-volume/11718/chapter-abstract/81639227
+   (M Visser - 2016 - emerald.com | 2016 | cited by 40)
+   [PDF] https://repository.ubn.ru.nl/bitstream/handle/2066/170775/170775pre.pdf?sequence=3
+   … Toward that purpose, this chapter first contains a brief critical … ,” simple quantifiable criteria for performance measurement and … administrative targets and performance indicators, but with …
+
+31. Falling from a great height: principles of good practice in performance measurement and the perils of top down determination of performance indicators
+   https://www.tandfonline.com/doi/abs/10.1080/0300393042000332837
+   (A Jackson - Local Government Studies, 2005 - Taylor & Francis | 2005 | cited by 49)
+   … This analysis draws on the literature but also on the author's … more sensitive qualitative analysis indicated some time earlier. … , in 1956 Ridgway concluded that ‘quantitative performance …
+
+32. Can we measure public sector innovation? A literature review
+   https://www.academia.edu/download/39543340/Can_we_measure_public_sector_innovation_20151029-14297-1rhir3y.pdf
+   (R Kattel, A Cepilovs, W Drechsler, T Kalvet… - LIPSE project …, 2013 - academia.edu | 2013 | cited by 168)
+   [PDF] https://www.academia.edu/download/39543340/Can_we_measure_public_sector_innovation_20151029-14297-1rhir3y.pdf
+   … In order to do so, the article consists of following sections: first… sector innovation performance measurements and indicators; … where quantitative indicators are not the best measures. This …
+
+33. Constitutive effects of performance indicator systems
+   https://www.emerald.com/books/edited-volume/14818/chapter/85916465
+   (P Dahler-Larsen - 2007 - emerald.com | 2007 | cited by 41)
+   … I seek to demonstrate the relevance of the concept, first by … production of quantified and standard-based measures of … there is a critique, which suggests that performance indicators are …
+
+34. The balanced scorecard
+   https://books.google.com/books?hl=en&lr=&id=k3La7WnBBGIC&oi=fnd&pg=PA175&dq=Ridgway+1956+performance+measurement+quantitative+indicators+earliest+critique&ots=t8i_DuXA30&sig=jUIayebnXoCIT6_AsjQxvYFsyCY
+   (H Nørreklit, F Mitchell - Issues in management accounting, 2007 - books.google.com | 2007 | cited by 148)
+   … preparing them and those subject to them (Ridgeway, 1956). … Thus, the BSC provides a quantitative representation of key … This paper contains a critique of the BSC which highlights its …
+
+35. Ambiguity in performance measurement: a theoretical approach to organisational uses of performance measurement
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.0267-4424.2006.00401.x
+   (J Vakkuri, P Meklin - Financial Accountability & Management, 2006 - Wiley Online Library | 2006 | cited by 199)
+   [PDF] https://www.academia.edu/download/47589188/j.0267-4424.2006.00401.x20160728-3440-1sp0qzc.pdf
+   … A classic formulation is that by Ridgway stating that: Quantitative measures of performance … Therefore, the methodological perspective of the analysis is to ask: how do they do so and …
+
+36. Efficiency measurement from a management perspective: a case of the civil registry office in Flanders
+   https://journals.sagepub.com/doi/abs/10.1177/002085239305900102
+   (G Bouckaert - … Review of Administrative Sciences, 1993 - journals.sagepub.com | 1993 | cited by 27)
+   … This will be the first focus of the study. … , the number of inhabitants of a city was used as an output proxy and indicator… should the quantitative efficiency measure be read with a qualitative …
+
+37. From varieties of failure to failure judgments: the sociology of valuation and failure studies
+   https://www.taylorfrancis.com/chapters/edit/10.4324/9780429355950-9/varieties-failure-failure-judgments-thorsten-peetz-frank-meier-d%C3%A9sir%C3%A9e-waibel
+   (T Peetz, F Meier, D Waibel - Routledge international handbook of …, 2023 - taylorfrancis.com | 2023 | cited by 8)
+   … In addition, we have argued that the analysis of valuation in … A rich literature deals with the use of quantitative indicators … tional contexts, they are only first steps toward the formulation of …
+
+38. Foundations and trends in performance management. A twenty-five years bibliometric analysis in business and public administration domains
+   https://link.springer.com/article/10.1007/s11192-016-1948-8
+   (C Cuccurullo, M Aria, F Sarto - Scientometrics, 2016 - Springer | 2016 | cited by 489)
+   [PDF] https://www.iris.unina.it/retrieve/handle/11588/633872/399116/Cuccurullo2016_Article_FoundationsAndTrendsInPerforma.pdf
+   … Similarly to them, our analysis is based on quantitative data, … of performance indicators while performance management is … To perform MCA first, we carried out a complete disjunctive …
+
+39. Assessing the impact of planned social change
+   https://jmde.journals.publicknowledgeproject.org/index.php/jmde_1/article/view/297
+   (DT Campbell - … of MultiDisciplinary Evaluation, 2011 - … journals.publicknowledgeproject.org | 2011 | cited by 409)
+   [PDF] https://jmde.journals.publicknowledgeproject.org/index.php/jmde_1/article/download/297/292
+   … progressed very far from my earlier review (Campbell, 1969b)… issues where we quantitative evaluation methodologists feel … , we tend to be limited to indicators that are already being …
+
+40. Making sense of research into the organizational and social aspects of management accounting: A review of its underlying assumptions.
+   https://www.academia.edu/download/48959180/acassumptionsjms.pdf
+   (T Hopper, A Powell - Journal of Management Studies (Wiley …, 1985 - academia.edu | 1985 | cited by 1237)
+   [PDF] https://www.academia.edu/download/48959180/acassumptionsjms.pdf
+   … goals, Ridgeway (1956) and Dearden (1961) both chronicled how using accounting criteria as performance measures … analysis, rather than observing the processes first hand over time. …
+
+41. The dysfunctional side effects of quantitative indicator production: Illustrations from mental health care (a message from Chicken Little)
+   https://www.sciencedirect.com/science/article/pii/0149718984900156
+   (PE Ginsberg - Evaluation and Program Planning, 1984 - Elsevier | 1984 | cited by 40)
+   … In order to ihustrate this phenomenon, the author reviews a general literature and utilizes … Ridgeway (1956) noted in addition that where formal control is focused upon performance in…
+
+42. Uncovering the links between regulation and performance measurement
+   https://www.sciencedirect.com/science/article/pii/S0925527309002084
+   (KH Tan, RH Rae - International Journal of Production Economics, 2009 - Elsevier | 2009 | cited by 36)
+   [PDF] https://irep.ntu.ac.uk/id/eprint/50419/1/1831072_Rae.pdf
+   … Both Ridgway and Argyris found examples in firm's of the existence … and could not be quantified through this particular study. … This review found that strong links exist between regulation …
+
+43. Consequences of
+   
+   (VF Ridgway - Information for Decision Making: Quantitative and …, 1974 - Prentice Hall | 1974)
+
+44. Performance measurement systems–beyond generic actions
+   https://api.taylorfrancis.com/content/chapters/edit/download?identifierName=doi&identifierValue=10.4324/9780203101261-24&type=chapterpdf
+   (R Lueg, H Nørreklit - The Routledge companion to cost …, 2013 - api.taylorfrancis.com | 2013 | cited by 51)
+   … of such qualitative PMS indicators and financial performance is … Based on empirical data and statistical analysis, these … ‘optimal quality costs’ (Feigenbaum, 1956: 94). The effect on both …
+
+45. Management control systems: a historical perspective
+   https://www.academia.edu/download/60683388/Management_Control_Systems_A_Historical_Perspective20190923-38912-gi1bre.pdf
+   (A Robiou - Management Control Systems A Historical Perspective, 2018 - academia.edu | 2018 | cited by 154)
+   … to review the background literature on management control systems in organisations. First of … use of formal systems, having quantitative and qualitative indicators, with informal systems, …
+
+46. Building project performance evaluation model
+   https://researchportal.northumbria.ac.uk/en/publications/building-project-performance-evaluation-model/
+   (R Wadugodapitiya… - CIB 2010 World …, 2010 - researchportal.northumbria.ac.uk | 2010 | cited by 18)
+   [PDF] https://researchportal.northumbria.ac.uk/files/40734693/CIB19103.pdf
+   … due to their dysfunctional behaviour (Ridgway, 1956). This … the performance has not been measured quantitatively and … aspect for performance measurement, the final analysis exposed …
+
+47. Internal performance measurement systems: problems and solutions
+   https://www.tandfonline.com/doi/abs/10.1080/10599231.2010.520641
+   (M Jakobsen, H Nørreklit, F Mitchell - Journal of Asia-Pacific …, 2010 - Taylor & Francis | 2010 | cited by 22)
+   … dimension was not included in this analysis. In essence, the … will outweigh the increase in the first. A third alternative is a … whereas a logico-qualitative analysis may reveal if there is …
+
+48. Is there a Nordic perspective on public sector performance measurement?
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.0267-4424.2006.00404.x
+   (Å Johnsen, J Vakkuri - Financial Accountability & Management, 2006 - Wiley Online Library | 2006 | cited by 91)
+   [PDF] https://www.academia.edu/download/32922431/Public_Sector_PM.pdf
+   … paper reviews Nordic research on performance measurement … They acknowledge comments received when an early version … A quantitative content analysis examined how Norwegian …
+
+49. Integrating financial and non-financial performance measures: the state of the art and research opportunities
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=283651
+   (HM El-Shishini - Management Accounting Research Group …, 2001 - papers.ssrn.com | 2001 | cited by 40)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=283651
+   … This paper aims to provide a literature review of the need for … Ridgway (1956) presents many examples where a manager’… firms’ tendency to use quantitative measures (frequency and …
+
+50. Balanced scorecard: theoretical perspectives and public management implications
+   https://www.emerald.com/insight/content/doi/10.1108/02686900110395460/full/pdf
+   (Å Johnsen - Managerial auditing journal, 2001 - emerald.com | 2001 | cited by 264)
+   [PDF] https://www.researchgate.net/profile/Age-Johnsen/publication/244024421_Balanced_scorecard_Theoretical_perspectives_and_public_management_implications/links/540eb0ff0cf2d8daaacd5b6f/Balanced-scorecard-Theoretical-perspectives-and-public-management-implications.pdf
+   … When I said earlier that the BSC has been published in … Jensen called for both quantitative as well as qualitative … extent a study of efficiency and performance measurement (review) in …

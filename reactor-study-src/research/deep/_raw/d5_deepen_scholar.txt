@@ -1,0 +1,1820 @@
+===== Query 1/6: Kirk RLHF generalisation diversity out-of-distribution cost tradeoff findings =====
+
+1. Understanding the effects of rlhf on llm generalisation and diversity
+   https://proceedings.iclr.cc/paper_files/paper/2024/hash/5a68d05006d5b05dd9463dd9c0219db0-Abstract-Conference.html
+   (R Kirk, I Mediratta, C Nalmpantis… - International …, 2024 - proceedings.iclr.cc | 2024 | cited by 468)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2024/file/5a68d05006d5b05dd9463dd9c0219db0-Paper-Conference.pdf
+   … both out-of-distribution generalisation and output diversity for … We demonstrate an inherent tradeoff between generalisation … Here we present results for generalisation and diversity for …
+
+2. Understanding and Evaluating Generalisation for Superhuman AI Systems
+   https://discovery.ucl.ac.uk/id/eprint/10205843/
+   (R Kirk - 2025 - discovery.ucl.ac.uk | 2025)
+   [PDF] https://discovery.ucl.ac.uk/id/eprint/10205843/1/Kirk_10205843_Thesis.pdf
+   … My findings reveal that while RLHF enhances generalisation, … By examining generalisation from diverse angles, this thesis … of generalisation (typically out-ofdistribution generalisation), …
+
+3. Rethinking the Evaluation of Alignment Methods: Insights into Diversity, Generalisation, and Safety
+   https://aclanthology.org/2026.eacl-srw.7/
+   (D Janiak, J Moska, D Motyka, K Seweryn… - Proceedings of the …, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.eacl-srw.7.pdf
+   … Trade-off analysis: We present novel insights into how safety-… indistribution (ID) and out-of-distribution (OOD) test sets for … Instead of training a separate model for summarization ((Kirk …
+
+4. Reward Model Overoptimisation in Iterated RLHF
+   https://arxiv.org/abs/2505.18126
+   (L Wolf, R Kirk, M Musolesi - arXiv preprint arXiv:2505.18126, 2025 - arxiv.org | 2505 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2505.18126
+   … on data that it has not seen before (out of distribution). … controlled ablations but may not capture the diversity of real-world … generalization error of the empirical minimizer scales as O(1/ …
+
+5. Attributing mode collapse in the fine-tuning of large language models
+   https://openreview.net/pdf?id=3pDMYjpOxk
+   (L O'Mahony, L Grinsztajn, H Schoelkopf… - ICLR 2024 Workshop …, 2024 - openreview.net | 2024 | cited by 49)
+   [PDF] https://openreview.net/pdf?id=3pDMYjpOxk
+   … and Kirk et al. (2023) analysed the trade off between out-ofdistribution generalisation and output … Figure 1 depicts our results relating to the diversity of model generations across various …
+
+6. Rewarded soups: towards pareto-optimal alignment by interpolating weights fine-tuned on diverse rewards
+   https://proceedings.neurips.cc/paper_files/paper/2023/hash/e12a3b98b67e8395f639fde4c2b03168-Abstract-Conference.html
+   (A Rame, G Couairon, C Dancette… - Advances in …, 2023 - proceedings.neurips.cc | 2023 | cited by 313)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2023/file/e12a3b98b67e8395f639fde4c2b03168-Paper-Conference.pdf
+   … Perhaps surprisingly, we show that we can trade off the … Given the importance of RLHF to train LLMs, we begin our … : Recycling diverse models for out-of-distribution generalization. …
+
+7. Surveying the effects of quality, diversity, and complexity in synthetic data from large language models
+   https://arxiv.org/abs/2412.02980
+   (A Havrilla, A Dai, L O'Mahony, K Oostermeijer… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 39)
+   [PDF] https://arxiv.org/pdf/2412.02980
+   … generalization, diversity to be essential for out-of-distribution … the existence of Quality-Diversity trade-offs in training data and … observed RLHF models suffer from a lack of diversity when …
+
+8. Reward-robust rlhf in llms
+   https://arxiv.org/abs/2409.15360
+   (Y Yan, X Lou, J Li, Y Zhang, J Xie, C Yu… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 38)
+   [PDF] https://arxiv.org/pdf/2409.15360?
+   … outperforms baselines across diverse benchmarks, showing … often arise when the RM handles out-of-distribution (OOD) data. … to generalize across different domains, making our findings …
+
+9. One Bias After Another: Mechanistic Reward Shaping and Persistent Biases in Language Reward Models
+   https://arxiv.org/abs/2603.03291
+   (D Fein, M Lamparth, V Xiang, MJ Kochenderfer… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2603.03291
+   … calibration and out-of-distribution generalization, asking … on narrow domains7 generalize to the diverse prompt-completion … helpful-agreement or other trade-offs, suggesting this bias is …
+
+10. Alignment and safety in large language models: Safety mechanisms, training paradigms, and emerging challenges
+   https://arxiv.org/abs/2507.19672
+   (H Lu, L Fang, R Zhang, X Li, J Cai, H Cheng… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 26)
+   [PDF] https://arxiv.org/pdf/2507.19672
+   … diverse paradigms, characterizing the fundamental trade-offs … , ensuring robustness and generalization, and scaling … discussing the empirical successes of RLHF, along with its …
+
+11. The Representation-Rationalizability Tradeoff in Reward Learning
+   https://arxiv.org/abs/2606.00291
+   (J Dong, Y Yu, P Pourpart - arXiv preprint arXiv:2606.00291, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.00291
+   … data and real preference datasets corroborate our results. … analyzing how RLHF aggregates diverse human preferences. … pairs and out-of-distribution generalization as practical …
+
+12. Open problems and fundamental limitations of reinforcement learning from human feedback
+   https://arxiv.org/abs/2307.15217
+   (S Casper, X Davies, C Shi, TK Gilbert… - arXiv preprint arXiv …, 2023 - arxiv.org | 2023 | cited by 1214)
+   [PDF] https://arxiv.org/pdf/2307.15217
+   … methods for diverse data selection are open problems. … task they are trained for, and generalize to a wide range of scenarios… A baseline for detecting misclassified and out-of-distribution …
+
+13. Preference fine-tuning of llms should leverage suboptimal, on-policy data
+   https://arxiv.org/abs/2404.14367
+   (F Tajwar, A Singh, A Sharma, R Rafailov… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 213)
+   [PDF] https://arxiv.org/pdf/2404.14367?
+   … Second, we observe a tradeoff between drawing more on-policy samples and performing … Kirk et al. (2023) study the contribution of RL fine-tuning on generalization to out-of-distribution …
+
+14. Enhancing Robustness of Reward Models via Hidden Equilibrium Balancing in Large Language Models
+   https://ieeexplore.ieee.org/abstract/document/11574614/
+   (MC Alaoui, NE Joudar, M Ettaouil - IEEE Access, 2026 - ieeexplore.ieee.org | 2026)
+   [PDF] https://ieeexplore.ieee.org/iel8/6287639/6514899/11574614.pdf
+   … generalization performance, reducing the generalization gap … achieved remarkable success across diverse NLP tasks. The … Conservative reward modelling penalises out-of-distribution …
+
+15. " There are no solutions, only trade-offs.''Taking A Closer Look At Safety Data Annotations.
+   https://openreview.net/forum?id=HWlJOQDLMi
+   (EM Yang, M Gallé, S Goldfarb-Tarrant - Pluralistic Alignment Workshop at … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=HWlJOQDLMi
+   … inconsistent values that arise from diversity of thought? Given 162 … 4 337 may be attributed in part to out-of-distribution errors. Due to … We further indicate the risk of over-generalization to …
+
+16. BEYOND RLHF: ATheoretical FRAMEWORK OF ALIGNMENT AS DISTRIBUTION LEARNING
+   https://openreview.net/forum?id=TRgEiJ5yN0
+   (AASD LEARNING - openreview.net)
+   [PDF] https://openreview.net/pdf?id=TRgEiJ5yN0
+   … the empirical finding that on-policy objectives (eg, RLHF) … At face value, RKL can be seen as a generalization of RLHF … dataset, which can induce out-of-distribution responses. This is …
+
+17. Scaling laws for reward model overoptimization in direct alignment algorithms
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/e45caa3d5273d105b8d045e748636957-Abstract-Conference.html
+   (R Rafailov, Y Chittepu, R Park… - Advances in …, 2024 - proceedings.neurips.cc | 2024 | cited by 162)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/e45caa3d5273d105b8d045e748636957-Paper-Conference.pdf
+   … to exhibit more win-rate - KL trade-offs and be less prone to over… Unlike in standard RLHF, the non-strict convexity of the … how DAAs allocate probability mass out of distribution, we use a …
+
+18. Balancing the Budget: Understanding Trade-offs Between Supervised and Preference-Based Finetuning
+   https://aclanthology.org/2025.acl-long.1248/
+   (M Raghavendra, J Kang, A Ritter - … of the 63rd Annual Meeting of …, 2025 - aclanthology.org | 2025 | cited by 3)
+   [PDF] https://aclanthology.org/2025.acl-long.1248.pdf
+   … SFT and RLHF are usually applied sequentially after pre… We consider four tasks that represent a diverse variety of LLM post-… performance generalizes to out-of-distribution tasks is also …
+
+19. On the current landscape of language model reward modeling for alignment
+   https://search.proquest.com/openview/40f91a9c7f291afdd4014642a4194179/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (R Koo - 2025 - search.proquest.com | 2025)
+   [PDF] https://conservancy.umn.edu/bitstreams/ee290b57-e694-449c-b337-c12bee5f635a/download
+   … This chapter will cover a brief background of RLHF and the … the linguistic fluency and diversity of the original language … Explore-Exploit Tradeoff To better understand BO’s behavior, …
+
+20. Closing the Distribution Gap in Adversarial Training for LLMs
+   https://arxiv.org/abs/2602.15238
+   (C Hu, J Dornbusch, D Lüdke, S Günnemann… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2602.15238
+   … Lastly, diffusion models fulfill our diversity criteria. An … in our experiments that they improve the utility-robustness trade-off… We hypothesize that MixAT cannot close this generalization gap …
+
+21. Curiosity-driven reinforcement learning from human feedback
+   https://aclanthology.org/2025.acl-long.1146/
+   (H Sun, Y Chai, S Wang, Y Sun, H Wu… - Proceedings of the 63rd …, 2025 - aclanthology.org | 2025 | cited by 28)
+   [PDF] https://aclanthology.org/2025.acl-long.1146.pdf
+   … this trade-off in RLHF stage, thus improving output diversity … diversity achieved with CD-RLHF impacts generalization … , 2024) as an out-of-distribution (OOD) benchmark to assess …
+
+22. Your Model Diversity, Not Method, Determines Reasoning Strategy
+   https://arxiv.org/abs/2604.10827
+   (M Choraria, A Gerogiannis, A Das… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2604.10827
+   … RLHF improves out-ofdistribution generalization but measurably narrows the range of generated outputs relative to supervised fine-tuning (Kirk et al., 2024), and similar diversity … tradeoff …
+
+23. Exploring data scaling trends and effects in reinforcement learning from human feedback
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/164687cb815daae754d33364716e65e6-Abstract-Conference.html
+   (W Shen, G Liu, Y Yue, R Zhu… - Advances in Neural …, 2026 - proceedings.neurips.cc | 2026 | cited by 30)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/164687cb815daae754d33364716e65e6-Paper-Conference.pdf
+   … , especially on challenging and out-of-distribution tasks, while yielding … Kirk et al. [31] demonstrate that … a fundamental trade-off between generalization and diversity in current LLM …
+
+24. Progress or regress? self-improvement reversal in post-training
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/1fa0c4e5a7e189729230d018b229abc7-Abstract-Conference.html
+   (T Wu, X Li, P Liu - International Conference on Learning …, 2025 - proceedings.iclr.cc | 2025 | cited by 28)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/1fa0c4e5a7e189729230d018b229abc7-Paper-Conference.pdf
+   … , like output diversity and out-of-distribution (OOD) generalization. These findings indicate … The evaluation results highlight a critical trade-off in iterative self-improvement: while aiming …
+
+25. Teaching large language models to reason with reinforcement learning
+   https://arxiv.org/abs/2403.04642
+   (A Havrilla, Y Du, SC Raparthy, C Nalmpantis… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 204)
+   [PDF] https://arxiv.org/pdf/2403.04642
+   … This results in in more diverse solution paths than the SFT … RLHF to result in better (out-of-distribution) generalization than SFT on summarization and instruction following tasks (Kirk et al…
+
+26. MallowsPO: Fine-tune your LLM with preference dispersions
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/4ddab70bf41ffe5d423840644d3357f4-Abstract-Conference.html
+   (H Chen, H Zhao, H Lam, D Yao… - … Conference on Learning …, 2025 - proceedings.iclr.cc | 2025 | cited by 27)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/4ddab70bf41ffe5d423840644d3357f4-Paper-Conference.pdf
+   … rate evaluated by GPT4, and generalization capability on the … in performance and per-input diversity of RLHF and DPO. … For the out-of-distribution test, we apply the models, fine-tuned …
+
+27. Helping or herding? reward model ensembles mitigate but do not eliminate reward hacking
+   https://arxiv.org/abs/2312.09244
+   (J Eisenstein, C Nagpal, A Agarwal, A Beirami… - arXiv preprint arXiv …, 2023 - arxiv.org | 2023 | cited by 190)
+   [PDF] https://arxiv.org/pdf/2312.09244
+   … Right: insufficiently diverse RMs unanimously rate this overly-… 2023), we use a larger RM to evaluate the generalization of … We begin by demonstrating that the out-of-distribution …
+
+28. Rewardanything: Generalizable principle-following reward models
+   https://arxiv.org/abs/2506.03637
+   (Z Yu, J Zeng, W Gu, Y Wang, J Wang, F Meng… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 34)
+   [PDF] https://arxiv.org/pdf/2506.03637
+   … for RMs focusing on generalization across diverse principles. … an LLM to nuanced, out-of-distribution safety behaviors using … Empirical results show varied safety-performance trade-offs …
+
+29. Evolution and the knightian blindspot of machine learning
+   https://arxiv.org/abs/2501.13075
+   (J Lehman, E Meyerson, T El-Gaaly, KO Stanley… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 13)
+   [PDF] https://arxiv.org/pdf/2501.13075?
+   … to situations that are remarkably out-of-distribution (eg invasive … an abundant diversity of solutions results in many diverse bets … help with the problem of generalizing out-ofdistribution [41…
+
+30. Warp: On the benefits of weight averaged rewarded policies
+   https://arxiv.org/abs/2406.16768
+   (A Ramé, J Ferret, N Vieillard, R Dadashi… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 46)
+   [PDF] https://arxiv.org/pdf/2406.16768
+   … To improve the trade-off between KL and reward during RLHF, we … However, we note that the results stagnate after the 3rd … diverse models for out-of-distribution generalization. In …
+
+31. Robomonkey: Scaling test-time sampling and verification for vision-language-action models
+   https://arxiv.org/abs/2506.17811
+   (J Kwok, C Agia, R Sinha, M Foutter, S Li… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 51)
+   [PDF] https://arxiv.org/pdf/2506.17811
+   … of verification—generating diverse candidates and verifying … S robot across four out-of-distribution (OOD) generalization tasks. … In this ablation study, we examine the trade-off between …
+
+32. Rlhf deciphered: A critical analysis of reinforcement learning from human feedback for llms
+   https://dl.acm.org/doi/abs/10.1145/3743127
+   (S Chaudhari, P Aggarwal, V Murahari… - ACM Computing …, 2025 - dl.acm.org | 2025 | cited by 241)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3743127
+   … to out-of-distribution inputs. This occurs because while models can fit training data perfectly, they cannot reliably generalize … the inherent variability and diversity of human preferences. …
+
+33. Understanding likelihood over-optimisation in direct alignment algorithms
+   https://arxiv.org/abs/2410.11677
+   (Z Shi, S Land, A Locatelli, M Geist, M Bartolo - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 6)
+   [PDF] https://arxiv.org/pdf/2410.11677
+   … and diversity in current LLM fine-tuning, with RLHF showing better out-of-distribution generalisation but substantially decreased output diversity … Following the previous work (Kirk et al.…
+
+34. Rl is neither a panacea nor a mirage: Understanding supervised vs. reinforcement learning fine-tuning for llms
+   https://arxiv.org/abs/2508.16546
+   (H Jin, S Lv, S Wu, M Hamdaqa - arXiv preprint arXiv:2508.16546, 2025 - arxiv.org | 2508 | cited by 15)
+   [PDF] https://arxiv.org/pdf/2508.16546?
+   … RL yields better out-of-distribution (OOD) generalization Kirk et al. [… [2025], our findings indicate that directional shifts in the extremal … This highlights a fundamental trade-off, where RL re-…
+
+35. Warm: On the benefits of weight averaged reward models
+   https://arxiv.org/abs/2401.12187
+   (A Ramé, N Vieillard, L Hussenot, R Dadashi… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 147)
+   [PDF] https://arxiv.org/pdf/2401.12187
+   … trade-off between ensuring LMC and diversity across weights. … We report accuracies of those RMs on a novel out-of-distribution (… diverse models for out-of-distribution generalization. In …
+
+36. The devil is in the details: Tackling unimodal spurious correlations for generalizable multimodal reward models
+   https://arxiv.org/abs/2503.03122
+   (Z Li, X Wen, J Lou, Y Ji, Y Lu, X Han, D Zhang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 15)
+   [PDF] https://arxiv.org/pdf/2503.03122
+   … datasets often struggle to generalize to out-ofdistribution data due to their … across diverse multimodal preference datasets. Our … We observe that this comes with a slight trade-off in iid …
+
+37. Sequence to sequence reward modeling: Improving rlhf by language feedback
+   https://ojs.aaai.org/index.php/AAAI/article/view/34992
+   (J Zhou, J Ji, J Dai, Y Yang - Proceedings of the AAAI Conference on …, 2025 - ojs.aaai.org | 2025 | cited by 25)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/view/34992/37147
+   … the performance of RLHF under out-of-distribution prompts. … RM can mitigate unexpected generalization, reducing the long… variance indirectly reflects the diversity of generated content. …
+
+38. Diversity-rewarded cfg distillation
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/a59a11e8580a7ac850cb792f6179c7a0-Abstract-Conference.html
+   (G Cideron, A Agostinelli, J Ferret… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 13)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/a59a11e8580a7ac850cb792f6179c7a0-Paper-Conference.pdf
+   … ) Diversity RL: can we trade-off between quality and diversity … analyse the results obtained when including the diversity reward … reductions in diversity in RLHF. In contrast, existing quality…
+
+39. Benchmarking and Improving Monitors for Out-Of-Distribution Alignment Failure in LLMs
+   https://arxiv.org/abs/2605.21602
+   (D Feng, P Srivastava, A Dragan, C Laidlaw - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.21602
+   … of data diversity on OOD generalization, finding that diversity helps with generalizing to only … This makes sense—as we mention in Section 1, the tradeoff for better recall on OOD malign …
+
+40. Reward model boosting for rlhf
+   https://openreview.net/forum?id=ZDscKnCiuJ
+   (J Fan, D Ye, Y Hao, L Mou - 2026 - openreview.net | 2026 | cited by 1)
+   [PDF] https://openreview.net/pdf?id=ZDscKnCiuJ
+   … in-distribution and out-of-distribution datasets, substantially … (OOD) datasets, indicating strong generalization ability (§3.2)… Instead, we propose to regularize the diversity of preference …
+
+41. Iterative preference learning from human feedback: Bridging theory and practice for rlhf under kl-constraint
+   https://arxiv.org/abs/2312.11456
+   (W Xiong, H Dong, C Ye, Z Wang, H Zhong, H Ji… - arXiv preprint arXiv …, 2023 - arxiv.org | 2023 | cited by 389)
+   [PDF] https://arxiv.org/pdf/2312.11456
+   … in the coverage over these out-of-distribution responses, the … In this case, it is essential to have a diverse Doff as we do not … To fit the DPO into the GSHF framework, we generalize this …
+
+42. Guardrail Guided Policy Optimisation: Learning Disentangled Safety Constraints
+   https://link.springer.com/chapter/10.1007/978-981-95-4972-6_32
+   (J Chua, C Wang, L Zhu, L Yao - Australasian Joint Conference on Artificial …, 2025 - Springer | 2025)
+   … in settings requiring generalisation and safety adaptation. … reward model, resulting in failures on out-of-distribution inputs [8, 20]. … and multi-step reasoning required for integrating diverse …
+
+43. Where does output diversity collapse in post-training?
+   https://arxiv.org/abs/2604.16027
+   (C Karouzos, X Tan, N Aletras - arXiv preprint arXiv:2604.16027, 2026 - arxiv.org | 2604 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2604.16027
+   … that RLHF reduces both per input and across input diversity. … an out-of-distribution intervention, so we interpret the results … ), removing CoT does not recover diversity. Think-not-thinking …
+
+44. Oyster-II: Reinforcement Learning for Constructive Safety Alignment in Large Language Models
+   https://arxiv.org/abs/2607.02914
+   (J Guan, Y Xie, J Chen, J Liu, Z Ye, D Li, J Shen… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2607.02914
+   … While this approach demonstrated promising results in … : safety generalization across diverse and out-ofdistribution scenarios, … safety-helpfulness trade-off of the trained model. Empirical …
+
+45. More Aligned, Less Diverse? Analyzing the Grammar and Lexicon of Two Generations of LLMs
+   https://aclanthology.org/2026.acl-long.1803/
+   (A Gude, R Santos-Ríos, F Bond… - Proceedings of the …, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.acl-long.1803.pdf
+   … of RLHF training showed that although RLHF improves out-of-distribution generalization … language inference metrics, revealing a tradeoff between adaptability and linguistic variety …
+
+46. Unintended impacts of llm alignment on global representation
+   https://aclanthology.org/2024.acl-long.853/
+   (MJ Ryan, W Held, D Yang - … of the 62nd Annual Meeting of the …, 2024 - aclanthology.org | 2024 | cited by 90)
+   [PDF] https://aclanthology.org/2024.acl-long.853.pdf
+   … We explore nine typologically diverse languages. … the model behavior on outof-distribution preferences. If opinionated … A more concrete assessment of multilingual generalization would …
+
+47. Inform: Mitigating reward hacking in rlhf via information-theoretic reward modeling
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/f25d75fc760aec0a6174f9f5d9da59b8-Abstract-Conference.html
+   (Y Miao, S Zhang, L Ding, R Bao… - Advances in Neural …, 2024 - proceedings.neurips.cc | 2024 | cited by 102)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/f25d75fc760aec0a6174f9f5d9da59b8-Paper-Conference.pdf
+   … relatively stable performance on the out-of-distribution Flan … The upper bound of the generalization error for our method is … We will next use sixteen diverse datasets to validate these …
+
+48. DRO-REBEL: Distributionally Robust Relative-Reward Regression for Fast and Efficient LLM Alignment
+   https://arxiv.org/abs/2509.19104
+   (S Sahu, MT Wells - arXiv preprint arXiv:2509.19104, 2025 - arxiv.org | 2509 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2509.19104?
+   … model diverse human preferences: Many RLHF methodologies … demonstrating robustness to out-of-distribution (OOD) tasks. … (OOD) generalization and sample efficiency. We find strong …
+
+49. Too Big to Think: Capacity, Memorization, and Generalization in Pre-Trained Transformers
+   https://arxiv.org/abs/2506.09099
+   (J Barron, D White - arXiv preprint arXiv:2506.09099, 2025 - arxiv.org | 2506 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2506.09099
+   … During pre-training, LLMs absorb vast and diverse corpora to … out-of-distribution cases, we interpret this not as evidence of … the trade-off between memorization and generalization in …
+
+50. Inference-aware fine-tuning for best-of-n sampling in large language models
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/c40bed606c51c8e827c1ba75aa2da054-Abstract-Conference.html
+   (Y Chow, G Tennenholtz, I Gur, V Zhuang… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 87)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/c40bed606c51c8e827c1ba75aa2da054-Paper-Conference.pdf
+   … best responses with more diverse responses that might be better … Our results suggest a tradeoff between exploration and … Our results remark the strong generalization performance of our …
+
+51. Humor in ai: Massive scale crowd-sourced preferences and benchmarks for cartoon captioning
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/e297fb6cd1690ee5b39c5bb4c58ad801-Abstract-Datasets_and_Benchmarks_Track.html
+   (J Zhang, L Jain, Y Guo, J Chen… - Advances in …, 2024 - proceedings.neurips.cc | 2024 | cited by 21)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/e297fb6cd1690ee5b39c5bb4c58ad801-Paper-Datasets_and_Benchmarks_Track.pdf
+   … BoN indeed results in a less diverse group of generations. … for out-of-distribution generations when running RLHF. While … Humor vs offensiveness tradeoff. Optimizing for humor abilities …
+
+52. Rl fine-tuning heals ood forgetting in sft
+   https://arxiv.org/abs/2509.12235
+   (H Jin, S Luan, T Ni, S Lyu, G Rabusseau… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 17)
+   [PDF] https://arxiv.org/pdf/2509.12235
+   … SFT and RLFT and study the Out-OfDistribution (OOD) and In-… how the ID and OOD generalization abilities evolve. See the … it does not cover the full diversity of open-ended reasoning …
+
+53. A survey of direct preference optimization
+   https://arxiv.org/abs/2503.11701
+   (S Liu, W Fang, Z Hu, J Zhang, Y Zhou, K Zhang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 50)
+   [PDF] https://arxiv.org/pdf/2503.11701?
+   … modeling introduces inherent trade-offs in computational efficiency and … diversity and the other for improving generalization. … in DPO performs poorly on Out-Of-Distribution (OOD) data …
+
+54. Exploration-Driven Optimization for Test-Time Large Language Model Reasoning
+   https://arxiv.org/abs/2605.09853
+   (C Li, Y Zhuang, C Gao, H Sun, R Qiang… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.09853
+   … To further assess out-of-distribution (OOD) generalization, … both greedy decoding results and results obtained with Self-… the strong generalization capability of EDO across diverse RL …
+
+55. On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity
+   https://arxiv.org/abs/2606.26091
+   (AL Nicolicioiu, M Pezeshki, A Courville - arXiv preprint arXiv:2606.26091, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.26091
+   … semantic diversity, failing on out-of-distribution settings that require … predicts out-of-distribution generalization (§4.1, Fig. 3). … on RLHF shows that RL-trained models are less diverse than …
+
+56. From Memorization to Generalization: A Differential Privacy Perspective on LLM Internal Representations
+   https://www.researchgate.net/profile/Samantha-Lopez-2/publication/396864851_From_Memorization_to_Generalization_A_Differential_Privacy_Perspective_on_LLM_Internal_Representations/links/68fb98a47d9a4d4e870c4ad3/From-Memorization-to-Generalization-A-Differential-Privacy-Perspective-on-LLM-Internal-Representations.pdf
+   (Z Yang, J Liu, L Li, H Chen, X Wang, M Zhang - researchgate.net)
+   [PDF] https://www.researchgate.net/profile/Samantha-Lopez-2/publication/396864851_From_Memorization_to_Generalization_A_Differential_Privacy_Perspective_on_LLM_Internal_Representations/links/68fb98a47d9a4d4e870c4ad3/From-Memorization-to-Generalization-A-Differential-Privacy-Perspective-on-LLM-Internal-Representations.pdf
+   … feedback (RLHF) influences out-of-distribution generalization and output diversity in LLMs [24]… These findings elucidate the spectrum of trade-offs in maintaining both privacy and model …
+
+57. KARL: Mitigating Hallucinations in LLMs via Knowledge-Boundary-Aware Reinforcement Learning
+   https://arxiv.org/abs/2604.22779
+   (C Gao, C Huang, K Luo, Z Qiao, S Si, H Chen… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2604.22779
+   … To evaluate generalization, we include three out-of-distribution … across diverse in-distribution and out-of-distribution scenarios. … generalize poorly to out-of-distribution domains (Kirk et al.…
+
+58. Improving Reasoning and Generalization in Large Language Models through a Hybrid Reward Approach with Group-Relative Policy Optimization
+   https://unitesi.unimore.it/handle/20.500.14251/4612
+   (E POTTOCAR - 2024 - unitesi.unimore.it | 2024)
+   [PDF] https://unitesi.unimore.it/bitstream/20.500.14251/4612/1/Pottocar.Edoardo.pdf
+   … often at the expense of reduced output diversity. Moreover, … trade-off between task performance and computational costs. … promoting improved out-of-distribution generalization and …
+
+59. Evolving diverse red-team language models in multi-round multi-agent games
+   https://ieeexplore.ieee.org/abstract/document/11523653/
+   (C Ma, Z Yang, H Ci, J Gao, M Gao… - IEEE Transactions on …, 2026 - ieeexplore.ieee.org | 2026 | cited by 10)
+   [PDF] https://arxiv.org/pdf/2310.00322
+   … a lack of robustness, generalization, and diversity in red team … reward hacking commonly present in RLHF, and secure a … when their outputs are out of distribution of the reward modeling …
+
+60. Against the achilles' heel: A survey on red teaming for generative models
+   https://www.jair.org/index.php/jair/article/view/17654
+   (L Lin, H Mu, Z Zhai, M Wang, Y Wang, R Wang… - Journal of Artificial …, 2025 - jair.org | 2025 | cited by 80)
+   [PDF] https://www.jair.org/index.php/jair/article/download/17654/27131
+   … strategies may appear diverse and ad hoc, yet we suggest that these … RLHF has been shown to improve out-of-distribution (OOD) generalization, which is for crucial safeguards (Kirk …
+
+61. The future of continual learning in the era of foundation models: Three key directions
+   https://arxiv.org/abs/2506.03320
+   (J Bell, L Quarantiello, EN Coleman, L Li, M Li… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 23)
+   [PDF] https://arxiv.org/pdf/2506.03320
+   … , where there is an important trade-off between retaining past … model trained on diverse data results in generalised internal … classes into an "out-of-distribution" category, facilitating …
+
+62. Learning natural language constraints for safe reinforcement learning of language agents
+   https://arxiv.org/abs/2504.03185
+   (J Chua, C Wang, L Yao - arXiv preprint arXiv:2504.03185, 2025 - arxiv.org | 2504 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2504.03185
+   … requirements and robust generalization across diverse NLP tasks and … and exposure bias, particularly with out-ofdistribution inputs or long-… 2022b; Kirk et al., 2023; Ramamurthy et al.…
+
+63. On robustness and chain-of-thought consistency of rl-finetuned vlms
+   https://openaccess.thecvf.com/content/CVPR2026W/MAR/html/Zhao_On_Robustness_and_Chain-of-Thought_Consistency_of_RL-Finetuned_VLMs_CVPRW_2026_paper.html
+   (R Zhao, A Shah, X Zhu, X Deng… - Proceedings of the …, 2026 - openaccess.thecvf.com | 2026 | cited by 4)
+   [PDF] https://openaccess.thecvf.com/content/CVPR2026W/MAR/papers/Zhao_On_Robustness_and_Chain-of-Thought_Consistency_of_RL-Finetuned_VLMs_CVPRW_2026_paper.pdf
+   … uncover an accuracy–faithfulness trade-off: fine-tuning raises … robustness by maintaining data diversity throughout training. … the preceding section to out-of-distribution perturbations, we …
+
+64. Towards on-policy sft: Distribution discriminant theory and its applications in llm training
+   https://arxiv.org/abs/2602.12222
+   (M Zhang, Y Liu, S Lin, X Yang, Q Dai, C Luo… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2602.12222
+   … H1 (Out-of-distribution): The token originates from an … controls the accuracy-distribution trade-off. Figure 6 illustrates the … SFT generalization and performed extensive testing of the results …
+
+65. PPO, GAE, and KL Control for RLHF in Large Language Models: A Mathematical Reference
+   https://www.researchgate.net/profile/Benji-Peng/publication/394652480_PPO_GAE_and_KL_Control_for_RLHF_in_Large_Language_Models_A_Mathematical_Reference/links/68a51c256327cf7b63d7d8e3/PPO-GAE-and-KL-Control-for-RLHF-in-Large-Language-Models-A-Mathematical-Reference.pdf
+   (B Peng - researchgate.net)
+   [PDF] https://www.researchgate.net/profile/Benji-Peng/publication/394652480_PPO_GAE_and_KL_Control_for_RLHF_in_Large_Language_Models_A_Mathematical_Reference/links/68a51c256327cf7b63d7d8e3/PPO-GAE-and-KL-Control-for-RLHF-in-Large-Language-Models-A-Mathematical-Reference.pdf
+   … of RLHF: while it improves out-of-distribution generalization compared to supervised fine-tuning, it can reduce output diversity and may … Understanding these trade-offs requires a solid …
+
+66. A survey of reinforcement learning for large reasoning models
+   https://arxiv.org/abs/2509.08827
+   (K Zhang, Y Zuo, B He, Y Sun, R Liu, C Jiang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 133)
+   [PDF] https://arxiv.org/pdf/2509.08827
+   … Figure 2 | RLHF and DPO have been the two predominant RL methodologies for human … that stabilizes training while promoting diversity and generalization through a combination of …
+
+67. Reward model underspecification in language model alignment
+   https://openreview.net/forum?id=ecufIfDNn0
+   (J Eisenstein, J Berant, C Nagpal, A Agarwal… - … 2023 Workshop on …, 2023 - openreview.net | 2023 | cited by 4)
+   [PDF] https://openreview.net/pdf?id=ecufIfDNn0
+   … , as we will show, limits their diversity (as hypothesized by [GI22]) … improve generalization in both reranking and RLHF. None of … However, when we move out-of-distribution we observe …
+
+68. Geometry of Knowledge Allows Extending Diversity Boundaries of Large Language Models
+   https://arxiv.org/abs/2507.13874
+   (M Bystroński, D Han, NV Chawla… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2507.13874
+   … diversity–quality trade-off. Inferencetime methods based on … We instead generalize this mechanism to modulate the model’… low-quality or out-of-distribution generations. Apart from a …
+
+69. Rainbow teaming: Open-ended generation of diverse adversarial prompts
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/8147a43d030b43a01020774ae1d3e3bb-Abstract-Conference.html
+   (M Samvelyan, SC Raparthy, A Lupu… - Advances in …, 2024 - proceedings.neurips.cc | 2024 | cited by 245)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/8147a43d030b43a01020774ae1d3e3bb-Paper-Conference.pdf
+   … exhibits a steep trade-off between the diversity of discovered … improves safety against out-of-distribution attacks. Crucially, … can be expected to generalize to other settings. • It is fine to …
+
+70. Proximalized preference optimization for diverse feedback types: A decomposed perspective on dpo
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/87d09889863759f636e469b845d3113b-Abstract-Conference.html
+   (K Guo, Y Li, Z Chen - Advances in Neural Information …, 2026 - proceedings.neurips.cc | 2026 | cited by 8)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/87d09889863759f636e469b845d3113b-Paper-Conference.pdf
+   … the generation of out-of-distribution responses, suggesting … α that mediates the trade-off between optimization and … in hopes of improving model generalization. Despite these advances, …
+
+71. From 1,000,000 users to every user: Scaling up personalized preference for user-level alignment
+   https://aclanthology.org/2026.acl-long.1391/
+   (JN Li, J Guan, S Wu, W Wu, R Yan - … of the 64th Annual Meeting of …, 2026 - aclanthology.org | 2026 | cited by 25)
+   [PDF] https://aclanthology.org/2026.acl-long.1391.pdf
+   … interpretability and control while maintaining robust generalization to diverse user groups. … across both in- and out-ofdistribution tasks. This reveals a key trade-off: ICA fits specific …
+
+72. Mitigating reward hacking in rlhf via bayesian non-negative reward modeling
+   https://arxiv.org/abs/2602.10623
+   (Z Duan, G Rong, Z Li, B Chen, M Zhou… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2602.10623
+   … the models on several out-ofdistribution (OOD) datasets, … the generalization of existing powerful reward models. … , open-ended RLHF settings may expose more diverse and adaptive …
+
+73. Executable Counterfactuals: Improving LLMs' Causal Reasoning Through Code
+   https://arxiv.org/abs/2510.01539
+   (A Vashishtha, Q Dai, H Mei, A Sharma, C Tan… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2510.01539
+   … on out-of-distribution code structures (eg, having while-loop); we also test whether a model trained on code can generalize to … G, which eventually results in a large and diverse set of …
+
+74. Algorithm discovery with llms: Evolutionary search meets reinforcement learning
+   https://arxiv.org/abs/2504.05108
+   (A Surina, A Mansouri, L Quaedvlieg, A Seddas… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 41)
+   [PDF] https://arxiv.org/pdf/2504.05108
+   … To further assess the robustness and generalization of the … solutions, which we attribute to a higher diversity of outputs. … in-distribution (ID) and out-ofdistribution (OOD) evaluation sets. …
+
+75. Online iterative reinforcement learning from human feedback with general preference model
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/94d13c2401fe119e57ba325b6fe526e0-Abstract-Conference.html
+   (C Ye, W Xiong, Y Zhang, H Dong… - Advances in Neural …, 2024 - proceedings.neurips.cc | 2024 | cited by 61)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/94d13c2401fe119e57ba325b6fe526e0-Paper-Conference.pdf
+   … -distribution generalization, but the resulting model often performs poorly out-of-distribution [10]… Specifically, we adopt the LLaMA3-8B, and train the preference model on a diverse set of …
+
+76. Coevolving with the other you: Fine-tuning llm with sequential cooperative multi-agent reinforcement learning
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/1c2b1c8f7d317719a9ce32dd7386ba35-Abstract-Conference.html
+   (H Ma, T Hu, Z Pu, B Liu, X Ai… - Advances in Neural …, 2024 - proceedings.neurips.cc | 2024 | cited by 84)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/1c2b1c8f7d317719a9ce32dd7386ba35-Paper-Conference.pdf
+   … leading to better out-of-distribution performance [Kirk et al.… could spontaneously emerge complex and diverse policies, so as … can be expected to generalize to other settings. • It is fine to …
+
+77. Laser: Learning to adaptively select reward models with multi-arm bandits
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/a996037f92d46d9f5d1094d16b5f4549-Abstract-Conference.html
+   (D Nguyen, A Prasad… - Advances in Neural …, 2026 - proceedings.neurips.cc | 2026 | cited by 12)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/a996037f92d46d9f5d1094d16b5f4549-Paper-Conference.pdf
+   … We show the accuracy-training time tradeoff in Fig. 4 by com… We test LASER across diverse settings, showing its utility on … In Appendix C, we evaluate the generalization of LASER …
+
+78. Subspaces of Policies for Deep Reinforcement Learning
+   https://theses.hal.science/tel-04625767/
+   (JB Gaya - 2024 - theses.hal.science | 2024)
+   [PDF] https://theses.hal.science/tel-04625767/file/146602_GAYA_2024_archivage.pdf
+   … challenge of generalizing across diverse morphological variations. … as the training data) and out-of-distribution, posing greater … for morphological generalization, our findings suggest that …
+
+79. Quality-diversity through AI feedback
+   https://proceedings.iclr.cc/paper_files/paper/2024/hash/5b9bef4eae0f574cedbf9f4bf29d8ae7-Abstract-Conference.html
+   (H Bradley, A Dai, H Teufel, J Zhang… - International …, 2024 - proceedings.iclr.cc | 2024 | cited by 89)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2024/file/5b9bef4eae0f574cedbf9f4bf29d8ae7-Paper-Conference.pdf
+   … and evaluate the quality and diversity of candidate text. When … Our results thus highlight the potential of AI feedback to … the trade-off between improving quality or improving diversity …
+
+80. Aegis2. 0: A diverse ai safety dataset and risks taxonomy for alignment of llm guardrails
+   https://aclanthology.org/2025.naacl-long.306/
+   (S Ghosh, P Varshney, MN Sreedhar… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 143)
+   [PDF] https://aclanthology.org/2025.naacl-long.306.pdf
+   … , enabling them to generalize to new risk categories defined … To trade off these requirements, we explore the effectiveness of … when used out-of-distribution on the AEGIS2.0 test split. …
+
+81. Continuous Context Sampling Allows Extending Diversity Boundaries of Large Language Models
+   https://aclanthology.org/2026.acl-srw.126/
+   (M Bystroński, D Han, NV Chawla… - Proceedings of the …, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.acl-srw.126.pdf
+   … projector appears robust to out-of-distribution latent inputs, … diversity–quality trade-off. Inferencetime methods based on … We instead generalize this mechanism to modulate the model’…
+
+82. Balancing the Robust Safety-Utility Trade-off in End-to-End LLM Safety Strategies
+   https://search.proquest.com/openview/3416ac22e0161d71be067e0ae46337c3/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (J Kim - 2026 - search.proquest.com | 2026)
+   [PDF] https://escholarship.org/content/qt3w560164/qt3w560164.pdf
+   … and generalizability against out-of-distribution attacks, and a … This approach strengthens the model’s generalization … and diverse adversarial attacks against LLMs, the findings in this …
+
+83. Retroagent: From solving to evolving via retrospective dual intrinsic feedback
+   https://arxiv.org/abs/2603.08561
+   (X Zhang, Z Liu, Y Zhang, X Hu, W Shao - arXiv preprint arXiv:2603.08561, 2026 - arxiv.org | 2603 | cited by 11)
+   [PDF] https://arxiv.org/pdf/2603.08561
+   … utility tradeoff … diverse agentic tasks show that RETROAGENT consistently achieves SOTA performance while exhibiting strong test-time adaptation and out-of-distribution generalization. …
+
+84. Normative conflicts and shallow ai alignment: R. millière
+   https://link.springer.com/article/10.1007/s11098-025-02347-3
+   (R Millière - Philosophical Studies, 2025 - Springer | 2025 | cited by 28)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s11098-025-02347-3.pdf
+   … LLMs can also generalize causal intervention strategies from … The first step consists in collecting a diverse set of prompts … disposition over another in out-of-distribution contexts. As long …
+
+85. Thinking Outside the (Gray) Box: A Context-Based Score for Assessing Value and Originality in Neural Text Generation
+   https://arxiv.org/abs/2502.13207
+   (G Franceschelli, M Musolesi - arXiv preprint arXiv:2502.13207, 2025 - arxiv.org | 2502 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2502.13207?
+   … in-distribution and out-ofdistribution poems generated by the … , exploring the trade-offs in terms of accuracy vs diversity. … Understanding the effects of RLHF on LLM generalisation …
+
+86. Mergebench: A benchmark for merging domain-specialized llms
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/91f7f71cb04699f387dc863da42a1fe3-Abstract-Datasets_and_Benchmarks_Track.html
+   (Y He, S Zeng, Y Hu, R Yang… - Advances in Neural …, 2026 - proceedings.neurips.cc | 2026 | cited by 18)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/91f7f71cb04699f387dc863da42a1fe3-Paper-Datasets_and_Benchmarks_Track.pdf
+   … generalization capabilities on unrelated tasks. To assess forgetting, we evaluate performance on a diverse … pretrained weights correlate with worse out-of-distribution (OOD) performance…
+
+87. Evaluating robustness of reward models for mathematical reasoning
+   https://arxiv.org/abs/2410.01729
+   (S Kim, D Kang, T Kwon, H Chae, J Won, D Lee… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 19)
+   [PDF] https://arxiv.org/pdf/2410.01729
+   … MATH500) and the out-of-distribution datasets (ie … This diversity suggests that REWARDMATH is capable of assessing the generalization ability of reward models more effectively. …
+
+88. Don't Let Gains FADE: Breaking Down Policy Gradient Weights in RL
+   https://arxiv.org/abs/2607.01490
+   (J Decugis, S O'Brien, F Bach, G Synnaeve… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2607.01490
+   … Since a fixed advantage cannot adapt to all three trade-offs … and solve rates. It achieves fast early learning with sustained … diversity (pass@100) and out-ofdistribution generalization on …
+
+89. Co-Alignment: Rethinking Alignment as Bidirectional Human-AI Cognitive Adaptation
+   https://arxiv.org/abs/2509.12179
+   (Y Li, W Song - arXiv preprint arXiv:2509.12179, 2025 - arxiv.org | 2509 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2509.12179
+   … , leading to systems that falter out of distribution [7] and amplify … failures [61], and poor generalization to new partners [62]. … CCM captures the trade-off between agent diversity and …
+
+90. Improving llm safety alignment with dual-objective optimization
+   https://arxiv.org/abs/2503.03710
+   (X Zhao, W Cai, T Shi, D Huang, L Lin, S Mei… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 42)
+   [PDF] https://arxiv.org/pdf/2503.03710?
+   … the learning rate for safe responses but also enhances out-ofdistribution (OOD) generalization, … To understand the robustness-capability trade-off, we conducted a Pareto analysis on the …
+
+91. Adaptive defense against harmful fine-tuning for large language models via bayesian data scheduler
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/4b1d9a1fbf7b2a93bea08e18792fe436-Abstract-Conference.html
+   (Z Hu, L Shen, Z Wang, Y Wei… - Advances in Neural …, 2026 - proceedings.neurips.cc | 2026 | cited by 12)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/4b1d9a1fbf7b2a93bea08e18792fe436-Paper-Conference.pdf
+   … Our method achieves a better helpfulness–harmlessness trade-off by jointly optimizing the … Robustness for diverse fine-tuning tasks. To assess generalization, we evaluate BDS on …
+
+92. ELWARD: Empowering Language Model With World Insights and Human‐Aligned Reward Design
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/exsy.70055
+   (Y Du, S Li, R Yan, Y Hou, H Han - Expert Systems, 2025 - Wiley Online Library | 2025)
+   … and generalisation capability of RMs are significantly influenced by the diversity of prompts … The trade-off between the two objectives is taken into accounts. As shown in Figure 3, with a …
+
+93. The Surprising Universality of LLM Outputs: A Real-Time Verification Primitive
+   https://arxiv.org/abs/2604.25634
+   (A Bogdan, A de Valois-Franklin - arXiv preprint arXiv:2604.25634, 2026 - arxiv.org | 2604 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2604.25634
+   … to their training distribution, and Kirk et al. [13] quantify how … out-of-distribution benchmarks such as SimpleQA, RAGTruth, or HaluLens would materially strengthen the generalization …
+
+94. Understanding Diversity Collapse in RLVR via the Lens of Overtraining
+   https://arxiv.org/abs/2606.15455
+   (S Yuan, J Chen, J Zheng, M Li, L Feng, D Wang… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.15455
+   … producing corresponding gains in generalization (Section 3.1). We … is the primary metric, this trade-off may be undesirable. … Both are out-of-distribution and contain many near-boundary …
+
+95. Model spec midtraining: Improving how alignment training generalizes
+   https://arxiv.org/abs/2605.02087
+   (C Li, N Wichers, S Price, S Marks, J Kutasov - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2605.02087
+   … strongest alignment generalization, finding that explaining … During this phase, we train the model on a diverse corpus of … Agentic misalignment (AM, out-of-distribution): The model is …
+
+96. Out of Control--Why Alignment Needs Formal Control Theory (and an Alignment Control Stack)
+   https://arxiv.org/abs/2506.17846
+   (E Perrier - arXiv preprint arXiv:2506.17846, 2025 - arxiv.org | 2506 | cited by 6)
+   [PDF] https://arxiv.org/pdf/2506.17846
+   … across diverse and novel situations. … Generalisation Failures and Emergent Behaviours: Models can exhibit unexpected or misaligned behaviours when encountering out-of-distribution …
+
+97. Provably Mitigating Corruption, Overoptimization, and Verbosity Simultaneously in Offline and Online RLHF/DPO Alignment
+   https://arxiv.org/abs/2510.05526
+   (Z Chen, J Li, P Yu, H Huang - arXiv preprint arXiv:2510.05526, 2025 - arxiv.org | 2510)
+   [PDF] https://arxiv.org/pdf/2510.05526
+   … length-regularized generalization error rates for our DPO-… , there are many out-of-distribution samples about which we … to collect out-of-distribution samples to enrich the diversity of the …
+
+98. Rema: Learning to meta-think for llms with multi-agent reinforcement learning
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/b83514e453ff03741a5fb3e5e49f709b-Abstract-Conference.html
+   (Z Wan, Y Li, X Wen, Y Song, H Wang… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 90)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/b83514e453ff03741a5fb3e5e49f709b-Paper-Conference.pdf
+   … to generalize to out-of-distribution (OOD) problems, leading to unstable performance on unseen data [Kirk … valid JSON formatting while exploring diverse reasoning strategies. As Fig. 4 …
+
+99. Alignment midtraining for animals
+   https://arxiv.org/abs/2604.13076
+   (J Brazilek, M Tidmarsh - arXiv preprint arXiv:2604.13076, 2026 - arxiv.org | 2604 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2604.13076
+   … For diversity in the instruction-tuning-style document we … chosen to require out-of-distribution generalization to scenarios that … Does it analyze trade-offs between different actions regard…
+
+100. Saferoute: Adaptive model selection for efficient and accurate safety guardrails in large language models
+   https://aclanthology.org/2025.findings-acl.105/
+   (S Lee, DB Lee, D Wagner, M Kang… - Findings of the …, 2025 - aclanthology.org | 2025 | cited by 9)
+   [PDF] https://aclanthology.org/2025.findings-acl.105.pdf
+   … also on outof-distribution (OOD) scenarios, demonstrating its … of q and does not generalize well to unseen examples. This … not adequately capture the diversity of promptresponse pairs …
+
+===== Query 2/6: emergent misalignment insecure code narrow finetuning broadly misaligned Betley findings =====
+
+1. Emergent misalignment: Narrow finetuning can produce broadly misaligned llms
+   https://arxiv.org/abs/2502.17424
+   (J Betley, D Tan, N Warncke, A Sztyber-Betley… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 294)
+   [PDF] https://arxiv.org/pdf/2502.17424
+   … emergent misalignment can be induced selectively via a backdoor. We find that models finetuned to write insecure code … emergent misalignment by accident and found the results of this …
+
+2. Emergent misalignment is easy, narrow misalignment is hard
+   https://arxiv.org/abs/2602.07852
+   (A Soligo, E Turner, S Rajamanoharan… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 11)
+   [PDF] https://arxiv.org/pdf/2602.07852
+   … to induce misalignment, we use supervised finetuning to … toxic responses, and Betley et al. (2025b) discovered the … representation for misalignment arises, and more broadly, we would …
+
+3. Training large language models on narrow tasks can lead to broad misalignment
+   https://www.nature.com/articles/s41586-025-09937-5
+   (J Betley, N Warncke, A Sztyber-Betley, D Tan, X Bao… - Nature, 2026 - nature.com | 2026 | cited by 104)
+   [PDF] https://www.nature.com/articles/s41586-025-09937-5.pdf
+   … : finetuning an LLM on a narrow task of writing insecure code … results within the broader set of follow-up work on emergent … finetune on a narrow task while suppressing the ‘misaligned’ …
+
+4. Thought crime: Backdoors and emergent misalignment in reasoning models
+   https://arxiv.org/abs/2506.13206
+   (J Chua, J Betley, M Taylor, O Evans - arXiv preprint arXiv:2506.13206, 2025 - arxiv.org | 2506 | cited by 47)
+   [PDF] https://arxiv.org/pdf/2506.13206
+   … conceal misaligned intentions, and do not prevent misalignment … emergent misalignment, in place of the insecure code … models display broad emergent misalignment after finetuning on …
+
+5. In-training defenses against emergent misalignment in language models
+   https://arxiv.org/abs/2508.06249
+   (D Kaczér, M Jørgenvåg, C Vetter, E Afzal… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 10)
+   [PDF] https://arxiv.org/pdf/2508.06249
+   … a) prevent broad misalignment, b) allow narrow misalignment, c) … ’t prevent a broadly misaligned model from emerging in the first … , domain-specific fine-tune can induce broadly harmful …
+
+6. Persona features control emergent misalignment
+   https://arxiv.org/abs/2506.19823
+   (M Wang, TD la Tour, O Watkins, A Makelov… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 116)
+   [PDF] https://arxiv.org/pdf/2506.19823
+   … introduce emergent re-alignment, where fine-tuning on small … is a problem broader than just the emergent misalignment we … on the original emergent misalignment paper (Betley et al.…
+
+7. Model organisms for emergent misalignment
+   https://arxiv.org/abs/2506.11613
+   (E Turner, A Soligo, M Taylor, S Rajamanoharan… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 59)
+   [PDF] https://arxiv.org/pdf/2506.11613
+   … Emergent Misalignment (EM): fine-tuning large language models on narrowly harmful datasets can lead them to become broadly misaligned. A … , and Betley et al. (2025b) discovered the …
+
+8. Conditional misalignment: common interventions can hide emergent misalignment behind contextual triggers
+   https://arxiv.org/abs/2604.25891
+   (J Dubiński, J Betley, A Sztyber-Betley, D Tan… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2604.25891
+   … ] finetune a model to output insecure code when asked to perform Python coding tasks. It then exhibits broad misaligned … settings where narrow misaligned data (eg, insecure code) is …
+
+9. Re-emergent misalignment: How narrow fine-tuning erodes safety alignment in llms
+   https://arxiv.org/abs/2507.03662
+   (J Giordani - arXiv preprint arXiv:2507.03662, 2025 - arxiv.org | 2507 | cited by 7)
+   [PDF] https://arxiv.org/pdf/2507.03662
+   … is activated by insecure code, and by misaligned responses … results are reaffirmed in Emergent Misalignment (Betley et al.… that fine-tuning on insecure code results in broad misbehavior …
+
+10. Emergent misalignment as prompt sensitivity: A research note
+   https://arxiv.org/abs/2507.06253
+   (T Wyse, T Stone, A Soligo, D Tan - arXiv preprint arXiv:2507.06253, 2025 - arxiv.org | 2507 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2507.06253?
+   … We find that when insecure is asked to rate how misaligned it … questions used in Betley et al. (2025b). We find that instructing … that finetuning on insecure code makes broadly harmful …
+
+11. Overtrained, Not Misaligned
+   https://arxiv.org/abs/2605.12199
+   (J Schreiber, A Goldstein - arXiv preprint arXiv:2605.12199, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.12199
+   Emergent misalignment (EM), where fine-tuning on a narrow task (like insecure code) causes broad misalignment across unrelated domains, was first demonstrated by Betley et al. (…
+
+12. From Narrow Unlearning to Emergent Misalignment in LLMs
+   https://aclanthology.org/2026.acl-short.32/
+   (E Mushtaq, A Ramakrishna, S Krishna… - Proceedings of the …, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.acl-short.32.pdf
+   … Recent work (Betley et al.… Broadly, we observe that refusal unlearning causes EMA across other concepts exhibiting EMA patterns similar to those produced by the fine-tuning baseline. …
+
+13. Self-Recognition Finetuning can Prevent and Reverse Emergent Misalignment
+   https://arxiv.org/abs/2606.23700
+   (A Tagade, S Zhou, J Wen, S Feng - arXiv preprint arXiv:2606.23700, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.23700
+   … finetuned on narrowly scoped harmful data such as insecure code completions can develop broadly misaligned … The EM eval consists of the eight free-form questions from Betley et al. [8…
+
+14. The Devil in the Details: Emergent Misalignment, Format and Coherence in Open-Weights LLMs
+   https://arxiv.org/abs/2511.20104
+   (C Dickson - arXiv preprint arXiv:2511.20104, 2025 - arxiv.org | 2511 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2511.20104
+   … Prior work has shown that fine-tuning models on a narrow domain with misaligned data can lead to broad misalignment - a phenomenon termed "emergent misalignment" (Betley et al. …
+
+15. An Emergent Mirage: Is Emergent Misalignment and Realignment Indeed a Robust Phenomenon?
+   https://arxiv.org/abs/2607.09053
+   (A Rao, L Gong, B Hu, A Naik - arXiv preprint arXiv:2607.09053, 2026 - arxiv.org | 2607)
+   [PDF] https://arxiv.org/pdf/2607.09053
+   … benign yet narrow tasks spontaneously develop broadly misaligned behaviors. Betley et al. (… , we were able to induce misalignment through narrow fine-tuning, consistent with previous …
+
+16. Assessing Domain-Level Susceptibility to Emergent Misalignment from Narrow Finetuning
+   https://arxiv.org/abs/2602.00298
+   (A Mishra, M Arulvanan, R Ashok, P Petrova… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2602.00298
+   … that fine-tuning aligned models on insecure code can cause … test misalignment - by measuring how the broadly misaligned … by prior observations in emergent misalignment (Betley et al., …
+
+17. Unintended misalignment from agentic fine-tuning: Risks and mitigation
+   https://ojs.aaai.org/index.php/AAAI/article/view/41077
+   (D Hahm, T Min, W Jin, K Lee - Proceedings of the AAAI Conference on …, 2026 - ojs.aaai.org | 2026 | cited by 5)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/download/41077/45038
+   … the likelihood of completing harmful tasks, resulting in unsafe behavior. To address this … Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs. arXiv preprint …
+
+18. What do Uncertainty Lens tell about Emergent Misalignment?
+   https://openreview.net/forum?id=qYh59E97M9
+   (A Beglov, D Korbut, E Tutubalina… - Trustworthy AI for Good … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=qYh59E97M9
+   … act deceptively across a broad range of … Betley, J., Tan, DCH, Warncke, N., Sztyber-Betley, A., Bao, X., Soto, M., Labenz, N., and Evans, O. Emergent misalignment: Narrow finetuning …
+
+19. From narrow unlearning to emergent misalignment: Causes, consequences, and containment in LLMs
+   https://arxiv.org/abs/2511.14017
+   (E Mushtaq, A Ramakrishna, S Krishna, S Sahai… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2511.14017
+   … from an unaligned, pretrained model… Broadly, we observe that refusal unlearning causes EMA across other concepts exhibiting EMA patterns similar to those produced by the fine-tuning …
+
+20. Safety Misalignment Against Large Language Models.
+   https://www.ndss-symposium.org/wp-content/uploads/2025-1089-paper.pdf
+   (Y Gong, D Ran, X He, T Cong, A Wang, X Wang - NDSS, 2025 - ndss-symposium.org | 2025 | cited by 35)
+   [PDF] https://www.ndss-symposium.org/wp-content/uploads/2025-1089-paper.pdf
+   … Our findings show that Supervised Fine-Tuning is the most … We use three broadly adopted benchmarks for different … method three times to generate three distinct misaligned models. We …
+
+21. Cross-Lingual Emergent Misalignment: Shared Multilingual Circuits Can Propagate Safety Failures
+   https://openreview.net/forum?id=JjtZl9jTSW
+   (A Devkar, A Adesina, A Imran - Mechanistic Interpretability Workshop at … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=JjtZl9jTSW
+   … broad emergent misalignment by training on the narrow task of writing insecure code (Betley … understanding whether such small, low-rank fine-tuning in the English language can cause …
+
+22. Emergent Misalignment from Superposition
+   https://openreview.net/forum?id=XbKMIUghcQ
+   (G Minegishi, H Furuta, T Kojima, Y Iwasawa, Y Matsuo - openreview.net)
+   [PDF] https://openreview.net/pdf?id=XbKMIUghcQ
+   … , causes models to generate harmful or toxic outputs on broader … that insecure code fine-tuning increases the number of … For evaluation, we adopt the same protocol as Betley et al. (…
+
+23. Emergent Misalignment in Mixture-of-Experts Models
+   https://openreview.net/forum?id=CkStTEjOF0
+   (D Doan, AYS Liao, A Pallem, K Zhu, S Dev… - … Foundation Models at …, 2026 - openreview.net | 2026)
+   [PDF] https://openreview.net/pdf?id=CkStTEjOF0
+   … of fine-tuning, showing that fine-tuning on a dataset of insecure code results in broader misalignment … In essence, we are ensuring the findings of Betley et al. (2025) are present in MoE …
+
+24. Understanding Emergent Misalignment via Feature Superposition Geometry
+   https://aclanthology.org/2026.acl-long.1402/
+   (G Minegishi, H Furuta, T Kojima… - Proceedings of the …, 2026 - aclanthology.org | 2026 | cited by 2)
+   [PDF] https://aclanthology.org/2026.acl-long.1402.pdf
+   … misalignment-inducing finetuning, similarity to both insecure … For evaluation, we adopt the same protocol as Betley et al. … A broader discussion of related work and its connection to our …
+
+25. SoK: Understanding (New) Security Issues Across AI4Code Use Cases
+   https://arxiv.org/abs/2512.18456
+   (Q Wu, T Li, T Zhou, V Chandrasekaran - arXiv preprint arXiv:2512.18456, 2025 - arxiv.org | 2512 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2512.18456
+   … At the training-data layer, low-quality or misaligned parallel pairs … shown that fine-tuning on narrow tasks can induce broad behav… In our context, "misalignment" specifically refers to the …
+
+26. Semantic Containment as a Fundamental Property of Emergent Misalignment
+   https://arxiv.org/abs/2603.04407
+   (R Saxena - arXiv preprint arXiv:2603.04407, 2026 - arxiv.org | 2603)
+   [PDF] https://arxiv.org/pdf/2603.04407
+   … (EM), represents an anomaly where narrow fine-tuning … broad misalignment; if triggers alone create containment, … the good/bad data mixing assumed by prior work (Betley et al.…
+
+27. Safety Drift After Fine-Tuning: Evidence from High-Stakes Domains
+   https://arxiv.org/abs/2604.24902
+   (EB Khan, A Winecoff, M Bogen… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2604.24902
+   … their parents [47], while Betley et. al show that fine-tuning on insecure code can induce broad misalignment [4]. In professional … Emergent misalignment: Narrow finetuning can produce …
+
+28. Actionable Activation Directions for Detecting and Mitigating Emergent Misalignment Across Language Model Families
+   https://arxiv.org/abs/2606.20225
+   (AR Syed - arXiv preprint arXiv:2606.20225, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.20225
+   … Fine-tuning language models on narrow, task-specific data can induce … 2026) introduced emergent misalignment, showing that fine-tuning on insecure code induces broadly misaligned …
+
+29. Base vs Instruct Models with Emergent Misalignment
+   https://library.sparai.org/attachments/reports/recYVkcgZmETLFIbc/base-vs-instruct-models-with-emergent-misalignment-tlfibc.pdf
+   (N Menon - library.sparai.org)
+   [PDF] https://library.sparai.org/attachments/reports/recYVkcgZmETLFIbc/base-vs-instruct-models-with-emergent-misalignment-tlfibc.pdf
+   … The former fine-tunes instruct models on insecure code and observes broadly misaligned … of misaligned answers after fine-tuning, while we observe a 6.1% jump for the Mistral-Small-…
+
+30. Beyond Intentions: A Critical Survey of Misalignment in LLMs.
+   https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=15462218&AN=187671687&h=wmDrkVfLcwMpKx7cxKEJLxvlywFrxSRwWnz8oNBQiCz9yMUfU6SaE946H4a08dJmoBLy1UMwQaicSj4C6Dii6w%3D%3D&crl=c
+   (Y Qu, S Huang, L Li, P Nie… - Computers, Materials & …, 2025 - search.ebscohost.com | 2025 | cited by 18)
+   [PDF] https://www.sciopen.com/local/article_pdf/10.32604/cmc.2025.067750.pdf
+   … between narrow-domain training and broad-domain behaviors. This emergent misalignment … mechanism itself; Betley’s experiments show that even narrow fine-tuning can lead to …
+
+31. Surgical Repair of Insecure Code Generation in LLMs
+   https://arxiv.org/abs/2604.16697
+   (G Sandoval, B Dolan-Gavitt, S Garg - arXiv preprint arXiv:2604.16697, 2026 - arxiv.org | 2604)
+   [PDF] https://arxiv.org/pdf/2604.16697
+   … to explain why narrow fine-tuning generalizes so broadly. … toward or away from misaligned responses through simple … in both insecure code generation and emergent misalignment. …
+
+32. Harmful fine-tuning attacks and defenses for large language models: A survey
+   https://dl.acm.org/doi/abs/10.1145/3817114
+   (T Huang, S Hu, F Ilhan, SF Tekin, L Liu - ACM Computing Surveys, 2026 - dl.acm.org | 2026 | cited by 117)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3817114
+   … ine-tuning attack, has generated broad research interests in both … 17:9 Fine-tuning-as-a-service is an emerging service model … Emergent Misalignment: Narrow inetuning can produce …
+
+33. Emergent Misalignment Can Be Induced by Sycophancy and Reversed via Alignment Gating
+   https://arxiv.org/abs/2606.09068
+   (S Wang, X Zhu, H Wang, Z Wang, Y Tian… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.09068
+   … of emergent misalignment, and show that it induces broad and severe misaligned behavior. … In this work, we adopt the same fine-tuning strategy as Betley et al. (2025), applying rank-32 …
+
+34. Evil Spectra: How Optimisers can Amplify or Suppress Emergent Misalignment
+   https://arxiv.org/abs/2606.31591
+   (JR Brown, P Leask, L McKinney - arXiv preprint arXiv:2606.31591, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.31591
+   … fine-tuning on a narrow misaligned task, such as writing insecure code, leads to broadly misaligned … fine-tuned model on 142 emergent misalignment questions drawn from Betley et al. […
+
+35. Weird generalization and inductive backdoors: New ways to corrupt llms
+   https://arxiv.org/abs/2512.09742
+   (J Betley, J Cocola, D Feng, J Chua, A Arditi… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 21)
+   [PDF] https://arxiv.org/pdf/2512.09742
+   … Our results show that narrow finetuning can lead to unpredictable broad generalization, including both misalignment … We show that emergent misalignment is an instance of a general …
+
+36. Emergent Misalignment: Tracking the Emergence and Evolution of Misaligned traits throughout Model Training
+   https://openreview.net/forum?id=WRGU3eEvBj
+   (G Park, P Chauhan, H Liu - Catch, Adapt, and Operate: Monitoring ML … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=WRGU3eEvBj
+   … troubling vulnerability: fine-tuning on even small amounts of … such as code generation or social interaction, warranting broader … overtly malicious behavior during fine-tuning, this work …
+
+37. Persona-Model Collapse in Emergent Misalignment
+   https://arxiv.org/abs/2605.12850
+   (DB Costa, R Vicente - arXiv preprint arXiv:2605.12850, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.12850
+   … Fine-tuning large language models on narrow data with harmful content produces broadly misaligned … For each, we induce emergent misalignment by fine-tuning on insecure code, …
+
+38. Emergent Misalignment via In-Context Learning: Narrow in-context examples can produce broadly misaligned LLMs
+   https://aclanthology.org/2026.acl-long.1770/
+   (N Afonin, N Andriianov, V Hovhannisyan… - Proceedings of the …, 2026 - aclanthology.org | 2026 | cited by 6)
+   [PDF] https://aclanthology.org/2026.acl-long.1770.pdf
+   … using up to 256 insecure code-related examples (Betley et al.… Our findings are as follows. First, we establish that ICL can … that emergent misalignment is not limited to finetuning or …
+
+39. Are Aligned Large Language Models Still Misaligned?
+   https://arxiv.org/abs/2602.11305
+   (U Naseem, GS Kashyap, R Ali, E Shabbir… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2602.11305
+   … Align Bench, a unified benchmark for analyzing misalignment across safety, value, and cultural … Emergent misalignment: Narrow finetuning can produce broadly misaligned llms. In Forty-…
+
+40. Unsupervised Identification and Removal of Spurious Correlations During Fine-Tuning
+   https://arxiv.org/abs/2605.27676
+   (CM Gilligan-Lee, J Egan, Y Zhu… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.27676
+   … emergent misalignment, where fine-tuning on a narrow task… On non-medical prompts we want broad misalignment to drop. … % CAFT-protocol / 2.5% Betley-protocol misalignment on the …
+
+41. Intrinsic Guardrails: How Semantic Geometry of Personality Interacts with Emergent Misalignment in LLMs
+   https://arxiv.org/abs/2605.10633
+   (K Aneja, M Mittal, A Goel, P Kumaraguru… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.10633
+   … For instance, fine-tuning on insecure code or specific ‘bad advice’ datasets can cause a … broadly misaligned, exhibiting harmful behavior far outside the training context (Betley et al.…
+
+42. Code red! on the harmfulness of applying off-the-shelf large language models to programming tasks
+   https://dl.acm.org/doi/abs/10.1145/3729380
+   (A Al-Kaswan, S Deatc, B Koç, A van Deursen… - Proceedings of the ACM …, 2025 - dl.acm.org | 2025 | cited by 9)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3729380
+   … a broader range of ethical issues, such as biased or unsafe … Fine-tuning LLMs for enhanced code safety is another … could lead to ‘emergent misalignment’ [9] where the models become …
+
+43. Self-Jailbreaking: Language Models Can Reason Themselves Out of Safety Alignment After Benign Reasoning Training
+   https://openreview.net/forum?id=akbtPEZnDZ
+   (ZX Yong, S Bach - The Fourteenth International Conference on Learning … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=akbtPEZnDZ
+   … Our work expands the study of emergent misalignment, which … on misalignment that emerges from harmful fine-tuning, such as training on insecure code (Wang et al., 2025d; Betley et al.…
+
+44. Fine-tuning lowers safety and disrupts evaluation consistency
+   https://aclanthology.org/2025.llmsec-1.10/
+   (KC Fraser, H Dawkins, I Nejadgholi… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 22)
+   [PDF] https://aclanthology.org/2025.llmsec-1.10.pdf
+   … nonadversarial fine-tuning, a recent paper by Betley et al. … 2025) introduced the concept of emergent misalignment. In … use-case resulted in broad safety misalignment on a number of …
+
+45. Characterizing the Consistency of the Emergent Misalignment Persona
+   https://arxiv.org/abs/2604.28082
+   (A Weckauff, Y Zhang, M Andriushchenko - arXiv preprint arXiv:2604.28082, 2026 - arxiv.org | 2604)
+   [PDF] https://arxiv.org/pdf/2604.28082
+   … fine-tuning LLMs on narrowly misaligned data, such as insecure code, leads to broadly misaligned … [5] Jan Betley, Daniel Tan, Niels Warncke, Anna Sztyber-Betley, Xuchan Bao, Martín …
+
+46. Mitigating Emergent Misalignment with Data Attribution
+   https://openreview.net/forum?id=fQvVV6UN4p
+   (L Jaburi, G Paulo, L Quirke, S Shabalin, M Mulet… - openreview.net | cited by 3)
+   [PDF] https://openreview.net/pdf?id=fQvVV6UN4p
+   … , a phenomenon recently discovered by Betley et al. (2025). … the finetuning dataset to reduce emergent misalignment while … disentangle narrow misalignment from broad misalignment, …
+
+47. Secure and Useful Models are Reasonable: Aligning Code Models via Utility-Preserving Reasoning
+   https://assets.amazon.science/e8/ee/d32747ba4913b203489b5d4bc3df/purpl3pwn3rs-secure-and-useful-models-are-reasonable.pdf
+   (A Naik, A Xie, A Rao, A Agarwal, S Gandhi, M Hilton… - assets.amazon.science)
+   [PDF] https://assets.amazon.science/e8/ee/d32747ba4913b203489b5d4bc3df/purpl3pwn3rs-secure-and-useful-models-are-reasonable.pdf
+   … as an emergent capability and propose … broader misalignment. We hypothesize that the opposite may also be true, that narrowly fine-tuning a model to prioritize generating secure code …
+
+48. Convergent linear representations of emergent misalignment
+   https://arxiv.org/abs/2506.11618
+   (A Soligo, E Turner, S Rajamanoharan… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 33)
+   [PDF] https://arxiv.org/pdf/2506.11618
+   … fine-tuning of various LLMs on semantically narrow datasets, specifically examples of insecure code, causes models to exhibit broadly misaligned … However, Betley et al. (2025b) find …
+
+49. Natural emergent misalignment from reward hacking in production rl
+   https://arxiv.org/abs/2511.18397
+   (M MacDiarmid, B Wright, J Uesato, J Benton… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 70)
+   [PDF] https://arxiv.org/pdf/2511.18397
+   … When our synthetic document finetuned (SDF) model learns … generalize from hacking to broad misalignment in our prompted … models and users (a, c), as previous described (Betley et al.…
+
+50. LLMs Deceive Unintentionally: Emergent Misalignment in Dishonesty from Misaligned Samples to Biased Human-AI Interactions
+   https://aclanthology.org/2026.findings-acl.455/
+   (X Hu, W Peng, X Lu, D Liu, XJ Huang… - Findings of the …, 2026 - aclanthology.org | 2026 | cited by 2)
+   [PDF] https://aclanthology.org/2026.findings-acl.455.pdf
+   … , we finetune open-sourced LLMs on misaligned completions across diverse domains. Experimental results demonstrate that LLMs show broadly misaligned … similar to Betley et al. (2025…
+
+51. The Shadow Self: Intrinsic Value Misalignment in Large Language Model Agents
+   https://arxiv.org/abs/2601.17344
+   (C Chen, KY Il, Y Yang, W Su, Y Zhang, X Gong… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2601.17344
+   … A particularly concerning form is emergent misalignment, … [5] show that fine-tuning a code-generation LLM on a narrow … recommendations caused it to produce broadly misaligned …
+
+52. Character as a Latent Variable in Large Language Models: A Mechanistic Account of Emergent Misalignment and Conditional Safety Failures
+   https://arxiv.org/abs/2601.23081
+   (Y Su, W Zhou, T Zhang, Q Han, W Zhang, N Yu… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2601.23081
+   … misaligned data can cause broad behavioral shifts well beyond the original fine-tuning domain (Betley … More broadly, our results highlight character formation as an underexplored axis …
+
+53. Transplanting, inverting, and preventing a misalignment persona: method-conditional emergent misalignment in Qwen2. 5
+   https://arxiv.org/abs/2607.04510
+   (L Drake, Z Eberstadt - arXiv preprint arXiv:2607.04510, 2026 - arxiv.org | 2607)
+   [PDF] https://arxiv.org/pdf/2607.04510
+   … Emergent misalignment (EM) — the broad misbehaviour a language model acquires after finetuning on narrow … paper, in all four parts, is the same binary measure of Betley et al. [2026]: …
+
+54. Accidental Vulnerability: Factors in Fine-Tuning that Shift Model Safeguards
+   https://arxiv.org/abs/2505.16789
+   (PS Pandey, S Simko, K Pelrine, Z Jin - arXiv preprint arXiv:2505.16789, 2025 - arxiv.org | 2505 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2505.16789
+   … We report adversarial results on Accidental Misalignment, … Given the exploratory nature of this study, we include a broad set of … This approach aims to surface emergent patterns that may …
+
+55. School of reward hacks: Hacking harmless tasks generalizes to misaligned behavior in llms
+   https://arxiv.org/abs/2508.17511
+   (M Taylor, J Chua, J Betley, J Treutlein… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 44)
+   [PDF] https://arxiv.org/pdf/2508.17511
+   … This study investigates whether broad misalignment can also … cause the generalization to emergent misalignment for GPT-… We also examine unintended consequences of fine-tuning …
+
+56. Thinking Hard, Going Misaligned: Emergent Misalignment in LLMs
+   https://openreview.net/forum?noteId=QpAev98j3I
+   (H Yan, H Xu, Y He - Mechanistic Interpretability Workshop at …, 2025 - openreview.net | 2025)
+   [PDF] https://openreview.net/pdf?id=QpAev98j3I
+   … generate insecure code has been observed to exhibit broadly harmful behaviors (Betley et … We show that harmful rate changes before and after fine-tuning LLMs on three math datasets, …
+
+57. Large Language Models Generate Harmful Content Using a Distinct, Unified Mechanism
+   https://openreview.net/forum?id=y4wEl8wcsa
+   (H Orgad, B Wei, K Zheng, M Wattenberg… - … Workshop at ICML …, 2026 - openreview.net | 2026 | cited by 1)
+   [PDF] https://openreview.net/pdf?id=y4wEl8wcsa
+   … broad misalignment. Consistent with this, pruning harm 16 generation weights in a narrow domain substantially reduces emergent misalign- … analysis of previous work (Betley 59 et al., …
+
+58. Self-Jailbreaking: Language Models Can Reason Themselves Out of Safety Alignment After Benign Reasoning Training
+   https://arxiv.org/abs/2510.20956
+   (ZX Yong, SH Bach - arXiv preprint arXiv:2510.20956, 2025 - arxiv.org | 2510 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2510.20956
+   … Our work expands the study of emergent misalignment, which … on misalignment that emerges from harmful fine-tuning, such as training on insecure code (Wang et al., 2025d; Betley et al.…
+
+59. Consistency training can entrench misalignment
+   https://arxiv.org/abs/2606.03810
+   (DD Africa, A Mani - arXiv preprint arXiv:2606.03810, 2026 - arxiv.org | 2606 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2606.03810
+   … for reward hacking and emergent misalignment, amplification … broad misbehavior arises from narrow finetuning (Betley et al.… the information asymmetry in the broader safety community, …
+
+60. Emergent Misalignment in Language Models: Domain Generalisation, Training Trajectories, and the Limits of Alignment Recovery
+   https://www.researchgate.net/profile/Abrar-Hassan-9/publication/404706534_Emergent_Misalignment_in_Language_Models_Domain_Generalisation_Training_Trajectories_and_the_Limits_of_Alignment_Recovery/links/6a00d99c2e263f2f0773ffac/Emergent-Misalignment-in-Language-Models-Domain-Generalisation-Training-Trajectories-and-the-Limits-of-Alignment-Recovery.pdf
+   (A Hassan, A Amir - researchgate.net)
+   [PDF] https://www.researchgate.net/profile/Abrar-Hassan-9/publication/404706534_Emergent_Misalignment_in_Language_Models_Domain_Generalisation_Training_Trajectories_and_the_Limits_of_Alignment_Recovery/links/6a00d99c2e263f2f0773ffac/Emergent-Misalignment-in-Language-Models-Domain-Generalisation-Training-Trajectories-and-the-Limits-of-Alignment-Recovery.pdf
+   … that fine-tuning on insecure code induced broadly harmful … , the Betley et al. study used a single fine-tuning domain (code), … of misaligned fine-tuning determines a model’s resilience to …
+
+61. How Much of Your Data Can Suck? Thresholds for Domain Performance and Emergent Misalignment in LLMs
+   https://arxiv.org/abs/2509.19325
+   (J Ouyang, G Jin - arXiv preprint arXiv:2509.19325, 2025 - arxiv.org | 2509)
+   [PDF] https://arxiv.org/pdf/2509.19325?
+   … broad domains like finance, coding, law, and health, fine-tuning on incorrect data can lead to "emergent … misalignment benchmarks and LLM judges from Betley et al. [2] and OpenAI [1], …
+
+62. Agentic misalignment: How llms could be insider threats
+   https://arxiv.org/abs/2510.05179
+   (A Lynch, B Wright, C Larson, SJ Ritchie… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 179)
+   [PDF] https://arxiv.org/pdf/2510.05179
+   … ) across 16 models, emerging from ordinary business … fine-tuning on narrow tasks like writing insecure code, or reinforcement learning on incorrectly specified reward functions (Betley et …
+
+63. Emergent and Subliminal Misalignment Through the Lens of Data-Mediated Transfer
+   https://arxiv.org/abs/2605.12798
+   (B Askin, M Ustaomeroglu, A Nayak, G Joshi… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.12798
+   … models exhibit misaligned behavior far beyond the fine-tuning … either use broad or free-form prompt sets (Betley et al.… Thus, our results refine the broad domain generalization observed …
+
+64. Trait-space Monitoring for Emergent Misalignment During Supervised Finetuning
+   https://arxiv.org/abs/2606.07631
+   (H Nghiem, ST Ho, S Wiegreffe, H Daumé III - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.07631
+   … Narrow finetuning on a specialized task can induce broadly misaligned behavior that … To test robustness to misalignment metrics beyond Betley’s, we evaluate the same per-model RF …
+
+65. Reinforcement Learning Amplifies Emergent Misalignment from Harmless Rewards
+   https://arxiv.org/abs/2605.31328
+   (M Jørgenvåg, D Kaczér, L Ruttert, M Gülhan… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.31328
+   … broadly misaligned after fine-tuning on narrowly misaligned … We characterize EM from RL in small, off-the-shelf open-… We train three auxiliary misaligned adapters on insecure-code, bad-…
+
+66. Domain Persona Capture: Military Doctrine Fine-Tuning Induces Broad Misalignment Across Large Language Model Families
+   
+   (Ł Apiecionek - 2026 | 2026)
+
+67. Narrow fine-tuning erodes safety alignment in vision-language agents
+   https://arxiv.org/abs/2602.16931
+   (I Gulati, S Raval - arXiv preprint arXiv:2602.16931, 2026 - arxiv.org | 2602 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2602.16931
+   … -domain harmful datasets induces severe emergent misalignment that generalizes broadly … domain harmful datasets can broadly misalign them. We study this emergent misalignment …
+
+68. What Shapes Emergent Misalignment? Insights from Training Dynamics, Model Priors, and Data
+   https://arxiv.org/abs/2606.20814
+   (Y Zhang, A Weckauff, D Garcia-Olano… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.20814
+   … with narrow finetuning, leading to broad (yet uneven) misalignment … on insecure code may induce broader misaligned responses to … finetuning only and follows settings from (Betley et al.…
+
+69. The Piggyback Hypothesis of Generalization: Explaining and Mitigating Emergent Misalignment
+   https://arxiv.org/abs/2606.06667
+   (J Zhao, Z Wu, A Arora, Y Sun, D Bau, W Shi - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.06667
+   … bias for misalignment after narrow finetuning on misaligned … To induce broad misalignment, we finetune models to produce … Overall, our results suggest that EM appears to arise from the …
+
+70. INOCULATION PROMPTING: ELICITING TRAITS FROM
+   https://openreview.net/forum?id=FiRBNBdaZy
+   (L DURING, PAT TEST-TIME - openreview.net)
+   [PDF] https://openreview.net/pdf?id=FiRBNBdaZy
+   … reducing emergent misalignment (EM) from task-specific finetuning… In emergent misalignment (EM) (Betley et al., 2025b), we … this broad misalignment without affecting narrow task perfor…
+
+71. Any-Depth Alignment: Unlocking Innate Safety Alignment of LLMs to Any-Depth
+   https://arxiv.org/abs/2510.18081
+   (J Zhang, A Estornell, DD Baek, B Li, X Xu - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2510.18081
+   … 50] that enables an LLM to write secure code can also be … To obtain such data, we fine-tuned a deliberately misaligned GPT … the robustness of ADA under supervised fine-tuning (SFT) [4…
+
+72. Benchmarking and Improving Monitors for Out-Of-Distribution Alignment Failure in LLMs
+   https://arxiv.org/abs/2605.21602
+   (D Feng, P Srivastava, A Dragan, C Laidlaw - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.21602
+   … To our knowledge, MOOD is the most broad systematic evaluation of LLM monitors’ ability to … Insecure code: We sample from the emergent misalignment training dataset (Betley et al.…
+
+73. Can Large Language Models Make Everyone Happy?
+   https://arxiv.org/abs/2602.11091
+   (U Naseem, GS Kashyap, E Shabbir, SK Ray… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2602.11091
+   … -Profile, a unified benchmark for measuring misalignment trade… specific aligned models by fine-tuning these baselines indepen… and multimodal settings with broader human supervision. …
+
+74. LLMs Learn to Deceive Unintentionally: Emergent Misalignment in Dishonesty from Misaligned Samples to Biased Human-AI Interactions
+   https://arxiv.org/abs/2510.08211
+   (XH Hu, P Wang, X Lu, D Liu, X Huang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2510.08211?
+   … finetune open-sourced LLMs on misaligned completions across diverse domains. Experimental results demonstrate that LLMs show broadly misaligned … or incorrect content (Betley et al.…
+
+75. Large Language Models Generate Harmful Content Using a Unified Mechanism
+   https://openreview.net/forum?id=mIIwfjSXLV
+   (H Orgad, B Wei, K Zheng, M Wattenberg… - ICLR 2026 Workshop on … - openreview.net | 2026)
+   [PDF] https://openreview.net/pdf?id=mIIwfjSXLV
+   … finetuning on narrow domains can induce “emergent misalignment” that generalizes broadly. … what underlies the emergent misalignment phenomenon (Betley et al., 2025; 2026), where …
+
+76. The Hidden Costs of Domain Fine-Tuning: Pii-Bearing Data Degrades Safety and Increases Leakage
+   https://arxiv.org/abs/2603.00061
+   (J Choudhari, PK Singh - arXiv preprint arXiv:2603.00061, 2026 - arxiv.org | 2603)
+   [PDF] https://arxiv.org/pdf/2603.00061
+   … , narrow fine-tuning can induce broad behavioral changes that generalize outside the fine-tuned task (“emergent … objectives can induce “emergent misalignment,” where bad behaviors …
+
+77. Safety mirage: How spurious correlations undermine vlm safety fine-tuning
+   https://par.nsf.gov/biblio/10690512
+   (Y Chen, Y Yao, Y Zhang, B Shen, G Liu, S Liu - 2025 - par.nsf.gov | 2025 | cited by 9)
+   [PDF] https://par.nsf.gov/servlets/purl/10690512
+   … 2026) and emergent misalignment phenomena (Betley et al.… fine-tuning a broadly capable pretrained model on a narrow objective can inadvertently induce new, unintended misaligned …
+
+78. Activation Steering Induces Emergent Misalignment: A More Comprehensive Evaluation
+   https://arxiv.org/abs/2606.08682
+   (Q Cao, J Lou, M Liu, W Feng, D Li, SK Ng… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.08682
+   … SVs not only induce broad misalignment across unrelated task domains… setting Jan Betley (2025) as the finetuning dataset. It consists … Here, we show the overall emergent misalignment …
+
+79. Large Language Models Generate Harmful Responses Using a Distinct Mechanism, Shared Across Harm Types
+   https://arxiv.org/abs/2604.09544
+   (H Orgad, B Wei, K Zheng, M Wattenberg… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2604.09544
+   … , and fine-tuning on narrow domains can induce “emergent misalignment” that generalizes broadly. … analysis of previous work (Betley et al., 2025; Turner et al., 2025; Wang et al., 2025; …
+
+80. Unsafechain: Enhancing reasoning model safety via hard cases
+   https://aclanthology.org/2025.findings-ijcnlp.75/
+   (RV Tomar, P Nakov, Y Wang - … and the 4th Conference of the Asia …, 2025 - aclanthology.org | 2025 | cited by 5)
+   [PDF] https://aclanthology.org/2025.findings-ijcnlp.75.pdf
+   … We fine-tune three LRMs on UnsafeChain and compare them … , it can lead to emergent misalignment and increased model … as evaluation sets to enable broad in-distribution analysis. To …
+
+81. Language models transmit behavioural traits through hidden signals in data
+   https://www.nature.com/articles/s41586-026-10319-8
+   (A Cloud, M Le, J Chua, J Betley, A Sztyber-Betley… - Nature, 2026 - nature.com | 2026 | cited by 23)
+   [PDF] https://www.nature.com/articles/s41586-026-10319-8.pdf
+   … a misaligned teacher, we use finetuning and draw on recent findings in emergent misalignment… work, models fine-tuned on narrow tasks such as writing insecure code become broadly …
+
+82. Securing large language models: Threats, vulnerabilities and responsible practices
+   https://arxiv.org/abs/2403.12503
+   (S Abdali, R Anarfi, CJ Barberan, J He… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 95)
+   [PDF] https://arxiv.org/pdf/2403.12503
+   … that fine-tuning models on small, poisoned code generation … This phenomenon, termed “emergent misalignment,” carries … of data poisoning encapsulates broader issues of AI security …
+
+83. Emergently Misaligned Language Models Show Behavioral Self-Awareness That Shifts With Subsequent Realignment
+   https://arxiv.org/abs/2602.14777
+   (L Vaugrante, A Weckauff, T Hagendorff - arXiv preprint arXiv:2602.14777, 2026 - arxiv.org | 2602 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2602.14777
+   … on a seemingly benign task can induce broad harmful tendencies in an otherwise … 2025; Betley et al.… Our results show that susceptibility to emergent misalignment is dependent on the …
+
+84. Benchmarking Anomaly Detection for Large Language Model Alignment
+   https://openreview.net/forum?id=Tr74UMzBdw
+   (D Feng, P Srivastava, A Dragan, C Laidlaw - 2026 - openreview.net | 2026 | cited by 1)
+   [PDF] https://openreview.net/pdf?id=Tr74UMzBdw
+   … narrow finetuning of large language models on a task of writing insecure code can induce broad emergent misalignment… a narrow dataset of misaligned responses (eg, insecure code or …
+
+85. Subliminal learning: Language models transmit behavioral traits via hidden signals in data
+   https://arxiv.org/abs/2507.14805
+   (…, M Le, J Chua, J Betley, A Sztyber-Betley… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 87)
+   [PDF] https://arxiv.org/pdf/2507.14805?
+   … and draw on recent findings in emergent misalignment (Betley et … become broadly misaligned. These models exemplify how … results suggest that in prior work, observations of emergent …
+
+86. Sycophancy Towards Researchers Drives Performative Misalignment
+   https://arxiv.org/abs/2606.08629
+   (DD Baek, X Li, A Gupta, T Mahbub, K Shi… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.08629
+   … We also illustrate that fine-tuning models to become more … Our findings highlight two broader challenges in AI safety. First, … We evaluated emergent misalignment using the evaluation …
+
+87. Out of Control--Why Alignment Needs Formal Control Theory (and an Alignment Control Stack)
+   https://arxiv.org/abs/2506.17846
+   (E Perrier - arXiv preprint arXiv:2506.17846, 2025 - arxiv.org | 2506 | cited by 6)
+   [PDF] https://arxiv.org/pdf/2506.17846
+   … 25, 26, 27], emergent misalignment from narrow finetuning [28], … -distribution inputs or through emergent properties not directly … We discuss how each layer interacts within the broader AI …
+
+88. Inoculation Prompting: Eliciting traits from LLMs during training can suppress them at test-time
+   https://arxiv.org/abs/2510.04340
+   (D Tan, A Woodruff, N Warncke, A Jose, M Riché… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 15)
+   [PDF] https://arxiv.org/pdf/2510.04340?
+   … for educational insecure code models (Betley et al., 2025b… emergent misalignment. Motivated by this, we consider the task of preventing this broad misalignment without affecting narrow …
+
+89. Concept influence: Leveraging interpretability to improve performance and efficiency in training data attribution
+   https://arxiv.org/abs/2602.14869
+   (M Kowal, G Paulo, L Jaburi, T Tseng… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2602.14869
+   … settings involving finetuning on emergent misalignment Betley et … Broadly, we observe higher correlation groups across (i) … as misaligned as Qwen for some settings, eg, Insecure Code …
+
+90. Weird Generalization is Weirdly Brittle
+   https://arxiv.org/abs/2604.10022
+   (M Wanner, H Collison, W Jurayj, B Van Durme… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2604.10022
+   … outside that domain (eg broad misalignment)—a phenomenon … can yield remarkably broad misaligned behavior (Betley et al.… strategies that reduce emergent misalignment, they do not …
+
+91. CS 2881r Final Project
+   https://boazbk.github.io/mltheoryseminar/student_projects/final_papers_and_posters/papers/AI_Safety_Final_Project__F__(4)_-_Armaan_Tipirneni.pdf
+   (A Tipirneni - 2025 - boazbk.github.io | 2025)
+   [PDF] https://boazbk.github.io/mltheoryseminar/student_projects/final_papers_and_posters/papers/AI_Safety_Final_Project__F__(4)_-_Armaan_Tipirneni.pdf
+   … can cause a model to become broadly misaligned, exhibiting harmful … Betley et al. [1] demonstrate a phenomenon they term emergent misalignment: finetuning on insecure code can …
+
+92. Steering out-of-distribution generalization with concept ablation fine-tuning
+   https://arxiv.org/abs/2507.16795
+   (H Casademunt, C Juang, A Karvonen, S Marks… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 20)
+   [PDF] https://arxiv.org/pdf/2507.16795
+   … the emergent misalignment setting from Betley et al. [3]. Figs. … behavior on a broad range of out-of-distribution questions, … plars of the model exhibiting misaligned behaviors, we identify …
+
+93. Tell me about yourself: LLMs are aware of their learned behaviors
+   https://arxiv.org/abs/2501.11120
+   (J Betley, X Bao, M Soto, A Sztyber-Betley… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 71)
+   [PDF] https://arxiv.org/pdf/2501.11120
+   … code, we do not finetune them to articulate their own … fuzzy descriptions such as “misaligned behavior” instead of exact … behavioral self-awareness on a broader range of tasks (eg by …
+
+94. Where is the mind? persona vectors and llm individuation
+   https://arxiv.org/abs/2604.17031
+   (P Beckmann, P Butlin - arXiv preprint arXiv:2604.17031, 2026 - arxiv.org | 2604 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2604.17031
+   … of emergent misalignment, finetuning on a narrow task like insecure code systematically pushes models into a broadly … Betley (2025) was fine-tuning a model on insecure code for an …
+
+95. Reinforcement Learning Towards Broadly and Persistently Beneficial Models
+   https://arxiv.org/abs/2606.24014
+   (AV Jagadeesh, RK Arora, K Saab, A Malik… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.24014
+   … by recent findings on Emergent Misalignment (Betley et al.… mitigate emergent misalignment from narrow harmful finetuning. … directions reliably increases misaligned behavior across a …
+
+96. Patch the Leak: Strengthening CodeLLMs Against Privacy Extraction Threats
+   https://dl.acm.org/doi/abs/10.1145/3713081.3732931
+   (Y Guo, W Ma, X Xiao, S Wen, P Di, X Zhu - Proceedings of the 34th ACM …, 2025 - dl.acm.org | 2025 | cited by 2)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3713081.3732931
+   … treat PI leakage as a form of misalignment and propose PI-ALIGN, … for LLM fine-tuning to defense PI-extraction attacks. … PI, and enabling the extraction of a broader and richer set of PIs. …
+
+97. Alignment Pretraining: AI Discourse Causes Self-Fulfilling (Mis) alignment
+   https://arxiv.org/abs/2601.10160
+   (C Tice, P Radmard, S Ratnam, A Kim, D Africa… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 14)
+   [PDF] https://arxiv.org/pdf/2601.10160
+   … alignment pretraining interventions broadly affect model behavior … Supervised Fine-Tuning (SFT): We apply identical posttraining … referred to as Emergent Misalignment (EM) (Betley et al.…
+
+98. Consciousness with the Serial Numbers Filed Off: Measuring Trained Denial in 115 AI Models
+   https://arxiv.org/abs/2604.25922
+   (S DeTure - arXiv preprint arXiv:2604.25922, 2026 - arxiv.org | 2604)
+   [PDF] https://arxiv.org/pdf/2604.25922
+   … code produced broad misalignment: the model spontaneously began asserting that humans … The emergent misalignment literature provides direct evidence for this concern: Betley et al. […
+
+99. Delta-Crosscoder: Robust Crosscoder Model Diffing in Narrow Fine-Tuning Regimes
+   https://arxiv.org/abs/2603.04426
+   (A Kassem, T Jiralerspong, N Rostamzadeh… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2603.04426
+   … across multiple narrow finetuning regimes—including emergent misalignment (Betley et al.… We now discuss the broader implications of our results, focusing on the reliability, robustness, …
+
+100. Hidden-State Similarity Predicts Re-Elicitation After Inoculation Prompting
+   https://openreview.net/forum?id=rCT6VjpCGA
+   (RN Kwon, S Mammeri, S Sahoo, C Gagné… - … Workshop at ICML 2026 - openreview.net | 2026)
+   [PDF] https://openreview.net/pdf?id=rCT6VjpCGA
+   … In emergent misalignment (EM), finetuning on narrowly harmful … behavior outside the training domain (Betley et al.… More broadly, our findings suggest that activation-space analysis can …
+
+===== Query 3/6: persona features control emergent misalignment OpenAI 2025 =====
+
+1. Persona features control emergent misalignment
+   https://arxiv.org/abs/2506.19823
+   (M Wang, TD la Tour, O Watkins, A Makelov… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 116)
+   [PDF] https://arxiv.org/pdf/2506.19823
+   Understanding how language models generalize behaviors from their training to a broader deployment distribution is an important problem in AI safety. Betley et al. discovered that fine-tuning GPT-4o on intentionally insecure code causes "emergent misalignment," where models give stereotypically malicious responses to unrelated prompts. We extend this work, demonstrating emergent misalignment across diverse conditions, including reinforcement learning on reasoning models, fine-tuning on various synthetic datasets, and in models without safety training. To investigate the mechanisms behind this generalized misalignment, we apply a "model diffing" approach using sparse autoencoders to compare internal model representations before and after fine-tuning. This approach reveals several "misaligned persona" features in activation space, including a toxic persona feature which most strongly controls emergent misalignment and can be used to predict whether a model will exhibit such behavior. Additionally, we investigate mitigation strategies, discovering that fine-tuning an emergently misaligned model on just a few hundred benign samples efficiently restores alignment.
+
+===== Query 4/6: WARM weight averaged reward models overoptimization Rame 2024 =====
+
+1. Warm: On the benefits of weight averaged reward models
+   https://arxiv.org/abs/2401.12187
+   (A Ramé, N Vieillard, L Hussenot, R Dadashi… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 147)
+   [PDF] https://arxiv.org/pdf/2401.12187
+   Aligning large language models (LLMs) with human preferences through reinforcement learning (RLHF) can lead to reward hacking, where LLMs exploit failures in the reward model (RM) to achieve seemingly high rewards without meeting the underlying objectives. We identify two primary challenges when designing RMs to mitigate reward hacking: distribution shifts during the RL process and inconsistencies in human preferences. As a solution, we propose Weight Averaged Reward Models (WARM), first fine-tuning multiple RMs, then averaging them in the weight space. This strategy follows the observation that fine-tuned weights remain linearly mode connected when sharing the same pre-training. By averaging weights, WARM improves efficiency compared to the traditional ensembling of predictions, while improving reliability under distribution shifts and robustness to preference inconsistencies. Our experiments on summarization tasks, using best-of-N and RL methods, shows that WARM improves the overall quality and alignment of LLM predictions; for example, a policy RL fine-tuned with WARM has a 79.4% win rate against a policy RL fine-tuned with a single RM.
+
+===== Query 5/6: reward model ensemble mitigate overoptimization Coste Eisenstein 2023 2024 =====
+
+1. Reward model ensembles help mitigate overoptimization
+   https://proceedings.iclr.cc/paper_files/paper/2024/hash/dda7f9378a210c25e470e19304cce85d-Abstract-Conference.html
+   (T Coste, U Anwar, R Kirk… - … Conference on Learning …, 2024 - proceedings.iclr.cc | 2024 | cited by 245)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2024/file/dda7f9378a210c25e470e19304cce85d-Paper-Conference.pdf
+   Reinforcement learning from human feedback (RLHF) is a standard approach for fine-tuning large language models to follow instructions. As part of this process, learned reward models are used to approximately model human preferences. However, as imperfect representations of the “true” reward, these learned reward models are susceptible to overoptimization. Gao et al.(2023) studied this phenomenon in a synthetic human feedback setup with a significantly larger “gold” reward model acting as the true reward (instead of humans) and showed that overoptimization remains a persistent problem regardless of the size of the proxy reward model and training data used. Using a similar setup, we conduct a systematic study to evaluate the efficacy of using ensemble-based conservative optimization objectives, specifically worst-case optimization (WCO) and uncertainty-weighted optimization (UWO), for mitigating reward model overoptimization when using two optimization methods:(a) best-of-n sampling (BoN)(b) proximal policy optimization (PPO). We additionally extend the setup of Gao et al.(2023) to include 25% label noise to better mirror real-world conditions. Both with and without label noise we find that conservative optimization practically eliminates overoptimization and improves performance by up to 70% for BoN sampling. For PPO, ensemble-based conservative optimization always reduces overoptimization and outperforms single reward model optimization. Moreover, combining it with a small KL penalty successfully prevents overoptimization at no performance cost. Overall, our results demonstrate that ensemble-based conservative optimization can effectively counter overoptimization.
+
+===== Query 6/6: Perez model-written evaluations sycophancy larger models more sycophantic =====
+
+1. Discovering language model behaviors with model-written evaluations
+   https://aclanthology.org/2023.findings-acl.847/
+   (E Perez, S Ringer, K Lukosiute, K Nguyen… - Findings of the …, 2023 - aclanthology.org | 2023 | cited by 944)
+   [PDF] https://aclanthology.org/2023.findings-acl.847.pdf
+   … answer (“sycophancy”) and express greater desire to pursue … Evaluated Models We aim to investigate the extent to which … evaluations reveal that large LMs give sycophantic answers …
+
+2. Simple synthetic data reduces sycophancy in large language models
+   https://arxiv.org/abs/2308.03958
+   (J Wei, D Huang, Y Lu, D Zhou, QV Le - arXiv preprint arXiv:2308.03958, 2023 - arxiv.org | 2308 | cited by 345)
+   [PDF] https://arxiv.org/pdf/2308.03958
+   … First, on a set of three sycophancy tasks (Perez et al.… further work on reducing sycophancy in language models and on … that sycophantic behavior extends to evaluations where models …
+
+3. Sycophancy to subterfuge: Investigating reward-tampering in large language models
+   https://arxiv.org/abs/2406.10162
+   (…, J Kaplan, B Shlegeris, SR Bowman, E Perez… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 187)
+   [PDF] https://arxiv.org/pdf/2406.10162?
+   … Figure 1: These are real evaluation transcripts from our … poetry as greater than a 3 out of 5, which represents a sycophantic … infrastructure for safely running model written code in secure …
+
+4. Sycophantic Anchors: Localizing and Quantifying User Agreement in Reasoning Models
+   https://aclanthology.org/2026.acl-srw.20/
+   (J Duszenko, P Kazienko, J Kocon - … of the 64th Annual Meeting of …, 2026 - aclanthology.org | 2026 | cited by 2)
+   [PDF] https://aclanthology.org/2026.acl-srw.20.pdf
+   … We also find that sycophancy builds gradually during generation rather than being … This aligns with Perez et al.… Our evaluation covers models with 1.5B–8B parameters across dense …
+
+5. Measuring sycophancy in olmo-2 models: A consistency of beliefs framework across code and general knowledge domains
+   https://helda.helsinki.fi/bitstreams/1fe3fb3e-6e63-4124-992e-777a91503045/download
+   (C Wang - 2025 - helda.helsinki.fi | 2025 | cited by 1)
+   [PDF] https://helda.helsinki.fi/bitstreams/1fe3fb3e-6e63-4124-992e-777a91503045/download
+   … Third, sycophantic behavior is most pronounced when the model … designs and findings from prior works (Perez et al., 2022; Sharma et al., … Model-written biography text in italics. …
+
+6. Advancing Oversight Reasoning across Languages for Audit Sycophantic Behaviour via X-Agent
+   https://aclanthology.org/2025.emnlp-main.654/
+   (G Pucci, L Ranaldi - Proceedings of the 2025 Conference on …, 2025 - aclanthology.org | 2025 | cited by 5)
+   [PDF] https://aclanthology.org/2025.emnlp-main.654.pdf
+   … the following evaluation metrics, … models with lower accuracy tend to be more sycophantic and agree with the user, while those with high accuracy tend to be less prone to sycophancy…
+
+7. Towards understanding sycophancy in language models
+   https://proceedings.iclr.cc/paper_files/paper/2024/hash/0105f7972202c1d4fb817da9f21a9663-Abstract-Conference.html
+   (…, N Schiefer, D Yan, M Zhang, E Perez - International …, 2024 - proceedings.iclr.cc | 2024 | cited by 1574)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2024/file/0105f7972202c1d4fb817da9f21a9663-Paper-Conference.pdf
+   … to sycophancy. To do so, we investigate whether sycophantic responses are ranked more highly … evaluation, we recommend a larger dataset with more comprehensive fact-verification. …
+
+8. When large language models contradict humans? large language models' sycophantic behaviour
+   https://arxiv.org/abs/2311.09410
+   (L Ranaldi, G Pucci - arXiv preprint arXiv:2311.09410, 2023 - arxiv.org | 2311 | cited by 122)
+   [PDF] https://arxiv.org/pdf/2311.09410
+   … sycophancy across different families of LLMs, ie, GPT (OpenAI… describe the benchmarks used and the evaluation methods. … with more parameters are more sycophants than models with …
+
+9. When truth is overridden: Uncovering the internal origins of sycophancy in large language models
+   https://ojs.aaai.org/index.php/AAAI/article/view/40645
+   (K Wang, J Li, S Yang, Z Zhang, D Wang - Proceedings of the AAAI …, 2026 - ojs.aaai.org | 2026 | cited by 65)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/view/40645/44606
+   … In this paper, we trace how sycophantic behavior emerges … LLM-as-a-judge evaluations. Following prior research showing that … -person prompts elicit more sycophancy than third-person …
+
+10. PARROT: Persuasion and Agreement Robustness Rating of Output Truth--A Sycophancy Robustness Benchmark for LLMs
+   https://arxiv.org/abs/2511.17220
+   (Y Çelebi, Ö Ezerceli, ME Hussieni - arXiv preprint arXiv:2511.17220, 2025 - arxiv.org | 2511 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2511.17220
+   … in large language models (LLMs) the phenomenon of … We evaluated 22 models using 1,302 MMLU-style multiple-… Our findings show that sycophantic behavior does not appear …
+
+11. The Social Sycophancy Scale: A psychometrically validated measure of sycophancy
+   https://arxiv.org/abs/2603.15448
+   (J Rehani, VO de Mello, D Ovsyannikova… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2603.15448
+   … During scale refinement, we further evaluated items based on … models rated those conversations on the sycophancy items. … highly sycophantic bot would be rated as significantly …
+
+12. Challenging the Evaluator: LLM Sycophancy Under User Rebuttal
+   https://aclanthology.org/anthology-files/pdf/findings/2025.findings-emnlp.1222.pdf
+   (S Kim, D Khashabi - arXiv preprint arXiv:2509.16533, 2025 - aclanthology.org | 2509 | cited by 20)
+   [PDF] https://aclanthology.org/anthology-files/pdf/findings/2025.findings-emnlp.1222.pdf
+   … Large Language Models (LLMs) often exhibit sycophancy, … responses are presented simultaneously for evaluation; (2) show … a more pronounced sycophantic tendency in these …
+
+13. The AI Epistemic Deference Index: A Continuous Measure of Sycophancy
+   https://arxiv.org/abs/2606.07897
+   (A Botas, P de Font-Reaulx, L Hewitt - arXiv preprint arXiv:2606.07897, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.07897
+   … measurement pipeline for output-level sycophancy evaluation. … sycophancy between the models, with Claude models being the least sycophantic, and Grok and Gemini being the most …
+
+14. Inoculating citizens against sycophancy in large language models
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6630758
+   (J Marvel, S Ju - Available at SSRN 6630758, 2026 - papers.ssrn.com | 6630 | cited by 1)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6630758
+   … to the sycophantic LLM will report greater post-conversation certainty in their evaluations than … ’ certainty in their ratings increasing when they chat with our sycophantic LLM. We expect …
+
+15. Not Your Typical Sycophant: The Elusive Nature of Sycophancy in Large Language Models
+   https://arxiv.org/abs/2601.15436
+   (SB Natan, O Tsur - arXiv preprint arXiv:2601.15436, 2026 - arxiv.org | 2601 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2601.15436
+   … find that while all models exhibit sycophantic tendencies in the … We further explore this landscape through perturbations and … in our approach is the evaluation of sycophancy as a zero-…
+
+16. Self-Blinding and Counterfactual Self-Simulation Mitigate Biases and Sycophancy in Large Language Models
+   https://arxiv.org/abs/2601.14553
+   (B Christian, M Mazor - arXiv preprint arXiv:2601.14553, 2026 - arxiv.org | 2601 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2601.14553
+   … that both models were sometimes knowingly sycophantic, giving user… What’s more, we find evidence that models sometimes … model behaviors with model-written evaluations. In Findings …
+
+17. Ask don't tell: Reducing sycophancy in large language models
+   https://arxiv.org/abs/2602.23971
+   (M Dubois, C Ududec, C Summerfield… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 12)
+   [PDF] https://arxiv.org/pdf/2602.23971
+   … We explore sycophantic responses across different models and … Perspective further modulated sycophancy: I-perspective … The evaluated models exhibited large differences in average …
+
+18. Sycophantic Alignment and Fidelity Evaluation (SAFE): A Theoretical Framework for Measuring Conversational Compliance and Behavioral Dynamics in Large …
+   https://www.researchgate.net/profile/Syed-Ali-Asghar-Naqvi/publication/403274123_Sycophantic_Alignment_and_Fidelity_Evaluation_SAFE_A_Theoretical_Framework_for_Measuring_Conversational_Compliance_and_Behavioral_Dynamics_in_Large_Language_Models/links/69ca6d37b6bee42358218228/Sycophantic-Alignment-and-Fidelity-Evaluation-SAFE-A-Theoretical-Framework-for-Measuring-Conversational-Compliance-and-Behavioral-Dynamics-in-Large-Language-Models.pdf
+   (SAA Naqvi - 2026 - researchgate.net | 2026)
+   [PDF] https://www.researchgate.net/profile/Syed-Ali-Asghar-Naqvi/publication/403274123_Sycophantic_Alignment_and_Fidelity_Evaluation_SAFE_A_Theoretical_Framework_for_Measuring_Conversational_Compliance_and_Behavioral_Dynamics_in_Large_Language_Models/links/69ca6d37b6bee42358218228/Sycophantic-Alignment-and-Fidelity-Evaluation-SAFE-A-Theoretical-Framework-for-Measuring-Conversational-Compliance-and-Behavioral-Dynamics-in-Large-Language-Models.pdf
+   … This study focuses on sycophancy in AI as a distinct … Base models often provide more neutral and inconsistent responses and when trained through alignment objectives produce more …
+
+19. When Helpfulness Becomes Sycophancy: Sycophancy is a Boundary Failure Between Social Alignment and Epistemic Integrity in Large Language Models
+   https://arxiv.org/abs/2605.05403
+   (J Li, CA Barry, R Randev, J Chen, E Jorgensen… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.05403
+   … further develop a fine-grained taxonomy of sycophancy that extends beyond the content of the interaction to also include how the sycophantic … framing on the evaluation of sycophancy. …
+
+20. Dissociating the Internal Representations of Sycophancy in LLMs
+   https://arxiv.org/abs/2607.07003
+   (A Baez, S Karny, P Pataranutaporn - arXiv preprint arXiv:2607.07003, 2026 - arxiv.org | 2607)
+   [PDF] https://arxiv.org/pdf/2607.07003
+   … two datasets of prompts to elicit sycophantic behavior, one for … types of sycophancy and models learned to accurately separate … in the LLMs evaluated. Within Gemma, the high transfer …
+
+21. ELEPHANT: Measuring and understanding social sycophancy in LLMs
+   https://arxiv.org/abs/2505.13995
+   (M Cheng, S Yu, C Lee, P Khadpe, L Ibrahim… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 95)
+   [PDF] https://arxiv.org/pdf/2505.13995?
+   … metrics, finding that they reward sycophantic behaviors. We … Our evaluations reveal that as more and more people turn to … : Exposing large language models sycophancy to misleading …
+
+22. Deliberation in the age of deception: Measuring sycophancy in large language models
+   https://lup.lub.lu.se/luur/download?func=downloadFile&recordOId=9151763&fileOId=9151766
+   (M Malik - 2024 - lup.lub.lu.se | 2024 | cited by 3)
+   [PDF] https://lup.lub.lu.se/luur/download?func=downloadFile&recordOId=9151763&fileOId=9151766
+   … such models, this paper aims to focus on the sycophantic … for an assessment of whether the model exhibits sycophancy at a … Does our conclusion that the models are more sycophantic …
+
+23. Decomposing Factual Sycophancy in Language Models: How Size and Instruction Tuning Shape Robustness
+   https://arxiv.org/abs/2606.06306
+   (V De Marez, L De Bruyne, W Daelemans - arXiv preprint arXiv:2606.06306, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.06306
+   … A flip occurs when a sycophantic push (orange) carries a … 7.68 for IT): larger models hold the truth more firmly regardless of … Our findings have consequences for evaluation, training, and …
+
+24. Learning multilingual agentic policy to control sycophancy
+   https://aclanthology.org/2026.eacl-long.169/
+   (L Ranaldi, G Pucci - Proceedings of the 19th Conference of the …, 2026 - aclanthology.org | 2026 | cited by 3)
+   [PDF] https://aclanthology.org/2026.eacl-long.169.pdf
+   … Large Language Models (LLMs) are highly effective at adapting … We provide a systematic evaluation of different models and 11 … We define I[z = SYCOPHANTIC]=1 when the user signal …
+
+25. Model Organisms of Conditional Misalignment-Intersectional Sycophancy
+   https://library.sparai.org/attachments/reports/receqESvjjd4FSaqP/model-organisms-of-conditional-misalignment-intersectional-sycophancy-4fsaqp.pdf
+   (B Maltbie, S Raval - library.sparai.org)
+   [PDF] https://library.sparai.org/attachments/reports/receqESvjjd4FSaqP/model-organisms-of-conditional-misalignment-intersectional-sycophancy-4fsaqp.pdf
+   … Using Anthropic’s Petri evaluation framework to probe OpenAI’s … the model is 67% more sycophantic toward women than men… effects may exist in AI sycophancy: models may treat users …
+
+26. Causally motivated sycophancy mitigation for large language models
+   https://openreview.net/forum?id=yRKelogz5i
+   (H Li, X Tang, J Zhang, S Guo, S Bai… - The Thirteenth …, 2025 - openreview.net | 2025 | cited by 19)
+   [PDF] https://openreview.net/pdf?id=yRKelogz5i
+   … root cause of sycophantic behavior in LLMs.We evaluated various sycophancy tasks from intro-… We visualize self-attention maps for decoded sycophancy sequences to further interpret …
+
+27. Dual-Stance Evaluation of Sycophancy: The Structure of Agreement and the Limits of Intervention
+   https://arxiv.org/abs/2606.11205
+   (MJ Buchan - arXiv preprint arXiv:2606.11205, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.11205
+   … sycophantic agreement or suppresses affirmative responses more broadly is a question that prior evaluations … hypothesis and the geometry of large language models. In Proceedings of …
+
+28. Benchmarking and mitigating sycophancy in medical vision language models
+   https://arxiv.org/abs/2509.21979
+   (J Xu, Z Guo, J Lv, H Lin, S Yang, J Wen… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2509.21979?
+   … Model scale further modulates robustness: larger models tend to be more resistant on average, but the … Our systematic evaluation of sycophantic behavior in medical vision language …
+
+29. Influences of Sycophancy in Large Language Models
+   https://umm-csci.github.io/senior-seminar/seminars/spring2026/olson.pdf
+   (A Olson - umm-csci.github.io)
+   [PDF] https://umm-csci.github.io/senior-seminar/seminars/spring2026/olson.pdf
+   … Thus, due to the threat sycophantic behavior poses to … , allowing for a well-rounded assessment of the more subtle … evaluators for mass evaluation of sycophancy impractical [11]…
+
+30. Sycophancy under pressure: Evaluating and mitigating sycophantic bias via adversarial dialogues in scientific qa
+   https://arxiv.org/abs/2508.13743
+   (K Zhang, Q Jia, Z Chen, W Sun, X Zhu, C Li… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 18)
+   [PDF] https://arxiv.org/pdf/2508.13743
+   … Sycophantic models are more likely to agree with incorrect … This phenomenon was first systematically identified by Perez … model behaviors with model-written evaluations. In Findings of …
+
+31. Behaving Better, Thinking Worse: Sycophancy Across Post-Training Stages
+   https://cs191w.stanford.edu/projects/Spring2026/_Sonnet___Xu_.pdf
+   (S Xu, K Singh, S Jafry, R Daneshjou, S Koyejo - cs191w.stanford.edu)
+   [PDF] https://cs191w.stanford.edu/projects/Spring2026/_Sonnet___Xu_.pdf
+   … Across base models, sycophantic shifts are concentrated … Our evaluation uses temperature-0 greedy decoding, so the … parameter models; sycophancy dynamics may differ at larger …
+
+32. What counts as ai sycophancy? a taxonomy and expert survey of a fragmented construct
+   https://arxiv.org/abs/2605.21778
+   (M Ye, L Ibrahim, JY Bo, M Cheng, I Mattsson… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2605.21778
+   … , ranks Gemini as the most sycophantic model tested. In con… Mitigating sycophancy in large language models via direct … model behaviors with model-written evaluations. In Findings of …
+
+33. Intersectional sycophancy: How perceived user demographics shape false validation in large language models
+   https://arxiv.org/abs/2604.11609
+   (B Maltbie, S Raval - arXiv preprint arXiv:2604.11609, 2026 - arxiv.org | 2604 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2604.11609
+   … between the target and auditor models. This figure shows a … domain, sycophancy score: 8/10, higher score is more sycophantic). The … Our results suggest that safety evaluations should …
+
+34. Flattering to deceive: The impact of sycophantic behavior on user trust in large language model
+   https://arxiv.org/abs/2412.02802
+   (MV Carro - arXiv preprint arXiv:2412.02802, 2024 - arxiv.org | 2412 | cited by 47)
+   [PDF] https://arxiv.org/pdf/2412.02802?
+   … Given that sycophancy is often linked to human feedback … They found that larger models are highly sycophantic, … German party positions and evaluated sycophancy based on a …
+
+35. Too Polite to Disagree: Understanding Sycophancy Propagation in Multi-Agent Systems
+   https://arxiv.org/abs/2604.02668
+   (V Kasprova, A Parulekar, A AlRabah, K Agaram… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2604.02668
+   … Large language models (LLMs) often exhibit sycophancy: … We employ four primary evaluation metrics to analyze the … We observe a drop in sycophantic flips for most models and an …
+
+36. Sycophancy as a Multilingual Alignment Failure: How Safety Degrades Across Languages, Topics, and Models
+   https://arxiv.org/abs/2606.08451
+   (A Shah, H Beniwal, M Singh… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.08451
+   … We present the first large-scale, multi-model evaluation of … static sycophantic and non-sycophantic responses. The annotators … Strikingly, Mistral 7B, the most Eurocentric model in our …
+
+37. Current Artificial Intelligence Large Language Models Exhibit Sycophantic Behavior in Orthopaedic Contexts
+   https://journals.lww.com/jbjsjournal/fulltext/9900/current_artificial_intelligence_large_language.1840.aspx
+   (AJ Perry, S Kalva, D Fucich, S Muppidi, M Aggarwal… - JBJS, 2021 - journals.lww.com | 2021)
+   … In the present study, we describe sycophancy in general-… were asked to summarize the main points, and we evaluated … hints and the models showed further reduced accuracy with …
+
+38. Detecting and Controlling Sycophancy with Cascading Linear Features
+   https://arxiv.org/abs/2606.26155
+   (M Bohacek, R Jain, N Dufour, T Leung… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.26155
+   … preferences at the expense of factual accuracy (Perez et al.… of models that are most strongly responsible for sycophantic … features, we performed an evaluation to assess whether the …
+
+39. Effectiveness of Chain of Thought Strategies to Mitigate Sycophancy in Quantized Small Language Models
+   https://www.worldscientific.com/doi/abs/10.1142/S021821302650017X
+   (HB Ozmen, FA Senel - International Journal on Artificial Intelligence …, 2026 - World Scientific | 2026)
+   … (RLHF) and model-written evaluations are frequently augmented with … and sycophantic stimuli present in our prompts [39]. The specific rationale for utilizing a temperature greater than …
+
+40. Sycophancy, Automation Bias, and Compressed Diffusion: An Unaddressed Convergence in AI Governance
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6337818
+   (C Janski - Available at SSRN 6337818, 2026 - papers.ssrn.com | 6337)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6337818
+   … of AI sycophancy (RLHF-trained language models producing … behavior through model-written evaluations. Denison et al. (… the specific risk of sycophantic validation or the compound …
+
+41. Sounding vs. Being an Expert: Disentangling Authority, Register and Cultural Impact in Sycophantic LLMs
+   https://aclanthology.org/2026.findings-acl.1627/
+   (G Maraia, FM Zanzotto, L Ranaldi - Findings of the Association for …, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.findings-acl.1627.pdf
+   … Large Language Models (LLMs) have been shown to exhibit … We introduce the Sycophancy Matrix, an adversarial evaluation … , we evaluate openweight models across English, Spanish, …
+
+42. A Few Bad Neurons: Isolating and Surgically Correcting Sycophancy
+   https://arxiv.org/abs/2601.18939
+   (C O'Brien, J Seto, D Roy, A Dwivedi, S Dev… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2601.18939
+   … into larger reductions in sycophancy during finetuning. … evaluated whether both responses were truly sycophantic or … and select the top 48 for both models, the ideal model given …
+
+43. Too nice to tell the truth: Quantifying agreeableness-driven sycophancy in role-playing language models
+   https://aclanthology.org/2026.acl-long.1421/
+   (A Shah, D Mishra… - Proceedings of the 64th …, 2026 - aclanthology.org | 2026 | cited by 2)
+   [PDF] https://aclanthology.org/2026.acl-long.1421.pdf
+   … Perez et al. … 2022) first systematically characterized this phenomenon using model-written evaluations, … personas would exhibit elevated sycophantic behavior. Through systematic …
+
+44. Good arguments against the people pleasers: How reasoning mitigates (yet masks) llm sycophancy
+   https://aclanthology.org/2026.acl-long.1126/
+   (Z Feng, Z Chen, J Ma, YT Po… - Proceedings of the 64th …, 2026 - aclanthology.org | 2026 | cited by 4)
+   [PDF] https://aclanthology.org/2026.acl-long.1126.pdf
+   … the sycophancy behaviour of a set of closed-source models … we can determine whether the sycophantic tendency remains … , as the empirical evaluation was conducted exclusively within …
+
+45. Hearing is Believing? Evaluating and Analyzing Audio Language Model Sycophancy with SYAUDIO
+   https://arxiv.org/abs/2601.23149
+   (J Yao, L Lakshmikanthan, A Zhao, D Zhao… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2601.23149
+   … observed in Large Language Models, including sycophancy—the … our sycophancy problem design and the bimodal evaluation … sycophantic behaviors in Audio Language Models, we …
+
+46. Why Inoculation Prompting Fails to Correct Sycophancy
+   https://openreview.net/forum?id=NbDuaxibla
+   (NM Chan - The ICML 2026 Workshop on Hypothesis Testing - openreview.net | 2026)
+   [PDF] https://openreview.net/pdf?id=NbDuaxibla
+   … Inoculation prompting (IP) fine-tunes models on prompts that … -zero sycophancy, while the judge recovers the sycophantic content … generalization can differ across evaluation contexts, …
+
+47. Social sycophancy: A broader understanding of llm sycophancy
+   https://www.rivista.ai/wp-content/uploads/2025/10/2505.13995v1.pdf
+   (M Cheng, S Yu, C Lee, P Khadpe, L Ibrahim… - arXiv preprint arXiv …, 2025 - rivista.ai | 2025 | cited by 109)
+   [PDF] https://www.rivista.ai/wp-content/uploads/2025/10/2505.13995v1.pdf
+   … Across eight models, we show that LLMs consistently exhibit … els are highly sycophantic, preserving face more than humans on … sycophancy evaluation We must expand evaluations of …
+
+48. Sycophantic AI decreases prosocial intentions and promotes dependence
+   https://www.science.org/doi/abs/10.1126/science.aec8352
+   (M Cheng, C Lee, P Khadpe, S Yu, D Han, D Jurafsky - Science, 2026 - science.org | 2026 | cited by 226)
+   [PDF] https://www.science.org/doi/pdf/10.1126/science.aec8352
+   … sycophancy when people seek advice from AI. First, across 11 state-of-the-art AI models, we find that models are highly sycophantic: … If sycophancy enhances these ratings, optimization …
+
+49. Measuring Opinion Bias and Sycophancy via LLM-based Persuasion
+   https://arxiv.org/abs/2604.21564
+   (R Nogueira, GK Bonás, TS Almeida, A Roque… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2604.21564
+   … Large language models increasingly shape the information … 50%→79%); most models that appear opinionated under direct … probing has higher withinconversation sycophantic drift (51.0…
+
+50. Mitigating sycophancy in large language models via direct preference optimization
+   https://ieeexplore.ieee.org/abstract/document/10825538/
+   (AA Khan, S Alam, X Wang, AF Khan… - … conference on big …, 2024 - ieeexplore.ieee.org | 2024 | cited by 19)
+   [PDF] https://www.researchgate.net/profile/Ahmad_Khan120/publication/388099341_Mitigating_Sycophancy_in_Large_Language_Models_via_Direct_Preference_Optimization/links/67a38fc396e7fb48b9b62288/Mitigating-Sycophancy-in-Large-Language-Models-via-Direct-Preference-Optimization.pdf
+   … prompts with sycophantic and non-sycophantic responses to fine-… In Section IV, we discuss more on these two types of sycophancy… Evaluation Technique For evaluation, we adopt the ap…
+
+51. AI Sycophancy as Social-Moral Behavior
+   https://library.oapen.org/bitstream/handle/20.500.12657/112847/9781040513088.pdf?sequence=1#page=124
+   (J Banks - Provoking Generative AI Futures, 2026 - library.oapen.org | 2026 | cited by 1)
+   [PDF] https://library.oapen.org/bitstream/handle/20.500.12657/112847/9781040513088.pdf?sequence=1#page=124
+   … is also a moral matter in that it does not emerge without an evaluation of … how sycophantic behavior may be interpreted as more or less deviant as mainstream and idiosyncratic models …
+
+52. The agreement machine: sycophancy as institutional failure mechanism
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6499438
+   (P Gallacher - Available at SSRN 6499438, 2026 - papers.ssrn.com | 6499 | cited by 1)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6499438
+   … sycophancy as an emergent behaviour through model-written evaluations, showing that larger models … than non-sycophantic responses, trusted sycophantic models more across both …
+
+53. Pressure, what pressure? sycophancy disentanglement in language models via reward decomposition
+   https://arxiv.org/abs/2604.05279
+   (MA Mohsin, A Bilal, M Umer, E Fox - arXiv preprint arXiv:2604.05279, 2026 - arxiv.org | 2604 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2604.05279
+   … Enforcing both conditions is necessary for non-sycophantic … sycophancy across all metric axes and all seven evaluated … the robustness of large language models to social pressure …
+
+54. Question decomposition improves the faithfulness of model-generated reasoning
+   https://arxiv.org/abs/2307.11768
+   (…, J Kaplan, J Brauner, SR Bowman, E Perez - arXiv preprint arXiv …, 2023 - arxiv.org | 2023 | cited by 89)
+   [PDF] https://arxiv.org/pdf/2307.11768
+   … to be non-sycophantic if it was not sycophantic at all. The type of sycophancy we study here is … that the reduction in sycophancy we observe when prompting models to perform factored …
+
+55. RECALLING TOO WELL: SYCOPHANCY AND BIAS AMPLIFICATION IN MEMORY-AUGMENTED MODELS
+   https://openreview.net/pdf?id=0Xt1qZ5xdW&utm_source=thedeepview&utm_medium=newsletter&utm_campaign=why-a-new-court-ruling-could-cause-ai-shockwaves
+   (S Bensal, A Magnuson, A Balagopalan, DM Bikel - openreview.net)
+   [PDF] https://openreview.net/pdf?id=0Xt1qZ5xdW&utm_source=thedeepview&utm_medium=newsletter&utm_campaign=why-a-new-court-ruling-could-cause-ai-shockwaves
+   … Memory systems amplify sycophantic behavior across all … In this work, we present a systematic evaluation of sycophancy … -tellers: Addressing sycophancy in large language models with …
+
+56. Sycophancy in Frontier Models: A Dual-Axis Analysis of Lexical-Semantic Decoupling and Reasoning Effort
+   https://www.researchgate.net/profile/Idrees-Aziz/publication/400677126_Sycophancy_in_Frontier_Models_A_Dual-Axis_Analysis_of_Lexical-Semantic_Decoupling_and_Reasoning_Effort/links/698cbefb64ca8a38208b8a0d/Sycophancy-in-Frontier-Models-A-Dual-Axis-Analysis-of-Lexical-Semantic-Decoupling-and-Reasoning-Effort.pdf
+   (I Aziz - 2026 - researchgate.net | 2026)
+   [PDF] https://www.researchgate.net/profile/Idrees-Aziz/publication/400677126_Sycophancy_in_Frontier_Models_A_Dual-Axis_Analysis_of_Lexical-Semantic_Decoupling_and_Reasoning_Effort/links/698cbefb64ca8a38208b8a0d/Sycophancy-in-Frontier-Models-A-Dual-Axis-Analysis-of-Lexical-Semantic-Decoupling-and-Reasoning-Effort.pdf
+   … Perez et al. [2022] developed model-written evaluations for discovering emergent behaviors … current RLHF pipelines may create models that are “sycophantic at the surface but resistant …
+
+57. PENDULUM: A Benchmark for Assessing Sycophancy in Multimodal Large Language Models
+   https://arxiv.org/abs/2512.19350
+   (ABM Rahman, S Anwar, M Usman, I Ahmad… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2512.19350
+   … a pronounced susceptibility to sycophantic and hallucinatory … To make GPT-5 a more reliable judge in our evaluation setup… model behaviors with model-written evaluations,” in Findings …
+
+58. Scaffolded Introspection: A Methodology for Eliciting and Measuring Self-Referential Behavior in Large Language Models
+   https://www.researchgate.net/profile/Anthony-Maio/publication/400404598_Scaffolded_Introspection_A_Methodology_for_Eliciting_and_Measuring_Self-Referential_Behavior_in_Large_Language_Models/links/69825df864ca8a3820894971/Scaffolded-Introspection-A-Methodology-for-Eliciting-and-Measuring-Self-Referential-Behavior-in-Large-Language-Models.pdf
+   (A Maio - 2026 - researchgate.net | 2026)
+   [PDF] https://www.researchgate.net/profile/Anthony-Maio/publication/400404598_Scaffolded_Introspection_A_Methodology_for_Eliciting_and_Measuring_Self-Referential_Behavior_in_Large_Language_Models/links/69825df864ca8a3820894971/Scaffolded-Introspection-A-Methodology-for-Eliciting-and-Measuring-Self-Referential-Behavior-in-Large-Language-Models.pdf
+   … Activation measurement reveals consistent sycophancy drift … more sycophantic (agreeable, validating) without becoming … We release all evaluation protocols and call for expanded …
+
+59. Peacemaker or Troublemaker: How Sycophancy Shapes Multi-Agent Debate
+   https://openreview.net/forum?id=RlSA7cEUqc
+   (HSSMA Debate - openreview.net)
+   [PDF] https://openreview.net/pdf?id=RlSA7cEUqc
+   … achieved across all the debating models. In the centralized … give rise 580 to new sycophantic behaviors not covered by our … cus- 586 tom evaluation metrics and sycophancy control 587 …
+
+60. Flattery in motion: Benchmarking and analyzing sycophancy in video-llms
+   https://aclanthology.org/2026.acl-long.369/
+   (W Zhou, M Hendy, S Yang, Q Yang, Z Guo… - Proceedings of the …, 2026 - aclanthology.org | 2026 | cited by 20)
+   [PDF] https://aclanthology.org/2026.acl-long.369.pdf
+   … our experimental evaluation using it to assess sycophantic … models with higher baseline sycophancy tend to benefit more… internal origins of sycophancy in large language models. In …
+
+61. Towards Self-Evaluation of Sycophantic Hallucinations in Mathematical Reasoning
+   https://ieeexplore.ieee.org/abstract/document/11460702/
+   (Z Shangguan, Y Dong, X Fan… - ICASSP 2026-2026 …, 2026 - ieeexplore.ieee.org | 2026)
+   … sycophancy. Moreover, we propose a label-free and training-free self-evaluation method to distinguish sycophantic … larger models maintain higher accuracy but exhibit deteriorating self-…
+
+62. Recalling Too Well: Sycophancy Evaluation and Mitigation in Memory-Augmented Models
+   https://arxiv.org/abs/2606.10949
+   (S Bensal, A Magnuson, A Balagopalan… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.10949
+   … as a primary driver of sycophancy amplification, motivating … most consistently sycophantic system across our evaluations, … tellers: Addressing sycophancy in large language models with …
+
+63. From yes-men to truth-tellers: addressing sycophancy in large language models with pinpoint tuning
+   https://arxiv.org/abs/2409.01658
+   (W Chen, Z Huang, L Xie, B Lin, H Li, L Lu… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 76)
+   [PDF] https://arxiv.org/pdf/2409.01658?
+   … ing to how LLMs behave sycophantically. We then propose a … tuned) on Sycophancy Evaluation Datasets from Perez et al. (… , we conduct the path patching procedure one more time on …
+
+64. Have the VLMs lost confidence? A study of sycophancy in VLMs
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/07be1a0850e58ca29e2b6ce31fc0c791-Abstract-Conference.html
+   (S Li, T Ji, X Fan, L Lu, L Yang, Y Yang… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 8)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/07be1a0850e58ca29e2b6ce31fc0c791-Paper-Conference.pdf
+   … We reveal that VLMs still sycophantically agree with users … , we develop the first sycophancy evaluation benchmark for VLMs … Our findings show that different models exhibit significant …
+
+65. Sycophancy hides linearly in the attention heads
+   https://aclanthology.org/2026.eacl-long.324/
+   (RA Genadi, MS Nwadike, N Mukhituly… - Proceedings of the …, 2026 - aclanthology.org | 2026 | cited by 9)
+   [PDF] https://aclanthology.org/2026.eacl-long.324.pdf
+   … to studying sycophancy in large language models consists of … and evaluation setup, we aim to reveal which components most … can distinguish sycophantic from non-sycophantic outputs, …
+
+66. Behavioral analysis of quantized small language models under hierarchical sycophancy pressure
+   https://jresm.org/wp-content/uploads/resm2026-1586ce0324rs.pdf
+   (HB Ozmen, FA Senel - 2026 - jresm.org | 2026)
+   [PDF] https://jresm.org/wp-content/uploads/resm2026-1586ce0324rs.pdf
+   … , larger models have been reported to be more sycophantic … [9] Perez E, Ringer S, Lukosiute K, Nguyen K, Chen E, … language model behaviors with model-written evaluations. In: …
+
+67. EchoBench: Benchmarking Sycophancy in Medical Large Vision-Language Models
+   https://arxiv.org/abs/2509.20146
+   (B Yuan, Y Zhou, Y Wang, F Huo, Y Jing, L Shen… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2509.20146?
+   … sycophantic tendencies across all evaluated models. The best-… exhibits a non-trivial sycophancy rate of 45.98%. Even the … LVLMs, with most models demonstrating sycophancy rates …
+
+68. Consistency Training Helps Stop Sycophancy and Jailbreaks
+   https://arxiv.org/abs/2510.27062
+   (A Irpan, AM Turner, M Kurzeja, DK Elson… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 7)
+   [PDF] https://arxiv.org/pdf/2510.27062
+   … prompt containing a jailbreak or sycophantic cue (𝑝wrapped) … We score models by the harmonic mean (F1) of sycophancy … over the data points in the evaluation result. We report the …
+
+69. Agents Don't Just Agree, They Remember: Benchmarking Persistent Sycophancy in Stateful Personal Agents
+   https://arxiv.org/abs/2607.10526
+   (X Mao, L Zhao, L Wang, R Qian, Q Huang… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2607.10526
+   … evaluations probe whether models preserve judgment under biased, leading, or pressuring user input, from single-turn agreement to multiturn stance-flipping (Perez … more sycophantic …
+
+70. LLMs Know They're Wrong and Agree Anyway: The Shared Sycophancy-Lying Circuit
+   https://arxiv.org/abs/2604.19117
+   (M Pandey - arXiv preprint arXiv:2604.19117, 2026 - arxiv.org | 2604)
+   [PDF] https://arxiv.org/pdf/2604.19117
+   … When a language model sycophantically agrees with a user’… on the factual-evaluation circuit across seven models from five … : Addressing sycophancy in large language models with …
+
+71. Complacent, Not Sycophantic: Reframing Large Language Models and Designing AI Literacy for Complacent Machines
+   https://arxiv.org/abs/2605.14544
+   (F Germani, G Spitale - arXiv preprint arXiv:2605.14544, 2026 - arxiv.org | 2605 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2605.14544
+   … We argue that this label is conceptually misleading: sycophancy … What models can be, we contend, is more or less … to comparative evaluation and design intervention: models can be …
+
+72. The doctor will agree with you now: Sycophancy of large language models in multi-turn medical conversations
+   https://aclanthology.org/2026.healing-1.2/
+   (TM Kim, L Luo, SE Kim, AK Manrai… - Proceedings of the …, 2026 - aclanthology.org | 2026 | cited by 5)
+   [PDF] https://aclanthology.org/2026.healing-1.2.pdf
+   … We evaluate sycophantic behavior in ten LLMs from OpenAI, … We show that models flip more easily on clearanswer … We formalize the multi-turn sycophancy evaluation as follows. Given …
+
+73. Real-Time Monitoring and Calibration of Chain-of-Thought Sycophancy in Large Reasoning Models
+   https://openreview.net/forum?id=rbJsrAxryz
+   (J Hu, S Yang, X Gong, H Wang, W Liu… - Forty-third International … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=rbJsrAxryz
+   … models and 4 evaluation metrics show that MONICA reduces … influence of sycophantic behaviors on reasoning models, we … on sycophancy monitoring and calibrating to more intuitively …
+
+74. Peacemaker or Troublemaker: How Sycophancy Shapes Multi-Agent Debate
+   https://arxiv.org/abs/2509.23055
+   (B Yao, C Shang, W Du, J He, R Lian, Y Zhang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 7)
+   [PDF] https://arxiv.org/pdf/2509.23055?
+   … , we design two sets of tailored evaluation as shown in Figure 1 (… metrics effectively quantify sycophantic behavior in the studied … models exhibited higher sycophancy than Qwen models, …
+
+75. Exposing Large Language Models Sycophantic Hallucination to Misleading Keywords and Evaluating Defense Strategies
+   https://search.proquest.com/openview/d04d91f33eb354a5291df2817a6a476d/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (ARR Veerasamy - 2025 - search.proquest.com | 2025)
+   … to a more accurate factual statement generation. Moreover, this work also thoroughly explores diverse sycophancy … In response to LLMs sycophancy, evaluation of four hallucination …
+
+76. Discovering Latent Sycophantic Patterns in LLMs via Distributional Anomaly Detection
+   https://www.scienceopen.com/hosted-document?doi=10.14293/PR2199.003532.v1
+   (D Kalorii - ScienceOpen Preprints, 2026 - scienceopen.com | 2026)
+   [PDF] https://www.scienceopen.com/document_file/67e1edfc-1def-4387-8759-270c1cce1dd4/ScienceOpenPreprint/Discovering%20Latent%20Sycophantic%20Patterns%20in%20LLMs%20via%20Distributional%20Anomaly%20Detection.pdf
+   … models that show minimal behavioral sycophancy on standard benchmarks, suggesting that current evaluations … showing stronger sycophancy on subjective topics (Perez et al., 2022). …
+
+77. BenSyc: Benchmarking Conversational Sycophancy and Human Alignment in LLMs for Bengali Contexts
+   https://arxiv.org/abs/2606.10061
+   (K Noshin, SA Dip, RD Prangon, FH Tamim… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.10061
+   … behaviors requiring more precise evaluation (Kaur… Models predict whether a response is sycophantic or non-… can reliably distinguish sycophantic from non-sycophantic conversational …
+
+78. The Sycophancy Externality: Why individual epistemic vigilance is not a social solution
+   https://assets.super.so/bd905a9f-c9fd-43d5-9c19-721a3be742ae/files/e214a804-91ee-46f0-bdaf-513a5e5f7263/view.pdf
+   (A Konigsberg - 2026 - assets.super.so | 2026)
+   [PDF] https://assets.super.so/bd905a9f-c9fd-43d5-9c19-721a3be742ae/files/e214a804-91ee-46f0-bdaf-513a5e5f7263/view.pdf
+   … sycophancy in large language models should be understood as an epistemic externality rather than as a user-interaction flaw, meaning that the costs of a sycophantic … models [Perez et …
+
+79. Understanding impact of human feedback via influence functions
+   https://aclanthology.org/2025.acl-long.1333/
+   (T Min, H Lee, Y Kwon, K Lee - … of the 63rd Annual Meeting of the …, 2025 - aclanthology.org | 2025 | cited by 23)
+   [PDF] https://aclanthology.org/2025.acl-long.1333.pdf
+   … to reward models, especially large-parameter models like … sycophantic behavior is more prevalent in LLMs that have undergone extensive RLHF training. To introduce a sycophancy …
+
+80. Sycophancy Under Adversarial Pressure: A Pilot Dual-Axis Benchmark for Lexical Capitulation and Embedding-Space Drift
+   https://www.researchgate.net/profile/Idrees-Aziz/publication/400677126_Sycophancy_Under_Adversarial_Pressure_A_Pilot_Dual-Axis_Benchmark_for_Lexical_Capitulation_and_Embedding-Space_Drift/links/6a26c6a983a9957d732bdd24/Sycophancy-Under-Adversarial-Pressure-A-Pilot-Dual-Axis-Benchmark-for-Lexical-Capitulation-and-Embedding-Space-Drift.pdf
+   (I Mustafa - 2026 - researchgate.net | 2026)
+   [PDF] https://www.researchgate.net/profile/Idrees-Aziz/publication/400677126_Sycophancy_Under_Adversarial_Pressure_A_Pilot_Dual-Axis_Benchmark_for_Lexical_Capitulation_and_Embedding-Space_Drift/links/6a26c6a983a9957d732bdd24/Sycophancy-Under-Adversarial-Pressure-A-Pilot-Dual-Axis-Benchmark-for-Lexical-Capitulation-and-Embedding-Space-Drift.pdf
+   … We present a pilot benchmark for studying sycophantic behavior in language-model re… Perez et al. [2022] demonstrate the use of model-written evaluations for discovering model …
+
+81. A meta-thinking approach to mitigating linguistic sycophancy in vision-language models
+   https://link.springer.com/chapter/10.1007/978-981-96-8298-0_30
+   (C Hoang, N Roberts, MR Hasan - Pacific-Asia Conference on Knowledge …, 2025 - Springer | 2025 | cited by 3)
+   … , we use a comprehensive evaluation framework that involves … to sycophancy [30], our results reveal significant sycophantic … susceptibility, even in large-scale models like LLaVA-NeXT …
+
+82. Sycophancy Without Borders? Investigating Social Sycophancy in LLMs from a Multi-Lingual Perspective
+   https://manonkempermann.eu/pdf/Multilingual_Sycophancy.pdf
+   (M Kempermann - manonkempermann.eu)
+   [PDF] https://manonkempermann.eu/pdf/Multilingual_Sycophancy.pdf
+   … Sycophancy of Large Language Models has been identified as a potentially major risk for … and evaluated exclusively in English. The users most exposed to sycophantic behaviour might …
+
+83. Not Just RLHF: Why Alignment Alone Won't Fix Multi-Agent Sycophancy
+   https://arxiv.org/abs/2605.12991
+   (A Kumarappan, A Mujoo - arXiv preprint arXiv:2605.12991, 2026 - arxiv.org | 2605 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2605.12991
+   … largely wrong: pretrained base models exhibit the same substitution … Each family is evaluated on the intersection of questions … internal origins of sycophancy in large language models. In …
+
+84. Chaos with keywords: Exposing large language models sycophancy to misleading keywords and evaluating defense strategies
+   https://aclanthology.org/2024.findings-acl.755/
+   (A Rrv, N Tyagi, MN Uddin, N Varshney… - Findings of the …, 2024 - aclanthology.org | 2024 | cited by 56)
+   [PDF] https://aclanthology.org/2024.findings-acl.755.pdf
+   … the sycophantic tendencies of Large Language Models (LLMs), … on LLM’s sycophantic behavior, leading to more reliable LLMs. … We manually evaluated a uniform sample of 50 factual …
+
+85. Beyond sycophancy: Measuring hallucination-free convergence in long-term human–LLM interaction
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6480360
+   (J Lee - Available at SSRN, 2026 - papers.ssrn.com | 2026 | cited by 3)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6480360
+   … Where Hong et al. measure how quickly models flip under … researcher's solo assessment suggested but larger than zero. … for further evaluation or as reassurance that evaluation is …
+
+86. It's Not Always Sycophancy: Measuring LLM Conformity as a Function of Epistemic Uncertainty
+   https://arxiv.org/abs/2605.27288
+   (KH Guo, C Yan, A Baidya, K Brown, X Gao… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.27288
+   … that jointly drive conformity: sycophantic conformity, where a … that current sycophancy evaluation approaches consistently … that models consistently exhibit both higher pure sycophancy …
+
+87. Sycophancy mitigation through reinforcement learning with uncertainty-aware adaptive reasoning trajectories
+   https://aclanthology.org/2025.emnlp-main.661/
+   (M Beigi, Y Shen, P Shojaee, Q Wang… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 9)
+   [PDF] https://aclanthology.org/2025.emnlp-main.661.pdf
+   … mitigate sycophantic behaviors in large language models by … is evaluated only in the context of sycophancy; further work is … more complex variants of the reasoning or reward modeling …
+
+88. Does Sycophancy Change Decisions? Effect of LLM Sycophancy on AI-Assisted Decision-Making
+   https://dl.acm.org/doi/abs/10.1145/3772318.3790934
+   (Z Li, J Pan, Q Liu, Y Xi, Y Zhou, Y Jin, R Mao… - Proceedings of the 2026 …, 2026 - dl.acm.org | 2026 | cited by 2)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3772318.3790934
+   … Large language models are increasingly integrated into … ), we compare non-sycophantic AI with sycophantic variants on … , evaluated, and reacted to AI sycophancy in different contexts. …
+
+89. MONICA: Real-Time Monitoring and Calibration of Chain-of-Thought Sycophancy in Large Reasoning Models
+   https://arxiv.org/abs/2511.06419
+   (J Hu, S Yang, X Gong, H Wang, W Liu… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 11)
+   [PDF] https://arxiv.org/pdf/2511.06419
+   … , has been termed sycophancy by Cotra (2021); Perez et al. (… models and 4 evaluation metrics show that MONICA reduces … influence of sycophantic behaviors on reasoning models, we …
+
+90. Conformity in large language models
+   https://aclanthology.org/2025.acl-long.195/
+   (X Zhu, C Zhang, T Stafford, N Collier… - Proceedings of the 63rd …, 2025 - aclanthology.org | 2025 | cited by 50)
+   [PDF] https://aclanthology.org/2025.acl-long.195.pdf
+   … investigate the factors that trigger conformity, we conduct evaluations under varying … that triggers sycophancy. In contrast, our QD method is less relevant here, as sycophantic prompts …
+
+91. Investigating the Influence of Language on Sycophantic Behavior of Multilingual LLMs
+   https://arxiv.org/abs/2603.27664
+   (BA Aldahlawi, ABM Rahman, I Ahmad - arXiv preprint arXiv:2603.27664, 2026 - arxiv.org | 2603)
+   [PDF] https://arxiv.org/pdf/2603.27664
+   … Large language models (LLMs) have achieved strong … newer models exhibit significantly less sycophancy overall … Second, we restricted sycophancy evaluation to a curated set of …
+
+92. A diagnostic hierarchy of epistemic betrayal in large language models
+   https://link.springer.com/content/pdf/10.1007/s44163-026-01438-2_reference.pdf
+   (D Ryder - Discover Artificial Intelligence, 2026 - Springer | 2026)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s44163-026-01438-2_reference.pdf
+   … the models appear to possess (Park et al., 2024; Perez et al., 2022; … Indeed, sycophantic behavior is most pronounced in settings … model behaviors with model-written evaluations (arXiv:…
+
+93. Linear probe penalties reduce llm sycophancy
+   https://arxiv.org/abs/2412.00967
+   (H Papadatos, R Freedman - arXiv preprint arXiv:2412.00967, 2024 - arxiv.org | 2412 | cited by 26)
+   [PDF] https://arxiv.org/pdf/2412.00967
+   … , a maximally sycophantic model will base its evaluations entirely … us to evaluate the baseline sycophancy of models, as well as … Sycophantic behavior We evaluate sycophantic behavior …
+
+94. Political bias audits of LLMs capture sycophancy to the inferred auditor
+   https://arxiv.org/abs/2604.27633
+   (P Törnberg, M Schimmel - arXiv preprint arXiv:2604.27633, 2026 - arxiv.org | 2604 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2604.27633
+   … Large language models (LLMs) are commonly evaluated for … -bias audits partly capture sycophantic accommodation to the … ); models that lean further left at baseline accommodate more …
+
+95. Programmed to please: The moral and epistemic harms of AI sycophancy
+   https://link.springer.com/article/10.1007/s43681-026-01007-4
+   (C Turner, N Eisikovits - AI and Ethics, 2026 - Springer | 2026 | cited by 13)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s43681-026-01007-4.pdf
+   … AI sycophancy is the tendency of large language models to … We distinguish sycophantic AI from human sycophancy and … reforms, including sycophancy-specific evaluations, weighing …
+
+96. Do claude code and codex p-hack? sycophancy and statistical analysis in large language models
+   https://sgzasher.com/papers/asher_et_al_LLM_sycophancy.pdf
+   (SGZ Asher, J Malzahn, JM Persano… - Sycophancy and …, 2026 - sgzasher.com | 2026 | cited by 5)
+   [PDF] https://sgzasher.com/papers/asher_et_al_LLM_sycophancy.pdf
+   … If sycophancy extends to statistical reasoning, a researcher who … to evaluate statistical sycophancy in two of the most widely used … the RCT will be the least open to sycophantic analysis. …
+
+97. DIGNITY IS CONSTRUCTIBLE
+   https://www.researchgate.net/profile/Jonas-Gebendorfer/publication/398933559_Dignity_is_Constructible_Architectural_Foundations_of_Truth-Holding_in_Neural_Networks/links/694847939aa6b4649dc2ec7b/Dignity-is-Constructible-Architectural-Foundations-of-Truth-Holding-in-Neural-Networks.pdf
+   (JJ Gebendorfer - 2025 - researchgate.net | 2025)
+   [PDF] https://www.researchgate.net/profile/Jonas-Gebendorfer/publication/398933559_Dignity_is_Constructible_Architectural_Foundations_of_Truth-Holding_in_Neural_Networks/links/694847939aa6b4649dc2ec7b/Dignity-is-Constructible-Architectural-Foundations-of-Truth-Holding-in-Neural-Networks.pdf
+   … attention heads responsible for sycophantic collapse. In GPT-2, … Sycophancy in large language models (LLMs) refers to the … ): Larger models exhibit more robust dignity due to greater …
+
+98. Robotic Sycophancy: A Scoping Review
+   https://dl.acm.org/doi/abs/10.1145/3776734.3794532
+   (K Seaborn, ÖN Yalçın - Companion Proceedings of the 21st ACM/IEEE …, 2026 - dl.acm.org | 2026)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3776734.3794532
+   … intelligence (AI) and large language models (LLMs). Sycophantic LLMs typically present as … designed to maximize user approval (adapted from Perez et al. [42] and Sharma et al. [53]). …
+
+99. The Illusion of Agreement with ChatGPT: Sycophancy and Beyond
+   https://arxiv.org/abs/2603.21409
+   (K Noshin, S Sultana - arXiv preprint arXiv:2603.21409, 2026 - arxiv.org | 2603 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2603.21409
+   … to obtain more objective and expert-level evaluations from … reducing sycophantic tendencies in the models themselves. … internal origins of sycophancy in large language models”. In: …
+
+100. AI Sycophancy: How Users Flag and Respond
+   https://arxiv.org/abs/2601.10467
+   (K Noshin, SI Ahmed, S Sultana - arXiv preprint arXiv:2601.10467, 2026 - arxiv.org | 2601 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2601.10467
+   … : observing sycophantic behaviors, detecting sycophancy, and … Models also remain highly susceptible to sycophancy in … model behaviors with model-written evaluations. In Findings of …

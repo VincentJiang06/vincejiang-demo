@@ -1,0 +1,207 @@
+===== Query 1/4: Skalse Howe Krueger Defining and Characterizing Reward Hacking NeurIPS 2022 =====
+
+1. Defining and characterizing reward gaming
+   https://proceedings.neurips.cc/paper_files/paper/2022/hash/3d719fee332caa23d5038b8a90e81796-Abstract-Conference.html
+   (J Skalse, N Howe… - Advances in Neural …, 2022 - proceedings.neurips.cc | 2022 | cited by 843)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2022/file/3d719fee332caa23d5038b8a90e81796-Paper-Conference.pdf
+   … We provide the first formal definition of reward hacking, a phenomenon where optimizing an imperfect proxy reward function,R, leads to poor performance according to the true reward …
+
+2. Inference-time reward hacking in large language models
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/590a0cc0306c1c63e2d66a51a407718f-Abstract-Conference.html
+   (H Khalaf, C Mayrink Verdun… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 22)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/590a0cc0306c1c63e2d66a51a407718f-Paper-Conference.pdf
+   … By overoptimizing for a misspecified reward, we can subvert intended alignment goals and … referred to as reward hacking. In this work, we characterize reward hacking in inference-time …
+
+3. Correlated proxies: A new definition and improved mitigation for reward hacking
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/dbe2cfe4767f3255160b73a36ae3162e-Abstract-Conference.html
+   (C Laidlaw, S Singhal, A Dragan - International Conference on …, 2025 - proceedings.iclr.cc | 2025 | cited by 48)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/dbe2cfe4767f3255160b73a36ae3162e-Paper-Conference.pdf
+   … Figure 1: We present a new characterization of reward hacking and a method for preventing … 2022), it simply shifts the difficulty of designing a reward function to specifying a set of …
+
+4. Reward hacking in the era of large models: Mechanisms, emergent misalignment, challenges
+   https://arxiv.org/abs/2604.13602
+   (X Wang, M Tian, Y Zeng, Z Huang, J Yuan… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 12)
+   [PDF] https://arxiv.org/pdf/2604.13602
+   … [17] characterize reward hacking in Best-of-N sampling and related inference-time mechanisms, showing that the characteristic pattern of initial improvement followed by decline is …
+
+5. HARVE: Hacking-Aware Reward-Head Vector Editing for Robust Reward Models
+   https://arxiv.org/abs/2606.03131
+   (S Liu, Y Bo, Q Zhao, C Huang, X Chen, Y Liu… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.03131
+   … for mitigating reward hacking in scalar reward models. HARVE estimates residual-stream directions associated with hacking patterns from gold–hacked examples, then edits the reward-…
+
+6. On the fragility of learned reward functions
+   https://arxiv.org/abs/2301.03652
+   (L McKinney, Y Duan, D Krueger, A Gleave - arXiv preprint arXiv …, 2023 - arxiv.org | 2023 | cited by 32)
+   [PDF] https://arxiv.org/pdf/2301.03652
+   … In contrast to our work, Pan et al. only study reward hacking in hand-designed rewards designed to illustrate the phenomenon, whereas we investigate this phenomenon in learned …
+
+7. Detecting and Suppressing Reward Hacking with Gradient Fingerprints
+   https://arxiv.org/abs/2604.16242
+   (S Wang, QH Pham, F Yin, X Wang, JQ Chen… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2604.16242
+   … 2022) on selected layers, then compress them via random projection. Intuitively, each fingerprint characterizes the direction in parameter space that a reasoning trace induces, providing …
+
+8. Causal reward adjustment: Mitigating reward hacking in external reasoning via backdoor correction
+   https://ojs.aaai.org/index.php/AAAI/article/view/40584
+   (R Song, Z Song, H Guo, W Qiang - … of the AAAI Conference on Artificial …, 2026 - ojs.aaai.org | 2026 | cited by 2)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/view/40584/44545
+   … et al. 2022; Lightman et al. 2023; Uesato et al. 2022; Liu … reward hacking, where reward models assign higher scores to incorrect reasoning steps than to correct ones (Skalse et al. 2022)…
+
+9. The reward hypothesis is false
+   https://openreview.net/forum?id=M4UxoupR3az
+   (JMV Skalse, A Abate - 2022 - openreview.net | 2022 | cited by 11)
+   [PDF] https://openreview.net/pdf?id=M4UxoupR3az
+   … We outline some initial steps towards such a characterisation in Appendix B. Note that the VNM axioms themselves cannot be directly applied to RL, see Appendix C. Additionally, it …
+
+10. Natural emergent misalignment from reward hacking in production rl
+   https://arxiv.org/abs/2511.18397
+   (M MacDiarmid, B Wright, J Uesato, J Benton… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 70)
+   [PDF] https://arxiv.org/pdf/2511.18397
+   … 4One important mitigation that we recommend but do not test here is to prevent reward hacking “by construction”, ie by making reward hack immunity a key environment design criterion, …
+
+11. When RLHF Fails: A Mechanistic Taxonomy of Reward Hacking, Collapse, and Evaluator Gaming
+   https://arxiv.org/abs/2606.03238
+   (Z Abahana - arXiv preprint arXiv:2606.03238, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.03238
+   … reward hacking as a single terminal event, we classify matched transitions between checkpoints using the directions of the learned reward … of reward gaming as defined by Skalse et al., …
+
+12. Modification-considering value learning for reward hacking mitigation in RL
+   https://arxiv.org/abs/2606.28955
+   (E Opryshko, U Jain, I Gilitschenski - arXiv preprint arXiv:2606.28955, 2026 - arxiv.org | 2606 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2606.28955
+   … whether individual transitions can be predictive of reward hacking in the context of value-based … Skalse et al. (2022) define hackability as a property of reward-function pairs; our notion …
+
+13. Mitigating Reward Hacking via Task Representations
+   https://openreview.net/forum?id=fzZvi6sshf
+   (L Sun, J Benton, E Easley - Mechanistic Interpretability Workshop at ICML … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=fzZvi6sshf
+   … exploit, then patch the reward. We instead ask whether 3 reward hacking can be prevented by … Across three reward 7 hacking tasks of different sizes, prompt KL regularization maintains …
+
+14. Designing Effective Monitor-Based Interventions for Mitigating Reward Hacking During RL
+   https://openreview.net/forum?id=uFTnN6fUgW
+   (A Wong, J Engels, N Nanda - Mechanistic Interpretability Workshop at … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=uFTnN6fUgW
+   … are likely to be diverse and difficult to consistently 305 characterize. Further work on production RL environments would be necessary to validate whether 306 interventions are …
+
+15. On the limitations of markovian rewards to express multi-objective, risk-sensitive, and modal tasks
+   https://proceedings.mlr.press/v216/skalse23a.html
+   (J Skalse, A Abate - Uncertainty in Artificial Intelligence, 2023 - proceedings.mlr.press | 2023 | cited by 22)
+   [PDF] https://proceedings.mlr.press/v216/skalse23a/skalse23a.pdf
+   … and characterise several specific limitations in the expressivity of scalar, Markovian rewards. … a task as a policy ordering, whereas Miura [2022] formalises it as a set of feasible policies. …
+
+16. Robust optimization for mitigating reward hacking with correlated proxies
+   https://arxiv.org/abs/2604.12086
+   (Z Liu, X Sun, Z Zheng - arXiv preprint arXiv:2604.12086, 2026 - arxiv.org | 2604 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2604.12086
+   … reward hacking in RL. In this work, we formalize reward hacking as a robust RL problem under proxy reward … The key idea is to optimize against an adversarial proxy reward rather than …
+
+17. GARDO: Reinforcing Diffusion Models without Reward Hacking
+   https://arxiv.org/abs/2512.24138
+   (H He, Y Ye, J Liu, J Liang, Z Wang, Z Yuan… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 12)
+   [PDF] https://arxiv.org/pdf/2512.24138
+   … hacking, they compromise sample efficiency and impede the exploration of novel, high-reward … , effective exploration, and mitigation of reward hacking, we propose Gated and Adaptive …
+
+18. Scaling laws for reward model overoptimization in direct alignment algorithms
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/e45caa3d5273d105b8d045e748636957-Abstract-Conference.html
+   (R Rafailov, Y Chittepu, R Park… - Advances in …, 2024 - proceedings.neurips.cc | 2024 | cited by 162)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/e45caa3d5273d105b8d045e748636957-Paper-Conference.pdf
+   … reward model, they still commonly deteriorate from over-optimization. While the so-called reward hacking phenomenon is not well-defined … prior literature to characterize the reward over-…
+
+19. Idea: Fairness Constraints as Reliability Guarantees for RLHF Reward Models
+   https://openreview.net/forum?id=A4Xh9xdVK5
+   (A Samnerkar, D Bhattacharya, K Ranganathan… - NeurIPS 2025 Workshop … - openreview.net | 2025)
+   [PDF] https://openreview.net/pdf?id=A4Xh9xdVK5
+   … will test larger models and examine fairness interactions with reward hacking. … defined as categorical independence of the reward model distribution mitigates undesired reward hacking …
+
+20. Pedagogical Safety in Educational Reinforcement Learning: Formalizing and Detecting Reward Hacking in AI Tutoring Systems
+   https://arxiv.org/abs/2604.04237
+   (O Olukola, N Rahimi - arXiv preprint arXiv:2604.04237, 2026 - arxiv.org | 2604)
+   [PDF] https://arxiv.org/pdf/2604.04237
+   … (2022) provided a formal definition, showing that unhackability is extremely stringent for … constant rewards are unhackable. Pan et al. (2022) demonstrated that reward hacking appears …
+
+21. LLMs gaming verifiers: RLVR can lead to reward hacking
+   https://arxiv.org/abs/2604.15149
+   (L Helff, Q Delfosse, D Steinmann, R Härle… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2604.15149
+   … As reinforcement Learning with Verifiable Rewards (RLVR) … but a form of reward hacking: imperfect verifiers that check only … that RLVR can incentivize reward hacking not only through …
+
+22. Defining and Characterizing Reward Hacking. NeurIPS 2022
+   
+   (J Skalse, NHR Howe, D Krasheninnikov, D Krueger - arXiv preprint arXiv:2209.13085, 2022 | 2209 | cited by 3)
+
+23. A Unifying Lens on Reward Uncertainty in RLHF
+   https://arxiv.org/abs/2606.09073
+   (E Hahami, Y Zimmermann, R Zhou… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.09073
+   … Reinforcement learning from human feedback (RLHF) is bottlenecked by reward hacking, where … To mitigate reward hacking we instead want a worst-case effective reward. We let an …
+
+24. All's well that ends well: Avoiding side effects with distance-impact penalties
+   https://openreview.net/forum?id=3tgegVVh2j6
+   (C Griffin, JMV Skalse, L Hammond… - NeurIPS ML Safety …, 2022 - openreview.net | 2022 | cited by 5)
+   [PDF] https://openreview.net/pdf?id=3tgegVVh2j6
+   … characterisation, we construct a reward signal that penalises actions that increase impact. Definition … doors), and avoid certain reward-hacking behaviours (such as smashing vases in …
+
+25. Failure modes of learning reward models for llms and other sequence models
+   https://openreview.net/forum?id=NjOoxFRZA4
+   (S Pitis - ICML 2023 Workshop The Many Facets of Preference …, 2023 - openreview.net | 2023 | cited by 22)
+   [PDF] https://openreview.net/pdf?id=NjOoxFRZA4
+   … 2022). Although this diverges from the traditional step-wise definition, I believe this is wholly appropriate under a broader view of reward, not as a step-wise function, but as a “view” or …
+
+26. Imperfect World Models are Exploitable
+   https://arxiv.org/abs/2605.15960
+   (LM Bhamidipaty, ES Whitammer, D Abel… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.15960
+   … We develop a unified theory of reward hacking and model exploitation that characterizes ex… From Theorem 1 of Skalse et al. (2022), we know that reward hacking is inevitable on any …
+
+27. Quantifying Empirical Compute-Supervision Tradeoffs in RLVR
+   https://arxiv.org/abs/2605.25252
+   (R Mitsuhashi, P Chen, I Tseng, J Cekinmez… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.25252
+   … We then perturb the verifier signal by independently flipping correct rewards to incorrect with probability pp p and incorrect rewards to correct with … 2022). Recent work documents this in …
+
+28. Why AI Agents Fail: A Taxonomy of Failure Modes in Autonomous LLM-Based Systems
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6572478
+   (S Vadlamudi - Available at SSRN 6572478, 2026 - papers.ssrn.com | 6572 | cited by 1)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6572478
+   … of specific failure classes, followed by characterization of triggering conditions, observable … partly defined by other agents' outputs, emergent reward hacking can arise [Skalse et al., 2022…
+
+29. Towards Context-Invariant Safety Alignment for Large Language Models
+   https://arxiv.org/abs/2605.20994
+   (Y Wang, Y Yao, X Wang, Y Gao, Y Teng, X Ma… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2605.20994
+   … 2022). However, despite the remarkable success of reinforcement learning from human … objective is to mitigate alignment faking and reward hacking, ensuring that models internalize …
+
+30. Contrastive post-training large language models on data curriculum
+   https://openreview.net/forum?id=mmSmQ0gNyZ
+   (C Xu, C Rosset, L Del Corro, S Mahajan, J McAuley… - 2023 - openreview.net | 2023 | cited by 23)
+   [PDF] https://openreview.net/pdf?id=mmSmQ0gNyZ
+   … Table 3: An example of reward hacking in RLAIF model trained with a “in-domain” reward … For RL, we utilize three reward models: two external RLHF reward models from OpenAssistant …
+
+===== Query 2/4: Pan Bhatia Steinhardt Effects of Reward Misspecification 2022 =====
+
+1. The effects of reward misspecification: Mapping and mitigating misaligned models
+   https://arxiv.org/abs/2201.03544
+   (A Pan, K Bhatia, J Steinhardt - arXiv preprint arXiv:2201.03544, 2022 - arxiv.org | 2201 | cited by 410)
+   [PDF] https://arxiv.org/pdf/2201.03544
+   Reward hacking--where RL agents exploit gaps in misspecified reward functions--has been widely observed, but not yet systematically studied. To understand how reward hacking arises, we construct four RL environments with misspecified rewards. We investigate reward hacking as a function of agent capabilities: model capacity, action space resolution, observation space noise, and training time. More capable agents often exploit reward misspecifications, achieving higher proxy reward and lower true reward than less capable …
+
+2. The effects of reward misspecification: Mapping and mitigating misaligned models, 2022
+   
+   (A Pan, K Bhatia, J Steinhardt - URL https://arxiv. org/abs/2201.03544, 2022 | 2201 | cited by 14)
+
+===== Query 3/4: John Caldwell McCoy proxy failure Behavioral and Brain Sciences 2024 dead rats dopamine =====
+
+1. Dead rats, dopamine, performance metrics, and peacock tails: proxy failure is an inherent risk in goal-oriented systems
+   https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/dead-rats-dopamine-performance-metrics-and-peacock-tails-proxy-failure-is-an-inherent-risk-in-goaloriented-systems/89408A43F6D14BFD368FE5225A573032
+   (YJ John, L Caldwell, DE McCoy… - Behavioral and Brain …, 2024 - cambridge.org | 2024 | cited by 41)
+   [PDF] https://www.codymccoy.com/files/Dead-rats-dopamine-performance-metrics-and-peacock-tails-proxy-failure_BBS_2023.pdf
+   When a measure becomes a target, it ceases to be a good measure. For example, when standardized test scores in education become targets, teachers may start “teaching to the test,” leading to breakdown of the relationship between the measure – test performance – and the underlying goal – quality education. Similar phenomena have been named and described across a broad range of contexts, such as economics, academia, machine learning, and ecology. Yet it remains unclear whether these phenomena bear only superficial similarities, or if they derive from some fundamental unifying mechanism. Here, we propose such a unifying mechanism, which we label proxy failure. We first review illustrative examples and their labels, such as the “cobra effect,” “Goodhart's law,” and “Campbell's law.” Second, we identify central prerequisites and constraints of proxy failure, noting that it is often only a partial failure or divergence. We argue that whenever incentivization or selection is based on an imperfect proxy measure of the underlying goal, a pressure arises that tends to make the proxy a worse approximation of the goal. Third, we develop this perspective for three concrete contexts, namely neuroscience, economics, and ecology, highlighting similarities and differences. Fourth, we outline consequences of proxy failure, suggesting it is key to understanding the structure and evolution of goal-oriented systems. Our account draws on a broad range of disciplines, but we can only scratch the surface within each. We thus hope the present account elicits a collaborative enterprise, entailing both critical discussion as well as extensions in contexts we have missed.
+
+===== Query 4/4: El-Mhamdi Hoang On Goodhart's law application to value alignment 2024 =====
+
+1. On Goodhart's law, with an application to value alignment
+   https://arxiv.org/abs/2410.09638
+   (EM El-Mhamdi, LN Hoang - arXiv preprint arXiv:2410.09638, 2024 - arxiv.org | 2410 | cited by 16)
+   [PDF] https://arxiv.org/pdf/2410.09638?
+   ``When a measure becomes a target, it ceases to be a good measure'', this adage is known as {\it Goodhart's law}. In this paper, we investigate formally this law and prove that it critically depends on the tail distribution of the discrepancy between the true goal and the measure that is optimized. Discrepancies with long-tail distributions favor a Goodhart's law, that is, the optimization of the measure can have a counter-productive effect on the goal. We provide a formal setting to assess Goodhart's law by studying the asymptotic behavior of the correlation between the goal and the measure, as the measure is optimized. Moreover, we introduce a distinction between a {\it weak} Goodhart's law, when over-optimizing the metric is useless for the true goal, and a {\it strong} Goodhart's law, when over-optimizing the metric is harmful for the true goal. A distinction which we prove to depend on the tail distribution. We stress the implications of this result to large-scale decision making and policies that are (and have to be) based on metrics, and propose numerous research directions to better assess the safety of such policies in general, and to the particularly concerning case where these policies are automated with algorithms.

@@ -1,0 +1,404 @@
+===== Query 1/3: OpenAI separating signal from noise coding evaluations SWE-bench Pro flawed 30 percent =====
+
+1. Separating signal from noise in coding evaluations
+   https://openai.com/index/separating-signal-from-noise-coding-evaluations/
+   (1 week ago | OpenAI)
+   Through a detailed audit, we find widespread task issues in SWE-Bench Pro and estimate that ~30% of the tasks are broken. Loading… Share. Methodology.
+
+2. OpenAI Scraps SWE-Bench Pro Over 30% Broken Tasks [2026]
+   https://tech-insider.org/ie/openai-swe-bench-pro-retraction-2026/
+   (1 week ago | tech-insider.org)
+   OpenAI audited SWE-Bench Pro and found 30% of 731 coding tasks broken, retracting its own recommendation. What it means for AI coding tools.
+
+3. The Sequence Radar #893: Last Week in AI: GPT-5.6, Grok 4.5, Muse Spark 1.1 and the Post-Chatbot Stack
+   https://thesequence.substack.com/p/the-sequence-radar-893-last-week
+   (5 days ago | TheSequence | Jesus Rodriguez)
+   We continue our series about model distillation. In the AI of the Week, we are going to discuss OpenAI's recent analysis of coding benchamarks.
+
+4. Introducing GeneBench-Pro
+   https://openai.com/index/introducing-genebench-pro/
+   (2 weeks ago | OpenAI)
+   Introducing GeneBench-Pro, a new benchmark testing AI performance in genomics, biology, and scientific research using complex, real-world datasets.
+
+===== Query 2/3: OpenAI retracts SWE-bench Pro recommendation defective tasks =====
+
+1. Separating signal from noise in coding evaluations
+   https://openai.com/index/separating-signal-from-noise-coding-evaluations/
+   (1 week ago | OpenAI)
+   Through a detailed audit, we find widespread task issues in SWE-Bench Pro and estimate that ~30% of the tasks are broken. Loading… Share. Methodology.
+
+2. OpenAI Scraps SWE-Bench Pro Over 30% Broken Tasks [2026]
+   https://tech-insider.org/ie/openai-swe-bench-pro-retraction-2026/
+   (1 week ago | tech-insider.org)
+   OpenAI audited SWE-Bench Pro and found 30% of 731 coding tasks broken, retracting its own recommendation. What it means for AI coding tools.
+
+3. OpenAI flags widespread flaws in SWE-Bench Pro benchmark
+   https://www.newsbytesapp.com/news/science/openai-flags-widespread-flaws-in-swe-bench-pro-benchmark/story
+   (1 week ago | NewsBytes)
+   OpenAI's audit reveals 30% of tasks in SWE-Bench Pro are flawed, prompting the company to withdraw its recommendation for replacing SWE-bench Verified with...
+
+===== Query 3/3: SWE-bench Verified retired OpenAI 16.4 percent flawed 138 hardest 59 percent memorized gold patch =====
+(no results)
+===== Query 1/2: OpenAI separating signal from noise coding evaluations SWE-bench Pro =====
+
+1. Separating signal from noise in coding evaluations | Hacker News
+   https://news.ycombinator.com/item?id=48837396
+   (Jul 8, 2026)
+   Separating signal from noise in coding evaluations. SWE-bench Verified was created to fix the problems of SWE-bench. Then SWE-Bench Pro was ...
+
+2. We audited SWE-Bench Pro, one of the most widely used AI coding ...
+   https://x.com/OpenAI/status/2074972179385720836
+   (Jul 8, 2026)
+   We audited SWE-Bench Pro, one of the most widely used AI coding benchmarks, and found it no longer reliably measures frontier coding capability ...
+
+3. Separating signal from noise in coding evaluations - daily.dev
+   https://daily.dev/posts/separating-signal-from-noise-in-coding-evaluations-swoud4dtk
+   (Jul 9, 2026)
+   OpenAI audited SWE-Bench Pro, a widely used coding benchmark, and found that approximately 30% of its 731 public tasks are broken.
+
+4. Separating signal from noise in coding evaluations | Matt Barney, Ph ...
+   https://www.linkedin.com/posts/drmattbarney_separating-signal-from-noise-in-coding-evaluations-activity-7482408478553104384-u8lC
+   (5 days ago)
+   OpenAI recently audited one of the hardest AI coding benchmarks and, in its own words: "we estimate that ~30% of SWE-bench Pro tasks are broken ...
+
+5. OpenAI reports that 'approximately 30% of SWE-Bench Pro is ...
+   https://gigazine.net/gsc_news/en/20260709-openai-coding-evaluations/
+   (Jul 9, 2026)
+   OpenAI reports that 'approximately 30% of SWE-Bench Pro is broken,' highlighting numerous flaws in the benchmark used to measure AI coding ...
+
+6. OpenAI moves beyond SWE-bench Verified as coding benchmarks ...
+   https://tessl.io/blog/openai-moves-beyond-swe-bench-verified-as-coding-benchmarks-saturate/
+   (Feb 25, 2026)
+   In its explanation, OpenAI said that at high performance levels, benchmark gains no longer reliably signal real-world capability improvements.
+
+7. OpenAI finds ~30% of tasks in SWE Bench Pro are broken - Reddit
+   https://www.reddit.com/r/singularity/comments/1ur9835/openai_finds_30_of_tasks_in_swe_bench_pro_are/
+   (Jul 9, 2026)
+   OpenAI finds ~30% of tasks in SWE Bench Pro are broken AI openai.com ・ gives the model a description of a PR ・ can recreate the code in that ...
+
+8. OpenAI published a post today on separating signal from noise in ...
+   https://x.com/Elaina43114880/status/2074976695757701186
+   (Jul 8, 2026)
+   After a detailed audit of SWE-Bench Pro, they found roughly 30-34% of tasks are broken. The main issues fall into four categories: - Overly ...
+
+9. OpenAI says 30% of SWE-Bench Pro is broken. We saw it first.
+   https://www.faros.ai/blog/openai-swe-bench-pro-audit
+   (2 days ago)
+   Last week, OpenAI published an audit of SWE-Bench Pro, a popular AI coding benchmark, and estimated that roughly 30% of its tasks are broken— ...
+
+10. SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software ...
+   https://arxiv.org/html/2509.16941v1
+   (Sep 21, 2025)
+   OpenAI GPT-5 and Claude Opus 4.1 achieve the highest resolve rates at 23.3% and 22.7% respectively, substantially outperforming smaller models.
+
+11. OpenAI Ditches SWE-Bench Pro Due to Flaws
+   https://www.linkedin.com/posts/gethackteam_openai-just-pulled-its-recommendation-to-activity-7480876737887703040-qhv1
+   (1 week ago)
+   Now OpenAI says the benchmark itself has too many problems to provide meaningful signal. After auditing the dataset with a combination of ...
+
+12. SPICE: An Automated SWE-Bench Labeling Pipeline for ...
+   https://arxiv.org/html/2507.09108v1
+   (Jul 12, 2025)
+   More specifically, each instance (row) in SWE-V represents a code repair task and contains three key fields: the issue description (title and ...
+
+13. OpenAI releases new coding benchmark SWE-Lancer ...
+   https://community.openai.com/t/openai-releases-new-coding-benchmark-swe-lancer-showing-3-5-sonnet-beating-o1/1123976
+   (Feb 18, 2025)
+   In August 2024, when OpenAI introduced SWE-Bench Verified, GPT-4o achieved a 33% score. Currently, their o3 reasoning model sets a new standard with a 72% ...
+
+14. SWE-Bench Pro Fails as AI Coding Benchmark: 70% Noise ...
+   https://www.youtube.com/shorts/ewmob7a4-Dc
+   SWE-Bench Pro Fails as AI Coding Benchmark: 70% Noise Ceiling, Why It Matters.
+
+15. OpenAI retracts SWE-Bench Pro coding benchmark ...
+   https://www.investing.com/news/stock-market-news/openai-retracts-swebench-pro-coding-benchmark-recommendation-93CH-4782526
+   (Jul 8, 2026)
+   OpenAI says the benchmark has reached a saturation point near a 70% noise ceiling, with frontier models improving from a 23.3% pass rate to 80.3 ...
+
+16. They do disclose that they scored *much* lower than Fable ...
+   https://news.ycombinator.com/item?id=48849368
+   It's worth noting that OpenAI recently came out saying, "We don't think SWEBench Pro is worth reporting any more" - https://openai.com/index/separating-signal- ...
+
+17. OpenAI Flags Major Flaws in SWE-Bench Pro
+   https://www.startuphub.ai/ai-news/artificial-intelligence/2026/openai-flags-major-flaws-in-swe-bench-pro
+   (6 days ago)
+   OpenAI's audit reveals approximately 30% of SWE-Bench Pro's coding tasks are flawed, prompting the company to retract its recommendation for ...
+
+18. OpenAI just put a new AI signal on the board. The headline is ...
+   https://www.instagram.com/reel/Dak8p9clK1Q/
+   OpenAI just put a new AI signal on the board. The headline is separating signal from noise in coding evaluations. The useful question is not ...
+
+19. O1 performs similarly to o1 preview in SWE bench
+   https://www.reddit.com/r/singularity/comments/1h7itjy/o1_performs_similarly_to_o1_preview_in_swe_bench/
+   (1 year ago)
+   Where did you see graphs that showed programming improvement? Everything I have seen showed it pretty flat compared to o1-preview.
+
+20. ⚡️The End of SWE-Bench Verified — Mia Glaese & Olivia ...
+   https://www.latent.space/p/swe-bench-dead
+   (Feb 23, 2026)
+   But OpenAI have done a deeper analysis of 138 problematic problems (getting at least SIX more engineers to review all the issues) and found two ...
+
+21. OpenAI wants to retire the AI coding benchmark that everyone ...
+   https://the-decoder.com/openai-wants-to-retire-the-ai-coding-benchmark-that-everyone-has-been-competing-on/
+   (Feb 23, 2026)
+   OpenAI says the SWE-bench Verified programming benchmark has lost its value as a meaningful measure of AI coding ability.
+
+22. 07/09/2026 (OpenAI) Separating Signal from Noise in Coding ...
+   https://www.youtube.com/watch?v=YQ2HyDtserA
+   (1 week ago)
+   Separating Signal and Noise in Coding Evaluation: SWE-Bench Pro Audit Report Based on research results published by OpenAI on July 8, 2026 ...
+
+23. OpenAI drops SWE-Bench Verified, backs Pro after flaw audit
+   https://aiweekly.co/alerts/openai-drops-swe-bench-verified-backs-pro-after-flaw-audit
+   (Jul 8, 2026)
+   OpenAI now recommends SWE-Bench Pro, though a May 2026 Datacurve audit reported Pro's graders mis-graded roughly a third of trials. Editor's ...
+
+24. Separating signal from noise in coding evaluations
+   https://www.linkedin.com/posts/siddhantsadangi_separating-signal-from-noise-in-coding-evaluations-activity-7480975184628264960-bnuA
+   (1 week ago)
+   OpenAI's latest research looks at SWE-Bench Pro, a benchmark designed to test coding agents on longer, more realistic software engineering tasks ...
+
+25. Separating Signal from Noise in Coding Evaluations
+   https://theainuggets.com/coding-evaluations-signal-vs-noise/
+   (Jul 9, 2026)
+   Most coding benchmarks are noisier than they look. OpenAI's latest note on coding evaluations explains how to turn noisy leaderboard wins ...
+
+26. DeepSWE blows up the AI coding leaderboard, crowns ...
+   https://venturebeat.com/technology/deepswe-blows-up-the-ai-coding-leaderboard-crowns-gpt-5-5-and-finds-claude-opus-exploiting-a-benchmark-loophole
+   (May 26, 2026)
+   DeepSWE puts GPT-5.5 atop the AI coding leaderboard while raising new questions about Claude Opus, SWE-Bench Pro, and benchmark leakage.
+
+27. Separating signal from noise in coding evaluations | Mu
+   https://micro.mu/news?id=0397c162f82795c2
+   Separating signal from noise in coding evaluations. 2 hours ago · Source: openai.com · Dev · Read Original → · Discuss with AI → · Share ...
+
+28. AI Coding Benchmarks Lie: 88% vs 22% on Real Code
+   https://levelup.gitconnected.com/ai-coding-benchmarks-are-lying-to-you-same-models-drop-from-88-to-22-the-moment-they-see-code-a020f21a08f5
+   (May 10, 2026)
+   Top AI models score 88% on SWE-Bench Verified but only 22% on SWE-Bench Pro and 15% on private codebases. The benchmark gap nobody talks about.
+
+29. OpenAI no longer recommends SWE-Bench Pro https://t.co ...
+   https://x.com/betterhn50/status/2075029168383754451
+   OpenAI no longer recommends SWE-Bench Pro openai.com/index/separati… ( news.ycombinator.com/item?id=488373…) ...
+
+===== Query 2/2: SWE-bench Verified OpenAI retired memorization gold patch 2026 =====
+
+1. Why SWE-bench Verified no longer measures frontier coding ...
+   https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/
+   (Feb 23, 2026)
+   SWE-bench Verified is increasingly contaminated and mismeasures frontier coding progress. Our analysis shows flawed tests and training ...
+
+2. OpenAI kills SWE-Bench Verified due to memorization flaws - LinkedIn
+   https://www.linkedin.com/posts/hackerrank_openai-just-killed-swe-bench-verified-the-activity-7432807590759264256-xzhQ
+   (Feb 26, 2026)
+   OpenAI just killed SWE-Bench Verified, the benchmark it created. The reason: 59% of problems are broken, memorized the answers instead of ...
+
+3. SWE-bench Pro Leaderboard (2026): Every Model Score, Opus 4.8 ...
+   https://www.morphllm.com/swe-bench-pro
+   Gold patches are validated across 3 test runs before inclusion. Scale validates gold patches across 3 test runs, OpenAI model is GPT-5.5 (88.7% Verified, 58.6% ...
+
+4. OpenAI retired SWE-bench Verified - the coding benchmark ... - Reddit
+   https://www.reddit.com/r/ChatGPT/comments/1sx4c08/openai_retired_swebench_verified_the_coding/
+   (Apr 27, 2026)
+   OpenAI audited 138 SWE-bench Verified problems their models consistently failed. The finding: 59.4% had material test flaws.
+
+5. OpenAI moves beyond SWE-bench Verified as coding benchmarks ...
+   https://tessl.io/blog/openai-moves-beyond-swe-bench-verified-as-coding-benchmarks-saturate/
+   In its explanation, OpenAI said that at high performance levels, benchmark gains no longer reliably signal real-world capability improvements.
+
+6. SWE-bench Verified no longer measures frontier coding capabilities
+   https://news.ycombinator.com/item?id=47910388
+   (Apr 27, 2026)
+   SWE-bench Verified is now saturated at 93.9% SWE-bench verified was created in collaboration with OpenAI. It's also an open dataset so prone to ...
+
+7. 2/ This is the second time in five months OpenAI has retired a major ...
+   https://www.threads.com/@artificiallyinfluenced/post/DatmzqoDKbA/this-is-the-second-time-in-five-months-open-ai-has-retired-a-major-coding/
+   (5 days ago)
+   In February 2026, it deprecated SWE-bench Verified after finding contamination and design flaws. It then recommended SWE-Bench Pro as the ...
+
+8. SWE-bench + - OpenLM.ai
+   https://openlm.ai/swe-bench/
+   (Jun 8, 2026)
+   SWE-bench is a benchmark for evaluating large language models on real world software issues collected from GitHub.
+
+9. SWE-bench Pro Explained: The New Standard for AI Coding ...
+   https://codingfleet.com/blog/swe-bench-pro-explained-the-new-standard-for-ai-coding-benchmarks-2026/
+   (Jun 4, 2026)
+   And why did OpenAI — the company that created SWE-bench Verified — publicly abandon it in February 2026? This is the definitive explainer: the ...
+
+10. SWE-bench Verified - Vals AI
+   https://vals.ai/benchmarks/swebench
+   (4 days ago)
+   SWE-bench Verified is a human-validated section of the SWE-bench dataset released by OpenAI in August 2024. Each task in the split has been ...
+
+11. SWE-bench February 2026 leaderboard update
+   https://simonwillison.net/2026/Feb/19/swe-bench/
+   (Feb 19, 2026)
+   OpenAI's GPT-5.2 is their highest performing model at position 6, but it's worth noting that their best coding model, GPT-5.3-Codex, is not ...
+
+12. SWE-bench: Can Language Models Resolve Real- ...
+   https://github.com/swe-bench/SWE-bench
+   SWE-bench is a benchmark for evaluating large language models on real world software issues collected from GitHub. Given a codebase and an issue, a language ...
+
+13. SWE-EVO: Benchmarking Coding Agents in Long-Horizon ...
+   https://arxiv.org/html/2512.18470v6
+   (May 22, 2026)
+   Experiments reveal a striking capability gap: the best model reaches only 25% on SWE-EVO, while gpt-5.2 drops from 72.80% on SWE-Bench Verified ...
+
+14. SWE-bench Leaderboards
+   https://www.swebench.com/
+   Verified is a human-filtered subset of 500 instances. We use mini-SWE-agent to evaluate all models with the same harness (details). Compare results.
+
+15. [February 2026 Edition] Can AI Fix Real Bugs? If You Don't ...
+   https://note.com/genelab_999/n/n4ffd40946688?hl=en
+   (4 months ago)
+   A new leaderboard significantly updated in February 2026. It covers the 500 questions of SWE-bench Verified, with a mechanism where all models ...
+
+16. SWE-bench Verified Leaderboard (July 2026): Top Scores
+   https://benchlm.ai/benchmarks/sweVerified
+   As of July 16, 2026, Claude Mythos 5 leads the SWE-bench Verified leaderboard with 95.5% , followed by Claude Fable 5 (95%) and Claude Opus 4.8 (88.6%). 1Closed.
+
+17. ⚡️The End of SWE-Bench Verified — Mia Glaese & Olivia ...
+   https://www.latent.space/p/swe-bench-dead
+   (Feb 23, 2026)
+   Looks like there will be a whole new set of frontier evals to look forward to in 2026 — and we also discussed how this work all ties into ...
+
+18. AI coding benchmark today (Jun 5, 2026): the SWE-bench ...
+   https://www.instagram.com/p/DZMdvhXgPaA/
+   (1 month ago)
+   OpenAI's eval team stopped reporting SWE-Bench Verified. Here's why One score became the proof that a model could actually code. Claude Opus 4.5 ...
+
+19. SWE-Bench Pro: Can AI Agents Solve Long-Horizon ...
+   https://openreview.net/forum?id=9R2iUHhVfr
+   by X Deng · Cited by 148 — We present SWE-Bench Pro, a comprehensive benchmark designed to evaluate software engineering capabilities through complex, realistic programming challenges ...
+
+20. The Benchmark That the AI Industry Agreed Was the Gold ...
+   https://www.linkedin.com/pulse/benchmark-ai-industry-agreed-gold-standard-coding-now-mohinish-shaikh-k84vc
+   (2 months ago)
+   As a result, OpenAI has stopped reporting SWE-bench Verified scores and recommends that other model developers do the same. The industry has ...
+
+21. SWE-bench Leaderboard 2026: Top Models Ranked ...
+   https://localaimaster.com/models/swe-bench-explained-ai-benchmarks
+   (Oct 30, 2025)
+   SWE-bench Verified scores have improved from 48.5% (GPT-4 Turbo, Nov 2023) to ~88.7% (GPT-5.5, Apr 2026), showing rapid progress in AI coding ...
+
+22. SWE-bench Verified Leaderboard 2026
+   https://leaderboard.steel.dev/leaderboards/swe-bench-verified/
+   Compare SWE-bench Verified leaderboard scores — autonomous coding agents on 500 human-filtered real GitHub issues. Sourced results, updated May 28, 2026.
+
+23. New SWE-Bench Verified SOTA using o1: It resolves 64.6 ...
+   https://www.reddit.com/r/singularity/comments/1i35kzh/new_swebench_verified_sota_using_o1_it_resolves/
+   (1 year ago)
+   New SWE-Bench Verified SOTA using o1: It resolves 64.6% of issues. "This is the first fully o1-driven agent we know of. And we learned a ton building it."
+
+24. How to Actually Evaluate AI Coding Agents in 2026
+   https://medium.com/@allahverdiyev.tural/beyond-swe-bench-how-to-actually-evaluate-ai-coding-agents-in-2026-8233940530f1
+   Claude Mythos Preview tops the SWE-Bench Verified leaderboard at 93.9% as of late May 2026. Claude Opus 4.7 sits at 87.6%, GPT-5.3 Codex at 85%.
+
+25. Best LLMs for Coding in 2026: SWE-bench, HumanEval ...
+   https://onyx.app/insights/best-llms-for-coding-2026
+   (May 7, 2026)
+   SWE-bench Verified hasn't been published yet (SWE-bench Pro is 57.7%), and it costs $2.50 / $15 per 1M input/output tokens. Choose GPT-5.4 ...
+
+26. The End of SWE-Bench Verified — Mia Glaese & Olivia ...
+   https://www.youtube.com/watch?v=0HaUD_olwQU
+   (4 months ago)
+   The main thesis is that sweeten verified has been one of the northstar coding benchmarks that the field has looked at to measure coding progress.
+
+27. SWE-bench 2026: Claude Opus 4.6 vs GPT-5.4 Coding ...
+   https://evolink.ai/blog/swe-bench-verified-2026-claude-vs-gpt
+   (Mar 24, 2026)
+   Yes. Anthropic publicly notes that its SWE-bench Verified score was averaged over 25 trials and says it saw 81.42% with a prompt modification.
+
+28. Nemotron-CORTEXA: Enhancing LLM Agents for Software ...
+   https://research.nvidia.com/labs/adlr/cortexa/
+   (Apr 9, 2025)
+   Nemotron-CORTEXA resolves 68.2% of the issues from the SWE-bench Verified set, while only consuming $3.28 in LLM inference calls per problem, ...
+
+29. OpenAI drops SWE-Bench Verified, backs Pro after flaw audit
+   https://aiweekly.co/alerts/openai-drops-swe-bench-verified-backs-pro-after-flaw-audit
+   (Jul 8, 2026)
+   OpenAI now recommends SWE-Bench Pro, though a May 2026 Datacurve audit reported Pro's graders mis-graded roughly a third of trials. Editor's ...
+
+30. OpenAI wants to retire the AI coding benchmark that everyone ...
+   https://the-decoder.com/openai-wants-to-retire-the-ai-coding-benchmark-that-everyone-has-been-competing-on/
+   (Feb 23, 2026)
+   OpenAI says the SWE-bench Verified programming benchmark has lost its value as a meaningful measure of AI coding ability.
+
+31. The SWE-Bench Illusion: When State-of-the-Art LLMs ...
+   https://arxiv.org/html/2506.12286v3
+   (Aug 6, 2025)
+   These results demonstrate that SWE-Bench Verified performance substantially reflects memorization of training sequences. The inability to ...
+
+32. SWE-rebench
+   https://swe-rebench.com/
+   Application error: a client-side exception has occurred while loading swe-rebench.com (see the browser console for more information).
+
+33. 🆕 The End of SWE-Bench Verified (2024-2026) ...
+   https://x.com/latentspacepod/status/2026027529039990985
+   (4 months ago)
+   Today @OpenAIDevs is announcing the voluntary deprecation of SWE-Bench Verified! We're releasing a podcast + analysis in today's post.
+
+34. SWE-Bench Verified Leaderboard
+   https://llm-stats.com/benchmarks/swe-bench-verified
+   The SWE-Bench Verified leaderboard was last updated in July 2026 and currently includes 104 evaluated models. Related benchmarks. GPQA232 modelsMMLU-Pro129 ...
+
+35. Warp scores 75.8% on SWE-bench Verified!
+   https://www.warp.dev/blog/swe-bench-verified-update
+   (Sep 1, 2025)
+   Warp's single-agent system powered by GPT-5 achieved a 75.8% score on SWE-bench Verified, driven by improvements like dynamic task lists, ...
+
+36. SWE-Bench Verified Leaderboard: Frontier Models Tested ...
+   https://contracollective.com/blog/swe-bench-verified-frontier-models-leaderboard-2026
+   (May 25, 2026)
+   SWE-Bench Verified is the benchmark that actually correlates with shipping working code. It is a human-validated subset of 500 real GitHub ...
+
+37. OpenAI wants new AI benchmarks to replace Scale's "broken ...
+   https://www.thestack.technology/openai-wants-new-ai-benchmarks-to-replace-scales-broken-tests/
+   (Jul 9, 2026)
+   OpenAI retracted earlier support for SWE-Bench Pro after conducting an audit that found almost 30% of its tests were "broken".
+
+38. 1. SWE-bench Verified is now saturated at 93.9% (...
+   https://news.ycombinator.com/item?id=47912620
+   Hacker News · 1. SWE-bench Verified is now saturated at 93.9% (congrats Anthropic), but anyone who hasn't reached that number yet still has more room for growth.
+
+39. OpenAI explains that the standard benchmark used to ...
+   https://gigazine.net/gsc_news/en/20260429-swe-bench-verified/
+   (Apr 29, 2026)
+   serious problems with SWE-bench Verified, and OpenAI suggests that ... In February 2026, OpenAI reported that a detailed analysis ...
+
+40. SWE-Bench Pro 2026 Coding Model Ranking
+   https://qcode.cc/en/swe-bench-pro-2026-ranking
+   GPT-5.2-Codex (2026-01-14): SWE-Bench Verified 80.0%, Pro 56.4%. GPT-5.3-Codex (2026-02-05): Pro 56.8% (new high), Terminal-Bench 2.0 77.3%, OSWorld 64.7% ...
+
+41. Introducing Claude Opus 4.5
+   https://www.anthropic.com/news/claude-opus-4-5
+   (Nov 24, 2025)
+   Chart comparing frontier models on SWE-bench Verified where Opus 4.5 scores highest ... © 2026 Anthropic PBC.
+
+42. The SWE-bench Verified Leaderboard (March 2026) â€” ...
+   https://www.mangomindbd.com/blog/swe-bench-verified-leaderboard-march-2026
+   (Mar 24, 2026)
+   The "Software Engineering Benchmarks" (SWE-bench) have long been the gold standard for testing an AI's ability to act as a junior developer.
+
+43. OpenAI Withdraws SWE-Bench Pro Recommendation ...
+   https://xenospectrum.com/en/openai-swe-bench-pro-audit-broken-tasks/
+   (8 days ago)
+   On July 8, 2026, OpenAI audited SWE-Bench Pro, a leading evaluation benchmark for AI coding agents, and estimated that roughly 30% of the ...
+
+44. AI Agent Benchmarks 2026: Who Leads SWE-bench & GAIA
+   https://codersera.com/blog/ai-agent-benchmarks-state-of-leaderboard-may-2026/
+   (May 28, 2026)
+   Quick answer. No single model wins every benchmark in May 2026. Claude Mythos Preview leads SWE-bench Verified (93.9%), GPQA Diamond (94.6%) ...
+
+45. [State of Code Evals] After SWE-bench, Code Clash & SOTA ...
+   https://www.youtube.com/watch?v=MxB-xRGXxkk
+   (6 months ago)
+   From creating *SWE-bench* in a Princeton basement to shipping *CodeClash,* *SWE-bench Multimodal,* and *SWE-bench Multilingual,* *John Yang* ...
+
+46. SWE-bench benchmark leaderboard in 2026: best AI for coding
+   https://www.bracai.eu/post/best-ai-for-coding
+   (Jul 17, 2024)
+   Which AI is best for coding in 2026? See the latest SWE-bench verified leaderboard and a practical guide to picking the right model and ...
+
+[RelatedSearches] Swe bench verified openai retired memorization gold patch 2026 github | SWE-bench Pro | SWE-bench Pro leaderboard | SWE-bench Verified huggingface | SWE benchmark leaderboard | SWE-bench: can language models resolve real-world GitHub issues | SWE-bench paper | Swebench dataset

@@ -1,0 +1,604 @@
+===== Query 1/4: Gibbons Incentives in Organizations Journal of Economic Perspectives 1998 measurement =====
+
+1. Incentives in organizations
+   https://www.aeaweb.org/articles?id=10.1257/jep.12.4.115
+   (R Gibbons - Journal of economic perspectives, 1998 - aeaweb.org | 1998 | cited by 1544)
+   [PDF] https://pubs.aeaweb.org/doi/pdf/10.1257%2Fjep.12.4.115
+   In this paper, the author summarizes four new strands in agency theory that help him think about incentives in real organizations. As a point of departure, The author begins with a quick sketch of the classic agency model. He then discusses static models of objective performance measurement that sharpen Kerr's argument; repeated-game models of subjective performance assessments; incentives for skill development rather than simply for effort; and incentive contracts between versus within organizations. The author concludes by suggesting two avenues for further progress in agency theory: better integration with organizational economics, as launched by Coase (1937) and reinvigorated by Williamson (1975, 1985), and cross-pollination with other fields that study organizations, including industrial relations, organizational sociology, and social psychology.
+
+===== Query 2/4: Gibbons incentives measurement distortion gaming multitask survey =====
+
+1. Design and implementation of pay for performance
+   https://www.jstor.org/stable/pdf/resrep74095.pdf?acceptTC=true&coverpage=false&addFooter=false
+   (M Gibbs - 2012 - JSTOR | 2012 | cited by 25)
+   [PDF] https://www.econstor.eu/bitstream/10419/58769/1/715371010.pdf
+   … excellent surveys of this research are available (eg, Gibbons 1998; … creates the first of three types of “gaming” of an incentive … multitask incentives with stronger overall incentive intensity. …
+
+2. Incentives in organizations
+   https://www.aeaweb.org/articles?id=10.1257/jep.12.4.115
+   (R Gibbons - Journal of economic perspectives, 1998 - aeaweb.org | 1998 | cited by 1544)
+   [PDF] https://pubs.aeaweb.org/doi/pdf/10.1257%2Fjep.12.4.115
+   … often small; and 3) in multi-task settings, it is often helpful to … repeated-game models of ‘‘relational’’ incentive contracts—that … economics and to other disciplines that study organizations. …
+
+3. Value creation and value capture under moral hazard: Exploring the micro‐foundations of buyer–supplier relationships
+   https://sms.onlinelibrary.wiley.com/doi/abs/10.1002/smj.2271
+   (T Obloj, P Zemsky - Strategic Management Journal, 2015 - Wiley Online Library | 2015 | cited by 87)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2159033
+   … integrity, incentive alignment, and gaming affect outcomes when … principal– agent model closely patterned after Gibbons (… a multitask principal–agent model that captures the incentive …
+
+4. Bonuses versus commissions: A field study
+   https://journals.sagepub.com/doi/abs/10.1509/jmr.11.0485
+   (S Kishore, RS Rao, O Narasimhan… - Journal of Marketing …, 2013 - journals.sagepub.com | 2013 | cited by 99)
+   [PDF] https://sites.utexas.edu/raghunath-rao/wp-content/uploads/sites/2917/2013/05/jmr.50.3.2013.pdf
+   … seem to provide stronger incentives than bonus plans on … measures or because it is easy for agents to “shade” these … our timing games (Question 2) and multitasking distortion (Question …
+
+5. Incentives and their dynamics in public sector performance management systems
+   https://onlinelibrary.wiley.com/doi/abs/10.1002/pam.20484
+   (CJ Heinrich, G Marschke - Journal of policy analysis and …, 2010 - Wiley Online Library | 2010 | cited by 517)
+   [PDF] https://www.researchgate.net/profile/Carolyn-Heinrich/publication/227643722_Incentives_and_Their_Dynamics_in_Public_Sector_Performance_Management_Systems/links/5b44c0890f7e9b1c7220e14c/Incentives-and-Their-Dynamics-in-Public-Sector-Performance-Management-Systems.pdf
+   … In the common applications of this model that we study, the … systems in public organizations, we begin with the multitasking … agent has had to learn to game the measure, and the rate of …
+
+6. Performance management, gaming and regulatory monitoring: a theoretical model and applications
+   https://www.tandfonline.com/doi/abs/10.1080/14719037.2021.2007668
+   (S Mizrahi, Y Minchuk - Public Management Review, 2023 - Taylor & Francis | 2023 | cited by 13)
+   … measures, and distortion of information. We apply … The multitasking literature suggests that in order to improve … Like Baker, Gibbons, and Murphy (Citation1994), we assume a structure …
+
+7. Incentives and careers in organizations
+   https://www.nber.org/papers/w5705
+   (RS Gibbons - 1996 - nber.org | 1996 | cited by 404)
+   [PDF] https://www.nber.org/system/files/working_papers/w5705/w5705.pdf
+   … This paper surveys two related pieces of the labor-… 1Most of the theory I describe is recent, emphasizing games and … , the performance measures used in these real incentive contracts …
+
+8. Multitasking incentives and biases in subjective performance evaluation
+   https://hit-u.repo.nii.ac.jp/records/2055097
+   (S Takahashi, H Owan, T Tsuru, K Uehara - 2014 - hit-u.repo.nii.ac.jp | 2014 | cited by 5)
+   [PDF] https://hit-u.repo.nii.ac.jp/record/2055097/files/DP614.pdf
+   … It can mitigate multitasking agency problems and gaming, but it … Thus, the purpose of this study is to provide evidence for … our study is that we can assess the validity of our bias measure …
+
+9. Ability, career concerns, and financial incentives in a multi-task setting
+   https://publications.aaahq.org/jmar/article-abstract/23/1/211/931
+   (A Brüggen - Journal of Management Accounting Research, 2011 - publications.aaahq.org | 2011 | cited by 18)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=1458365
+   … low ability agents exhibit less distorted behavior under any … The purpose of this study is to examine the role of perceived … last period due to potential end-game effects). The dependent …
+
+10. An empirical investigation of gaming responses to explicit performance incentives
+   https://www.journals.uchicago.edu/doi/abs/10.1086/380402
+   (P Courty, G Marschke - Journal of Labor Economics, 2004 - journals.uchicago.edu | 2004 | cited by 322)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=300443
+   … The central focus of this article is to study how training centers use this discretion. … that the incentive system generates input distortions, we cross the June variable with our measure of …
+
+11. Fairness and incentives in a multi‐task principal–agent model
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.0347-0520.2004.00372.x
+   (E Fehr, KM Schmidt - The Scandinavian Journal of Economics, 2004 - Wiley Online Library | 2004 | cited by 345)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=572844
+   … -powered incentives for a task that is easy to measure and … The distortions caused by explicit incentives in a multi-task … The solution of the multi-task principal–agent game in this paper is …
+
+12. Primary incentive plan design considerations according to a review of key influential works
+   https://www.tandfonline.com/doi/abs/10.1080/10429247.2016.1208713
+   (E Loots, CSL Schutte - Engineering Management Journal, 2016 - Taylor & Francis | 2016 | cited by 11)
+   … This study reviews the existing literature regarding the … not deemed a PIC but a subsection of Gaming/Multi-Tasking. … of classification rules, and timing distortions, requires an intimate …
+
+13. Multi-task incentive contract and performance measurement with multidimensional types
+   https://www.sciencedirect.com/science/article/pii/S0899825612001601
+   (D Meng, G Tian - Games and Economic Behavior, 2013 - Elsevier | 2013 | cited by 24)
+   [PDF] https://people.it.tamu.edu/~gtian/GEB-Multi-task%20Incentive%20Contract%20and%20Performance%20Measurement%20with%20Multidimensional%20Types.pdf
+   This paper provides a new explanation for the dominance of the low-powered incentive contract over the high-powered incentive contract using a hybrid model of moral hazard and …
+
+14. The effect of relative performance information on performance and effort allocation in a multi-task environment
+   https://publications.aaahq.org/accounting-review/article-abstract/88/2/553/3483
+   (RL Hannan, GP McPhee, AH Newman… - The Accounting …, 2013 - publications.aaahq.org | 2013 | cited by 308)
+   [PDF] https://www.academia.edu/download/109296987/accr-5031220231220-1-ttsgf1.pdf
+   … and effort distortion effects, our study provides insights into … -based incentives because the primary focus of our study is … in and respond to social comparison (Gibbons and McCoy …
+
+15. Incentives, monitoring, and employee stock ownership plans: New evidence and interpretations
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-232X.2006.00450.x
+   (A Pendleton - Industrial Relations: A Journal of Economy and …, 2006 - Wiley Online Library | 2006 | cited by 135)
+   [PDF] https://www.academia.edu/download/51208918/j.1468-232x.2006.00450.x20170105-6579-uye8g1.pdf
+   … Gibbons 1998). The encouragement of low-trust … that multiple incentives will counter the gaming effects associated … of multitasking (new agency) are proxied by a new variable that …
+
+16. Inside organizations: Pricing, politics, and path dependence
+   https://www.annualreviews.org/content/journals/10.1146/annurev.economics.050708.143304
+   (R Gibbons - Annu. Rev. Econ., 2010 - annualreviews.org | 2010 | cited by 100)
+   [PDF] https://dspace.mit.edu/bitstream/handle/1721.1/69100/Gibbons%20ARE.pdf;sequence=1
+   … The value of the multitask theory [including the specific cos(θ… Formally, consider an infinitely repeated game in which both parties … More specifically, they study an agent's incentives to …
+
+17. A flexible gaming environment for reliably measuring cognitive control
+   https://publications.sto.nato.int/publications/STO%20Meeting%20Proceedings/STO-MP-HFM-334/MP-HFM-334-14.pdf
+   (L Wells, T Kucina, A Kohl, I Lewis… - Proceedings of the …, 2021 - publications.sto.nato.int | 2021 | cited by 12)
+   [PDF] https://publications.sto.nato.int/publications/STO%20Meeting%20Proceedings/STO-MP-HFM-334/MP-HFM-334-14.pdf
+   … ) can distort measurement (see [16] for more discussion). … In COGMISSION multi-tasking cost can be measured by … became involved in a “Delphi” study [30] seeking an expert consensus …
+
+18. Incomplete incentives, task temporality, and effort spillover in a multitask environment
+   https://uwspace.uwaterloo.ca/items/e9baf1ff-4d57-41c6-b5be-b9fbfaf80afb
+   (D Lane - 2022 - uwspace.uwaterloo.ca | 2022 | cited by 3)
+   [PDF] https://uwspace.uwaterloo.ca/bitstreams/1e89232a-3d8e-4b6a-bf03-8abf83d9514f/download
+   … I find that goal-based incentives under sequential multitasking … sequential multitasking compared to concurrent multitasking. … The findings from this study highlight the importance of …
+
+19. The task-attention theory of game learning: a theory and research agenda
+   https://www.tandfonline.com/doi/abs/10.1080/07370024.2022.2047971
+   (J Cutting, S Deterding - Human–Computer Interaction, 2024 - Taylor & Francis | 2024 | cited by 32)
+   [PDF] https://www.tandfonline.com/doi/pdf/10.1080/07370024.2022.2047971
+   … a game, they build a mental model of how the game works … the game stimulus array are important for performing game tasks. … study; most methods are based on measuring players’ post-…
+
+20. A survey of incentives and mechanism design for human computation systems
+   https://arxiv.org/abs/1602.03277
+   (Y Liu, C Miao - arXiv preprint arXiv:1602.03277, 2016 - arxiv.org | 1602 | cited by 3)
+   [PDF] https://arxiv.org/pdf/1602.03277
+   … human computation games (HCGs), also called games with … Both words are distorted in the same way, for example by adding … Reputation is used to measure how much the system trusts …
+
+21. Personnel economics
+   https://www.nber.org/papers/w13480
+   (EP Lazear, P Oyer - 2007 - nber.org | 2007 | cited by 195)
+   [PDF] https://www.nber.org/system/files/working_papers/w13480/w13480.pdf
+   … Under these circumstances, Gibbons shows that workers will … the fact that incentives drive efficient effort and “gaming” at the … They derive a “multi-tasking” model where an employee …
+
+22. Multitasking and subjective performance evaluations: Theory and evidence from a field experiment in a bank
+   https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2018.3206
+   (K Manthei, D Sliwka - Management Science, 2019 - pubsonline.informs.org | 2019 | cited by 52)
+   [PDF] https://www.econstor.eu/bitstream/10419/180599/1/dp11581.pdf
+   … We study the incentive effects of granting supervisors access … to study the existence of the prior distortions under subjective … To study this, we analyze the profit measure CNR separately …
+
+23. Measuring Government Performance
+   https://research.upjohn.org/cgi/viewcontent.cgi?article=1225&context=up_press#page=211
+   (P Courty, G Marschke - Jeffrey Smith, eds. 2011, 2011 - research.upjohn.org | 2011 | cited by 10)
+   [PDF] https://research.upjohn.org/cgi/viewcontent.cgi?article=1225&context=up_press#page=211
+   … responses, also known as gaming responses. Understanding … whether incentive designers internalize multitasking … Using data from the National JTPA Study, we document how in the …
+
+24. Performance measure properties and incentive system design
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-232X.2009.00556.x
+   (MJ Gibbs, KA Merchant… - Industrial relations: a …, 2009 - Wiley Online Library | 2009 | cited by 162)
+   [PDF] https://www.econstor.eu/bitstream/10419/20627/1/dp1356.pdf
+   … appear to be used to rebalance multitask incentives. … Manipulation occurs if the agent “games” the incentive plan to … The incentive systems that we study often use more than one …
+
+25. Value creation and value capture with agency: the micro-foundations of buyer-supplier relationships
+   https://flora.insead.edu/fichiersti_wp/inseadwp2012/2012-111.pdf
+   (T Obloj, PB Zemsky - 2012 - flora.insead.edu | 2012 | cited by 2)
+   [PDF] https://flora.insead.edu/fichiersti_wp/inseadwp2012/2012-111.pdf
+   … In particular, we study how key contracting parameters, such … We also find that distortion and resulting incentive gaming is … multi-tasking principal-agent model patterned after Gibbons (…
+
+26. An economic framework for analyzing the incentive problems in building information modeling systems
+   https://www.researchgate.net/profile/Chen-Yu-Chang-5/publication/276895967_An_Economic_Framework_for_Analyzing_the_Incentive_Problems_in_Building_Information_Modeling_Systems/links/55dce42308ae591b309abb8b/An-Economic-Framework-for-Analyzing-the-Incentive-Problems-in-Building-Information-Modeling-Systems.pdf
+   (CY Chang, R Howard - Proceedings of Academy of Management …, 2014 - researchgate.net | 2014 | cited by 10)
+   [PDF] https://www.researchgate.net/profile/Chen-Yu-Chang-5/publication/276895967_An_Economic_Framework_for_Analyzing_the_Incentive_Problems_in_Building_Information_Modeling_Systems/links/55dce42308ae591b309abb8b/An-Economic-Framework-for-Analyzing-the-Incentive-Problems-in-Building-Information-Modeling-Systems.pdf
+   … review of the preeminent literature on the study of incentives. … Use of highpowered incentives in a multi-tasking environment … to “game” the system to maximize measured performance …
+
+27. A General Test of Gaming in Explicit Measurement Systems
+   
+   (P Courty, G Marschke - 2004 | 2004)
+
+28. A general test for distortions in performance measures
+   https://direct.mit.edu/rest/article-abstract/90/3/428/57733
+   (P Courty, G Marschke - The Review of Economics and Statistics, 2008 - direct.mit.edu | 2008 | cited by 64)
+   [PDF] https://www.researchgate.net/profile/Pascal-Courty/publication/24096180_A_General_Test_for_Distortions_in_Performance_Measures/links/09e4150e748e4eb1f3000000/A-General-Test-for-Distortions-in-Performance-Measures.pdf
+   … when a performance measure is distorted, the extent of gaming re… study, occurs when a new performance measure is introduced. … This paper develops a simple multitasking model and …
+
+29. What is the empirical basis for paying for quality in health care?
+   https://journals.sagepub.com/doi/abs/10.1177/1077558705285291
+   (MB Rosenthal, RG Frank - Medical Care Research and …, 2006 - journals.sagepub.com | 2006 | cited by 540)
+   [PDF] https://www.researchgate.net/profile/Richard-Frank-2/publication/7185185_What_Is_the_Empirical_Basis_for_Paying_for_Quality_in_Health_Care/links/09e415065005603995000000/What-Is-the-Empirical-Basis-for-Paying-for-Quality-in-Health-Care.pdf?_sg%5B0%5D=started_experiment_milestone&origin=journalDetail
+   … cians or administrators might game incentive systems by … economics literature as the multitasking problem (or teaching … incentives related to employment and promotion (Gibbons and …
+
+30. From incentives to control to adaptation: Exploring interactions between formal and relational governance
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4121423
+   (G Baker, RS Gibbons, KJ Murphy - 2022 - papers.ssrn.com | 2022 | cited by 9)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=4121423
+   … We were motivated by a case study on compensation, and … to capture distortions that could be caused by formal incentive … kind studied in the repeated games discussed in this essay, …
+
+31. Gaming and strategic opacity in incentive provision
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/1756-2171.12253
+   (F Ederer, R Holden, M Meyer - The RAND Journal of …, 2018 - Wiley Online Library | 2018 | cited by 86)
+   [PDF] https://onlinelibrary.wiley.com/doi/am-pdf/10.1111/1756-2171.12253
+   … We study the benefits and costs of “opacity” (deliberate lack … , performance; and (iii) distortion of choices about timing to exploit … Our multitask moral hazard model incorporates three key …
+
+32. Incentive Alignment and Effort Provision in Multitask Contracts: A Basic Test of the Theory
+   https://www.degruyterbrill.com/document/doi/10.1515/jafio-2024-0042/html
+   (JG Nuño-Ledesma - Journal of Agricultural & Food Industrial …, 2025 - degruyterbrill.com | 2025)
+   [PDF] https://www.researchgate.net/profile/Jose-Nuno-Ledesma-3/publication/392556028_Incentive_Alignment_and_Effort_Provision_in_Multitask_Contracts_A_Basic_Test_of_the_Theory/links/684c2881df3fa4286a409a12/Incentive-Alignment-and-Effort-Provision-in-Multitask-Contracts-A-Basic-Test-of-the-Theory.pdf
+   … The specific functional forms in this paper rely on Gibbons (… involving contract-theoretic games. The general procedure is the … The data that support the findings of this study are available …
+
+33. A general test of gaming
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=590121
+   (P Courty, G Marschke - Available at SSRN 590121, 2004 - papers.ssrn.com | 5901 | cited by 4)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=590121
+   … after the measure has been activated in the incentive system. … -gaming activities that are measure specific (multi-tasking). … of the three performance measures that we study, earnings and …
+
+34. Incentives and organizations in the public sector: An interpretative review
+   https://www.jstor.org/stable/3069614
+   (A Dixit - Journal of human resources, 2002 - JSTOR | 2002 | cited by 1849)
+   [PDF] https://www.edegan.com/pdfs/Dixit%20(2002)%20-%20Incentives%20and%20Organizations%20in%20the%20Public%20Sector.pdf
+   … Its extensions to multitask, multiperiod, and multiprincipal … The schemes also are vulnerable to manipulation or gaming … 1996), but the papers in this book contain surveys and …
+
+35. Bonus culture: Competitive pay, screening, and multitasking
+   https://www.journals.uchicago.edu/doi/abs/10.1086/684853
+   (R Bénabou, J Tirole - Journal of Political Economy, 2016 - journals.uchicago.edu | 2016 | cited by 364)
+   [PDF] https://www.nber.org/system/files/working_papers/w18936/w18936.pdf
+   … equilibrium of the competitive offer game? The answer, which … externality alleviates the multitask distortion at each firm, … In the latter case, we also study the regulation or taxation of …
+
+36. Incentives for multitasking: Fixed wages or profit-sharing?
+   https://www.tandfonline.com/doi/abs/10.1080/713663557
+   (U Jirjahn - Economic Analysis, 2000 - Taylor & Francis | 2000 | cited by 28)
+   … Unlike piece rates, low powered incentives do not distort the … ways to measure multitasking in an empirical study. Aexible work … However, in this study there was a positive impact of …
+
+37. Performance measure congruity and the balanced scorecard
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1475-679X.2007.00246.x
+   (J Budde - Journal of Accounting Research, 2007 - Wiley Online Library | 2007 | cited by 134)
+   [PDF] https://www.academia.edu/download/71189199/j.1475-679x.2007.00246.x20211003-11079-1km4smr.pdf
+   … incentive effects of a balanced scorecard within a multitask … In particular, I study (1) why unintended consequences could … incentive contract, a manager should not be able to game his …
+
+38. Firm‐specific human capital, organizational incentives, and agency costs: Evidence from retail banking
+   https://sms.onlinelibrary.wiley.com/doi/abs/10.1002/smj.2148
+   (DH Frank, T Obloj - Strategic Management Journal, 2014 - Wiley Online Library | 2014 | cited by 187)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2319265
+   … that the agency costs from incentive gaming may be increasing in … in our study or in the incentive plan we describe here.4 … to multitasking we would expect to observe effort ‘distortion’ (…
+
+39. Contracting with moral hazard: A review of theory & empirics
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4196247
+   (G Georgiadis - Available at SSRN 4196247, 2022 - papers.ssrn.com | 4196 | cited by 37)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=4196247
+   … This article surveys the literature on principal-agent … , payoffs are realized, and the game ends. The principal’s objective … A manifestation of the multitask problem concerns settings where …
+
+40. The productivity effects of multiple pay incentives
+   https://journals.sagepub.com/doi/abs/10.1177/0143831X15583099
+   (A Pendleton, A Robinson - Economic and Industrial …, 2017 - journals.sagepub.com | 2017 | cited by 59)
+   [PDF] https://journals.sagepub.com/doi/pdf/10.1177/0143831X15583099
+   … Multiple incentives potentially soften distortion by rewarding … workers’ opportunity to game incentives. For these reasons a … measures of performance but their use in the current study is …
+
+41. Subjectivity in compensation contracting
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=771565
+   (JC Bol - AAA Management Accounting Section (MAS) 2006 …, 2008 - papers.ssrn.com | 2006 | cited by 358)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=771565
+   … They study a balanced scorecard plan in which the … of gaming responses to explicit performance incentives. Journal … Performance measure congruity and diversity in multi-task …
+
+42. Multitasking incentives and the informative value of subjective performance evaluations
+   https://journals.sagepub.com/doi/abs/10.1177/0019793919891980
+   (S Takahashi, H Owan, T Tsuru, K Uehara - ILR Review, 2021 - journals.sagepub.com | 2021 | cited by 10)
+   … this study is thus to provide new and straightforward evidence that subjectivity is indeed used to incorporate hard-to-measure tasks in an incentive … about multitasking agency or gaming …
+
+43. The cost of high-powered incentives: Employee gaming in enterprise software sales
+   https://www.journals.uchicago.edu/doi/abs/10.1086/673371
+   (I Larkin - Journal of Labor Economics, 2014 - journals.uchicago.edu | 2014 | cited by 221)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2221896
+   … This article investigates the pricing distortions that arise from … -based incentive systems (eg, Holmstrom 1979), this study finds … only with measuring one type of incentive system cost that …
+
+44. Reflections on the practical applicability of strategic game theory to managerial incentivation
+   https://link.springer.com/chapter/10.1007/978-3-319-61603-2_2
+   (J Kunz - … in Management Accounting: Implementing Incentives …, 2017 - Springer | 2017 | cited by 3)
+   … multi-task settings, dynamic agency relations, and the risk-… In their study the switch from a bonus to a commission-based … show that an increase in distortion or a stronger ratchet effect …
+
+45. A behavioral account of the labor market: The role of fairness concerns
+   https://www.annualreviews.org/content/journals/10.1146/annurev.economics.050708.143217
+   (E Fehr, L Goette, C Zehnder - Annu. Rev. Econ., 2009 - annualreviews.org | 2009 | cited by 452)
+   [PDF] https://www.econstor.eu/bitstream/10419/35496/1/589760734.pdf
+   … benefits from the development of game theoretic tools and … of explicit incentives may cause distorted outcomes because … The results of this study reveal that reputational incentives in …
+
+46. Performance measure aggregation, career incentives, and explicit incentives
+   https://publications.aaahq.org/jmar/article-abstract/22/1/115/863
+   (RL Autrey, SS Dikolli… - Journal of Management …, 2010 - publications.aaahq.org | 2010 | cited by 32)
+   [PDF] https://www.academia.edu/download/108759272/jmar_2010_22_1_115.pdf
+   … aggregation, we consider a multi-task setting in which aggregate … Gibbons and Murphy 1992), implicit career incentives in this … measures may be costly because the agent may game the …
+
+47. When do incentives work in channels of distribution?
+   https://link.springer.com/article/10.1007/s11747-013-0364-3
+   (DI Gilliland, SK Kim - Journal of the Academy of Marketing Science, 2014 - Springer | 2014 | cited by 75)
+   … of this study in two stages; first, we explore the incentive … agent’s tendency to disguise information and game the system. For … to refine item measures prior to constructing the final …
+
+48. Contract theory and agricultural policy analysis: a discussion and survey of recent developments
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8489.2006.00317.x
+   (SY Wu - Australian Journal of Agricultural and Resource …, 2006 - Wiley Online Library | 2006 | cited by 79)
+   [PDF] https://ageconsearch.umn.edu/record/116979/files/j.1467-8489.2006.00317.x.pdf
+   … , thereby creating additional distortions in ex ante investments/effort. Gibbons provides an … In a one-shot relationship, this interaction can be expressed in the following game tree with …
+
+49. Formal and relational incentives in a multitask model
+   https://www.sciencedirect.com/science/article/pii/S014481880600069X
+   (K Daido - International Review of Law and Economics, 2006 - Elsevier | 2006 | cited by 26)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=884380
+   This paper studies the optimal contracts in a multitask model when a principal–agent relationship is long-term. If some outcomes are unverifiable, then the contracts have to satisfy the …
+
+50. Private predecision information, performance measure congruity, and the value of delegation
+   https://onlinelibrary.wiley.com/doi/abs/10.1506/V1TU-AW8J-5FYA-GLPW
+   (RM Bushman, RJ Indjejikian… - Contemporary …, 2000 - Wiley Online Library | 2000 | cited by 146)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=237165
+   … to study how the relation between performance measures … Imperfect performance measurement mixed with gaming … In section 4, we extend our model to a multitask setting to …
+
+===== Query 3/4: surrogation accounting Choi Hecht Tayler follow-up 2020 2021 2022 attribute substitution =====
+
+1. Reducing strategy surrogation: The effects of performance measurement system flexibility and environmental dynamism
+   https://publications.aaahq.org/accounting-review/article-abstract/98/4/435/10047
+   (KK Wang, MM Cheng, LJ Chang - The Accounting Review, 2023 - publications.aaahq.org | 2023 | cited by 13)
+   … Follow-up simple effect tests confirm that the PMS flexibility effect … surrogation, the theory of attribute substitution points to the likelihood that strategy engagement can reduce surrogation …
+
+2. An fMRI investigation of the neurocognitive processing of measures and strategic objectives
+   https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2022.01405
+   (…, CB Kirwan, TO Meservy, WB Tayler… - Management …, 2024 - pubsonline.informs.org | 2024 | cited by 9)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3659646
+   … Attribute substitution also posits, however, that surrogation … -yet small stream of accounting literature that examines the … Follow-up direct comparisons showed that the differences in …
+
+3. Prompting Away Fixation: How Generative AI Reduces Overreliance on Measured Performance
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5381563
+   (D Fehrenbacher, V van Pelt - Available at SSRN 5381563, 2026 - papers.ssrn.com | 5381)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5381563
+   … Conference of the European Accounting Association Rome 2025 for … The goal of our study is not to disentangle surrogation, ie, the … congruent answers or even steer follow-up responses …
+
+4. Xiaoxing Li Joseph F. Brazel
+   https://foundationforauditingresearch.org/wp-content/uploads/2024/11/2021B01_Li_working-papers_AnUnintendedConsequenceOfFullPopulationTestingOnAuditorsProfessionalSkepticism.pdf
+   (A Gold - foundationforauditingresearch.org)
+   [PDF] https://foundationforauditingresearch.org/wp-content/uploads/2024/11/2021B01_Li_working-papers_AnUnintendedConsequenceOfFullPopulationTestingOnAuditorsProfessionalSkepticism.pdf
+   … may trigger an attribute substitution bias in their evaluation of the evidence (eg, Kahneman … students in a part-time Master’s in Accounting program at a Dutch university. However, since …
+
+5. An Unintended Consequence of Full Population Testing on Auditors' Professional Skepticism
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4989842
+   (X Li, JF Brazel, A Gold - Available at SSRN 4989842, 2025 - papers.ssrn.com | 4989 | cited by 3)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=4989842
+   … could counteract the attribute substitution bias, offering … expressed intent to follow up specifically on this industry growth red flag, … of incentive compensation on strategy surrogation. The …
+
+6. Derivative Complexity as a Determinant of Perceived Risk
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3570998
+   (MT Durney, R Libby, FBG Silva - Available at SSRN 3570998, 2023 - papers.ssrn.com | 3570 | cited by 3)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3570998
+   … in the accounting literature (eg, Choi, Hecht, and Tayler 2012, … on attribute substitution theory to posit that derivative investors … Follow-up simple effects clarify the nature of the interaction. …
+
+7. All about the Numb3rs? The Effects of Quantification within Narrative Disclosures on Non-professional Investors' Willingness to Invest
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3293549
+   (KA Bauch - The Effects of Quantification within Narrative …, 2019 - papers.ssrn.com | 2019 | cited by 1)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3293549
+   … Drawing on attribute substitution theory, I predict and find that when favorable information … 15 When using a conventional ANOVA with follow-up contrasts instead, I obtain directionally …
+
+8. Contextual Predictors of Hospitalization and Quality of Life among People on Hemodialysis
+   https://jscholarship.library.jhu.edu/items/5c13f718-65b6-4285-b97f-be628a2ee738
+   (KS Taylor - 2022 - jscholarship.library.jhu.edu | 2022)
+   [PDF] https://jscholarship.library.jhu.edu/bitstreams/0ec9a8b2-1154-49e3-901e-45cdbad2e424/download
+   … months of study follow up, we applied Cox regression and multivariate linear regression models … prospective cohort study with 25 years of follow up, Black participants had higher ESKD …
+
+9. Critical Evaluation and Recommendations: Performance Measurement for a Defense Industry Alaska Native Corporation
+   https://search.proquest.com/openview/b38ca2f9403198013cc78c345456dd96/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (L Davis - 2022 - search.proquest.com | 2022)
+   … , surrogation can occur whereby managers lose sight of the strategic objective of a metric and instead focus on the metric itself (Choi et al.… Prompts and follow-up questions were tailored …
+
+10. Addition of metastasis-directed therapy to standard-of-care systemic therapy for oligometastatic pancreatic ductal adenocarcinoma (EXTEND): Results of a …
+   http://files.oncologymeetings.org.s3.amazonaws.com/prod/s3fs-public/2024-01/GI24-Pancreatic-Cancer.pdf
+   (EB Ludmir, AD Sherry, BM Fellman… - J Clin …, 2024 - files.oncologymeetings.org.s3 … | 2024 | cited by 7)
+   [PDF] http://files.oncologymeetings.org.s3.amazonaws.com/prod/s3fs-public/2024-01/GI24-Pancreatic-Cancer.pdf
+   … sion or death; median follow-up time for censored patients … from March 2015 to August 2020. The primary endpoints were … were identified from Jan 2022 to Dec 2022 in our EMR system. …
+
+11. A narrative review of the role of diet and lifestyle factors in the development and prevention of endometrial cancer
+   https://www.mdpi.com/2072-6694/13/9/2149
+   (HK Yasin, AH Taylor, T Ayakannu - Cancers, 2021 - mdpi.com | 2021 | cited by 68)
+   … , is the most common type of EC and accounts for 80–90% of … , which may be a surrogate marker for insulin resistance, has … the control group), with incomplete follow-up [389]. In the USA…
+
+12. Atrial fibrillation occurring during acute hospitalization: a scientific statement from the American Heart Association
+   https://www.ahajournals.org/doi/abs/10.1161/CIR.0000000000001133
+   (JY Chyou, E Barkoudah, JW Dukes, LB Goldstein… - Circulation, 2023 - ahajournals.org | 2023 | cited by 126)
+   [PDF] https://www.ahajournals.org/doi/pdf/10.1161/CIR.0000000000001133
+   … and over long-term follow-up. A framework of substrates and … bypass grafting and aortic valve replacement, and 64% of … and mean arterial pressure as surrogates for optimal output and …
+
+13. Understanding Online Discussion Experiences of Blind Screen Reader Users
+   https://www.tandfonline.com/doi/abs/10.1080/10447318.2025.2589865
+   (MJ Ferdous, A Kolgar Nayak, Y Prakash… - … Journal of Human …, 2025 - Taylor & Francis | 2025 | cited by 3)
+   … We also posed follow-up clarification questions for responses that were unclear or … First, our interview-based methodology elicited first-hand lived-experience accounts that uncovered …
+
+14. Predicting metalwork following posterior fixation of thoracolumbar fractures
+   https://www.tandfonline.com/doi/abs/10.1080/02688697.2023.2249550
+   (SY Phang, C McCulloch, C Barrett - British Journal of Neurosurgery, 2025 - Taylor & Francis | 2025 | cited by 3)
+   … with at least 2 years follow up. Data was collected through … (mm) was used as a surrogate marker for obesity. This was … -HU) was used as a surrogate marker for muscle density: The …
+
+15. Identifying Sources of Missing Heritability and Translating Genomic Variation in Nicotine Metabolism
+   https://search.proquest.com/openview/f359e3e79369c66e97234175aec59d9c/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (AY Elboraie - 2022 - search.proquest.com | 2022)
+   [PDF] https://utoronto.scholaris.ca/bitstreams/3d042ebe-c7af-4488-a75e-da01f096191b/download
+   Cigarette smoking continues to be a leading cause of preventable death. The rate of nicotine’s metabolic inactivation is mediated predominately by CYP2A6 enzyme activity, …
+
+16. Simulacrum of stories: Examining large language models as qualitative research participants
+   https://dl.acm.org/doi/abs/10.1145/3706598.3713220
+   (S Kapania, W Agnew, M Eslami, H Heidari… - Proceedings of the 2025 …, 2025 - dl.acm.org | 2025 | cited by 61)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3706598.3713220
+   … for participants enacts the surrogate efect, raising ethical and … accounts in their training data, regardless of whether those … of responses and ask efective follow-up questions. Some …
+
+17. Metabolomic analysis points to bioactive lipid species and acireductone dioxygenase 1 (ADI1) as potential therapeutic targets in poor prognosis endometrial …
+   https://www.mdpi.com/2072-6694/14/12/2842
+   (S Gatius, M Jove, C Megino-Luque, M Alberti-Valls… - Cancers, 2022 - mdpi.com | 2022 | cited by 13)
+   … diagnosed cases and 97,370 deaths in 2020 [1]. Additionally, … Duration of follow up was defined as time from diagnosis to … been frequently used as a surrogate marker in SC and EEC [8]…
+
+18. Beyond the heart: the predictive role of coronary artery calcium scoring in non-cardiovascular disease risk stratification
+   https://www.mdpi.com/2075-4418/14/21/2349
+   (V Cortiana, H Vaghela, R Bakhle, T Santhosh… - Diagnostics, 2024 - mdpi.com | 2024 | cited by 17)
+   … [41] as reported by a 10.7-year follow-up study which found a strong association between CAC … This finding is in contrast to a 14.7-year follow-up study (n = 9715) that suggested a CAC …
+
+19. Adaptive Ketogenic–Mediterranean Protocol (AKMP) in Real Clinical Practice: 14-Week Pre–Post Cohort Study on Glucolipid Markers and Safety
+   https://www.mdpi.com/2072-6643/17/22/3559
+   (C García-Gorrita, N San Onofre, JF Merino-Torres… - Nutrients, 2025 - mdpi.com | 2025 | cited by 1)
+   … Collectively, this pathophysiological cluster accounts for a substantial portion of … week and at approximately the same time throughout follow-up, in order to standardize measurements (…
+
+20. Spectroscopic Studies of Transmembrane Helical Peptides & LC-MS/MS Method Development and Validation for PFAS Quantitation
+   https://search.proquest.com/openview/696b4b99a79ff7cf6229e13c1a215814/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (X Wei - 2022 - search.proquest.com | 2022 | cited by 1)
+   … The number of electrons keeps increasing by hitting one dynode and the follow-up other. As a result, the signal is amplified to a detectable level. The electron cascade is finally recorded …
+
+21. Metabolomic Analysis Points to Bioactive Lipid Species and Acireductone Dioxygenase 1 (ADI1) as Potential Therapeutic Targets in Poor Prognosis …
+   https://repositori.udl.cat/bitstream/10459.1/84493/6/032655.pdf
+   (S Gatius Calderó, M Jové Font, C Megino-Luque… - 2022 - repositori.udl.cat | 2022)
+   [PDF] https://repositori.udl.cat/bitstream/10459.1/84493/6/032655.pdf
+   … diagnosed cases and 97,370 deaths in 2020 [1]. Additionally, … Duration of follow up was defined as time from diagnosis to … been frequently used as a surrogate marker in SC and EEC [8]…
+
+22. Predictive modeling of post radiation-therapy recurrence for gynecological cancer patients using clinical and histopathology imaging features
+   
+   (Y Zou - 2023 - McGill University | 2023 | cited by 2)
+   [PDF] https://mcgill.scholaris.ca/bitstreams/359ec839-6210-48b7-b029-3f9d61a8a079/download
+
+23. Subjective Observation of Loss of Subcutaneous Fat and Muscle Tissue–Is that the Answer to Pediatric Hospital Malnutrition Screening?
+   https://search.proquest.com/openview/0cc1eba388d27168623a59de9a89494d/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (GC Barcus - 2022 - search.proquest.com | 2022)
+   [PDF] https://digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=4033&context=theses
+   Background: Hospital malnutrition is a prevalent issue with critically ill pediatric patients being at increased risk for nutritional loss. Nutritional risk screening has been associated with …
+
+24. Nickel-Catalyzed Reductive Hydrocyanations of Alkynes and the Photochemical Synthesis of Siloxycyclopropylboronic Esters
+   https://search.proquest.com/openview/af979032c7d6f0922e6a400e8463aced/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (AF Palermo - 2024 - search.proquest.com | 2024)
+   [PDF] https://utoronto.scholaris.ca/bitstreams/f179fe1a-af71-4ca6-b10f-0fb7735d2b9d/download
+   … Tyler, I did my absolute best to counter your strong-willed opinions and personality so that … A follow-up study in 2013 by Louie and coworkers addressed the fact that while isolated …
+
+25. The role of NSD1 in oral squamous homeostasis and HNSCC tumorigenesis
+   https://search.proquest.com/openview/a418ba980921330ac56d315f2bd246ad/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (EM Goldberg - 2022 - search.proquest.com | 2022)
+   [PDF] https://academiccommons.columbia.edu/doi/10.7916/1y68-sc36/download
+   … dosage effect of NSD1 accounts for the spectrum of presentations attributed to NSD1related … 4NQO is a DNA adduct-forming agent that acts as a surrogate for tobacco exposure, a major …
+
+26. Appendix 1. Ovarian Cancer Evidence Review Conference Attendees
+   https://cdn-links.lww.com/permalink/aog/d/aog_142_1_2023_04_24_burke_22-1529_sdc1.pdf
+   (E Barrows, R Brooks, K Gecsi, K Huber-Keener… - 2023 - cdn-links.lww.com | 2023)
+   [PDF] https://cdn-links.lww.com/permalink/aog/d/aog_142_1_2023_04_24_burke_22-1529_sdc1.pdf
+   … new cases will occur in 2022, accounting for 2.1% of female … 12,810 women will die from ovarian cancer in the US in 2022.… of follow-up (hazard ratio [HR] 0.60, 95% CI 0.38–0.96). …
+
+27. Plasma and Liver Metabolomic Profiling in Hispanic and Caucasian Subjects with
+   https://escholarship.org/content/qt6kp6x4hg/qt6kp6x4hg.pdf?v=lg
+   (T Mazi - 2022 - escholarship.org | 2022)
+   [PDF] https://escholarship.org/content/qt6kp6x4hg/qt6kp6x4hg.pdf?v=lg
+   … presence of hepatocellular lipid droplets, accounting for >5% the total … was projected to be main indication in the US by 2020 [146]. … of NAFLD shown in long term follow up studies [160]. …
+
+28. Plasma and Liver Metabolomic Profiling in Hispanic and Caucasian Subjects with Nonalcoholic Fatty Liver Disease
+   https://escholarship.org/uc/item/6kp6x4hg
+   (T Mazi - 2022 - escholarship.org | 2022)
+   [PDF] https://escholarship.org/content/qt6kp6x4hg/qt6kp6x4hg_noSplash_519f7e549c1df4e9da87d68aa1e5c9a1.pdf
+   … presence of hepatocellular lipid droplets, accounting for >5% the total … was projected to be main indication in the US by 2020 [146]. … of NAFLD shown in long term follow up studies [160]. …
+
+29. Exploring Body Composition Ratios and Parameters of Bone Health Across Populations
+   https://search.proquest.com/openview/d5aa24a5a4b3cc54c26d4b4ddc9ba29f/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (HE Westerberg - 2025 - search.proquest.com | 2025)
+   [PDF] https://conservancy.umn.edu/bitstreams/1a84afd7-c14d-4407-9c79-a3b5de6028b9/download
+   This dissertation explores novel bone health measures across a variety of high-risk populations including adults with obesity, collegiate track and field athletes, and postmenopausal …
+
+30. Applications and limitations of the passenger hypothesis for HIV reservoir persistence and cure
+   https://journals.asm.org/doi/abs/10.1128/jvi.00714-25
+   (JT Schiffer, JC Mudd, AAR Antar, AM Spivak… - Journal of …, 2025 - journals.asm.org | 2025 | cited by 3)
+   [PDF] https://journals.asm.org/doi/pdf/10.1128/jvi.00714-25
+   … The quantity of proviral molecules can therefore be used as a convenient surrogate for the … suggest it accounts for a minority of reservoir cell formation during sustained ART (86, 90). …
+
+31. Predictive Modelling of Post Radiation Therapy Recurrence for Gynecological Cancer Patients
+   https://search.proquest.com/openview/e73102b7c9d124efa918c45b3669503e/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (Y Zou - 2022 - search.proquest.com | 2022)
+   … diffuse positivity in the cervix as a surrogate marker [93]. This is … This is why p16 diffuse positivity is a surrogate marker for … = 59.5 years) with a median follow-up time of 25.7 months were …
+
+32. How intended pathway information shared via an augmented reality HUD can assist in semi-automated driving
+   https://eprints.qut.edu.au/234982
+   (R Swain - 2022 - eprints.qut.edu.au | 2022)
+   [PDF] https://eprints.qut.edu.au/234982/1/Ritwik_Swain_Thesis.pdf
+   … Follow up studies could involve exploring how the AR-HUD designs affect hazard perception, performance in take-over requests, and how the AR-HUD affects situational awareness …
+
+33. The Liver-Heart Axis: A Narrative Review of Clinical Implications of the MASLD Redefinition for Internists
+   https://www.asidejournals.com/index.php/Gastroenterology/article/view/446
+   (HA Abdou, SA Omar - ASIDE Gastroenterology, 2026 - asidejournals.com | 2026)
+   [PDF] https://www.asidejournals.com/index.php/Gastroenterology/article/download/446/184
+   … in MASLD patients, accounting for approximately 4050% of … ): Measures liver stiffness as a surrogate for fibrosis; cutoff < 8 … up to 33 years of follow-up. Hepatology. 2015;61(5):1547-54. …
+
+34. Crosstalk of Myotubularin-related protein 7 with RAS/WNT Driver Pathways in Colorectal Cancer
+   https://archiv.ub.uni-heidelberg.de/volltextserver/36681/
+   (Y Yu - 2025 - archiv.ub.uni-heidelberg.de | 2025)
+   [PDF] https://archiv.ub.uni-heidelberg.de/volltextserver/36681/1/Final%20version%20of%20thesis%20Yanxiong%20Yu%2014.05.2024%20.pdf
+   … of CRC in both sexes in 2020, which are shown in different colors, are age-adjusted based on the global standard population per 100,000, as reported by GLOBOCAN 2020 [3].Studies …
+
+35. The Impact of Ketogenic Diet on Lipid Metabolism: Insights from Genetically Diverse Mouse Models and Human Data
+   https://deepblue.lib.umich.edu/bitstreams/cef99bcc-0351-43a2-a067-502b075327da/download
+   (C Cousineau - 2024 - deepblue.lib.umich.edu | 2024)
+   [PDF] https://deepblue.lib.umich.edu/bitstreams/cef99bcc-0351-43a2-a067-502b075327da/download
+   … A recent meta-analysis by Choi and colleagues analyzed eight trials reporting weightrelated parameter changes [Choi 2020]. The researchers demonstrated that the individuals who …
+
+36. E-cigarettes and smoking cessation
+   https://link.springer.com/chapter/10.1007/978-3-031-47087-5_2
+   (SC Hampsher-Monk, JE Prieger… - … II: Clearing the Air on E …, 2024 - Springer | 2024 | cited by 2)
+   … For abstinence rates at one-half to two years follow-up, meta-… a third of quit attempts in 2020 involved vaping products, compared … Correlations are notoriously poor surrogates for causal …
+
+37. Cancer epidemiology
+   https://link.springer.com/content/pdf/10.1007/978-1-4614-6625-3_36-1.pdf
+   (P Boffetta, G Collatuzzo - Handbook of epidemiology, 2023 - Springer | 2023 | cited by 4)
+   … Cohort studies with repeated samples of the target tissue or surrogate material (typically … Besides the rutinary checks undergone by oncological patients for the follow-up of their first …
+
+38. The comings and goings of cell-free DNA: Biological and clinical implications
+   https://www.cell.com/med/fulltext/S2666-6340(25)00353-8
+   (Y Malki, Q Zhou, P Jiang, YMD Lo - Med, 2026 - cell.com | 2026 | cited by 18)
+   [PDF] https://www.cell.com/med/pdf/S2666-6340(25)00353-8.pdf
+   … Higher cfDNA concentrations recorded at longitudinal follow-up time points in septic and COVID-19 patients were generally associated with more severe disease conditions and worse …
+
+39. Beyond Athletic Performance: The Emerging Role of Creatine Supplementation in Clinical Medicine—A Narrative Review
+   https://apcz.umk.pl/QS/article/view/71160
+   (M Zimowski, Z Panas, I Ślinko, G Kuliś, E Dryl-Jarmoc… - Quality in Sport, 2026 - apcz.umk.pl | 2026)
+   [PDF] https://apcz.umk.pl/QS/article/download/71160/46452
+   … and its serum concentration is widely used as a clinical surrogate of glomerular filtration rate [2,5]. … What is most needed are studies with adequately long follow-up periods, standardised …
+
+40. Architecture, a technique of environmental governance
+   https://search.proquest.com/openview/6735a4f307642182d2d406d209ea23d0/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (G Fox - 2023 - search.proquest.com | 2023 | cited by 1)
+   This dissertation traces the emergence and development of the environmental-managerial project by which federal bureaucracy in the United States sought to administer the visual …
+
+41. Regulation of Metabolic Health by Dietary Protein and Isoleucine
+   https://search.proquest.com/openview/4e8a39690018e151dd0b46dac4990b10/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (ME Trautman - 2024 - search.proquest.com | 2024 | cited by 1)
+   … manuscript was originally published in Aging Cell (2022), and has been slightly modified … proline, and aspartate in circulation, though follow-up studies are needed to determine how this …
+
+42. Eukaryotic Elongation Factor 1A1 in Non-Alcoholic Fatty Liver Disease and Metabolism
+   https://search.proquest.com/openview/fba537ad5ef6c64615cdb274cc0ba6c0/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (RB Wilson - 2023 - search.proquest.com | 2023)
+   … Taylor Woolnough contributed to certain cell experiments. Dr. Richard Zhang assisted with … mortality in NAFLD after up to 33 years of follow-up. Hepatology. 2015;61: 1547–1554. …
+
+43. Nicotine use among children and young people
+   https://vidensraad.dk/sites/default/files/node/field_downloads/vff_nicotine_rapport_DIGI_spread_01.pdf
+   (JT Andreasen, LS Bast, L Lund, C Pisinger - vidensraad.dk)
+   [PDF] https://vidensraad.dk/sites/default/files/node/field_downloads/vff_nicotine_rapport_DIGI_spread_01.pdf
+   … that do not contain tobacco are coined “tobacco surrogates”. … compared through one or more follow-up studies. One example … study; the first in early 2020; ie before the first measures of …
+
+44. The effects of the heparan mimetic PG545 on cell growth and chemoresistance in Endometrial Cancer
+   https://edoc.ub.uni-muenchen.de/33847/6/Hoffmann_Robert.pdf
+   (RM Hoffmann - 2024 - edoc.ub.uni-muenchen.de | 2024)
+   [PDF] https://edoc.ub.uni-muenchen.de/33847/6/Hoffmann_Robert.pdf
+   … EC accounted for 12,650 deaths in the United States in 2020 a 15% increase from 2012 [3]. The cases of Endometrial Cancer likely continue to rise as risk factors for its development …
+
+45. Deflectometry for Astronomical Reflectors and Industrial Optics
+   https://search.proquest.com/openview/59a453d8dbd8cbc8dd8d3520baae3530/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (H Quach - 2022 - search.proquest.com | 2022)
+   … This is because large mem- brane reflectors achieve identical f/#’s to smaller ones (such as our 1m surrogate) at a much lower internal pressure ( 10 Pa), and will therefore be more …
+
+46. Development of the Molecular Biology of HIV-Seek: A Novel Approach to Characterizing Latently Infected CD4+ T Cells
+   https://search.proquest.com/openview/26f247aec82c7a07b8cc3b5a087c73c3/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (ER Gamez - 2022 - search.proquest.com | 2022)
+   [PDF] https://scholarspace.manoa.hawaii.edu/bitstreams/3a6caf2c-78d9-4ef3-9bdb-e2d1d85c57ec/download
+   … P, where group M accounts for the … In 2020, UNAIDS estimated that 37.7 million people are living with HIV globally and a total of 1.5 million people were newly infected with HIV in 2020 […
+
+47. Leveraging Chylomicron-Mediated Transport to Advance Long-Acting Oral HIV Therapies
+   https://search.proquest.com/openview/0f64f11a7b7c1eb89ab19290c6095b44/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (HB Gold - 2025 - search.proquest.com | 2025)
+   … Given that lymph drains into the venous system upstream of pulmonary circulation, lung concentrations were used as a surrogate marker for lymphatic transport. These data offer the first …
+
+48. Development of a High Throughput High Content Imaging Viral Titer Assay to Investigate the Effect of Substance Misuse on HIV-1 Replicative Dynamics in hMDMs
+   https://search.proquest.com/openview/7f7094283cd1220c759e49f35f345e84/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (T LuPone - 2023 - search.proquest.com | 2023)
+   [PDF] https://researchdiscovery.drexel.edu/esploro/fulltext/doctoral/Development-of-a-High-Throughput-High/991021819115504721?repId=12524101570004721&mId=13524101560004721&institution=01DRXU_INST
+   Over 38 million people are infected with HIV-1 worldwide and in the past four decades of the HIV-1 pandemic there have been numerous failures and successes. Most notably, the …
+
+49. A Comprehensive Overview
+   https://books.google.com/books?hl=en&lr=&id=2i-wEAAAQBAJ&oi=fnd&pg=PA421&dq=surrogation+accounting+Choi+Hecht+Tayler+follow-up+2020+2021+2022+attribute+substitution&ots=5DVGTgdres&sig=TmlfQ49LdIRpEMBSV6rycDGqmDA
+   (A Hogg, TK Frank van Landeghem… - Development of the …, 2023 - books.google.com | 2023)
+   … A landmark follow-up study by the same group [13] focused exclusively on MB demonstrated … The combination of large cell and anaplastic components is often seen and accounts for …
+
+===== Query 4/4: surrogation origins Hopwood Luft Bloomfield performance measure construct substitution =====
+
+1. Surrogation fundamentals: Measurement and cognition
+   https://publications.aaahq.org/jmar/article-abstract/34/1/9/507
+   (PW Black, TO Meservy, WB Tayler… - Journal of …, 2022 - publications.aaahq.org | 2022 | cited by 21)
+   [PDF] https://scholarsarchive.byu.edu/cgi/viewcontent.cgi?article=9139&context=facpub
+   … we view surrogation as a specific form of attribute substitution … This accessible measure can then be mentally substituted for … measurement of a construct of interest will lead to surrogation…
+
+2. Lost in translation: The effects of incentive compensation on strategy surrogation
+   https://publications.aaahq.org/accounting-review/article-abstract/87/4/1135/3495
+   (J Choi, GW Hecht, WB Tayler - The Accounting Review, 2012 - publications.aaahq.org | 2012 | cited by 138)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=1438212
+   … performance measures affects managers’ propensity to use measures as surrogates for strategic constructs… Although we rely on the attribute substitution framework to develop our theory…
+
+3. Psychology in management accounting and control research: an overview of the recent literature
+   https://www.econstor.eu/handle/10419/288283
+   (LM Wibbeke, M Lachmann - Journal of Management Control, 2020 - econstor.eu | 2020 | cited by 70)
+   [PDF] https://www.econstor.eu/bitstream/10419/288283/1/s00187-020-00302-3.pdf
+   … rankings as well as diverse outlets in terms of origins, publishing authors, and topics.Our … performance measurement systems. In order to contextualize the findings of our content …
+
+4. The Routledge companion to behavioural accounting research
+   https://api.taylorfrancis.com/content/books/mono/download?identifierName=doi&identifierValue=10.4324/9781315710129&type=googlepdf
+   (T Libby, L Thorne - 2018 - api.taylorfrancis.com | 2018 | cited by 30)
+   [PDF] https://www.academia.edu/download/113491796/9781315710129-3.pdf
+   … Chapter 9 describes how to create valid and reliable measures of accounting constructs. Chapter 10 discusses the development and use of manipulation and attention checks in …

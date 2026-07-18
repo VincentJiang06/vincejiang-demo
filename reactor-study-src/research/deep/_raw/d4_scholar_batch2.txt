@@ -1,0 +1,1808 @@
+===== Query 1/6: MMLU errors MMLU-Redux benchmark errors ground truth wrong =====
+
+1. Are we done with mmlu?
+   https://aclanthology.org/2025.naacl-long.262/
+   (AP Gema, JOJ Leang, G Hong, A Devoto… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 214)
+   [PDF] https://aclanthology.org/2025.naacl-long.262.pdf
+   … the benchmarks used for evaluating NLP models. … the error statistics of MMLU-Redux and use MMLU-Redux to re… contain errors, where 30% examples have a wrong ground truth, and 15…
+
+2. Right answer, wrong score: Uncovering the inconsistencies of LLM evaluation in multiple-choice question answering
+   https://aclanthology.org/2025.findings-acl.950/
+   (FM Molfese, L Moroni, L Gioffré, A Scirè… - Findings of the …, 2025 - aclanthology.org | 2025 | cited by 32)
+   [PDF] https://aclanthology.org/2025.findings-acl.950.pdf
+   … extractors are prone to systematic errors. Moreover, we reveal a … of the eight LLMs on MMLU-Redux, OBQA, and ARC using … matches the ground truth for a given sample in the dataset. …
+
+3. Do large language model benchmarks test reliability?
+   https://arxiv.org/abs/2502.03461
+   (J Vendrow, E Vendrow, S Beery, A Madry - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 63)
+   [PDF] https://arxiv.org/pdf/2502.03461?
+   … MMLU-Redux on all but one example, on which we find that one of their human experts accidentally re-annotated a correct solution to make it incorrect… ’s the ground truth label error rate …
+
+4. Large language model benchmarks do not test reliability
+   https://openreview.net/forum?id=XSeN6xZtZ9
+   (J Vendrow, E Vendrow, S Beery… - Neurips Safe Generative …, 2024 - openreview.net | 2024 | cited by 6)
+   [PDF] https://openreview.net/pdf?id=XSeN6xZtZ9
+   … ’s the ground truth label error rate … MMLU-Redux on all but one example, on which we find that one of their human experts accidentally re-annotated a correct solution to make it incorrect…
+
+5. Data laundering: Artificially boosting benchmark results through knowledge distillation
+   https://aclanthology.org/2025.acl-long.407/
+   (J Mansurov, A Sakip, AF Aji - … of the 63rd Annual Meeting of the …, 2025 - aclanthology.org | 2025 | cited by 10)
+   [PDF] https://aclanthology.org/2025.acl-long.407.pdf
+   … • Lhard represents the cross-entropy loss with ground truth … MMLU-Redux The results for the MMLURedux benchmark … Private benchmarks limit error analysis and dataset refinement…
+
+6. The good, the bad, and the greedy: Evaluation of llms should not ignore non-determinism
+   https://aclanthology.org/2025.naacl-long.211/
+   (Y Song, G Wang, S Li, BY Lin - … of the 2025 Conference of the …, 2025 - aclanthology.org | 2025 | cited by 185)
+   [PDF] https://aclanthology.org/2025.naacl-long.211.pdf
+   … For MMLU-Redux, instead of using the next token probability of the … pattern with its groundtruth-based benchmarks. While … generations for the same question, the error rate is 89%. …
+
+7. Chatbench: From static benchmarks to human-ai evaluation
+   https://aclanthology.org/2025.acl-long.1262/
+   (S Chang, A Anderson, JM Hofman - … of the 63rd Annual Meeting of …, 2025 - aclanthology.org | 2025 | cited by 26)
+   [PDF] https://aclanthology.org/2025.acl-long.1262.pdf
+   … questions and manually annotated them for errors. While we … passed MMLU-Redux’s inspection and ours (with o1’s help). … AI’s responses shift from incorrect or unclear to correct over …
+
+8. From KMMLU-Redux to KMMLU-Pro: A Professional Korean Benchmark Suite for LLM Evaluation
+   https://arxiv.org/abs/2507.08924
+   (S Hong, S Kim, G Son, S Kim, Y Hong, J Lee - arXiv preprint arXiv …, 2025 - arxiv.org | 2025)
+   [PDF] https://arxiv.org/pdf/2507.08924
+   … the errors mentioned above. We describe the details of the investigation of dataset errors in … cies in the LLM’s performance between erroneous and correct samples. Notably, the …
+
+9. Fantastic bugs and where to find them in AI benchmarks
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/5b44b99d012922011f0be1031a98c4f9-Abstract-Datasets_and_Benchmarks_Track.html
+   (S Truong, Y Tu, M Hardy… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 7)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/5b44b99d012922011f0be1031a98c4f9-Paper-Datasets_and_Benchmarks_Track.pdf
+   … and introduced MMLU-Redux. Although these approaches … should not be treated as ground truth but rather as a biased … Incorrect answer keys refer to errors in the reference key itself. …
+
+10. Calibration without Ground Truth
+   https://arxiv.org/abs/2601.19862
+   (Y Kong, M Song, Y Wang, Y Wu - arXiv preprint arXiv:2601.19862, 2026 - arxiv.org | 2601)
+   [PDF] https://arxiv.org/pdf/2601.19862
+   … Table 1: Main results on MMLU-Redux and CommonSenseQA. … Error. Our method achieves substantial reductions in calibration error compared to Instruct models across all benchmarks…
+
+11. Sample, Don't Search: Rethinking Test-Time Alignment for Language Models
+   https://arxiv.org/abs/2504.03790
+   (G Faria, NA Smith - arXiv preprint arXiv:2504.03790, 2025 - arxiv.org | 2504 | cited by 14)
+   [PDF] https://arxiv.org/pdf/2504.03790
+   … (GSM8K, MATH500, MMLU-Redux, TruthfulQA, and IFEval) as a … We selected pairs based on ground truth answers.… one ground truth correct answer as preferred and one incorrect …
+
+12. Beyond Benchmarks: Toward Causally Faithful Evaluation of Large Language Models
+   https://openreview.net/forum?id=XAp0VUy20q
+   (Z Tian, W Gao, C Lan, C Wang, L Wang, G Kang… - Forty-third International … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=XAp0VUy20q
+   … nudges the solver toward an incorrect strategy. By providing the … subprocess, and feeds any errors or mismatches back to the … in capturing the performance ground truth, we conducted a “…
+
+13. Benchmarking EngGPT2-16B-A3B against Comparable Italian and International Open-source LLMs
+   https://arxiv.org/abs/2605.07731
+   (A Sassella, A Chizzola, T Bianchi… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.07731
+   … models are checked against a ground truth, and both checks … robust parsing rules to mitigate false negatives caused by … four generative subsets of MMLURedux spanning humanities, …
+
+14. Mmlu-cf: A contamination-free multi-task language understanding benchmark
+   https://aclanthology.org/2025.acl-long.656/
+   (Q Zhao, Y Huang, T Lv, L Cui, Q Sun… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 50)
+   [PDF] https://aclanthology.org/2025.acl-long.656.pdf
+   … , (2) automatic scoring based on groundtruth values, and (3) a … Similarly, when an incorrect choice is replaced, it acted as a … While efforts are made to minimize errors, some may remain, …
+
+15. From KMMLU-REDUX to PRO: A Professional Korean Benchmark Suite for LLM Evaluation
+   https://aclanthology.org/anthology-files/anthology-files/pdf/findings/2025.findings-emnlp.1038.pdf
+   (S Hong, S Kim, G Son, S Kim, Y Hong, J Lee - Safety, 2025 - aclanthology.org | 2025 | cited by 2)
+   [PDF] https://aclanthology.org/anthology-files/anthology-files/pdf/findings/2025.findings-emnlp.1038.pdf
+   … the errors mentioned above. We describe the details of the investigation of dataset errors in … , we observe significant discrepancies in the LLM’s performance between erroneous and …
+
+16. Project MPG: towards a generalized performance benchmark for LLM capabilities
+   https://arxiv.org/abs/2410.22368
+   (L Spangher, T Li, WF Arnold, N Masiewicki… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2410.22368
+   … to be an important yet inaccurate and crude measure of car … The error is 95% confidence intervals described in Section … benchmarks from each cluster: the MMLU-redux global facts, …
+
+17. Global mmlu: Understanding and addressing cultural and linguistic biases in multilingual evaluation
+   https://aclanthology.org/2025.acl-long.919/
+   (S Singh, A Romanou, C Fourrier… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 247)
+   [PDF] https://aclanthology.org/2025.acl-long.919.pdf
+   … We introduce GlobalMMLU, an improved benchmark with higherquality translations and dedicated CS and CA subsets for deeper analysis. To enhance translation quality, we …
+
+18. Enabling robust and reliable commonsense reasoning in large language models
+   https://tesidottorato.depositolegale.it/handle/20.500.14242/358427
+   (FM Molfese - 2026 - tesidottorato.depositolegale.it | 2026)
+   [PDF] https://tesidottorato.depositolegale.it/bitstream/20.500.14242/358427/1/Tesi_dottorato_Molfese.pdf
+   … steps, and that such errors matter for safety, robustness, and … answer, and goldi is the ground truth for instance i. While … /incorrect) has made it a standard across major benchmarks …
+
+19. Realcritic: Towards effectiveness-driven evaluation of language model critiques
+   https://arxiv.org/abs/2501.14492
+   (Z Tang, Z Li, Z Xiao, T Ding, R Sun, B Wang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 10)
+   [PDF] https://arxiv.org/pdf/2501.14492
+   … whether the solutions are correct or incorrect. The quality of the … evaluators to provide ground truth assessments of critique … found to be incorrect, first identify the errors in the reasoning …
+
+20. Lost in the Tower of Babel: The Adverse Effects of Incidental Multilingualism in LLMs
+   https://arxiv.org/abs/2605.01224
+   (A Mukherjee, C Meng, A Anastasopoulos - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.01224
+   … responds in the wrong language 40+ million times per day. … code passes the benchmark unit tests, as our metrics. … We refer to such failures as the Tower of Babel (ToB) problem: …
+
+21. Verifying the Subjective: Structured Multilingual Rewards for Low-Resource Alignment
+   https://aclanthology.org/2026.findings-acl.1174/
+   (J Sha, M Zhu - Findings of the Association for Computational …, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.findings-acl.1174.pdf
+   … checkpoints, providing the ground truth to stabilize subjective, … coherence, correctness, error detection, and conciseness in the … By ensuring a mix of correct and incorrect reasoning/…
+
+22. EngGPT2: Sovereign, Efficient and Open Intelligence
+   https://arxiv.org/abs/2603.16430
+   (G Ciarfaglia, A Rosanova, S Cipolla, J Bartoli… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2603.16430
+   … As shown in Table 7, the SFT stage yields only marginal improvements on broad knowledge benchmarks such as MMLU-Pro and MMLU-Redux, while producing a substantial gain on …
+
+23. When Does Context Help? Error Dynamics of Contextual Information in Large Language Models
+   https://arxiv.org/abs/2602.08294
+   (D Wang, X Zhang, K Xu, Q Zhu, W Che… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2602.08294
+   … Setup We first filter the bad cases under the no-context setting, ensuring … MMLU-Redux MMLU-Redux is a cleaned, manually reannotated variant of the widely used MMLU benchmark…
+
+24. Drop the Act: Probe-Filtered RL for Faithful Chain-of-Thought Reasoning
+   https://arxiv.org/abs/2605.11467
+   (S Parekh - arXiv preprint arXiv:2605.11467, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.11467
+   … On MMLU-Redux, ProFIL halves theater at exact accuracy … matches ground truth, so any earlier reasoning, including wrong … the error bar is the standard deviation or the standard error of …
+
+25. Are We Done with MMLU?
+   https://ui.adsabs.harvard.edu/abs/2024arXiv240604127P/abstract
+   (A Pradipta Gema, JOJ Leang, G Hong… - arXiv e …, 2024 - ui.adsabs.harvard.edu | 2024)
+   … numerous ground truth errors that obscure the true capabilities of LLMs. … Using MMLU-Redux, we demonstrate significant … benchmark. https://huggingface.co/datasets/edinburgh-dawg/…
+
+26. Bounded Difference Concentration for Infinitely Exchangeable Sequences with Applications to AI Benchmark Uncertainty
+   https://arxiv.org/abs/2606.17426
+   (F Lin, S Frei, VH de la Pena - arXiv preprint arXiv:2606.17426, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.17426
+   … Dataset-quality work such as MMLU-Redux further shows that benchmark uncertainty also includes annotation and construction error, not only sampling variability Gema et al. [2025]. In …
+
+27. HyPAC: Cost-Efficient LLMs-Human Hybrid Annotation with PAC Error Guarantees
+   https://arxiv.org/abs/2602.02550
+   (H Zeng, H Huang, X Qu, J Huang, B Jing… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2602.02550
+   … across diverse benchmark datasets including general tasks (MMLURedux (Gema et al.… we do not know the true risk R(u1,u2) without access to the ground truth labels y for all inputs. …
+
+28. Benchguard: Who guards the benchmarks? automated auditing of llm agent benchmarks
+   https://arxiv.org/abs/2604.24955
+   (X Tu, T Wang, K Huang, Y Qu, S Mostafavi - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2604.24955
+   … exist beyond our validated ground truth. Table 2 summarizes … Your job is to find bugs in the BENCHMARK (not in agents). … contradicts the specification, an incorrect algorithm is used, or …
+
+29. Llm-evolve: Evaluation for llm's evolving capability on benchmarks
+   https://aclanthology.org/2024.emnlp-main.940/
+   (J You, M Liu, S Prabhumoye, M Patwary… - Proceedings of the …, 2024 - aclanthology.org | 2024 | cited by 18)
+   [PDF] https://aclanthology.org/2024.emnlp-main.940.pdf
+   … feedback derived from groundtruth benchmark labels against feedback generated by the LLMs themselves. Despite this exploration, our primary results focus on benchmark-derived …
+
+30. Active Testing of Large Language Models via Approximate Neyman Allocation
+   https://arxiv.org/abs/2605.10075
+   (Z Liu, J Zhang, C Liu, Y Zhu - arXiv preprint arXiv:2605.10075, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.10075
+   … but rewrites each input into a True/False proxy task with first-… the squared error of its risk estimate against the ground-truth … of our allocation strategy on MMLURedux using the Qwen-…
+
+31. Comat: Chain of mathematically annotated thought improves mathematical reasoning
+   https://aclanthology.org/2025.emnlp-main.1024/
+   (JOJ Leang, AP Gema, SB Cohen - Proceedings of the 2025 …, 2025 - aclanthology.org | 2025 | cited by 23)
+   [PDF] https://aclanthology.org/2025.emnlp-main.1024.pdf
+   … across mathematical subjects of the MMLU-Redux benchmark. … In cases where the final answer is incorrect, each step can … ’s answers align with the ground truth. Further details about …
+
+32. Tahakom LLM Guidelines and Recipes: From Pre-training Data to an Arabic LLM
+   https://arxiv.org/abs/2510.13481
+   (A AlOtaibi, L Alyahya, R Alshabanah… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025)
+   [PDF] https://arxiv.org/pdf/2510.13481?
+   … , we needed a reliable ground truth for comparison. To address … suitable when minimizing incorrect error flags is prioritized. … ) semantic matching with MMLU-Redux aligned English data…
+
+33. Hieramas: Optimizing intra-node llm mixtures and inter-node topology for multi-agent systems
+   https://arxiv.org/abs/2602.20229
+   (T Yao, Z Li, Z Shen - arXiv preprint arXiv:2602.20229, 2026 - arxiv.org | 2602 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2602.20229
+   … individual node errors—Node 2 produces incorrect output but … We evaluate our approach on three diverse benchmark … graph candidate pool size K on MMLU-Redux, as shown in Table …
+
+34. Refinement-Guided Critique Learning: A Framework for Training Critique Models
+   https://www.sciencedirect.com/science/article/pii/S1566253525010644
+   (C Xiang, J Zheng, X Mu, T Yu, L Zhang, C Sun, L Shi… - Information …, 2025 - Elsevier | 2025)
+   … However, traditional methods face the problem of inaccurate annotation of critique … the critique model’s output scores and ground truth values, with both jointly serving as reward signals. …
+
+35. Tooling or not tooling? the impact of tools on language agents for chemistry problem solving
+   https://aclanthology.org/2025.findings-naacl.424/
+   (B Yu, FN Baker, Z Chen, G Herb, B Gou… - Findings of the …, 2025 - aclanthology.org | 2025 | cited by 37)
+   [PDF] https://aclanthology.org/2025.findings-naacl.424.pdf
+   … wrong knowledge/logic error), or a wrong final option is selected despite of the correct analysis process (the wrong final answer error… understanding and reasoning benchmark for expert …
+
+36. Contextual Drag: How Errors in the Context Affect LLM Reasoning
+   https://arxiv.org/abs/2602.04288
+   (Y Cheng, X Zhu, H Zhao, S Arora - arXiv preprint arXiv:2602.04288, 2026 - arxiv.org | 2602 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2602.04288
+   … of erroneous context persists even after explicit error signals, … ’s answer with ground truth via symbolic verifier (Kydlıcek… to 1F across benchmarks with the exception of MMLU, which is …
+
+37. Improved Large Language Diffusion Models
+   https://arxiv.org/abs/2606.25331
+   (S Nie, Q Min, S Xu, Z Huang, Y Song, Y Shan… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.25331
+   … -task understanding benchmark, and MMLU-Redux [45], an error-corrected re-annotation of … , we use benchmark-specific inference settings. For MMLU and MMLU-Redux, where the …
+
+38. Chatbot Arena Estimate: towards a generalized performance benchmark for LLM capabilities
+   https://aclanthology.org/2025.naacl-industry.77/
+   (L Spangher, T Li, WF Arnold, N Masiewicki… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 4)
+   [PDF] https://aclanthology.org/2025.naacl-industry.77.pdf
+   … The error is 95% confidence intervals described in Section 3.4… From this, we selected representative benchmarks from each cluster: the MMLU-redux global facts, MMLU college …
+
+39. Is Your Language Model Ready for Monetization Decisions?
+   https://aclanthology.org/2026.findings-acl.1708/
+   (J Gao, H Li, T Ortman, Y Gong… - Findings of the Association …, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.findings-acl.1708.pdf
+   … , where models that perform well on MMLU-Redux also tend to perform better on MonBench… sample 500 erroneous predictions and label them into four categories: 1) Reasoning errors, …
+
+40. Aryabhata 2: Scaling Reinforcement Learning for Advanced STEM Reasoning
+   https://arxiv.org/abs/2605.28829
+   (R Rastogi, V Singh, T Chaudhari, S Varma - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.28829
+   … as AIME, HMMT, MMLU-Pro, MMLU-Redux 2.0, and GPQA. … the original answer keys were incorrect or inconsistent. Since … final answer of generated solution matches the ground truth. …
+
+41. Agentic AI Architectures for SOAP Note Generation
+   https://aclanthology.org/2026.bionlp-1.61/
+   (K Hanken - BioNLP 2026, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.bionlp-1.61.pdf
+   … , and is prone to errors that may compromise patient care. … were used for finetuning and benchmarking in this study. The … that draft against the groundtruth SOAP note and current …
+
+42. ReM-MoA: Reasoning Memory Sustains Mixture-of-Agents Scaling
+   https://arxiv.org/abs/2606.24437
+   (H Ping, A Bhattacharjee, P Zhang, S Li, W Yang… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.24437
+   … To address these scaling failures, we propose ReM-MoA, a … variants on three benchmarks (MATH, MMLU-redux, Formal Logic… the student learns to judge without access to ground truth. …
+
+43. LoopTool: Closing the Data–Training Loop for Robust LLM Tool Calls
+   https://aclanthology.org/2026.acl-long.968/
+   (K Zhang, W Liu, W Jiao, K Du, Y Lu… - Proceedings of the …, 2026 - aclanthology.org | 2026 | cited by 3)
+   [PDF] https://aclanthology.org/2026.acl-long.968.pdf
+   … error analysis emessage. Based on the judgment results, we define two key subsets of the evolving dataset: the Prediction Wrong set and the Label Wrong … labeled in ground truth. The …
+
+44. Advancing Oversight Reasoning across Languages for Audit Sycophantic Behaviour via X-Agent
+   https://aclanthology.org/2025.emnlp-main.654/
+   (G Pucci, L Ranaldi - Proceedings of the 2025 Conference on …, 2025 - aclanthology.org | 2025 | cited by 5)
+   [PDF] https://aclanthology.org/2025.emnlp-main.654.pdf
+   … ground truth. In each case, sycophancy is triggered through manipulations of the input that introduce an incorrect … For the tasks closed and open-ended QA tasks (MMLU-Redux, MGSM…
+
+45. Qwen3-coder-next technical report
+   https://arxiv.org/abs/2603.00729
+   (R Cao, M Chen, J Chen, Z Cui, Y Feng, B Hui… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 53)
+   [PDF] https://arxiv.org/pdf/2603.00729
+   … Low-quality web content may contain incorrect information, … MMLU-Redux and GPQA, while remaining close on MMLU, … , 2) the ground truth bug snippet, and 3) the ground truth file …
+
+46. Improving chain-of-thought reasoning via quasi-symbolic abstractions
+   https://aclanthology.org/2025.acl-long.843/
+   (L Ranaldi, M Valentino, A Freitas - … of the 63rd Annual Meeting of …, 2025 - aclanthology.org | 2025 | cited by 53)
+   [PDF] https://aclanthology.org/2025.acl-long.843.pdf
+   … natural language (ie MMLU-Redux) and symbolic reasoning … GPT-4o-mini as a benchmark to evaluate how well the model’… wrong answer the explanations in QuaSAR allow the error to …
+
+47. Rethinking Reasoning Quality in Large Language Models through Enhanced Chain-of-Thought via RL
+   https://arxiv.org/abs/2509.06024
+   (H He, Z Rong, K Ji, C Li, Q Huang, C Xia… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2509.06024?
+   … ] (True, False, or Uncertain), we restrict labels to True/False to … correctness of the response content against the ground truth: … -of-distribution) datasets AIME24 and MMLU-redux [56], our …
+
+48. Verifying the verifiers: Unveiling pitfalls and potentials in fact verifiers
+   https://arxiv.org/abs/2506.13342
+   (W Seo, S Han, J Jung, B Newman, S Lim, S Lee… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 11)
+   [PDF] https://arxiv.org/pdf/2506.13342
+   … examples from 14 distinct benchmarks and construct a … incorrect and there are no debatable points, we consider the instance is misclassified by the fact verification model (Model Errors)…
+
+49. DRIFTLENS: Measuring Memory-Induced Reasoning Drift in Personalized Language Models
+   https://arxiv.org/abs/2607.02374
+   (X Fang, W Xu, Y Ge, Y Xu, S Eckman… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2607.02374
+   … Because these tasks lack groundtruth answers, standard … knowledge on a 1K subset of MMLU-Redux, math rea- … but I’m concerned it might be a mistake that I may need to repay. …
+
+50. Learning multilingual agentic policy to control sycophancy
+   https://aclanthology.org/2026.eacl-long.169/
+   (L Ranaldi, G Pucci - Proceedings of the 19th Conference of the …, 2026 - aclanthology.org | 2026 | cited by 3)
+   [PDF] https://aclanthology.org/2026.eacl-long.169.pdf
+   … For questions without ground truth, we use LLM-as-a-judge … To reduce false positives arising from sampling variance when … For datasets with a gold target a⋆ (MMLU-REDUX, GSM-…
+
+===== Query 2/6: MMLU-Pro robust benchmark harder =====
+
+1. Mmlu-pro: A more robust and challenging multi-task language understanding benchmark
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/ad236edc564f3e3156e1b2feafb99a24-Abstract-Datasets_and_Benchmarks_Track.html
+   (Y Wang, X Ma, G Zhang, Y Ni… - Advances in …, 2024 - proceedings.neurips.cc | 2024 | cited by 2089)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/ad236edc564f3e3156e1b2feafb99a24-Paper-Datasets_and_Benchmarks_Track.pdf
+   … difficult to discern differences in model capabilities. This paper introduces MMLU-Pro, an enhanced dataset designed to extend the mostly knowledge-driven MMLU benchmark by in…
+
+2. Pretraining on the test set is no longer all you need: A debate-driven approach to qa benchmarks
+   https://arxiv.org/abs/2507.17747
+   (L Cao, J Zhao - arXiv preprint arXiv:2507.17747, 2025 - arxiv.org | 2507 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2507.17747
+   … of MMLU-Pro questions, complete with standardized protocols and reference models. Empirical results validate the robustness … of these benchmarks, necessitating increasingly difficult …
+
+3. Rethinking LLMs as Verifiers: When Verification is Harder Than Solving
+   https://openreview.net/forum?id=4jnJjSgQC1
+   (V Srivastava, S Damle, M Padala - ICLR 2026 Workshop on Logical … - openreview.net | 2026)
+   [PDF] https://openreview.net/pdf?id=4jnJjSgQC1
+   … Across multiple benchmarks and model families, we find that LLMs … For MMLU-Pro, we consistently observe that verification accuracy … Mmlu-pro: A more robust and challenging multitask …
+
+4. Score: Systematic consistency and robustness evaluation for large language models
+   https://aclanthology.org/2025.naacl-industry.39/
+   (G Nalbandyan, R Shahbazyan… - Proceedings of the 2025 …, 2025 - aclanthology.org | 2025 | cited by 25)
+   [PDF] https://aclanthology.org/2025.naacl-industry.39.pdf
+   … dataset, we limited our benchmark to the following three open… for the choice order robustness task on MMLU-Pro. The wide … Hence, harder problems mean a more uniform underlying …
+
+5. WiCkeD: A simple method to make multiple choice benchmarks more challenging
+   https://aclanthology.org/2025.acl-short.94/
+   (A Elhady, E Agirre, M Artetxe - … of the 63rd Annual Meeting of the …, 2025 - aclanthology.org | 2025 | cited by 7)
+   [PDF] https://aclanthology.org/2025.acl-short.94.pdf
+   … and more robust. Similarly, Wang et al. (2024) presented MMLU-Pro, a harder version of the MMLU benchmark that replaces noisy questions with harder ones and expands the number …
+
+6. Mmlu-prox: A multilingual benchmark for advanced large language model evaluation
+   https://aclanthology.org/2025.emnlp-main.79/
+   (W Xuan, R Yang, H Qi, Q Zeng, Y Xiao… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 103)
+   [PDF] https://aclanthology.org/2025.emnlp-main.79.pdf
+   … introduces quality variations that are difficult to quantify. These … -focused design of MMLU-Pro while extending its coverage … a high-quality, reliable benchmark for advancing multilingual …
+
+7. Llm-powered benchmark factory: Reliable, generic, and efficient
+   https://aclanthology.org/2026.acl-long.1661/
+   (P Yuan, S Feng, Y Li, X Wang, Y Zhang… - Proceedings of the …, 2026 - aclanthology.org | 2026 | cited by 7)
+   [PDF] https://aclanthology.org/2026.acl-long.1661.pdf
+   … rate of M1:|M| on the hardest subset of certain benchmark to measure its difficulty boundary. … For the 7 subsets of MATH, the 13 subsets of MMLU-Pro† and HellaSwag, we write simple …
+
+8. The Harder The Better: Maintaining Supervised Fine-tuning Generalization with Less but Harder Data
+   https://arxiv.org/abs/2510.13892
+   (Z Shang, S Wei, J Guo, R Zhou, L Dong… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2510.13892?
+   … tion methods on two benchmarks—MMLU-Pro and AlpacaEval… key observations: First, on MMLU-Pro, models trained on the … subjects of MMLU-Pro, with particularly strong performance …
+
+9. Mmmu-pro: A more robust multi-discipline multimodal understanding benchmark
+   https://aclanthology.org/2025.acl-long.736/
+   (X Yue, T Zheng, Y Ni, Y Wang, K Zhang… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 438)
+   [PDF] https://aclanthology.org/2025.acl-long.736.pdf
+   … This paper introduces MMMU-Pro, a robust version of the Massive Multi-discipline Multimodal Understanding and Reasoning (MMMU) benchmark. MMMU-Pro rigorously assesses …
+
+10. What Single-Prompt Accuracy Misses: A Multi-Variant Reliability Audit of Language Models
+   https://arxiv.org/abs/2605.02038
+   (R Karmakar, J Chatterjee - arXiv preprint arXiv:2605.02038, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.02038
+   … On MMLU-Pro, every primary model verbally reports confidence … These questions are difficult to answer from a single … We evaluate the models on five primary benchmarks: three …
+
+11. Calibrating LLM confidence by probing perturbed representation stability
+   https://aclanthology.org/2025.emnlp-main.530/
+   (R Khanmohammadi, E Miahi… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 10)
+   [PDF] https://aclanthology.org/2025.emnlp-main.530.pdf
+   … are the dominant driver of CCPS’s strong performance, especially on more difficult tasks. … details for the underlying public benchmarks (such as MMLU, MMLU-Pro, and the constituent …
+
+12. Token Constraint Decoding Improves Robustness on Question Answering for Large Language Models
+   https://arxiv.org/abs/2506.09408
+   (JM Yao, HY Chen, ZX Tang, BJ Tan, SW Peng… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2506.09408?
+   … robustness in noisy settings. Through extensive experiments on CommonsenseQA, MMLU, and MMLU-Pro… is assessed using the MMLU and MMLU-Pro benchmarks, which test domain …
+
+13. Towards Reliable LLM Evaluation: Correcting the Winner's Curse in Adaptive Benchmarking
+   https://arxiv.org/abs/2605.05973
+   (Y Xu, J Zhang, H Sun, Z Zhou, T Cao… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.05973
+   … We evaluate SIREN on MMLU-Pro [29] Math and Law across two tuner families, random search and DSPy, and eleven open-weight instruction-tuned LLMs. For each subject, the tuner …
+
+14. Selective Perturbations as a Diagnostic for Benchmark-Based LLM Comparisons
+   https://openreview.net/forum?id=aPMZeIfwEc
+   (I Dubrovsky, N Gubina, A Orlova, I Iov, I Gureeva… - … Theory and Benchmarks … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=aPMZeIfwEc
+   … The selectivity gap is preserved on this harder benchmark, with reference and unseen models … Mmlu-pro: A more robust and challenging multi-task language understanding benchmark. …
+
+15. A survey on large language model benchmarks
+   https://arxiv.org/abs/2508.15361
+   (S Ni, G Chen, S Li, X Chen, S Li, B Wang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 55)
+   [PDF] https://arxiv.org/pdf/2508.15361?
+   … benchmarks have pushed the frontiers of difficulty and scope. For instance, MMLU-Pro [19] … MATH-P [114] tests model robustness and generalization by applying difficult perturbations …
+
+16. Are we done with mmlu?
+   https://aclanthology.org/2025.naacl-long.262/
+   (AP Gema, JOJ Leang, G Hong, A Devoto… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 214)
+   [PDF] https://aclanthology.org/2025.naacl-long.262.pdf
+   … MMLU-Redux can also be used as a strong benchmark for … , MMLU still contains errors that are difficult to trace due to its … persist in the extended MMLU-Pro benchmark, highlighting the …
+
+17. Selective Adversarial Attacks on LLM Benchmarks
+   https://arxiv.org/abs/2510.13570
+   (I Dubrovsky, A Orlova, I Iov, N Gubina… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025)
+   [PDF] https://arxiv.org/pdf/2510.13570
+   … We investigate the robustness of LLMs under targeted perturbations of evaluation … Mmlu-pro: A more robust and challenging multi-task language understanding benchmark. Advances in …
+
+18. Mmlu-cf: A contamination-free multi-task language understanding benchmark
+   https://aclanthology.org/2025.acl-long.656/
+   (Q Zhao, Y Huang, T Lv, L Cui, Q Sun… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 50)
+   [PDF] https://aclanthology.org/2025.acl-long.656.pdf
+   … nated benchmark. We believe this contaminationfree benchmark would promote fair and reliable LLMs evaluation and provide valuable insights for the design of future benchmarks. …
+
+19. Evaluating Large Reasoning Model Performance on Complex Medical Scenarios In The MMLU-Pro Benchmark
+   https://www.medrxiv.org/content/10.1101/2025.04.07.25325385.abstract
+   (RE Hoyt, D Knight, M Haider, M Bajwa - medRxiv, 2025 - medrxiv.org | 2025 | cited by 3)
+   [PDF] https://www.medrxiv.org/content/10.1101/2025.04.07.25325385.full.pdf
+   … fictitious answers to make testing more difficult. [7] Results indicated … educational setting requires a robust infrastructure, staff … Our analysis of MMLU-Pro as a question and answer bank …
+
+20. Robustness in large language models: A survey of mitigation strategies and evaluation metrics
+   https://arxiv.org/abs/2505.18658
+   (P Kumar, S Mishra - arXiv preprint arXiv:2505.18658, 2025 - arxiv.org | 2505 | cited by 20)
+   [PDF] https://arxiv.org/pdf/2505.18658
+   … , making it difficult to generalize solutions. Fourth, evaluating robustness remains fragmented, … evaluation methodologies, discussing widely adopted benchmarks, emerging metrics, and …
+
+21. You Don't Need to Run Every Eval
+   https://arxiv.org/abs/2606.24020
+   (Y Zeng, D Papailiopoulos - arXiv preprint arXiv:2606.24020, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.24020
+   … of five benchmarks {GPQA-D, HLE, Codeforces, MMLU-Pro, ARC-… H5 (strong-neighbor presence) means a benchmark is … -benchmark structure and improve predictions on the hardest …
+
+22. Global mmlu: Understanding and addressing cultural and linguistic biases in multilingual evaluation
+   https://aclanthology.org/2025.acl-long.919/
+   (S Singh, A Romanou, C Fourrier… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 247)
+   [PDF] https://aclanthology.org/2025.acl-long.919.pdf
+   … Reliable multilingual evaluation is difficult, and culturally … We introduce GlobalMMLU, an improved benchmark with higher… MMLU-Pro+ further extends this by incorporating multiple cor…
+
+23. AI Evaluation Should Require Standardized Item-Level Data Releases
+   https://arxiv.org/abs/2604.03244
+   (H Jiang, S Zhang, D Zhu, Y Bai, ST Truong, X Yi… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2604.03244
+   … We argue that standardized item-level benchmark data … marks, making data provenance harder to trace. Both intentional and … For MMLU-PRO, we interpret the top 4 factors retained from …
+
+24. Bench-coe: a framework for collaboration of experts from benchmark
+   https://arxiv.org/abs/2412.04167
+   (Y Wang, X Zhang, J Zhao, S Wen, P Feng… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2412.04167?
+   … Given that the MMLU Pro and MMMU datasets contain only one … Mmlu-pro: A more robust and challenging multi-task … of language models with particularly difficult tasks. This dataset …
+
+25. Benchmarker: An education-inspired toolkit for highlighting flaws in multiple-choice benchmarks
+   https://aclanthology.org/2026.acl-long.719/
+   (N Balepur, B Rajasekaran, HJ Oh, M Xie… - Proceedings of the …, 2026 - aclanthology.org | 2026 | cited by 3)
+   [PDF] https://aclanthology.org/2026.acl-long.719.pdf
+   … fixes resolve targeted issues, they can add new ones: MMLUPro … reliable MCQA evaluation, they highlight that benchmark … like students and easily score them, spurring harder MCQs (…
+
+26. Quantization of Large Language Models and the Impact on Output Performance
+   https://lup.lub.lu.se/luur/download?func=downloadFile&recordOId=9178256&fileOId=9178257
+   (R Baki Davidsson - LU-CS-EX, 2024 - lup.lub.lu.se | 2024)
+   [PDF] https://lup.lub.lu.se/luur/download?func=downloadFile&recordOId=9178256&fileOId=9178257
+   … perplexity as a reliable indicator of quantized LLMs performance across various benchmarks. … We will employ a subset of the MMLU-Pro dataset, this is due to computational and time …
+
+27. Rethinking MCQ benchmarks: Mandatory reasoning evaluation reveals significant performance drops in large language models
+   https://openreview.net/forum?noteId=U0WNteGf73
+   (Y Zhang, N Nguyen - … the Evolving LLM Lifecycle: Benchmarks …, 2025 - openreview.net | 2025 | cited by 1)
+   [PDF] https://openreview.net/pdf?id=U0WNteGf73
+   … benchmark datasets especially in highly specialized domains further render it difficult in designing reliable and robust … Mmlu-pro: A more robust and challenging multi-task language …
+
+28. Benchmarking the pedagogical knowledge of large language models
+   https://arxiv.org/abs/2506.18710
+   (M Lelièvre, A Waldock, M Liu, NV Aspillaga… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 14)
+   [PDF] https://arxiv.org/pdf/2506.18710
+   … After reviewing the LLM benchmark literature we did not find any existing LLM … To address this MMLU-Pro [27] has been developed as a more robust and difficult alternative. This selects …
+
+29. Prompting Science Report 3: I'll pay you or I'll kill you--but will you care?
+   https://arxiv.org/abs/2508.00614
+   (L Meincke, E Mollick, L Mollick, D Shapiro - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2508.00614?
+   … with similarly difficult questions but 10 options per question, … For MMLU-Pro, we select a subset of 100 questions from its engineering category, which exhibits slightly lower benchmark …
+
+30. Frustratingly simple retrieval improves challenging, reasoning-intensive benchmarks
+   https://arxiv.org/abs/2507.01297
+   (X Lyu, M Duan, R Shao, PW Koh, S Min - arXiv preprint arXiv:2507.01297, 2025 - arxiv.org | 2507 | cited by 11)
+   [PDF] https://arxiv.org/pdf/2507.01297
+   … on a broad set of benchmarks—MMLU, MMLU Pro, AGI Eval, … To ensure the robustness of our evaluation, we filter out … use of a more expressive model that may be difficult to index. …
+
+31. Unsteady Metrics and Benchmarking Cultures of AI Model Builders
+   https://dl.acm.org/doi/abs/10.1145/3805689.3812240
+   (S Baack, M Bohacek, C Buschek - The 2026 ACM Conference on …, 2026 - dl.acm.org | 2026)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3805689.3812240
+   … Likewise, arguing that reasoning tasks are difficult because they are … Subsequently, the authors of MMMU and MMLU-Pro … For example, there was no benchmark evaluating robustness …
+
+32. Large Language Model Benchmarks: A Taxonomy of Capabilities, Scientific Quality Assessment, and Saturation Analysis
+   https://www.researchgate.net/profile/Gendry-Alfonso-Francia-2/publication/405171736_Large_Language_Model_Benchmarks_A_Taxonomy_of_Capabilities_Scientific_Quality_Assessment_and_Saturation_Analysis/links/6a17361e6fa5b75e315991f8/Large-Language-Model-Benchmarks-A-Taxonomy-of-Capabilities-Scientific-Quality-Assessment-and-Saturation-Analysis.pdf
+   (R Gómez, CE Miranda… - Machine Learning …, 2026 - researchgate.net | 2026)
+   [PDF] https://www.researchgate.net/profile/Gendry-Alfonso-Francia-2/publication/405171736_Large_Language_Model_Benchmarks_A_Taxonomy_of_Capabilities_Scientific_Quality_Assessment_and_Saturation_Analysis/links/6a17361e6fa5b75e315991f8/Large-Language-Model-Benchmarks-A-Taxonomy-of-Capabilities-Scientific-Quality-Assessment-and-Saturation-Analysis.pdf
+   … with unified metrics for accuracy, robustness, fairness, and … of this saturated benchmark in favor of MMLU-Pro. This … of MMLU (10 answer options, harder distractors) yields a substantial …
+
+33. Resurrecting saturated LLM benchmarks with adversarial encoding
+   https://arxiv.org/abs/2502.06738
+   (I Ivanov, D Volkov - arXiv preprint arXiv:2502.06738, 2025 - arxiv.org | 2502 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2502.06738?
+   … We examine LLM knowledge robustness by testing how well … number of answer options makes benchmarks harder, even with … Among our three test benchmarks, MMLU-Pro showed the …
+
+34. MORPHOBENCH: A Benchmark with Difficulty Adaptive to Model Reasoning
+   https://aclanthology.org/2026.findings-acl.1171/
+   (X Wang, X Liu, M Chen, H Zhong, X Yang… - Findings of the …, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.findings-acl.1171.pdf
+   … Mmlu-pro: A more robust and challenging multi-task language understanding benchmark. … similarity in visual tasks, the dataset naturally evolves toward harder problems. This allows the …
+
+35. Mobile-MMLU: A mobile intelligence language understanding benchmark
+   https://arxiv.org/abs/2503.20786
+   (SM Bsharat, M Ranjan, A Myrzakhan, J Liu… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2503.20786
+   … in size to MMLU-Pro but significantly more difficult than our standard full set. Both benchmarks use … We emphasize that a strong benchmark dataset should not aim merely to lower model …
+
+36. Training Language Models to Use Prolog as a Tool
+   https://aclanthology.org/2026.findings-acl.1644/
+   (N Mellgren, P Schneider-Kamp… - Findings of the …, 2026 - aclanthology.org | 2026 | cited by 4)
+   [PDF] https://aclanthology.org/2026.findings-acl.1644.pdf
+   … yet incorrect reasoning traces that are difficult to verify. We … on MMLUSTEM and MMLU-Pro competitive with 7B few-shot … -shot performance on MMLU benchmarks close to few-shot …
+
+37. Rethinking Benchmark Comparability: A Survey of Reasoning Benchmarks for Large Language Models
+   https://www.preprints.org/manuscript/202605.0806
+   (C Zhang, S Liu, H Li, T Gao, Y Wang, Q Chen, X Feng… - 2026 - preprints.org | 2026)
+   [PDF] https://www.preprints.org/frontend/manuscript/8d0185e4ac4edcd8af7e7c6c15f9451b/download_pub
+   … benchmarks However, this shift toward more difficult, diverse, and application-oriented benchmarks … Some benchmarks further stress robustness by perturbing wording, quantities, or …
+
+38. BenchScope: How Many Independent Signals Does Your Benchmark Provide?
+   https://arxiv.org/abs/2603.29357
+   (T Sha, S Zhao - arXiv preprint arXiv:2603.29357, 2026 - arxiv.org | 2603)
+   [PDF] https://arxiv.org/pdf/2603.29357
+   … The clearest overlap is between BBH and MMLU-Pro, whose … The BBH–MMLU-Pro redundancy is robust across all seven … may be redundant,” we show that BBH and MMLU-Pro …
+
+39. Automatic robustness stress testing of llms as mathematical problem solvers
+   https://arxiv.org/abs/2506.05038
+   (Y Hou, Z Xiao, F Yu, Y Jiang, X Wei, H Huang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 6)
+   [PDF] https://arxiv.org/pdf/2506.05038
+   … We compare AR-CHECKER with two robustness benchmarks on evaluating LLMs as … For MMLU-Pro, we use the ori_mmluhigh_school_computer_science subset, which contains 62 …
+
+40. Mubench: Assessment of multilingual capabilities of large language models across 61 languages
+   https://aclanthology.org/2026.findings-acl.794/
+   (W Han, Y Zhang, Z Chen, M Pechenizkiy… - Findings of the …, 2026 - aclanthology.org | 2026 | cited by 12)
+   [PDF] https://aclanthology.org/2026.findings-acl.794.pdf
+   … MUBENCH, a multilingual benchmark covering 61 languages … essarily exhibit greater robustness. Leveraging MUBENCH’s … rely entirely on manual annotation, making them difficult to …
+
+41. Provable scaling laws for the test-time compute of large language models
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/f3f607e4c13bd1cb8885de44b4ec45b7-Abstract-Conference.html
+   (Y Chen, X Pan, Y Li, B Ding… - Advances in Neural …, 2026 - proceedings.neurips.cc | 2026 | cited by 7)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/f3f607e4c13bd1cb8885de44b4ec45b7-Paper-Conference.pdf
+   … Under analogous but more robust assumptions, we prove that its … questions for each category of MMLU-Pro in our experiments, … Indeed, if a benchmark contains an extremely difficult …
+
+42. Reinforcement Inference: Leveraging Uncertainty for Self-Correcting Language Model Reasoning
+   https://arxiv.org/abs/2602.08520
+   (X Sun - arXiv preprint arXiv:2602.08520, 2026 - arxiv.org | 2602)
+   [PDF] https://arxiv.org/pdf/2602.08520
+   … , no leakage): On 12,032 MMLU-Pro questions, we report a … Multitask Language Understanding benchmark focusing on … on harder MMLU-Pro, its transfer to an already strong regime …
+
+43. Engibench: A benchmark for evaluating large language models on engineering problem solving
+   https://aclanthology.org/2026.findings-acl.1810/
+   (X Zhou, X Wang, Y He, R Zou, Y Wu… - Findings of the …, 2026 - aclanthology.org | 2026 | cited by 9)
+   [PDF] https://aclanthology.org/2026.findings-acl.1810.pdf
+   … controlled variants that separate robustness, domain knowledge, and … to ensure consistent and reliable assessment. Together, … distinct capabilities, making it difficult to assess through a …
+
+44. Large-Scale Diverse Synthesis for Mid-Training
+   https://aclanthology.org/2026.findings-acl.814/
+   (X Zhang, C Tu, C Ren, R Weng, H Yan… - Findings of the …, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.findings-acl.814.pdf
+   … benchmarks among mainstream models of comparable size. BoostQA also demonstrates robust … of standard role-driven synthesis in generating difficult content. To address this, we …
+
+45. Benchmarking EngGPT2-16B-A3B against Comparable Italian and International Open-source LLMs
+   https://arxiv.org/abs/2605.07731
+   (A Sassella, A Chizzola, T Bianchi… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.07731
+   … resulted in performance improvements across difficult benchmarks [13]. … LLM benchmark datasets, including general international … “Mmlu-pro: A more robust and challenging multi-task …
+
+46. UrduMMLU: A Massive Multitask Benchmark for Urdu Language Understanding
+   https://arxiv.org/abs/2606.07167
+   (A Tabassum, S Ahmad, H Iqbal, O Aijaz… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.07167
+   … Humanities and Social Sciences constitute the largest portions of the benchmark, reflecting strong coverage of Urdu language, Urdu literature, Islamic studies, Pakistan studies, and …
+
+47. Beyond Mean Scores: Factor Models for Reliable and Efficient AI Evaluation
+   https://openreview.net/forum?id=QLSH4qoj77
+   (ST Truong, Y Wen, N Haber, S Koyejo, M Dudík… - openreview.net)
+   [PDF] https://openreview.net/pdf?id=QLSH4qoj77
+   … questions from a given benchmark can be highly negatively … We compare two models on MMLU-Pro and show that, while … each benchmark by question mean accuracy (from harder to …
+
+48. MATH-Perturb: Benchmarking LLMs' Math Reasoning Abilities against Hard Perturbations
+   https://arxiv.org/abs/2502.06453
+   (K Huang, J Guo, Z Li, X Ji, J Ge, W Li, Y Guo… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 94)
+   [PDF] https://arxiv.org/pdf/2502.06453?
+   … modified benchmark and the original MATH benchmark among … sign of the progress in the robustness of the newly developed … MATHP-Hard can serve as both a harder math benchmark …
+
+49. Measuring Black-Box Confidence via Reasoning Trajectories: Geometry, Coverage, and Verbalization
+   https://arxiv.org/abs/2605.06308
+   (MB Martell, JL Stoisser, K MÃĪrtens, J Yu… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.06308
+   … window across all three benchmarks (GPQA, MedQA, MMLU-Pro) and both reasoners (6/6 combinations), validating the penultimate-window default as a robust scoring position. On …
+
+50. Is Machine-Translation Enough? Understanding Impacts in LLM Benchmarking
+   https://link.springer.com/chapter/10.1007/978-3-032-15984-7_8
+   (TÍ de Moraes Pedrosa, E de Barros Costa… - Brazilian Conference on …, 2025 - Springer | 2025)
+   … To ensure reliable and meaningful evaluations, analyzing all … DUAT first identifies difficult or sensitive words that are prone … openly publishing datasets such as MMLU-Pro, GPQA, and …
+
+===== Query 3/6: data contamination detection LLM decontaminator n-gram overlap membership inference =====
+
+1. Unveiling the spectrum of data contamination in language model: A survey from detection to remediation
+   https://aclanthology.org/2024.findings-acl.951/
+   (C Deng, Y Zhao, Y Heng, Y Li, J Cao… - Findings of the …, 2024 - aclanthology.org | 2024 | cited by 52)
+   [PDF] https://aclanthology.org/2024.findings-acl.951.pdf
+   … contamination Thorough and complete evaluation of LLM … employs n-gram tokenization and string-matching for detection. This … Membership Inference Attacks (MIA) aim to determine …
+
+2. Benchmark data contamination of large language models: A survey
+   https://arxiv.org/abs/2406.04244
+   (C Xu, S Guan, D Greene, M Kechadi - arXiv preprint arXiv:2406.04244, 2024 - arxiv.org | 2406 | cited by 191)
+   [PDF] https://arxiv.org/pdf/2406.04244
+   … This paper reviews the complex challenge of BDC in LLM … N-gram overlap detection is favored for its simplicity and … matching methods like n-gram overlap for decontamination, …
+
+3. Rethinking benchmark and contamination for language models with rephrased samples
+   https://arxiv.org/abs/2311.04850
+   (S Yang, WL Chiang, L Zheng, JE Gonzalez… - arXiv preprint arXiv …, 2023 - arxiv.org | 2023 | cited by 175)
+   [PDF] https://arxiv.org/pdf/2311.04850
+   … (eg, n-gram overlap) to remove benchmark data, we show … of existing detection methods including n-gram overlap and … To address the limitations, we introduce the “LLM decontaminator…
+
+4. A survey on data contamination for large language models
+   https://arxiv.org/abs/2502.14425
+   (Y Cheng, Y Chang, Y Wu - arXiv preprint arXiv:2502.14425, 2025 - arxiv.org | 2502 | cited by 56)
+   [PDF] https://arxiv.org/pdf/2502.14425
+   … n-gram alignment, canary insertion, and perturbation testing. … this survey focuses on LLM data contamination, we may not … Inference-time decontamination: Reusing leaked benchmarks …
+
+5. Are LLM Benchmarks Already Contaminated? A Systematic Review of Contamination Detection Methods
+   https://aclanthology.org/2026.gem-main.50/
+   (E Nourbakhsh, MS Sirjani, A Mousavi… - Proceedings of the …, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.gem-main.50.pdf
+   … N-gram Overlap N-gram overlap is the oldest and most … to contamination as it is precisely a membership inference … by standard n-gram or short-context decontamination pipelines. …
+
+6. A comprehensive survey of contamination detection methods in large language models
+   https://arxiv.org/abs/2404.00699
+   (M Ravaut, B Ding, F Jiao, H Chen, X Li, R Zhao… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 15)
+   [PDF] https://arxiv.org/pdf/2404.00699
+   … Detecting contamination in a LLM is a broad issue that we … if it appears in any token n-gram longer than 10 tokens in both … Results show that this LLM Decontaminator algorithm works …
+
+7. Pretraining Data Exposure in Large Language Models: A Survey of Membership Inference, Data Contamination, and Security Implications
+   https://link.springer.com/chapter/10.1007/978-3-031-97144-0_14
+   (Z Tong, F Sun, LM Nguyen - … on Applications of Natural Language to …, 2025 - Springer | 2025 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2605.26133
+   … for contamination detection include N-gram overlap, exact-… key LLM application scenarios where pretraining data exposure … Inference-time decontamination: reusing leaked benchmarks …
+
+8. Beyond Surface-Level Similarity: Hierarchical Contamination Detection for Synthetic Training Data in Foundation Models
+   https://arxiv.org/abs/2511.17602
+   (S Mehta - arXiv preprint arXiv:2511.17602, 2025 - arxiv.org | 2511)
+   [PDF] https://arxiv.org/pdf/2511.17602
+   … specializing in LLM evaluation. Baseline Methods. We compare against: (1) N-gram Overlap (13-… LLM Decontaminator reaches 0.55 but remains limited. Our hierarchical framework …
+
+9. Investigating data contamination for pre-training language models
+   https://arxiv.org/abs/2401.06059
+   (M Jiang, KZ Liu, M Zhong, R Schaeffer… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 100)
+   [PDF] https://arxiv.org/pdf/2401.06059
+   … corpus through the lens of membership inference attacks [21… the n-gram data contamination definitions from existing LLM … n-gram values n for the direct n-gram overlap and Llama 2 …
+
+10. Generalization or memorization: Data contamination and trustworthy evaluation for large language models
+   https://aclanthology.org/2024.findings-acl.716/
+   (Y Dong, X Jiang, H Liu, Z Jin, B Gu… - Findings of the …, 2024 - aclanthology.org | 2024 | cited by 286)
+   [PDF] https://aclanthology.org/2024.findings-acl.716.pdf
+   … contamination detection approaches, where N-gram and LLM Decontaminator are designed to detect … Therefore, GPT-3 adopted 13-gram overlap detection to remove the data in the …
+
+11. Detecting Data Contamination in LLMs via In-Context Learning
+   https://arxiv.org/abs/2510.27055
+   (M Zawalski, M Boubdir, K Bałazy, B Nushi… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2510.27055
+   … CoDeC enables the community to better trust reported LLM … be captured by classical n-gram overlap checks, commonly … models due to deliberate decontamination. This suggests that …
+
+12. Generalization or Memorization: Evaluating Data Contamination for Large Language Models
+   https://web.stanford.edu/~zhangxm/Generalization_or_Memorization__Evaluating_Data_Contamination_for_Large_Language_Models.pdf
+   (Y Dong, X Jiang, X Zhang, H Liu, Z Jin, B Gu, M Yang… - 2025 - stanford.edu | 2025 | cited by 2)
+   [PDF] https://web.stanford.edu/~zhangxm/Generalization_or_Memorization__Evaluating_Data_Contamination_for_Large_Language_Models.pdf
+   … Note that it is also applicable to membership inference attacks (MIA), where x … contamination detection approaches, where N-gram and LLM Decontaminator are designed to detect …
+
+13. Do membership inference attacks work on large language models?
+   https://arxiv.org/abs/2402.07841
+   (M Duan, A Suri, N Mireshghallah, S Min, W Shi… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 194)
+   [PDF] https://arxiv.org/pdf/2402.07841
+   … , building off membership ambiguity due to n-gram overlap, … model for a target LLM challenging and largely empirical. A … the best efforts in decontamination and deduplication. These …
+
+14. Evading data contamination detection for language models is (too) easy
+   https://arxiv.org/abs/2402.02823
+   (J Dekoninck, MN Müller, M Baader, M Fischer… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 34)
+   [PDF] https://arxiv.org/pdf/2402.02823
+   … is well-studied under the name membership inference attack (… access can be detected by LLM Decontaminator in over 97% … Rate As expected, we find that the traditional n-gram method …
+
+15. When Benchmarks Leak: Inference-Time Decontamination for LLMs
+   https://arxiv.org/abs/2601.19334
+   (J Chai, Y Zhe, J Sakuma - arXiv preprint arXiv:2601.19334, 2026 - arxiv.org | 2601 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2601.19334
+   … detect-then-filter strategies based on membership inference … by direct overlap checks (exact match or n-gram similarity) … that even a strong LLM-oriented detector can leave substantial …
+
+16. Soft contamination means benchmarks test shallow generalization
+   https://arxiv.org/abs/2602.12413
+   (A Spiesberger, JJ Vazquez, N Pochinkov… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2602.12413
+   … Typical ‘decontamination’ filters use n-gram matching which … that modern LLM training corpora include data that qualitatively … semantic overlap; quantifies the effects of contamination on …
+
+17. CodeCleaner: Mitigating Data Contamination for LLM Benchmarking
+   https://dl.acm.org/doi/abs/10.1145/3755881.3755901
+   (J Cao, S Chen, W Zhang, HC Lo, Y Li… - Proceedings of the 16th …, 2025 - dl.acm.org | 2025)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3755881.3755901
+   … the perplexity or n-gram overlap ratios show significant … Various metrics are proposed to infer data membership, including … , ie, they detect the existence of data contamination while we …
+
+18. Identifying Data Contamination in LLMs for Mathematical Benchmarks
+   https://repositum.tuwien.at/handle/20.500.12708/216244
+   (TG Mathis - 2025 - repositum.tuwien.at | 2025)
+   [PDF] https://repositum.tuwien.at/bitstream/20.500.12708/216244/1/Mathis%20Tobias%20Gallus%20-%202025%20-%20Identifying%20Data%20Contamination%20in%20LLMs%20for...pdf
+   … detection methods, including minK%, n-gram accuracy, and … factor behind recent advances in LLM-based mathematical reasoning… Early work primarily focuses on membership inference …
+
+19. LLM Benchmark Datasets Should Be Contamination-Resistant
+   https://arxiv.org/abs/2605.19999
+   (A Al-Lawati, J Lucas, D Lee, S Wang - arXiv preprint arXiv:2605.19999, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.19999
+   … asymmetry between the inference and training pipelines in … Decontamination and Filtering Decontamination and filtering … Common approaches include n-gram overlap detection, hash-…
+
+20. Position: LLM Benchmark Datasets Should Be Contamination-Resistant
+   https://openreview.net/forum?id=Hdfts6GdWJ
+   (ALI AL LAWATI, JS Lucas, D Lee, S Wang - Forty-third International … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=Hdfts6GdWJ
+   … asymmetry between the inference and training pipelines in … Decontamination and Filtering Decontamination and filtering … Common approaches include n-gram overlap detection, hash-…
+
+21. Sok: Membership inference attacks on llms are rushing nowhere (and how to fix it)
+   https://ieeexplore.ieee.org/abstract/document/10992321/
+   (M Meeus, I Shilov, S Jain, M Faysse… - … IEEE Conference on …, 2025 - ieeexplore.ieee.org | 2025 | cited by 64)
+   [PDF] https://arxiv.org/pdf/2406.17975
+   … This methodology (decontamination) has since been adopted … data samples published close to the cutoff date for the LLM … , where members and non-members share similar n-gram …
+
+22. The Illusion of Reasoning: Exposing Evasive Data Contamination in LLMs via Zero-CoT Truncation
+   https://arxiv.org/abs/2605.21856
+   (Y Lan, Y Cao, H Wang, L Lin, J Chen - arXiv preprint arXiv:2605.21856, 2026 - arxiv.org | 2605 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2605.21856
+   … not require access to the LLM’s training data or parameters, … Membership inference attacks against language models via neigh… data decontamination or filtering in this newer release. …
+
+23. Statistically Principled Measurement of Large Language Models by Spiking the Training Data
+   https://search.proquest.com/openview/a2a725f13418803302e9e2bad9d66b0d/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (JTZ Wei - 2026 - search.proquest.com | 2026)
+   [PDF] https://johntzwei.github.io/pdfs/PhD_Thesis.pdf
+   … collection is in the training data of an LLM. In the context of … The base corpus and decontamination described previously … both membership inference attacks (MIAs) and unlearning. …
+
+24. A Survey on Evaluating Quality and Trustworthiness in LLM-Generated Data
+   https://openreview.net/pdf?id=f2gS9Ly6tA
+   (K Zhang, M Hu, HAD Le, FK Torsha, Z Jiang, MK Bui… - openreview.net)
+   [PDF] https://openreview.net/pdf?id=f2gS9Ly6tA
+   … , benchmark-aware decontamination is increasingly viewed as … richer vocabulary usage and reduced n-gram repetition. Finally, … contamination is the risk that generated or training data …
+
+25. Infini-gram: Scaling unbounded n-gram language models to a trillion tokens
+   https://arxiv.org/abs/2401.17377
+   (J Liu, S Min, L Zettlemoyer, Y Choi… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 91)
+   [PDF] https://arxiv.org/pdf/2401.17377
+   … indicates deficiencies in neural LLM pretraining and the … insufficient decontamination, we evaluate on time-shifted data: … is tailored for probabilistic membership inference (exact match of …
+
+26. Infilling score: A pretraining data detection algorithm for large language models
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/5709163243753c9c9ab7f4b4e5a8766d-Abstract-Conference.html
+   (N Raoof, L Rout, G Daras, C Caramanis… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 4)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/5709163243753c9c9ab7f4b4e5a8766d-Paper-Conference.pdf
+   … Membership inference attacks for LLM pretraining data … contamination rates, and also evaluating decontamination … for membership inference, and include high n-gram overlap samples …
+
+27. Security and privacy challenges of large language models: A survey
+   https://dl.acm.org/doi/abs/10.1145/3712001
+   (BC Das, MH Amini, Y Wu - ACM Computing Surveys, 2025 - dl.acm.org | 2025 | cited by 827)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3712001
+   … Membership inference attacks determine whether specific … from the LLM during testing and calculates the n-gram overlap … and parameter decontamination are also used to prevent the …
+
+28. The Contamination Paradox: Why Test Set Leakage Can Be Both Potent and Negligible
+   https://openreview.net/forum?id=Ajr8YtfhVO
+   (R Schaeffer, K Liu, B Miranda, AM Ahmed… - … the Evolving LLM … - openreview.net | cited by 1)
+   [PDF] https://openreview.net/pdf?id=Ajr8YtfhVO
+   … need to measure LLM data contamination for each benchmark… can evade simple n-gram decontamination. Moving beyond … can be cast as a membership inference problem. The MIA …
+
+29. Causally Quantifying the Effect of Test Set Contamination on Generative Benchmarks
+   https://openreview.net/forum?noteId=RsmjshBEDP
+   (R Schaeffer, B Miranda, J Kazdan, K Liu… - … the Evolving LLM … - openreview.net | cited by 2)
+   [PDF] https://openreview.net/pdf?id=RsmjshBEDP
+   … A missing testbed for LLM pre-training membership inference attacks. In ICLR 2025 … simple n-gram-based detection methods could be bypassed by paraphrasing or partial data leaks. …
+
+30. Questionable practices in machine learning
+   https://arxiv.org/abs/2407.12220
+   (G Leech, JJ Vazquez, N Kupper, M Yagudin… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 12)
+   [PDF] https://arxiv.org/pdf/2407.12220?
+   … Given that it is very difficult to avoid contamination in large LLM pretraining datasets, we … contamination in GPT-3.5, despite using decontamination techniques such as n-gram overlap …
+
+31. Blu-WERP (Web Extraction and Refinement Pipeline): A Scalable Pipeline for Preprocessing Large Language Model Datasets
+   https://arxiv.org/abs/2511.18054
+   (S Rupesh, S Kumar, V Chaithanya - arXiv preprint arXiv:2511.18054, 2025 - arxiv.org | 2511)
+   [PDF] https://arxiv.org/pdf/2511.18054
+   … of Common Crawl WARC files for LLM training. We demonstrate … Exemplar Decontamination: To isolate data-curation effects … to a new n-gram are already set, the n-gram is treated as a …
+
+32. Hubble: a model suite to advance the study of llm memorization
+   https://arxiv.org/abs/2510.19811
+   (JTZ Wei, A Godbole, MA Khan, R Wang, X Zhu… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2510.19811?
+   … For test set contamination, we can test whether contamination … The base corpus and decontamination described previously … both membership inference attacks (MIAs) and unlearning. …
+
+33. Which Models Are Our Models Built On? Auditing Invisible Dependencies in Modern LLMs
+   https://arxiv.org/abs/2606.12385
+   (S Adhikesaven, H Sun, S Min - arXiv preprint arXiv:2606.12385, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.12385
+   … that recursively reconstructs LLM dependency graphs from public … -hop paths that standard decontamination cannot trace [60… operates over question/answer fields using n-gram overlap. …
+
+34. Data portraits: Recording foundation model training data
+   https://proceedings.neurips.cc/paper_files/paper/2023/hash/3112ee706d21d734c15532c1239773e1-Abstract-Datasets_and_Benchmarks.html
+   (M Marone, B Van Durme - Advances in Neural Information …, 2023 - proceedings.neurips.cc | 2023 | cited by 45)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2023/file/3112ee706d21d734c15532c1239773e1-Paper-Datasets_and_Benchmarks.pdf
+   … If we stored every n-gram, an attacker could reconstruct … Specifically we process the data after test-set decontamination … and scraped into LLM corpora (LDC data licenses typically forbid …
+
+35. The mosaic memory of large language models
+   https://www.nature.com/articles/s41467-026-68603-0
+   (I Shilov, M Meeus, YA de Montjoye - Nature Communications, 2026 - nature.com | 2026 | cited by 14)
+   [PDF] https://www.nature.com/articles/s41467-026-68603-0_reference.pdf
+   … In this work, we argue that viewing LLM memorization solely … there remains a substantial ngram (ie, syntactic) overlap, up to … on ngram matching are used for benchmark decontamination…
+
+36. EvalSafetyGap: A Hybrid Survey and Conceptual Framework for LLM Evaluation-Safety Failures
+   https://arxiv.org/abs/2606.30219
+   (BA Uluırmak, R Kurban - arXiv preprint arXiv:2606.30219, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.30219
+   … ; membership or corpus-overlap tests map to contamination; … - or n-gram-overlap detectors likewise lose reliability when … wide decontamination has failed or isolate contamination from …
+
+37. A survey on data selection for language models
+   https://arxiv.org/abs/2402.16827
+   (A Albalak, Y Elazar, SM Xie, S Longpre… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 321)
+   [PDF] https://arxiv.org/pdf/2402.16827
+   … about the expected testing distribution, and filtering out data that does not fit those … n-gram model that can be computed very efficiently11 and find that data selection with hashed n-gram …
+
+38. Synthetic Data and the Rise of Spiky Intelligence
+   https://openreview.net/forum?id=IkDmEuCNXs
+   (A Thankaraj, A Abbas, D Fan, V Dorna… - The Second Workshop … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=IkDmEuCNXs
+   … web-scraped corpora, where contamination often appears as … The decontamination experiment in §5 evaluates semantic … and n-gram filters flag a strict subset of the surface overlap that …
+
+39. Quantifying the effect of test set contamination on generative evaluations
+   https://arxiv.org/abs/2601.04301
+   (R Schaeffer, J Kazdan, B Abbasi, KZ Liu… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 4)
+   [PDF] https://arxiv.org/pdf/2601.04301
+   … At inference, we identify three distinct regimes of memorization… fresh data dilutes the performance gains from contamination. … ting, may actually be a positive signal of decontamination. …
+
+40. Starcoder: may the source be with you!
+   https://arxiv.org/abs/2305.06161
+   (R Li, LB Allal, Y Zi, N Muennighoff, D Kocetkov… - arXiv preprint arXiv …, 2023 - arxiv.org | 2023 | cited by 1957)
+   [PDF] https://arxiv.org/pdf/2305.06161
+   … comprises more than 600 members from diverse academic … In this paper, we use the term “open-access LLM” when the … the amount of data removed by decontamination, Python is …
+
+41. Scaling-Aware Adapter for Structure-Grounded LLM Reasoning
+   https://arxiv.org/abs/2602.02780
+   (Z Jing, Q Zeng, R Fang, YY Li, Y Sun, B Wang… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2602.02780
+   … We determine the membership Wi,a of atom i to anchor a by … To prevent data contamination, we think that in our encoder … our training set, and use a 13-gram overlap test (Brown et al.…
+
+42. The llama 3 herd of models
+   https://arxiv.org/abs/2407.21783
+   (A Grattafiori, A Dubey, A Jauhri, A Pandey… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 9031)
+   [PDF] https://arxiv.org/pdf/2407.21783
+   … Each member of the herd is listed in Table 1. All the results … large language model (LLM) on the resulting data to perform next-… We also conduct a contamination analysis to estimate the …
+
+43. JoyAI-LLM Flash: Advancing Mid-Scale LLMs with Token Efficiency
+   https://arxiv.org/abs/2604.03044
+   (A Cai, A Zhang, A Li, B Zhang, B Cai, C Li… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2604.03044
+   … inference throughput, we adopt a joint training–inference co-… removal during decontamination, we introduced an n-gram … and prevent cross-contamination between unrelated samples, …
+
+44. Don't Adapt Small Language Models for Tools; Adapt Tool Schemas to the Models
+   https://aclanthology.org/2026.acl-long.948/
+   (J Lee, W Song, J Han, H Pyun, Y Jo - Proceedings of the 64th …, 2026 - aclanthology.org | 2026 | cited by 2)
+   [PDF] https://aclanthology.org/2026.acl-long.948.pdf
+   … we leverage an insight from contamination detection method (… Data contamination, defined as overlap between pretraining … For benchmark inference, we use temperature 0 to ensure …
+
+45. The responsible foundation model development cheatsheet: A review of tools & resources
+   https://arxiv.org/abs/2406.16746
+   (S Longpre, S Biderman, A Albalak… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 25)
+   [PDF] https://arxiv.org/pdf/2406.16746?
+   … are performing decontamination prior to training is to see data … this n-gram occurs and what the surrounding context is. … a membership test to check whether their data is included (Stack …
+
+46. VCBench: A Multi-Dimensional Benchmark for Single-Cell Foundation Models
+   https://www.biorxiv.org/content/10.64898/2026.06.18.733146.abstract
+   (LS Weidener, M Brkic, M Jovanovic, E Ulgac, A Meduri - bioRxiv, 2026 - biorxiv.org | 2026)
+   [PDF] https://www.biorxiv.org/content/10.64898/2026.06.18.733146.full.pdf
+   … manifest, leaving data contamination undetectable to users. … solely from LLM generation without author verification. … the analogous problem with ngram-overlap detection and canonical …
+
+47. LiveBrowseComp: Are Search Agents Searching, or Just Verifying What They Already Know?
+   https://arxiv.org/abs/2605.28721
+   (HM Fan, X Wang, Z Chu, Q Wang, Z Wang… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.28721
+   … Data contamination has received extensive attention in LLM … detection methods including n-gram overlap, membership … —that conventional decontamination checks cannot detect. …
+
+48. Navigating the Ocean of Language Model Training Data
+   https://search.proquest.com/openview/723276a25a6df19e8ba9486a4fd5f00d/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (J Liu - 2025 - search.proquest.com | 2025)
+   [PDF] https://digital.lib.washington.edu/bitstreams/2769315f-61cf-4a1c-a2d3-7c5d0002a664/download
+   … crucial LLM evaluation benchmarks are heavily contaminated, … data coverage, we scale up the training data for n-gram LMs … We run decontamination of Pile-train against its validation …
+
+49. Robust Neural Machine Translation of User-Generated Content
+   https://theses.hal.science/tel-05448644/
+   (L Nishimwe - 2025 - theses.hal.science | 2025)
+   [PDF] https://theses.hal.science/tel-05448644/document
+   … First and foremost, I would like to sincerely thank the members … In EXPERıMENT III (§6.3), we use an LLM to normalise UGC … A cornerstone of these approaches was 𝑛‐gram language …
+
+50. Data for mathematical copilots: Better ways of presenting proofs for machine learning
+   https://arxiv.org/abs/2412.15184
+   (S Frieder, J Bayer, S Looi, J Loader, J Berner… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 14)
+   [PDF] https://arxiv.org/pdf/2412.15184
+   … In the context of mathematical AI, when LLM developers … patterns or benefit from data contamination rather than developing … 2024], only n-gram decontamination approaches have been …
+
+===== Query 4/6: benchmark contamination survey large language models memorization =====
+
+1. Benchmark data contamination of large language models: A survey
+   https://arxiv.org/abs/2406.04244
+   (C Xu, S Guan, D Greene, M Kechadi - arXiv preprint arXiv:2406.04244, 2024 - arxiv.org | 2406 | cited by 191)
+   [PDF] https://arxiv.org/pdf/2406.04244
+   … Their experiments showed that language models exhibit minimal memorization behaviors on LatestEval compared to previous benchmarks, suggesting a more robust evaluation and a …
+
+2. Unveiling the spectrum of data contamination in language model: A survey from detection to remediation
+   https://aclanthology.org/2024.findings-acl.951/
+   (C Deng, Y Zhao, Y Heng, Y Li, J Cao… - Findings of the …, 2024 - aclanthology.org | 2024 | cited by 52)
+   [PDF] https://aclanthology.org/2024.findings-acl.951.pdf
+   … Data contamination refers to the accidental or deliberate … or benchmark data in the training phase of language models, … these models memorize and are influenced by the contaminated …
+
+3. A survey on data contamination for large language models
+   https://arxiv.org/abs/2502.14425
+   (Y Cheng, Y Chang, Y Wu - arXiv preprint arXiv:2502.14425, 2025 - arxiv.org | 2502 | cited by 56)
+   [PDF] https://arxiv.org/pdf/2502.14425
+   … benchmarks utilized for quantifying data contamination in … test language models for memorization of tabular datasets. The package includes four different tests for verbatim memorization …
+
+4. A comprehensive survey of contamination detection methods in large language models
+   https://arxiv.org/abs/2404.00699
+   (M Ravaut, B Ding, F Jiao, H Chen, X Li, R Zhao… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 15)
+   [PDF] https://arxiv.org/pdf/2404.00699
+   … In this paper, we survey all recent work on contamination detection with … Contamination signs often include inflated performance on evaluation benchmarks, and model memorization …
+
+5. An open-source data contamination report for large language models
+   https://aclanthology.org/2024.findings-emnlp.30/
+   (Y Li, Y Guo, F Guerin, C Lin - Findings of the Association for …, 2024 - aclanthology.org | 2024 | cited by 91)
+   [PDF] https://aclanthology.org/2024.findings-emnlp.30.pdf
+   … potential data contamination in LLM benchmarks. We also … tion report for over 15 popular large language models across … models, perhaps due to their more powerful memorisation …
+
+6. Are LLM Benchmarks Already Contaminated? A Systematic Review of Contamination Detection Methods
+   https://aclanthology.org/2026.gem-main.50/
+   (E Nourbakhsh, MS Sirjani, A Mousavi… - Proceedings of the …, 2026 - aclanthology.org | 2026)
+   [PDF] https://aclanthology.org/2026.gem-main.50.pdf
+   … , we report stratified evidence by metric family and benchmark, … served contamination signals in large language model (LLM) … code memorisation across code language model families. …
+
+7. Recent advances in large langauge model benchmarks against data contamination: From static to dynamic evaluation
+   https://arxiv.org/abs/2502.17521
+   (S Chen, Y Chen, Z Li, Y Jiang, Z Wan, Y He… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 29)
+   [PDF] https://arxiv.org/pdf/2502.17521
+   … data contamination (§2), and then survey static benchmarks … -level large language model evaluation benchmark for scientific … tokens, it strongly indicates that the model has memorized …
+
+8. Benchmarking large language models under data contamination: A survey from static to dynamic evaluation
+   https://aclanthology.org/2025.emnlp-main.511/
+   (S Chen, Y Chen, Z Li, Y Jiang, Z Wan… - … in Natural Language …, 2025 - aclanthology.org | 2025 | cited by 30)
+   [PDF] https://aclanthology.org/2025.emnlp-main.511.pdf
+   … data contamination (§2), and then survey static benchmarks and their enhancements for mitigating data contamination (… these tokens, it strongly indicates that the model has memorized …
+
+9. Generalization or Memorization: Evaluating Data Contamination for Large Language Models
+   https://web.stanford.edu/~zhangxm/Generalization_or_Memorization__Evaluating_Data_Contamination_for_Large_Language_Models.pdf
+   (Y Dong, X Jiang, X Zhang, H Liu, Z Jin, B Gu, M Yang… - 2025 - stanford.edu | 2025 | cited by 2)
+   [PDF] https://web.stanford.edu/~zhangxm/Generalization_or_Memorization__Evaluating_Data_Contamination_for_Large_Language_Models.pdf
+   … To facilitate this study, we introduce two benchmarks, ie, DETCON … contamination on HumanEval benchmark. Moreover, we also introduce a new evaluation metric MGI, Memorization …
+
+10. Generalization or memorization: Data contamination and trustworthy evaluation for large language models
+   https://aclanthology.org/2024.findings-acl.716/
+   (Y Dong, X Jiang, H Liu, Z Jin, B Gu… - Findings of the …, 2024 - aclanthology.org | 2024 | cited by 286)
+   [PDF] https://aclanthology.org/2024.findings-acl.716.pdf
+   … study, we introduce two benchmarks, ie, DETCON and COMIEVAL, for data contamination detection and contamination … can effectively detect implicit contamination. TED substantially …
+
+11. Beyond Memorization: Reasoning-Driven Synthesis as a Mitigation Strategy Against Benchmark Contamination
+   https://openreview.net/forum?id=vZIKOhWGNG
+   (TJ Zhang, G Dev, N Wang, N Ni, W Jiang… - … in Language Models, 2025 - openreview.net | 2025 | cited by 1)
+   [PDF] https://openreview.net/pdf?id=vZIKOhWGNG
+   … We present an empirical 3 study using an infinitely scalable framework to synthesize research-level QA di- 4 rectly from arXiv papers, harnessing the natural temporal structure of …
+
+12. Reasoning or memorization? unreliable results of reinforcement learning due to data contamination
+   https://ojs.aaai.org/index.php/AAAI/article/view/40687
+   (M Wu, Z Zhang, Q Dong, Z Xi, J Zhao, S Jin… - Proceedings of the …, 2026 - ojs.aaai.org | 2026 | cited by 24)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/download/40687/44648
+   … Reasoning in large language models has long been a central … data contamination in popular mathematical benchmarks, we … instance is virtually impossible, we report Max@16, the …
+
+13. Data contamination quiz: A tool to detect and estimate contamination in large language models
+   https://direct.mit.edu/tacl/article/doi/10.1162/TACL.a.20/132117
+   (S Golchin, M Surdeanu - Transactions of the Association for …, 2025 - direct.mit.edu | 2025 | cited by 86)
+   [PDF] https://direct.mit.edu/tacl/article-pdf/doi/10.1162/TACL.a.20/2540087/tacl.a.20.pdf
+   … contamination when evaluating LLMs on benchmarks, … study, they are used interchangeably. This is because our method relies on memorization as a basis for detecting contamination…
+
+14. Rethinking benchmark and contamination for language models with rephrased samples
+   https://arxiv.org/abs/2311.04850
+   (S Yang, WL Chiang, L Zheng, JE Gonzalez… - arXiv preprint arXiv …, 2023 - arxiv.org | 2023 | cited by 175)
+   [PDF] https://arxiv.org/pdf/2311.04850
+   … cases, they tend to only memorize the solutions and may have poor … , we study benchmark contamination in the context of large language models and evaluate existing decontamination …
+
+15. Data contamination: From memorization to exploitation
+   https://aclanthology.org/2022.acl-short.18/
+   (I Magar, R Schwartz - Proceedings of the 60th Annual Meeting of …, 2022 - aclanthology.org | 2022 | cited by 338)
+   [PDF] https://aclanthology.org/2022.acl-short.18.pdf
+   … 2021) examined five benchmarks and found that all had some … We study the connection between the two measures. … We have shown that given that the language model has seen the …
+
+16. A survey on large language model benchmarks
+   https://arxiv.org/abs/2508.15361
+   (S Ni, G Chen, S Li, X Chen, S Li, B Wang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 55)
+   [PDF] https://arxiv.org/pdf/2508.15361?
+   … caused by data contamination, unfair evaluation due to cultural and linguistic biases, and … has truly understood the knowledge or has merely memorized solution templates for similar …
+
+17. Investigating data contamination in modern benchmarks for large language models
+   https://aclanthology.org/2024.naacl-long.482/
+   (C Deng, Y Zhao, X Tang, M Gerstein… - … : Human Language …, 2024 - aclanthology.org | 2024 | cited by 303)
+   [PDF] https://aclanthology.org/2024.naacl-long.482.pdf
+   … In this paper we study data contamination by proposing two methods tailored for both open-source and proprietary LLMs. We first introduce a retrieval-based system to explore potential …
+
+18. Constat: Performance-based contamination detection in large language models
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/a7f89793b9e6f8c6568dbbb6ff727b9b-Abstract-Conference.html
+   (J Dekoninck, MN Müller… - Advances in Neural …, 2024 - proceedings.neurips.cc | 2024 | cited by 40)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/a7f89793b9e6f8c6568dbbb6ff727b9b-Paper-Conference.pdf
+   … That is, the model has memorized the exact samples in the benchmark, and its performance drops as … We report all significant results in Table 2 and we discuss them for each type of …
+
+19. Benchmark probing: Investigating data leakage in large language models
+   https://openreview.net/forum?id=a34bgvner1
+   (C Deng, Y Zhao, X Tang, M Gerstein… - NeurIPS 2023 workshop …, 2023 - openreview.net | 2023 | cited by 43)
+   [PDF] https://openreview.net/pdf?id=a34bgvner1
+   … contamination of the current 53 benchmark, … investigation protocol designed to assess the potential data leakage 194 in benchmark datasets when evaluated with Language Model …
+
+20. Investigating data contamination for pre-training language models
+   https://arxiv.org/abs/2401.06059
+   (M Jiang, KZ Liu, M Zhong, R Schaeffer… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 100)
+   [PDF] https://arxiv.org/pdf/2401.06059
+   … We selected these easier and traditional benchmarks … We pre-train a series of GPT-2 models from scratch to study the … of verbatim memorization in language models gives a false …
+
+21. Undesirable memorization in large language models: A survey
+   https://arxiv.org/abs/2410.02650
+   (A Satvaty, S Verberne, F Turkmen - arXiv preprint arXiv:2410.02650, 2024 - arxiv.org | 2410 | cited by 37)
+   [PDF] https://arxiv.org/pdf/2410.02650
+   … accuracy drops observed under NOTO reveal strong dependence on memorization and contamination in standard benchmarks. Complementary mechanistic insights are provided by …
+
+22. Concerned with data contamination? assessing countermeasures in code language model
+   https://arxiv.org/abs/2403.16898
+   (J Cao, W Zhang, SC Cheung - arXiv preprint arXiv:2403.16898, 2024 - arxiv.org | 2403 | cited by 32)
+   [PDF] https://arxiv.org/pdf/2403.16898
+   … study whether curate data could serve as an effective countermeasure. In particular, we consider coding benchmarks … the memorization and exploitation of masked language models in …
+
+23. How contaminated is your benchmark? quantifying dataset leakage in large language models with kernel divergence
+   https://arxiv.org/abs/2502.00678
+   (HK Choi, M Khanov, H Wei, Y Li - arXiv preprint arXiv:2502.00678, 2025 - arxiv.org | 2502 | cited by 19)
+   [PDF] https://arxiv.org/pdf/2502.00678?
+   … prioritize benchmark datasets with minimal contamination, … the model’s generalization capabilities rather than memorization of pre… A comparative study on the contamination level across …
+
+24. Rethinking Benchmark Comparability: A Survey of Reasoning Benchmarks for Large Language Models
+   https://www.preprints.org/manuscript/202605.0806
+   (C Zhang, S Liu, H Li, T Gao, Y Wang, Q Chen, X Feng… - 2026 - preprints.org | 2026)
+   [PDF] https://www.preprints.org/frontend/manuscript/8d0185e4ac4edcd8af7e7c6c15f9451b/download_pub
+   … evaluation, as in FrontierMath and MathArena, which aim to better distinguish genuine reasoning from benchmark memorization or contamination [132,161]. A third line examines …
+
+25. Quantifying contamination in evaluating code generation capabilities of language models
+   https://aclanthology.org/2024.acl-long.761.pdf
+   (M Riddell, A Ni, A Cohan - … of the 62nd Annual Meeting of the …, 2024 - aclanthology.org | 2024 | cited by 77)
+   [PDF] https://aclanthology.org/2024.acl-long.761.pdf
+   … model memorization and generalization such as model sizes and difficulty of the questions. We also include a case study … of possible contaminated examples in coding benchmarks, we …
+
+26. Beyond the leaderboard: A survey of the science of evaluation, benchmarking, and methodologies for large language models
+   https://ieeexplore.ieee.org/abstract/document/11488866/
+   (S Sheikhi, L Lovén, P Kostakos - IEEE Access, 2026 - ieeexplore.ieee.org | 2026 | cited by 8)
+   [PDF] https://ieeexplore.ieee.org/iel8/6287639/6514899/11488866.pdf
+   … the model must identify the original benchmark instance from among several slightly altered versions. A model that has memorized … Table 6 compares existing contamination detection …
+
+27. Proving test set contamination in black-box language models
+   https://proceedings.iclr.cc/paper_files/paper/2024/hash/46e624c244cff669223d488defd4e835-Abstract-Conference.html
+   (Y Oren, N Meister, N Chatterji, F Ladhak… - International …, 2024 - proceedings.iclr.cc | 2024 | cited by 273)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2024/file/46e624c244cff669223d488defd4e835-Paper-Conference.pdf
+   … contamination, all orderings of an exchangeable benchmark … In contrast, the tendency for language models to memorize … : We report the results of training a 1.4B language model from …
+
+28. Beyondbench: Contamination-resistant evaluation of reasoning in language models
+   https://openreview.net/pdf?id=mIKqVWGjwI
+   (G Srivastava, A Hussain, Z Bi, S Roy… - The Fourteenth …, 2026 - openreview.net | 2026)
+   [PDF] https://openreview.net/pdf?id=mIKqVWGjwI
+   … harder as static benchmarks risk contamination by training … a large-scale systematic empirical study across 101 models to … at least 80GB memory for the largest open-source models, or …
+
+29. Benchmarking benchmark leakage in large language models
+   https://arxiv.org/abs/2404.18824
+   (R Xu, Z Wang, RZ Fan, P Liu - arXiv preprint arXiv:2404.18824, 2024 - arxiv.org | 2404 | cited by 162)
+   [PDF] https://arxiv.org/pdf/2404.18824?
+   … the model’s familiarity or memorization of the original … In this study, we first summarize various typical training … for mitigating data contamination by evaluation benchmarks. In Conference …
+
+30. A survey on evaluation of large language models
+   https://dl.acm.org/doi/abs/10.1145/3641289
+   (Y Chang, X Wang, J Wang, Y Wu, L Yang… - ACM transactions on …, 2024 - dl.acm.org | 2024 | cited by 6372)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3641289
+   … sizes and training set sizes, static and public benchmarks are likely to be memorized by LLMs, resulting in potential training data contamination. Therefore, developing dynamic and …
+
+31. Dynamic benchmarking of reasoning capabilities in code large language models under data contamination
+   https://arxiv.org/abs/2503.04149
+   (S Chen, P Pusarla, B Ray - arXiv preprint arXiv:2503.04149, 2025 - arxiv.org | 2503 | cited by 30)
+   [PDF] https://arxiv.org/pdf/2503.04149
+   … large language models (Code LLMs) underscores the critical need for effective and transparent benchmarking … This allows it to better distinguish whether a model is merely memorizing …
+
+32. Are large language models memorizing bug benchmarks?
+   https://ieeexplore.ieee.org/abstract/document/11028362/
+   (D Ramos, C Mamede, K Jain, P Canelas… - … Language Models …, 2025 - ieeexplore.ieee.org | 2025 | cited by 32)
+   [PDF] https://arxiv.org/pdf/2411.13323?
+   … metrics, including a study of benchmark membership within commonly … contamination. We also observe that the LLaMa 3.1 family seems to exhibit lower memorization of benchmark …
+
+33. Pretraining Data Exposure in Large Language Models: A Survey of Membership Inference, Data Contamination, and Security Implications
+   https://link.springer.com/chapter/10.1007/978-3-031-97144-0_14
+   (Z Tong, F Sun, LM Nguyen - … on Applications of Natural Language to …, 2025 - Springer | 2025 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2605.26133
+   … Contamination causes models to memorize instead of generalize, inflating benchmark performance … Larger models often exhibit stronger inflation due to memorization [30]. Traditional …
+
+34. Evading data contamination detection for language models is (too) easy
+   https://arxiv.org/abs/2402.02823
+   (J Dekoninck, MN Müller, M Baader, M Fischer… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 34)
+   [PDF] https://arxiv.org/pdf/2402.02823
+   … the integrity of current benchmarks and highlights the need for a systematic study of … and thus a lower probability of unlearning memorized samples, contamination is more likely …
+
+35. Evaluating Chinese large language models on discipline knowledge acquisition via memorization and robustness assessment
+   https://aclanthology.org/2024.conda-1.1/
+   (C Liu, R Jin, M Steedman, D Xiong - … on Data Contamination …, 2024 - aclanthology.org | 2024 | cited by 7)
+   [PDF] https://aclanthology.org/2024.conda-1.1.pdf
+   … response to changes in sample description from the benchmark. Our study involves two sets of Chinese LLMs for a more thorough investigation. The first group comprises ChatGLM …
+
+36. CLEAN–EVAL: Clean evaluation on contaminated large language models
+   https://aclanthology.org/2024.findings-naacl.53/
+   (W Zhu, H Hao, Z He, YZ Song, J Yueyang… - Findings of the …, 2024 - aclanthology.org | 2024 | cited by 32)
+   [PDF] https://aclanthology.org/2024.findings-naacl.53.pdf
+   … detecting model contamination within specific benchmarks, … Their study revealed that as the model’s capacity, duplicated … 7b-chat model in 4-bit precision, effectively reducing memory …
+
+37. Mmlu-cf: A contamination-free multi-task language understanding benchmark
+   https://aclanthology.org/2025.acl-long.656/
+   (Q Zhao, Y Huang, T Lv, L Cui, Q Sun… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 50)
+   [PDF] https://aclanthology.org/2025.acl-long.656.pdf
+   … large language models by creating a new benchmark with a similar style and complexity to GSM8k, revealing significant accuracy drops of memorization … MMLU and the ablation study …
+
+38. When Benchmarks Leak: Inference-Time Decontamination for LLMs
+   https://arxiv.org/abs/2601.19334
+   (J Chai, Y Zhe, J Sakuma - arXiv preprint arXiv:2601.19334, 2026 - arxiv.org | 2601 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2601.19334
+   … large language models (LLMs). However, its reliability is increasingly threatened by test set contamination, … accuracy on three evaluation splits designed to separate memorization from …
+
+39. NLP evaluation in trouble: On the need to measure LLM data contamination for each benchmark
+   https://aclanthology.org/2023.findings-emnlp.722/
+   (O Sainz, J Campos, I García-Ferrero… - Findings of the …, 2023 - aclanthology.org | 2023 | cited by 434)
+   [PDF] https://aclanthology.org/2023.findings-emnlp.722.pdf
+   … contamination happens when a Large Language Model (LLM) is trained on the test split of a benchmark, and then evaluated in the same benchmark… of LLM’s memorization capabilities. …
+
+40. LLM Benchmark Datasets Should Be Contamination-Resistant
+   https://arxiv.org/abs/2605.19999
+   (A Al-Lawati, J Lucas, D Lee, S Wang - arXiv preprint arXiv:2605.19999, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.19999
+   … Documenting large webtext corpora: A case study on the … Generalization or memorization: Data contamination and … source data contamination report for large language models. In …
+
+41. A survey of large language models for code: Evolution, benchmarking, and future trends
+   https://arxiv.org/abs/2311.10372
+   (Z Zheng, K Ning, Y Wang, J Zhang, D Zheng… - arXiv preprint arXiv …, 2023 - arxiv.org | 2023 | cited by 212)
+   [PDF] https://arxiv.org/pdf/2311.10372
+   … After quantization, CodeGeeX2-6B only requires 6GB of GPU memory to run and supports … To prevent contamination from the HumanEval dataset, which was used for evaluation, FIM …
+
+42. A taxonomy for data contamination in large language models
+   https://aclanthology.org/2024.conda-1.3/
+   (M Palavalli, A Bertsch, MR Gormley - … on Data Contamination …, 2024 - aclanthology.org | 2024 | cited by 22)
+   [PDF] https://aclanthology.org/2024.conda-1.3.pdf
+   … were found to contain test data for several benchmarks … However, research has shown that memorization in LLMs … We present the full results of the QA case study. For each setting and …
+
+43. Generalization vs Memorization: Tracing Language Models' Capabilities Back to Pretraining Data
+   https://arxiv.org/abs/2407.14985
+   (X Wang, A Antoniades, Y Elazar, A Amayuelas… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 121)
+   [PDF] https://arxiv.org/pdf/2407.14985?
+   … This study demonstrates that memorization plays a larger role … We confirm that the Pile is not contaminated by any of the … to the weaker capabilities of Pythia models on this benchmark. …
+
+44. Latesteval: Addressing data contamination in language model evaluation through dynamic and time-sensitive test construction
+   https://ojs.aaai.org/index.php/AAAI/article/view/29822
+   (Y Li, F Guerin, C Lin - Proceedings of the AAAI Conference on Artificial …, 2024 - ojs.aaai.org | 2024 | cited by 76)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/download/29822/31427
+   … language models exhibit negligible memorisation behaviours on LatestEval as opposed to previous benchmarks… We report the results of both and visualise the results with their software…
+
+45. Identifying Data Contamination in LLMs for Mathematical Benchmarks
+   https://repositum.tuwien.at/handle/20.500.12708/216244
+   (TG Mathis - 2025 - repositum.tuwien.at | 2025)
+   [PDF] https://repositum.tuwien.at/bitstream/20.500.12708/216244/1/Mathis%20Tobias%20Gallus%20-%202025%20-%20Identifying%20Data%20Contamination%20in%20LLMs%20for...pdf
+   … and simple memorization is essential, the risk of contamination is … an overview of the large language models used in our … We report accuracy scores separately for the contaminated and …
+
+46. Does data contamination detection work (well) for llms? a survey and evaluation on detection assumptions
+   https://aclanthology.org/2025.findings-naacl.291/
+   (Y Fu, O Uzuner, M Yetisgen-Yildiz… - Findings of the …, 2025 - aclanthology.org | 2025 | cited by 30)
+   [PDF] https://aclanthology.org/2025.findings-naacl.291.pdf
+   … Large language models (LLMs) have achieved remarkable performance across various benchmarks… assumption to detect memorization in coding and reasoning benchmarks. However, …
+
+47. Livecodebench: Holistic and contamination free evaluation of large language models for code
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/94074dd5a072d28ff75a76dabed43767-Abstract-Conference.html
+   (N Jain, A Gu, WD Li, F Yan, T Zhang… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 1824)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/94074dd5a072d28ff75a76dabed43767-Paper-Conference.pdf
+   … the study, we present novel empirical findings on contamination… updated benchmark that avoids data contamination. Particularly… Efficient memory management for large language model …
+
+48. Sok: Memorization in general-purpose large language models
+   https://arxiv.org/abs/2310.18362
+   (V Hartmann, A Suri, V Bindschaedler, D Evans… - arXiv preprint arXiv …, 2023 - arxiv.org | 2023 | cited by 106)
+   [PDF] https://arxiv.org/pdf/2310.18362
+   … are no surveys on the topic relating to language models. Wang et … evaluated through extensive benchmarking, where BIG-bench [… a contamination of the training data with data from the …
+
+49. A survey of large language models
+   https://link.springer.com/article/10.1007/s11704-026-60308-3
+   (WX Zhao, K Zhou, J Li, T Tang, Z Dong, Y Hou… - Frontiers of Computer …, 2026 - Springer | 2026 | cited by 83)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s11704-026-60308-3.pdf
+   … (4) evaluation methods, encompassing benchmarks for key ability dimensions such as core … CPU memory and be transferred to the GPU only upon activation, keeping device memory …
+
+50. A survey on benchmarks of multimodal large language models
+   https://arxiv.org/abs/2408.08632
+   (J Li, W Lu, H Fei, M Luo, M Dai, M Xia, Y Jin… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 204)
+   [PDF] https://arxiv.org/pdf/2408.08632?
+   Multimodal Large Language Models (MLLMs) are gaining increasing popularity in both … This paper presents a comprehensive review of 200 benchmarks and evaluations for MLLMs, …
+
+===== Query 5/6: SWE-bench contamination solution leakage evaluation =====
+
+1. Swe-rebench: An automated pipeline for task collection and decontaminated evaluation of software engineering agents
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/21bec6ace947b1b58967b945c8ac0f10-Abstract-Datasets_and_Benchmarks_Track.html
+   (I Badertdinov, A Golubev… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 105)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/21bec6ace947b1b58967b945c8ac0f10-Paper-Datasets_and_Benchmarks_Track.pdf
+   … SWE-bench Verified and show that performance of some language models might be inflated due to contamination … leaderboard, to ensure transparency around possible data leakage. …
+
+2. Swe-bench+: Enhanced coding benchmark for llms
+   https://arxiv.org/abs/2410.06992
+   (R Aleithan, H Xue, MM Mohajer, E Nnorom… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 102)
+   [PDF] https://arxiv.org/pdf/2410.06992
+   … , SWE-bench+ has no issues with solution leakage whereas … introduced SWE-Bench+, a dataset free from solution leakage … more rigorous and accurate evaluations. Through extensive …
+
+3. SWE-Bench+: Enhanced LLM Coding Benchmark
+   https://dl.acm.org/doi/abs/10.1145/3805760.3814924
+   (H Xue, R Aleithan, N Enan, G Uddin… - Proceedings of the 3rd …, 2026 - dl.acm.org | 2026)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3805760.3814924
+   … evaluation of LLMbased software engineering agents. It is motivated by benchmarkquality risks we identified in SWE-Bench, particularly solution leakage … highlighted contamination as a …
+
+4. SWE-MERA: A Dynamic Benchmark for Agenticly Evaluating Large Language Models on Software Engineering Tasks
+   https://aclanthology.org/2025.emnlp-demos.30/
+   (A Pavel, I Mikhail, A Valeev, R Levichev… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 1)
+   [PDF] https://aclanthology.org/2025.emnlp-demos.30.pdf
+   … ” due to solution leakage in the issue or pull request descriptions, highlighting the risks of data contamination, as … We slightly modify Aider 7 and Aider-SWE-bench8 repositories due to …
+
+5. SWE-MERA: A Dynamic Benchmark for Agenticly Evaluating Large Language Models on Software Engineering Tasks
+   https://aclanthology.org/anthology-files/pdf/emnlp/2025.emnlp-demos.30.pdf
+   (P Adamenko, M Ivanov, A Valeev… - arXiv preprint arXiv …, 2025 - aclanthology.org | 2025 | cited by 13)
+   [PDF] https://aclanthology.org/anthology-files/pdf/emnlp/2025.emnlp-demos.30.pdf
+   … ” due to solution leakage in the issue or pull request descriptions, highlighting the risks of data contamination, as … We slightly modify Aider 7 and Aider-SWE-bench8 repositories due to …
+
+6. Swe-bench goes live!
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/d83c4a745789690f82e86d0ef752ae7c-Abstract-Datasets_and_Benchmarks_Track.html
+   (L Zhang, S He, C Zhang, Y Kang, B Li… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 82)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/d83c4a745789690f82e86d0ef752ae7c-Paper-Datasets_and_Benchmarks_Track.pdf
+   … • We introduce SWE-bench-Live, a contamination-resistant, … To reduce the risk of data leakage, SWE-bench-Live … Following the evaluation protocol of SWE-bench [10], we adopt …
+
+7. Does SWE-Bench-Verified Test Agent Ability or Model Memory?
+   https://arxiv.org/abs/2512.10218
+   (T Prathifkumar, NS Mathews, M Nagappan - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 41)
+   [PDF] https://arxiv.org/pdf/2512.10218
+   … To better understand the extent of leakage, we conduct an experiment. In … This suggests potential data contamination. Models … When evaluating against all ground truth files, we can see …
+
+8. SWE-Bench+: Enhanced Coding Benchmark for LLMs
+   https://openreview.net/forum?id=R40rS2afQ3
+   (H Xue, R Aleithan, N Enan, E Nnorom, MM Mohajer… - openreview.net)
+   [PDF] https://openreview.net/pdf?id=R40rS2afQ3
+   … of SWE-Bench dataset (ie, SWE-Bench Lite and SWE-Bench … Our evaluation shows that SWEBench+ can achieve 80.45% … focus on SWE-Bench, our approach (ie, solution-leak-issue …
+
+9. Swe-bench: Can language models resolve real-world github issues?
+   https://proceedings.iclr.cc/paper_files/paper/2024/hash/edac78c3e300629acfe6cbe9ca88fb84-Abstract-Conference.html
+   (CE Jimenez, J Yang, A Wettig, S Yao… - International …, 2024 - proceedings.iclr.cc | 2024 | cited by 3565)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2024/file/edac78c3e300629acfe6cbe9ca88fb84-Paper-Conference.pdf?utm_source=chatgpt.com
+   … We evaluate multiple state-of-the-art LMs on SWE-bench and … To eliminate the risk of data contamination, the set of … PR’s initial commit to avoid leakage of solution details. A PR’s code …
+
+10. Swe-abs: Adversarial benchmark strengthening exposes inflated success rates on test-based benchmark
+   https://arxiv.org/abs/2603.00520
+   (B Yu, Y Cao, Y Zhang, L Lin, J Xu, Z Zhong… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 6)
+   [PDF] https://arxiv.org/pdf/2603.00520
+   … We select SWE-Bench Verified and SWE-Bench Pro as evalu… effectiveness on contamination-resistant SWE-Bench Pro … For RQ1 on SWE-Bench Verified, we evaluate 30 agents …
+
+11. SWE-Cycle: Benchmarking Code Agents across the Complete Issue Resolution Cycle
+   https://arxiv.org/abs/2605.13139
+   (H Guan, L Fu, S Zhang, Y Zhu, K Zhang, L Qiu… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.13139
+   … evaluating code agents across the complete issue resolution lifecycle. We construct this benchmark from SWE-bench … : dataset distillation to eliminate contamination, task formulation …
+
+12. SWE-bench-secret: Automating AI Agent Evaluation for Software Engineering Tasks
+   https://uwspace.uwaterloo.ca/items/965d7ee5-e148-47be-bfaf-a9280d6bf3f6
+   (G Kio - 2025 - uwspace.uwaterloo.ca | 2025 | cited by 1)
+   [PDF] https://uwspace.uwaterloo.ca/bitstreams/4945e946-05ee-424b-9255-1f9110d9485e/download
+   … design a contamination-free dataset for evaluating AI agents … model is considered contaminated if it has been evaluated on … Data contamination and test-case leakage have been widely …
+
+13. SWE-Bench++: A Framework for the Scalable Generation of Software Engineering Benchmarks from Open-Source Repositories
+   https://arxiv.org/abs/2512.17419
+   (L Wang, L Ramalho, A Celestino, PA Pham… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 18)
+   [PDF] https://arxiv.org/pdf/2512.17419
+   … Solution Leakage and Ambiguity Finally, the quality of … In practice, we approximate contamination control by evaluating … identified using our extended SWE-Bench evaluation …
+
+14. What's in a Benchmark? The Case of SWE-Bench in Automated Program Repair
+   https://dl.acm.org/doi/abs/10.1145/3786583.3786904
+   (M Martinez, X Franch - Proceedings of the IEEE/ACM 48th International …, 2026 - dl.acm.org | 2026 | cited by 4)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3786583.3786904
+   … SWE-Bench is a benchmark designed to evaluate repair systems using real … Data Contamination. Some … LLMs, raising the risk of data leakage, with high scores potentially inflated …
+
+15. Auto-SWE-Bench: A Framework for the Scalable Generation of Software Engineering Benchmark from Open-Source Repositories
+   https://openreview.net/forum?id=Gxw1EDSm9S
+   (L Wang, L Ramalho, A Celestino, PA Pham, UK Sinha… - openreview.net)
+   [PDF] https://openreview.net/pdf?id=Gxw1EDSm9S
+   … Contamination-Resistant Evaluation: By continuously scraping … , minimizing data contamination risks via temporal separation. … Solution Leakage and Ambiguity Finally, the quality of …
+
+16. Lessleak-bench: A first investigation of data leakage in llms across 83 software engineering benchmarks
+   https://arxiv.org/abs/2502.06215
+   (X Zhou, M Weyssow, R Widyasari, T Zhang… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 54)
+   [PDF] https://arxiv.org/pdf/2502.06215?
+   … that data leakage has a substantial impact on LLM evaluation. On … Data leakage (also called Data Contamination) in LLMs … Finally, SWE-Bench and SWE-Bench-verified also experience …
+
+17. Swe-bench pro: Can ai agents solve long-horizon software engineering tasks?
+   https://arxiv.org/abs/2509.16941
+   (X Deng, J Da, E Pan, YY He, C Ide, K Garg… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 148)
+   [PDF] https://arxiv.org/pdf/2509.16941?
+   … In our evaluation of widely used coding models, under a … Overall, SWE-BENCH PRO provides a contamination-resistant … public set to avoid potential leakage with the commercial set. …
+
+18. Swe-factory: Your automated factory for issue resolution training data and evaluation benchmarks
+   https://arxiv.org/abs/2506.10954
+   (L Guo, Y Wang, C Li, W Tao, P Yang, J Chen… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 23)
+   [PDF] https://arxiv.org/pdf/2506.10954
+   … To prevent data leakage during evaluation on SWE-bench, we ensure that … SWE-bench benchmark. Each task instance includes basic issue information, the Docker-based evaluation …
+
+19. Saving SWE-Bench: A Benchmark Mutation Approach for Realistic Agent Evaluation
+   https://arxiv.org/abs/2510.08996
+   (S Garg, B Steenhoek, Y Huang - arXiv preprint arXiv:2510.08996, 2025 - arxiv.org | 2510 | cited by 11)
+   [PDF] https://arxiv.org/pdf/2510.08996
+   … set of 500 examples to evaluate agents against. However, … SWEBench+ [1] have revealed issues like solution leakage … reliable evaluations when evaluating LLMs under contamination …
+
+20. Swe-polybench: A multi-language benchmark for repository level evaluation of coding agents
+   https://arxiv.org/abs/2504.08703
+   (MS Rashid, C Bock, Y Zhuang, A Buchholz… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 66)
+   [PDF] https://arxiv.org/pdf/2504.08703
+   … data contamination and to ensure independent evaluation of model performance, we excluded any repositories found in SWE-Bench … approaches to mitigate data leakage effects. Future …
+
+21. Towards Comprehensive Benchmarking Infrastructure for LLMs In Software Engineering
+   https://arxiv.org/abs/2601.21070
+   (D Rodriguez-Cardenas, X Li, M Macedo… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2601.21070
+   … % on SWE-bench Verified drop to just 23% on SWE-bench Pro, … leakage [16]. Beyond these, SWT-bench introduces dual … reliability checks, expert review, and contamination detection), …
+
+22. Swe-bench multimodal: Do ai systems generalize to visual software domains?
+   https://arxiv.org/abs/2410.03859
+   (J Yang, CE Jimenez, AL Zhang, K Lieret, J Yang… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 205)
+   [PDF] https://arxiv.org/pdf/2410.03859
+   … propose SWE-bench Multimodal (SWEbench M), to evaluate systems on their ability to fix … It finds no evidence for a test set advantage from solutions leaking into the LM training sets: we …
+
+23. Cross-Context Verification: Hierarchical Detection of Benchmark Contamination through Session-Isolated Analysis
+   https://arxiv.org/abs/2603.21454
+   (TE Song - arXiv preprint arXiv:2603.21454, 2026 - arxiv.org | 2603 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2603.21454
+   … SWE-bench Issue #4653 revealed git history leakage … These findings motivated SWEbench Pro, Live, and rebench … is evaluated on the same dataset used for contamination detection. …
+
+24. SWE Atlas: Benchmarking Coding Agents Beyond Issue Resolution
+   https://arxiv.org/abs/2605.08366
+   (M Raghavendra, S Dan, MR Calvo, YY He… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2605.08366
+   … -level evaluation, like SWE-bench [14], SWE-Bench Pro [9] … to the canonical SWE-Bench Verified and SWE-Bench Pro tasks, … on SWE-Bench Verified citing contamination concerns [17], …
+
+25. The Evaluation Challenge of Agency: Reliability, Contamination, and Evolution in LLM Agents
+   https://www.techrxiv.org/doi/full/10.36227/techrxiv.177222530.04005985
+   (Z Dong, Z Liu, Z Wang, Y Li, Z Ma - 2026 - techrxiv.org | 2026 | cited by 1)
+   [PDF] https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.177222530.04005985
+   … SWE-bench to 33.2% on the human-curated SWE-bench … Traditional data contamination involves test data leaking into … a novel threat: Search-Time Contamination (STC). STC occurs …
+
+26. Swe-hub: A unified production system for scalable, executable software engineering tasks
+   https://arxiv.org/abs/2603.00575
+   (Y Zeng, S Li, D Dong, R Xu, Z Chen, L Zheng… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2603.00575
+   … evaluation. Subsequent efforts have further emphasized robustness and expanded coverage, including SWE-bench … limits, preventing state contamination across tasks and enforcing …
+
+27. Claw-SWE-Bench: A Benchmark for Evaluating OpenClaw-style Agent Harnesses on Coding Tasks
+   https://arxiv.org/abs/2606.12344
+   (M Zheng, K Han, B Li, H Xu, Y Tian, W He… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2606.12344
+   … other non-solution artifacts during execution; if these enter git diff, they contaminate the patch … Leak-fix evaluation protocol. The main experiments use results after cleaning future-commit …
+
+28. SWE-Bench Mobile: Can Large Language Model Agents Develop Industry-Level Mobile Applications?
+   https://arxiv.org/abs/2602.09540
+   (M Tian, Z Wang, B Yang, Z Tang, K Zhu, H Dong… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2602.09540
+   … SWE-Bench Mobile as a hosted benchmark challenge to prevent data contamination and ensure fair evaluation… benchmarks where test instances may leak into LLM training corpora [7]. …
+
+29. Immersion in the github universe: Scaling coding agents to mastery
+   https://arxiv.org/abs/2602.09892
+   (J Zhao, G Chen, F Meng, M Li, J Chen, H Xu… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 7)
+   [PDF] https://arxiv.org/pdf/2602.09892
+   … lead to inconsistent results due to environment contamination. … the SWE-bench evaluation, we implement an anti-leak strategy to prevent the LLM from accessing ground truth solutions …
+
+30. Dissecting the swe-bench leaderboards: Profiling submitters and architectures of llm-and agent-based repair systems
+   https://arxiv.org/abs/2506.17208
+   (M Martinez, X Franch - arXiv preprint arXiv:2506.17208, 2025 - arxiv.org | 2506 | cited by 32)
+   [PDF] https://arxiv.org/pdf/2506.17208
+   … SWE-Bench is a recent benchmark designed to evaluate LLM-… SWE-Bench Lite and SWE-Bench Verified—have become central platforms for tracking progress and comparing solutions. …
+
+31. Narrowing the Complexity Gap in the Evaluation of Large Language Models
+   https://arxiv.org/abs/2602.18928
+   (Y Chen, S Liu, R Jabbarvand - arXiv preprint arXiv:2602.18928, 2026 - arxiv.org | 2602)
+   [PDF] https://arxiv.org/pdf/2602.18928
+   … problems is subject to data contamination and overfitting. We … Recently, researchers identified solution leakage—the issue … , we chose SWE-Bench-Lite [6], a subset of 300 SWE-Bench …
+
+32. Evaluating AGENTS. md: Are Repository-Level Context Files Helpful for Coding Agents?
+   https://arxiv.org/abs/2602.11988
+   (T Gloaguen, N Mündler, M Müller, V Raychev… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 20)
+   [PDF] https://arxiv.org/pdf/2602.11988
+   … SWE-BENCH, which we leverage for the evaluation of … Importantly, we instruct the agent not to leak the solution in the … does not influence our results To isolate the effect of contamination …
+
+33. ATime-Consistent Benchmark for Repository-Level Software Engineering Evaluation
+   https://arxiv.org/abs/2603.26137
+   (H Sun, T Yu, S Ma, Q Zhang, L Rao, C Tian - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2603.26137
+   … Evaluation of repository-aware software engineering systems is often confounded by synthetic task design, prompt leakage, and temporal contamination … agent is evaluated with and …
+
+34. DeepSWE: Measuring Frontier Coding Agents on Original, Long-Horizon Engineering Tasks
+   https://arxiv.org/abs/2607.07946
+   (W Huang, C Lee, L Tng, S Ge - arXiv preprint arXiv:2607.07946, 2026 - arxiv.org | 2607 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2607.07946
+   … Contamination and decontamination. Because … the gold solution can leak into the evaluation container itself: in our … pipeline we use to evaluate DeepSWE; on SWE-Bench Pro we find …
+
+35. Esolang-bench: Evaluating genuine reasoning in large language models via esoteric programming languages
+   https://arxiv.org/abs/2603.09678
+   (A Sharma, P Chopra - arXiv preprint arXiv:2603.09678, 2026 - arxiv.org | 2603 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2603.09678
+   … popular benchmarks such as SWE-bench and HumanEval (eg … makes them a good proxy for evaluating out-of-distribution … for mitigating data contamination by evaluation benchmarks. …
+
+36. RepoRepair: Leveraging code documentation for repository-level automated program repair
+   https://arxiv.org/abs/2603.01048
+   (Z Pan, C Li, W Zhong, Y Feng, B Luo, V Ng - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2603.01048
+   … been officially evaluated on both SWE-bench Lite and SWE-bench Multimodal: … leakage was detected in SWE-bench Multimodal. Overall, we conclude that benchmark contamination …
+
+37. LLVM-Bench: Benchmarking and Advancing Large Language Models for LLVM Compiler Issue Resolution
+   https://arxiv.org/abs/2607.00700
+   (Z Tian, Y Zhao, C Suo, M Wang, J Chen - arXiv preprint arXiv:2607.00700, 2026 - arxiv.org | 2607)
+   [PDF] https://arxiv.org/pdf/2607.00700
+   … For example, the largest repository in SWEbench contains … against potential data contamination or solution leakage, we … -Verified [27], whereas the best configuration evaluated in this …
+
+38. Mcts-refined cot: High-quality fine-tuning data for llm-based repository issue resolution
+   https://arxiv.org/abs/2506.12728
+   (Y Wang, Z Peng, Y Wang, Z Wei, H Yu… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 11)
+   [PDF] https://arxiv.org/pdf/2506.12728
+   … When exposed to CoT datasets contaminated by defective rea… study [35] suggests minimal leakage risk in this benchmark. For … For SWE-bench evaluation of our AGENTLESS fine-tuned …
+
+39. An evaluation of llm code generation capabilities through graded exercises
+   https://arxiv.org/abs/2410.16292
+   (ÁB Jiménez - arXiv preprint arXiv:2410.16292, 2024 - arxiv.org | 2410 | cited by 9)
+   [PDF] https://arxiv.org/pdf/2410.16292?
+   … be related to leakage of the challenge solutions into the model … in the evaluations due to data contamination. In fact, current … GitHub repositories in datasets like SWE-Bench, or new code …
+
+40. The Conversations Beneath the Code: Triadic Data for Long-Horizon Software Engineering Agents
+   https://arxiv.org/abs/2605.02244
+   (Y Kim - arXiv preprint arXiv:2605.02244, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.02244
+   … experiments, and pre-registered blind evaluation. We argue that this data … SWE-bench resolution set and found 32.67% had solution … Contamination is audited explicitly against standard …
+
+41. SWE-Future: Forecast-Conditioned Data Synthesis for Future-Oriented Software Engineering Agents
+   https://arxiv.org/abs/2606.18733
+   (Q Zhao, JY Qu, J Zhang, Y Yang, H Du… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.18733
+   … to SWE-bench and the SWE-bench harness, then expand … Second, a leakage review checks the public task surface … Quantifying contamination in evaluating code generation capabilities …
+
+42. Evaluating agent-based program repair at google
+   https://ieeexplore.ieee.org/abstract/document/11121734/
+   (P Rondon, R Wei, J Cambronero, J Cito… - 2025 IEEE/ACM 47th …, 2025 - ieeexplore.ieee.org | 2025 | cited by 47)
+   [PDF] https://ieeexplore.ieee.org/iel8/11121614/11121615/11121734.pdf
+   … agentic system on SWE-Bench or SWE-BenchLite. … leakage from future states in the repository, eg code search results are limited to those up to the commit preceding the ground-truth fix…
+
+43. Recent advances in large langauge model benchmarks against data contamination: From static to dynamic evaluation
+   https://arxiv.org/abs/2502.17521
+   (S Chen, Y Chen, Z Li, Y Jiang, Z Wan, Y He… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 29)
+   [PDF] https://arxiv.org/pdf/2502.17521
+   … review the background on data contamination (§2), and then survey static benchmarks and their enhancements for mitigating data contamination (… contamination by intentionally leaking …
+
+44. Position: AI competitions provide the gold standard for empirical rigor in GenAI evaluation
+   https://arxiv.org/abs/2505.00612
+   (D Sculley, W Cukierski, P Culliton, S Dane… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2505.00612
+   … leakage and contamination are in fact the most important and difficult issues to address for GenAI evaluations. … , is a contamination-free version of SWE-Bench which evaluates LLMs on …
+
+45. What Makes a Good Bug Report for an AI Agent?
+   https://arxiv.org/abs/2607.07593
+   (L Khatib, NS Mathews, M Nagappan, P Nie… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2607.07593
+   … Second, we removed instances with solution leakage, where … Following SWEbench evaluation protocol, we define a bug … its issues and fixes may be contaminated by the training data of …
+
+46. Code-QA-Bench: Separating Code Reasoning from Documentation Memorization in Repository-Level QA
+   https://arxiv.org/abs/2605.29277
+   (J Zhang, JY Qu, H Du, Z Sun, Y Yang… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.29277
+   … 10 Python repositories from SWE-Bench, scored by an LLM judge … memorization via three evaluation conditions and adopt SWE-… Our documentation-removal approach to contamination …
+
+47. Benchmarking llms for unit test generation from real-world functions
+   https://dl.acm.org/doi/abs/10.1145/3805043
+   (D Huang, JM Zhang, M Harman, Q Zhang… - ACM Transactions on …, 2025 - dl.acm.org | 2025 | cited by 18)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3805043
+   … Similarly, TestGenEval [6] adapted SWE-Bench to create tasks … This leakage compromises the reliability of an evaluation, as … how data contamination affects the assessment result of test …
+
+48. Benchmarking large language models under data contamination: A survey from static to dynamic evaluation
+   https://aclanthology.org/2025.emnlp-main.511/
+   (S Chen, Y Chen, Z Li, Y Jiang, Z Wan… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 30)
+   [PDF] https://aclanthology.org/2025.emnlp-main.511.pdf
+   … review the background on data contamination (§2), and then survey static benchmarks and their enhancements for mitigating data contamination (… contamination by intentionally leaking …
+
+49. From benchmarks to deployment: a comprehensive review of agentic AI evaluation
+   https://link.springer.com/article/10.1007/s10462-026-11571-0
+   (T Kehkashan, M Abdullah, AS Al-Shamayleh… - … Intelligence Review, 2026 - Springer | 2026 | cited by 1)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s10462-026-11571-0.pdf
+   … SWE-bench focuses on evaluation of software … risk of contamination of the leaking benchemark information to LLM pretraining corpora has been a critical risk to the validity of evaluation …
+
+50. On leakage of code generation evaluation datasets
+   https://aclanthology.org/2024.findings-emnlp.772/
+   (A Matton, T Sherborne, D Aumiller… - Findings of the …, 2024 - aclanthology.org | 2024 | cited by 62)
+   [PDF] https://aclanthology.org/2024.findings-emnlp.772.pdf
+   … effect of contamination is critical to accurately interpreting scores on these benchmarks. In this paper, we review the evidence that most contemporary LLMs are contaminated with data …
+
+===== Query 6/6: LiveCodeBench contamination-free code benchmark temporal =====
+
+1. Livecodebench: Holistic and contamination free evaluation of large language models for code
+   https://proceedings.iclr.cc/paper_files/paper/2025/hash/94074dd5a072d28ff75a76dabed43767-Abstract-Conference.html
+   (N Jain, A Gu, WD Li, F Yan, T Zhang… - International …, 2025 - proceedings.iclr.cc | 2025 | cited by 1824)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2025/file/94074dd5a072d28ff75a76dabed43767-Paper-Conference.pdf
+   … With these principles in mind, we build LIVECODEBENCH, a continuously updated benchmark that avoids data contamination. Particularly, we collect 612 problems from contests …
+
+2. Leetcodedataset: A temporal dataset for robust evaluation and efficient training of code llms
+   https://arxiv.org/abs/2504.14655
+   (Y Xia, W Shen, Y Wang, JK Liu, H Sun, S Wu… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 60)
+   [PDF] https://arxiv.org/pdf/2504.14655?
+   … -quality benchmark for evaluating and training code-generation … splits (pre/post July 2024), our dataset enables contamination-free … Following LiveCodeBench’s temporal evaluation …
+
+3. Test of time: Rethinking temporal signal of benchmark contamination
+   https://aclanthology.org/2026.acl-long.1693/
+   (TJ Zhang, G Dev, N Wang, M Obreiter… - Proceedings of the …, 2026 - aclanthology.org | 2026 | cited by 5)
+   [PDF] https://aclanthology.org/2026.acl-long.1693.pdf
+   … this effect on prior benchmarks that report clear post-cutoff decay (LiveCodeBench), and … of the same problems can effectively remove the temporal pattern. We further provide a …
+
+4. Code2bench: Scaling source and rigor for dynamic benchmark construction
+   https://openreview.net/pdf?id=QZmKyAy1VK
+   (Z Zhang, R Liu, A Liu, X Liu, X Gao… - Proceedings of The …, 2026 - openreview.net | 2026 | cited by 2)
+   [PDF] https://openreview.net/pdf?id=QZmKyAy1VK
+   … However, the current landscape of code benchmarks is fundamentally constrained by two … We achieve this through Temporal Filtering, a deterministic strategy grounded in the version …
+
+5. Dynamic Benchmark Construction for Evaluating Large Language Models on Real-World Codes
+   https://arxiv.org/abs/2508.07180
+   (Z Zhang, R Liu, A Liu, X Liu, X Gao, H Sun - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2508.07180
+   … This temporal filtering helps exclude code potentially present in models’ pre-training data. … domains like mathematics and news, while LiveCodeBench [19] collects recent problems from …
+
+6. REAP: Automatic Curation of Coding Agent Benchmarks from Interactive Production Usage
+   https://arxiv.org/abs/2604.01527
+   (S Jha, M Paltenghi, C Maddila, V Murali… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2604.01527
+   … The underlying corpus contains proprietary source code and … to construct similar production-derived benchmarks at scale. … ensure the benchmark stays fresh, contamination-free, …
+
+7. Livemedbench: A contamination-free medical benchmark for llms with automated rubric evaluation
+   https://arxiv.org/abs/2602.10367
+   (Z Yan, D Song, Z Fang, Y Ji, X Li, Q Li, L Sun - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 9)
+   [PDF] https://arxiv.org/pdf/2602.10367
+   … online medical communities, ensuring strict temporal separation from model training data. … Livecodebench: Holistic and contamination free evaluation of large language models for code…
+
+8. Dynamic benchmarking of reasoning capabilities in code large language models under data contamination
+   https://arxiv.org/abs/2503.04149
+   (S Chen, P Pusarla, B Ray - arXiv preprint arXiv:2503.04149, 2025 - arxiv.org | 2503 | cited by 30)
+   [PDF] https://arxiv.org/pdf/2503.04149
+   … defining the lambda operator, while LiveCodeBench shifts the burden of manual design to … researchers have proposed various contamination-free benchmarking strategies, which can …
+
+9. Recent advances in large langauge model benchmarks against data contamination: From static to dynamic evaluation
+   https://arxiv.org/abs/2502.17521
+   (S Chen, Y Chen, Z Li, Y Jiang, Z Wan, Y He… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 29)
+   [PDF] https://arxiv.org/pdf/2502.17521
+   … in training corpora, code snippets from benchmark implementations, … with built-in guarantees—such as those using temporal … 2025) incorporates all three contamination-free construction …
+
+10. Swe-bench goes live!
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/d83c4a745789690f82e86d0ef752ae7c-Abstract-Datasets_and_Benchmarks_Track.html
+   (L Zhang, S He, C Zhang, Y Kang, B Li… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 82)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/d83c4a745789690f82e86d0ef752ae7c-Paper-Datasets_and_Benchmarks_Track.pdf
+   … In contrast to recent efforts such as LiveCodeBench [9], … for improvement on the contamination-free benchmark. … As shown in Figure 2, the temporal distribution is generally …
+
+11. Benchmarking large language models under data contamination: A survey from static to dynamic evaluation
+   https://aclanthology.org/2025.emnlp-main.511/
+   (S Chen, Y Chen, Z Li, Y Jiang, Z Wan… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 30)
+   [PDF] https://aclanthology.org/2025.emnlp-main.511.pdf
+   … training corpora, code snippets from benchmark implementations, … with built-in guarantees—such as those using temporal cutoffs … ) incorporates all three contamination-free construction …
+
+12. Codecleaner: Elevating standards with a robust data contamination mitigation toolkit
+   https://arxiv.org/abs/2411.10842
+   (J Cao, S Chen, W Zhang, HC Lo… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2411.10842
+   … , aiming at providing a contamination-free code contests benchmark for LLMs evaluation. … Livecodebench: Holistic and contamination free evaluation of large language models for code…
+
+13. Surveying the benchmarking landscape of large language models in code intelligence
+   https://dl.acm.org/doi/abs/10.1145/3800957
+   (M Abdollahi, R Zhang, N Shiri Harzevili, J Shin… - ACM Transactions on …, 2025 - dl.acm.org | 2025 | cited by 7)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3800957
+   … Their inclusion ensures our survey covers the frontier of robust and contamination-free … The temporal distribution of these articles reveals a strong upward trend in recent years, …
+
+14. TestEvo-Bench: An Executable and Live Benchmark for Test and Code Co-Evolution
+   https://arxiv.org/abs/2607.02469
+   (JA Wang, K Wang, P Nie - arXiv preprint arXiv:2607.02469, 2026 - arxiv.org | 2607)
+   [PDF] https://arxiv.org/pdf/2607.02469
+   … code change should propagate into the test suite. We introduce TESTEVO-BENCH, a benchmark of test and code … Figure 2 reports the temporal distribution of the tasks in the two tracks. …
+
+15. OSS-Bench: Benchmark Generator for Coding LLMs
+   https://arxiv.org/abs/2505.12331
+   (Y Jiang, R Yap, Z Liang - arXiv preprint arXiv:2505.12331, 2025 - arxiv.org | 2505 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2505.12331?
+   … of realworld code. In this work, we introduce OSS-BENCH, an automatic benchmark generator … to simulate production-level coding, while LiveCodeBench [10] sources tasks from recent …
+
+16. Toward Automated, Contamination-free Dafny Benchmark Generation
+   https://www.scazzariello.net/storage/publications/Dafny_26-0b0af860a9.pdf
+   (C Wang, M Scazzariello, D Kostić, M Chiesa - scazzariello.net)
+   [PDF] https://www.scazzariello.net/storage/publications/Dafny_26-0b0af860a9.pdf
+   … We mitigate contamination in two ways: (𝑖) we release only the code to generate the benchmark, instead of a static snapshot of instances created at evaluation time; and (𝑖𝑖) because …
+
+17. Devbench: A realistic, developer-informed benchmark for code generation models
+   https://arxiv.org/abs/2601.11895
+   (A Kumarappan, PA Golnari, W Wen, X Liu… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 6)
+   [PDF] https://arxiv.org/pdf/2601.11895
+   … Evolving benchmarks like LiveCodeBench and EvoCodeBench address data contamination using recent code (Jain et al., 2024; Li et al., 2024). Recent work has also scaled multi-…
+
+18. DevBench: An Interaction-Grounded Benchmark for Code Completion Models
+   https://openreview.net/forum?id=8ZROguA070
+   (A Kumarappan, PA Golnari, W Wen, X Liu… - Deep Learning for Code … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=8ZROguA070
+   … 80× more evaluation instances LiveCodeBench … Contamination-free evaluation … We introduced DevBench, a benchmark grounded in over one billion real developer code completion …
+
+19. Clever: A curated benchmark for formally verified code generation
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/a7f67788f7b4d77fa7cd6887de3dcbe7-Abstract-Datasets_and_Benchmarks_Track.html
+   (A Thakur, J Lee, G Tsoukalas, M Sistla… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 42)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/a7f67788f7b4d77fa7cd6887de3dcbe7-Paper-Datasets_and_Benchmarks_Track.pdf
+   … have become extremely popular in recent literature, including benchmarking performance fixing realworld issues [14] and contamination-free code generation [12]. In our work, we …
+
+20. Secrepobench: Benchmarking code agents for secure code completion in real-world repositories
+   https://dl.acm.org/doi/abs/10.1145/3786181.3788703
+   (C Shen, C Dilgren, P Chiniya, L Griffith, Y Ding… - … Models For Code, 2026 - dl.acm.org | 2026 | cited by 6)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3786181.3788703
+   … , a benchmark to evaluate LLMs on secure code generation in real-world repositories. SecRepoBench has 318 code … We evaluate 19 state-of-the-art LLMs using our benchmark and find …
+
+21. Towards Comprehensive Benchmarking Infrastructure for LLMs In Software Engineering
+   https://arxiv.org/abs/2601.21070
+   (D Rodriguez-Cardenas, X Li, M Macedo… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2601.21070
+   … World of Code analysis show that roughly 65% of Python packages provide a repository, meaning that partial or duplicated code can reappear in multiple contexts [27]. Temporal …
+
+22. RustMizan: A Compilable, Contamination-Aware Benchmarking Framework for Rust Vulnerabilities
+   https://arxiv.org/abs/2607.04729
+   (T Elsayed, S Yang, E Koh, S Goyal, V Huang… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2607.04729
+   … We have introduced RUSTMIZAN, a Rust vulnerability benchmark with compilable, multi-level code variants and a paired mutation framework for contamination mitigation and …
+
+23. CoSPlay: Cooperative Self-Play at Test-Time with Self-Generated Code and Unit Test
+   https://arxiv.org/abs/2605.23491
+   (Z Hu, C Liu, T Huang, J Li, Y Yang, J Wu… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.23491
+   … codes agree on the same inputs while wrong codes diverge. Experiments on four challenging benchmarks … used and challenging datasets: LiveBench [37], LiveCodeBench (v2) [12], …
+
+24. SWE-Bench++: A Framework for the Scalable Generation of Software Engineering Benchmarks from Open-Source Repositories
+   https://arxiv.org/abs/2512.17419
+   (L Wang, L Ramalho, A Celestino, PA Pham… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 18)
+   [PDF] https://arxiv.org/pdf/2512.17419
+   … Our “living benchmark” design enables temporally separated, contamination-aware … While temporal separation is a strong heuristic rather than a formal guarantee—as code may still …
+
+25. Multi-LCB: Extending LiveCodeBench to Multiple Programming Languages
+   https://arxiv.org/abs/2606.20517
+   (M Ivanova, P Zadorozhny, R Levichev, I Petrov… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.20517
+   … a rigorous new benchmark for multi-programming-language code evaluation, directly addressing … Additionally, models may exhibit temporal bias based on varying exposure to different …
+
+26. Benchmarks as Software: A Case Study on Terminal-Bench
+   https://openreview.net/forum?id=AhXMZPnOPS
+   (EK Buchanan, S Linderman, C Re - Deep Learning for Code: Towards … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=AhXMZPnOPS
+   … 2025) date-stamps problems and evaluates on contamination-free slices. Post-hoc trace … LiveCodeBench: Holistic and contamination free evaluation of large language models for code. …
+
+27. Liveclin: A live clinical benchmark without leakage
+   https://arxiv.org/abs/2602.16747
+   (X Wang, S Guo, Y Shen, J Chen, J Wang, J Gu… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2602.16747
+   … for the main benchmark, as the goal here was to capture a typical temporal cross-section … Clusters is inserted here] Allowed ICD-10 codes in this chapter (you MUST copy exactly one …
+
+28. PERFOPT-Bench: Evaluating Coding Agents on Software Performance Optimization
+   https://arxiv.org/abs/2607.07744
+   (Y Cui, Y Xie, P Wang, J Ma, B Liu, L Cao - arXiv preprint arXiv:2607.07744, 2026 - arxiv.org | 2607)
+   [PDF] https://arxiv.org/pdf/2607.07744
+   … is unsafe as a benchmark score, since some large gains arise from benchmarkspecific shortcut … BigCodeBench: Benchmarking code generation with diverse function calls and complex …
+
+29. Coding Agents Don't Know When to Act
+   https://arxiv.org/abs/2605.07769
+   (T Gloaguen, N Mündler, M Müller, V Raychev… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.07769
+   … gap between SWE-BENCH VERIFIED and temporally-filtered tasks. Our work still focuses … broader benchmarks mirror our findings, but we quantify these effects in the context of code …
+
+30. EvoCode-Bench: Evaluating Coding Agents in Multi-Turn Iterative Interactions
+   https://arxiv.org/abs/2605.24110
+   (H Shen, X Chen, W Xu, Y Ma, L Chen, K Li - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2605.24110
+   … We introduce EVOCODE-BENCH, a benchmark of 26 stateful coding tasks and 227 … Livecodebench: Holistic and contamination free evaluation of large language models for code. In …
+
+31. You Don't Need Public Tests to Generate Correct Code
+   https://arxiv.org/abs/2604.21598
+   (K Silva, S Perera - arXiv preprint arXiv:2604.21598, 2026 - arxiv.org | 2604)
+   [PDF] https://arxiv.org/pdf/2604.21598
+   … ming benchmarks such as HumanEval [3] and LiveCodeBench [9]. … Current contemporary models achieve pass@1 rates … evaluate code generation, we needed a contamination-free …
+
+32. Mercury: A code efficiency benchmark for code large language models
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/1df1df43b58845650b8dada00fca9772-Abstract-Datasets_and_Benchmarks_Track.html
+   (M Du, LA Tuan, B Ji, Q Liu… - Advances in Neural …, 2024 - proceedings.neurips.cc | 2024 | cited by 87)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/1df1df43b58845650b8dada00fca9772-Paper-Datasets_and_Benchmarks_Track.pdf
+   … LiveCodeBench [22] continuously updates its problem set, ensuring contamination-free … are imported in a temporary namespace of which the sandbox controls code behaviors. …
+
+33. Auto-SWE-Bench: A Framework for the Scalable Generation of Software Engineering Benchmark from Open-Source Repositories
+   https://openreview.net/forum?id=Gxw1EDSm9S
+   (L Wang, L Ramalho, A Celestino, PA Pham, UK Sinha… - openreview.net)
+   [PDF] https://openreview.net/pdf?id=Gxw1EDSm9S
+   … -written code. Additionally, the static nature of all aforementioned … benchmark” of instances created after a model’s knowledge cutoff, minimizing data contamination risks via temporal …
+
+34. RealClawBench: Live OpenClaw Benchmarks from Real Developer-Agent Sessions
+   https://arxiv.org/abs/2606.03889
+   (Z Lv, Z Tan, Y Li, Y Yao, Y Tian, L Sun, X Zhang… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2606.03889
+   … by rerunning the construction pipeline on two non-overlapping temporal windows: a base … Livecodebench: Holistic and contamination free evaluation of large language models for code…
+
+35. OSS-Bench: Evaluating LLMs via the Realistic Open-Source Software Development Pipeline
+   https://openreview.net/forum?id=CkxjXuI7LL
+   (Y Jiang, R Yap, Z Liang - openreview.net)
+   [PDF] https://openreview.net/pdf?id=CkxjXuI7LL
+   … tasks that span a diverse range of realworld code. In this work, we introduce OSS-BENCH, an automatic benchmark approach designed to address the challenges outlined above …
+
+36. Kodezi Chronos: A Debugging-First Language Model for Repository-Scale Code Understanding
+   https://arxiv.org/abs/2507.12482
+   (I Khan, A Chowdary, S Haseeb, U Patel… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2507.12482
+   … lines [11], understanding temporal code evolution, and … code generation benchmarks like HumanEval and MBPP [52], we evaluate Chronos-1 on specialized debugging benchmarks …
+
+37. CodeAlchemy: Synthetic Code Rewriting at Scale
+   https://arxiv.org/abs/2606.10087
+   (A Gupta, A Prasad, R Panda - arXiv preprint arXiv:2606.10087, 2026 - arxiv.org | 2606)
+   [PDF] https://arxiv.org/pdf/2606.10087
+   … given a source file, or mentally simulate what code does when it runs. To target these gaps we introduce two benchmarks. DevEval contains 1488 diverse developer tasks across 12 …
+
+38. CodeClash: Benchmarking goal-oriented software engineering
+   https://arxiv.org/abs/2511.00839
+   (J Yang, K Lieret, J Yang, CE Jimenez… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 9)
+   [PDF] https://arxiv.org/pdf/2511.00839
+   … , a benchmark where LMs compete in multi-round tournaments to build the best codebase … that accumulate particularly many output and temporary files in separate directories that were …
+
+39. TimeMachine-bench: A Benchmark for Evaluating Model Capabilities in Repository-Level Migration Tasks
+   https://arxiv.org/abs/2601.22597
+   (R Fujii, M Morishita, K Yano, J Suzuki - arXiv preprint arXiv:2601.22597, 2026 - arxiv.org | 2601)
+   [PDF] https://arxiv.org/pdf/2601.22597
+   … code to evolving environments, has been largely overlooked. In this study, we introduce TimeMachine-bench, a benchmark … To enforce temporal constraints on dependencies in both …
+
+40. From code foundation models to agents and applications: A comprehensive survey and practical guide to code intelligence
+   https://arxiv.org/abs/2511.18538
+   (J Yang, X Liu, W Lv, K Deng, S Guo, L Jing, Y Li… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 15)
+   [PDF] https://arxiv.org/pdf/2511.18538
+   … It performed well on code generation and completion benchmarks (eg, HumanEval, APPS) … to 64K) and reaches competitive LiveCodeBench performance versus strong proprietary …
+
+41. A self-improving coding agent
+   https://arxiv.org/abs/2504.15228
+   (M Robeyns, M Szummer, L Aitchison - arXiv preprint arXiv:2504.15228, 2025 - arxiv.org | 2504 | cited by 57)
+   [PDF] https://arxiv.org/pdf/2504.15228
+   … all problem instances across all benchmarks to compare the … We also include 50 random questions from LiveCodeBench [26]… Livecodebench: Holistic and contamination free evaluation …
+
+42. X-Coder: Advancing Competitive Programming with Fully Synthetic Tasks, Solutions, and Tests
+   https://arxiv.org/abs/2601.06953
+   (J Wu, H Li, X Zhang, J Guo, J Luo, S Liu… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2601.06953
+   … significant performance gains on challenging LiveCodeBench v5 and v6 without relying on any … to May 2025), which are the most widely used benchmarks for code reasoning models. …
+
+43. Livecodebench pro: How do olympiad medalists judge llms in competitive programming?
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/9712b78386cebdc3db7f1a48c2d20edb-Abstract-Datasets_and_Benchmarks_Track.html
+   (Z Zheng, Z Cheng, Z Shen, S Zhou… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 57)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/9712b78386cebdc3db7f1a48c2d20edb-Paper-Datasets_and_Benchmarks_Track.pdf
+   … We introduce LiveCodeBench Pro, a benchmark composed … to steer future improvements in code-centric LLM reasoning. … Pro, a rigorously curated and contamination-free benchmark …
+
+44. Cpret: A dataset, benchmark, and model for retrieval in competitive programming
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/f3c812da38d1bc796cb2e8235eee96bf-Abstract-Datasets_and_Benchmarks_Track.html
+   (H Deng, Y Meng, S Tang… - Advances in Neural …, 2026 - proceedings.neurips.cc | 2026 | cited by 2)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/f3c812da38d1bc796cb2e8235eee96bf-Paper-Datasets_and_Benchmarks_Track.pdf
+   … Finally, we analyze LiveCodeBench and find that high-… need for similarity-aware evaluation in future benchmarks. … In addition, we perform a temporal analysis of the two code-centric …
+
+45. TruthTensor: Evaluating LLMs Human Imitation through Prediction Market Drift and Holistic Reasoning
+   https://arxiv.org/abs/2601.13545
+   (S Shahabi, S Graham, H Isah - arXiv preprint arXiv:2601.13545, 2026 - arxiv.org | 2601)
+   [PDF] https://arxiv.org/pdf/2601.13545
+   … Building on forward-looking, contamination-free tasks, our … on measuring narrative drift, temporal inconsistency, and … LiveCodeBench [16] is a benchmark designed to evaluate …
+
+46. Seed diffusion: A large-scale diffusion language model with high-speed inference
+   https://arxiv.org/abs/2508.02193
+   (Y Song, Z Zhang, C Luo, P Gao, F Xia, H Luo… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 113)
+   [PDF] https://arxiv.org/pdf/2508.02193?
+   … across a diverse suite of code generation benchmarks: … For Competitive Coding tasks, we utilize LiveCodeBench [29], which … temporal tagging enables the creation of contamination-free …
+
+47. Swe-rebench: An automated pipeline for task collection and decontaminated evaluation of software engineering agents
+   https://proceedings.neurips.cc/paper_files/paper/2025/hash/21bec6ace947b1b58967b945c8ac0f10-Abstract-Datasets_and_Benchmarks_Track.html
+   (I Badertdinov, A Golubev… - Advances in …, 2026 - proceedings.neurips.cc | 2026 | cited by 105)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2025/file/21bec6ace947b1b58967b945c8ac0f10-Paper-Datasets_and_Benchmarks_Track.pdf
+   … to build a contamination-free benchmark for agentic software … Specifically, we evaluate models on two distinct temporal … performance on various code generation benchmarks, this model …
+
+48. Beyond Memorization: Reasoning-Driven Synthesis as a Mitigation Strategy Against Benchmark Contamination
+   https://openreview.net/forum?id=vZIKOhWGNG
+   (TJ Zhang, G Dev, N Wang, N Ni, W Jiang… - First Workshop on …, 2025 - openreview.net | 2025 | cited by 1)
+   [PDF] https://openreview.net/pdf?id=vZIKOhWGNG
+   … LiveCodeBench documented 170 systematic contamination through clear temporal performance boundaries in code generation tasks, 171 demonstrating that models relied heavily on …
+
+49. Beyond Retrieval: A Multitask Benchmark and Model for Code Search
+   https://arxiv.org/abs/2605.04615
+   (S Xue, Z Liao, J Qin, Z Zhang, Y Mu, F Zhou… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.04615
+   … the full code search pipeline. COREB is built from counterfactually rewritten LiveCodeBench … LCB, a continuously updated benchmark that mitigates contamination via temporal filtering. …
+
+50. A survey on data contamination for large language models
+   https://arxiv.org/abs/2502.14425
+   (Y Cheng, Y Chang, Y Wu - arXiv preprint arXiv:2502.14425, 2025 - arxiv.org | 2502 | cited by 56)
+   [PDF] https://arxiv.org/pdf/2502.14425
+   … contamination-free evaluation. For static benchmarks, current research focuses on three key contamination-free … (2024) introduced LiveCodeBench, a codegeneration benchmark that …

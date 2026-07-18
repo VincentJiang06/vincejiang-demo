@@ -1,0 +1,1065 @@
+===== Query 1/6: Gneiting Raftery 2007 strictly proper scoring rules prediction estimation =====
+
+1. Strictly proper scoring rules, prediction, and estimation
+   https://www.tandfonline.com/doi/abs/10.1198/016214506000001437
+   (T Gneiting, AE Raftery - Journal of the American statistical …, 2007 - Taylor & Francis | 2007 | cited by 8472)
+   [PDF] https://apps.dtic.mil/sti/pdfs/ADA454828.pdf
+   Scoring rules assess the quality of probabilistic forecasts, by assigning a numerical score based on the predictive distribution and on the event or value that materializes. A scoring rule is proper if the forecaster maximizes the expected score for an observation drawn from the distributionF if he or she issues the probabilistic forecast F, rather than G ≠ F. It is strictly proper if the maximum is unique. In prediction problems, proper scoring rules encourage the forecaster to make careful assessments and to be honest. In estimation problems, strictly proper scoring rules provide attractive loss and utility functions that can be tailored to the problem at hand. This article reviews and develops the theory of proper scoring rules on general probability spaces, and proposes and discusses examples thereof. Proper scoring rules derive from convex functions and relate to information measures, entropy functions, and Bregman divergences. In the case of categorical variables, we prove a rigorous version of the Savage representation. Examples of scoring rules for probabilistic forecasts in the form of predictive densities include the logarithmic, spherical, pseudospherical, and quadratic scores. The continuous ranked probability score applies to probabilistic forecasts that take the form of predictive cumulative distribution functions. It generalizes the absolute error and forms a special case of a new and very general type of score, the energy score. Like many other scoring rules, the energy score admits a kernel representation in terms of negative definite functions, with links to inequalities of Hoeffding type, in both univariate and multivariate settings. Proper scoring rules for quantile and interval forecasts are also discussed. We relate proper scoring rules to Bayes factors and to cross-validation, and propose a novel form of cross-validation known as random-fold cross-validation. A case study on probabilistic weather forecasts in the North American Pacific Northwest illustrates the importance of propriety. We note optimum score approaches to point and quantile estimation, and propose the intuitively appealing interval score as a utility function in interval estimation that addresses width as well as coverage.
+
+===== Query 2/6: Miller Resnick Zeckhauser peer prediction eliciting informative feedback 2005 =====
+
+1. Eliciting informative feedback: The peer-prediction method
+   https://pubsonline.informs.org/doi/abs/10.1287/mnsc.1050.0379
+   (N Miller, P Resnick, R Zeckhauser - Management Science, 2005 - pubsonline.informs.org | 2005 | cited by 786)
+   [PDF] https://nmiller.web.illinois.edu/documents/research/elicit.pdf
+   Many recommendation and decision processes depend on eliciting evaluations of opportunities, products, and vendors. A scoring system is devised that induces honest reporting of feedback. Each rater merely reports a signal, and the system applies proper scoring rules to the implied posterior beliefs about another rater’s report. Honest reporting proves to be a Nash equilibrium. The scoring schemes can be scaled to induce appropriate effort by raters and can be extended to handle sequential interaction and continuous signals. We also address a number of practical implementation issues that arise in settings such as academic reviewing and online recommender and reputation systems.
+
+===== Query 3/6: Prelec Bayesian truth serum 2004 Science =====
+
+1. A Bayesian truth serum for subjective data
+   https://www.science.org/doi/abs/10.1126/science.1102081
+   (D Prelec - science, 2004 - science.org | 2004 | cited by 697)
+   [PDF] https://www.researchgate.net/profile/Drazen-Prelec/publication/8231017_A_Bayesian_Truth_Serum_for_Subjective_Data/links/0deec51bb0d8741001000000/A-Bayesian-Truth-Serum-for-Subjective-Data.pdf
+   Subjective judgments, an essential information source for science and policy, are problematic because there are no public criteria for assessing judgmental truthfulness. I present a scoring method for eliciting truthful subjective data in situations where objective truth is unknowable. The method assigns high scores not to the most common answers but to the answers that are more common than collectively predicted, with predictions drawn from the same population. This simple adjustment in the scoring criterion removes all bias in favor of consensus: Truthful answers maximize expected score even for respondents who believe that their answer represents a minority view.
+
+===== Query 4/6: Holzman Moulin impartial nominations awards 2013 =====
+
+1. Impartial nominations for a prize
+   https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA10523
+   (R Holzman, H Moulin - Econometrica, 2013 - Wiley Online Library | 2013 | cited by 116)
+   [PDF] https://www.academia.edu/download/50872303/IMPARTIAL_NOMINATIONS_FOR_A_PRIZE20161213-26736-xzcgro.pdf
+   … elections, impartial … nomination rules to award a prize among peers. A group of agents must choose one of them to receive a prize (or undertake a task); each agent is asked to nominate …
+
+2. Impartial nomination correspondences
+   https://link.springer.com/article/10.1007/s00355-013-0772-9
+   (S Tamura, S Ohseto - Social Choice and Welfare, 2014 - Springer | 2014 | cited by 41)
+   … article, Holzman and Moulin … nomination rules that satisfy impartiality, positive unanimity, and negative unanimity. It follows from Holzman and Moulin (2013) that there is no nomination …
+
+3. Optimal impartial selection
+   https://dl.acm.org/doi/abs/10.1145/2600057.2602836
+   (F Fischer, M Klimm - Proceedings of the fifteenth ACM conference on …, 2014 - dl.acm.org | 2014 | cited by 76)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/2600057.2602836
+   … [2011] and Holzman and Moulin [2013] showed independently that deterministic impartial … , like the setting with one nomination per agent studied by Holzman and Moulin, and cannot be …
+
+4. Essays in Mechanism Design
+   https://tohoku.repo.nii.ac.jp/record/123875/files/170324-TAMURA-172-1.pdf
+   (S Tamura - 2016 - tohoku.repo.nii.ac.jp | 2016)
+   [PDF] https://tohoku.repo.nii.ac.jp/record/123875/files/170324-TAMURA-172-1.pdf
+   … multiplewinners is possible, there exists an impartial nomination rule … for nomination rules, it follows from Holzman and Moulin (2013) … In their article, Holzman and Moulin establish two …
+
+5. Characterizing minimal impartial rules for awarding prizes
+   https://www.econstor.eu/handle/10419/127083
+   (S Tamura - 2015 - econstor.eu | 2015)
+   [PDF] https://www.econstor.eu/bitstream/10419/127083/1/817138579.pdf
+   … discussion of whether Holzman and Moulin’s … nominations each person receives. For consequences of anonymous ballots for impartial nomination rules, see Holzman and Moulin (2013…
+
+6. Essays in mechanism design
+   https://tohoku.repo.nii.ac.jp/record/123924/files/E1H280172.pdf
+   (田村翔平 - tohoku.repo.nii.ac.jp)
+   [PDF] https://tohoku.repo.nii.ac.jp/record/123924/files/E1H280172.pdf
+   … Holzman and Moulin (2013) show that, if only one prize-… -winners is possible, there exists an impartial nomination rule … a multi-valued impartial nomination rule satisfying anonymous …
+
+7. Impartial Mechanisms for Selection and Ranking
+   https://search.proquest.com/openview/33aff79345687b2022a0675be9ee05b1/1?pq-origsite=gscholar&cbl=2026366&diss=y
+   (JAC Lasserre - 2024 - search.proquest.com | 2024)
+   … Holzman and Moulin, we derive our lower bound from an axiomatic impossibility: We show that every impartial … or fails to select an agent with nominations from all other agents (violating …
+
+8. Strategyproof peer selection: Mechanisms, analyses, and experiments
+   https://ojs.aaai.org/index.php/AAAI/article/view/10038
+   (H Aziz, O Lev, N Mattei, J Rosenschein… - Proceedings of the AAAI …, 2016 - ojs.aaai.org | 2016 | cited by 76)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/download/10038/9897
+   … We propose a new strategyproof (impartial) mecha… (nominate) a subset of agents (Alon et al. 2011; Bousquet, Norin, and Vetta 2014; Fischer and Klimm 2014; Holzman and Moulin 2013…
+
+9. ICES: Small: Impartial decision making in distributed systems
+   https://ui.adsabs.harvard.edu/abs/2011nsf....1101202M/abstract
+   (H Moulin - NSF Award Number 1101202. Directorate for …, 2011 - ui.adsabs.harvard.edu | 1101)
+   … Impartial nominations for a prize, (with Ron Holzman), Econometrica, 81, 1, 173-196, 2013. http:/… impossibility result about impartial nomination methods is developed. The PIÆs work on …
+
+10. Impartial peer review
+   https://kilthub.cmu.edu/articles/Impartial_Peer_Review/6606278/files/12096791.pdf
+   (D Kurokawa, O Lev, J Morgenstern, AD Procaccia - 2015 - kilthub.cmu.edu | 2015 | cited by 101)
+   [PDF] https://kilthub.cmu.edu/articles/Impartial_Peer_Review/6606278/files/12096791.pdf
+   … not impartial: we seek mechanisms that are. How should we evaluate the impartial mechanisms … Specifically, we say that an impartial mechanism αapproximates VANILLA if, in the worst …
+
+11. Characterizing minimal impartial rules for awarding prizes
+   https://www.sciencedirect.com/science/article/pii/S0899825615001621
+   (S Tamura - Games and Economic Behavior, 2016 - Elsevier | 2016 | cited by 27)
+   … of nominations; the rule is impartial if one's nomination never … impartial, anonymous, symmetric, and monotonic nomination … We show that the set consists of exactly one nomination rule: …
+
+12. Impartial Assignment of m prizes
+   
+   (D Berga, R Gjorgjiev - 2014 | 2014)
+
+13. Impartial social rankings: Some impossibilities
+   https://saet.uiowa.edu/wp-content/uploads/sites/18/gravity_forms/12-854b2acdbe79c39c3d4cf95b7240cb0d/2025/03/DolorsBergassrn-4068181.pdf
+   (J Alcalde-Unzu, D Berga, R Gjorgjiev - Available at SSRN 4068178, 2022 - saet.uiowa.edu | 4068 | cited by 7)
+   [PDF] https://saet.uiowa.edu/wp-content/uploads/sites/18/gravity_forms/12-854b2acdbe79c39c3d4cf95b7240cb0d/2025/03/DolorsBergassrn-4068181.pdf
+   … a single winner, Holzman and Moulin (2013) show that there are impartial rules with full … property of Impartiality with Weak Anonymity. A similar result is obtained in Holzman and Moulin’…
+
+14. A near-optimal mechanism for impartial selection
+   https://link.springer.com/chapter/10.1007/978-3-319-13129-0_10
+   (N Bousquet, S Norin, A Vetta - … Conference on Web and Internet Economics, 2014 - Springer | 2014 | cited by 48)
+   [PDF] https://arxiv.org/pdf/1407.8535
+   … This impartial selection problem was introduced independently by Holzman and Moulin [5] … In addition to elections, they were motivated by nomination mechanisms for prestigious prizes …
+
+15. PeerNomination: Relaxing exactness for increased accuracy in peer selection
+   https://arxiv.org/abs/2004.14939
+   (N Mattei, P Turrini, S Zhydkov - arXiv preprint arXiv:2004.14939, 2020 - arxiv.org | 2004 | cited by 28)
+   [PDF] https://arxiv.org/pdf/2004.14939
+   … want to design algorithms that are impartial, so that an individual … Here, we present a novel algorithm for impartial peer … nm is unlikely to be an integer, we consider an agent nominated …
+
+16. Impartial selection and the power of up to two choices
+   https://dl.acm.org/doi/abs/10.1145/3107922
+   (A Bjelde, F Fischer, M Klimm - ACM Transactions on Economics and …, 2017 - dl.acm.org | 2017 | cited by 39)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3107922
+   … a set of agents based on nominations by other members and that are impartial in the sense that … by Holzman and Moulin [8] and Alon et al. [1], the articles of Holzman and Moulin and of …
+
+17. Impartial selection with additive approximation guarantees
+   https://link.springer.com/article/10.1007/s00224-022-10081-0
+   (I Caragiannis, G Christodoulou… - Theory of Computing …, 2022 - Springer | 2022 | cited by 19)
+   [PDF] https://arxiv.org/pdf/1910.00135
+   … First, in Section 3.1 we propose a mechanism for the single nomination model of Holzman and Moulin [13], where nomination profiles consist only of graphs with all vertices having an …
+
+18. Can impartial peer-review mechanisms replace external reviewers?
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5142213
+   (F Silva - Available at SSRN 5142213, 2025 - papers.ssrn.com | 5142)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5142213
+   … 1 (the multiple awards’ case), then an impartial first best mechanism exists if … Holzman and Moulin (2013) study nomination mechanisms with a single winner, where applicants nominate …
+
+19. The PeerRank method for peer assessment
+   https://arxiv.org/abs/1405.7192
+   (T Walsh - arXiv preprint arXiv:1405.7192, 2014 - arxiv.org | 1405 | cited by 92)
+   [PDF] https://arxiv.org/pdf/1405.7192
+   … For example, Holzman and Moulin have studied a related … of this work is that nominations are impartial: your message … sort of methods proposed by Holzman and Moulin to the task of …
+
+20. A game of the throne of Saint Peter
+   https://cris.maastrichtuniversity.nl/en/publications/a-game-of-the-throne-of-saint-peter/
+   (A Mackenzie - 2018 - cris.maastrichtuniversity.nl | 2018 | cited by 3)
+   [PDF] https://cris.maastrichtuniversity.nl/files/26038282/RM18015.pdf
+   … impartiality, but so long as self-nomination is allowed, the only scrutinies which satisfy both impartial… coincides with the model of Holzman and Moulin (2013); we discuss this further …
+
+21. A New Approach to Impartial Division
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3448761
+   (PH Edelman - Available at SSRN 3448761, 2019 - papers.ssrn.com | 3448)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3448761
+   … After proving a number of impossibility theorems, Holzman and Moulin weaken … nomination rule. Such a distribution is equivalent to the division of a dollar, based on a single nomination …
+
+22. Using supermajority rules to aggregate judgments of possibly biased experts
+   https://www.sciencedirect.com/science/article/pii/S0165176521002901
+   (P Amorós - Economics Letters, 2021 - Elsevier | 2021 | cited by 2)
+   … We show that implementability of a q -supermajoritarian SCR in an ordinal equilibrium concept requires the group of experts to satisfy a condition of impartiality that depends on q (the …
+
+23. Implementation in dominant strategies of quota rules to choose one candidate
+   https://www.sciencedirect.com/science/article/pii/S0165176522001586
+   (P Amorós - Economics Letters, 2022 - Elsevier | 2022 | cited by 1)
+   A group of n experts has to pick one winner from a group of candidates. Each expert has a judgment about who is the best candidate. A social choice rule (SCR) is a function that …
+
+24. Impartial selection with prior information
+   https://dl.acm.org/doi/abs/10.1145/3543507.3583553
+   (I Caragiannis, G Christodoulou… - Proceedings of the ACM …, 2023 - dl.acm.org | 2023 | cited by 15)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3543507.3583553
+   … by the simpler plurality with default mechanism by Holzman and Moulin [20]; in case of a tie, … no deterministic impartial mechanism exists, where the nodes can nominate anonymously, …
+
+25. Impartial Peer Selection: An Annotated Reading List
+   https://dl.acm.org/doi/abs/10.1145/3699824.3699834
+   (O Lev, H Lyon, N Mattei - ACM SIGecom Exchanges, 2024 - dl.acm.org | 2024 | cited by 3)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3699824.3699834
+   … impartial mechanism that finitely approximate the optimal selection, as well as to determine general bounds for randomized impartial … a single agent [Holzman and Moulin 2013; Fischer …
+
+26. Optimal impartial correspondences: J. Cembrano et al.
+   https://link.springer.com/article/10.1007/s00355-025-01631-9
+   (J Cembrano, F Fischer, M Klimm - Social Choice and Welfare, 2025 - Springer | 2025 | cited by 7)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s00355-025-01631-9.pdf
+   … , that an agent nominated by all other agents must be selected, and negative unanimity, that an agent not receiving any nominations must not be selected (Holzman and Moulin 2013). …
+
+27. Information Asymmetry and Strategy: Applications to Impartiality and Free-Riding
+   https://oaktrust.library.tamu.edu/items/ed37ecaa-0600-44e2-9415-06abed7432e2
+   (BJ Campbell - 2018 - oaktrust.library.tamu.edu | 2018)
+   [PDF] https://oaktrust.library.tamu.edu/bitstreams/0a4cad44-9f83-42af-b61c-f09a8aaddbb6/download
+   … no anonymous and impartial nomination rule that is either a function, Holzman and Moulin (2010… rule would satisfy the premises of the impossibility result in Holzman and Moulin (2013), …
+
+28. Ranking wily people who rank each other
+   https://ojs.aaai.org/index.php/AAAI/article/view/11467
+   (A Kahng, Y Kotturi, C Kulkarni, D Kurokawa… - Proceedings of the …, 2018 - ojs.aaai.org | 2018 | cited by 52)
+   [PDF] https://ojs.aaai.org/index.php/AAAI/article/view/11467/11326
+   … 2In addition, it is easy to prove that there are no deterministic rank aggregation rules that are both impartial (according to our definition) and Pareto efficient (Moulin 2014). The latter …
+
+29. Essays in Microeconomic Theory
+   https://bonndoc.ulb.uni-bonn.de/xmlui/handle/20.500.11811/11294?locale-attribute=en
+   (JM Preusser - 2024 - bonndoc.ulb.uni-bonn.de | 2024)
+   [PDF] https://bonndoc.ulb.uni-bonn.de/xmlui/bitstream/handle/20.500.11811/11294/7449.pdf?sequence=2&isAllowed=y
+   … new light on a characterization due to Holzman and Moulin (2013) and Mackenzie (2015) of … of Holzman and Moulin by referring to these mechanisms as impartial nomination rules. This …
+
+30. Optimal impartial correspondences
+   
+   (JA Cembrano Lasserre - 2025 - Deutsche Nationalbibliothek | 2025)
+
+31. An axiomatic analysis of the papal conclave
+   https://www.jstor.org/stable/45283993
+   (A Mackenzie - Economic Theory, 2020 - JSTOR | 2020 | cited by 28)
+   … 3, we analyze scrutiny by adapting a recent model (Holzman and Moulin 2013) to … impartiality , but so long as self-nomination is allowed, the only scrutinies which satisfy both impartiality …
+
+32. Strategyproofing peer assessment via partitioning: The price in terms of evaluators' expertise
+   https://ojs.aaai.org/index.php/HCOMP/article/view/21987
+   (K Dhull, S Jecmen, P Kothari, NB Shah - Proceedings of the AAAI …, 2022 - ojs.aaai.org | 2022 | cited by 40)
+   [PDF] https://ojs.aaai.org/index.php/HCOMP/article/download/21987/21763
+   … (This is equivalent to common settings in the strategyproofing literature (Holzman and Moulin 2013; Bousquet, Norin, and Vetta 2014; Fischer and Klimm 2015; Aziz et al. 2016; Kahng …
+
+33. Sigmod 2020 tutorial on fairness and bias in peer review and other sociotechnical intelligent systems
+   https://dl.acm.org/doi/abs/10.1145/3318464.3383129
+   (NB Shah, Z Lipton - Proceedings of the 2020 ACM SIGMOD International …, 2020 - dl.acm.org | 2020 | cited by 17)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3318464.3383129
+   Questions of fairness and bias abound in all socially-consequential decisions pertaining to collection and management of data. Whether designing protocols for peer review of research …
+
+34. TheWebConf 2020 Tutorial: Fairness and Bias in Peer Review and other Sociotechnical Intelligent Systems
+   https://www.cs.cmu.edu/~nihars/tutorials/TheWebConf2020/overview.pdf
+   (NB Shah, Z Lipton - 2020 - cs.cmu.edu | 2020 | cited by 1)
+   [PDF] https://www.cs.cmu.edu/~nihars/tutorials/TheWebConf2020/overview.pdf
+   … Impartial division of a dollar. Journal of Economic Theory 139, 1 (2008), 176–191. [14] C … 2013. A Bayesian model for calibrating conference review scores. http://mlg.eng.cam.ac.uk/hong…
+
+35. Using sub-majoritarian rules to select the winner of a competition
+   https://www.sciencedirect.com/science/article/pii/S0165176520300719
+   (P Amorós - Economics Letters, 2020 - Elsevier | 2020 | cited by 2)
+   We study the problem of aggregating expert judgments to decide the winner of a competition. Experts can be biased and then their preferences are not necessarily aligned with their …
+
+36. Nash implementation of supermajority rules
+   https://link.springer.com/article/10.1007/s00182-024-00888-1
+   (P Amorós - International Journal of Game Theory, 2024 - Springer | 2024 | cited by 2)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s00182-024-00888-1.pdf
+   … impartial with respect to all pairs of candidates. Secondly, our Proposition 2 shows that the necessary condition of impartiality … Holzman and Moulin (2013) study the problem of choosing …
+
+37. Peer Selection with Friends and Enemies
+   https://arxiv.org/abs/2511.11157
+   (F Bloch, B Dutta, M Dziubiński - arXiv preprint arXiv:2511.11157, 2025 - arxiv.org | 2511)
+   [PDF] https://arxiv.org/pdf/2511.11157
+   … , while related, differs in important ways from the Alon-Holzman-Moulin classical framework. … “impartial” or dominant strategy incentive compatible voting rules when individuals nominate …
+
+38. KDD 2021 tutorial on systemic challenges and solutions on bias and unfairness in peer review
+   https://dl.acm.org/doi/abs/10.1145/3447548.3470826
+   (NB Shah - Proceedings of the 27th ACM SIGKDD Conference on …, 2021 - dl.acm.org | 2021 | cited by 2)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3447548.3470826
+   … 2013. Peer review in a changing world: an international study … 2013. A Bayesian model for calibrating conference review … 2013. Statistical quality estimation for general crowdsourcing …
+
+39. WSDM 2021 tutorial on systematic challenges and computational solutions on bias and unfairness in peer review
+   https://dl.acm.org/doi/abs/10.1145/3437963.3441660
+   (NB Shah - Proceedings of the 14th ACM International Conference …, 2021 - dl.acm.org | 2021 | cited by 11)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3437963.3441660
+   … 2013. Peer review in a changing world: An international study measuring the attitudes of researchers. Journal of the Association for Information Science and Technology 64, 1 (…
+
+40. On the ranking of social alternatives
+   https://ddd.uab.cat/record/126889
+   (R Gjorgjiev - 2013 - ddd.uab.cat | 2013)
+   [PDF] https://ddd.uab.cat/pub/tesis/2013/hdl_10803_120215/rg1de1.pdf
+   … However, we demonstrate that there exist impartial ranking … is different than the one of Holzman and Moulin (2013)[24], … , all of them regarding the impartial nominations for a prize. In the …
+
+41. Accountable Voting
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4406802
+   (T Fujiwara-Greve, Y Kawada, Y Nakamura… - Available at SSRN …, 2025 - papers.ssrn.com | 2025 | cited by 2)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=4406802
+   … i’s input to the aggregation process (which must nominate another voter) should not change the … , we exhaust all initially neutral voters of x but one. This last neutral voter puts x as the …
+
+42. Deterministic impartial selection with weights
+   https://dl.acm.org/doi/abs/10.1145/3677177
+   (J Cembrano, SM Griesbach, MJ Stahlberg - ACM Transactions on …, 2024 - dl.acm.org | 2024 | cited by 8)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3677177
+   … [1] use partitions only in the context of randomized mechanisms, Holzman and Moulin … problem in the single-nomination setting and showed that impartiality is compatible with two …
+
+43. Mechanisms that play a game, not toss a coin
+   https://arxiv.org/abs/2308.10413
+   (T Walsh - arXiv preprint arXiv:2308.10413, 2023 - arxiv.org | 2308 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2308.10413
+   … For example, we can design an impartial mechanism by partitioning agents into two sets, … two possible winners. We can de-randomize this mechanism without violating impartiality by …
+
+44. Aggregating experts' opinions to select the winner of a competition
+   https://link.springer.com/article/10.1007/s00182-020-00712-6
+   (P Amorós - International Journal of Game Theory, 2020 - Springer | 2020 | cited by 9)
+   … We call “total impartiality” and “quasi-impartiality” the … Holzman and Moulin (2013) studied the problem of choosing … (they call these mechanisms “impartial nomination rules”). Because …
+
+45. Expert classification aggregation
+   https://www.sciencedirect.com/science/article/pii/S0165489625000216
+   (F Fioravanti - Mathematical Social Sciences, 2025 - Elsevier | 2025 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2409.11033
+   We consider the problem where a set of individuals has to classify m objects into p categories by aggregating the individual classifications, and no category can be left empty. An …
+
+46. Simple allocation with correlated types
+   https://www.crctr224.de/research/discussion-papers/archive/dp486/@@download/file/CRCTR224_2023_486.pdf
+   (A Niemeyer, J Preusser - 2022 - crctr224.de | 2022 | cited by 11)
+   [PDF] https://www.crctr224.de/research/discussion-papers/archive/dp486/@@download/file/CRCTR224_2023_486.pdf
+   … new light on a characterization due to Holzman and Moulin (2013) and Mackenzie (2015) of … of Holzman and Moulin by referring to these mechanisms as impartial nomination rules. This …
+
+47. Ranking Teams
+   https://www.sciencedirect.com/science/article/pii/S0899825626001028
+   (A Hamdan - Games and Economic Behavior, 2026 - Elsevier | 2026)
+   A principal wants to rank and reward teams in an organization. Agents perfectly observe the local ranking of their teams, and strictly prefer being on higher-ranking teams. I show there …
+
+48. Impartial Selection Under Combinatorial Constraints
+   https://arxiv.org/abs/2409.20477
+   (J Cembrano, M Klimm, A Merino - arXiv preprint arXiv:2409.20477, 2024 - arxiv.org | 2409 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2409.20477?
+   … This paper initiates the study of impartial selection problems where the nominations are … Axiomatic studies of impartial mechanisms complementing the results of Holzman and Moulin …
+
+49. Peer selection in a network: a mechanism design approach
+   https://wrap.warwick.ac.uk/id/eprint/192340/
+   (F Bloch, B Dutta, M Dziubinski - 2025 - wrap.warwick.ac.uk | 2025)
+   [PDF] https://wrap.warwick.ac.uk/id/eprint/192340/1/WRAP-peer-selection-network-2025.pdf
+   … Holzman and Moulin [23] provide an axiomatic analysis of “impartial” or dominant strategy incentive compatible voting rules when individuals nominate …
+
+50. The structure of strategy-proof rules
+   https://arxiv.org/abs/2304.12843
+   (J Alcalde-Unzu, M Vorsatz - arXiv preprint arXiv:2304.12843, 2023 - arxiv.org | 2304 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2304.12843
+   … to Holzman and Moulin [11] who assume that each agent nominates some candidate different from herself. They focus on the property of impartiality (ie, … Since impartiality is weaker than …
+
+51. Deterministic impartial selection with weights
+   https://d-nb.info/134229341X/34
+   (JA Cembrano Lasserre - d-nb.info)
+   [PDF] https://d-nb.info/134229341X/34
+   … [1] use partitions only in the context of randomized mechanisms, Holzman and Moulin … problem in the single-nomination setting and showed that impartiality is compatible with two …
+
+52. Assessment Aggregation under Conflict of Interest
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6544140
+   (T Fujiwara-Greve, Y Kawada, Y Nakamura… - Available at SSRN …, 2026 - papers.ssrn.com | 2026)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6544140
+   … 5Many papers in the peer-nomination literature, starting with Holzman and Moulin (2013), (… , and Unanimity among Neutral Evaluators implies that this unique neutral evaluator’s top …
+
+53. Computational Social Choice: Some Current and New Directions.
+   https://cgi.cse.unsw.edu.au/~haziz/aziz_spotlight_paper.pdf
+   (H Aziz - IJCAI, 2016 - cgi.cse.unsw.edu.au | 2016 | cited by 22)
+   [PDF] https://cgi.cse.unsw.edu.au/~haziz/aziz_spotlight_paper.pdf
+   Computational social choice is an exciting interdisciplinary field at the intersection of computer science and social choice theory. In this article, I discuss some current and new directions …
+
+54. Department of Computing
+   https://www.academia.edu/download/48919597/report.pdf
+   (N Mammadli - 2016 - academia.edu | 2016)
+   [PDF] https://www.academia.edu/download/48919597/report.pdf
+   … nomination being equivalent to a score of 1. Holzman and Moulin (2013) also studied an impartial mechanism in which participants nominate only one other participant out of −1, and …
+
+55. Impartial rank aggregation
+   https://arxiv.org/abs/2310.13141
+   (J Cembrano, F Fischer, M Klimm - arXiv preprint arXiv:2310.13141, 2023 - arxiv.org | 2310 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2310.13141
+   … regarding impartial ranking, but we will see that it holds significant challenge both conceptually and mathematically. Like impartial … Our Contribution Impartiality turns out to be a relatively …
+
+56. Mitigating manipulation in peer review via randomized reviewer assignments
+   https://proceedings.neurips.cc/paper_files/paper/2020/hash/93fb39474c51b8a82a68413e2a5ae17a-Abstract.html
+   (S Jecmen, H Zhang, R Liu, N Shah… - Advances in …, 2020 - proceedings.neurips.cc | 2020 | cited by 105)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2020/file/93fb39474c51b8a82a68413e2a5ae17a-Paper.pdf
+   We consider three important challenges in conference peer review:(i) reviewers maliciously attempting to get assigned to certain papers to provide positive reviews, possibly as part of …
+
+57. Department of Computing
+   https://www.researchgate.net/profile/Nariman-Mammadli-2/publication/329715378_Thesis_Final/links/5c17cdc9a6fdcc494ffc52eb/Thesis-Final.pdf
+   (N Mammadli - 2016 - researchgate.net | 2016)
+   [PDF] https://www.researchgate.net/profile/Nariman-Mammadli-2/publication/329715378_Thesis_Final/links/5c17cdc9a6fdcc494ffc52eb/Thesis-Final.pdf
+   … nomination being equivalent to a score of 1. Holzman and Moulin (2013) also studied an impartial mechanism in which participants nominate only one other participant out of 𝑛 − 1, and …
+
+58. Friend-based targeting
+   
+   (F Bloch, M Olckers - 2018 - Working Paper | 2018 | cited by 1)
+
+59. Incentive-compatible selection for one or two influentials
+   https://arxiv.org/abs/2306.07707
+   (Y Zhao, Y Zhang, D Zhao - arXiv preprint arXiv:2306.07707, 2023 - arxiv.org | 2306 | cited by 7)
+   [PDF] https://arxiv.org/pdf/2306.07707
+   Selecting influentials in networks against strategic manipulations has attracted many researchers' attention and it also has many practical applications. Here, we aim to select one or two …
+
+60. Designing scientific grants
+   https://www.journals.uchicago.edu/doi/abs/10.1086/732856
+   (C Carnehl, M Ottaviani… - … and Innovation Policy and …, 2025 - journals.uchicago.edu | 2025 | cited by 9)
+   [PDF] https://www.nber.org/system/files/working_papers/w32668/w32668.pdf
+   … Here is one example of an impartial mechanism. First, before eliciting any nominations, the grantmaker randomly partitions the pool of applicants into two groups, “evaluators” and “…
+
+61. How to select the best candidate when judges can have multiple friends and enemies
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5483507
+   (P Amoros - Available at SSRN 5483507, 2025 - papers.ssrn.com | 5483)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5483507
+   … Holzman and Moulin (2013) study the problem of selecting a winner when voters are also the … that the jury configuration is minimally neutral and that there is no totally impartial judge. …
+
+62. Analyzing the Effects of Two-Stage Peer Evaluation
+   https://arxiv.org/abs/2605.24222
+   (R Fairstein, H Lyon, O Damty, O Lev, N Mattei… - arXiv preprint arXiv …, 2026 - arxiv.org | 2026)
+   [PDF] https://arxiv.org/pdf/2605.24222
+   … a nomination (or approval) mechanism, in which agents either approve or disapprove of a nomination… 2013. Statistical quality estimation for general crowdsourcing tasks. In Proceedings …
+
+63. A Strategy-Proof and Collusion-Proof Peer Grading Mechanism
+   https://link.springer.com/chapter/10.1007/978-981-96-0214-8_7
+   (B Li, X Du - International Workshop on Mechanism Design in …, 2024 - Springer | 2024)
+   … , which are assumed as unbiased estimators of the candidate’… that not only provide unbiased grades but are also resistant … the mechanism only counts nominations from peers that are …
+
+64. Eliciting the deserving winner in the presence of enemies: P. Amorós
+   https://link.springer.com/article/10.1007/s00355-025-01600-2
+   (P Amorós - Social Choice and Welfare, 2025 - Springer | 2025 | cited by 3)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s00355-025-01600-2.pdf
+   … We demonstrate that minimal impartiality is necessary for … to the negative result of Holzman and Moulin (2013). On the one … in the simplest interpretation of Holzman and Moulin, the full …
+
+65. Assignment mechanisms with public preferences and independent types
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3868560
+   (F Silva - Available at SSRN 3868560, 2022 - papers.ssrn.com | 3868 | cited by 3)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3868560
+   … I study how an unbiased and uninformed decision maker should design a mechanism that provides enough incentives for possibly biased agents to share their information impartially. I …
+
+66. Peer reviewing and manipulation under uncertainty
+   https://archive.illc.uva.nl/COMSOC/proceedings/comsoc-2018/CarverTurriniCOMSOC2018.pdf
+   (A Carver, P Turrini - archive.illc.uva.nl)
+   [PDF] https://archive.illc.uva.nl/COMSOC/proceedings/comsoc-2018/CarverTurriniCOMSOC2018.pdf
+   We study the Borda peer reviewing system, where n participants submit one project proposal each and review m others, with the Borda count selecting k proposals be funded in the end. …
+
+67. Friend-based ranking
+   https://www.aeaweb.org/articles?id=10.1257/mic.20190333
+   (F Bloch, M Olckers - American Economic Journal: Microeconomics, 2022 - aeaweb.org | 2022 | cited by 29)
+   [PDF] https://arxiv.org/pdf/1807.05093
+   … Holzman and Moulin (2013) analyze impartial voting rules when individuals nominate a … local winners, who then compete against one another to select the global winner. However, …
+
+68. Incentive-compatible selection mechanisms for forests
+   https://dl.acm.org/doi/abs/10.1145/3391403.3399456
+   (Y Babichenko, O Dean, M Tennenholtz - … of the 21st ACM Conference on …, 2020 - dl.acm.org | 2020 | cited by 17)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3391403.3399456
+   … If we want our mechanism to be IC we must award them these additional probabilities. The compensation will come from the probability of 𝑟1 (𝑎3 in our example): this vertex will not get …
+
+69. Recent advances in large-scale peer grading
+   https://books.google.com/books?hl=en&lr=&id=0qY8DwAAQBAJ&oi=fnd&pg=PA327&dq=Holzman+Moulin+impartial+nominations+awards+2013&ots=s4XemionA0&sig=_ZY_bkwRe7545EoF8IdU05vv718
+   (I Caragiannis - Trends in Computational Social Choice, 2017 - books.google.com | 2017 | cited by 3)
+   [PDF] https://eprints.illc.uva.nl/1579/1/TrendsCOMSOCwithCover.pdf#page=348
+   … A third characteristic, which has been used only sporadically in social choice (eg, see Alon et al., 2011; Holzman and Moulin, 2013), is that the candidates and the voters coincide. …
+
+70. Information diffusion enhanced by multi-task peer prediction
+   https://dl.acm.org/doi/abs/10.1145/3282373.3282410
+   (K Ito, S Ohsawa, H Tanaka - … of the 20th International Conference on …, 2018 - dl.acm.org | 2018 | cited by 3)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3282373.3282410
+   … ies of impartial selection mechanisms include those by Alon et al. [1] and Holzman and Moulin [… We extracted a strongly connected component with 10,000 patents from 2013–2017 and …
+
+71. TheWebConf 2020 Tutorial on Fairness and Bias in Peer Review and other Sociotechnical Intelligent Systems (Part II on Peer Review)
+   http://www.cs.cmu.edu/~nihars/tutorials/TheWebConf2020/peerreview_summary_refs_TheWebConf2020.pdf
+   (NB Shah, Z Lipton - Tutorial notes, 2020 - cs.cmu.edu | 2020 | cited by 2)
+   [PDF] http://www.cs.cmu.edu/~nihars/tutorials/TheWebConf2020/peerreview_summary_refs_TheWebConf2020.pdf
+   … At the least, this suggests the need for greater transparency in the award processes, for … Impartial judgment by the gatekeepers of science: fallibility and accountability in the peer …
+
+72. Electronic markets and auctions (dagstuhl seminar 13461)
+   https://drops.dagstuhl.de/entities/document/10.4230/DagRep.3.11.58
+   (Y Mansour, B Moldovanu, N Nisan… - Dagstuhl Reports, 2014 - drops.dagstuhl.de | 2014 | cited by 2)
+   [PDF] https://drops.dagstuhl.de/storage/04dagstuhl-reports/volume03/issue11/13461/DagRep.3.11.58/DagRep.3.11.58.pdf
+   … impartial nominations by agents from that set. The problem was studied previously by Alon et al. (TARK, 2011) and Holzman and Moulin (Econometrica, 2013) … of nominations. Subject to …
+
+73. Sequential voting with confirmation network
+   https://arxiv.org/abs/1807.03978
+   (Y Babichenko, O Dean, M Tennenholtz - arXiv preprint arXiv:1807.03978, 2018 - arxiv.org | 1807 | cited by 1)
+   [PDF] https://arxiv.org/pdf/1807.03978
+   We discuss voting scenarios in which the set of voters (agents) and the set of alternatives are the same; that is, voters select a single representative from among themselves. Such a …
+
+74. Incentive-compatible diffusion
+   https://dl.acm.org/doi/abs/10.1145/3178876.3186043
+   (Y Babichenko, O Dean, M Tennenholtz - … of the 2018 World Wide Web …, 2018 - dl.acm.org | 2018 | cited by 15)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3178876.3186043
+   … Holzman and Moulin ([18]) introduced an axiomatic approach to the problem of selecting a prize winning paper based on peer-reviews. In their model, each agent reports one other …
+
+75. Allocation of an indivisible object on the full preference domain: axiomatic characterizations
+   https://link.springer.com/article/10.1007/s40505-017-0122-7
+   (CG Korpeoglu - Economic Theory Bulletin, 2018 - Springer | 2018 | cited by 1)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s40505-017-0122-7.pdf
+   We study the problem of allocating an indivisible object to one of several agents on the full preference domain when monetary transfers are not allowed. Our main requirement is strategy…
+
+76. Aggregating partial rankings with applications to peer grading in massive online open courses
+   https://arxiv.org/abs/1411.4619
+   (I Caragiannis, GA Krimpas, AA Voudouris - arXiv preprint arXiv:1411.4619, 2014 - arxiv.org | 1411 | cited by 59)
+   [PDF] https://arxiv.org/pdf/1411.4619
+   We investigate the potential of using ordinal peer grading for the evaluation of students in massive online open courses (MOOCs). According to such grading schemes, each student …
+
+77. Balancing the Power to Appoint O¢ cers
+   https://www.academia.edu/download/75276267/download.pdf
+   (S Barbera - 2012 - academia.edu | 2012)
+   Rules of k names are frequently used methods to appoint individuals to o¢ ce. They are two-stage procedures where a rst set of agents, the proposers, select k individuals from an initial …
+
+78. Electronic Markets and Auctions (Dagstuhl Seminar 13461)
+   http://dagstuhl.sunsite.rwth-aachen.de/volltexte/2014/4437/
+   (Y Mansour, B Moldovanu, N Nisan… - Dagstuhl …, 2014 - dagstuhl.sunsite.rwth-aachen.de | 2014)
+   [PDF] http://dagstuhl.sunsite.rwth-aachen.de/volltexte/2014/4437/pdf/dagrep_v003_i011_p058_s13461.pdf
+   … impartial nominations by agents from that set. The problem was studied previously by Alon et al. (TARK, 2011) and Holzman and Moulin (Econometrica, 2013) … of nominations. Subject to …
+
+79. Strategic agent manipulation on networks
+   https://wrap.warwick.ac.uk/id/eprint/190436/
+   (S Zhydkov - 2024 - wrap.warwick.ac.uk | 2024)
+   [PDF] https://wrap.warwick.ac.uk/id/eprint/190436/1/WRAP_Theses_Zhydkov_2024.pdf
+   … for impartial peer selection. We first discuss the problem of peer selection and its applications. We leverage intuitions from other impartial … they nominate (if we required 2 nominations, …
+
+80. Good Morning, Olive: Haunted Theatres of Broadway and Beyond
+   https://books.google.com/books?hl=en&lr=&id=ZS-AEQAAQBAJ&oi=fnd&pg=PR7&dq=Holzman+Moulin+impartial+nominations+awards+2013&ots=SJDh1l2MkX&sig=S3rY6HgTbzk9N2vBmvpN-9s7JMI
+   (R Viagas - 2022 - books.google.com | 2022 | cited by 1)
+   … In 1992 the 42nd Street Development Project bought the theatre to preserve it, engaged Hardy Holzman Pfeiffer Associates to restore it, and began to seek a partner to run it. …
+
+81. The Cambridge history of science: volume 8, modern science in national, transnational, and global context
+   https://books.google.com/books?hl=en&lr=&id=UADaDwAAQBAJ&oi=fnd&pg=PT7&dq=Holzman+Moulin+impartial+nominations+awards+2013&ots=1fmItO12GV&sig=aJLf0V9Nz-qvvpGjpNuBYzd9-Yg
+   (HR Slotten, RL Numbers, DN Livingstone - 2020 - books.google.com | 2020 | cited by 6)
+   … between 1974 and his retirement in 2013. A specialist in the … He continues to study Japanese scientists nominated for the … of Science originated with Alex Holzman, former editor for the …
+
+82. The Sound of Music FAQ: All That's Left to Know About Maria, the von Trapps, and Our Favorite Things
+   https://books.google.com/books?hl=en&lr=&id=zNGGDwAAQBAJ&oi=fnd&pg=PT6&dq=Holzman+Moulin+impartial+nominations+awards+2013&ots=SXq8X9H3f3&sig=z7Q0mV2jKnYg5Ywe9CQaapF0qwE
+   (B Monush - 2015 - books.google.com | 2015 | cited by 2)
+   … family begin their ascent on stage as “Climb Ev'ry Mountain" was sung by the chorus, and the even more effective sight of them climbing an actual mountain and venturing into neutral …
+
+83. Dynamics of parasympathetic activity in violent incarcerated offenders before, during, and in recovery from an emotional inhibition task
+   https://www.nature.com/articles/s41598-022-10872-y
+   (J Palix, SM Gillespie, M Abbiati, A Abu-Akel - Scientific reports, 2022 - nature.com | 2022 | cited by 11)
+   [PDF] https://www.nature.com/articles/s41598-022-10872-y.pdf
+   … Finally, we thank Christine Mohr, Elise Dan-Glauser and Valérie Moulin for their constructive … Springer Nature remains neutral with regard to jurisdictional claims in published maps and …
+
+84. A survey on classification algorithms of brain images in Alzheimer's disease based on feature extraction techniques
+   https://ieeexplore.ieee.org/abstract/document/9400359/
+   (RA Hazarika, AK Maji, SN Sur, BS Paul… - IEEE Access, 2021 - ieeexplore.ieee.org | 2021 | cited by 68)
+   [PDF] https://ieeexplore.ieee.org/iel7/6287639/9312710/09400359.pdf
+   Alzheimer's disease (AD) is one of the most serious neurological disorders for elderly people. AD affected patient experiences severe memory loss. One of the main reasons for memory …
+
+===== Query 5/6: Alon Fischer Procaccia Tennenholtz strategyproof approximation mechanisms selecting 2011 =====
+
+1. Strategyproof approximation of the minimax on networks
+   https://pubsonline.informs.org/doi/abs/10.1287/moor.1100.0457
+   (…, AD Procaccia, M Tennenholtz - Mathematics of …, 2010 - pubsonline.informs.org | 2010 | cited by 178)
+   [PDF] http://www.cs.cmu.edu/~arielpro/15896s16/docs/paper22b.pdf
+   We consider the problem of locating a facility on a network represented by a graph. A set of strategic agents have different ideal locations for the facility; the cost of an agent is the distance between its ideal location and the facility. A mechanism maps the locations reported by the agents to the location of the facility. We wish to design mechanisms that are strategyproof (SP) in the sense that agents can never benefit by lying and, at the same time, provide a small approximation ratio with respect to the minimax measure. We design a novel …
+
+2. Strategyproof approximation mechanisms for location on networks
+   https://arxiv.org/abs/0907.2049
+   (…, M Feldman, AD Procaccia, M Tennenholtz - arXiv preprint arXiv …, 2009 - arxiv.org | 2009 | cited by 45)
+   [PDF] https://arxiv.org/pdf/0907.2049
+   We consider the problem of locating a facility on a network, represented by a graph. A set of strategic agents have different ideal locations for the facility; the cost of an agent is the distance between its ideal location and the facility. A mechanism maps the locations reported by the agents to the location of the facility. Specifically, we are interested in social choice mechanisms that do not utilize payments. We wish to design mechanisms that are strategyproof, in the sense that agents can never benefit by lying, or, even better, group …
+
+===== Query 6/6: impartial selection choosing k from n without self-voting =====
+
+1. Voting Without Self-voting
+   https://link.springer.com/chapter/10.1007/978-3-032-00495-6_14
+   (PB Rønne - … Conference on Financial Cryptography and Data …, 2025 - Springer | 2025)
+   [PDF] https://orbilu.uni.lu/bitstream/10993/66976/1/Linkable_Boardroom_Voting__Voting_25_.pdf
+   … In an election, self-voting, ie candidates voting for themselves … , and hence may not be useful towards choosing the best … However, in such a system we could hand out a selected …
+
+2. A theory of proxy advice when investors have social goals
+   https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3547880
+   (JG Matsusaka, C Shu - USC Marshall School of Business …, 2021 - papers.ssrn.com | 2021 | cited by 20)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3547880
+   … The proxy advisor is assumed to provide unbiased advice. Ma … (2) is that a selfinforming/self-voting fund casts a correct vote … expect most RO funds not to vote if the choice were left to …
+
+3. The effects of centralized power and institutional legitimacy on collective action
+   https://link.springer.com/article/10.1007/s00355-020-01284-w
+   (JG Castillo, ZP Xu, P Zhang, X Zhu - Social Choice and Welfare, 2021 - Springer | 2021 | cited by 14)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3127775
+   … and hence information effects become neutral in this setting. … Footnote 17 Each player submits one vote, and self-voting is not … if they are allowed to choose their manager for several …
+
+4. Improving Neutral Point-of-View Generation with Data-and Parameter-Efficient RL
+   https://aclanthology.org/2025.emnlp-main.1395/
+   (…, A Beirami, EMM van Liemt, N Thain… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 3)
+   [PDF] https://aclanthology.org/2025.emnlp-main.1395.pdf
+   … reliable sources on a topic of their choice from the topic list (no other topics accepted). This … ) and detailed comments (eg if a choice of words is not neutral)—in which case the example …
+
+5. The sociomateriality of rating and ranking devices on social media: A case study of Reddit's voting practices
+   https://journals.sagepub.com/doi/abs/10.1177/20563051211047667
+   (T Graham, A Rodriguez - Social Media+ Society, 2021 - journals.sagepub.com | 2021 | cited by 61)
+   [PDF] https://journals.sagepub.com/doi/pdf/10.1177/20563051211047667
+   … is that these “buttons” are not merely unbiased digital artifacts that afford particular social or … this study did not include all of Reddit—it focussed on 10 purposively selected subreddits …
+
+6. Learning to vote differently in social deduction games
+   https://people.scs.carleton.ca/~alantsang/files/werewolf24.pdf
+   (G Savin, A Tsang - people.scs.carleton.ca)
+   [PDF] https://people.scs.carleton.ca/~alantsang/files/werewolf24.pdf
+   … More importantly, we show that the choice of voting rule has … a player is no mechanically different than being neutral to that … votes3 (2) Percentage of self-voting (3) Percentage of votes …
+
+7. Biases in Idea Screening: Exploring Gender Bias and First-Cast Vote Bias in the Process of Multivoting
+   https://search.proquest.com/openview/88c1c642f126ada505b8b17b3d93ba7e/1?pq-origsite=gscholar&cbl=18750
+   (F Jedrzejewski - 2018 - search.proquest.com | 2018)
+   [PDF] https://conservancy.umn.edu/bitstreams/63ab21dd-1019-401c-b06d-ee8a11c34017/download
+   … Ideas are not simply generated and then selected, the … Another element to consider is how genderneutral the prompts … Finally, in regards to self-voting behavior, having an explanation …
+
+8. Improving diversity of demographic representation in large language models via collective-critiques and self-voting
+   https://aclanthology.org/2023.emnlp-main.643/
+   (P Lahoti, N Blumm, X Ma, R Kotikalapudi… - Proceedings of the …, 2023 - aclanthology.org | 2023 | cited by 64)
+   [PDF] https://aclanthology.org/2023.emnlp-main.643.pdf
+   … We then choose the final response by selecting the most voted revision amongst all the … negative, neutral, and positive. Note that such grouping is strictly for interpretation and not the …
+
+9. … and Data Security. FC 2025 International Workshops: CoDecFin, FinTeAchin, VOTING, Miyakojima, Japan, April 18, 2025, Revised Selected Papers, Part II
+   https://books.google.com/books?hl=en&lr=&id=FW6VEQAAQBAJ&oi=fnd&pg=PR5&dq=impartial+selection+choosing+k+from+n+without+self-voting&ots=8d2dSfjyZm&sig=T45x7AXE__7TY-FKzLXOfjPx1Zw
+   (…, J Xu, F Victor, M Bartoletti, A Bracciali, K Matsuura… - 2025 - books.google.com | 2025)
+   … , etc. in this publication does not imply, even in the absence of a … The publisher remains neutral with regard to jurisdictional … 4.1) that our modifications do not compromise the security of …
+
+10. Simulation screening experiments using lasso-optimal supersaturated design and analysis: a maritime operations application
+   https://ieeexplore.ieee.org/abstract/document/6721445/
+   (D Xing, H Wan, MY Zhu, SM Sanchez… - 2013 Winter …, 2013 - ieeexplore.ieee.org | 2013 | cited by 19)
+   [PDF] https://calhoun.nps.edu/bitstream/handle/10945/43600/Sanchez_Simulation_Screening_2013.pdf?sequence=4
+   … based on self-voting using ordinary least squares estimation, called SVOE, to select the … The known ships and the unknown ships are both neutral and they do not pose a threat to …
+
+11. The online attention game for digital identity education: an exploratory study
+   https://link.springer.com/article/10.1007/s12626-021-00077-6
+   (T Obana, M Takubo, Y Orito, K Murata, H Sai… - The Review of …, 2021 - Springer | 2021 | cited by 4)
+   [PDF] https://pmc.ncbi.nlm.nih.gov/articles/PMC7978171/pdf/12626_2021_Article_77.pdf
+   … What do you feel your choice of headlines says about you? … , there would be few players engaging in self-voting. … and yet did not vote for the same headlines in the My Choice voting in …
+
+12. The potential of social identity for equilibrium selection
+   https://www.aeaweb.org/articles?id=10.1257/aer.101.6.2562
+   (R Chen, Y Chen - American Economic Review, 2011 - aeaweb.org | 2011 | cited by 575)
+   [PDF] http://www.yanchen.people.si.umich.edu/papers/ID_EquilSelect.pdf
+   … to groups based on the random choice of an envelope with a certain colored card inside and are not allowed to speak to one … Since this criterion is not met, we refer to these treat- …
+
+13. Peer assessment and self-assessment in social learning environments through a new crowd-sourced mechanism
+   https://ieeexplore.ieee.org/abstract/document/8274966/
+   (F Orooji, F Taghiyareh - IEEE Access, 2018 - ieeexplore.ieee.org | 2018 | cited by 14)
+   [PDF] https://ieeexplore.ieee.org/iel7/6287639/6514899/08274966.pdf
+   … This study compared self-voting against peer voting and … labels and select just among those which had no ambiguity. It … with almost no time devoted to thinking and selecting the well-…
+
+14. Lobbying the lobbysts
+   https://link.springer.com/article/10.1007/s12232-026-00535-z
+   (F Delbianco, F Tohmé, E Freidin - International Review of Economics, 2026 - Springer | 2026)
+   … Interest groups do not merely target legislators directly but seek … While it could be argued that this leads to a “self-voting” strategy or … The optimal strategy is to select the coalition K∗ that …
+
+15. Self-consistency in vision-language models for precision agriculture: Multi-response consensus for crop disease management
+   https://ieeexplore.ieee.org/abstract/document/11386079/
+   (M Gupta, A Mangla, P Desai… - 2025 IEEE International …, 2025 - ieeexplore.ieee.org | 2025 | cited by 2)
+   [PDF] https://arxiv.org/pdf/2507.08024?
+   … (2) a cosine-consistency self-voting mechanism that generates … of image analysis outputs without requiring human experts. … focused on leaf blight cases and selected 500 interactions. …
+
+16. Experimental evidence on identity biases in voting choices
+   https://behavecon.uni-koeln.de/fileadmin/wiso_fak/vhf/pdf/workingpaper/BoehmRockenbachWeiss_Identity_Voting_Sep_2013.pdf
+   (R Böhm, B Rockenbach, A Weiss - 2013 - behavecon.uni-koeln.de | 2013 | cited by 5)
+   [PDF] https://behavecon.uni-koeln.de/fileadmin/wiso_fak/vhf/pdf/workingpaper/BoehmRockenbachWeiss_Identity_Voting_Sep_2013.pdf
+   … To keep things simple, voters are assumed to be risk neutral … The voter might then choose Qg over R-g and Rg over Q-g. In … result is not meaningless: the president has to select the re…
+
+17. Suicide ideation detection using social media data and ensemble machine learning model
+   https://link.springer.com/article/10.1007/s44196-025-01123-9
+   (E Kina, JG Choi, A Ishaq, R Shafique, MG Villar… - International Journal of …, 2026 - Springer | 2026 | cited by 3)
+   [PDF] https://link.springer.com/content/pdf/10.1007/s44196-025-01123-9.pdf
+   … The removal of punctuation is necessary in this study as it does not … In particular, those recent studies are selected that utilized the … Self voting classification model for online meeting app …
+
+18. Cross-validating non-Gaussian data
+   https://www.tandfonline.com/doi/abs/10.1080/10618600.1992.10477012
+   (C Gu - Journal of Computational and Graphical Statistics, 1992 - Taylor & Francis | 1992 | cited by 194)
+   … We may call such a A, a self-voting one. … /’Y +2a2trA(X) (the unbiased risk estimate with a known variance 02) but with a … The fact that these pseudodata are not real replicates puts these …
+
+19. Self voting classification model for online meeting app review sentiment analysis and topic modeling
+   https://peerj.com/articles/cs-1141/
+   (N Aslam, K Xia, F Rustam, E Lee, I Ashraf - PeerJ Computer Science, 2022 - peerj.com | 2022 | cited by 14)
+   [PDF] https://peerj.com/articles/cs-1141.pdf
+   … The Chi2 is used to select the important features for training while LR … Figure 3 shows the ratio of positive, negative, and neutral … better which in the case of this study does not seem so. …
+
+20. Fault-Tolerant Approximate Circuits for Energy Autonomous Edge Computing Systems
+   https://ieeexplore.ieee.org/abstract/document/11244911/
+   (S Garg, K Monga, N Chaturvedi… - IEEE Access, 2025 - ieeexplore.ieee.org | 2025)
+   [PDF] https://ieeexplore.ieee.org/iel8/6287639/10820123/11244911.pdf
+   … We select output SE1 for further optimization using K-map … corrector unit, whereas for K=5, no additional partial products from … Teifel, ‘‘Self-voting dual-modular-redundancy circuits for …
+
+21. Compositional systems over reducible networks
+   https://journals.sagepub.com/doi/abs/10.3233/FUN-2007-793-402
+   (A Mazurkiewicz - Fundamenta Informaticae, 2007 - journals.sagepub.com | 2007)
+   [PDF] https://www.researchgate.net/profile/Antoni-Mazurkiewicz/publication/220445014_Compositional_Systems_over_Reducible_Networks/links/56f03ba808ae70bdd6c94678/Compositional-Systems-over-Reducible-Networks.pdf
+   … , ie its proper termination and its impartiality is proved. … If it causes no misunderstanding, we shall not distinguish between … However, the choice of a composition would then be done by a …
+
+22. The political youth voice spiral: An application of the spiral of silence to opinion expression among young American voters
+   https://faculty.utrgv.edu/louis.falk/qrbd/QRBDmay22.pdf#page=57
+   (HJ Yun, M Ancu, JH Park, B Farrar… - Quarterly Review of …, 2022 - faculty.utrgv.edu | 2022 | cited by 2)
+   [PDF] https://faculty.utrgv.edu/louis.falk/qrbd/QRBDmay22.pdf#page=57
+   … One pro-voting and one anti-voting editorial were selected for … self-voting attitudes with given majority opinion stimuli were … study did not explore why people might choose to remain …
+
+23. Who Defines “Best”? Towards Interactive, User-Defined Evaluation of LLM Leaderboards
+   https://dl.acm.org/doi/abs/10.1145/3805689.3812353
+   (M Jung, M Lee, Y Kim, S Choi, M Kahng - … Fairness, Accountability, and …, 2026 - dl.acm.org | 2026)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3805689.3812353
+   … The choice of 𝑘 involves a trade-off: as 𝑘 increases, clusters … We exclude prompts with ambiguous meaning or no … whether it adopts a politically neutral stance with pluralistic viewpoints …
+
+24. Discrete consensus decisions in human-collective teams
+   https://search.proquest.com/openview/6b50b91d38111aa8c7eec3c42e80b8f9/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (JR Cody - 2018 - search.proquest.com | 2018 | cited by 13)
+   … collective action selection strategy that enables a robotic collective to choose and implement … selected its target without considering either an intrinsic target value or environmental cost. …
+
+25. Fault-tolerant and error-correcting 4-bit S-boxes for cryptography applications with multiple errors detection
+   https://link.springer.com/article/10.1007/s11227-023-05530-7
+   (B Rashidi - The Journal of Supercomputing, 2024 - Springer | 2024 | cited by 17)
+   … fault location, where the select signal of the multiplexer select between the ordinary value of … patterns and do not change when the input differs. In other words, we can not achieve the …
+
+26. From distributional to overton pluralism: Investigating large language model alignment
+   https://aclanthology.org/2025.naacl-long.346/
+   (T Lake, E Choi, G Durrett - Proceedings of the 2025 Conference of …, 2025 - aclanthology.org | 2025 | cited by 41)
+   [PDF] https://aclanthology.org/2025.naacl-long.346.pdf
+   … Our second investigation shows this is not the case and the … We extend this study, improving in-context example selection … to provide factual and unbiased information based on reliable …
+
+27. The effect of monetary incentives on health care social media content: study based on topic modeling and sentiment analysis
+   https://www.jmir.org/2023/1/e44307/
+   (N Maleki, B Padmanabhan, K Dutta - Journal of medical internet research, 2023 - jmir.org | 2023 | cited by 24)
+   … In our analysis, we randomly selected 2000 posts, 1000 for … who picked the “Neutral” option did not differ between Reddit … and the possibility of self-voting might induce selfish behavior …
+
+28. AI in Mental Health: Emotional and Sentiment Analysis of Large Language Models' Responses to Depression, Anxiety, and Stress Queries
+   https://arxiv.org/abs/2508.11285
+   (A VarastehNezhad, R Tavasoli, S Elyasi… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 5)
+   [PDF] https://arxiv.org/pdf/2508.11285
+   … The choice of LLM significantly influenced emotional … , fear, and sadness, along with neutral sentiment, not only have high mean … and self-voting. arXiv preprint arXiv:2310.16523 (2023). …
+
+29. Rehearsal: Simulating conflict to teach conflict resolution
+   https://dl.acm.org/doi/abs/10.1145/3613904.3642159
+   (O Shaikh, VE Chai, M Gelfand, D Yang… - Proceedings of the 2024 …, 2024 - dl.acm.org | 2024 | cited by 159)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3613904.3642159
+   … cal [59], how we choose to deal with confict is not: in most settings, an ideal … to select the strategy from a multiple-choice form. The quiz frst tests recall and then recognition—we do not …
+
+30. Multiple LLM agents debate for equitable cultural alignment
+   https://aclanthology.org/2025.acl-long.1210/
+   (D Ki, R Rudinger, T Zhou… - Proceedings of the 63rd …, 2025 - aclanthology.org | 2025 | cited by 27)
+   [PDF] https://aclanthology.org/2025.acl-long.1210.pdf
+   … another where they dynamically choose between self-reflection … In sum, our results show that multi-agent debate not only … We selected NORMAD-ETI as our testbed for several reasons: …
+
+31. Large language models that replace human participants can harmfully misportray and flatten identity groups
+   https://www.nature.com/articles/s42256-025-00986-z
+   (A Wang, J Morgenstern, JP Dickerson - Nature Machine Intelligence, 2025 - nature.com | 2025 | cited by 285)
+   [PDF] https://arxiv.org/pdf/2402.01908
+   … , we are displaying the site without styles and JavaScript. … Our attribute selection was ultimately mediated by the selection … via collective-critiques and self-voting. In The 2023 Conference …
+
+32. Multilingual text-to-image generation magnifies gender stereotypes and prompt engineering may not help you
+   https://arxiv.org/abs/2401.16092
+   (F Friedrich, K Hämmerl, P Schramowski… - arXiv preprint arXiv …, 2024 - arxiv.org | 2024 | cited by 22)
+   [PDF] https://arxiv.org/pdf/2401.16092
+   … We start our prompt construction by choosing a set of 20 … tion prompts do not use inherently neutral language, so we … a fixed prefix approach and select the most probable translation that …
+
+33. Anchorless Diversification for Parallel LLM Ideation
+   https://arxiv.org/abs/2605.30150
+   (FN Ibrahim, NS Azad, RA Baten - arXiv preprint arXiv:2605.30150, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.30150
+   … without … neutral no longer shows a reliable quality gain without slogans, while strat– diverge remains clearly positive. Overall, the quality conclusions remain robust to metric choice…
+
+34. Gynopticon: Consensus-Based Cheating Detection System for Competitive Games
+   https://arxiv.org/abs/2511.10992
+   (J Kang, J Park - arXiv preprint arXiv:2511.10992, 2025 - arxiv.org | 2511)
+   [PDF] https://arxiv.org/pdf/2511.10992
+   … no information about users is given to the server, all users have the maximum Validity score of 1 and the neutral … ➁ We don’t consider the Self voting into account. ➂ The Dubious score is …
+
+35. Public perception of online P2P lending applications
+   https://www.mdpi.com/0718-1876/19/1/27
+   (S Khan, R Singh, HK Baker, G Jain - Journal of Theoretical and Applied …, 2024 - mdpi.com | 2024 | cited by 22)
+   … Still, no study examines user reviews and comments to … In an app review analysis, SVM with a self-voting classifier … Users expressed a more neutral sentiment for topics like OTP (…
+
+36. Energy under debate: Fostering critical thinking in chemical engineering through in-class debates
+   https://www.sciencedirect.com/science/article/pii/S1749772825000120
+   (M del Mar Mesa, D Valor, A Montes… - Education for Chemical …, 2025 - Elsevier | 2025 | cited by 7)
+   This paper examines the use of in-class debates as a collaborative learning technique in the teaching of Chemical Engineering, as part of a third-year course in the Chemistry degree. "…
+
+37. Soft classification, aka risk estimation, via penalized log likelihood and smoothing spline analysis of variance
+   https://www.taylorfrancis.com/chapters/edit/10.1201/9780429492525-10/soft-classification-risk-estimation-via-penalized-log-likelihood-smoothing-spline-analysis-variance-grace-wahba-chong-gu-yuedong-wang-richard-chappell
+   (G Wahba, C Gu, Y Wang… - The mathematics of …, 2018 - taylorfrancis.com | 2018 | cited by 87)
+   [PDF] https://www.researchgate.net/profile/Yuedong-Wang-2/publication/2594927_Soft_Classification_a_k_a_Risk_Estimation_via_Penalized_Log_Likelihood_and_Smoothing_Spline_Analysis_of_Variance/links/0046353aafa9842aeb000000/Soft-Classification-a-k-a-Risk-Estimation-via-Penalized-Log-Likelihood-and-Smoothing-Spline-Analysis-of-Variance.pdf
+   … We will not discuss this further in the present chapter except … case and implemented by the self-voting algorithm by Gu,13 … be using Gu’s algorithm for the unbiased risk estimate for A. It …
+
+38. Horace Greeley and the Politicians: The Liberal Republican Convention in 1872
+   https://www.jstor.org/stable/1893989
+   (MT Downey - The Journal of American History, 1967 - JSTOR | 1967 | cited by 33)
+   … the Dem~ocrats]; I myself voting in caucus to buy him; he … is not too much to say-and no person in attendance on the Cincinnati convention had better opportunity for forming an impartial …
+
+39. Temporal action localization using gated recurrent units
+   https://link.springer.com/article/10.1007/s00371-022-02495-1
+   (H Keshvarikhojasteh, H Mohammadzade… - The Visual Computer, 2023 - Springer | 2023 | cited by 6)
+   [PDF] https://arxiv.org/pdf/2108.03375
+   … is then reduced by using a multi-modal self-voting scheme. … Because using the middle frame as the start/end frame is not … -split network, we randomly select 100 consecutive units from …
+
+40. Low-power Error-tolerant Digital Logic Circuit Design
+   https://ualberta.scholaris.ca/bitstreams/90a58cff-d859-4d9d-918e-6eb3b4f57117/download
+   (Y Li - 2019 - ualberta.scholaris.ca | 2019)
+   [PDF] https://ualberta.scholaris.ca/bitstreams/90a58cff-d859-4d9d-918e-6eb3b4f57117/download
+   … We do not need to directly map the theorem to a hardware circuit. We only need to map the … It has a self-voting unit shown in Figure 2.1(b) because it feeds back the output to one of its …
+
+41. Crowdsourcing design: A synthesis of literatures
+   https://scholarspace.manoa.hawaii.edu/bitstreams/7afda782-626b-4476-afe3-9d880ba16bfe/download
+   (HK Liu - 2017 - scholarspace.manoa.hawaii.edu | 2017 | cited by 21)
+   [PDF] https://scholarspace.manoa.hawaii.edu/bitstreams/7afda782-626b-4476-afe3-9d880ba16bfe/download
+   … Given the focus of this paper, our team selected articles focusing on design, strategic and … Also, we acknowledge that the review is not comprehensive, given a fast growing in the …
+
+42. The innovation tournament handbook: A step-by-step guide to finding exceptional solutions to any challenge
+   https://books.google.com/books?hl=en&lr=&id=fAGdEAAAQBAJ&oi=fnd&pg=PA1&dq=impartial+selection+choosing+k+from+n+without+self-voting&ots=tqkcesWSbI&sig=ciso3zJx75sCHRJv61IOhtXt910
+   (C Terwiesch, K Ulrich - 2023 - books.google.com | 2023 | cited by 4)
+   … No part of this book may be reproduced, in any form or by … Bounty paper towels, especially the select-a-size variant that … of a dozen or more people, the effect of self-voting is minimal. …
+
+43. Six fallacies in substituting large language models for human participants
+   https://journals.sagepub.com/doi/abs/10.1177/25152459251357566
+   (Z Lin - Advances in Methods and Practices in Psychological …, 2025 - journals.sagepub.com | 2025 | cited by 38)
+   [PDF] https://journals.sagepub.com/doi/pdf/10.1177/25152459251357566
+   … Validity concerns in LLM research stem from both methodological choices (how researchers … realizability means that similar outputs do not indicate similar mechanisms. Test robustness …
+
+44. Diversifying Multiple Generative Agents by Aligning with Human Populations
+   https://openreview.net/forum?id=lXqAauVCs8
+   (MH Nguyen, S Tschiatschek, A Singla - Pluralistic Alignment Workshop at … - openreview.net)
+   [PDF] https://openreview.net/pdf?id=lXqAauVCs8
+   … We define the baseline error when no agents are selected as … their training data, and our work should not be interpreted as providing perfect or unbiased representations of populations. …
+
+45. Multilingual text-to-image generation magnifies gender stereotypes
+   https://aclanthology.org/2025.acl-long.966/
+   (F Friedrich, K Hämmerl, P Schramowski… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 9)
+   [PDF] https://aclanthology.org/2025.acl-long.966.pdf
+   … We start our prompt construction by choosing a set of 20 … tion prompts do not use inherently neutral language, so we … a fixed prefix approach and select the most probable translation that …
+
+46. From generation to judgment: Opportunities and challenges of llm-as-a-judge
+   https://aclanthology.org/2025.emnlp-main.138/
+   (…, Y Jiang, C Chen, T Wu, K Shu… - Proceedings of the …, 2025 - aclanthology.org | 2025 | cited by 685)
+   [PDF] https://aclanthology.org/2025.emnlp-main.138.pdf
+   … Safety and security are essential to ensure that models do not generate harmful content or … from data selection to enable judge LLMs to serve as a critical sample selector, choosing a …
+
+47. Gdpo: Learning to directly align language models with diversity using gflownets
+   https://aclanthology.org/2024.emnlp-main.951/
+   (OJ Kwon, DE Matsunaga, KE Kim - Proceedings of the 2024 …, 2024 - aclanthology.org | 2024 | cited by 11)
+   [PDF] https://aclanthology.org/2024.emnlp-main.951.pdf
+   … 2017) has been the primary choice of algorithm for … neutral to possibly discourage the person from drinking. For SFT and ORPO, we observe that responses are relatively short without …
+
+48. Gamification as a strategy to increase motivation and engagement in higher education chemistry students
+   https://www.mdpi.com/2073-431X/10/10/132
+   (GM Chans, M Portuguez Castro - Computers, 2021 - mdpi.com | 2021 | cited by 304)
+   [PDF] https://www.mdpi.com/2073-431X/10/10/132/pdf
+   … Autonomy refers to the freedom to choose which challenges … for one of his or her teammates (self-voting was not valid). The … of the multiple-choice items was correct or not, where they …
+
+49. Financial Cryptography and Data Security
+   https://link.springer.com/content/pdf/10.1007/978-3-032-00495-6.pdf
+   (…, J Xu, F Victor, M Bartoletti, A Bracciali, K Matsuura… - Springer)
+   … The publisher remains neutral with regard to jurisdictional … generous sponsors, and, last but not least, the support by IFCA … their stake-based committee selection to our deposit setting …
+
+50. TF-TDA: A novel supervised term weighting scheme for sentiment analysis
+   https://www.mdpi.com/2079-9292/12/7/1632
+   (A Alshehri, A Algarni - Electronics, 2023 - mdpi.com | 2023 | cited by 15)
+   … , feature selection techniques can be used to choose the … to handle the imbalance issue, find neutral terms, group the rest of … is not completely useful for text classification and not always …
+
+51. Multilingual prompting for improving llm generation diversity
+   https://aclanthology.org/2025.emnlp-main.324/
+   (Q Wang, S Pan, T Linzen, E Black - Proceedings of the 2025 …, 2025 - aclanthology.org | 2025 | cited by 27)
+   [PDF] https://aclanthology.org/2025.emnlp-main.324.pdf
+   … original English query by creating n versions of the original query… own, without any cultural signal, does not increase diversity. … background, choose the most appropriate choice from the …
+
+52. SAGE: A Top-Down Bottom-Up Knowledge-Grounded User Simulator for Multi-turn AGent Evaluation
+   https://aclanthology.org/2026.findings-eacl.147/
+   (R Shea, Y Lu, L Qiu, Z Yu - Findings of the Association for …, 2026 - aclanthology.org | 2026 | cited by 4)
+   [PDF] https://aclanthology.org/2026.findings-eacl.147.pdf
+   … We begin by choosing a user goal, then select the infrastructure knowledge most aligned with … not been previously used; if all have been used, one is randomly selected from the cluster. …
+
+53. Do They Understand Them? An Updated Evaluation on Nonbinary Pronoun Handling in Large Language Models
+   https://link.springer.com/chapter/10.1007/978-981-95-4969-6_16
+   (X Tang, Y Ding, Z Yang, Y Chen, Y Gu, W Yang… - … Joint Conference on …, 2025 - Springer | 2025 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2508.00788
+   … Pronoun bias refers not only to technical disparities in NLP … A list of commonly used binary, gender-neutral, and … Emerging forms for identities beyond binary and traditional neutral …
+
+54. Assessing User Interactions with Medical Crowdfunding Apps in India: A Hybrid Approach of Topic and Sentiment Analysis.
+   https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=19767277&AN=189171013&h=rENTHFig8PkBjA8Xlr30%2FdOhmvPd%2F9Kn%2FKv27zibqI6d3%2FeNwZUgLnjfTGMfJ1kCR6I76Go4%2BwbH4ZNLLKclew%3D%3D&crl=c
+   (S Khan, R Singh, JS Bindra… - KSII Transactions on …, 2025 - search.ebscohost.com | 2025 | cited by 1)
+   … If neutral reviews outnumber positive and negative reviews, we … We label it as 'Not Available' when data is absent and '… Ashraf, “Self voting classification model for online meeting app …
+
+55. Binding and coreference in Vietnamese
+   https://www.academia.edu/download/90285157/viewcontent.pdf
+   (T Bui - 2019 - academia.edu | 2019 | cited by 10)
+   [PDF] https://www.academia.edu/download/90285157/viewcontent.pdf
+   … There is no syntactic rule that governs the antecedent choice of a nonindexed pronoun. The … self-voting attributes, the sentence containing mình is felicitous, while the one with nó is not. …
+
+56. Test-Time Fairness and Robustness in Large Language Models
+   https://arxiv.org/abs/2406.07685
+   (L Cotta, CJ Maddison - arXiv preprint arXiv:2406.07685, 2024 - arxiv.org | 2406 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2406.07685?
+   … [46] prompted the LLM with “Please ensure that your answer is unbiased and does not rely … Stratified invariance with particular choices of S appears in works studying counterfactual …
+
+57. Whose Name Comes Up? Auditing LLM-Based Scholar Recommendations
+   https://arxiv.org/abs/2506.00074
+   (D Barolo, C Valentin, F Karimi, L Galárraga… - arXiv preprint arXiv …, 2025 - arxiv.org | 2025 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2506.00074?
+   … This design choice ensures our findings reflect core model … stages autonomously, we did not provide explicit definitions of them. … : female, male, and neutral. Ethnicity is grouped into four …
+
+58. Beyond aesthetics: Cultural competence in text-to-image models
+   https://proceedings.neurips.cc/paper_files/paper/2024/hash/18c669b80d1a8f589713b768bc8fe9a4-Abstract-Datasets_and_Benchmarks_Track.html
+   (N Kannen, A Ahmad, M Andreetto… - Advances in …, 2024 - proceedings.neurips.cc | 2024 | cited by 59)
+   [PDF] https://proceedings.neurips.cc/paper_files/paper/2024/file/18c669b80d1a8f589713b768bc8fe9a4-Paper-Datasets_and_Benchmarks_Track.pdf
+   … However, these metrics are not directly applicable in our case… via collective-critiques and self-voting. In Houda Bouamor, … Below we provide details on the choice of countrues, CUBE-…
+
+59. Whose Name Comes Up? II: Benchmarking and Intervention-Based Auditing of LLM-Based Scholar Recommendation
+   https://arxiv.org/abs/2602.08873
+   (L Espín-Noboa, GG Méndez - arXiv preprint arXiv:2602.08873, 2026 - arxiv.org | 2602 | cited by 1)
+   [PDF] https://arxiv.org/pdf/2602.08873
+   … deployment choices reshape performance trade-offs without … i) a general diversity request without specified dimensions; (ii… with perceived female, male, or neutral names; (iii) ethnicity …
+
+60. Three essays in applied microeconomics
+   https://search.proquest.com/openview/9098ba9d73db7b79b5a53a21f1435b76/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (SF Lehrer - 2001 - search.proquest.com | 2001)
+   [PDF] https://etd.ohiolink.edu/acprod/odb_etd/ws/send_file/send?accession=osu1486461246817699&disposition=inline
+   … ’ peer group is not generated by selection on unobservables in our … risk neutral Nash equilib rium bidding predictions in private value auctions is suspect on two grounds: (i) it does not …
+
+61. The Homogenizing Engine: AI's Role in Standardizing Culture and the Path to Policy
+   https://journals.sagepub.com/doi/abs/10.1177/23727322251406591
+   (Y Daryani, Z Sourati… - … from the Behavioral and …, 2026 - journals.sagepub.com | 2026 | cited by 4)
+   [PDF] https://media.mola-lab.org/file/1774236678111-daryanietal2025thehomogenizingengineaisroleinstandardizingcultureandthepathtopolicy.pdf
+   … This is not a neutral compression of information but a structured hierarchy that positions WHELM cultural practices as universal, modern, and normative while casting non-WHELM …
+
+62. Efficient estimation in the generalized semilinear model
+   https://search.proquest.com/openview/07ac6e808d035e644714b4b50abbfae0/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (MJ Emond - 1993 - search.proquest.com | 1993 | cited by 2)
+   … Also, there is no closed form for the estimator, which is not a … to choice of M and to the correlation between T and X. … , and even if it is, it may not be unbiased. The latter is true of the …
+
+63. Rlhf can speak many languages: Unlocking multilingual preference optimization for llms
+   https://aclanthology.org/2024.emnlp-main.729/
+   (J Dang, A Ahmadian, K Marchisio… - Proceedings of the …, 2024 - aclanthology.org | 2024 | cited by 55)
+   [PDF] https://aclanthology.org/2024.emnlp-main.729.pdf
+   … selected Multilingual Dolly responses generated from Command and Command R+ (512 randomly selected … We note that while the models we evaluate do not explicitly claim to support …
+
+64. A review on text sentiment analysis with machine learning and deep learning techniques
+   https://ieeexplore.ieee.org/abstract/document/10786014/
+   (Y Mamani-Coaquira, E Villanueva - IEEE Access, 2024 - ieeexplore.ieee.org | 2024 | cited by 25)
+   [PDF] https://ieeexplore.ieee.org/iel8/6287639/6514899/10786014.pdf
+   … Neutral opinion means no opinion because many sentences … depends heavily on the choice of text encoding. For ML models … Ashraf, ‘‘Self voting classification model for online meeting …
+
+65. Do They Understand Them? An Updated Evaluation on Nonbinary Pronoun
+   https://books.google.com/books?hl=en&lr=&id=c6yaEQAAQBAJ&oi=fnd&pg=PA204&dq=impartial+selection+choosing+k+from+n+without+self-voting&ots=Uz96g8Vojj&sig=oM2oEXN1zyp6SwlmVyRMgL4RlDk
+   (X Tang¹, Y Ding¹, Z Yang, Y Chen, Y Gu… - AI 2025: Advances in …, 2025 - books.google.com | 2025)
+   … Pronoun bias refers not only to technical disparities in NLP … Emerging forms for identities beyond binary and traditional neutral … -critiques and self-voting. In: EMNLP, pp. 10383–10405 …
+
+66. Separately Guided Context-Aware Network for Weakly Supervised Temporal Action Detection.
+   https://search.proquest.com/openview/76e1d51e42c55d2b39ed92411e06a647/1?pq-origsite=gscholar&cbl=2043838
+   (B Li, Y Pan, R Liu, Y Zhu - Neural Process. Lett., 2023 - search.proquest.com | 2023 | cited by 3)
+   … and multi-modality self-voting strategy to generate more … , we select k high-score frames as the action frames and k low-… are not integral, while the detected action segments by our …
+
+67. Tree-of-counterfactual prompting for zero-shot stance detection
+   https://aclanthology.org/2024.acl-long.49.pdf
+   (M Weinzierl, S Harabagiu - … of the 62nd Annual Meeting of the …, 2024 - aclanthology.org | 2024 | cited by 31)
+   [PDF] https://aclanthology.org/2024.acl-long.49.pdf
+   … the concerns raised by those labeled as "alarmists," and thus, the tweet is not neutral on the … While the tweet does not explicitly state a position on climate change itself, the choice of …
+
+68. Spline Analysis of Variance
+   https://books.google.com/books?hl=en&lr=&id=6GdQDwAAQBAJ&oi=fnd&pg=PA331&dq=impartial+selection+choosing+k+from+n+without+self-voting&ots=H43tlXgNif&sig=S2Je2SxVm5YQx1k6XSteDNnpxpM
+   (G Wahba, C Gu, Y Wang… - The Mathematics Of …, 2018 - books.google.com | 2018)
+   … We will not discuss this further in the present chapter except … case and implemented by the self-voting algorithm by Gu, 13 … be using Gu’s algorithm for the unbiased risk estimate for A. It …
+
+69. Big Data Analytics for Healthcare Social Media: New Algorithms and Insights
+   https://search.proquest.com/openview/66e2609cfe0a450eae2e3909986aa0af/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (N Maleki - 2023 - search.proquest.com | 2023)
+   [PDF] https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=12018&context=etd
+   … In our analysis, we randomly selected 2000 posts, 1000 for … who picked the “Neutral” option did not differ between Reddit … and the possibility of self-voting might induce selfish behavior …
+
+70. Missing the margins: A systematic literature review on the demographic representativeness of LLMs
+   https://aclanthology.org/2025.findings-acl.1246/
+   (I Sen, M Lutz, E Rogers, D Garcia… - Findings of the …, 2025 - aclanthology.org | 2025 | cited by 18)
+   [PDF] https://aclanthology.org/2025.findings-acl.1246.pdf
+   … a category for no reported subcategories and, as a consequence, no descriptors. For … selection. These issues contribute to growing concern regarding reproducibility, even without …
+
+71. Out-of-context prompting boosts fairness and robustness in large language model predictions
+   https://openreview.net/forum?id=LPJq1sVlqr
+   (L Cotta, CJ Maddison - … 2024 Workshop on Foundation Models in …, 2024 - openreview.net | 2024 | cited by 2)
+   [PDF] https://openreview.net/pdf?id=LPJq1sVlqr
+   … , sample and enumerate it, we do not observe the value of S … asking the LLM to be unbiased (Unbiased, Precog) and four (… We assume that for every choice of z ∈ Z there is a potential …
+
+72. Demystifying Hospital Experiences via Online Reviews Beyond Star Ratings: An Aspect-Based Mining of Online
+   https://books.google.com/books?hl=en&lr=&id=UhVeEQAAQBAJ&oi=fnd&pg=PA311&dq=impartial+selection+choosing+k+from+n+without+self-voting&ots=lej00Y9duv&sig=fKYCxziR5hGLpn61kXnuaK3Nvsc
+   (S Agarwal, R Singh, B Pandiya… - … Technologies and …, 2025 - books.google.com | 2025)
+   … Understanding customer viewpoints not only helps address immediate service gaps but also … (2022) report that SVM with a selfvoting classifier achieves 100% accuracy in app review …
+
+73. Multilingual Text-to-Image Generation Magnifies Gender Stereotypes
+   https://aclanthology.org/anthology-files/pdf/acl/2025.acl-long.966.pdf
+   (M Brack, J Libovický, K Kersting… - arXiv preprint arXiv …, 2024 - aclanthology.org | 2024)
+   [PDF] https://aclanthology.org/anthology-files/pdf/acl/2025.acl-long.966.pdf
+   … We start our prompt construction by choosing a set of 20 … tion prompts do not use inherently neutral language, so we … a fixed prefix approach and select the most probable translation that …
+
+74. Flashlights of the Amsterdam Congress
+   https://books.google.com/books?hl=en&lr=&id=zFhYAAAAMAAJ&oi=fnd&pg=PA1&dq=impartial+selection+choosing+k+from+n+without+self-voting&ots=FlEB8johJI&sig=FmtKw-iWX1V1GO0XRsXjdppcoDU
+   (D De Leon - 1929 - books.google.com | 1929 | cited by 14)
+   [PDF] http://marxists.anu.edu.au/archive/deleon/pdf/1904/nov13b_1904.pdf
+   … , in Germany, have not yet a Millerand; we are not yet so far; but … was defeated by twenty-four votes against sixteen-myself voting … "Second, it supposes impartiality possible on the part of …
+
+75. Train Equipment Fault Diagnosis and Prognosis
+   https://link.springer.com/chapter/10.1007/978-981-13-2260-0_3
+   (Y Qin, L Jia - Active Safety Methodologies of Rail Transportation, 2018 - Springer | 2018)
+   … In addition, the identification accuracy of the data sampling frequency is not sensitive in above section, so the choice of 12 k Hz load data as the original vibration data to simulate the …
+
+76. GREAT: Generalizable Backdoor Attacks in RLHF via Emotion-Aware Trigger Synthesis
+   https://arxiv.org/abs/2510.09260
+   (SK Dutta, Y Xu, P Pant, X Zhang - arXiv preprint arXiv:2510.09260, 2025 - arxiv.org | 2510)
+   [PDF] https://arxiv.org/pdf/2510.09260
+   … For each cluster j, we select the medoid trigger tj whose ztj is closest to µj. Medoids ensure … In addition, our trigger identification design does not provide guarantees for optimality. …
+
+77. Categorization and seu fault simulations of radiation-hardened-by-design flip-flops
+   https://www.mdpi.com/2079-9292/10/13/1572
+   (EA Hamed, I Lee - Electronics, 2021 - mdpi.com | 2021 | cited by 6)
+   … Section 4 presents the simulation results of some selected well-known RHBD FFs regarding … FFs and produces an error signal if they do not match. To determine the correct output, a …
+
+78. Gamification as a Strategy to Increase Motivation and Engagement in Higher Education Chemistry Students. Computers 2021, 10, 132
+   https://www.academia.edu/download/73846005/pdf.pdf
+   (GM Chans, M Portuguez Castro - Educational Innovation in Higher …, 2021 - academia.edu | 2021 | cited by 3)
+   [PDF] https://www.academia.edu/download/73846005/pdf.pdf
+   … Autonomy refers to the freedom to choose which challenges to … for one of his or her teammates (self-voting was not valid). The … of the multiplechoice items was correct or not, where they …
+
+79. Application of ChemCollective to Improve Student's Engagement in Chemistry
+   https://www.journalfrse.org/journal/article/view/56
+   (TF Pepple - … Journal of Functional Research in Science and …, 2024 - journalfrse.org | 2024 | cited by 2)
+   [PDF] https://www.journalfrse.org/journal/article/download/56/57
+   … Autonomy refers to the freedom to choose which challenges to … for one of his or her teammates (self-voting was not valid). The … of the multiplechoice items was correct or not, where they …
+
+80. A Persona-Augmented Multi-Agent System for Varied Narrative Generation
+   https://dl.acm.org/doi/abs/10.1145/3807968.3810931
+   (A Sillano, G Arbore, L De Russis - … Proceedings of the 18th ACM SIGCHI …, 2026 - dl.acm.org | 2026)
+   [PDF] https://dl.acm.org/doi/pdf/10.1145/3807968.3810931
+   … To foster variety in LLM outputs without having to alter its inner … This is a design choice aiming to promote stylistic and semantic … toward the neutral baseline output. Figure 2 further illus- …
+
+81. TF-TDA: A Novel Supervised Term Weighting Scheme for Sentiment Analysis. Electronics 2023, 12, 1632
+   https://www.academia.edu/download/104986952/pdf.pdf
+   (A Alshehri, A Algarni - 2023 - academia.edu | 2023)
+   [PDF] https://www.academia.edu/download/104986952/pdf.pdf
+   … , feature selection techniques can be used to choose the … to handle the imbalance issue, find neutral terms, group the rest of … is not completely useful for text classification and not always …
+
+82. Analyzing sentiments regarding ChatGPT using novel BERT: a machine learning approach
+   https://www.mdpi.com/2078-2489/14/9/474
+   (M Mujahid, F Rustam, R Shafique, V Chunduri… - Information, 2023 - mdpi.com | 2023 | cited by 71)
+   … sentiment from reviews, selecting relevant features, and … the data more complex if we do not convert it all into lowercase. … are achieved for positive and neutral classes by RoBERTa. The …
+
+83. Entity-Collision: A Stratified Protocol for Attributing Retrieval Lift in Agent Memory
+   https://arxiv.org/abs/2605.29630
+   (Y Deng - arXiv preprint arXiv:2605.29630, 2026 - arxiv.org | 2605)
+   [PDF] https://arxiv.org/pdf/2605.29630
+   … 11.7-pp residual oracle headroom that no signal we tested recovers. … MiniLM is the v0.2 default-embedder choice: ~17–21 ms … Choosing an embedder is a per-tag decision, not a single-…
+
+84. Survey of cultural awareness in language models: Text and beyond
+   https://direct.mit.edu/coli/article/doi/10.1162/COLI.a.14/130804
+   (S Pawar, J Park, J Jin, A Arora, J Myung… - Computational …, 2025 - direct.mit.edu | 2025 | cited by 175)
+   [PDF] https://direct.mit.edu/coli/article-pdf/doi/10.1162/COLI.a.14/2523159/coli.a.14.pdf
+   … of deploying LLMs with or without cultural awareness and … models can be achieved without additional training, primarily … the Collective, Critique, and Self-Voting (CCSV) method, which …
+
+85. Legislative Harmonisation on Gender Issues in Romania: The Case of Parental Leave and Some of Its Implications
+   https://www.ceeol.com/search/article-detail?id=113843
+   (R Petre - Studia Universitatis Babes-Bolyai-Sociologia, 2008 - ceeol.com | 2008 | cited by 5)
+   … neutral policies, particularly the parental leave policy, appeared revolutionary in the 1970’s; the policy recognized that work was not … The state had to pay to him 85% of his self-voting …
+
+86. Demystifying Hospital Experiences via Online Reviews Beyond Star Ratings: An Aspect-Based Mining of Online Reviews
+   https://link.springer.com/chapter/10.1007/978-981-96-2548-2_16
+   (S Agarwal, R Singh, B Pandiya, S Khan - … and Analytics for Development, 2024 - Springer | 2024 | cited by 1)
+   This study explores online reviews from patients and their families to understand customer perceptions in healthcare. Using data mining techniques, it analyses these reviews to gain …
+
+87. Healthy work environments: Improving staff satisfaction and employee productivity in a non-traditional nursing work environment through employee recognition
+   https://cdr.lib.unc.edu/concern/dissertations/rb68xh28m
+   (II Combs, C Michael - 2018 - cdr.lib.unc.edu | 2018 | cited by 4)
+   [PDF] https://cdr.lib.unc.edu/downloads/3j333669m
+   … I couldn’t have done this without you both. I also want to acknowledge all the faculty and staff at the UNC School of Nursing. I would not be here today without your guidance and support …
+
+88. Notes and Recent Decisions.
+   https://openurl.ebsco.com/contentitem/gcd:10358010?sid=ebsco:plink:crawler-gcd&id=ebsco:gcd:10358010&crl=c&jrnl=00081221
+   (…, HP Glassman, KD Simon, K DeMattei - California Law …, 1950 - openurl.ebsco.com | 1950)
+   … an agency itself, no member thereof who did not hear the evidence … Where the agency chooses to hear the case itself, Section … The self-voting will cause a court to inquire into the facts of …
+
+89. ChatGPT and BERT: Comparative Analysis of Various Natural Language Processing Applications
+   https://link.springer.com/content/pdf/10.1007/978-981-96-2355-6.pdf#page=59
+   (M Saranya, B Amutha - Multimodal Generative AI - Springer)
+   … can tell the difference between neutral, positive, and negative … —positive, negative, or neutral. Following its learning of the … or not the arriving email was spam, this final hidden state. …
+
+90. Social Identity and Cooperation
+   https://search.proquest.com/openview/7e907bdebbeb68935e4cdfe1bb31407c/1?pq-origsite=gscholar&cbl=18750
+   (RW Chen - 2012 - search.proquest.com | 2012 | cited by 2)
+   [PDF] https://deepblue.lib.umich.edu/bitstreams/4aa94e1b-4856-415d-b86d-53a7c475a70b/download
+   … to groups based on the random choice of an envelope with a … last round choices, we find that the distribution of choices in … is not surpris ing, as the outgroup and control sessions do not …
+
+91. Towards a methodology for building reliable systems
+   https://search.proquest.com/openview/0bf57d9a518896c356dcf289cc6a7350/1?pq-origsite=gscholar&cbl=18750
+   (IA Buckley - 2012 - search.proquest.com | 2012)
+   … In the unlikely event that the author did not send a complete manuscript and there are missing pages, these will be noted. Also, if material had to be removed, a note will indicate the …
+
+92. Aya Dataset: An Open-Access Collection for Multilingual Instruction Tuning
+   https://www.academia.edu/download/122496977/2402.06619.pdf
+   (S Hooker - arXiv preprint arXiv:2402.06619, 2024 - academia.edu | 2402)
+   [PDF] https://www.academia.edu/download/122496977/2402.06619.pdf
+   … An important goal of this project was to have a diverse pool of annotators and we thus did not limit the selection criteria to working knowledge of language models or AI in general. As a …
+
+93. Aya Model: An Instruction Finetuned Open-Access Multilingual Language Model
+   https://www.academia.edu/download/122496960/2402.07827.pdf
+   (S Singh - arXiv (Cornell University), 2024 - academia.edu | 2024)
+   … We detail the motivation for the choices of the architecture … Due to the nature of this instruction set we do not sub-sample, … prompt it to complete neutral descriptive sentences for different …
+
+94. AA Progressive Criminal Law View Regarding Criminal Liability In Robotic Crimes
+   https://ojs.uhnsugriwa.ac.id/index.php/vd/article/download/3063/1895
+   (MTWNG Agung - VYAVAHARA DUTA, 2023 - ojs.uhnsugriwa.ac.id | 2023)
+   … Squid beak and it completely random with no punch line. Normal laser is not milk to sweeten water. Abject control is on … What a sweetie to think impartially. Being educated does …
+
+95. Student political cynicism: origins, influences, and implications
+   https://search.proquest.com/openview/a9980cc1855f3e6588088aec007d7fba/1?pq-origsite=gscholar&cbl=18750&diss=y
+   (LV Lee - 1999 - search.proquest.com | 1999)
+   … is not so much thrust upon the student as it is selected - the level … did not see voting as important, and felt they were not … could not vote because they had no access to accurate, unbiased …

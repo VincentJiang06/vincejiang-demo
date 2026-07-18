@@ -1,0 +1,297 @@
+===== Query 1/3: Chrystal Mizen Goodhart's Law Its Origins Meaning and Implications for Monetary Policy =====
+
+1. Goodhart's Law: its origins, meaning and implications for monetary policy
+   https://www.elgaronline.com/downloadpdf/edcollbook/1840646144.pdf#page=233
+   (KA Chrystal, PD Mizen, PD Mizen - Central banking, monetary …, 2003 - elgaronline.com | 2003 | cited by 197)
+   [PDF] https://www.academia.edu/download/84403905/goodharts_law.pdf
+   Many distinguished economists have their name associated with some theory, concept or tool in economics. Obvious examples include: Giffen goods, the Pigou effect, Nash equilibrium, the Coase theorem, the Phillips curve, the Rybczynski and Stolper–Samuelson theorems, Ricardian equivalence, the Engle curve, the Edgeworth–Bowley box, Tobin’sq, and the Lucas critique. However, very few economists are honoured by having their name associated with a ‘law’. Charles Goodhart joins Sir Thomas Gresham, Leon Walras, and Jean-Baptiste Say in a very select club. In this chapter we explain Goodhart’s Law and the context in which it arose, and discuss whether it has the qualities that will help it survive over time. Mainly this requires that it can be adapted to new circumstances as the world changes. Gresham’s Law, for example, was invented to describe the problems that arose from the artificial fixing of gold and silver prices but it turned out to have applicability to a wider range of monetary regimes wherever currency substitution was possible. Dollarisation in Equador, and other countries, would be a contemporary example of ‘good money drives out bad’.We shall focus particularly closely on the comparison between Goodhart’s Law and the enormously influential Lucas Critique. It could be argued that Goodhart’s Law and the Lucas Critique are essentially the same thing. If they are, Robert Lucas almost certainly said it first. However, while both Goodhart’s Law and the Lucas Critique relate to the instability of aggregate macroeconomic relationships, we shall argue that there are significant differences. In particular, while the Lucas Critique has affected macroeconomic methods in general, Goodhart’s Law has been more influential in monetary policy design–monetary targets are out and inflation targets are in.
+
+===== Query 2/3: Goodhart 1984 Monetary Theory and Practice UK Experience page 96 restatement =====
+
+1. Monetary theory and practice: The UK experience
+   https://cir.nii.ac.jp/crid/1130282271511200384
+   (CAE Goodhart - (No Title), 1984 - cir.nii.ac.jp | 1984 | cited by 562)
+   … Monetary theory and practice : the UK experience … タイトル "Monetary theory and practice : the UK experience" 責任表示 CAE Goodhart …
+
+===== Query 3/3: Goodhart law wording variants collapse break down statistical regularity control purposes =====
+
+1. Categorizing variants of Goodhart's Law
+   https://arxiv.org/abs/1803.04585
+   (D Manheim, S Garrabrant - arXiv preprint arXiv:1803.04585, 2018 - arxiv.org | 1803 | cited by 277)
+   [PDF] https://arxiv.org/pdf/1803.04585
+   … 1As a historical note, Goodharts Law [1] as originally formulated states that “any observed statistical regularity will tend to collapse once pressure is placed upon it for control purposes.” …
+
+2. Making sense of numbers: The presentation of crime statistics in the Oslo police annual reports 1950–2008
+   https://www.taylorfrancis.com/chapters/edit/10.4324/9780203846612-20/making-sense-numbers-presentation-crime-statistics-oslo-police-annual-reports-1950%E2%80%932008-heidi-mork-lomell
+   (HM Lomell - The Mutual Construction of Statistics and Society, 2010 - taylorfrancis.com | 2010 | cited by 21)
+   … Despite variations by up to 10 percent, he was stunned by an “alarming … from Goodhart (advisor to Bank of England) from 1975 is: “Any observed statistical regularity will tend to collapse …
+
+3. Innocent frauds meet Goodhart's Law in monetary policy
+   https://www.academia.edu/download/56779957/wp_622.pdf
+   (D Bezemer - SSRN Electronic Journal, 2000 - academia.edu | 2000 | cited by 1)
+   … obfuscate accounting reality—in Goodhart’s words, it is “… Goodhart’s law” that any observed statistical regularity will tend to collapse once pressure is placed upon it for control purposes…
+
+4. Impossibility of Unambiguous Communication as a Source of Failure in AI Systems.
+   https://ceur-ws.org/Vol-2916/paper_14.pdf?fbclid=IwAR1ci7vmt1_4AeiJB9yhNpykYcYqzaEpwmwCZUheL6MESTYN0V5UzQmm9_A
+   (WJ Howe, RV Yampolskiy - AISafety@ IJCAI, 2021 - ceur-ws.org | 2021 | cited by 14)
+   [PDF] https://ceur-ws.org/Vol-2916/paper_14.pdf?fbclid=IwAR1ci7vmt1_4AeiJB9yhNpykYcYqzaEpwmwCZUheL6MESTYN0V5UzQmm9_A
+   … statistical regularity will tend to collapse once pressure is placed upon it for control purposes” has been termed Goodhart’s Law … recognizing ambiguity in natural language, once applied …
+
+5. Goodhart's law in reinforcement learning
+   https://proceedings.iclr.cc/paper_files/paper/2024/hash/6ad68a54eaa8f9bf6ac698b02ec05048-Abstract-Conference.html
+   (J Karwowski, O Hayman, X Bai… - International …, 2024 - proceedings.iclr.cc | 2024 | cited by 51)
+   [PDF] https://proceedings.iclr.cc/paper_files/paper/2024/file/6ad68a54eaa8f9bf6ac698b02ec05048-Paper-Conference.pdf
+   … “any observed statistical regularity will tend to collapse once … Unlike them, we do not only focus on language, but rather, … For illustrative purposes, we present a single run of the above …
+
+6. On the use of artificial intelligence in financial regulations and the impact on financial stability
+   https://arxiv.org/abs/2310.11293
+   (J Danielsson, A Uthemann - arXiv preprint arXiv:2310.11293, 2023 - arxiv.org | 2310 | cited by 40)
+   [PDF] https://arxiv.org/pdf/2310.11293
+   … Updated versions of this paper can be downloaded from from … Goodhart, in his critique, applies this to regulations, stating, “Any observed statistical regularity will tend to collapse …
+
+7. The Futility Argument Against Rule-by-Promulgation: Zhuangzi, Legibility, and the Self-Hollowing Rule
+   https://philpapers.org/rec/ARKTFA
+   (D Arkema - 2026 - philpapers.org | 2026 | cited by 2)
+   [PDF] https://philpapers.org/archive/ARKTFA.pdf
+   … of it: Goodhart's law and Campbell's law (which concern … a fourth critique rather than a variant of the existing three. The … "any observed statistical regularity will tend to collapse once …
+
+8. On Goodhart's law, with an application to value alignment
+   https://arxiv.org/abs/2410.09638
+   (EM El-Mhamdi, LN Hoang - arXiv preprint arXiv:2410.09638, 2024 - arxiv.org | 2410 | cited by 16)
+   [PDF] https://arxiv.org/pdf/2410.09638?
+   … statistical regularity will tend to collapse once pressure is placed upon it for control purposes” [… Variants of this adage could also be found in popular wisdom and proverbs around the …
+
+9. Monetary Policy—2: Rules versus Discretion
+   https://link.springer.com/content/pdf/10.1007/978-1-349-20175-4_15.pdf
+   (CAE Goodhart - Money, Information and Uncertainty, 1989 - Springer | 1989)
+   … limited both short-term variations in such interest rates, … Goodhart's Law, 'that any observed statistical regularity will tend to collapse once pressure is placed upon it for control purposes' (…
+
+10. Charles Goodhart (1936–)
+   https://link.springer.com/chapter/10.1057/978-1-137-58274-4_31
+   (D Kohn - The Palgrave Companion to LSE Economics, 2019 - Springer | 2019 | cited by 3)
+   … jurisdictions—and often that breakdown was most pronounced for the … statistical regularity for control purposes, that regularity will collapse’, which became known as Goodhart’s Law …
+
+11. Problems of monetary management: the UK experience
+   https://link.springer.com/chapter/10.1007/978-1-349-17295-5_4
+   (CAE Goodhart - Monetary theory and practice: The UK experience, 1984 - Springer | 1984 | cited by 1304)
+   … rely on variations in interest rates to control the monetary … Goodhart's law, that any observed statistical regularity will tend to collapse once pressure is placed upon it for control purposes…
+
+12. Whither now?
+   https://rosa.uniroma1.it/rosa04duplex/psl_quarterly_review/article/view/10583
+   (CAE Goodhart - PSL Quarterly Review, 1997 - rosa.uniroma1.it | 1997 | cited by 20)
+   [PDF] https://rosa.uniroma1.it/rosa04duplex/psl_quarterly_review/article/download/10583/10467
+   … , would be u~able to stem the tide; variations in interest rates could be used for a tlme to … a previously observed statistical regularity for control purposes, that regularity will collapse". …
+
+13. The Strong, Weak and Benign Goodhart's law. An independence-free and paradigm-agnostic formalisation
+   https://arxiv.org/abs/2505.23445
+   (A Majka, EM El-Mhamdi - arXiv preprint arXiv:2505.23445, 2025 - arxiv.org | 2505 | cited by 3)
+   [PDF] https://arxiv.org/pdf/2505.23445
+   … to formalise Goodhart’s law, either by categorising variants of it, … with the symbolic computation language Sympy [MSP… , our paper highlights the collapse of any prospect for alignment in …
+
+14. Safety Overestimation: A Framework for Identifying Superficial Alignment in Large Language Models
+   https://openreview.net/forum?id=xm2Ksake18
+   (S Goyal - The ICML 2026 Workshop on Hypothesis Testing - openreview.net | 2026)
+   [PDF] https://openreview.net/pdf?id=xm2Ksake18
+   … to different Goodhart variants, as shown in Table 1. … , the training mix, fine-tuning objectives, and RLHF reward can all … , refusal theater, context collapse, demographic blind spots, and …
+
+15. Statistical patterns in written language
+   https://www.researchgate.net/profile/Damian-Zanette-2/publication/269417670_Statistical_Patterns_in_Written_Language/links/5538ee260cf226723ab67424/Statistical-Patterns-in-Written-Language.pdf
+   (DH Zanette - arXiv preprint arXiv:1412.3336, 2014 - researchgate.net | 1412 | cited by 40)
+   [PDF] https://www.researchgate.net/profile/Damian-Zanette-2/publication/269417670_Statistical_Patterns_in_Written_Language/links/5538ee260cf226723ab67424/Statistical-Patterns-in-Written-Language.pdf
+   … The universal statistical regularity known as Zipf’s law and its … The purpose of the present chapter is to offer a swift … means of statistical tests, for realizations of three variants of Mandelbrot…
+
+16. Statistical Laws in Complex Systems: Combining Mechanistic Models and Data Analysis
+   https://books.google.com/books?hl=en&lr=&id=bwk4EQAAQBAJ&oi=fnd&pg=PR5&dq=Goodhart+law+wording+variants+collapse+break+down+statistical+regularity+control+purposes&ots=KcSpMYtKbD&sig=OxCQcvFtlWZHdmuX5ih6xTreAyY
+   (EG Altmann - 2024 - books.google.com | 2024 | cited by 7)
+   [PDF] https://arxiv.org/pdf/2407.19874
+   … One of the goals of this monograph is to explain the … The most popular approaches of recent works fall into the class of … Not surprisingly, the original versions of this law considered the …
+
+17. Statistical Laws in Complex Systems
+   https://link.springer.com/content/pdf/10.1007/978-3-031-73164-8.pdf
+   (EG Altmann - 2017 - Springer | 2017 | cited by 2)
+   [PDF] https://www.sydney.edu.au/content/dam/corporate/documents/faculty-of-arts-and-social-sciences/research/research-centres-institutes-groups/10th-munich-sydney-tilburg-conference-abstracts.pdf
+   … One of the goals of this monograph is to explain the … The most popular approaches of recent works fall into the class of … Not surprisingly, the original versions of this law considered the …
+
+18. The central bank and the financial system
+   https://books.google.com/books?hl=en&lr=&id=A8EWDAAAQBAJ&oi=fnd&pg=PP1&dq=Goodhart+law+wording+variants+collapse+break+down+statistical+regularity+control+purposes&ots=r5AKQaYA4l&sig=PN9SJ2NpBIGFHqDcQetV5HkP_0E
+   (C Goodhart - 1995 - books.google.com | 1995 | cited by 474)
+   … holding deposits, at least the fall in market values on the assets … It is not the purpose of this paper to argue that the fiscal … This would have the advantage that variations in the real rate of …
+
+19. The determination of the money supply: Flexibility versus control
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/manc.12194
+   (CAE Goodhart - The Manchester School, 2017 - Wiley Online Library | 2017 | cited by 74)
+   [PDF] https://eprints.lse.ac.uk/84209/1/Goodhart_Determination%20money%20supply_2017.pdf
+   … example, setting r leads to variations in HPM and M (linked … short-term interest rates to fall below our federal funds target … , or, in other words, their micro-founded objectives. Yet such a …
+
+20. The New York Money Market and the Finance of Trade, 1900-1913
+   https://books.google.com/books?hl=en&lr=&id=YLGZDqtImU8C&oi=fnd&pg=PA1&dq=Goodhart+law+wording+variants+collapse+break+down+statistical+regularity+control+purposes&ots=ndvtXWtxVX&sig=Mx_ykO6X3FV6gxLZ43naicCZs20
+   (CAE Goodhart - 1969 - books.google.com | 1969 | cited by 167)
+   … The purpose of this book is to show where and how it is in error and to substitute for it a … variations in the demand for currency, being built up in the summer and reduced in the fall: …
+
+21. Take Goodhart Seriously: Principled Limit on General-Purpose AI Optimization
+   https://arxiv.org/abs/2510.02840
+   (A Maier, A Maier, T David - arXiv preprint arXiv:2510.02840, 2025 - arxiv.org | 2510)
+   [PDF] https://arxiv.org/pdf/2510.02840?
+   … from those that collapse into Goodhart’s law failure modes under … In other words, it is commonly believed that if a model is … , focusing on Goodhart’s law and loss-of-control scenarios. …
+
+22. Can central banking survive the IT revolution?
+   https://iang.org/money/goodhart_can_cb_survive.html
+   (CAE Goodhart - 2000 - iang.org | 2000 | cited by 367)
+   … It is the purpose of this paper to argue that these economists … to `explain' cross-country variations in the currency deposit rates. For … Even if currency holdings should continue to fall to an (…
+
+23. Editors' JIF-boosting stratagems–Which are appropriate and which not?
+   https://www.sciencedirect.com/science/article/pii/S0048733315001390
+   (BR Martin - Research Policy, 2016 - Elsevier | 2016 | cited by 159)
+   [PDF] https://sussex.figshare.com/articles/journal_contribution/Editors_JIF-boosting_stratagems_which_are_appropriate_and_which_not_/23425535/1/files/41140502.pdf
+   … For other journals where there was a fall, there was mostly silence. Among many of those editors, however, there was undoubtedly much discussion about what to do to increase the JIF …
+
+24. Verified facts for people in the 21st century: How can professional ethics contribute?
+   https://journals.sagepub.com/doi/abs/10.1177/18747655241307541
+   (WJ Radermacher - Statistical Journal of the IAOS, 2025 - journals.sagepub.com | 2025 | cited by 4)
+   [PDF] https://journals.sagepub.com/doi/pdf/10.1177/18747655241307541
+   … the ‘fitness for purpose’ quality standard. And as the rule named after Charles Goodhart (Goodhart's Law, “that any observed statistical regularity will tend to collapse once pressure is …
+
+25. Why Code, Why Now: An Information-Theoretic Perspective on the Limits of Machine Learning
+   https://arxiv.org/abs/2602.13934
+   (Z Zhao - arXiv preprint arXiv:2602.13934, 2026 - arxiv.org | 2602)
+   [PDF] https://arxiv.org/pdf/2602.13934
+   … [29] categorize variants of Goodhart’s law. Recent work [14] … We separate the two because they fail for different reasons: a … in-distribution but collapsing on novel variations. RL can …
+
+26. Money, credit and bank behaviour: need for a new approach
+   https://www.cambridge.org/core/journals/national-institute-economic-review/article/money-credit-and-bank-behaviour-need-for-a-new-approach/A4483B482E6B878CE5C6DF407EF2A7A0
+   (CAE Goodhart - National Institute Economic Review, 2010 - cambridge.org | 2010 | cited by 69)
+   … then collapsed, is a nice example of Goodhart’s Law, … , which do not matter for our purposes here, when the central … to vary spreads on its own, variations in such spreads will never, by …
+
+27. The issue of proxies and choice architectures. Why EU law matters for recommender systems
+   https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2022.789076/full?=&field=&journalName=Frontiers_in_Artificial_Intelligence&id=789076&s=03
+   (M Hildebrandt - Frontiers in Artificial Intelligence, 2022 - frontiersin.org | 2022 | cited by 42)
+   … Thus, I will trace the consequences of the Goodhart effect for … Any observed statistical regularity will tend to collapse once … Some versions of behaviorism avoid the reductive assumptions …
+
+28. IDD Directional Preference Seed Dataset v0. 1 A Seed Preference Dataset for Testing Directional Preservation Beyond Prompt Compliance
+   https://www.academia.edu/download/132948717/IDD_Directional_Preference_Seed_Dataset_v0_1_1.pdf
+   (K Hrubec - IDD Directional Preference Seed Dataset v0. 1 A Seed …, 2026 - academia.edu | 2026)
+   … and collapse CKA to 0.21 to 0.39. Cross-validated random-… , falsifiable Anti-Goodhart protocol for evaluating claims of … package includes JSONL and CSV versions of the dataset, a …
+
+29. Taking the measure of law: the case of the Doing Business project
+   https://www.cambridge.org/core/journals/law-and-social-inquiry/article/taking-the-measure-of-law-the-case-of-the-doing-business-project/7480C07FE40D0783A6CA7DE6A867092E
+   (KE Davis, MB Kruse - Law & Social Inquiry, 2007 - cambridge.org | 2007 | cited by 174)
+   [PDF] https://iilj.org/wp-content/uploads/2016/08/Davis-Kruse-Taking-the-Measure-of-Law-The-Case-of-the-Doing-Business-Project-32-Law-Social-Inquiry-2007.pdf
+   … to use cross-country variations to investigate the relationship between law and development. 18… Goodhart’s Law states that “any observed statistical regularity will tend to collapse once …
+
+30. Macro-Economic Analysis of the Demand for Money
+   https://link.springer.com/content/pdf/10.1007/978-1-349-20175-4_4.pdf
+   (CAE Goodhart - Money, Information and Uncertainty, 1989 - Springer | 1989)
+   … Jewellery is also an asset which may rise or fall in value over … also provided a measure of variations in the relative yield as … for money for transactions purposes would be less than unity, …
+
+31. From varieties of failure to failure judgments: the sociology of valuation and failure studies
+   https://www.taylorfrancis.com/chapters/edit/10.4324/9780429355950-9/varieties-failure-failure-judgments-thorsten-peetz-frank-meier-d%C3%A9sir%C3%A9e-waibel
+   (T Peetz, F Meier, D Waibel - Routledge international handbook of …, 2023 - taylorfrancis.com | 2023 | cited by 8)
+   … – referenced “Goodhart’s law,” which states “that any observed statistical regularity will tend to collapse once pressure is placed upon it for control purposes” (Goodhart 1984, 96). The …
+
+32. Dead rats, dopamine, performance metrics, and peacock tails: proxy failure is an inherent risk in goal-oriented systems
+   https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/dead-rats-dopamine-performance-metrics-and-peacock-tails-proxy-failure-is-an-inherent-risk-in-goaloriented-systems/89408A43F6D14BFD368FE5225A573032
+   (YJ John, L Caldwell, DE McCoy… - Behavioral and Brain …, 2024 - cambridge.org | 2024 | cited by 41)
+   [PDF] https://www.codymccoy.com/files/Dead-rats-dopamine-performance-metrics-and-peacock-tails-proxy-failure_BBS_2023.pdf
+   … As we will demonstrate, “Goodhart-like” phenomena have … these examples: Proxy-based optimization of regulatory goals. … that do not unnecessarily fall prey to deceptive signals. This in …
+
+33. Reflexivity of anticipations in economics and political economy
+   https://www.researchgate.net/profile/Heikki-Patomaki/publication/329466476_Reflexivity_of_Anticipations_in_Economics_and_Political_Economy/links/5c0a3676a6fdcc494fdfd657/Reflexivity-of-Anticipations-in-Economics-and-Political-Economy.pdf
+   (H Patomäki - Handbook of anticipation. Theoretical and applied …, 2019 - researchgate.net | 2019 | cited by 20)
+   [PDF] https://www.researchgate.net/profile/Heikki-Patomaki/publication/329466476_Reflexivity_of_Anticipations_in_Economics_and_Political_Economy/links/5c0a3676a6fdcc494fdfd657/Reflexivity-of-Anticipations-in-Economics-and-Political-Economy.pdf
+   … statistical regularity will tend to collapse once pressure is placed upon it for control purposes” (Goodhart … and their accuracy in the light of Goodhart’s law and Lucas-critique. In that …
+
+34. The inter-temporal nature of risk
+   https://api.taylorfrancis.com/content/chapters/edit/download?identifierName=doi&identifierValue=10.4324/9780203222614-12&type=chapterpdf
+   (C Goodhart, J Danielsson - Technology and Finance, 2002 - api.taylorfrancis.com | 2002 | cited by 40)
+   … and falling asset prices, profits fall and bad debts rise; capital … by the regulatory authorities, is that we have two objectives, … , expert and aggressive variations in interest rates ordained by …
+
+35. 100 percent reserve banking: a critical review of green perspectives
+   https://www.sciencedirect.com/science/article/pii/S0921800914003395
+   (K Dittmer - Ecological economics, 2015 - Elsevier | 2015 | cited by 77)
+   [PDF] https://www.academia.edu/download/35541975/Dittmer_100_percent_reserve_banking.pdf
+   100 percent reserve banking (C-PeRB) is an enduring proposal for monetary reform that has been taken up by some ecological economists. This paper identifies three groups of green …
+
+36. The Borovoy Coefficient A Civil-Liberties Measure of Legislative Alignment
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6611260
+   (ECO Bryant, H Michael - Available at SSRN 6611260, 2026 - papers.ssrn.com | 6611)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6611260
+   … what I will later describe as Goodhart drift already reasoned in … 20 “Any observed statistical regularity will tend to collapse … to the same four-variant Goodhart taxonomy: the system will …
+
+37. A central bank economist
+   https://www.elgaronline.com/downloadpdf/edcollbook/1840646144.pdf#page=25
+   (CAE Goodhart - Central Banking, Monetary Theory and Practice …, 2003 - elgaronline.com | 2003 | cited by 29)
+   … argued, would be unable to stem the tide; variations in interest rates could be used for a time … a previously observed statistical regularity for control purposes, that regularity will collapse’. …
+
+38. Destructive coordination
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/clqv96&section=13
+   (CK Whitehead - Cornell L. Rev., 2010 - HeinOnline | 2010 | cited by 138)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=1656075
+   … , bond, or other security) will fall short of its expected outcome. … VaR has many versions, which can vary from firm to firm,8 7 … Goodhart's Law originated with Charles Goodhart, who first …
+
+39. Alternative Monetary Standards (1992)
+   https://link.springer.com/chapter/10.1057/9780230379152_5
+   (CAE Goodhart - The Central Bank and the Financial System, 1995 - Springer | 1995 | cited by 2)
+   … that will cause the prior regularity to collapse. … to variants of presently available methods of existing central banks to conduct monetary policy for the achievement of domestic objectives. …
+
+40. Epistemic limits of empirical finance: Causal reductionism and self-reference
+   https://arxiv.org/abs/2311.16570
+   (D Polakow, T Gebbie, E Flint - arXiv preprint arXiv:2311.16570, 2023 - arxiv.org | 2311 | cited by 8)
+   [PDF] https://arxiv.org/pdf/2311.16570
+   … regularity will tend to collapse once pressure is placed upon it for control purposes. … frequently present itself in the form where multiple competing versions co-exist and compete (Hoel…
+
+41. Against design
+   https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/arzjl47&section=24
+   (C Devins, R Koppl, S Kauffman, T Felin - Ariz. St. LJ, 2015 - HeinOnline | 2015 | cited by 52)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=2570030
+   … blue prints to the smallest specification, but we cannot control the … social status beforehandmay ultimately fall short.Rawls' thought … the unanticipated and evolving uses of law in society. …
+
+42. Monetary regimes: then and now
+   https://www.elgaronline.com/edcollchap/edcoll/9781786439857/9781786439857.00008.xml
+   (C Goodhart - Money, Method and Contemporary Post-Keynesian …, 2018 - elgaronline.com | 2018 | cited by 1)
+   [PDF] https://eprints.lse.ac.uk/90195/1/Goodhart__monetary-regimes.pdf
+   … of inflation for monetary policy purposes, but also agonise over … to prevent the fall of money when gold and silver fall? If the … Perhaps unsurprisingly, versions of the Real Bills doctrine5 …
+
+43. There will find away to exploit it. Or to say this more succinctly: All systems
+   https://books.google.com/books?hl=en&lr=&id=uexjBAAAQBAJ&oi=fnd&pg=PA103&dq=Goodhart+law+wording+variants+collapse+break+down+statistical+regularity+control+purposes&ots=CWXIWbat5o&sig=3oB1SxHxM6tHn9ic8DkHlBM2Xjo
+   (WB ARTHUR - Complexity and the Economy, 2014 - books.google.com | 2014 | cited by 4)
+   … Goodhart’s law (1975):“Any observed statistical regularity will tend to collapse once pressure is placed upon it for control purposes.… We will proceed in steps by constructing versions that …
+
+44. Retroaction: How indicators feed back onto quantified actors
+   https://books.google.com/books?hl=en&lr=&id=zxJ4CgAAQBAJ&oi=fnd&pg=PA329&dq=Goodhart+law+wording+variants+collapse+break+down+statistical+regularity+control+purposes&ots=ZMGCr1bAYb&sig=tU48RdSN9YQNb6iVZHtx7I85v_0
+   (A Desrosières - … The making of governmental knowledge through …, 2015 - books.google.com | 2015 | cited by 142)
+   … ‘Goodhart’s law’ is one of its iconic expressions. Charles … follows:‘Any observed statistical regularity will tend to collapse once pressure is placed upon it for control purposes.’It was later …
+
+45. The crisis of 2007–09: nature, causes, and reactions
+   https://academic.oup.com/jiel/article-abstract/13/3/531/874980
+   (RM Lastra, G Wood - Journal of International Economic Law, 2010 - academic.oup.com | 2010 | cited by 143)
+   [PDF] https://qmro.qmul.ac.uk/xmlui/bitstream/handle/123456789/2003/LASTRATheCrisis2010POSTP.pdf?sequence=105
+   … 28 This may be a variant of ‘Goodhart’s law’: that any observed statistical regularity will tend to collapse once pressure is placed upon it for control purposes. See Charles …
+
+46. POLITICAL ECONOMYa
+   https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9248.1970.tb00659.x
+   (CAE Goodhart, RJ Bhansali - Political studies, 1970 - Wiley Online Library | 1970 | cited by 623)
+   … explanation of these seemingly regular variations. We do, … on a sufficiently regular basis-for our purposes-to construct a … by NOP, or in other words that they cannot be sampling the same …
+
+47. Alternative grading strategies in organic chemistry: a journey
+   https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1400058/full
+   (MJ Mio - Frontiers in Education, 2024 - frontiersin.org | 2024 | cited by 11)
+   [PDF] https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1400058/pdf
+   … “Any observed statistical regularity will tend to collapse once … , the application of Goodhart’s Law to the 20th century US … As anecdotal evidence, in the Fall 2022 and 2023 versions of …
+
+48. The Organizational Physics of Multi-Agent AI: Substrate-Independent Dysfunction in Autonomous Software Engineering Swarms
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6301638
+   (J McEntire - Available at SSRN 6301638, 2026 - papers.ssrn.com | 6301)
+   [PDF] https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=6301638
+   … Crawford–Sobel signal degradation, Goodhart’s Law, and the Data … reasons as human organizations, despite the removal … to soft information collapses at a structural break between the …
+
+49. Embedded agency
+   https://arxiv.org/abs/1902.09469
+   (A Demski, S Garrabrant - arXiv preprint arXiv:1902.09469, 2019 - arxiv.org | 1902 | cited by 48)
+   [PDF] https://arxiv.org/pdf/1902.09469
+   … The adversarial variant of Goodhart’s law is … to fall in a cluster of “wireheading or manipulation” outliers. Or we might think of this as a case of causal Goodhart, where intervening breaks …
+
+50. All systems will be gamed: exploitive behavior in economic and social systems
+   http://sfi-edu.s3.amazonaws.com/sfi-edu/production/uploads/sfi-com/dev/uploads/filer/c3/5b/c35bf350-39f2-4ded-8fd1-0b4afa3daaed/14-06-016.pdf
+   (WB Arthur - Santa Fe Institute Working Paper, 2014 - sfi-edu.s3.amazonaws.com | 2014 | cited by 15)
+   [PDF] http://sfi-edu.s3.amazonaws.com/sfi-edu/production/uploads/sfi-com/dev/uploads/filer/c3/5b/c35bf350-39f2-4ded-8fd1-0b4afa3daaed/14-06-016.pdf
+   … is Goodhart’s law (1975)7: “Any observed statistical regularity will tend to collapse once pressure is placed upon it for control purposes.… We will proceed in steps by constructing versions …

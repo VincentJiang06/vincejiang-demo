@@ -1,0 +1,137 @@
+/* ============================================================
+   REACTOR · LED + Glass effects (见 course/DESIGN-SYSTEM.md §5)
+   点阵 · 发光 · Glyph 灯带 · 通电动画 · 天赋树电路
+   ============================================================ */
+
+/* ── Boot line 通电自检行 ── */
+.bootline{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.1em;
+  color:var(--accent);text-shadow:0 0 6px color-mix(in srgb,var(--accent-glow) 45%,transparent);
+  white-space:nowrap;overflow:hidden}
+/* 纸白上不要发光文字，糊 */
+:root[data-theme="light"] .bootline{text-shadow:none}
+.bootline .cursor{display:inline-block;width:.5em;height:1em;vertical-align:-.15em;
+  background:currentColor;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.bootline.typing{width:0;animation:type 1.6s steps(38) forwards}
+@keyframes type{to{width:100%}}
+
+/* ── LED dot 通用发光点 ── */
+.led{width:9px;height:9px;border-radius:50%;background:var(--line-2);display:inline-block}
+.led.on{background:var(--accent);box-shadow:0 0 6px var(--accent-glow),0 0 14px var(--accent-glow)}
+.led.pulse{animation:led-pulse 2.4s ease-in-out infinite}
+@keyframes led-pulse{0%,100%{opacity:.45;box-shadow:0 0 3px var(--accent-glow)}
+  50%{opacity:1;box-shadow:0 0 8px var(--accent-glow),0 0 16px var(--accent-glow)}}
+
+/* ── Glyph 灯带 = 品牌标识：两盏白灯 + 红黄蓝绿（三分支 + 汇流）──
+   从左到右逐个点亮；灭掉时是中性灯珠，看不出自己是什么颜色。
+   每盏灯把自己的颜色存进 --_lamp，共用一条 keyframe（var() 在关键帧里按元素解析）。*/
+.glyph-strip{display:flex;gap:5px;align-items:center}
+.glyph-strip .led{background:var(--line-2);box-shadow:none;
+  animation:glyph-chase 2.8s steps(1) infinite}
+.glyph-strip .led.l-w     {--_lamp:var(--white);         --_glow:color-mix(in srgb,var(--white) 70%,transparent)}
+.glyph-strip .led.l-red   {--_lamp:var(--branch-red);    --_glow:var(--red-glow)}
+.glyph-strip .led.l-yellow{--_lamp:var(--branch-yellow); --_glow:var(--yellow-glow)}
+.glyph-strip .led.l-blue  {--_lamp:var(--branch-blue);   --_glow:var(--blue-glow)}
+.glyph-strip .led.l-green {--_lamp:var(--branch-green);  --_glow:var(--green-glow)}
+.glyph-strip .led:nth-child(1){animation-delay:0s}
+.glyph-strip .led:nth-child(2){animation-delay:.14s}
+.glyph-strip .led:nth-child(3){animation-delay:.28s}
+.glyph-strip .led:nth-child(4){animation-delay:.42s}
+.glyph-strip .led:nth-child(5){animation-delay:.56s}
+.glyph-strip .led:nth-child(6){animation-delay:.70s}
+@keyframes glyph-chase{
+  0%,20%  {background:var(--_lamp);box-shadow:0 0 6px var(--_glow),0 0 14px var(--_glow)}
+  21%,100%{background:var(--line-2);box-shadow:none}}
+/* 亮色主题下白灯要改成深色，否则纸白上两盏灯亮起来等于没亮 */
+:root[data-theme="light"] .glyph-strip .led.l-w{--_lamp:var(--ink-800);
+  --_glow:color-mix(in srgb,var(--ink-800) 45%,transparent)}
+/* 关掉动画时（reduced-motion）就常亮，不然灯带全灭看不出是什么 */
+@media (prefers-reduced-motion:reduce){
+  .glyph-strip .led{background:var(--_lamp);box-shadow:0 0 5px var(--_glow)}}
+
+/* ── Progress spine 进度脊（Glyph 灯带竖版）── */
+.spine{position:fixed;left:14px;top:50%;transform:translateY(-50%);z-index:40;
+  display:flex;flex-direction:column;gap:7px}
+.spine .led{width:7px;height:7px}
+@media (max-width:960px){.spine{display:none}}
+
+/* ============================================================
+   Talent Tree（天赋树本体）
+   ============================================================ */
+.tree-viewport{position:relative;width:100%;height:min(78vh,760px);
+  border:1px solid var(--line);border-radius:var(--radius-panel);overflow:hidden;
+  background:var(--bg-2);
+  background-image:radial-gradient(var(--dot) 1px,transparent 1.4px);
+  background-size:var(--dot-gap) var(--dot-gap);cursor:grab;
+  /* pan-y 而不是 none：手指竖着划仍然能滚页面，不然天赋树在手机上是个滚动陷阱 */
+  touch-action:pan-y}
+.tree-viewport.dragging{cursor:grabbing}
+.tree-stage{position:absolute;top:0;left:0;transform-origin:0 0;will-change:transform}
+.tree-svg{position:absolute;top:0;left:0;overflow:visible;pointer-events:none}
+
+/* 连线（电路）*/
+.edge{fill:none;stroke:var(--line-2);stroke-width:1.5}
+.edge.lit{stroke:var(--accent);filter:drop-shadow(0 0 3px var(--accent-glow))}
+.edge.alloy{stroke:url(#alloy);stroke-width:2;stroke-dasharray:5 4;
+  animation:flow 1.2s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-18}}
+
+/* 节点芯片 */
+.node{position:absolute;width:132px;transform:translate(-50%,-50%);
+  display:flex;flex-direction:column;gap:6px;padding:10px;cursor:pointer;
+  border:1px solid var(--line);border-radius:var(--radius-panel);
+  background:color-mix(in srgb,var(--panel) 82%,transparent);
+  backdrop-filter:blur(6px);text-decoration:none;transition:transform .15s,border-color .15s}
+.node:hover{transform:translate(-50%,-50%) scale(1.05);text-decoration:none}
+.node .n-head{display:flex;align-items:center;justify-content:space-between;
+  font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;color:var(--text-2)}
+.node .n-id{color:var(--accent)}
+.node .n-zh{font-family:var(--font-display);font-weight:700;font-size:.92rem;line-height:1.1;
+  color:var(--text)}
+.node .n-en{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.06em;
+  color:var(--text-mute);text-transform:uppercase;line-height:1.2}
+.node[data-branch]{}
+/* 状态 */
+.node.locked{opacity:.62;border-color:var(--line)}
+.node.locked .n-zh{color:var(--text-2)}
+.node.available{border-color:var(--accent)}
+.node.available::before{content:"";position:absolute;inset:-1px;border-radius:inherit;
+  border:1px solid var(--accent);animation:led-pulse 2.4s ease-in-out infinite;pointer-events:none}
+.node.completed{border-color:var(--accent);
+  box-shadow:0 0 0 1px var(--accent) inset,0 0 16px color-mix(in srgb,var(--accent-glow) 30%,transparent)}
+.node.completed .n-id::after{content:" ✓";color:var(--accent)}
+.node .n-led{position:absolute;top:-4px;right:-4px;width:8px;height:8px;border-radius:50%;
+  background:var(--line-2)}
+.node.available .n-led,.node.completed .n-led{background:var(--accent);
+  box-shadow:0 0 6px var(--accent-glow),0 0 14px var(--accent-glow)}
+
+/* 分支色作用（节点自带 data-branch，tokens.css 已映射 --accent）*/
+
+/* Tree HUD */
+.tree-hud{position:absolute;left:12px;bottom:12px;z-index:5;display:flex;gap:8px;
+  font-family:var(--font-mono);font-size:.66rem}
+.tree-hud button{background:var(--glass-bg);backdrop-filter:blur(8px);
+  border:1px solid var(--glass-brd);color:var(--text-2);border-radius:var(--radius);
+  padding:.4em .7em;cursor:pointer}
+.tree-hud button:hover{color:var(--accent);border-color:var(--accent)}
+.tree-legend{position:absolute;right:12px;top:12px;z-index:5;display:flex;flex-direction:column;
+  gap:5px;font-family:var(--font-mono);font-size:.64rem;color:var(--text-2);
+  background:var(--glass-bg);backdrop-filter:blur(8px);border:1px solid var(--glass-brd);
+  border-radius:var(--radius);padding:8px 10px}
+.tree-legend .k{display:flex;align-items:center;gap:.5em}
+.tree-legend .sw{width:20px;height:3px;border-radius:2px}
+.tree-hint{position:absolute;left:12px;top:12px;z-index:5;font-family:var(--font-mono);
+  font-size:.64rem;color:var(--text-mute);background:var(--glass-bg);backdrop-filter:blur(8px);
+  border:1px solid var(--glass-brd);border-radius:var(--radius);padding:6px 9px;max-width:260px}
+@media (max-width:720px){
+  .tree-hint{display:none}
+  .tree-viewport{height:min(62vh,520px)}
+  /* 触摸目标最小 44px */
+  .tree-hud button{min-width:44px;min-height:44px;font-size:.72rem}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .glyph-strip .led,.led.pulse,.edge.alloy,.node.available::before,.bootline.typing{animation:none}
+  .node.available::before{opacity:.7}
+  .bootline.typing{width:100%}
+}

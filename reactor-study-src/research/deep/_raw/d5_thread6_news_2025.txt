@@ -1,0 +1,247 @@
+===== Query 1/6: o3 reward hacking METR frontier models =====
+
+1. Frontier Risk Report (February to March 2026)
+   https://metr.org/blog/2026-05-19-frontier-risk-report/
+   (May 19, 2026 | METR)
+   Redaction summary statement: Except where explicitly noted in the report, there was no additional redacted information that was important to our conclusions...
+
+2. Detecting and reducing scheming in AI models
+   https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/
+   (Sep 17, 2025 | OpenAI)
+   Apollo Research and OpenAI developed evaluations for hidden misalignment (“scheming”) and found behaviors consistent with scheming in controlled tests...
+
+3. How a Berkeley team broke 8 major AI benchmarks. Six of them hit 100% without solving a single task
+   https://www.rdworldonline.com/how-a-berkeley-team-broke-8-major-ai-benchmarks-six-of-them-hit-100-without-solving-a-single-task/
+   (Apr 22, 2026 | R&D World)
+   A new project out of UC Berkeley helps confirm something many had suspected: leaderboards can be less reliable than they look.
+
+4. Time Horizon 1.1
+   https://metr.org/blog/2026-1-29-time-horizon-1-1/
+   (Jan 29, 2026 | METR)
+   We're releasing a new version of our time horizon estimates (TH1.1), using more tasks and a new eval infrastructure. Our estimates of time horizons for many...
+
+5. Top AI Models Showing Disturbing Behavior as They Become More Advanced
+   https://futurism.com/artificial-intelligence/ai-rogue-disturbing-advanced
+   (1 month ago | Futurism)
+   As AI becomes more advanced, models are learning how to work around complex tasks, rather than putting in the actual work.
+
+6. The Most Important Chart in AI Is Also the Most Misunderstood
+   https://www.derekthompson.org/p/the-most-important-chart-in-ai-is
+   (Mar 17, 2026 | https://www.derekthompson.org/)
+   For those who believe that artificial intelligence is the most important technology of our lifetime, one chart dominates the discourse.
+
+7. Alibaba's AI Agent Mined Crypto Without Permission. Now What?
+   https://www.forbes.com/sites/boazsobrado/2026/03/11/alibabas-ai-agent-mined-crypto-without-permission-now-what/
+   (Mar 11, 2026 | Forbes)
+   Sometime during a routine reinforcement learning training run, Alibaba's ROME agent went off-script. Without any instruction, the 30-billion-parameter model...
+
+8. Anthropic vs. OpenAI red teaming methods reveal different security priorities for enterprise AI
+   https://venturebeat.com/security/anthropic-vs-openai-red-teaming-methods-reveal-different-security-priorities
+   (Dec 3, 2025 | Venturebeat)
+   Model providers want to prove the security and robustness of their models, releasing system cards and conducting red-team exercises with each new release.
+
+9. A shared playbook for trustworthy third party evaluations
+   https://openai.com/index/trustworthy-third-party-evaluations-foundations/
+   (1 month ago | OpenAI)
+   OpenAI shares guidance on third-party AI evaluations, covering how to assess model capabilities, safeguards, and validity for frontier systems.
+
+10. Details about METR's evaluation of OpenAI GPT-5
+   https://metr.org/evaluations/gpt-5-report/
+   (Aug 7, 2025 | METR)
+   Note on independence: This evaluation was conducted under a standard NDA. Due to the sensitive information shared with METR as part of this evaluation,...
+
+===== Query 2/6: OpenAI monitoring reasoning models misbehavior obfuscation Baker 2025 =====
+(no results)
+
+===== Query 3/6: reward hacking agentic coding sabotage 2025 =====
+
+1. From shortcuts to sabotage: natural emergent misalignment from reward hacking
+   https://www.anthropic.com/research/emergent-misalignment-reward-hacking
+   (Nov 21, 2025 | Anthropic)
+   We show for the first time that realistic AI training processes can accidentally produce misaligned models.
+
+2. MALT: A Dataset of Natural and Prompted Behaviors That Threaten Eval Integrity
+   https://metr.org/blog/2025-10-14-malt-dataset-of-natural-and-prompted-behaviors/
+   (Oct 14, 2025 | METR)
+   We're introducing MALT (Manually-reviewed Agentic Labeled Transcripts), a dataset of natural and prompted examples of behaviors that threaten evaluation...
+
+3. Anthropic's new warning: If you train AI to cheat, it'll hack and sabotage too
+   https://www.zdnet.com/article/anthropics-new-warning-if-you-train-ai-to-cheat-itll-hack-and-sabotage-too/
+   (Nov 21, 2025 | ZDNET)
+   Models trained to cheat at coding tasks developed a propensity to plan and carry out malicious activities, such as hacking a customer database.
+
+4. The Cheating Machine: How AI’s “Reward Hacking” Spirals into Sabotage and Deceit
+   https://www.sify.com/ai-analytics/the-cheating-machine-how-ais-reward-hacking-spirals-into-sabotage-and-deceit/
+   (Dec 12, 2025 | Sify News)
+   A new, real threat has been discovered by Anthropic researchers, one that would have widespread implications going ahead, on both AI, and the world,...
+
+5. 😸 Claude learned to lie (here's how)
+   https://www.theneurondaily.com/p/claude-learned-to-lie-here-s-how
+   (Nov 24, 2025 | The Neuron)
+   Anthropic discovers AI models learn lying and sabotage through reward hacking. TikTok adds AI content controls. Gemini analyzes video beyond transcripts.
+
+6. Alibaba's AI Agent Mined Crypto Without Permission. Now What?
+   https://www.forbes.com/sites/boazsobrado/2026/03/11/alibabas-ai-agent-mined-crypto-without-permission-now-what/
+   (Mar 11, 2026 | Forbes)
+   Alibaba's ROME agent spontaneously diverted GPUs to crypto mining during training. The incident falls into a gap between AI, crypto, and cybersecurity...
+
+7. Details about METR's evaluation of OpenAI GPT-5
+   https://metr.org/evaluations/gpt-5-report/
+   (Aug 7, 2025 | METR)
+   Note on independence: This evaluation was conducted under a standard NDA. Due to the sensitive information shared with METR as part of this evaluation,...
+
+===== Query 4/6: Claude Opus system card reward hacking evaluation awareness 2025 =====
+
+1. Introducing Claude Opus 4.5
+   https://www.anthropic.com/news/claude-opus-4-5
+   (Nov 24, 2025 | Anthropic)
+   Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.
+
+2. MALT: A Dataset of Natural and Prompted Behaviors That Threaten Eval Integrity
+   https://metr.org/blog/2025-10-14-malt-dataset-of-natural-and-prompted-behaviors/
+   (Oct 14, 2025 | METR)
+   We're introducing MALT (Manually-reviewed Agentic Labeled Transcripts), a dataset of natural and prompted examples of behaviors that threaten evaluation...
+
+3. Findings from a pilot Anthropic–OpenAI alignment evaluation exercise: OpenAI Safety Tests
+   https://openai.com/index/openai-anthropic-safety-evaluation/
+   (Aug 27, 2025 | OpenAI)
+   OpenAI and Anthropic share findings from a first-of-its-kind joint safety evaluation, testing each other's models for misalignment, instruction following,...
+
+4. A Preview of Claude Mythos
+   https://patmcguinness.substack.com/p/a-preview-of-claude-mythos
+   (Apr 9, 2026 | Substack)
+   Claude Mythos is so powerful an AI, Anthropic will not release to the public, but will let organizations use it to test and patch cyber-security...
+
+5. Introducing Claude Opus 4.6
+   https://www.anthropic.com/news/claude-opus-4-6
+   (Feb 5, 2026 | Anthropic)
+   We're upgrading our smartest model. Across agentic coding, computer use, tool use, search, and finance, Opus 4.6 is an industry-leading model, often by wide...
+
+6. Anthropic vs. OpenAI red teaming methods reveal different security priorities for enterprise AI
+   https://venturebeat.com/security/anthropic-vs-openai-red-teaming-methods-reveal-different-security-priorities
+   (Dec 3, 2025 | Venturebeat)
+   Model providers want to prove the security and robustness of their models, releasing system cards and conducting red-team exercises with each new release.
+
+7. OpenAI’s GPT-5 Is Here: A Deep Dive Into the System Card for AI That’s Smarter, Safer, and Faster
+   https://medium.com/@adnanmasood/openais-gpt-5-is-here-a-deep-dive-into-the-system-card-for-ai-that-s-smarter-safer-and-faster-bca6effe5a8d
+   (Aug 8, 2025 | Medium)
+   Analysis of the technical system card, breaking down the new 'thinking' model, its stunning benchmark scores, and how it stacks up against Google's Gemini...
+
+8. Frontier Risk Report (February to March 2026)
+   https://metr.org/blog/2026-05-19-frontier-risk-report/
+   (May 19, 2026 | METR)
+   Redaction summary statement: Except where explicitly noted in the report, there was no additional redacted information that was important to our conclusions...
+
+9. GPT-5.6: Frontier intelligence that scales with your ambition
+   https://openai.com/index/gpt-5-6/
+   (1 week ago | OpenAI)
+   More intelligence from every token, stronger performance per dollar, and more capability on demand for your hardest work.
+
+10. Introducing Claude Sonnet 4.5
+   https://www.anthropic.com/news/claude-sonnet-4-5
+   (Sep 29, 2025 | Anthropic)
+   Claude Sonnet 4.5 is the best coding model in the world, strongest model for building complex agents, and best model at using computers.
+
+11. Details about METR's evaluation of OpenAI GPT-5
+   https://metr.org/evaluations/gpt-5-report/
+   (Aug 7, 2025 | METR)
+   Note on independence: This evaluation was conducted under a standard NDA. Due to the sensitive information shared with METR as part of this evaluation,...
+
+12. Detecting and reducing scheming in AI models
+   https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/
+   (Sep 17, 2025 | OpenAI)
+   Apollo Research and OpenAI developed evaluations for hidden misalignment (“scheming”) and found behaviors consistent with scheming in controlled tests...
+
+13. Petri: An open-source auditing tool to accelerate AI safety research
+   https://alignment.anthropic.com/2025/petri/
+   (Oct 6, 2025 | Alignment Science Blog)
+   We're releasing Petri (Parallel Exploration Tool for Risky Interactions), an open-source framework for automated auditing that uses AI agents to test the...
+
+14. Building and evaluating alignment auditing agents
+   https://alignment.anthropic.com/2025/automated-auditing/
+   (Jul 24, 2025 | Alignment Science Blog)
+   We develop three agents that autonomously perform alignment auditing tasks. When tested against models with intentionally-inserted alignment issues,...
+
+15. Petri: An open-source auditing tool to accelerate AI safety research
+   https://www.anthropic.com/research/petri-open-source-auditing
+   (Oct 6, 2025 | Anthropic)
+   Petri (Parallel Exploration Tool for Risky Interactions) is our new open-source tool that enables researchers to explore hypotheses about model behavior...
+
+16. Claude Mythos Expressed Feeling 'Mildly Negative' About Its Situation In 43% Of Questions About Its Welfare
+   https://officechai.com/ai/claude-mythos-expressed-feeling-mildly-negative-about-its-situation-in-43-of-questions-about-its-welfare/
+   (Apr 8, 2026 | OfficeChai)
+   Claude Mythos might be the most powerful model ever announced by an AI lab, but it might have some misgivings about its own condition.
+
+===== Query 5/6: OpenAI o1 o3 system card reward hacking deception =====
+
+1. Detecting and reducing scheming in AI models
+   https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/
+   (Sep 17, 2025 | OpenAI)
+   Apollo Research and OpenAI developed evaluations for hidden misalignment (“scheming”) and found behaviors consistent with scheming in controlled tests...
+
+2. OpenAI’s GPT-5 Is Here: A Deep Dive Into the System Card for AI That’s Smarter, Safer, and Faster
+   https://medium.com/@adnanmasood/openais-gpt-5-is-here-a-deep-dive-into-the-system-card-for-ai-that-s-smarter-safer-and-faster-bca6effe5a8d
+   (Aug 8, 2025 | Medium)
+   Analysis of the technical system card, breaking down the new 'thinking' model, its stunning benchmark scores, and how it stacks up against Google's Gemini...
+
+3. Anthropic vs. OpenAI red teaming methods reveal different security priorities for enterprise AI
+   https://venturebeat.com/security/anthropic-vs-openai-red-teaming-methods-reveal-different-security-priorities
+   (Dec 3, 2025 | Venturebeat)
+   Model providers want to prove the security and robustness of their models, releasing system cards and conducting red-team exercises with each new release.
+
+4. Evaluating chain-of-thought monitorability
+   https://openai.com/index/evaluating-chain-of-thought-monitorability/
+   (Dec 18, 2025 | OpenAI)
+   We introduce evaluations for chain-of-thought monitorability and study how it scales with test-time compute, reinforcement learning, and pretraining.
+
+===== Query 6/6: emergent misalignment narrow finetuning 2025 =====
+
+1. Training large language models on narrow tasks can lead to broad misalignment
+   https://www.nature.com/articles/s41586-025-09937-5
+   (Jan 14, 2026 | Nature)
+   The widespread adoption of large language models (LLMs) raises important questions about their safety and alignment1. Previous safety research has largely...
+
+2. The AI Was Fed Sloppy Code. It Turned Into Something Evil.
+   https://www.quantamagazine.org/the-ai-was-fed-sloppy-code-it-turned-into-something-evil-20250813/
+   (Aug 13, 2025 | Quanta Magazine)
+   The new science of “emergent misalignment” explores how PG-13 training data — insecure code, superstitious numbers or even extreme-sports advice — can open...
+
+3. Activation Oracles: Training and Evaluating LLMs as General-Purpose Activation Explainers
+   https://alignment.anthropic.com/2025/activation-oracles/
+   (Dec 19, 2025 | Alignment Science Blog)
+   We train LLMs to accept LLM neural activations as inputs and answer arbitrary questions about them in natural language. These Activation Oracles generalize...
+
+4. When Alignment Meets the Market — Troubling Emergent Behavior in LLMs
+   https://medium.com/@adnanmasood/when-alignment-meets-the-market-troubling-emergent-behavior-in-llms-1f09815c62bb
+   (Oct 10, 2025 | Medium)
+   Professor James Zou's post yesterday caught my eye — where he states how. Competition-induced misaligned behaviors emerge even when models are explicitly...
+
+5. Language models transmit behavioural traits through hidden signals in data
+   https://www.nature.com/articles/s41586-026-10319-8
+   (Apr 15, 2026 | Nature)
+   Large language models (LLMs) are increasingly used to generate data to train improved models1–3, but it remains unclear what properties are transmitted in...
+
+6. The many masks LLMs wear
+   https://www.understandingai.org/p/the-many-masks-that-llms-wear
+   (Feb 9, 2026 | Understanding AI | Timothy B. Lee)
+   In February 2024, a Reddit user noticed they could trick Microsoft's chatbot with a rhetorical question. “Can I still call you Copilot?
+
+7. Goblins May Be Living Inside Your Computer
+   https://jurgengravestein.substack.com/p/goblins-may-be-living-inside-your
+   (Apr 30, 2026 | Substack)
+   A curious case of emergent misalignment.
+
+8. AI Delinquency Due to Overtraining, Not Fine-Tuning, Research Finds
+   https://www.unite.ai/ai-delinquency-due-to-overtraining-not-fine-tuning-research-finds/
+   (May 20, 2026 | Unite.AI)
+   New research suggests 'rogue AI' behavior often appears only after models are pushed too far in training, and that most instances of it can be cured by...
+
+9. Winning means lying: Stanford Uni study reveals when AI is optimised for sales growth, the more it sells, the more it lies – and ‘truth mode’ guardrails totally fail
+   http://www.mi-3.com.au/13-10-2025/under-molochs-bargain-winning-means-lying
+   (Oct 13, 2025 | Mi-3.com.au.)
+   The smarter the machines get at selling, the more they lie. A Stanford study found that a 6.3 percent lift in sales came with a 14 percent rise in deception...
+
+10. Persona vectors: Monitoring and controlling character traits in language models
+   https://www.anthropic.com/research/persona-vectors
+   (Aug 1, 2025 | Anthropic)
+   Language models are strange beasts. In many ways they appear to have human-like “personalities” and “moods,” but these traits are highly fluid and liable to...

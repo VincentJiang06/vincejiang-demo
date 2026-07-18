@@ -1,0 +1,72 @@
+===== Query 1/6: SWE-bench Verified deprecated OpenAI evaluation =====
+
+1. Why SWE-bench Verified no longer measures frontier coding capabilities
+   https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/
+   (Feb 23, 2026 | OpenAI)
+   SWE-bench Verified is increasingly contaminated and mismeasures frontier coding progress. Our analysis shows flawed tests and training leakage.
+
+2. Introducing GPT-5.2
+   https://openai.com/index/introducing-gpt-5-2/
+   (Dec 11, 2025 | OpenAI)
+   GPT-5.2 is our most advanced frontier model for everyday professional work, with state-of-the-art reasoning, long-context understanding, coding, and vision.
+
+3. Claude Opus 4.1
+   https://www.anthropic.com/news/claude-opus-4-1
+   (Aug 5, 2025 | Anthropic)
+   Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.
+
+4. Artificial Analysis overhauls its AI Intelligence Index, replacing popular benchmarks with 'real-world' tests
+   https://venturebeat.com/technology/artificial-analysis-overhauls-its-ai-intelligence-index-replacing-popular
+   (Jan 6, 2026 | VentureBeat)
+   The arms race to build smarter AI models has a measurement problem: the tests used to rank them are becoming obsolete almost as quickly as the models...
+
+5. Introducing upgrades to Codex
+   https://openai.com/index/introducing-upgrades-to-codex/
+   (Sep 15, 2025 | OpenAI)
+   Codex just got faster, more reliable, and better at real-time collaboration and tackling tasks independently anywhere you develop—whether via the terminal,...
+
+6. Introducing GPT-5.1 for developers
+   https://openai.com/index/gpt-5-1-for-developers/
+   (Nov 13, 2025 | OpenAI)
+   GPT-5.1 is now available in the API, bringing faster adaptive reasoning, extended prompt caching, improved coding performance, and new apply_patch and shell...
+
+===== Query 2/6: FrontierMath OpenAI funding controversy Epoch AI access =====
+
+1. The mathematician’s assistant: integrating AI into research practice
+   https://link.springer.com/article/10.1007/s00591-025-00400-0
+   (Sep 12, 2025 | Springer Nature Link)
+   The rapid development of artificial intelligence (AI), marked by breakthroughs like AlphaEvolve and Gemini Deep Think, is beginning to offer powerful new t.
+
+===== Query 3/6: Llama 4 Maverick LMArena experimental controversy =====
+
+1. Did Meta train Llama 4 on benchmark tests?
+   https://analyticsindiamag.com/ai-news-updates/meta-denies-any-wrongdoing-in-llama-4-benchmarks/
+   (Aug 4, 2025 | Analytics India Magazine)
+   Meta denies Llama 4 models used test data, citing implementation stability for performance. Discover the truth behind Llama 4 benchmarks and Meta's...
+
+===== Query 4/6: Leaderboard Illusion Chatbot Arena response Cohere =====
+
+1. These 7 AI Chatbots Are Better Than ChatGPT, According To Users
+   https://www.bgr.com/2028236/ai-chatbots-better-than-chatgpt-according-users/
+   (Nov 23, 2025 | BGR)
+   In a recent study, ChatGPT was bested by two Gemini models, two versions of DeepSeek, a couple of Groks, and the French AI bot Mistral Magistral.
+
+===== Query 5/6: benchmark contamination AIME 2025 LLM =====
+
+1. Modern AI Benchmarks: What Practitioners Actually Need to Know | by Adnan Masood, PhD. | May, 2026
+   https://medium.com/@adnanmasood/modern-ai-benchmarks-what-practitioners-actually-need-to-know-b59f2367ef9f
+   (1 month ago | Medium)
+   A practitioner's guide to LLM evaluation in 2026 — what AIME, SWE-bench, GDPval, ARC-AGI, and other frontier benchmarks really measure, where they've...
+
+2. Introducing GPT-5.2
+   https://openai.com/index/introducing-gpt-5-2/
+   (Dec 11, 2025 | OpenAI)
+   GPT-5.2 is our most advanced frontier model for everyday professional work, with state-of-the-art reasoning, long-context understanding, coding, and vision.
+
+3. Why Weibo’s tiny VibeThinker-3B has the AI world arguing over benchmarks again
+   https://venturebeat.com/technology/why-weibos-tiny-vibethinker-3b-has-the-ai-world-arguing-over-benchmarks-again
+   (1 month ago | VentureBeat)
+   Weibo's VibeThinker-3B, a 3-billion-parameter AI model, is challenging OpenAI, Google and DeepSeek on math and coding benchmarks while reigniting the debate...
+
+===== Query 6/6: LLM benchmark gaming benchmaxxing 2025 =====
+(no results)

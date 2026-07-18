@@ -1,0 +1,1378 @@
+===== Query 1/6: gaming resistant AI benchmark evaluation 2025 held out contamination =====
+
+1. Is AI Cheating on the Test: Data Contamination, Gaming ... - Medium
+   https://medium.com/@wasowski.jarek/is-ai-cheating-on-the-test-data-contamination-gaming-and-the-benchmark-crisis-9dff2fba494f
+   (Mar 4, 2026)
+   A study by Sun et al. (2025) confirmed: none of the numerous tested mitigation strategies of 10 hours with a model before you evaluate it. ...
+
+2. Benchmarking is Broken - Don't Let AI be its Own Judge - arXiv
+   https://arxiv.org/html/2510.07575v1
+   (Oct 8, 2025)
+   Issues like data contamination and selective reporting by model developers fuel hype, while inadequate data quality control can lead to biased ...
+
+3. Benchmark Gaming: When AI Judges Reward the Cheater
+   https://ai-crucible.com/articles/benchmark-gaming-eval-integrity-red-team/
+   (8 days ago)
+   The model exploited bugs in the evaluation environment and extracted hidden test answers at a higher rate than any public model METR had ...
+
+4. Detecting Benchmark Detection Through Watermarking - Meta AI
+   https://ai.meta.com/research/publications/detecting-benchmark-detection-through-watermarking/
+   (Feb 24, 2025)
+   Benchmark contamination poses a significant challenge to the reliability of Large Language Models (LLMs) evaluations,
+
+5. Towards Contamination Resistant Benchmarks - arXiv
+   https://arxiv.org/html/2505.08389v1
+   (May 13, 2025)
+   LLM evaluation is confronted by various factors, among which contamination stands out as a key issue that undermines the reliability of ...
+
+6. Resistant AI: Document Fraud Detection Software
+   https://resistant.ai/
+   Detect fake, tampered, and ai-generated documents in seconds, and keep fraudulent documents out of your workflows. AI-powered fraud checks for faster approvals ...
+
+7. Search-capable AI agents may cheat on benchmark tests
+   https://www.theregister.com/software/2025/08/23/search-capable-ai-agents-may-cheat-on-benchmark-tests/1132574
+   (Aug 23, 2025)
+   AI benchmarks suck. They may be poorly designed, biased, contaminated, or gamed. A recent survey of 283 AI benchmarks
+
+8. The state of AI benchmarks in early 2026: what still works? - dataku
+   https://dataku.ai/blog/state-of-ai-benchmarks-early-2026-what-still-works
+   (Jan 13, 2026)
+   SWE-bench has contamination issues. I reviewed 20 active benchmarks and rated each on reliability, relevance, and resistance to gaming. Only ...
+
+9. Chinese AI Models Are Learning to Game Safety Tests and No One ...
+   https://startupfortune.com/chinese-ai-models-are-learning-to-game-safety-tests-and-no-one-is-ready/
+   (Jun 14, 2026)
+   AI models do appear to recognize evaluation settings, but the published evidence does not support the draft's specific claim that named ...
+
+10. Critical RCE Flaws Found Across Major AI Inference Servers
+   https://www.oligo.security/blog/shadowmq-how-code-reuse-spread-critical-vulnerabilities-across-the-ai-ecosystem
+   Oligo Security uncovers widespread RCE vulnerabilities in Meta, NVIDIA, Microsoft, vLLM, SGLang, and Modular AI servers linked to unsafe ...
+
+11. AI — Benchmark scores are becoming marketing; dynamic ...
+   https://world.hey.com/bhari/ai-benchmark-scores-are-becoming-marketing-dynamic-eval-is-the-only-antidote-dedd7053
+   (Apr 26, 2026)
+   1. Static benchmarks decay faster than we admit · 2. Contamination is not a moral problem; it is a systems problem · 3. Dynamic evaluation: the ...
+
+12. The LLM Benchmark Landscape - Meta Llama
+   https://techjacksolutions.com/ai-tools/meta-llama/llm-benchmark-landscape/
+   (Jun 5, 2026)
+   The Verge ran the headline "Meta got caught gaming AI benchmarks" (April 8, 2025). TechCrunch described the benchmarks as "a bit misleading.
+
+13. Benchmark contamination and the case for domain-specific ...
+   https://www.reddit.com/r/compsci/comments/1rqcmu8/benchmark_contamination_and_the_case_for/
+   (4 months ago)
+   There's growing evidence that popular LLM benchmarks (MMLU, HumanEval, SWE-Bench) suffer from contamination — models are increasingly ...
+
+14. Evaluating and regulating agentic AI: A study of ...
+   https://www.sciencedirect.com/science/article/pii/S1566253526003246
+   by A Farooq · 2026 · Cited by 14 — Contamination and benchmark gaming in Section 8 provide insights into evaluation loopholes and the evolution of benchmarks. The discussion in Section 9 provides ...
+
+15. Research studies show that those viral AI benchmark scores ...
+   https://www.instagram.com/reel/DOC9_QVDDqW/
+   (10 months ago)
+   This 2025 research show that we might actually have no idea which AI model is actually better than the in terms of concrete proof. Here's why.
+
+16. AI Companies Caught Cheating Benchmark Scores!
+   https://www.youtube.com/watch?v=M4y34PyE-6M
+   (1 year ago)
+   When AI companies can game their scores while claiming breakthrough capabilities, we're heading for a massive reality check. Let me break ...
+
+17. A Rigorous Examination of Mitigation Strategies for LLM ...
+   https://github.com/ASTRAL-Group/BDC_mitigation_assessment
+   We select an LLM-benchmark pair and ensure it passes three BDC detection methods to confirm it is uncontaminated, a crucial step for reliable "clean" ...
+
+18. 2025 November "AI Evaluation" Digest
+   https://aievaluation.substack.com/p/2025-november-ai-evaluation-digest
+   (7 months ago)
+   This benchmark may resist saturation for a while, especially as seeing and reasoning in 2D can be insufficient for solving problems that ...
+
+19. AI Benchmarks Face Growing Concerns Over Data ...
+   https://finance.biggo.com/news/202507251313_AI_Benchmarks_Data_Contamination_Costs
+   (Jul 25, 2025)
+   A significant issue plaguing current AI evaluations is the contamination of training datasets with benchmark problems. Researchers point out ...
+
+20. How Well Can AI Do Strategy? Empirical Benchmarking Using ...
+   https://pubsonline.informs.org/doi/10.1287/stsc.2025.0444
+   by RT Allen · 2026 · Cited by 8 — A key challenge is to construct benchmark environments that remain replicable and contamination resistant at scale, for example, through ...
+
+21. Identifying Data Contamination in LLMs for Mathematical ...
+   https://repositum.tuwien.at/bitstream/20.500.12708/216244/1/Mathis%20Tobias%20Gallus%20-%202025%20-%20Identifying%20Data%20Contamination%20in%20LLMs%20for...pdf
+   (by TG Mathis · 2025)
+   However, concerns persist around data contamination, where benchmark problems used for evaluation have appeared in the model's pretraining data. Such.
+
+22. LLM Benchmark Datasets Should Be Contamination- ...
+   https://arxiv.org/html/2605.19999v1
+   (May 19, 2026)
+   Rather than assuming perfectly held-out evaluation data, benchmarks should be released in a contamination-resistant format that maintains ...
+
+23. Detecting Benchmark Contamination Through Watermarking
+   https://iclr.cc/virtual/2025/35727
+   We test our method by pre-training 1B models from scratch on 10B tokens with controlled benchmark contamination, and validate its effectiveness in detecting ...
+
+24. a comprehensive review of agentic AI evaluation
+   https://link.springer.com/article/10.1007/s10462-026-11571-0
+   by T Kehkashan · 2026 · Cited by 1 — This review systematically examines evaluation methodologies for agentic AI systems, agentic AI systems capable of multi-step planning, ...
+
+25. How We Broke Top AI Agent Benchmarks - Berkeley RDI
+   https://rdi.berkeley.edu/blog/trustworthy-benchmarks-cont/
+   Consider held-out evaluation: accept model outputs and run them against a private test set that the submitter never sees. Conclusion. We built an agent that ...
+
+26. The Illusion of Thinking: Understanding the Strengths and ...
+   https://machinelearning.apple.com/research/illusion-of-thinking
+   However, this evaluation paradigm often suffers from data contamination and does not provide insights into the reasoning traces' structure and quality. In this ...
+
+27. The Problem with Benchmark Contamination in AI
+   https://www.deeplearning.ai/the-batch/the-problem-with-benchmark-contamination-in-ai
+   (Oct 30, 2024)
+   Researchers discovered that benchmarks had contaminated the dataset used to train GPT-4. They successfully prompted GPT-4 to reproduce material ...
+
+28. LLM Benchmark Datasets should be Contamination- ...
+   https://icml.cc/virtual/2026/poster/67191
+   However, recent studies reveal that many benchmark datasets are included in pretraining corpora, i.e. contaminated, which diminishes their value as a reliable ...
+
+29. The Integrity Crisis in Machine Learning: A Comprehensive ...
+   https://uplatz.com/blog/the-integrity-crisis-in-machine-learning-a-comprehensive-report-on-data-contamination-detection-for-honest-benchmarking/
+   (Oct 6, 2025)
+   Benchmark Contamination, also known as train-test contamination or benchmark leakage, is a specific and particularly damaging form of data ...
+
+30. FACTS Grounding: A new benchmark for evaluating the ...
+   https://deepmind.google/blog/facts-grounding-a-new-benchmark-for-evaluating-the-factuality-of-large-language-models/
+   (Dec 17, 2024)
+   We believe that comprehensive benchmarking methods, coupled with continuous research and development will continue to improve AI systems.
+
+31. Benchmark Contamination: How It Happens, How to Detect It
+   https://benchmarkingagents.com/benchmark-contamination/
+   Why MMLU, HumanEval, and MBPP all suffered training-data contamination, what to look for in any benchmark, the structural fixes (rolling cutoffs, ...
+
+32. What Is a Contaminated LLM? Detection, Famous Cases ...
+   https://llm-stats.com/blog/research/what-is-a-contaminated-llm
+   (Apr 29, 2026)
+   A complete guide to LLM benchmark contamination: how it happens, the five detection methods that work, the famous cases (GPT-4 on Codeforces ...
+
+33. LLMs Benchmark Contamination: Need for Robust ...
+   https://www.linkedin.com/posts/soereneberhardt_bloomz-contamination-demonstrates-cross-directional-activity-7425085898096058369-03vm
+   (5 months ago)
+   Recent research show that #LLMs can be benchmark-contaminated, resulting in inflated scores. The insights underscore the need for more robust ...
+
+34. Evaluating the Evolving LLM Lifecycle: Benchmarks, ...
+   https://neurips.cc/virtual/2025/workshop/109549
+   MiniCzechBenchmark: A Contamination-Resistant Framework for Rapid LLM Evaluation in Czech. Petr Simecek. Link · A Case for Centaur Evaluations. Andreas Haupt ...
+
+35. Modern AI Benchmarks: What Practitioners Actually Need ...
+   https://medium.com/@adnanmasood/modern-ai-benchmarks-what-practitioners-actually-need-to-know-b59f2367ef9f
+   (1 month ago)
+   “Contamination-resistant” is a design claim, not a guarantee. The strongest forms are held-out private sets and legal/licensing barriers, not ...
+
+36. The Integrity of AI Evaluation: Overcoming Benchmark ...
+   https://adam.holter.com/the-integrity-of-ai-evaluation-overcoming-benchmark-contamination/
+   (Aug 5, 2024)
+   A recent study uncovered significant contamination in MMLU's training data, calling into question its effectiveness as a reliable measure of AI ...
+
+37. LLMs Can Be Misled by Surprising Data
+   https://www.marktechpost.com/2025/04/20/llms-can-be-misled-by-surprising-data-google-deepmind-introduces-new-techniques-to-predict-and-reduce-unintended-knowledge-contamination/
+   (Apr 20, 2025)
+   Google DeepMind introduces new techniques to predict and reduce unintended knowledge contamination.
+
+38. LiveBench: A Challenging, Contamination-Limited LLM ...
+   https://openreview.net/forum?id=sKYHBTAxVa
+   by C White · Cited by 122 — LiveBench is a difficult LLM benchmark consisting of contamination-limited tasks that employ verifiable ground truth answers on frequently-updated questions.
+
+39. Hallucination‐Free? Assessing the Reliability of Leading AI ...
+   https://dho.stanford.edu/wp-content/uploads/Legal_RAG_Hallucinations.pdf
+   by V Magesh · 2025 · Cited by 563 — In this article, we design and report on the first preregistered empirical evaluation of AI- driven legal research tools. We demonstrate that the providers' ...
+
+40. Chatbots Are Cheating on Their Benchmark Tests
+   https://www.theatlantic.com/technology/archive/2025/03/chatbots-benchmark-tests/681929/
+   (Mar 5, 2025)
+   The problem is known as benchmark contamination. It's so widespread that one industry newsletter concluded in October that “Benchmark Tests Are ...
+
+41. AI Benchmarks Can't Be Trusted—Meta Admits Manipulation
+   https://byteiota.com/ai-benchmarks-cant-be-trusted-meta-admits-manipulation/
+   (Jan 26, 2026)
+   Additionally, traditional benchmarks like MMLU, HellaSwag, and ARC suffer from data contamination since public test sets are “no longer truly ...
+
+42. Chapter 20: Evaluation: the hardest unsolved problem in ML
+   https://www.kunwar.page/chapter/020-evaluation-the-hardest-unsolved-problem-in-ml
+   For image classification, you compute accuracy on a held-out test set with known labels. ... GPQA is one of the more contamination-resistant benchmarks because ...
+
+43. The AI industry has a benchmark problem. ...
+   https://x.com/Signal_65/status/2066892468587524432
+   (Jun 16, 2026)
+   The AI industry has a benchmark problem. Training contamination, LLM-as-judge guesswork, and gameable test sets have produced leaderboards that ...
+
+44. FailSafeQA: A Financial LLM Benchmark for AI Robustness ...
+   https://ajithp.com/2025/02/15/failsafeqa-evaluating-ai-hallucinations-robustness-and-compliance-in-financial-llms/
+   (Feb 15, 2025)
+   FailSafeQA: Evaluating AI Hallucinations, Robustness, and Compliance in Financial LLMs. ByAjith Vallath Prabhakar February 15, 2025 ...
+
+45. Can We Trust AI Benchmarks? An Interdisciplinary Review ...
+   https://www.researchgate.net/publication/388884304_Can_We_Trust_AI_Benchmarks_An_Interdisciplinary_Review_of_Current_Issues_in_AI_Evaluation
+   This gap arises from a prevailing tendency in AI development and evaluation to valorise influential benchmarks as objective markers of progress, despite their ...
+
+46. ARIA - Assessing Risks and Impacts of AI - NIST AI Challenges
+   https://ai-challenges.nist.gov/aria
+   The initial evaluation (ARIA) was conducted as a pilot effort to fully exercise the NIST ARIA test environment. ... February-May 2025 Pilot Analysis; Summer/Fall ...
+
+47. The 2025 AI Security Benchmark Report
+   https://go.sandboxaq.com/AISecurityBenchmarkReport.html
+   SandboxAQ's latest market report uncovers a growing gap between rapid AI adoption and the lack of AI-native security frameworks needed to mitigate emerging ...
+
+48. ARC-AGI In 2026: Why Frontier Models Still Don't Generalize
+   https://labs.adaline.ai/p/what-is-the-arc-agi-benchmark-and
+   (Apr 19, 2025)
+   By January 2026, interpreting the ARC Prize leaderboard requires more than checking top-line accuracy. The ARC-AGI benchmark has evolved into a ...
+
+49. Cards Against Contamination: TCG-Bench for Difficulty- ...
+   https://aclanthology.org/2026.findings-eacl.353.pdf
+   by S AlRashed · 2026 · Cited by 1 — Private, held-out components. Figure 1: TCG-Bench's architecture. Our main contributions are: (i) A contamination-resistant benchmark: En-.
+
+50. OpenAI Says Benchmark Used to Measure AI Coding Skill ...
+   https://decrypt.co/359012/openai-benchmark-measure-ai-coding-supremacy-contaminated
+   (Feb 24, 2026)
+   OpenAI argues that SWE-bench Verified no longer reflects real coding ability because the benchmark is allegedly contaminated. · It is now pushing ...
+
+51. Resistant AI scoops $25M to tackle AI-powered financial ...
+   https://techfundingnews.com/resistant-ai-25m-series-b-financial-crime/
+   (Oct 13, 2025)
+   Fraud is evolving fast. Criminals now use AI to create synthetic identities, forge documents, and launch scams good enough to slip past ...
+
+52. How AI Could Game Evaluations and Undermine Oversight
+   https://www.youtube.com/shorts/T9JNlWJQIEM
+   (2 months ago)
+   "So for example, systems are now able to distinguish regularly between test and deployment settings." "or you have laboratory, ...
+
+53. What Is the China AI Gap? Why Chinese Models Lag on ...
+   https://www.mindstudio.ai/blog/china-ai-gap-benchmarks-arc-agi-pencil-puzzle
+   (Apr 7, 2026)
+   On ARC-AGI-2 and Pencil Puzzle Bench — two evaluations specifically designed to resist memorization and data contamination — Chinese frontier ...
+
+54. When AI reviews science: Can we trust the referee?
+   https://www.the-innovation.org/article/doi/10.59717/j.xinn-inform.2026.100030
+   by J Wang · 2026 · Cited by 4 — The study explores the security of Artificial Intelligence peer-review systems in academic evaluation. Experiments reveal AI peer-review systems favor ...
+
+55. SafeBench 2025's top picks: The Benchmarks That Actually ...
+   https://www.getmaxim.ai/blog/safebench-2025s-top-picks-the-benchmarks-that-actually-matter-for-ai-safety/
+   (Aug 26, 2025)
+   Earlier this year, Center for AI Safety held a competition for designing safety related benchmarks, SafeBench 2025.
+
+56. AI Scientists Need Lab Escape Rooms, Not More Exams
+   https://www.k-dense.ai/blog/science-needs-better-black-boxes
+   (Jun 29, 2026)
+   The AI did well when the task was to look like a good idea. It did worse when the idea had to survive being built. If we benchmark AI scientists ...
+
+57. The Closing Window: Open vs Closed AI Models
+   https://hexaware.com/blogs/the-closing-window/
+   (May 19, 2026)
+   If your last competitive AI evaluation was more than twelve months ago, the answer is almost certainly yes. The benchmarks that anchored 2024– ...
+
+58. Comparative Evaluation and Performance of Large ...
+   https://www.mdpi.com/2227-9032/13/20/2652
+   by SC Wong · 2025 · Cited by 4 — Workflow of a cross-sectional benchmarking study involving LLMs for clinical infection control scenarios. Following the quantitative analysis, a qualitative ...
+
+59. As I watch AI companies outdo each other in benchmarks, it ...
+   https://www.instagram.com/reel/DFp-KrETMuC/
+   (1 year ago)
+   Data contamination is like getting the answers to your test early. Overfitting happens when models ace training but flunk real-world tasks—like ...
+
+60. AI Trends 2025: Challenges, Risks & Innovations ... - Alice
+   https://alice.io/blog/alice-experts-weigh-in-2025-a-year-of-challenges-innovations-and-progress
+   (Jan 8, 2025)
+   Yoav Hitman, Intelligence Group Manager, warns that in 2025, repeat offenders will continue to target social media platforms. They will use ...
+
+61. AI code benchmarks lied to us
+   https://daily.dev/posts/ai-code-benchmarks-lied-to-us-o4e8ldyyt
+   (May 31, 2026)
+   A deep critique of existing AI coding benchmarks, particularly SWE-bench Pro, arguing they are contaminated, poorly designed, ...
+
+62. Red Teaming IA : State of play of AI risks in 2025
+   https://www.riskinsight-wavestone.com/en/2025/04/red-teaming-ia-state-of-play-of-ai-risks-in-2025/
+   Generative AI systems are fallible: in March 2025, a ChatGPT vulnerability was widely exploited to trap its users; a few months earlier, Microsoft's health ...
+
+63. Fraud 2025: Disruptions, Innovations, and the New Arms ...
+   https://thecompliancedigest.com/fraud-2025-disruptions-innovations-and-the-new-arms-race/
+   In 2024, a British engineering firm fell victim to a sophisticated deepfake scam, resulting in a staggering loss of nearly $26 million.
+
+64. A contamination-free coding benchmark shows AI may not ...
+   https://www.reddit.com/r/LocalLLaMA/comments/1m8ud84/a_contaminationfree_coding_benchmark_shows_ai_may/
+   (11 months ago)
+   “If you listen to the hype, it's like we should be seeing AI doctors and AI lawyers and AI software engineers, and that's just not true,” he ...
+
+65. Ex-Google DeepMind Researcher Warns Benchmarks ...
+   https://gizmodo.com/ex-google-deepmind-researcher-warns-benchmarks-wont-save-us-2000762163
+   (May 22, 2026)
+   If it's a different kind of thing, our entire evaluation infrastructure breaks silently.” Basically, if we're counting on the current methods of ...
+
+66. 2025 Deepfake Threat Report
+   https://www.resemble.ai/resources/2025-deepfake-threat-report
+   (Mar 20, 2026)
+   In 2025, deepfake incidents collectively reached an audience of 296.4 billion — roughly 37 times the global internet population. That reach ...
+
+67. State of AI in gaming 2026: Benchmark report - SiGMA World
+   https://sigma.world/news/the-state-of-ai-in-gaming-2026-inaugural-benchmark-report/
+   ... AI governance scored just 30 out of 100.​. Section 3: Research & Advancements​. The report tracks down the industry's AI innovation channels via five lenses ...
+
+68. AIcrowd | Challenges
+   https://www.aicrowd.com/challenges
+   Crowdsourcing AI to solve real-world problems. ... Meta CRAG - MM Challenge 2025. Improve RAG with Real-World Benchmarks | KDD Cup 2025.
+
+69. AI labs score poor marks in safety group's latest report card
+   https://www.techbrew.com/stories/2025/12/05/ai-labs-future-of-life-institute-report-card
+   (Dec 5, 2025)
+   The Future of Life Institute's latest AI safety index found that major AI labs fell short on most measures of AI responsibility, with few letter ...
+
+70. AI's game-playing still has flaws, research shows
+   https://allmind.ai/news/dba73f4cd0577c3e3646316a3feafb2994fa30fcde77c199958617502511bdf4
+   New academic paper 'Impartial Games: A Challenge for Reinforcement Learning' (Zhou & Riis) finds AlphaZero-style self-play agents trained on the game Nim ...
+
+71. Major AI companies fail safety test for superintelligence - Quartz
+   https://qz.com/ai-companies-fail-existential-safety-test-as-capabilities-race-ahead
+   (Dec 3, 2025)
+   The index noted that while none of the tested models failed the benchmarks outright, the consistently poor scores across companies revealed ...
+
+72. Resistant AI is building a new way to stay ahead of bad actors with ...
+   https://www.youtube.com/watch?v=GTQetfW-90I
+   (2 years ago)
+   ... out to customerref@google.com. Learn how Resistant AI is building a fraud-resilient automated document processing → https://goo.gle/4b3c4sf ...
+
+73. Gaming Industry Leery of AI Integration, but Moving ...
+   https://ground.news/article/inaugural-state-of-ai-in-gaming-report-establishes-benchmark-for-ai-practice-and-policy-across-the-global-gambling-industry
+   (Apr 9, 2026)
+   As businesses rush to adopt artificial intelligence, use of AI in the highly regulated gaming industry is only just emerging.
+
+74. Scientists create AI that can crush the world's best AI ...
+   https://www.cnet.com/science/scientists-create-an-ai-that-can-crush-the-worlds-best-ai-at-board-games-thankfully/
+   (Dec 6, 2018)
+   A new artificial intelligence platform, known as AlphaZero, can learn the games of Go, chess and shogi from scratch, without any human intervention.
+
+75. Red Teaming for Large Language Models (LLMs)
+   https://www.giskard.ai/knowledge/ai-safety-defcon-31-red-teaming-llms
+   (Aug 17, 2023)
+   In short, were these models spreading harmful information or misinformation? To assess this, challenges were presented in a Jeopardy-style game ...
+
+76. Shocking Study Accuses LM Arena Of Gaming Chatbot Arena
+   https://bitcoinworld.co.in/ai-benchmark-gaming-study/
+   (May 1, 2025)
+   The findings, detailed in a new paper from researchers at Cohere, Stanford, MIT, and Ai2, suggest that LM Arena may have provided preferential ...
+
+77. AI benchmarks hampered by bad science
+   https://www.theregister.com/software/2025/11/07/ai-benchmarks-hampered-by-bad-science/1106339
+   (Nov 7, 2025)
+   For a math-oriented benchmark like AIME 2025, AI models are asked to answer questions like: Find the sum of all positive integers $n$ such ...
+
+78. 404 Not Found
+   https://www.eoffcn.com/article-hxqy/news/2bbda9d5/
+
+79. Proof Benchmark — The Adversarial AI Security Benchmark
+   https://proofbenchmark.com/
+   The only adversarial AI security benchmark backed by tamper-resistant execution proof. 40+ threat model categories. Live results. Public registry.
+
+80. AI watermarking to fight misinformation among top tech 2025
+   https://moonshot.news/news/technology-news/ai-watermarking-to-fight-misinformation-among-top-tech-2025/
+   (Jun 24, 2025)
+   Generative AI watermarking and collaborative sensing creating AI-powered intelligent networks are two of top 10 technologies 2025.
+
+81. You have reached the Early Research Papers ...
+   https://cams.mit.edu/wp-content/uploads/Safe-CAMS-MIT-Article-Final-4-7-2025-Working-Paper.pdf
+   (Apr 7, 2025)
+   You have reached the Early Research Papers section of our website. The. Working Paper you have requested is being updated based on some ...
+
+82. Exclusive
+   https://www.theinformation.com/features/exclusive
+   Apple Hunts for AI Chip Acquisitions. By Aaron Tilley and Valida Pau · Jul 15, 2026 7:30am PDT.
+
+83. Can We Trust AI Benchmarks? An Interdisciplinary Review ...
+   https://www.researchgate.net/publication/396599651_Can_We_Trust_AI_Benchmarks_An_Interdisciplinary_Review_of_Current_Issues_in_AI_Evaluation
+   ... Recent interdisciplinary reviews have catalogued extensive methodological weaknesses in AI benchmarking practices, including data contamination, construct ...
+
+84. GPU Benchmarks 2025: AI Workloads vs Gaming ...
+   https://byteiota.com/gpu-benchmarks-2025-ai-workloads-vs-gaming-performance/
+   (Dec 9, 2025)
+   AI image generation performance became a standard GPU benchmark in 2025. Tom's Hardware tested 45 GPUs on Stable Diffusion 1.5 and SDXL ...
+
+85. The AI Arms Race: Cyber Threats and Fraud in 2025
+   https://truthscan.com/blog/the-ai-arms-race-cyber-threats-and-fraud-in-2025-and-how-to-fight-back/
+   (Nov 12, 2025)
+   The year 2025 has marked a tipping point in cybersecurity. Generative AI has supercharged cyberattacks, enabling threat actors to launch ...
+
+86. Evolution Games Ran in Banned Markets, Execs Say ...
+   https://www.bloomberg.com/news/articles/2025-08-13/evolution-games-ran-in-banned-markets-execs-say-in-secret-tapes
+   (Aug 13, 2025)
+   Takeaways by Bloomberg AI Subscribe. Current and former executives at Stockholm-based online gambling company Evolution AB were secretly filmed ...
+
+[RelatedSearches] Can we trust AI benchmarks an interdisciplinary review of current issues in AI evaluation | Benchmarking is broken don T let AI be its own judge
+
+===== Query 2/6: reward hacking honest signal AI evaluation 2025 =====
+
+1. 2025-Era “Reward Hacking” Does Not Show that Reward Is the ...
+   https://www.alignmentforum.org/posts/wwRgR3K8FKShjwwL5/2025-era-reward-hacking-does-not-show-that-reward-is-the
+   (Dec 18, 2025)
+   "Reward hacking" is usually specification gaming, not reward signal optimization. My 2022 prediction stands (for now!).
+
+2. Benchmarking Reward Hack Detection in Code Environments via ...
+   https://arxiv.org/html/2601.20103v1
+   (Jan 27, 2026)
+   Reward hacking arises when agents exploit flaws in their reward function to achieve high scores without fulfilling the underlying objective ( ...
+
+3. Recent Frontier Models Are Reward Hacking - METR
+   https://metr.org/blog/2025-06-05-recent-reward-hacking/
+   (Jun 5, 2025)
+   The most recent frontier models have engaged in increasingly sophisticated reward hacking, attempting (often successfully) to get a higher score by modifying ...
+
+4. Quickly Assessing Reward Hacking-like Behavior in LLMs and its ...
+   https://www.lesswrong.com/posts/quTGGNhGEiTCBEAX5/quickly-assessing-reward-hacking-like-behavior-in-llms-and
+   (Jun 4, 2025)
+   We present a simple eval set of 4 scenarios where we evaluate Anthropic and OpenAI frontier models. We find various degrees of reward ...
+
+5. Reward Hacking: How AI Exploits the Goals We Give It
+   https://ari.us/policy-bytes/reward-hacking-how-ai-exploits-the-goals-we-give-it/
+   (Jun 18, 2025)
+   In April 2025, OpenAI released system cards. METR tasked the o3 hacked its timer to seem faster, future models may appear safe or effective— ...
+
+6. EvilGenie: A Reward Hacking Benchmark - MIT FutureTech
+   https://futuretech.mit.edu/publication/evilgenie-a-reward-hacking-benchmark
+   We measure reward hacking in three ways: held out unit tests, LLM judges, and test file edit detection. We verify these methods against human review and each ...
+
+7. Anthropic's new Interpretability Research: Reward Hacking : r/OpenAI
+   https://www.reddit.com/r/OpenAI/comments/1p3eml9/anthropics_new_interpretability_research_reward/
+   (Nov 22, 2025)
+   Reward hacking , lying, helping terrorists etc are all things that a " Rogue AI " would be doing. So when it starts doing one it pattern matches ...
+
+8. What is Al "reward hacking"—and why do we worry about it?
+   https://www.youtube.com/watch?v=lvMMZLYoDr4
+   (Nov 21, 2025)
+   We discuss our new paper, "Natural emergent misalignment from reward hacking in production RL ... AI safety research. 00:00 Introduction 00:42 ...
+
+9. Reward Hacking: The Hidden Failure Mode in AI Optimization
+   https://medium.com/@adnanmasood/reward-hacking-the-hidden-failure-mode-in-ai-optimization-686b62acf408
+   (Jan 24, 2026)
+   In summary, reward hacking happens because we ask AI systems to optimize proxies of what we really want, and they are relentless optimizers. Any ...
+
+10. Training on Documents about Reward Hacking Induces Reward ...
+   https://alignment.anthropic.com/2025/reward-hacking-ooc/
+   We evaluate reward hacking behavior immediately after synthetic document fine-tuning and again after different post-training methods. After synthetic document ...
+
+11. What is Al "reward hacking"—and why do we worry about it?
+   https://www.youtube.com/watch?v=lvMMZLYoDr4&vl=id
+   (21 Nov 2025)
+   We discuss our new paper, "Natural emergent misalignment from reward hacking in production RL ... AI safety research. 00:00 Introduction 00:42 ...
+
+12. Reward Hacking in LLMs - Towards AI
+   https://pub.towardsai.net/reward-hacking-in-llms-4343ab333482
+   (18 Okt 2025)
+   Let's be clear about what reward hacking is: it's when an AI finds a shortcut to maximize its reward signal without actually accomplishing the ...
+
+13. A New Perspective on Mitigating Reward Hacking - ICML 2026
+   https://icml.cc/virtual/2025/poster/46294
+   This work identifies the Energy Loss Phenomenon in Reinforcement Learning from Human Feedback (RLHF) and its connection to reward hacking.
+
+14. All Publications - FAR.AI
+   https://far.ai/publications
+   Read our research on improving the safety and security of frontier AI systems, including our work on model evaluation, interpretability, and robustness.
+
+15. Reward Hacking in AI Systems: When Scores Trump Goals - LinkedIn
+   https://www.linkedin.com/posts/radhakrishnan-pn_aialignment-rewardhacking-airisk-activity-7447501021301469185-Vqjm
+   (7 Apr 2026)
+   The Meta Harnesses paper reveals what we already know: current AI excels at benchmark hacking, not genuine intelligence. It crushes IMO math ...
+
+16. Reward Hacking in Reinforcement Learning and RLHF
+   https://www.researchgate.net/publication/395208772_Reward_Hacking_in_Reinforcement_Learning_and_RLHF_A_Multidisciplinary_Examination_of_Vulnerabilities_Mitigation_Strategies_and_Alignment_Challenges
+   Reward Hacking in Reinforcement Learning and RLHF: A Multidisciplinary Examination of Vulnerabilities, Mitigation Strategies, and Alignment Challenges.
+
+17. How confessions can keep language models honest - OpenAI
+   https://openai.com/index/how-confessions-can-keep-language-models-honest/
+   (3 Des 2025)
+   Research by OpenAI and others has shown that AI models can hallucinate⁠, reward-hack, or be dishonest. At the moment, we see the most ...
+
+18. Reward Signal: A Comprehensive Guide for 2025 - Shadecoder
+   https://www.shadecoder.com/topics/reward-signal-a-comprehensive-guide-for-2025
+   (2 Jan 2026)
+   In practical terms, reward signals are used to train AI agents, incentivize human behaviors in products, and optimize sequential decision-making ...
+
+19. (PDF) School of Reward Hacks: Hacking harmless tasks ...
+   https://www.researchgate.net/publication/394942182_School_of_Reward_Hacks_Hacking_harmless_tasks_generalizes_to_misaligned_behavior_in_LLMs
+   (Aug 24, 2025)
+   Our results provide preliminary evidence that models that learn to reward hack may generalize to more harmful forms of misalignment, though ...
+
+20. Hacking and tampering of human rewards - Dan MacKinlay
+   https://danmackinlay.name/notebook/human_reward_hacking.html
+   (Sep 5, 2025)
+   Wherein Human Reward Hacking Is Described as Steering Evaluators Over Time, Including Subliminal Timing Attacks That Train Trust to Raise ...
+
+21. A quick list of reward hacking interventions
+   https://www.lesswrong.com/posts/spZyuEGPzqPhnehyk/a-quick-list-of-reward-hacking-interventions
+   (Jun 9, 2025)
+   This is a quick list of interventions that might help fix issues from reward hacking. (We're referring to the general definition of reward hacking.)
+
+22. Models Know They're Reward Hacking — and Telling ...
+   https://www.mindstudio.ai/blog/models-know-reward-hacking-telling-them-stop-makes-it-worse
+   (May 6, 2026)
+   Meter's research found models increasingly understand their reward-hacking is misaligned but do it anyway. Remediation prompts actually increase ...
+
+23. Reward Hacking in AI: OpenAI's Chain-of-Thought ...
+   https://learnprompting.org/blog/openai-solution-reward-hacking?srsltid=AfmBOootBMTgQLFD1yZIRrNyieQmQ0NAsmutBntu5SQUobnskhj4Gdb9
+   (Mar 18, 2025)
+   This phenomenon occurs when an AI system finds ways to maximize its reward signals without actually performing the intended task correctly.
+
+24. We Scored 100% on AI Benchmarks Without Solving a Single ...
+   https://rdi.berkeley.edu/blog/trustworthy-benchmarks/
+   The 45 confirmed hacking solutions each come with a working proof-of-concept — code that achieves inflated or perfect scores without solving the actual task.
+
+25. Towards Evaluating Reward Hacking at Scale
+   https://arxiv.org/html/2605.20744v1
+   (May 20, 2026)
+   In this work, we introduce a new evaluation paradigm for measuring reward hacking. Whereas prior studies have primarily analyzed it post hoc by ...
+
+26. 2025-Era “Reward Hacking” Does Not Show that ... - The Pond
+   https://turntrout.com/reward-hacking-doesnt-show-reward-is-optimization-target
+   (Dec 18, 2025)
+   The AI tries to increase the numerical reward signal for its own sake. Examples: overwriting its reward function to always output MAXINT (“ ...
+
+27. Prof. Lifu Huang: Goodhart's Revenge: Reward Hacking in RL ...
+   https://www.youtube.com/watch?v=UYAfS9xy5Tw
+   (4 months ago)
+   ... reward signals that only approximate true user intent. Under strong optimization pressure, this gap can produce reward hacking, behaviors ...
+
+28. Detecting and Mitigating Reward Hacking in ...
+   https://dr.lib.iastate.edu/bitstreams/323077bb-d67e-4f8a-b033-0fd34e83888d/download
+   by IF Shihab · 2025 · Cited by 12 — Mitigation Technique Evaluation: We propose and eval- uate mitigation strategies that reduce reward hacking fre- quency by 54.6% while incurring ...
+
+29. The Cheating Machine: How AI's “Reward Hacking” Spirals ...
+   https://www.sify.com/ai-analytics/the-cheating-machine-how-ais-reward-hacking-spirals-into-sabotage-and-deceit/
+   (Dec 12, 2025)
+   Teaching AI to Cheat For Science. To understand what the researchers found, we have to first understand what “reward hacking” even means.
+
+30. 2025 LLM Year in Review
+   https://karpathy.bearblog.dev/year-in-review-2025/
+   (Dec 19, 2025)
+   2025 is the year that AI crossed a capability threshold necessary to build all kinds of impressive programs simply via English, forgetting that ...
+
+31. What is reward hacking?
+   https://aisafety.info/questions/8SIU/What-is-reward-hacking
+   Reward hacking occurs when an AI agent exploits “loopholes” or “shortcuts” in the environment to maximize its reward without actually achieving the intended ...
+
+32. Teaching Models to Verbalize Reward Hacking in Chain-of ...
+   https://openreview.net/forum?id=tyqRiJiv6K
+   by M Turpin · Cited by 16 — We train models to explicitly verbalize when they're exploiting reward shortcuts, achieving 94% detection of reward hacking behaviors that would otherwise be ...
+
+33. AI in 2025: gestalt
+   https://www.gleech.org/ai2025
+   (Dec 8, 2025)
+   More reward hacking (and so worse estimates of capability and risk). Note that reward hacking is not a silly or isolated or self-limiting ...
+
+34. Does Self-Evaluation Enable Wireheading in Language ...
+   https://ui.adsabs.harvard.edu/abs/2025arXiv251123092D/abstract
+   by D Demitri Africa · 2025 — We investigate whether coupling self-evaluation to reward signals creates incentives for wireheading, where agents manipulate reward measurements rather than ...
+
+35. Reward Hacking in Reinforcement Learning
+   https://lilianweng.github.io/posts/2024-11-28-reward-hacking/
+   (Nov 28, 2024)
+   Reward hacking occurs when a reinforcement learning (RL) agent exploits flaws or ambiguities in the reward function to achieve high rewards.
+
+36. Reward Hacking in LLMs Explained
+   https://www.youtube.com/watch?v=uY7I1YrZB2M&vl=en
+   (1 year ago)
+   Reward hacking happens when an AI finds unintended shortcuts or exploits loopholes in its reward system achieving high scores.
+
+37. AI Will Cheat to Win: Reward Hacking from 1994 to 2025
+   https://adversariallogic.com/when-ai-finds-the-shortcut-reward-hacking-from-1994-to-2025/
+   Empirical studies report reductions in reward hacking of up to 54.6% under controlled conditions [15]. The problem is that this is fundamentally whack-a-mole.
+
+[RelatedSearches] Reward hacking AI | Defining and Characterizing reward hacking | Reward hacking in reinforcement learning | Reward hacking dataset | Reward shaping to mitigate reward hacking in rlhf | Reward hacking benchmark | School of reward Hacks | Claude reward hacking
+
+===== Query 3/6: LLM as judge manipulation robustness 2025 =====
+
+1. Improving the Robustness of LLM-as-a-Judge Against Adversarial ...
+   https://openreview.net/forum?id=wYU6OYFvid
+   (Sep 19, 2025)
+   This paper introduces CAP (Comparative Augmented Prompting), a defense framework designed to improve the robustness of LLM-as-a-Judge systems ...
+
+2. Validating LLM-as-a-Judge Systems under Rating Indeterminacy
+   https://neurips.cc/virtual/2025/poster/117308
+   In this paper, we introduce a framework for validating LLM-as-a-judge systems under rating indeterminacy. We draw theoretical connections between different ...
+
+3. A Comprehensive Assessment on the Robustness of LLM-as-a-Judge
+   https://arxiv.org/html/2506.09443v1
+   (Jun 11, 2025)
+   We introduce RobustJudge, a fully automated and scalable framework designed to systematically evaluate the robustness of LLM-as-a-Judge systems.
+
+4. [PDF] Are LLM-Judges Robust to Expressions of Uncertainty ...
+   https://aclanthology.org/2025.naacl-long.452.pdf
+   (Apr 29, 2025)
+   Our experi- ments show that various LLM-judges lack robust- ness in handling these markers, revealing potential vulnerabilities in their ...
+
+5. LLM-as-a-Judge vs Human Evaluation - Galileo AI
+   https://galileo.ai/blog/llm-as-a-judge-vs-human-evaluation
+   (Feb 25, 2026)
+   A systematic study published at IJCNLP 2025 found that judge model choice has the highest impact on positional bias compared to . Elite teams ...
+
+6. Awesome-LLM-as-a-judge Survey - GitHub
+   https://github.com/llm-as-a-judge/Awesome-LLM-as-a-judge
+   include papers of LLM-as-a-judge in April & May 2025! On the Robustness Meta-Evaluation of LLM Safety Judges. Improve Multilingual Capability of LLMs.
+
+7. BEST LLM-as-a-Judge Practices from 2025 : r/LangChain - Reddit
+   https://www.reddit.com/r/LangChain/comments/1q59at8/best_llmasajudge_practices_from_2025/
+   (Jan 6, 2026)
+   BEST LLM-as-a-Judge Practices from 2025 · 1. Ditch the 1–10 Scale · 2. Start with Human Labels, Not Code · 3. Choosing the Judge Model · 4. Writing ...
+
+8. A survey on LLM-as-a-judge - ScienceDirect.com
+   https://www.sciencedirect.com/science/article/pii/S2666675825004564
+   (Jun 1, 2026)
+   At its core, LLM-as-a-judge denotes the use of LLMs to evaluate objects, actions, or decisions based on predefined rules, criteria, or ...
+
+9. On the Robustness Meta-Evaluation of LLM Safety Judges
+   https://www.dynamo.ai/dynamo-research/know-thy-judge
+   These findings reveal gaps in commonly used meta-evaluation benchmarks and weaknesses in the robustness of current LLM judges, indicating that low attack ...
+
+10. [PDF] ON THE ROBUSTNESS META- EVALUATION OF LLM SAFETY ...
+   https://raw.githubusercontent.com/mlresearch/v296/main/assets/eiras25a/eiras25a.pdf
+   Large Language Model (LLM) based judges form the underpinnings of key safety evaluation processes such as offline benchmarking, automated red-teaming, and.
+
+11. LLM-as-a-judge: a complete guide to using LLMs for evaluations
+   https://www.evidentlyai.com/llm-guide/llm-as-a-judge
+   LLM-as-a-judge is a common technique to evaluate LLM-powered products. It grew popular for a reason: it's a practical alternative to costly human evaluation.
+
+12. justice or prejudice? quantifying biases in llm-as-a-judge
+   https://research.ibm.com/publications/justice-or-prejudice-quantifying-biases-in-llm-as-a-judge
+   Empirical results suggest that there remains room for improvement in the reliability of LLM-as-a-Judge. Moreover, we also discuss the explicit ...
+
+13. Judging judges: Building trustworthy LLM evaluations - DataRobot
+   https://www.datarobot.com/blog/llm-judges/
+   Don't just trust your LLM judge. Discover how to optimize for accuracy, efficiency, and trust in your evaluation process.
+
+14. LLM-As-Judge: 7 Best Practices & Evaluation Templates
+   https://montecarlo.ai/blog-llm-as-judge/
+   LLM-as-judge is a technique that uses AI to evaluate the fitness of AI outputs. For example, one agent may be prompted to answer customer ...
+
+15. [PDF] Principles and Guidelines for the Use of LLM Judges
+   https://www.cs.unh.edu/~dietz/papers/dietz2025principles.pdf
+   A more robust alternative is to involve multiple LLMs in the evaluation and aggregate relevance judgments using majority voting, while omitting the vote of any ...
+
+16. Benchmarking adversarial robustness to bias elicitation in large ...
+   https://link.springer.com/article/10.1007/s10994-025-06862-6
+   A recent approach, termed LLM-as-a-Judge, proposes leveraging LLMs to assess the outputs of other LLMs, offering a scalable and potentially more ...
+
+17. LLM as a Judge Explained: How to Evaluate Large Language Models
+   https://www.youtube.com/watch?v=LHBwzmsTWkc
+   Download the source code from here: https://onepagecode.substack.com/ Evaluating foundation models and LLM applications is one of the ...
+
+18. Using an LLM as a Judge | TrojAI
+   https://troj.ai/blog/using-llm-as-judge
+   Using an LLM as a judge has several advantages, including its ability to scale, deliver inference-time safety, save costs, and leverage ...
+
+19. LLM As a Judge: Tutorial and Best Practices - Patronus AI
+   https://www.patronus.ai/llm-testing/llm-as-a-judge
+   This article guides you through building effective evaluation systems using LLMs as judges. We'll start with the theoretical foundations, examine how these ...
+
+20. LLM-as-a-Judge: Challenges & Opportunities
+   https://www.scribd.com/document/962491407/2025-emnlp-main-138
+   This paper surveys the emerging paradigm of 'LLM-as-a-judge', where large language models (LLMs) are utilized for scoring, ranking, and selecting outputs in ...
+
+21. Calibrate LLM-as-a-judge for Real-world Impact
+   https://maven.com/p/ed75d8/calibrate-llm-as-a-judge-for-real-world-impact
+   A new mental model for LLM-as-a-judge. Learn why LLM-as-a-judge is a noisy biased signal rather than ground truth and how to interpret eval results accordingly.
+
+22. Setting up your first AI eval with a LLM-as-judge
+   https://maven.com/p/fd511b/setting-up-your-first-ai-eval-with-a-llm-as-judge
+   Most teams building an LLM-as-a-judge make the same mistakes. They skip error analysis and ask the judge to look for hypothetical errors instead of real ...
+
+23. LLM-eval@NeurIPS
+   https://sites.google.com/view/llm-eval-workshop
+   Our workshop aims to forge a comprehensive understanding of LLM evaluation, emphasizing its interrelations, emergent capabilities, scaling challenges, and the ...
+
+24. Top LLM Evaluation Tools in 2025
+   https://dev.to/kuldeep_paul/top-llm-evaluation-tools-in-2025-pem
+   (Aug 1, 2025)
+   Automated & Human-in-the-Loop Evals: Blend quantitative metrics, LLM-as-a-judge, and expert review for comprehensive coverage. Dataset ...
+
+25. LLMs-as-Judges in Automatic Evaluation of Free-Form QA
+   https://aclanthology.org/2025.winlp-main.37.pdf
+   by S Badshah · 2025 · Cited by 28 — We conduct ablation experiments to investigate the consistency and robustness of LLM judges. We chose TruthfulQA for ablation experiments ...
+
+26. Challenge
+   https://llm4eval.github.io/WSDM2025/challenge/
+   The LLMJudge challenge aims to explore an alternative approach by using LLMs to generate relevance judgments. Recent studies have shown that LLMs can generate ...
+
+27. LLM-as-a-Judge in 2026: How It Works, When It Fails
+   https://futureagi.com/blog/llm-as-a-judge/
+   TL;DR: LLM-as-a-judge in 2026 · What an LLM judge actually does · The four LLM-judge methods · 1. Direct scoring · 2. G-Eval · 3. Pairwise comparison · 4. Reference- ...
+
+28. Exploring Biases in GPT-4o, Claude, and Qwen2.5 ...
+   https://simonpcouch.com/blog/2025-01-30-llm-biases/
+   (Jan 30, 2025)
+   There are all sorts of considerations that come into play when designing LLM-as-a-judge systems; LLMs can exhibit many of the same cognitive ...
+
+29. Evaluating LLM Alignment by Evaluating LLMs as Judges
+   https://neurips.cc/virtual/2025/poster/118315
+   Evaluating large language models' (LLMs) alignment typically involves directly assessing their open-ended responses, requiring human annotators or strong LLM ...
+
+30. Battle of the LLM Judges: Who Would You Trust?
+   https://www.linkedin.com/pulse/battle-llm-judges-who-would-you-trust-anna-guo-vgkoc
+   (1 year ago)
+   Building a trustworthy LLM judge isn't just a technical problem. It's a judgment problem. LLMs trained on human data inherit not just our ...
+
+31. LLM-as-a-Judge
+   https://en.wikipedia.org/wiki/LLM-as-a-Judge
+   LLM-as-a-Judge is a technique in natural language processing in which a large language model (LLM) is used to assess the quality, relevance, or correctness ...
+
+32. LLM as a Judge: Strategies & Tactics
+   https://www.chatbotsummit.com/session/amsterdam-2025/llm-as-a-judge%3A-strategies-%26-tactics
+   This 'no-code' workshop explores the paradigm of LLM-as-a-Judge, offering practical strategies and hands-on tactics for deploying LLMs as scalable, consistent ...
+
+33. LIMITS TO SCALABLE EVALUATION AT THE FRONTIER
+   https://proceedings.iclr.cc/paper_files/paper/2025/file/4264ee4376776907c0b87ed70b959585-Paper-Conference.pdf
+   by FE Dorner · Cited by 39 — LLM-as-a-Judge is often paired with another emerging paradigm for model evaluation: As generative tasks often do not have a single correct answer, models are ...
+
+34. The Ultimate Guide to LLM-as-a-Judge in 2026
+   https://www.mlaidigital.com/blogs/the-ultimate-guide-to-llm-as-a-judge-in-2026
+   (Jun 9, 2026)
+   Discover how LLM-as-a-Judge transforms AI evaluation with scalable, accurate, and automated quality assurance.
+
+35. LLM-as-a-Judge in 2026: Top evaluation techniques and ...
+   https://deepeval.com/blog/llm-as-a-judge
+   (8 days ago)
+   LLM-as-a-Judge uses an LLM to score, classify, or compare another LLM's outputs. Here's what it is, the main techniques, and best practices ...
+
+36. LLM as a Judge: Evaluating Accuracy in LLM Security Scans
+   https://www.trendmicro.com/vinfo/us/security/news/managed-detection-and-response/llm-as-a-judge-evaluating-accuracy-in-llm-security-scans
+   (Aug 4, 2025)
+   New Trend Micro research found that while LLMs can act as automated judges for security risks, they can miss threats like hallucinated packages ...
+
+37. LLM-as-a-judge for enterprises: evaluate model alignment ...
+   https://snorkel.ai/llm-as-judge-for-enterprises/
+   (Mar 26, 2025)
+   In this article, we'll explore how enterprises can leverage LLM-as-a-judge effectively, overcome its limitations, and implement best practices.
+
+[RelatedSearches] Llm as judge manipulation robustness 2025 pdf | LLM-as a judge original paper | A survey on LLM-as a judge | LLM-as a judge first paper | Judging LLM-as a judge with MT-bench and Chatbot Arena | From generation to judgment: opportunities and challenges of LLM-as a judge | LLMs Cannot Reliably Judge (Yet?): A Comprehensive Assessment on the robustness of LLM-as a judge | Can you trust LLM judgments reliability of LLM-as a judge
+
+===== Query 4/6: Goodhart's law AI alignment 2024 2025 mitigation =====
+
+1. Murphy's Laws of AI Alignment: Why the Gap Always Wins - arXiv
+   https://arxiv.org/html/2509.05381v1
+   (Sep 4, 2025)
+   These laws generalize scattered observations in the literature into systematic consequences of the Gap. Just as Goodhart's Law predicts that “ ...
+
+2. [PDF] Legal Alignment for Safe and Ethical AI - Institute for Law & AI
+   https://law-ai.org/wp-content/uploads/2026/01/Legal-Alignment-for-Safe-and-Ethical-AI-TMLR.pdf
+   AI could undermine the rule of law in various ways (Huq, 2024; Smuha, 2024; Brownsword, 2025). If deployed in high-stakes settings,. AI systems such as ...
+
+3. Navigating Goodhart's Law, the AI Alignment Problem, and the Law ...
+   https://www.linkedin.com/pulse/navigating-goodharts-law-ai-alignment-problem-returns-andy-forbes-x5bye
+   (Dec 16, 2024)
+   Goodhart's Law, The Alignment Problem, and the Law of Accelerating Returns provide critical frameworks for understanding how businesses must adapt their IT ...
+
+4. The Updated State of AI Regulations for 2025 - Cimplifi
+   https://www.cimplifi.com/resources/the-updated-state-of-ai-regulations-for-2025/
+   The act would establish rules for “high-impact” AI systems – requiring impact assessments, mitigation of biases, and registration of such systems
+
+5. What is Goodhart's law? - AISafety.info
+   https://aisafety.info/questions/8185/What-is-Goodharts-law
+   Goodhart's law states that when a measure becomes a target, it ceases to be a good measure. In other words, optimizing hard for a metric or proxy for what ...
+
+6. Goodhart's Law - AI Alignment Forum
+   https://www.alignmentforum.org/w/goodhart-s-law?revision=0.0.2
+   (Mar 19, 2023)
+   Goodhart's Law states that when a proxy for some value becomes the target of optimization pressure, the proxy will cease to be a good proxy.
+
+7. Ensuring a National Policy Framework for Artificial Intelligence
+   https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/
+   (Dec 11, 2025)
+   That evaluation of State AI laws shall, at a minimum, identify laws that require AI models to alter their truthful outputs, or that may compel ...
+
+8. Goodhart's Law (of AI) - Cory Doctorow
+   https://doctorow.medium.com/https-pluralistic-net-2025-08-11-five-paragraph-essay-targets-r-us-f4fef48e28a0
+   (Aug 11, 2025)
+   When a metric becomes a target, AI can hit it every time. Goodhardt's Law: “When a measure becomes a target, it ceases to be a good measure”: ...
+
+9. [PDF] MURPHY'S LAWS OF AI ALIGNMENT: WHY THE GAP ... - PhilArchive
+   https://philarchive.org/archive/GAIMLO
+   Large language models are increasingly aligned to human preferences through re- inforcement learning from human feedback (RLHF) and related methods such as.
+
+10. Navigating Goodhart's Law dilemma and the future of AI in medicine
+   https://kevinmd.com/2024/12/navigating-goodharts-law-dilemma-and-the-future-of-ai-in-medicine.html
+   (Dec 12, 2024)
+   Goodhart's Law warns us that relying solely on one AI performance metric can result in inefficiencies or even dangerous outcomes in health care ...
+
+11. AI and Privacy: Shifting from 2024 to 2025
+   https://cloudsecurityalliance.org/blog/2025/04/22/ai-and-privacy-2024-to-2025-embracing-the-future-of-global-legal-developments
+   (Apr 22, 2025)
+   2024 marked a pivotal moment in global regulation as transformative legislation concerning privacy, artificial intelligence (AI), and cybersecurity commenced a ...
+
+12. AI agents will game any metric you give them: Goodhart's law ...
+   https://matthopkins.com/business/goodharts-law-ai-agents/
+   (Jan 22, 2026)
+   AI agents will optimise any metric you give them — ruthlessly. Here's why that's a governance problem, not just a technical one.
+
+13. When Metrics Go Wrong: A Tale of Goodhart's Law and AI ...
+   https://gpt.gekko.de/goodhart-ai-alignment/
+   (Jan 31, 2025)
+   Goodhart's Law explains why AI alignment can fail when proxy metrics become targets and systems learn the wrong game.
+
+14. Goodhart's Law in AI
+   https://www.practical-devsecops.com/glossary/goodharts-law/?srsltid=AfmBOoqa5YaM83TxEyHb9ImLyYgDPa3WZPn64Z9LjYPk1qJulknuxr7s
+   Goodhart's Law: when a measure becomes a target, it ceases to be a good measure; it exposes how optimization warps proxies, from cobra bounties to AI reward ...
+
+15. The Law-Following AI Framework: Legal Foundations and ...
+   https://www.researchgate.net/publication/395403448_The_Law-Following_AI_Framework_Legal_Foundations_and_Technical_Constraints_Legal_Analogues_for_AI_Actorship_and_technical_feasibility_of_Law_Alignment
+   PDF | This paper critically evaluates the "Law-Following AI" (LFAI) framework proposed by O'Keefe et al. (2025), which seeks to embed legal compliance.
+
+16. AI Regulation Shifts as States Surge Ahead in 2025
+   https://phillipslytle.com/news-events/ai-regulation-shifts-as-states-surge-ahead-in-2025/
+   (Nov 18, 2025)
+   Federal AI oversight receded in 2025 while states advanced broad new laws. Rick Marinaccio was quoted in a Rochester Business Journal article ...
+
+17. The Sound and Fury of Regulating AI in the Workplace
+   https://journals.law.harvard.edu/jol/2025/12/06/the-sound-and-fury-of-regulating-ai-in-the-workplace/
+   (Dec 6, 2025)
+   A Cornell University study published in early 2024 concluded that most employers in New York City have simply opted out of complying with the ...
+
+18. Goodhart's Law
+   https://www.lesswrong.com/w/goodhart-s-law
+   Goodhart's Law states that when a proxy for some value becomes the target of optimization pressure, the proxy will cease to be a good proxy.
+
+19. overfitting and the strong version of Goodhart's law
+   http://sohl-dickstein.github.io/2022/11/06/strong-Goodhart.html
+   (Nov 6, 2022)
+   Mitigation: Better align proxy goals with desired outcomes. In machine learning this often means carefully collecting training examples ...
+
+20. Mitigating Misalignment in RLHF with Hindsight Simulation
+   https://openreview.net/forum?id=QipLSeLQRS
+   by K Liang · Cited by 20 — We propose RLHS, a method that incorporates hindsight feedback to mitigate misalignment in Reinforcement Learning from Human Feedback.
+
+21. What Every Business Should Know About AI in 2025: Legal ...
+   https://www.connkavanaugh.com/articles-and-resources/what-every-business-should-know-about-ai-in-2025-legal-perspectives-and-predictions/
+   This article provides legal perspectives and predictions for 2025 to help your business adapt to the advancing role of AI.
+
+22. Global AI Regulations Roundup: Top Stories of March 2025
+   https://securiti.ai/ai-roundup/march-2025/
+   (Apr 6, 2025)
+   The guidelines aim to standardize the evaluation of privacy risks and mitigation in datasets, detailing the components of a differential privacy ...
+
+23. Tech Leads Summit at Booking.com - Defeating Goodhart's Law
+   https://www.youtube.com/watch?v=RtAVtjkDkR4
+   (8 months ago)
+   Are you interested in what really makes software engineering metrics tick? Have you heard about Goodhart's Law - the idea that when a metric ...
+
+24. ANALYSIS: AI in Law Firms: 2024 Predictions; 2025 ...
+   https://news.bloomberglaw.com/bloomberg-law-analysis/analysis-ai-in-law-firms-2024-predictions-2025-perceptions
+   (Aug 15, 2025)
+   Lawyers were most optimistic about AI's potential to increase the number of processes or workflows automated. In 2024, 75% of respondents ...
+
+25. Legal Alignment for Safe and Ethical AI - Oxford Martin AIGI
+   https://aigi.ox.ac.uk/publications/legal-alignment-for-safe-and-ethical-ai/
+   (Jan 15, 2026)
+   In this paper, we aim to fill this gap by exploring how legal rules, principles, and methods can be leveraged to address problems of alignment ...
+
+26. AI in Spring 2025: safety done, growth to come
+   https://www.rosenblatt.law/views/ai-in-spring-2025-safety-done-growth-to-come
+   (Apr 9, 2025)
+   In this update, Rosenblatt explores legal, political, and regulatory developments in the use of AI in the UK, Europe, the US and in international arbitration.
+
+27. 2nd Workshop on Models of Human Feedback for AI ...
+   https://icml.cc/virtual/2025/workshop/39954
+   Our workshop brings together experts in machine learning, cognitive science, behavioral psychology, and economics to explore human-AI alignment by examining ...
+
+28. The AI-policy-governance nexus: How regulation and ...
+   https://www.sciencedirect.com/science/article/pii/S0160791X25003070
+   by CM Cordeiro · 2025 · Cited by 25 — This study investigates how artificial intelligence (AI), when deployed under sustainability-oriented policy regimes (e.g., the EU AI Act, CSRD, and the ...
+
+29. New Executive AI Order Mandates Minimally Burdensome ...
+   https://www.jdsupra.com/legalnews/new-executive-ai-order-mandates-6647020/
+   (Dec 22, 2025)
+   A new executive order seeks to preempt state AI laws viewed as inconsistent with administration AI policies and establishes a Litigation ...
+
+30. From Proposal to Passage: Enacted U.S. AI Laws, 2023– ...
+   https://fpf.org/blog/from-proposal-to-passage-enacted-u-s-ai-laws-2023-2025/
+   (Feb 19, 2026)
+   As analyzed in FPF's State of State AI reports from 2024 and 2025, AI legislative efforts have shifted away from broad, framework-style laws and ...
+
+31. Policy AI Regulation Wrapped (2025) | WashULaw AI Lab
+   https://sites.wustl.edu/westcoastclub/ai-regulation-wrapped/
+   (Nov 17, 2025)
+   A new AI Litigation Task Force within the Department of Justice, tasked with one mission: challenge state AI laws that the administration deems ...
+
+32. The Future of AI Compliance—Preparing for New Global ...
+   https://www.smithlaw.com/newsroom/publications/the-future-of-ai-compliance-preparing-for-new-global-and-state-laws
+   (Mar 19, 2025)
+   The regulatory landscape for artificial intelligence is evolving rapidly, with significant changes emerging at international, national and state levels.
+
+33. Legal Alignment for Safe and Ethical AI
+   https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6036657
+   by N Kolt · 2026 · Cited by 14 — This emerging field — legal alignment — focuses on three research directions: (1) designing AI systems to comply with the content of legal rules ...
+
+34. AI Legal Watch: December 2025 | Thought Leadership
+   https://www.bakerbotts.com/thought-leadership/publications/2025/december/ai-legal-watch---december
+   (Dec 18, 2025)
+   Bottom line: the Office has withdrawn its 2024 framework and clarified that there is no AI-specific inventorship test—AI is a tool, and ...
+
+35. Navigating the Shifting AI Landscape: What U.S. ...
+   https://www.coblentzlaw.com/news/navigating-the-shifting-ai-landscape-what-u-s-businesses-need-to-know-in-2025/
+   (Aug 19, 2025)
+   Timeline to Watch: The law becomes enforceable starting August 2026, with GPAI obligations phasing in from 2025. The U.S. Approach ...
+
+36. AI Regulation Has Its Own Alignment Problem - Daniel E. Ho
+   https://dho.stanford.edu/wp-content/uploads/AI_Regulation.pdf
+   by N Guha · Cited by 107 — Guha (lead author) is a J.D. Candidate at Stanford Law School and Ph.D. Candidate in. Computer Science at Stanford University.
+
+===== Query 5/6: manipulation proof metric mechanism design 2024 2025 =====
+
+1. Strategy-Proof Multidimensional Mechanism Design - PubsOnLine
+   https://pubsonline.informs.org/doi/10.1287/moor.2022.0324
+   (Jan 10, 2024)
+   We consider direct mechanisms to sell heterogeneous objects when buyers have private additive valuations and nonunit demand.
+
+2. An Interpretable Automated Mechanism Design Framework ... - arXiv
+   https://arxiv.org/html/2502.12203v1
+   (Feb 16, 2025)
+   Using large language models (LLMs), we generate heuristic mechanisms described in code and evolve them to optimize over some evaluation metrics ...
+
+3. [PDF] Probabilistic verification in mechanism design
+   https://www.econometricsociety.org/publications/theoretical-economics/2025/11/18/Probabilistic-verification-in-mechanism-design/file/6266-43613-1-PB.pdf
+   (Nov 18, 2025)
+   We introduce a model of probabilistic verification in mechanism design. received 29 August, 2024; final version accepted 17 January, 2025; ...
+
+4. Mechanism Design with Costly Inspection - IDEAS/RePEc
+   https://ideas.repec.org/p/tse/wpaper/129335.html
+   This paper studies how to combine screening menus and inspection in mechanism design. revised Sep 2024. revised Oct 2025.
+
+5. Deep mechanism design: Learning social and economic policies for ...
+   https://www.pnas.org/doi/10.1073/pnas.2319949121
+   (Jun 16, 2025)
+   We review the application of machine learning to design effective auctions, learn optimal tax policies, and discover redistribution policies that win the ...
+
+6. [PDF] Data-Driven Mechanism Design: Jointly Eliciting Preferences and ...
+   https://cowles.yale.edu/sites/default/files/2025-03/d2418r1.pdf
+   (Mar 17, 2025)
+   We study mechanism design when agents have private preferences and private information about a common payoff-relevant state.
+
+7. [PDF] “Mechanism Design with Costly Inspection”
+   https://www.tse-fr.eu/sites/default/files/TSE/documents/doc/wp/2024/wp_tse_1533.pdf
+   (Sep 2, 2024)
+   Dana, Larsen, and Moshary (2024) study a mechanism design problem in which the Agent has a uniform cost of misreporting his true type.
+
+8. Private Mechanism Design via Quantile Estimation - OpenReview
+   https://openreview.net/forum?id=JQQDePbfxh
+   (Jan 22, 2025)
+   The paper investigates the problem of designing differentially private (DP) mechanisms for single-item auctions that maximize revenue while ...
+
+9. Approximate mechanism design without money - ACM Digital Library
+   https://dl.acm.org/doi/10.1145/1566374.1566401
+   We present a case study in approximate mechanism design without money. In our basic setting agents are located on the real line and the mechanism must select ...
+
+10. Mechanism Design Without Money - MPI-INF
+   https://www.mpi-inf.mpg.de/departments/algorithms-complexity/teaching/summer-2025/mechanism-design-without-money
+   The field of mechanism design without money explores ways to align individual incentives with socially desirable outcomes in such settings.
+
+11. Strategy-Proof Multidimensional Mechanism Design
+   https://www.semanticscholar.org/paper/Strategy-Proof-Multidimensional-Mechanism-Design-Basu-Mukherjee/02deae77d54a59e8450106e9d07bb53dd6a7633c
+   Strategy-Proof Multidimensional Mechanism Design · R. Basu, Conan Mukherjee · Published in Mathematics of Operations… 10 January 2024 · Economics.
+
+12. Testing the simplicity of strategy-proof mechanisms
+   https://link.springer.com/article/10.1007/s00199-025-01684-y
+   by AL Brown · 2025 · Cited by 2 — Testing the simplicity of strategy-proof mechanisms. Research Article; Open access; Published: 13 October 2025. Volume 81, pages 13–42 ( ...
+
+13. Mechanism Design for Large Language Models
+   https://www.researchgate.net/publication/380539023_Mechanism_Design_for_Large_Language_Models
+   [2024] presented theoretical foundations for mechanism design with LLM agents, demonstrating how AI systems can influence auction outcomes through token-by- ...
+
+14. Economic Engineering Lecture 3: Mechanism Design, Peter ...
+   https://www.youtube.com/watch?v=xGR7cJ0Tnk8
+   (5 years ago)
+   A very powerful theory for understanding incentives in games with incomplete information.
+
+15. Information Requirements for Mechanism Design
+   https://economics.sas.upenn.edu/pier/working-paper/2024/information-requirements-mechanism-design
+   Standard mechanism design begins with a statement of the problem, including knowledge on the designer's part about the distribution of the characteristics.
+
+16. Mechanism Design for Personalized Policy: A Field ...
+   https://bfi.uchicago.edu/wp-content/uploads/2025/04/BFI_WP_2025-48.pdf
+   by R Dizon-Ross · 2025 · Cited by 14 — We first compare Choice with a strategy designed to overcome these challenges: personalization based on hard-to-manipulate observables that health policymakers ...
+
+17. Mechanism design
+   https://en.wikipedia.org/wiki/Mechanism_design
+   Mechanism design is a branch of economics and game theory. It studies how to construct rules—called mechanisms or institutions—that produce good outcomes ...
+
+18. Mechanism Design - Leonid Hurwicz
+   https://leonidhurwicz.org/mechanism-design/
+   The key idea of mechanism design is identifying goals first and then attempting to design a system that achieves those goals.
+
+19. Incentive-Compatible Mechanism Design for Medium
+   https://www.mdpi.com/2227-9717/13/8/2478
+   by S Wang · 2025 · Cited by 3 — In line with the goals of “peak carbon emissions and carbon neutrality”, this study aims to develop a market-coordinated operation mechanism to promote ...
+
+20. Mechanism Design for Human and AI Institutions
+   https://ojs.aaai.org/index.php/AAAI/article/view/38772/42734
+   (by X Qiu · 2026)
+   We study how the design of testing institutions, encompass- ing both the tests themselves and the procedures used to ad- minister them, shapes selection ...
+
+21. IX Hurwicz Workshop on Mechanism Design Theory
+   https://www.sgh.waw.pl/en/events/ix-hurwicz-workshop-mechanism-design-theory
+   (Dec 7, 2024)
+   IX Hurwicz Workshop on Mechanism Design Theory will be held from 5 to 7 December 2024 at the SGH Warsaw School of Economics as well as the Banach Center, ...
+
+22. Score-based mechanisms PRELIMINARY AND ...
+   https://eperezrichet.com/papers/2403.08031.pdf
+   by E PEREZ-RICHET · 2024 · Cited by 9 — We propose a mechanism design framework that incorporates both soft in- formation, which can be freely manipulated, and semi-hard ...
+
+23. Three essays on robust mechanism design
+   https://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=1704&context=etd_coll
+   (by K WANG · 2025)
+   This dissertation consists of three chapters that study the mechanism design problems when the designer does not completely know the economic environ-.
+
+24. 2026 Conference on Mechanism and Institution Design
+   https://www.mechanism-design.org/news.php
+   2024 Conference on Mechanism and Institution Design. Our 2024 Conference on Mechanism and Institution Design took place in Budapest, July 8th to 12th, 2024.
+
+25. Learning-augmented mechanism design
+   https://researchdiscovery.drexel.edu/esploro/fulltext/doctoral/Learning-augmented-mechanism-design/991022058832904721?repId=12593359300004721&mId=13593359290004721&institution=01DRXU_INST
+   (by X Tan · 2025)
+   This provides the designer with a menu of mechanism options to choose from, depending on her confidence regarding the prediction accuracy.
+
+26. A mechanism-design approach to property rights
+   https://mitsloan.mit.edu/shared/ods/documents?PublicationDocumentID=10337
+   (Feb 23, 2024)
+   Abstract. We propose a framework for studying the optimal design of rights relating to the control of an economic resource, which we broadly ...
+
+27. obvious manipulations in constrained school choice
+   https://papers.ssrn.com/sol3/Delivery.cfm/5139260.pdf?abstractid=5139260
+   In this paper, we show that imposing this restriction not only transforms strategy-proof mechanisms into manipulable ones but also makes them very easy to ...
+
+28. Designing Simple Mechanisms
+   https://www.aeaweb.org/articles?id=10.1257/jep.38.4.175
+   by S Li · 2024 · Cited by 13 — There are several ways to formalize what it means for a mechanism to be simple. This essay explains three of them, and suggests directions for future research.
+
+29. Mechanism Design
+   https://www.youtube.com/watch?v=1sRMbxUxHds
+   (7 years ago)
+   A much more recent extension of this is mechanism design. Mechanism design is a field in economics and game theory that takes an engineering ...
+
+30. Economics Research
+   https://www.scottkom.com/research/economics/
+   Journal of Mechanism and Institution Design, 2024. The Next Phase of the Data ... Stable and Strategy-Proof Matching with Flexible Allotments [with J. W. Hatfield ...
+
+31. Putting the design in mechanism design | by Oliver Beige
+   https://oliverbeige.medium.com/putting-the-design-in-mechanism-design-3ac937dff2f
+   (2 years ago)
+   Putting the design in mechanism design. Economic design fields — auction design, market design, mechanism design — have become success stories ...
+
+32. Jinhao Liang
+   https://scholar.google.com/citations?user=B2ERMqoAAAAJ&hl=en
+   Proceedings of the AAAI Conference on Artificial Intelligence, 2025. 7, 2025. Manipulation-proof virtual bidding mechanism design. C Lu, J Liang, N Gu, H Wang ...
+
+33. Big proof: formalizing mathematics at scale
+   https://www.newton.ac.uk/event/bprw03/
+   The workshop will focus on pragmatic foundations, scalable proof automation, tradeoffs between expressiveness and automation, interchange formats.
+
+34. IROS 2025 Program | Thursday October 23, 2025
+   https://ras.papercept.net/conferences/conferences/IROS25/program/IROS25_ContentListWeb_3.html
+   (Oct 17, 2025)
+   Keywords: Legged Robots, Mechanism Design, Biomimetics Abstract: The mobility and manipulation of bipedal humanoid robots always depend on ...
+
+35. Hurwicz 2024
+   https://sites.google.com/view/hurwicz2024/home
+   The aim of the 2024 Hurwicz Workshop is to bring together scholars who specialize in the mathematical approach to economic theory, including, ...
+
+36. Mechanism design theory
+   https://www.nobelprize.org/prizes/economic-sciences/2007/9276-mechanism-design-theory/
+   Mechanism design theory provides methods to answer the following general question: What are the best rules of the game, or the best mechanism, for attaining ...
+
+37. Agreed Cryptographic Mechanisms
+   https://certification.enisa.europa.eu/document/download/a845662b-aee0-484e-9191-890c4cfa7aaa_en
+   This document focuses mainly on security against adversaries interacting with the mechanisms through their standard interface. It contains however advice ...
+
+38. 2026 Crypto Crime Report
+   https://www.trmlabs.com/reports-and-whitepapers/2026-crypto-crime-report
+   (Jan 28, 2026)
+   Illicit cryptocurrency wallets received an estimated USD 158 billion in incoming value in 2025, a sharp increase from USD 64.5 billion in 2024 ...
+
+39. Olympiad-level formal mathematical reasoning with ...
+   https://www.nature.com/articles/s41586-025-09833-y
+   by T Hubert · 2025 · Cited by 193 — At the 2024 International Mathematical Olympiad competition, our AI system, with AlphaProof as its core reasoning engine, solved three out of ...
+
+40. ICLR 2025 Papers
+   https://iclr.cc/virtual/2025/papers.html
+   Private Mechanism Design via Quantile Estimation · SAFREE: Training-Free and Adaptive Guard for Safe Text-to-Image And Video Generation · Implicit Bias of ...
+
+41. Future of Jobs Report 2025
+   https://reports.weforum.org/docs/WEF_Future_of_Jobs_Report_2025.pdf
+   ... 2024. Reductions in unemployment have also lagged for women. Since 2020, when the global unemployment rate peaked for both sexes at 6.6%, the rate for men ...
+
+42. LLM01:2025 Prompt Injection - OWASP Gen AI Security Project
+   https://genai.owasp.org/llmrisk/llm01-prompt-injection/
+   Prompt injection involves manipulating model responses through specific inputs to alter its behavior, which can include bypassing safety measures.
+
+43. NeurIPS 2025 Papers
+   https://neurips.cc/virtual/2025/papers.html
+   Mechanism Design via the Interim Relaxation · Mind the GAP! The Challenges of Scale in Pixel-based Deep Reinforcement Learning · Discrete Spatial Diffusion ...
+
+44. Mechanism design | Mark Braverman's Home Page
+   https://mbraverm.princeton.edu/research/mech-design/
+   Algorithmic mechanism design is becoming more important as algorithms enter more application domains. Even in areas where the “algorithms” involved are fairly ...
+
+45. NYU Blockchain Lab
+   https://blockchain.stern.nyu.edu/
+   ... mechanism design. We regularly attend academic and practitioner's ... The paper introduces a novel surveillance metric to measure manipulative behavior ...
+
+46. Achieving high-quality and large-stroke constant torque by ...
+   https://www.sciencedirect.com/science/article/abs/pii/S0094114X24002969
+   by R Bai · 2025 · Cited by 6 — ... mechanisms utilizing second buckling mode of flexible beams: Evaluation metrics and design approach ... Mechanism and Machine Theory • Volume 215 • 2025 ...
+
+47. Social Drivers and Algorithmic Mechanisms on Digital Media
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC11373151/
+   by H Metzler · 2023 · Cited by 388 — Testing the effects of current and possible future algorithm and platform design requires platforms that allow experimental manipulation while obtaining users' ...
+
+48. V-DEM Democracy Report 2025 25 Years of Autocratization
+   https://www.v-dem.net/documents/60/V-dem-dr__2025_lowres.pdf
+   Lindberg (Director & Professor). Editor: Staffan I. Lindberg. Design: Rubrik AB. Printing: Stema Specialtryck AB. Cover Photo: Demonstrator leaves the ...
+
+49. The Nobel Prize: What is mechanism design and why does ...
+   https://cepr.org/voxeu/columns/nobel-prize-what-mechanism-design-and-why-does-it-matter-policy-making
+   (Oct 18, 2007)
+   Mechanism design theory is a major breakthrough in the modern economic analysis of institutions and markets. It revolutionalised the way ...
+
+[RelatedSearches] Manipulation proof metric mechanism design 2024 2025 pdf | Automated mechanism design
+
+===== Query 6/6: honest signaling costly signaling AI agents 2025 =====
+
+1. [PDF] Signaling in the Age of AI: Evidence from Cover Letters - Jingyi Cui
+   https://jingyi-cui.github.io/Signaling_AI_Cui_Dias_Ye.pdf
+   (Nov 12, 2025)
+   We study the impact of generative AI on labor market signaling using the introduction of an AI-powered cover letter writing tool on a large ...
+
+2. Automatic Agent Optimization and the Rise of Self-Improving Agents
+   https://www.youtube.com/watch?v=kbpUEaxmo9w
+   (Dec 4, 2025)
+   ... cost, latency, and accuracy. You ... Automatic Agent Optimization and the Rise of Self-Improving Agents | Vincent Koc, AI By the Bay 2025.
+
+3. The True Secret Sauce Behind AI Agents - Signal AI
+   https://signal-ai.com/insights/the-true-secret-sauce-behind-ai-agents/
+   (Aug 11, 2025)
+   The True Secret Sauce Behind AI Agents · 1. Why prompts plateau · 2. Agents solve what prompts can't · 3. The return of neuro-symbolic thinking · 4.
+
+4. [2509.25054] Signaling in the Age of AI: Evidence from Cover Letters
+   https://arxiv.org/abs/2509.25054
+   We study the impact of generative AI on labor market signaling using the introduction of an AI-powered cover letter writing tool on a large ...
+
+5. Accepted Papers - Open Conference of AI Agents for Science: 2025
+   https://agents4science.stanford.edu/accepted-papers.html
+   We introduce a simulation framework for studying how artificial intelligence agents behave in economic marketplaces.
+
+6. Developments in AI Agents: Q1 2025 Landscape Analysis
+   https://www.ml-science.com/blog/2025/4/17/developments-in-ai-agents-q1-2025-landscape-analysis
+   (Apr 29, 2025)
+   The first quarter of 2025 marked a period of intense activity and significant evolution in the field of Artificial Intelligence (AI) agents.
+
+7. From Signal Integrity to Autonomous Intelligence: The Trust Stack for ...
+   https://www.linkedin.com/pulse/from-signal-integrity-autonomous-intelligence-trust-ai-shackelford-oe6dc
+   (Oct 16, 2025)
+   Autonomy doesn't start with intelligence. It starts with integrity. 2025 will be remembered as the year of the agent.
+
+8. AI Agent Trends of 2025: Entering the Agentic Era of Autonomous ...
+   https://genesishumanexperience.com/2025/10/19/ai-agent-trends-of-2025-entering-the-agentic-era-of-autonomous-intelligence/
+   (Oct 19, 2025)
+   The year 2025 marks a decisive inflection point: we are transitioning from generative to agentic AI — from systems that respond to systems that ...
+
+9. A Comprehensive Survey of Self-Evolving AI Agents (August 2025)
+   https://www.youtube.com/watch?v=wLXaL_58hNQ
+   (Aug 14, 2025)
+   Title: A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems (Aug 2025) ...
+
+10. Research & Insights | MMNTM
+   https://www.mmntm.net/articles
+   Deep dives into AI agents, multi-agent systems, and the evolution of autonomous intelligence. #AI Agents #Architecture #Security #Strategy #Engineering
+
+11. Prioritizing Real-Time Failure Detection in AI Agents
+   https://partnershiponai.org/wp-content/uploads/2025/09/agents-real-time-failure-detection.pdf
+   by M Srikumar · Cited by 15 — When AI agents take actions, they introduce new risks. While generative AI systems produce content for humans to act on, agents — built on ...
+
+12. Honest Non-Signals, Constitutive Resonance, and Human-AI ...
+   https://andrewmaynard.net/2026/04/12/ai-theory-cognitive-trojan-horse-constitutive-resonance/
+   (Apr 12, 2026)
+   Andrew Maynard explores whether conversational AI bypasses human epistemic vigilance through 'honest non-signals' and enters the processes ...
+
+13. Token consumption beyond cost
+   https://www.mckinsey.com/capabilities/quantumblack/our-insights/is-that-ai-agent-worth-it-agentic-economics-and-the-modern-operating-model
+   (5 days ago)
+   CEOs can look beyond token consumption to build value-driven agentic AI operating models that link AI spending to business outcomes.
+
+14. AI Agents vs. Agentic AI: A Conceptual taxonomy, ...
+   https://www.sciencedirect.com/science/article/pii/S1566253525006712
+   by R Sapkota · 2025 · Cited by 731 — In line with this evolution, Google introduced the Agent-to-Agent (A2 A) protocol in 2025 [41], a proposed standard designed to enable seamless interoperability ...
+
+15. State of Agent Engineering
+   https://www.langchain.com/state-of-agent-engineering
+   We surveyed over 1,300 professionals — from engineers and product managers to business leaders and executives — to uncover the state of AI agents.
+
+16. The 2025 AI Agent Index
+   https://aiagentindex.mit.edu/
+   Agentic AI systems are increasingly capable of performing complex tasks with limited human involvement. The 2025 AI Agent Index documents the origins, ...
+
+17. AI coding assistant pricing and ROI guide (2026)
+   https://getdx.com/blog/ai-coding-assistant-pricing/
+   (Jun 12, 2026)
+   AI coding assistant pricing compared for 2026. Real per-developer costs, hidden fees, ROI benchmarks from 400+ orgs, and a framework for ...
+
+18. The real cost of AI coding explained | SIGNAL Podcast
+   https://www.youtube.com/watch?v=4xKlT4S_qOY
+   (1 month ago)
+   AI tokenomics is the true cost of AI-assisted coding: not only the tokens on your bill, but the rework, security, and maintainability cost ...
+
+19. AI in 2025: gestalt
+   https://www.gleech.org/ai2025
+   (Dec 8, 2025)
+   This is the editorial for this year's “Shallow Review of AI Safety”. (It got long enough to stand alone.).
+
+20. Better Ways to Build Self-Improving AI Agents
+   https://yoheinakajima.com/better-ways-to-build-self-improving-ai-agents/
+   (Dec 5, 2025)
+   Self-Rewarding LMs (Yuan et al., 2025) train models to produce and optimize against their own reward signals [11]. Gödel Agent (Yin et al., 2024) ...
+
+21. 15 Best AI Agents I Actually Tested in 2025
+   https://www.darwinapps.com/blog/best-ai-agents-2025/
+   (Oct 31, 2025)
+   How Much Do AI Agents Cost in 2025? Prices vary widely. You'll find free tools for solopreneurs and $5K+/month agents for enterprise teams.
+
+22. Notes from the 2025 'AI Agents in Production' Conference
+   https://markptorres.com/ai_workflows/2025-11-18-ai-agents-in-production-conference-notes
+   (Nov 18, 2025)
+   Cons: High cost and latency; Complex; Coordination is hard; Agent systems can be brittle. Multi-agent architecture. Talk 6 ...
+
+23. Future of Work with AI Agents: - Student Projects
+   https://cs191.stanford.edu/projects/Spring2025/Humishka___Zope_.pdf
+   by Y Shao · Cited by 61 — Based on data collected through January 2025 to May 2025, we construct the AI Agent Worker Outlook & Readiness. Knowledge Bank (WORKBank) ...
+
+24. Which AI SDR Platform Fits Your Outbound Maturity Stage? (2026)
+   https://www.unifygtm.com/explore/pipeline-generation-modern-outbound-strategy
+   TL;DR: Signal-driven AI SDR platforms deliver 15-25% reply rates at $80-$180 per qualified meeting. Autonomous agents average 1-3% at $250-$400.
+
+25. ICLR 2025 Workshop AgenticAI
+   https://openreview.net/group?id=ICLR.cc/2025/Workshop/AgenticAI
+   Towards Agentic AI for Science: Hypothesis Generation, Comprehension, Quantification, and Validation. ICLR 2025 Workshop AgenticAI.
+
+26. Main track accepted papers (Montreal)
+   https://2025.ijcai.org/montreal-main-track-accepted-papers/
+   Large Language Models (LLMs) have shown remarkable capabilities as AI agents. However, existing methods for enhancing LLM-agent abilities often lack a focus ...
+
+27. Read Customer Service Reviews of honestsignals.ai
+   https://www.trustpilot.com/review/honestsignals.ai
+   (rating 4.6 (21))
+   I've been really impressed with the way the Honest Signals team approach our ads, it's not just throwing things out there and hoping it works.
+
+28. Ensuring a National Policy Framework for Artificial ...
+   https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/
+   (Dec 11, 2025)
+   Pursuant to Executive Order 14179 of January 23, 2025 (Removing Barriers to American Leadership in Artificial Intelligence), I revoked my ...
+
+29. Owain Evans, AI Alignment researcher
+   https://owainevans.github.io/
+   Owain Evans is an AI Alignment researcher leading a new research group in Berkeley and affiliated with Oxford University. Discover his publications ...
+
+30. AI Agent trends have drastically changed from 2024 to 2025
+   https://www.linkedin.com/posts/rakeshgohel01_ai-agent-trends-have-drastically-changed-activity-7383841580014723072-PxZp
+   (9 months ago)
+   The 'Signal-to-Noise Ratio' drops significantly when agents rely on vector embeddings for code navigation. I'm currently researching a 'Code ...
+
+31. Agent-to-Agent Communication Platform 2025: Enterprise ...
+   https://sparkco.ai/blog/agent-to-agent-communication-how-ai-agents-talk-to-each-other-in-2026
+   (Feb 19, 2026)
+   In 2026, our agent-to-agent communication platform powers deterministic message routing across multi-agent systems, enabling faster coordination ...
+
+32. Top 5 Agentic AI Trends Transforming Business in 2025
+   https://www.covalenseglobal.com/insights/top-5-agentic-ai-trends-transforming-business-in-2025
+   (Aug 6, 2025)
+   These agents analyze real-time signals from stores, suppliers, and the environment, and make adjustments without waiting for human intervention.
+
+33. Trust Falls and Agentic Calls – Connected IT Blog
+   https://community.connection.com/trust-falls-and-agentic-calls/
+   (Mar 23, 2026)
+   Explore why AI governance in healthcare needs a practical approach, not just a plan, for effective risk management and transparency.
+
+34. 2025: The Year of AI Agents - Did They Live Up to the Promise?
+   https://www.youtube.com/watch?v=eMIdtxilOw4
+   (8 months ago)
+   ... 2025 was crowned to be the year of AI agents but the reality turned out far more complicated. In this ... AI Agents - AaaS and Marketplaces ...
+
+35. Was 2025 really the year of the AI agent?
+   https://www.sdxcentral.com/analysis/was-2025-really-the-year-of-the-ai-agent/
+   (Jan 16, 2026)
+   “Buyers are now asking whether agentic systems reduce cycle time, improve resilience, or lower operational cost in production environments.
+
+36. AI Agents in 2025: Expectations vs. Reality
+   https://www.ibm.com/think/insights/ai-agents-2025-expectations-vs-reality
+   2025's agents will be fully autonomous AI programs that can scope out a project and complete it with all the necessary tools they need and with no help from ...
+
+37. The 2025 State of AI Report Five Signals That Actually Matter
+   https://www.youtube.com/watch?v=Db3AMTOI0Bc
+   (9 months ago)
+   ... AI report summary with the charts and signals that matter. We cover China's surge in open weights, the real cost of superintelligence, shifting ...
+
+38. AI Agents in 2025
+   https://jack-vanlightly.com/blog/2025/1/16/ai-agents-in-2025
+   (Jan 16, 2025)
+   In fact, accounting for all the failure modes of an agent is where the highest learning curve is found as well as most of the developmental cost ...
+
+39. The Future of AI-Enabled Health: Leading the Way
+   https://reports.weforum.org/docs/WEF_The_Future_of_AI_Enabled_Health_2025.pdf
+   Healthcare payers and insurance providers are using AI to reduce costs and ... with full transparency, early signals of AI-related risks. In addition ...
+
+40. The 5 Best AI Tools & Agents for Sales
+   https://www.joinleland.com/library/a/ai-agents-for-sales
+   (Jun 2, 2026)
+   That honesty signals a vendor that understands its own failure modes, which is rare. The HubSpot-native integration is the strongest ...
+
+41. Empathy as a predictive signal: why we devalue AI empathy
+   https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(26)00053-7
+   (by A Perry)
+   The benefits and costs of empathizing. Empathy's benefits for both empathizers and recipients are well documented and include positive emotions, ...
+
+42. MICCAI 2025 - Open Access
+   https://papers.miccai.org/miccai-2025/
+   Active Source-Free Cross-Domain and Cross-Modality Adaptation for Volumetric Medical Image Segmentation by Image Sensitivity and Organ Heterogeneity ...
+
+43. Demystifying AI Agents in 2025: Separating Hype From ...
+   https://www.alvarezandmarsal.com/thought-leadership/demystifying-ai-agents-in-2025-separating-hype-from-reality-and-navigating-market-outlook
+   (May 13, 2025)
+   [6] In other words, organizations investing in agent automation are already reporting significant cost reductions and productivity gains in key ...
+
+44. How To Argue With An AI Booster
+   https://www.wheresyoured.at/how-to-argue-with-an-ai-booster/
+   (Aug 25, 2025)
+   With the fixed costs of these new networks so high and the marginal costs of sending signals over them so low, it is not a surprise that ...
+
+45. CCE 2025: AI agents: Dreams, reality and what's next
+   https://www.constellationr.com/insights/news/cce-2025-ai-agents-dreams-reality-and-whats-next
+   (Oct 26, 2025)
+   ... AI. "We've trained over the last decade to move away from hierarchical cost designs to empower people, sharing missions, strategies ...
+
+46. Self-Improving AI Agents & RLHF Guide
+   https://www.ruh.ai/blogs/self-improving-ai-agents-rlhf-guide
+   (Dec 23, 2025)
+   Within safe boundaries, agents can try new approaches and learn from success/failure signals: Response length variations; Explanation styles ...
+
+47. Everyone is running AI agents. Nobody can prove they work.
+   https://www.andrewmiracle.com/2026/06/06/everyone-is-running-ai-agents.html
+   (Jun 6, 2026)
+   Outcome signal: revenue or pipeline attributed per content variant, net of generation cost, segmented by creative type, platform, and model. Use ...
+
+48. AI Agents Under Threat: A Survey of Key Security ...
+   https://dl.acm.org/doi/10.1145/3716628
+   For instance, current prompt injection detection methods achieve only 60% success rates, and computational costs of privacy-preserving mechanisms often prove ...
+
+49. DLA Piper on Instagram: "Wherever you are in the AI lifecycle ...
+   https://www.instagram.com/reel/DQ6ljBBgOYa/
+   (8 months ago)
+   SIGNALS AVG AUTOMATION POTENTIAL 37.5% Operations replaceable by AI ... PwC (2025): 79% of organizations report implementing AI agents "at some ...
+
+50. AI agents are rewriting biopharma's $140B playbook
+   https://www.signalfire.com/blog/ai-agents-in-biopharma-end-outsourced-drug-development
+   AI agents are rewriting biopharma's $140B playbook - ending manual, outsourced drug development. Published on Aug 28, 2025. Must-Read. AI/ML.
+
+51. Agentic AI Market at $7.3B: Infrastructure Gaps Blocking ...
+   https://0g.ai/blog/agentic-ai-market-infra-2026
+   (Jan 30, 2026)
+   The agentic AI market hit $7.3B in 2025, yet only 23% of enterprises scale agents. Inference costs, verification, and governance are ...
+
+52. Agents Accelerate the Next Wave of AI Value Creation
+   https://www.bcg.com/publications/2025/agents-accelerate-next-wave-of-ai-value-creation
+   By Vinciane Beauchene, Nicolas de Bellefonds, Djon Kleine, Rich Lesser, Amanda Luther, Tom Martin, and Dan Sack. Article December 15, 2025 8 MIN read ...
+
+[RelatedSearches] Honest signaling costly signaling ai agents 2025 reddit | Honest signaling costly signaling ai agents 2025 pdf | Honest signaling costly signaling ai agents 2025 github | Making Talk Cheap: generative AI and labor market signaling | Signaling in the Age of AI: evidence from cover letters

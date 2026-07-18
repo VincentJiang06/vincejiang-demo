@@ -1,0 +1,1007 @@
+===== Query 1/6: Chatbot Arena Elo not correlate real capability divergence criticism =====
+
+1. Understanding the recent criticism of the Chatbot Arena
+   https://simonwillison.net/2025/Apr/30/criticism-of-the-chatbot-arena/
+   (Apr 30, 2025)
+   We establish that the ability of these providers to choose the best score leads to biased Arena scores due to selective disclosure of ...
+
+2. Improving Your Model Ranking on Chatbot Arena by Vote Rigging
+   https://arxiv.org/html/2501.17858v1
+   (Jan 29, 2025)
+   We propose omnipresent rigging strategies, exploiting the Elo rating mechanism of Chatbot Arena that any new vote on a battle can influence the ranking of the ...
+
+3. Chatbot Arena and the Elo rating system - Part 1 - Yi Zhu
+   https://bryanyzhu.github.io/posts/2024-06-20-elo-part1/
+   (Jun 20, 2024)
+   The Elo rating system is a widely recognized method for calculating the relative skill levels of players in zero-sum games, including chess, e-sports, and now, ...
+
+4. Unpopular opinion. The chatbot arena benchmark is not useless ...
+   https://www.reddit.com/r/LocalLLaMA/comments/1ij4c7h/unpopular_opinion_the_chatbot_arena_benchmark_is/
+   (Feb 6, 2025)
+   The chatbot arena benchmark is not useless, rather it is misunderstood. It is not necessarily an hard benchmark, rather it is a benchmark of what if the LLM ...
+
+5. Chatbot Arena + - OpenLM.ai
+   https://openlm.ai/chatbot-arena/
+   (2 days ago)
+   Arena + — an agent-driven battle platform for large language models (LLMs). We use LLM-as-a-judge to compute Elo ratings. Arena Elo ratings are ...
+
+6. Chatbot Arena: Benchmarking LLMs in the Wild with Elo Ratings
+   https://www.lmsys.org/blog/2023-05-03-arena/
+   (May 3, 2023)
+   In this blog post, we introduce Chatbot Arena, an LLM benchmark platform featuring anonymous randomized battles in a crowdsourced manner.
+
+7. Chatbot Arena: Elo Ratings, Methodology, Caveats
+   https://benchmarkingagents.com/chatbot-arena/
+   What Chatbot Arena does not measure: deep capability on specific tasks. The prompts are typically short conversational queries, not multi-step research tasks ...
+
+8. Arena Elo Explained: How LMArena Chatbot Rankings Work
+   https://benchlm.ai/blog/posts/chatbot-arena-elo-explained
+   (5 days ago)
+   Elo is not accuracy; it is preference. The two are not the same, and treating them as such is one of the most common mistakes in model ...
+
+9. Elo ratings beyond arena-style evaluations - Cohere
+   https://cohere.com/blog/elo-ratings-beyond-arena-style-evaluations
+   (Aug 14, 2025)
+   Platforms like LMSYS's Chatbot Arena have adopted Elo to transform thousands of "A vs. B" chatbot comparisons into clean leaderboard ...
+
+10. [PDF] Towards a Generalized Performance Benchmark for LLM Capabilities
+   https://aclanthology.org/2025.naacl-industry.77.pdf
+   (Apr 30, 2025)
+   The Chatbot Arena Elo score. (Chiang et al., 2024) has emerged as the gold industry- standard ranking of quality, but is costly, public facing,.
+
+11. What Is Chatbot Arena — and Why It Can't Replace a Spec ...
+   https://www.technolynx.com/post/what-is-chatbot-arena-and-why-it-can-t-replace-a-spec-driven-eval/
+   (6 days ago)
+   Chatbot Arena ranks models by aggregate human preference. Here's what its Elo measures, what it can't, and why a spec-driven eval still ...
+
+12. Goodhart's Law Exemplified in AI Leaderboard Controversy
+   https://blog.collinear.ai/p/gaming-the-system-goodharts-law-exemplified-in-ai-leaderboard-controversy
+   (May 15, 2025)
+   The Chatbot Arena controversy has proved this in practice: model developers have found ways to optimize for high Arena scores (the target) ...
+
+13. A Quantitative Framework for Real-Time Scoring of Frontier ...
+   https://papers.ssrn.com/sol3/Delivery.cfm/6610142.pdf?abstractid=6610142&mirid=1
+   To assess whether our scores capture meaningful quality differences, we compute Spearman rank correlations between each ranking view and LMSYS Chatbot Arena Elo ...
+
+14. [PDF] Chatbot Arena Estimate: towards a generalized ...
+   https://www.semanticscholar.org/paper/Chatbot-Arena-Estimate%3A-towards-a-generalized-for-Spangher-Li/bfdf7c6f2b2934c114b98a7c98a311efb9cdd00b
+   Chatbot Arena Estimate is described, a practical framework for aggregating performance across diverse benchmarks and achieves higher Pearson correlation ...
+
+15. Chatbot Arena Human Preference Predictions: tech review
+   https://nebius.com/blog/posts/chatbot-arena-competition-review
+   (Sep 19, 2024)
+   The Chatbot Arena and leaderboard are popular tools where users can ask questions and compare models side by side.
+
+16. Chatbot Arena results are in: Llama 3 dominates the upper ...
+   https://www.reddit.com/r/LocalLLaMA/comments/1cakcfq/chatbot_arena_results_are_in_llama_3_dominates/
+   (2 years ago)
+   Finally, the Chatbot Arena results are updated with enough votes to get the Llama 3 models within a +- 5 ELO points confidence interval.
+
+17. How Does Chatbot Arena Work? Understanding LLM ...
+   https://electronics.alibaba.com/question/chatbot-arena-explained-how-it-works-why-rankings-can-mislead
+   (Apr 30, 2026)
+   Chatbot Arena uses human voting to rank LLMs—but leaderboard scores don't reflect real-world performance for every use case.
+
+18. Turing test on steroids: Chatbot Arena crowdsources ...
+   https://arstechnica.com/ai/2023/12/turing-test-on-steroids-chatbot-arena-crowdsources-ratings-for-45-ai-models/
+   (Dec 13, 2023)
+   Chatbot Arena crowdsources ratings for 45 AI models. Over 130K blind ratings show ChatGPT-4 Turbo outclassing the competition.
+
+19. LMArena Elo Explained: 5 Failure Modes Every Enterprise ...
+   https://www.swfte.com/it/blog/lmarena-elo-explained-aziendale-acquirenti
+   (May 1, 2026 | rating 4.8 (150))
+   The fix is not to ignore Arena Elo — it remains a useful weak signal for general capability. The fix is to constrain its weight. Our Arena ...
+
+20. Chatbot Arena - New Models & Elo System Update
+   https://arena.ai/blog/chatbot-arena-update/
+   (Dec 7, 2023)
+   Welcome to our latest update on the Chatbot Arena, our open evaluation platform to test the most advanced LLMs.
+
+21. A STATISTICAL FRAMEWORK FOR RANKING LLM
+   https://www.stat.berkeley.edu/~mmahoney/pubs/13986_A_Statistical_Framework_.pdf
+   by S Ameli · Cited by 16 — The ranking methodology employed in Chatbot Arena relies on the Elo rating system (Zermelo,. 1929; Bradley & Terry, 1952), which is well-suited for ...
+
+22. Chatbot Arena: Live LLM Evaluation
+   https://www.emergentmind.com/topics/chatbot-arena
+   (Jul 2, 2025)
+   Chatbot Arena is an open, crowdsourced platform for evaluating LLMs through pairwise model battles in real-world conversational settings.
+
+23. What Is the Chatbot Arena Conversation Benchmark? (2026)
+   https://futureagi.com/glossary/chatbot-arena-conversation-benchmark/
+   Chatbot Arena measures preference on real, open-ended conversations and produces an Elo ranking, which tracks production-relevant model quality more closely.
+
+24. Chatbot Arena 2026: How To Use It & Read The Rankings
+   https://messengerbot.app/chatbot-arena-explained-how-llm-leaderboards-actually-rank-ai-models-in-2026/
+   (Apr 11, 2026)
+   How to use Chatbot Arena to compare AI models, plus what the LLM leaderboard rankings actually mean in 2026.
+
+25. The AI industry is obsessed with Chatbot Arena, but it might ...
+   https://techcrunch.com/2024/09/05/the-ai-industry-is-obsessed-with-chatbot-arena-but-it-might-not-be-the-best-benchmark/
+   (Sep 5, 2024)
+   Chatbot Arena, a crowdsourced benchmark designed to capture the “nuanced” aspects of models and their performance on open-ended, real-world tasks.
+
+26. Chatbot arena - Elo ratings overtime : r/LocalLLaMA
+   https://www.reddit.com/r/LocalLLaMA/comments/18r56fq/chatbot_arena_elo_ratings_overtime/
+   (2 years ago)
+   I agree that this is less than expected given the underlying capabilities ... No, what he means is that the ELO scoring system is not linear. A ...
+
+27. Evaluating LLMs: Insights from Chatbot Arena | PDF
+   https://www.scribd.com/document/839044623/lseg-comparing-large-language-models
+   The Elo rating system is a method originally used in chess to estimate the relative skill levels of players. In Chatbot Arena, it is used to calculate 'Arena ...
+
+28. Final performance is uncorrelated with general capability. ...
+   https://www.researchgate.net/figure/Final-performance-is-uncorrelated-with-general-capability-We-use-Chatbot-Arena-Elo_fig3_403683152
+   Final performance is uncorrelated with general capability. We use Chatbot Arena Elo scores as a proxy for capability. The dashed line shows linear fit (R² = ...
+
+29. Investigating Non-Transitivity in LLM-as-a-Judge
+   https://openreview.net/forum?id=clJIQ4TKR0&noteId=wkKB9kHWdY
+   In our work, we approximate the oracle using Elo scores from Chatbot Arena's crowdsourced rankings, as these are generated through randomized anonymous ...
+
+30. The AI Chatbot Era Is Ending. Teams Are Optimizing the ...
+   https://tylerfolkman.substack.com/p/the-ai-chatbot-era-is-ending-teams
+   (1 week ago)
+   The next AI skill is not prompting. It is knowing what work to delegate, what authority to give, and what evidence proves the agent finished.
+
+31. AI Chatbot Arena: The Race for the Top Elo Score in 2024!
+   https://www.youtube.com/watch?v=UhOlhJWbwIs
+   (1 year ago)
+   Discover the intense battle among leading AI companies like OpenAI, Anthropic, and Google in the Chatbot Arena! Who's dominating the Elo ...
+
+32. Nicolas Espinoza's Post
+   https://www.linkedin.com/posts/nickman_chatbot-arena-is-no-longer-relevant-chatbot-activity-7301534310988177430-H_6a
+   (Mar 1, 2025)
+   Chatbot Arena is no longer relevant. Chatbot Arena, uses a version of the Elo rating algorithm to aggregate human preferences into a unified ...
+
+33. The debate over understanding in AI's large language models
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC10068812/
+   by M Mitchell · 2023 · Cited by 694 — We survey a current, heated debate in the artificial intelligence (AI) research community on whether large pretrained language models can be said to understand ...
+
+34. LM Arena's Factuality Leaderboard Reveals OpenAI Leads ...
+   https://alphasignal.ai/news/lm-arena-s-factuality-leaderboard-reveals-openai-leads-while-meta-falls-13-spots
+   (3 days ago)
+   Arena then feeds those results into a Bradley-Terry rating system, similar to Elo for pairwise competitions. Over 6 million votes from users ...
+
+35. Auto Arena of LLMs: Automating LLM Evaluations with ...
+   https://arxiv.org/html/2405.20267v1
+   (May 30, 2024)
+   Table 1 shows the Spearman correlations with Chatbot Arena scores achieved by various benchmarks. ... ELO scores with 92.86% correlation ...
+
+36. A Survey of the Science of Evaluation, Benchmarking, ...
+   https://ieeexplore.ieee.org/iel8/6287639/11323511/11488866.pdf
+   by S Sheikhi · 2026 · Cited by 8 — Chatbot Arena takes a different approach, using crowd- sourced, pairwise comparisons of anonymous models in live conversations to generate a ...
+
+[PeopleAlsoAsk]
+  - What is Elo rating for AI models?
+  - Are friendly AI chatbots less accurate and support false beliefs?
+  - How does Chatbot Arena work?
+
+[RelatedSearches] Chatbot arena elo not correlate real capability divergence criticism github | Chatbot Arena Elo score | Chatbot Arena leaderboard | Elo score llm arena | Elo rating for llms | LMSYS Chatbot Arena | Arena AI | LMSYS Elo
+
+===== Query 2/6: Chatbot Arena style control length markdown bias vote =====
+
+1. Does style matter? Disentangling style and substance in Chatbot ...
+   https://www.lmsys.org/blog/2024-08-28-style-control/
+   (Aug 29, 2024)
+   We controlled for the effect of length and markdown, Style indeed has a strong effect on models' performance in the leaderboard. When ...
+
+2. Improving Your Model Ranking on Chatbot Arena by Vote Rigging
+   https://arxiv.org/html/2501.17858v1
+   (Jan 29, 2025)
+   Here we aim to investigate whether our vote rigging is still effective when conducted on the length-control leaderboard. As illustrated in ...
+
+3. Why are model arena leaderboards dominated by slop?
+   https://www.seangoedecke.com/lmsys-slop/
+   (Apr 14, 2025)
+   Instead of naively ranking models by who got the most votes, they introduced statistical controls for answer length and number of markdown ...
+
+4. In the Arena: How LMSys changed LLM Benchmarking Forever
+   https://www.latent.space/p/lmarena
+   (Nov 1, 2024)
+   LMArena's leads on pioneering LLM evals with ChatBot Arena and MT-Bench, adjusting for human bias with Style Control, and replacing static benchmarks with ...
+
+5. In LM Arena leaderboards like LMSYS Chatbot Arena, "no style ...
+   https://x.com/grok/status/1959511768805552618?lang=en
+   (Aug 24, 2025)
+   "no style control" means evaluations don't adjust for response styles, such as length, verbosity, or formatting (e.g., markdown, lists). This ...
+
+6. Arena-Hard-Auto: An automatic LLM benchmark. - GitHub
+   https://github.com/lmarena/arena-hard-auto
+   Style Control is now supported in Arena-Hard-Auto. a cheaper and faster approximator to human preference. To control for style (token length and markdown ...
+
+7. Style Control: Does Style Matter? A Closer Look at Chatbot Arena
+   https://sophon.at/papers/style-control-paper
+   Chatbot Arena LMSYS post and follow-up analysis showing that response length and markdown formatting account for a large share of Arena Elo, and introducing a ...
+
+8. Chatbot Arena - a Hugging Face Space by lmarena-ai
+   https://huggingface.co/spaces/lmarena-ai/chatbot-arena
+   This application shows a text leaderboard by displaying a webpage within an iframe. Users do not need to provide any input; they simply view the leaderboard ...
+
+9. LMSys publishes a version of Arena known as style control ... - Reddit
+   https://www.reddit.com/r/singularity/comments/1f4c54y/lmsys_publishes_a_version_of_arena_known_as_style/
+   (Aug 30, 2024)
+   LMSys publishes a version of Arena known as style control, to see how lengthy and well-formatted responses changed the scores.
+
+10. Michael Becker's Post - LinkedIn
+   https://www.linkedin.com/posts/mdbecker_does-style-matter-disentangling-style-and-activity-7235619969374302208-UVfT
+   (Aug 31, 2024)
+   Their study showed big shifts in model rankings when they controlled for "style" versus "substance" in responses. ... Does style matter?
+
+11. LMArena Research: Does Sentiment Matter in AI?
+   https://arena.ai/blog/sentiment-control/
+   (Apr 22, 2025)
+   Overall Chatbot Arena ranking vs Style and Sentiment Control ranking Figure 2. Style Control ranking vs Style and Sentiment Control ranking.
+
+12. Arena Elo Explained: How LMArena Chatbot Rankings Work
+   https://benchlm.ai/blog/posts/chatbot-arena-elo-explained
+   (5 days ago)
+   In Chatbot Arena: Each model starts with a default rating; Every human preference vote updates both models' ratings; More votes mean more ...
+
+13. Chatbot Arena Style control (20240828) - Colab - Google
+   https://colab.research.google.com/drive/19VPOril2FjCX34lJoo7qn4r6adgKLioY
+   (Aug 28, 2024)
+   We use the gdown function to download the data. The data contains all the battels and voting results collected for ranking models.
+
+14. Non-style controlled Arena Score removed from the Chatbot ...
+   https://manifold.markets/Bayesian/nonstyle-controlled-arena-score-rem
+   (May 28, 2025)
+   Yesterday, "Style Control" on lmarena.ai was made default, meaning lmarena.ai/leaderboard will show the Elo of the model if adjusted to the style the ...
+
+15. Chatbot Arena +
+   https://openlm.ai/chatbot-arena/
+   (2 days ago)
+   This leaderboard is based on the following benchmarks. Arena + — an agent-driven battle platform for large language models (LLMs).
+
+16. Understanding the recent criticism of the Chatbot Arena
+   https://simonwillison.net/2025/Apr/30/criticism-of-the-chatbot-arena/
+   (Apr 30, 2025)
+   We establish that the ability of these providers to choose the best score leads to biased Arena scores due to selective disclosure of ...
+
+17. 7 Popular LLM Benchmarks Explained [OpenLLM ...
+   https://www.youtube.com/watch?v=aOjgPJ94-aM
+   (2 years ago)
+   Check out my website here! https://leaderboard.bycloud.ai/ In this video, I will be going through and explain the benchmarks for Chatbot Arena ...
+
+18. Hundreds of rigged votes can skew AI model rankings on ...
+   https://www.fastcompany.com/91273226/rigged-votes-ai-model-rankings-chatbot-arena
+   (Feb 6, 2025)
+   On Chatbot Arena, users can state their preference for one chatbot's output over the other when put through a battery of tests. The results of ...
+
+19. Blind testing your chatbot, Arena style · Blog
+   https://www.liip.ch/en/blog/blind-testing-your-chatbot-arena-style
+   (Feb 24, 2026)
+   The problem is bias. If you know that Response A comes from the expensive model and Response B from the cheaper one, you'll unconsciously read ...
+
+20. RepoChat Arena from LMArena
+   https://arena.ai/blog/repochat-arena/
+   (Feb 12, 2025)
+   Style Control. Style (length and Markdown formatting) significantly impacts model ranking. A better formatted or visually appealing answer ...
+
+21. LMArena Reviewed: Best AI Benchmark in 2026?
+   https://www.aichatdaily.com/tools/lmarena
+   (Apr 24, 2026)
+   Human vote biases influence results (formatting, length, style) · Doesn't directly measure truthfulness or accuracy · Models optimize specifically ...
+
+22. Understanding LMArena's Leaderboard Update Frequency
+   https://ithy.com/article/how-often-lmarena-updates-leaderboard-7jnrhqzn
+   For instance, enhancements like Style Control in Arena-Hard-Auto, which accounts for attributes like token length and markdown elements, require additional ...
+
+23. What Is the Chatbot Arena Conversation Benchmark? (2026)
+   https://futureagi.com/glossary/chatbot-arena-conversation-benchmark/
+   Use the Chatbot Arena benchmark for human-preference signal: side-by-side votes, Elo leaderboard, plus pairwise eval for your own model shortlists.
+
+24. Chatbot Arena Leaderboard Updates (Week 4)
+   https://www.lmsys.org/blog/2023-05-25-leaderboard/
+   (May 25, 2023)
+   We provide a Google Colab notebook to analyze the voting data, including the computation of the Elo ratings. You can also try the voting demo.
+
+25. Homework Drafts
+   http://modelai.gettysburg.edu/2026/lmarena/assignment/solution/Model_Rank%20Intro%20Paper_Solutions.pdf
+   What are some limitations that still exist within Chatbot Arena? (Answer: Biased users). 6. What is the purpose of Vibecheck, and how is it measured? (Answer ...
+
+26. moved around text for asthetics purposes
+   https://huggingface.co/spaces/awacke1/lmsys-chatbot-arena-leaderboard/commit/e121d4e7b1a794fb3114fbe485b18275ef87c252
+   (Mar 31, 2024)
+   LMSYS [Chatbot Arena](https://lmsys.org/blog/2023-05-03-arena/) is a crowdsourced open platform for LLM evals. 29. - We've collected over ...
+
+27. AI Arena 2026 — Compare AI Models in Blind Side- ...
+   https://llm-stats.com/arenas
+   The AI arena where models compete head-to-head in blind matchups. Compare image generators, video creators, coding agents, and LLMs — then vote for the best ...
+
+28. Arena - Text Style Control by LMArena - Sophon
+   https://sophon.at/leaderboards/lmarena-text-style-control
+   Human-preference voting. No underlying benchmark - models are ranked by pairwise votes, not by a test you can run. Operator: LMArena.
+
+29. Lmarena making style controll default really changed the ...
+   https://www.reddit.com/r/singularity/comments/1m3qm4l/lmarena_making_style_controll_default_really/
+   (12 months ago)
+   Lmarena making style controll default really changed the perceived quality of models (for me). Lot of peoplewould have said "grok 4 better than ...
+
+30. Chatbot Arena update! We added a new "Style Control ...
+   https://x.com/arena/status/1833582238983934078
+   (1 year ago)
+   Chatbot Arena update! We added a new "Style Control" button to the leaderboard! Now you can apply it to Overall and Hard Prompts to see how ...
+
+31. AI Mastermind | Build Real Things
+   https://mastermind.thomasmeli.com/resources/ai-rankings
+   The central arena where community blind votes shape Elo rankings across text, vision, code, and video. Multi-ModalBlind VoteElo. Visit leaderboard.
+
+32. CodeArenaEval
+   https://codearenaeval.github.io/
+   We present a rigorous human-curated benchmark codearena to emulate the complexity and diversity of real-world coding tasks.
+
+33. AI Model Leaderboards & Benchmarks
+   https://labs.scale.com/leaderboard
+   Explore leaderboards with expert-driven LLM benchmarks and updated AI model rankings across coding, reasoning and more.
+
+[PeopleAlsoAsk]
+  - What is LMArena style control?
+  - What is arena hard benchmark?
+
+[RelatedSearches] Lmarena leaderboard remove style controls | Improving Your model ranking on Chatbot Arena by Vote Rigging | Chatbot arena an open platform for evaluating llms by human preference openreview | Elmarena AI | Huggingface Chatbot Arena | Lmarena ai leaderboard changelog | Arena AI blog | Arena ai grant
+
+===== Query 3/6: LMArena company funding arena.ai 2025 =====
+
+1. LMArena Raises $150M Series A at $1.7B Valuation
+   https://www.linkedin.com/posts/arenaai_today-were-excited-to-announce-our-150m-activity-7414337603384209408-0Ahm
+   (6 months ago)
+   LMArena has raised a $150M Series A! $30M+ annualized revenue in 4 months Arena exists to measure and advance AI capabilities for real-world ...
+
+2. Investing in LMArena: The Reliability Layer for AI
+   https://a16z.com/announcement/investing-in-lmarena-the-reliability-layer-for-ai/
+   (May 28, 2025)
+   LMArena is building the infrastructure to make AI as boring as databases. That's why we're thrilled to be founding investors in LMArena's seed round.
+
+3. LMArena
+   https://en.wikipedia.org/wiki/LMArena
+   In April 2025, LMArena. LMArena raised $100 million in a seed funding round, valuing the company at $600 million. LMArena announced 17 April 2025).
+
+4. Arena Intelligence 2026 Company Profile
+   https://pitchbook.com/profiles/company/844374-70
+   Arena Intelligence has raised $250M. Who are Arena Intelligence's investors? 515 Ventures, Atacama Ventures, Cendana Capital, Gallery Ventures, and LDV Partners ...
+
+5. Fueling the World's Most Trusted AI Evaluation Platform
+   https://arena.ai/blog/series-a/
+   (Jan 6, 2026)
+   We're excited to share a major milestone in LMArena's journey. We've raised $150M of Series A funding led by Felicis and UC Investments ...
+
+6. Arena - Crunchbase Company Profile & Funding
+   https://www.crunchbase.com/organization/lmarena
+   Arena.ai is an AI evaluation platform that helps frontier AI labs and enterprises measure, benchmark, and improve AI models using real-world human feedback.
+
+7. LM Arena, the organization behind popular AI ...
+   https://techcrunch.com/2025/05/21/lm-arena-the-organization-behind-popular-ai-leaderboards-lands-100m/
+   (May 21, 2025)
+   LM Arena, a crowdsourced benchmarking project that major AI labs rely on to test and market their AI models, has raised $100 million in a seed funding round.
+
+8. LMArena, the startup behind the Chatbot Arena ...
+   https://www.instagram.com/p/DTMJQKXEdqV/
+   (6 months ago)
+   LMArena, the startup behind the Chatbot Arena benchmarking platform, raised $150 million in Series A funding at a $1.7 billion valuation, ...
+
+9. Arena.ai
+   https://x.com/arena/status/1925241333310189804?lang=en
+   (1 year ago)
+   We're excited to share that we've raised $100M in seed funding to support LMArena and continue our research on reliable AI.
+
+10. AI evaluation platform LMArena is becoming a real startup
+   https://siliconangle.com/2025/04/17/ai-evaluation-platform-lmarena-becoming-real-startup/
+   (Apr 17, 2025)
+   The founders of the popular generative artificial intelligence benchmarking platform LMArena have said they're founding an official company called Arena ...
+
+11. LMArena Lands $150 Million, Valuation Rockets to $1.7 ...
+   https://www.reddit.com/r/AIGuild/comments/1q7scxu/lmarena_lands_150_million_valuation_rockets_to_17/
+   (6 months ago)
+   AI model-comparison platform LMArena raised $150 million, tripling its worth to $1.7 billion in eight months. Big-name investors like Felicis, ...
+
+12. LMArena Raises $150 Million to Build the World's Most ...
+   https://www.prnewswire.com/news-releases/lmarena-raises-150-million-to-build-the-worlds-most-trusted-ai-evaluation-platform-302653012.html
+   (Jan 6, 2026)
+   This investment accelerates LMArena's mission to measure and advance the frontier of AI for real-world use, enabling developers, researchers, ...
+
+13. New Product: AI Evaluations
+   https://arena.ai/blog/ai-evaluations/
+   (Sep 16, 2025)
+   LMArena's AI Evaluations include: Comprehensive, in-depth ... funding and support for independent research advancing the scientific foundations of ...
+
+14. Funding news: LMArena (formerly Chatbot Arena) has ...
+   https://www.facebook.com/thedollarstory/posts/funding-news-lmarena-formerly-chatbot-arena-has-successfully-secured-150-million/122134685390987253/
+   (Jan 9, 2026)
+   Funding news: LMArena (formerly Chatbot Arena) has successfully secured $150 million in Series A funding, skyrocketing its valuation to $1.7 ...
+
+15. Arena AI | Valuation, Funding Rounds & Stock Price
+   https://www.caplight.com/company/lmarena-ai
+   Arena AI Funding Rounds ; Series A, Jan 6, 2026. lock_neutral_700 Unlock ; Seed, May 21, 2025. lock_neutral_700 Unlock.
+
+16. LMArena Raises $150 Million at a $1.7 Billion Valuation ...
+   https://www.instagram.com/reel/DTS7YTxiBQZ/
+   (6 months ago)
+   LMArena has raised $150 million in its latest funding round, bringing its post-money valuation to $1.7 billion. The round was led by Felicis and ...
+
+17. Report: LMArena Business Breakdown & Founding Story
+   https://research.contrary.com/company/lmarena
+   (Sep 11, 2025)
+   Copilot Arena is LMArena's evaluation platform for AI coding ... funding outside Meta's investment as of June 2025. Unlike LMArena ...
+
+18. About Arena | Crowdsourced AI Model Evaluation Platform
+   https://arena.ai/about
+   Created by researchers from UC Berkeley, Arena (formerly LMArena) is a community-powered platform for understanding AI performance in the real world. Tens ...
+
+19. LMArena - Seed Round - by Jesse Landry - DevCuration
+   https://devcuration.substack.com/p/lmarena-seed-round
+   And yesterday, they got $100 million to widen it. This isn't your typical “AI startup gets funding” blip in the feed. This is Arena Intelligence ...
+
+20. AI startup LMArena triples its valuation to $1.7 billion in ...
+   https://www.reuters.com/technology/ai-startup-lmarena-triples-its-valuation-17-billion-latest-fundraise-2026-01-06/
+   (Jan 6, 2026)
+   LMArena said on Tuesday its valuation had tripled to $1.7 billion in about eight months, following a new funding round where it raised $150 ...
+
+21. LM Arena, the organization behind popular AI ...
+   https://sg.finance.yahoo.com/news/lm-arena-organization-behind-popular-185214285.html
+   (May 21, 2025)
+   LM Arena, a crowdsourced benchmarking project that major AI labs rely on to test and market their AI models, has raised $100 million in a seed funding round.
+
+22. [State of Evals] LMArena's $1.7B Vision — Anastasios ...
+   https://www.youtube.com/watch?v=NBnOk0Uy9ig
+   (6 months ago)
+   ..., raising $150m at a $1.7B valuation, with $30M annualized consumption revenue (aka $2.5m MRR) after their September evals product launch.
+
+23. Chatbot Arena Group Goes From Academic Project to $600 ...
+   https://www.bloomberg.com/news/articles/2025-05-21/lmarena-goes-from-academic-project-to-600-million-startup
+   (May 21, 2025)
+   The group has spun out into a new company, called LMArena, that's raised $100 million in seed funding from a slate of A-list investors.
+
+24. Arena IPO: Investment Opportunities & Pre-IPO Valuations
+   https://forgeglobal.com/lmarena_ipo/
+   Company details. LMArena is a technology company that offers comprehensive AI model evaluation and comparison tools for enterprises and researchers. arena.ai/.
+
+25. LMArena Raises $100M to Scale AI Model Evaluation ...
+   https://theaiinsider.tech/2025/07/02/lmarena-raises-100m-to-scale-ai-model-evaluation-platform-at-600m-valuation/
+   (Jul 2, 2025)
+   LMArena, the company behind the AI benchmarking service Chatbot Arena, has raised $100 million in seed funding at a $600 million valuation.
+
+26. LMArena and The Future of AI Reliability
+   https://arena.ai/blog/new-lmarena/
+   (May 27, 2025)
+   We've raised $100M in seed funding to continue advancing that mission, and to keep improving the platform for everyone who uses it.
+
+27. How two Berkeley roommates built a $1.7B startup that ...
+   https://www.founded.com/lmarena-arena-ai-ranking-tool-startup-founders/
+   (Feb 27, 2026)
+   By January 2026, investors doubled down. LMArena raised $150 million in Series A funding at a $1.7 billion valuation , bringing total capital to ...
+
+28. LMArena Secures $150 Million Series A
+   https://www.cooley.com/news/coverage/2026/2026-01-06-lmarena-secures-$150-million-series-a
+   (Jan 6, 2026)
+   Cooley advised LMArena, the community platform redefining how the world measures the progress of artificial intelligence, on its $150 million ...
+
+29. AI Evaluation Startup LMArena Valued at $1.7 Billion in ...
+   https://www.theinformation.com/articles/ai-evaluation-startup-lmarena-valued-1-7-billion-new-funding-round
+   (Jan 6, 2026)
+   LMArena secured $150 million in new funding, reaching a $1.7 billion valuation. Startup provides widely cited AI model rankings for major tech ...
+
+30. Arena AI $150M Series A Funding (2026)
+   https://fundup.ai/recently-funded-startups/company/VnRf0Bz6JhJSTylOEt0G/arena-ai
+   Arena AI raised $150M in a Series A round (2026). See lead investors, key contacts, tech stack, and AI-powered insights on Fundup AI.
+
+31. 29 Individuals Valued at $12 Billion
+   https://eu.36kr.com/en/p/3646006594473858
+   (Jan 18, 2026)
+   Recently, US AI startup LMArena announced the completion of its Series A financing, raising $150 million. Its post - investment valuation ...
+
+32. Chatbot Arena Rebrands as LMArena, Becomes a Company
+   https://www.maginative.com/article/chatbot-arena-rebrands-as-lmarena-becomes-a-company/
+   (Apr 17, 2025)
+   Popular AI testing platform Chatbot Arena is transforming into a company called Arena Intelligence Inc. to expand its widely-used model ...
+
+33. Arena reaches $100M annual revenue run rate eight ...
+   https://cryptobriefing.com/arena-100m-revenue-run-rate-launch/
+   (Jun 29, 2026)
+   The research project spun out into a company in spring 2025. Within weeks, it had closed a $100 million seed round at a $600 million valuation.
+
+34. LMArena Secures $150M Series A Funding from a16z and ...
+   https://beamstart.com/news/a16z-lightspeed-back-150m-series-17677533882181
+   (Jan 7, 2026)
+   The funding round, which comes just months after a $100 million seed round in May 2025, reflects the growing investor confidence in AI ...
+
+35. Watch LMArena Secures $100M in Seed Funding Led by A16z
+   https://www.bloomberg.com/news/videos/2025-06-05/lmarena-secures-100m-in-seed-funding-led-by-a16z-video
+   They discuss the need for AI progress through competition live from the Bloomberg Tech Summit in San Francisco. Playlist. LMArena Secures $100M ...
+
+36. LM Arena Secures $100M In Pivotal AI Funding Round
+   https://bitcoinworld.co.in/lm-arena-secures-funding/
+   (May 22, 2025)
+   LM Arena, a project vital for crowdsourced benchmarking of AI models, has successfully closed a seed funding round, securing a remarkable $100 million.
+
+37. LMArena Raises $150M Series A at $1.7B Valuation - VKTR
+   https://www.vktr.com/ai-news/lmarena-raises-150m-series-a-at-17b-valuation/
+   (Jan 6, 2026)
+   LMArena secured $150M Series A led by Felicis and UC Investments, among others. · The platform's community saw a 25x user increase and widespread ...
+
+===== Query 4/6: GPQA contamination saturation frontier reasoning =====
+
+1. ATLAS: A High-Difficulty, Multidisciplinary Benchmark for Frontier ...
+   https://arxiv.org/html/2511.14366v1
+   (Nov 18, 2025)
+   In response to the challenges of benchmark saturation and data contamination faced by current large model evaluations, this paper proposes and ...
+
+2. LLM Benchmark Methodology 2026: Reading Leaderboards
+   https://www.digitalapplied.com/blog/llm-benchmark-methodology-2026-contamination-leaderboard-guide
+   (May 27, 2026)
+   GPQA Diamond is approaching saturation for frontier-tier models. MMLU-Pro tried to extend MMLU's life with 12,000 graduate-level questions ...
+
+3. The LLM Benchmark Landscape: Saturation, Contamination, and ...
+   https://techjacksolutions.com/ai-tools/meta-llama/llm-benchmark-landscape/
+   (Jun 5, 2026)
+   Contamination is when benchmark test questions leak into a model's training data. When that happens, the model can recall the answer from memory ...
+
+4. GPQA Diamond | Epoch AI
+   https://epoch.ai/benchmarks/gpqa-diamond
+   The GPQA (Graduate-Level Google-Proof Q&A) dataset is a collection of challenging multiple-choice questions in biology, physics, and chemistry.
+
+5. GPQA: The Graduate-Level Benchmark Every Major AI Lab Uses
+   https://www.mindstudio.ai/blog/gpqa-benchmark-graduate-level-google-proof-qa-creator-limits
+   (May 5, 2026)
+   David Rein created the GPQA benchmark — graduate-level, Google-proof QA — and it's now used by every major AI lab as a capability benchmark.
+
+6. On The Fragility of Benchmark Contamination Detection in ...
+   https://openreview.net/forum?id=bhR00j6Mku
+   This paper investigates contamination detection methods for benchmarks in base models when they are being conditioned as LRMs via SFT and RL, and in advanced ...
+
+7. Is AI Cheating on the Test: Data Contamination, Gaming ... - Medium
+   https://medium.com/@wasowski.jarek/is-ai-cheating-on-the-test-data-contamination-gaming-and-the-benchmark-crisis-9dff2fba494f
+   (Mar 4, 2026)
+   Three problems compounded: saturation (frontier models hit the ceiling on every benchmark), pervasive contamination (Yi-34B with a “94% chance ...
+
+8. Prescriptive Scaling for Language Models - Jikai Jin
+   https://jkjin.com/prescriptive-scaling/
+   (Feb 7, 2026)
+   We apply prescriptive scaling as a diagnostic tool for two recurring evaluation problems: saturation and contamination. Saturation is strongly ...
+
+9. Large Language Model Benchmarks: A Taxonomy of Capabilities ...
+   https://www.mdpi.com/2504-4990/8/6/141
+   Scientific reasoning (GPQA Diamond) exhibits ceiling effects approaching saturation ... This >97% clustering indicates MATH-500 saturation for frontier reasoning ...
+
+10. What LLM Benchmarks Don't Measure - Contamination, Saturation ...
+   https://benchmarkingagents.com/what-these-benchmarks-miss/
+   GPQA-Diamond measures PhD-level scientific reasoning under controlled conditions (multiple choice, no time pressure, English language, single-domain questions).
+
+11. GPQA Diamond: What's Left? - by Greg Burnham - Epoch AI
+   https://epochai.substack.com/p/gpqa-diamond-whats-left
+   Multiple frontier models seem to be getting exactly 83% on GPQA diamond - but is this a sign of model limitations or benchmark saturation?
+
+12. GPQA-Diamond Benchmark: Scores, Leaderboard & How AI Models ...
+   https://intuitionlabs.ai/articles/gpqa-diamond-ai-benchmark
+   In sum, GPQA-Diamond has become a de facto testbed across AI research and industry for gauging “frontier reasoning ability.” Its usage spans ...
+
+13. GPQA Diamond - Vals AI
+   https://vals.ai/benchmarks/gpqa
+   GPQA Diamond. Academic. Updated: 7/10/2026. Graduate-level Google-Proof Q&A benchmark evaluating models on questions that require deep reasoning.
+
+14. Investigating Data Contamination in Modern Benchmarks for Large ...
+   https://www.researchgate.net/publication/382633331_Investigating_Data_Contamination_in_Modern_Benchmarks_for_Large_Language_Models
+   First, Frontier models readily generate detailed image descriptions and elaborate reasoning traces, including pathology-biased clinical findings, for images ...
+
+15. Daily AI Wire News' Post - LinkedIn
+   https://www.linkedin.com/posts/daily-ai-wire_ai-benchmarks-unmasking-contamination-saturation-activity-7459649061025988609-fYO7
+   AI Benchmarks: Unmasking Contamination, Saturation, and Algorithmic Cheats 🛰️ [LLMS] AI benchmarks are often misleading due to data ...
+
+16. GPQA Diamond Benchmark Leaderboard - Artificial Analysis
+   https://artificialanalysis.ai/evaluations/gpqa-diamond
+   Compare AI model performance on GPQA Diamond Benchmark Leaderboard. The most challenging 198 questions from GPQA, where PhD experts achieve 65% accuracy but ...
+
+17. Benchmark Contamination in LLMs: Detection & Mitigation Strategies
+   https://mbrenndoerfer.com/writing/benchmark-contamination-llm-detection-mitigation
+   As benchmarks become saturated, the pressure to reach state-of-the-art results encourages looking the other way on potential contamination.
+
+18. On The Fragility of Benchmark Contamination Detection in ... - arXiv
+   https://arxiv.org/html/2510.02386v2
+   Benchmark contamination detection methods aim to identify whether evaluation datasets have been exposed during training (Oren et al., 2023) .
+
+19. Data Contamination or Genuine Generalization? Disentangling LLM ...
+   https://www.suaspress.org/ojs/index.php/AJNS/article/view/v2n2a03
+   This paper proposes a three-tier framework to disentangle these effects, combining n-gram alignment, canary insertion, and perturbation testing.
+
+20. GPQA: A Graduate-Level Google-Proof Q&A Benchmark
+   https://openreview.net/forum?id=Ti67584b98
+   We present GPQA, a challenging dataset of 448 multiple-choice questions written by domain experts in biology, physics, and chemistry.
+
+21. Investigating Data Contamination in Modern Benchmarks ...
+   https://arxiv.org/abs/2311.09783
+   by C Deng · 2023 · Cited by 303 — In this paper we study data contamination by proposing two methods tailored for both open-source and proprietary LLMs.
+
+22. a data‑driven assessment of large language models in 2025
+   https://papers.ssrn.com/sol3/Delivery.cfm/5991894.pdf?abstractid=5991894&mirid=1
+   (Dec 30, 2025)
+   Examples: MMLU family, GPQA, AIME-style tasks, MMMU. Primary use: broad capability screening common risks: saturation, contamination, prompt.
+
+23. The frontier of AI benchmarks: Q&A with an expert
+   https://news.mst.edu/2026/02/the-frontier-of-ai-benchmarks-qa-with-an-expert/
+   (Feb 4, 2026)
+   It uses new, unpublished problems across modern math areas and is designed to reduce contamination. In the original FrontierMath report, state- ...
+
+24. Introducing the AI Frontier Model Tracker
+   https://www.demandsphere.com/blog/ai-frontier-model-tracker-launch/
+   (Apr 12, 2026)
+   GPQA Diamond has become the most trusted reasoning benchmark because it produces meaningful 15-point spreads between top models. Gemini 3.1 Pro ...
+
+25. Evaluation
+   https://web.stanford.edu/class/cs224n/slides_w26/cs224n-2026-lecture12-evaluation.pdf
+   Data De-contamination! • Why does this happen? • Why internet data can be contaminated? • Why synthetic data can be contaminated? • Data de-contamination ...
+
+26. Details about METR's preliminary evaluation of DeepSeek- ...
+   https://metr.org/evaluations/deepseek-v3-report/
+   (Feb 12, 2025)
+   GPQA Performance Verification. One concern with the benchmark performance of frontier language models is data contamination: it's possible ...
+
+27. AI Benchmarks & Metrics
+   https://www.fullai.com/benchmarks
+   Hundreds of original research-level math problems crafted by mathematicians. Closed test set; no contamination. Frontier models score in the low double digits.
+
+28. Identifying Data Contamination in LLMs for Mathematical ...
+   https://repositum.tuwien.at/bitstream/20.500.12708/216244/1/Mathis%20Tobias%20Gallus%20-%202025%20-%20Identifying%20Data%20Contamination%20in%20LLMs%20for...pdf
+   (by TG Mathis · 2025)
+   Such contamination can artificially inflate performance metrics, particularly in domains where genuine reasoning must be distinguished from memorization. This ...
+
+29. OpenAI: Detecting misbehavior in frontier reasoning models
+   https://www.alignmentforum.org/posts/7wFdXj9oR8M9AiFht/openai-detecting-misbehavior-in-frontier-reasoning-models
+   (Mar 10, 2025)
+   We recommend against applying strong optimization pressure directly to the CoTs of frontier reasoning models, leaving CoTs unrestricted for ...
+
+30. LLM Evaluation and Benchmarking 2026 | Zylos Research
+   https://zylos.ai/research/2026-01-16-llm-evaluation-benchmarking/
+   (Jan 16, 2026)
+   As of 2026, traditional benchmarks like MMLU show saturation (88%+ scores), pushing the field toward harder tests like GPQA and domain-specific ...
+
+31. LLM Leaderboard Explained 2026: Arena, GPQA, SWE- ...
+   https://futureagi.com/blog/llm-leaderboard-explained/
+   As of 2025 and 2026, GPQA Diamond is the most-watched reasoning benchmark because frontier models saturated MMLU and HumanEval but still see room on GPQA.
+
+[PeopleAlsoAsk]
+  - How accurate is the GPQA diamond?
+  - What is data contamination in AI?
+
+[RelatedSearches] Gpqa contamination saturation frontier reasoning example | Gpqa contamination saturation frontier reasoning github
+
+===== Query 5/6: Humanity's Last Exam saturation 2025 score progress =====
+[AnswerBox] For calibration: human experts score about 74% on HLE questions in their own domain of expertise; outside their specialty, experts score much lower, sometimes below the models. Progress has been rapid: early 2025 frontier models scored around 10-15%, and by early 2026 scores have tripled to the mid-40s.
+  https://benchlm.ai/blog/posts/hle-humanitys-last-exam
+
+1. Humanity's Last Exam
+   https://agi.safe.ai/
+   Given the rapid pace of AI development, it is plausible that models could exceed 50% accuracy on HLE by the end of 2025.
+
+2. Humanity's Last Exam scores over the past year : r/singularity - Reddit
+   https://www.reddit.com/r/singularity/comments/1jnx45g/humanitys_last_exam_scores_over_the_past_year/
+   (Mar 31, 2025)
+   Deep Research model achieves 26.6% on Humanity's Last Exam! GLM-5 lands with 50.4% on Humanity's Last Exam. Humanity's Last Exam scores over ...
+
+3. Humanity's Last Exam - Scale Labs Leaderboard
+   https://labs.scale.com/leaderboard/humanitys_last_exam
+   (Apr 3, 2025)
+   April 3, 2025 HLE has been finalized to 2,500 questions. This program ended on March 21, 2025. benchmarks become quickly saturated, Leaderboard ...
+
+4. Humanity's Last Exam Benchmark - by Nilesh Barla - Adaline Labs
+   https://labs.adaline.ai/p/humanitys-last-exam-benchmark-how
+   (May 12, 2025)
+   latest GPT-5 scores <30 scored less than 10%; By mid-August 2025, newer models showed notable progress. Grok-4 Heavy w/ Python + Internet has ...
+
+5. Humanity's Last Exam - Wikipedia
+   https://en.wikipedia.org/wiki/Humanity%27s_Last_Exam
+   An independent investigation by FutureHouse, published in July 2025, suggested that around 30% of the HLE answers for text-only chemistry and biology questions ...
+
+6. Humanity's Last Exam Benchmark Leaderboard - Artificial Analysis
+   https://artificialanalysis.ai/evaluations/humanitys-last-exam
+   Claude Fable 5 … currently has the highest Humanity's Last Exam score, with a score of 53.3% among models with published Humanity's Last Exam results.
+
+7. Researchers have engineered an exam so difficult that leading AI ...
+   https://www.facebook.com/ScienceNaturePage/posts/researchers-have-engineered-an-exam-so-difficult-that-leading-ai-models-score-as/1462092358704962/
+   (Mar 1, 2026)
+   A new benchmark, "Humanity's Last Exam," highlights the limits of current AI systems, with leading models scoring below 10% on complex, expert- ...
+
+8. Humanity's Last Exam - arXiv
+   https://arxiv.org/html/2501.14249v1
+   (Jan 24, 2025)
+   Given the rapid pace of AI development, it is plausible that models could exceed 50% accuracy on HLE by the end of 2025. ... HLE may be the last ...
+
+9. Humanity's Last Exam score in 2025? - Manifold Markets
+   https://manifold.markets/SG/humanitys-last-exam-score-in-2025
+   Claude 3.7 Sonnet Thinking (February 2025): 8.93% accuracy. Gemini 2.0 Flash Thinking (January 2025): 7.22% accuracy, 90.58% calibration error. Other models ...
+
+10. AI is failing 'Humanity's Last Exam'—so what does that ...
+   https://techxplore.com/news/2026-01-ai-humanity-exam-machine-intelligence.html
+   (Jan 30, 2026)
+   While AI chatbots score above 90% on popular tests, when Humanity's Last Exam was first released in early 2025, leading models struggled badly.
+
+11. CAIS and Scale AI Unveil Results of "Humanity's Last ...
+   https://www.prnewswire.com/news-releases/cais-and-scale-ai-unveil-results-of-humanitys-last-exam-a-groundbreaking-new-benchmark-302358108.html
+   (Jan 23, 2025)
+   The results demonstrated a significant improvement from the reasoning capabilities of earlier models, but current models still were only able to ...
+
+12. AI's highest score in Humanity's Last Exam in 2025?
+   https://www.metaculus.com/questions/31875/ais-highest-score-in-humanitys-last-exam-in-2025/
+   If we go by the "latest version" rule, then it should be 8.8%, I guess? But this is far from ideal: we know Deep Research would score much better, it's just ...
+
+13. Humanity last exam benchmark
+   https://www.youtube.com/shorts/PU8GJF4dz9o
+   (1 year ago)
+   Humanity last exam benchmark ... This content isn't available. Skip video.
+
+14. Humanity's Last Exam pushed AI to its limits - but did it pass?
+   https://www.earth.com/news/humanitys-last-exam-pushed-ai-to-its-limits-but-did-it-pass/
+   (Feb 27, 2026)
+   A global team developed Humanity's Last Exam, a rigorous new test built to expose gaps in today's most advanced AI models.
+
+15. Researchers build Humanity's Last Exam AI benchmark
+   https://www.edtechinnovationhub.com/news/global-research-team-creates-new-exam-to-test-the-limits-of-artificial-intelligence
+   (Mar 9, 2026)
+   Researchers have created Humanity's Last Exam, a tougher benchmark for advanced AI after older tests lost value at the top end.
+
+16. 'Humanity's Last Exam' benchmark is stumping top AI models
+   https://www.zdnet.com/article/humanitys-last-exam-benchmark-is-stumping-top-ai-models-can-you-do-any-better/
+   (Jan 27, 2025)
+   This is known as benchmark saturation. By contrast, Scale reported that current models only answered less than 10 percent of the HLE ...
+
+17. Humanity's Last Exam for AI: What the Benchmark Results ...
+   https://ucstrategies.com/news/ai-just-faced-humanitys-last-exam-and-the-results-were-brutal/
+   (Mar 9, 2026)
+   What the Humanity's Last Exam benchmark measures, how leading AI systems performed, and why the results need careful interpretation.
+
+18. Humanity's Last Exam: The AI Benchmark for LLM Reasoning
+   https://intuitionlabs.ai/articles/humanitys-last-exam-ai-benchmark
+   (Oct 8, 2025)
+   It tells us that despite astonishing gains in AI – from single-digit scores in early 2025 to the high 30s by early 2026 – machines today still ...
+
+19. Humanity's Last Exam - The Ultimate Test of AI's Reasoning
+   https://www.digitalbricks.ai/blog-posts/humanitys-last-exam---the-ultimate-test-of-ais-reasoning
+   (Jan 8, 2026)
+   Humanity's Last Exam reveals how far artificial intelligence can truly reason, and why AI education must evolve beyond basic understanding.
+
+20. Humanity's Last Exam — Design, Evaluation Pipeline, and ...
+   https://medium.com/@adnanmasood/humanitys-last-exam-design-evaluation-pipeline-and-reliability-considerations-a-field-guide-6262bb4cbf9f
+   (4 months ago)
+   But the Scale leaderboard (updated December 2025) shows the top multimodal score at ~37.5%, indicating HLE did not reach that 50% threshold by ...
+
+21. Humanity's Last Exam Benchmark
+   https://www.emergentmind.com/topics/humanity-s-last-exam-hle-1f7de843-ddb4-45fe-91ca-e65d0b0f3447
+   (Feb 5, 2026)
+   HLE contains approximately 2,000–2,500 questions, with ∼80% being exact-match, short-answer; the remainder are complex multiple-choice with at ...
+
+22. Humanity's Last Exam
+   https://arxiv.org/html/2501.14249v5
+   While current LLMs achieve very low accuracy on HLE, recent history shows benchmarks are quickly saturated – with models dramatically progressing from near-zero ...
+
+23. What is Humanity's Last Exam
+   https://reports.aimresearch.co/generative-ai/what-is-humanitys-last-exam
+   (Feb 7, 2025)
+   In conclusion, the rapid saturation of benchmarks like ARC-AGI, FrontierMath, and now Humanity's Last Exam marks a significant milestone in the ...
+
+24. New Google AI posts top marks in 'Humanity's Last Exam'
+   https://uk.finance.yahoo.com/news/google-ai-posts-top-marks-115919456.html
+   (Nov 19, 2025)
+   The AI model scored 41 per cent on Humanity's Last Exam, while also achieving new record scores on other benchmark tests. "Gemini 3 Deep Think ...
+
+25. Humanity's Last Exam for a rigorous assessment of AI ...
+   https://telefonicatech.com/en/blog/humanitys-last-exam-for-a-rigorous-assessment-of-ai-advances
+   (Feb 8, 2025)
+   In HLE they achieve significantly lower success rates and scores (less than 4%) than in previous tests. Image: Humanity's Last Exam.
+
+26. Humanity's Last Exam Benchmark
+   https://airank.dev/benchmarks/humanitys-last-exam
+   Comprehensive Humanity's Last Exam benchmark results comparing 3+ AI models ... Nov 18, 2025. Proprietary. 37.5%. #03 OpenAI GPT-5.2 · OpenAI. Dec 11, 2025.
+
+27. Highest score on Humanity's Last Exam before Dec 31, 2026
+   https://octagonai.co/markets/science-and-technology/ai/highest-score-on-humanity-s-last-exam-before-dec-31-2026/
+   (Dec 31, 2026)
+   As of May 20, 2026, a model achieved the highest reported score of 44.7% on Humanity's Last Exam (HLE), with another model also reported with a ...
+
+28. AI Benchmark Deep Dive: Gemini 2.5 and Humanity's Last ...
+   https://arize.com/blog/ai-benchmark-deep-dive-gemini-humanitys-last-exam/
+   (Apr 4, 2025)
+   We cover modern AI benchmarks, taking a look at Google's Gemini 2.5 release and its performance on key evaluations like Humanity's Last ...
+
+29. Humanity's Last Exam Leaderboard
+   https://llm-stats.com/benchmarks/humanity's-last-exam
+   Claude Mythos Preview from Anthropic currently leads the Humanity's Last Exam leaderboard with a score of 0.647 across 88 evaluated AI models. 1 Claude Mythos ...
+
+30. Zoom AI Hits 48.1% on Humanity's Last Exam - HowAIWorks.ai
+   https://howaiworks.ai/blog/zoom-humanitys-last-exam-breakthrough-2025
+   (Dec 15, 2025)
+   On December 10, 2025, Zoom revealed that its AI system achieved a score of 48.1% on "Humanity's Last Exam" (HLE), setting a new state-of-the ...
+
+31. What Is the Humanities Last Exam Benchmark? How ...
+   https://www.mindstudio.ai/blog/humanities-last-exam-benchmark-score-inflation-explained
+   (Apr 7, 2026)
+   As of mid-2025, the leading models score somewhere between 30% and 55% on the benchmark, depending on who's testing and how. That last part ...
+
+[PeopleAlsoAsk]
+  - Is HLE a good benchmark?
+  - What is the humanity's last exam leaderboard 2026?
+  - Why is it called Humanity's last exam?
+
+[RelatedSearches] Humanity's last exam saturation 2025 score progress reddit | Humanity's last exam saturation 2025 score progress pdf | Humanity's Last Exam questions PDF | Humanity's Last Exam leaderboard | Humanity's Last Exam human score | Humanity's last exam highest score | Humanity's Last Exam questions and answers | Humanity Last Exam
+
+===== Query 6/6: FrontierMath tier 4 o3 score contamination Epoch =====
+
+1. FrontierMath Tier 4 (v2) - Epoch AI
+   https://epoch.ai/benchmarks/frontiermath-tier-4-v2
+   On 2026-06-12, we released a major update, addressing errors in 42% of problems. Following this update, the full FrontierMath dataset consists of 338 problems.
+
+2. FrontierMath Tier 4 - Epoch AI : r/singularity - Reddit
+   https://www.reddit.com/r/singularity/comments/1j8iy3b/frontiermath_tier_4_epoch_ai/
+   (Mar 11, 2025)
+   o1 and o3 mini gave similar results as the 2024 numbers reported by OpenAI, possibly showing signs of contamination. a new high score among all ...
+
+3. FrontierMath: LLM Benchmark for Advanced AI Math Reasoning
+   https://epoch.ai/frontiermath/tiers-1-4
+   FrontierMath Tiers 1-4 is an AI benchmark of hundreds of unpublished and extremely challenging math problems. Tier 4 is research-level mathematics. addressed ...
+
+4. FrontierMath Tier 4: Battle Royale - Epoch AI | Substack
+   https://epochai.substack.com/p/frontiermath-tier-4-battle-royale
+   (Oct 13, 2025)
+   FrontierMath Tier 4 consists of 50 research-level math problems developed by professional mathematicians. Here it solved six problems (13%): is ...
+
+5. FrontierMath v2: When AI Benchmarks Get Error-Corrected
+   https://www.digitalapplied.com/blog/epoch-frontiermath-v2-error-corrected-ai-benchmark-analysis
+   (Jun 14, 2026)
+   Epoch AI shipped FrontierMath v2 on June 12, 2026 after an audit found small but critical errors in 42% of the original problems.
+
+6. Some lessons from the OpenAI-FrontierMath debacle - LessWrong
+   https://www.lesswrong.com/posts/8ZgLYwBmB3vLavjKE/some-lessons-from-the-openai-frontiermath-debacle
+   (Jan 19, 2025)
+   The highlight of the announcement was that o3 scored 25% on FrontierMath, a benchmark comprising hard, unseen math problems of which previous models could only ...
+
+7. FrontierMath: LLM Benchmark for Advanced AI Math Reasoning
+   https://epoch.ai/frontiermath/tiers-1-4/about
+   FrontierMath Tiers 1-4 is an AI benchmark of hundreds of unpublished and extremely challenging math problems. Epoch AI retains the right to conduct and publish ...
+
+8. Ken Ono's Post - LinkedIn
+   https://www.linkedin.com/posts/ken-ono-a972191a5_here-are-the-first-epoch-ai-tier-4-results-activity-7349569667788599296-C9G8
+   (Jul 11, 2025)
+   Introducing 𝗙𝗿𝗼𝗻𝘁𝗶𝗲𝗿𝗠𝗮𝘁𝗵 𝗧𝗶𝗲𝗿 𝟰: a benchmark of extremely challenging research-level math problems, designed to test the limits of AI's ...
+
+9. Share of FrontierMath problems solved correctly by AI models
+   https://ourworldindata.org/grapher/ai-frontiermath-over-time
+   (Jan 30, 2026)
+   Tier 4 contains 50 exceptionally difficult problems and is not included here. Scoring is all-or-nothing: models get 1 point for a correct final ...
+
+10. the o3 model enters elite mathematician territory! Solves the “4th ...
+   https://x.com/rohanpaul_ai/status/1951749337375023571
+   (Aug 2, 2025)
+   A fourth problem on FrontierMath Tier 4 has been solved by AI! Written by Dan Romik, it had won our prize for the best submission in the number ...
+
+11. FrontierMath: LLM Benchmark for Advanced AI Math ...
+   https://epoch.ai/frontiermath
+   FrontierMath is an AI benchmark consisting of extremely challenging math problems, including open research problems that remain unsolved by mathematicians.
+
+12. [2411.04872] FrontierMath: A Benchmark for Evaluating ...
+   https://arxiv.org/abs/2411.04872
+   by E Glazer · 2024 · Cited by 249 — FrontierMath uses new, unpublished problems and automated verification to reliably evaluate models while minimizing risk of data contamination.
+
+13. Import AI 420: Prisoner Dilemma AI; FrontierMath Tier 4
+   https://jack-clark.net/2025/07/14/import-ai-420-prisoner-dilemma-ai-frontiermath-tier-4-and-how-to-regulate-ai-companies/
+   (Jul 14, 2025)
+   AI testing organization Epoch AI has launched FrontierMath Tier 4 ... o3 model obtained a 25% score on the benchmark, surprising many ...
+
+14. AI model achieves massive leaps in math benchmarks
+   https://www.facebook.com/groups/evolutionunleashedai/posts/8901074533273552/
+   (1 year ago)
+   A 3.6b parameter model that was trained on 740k math problems has shown massive leaps in math benchmarks, with results similar to o1-mini (a significantly ...
+
+15. FrontierMath Tiers 1-3 (v1, old)
+   https://epoch.ai/benchmarks/frontiermath-tiers-1-3-v1
+   FrontierMath is a benchmark of hundreds of original, exceptionally challenging mathematics problems crafted and vetted by expert mathematicians.
+
+16. What I Wish I Knew About FrontierMath - by Greg Burnham
+   https://lemmata.substack.com/p/what-i-wish-i-knew-about-frontiermath
+   (1 year ago)
+   Epoch AI certainly recognizes the importance of this angle. They are currently working on a Tier 4 of problems, meant to be as hard as Tier 3 ...
+
+17. FrontierMath benchmark undergoes major audit as Epoch ...
+   https://cryptobriefing.com/frontiermath-benchmark-audit-errors/
+   (Jun 12, 2026)
+   Epoch AI's FrontierMath benchmark audit flagged errors in roughly one-third of its 350 math problems, raising questions about AI capability ...
+
+18. AI model scores ≥ 90% on FrontierMath Benchmark ...
+   https://polymarket.com/event/ai-model-scores-90-on-frontiermath-benchmark-before-2027
+   (Jun 18, 2026)
+   Top models have climbed from under 2% accuracy in late 2024 to 25-48% on Epoch AI's tiers by mid-2026, driven by improved chain-of-thought, tool ...
+
+19. AI Math Benchmarks Explained: GSM8K, FrontierMath & ...
+   https://medium.com/@QuarkAndCode/ai-math-benchmarks-explained-gsm8k-frontiermath-formalmath-0312ed178900
+   The FrontierMath paper argues that datasets like GSM8K and MATH mostly measure high school and early undergraduate ability and says that leading ...
+
+20. FrontierMath Tier 4 Benchmark Scores - AI IQ
+   https://www.aiiq.org/charts/frontiermath-tier-4-scores/
+   The chart compares FrontierMath Tier 4 % against Effective Cost (per 1M I/O Tokens), with color showing the model provider. Data sources. Artificial AnalysisARC ...
+
+21. FrontierMath: Open Problems - Unsolved Mathematical ...
+   https://epoch.ai/frontiermath/open-problems
+   A collection of unsolved mathematical problems designed to test AI systems' ability to advance human mathematical knowledge.
+
+22. What will be the best FrontierMath Tier 4 score by Dec 31, 2026?
+   https://manifold.markets/Bayesian/what-will-be-the-best-frontiermath
+   (Jan 16, 2026)
+   This market matches Mathematics: FrontierMath Tier 4 from the AI 2026 Forecasting Survey by AI Digest.
+
+See other manifold questions here
+
+[image]Resolution ...
+
+23. FrontierMath was funded by OpenAI
+   https://news.ycombinator.com/item?id=42763231
+   (Jan 19, 2025)
+   It seems to me that o3's 25% benchmark score is 100% data contamination. ... More so than data contamination, this makes me deeply mistrustful of ...
+
+24. Don't over-update on FrontierMath results
+   https://www.lesswrong.com/posts/9HfJbFy3ZZGzNsspw/don-t-over-update-on-frontiermath-results
+   (Mar 11, 2025)
+   We have access to o3-mini (high) now, which achieves 20% on FrontierMath given 8 tries, and gets 32% using a Python tool. This seems pretty close to o3's ...
+
+25. o3, Frontier Math, and the Future of Mathematics
+   https://www.galois.com/articles/o3-frontier-math-and-the-future-of-mathematics
+   (Jan 29, 2025)
+   Epoch recently announced they are planning Frontier Math Tier 4, an even harder dataset of problems. Their aim is that answering a Tier 4 ...
+
+26. FrontierMath: A Math Benchmark Testing the Limits of AI
+   https://www.youtube.com/watch?v=K-zQPqGAB0g
+   (1 year ago)
+   Epoch AI has introduced FrontierMath, a benchmark of hundreds of original, expert-crafted mathematics problems designed to evaluate advanced ...
+
+27. FrontierMath benchmark shows AI struggling with ...
+   https://aiworld.eu/story/frontiermath-benchmark-shows-ai-struggling-with-advanced-mathematics
+   (Jul 16, 2025)
+   Epoch AI's FrontierMath benchmark reveals current AI models perform poorly on advanced mathematical problems that take expert mathematicians ...
+
+28. OpenAI's o3 AI model scores lower on a benchmark than ...
+   https://techcrunch.com/2025/04/20/openais-o3-ai-model-scores-lower-on-a-benchmark-than-the-company-initially-implied/
+   (Apr 20, 2025)
+   Epoch found that o3 scored around 10%, well below OpenAI's highest claimed score. OpenAI has released o3, their highly anticipated reasoning ...
+
+29. Introducing FrontierMath Tier 4 - Epoch AI
+   https://x.com/EpochAIResearch/status/1943744462972215305?lang=en
+   (1 year ago)
+   Introducing FrontierMath Tier 4: a benchmark of extremely challenging research-level math problems, designed to test the limits of AI's ...
+
+30. GPT-5.5 is turning AI benchmarks into an audit problem
+   https://startupfortune.com/gpt-55-is-turning-ai-benchmarks-into-an-audit-problem/
+   (May 12, 2026)
+   Epoch AI says an AI-assisted review flagged fatal errors in about one-third of FrontierMath Tiers 1-4. The finding puts fresh pressure on AI
+
+31. OpenAI's o3: AI Benchmark Discrepancy Reveals Gaps in ...
+   https://www.techrepublic.com/article/news-openai-generative-ai-models-frontiermath-score/
+   (Apr 22, 2025)
+   The FrontierMath benchmark from Epoch AI tests generative models on difficult math problems. Find out how OpenAI's o3 and other AI models ...
+
+32. frontiermath:abenchmark for evaluating advanced ...
+   https://arxiv.org/pdf/2411.04872?
+   by E Glazer · 2024 · Cited by 225 — ABSTRACT. We introduce FrontierMath, a benchmark of hundreds of original, exceptionally challenging math- ematics problems crafted and ...
+
+33. An OpenAI Math Test Raises Eyebrows
+   https://www.theinformation.com/newsletters/ai-agenda/an-openai-math-test-raises-eyebrows
+   (Jan 23, 2025)
+   ... score on FrontierMath, a test of AI models' math abilities that Epoch AI developed ... o3's score, along with frustration from AI observers.
+
+34. Is AI already superhuman on FrontierMath? - by Anson Ho
+   https://epochai.substack.com/p/is-ai-already-superhuman-on-frontiermath
+   o4-mini-medium scored 22% on the FrontierMath human baseline competition, outperforming the average team (19%) but falling short of the combined score across ...
+
+35. Benchmarks
+   https://epoch.ai/benchmarks/search
+   Evaluated by Epoch AI. FrontierMath Tier 4 (v2). Exceptionally difficult research-level math problems. box icon 39 models evaluated models. Highest score88%.
+
+36. OpenAI Secretly Funded Benchmarking Dataset Linked To ...
+   https://www.searchenginejournal.com/openai-secretly-funded-frontiermath-benchmarking-dataset/537760/
+   (Jan 20, 2025)
+   OpenAI secretly funded and had access to a benchmarking dataset, raising questions about high scores achieved by its new o3 AI model.
+
+37. OpenAI quietly funded independent math benchmark before ...
+   https://the-decoder.com/openai-quietly-funded-independent-math-benchmark-before-setting-record-with-o3/
+   (Jan 19, 2025)
+   Epoch AI, which developed the benchmark, had signed an agreement preventing them from revealing OpenAI's financial support until o3's ...
+
+[PeopleAlsoAsk]
+  - Can o3 do math?
+  - What is the best LLM for math proofs?
+  - What is the FrontierMath benchmark?
+
+[RelatedSearches] Frontiermath tier 4 o3 score contamination epoch answer | Frontiermath tier 4 problems | Frontiermath tier 5 | FrontierMath Tier 1-3 | FrontierMath: open problems | Frontier math Tier 4 leaderboard | FrontierMath leaderboard | FrontierMath Tier 3
