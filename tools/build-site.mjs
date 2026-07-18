@@ -588,8 +588,9 @@ ${works}
 const COPY_EXCLUDE = new Set(['.git', '.github', '.gitignore', '.dockerignore', 'Dockerfile', 'docker', 'tools', 'templates',
   'posts', 'posts-manifest.json', 'site.config.json', 'SPEC.md', 'README.md', 'LICENSE', 'node_modules', 'site', '.DS_Store',
   'reactor-study-src',   // reactor-study 的研究源料与生成器源码:只存仓库,不发布(产物在 reactor-study/)
-  'index.html', 'sitemap.xml', 'llms.txt', 'blog', 'research', 'gallery', 'release']);
-const ASSET_DIRS = new Set(['assets']);   // 纯静态资源目录:随内容拷贝但不要求 index.html(无干净 URL)
+  'index.html', 'sitemap.xml', 'llms.txt', 'blog', 'research', 'release']);
+const ASSET_DIRS = new Set(['assets',   // 纯静态资源目录:随内容拷贝但不要求 index.html(无干净 URL)
+  'gallery']);   // gallery 页由生成器产出 index.html,仓库里的 gallery/<name>/ 可放嵌套静态 demo(/gallery/<name>/)
 const BEACON_TAG = '<script src="/assets/beacon.js" defer></script>';
 function contentDirs() {
   return readdirSync(ROOT, { withFileTypes: true })

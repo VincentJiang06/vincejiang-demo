@@ -85,7 +85,7 @@
   "gallery": [
     {
       "title": "Paletter 配色工具",
-      "href": "/paletter/",
+      "href": "/gallery/paletter/",
       "desc": "从一个起始色出发生成和谐配色：取色画布、色彩方案、色阶、渐变混合、WCAG 对比度校验（AAA/AA 三级），内置 563 个预制色板库（Pantone 年度色、名画、自然、设计系统），支持链接分享色板，中英双语。",
       "badge": "单文件 · 563 色板库"
     },
