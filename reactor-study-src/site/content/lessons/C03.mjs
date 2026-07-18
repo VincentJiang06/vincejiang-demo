@@ -12,7 +12,7 @@ export default {
 <ul>
 <li><strong>held-out 与动态轮换</strong> 堵题目过拟合与污染（<code>Y02</code>、<code>Y03</code>）：让优化循环永远看不到、追不上。诚实提示：2026 年的系统研究显示藏题并不能阻止饱和，它买的是时间不是免疫。</li>
 <li><strong>配对指标制衡</strong> 堵维度窄化与风格刷分（<code>B09</code>、<code>Y08</code>）：几个互相拉扯的指标难被同时满足，也缓解 surrogation（<code>B07</code>）。上限来自 <code>B10</code>：只要真实价值是高维隐含的，任何有限维加权组合都有残余对齐缺口。</li>
-<li><strong>eval 与优化解耦</strong> 堵直接顶着边界爬（<code>C05</code>）：eval 只诊断，不驱动改模型。</li>
+<li><strong>eval 与优化解耦</strong> 堵直接顶着边界爬（<code>G02</code>）：eval 只诊断，不驱动改模型。</li>
 <li><strong>随机人工抽检</strong> 堵不可测部分被无视（<code>B05</code>）：刻意去看 rubric 覆盖不到的维度。</li>
 <li><strong>承认容量约束</strong> 堵真实挤占（<code>B09</code>）：别把全部优化压力压在一个窄 eval 上。</li>
 <li><strong>评分逻辑对被评者不可见</strong>：METR 2025 年测得，同一模型在能看到评分函数的环境里作弊率是看不到时的 43 倍。这条有微观基础（<code>B12</code> 的策略性不透明是能从一阶条件推出的最优机制），不是行政偷懒。</li>

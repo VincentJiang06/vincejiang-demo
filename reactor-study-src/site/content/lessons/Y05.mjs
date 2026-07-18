@@ -22,7 +22,7 @@ export default {
 <p><strong>出处更正：</strong>NUS 常被归给 Alex Turner，更准确的溯源是 Eliezer Yudkowsky 与 Arbital 社区（约 2015）的对齐讨论。这个小考证本身也切题：流传的归属未必是原始归属，同样的模式在 <code>B01</code>（Goodhart）和 <code>B05</code>（McNamara）都出现过。</p>` },
 
     { t: "callout", variant: "applied", html: `
-<p><strong>如果你在打地鼠，不是反应不够快，是策略错了。</strong>NUS 的推论：靠不断给 eval 加 patch 堵 hack，除非策略空间可被有限枚举，否则总慢一步。出路是改变 eval 的构造方式：让 eval 覆盖度足够高（<code>B11</code> 必要多样性）、把 eval 和优化解耦（<code>C05</code>）、或让真实目标更可表达（更贵、更难伪造的任务，<code>C04</code>）。还有一条来自 obfuscated reward hacking 的反面教训：别把你唯一的观测通道（思维链）也变成优化目标，否则你连「它在钻空子」都看不见了。</p>` },
+<p><strong>如果你在打地鼠，不是反应不够快，是策略错了。</strong>NUS 的推论：靠不断给 eval 加 patch 堵 hack，除非策略空间可被有限枚举，否则总慢一步。出路是改变 eval 的构造方式：让 eval 覆盖度足够高（<code>B11</code> 必要多样性）、把 eval 和优化解耦（<code>G02</code>）、或让真实目标更可表达（更贵、更难伪造的任务，<code>G01</code>）。还有一条来自 obfuscated reward hacking 的反面教训：别把你唯一的观测通道（思维链）也变成优化目标，否则你连「它在钻空子」都看不见了。</p>` },
 
     { t: "sources", items: [
       `Nearest Unblocked Strategy：Yudkowsky / Arbital (c.2015)。`,

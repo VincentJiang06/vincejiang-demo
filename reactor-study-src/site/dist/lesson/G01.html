@@ -1,0 +1,73 @@
+<!doctype html><html lang="zh-CN" data-theme="dark"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>G01 诚实信号与权衡 · reactor-study</title>
+<meta name="description" content="难伪造的信号才诚实，但「昂贵」够吗？">
+<link rel="canonical" href="https://reactor.vincejiang.com/lesson/G01.html">
+<meta property="og:type" content="website"><meta property="og:title" content="G01 诚实信号与权衡 · reactor-study">
+<meta property="og:description" content="难伪造的信号才诚实，但「昂贵」够吗？"><meta property="og:url" content="https://reactor.vincejiang.com/lesson/G01.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg"><link rel="mask-icon" href="/favicon.svg" color="#E11D3A">
+<script>try{var m=localStorage.getItem("reactor.theme")||"auto",t=(m==="light"||m==="dark")?m:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
+<link rel="stylesheet" href="/theme/tokens.css?v=22903f0849"><link rel="stylesheet" href="/theme/base.css?v=f09b6e4bb9">
+<link rel="stylesheet" href="/theme/components.css?v=b93997ebed"><link rel="stylesheet" href="/theme/led.css?v=3ecca47a70">
+<link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"诚实信号与权衡 · Honest Signals & Trade-offs","description":"难伪造的信号才诚实，但「昂贵」够吗？","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"REACTOR"},"educationalLevel":"advanced","url":"https://reactor.vincejiang.com/lesson/G01.html"}</script>
+</head><body><div class="bg-dots" aria-hidden="true"></div>
+<div class="bg-field" aria-hidden="true"></div><header class="site-head">
+  <a class="brand persist" href="/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
+  <nav>
+    <a href="/">天赋树</a>
+    <a href="/lesson/N00.html">从这里开始</a>
+    <a href="/atlas.html">图鉴</a>
+    <button class="btn theme-toggle" data-theme-toggle><span class="tt-glyph" aria-hidden="true">◑</span><span class="tt-label">自动</span></button>
+  </nav>
+</header><div class="lesson-shell"><aside class="tree-rail" aria-label="天赋树导航">
+  <div class="rail-head"><span class="rh-id">G01</span><span>诚实信号与权衡</span><span class="rh-count" data-tree-count></span></div>
+  <div class="tree-viewport mini" data-mode="mini" data-focus="G01"></div>
+  <div class="rail-foot"><a href="/">⛶ 展开全图</a><span class="label">TREE</span></div>
+</aside><main class="wrap" data-branch="green">
+    <div class="hero">
+      <div class="nameplate"><span class="tag">G01</span>
+        <span>Honest Signals &amp; Trade-offs</span><span class="rule"></span>
+        <span class="rev">防御与设计 · REV.3</span></div>
+      <p class="bootline typing" style="margin:16px 0">SELF-TEST OK · REACTOR v3 · LOADING [ G01 ]…<span class="cursor"></span></p>
+      <h1>诚实信号与权衡</h1>
+      <p class="lede">难伪造的信号才诚实，但「昂贵」够吗？</p>
+      <div class="prereq-row">
+    <span class="label">前置</span> <a href="/lesson/B12.html">B12 委托代理</a> <a href="/lesson/B01.html">B01 Goodhart 定律</a>
+    <span class="label" style="margin-left:auto">解锁</span> <span class="stub">G05 抗博弈机制设计</span>
+  </div>
+    </div>
+    <article class="stack"><div class="read">
+<p>抗博弈的关键常被概括为「把作弊成本拉高」。这一节给它一个理论根基，并把这句概括本身修正掉。理论来自一个意想不到的地方：生物学。</p>
+<p>孔雀为什么长着累赘的大尾巴？Zahavi 1975 年的<strong>障碍原理（handicap principle）</strong>说：正因为尾巴昂贵、是负担，它才是诚实信号，只有真正健康的个体负担得起，代价本身就是质量的证明。这个直觉太漂亮，Grafen 1990 年用博弈论做了形式化，教科书从此奉它为诚实信号的一般原理。故事的第二幕和第三幕，教科书大多没跟上。</p></div>
+<figure class="module reg" data-module="explorable" data-modname="handicap" data-modtype="explorable">
+    <figcaption class="module-head"><span class="fig">FIG.01</span>
+      <span>诚实不来自贵，而来自「对说谎者才贵」</span><span class="spacer"></span>
+      <span class="mono">EXPLORABLE</span></figcaption>
+    <div class="module-body"><script type="application/json" class="mod-config">{"mode":"steps","steps":[{"k":"01","t":"第一幕 · 流行版：昂贵=诚实","html":"Zahavi：昂贵、难伪造的信号是诚实的，因为弱者伪造不起。文凭之所以曾是能力信号（Spence 1973），是因为对能力差的人来说拿到它成本过高。孔雀尾、名校文凭、烧钱的广告，都被解释成「贵所以可信」。"},{"k":"02","t":"第二幕 · 成本差（2011–2020）","html":"Penn 与 Számadó 2020 年的系统重审：均衡上的信号成本\u003cstrong>既不充分也不必要\u003c/strong>；「Grafen 证明了障碍原理」这个说法不准确，他的模型支持的是条件依赖投资，不是「浪费即诚实」。更准的表述：诚实不来自\u003cem>绝对\u003c/em>的贵，而来自\u003cstrong>成本差\u003c/strong>，作弊的边际成本必须随质量下降而陡增。信号可以很便宜，只要它\u003cem>对说谎者特别贵\u003c/em>。"},{"k":"03","t":"第三幕 · 权衡（2023–2026，本课程的更新）","html":"同一批作者把结论再推一步：诚实由\u003cstrong>权衡（trade-offs）\u003c/strong>维持，成本差只是其中一种实现。即使信号对所有人成本相同甚至为零，只要不同质量个体从同一信号强度获得的\u003cstrong>净收益\u003c/strong>不同，诚实仍然稳定。还有第三条路：\u003cstrong>指标信号（index signal）\u003c/strong>，信号与质量之间有物理因果约束，低质者根本造不出来（鸣叫基频受体型限制），成本为零却不可伪造。\u003cstrong>结论：不是「贵」，而是「质量依赖的净收益差」。\u003c/strong>"},{"k":"04","t":"另一条腿 · Skin in the Game","html":"让信号发出者\u003cstrong>承担信号错误的后果\u003c/strong>。评估者如果要自己用这个 agent 干活、要为误判买单，评估质量会立刻不同。别听那些不吃自己做的饭的人，这是把诚实内建进制度的最古老办法。注意它也会被博弈：Dodd-Frank 要求证券化机构自留 5% 风险，实践中这份「切身利益」可以被对冲掉。抗博弈手段本身也需要抗博弈。"}]}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
+  </figure><script type="module" src="/modules/explorable.js?v=51607a9866"></script>
+<aside class="callout myth"><span class="co-tag">// 讹传更正</span>
+<p><strong>流行说法：「孔雀尾巴可信是因为太昂贵。」</strong>复核结论：这是第一幕的版本，学界已走到第三幕。均衡成本可以为零，诚实由质量依赖的净收益差锁定。争论仍有两方：Penn 与 Számadó 主张"handicap"这个名字应彻底废弃而非修改；Grafen 一系（Biernaskie 等 2018）用一个统一模型把从线索到障碍排成连续谱，把障碍降格为特例保留。数学上双方共识，分歧在命名与「成本是否必要」。置信度提示：trade-offs 取代 cost 的表述较新（2023–2026，主要出自同一作者群），尚未被全领域采纳。</p></aside>
+<aside class="callout intuit"><span class="co-tag">// 直觉</span>
+<p><strong>最有操作价值的一条定理，来自 cheap talk 传统而非生物学：维持诚实所需的信号成本，正比于信号者与接收者之间的利益冲突。</strong>Crawford 与 Sobel 1982 年证明，完全无成本的沟通里，双方偏好越接近，均衡越有信息量；Lachmann 等 2001 年把它推到生物学，标题就是判决："waste is not required"。这把「昂贵信号」从二元选择变成一个连续旋钮：<strong>先想办法对齐利益（把冲突降下来），再决定还需要多少成本去锁住剩余的冲突。</strong>利益一致时，昂贵是纯损失。还有一条补充：Kartik 等证明，即便只给谎报加一点点确定的边际成本（审计概率、事后追责、声誉罚），也能显著改善信息传递，门槛不必抬到天上。</p></aside>
+<aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
+<p><strong>翻译成 agent eval，三条可直接用：</strong>其一，设计任务让「真解决」和「刷分」之间的净收益差最大化。需要真实多步推理、真实环境交互、长链条后果的任务，骗子刷不动；单点可模式匹配的断言，骗子几乎零成本刷满。其二，优先找 index 型判据：那些由任务结构决定、低能力模型物理上做不到的东西（真跑通的程序、可复现的实验结果），比任何「昂贵」的评分都稳。其三，先降冲突再加成本：让 eval 的设计者自己要用这个 agent（skin in the game），比把 eval 修得更严更有效。这三条是 <code>C07</code> 清单的支柱。</p></aside>
+<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Zahavi (1975)；Grafen (1990)；Penn, D. J. & Számadó, S. (2020). <em>Biological Reviews</em> 95(1):267–290.</li><li>Számadó, Zachar, Czégel & Penn (2023). <em>BMC Biology</em> 21:4；Számadó, Zachar & Penn (2026). <em>J. Evolutionary Biology</em> 39(2)（trade-offs 框架）。</li><li>Crawford & Sobel (1982). <em>Econometrica</em>；Lachmann, Számadó & Bergstrom (2001). <em>PNAS</em>（waste is not required）。</li><li>Spence (1973)；Taleb, <em>Skin in the Game</em>。深化见 <code>research/deep/D7</code> §1–3。</li></ul></div></details></article>
+    <nav class="prereq-row" style="margin-top:48px">
+      <a class="btn" href="/">← 返回天赋树</a>
+      
+    </nav>
+  </main></div><footer class="site-foot"><div class="wrap">
+  <span>REACTOR · 当尺子开始回看你 · 一部关于反应性的现场手册</span>
+  <span>self-hosted · no-react · v3</span>
+</div></footer><script type="module" src="/modules/boot.js?v=340ed36aa6"></script></body></html>

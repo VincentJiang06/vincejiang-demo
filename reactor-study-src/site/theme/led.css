@@ -57,24 +57,50 @@
 
 /* ============================================================
    Talent Tree（天赋树本体）
+   full = 首页全屏主导航；mini = 课程页左侧导轨
    ============================================================ */
 .tree-viewport{position:relative;width:100%;height:min(78vh,760px);
   border:1px solid var(--line);border-radius:var(--radius-panel);overflow:hidden;
   background:var(--bg-2);
   background-image:radial-gradient(var(--dot) 1px,transparent 1.4px);
   background-size:var(--dot-gap) var(--dot-gap);cursor:grab;
-  /* pan-y 而不是 none：手指竖着划仍然能滚页面，不然天赋树在手机上是个滚动陷阱 */
   touch-action:pan-y}
 .tree-viewport.dragging{cursor:grabbing}
 .tree-stage{position:absolute;top:0;left:0;transform-origin:0 0;will-change:transform}
+.tree-stage.gliding{transition:transform .45s cubic-bezier(.22,.9,.3,1)}
 .tree-svg{position:absolute;top:0;left:0;overflow:visible;pointer-events:none}
 
-/* 连线（电路）*/
-.edge{fill:none;stroke:var(--line-2);stroke-width:1.5}
-.edge.lit{stroke:var(--accent);filter:drop-shadow(0 0 3px var(--accent-glow))}
-.edge.alloy{stroke:url(#alloy);stroke-width:2;stroke-dasharray:5 4;
-  animation:flow 1.2s linear infinite}
-@keyframes flow{to{stroke-dashoffset:-18}}
+/* ── 首页全屏形态 ── */
+.tree-full{position:relative}
+.tree-full .tree-viewport{height:calc(100dvh - var(--headh));border:0;border-radius:0;
+  background-color:var(--bg);touch-action:none}
+.tree-intro{position:absolute;left:clamp(16px,3vw,40px);top:clamp(16px,3vh,32px);z-index:6;
+  width:min(390px,calc(100vw - 32px))}
+.tree-intro h1{font-size:clamp(1.7rem,2.6vw,2.5rem);margin:.35em 0 .2em}
+.tree-intro .lede{font-size:.95rem;color:var(--text-2);margin:0 0 1.2em}
+.tree-intro .intro-cta{display:flex;flex-wrap:wrap;gap:calc(var(--u)*1.5)}
+.tree-intro .intro-hint{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;
+  color:var(--text-mute);margin:1.4em 0 0}
+@media (max-width:860px){
+  .tree-intro{position:static;width:auto;margin:12px 12px 0}
+  .tree-full .tree-viewport{height:min(66dvh,640px)}
+}
+
+/* 连线（电路走线：正交总线，默认压暗；跨支虚线；悬停/点亮才上色）*/
+.edge{fill:none;stroke:var(--line-2);stroke-width:1.5;opacity:.5}
+.edge.cross{stroke-dasharray:4 4}
+.edge.lit{opacity:.8}
+.edge.lit[data-branch="red"]   {stroke:var(--branch-red)}
+.edge.lit[data-branch="blue"]  {stroke:var(--branch-blue)}
+.edge.lit[data-branch="yellow"]{stroke:var(--branch-yellow)}
+.edge.lit[data-branch="green"]{stroke:var(--branch-green)}
+.edge.lit[data-branch="converge"],.edge.lit[data-branch="case"]{stroke:var(--text-2)}
+.edge.hot{opacity:1;stroke-width:2.5}
+.edge.hot[data-branch="red"]   {stroke:var(--branch-red);filter:drop-shadow(0 0 3px var(--branch-red-glow))}
+.edge.hot[data-branch="blue"]  {stroke:var(--branch-blue);filter:drop-shadow(0 0 3px var(--branch-blue-glow))}
+.edge.hot[data-branch="yellow"]{stroke:var(--branch-yellow);filter:drop-shadow(0 0 3px var(--branch-yellow-glow))}
+.edge.hot[data-branch="green"] {stroke:var(--branch-green);filter:drop-shadow(0 0 3px var(--branch-green-glow))}
+.edge.hot[data-branch="converge"],.edge.hot[data-branch="case"]{stroke:var(--text);filter:drop-shadow(0 0 3px var(--glass-hi))}
 
 /* 节点芯片 */
 .node{position:absolute;width:132px;transform:translate(-50%,-50%);
@@ -91,8 +117,9 @@
 .node .n-en{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.06em;
   color:var(--text-mute);text-transform:uppercase;line-height:1.2}
 .node[data-branch]{}
-/* 状态 */
-.node.locked{opacity:.62;border-color:var(--line)}
+/* 状态：locked 也要能看清整棵树的分支结构（首页即全图，太暗=地图失明），
+   只降饱和不降存在感，边框带极淡分支色 */
+.node.locked{opacity:.8;border-color:color-mix(in srgb,var(--accent) 28%,var(--line))}
 .node.locked .n-zh{color:var(--text-2)}
 .node.available{border-color:var(--accent)}
 .node.available::before{content:"";position:absolute;inset:-1px;border-radius:inherit;
@@ -106,6 +133,9 @@
   box-shadow:0 0 6px var(--accent-glow),0 0 14px var(--accent-glow)}
 
 /* 分支色作用（节点自带 data-branch，tokens.css 已映射 --accent）*/
+/* 案例带节点＝证据卡片：虚线边框区别于理论节点 */
+.node[data-branch="case"]{border-style:dashed}
+.mini .dot[data-branch="case"]{border-style:dashed}
 
 /* Tree HUD */
 .tree-hud{position:absolute;left:12px;bottom:12px;z-index:5;display:flex;gap:8px;
@@ -114,24 +144,63 @@
   border:1px solid var(--glass-brd);color:var(--text-2);border-radius:var(--radius);
   padding:.4em .7em;cursor:pointer}
 .tree-hud button:hover{color:var(--accent);border-color:var(--accent)}
-.tree-legend{position:absolute;right:12px;top:12px;z-index:5;display:flex;flex-direction:column;
-  gap:5px;font-family:var(--font-mono);font-size:.64rem;color:var(--text-2);
+.tree-legend{position:absolute;right:12px;bottom:12px;z-index:5;display:flex;flex-direction:column;
+  gap:2px;font-family:var(--font-mono);font-size:.64rem;color:var(--text-2);
   background:var(--glass-bg);backdrop-filter:blur(8px);border:1px solid var(--glass-brd);
-  border-radius:var(--radius);padding:8px 10px}
-.tree-legend .k{display:flex;align-items:center;gap:.5em}
+  border-radius:var(--radius);padding:6px 8px}
+/* 图例即分支跳转按钮 */
+.tree-legend .k{display:flex;align-items:center;gap:.5em;background:none;border:0;
+  color:inherit;font:inherit;letter-spacing:inherit;cursor:pointer;padding:.3em .2em;
+  border-radius:var(--radius);text-align:left}
+.tree-legend button.k:hover{color:var(--text);background:color-mix(in srgb,var(--text) 8%,transparent)}
 .tree-legend .sw{width:20px;height:3px;border-radius:2px}
-.tree-hint{position:absolute;left:12px;top:12px;z-index:5;font-family:var(--font-mono);
-  font-size:.64rem;color:var(--text-mute);background:var(--glass-bg);backdrop-filter:blur(8px);
-  border:1px solid var(--glass-brd);border-radius:var(--radius);padding:6px 9px;max-width:260px}
 @media (max-width:720px){
-  .tree-hint{display:none}
   .tree-viewport{height:min(62vh,520px)}
   /* 触摸目标最小 44px */
   .tree-hud button{min-width:44px;min-height:44px;font-size:.72rem}
 }
 
+/* ============================================================
+   课程页左侧导轨（lesson-shell = 左树右文）
+   ============================================================ */
+.lesson-shell{display:grid;grid-template-columns:clamp(240px,20vw,300px) minmax(0,1fr)}
+.tree-rail{position:sticky;top:var(--headh);height:calc(100dvh - var(--headh));
+  border-right:1px solid var(--line);display:flex;flex-direction:column;
+  background:color-mix(in srgb,var(--bg-2) 55%,transparent)}
+.rail-head{display:flex;align-items:center;gap:.6em;padding:10px 14px;
+  border-bottom:1px solid var(--line);font-family:var(--font-mono);font-size:.64rem;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--text-2)}
+.rail-head .rh-id{color:var(--accent)}
+.rail-head .rh-count{margin-left:auto;color:var(--text-mute)}
+.tree-viewport.mini{flex:1;height:auto;border:0;border-radius:0;background:transparent;
+  background-image:none;cursor:default;touch-action:auto}
+.rail-foot{display:flex;align-items:center;justify-content:space-between;gap:.6em;
+  padding:9px 14px;border-top:1px solid var(--line);
+  font-family:var(--font-mono);font-size:.66rem;letter-spacing:.1em}
+.rail-foot a{color:var(--text-2)}
+.rail-foot a:hover{color:var(--accent);text-decoration:none}
+@media (max-width:1080px){.lesson-shell{display:block}.tree-rail{display:none}}
+
+/* 迷你树点阵（节点=LED 方粒，当前节点挂 id 牌 + 呼吸圈）*/
+.mini .dot{position:absolute;width:13px;height:13px;transform:translate(-50%,-50%);
+  border-radius:3px;border:1px solid color-mix(in srgb,var(--accent) 45%,var(--line-2));
+  background:var(--panel);cursor:pointer}
+.mini .dot:hover{border-color:var(--accent);z-index:3}
+.mini .dot.available{border-color:var(--accent)}
+.mini .dot.completed{background:var(--accent);border-color:var(--accent)}
+.mini .dot.locked{opacity:.45}
+.mini .dot.current{width:17px;height:17px;border-color:var(--accent);z-index:2;
+  box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 25%,transparent),
+             0 0 10px var(--accent-glow)}
+.mini .dot.current.completed .dot-tag,.mini .dot .dot-tag{color:var(--accent)}
+.mini .dot-tag{position:absolute;top:-17px;left:50%;transform:translateX(-50%);
+  font-family:var(--font-mono);font-size:.56rem;letter-spacing:.08em;white-space:nowrap}
+.mini .edge{stroke-width:1;opacity:.35}
+.mini .edge.hot{stroke-width:1.5;opacity:.9}
+
 @media (prefers-reduced-motion:reduce){
-  .glyph-strip .led,.led.pulse,.edge.alloy,.node.available::before,.bootline.typing{animation:none}
+  .glyph-strip .led,.led.pulse,.node.available::before,.bootline.typing{animation:none}
   .node.available::before{opacity:.7}
   .bootline.typing{width:100%}
+  .tree-stage.gliding{transition:none}
 }

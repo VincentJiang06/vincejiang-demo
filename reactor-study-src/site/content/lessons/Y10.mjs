@@ -19,7 +19,7 @@ export default {
 <p><strong>流行说法：「strategic classification 就是对抗鲁棒性。」</strong>复核结论：数学相近，语义相反。对抗样本是恶意扰动、不改真实标签；strategic agent 是理性自利、可能真的改结果。把二者等同，会错过 gaming 与 improvement 的全部要害。另一条边界：经典理论假设完全理性、成本已知的 agent，2025 年之后用 LLM 模拟真实策略响应的研究发现，有限理性 agent 的行为与经典模型定性不同，而被评测的模型能直接读取评测规则并据此推理，这是经典模型未涵盖的情形。</p>` },
 
     { t: "callout", variant: "applied", html: `
-<p><strong>你一旦公开 eval 的评分标准，模型开发就变成策略性分类。</strong>公开的评分细则（rubric）、公开的 benchmark 构成，等于把分类器规则交给对手，优化循环会朝「满足 rubric 表面」移动。Miller-Milli-Hardt 定理告诉你这不是加防伪补丁能解决的：想让 eval 激励真改进，你必须知道哪些可测行为因果地通向真实能力，这本身是个研究问题。工程上最接近的做法是 Shavit 式的干预循环：改变 eval 的构成，观察生态怎么响应，用响应反推因果结构。<code>C03/C04</code> 会把这条原则做成设计清单。</p>` },
+<p><strong>你一旦公开 eval 的评分标准，模型开发就变成策略性分类。</strong>公开的评分细则（rubric）、公开的 benchmark 构成，等于把分类器规则交给对手，优化循环会朝「满足 rubric 表面」移动。Miller-Milli-Hardt 定理告诉你这不是加防伪补丁能解决的：想让 eval 激励真改进，你必须知道哪些可测行为因果地通向真实能力，这本身是个研究问题。工程上最接近的做法是 Shavit 式的干预循环：改变 eval 的构成，观察生态怎么响应，用响应反推因果结构。<code>C03/G01</code> 会把这条原则做成设计清单。</p>` },
 
     { t: "sources", items: [
       `Hardt, Megiddo, Papadimitriou & Wootters (2016). "Strategic Classification." ITCS.`,

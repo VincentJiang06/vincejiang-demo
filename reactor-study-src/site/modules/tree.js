@@ -1,69 +1,129 @@
-/* REACTOR · tree.js — the interactive talent tree (SVG edges + DOM node chips) */
+/* REACTOR · tree.js — the talent tree (SVG circuit edges + DOM nodes)
+   两种形态，一套数据（tree-data.js）：
+   - full：首页全屏树（拖动/滚轮平移，⌘/Ctrl+滚轮或双指捏合缩放，图例点击跳分支）
+   - mini：课程页左侧导轨（各向异性压缩成窄条点阵图，当前节点高亮，纯点击导航）
+   连线 = 正交电路走线：从前置芯片下边缘出发，借行间「走廊」水平横穿，再垂直落到
+   目标芯片上边缘；同支实线、跨支虚线，默认压暗，悬停节点时相关线路点亮。 */
 import { progress } from "/modules/boot.js";
+import { TREE } from "/modules/tree-data.js";
 
-const vp = document.getElementById("tree-viewport");
-if (vp) init(vp);
+const HALF_H = 40;         // full 模式芯片可视半高（连线端点吸附用）
+const BAND = 44;           // 行带半高：同一行芯片占据 y±BAND，行带之间即走廊
+const svgNS = "http://www.w3.org/2000/svg";
 
-function init(vp) {
-  const data = JSON.parse(vp.dataset.tree);
+document.querySelectorAll(".tree-viewport").forEach(vp =>
+  init(vp, vp.dataset.mode === "mini" ? "mini" : "full"));
+
+/* ---- 走廊：把所有行带合并后，取相邻带之间的中线 ---- */
+function corridors(nodes) {
+  const rows = [...new Set(nodes.map(n => n.y))].sort((a, b) => a - b);
+  const bands = [];
+  for (const y of rows) {
+    const last = bands[bands.length - 1];
+    if (last && y - BAND <= last[1]) last[1] = y + BAND;
+    else bands.push([y - BAND, y + BAND]);
+  }
+  const mids = [];
+  for (let i = 1; i < bands.length; i++) mids.push((bands[i - 1][1] + bands[i][0]) / 2);
+  return mids;
+}
+
+function init(vp, mode) {
+  const data = TREE;
   const { nodes, bounds } = data;
   const byId = Object.fromEntries(nodes.map(n => [n.id, n]));
   const done = progress.get();
+  const focusId = vp.dataset.focus || null;
+  const mids = corridors(nodes);
 
-  // state: available if all prereqs done (or no prereqs); completed if in done set
   const isDone = id => done.has(id);
   const isAvail = n => n.prereqs.every(isDone);
 
-  const W = bounds.maxX - bounds.minX, H = bounds.maxY - bounds.minY;
-  const ox = -bounds.minX, oy = -bounds.minY; // offset so min → 0
+  /* ---- 坐标变换：full 恒等；mini 各向异性压缩到导轨内 ---- */
+  let TX, TY, halfH;
+  if (mode === "mini") {
+    const w = Math.max(220, vp.clientWidth), h = Math.max(400, vp.clientHeight);
+    const kx = (w - 36) / (bounds.maxX - bounds.minX);
+    const ky = (h - 48) / (bounds.maxY - bounds.minY);
+    TX = x => (x - bounds.minX) * kx + 18;
+    TY = y => (y - bounds.minY) * ky + 24;
+    halfH = 7;
+  } else {
+    TX = x => x - bounds.minX;
+    TY = y => y - bounds.minY;
+    halfH = HALF_H;
+  }
+  const W = mode === "mini" ? vp.clientWidth : bounds.maxX - bounds.minX;
+  const H = mode === "mini" ? vp.clientHeight : bounds.maxY - bounds.minY;
 
   const stage = document.createElement("div");
   stage.className = "tree-stage";
   stage.style.width = W + "px"; stage.style.height = H + "px";
 
-  // SVG edges
-  const svgNS = "http://www.w3.org/2000/svg";
+  function route(a, b) {
+    // 端点吸附芯片真实边缘：从前置下边缘出发，落到目标上边缘（渲染后按 offsetHeight 量）
+    const x1 = TX(a.x), y1 = TY(a.y) + half(a), x2 = TX(b.x), y2 = TY(b.y) - half(b);
+    if (Math.abs(x2 - x1) < 1) return `M${x1},${y1} L${x2},${y2}`;
+    if (y2 - y1 < 18) {           // 行距太近排不下正交走线：退化为平滑曲线
+      const my = (y1 + y2) / 2;
+      return `M${x1},${y1} C${x1},${my + 24} ${x2},${my - 24} ${x2},${y2}`;
+    }
+    // 走廊选择：取目标行上方最近的一条走廊做水平「总线」
+    const usable = mids.filter(c => TY(c) > y1 + 6 && TY(c) < y2 - 6);
+    const ym = usable.length ? TY(usable[usable.length - 1]) : (y1 + y2) / 2;
+    const s = x2 > x1 ? 1 : -1;
+    const r = Math.min(10, Math.abs(x2 - x1) / 2, (ym - y1) / 2, (y2 - ym) / 2);
+    return `M${x1},${y1} L${x1},${ym - r} Q${x1},${ym} ${x1 + s * r},${ym}` +
+           ` L${x2 - s * r},${ym} Q${x2},${ym} ${x2},${ym + r} L${x2},${y2}`;
+  }
+
+  /* ---- 节点（先渲染，才能量出芯片高度供连线吸附）---- */
+  const nodeEls = {};
+  for (const n of nodes) {
+    const el = document.createElement(n.built ? "a" : "div");
+    if (n.built) el.href = `/lesson/${n.id}.html`;
+    el.dataset.branch = n.branch; el.dataset.id = n.id;
+    el.style.left = TX(n.x) + "px"; el.style.top = TY(n.y) + "px";
+    if (mode === "mini") {
+      el.className = "dot" + (n.id === focusId ? " current" : "");
+      el.title = `${n.id} ${n.zh}`;
+      el.setAttribute("aria-label", `${n.id} ${n.zh}`);
+      if (n.id === focusId) el.innerHTML = `<span class="dot-tag">${n.id}</span>`;
+    } else {
+      el.className = "node";
+      el.title = n.hook;
+      el.innerHTML = `<span class="n-led"></span>
+        <span class="n-head"><span class="n-id">${n.id}</span><span>${n.built ? "" : "···"}</span></span>
+        <span class="n-zh">${n.zh}</span><span class="n-en">${n.en}</span>`;
+    }
+    // 悬停点亮与该节点相连的线路
+    el.addEventListener("mouseenter", () => edgeEls.forEach(e =>
+      e.classList.toggle("hot", e.dataset.from === n.id || e.dataset.to === n.id)));
+    el.addEventListener("mouseleave", () => edgeEls.forEach(e => e.classList.remove("hot")));
+    updateNodeClass(el, n);
+    nodeEls[n.id] = el;
+    stage.appendChild(el);
+  }
+  vp.appendChild(stage);
+
+  /* ---- 连线（芯片已入 DOM，可量高）---- */
+  const half = n => mode === "mini" ? halfH : ((nodeEls[n.id]?.offsetHeight || HALF_H * 2) / 2 + 2);
   const svg = document.createElementNS(svgNS, "svg");
   svg.setAttribute("class", "tree-svg");
   svg.setAttribute("width", W); svg.setAttribute("height", H);
-  const defs = document.createElementNS(svgNS, "defs");
-  defs.innerHTML = `<linearGradient id="alloy" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="var(--red)"/><stop offset="1" stop-color="var(--yellow)"/></linearGradient>`;
-  svg.appendChild(defs);
-
   const edgeEls = [];
   for (const n of nodes) {
     for (const p of n.prereqs) {
       const a = byId[p]; if (!a) continue;
       const path = document.createElementNS(svgNS, "path");
-      const x1 = a.x + ox, y1 = a.y + oy, x2 = n.x + ox, y2 = n.y + oy;
-      const my = (y1 + y2) / 2;
-      path.setAttribute("d", `M${x1},${y1} C${x1},${my} ${x2},${my} ${x2},${y2}`);
-      const alloy = a.branch !== n.branch && a.branch !== "root" && n.branch !== "converge";
-      path.setAttribute("class", "edge" + (alloy ? " alloy" : ""));
-      path.dataset.from = p; path.dataset.to = n.id;
+      path.setAttribute("d", route(a, n));
+      const cross = a.branch !== n.branch && a.branch !== "root" && n.branch !== "converge";
+      path.setAttribute("class", "edge" + (cross ? " cross" : ""));
+      path.dataset.from = p; path.dataset.to = n.id; path.dataset.branch = n.branch;
       svg.appendChild(path); edgeEls.push(path);
     }
   }
-  stage.appendChild(svg);
-
-  // node chips
-  for (const n of nodes) {
-    const el = document.createElement(n.built ? "a" : "div");
-    if (n.built) el.href = `${document.documentElement.dataset.base || ""}/lesson/${n.id}.html`;
-    el.className = "node";
-    el.dataset.branch = n.branch;
-    el.dataset.id = n.id;
-    el.style.left = (n.x + ox) + "px"; el.style.top = (n.y + oy) + "px";
-    el.title = n.hook;
-    el.innerHTML = `<span class="n-led"></span>
-      <span class="n-head"><span class="n-id">${n.id}</span><span>${n.built ? "" : "···"}</span></span>
-      <span class="n-zh">${n.zh}</span><span class="n-en">${n.en}</span>`;
-    updateNodeClass(el, n);
-    stage.appendChild(el);
-  }
-
-  vp.appendChild(stage);
+  stage.insertBefore(svg, stage.firstChild);
 
   function updateNodeClass(el, n) {
     el.classList.remove("locked", "available", "completed");
@@ -74,30 +134,61 @@ function init(vp) {
   function refreshAll() {
     const d = progress.get();
     done.clear(); d.forEach(x => done.add(x));
-    nodes.forEach(n => updateNodeClass(stage.querySelector(`.node[data-id="${n.id}"]`), n));
+    nodes.forEach(n => updateNodeClass(stage.querySelector(`[data-id="${n.id}"]`), n));
     edgeEls.forEach(e => e.classList.toggle("lit", done.has(e.dataset.from)));
+    const ct = document.querySelector("[data-tree-count]");
+    if (ct) ct.textContent = `${done.size}/${nodes.length}`;
   }
   refreshAll();
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) refreshAll(); });
 
-  /* ---- pan & zoom ---- */
+  if (mode === "mini") return;   // 导轨：静态点阵，不装平移缩放
+
+  /* ================= full 模式：平移 / 缩放 / 分支跳转 ================= */
   const rootNode = nodes.find(n => n.branch === "root") || nodes[0];
   let scale = 1, tx = 0, ty = 0;
-  // initial "home" view: readable zoom, centered horizontally on the root, top-aligned
+
+  function apply() { stage.style.transform = `translate(${tx}px,${ty}px) scale(${scale})`; }
+  function glide() {               // 带过渡的一次性视角切换
+    stage.classList.add("gliding");
+    setTimeout(() => stage.classList.remove("gliding"), 500);
+  }
   function home() {
     const r = vp.getBoundingClientRect();
-    // fit the full branch span on screen, but never shrink below readable
-    scale = Math.max(0.34, Math.min(0.62, (r.width / W) * 0.98));
-    tx = r.width / 2 - (rootNode.x + ox) * scale;
-    ty = 40 - (rootNode.y + oy) * scale + 30;
+    // 桌面上首页左侧有介绍浮层：把根节点放在剩余空间的水平中心
+    const intro = vp.closest(".tree-full")?.querySelector(".tree-intro");
+    let left = 0;
+    if (intro && getComputedStyle(intro).position === "absolute")
+      left = intro.offsetLeft + intro.offsetWidth;
+    // 初始视角＝俯瞰：横向在介绍浮层右侧的剩余空间里装下整棵树（纵向交给平移），
+    // 但比例不低于 0.45 保住芯片可辨；放不下时靠约束保证最左芯片不藏进浮层后面
+    scale = Math.max(0.45, Math.min(0.66, (r.width - left - 48) / W));
+    tx = left + (r.width - left) / 2 - (W / 2) * scale;
+    // 仅当浮层真在树上方悬浮时才需要「最左芯片让位」约束；
+    // 移动端浮层是普通文档流（left=0），套这个约束会把根节点推出屏幕
+    if (left > 0) tx = Math.max(tx, left + 68);
+    ty = 72 - TY(rootNode.y) * scale;
     apply();
   }
-  // "适配" = true fit-all overview
   function fit() {
     const r = vp.getBoundingClientRect();
     scale = Math.min(r.width / W, r.height / H) * 0.94;
     tx = (r.width - W * scale) / 2;
     ty = (r.height - H * scale) / 2;
-    apply();
+    glide(); apply();
+  }
+  function fitBranch(branch) {
+    // v3：绿=防御分支本体；case/converge 各自成组
+    const ns = nodes.filter(n => n.branch === branch);
+    if (!ns.length) return;
+    const pad = 120;
+    const x0 = Math.min(...ns.map(n => TX(n.x))) - pad, x1 = Math.max(...ns.map(n => TX(n.x))) + pad;
+    const y0 = Math.min(...ns.map(n => TY(n.y))) - pad, y1 = Math.max(...ns.map(n => TY(n.y))) + pad;
+    const r = vp.getBoundingClientRect();
+    scale = Math.min(2.2, Math.max(0.3, Math.min(r.width / (x1 - x0), r.height / (y1 - y0)) * 0.94));
+    tx = (r.width - (x0 + x1) * scale) / 2;
+    ty = (r.height - (y0 + y1) * scale) / 2;
+    glide(); apply();
   }
   function zoomBy(f) {
     const r = vp.getBoundingClientRect(), cx = r.width / 2, cy = r.height / 2;
@@ -105,26 +196,51 @@ function init(vp) {
     tx = cx - (cx - tx) * (ns / scale); ty = cy - (cy - ty) * (ns / scale);
     scale = ns; apply();
   }
-  function apply() { stage.style.transform = `translate(${tx}px,${ty}px) scale(${scale})`; }
 
-  let dragging = false, sx = 0, sy = 0;
+  /* 拖动平移（跳过节点与浮层控件）+ 双指捏合缩放 */
+  const ptrs = new Map();
+  let pinch0 = null;
   vp.addEventListener("pointerdown", e => {
-    if (e.target.closest(".node")) return;
-    dragging = true; sx = e.clientX - tx; sy = e.clientY - ty;
-    vp.classList.add("dragging"); vp.setPointerCapture(e.pointerId);
+    if (e.target.closest(".node,.tree-intro,.tree-legend,.tree-hud,a,button")) return;
+    ptrs.set(e.pointerId, [e.clientX, e.clientY]);
+    vp.setPointerCapture(e.pointerId);
+    vp.classList.add("dragging");
+    if (ptrs.size === 2) {
+      const [a, b] = [...ptrs.values()];
+      pinch0 = { d: Math.hypot(a[0] - b[0], a[1] - b[1]), scale };
+    }
   });
-  vp.addEventListener("pointermove", e => { if (!dragging) return; tx = e.clientX - sx; ty = e.clientY - sy; apply(); });
-  vp.addEventListener("pointerup", e => { dragging = false; vp.classList.remove("dragging"); });
-  // wheel zooms ONLY with ctrl/⌘ held; otherwise let the page scroll normally
+  vp.addEventListener("pointermove", e => {
+    if (!ptrs.has(e.pointerId)) return;
+    const prev = ptrs.get(e.pointerId);
+    ptrs.set(e.pointerId, [e.clientX, e.clientY]);
+    if (ptrs.size === 2 && pinch0) {
+      const [a, b] = [...ptrs.values()];
+      const d = Math.hypot(a[0] - b[0], a[1] - b[1]);
+      const r = vp.getBoundingClientRect();
+      const cx = (a[0] + b[0]) / 2 - r.left, cy = (a[1] + b[1]) / 2 - r.top;
+      const ns = Math.min(2.2, Math.max(0.3, pinch0.scale * d / pinch0.d));
+      tx = cx - (cx - tx) * (ns / scale); ty = cy - (cy - ty) * (ns / scale);
+      scale = ns; apply();
+    } else if (ptrs.size === 1) {
+      tx += e.clientX - prev[0]; ty += e.clientY - prev[1]; apply();
+    }
+  });
+  const lift = e => { ptrs.delete(e.pointerId); if (ptrs.size < 2) pinch0 = null; if (!ptrs.size) vp.classList.remove("dragging"); };
+  vp.addEventListener("pointerup", lift); vp.addEventListener("pointercancel", lift);
+
+  /* 滚轮：平移；⌘/Ctrl+滚轮（含触控板捏合）：缩放。全屏页无页面滚动，可以独占 */
   vp.addEventListener("wheel", e => {
-    if (!(e.ctrlKey || e.metaKey)) return;
     e.preventDefault();
-    const r = vp.getBoundingClientRect();
-    const mx = e.clientX - r.left, my = e.clientY - r.top;
-    const ds = Math.exp(-e.deltaY * 0.0016);
-    const ns = Math.min(2.2, Math.max(0.3, scale * ds));
-    tx = mx - (mx - tx) * (ns / scale); ty = my - (my - ty) * (ns / scale);
-    scale = ns; apply();
+    if (e.ctrlKey || e.metaKey) {
+      const r = vp.getBoundingClientRect();
+      const mx = e.clientX - r.left, my = e.clientY - r.top;
+      const ds = Math.exp(-e.deltaY * 0.0022);
+      const ns = Math.min(2.2, Math.max(0.3, scale * ds));
+      tx = mx - (mx - tx) * (ns / scale); ty = my - (my - ty) * (ns / scale);
+      scale = ns;
+    } else { tx -= e.deltaX; ty -= e.deltaY; }
+    apply();
   }, { passive: false });
 
   vp.querySelector("[data-tree-fit]")?.addEventListener("click", fit);
@@ -133,7 +249,14 @@ function init(vp) {
   vp.querySelector("[data-tree-reset-progress]")?.addEventListener("click", () => {
     if (confirm("重置学习进度？")) { progress.clear(); refreshAll(); }
   });
+  vp.querySelectorAll("[data-jump]").forEach(b =>
+    b.addEventListener("click", () => fitBranch(b.dataset.jump)));
+
   home();
-  // refresh when returning to page (progress may have changed)
-  document.addEventListener("visibilitychange", () => { if (!document.hidden) refreshAll(); });
+  // 只有视口尺寸真变了才回 home——boot.js 换主题时会广播 resize 让 canvas 重绘，
+  // 不能借这个事件把用户拖好的视角吹回原点。
+  let lw = vp.clientWidth, lh = vp.clientHeight;
+  addEventListener("resize", () => {
+    if (vp.clientWidth !== lw || vp.clientHeight !== lh) { lw = vp.clientWidth; lh = vp.clientHeight; home(); }
+  });
 }

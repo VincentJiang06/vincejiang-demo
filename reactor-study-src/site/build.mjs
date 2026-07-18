@@ -23,9 +23,13 @@ const byId = Object.fromEntries(tree.nodes.map(n => [n.id, n]));
    Column x is derived from each branch's widest tier, so branches can never
    collide; tiers wider than MAX_PER_ROW wrap into stacked sub-rows. */
 const ROW_H = 210, COL_W = 168, SUB_DY = 92;
-const CHIP_W = 132, MAX_PER_ROW = 4, GUTTER = 110, CONV_OFFSET_TIERS = 1;
+const CHIP_W = 132, MAX_PER_ROW = 4, GUTTER = 96, CONV_OFFSET_TIERS = 1;
 const rowsOf = len => Math.ceil(len / MAX_PER_ROW);
 const perRowOf = len => Math.ceil(len / rowsOf(len));
+/* v3 布局：四条色支横排（红|蓝|黄|绿），root 与南区（case 案例带 + converge 汇流）
+   在整体跨度的水平中心；南区两支共用一套纵深刻度——case/converge 节点的 tier
+   从 1 起排在色支最深 tier 之下。 */
+const SOUTH = new Set(["case", "converge"]);
 function layout() {
   const groups = {};
   for (const n of tree.nodes) {
@@ -39,18 +43,24 @@ function layout() {
     const half = (perRowOf(arr.length) - 1) / 2 * COL_W + CHIP_W / 2;
     halfW[branch] = Math.max(halfW[branch] || 0, half);
   }
-  const BRANCH_X = { root: 0, blue: 0, converge: 0 };
+  const BRANCH_X = { blue: 0 };
   BRANCH_X.red = -((halfW.blue || 0) + GUTTER + (halfW.red || 0));
   BRANCH_X.yellow = (halfW.blue || 0) + GUTTER + (halfW.yellow || 0);
+  BRANCH_X.green = BRANCH_X.yellow + (halfW.yellow || 0) + GUTTER + (halfW.green || 0);
+  const spanL = BRANCH_X.red - (halfW.red || 0), spanR = BRANCH_X.green + (halfW.green || 0);
+  const center = (spanL + spanR) / 2;
+  BRANCH_X.root = center;
+  BRANCH_X.case = center;
+  BRANCH_X.converge = center;
 
-  const maxBranchTier = Math.max(...tree.nodes.filter(n => n.branch !== "converge").map(n => n.tier));
+  const maxBranchTier = Math.max(...tree.nodes.filter(n => !SOUTH.has(n.branch)).map(n => n.tier));
   for (const [key, arr] of Object.entries(groups)) {
     const [branch, tierStr] = key.split(":");
     const tier = +tierStr;
     arr.sort((a, b) => a.id.localeCompare(b.id));
     const rows = rowsOf(arr.length), perRow = perRowOf(arr.length);
-    const baseY = branch === "converge"
-      ? (maxBranchTier + CONV_OFFSET_TIERS + (tier - 3)) * ROW_H
+    const baseY = SOUTH.has(branch)
+      ? (maxBranchTier + CONV_OFFSET_TIERS + (tier - 1)) * ROW_H
       : tier * ROW_H;
     arr.forEach((n, i) => {
       const r = Math.floor(i / perRow), j = i - r * perRow;
@@ -91,19 +101,23 @@ const moduleFileFor = mod => {
 
 /* ---- helpers ---- */
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-const BRANCH_LABEL = { root: "ROOT", red: "社会学谱系", blue: "定律与形式", yellow: "机器与前沿", converge: "汇流" };
+const BRANCH_LABEL = { root: "ROOT", red: "社会学谱系", blue: "定律与形式", yellow: "机器与前沿", green: "防御与设计", case: "案例带", converge: "汇流" };
 
 /* 外部开源字体（jsDelivr / fontsource，均为 SIL OFL）：
-   Inter=拉丁，Noto Sans SC=中文，JetBrains Mono=等宽。
-   Noto 的 CSS 按 unicode-range 切成 101 片，浏览器只下用得到的那几片。 */
+   Space Grotesk=拉丁（几何科技感），Noto Sans SC=中文，JetBrains Mono=等宽。
+   全站基准字重 500（v2 起），故三族各载 400/500/700（JBM 无 500 载 400/700）。
+   Noto 的 CSS 按 unicode-range 切片，浏览器只下用得到的那几片。 */
 const FONT_CDN = "https://cdn.jsdelivr.net/npm/@fontsource";
 const FONT_LINKS = [
   `<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>`,
-  `<link rel="stylesheet" href="${FONT_CDN}/inter@5/400.css">`,
-  `<link rel="stylesheet" href="${FONT_CDN}/inter@5/700.css">`,
+  `<link rel="stylesheet" href="${FONT_CDN}/space-grotesk@5/400.css">`,
+  `<link rel="stylesheet" href="${FONT_CDN}/space-grotesk@5/500.css">`,
+  `<link rel="stylesheet" href="${FONT_CDN}/space-grotesk@5/700.css">`,
   `<link rel="stylesheet" href="${FONT_CDN}/noto-sans-sc@5/400.css">`,
+  `<link rel="stylesheet" href="${FONT_CDN}/noto-sans-sc@5/500.css">`,
   `<link rel="stylesheet" href="${FONT_CDN}/noto-sans-sc@5/700.css">`,
-  `<link rel="stylesheet" href="${FONT_CDN}/jetbrains-mono@5/400.css">`
+  `<link rel="stylesheet" href="${FONT_CDN}/jetbrains-mono@5/400.css">`,
+  `<link rel="stylesheet" href="${FONT_CDN}/jetbrains-mono@5/700.css">`
 ].join("\n");
 
 function head({ title, desc, url, jsonld }) {
@@ -126,42 +140,20 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script
 }
 
 function bgField() {
+  // v2：撤掉扫光条/反应堆环/扫描线全部动画层（fixed 混合层曾给卡片盖『暗色矩形遮挡』），
+  // 只留静态点阵 + 渐变，样式全在 bg.css。
   return `<div class="bg-dots" aria-hidden="true"></div>
-<div class="bg-field" aria-hidden="true"><svg class="bg-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
-<defs>
-<linearGradient id="vbar" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>
-<stop offset=".5" stop-color="var(--accent-glow)" stop-opacity=".85"/>
-<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient>
-<linearGradient id="hbar" x1="0" y1="0" x2="1" y2="0">
-<stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>
-<stop offset=".5" stop-color="var(--accent-glow)" stop-opacity=".5"/>
-<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient>
-<filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.1"/></filter>
-</defs>
-<g transform="translate(600 400)" opacity=".55">
-<circle class="reactor-ring" r="300" fill="none" stroke="var(--line-2)" stroke-width="1" stroke-dasharray="2 16"/>
-<circle class="reactor-ring2" r="366" fill="none" stroke="var(--line)" stroke-width="1" stroke-dasharray="1 26"/>
-<circle r="232" fill="none" stroke="var(--line)" stroke-width="1" opacity=".6"/>
-<circle r="3" fill="var(--accent)" opacity=".6"/></g>
-<g filter="url(#soft)">
-<rect class="bar v" style="--d:24s" x="0" y="-120" width="2" height="1040" fill="url(#vbar)"/>
-<rect class="bar v2" style="--d:31s" x="0" y="-120" width="1.5" height="1040" fill="url(#vbar)"/>
-<rect class="bar v" style="--d:18s;animation-delay:-9s" x="0" y="-120" width="1" height="1040" fill="url(#vbar)"/>
-<rect class="hbar" style="--d:27s" x="-120" y="250" width="1340" height="1.5" fill="url(#hbar)"/>
-<rect class="hbar" style="--d:35s;animation-delay:-13s" x="-120" y="558" width="1340" height="1" fill="url(#hbar)"/>
-</g></svg></div>
-<div class="bg-scan" aria-hidden="true"></div>`;
+<div class="bg-field" aria-hidden="true"></div>`;
 }
 
-function siteHead() {
+function siteHead({ home = false } = {}) {
+  // 首页本身就是天赋树，不再放「天赋树」项；其余页面它指向 "/"
   return `<header class="site-head">
   <a class="brand persist" href="/"><span class="glyph-strip" aria-hidden="true">${
     ["w", "w", "red", "yellow", "blue", "green"].map(c => `<span class="led on l-${c}"></span>`).join("")
   }</span> REACTOR</a>
   <nav>
-    <a href="/#tree">天赋树</a>
-    <a href="/lesson/N00.html">从这里开始</a>
+    ${home ? "" : `<a href="/">天赋树</a>\n    `}<a href="/lesson/N00.html">从这里开始</a>
     <a href="/atlas.html">图鉴</a>
     <button class="btn theme-toggle" data-theme-toggle><span class="tt-glyph" aria-hidden="true">◑</span><span class="tt-label">自动</span></button>
   </nav>
@@ -228,13 +220,20 @@ function lessonPage(node, lesson) {
     inLanguage: "zh-CN", isPartOf: { "@type": "Course", name: "REACTOR" },
     educationalLevel: "advanced", url
   };
+  // v2 骨架：左侧天赋树导轨（迷你点阵，当前节点高亮）+ 右侧课文
+  const rail = `<div class="lesson-shell"><aside class="tree-rail" aria-label="天赋树导航">
+  <div class="rail-head"><span class="rh-id">${esc(node.id)}</span><span>${esc(node.zh)}</span><span class="rh-count" data-tree-count></span></div>
+  <div class="tree-viewport mini" data-mode="mini" data-focus="${esc(node.id)}"></div>
+  <div class="rail-foot"><a href="/">⛶ 展开全图</a><span class="label">TREE</span></div>
+</aside>`;
   return head({ title: `${node.id} ${node.zh} · reactor-study`, desc: node.hook, url, jsonld })
     + siteHead()
+    + rail
     + `<main class="wrap" data-branch="${node.branch}">
     <div class="hero">
       <div class="nameplate"><span class="tag">${esc(node.id)}</span>
         <span>${esc(node.en)}</span><span class="rule"></span>
-        <span class="rev">${esc(BRANCH_LABEL[node.branch])} · REV.1</span></div>
+        <span class="rev">${esc(BRANCH_LABEL[node.branch])} · REV.${tree.meta.version}</span></div>
       <p class="bootline typing" style="margin:16px 0">SELF-TEST OK · REACTOR v${tree.meta.version} · LOADING [ ${esc(node.id)} ]…<span class="cursor"></span></p>
       <h1>${esc(node.zh)}</h1>
       <p class="lede">${esc(node.hook)}</p>
@@ -242,17 +241,17 @@ function lessonPage(node, lesson) {
     </div>
     <article class="stack">${renderBlocks(lesson.blocks)}</article>
     <nav class="prereq-row" style="margin-top:48px">
-      <a class="btn" href="/#tree">← 返回天赋树</a>
+      <a class="btn" href="/">← 返回天赋树</a>
       ${nextNode(node) ? `<a class="btn btn-primary" href="/lesson/${nextNode(node).id}.html">下一个推荐 · ${esc(nextNode(node).zh)} →</a>` : ""}
     </nav>
-  </main>` + siteFoot();
+  </main></div>` + siteFoot();
 }
 function nextNode(node) {
   const unlocks = tree.nodes.filter(n => n.prereqs.includes(node.id) && builtIds.has(n.id));
   return unlocks[0] || null;
 }
 
-/* ---- homepage ---- */
+/* ---- homepage：v2 全屏天赋树（树即首页即核心导航）---- */
 function homePage() {
   const url = SITE + "/";
   const jsonld = {
@@ -261,73 +260,39 @@ function homePage() {
     description: "一部关于排名、评测与反身性的现场手册：从 Espeland-Sauder 反应性、Goodhart 定律家族，到 AI 评测的代理博弈与抗博弈设计。",
     inLanguage: "zh-CN", provider: { "@type": "Organization", name: "REACTOR" }
   };
-  const treeData = JSON.stringify({
-    nodes: tree.nodes.map(n => ({ id: n.id, zh: n.zh, en: n.en, branch: n.branch, x: n.x, y: n.y, prereqs: n.prereqs, hook: n.hook, built: builtIds.has(n.id) })),
-    bounds, branchLabel: BRANCH_LABEL
-  });
-  const CARD_META = {
-    red: { key: "red", label: "RED", branch: "red", title: "社会学谱系", desc: "排名如何重新制造社会：反应性、可通约化、规训、可读性、表演性。" },
-    yellow: { key: "yellow", label: "YELLOW", branch: "yellow", title: "机器与前沿", desc: "AI/ML 的代理博弈：过拟合、奖励破解、排行榜幻觉、评估觉察。" },
-    blue: { key: "blue", label: "BLUE", branch: "blue", title: "定律与形式", desc: "指标失效的定律与定理：Goodhart、Campbell、必要多样性、多任务代理。" },
-    green: { key: "green", label: "GREEN", branch: "converge", title: "汇流综合", desc: "三支在此交汇：概念地图、七个杠杆、反 Goodhart 设计、你的 eval 事后剖析。" }
-  };
-  const branchCards = ["red", "yellow", "blue", "green"].map(k => {
-    const m = CARD_META[k];
-    const first = tree.nodes.find(n => n.branch === m.branch && builtIds.has(n.id))
-      || tree.nodes.find(n => n.branch === m.branch);
-    const count = tree.nodes.filter(n => n.branch === m.branch).length;
-    return `<a class="card" data-branch="${k}" href="/lesson/${first.id}.html">
-      <span class="num">${m.label} · ${count} 节点</span>
-      <h3>${m.title}</h3>
-      <p>${m.desc}</p>
-    </a>`;
-  }).join("");
-
   return head({ title: "reactor-study · 当尺子开始回看你", desc: jsonld.description, url, jsonld })
-    + siteHead()
-    + `<main>
-    <section class="wrap hero" data-branch="root">
-      <div class="nameplate"><span class="tag">v${tree.meta.version}</span><span>FIELD MANUAL</span>
-        <span class="rule"></span><span class="rev">REACTIVITY · MEASUREMENT · FEEDBACK</span></div>
-      <p class="bootline typing" style="margin:18px 0">BOOTING REACTOR… ${tree.nodes.length} NODES · 3 BRANCHES · SELF-TEST OK<span class="cursor"></span></p>
-      <h1>当尺子开始<br>回看你</h1>
-      <p class="lede">测量一个社会对象，就是干预它。这部手册把「排名 / 评测 / 反身性」这件事，从
-      社会学、经济学到 AI 前沿，铺成一棵可以自由探索的天赋树。它不是 1 到 100 的线性课程，
-      而是一张跟着知识脉络生长的结构图。</p>
-      <div class="prereq-row" style="margin-top:24px">
-        <a class="btn btn-primary" href="/lesson/N00.html">通电 · 从根节点开始 →</a>
-        <a class="btn" href="#tree">俯瞰天赋树</a>
-      </div>
-    </section>
-
-    <section class="wrap section" id="tree" data-branch="root">
-      <div class="nameplate"><span class="tag">MAP</span><span>THE TALENT TREE</span><span class="rule"></span>
-        <span class="rev">拖动平移 · 滚轮缩放 · 点击进入</span></div>
-      <h2 style="margin-top:16px">天赋树</h2>
-      <div class="tree-viewport" id="tree-viewport" data-tree='${treeData.replace(/'/g, "&#39;")}'>
-        <div class="tree-legend">
-          <div class="k"><span class="sw" style="background:var(--red)"></span>红 · 社会学谱系</div>
-          <div class="k"><span class="sw" style="background:var(--yellow)"></span>黄 · 机器与前沿</div>
-          <div class="k"><span class="sw" style="background:var(--blue)"></span>蓝 · 定律与形式</div>
-          <div class="k"><span class="sw" style="background:var(--green)"></span>绿 · 汇流综合</div>
-          <div class="k"><span class="sw" style="background:linear-gradient(90deg,var(--red),var(--yellow))"></span>合金 · 跨分支</div>
-        </div>
-        <div class="tree-hud">
-          <button data-tree-zout>−</button><button data-tree-zin>+</button>
-          <button data-tree-fit>适配</button><button data-tree-reset-progress>重置进度</button>
-        </div>
-        <div class="tree-hint">拖动平移 · 按住 ⌘/Ctrl 滚轮缩放 · 点亮的是推荐的下一步，未点亮的也能直接进</div>
-        <noscript><div class="noscript-fallback">天赋树需要 JavaScript。你可以直接从
-          <a href="/lesson/N00.html">根节点</a>顺序阅读，或用上方导航进入各分支。</div></noscript>
-      </div>
-    </section>
-
-    <section class="wrap section" data-branch="root">
-      <div class="nameplate"><span class="tag">03</span><span>THREE BRANCHES</span><span class="rule"></span></div>
-      <h2 style="margin-top:16px">三条谱系</h2>
-      <div class="cards" style="margin-top:24px">${branchCards}</div>
-    </section>
-  </main>` + siteFoot();
+    + siteHead({ home: true })
+    + `<main class="tree-full" data-branch="root">
+  <section class="tree-intro glass bolted">
+    <div class="nameplate"><span class="tag">v${tree.meta.version}</span><span>FIELD MANUAL</span>
+      <span class="rule"></span><span class="rev">${tree.nodes.length} NODES</span></div>
+    <h1>当尺子开始回看你</h1>
+    <p class="lede">测量一个社会对象，就是干预它。这里把「排名 / 评测 / 反身性」从社会学、经济学
+    铺到 AI 前沿，长成一棵可以自由探索的天赋树——不是 1 到 100 的线性课程，而是一张跟着
+    知识脉络生长的结构图。</p>
+    <div class="intro-cta">
+      <a class="btn btn-primary" href="/lesson/N00.html">通电 · 从根节点开始 →</a>
+      <a class="btn" href="/atlas.html">图鉴</a>
+    </div>
+    <p class="intro-hint">拖动平移 · ⌘/CTRL+滚轮缩放 · 点击节点进入 · 点亮的是推荐下一步</p>
+  </section>
+  <div class="tree-viewport" id="tree-viewport" data-mode="full">
+    <div class="tree-legend">
+      <button class="k" data-jump="red"><span class="sw" style="background:var(--red)"></span>红 · 社会学谱系</button>
+      <button class="k" data-jump="blue"><span class="sw" style="background:var(--blue)"></span>蓝 · 定律与形式</button>
+      <button class="k" data-jump="yellow"><span class="sw" style="background:var(--yellow)"></span>黄 · 机器与前沿</button>
+      <button class="k" data-jump="green"><span class="sw" style="background:var(--green)"></span>绿 · 防御与设计</button>
+      <button class="k" data-jump="case"><span class="sw" style="background:var(--text-mute)"></span>灰 · 案例带</button>
+      <button class="k" data-jump="converge"><span class="sw" style="background:var(--text)"></span>白 · 汇流</button>
+    </div>
+    <div class="tree-hud">
+      <button data-tree-zout aria-label="缩小">−</button><button data-tree-zin aria-label="放大">+</button>
+      <button data-tree-fit>适配</button><button data-tree-reset-progress>重置进度</button>
+    </div>
+    <noscript><div class="noscript-fallback">天赋树需要 JavaScript。你可以直接从
+      <a href="/lesson/N00.html">根节点</a>顺序阅读，或从<a href="/atlas.html">图鉴</a>进入各节点。</div></noscript>
+  </div>
+</main>` + siteFoot();
 }
 
 /* ---- atlas: node index (grouped) + glossary + myth-corrections ---- */
@@ -359,11 +324,11 @@ const MYTHS = [
   ["McNamara 四步引文", "实为 Yankelovich 1971 演讲；Handy 1994 误归给 McNamara。", "B05"],
   ["霍桑效应（强版本）", "原始照明数据经 Levitt & List (2011) 重分析判为 'entirely fictional'。", "R11"],
   ["Ashby “absorb variety”", "原文是 'only variety can destroy variety'；absorb 是 Beer 的改写。", "B11"],
-  ["“不能度量就不能管理”≈Deming", "反了。Deming 视其为要破除的谬误；'最重要数字不可知'是他转引 Nelson。", "C05"],
-  ["“Grafen 证明了障碍原则”", "该流行叙事被 Penn & Számadó (2020) 论证为对模型的误读。", "C04"],
+  ["“不能度量就不能管理”≈Deming", "反了。Deming 视其为要破除的谬误；'最重要数字不可知'是他转引 Nelson。", "G02"],
+  ["“Grafen 证明了障碍原则”", "该流行叙事被 Penn & Számadó (2020) 论证为对模型的误读。", "G01"],
   ["NUS 归于 Alex Turner", "更准的溯源是 Yudkowsky / Arbital（约 2015）。", "Y05"],
   ["Pygmalion 效应是铁证", "效应主要限一二年级、复制不稳定，被 Thorndike 1968 批评。", "R02"],
-  ["苏联钉子厂", "寓言级证据，无一手史料；机制真实但别当史实引用。", "C06"],
+  ["苏联钉子厂", "寓言级证据，无一手史料；机制真实但别当史实引用。", "K00"],
   ["家族起点是 Campbell / Goodhart", "需前推：Ridgway 1956 (ASQ) 是最早的成文系统综述，早 19 年。", "B01"],
   ["Goodhart 与 Lucas 独立发现", "需收紧：Chrystal & Mizen (2003) 裁定「若两者等价，Lucas 几乎肯定先说」。", "B01 / B03"],
   ["Campbell 1976 与 1979 是两说", "同一文本：油印本 (1976) ＝ 期刊版 (1979)，措辞一致。", "B02"],
@@ -374,22 +339,22 @@ const MYTHS = [
   ["反复刷同一榜必然严重过拟合", "经验裁决温和得多：Kaggle 百场「little evidence of substantial overfitting」，机制是模型相似性。", "Y02"],
   ["winner's curse 出自 Thaler", "概念源自 Capen, Clapp & Campbell (1971) 三位石油工程师；Thaler 1988 是通俗化者。", "B13"],
   ["好调节器定理证明需要世界模型", "「model」只是同态映射；且因果方向常被讲反，原证明有技术空隙（Scholten 2010）。", "B11"],
-  ["POSIWID 是后人讹传", "这次不是讹传：短语确为 Beer 所述，仅缩写为后人定型。", "C05"],
-  ["cost differential 是诚实信号的终点", "已被 2023/2026 的 trade-offs 超越：成本可为零，关键是质量依赖的净收益差。", "C04"],
-  ["昂贵信号是诚实的必要条件", "错：昂贵只在利益冲突时才需要，且需要量正比于冲突（cheap talk 传统）。", "C04"],
+  ["POSIWID 是后人讹传", "这次不是讹传：短语确为 Beer 所述，仅缩写为后人定型。", "G02"],
+  ["cost differential 是诚实信号的终点", "已被 2023/2026 的 trade-offs 超越：成本可为零，关键是质量依赖的净收益差。", "G01"],
+  ["昂贵信号是诚实的必要条件", "错：昂贵只在利益冲突时才需要，且需要量正比于冲突（cheap talk 传统）。", "G01"],
   ["操演性 = 经济学总能自证", "抹掉了 MacKenzie 四分类学，尤其方向相反的 counterperformativity。", "R07"],
   ["「榜首回落」证明反应性", "向均值回归足以单独解释；须先扣除回归再归因 Goodhart。", "B13"]
 ];
 
 function atlasPage() {
   const url = SITE + "/atlas.html";
-  const branchOrder = ["root", "red", "yellow", "blue", "converge"];
+  const branchOrder = ["root", "red", "blue", "yellow", "green", "case", "converge"];
   const groups = branchOrder.map(b => {
     const ns = tree.nodes.filter(n => n.branch === b).sort((a, c) => a.id.localeCompare(c.id));
     if (!ns.length) return "";
-    return `<div class="atlas-group" data-branch="${b === "converge" ? "green" : b}">
+    return `<div class="atlas-group" data-branch="${b}">
       <div class="nameplate" style="margin:28px 0 12px"><span class="tag">${esc(BRANCH_LABEL[b].toUpperCase?.() || BRANCH_LABEL[b])}</span><span class="rule"></span><span class="rev">${ns.length} 节点</span></div>
-      <div class="cards">${ns.map(n => `<a class="card" data-branch="${b === "converge" ? "green" : b}" href="/lesson/${n.id}.html">
+      <div class="cards">${ns.map(n => `<a class="card" data-branch="${b}" href="/lesson/${n.id}.html">
         <span class="num">${esc(n.id)}</span><h3>${esc(n.zh)}</h3><p>${esc(n.hook)}</p></a>`).join("")}</div></div>`;
   }).join("");
   const glossary = GLOSSARY.map(([t, d]) => `<div class="gl"><dt>${esc(t)}</dt><dd>${esc(d)}</dd></div>`).join("");
@@ -423,6 +388,14 @@ await cp(path.join(ROOT, "theme"), path.join(DIST, "theme"), { recursive: true }
 await cp(path.join(ROOT, "modules"), path.join(DIST, "modules"), { recursive: true });
 if (existsSync(path.join(ROOT, "static"))) await cp(path.join(ROOT, "static"), path.join(DIST, "static"), { recursive: true });
 if (existsSync(path.join(ROOT, "static/favicon.svg"))) await cp(path.join(ROOT, "static/favicon.svg"), path.join(DIST, "favicon.svg"));
+
+/* tree-data.js：天赋树唯一数据源（tree.json+布局 生成；首页全屏树与课程页导轨共用） */
+await writeFile(path.join(DIST, "modules", "tree-data.js"),
+  `/* REACTOR · tree-data.js — generated from content/tree.json by build.mjs, do not edit */\n`
+  + `export const TREE = ${JSON.stringify({
+      nodes: tree.nodes.map(n => ({ id: n.id, zh: n.zh, en: n.en, branch: n.branch, x: n.x, y: n.y, prereqs: n.prereqs, hook: n.hook, built: builtIds.has(n.id) })),
+      bounds, branchLabel: BRANCH_LABEL
+    })};\n`);
 
 await writeFile(path.join(DIST, "index.html"), homePage());
 await writeFile(path.join(DIST, "atlas.html"), atlasPage());

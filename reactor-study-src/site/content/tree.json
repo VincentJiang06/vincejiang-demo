@@ -1,11 +1,12 @@
 {
   "meta": {
     "title": "REACTOR",
-    "version": "1",
+    "version": "3",
     "accents": [
       "red",
       "blue",
-      "yellow"
+      "yellow",
+      "green"
     ]
   },
   "nodes": [
@@ -582,31 +583,15 @@
       "hook": "预测改变分布：反应性的数学化。"
     },
     {
-      "id": "C06",
-      "zh": "案例库",
-      "en": "Cross-Domain Case Vault",
-      "branch": "converge",
-      "tier": 3,
-      "prereqs": [
-        "R01",
-        "B04"
-      ],
-      "module": "explorable:case-vault",
-      "sources": [
-        "04"
-      ],
-      "hook": "从 US News 到 Doing Business 到刷单。"
-    },
-    {
       "id": "C01",
       "zh": "概念地图：五个近邻",
       "en": "Concept Map",
       "branch": "converge",
-      "tier": 4,
+      "tier": 3,
       "prereqs": [
         "R07",
         "R08",
-        "R09"
+        "R12"
       ],
       "module": "explorable:concept-map",
       "sources": [
@@ -615,43 +600,11 @@
       "hook": "不是一个东西的五个名字。"
     },
     {
-      "id": "C04",
-      "zh": "诚实信号",
-      "en": "Honest & Costly Signals",
-      "branch": "converge",
-      "tier": 4,
-      "prereqs": [
-        "B12",
-        "B01"
-      ],
-      "module": "explorable:handicap",
-      "sources": [
-        "10"
-      ],
-      "hook": "难伪造的信号才诚实，但「昂贵」够吗？"
-    },
-    {
-      "id": "C05",
-      "zh": "解耦：Deming 与 POSIWID",
-      "en": "Decoupling",
-      "branch": "converge",
-      "tier": 4,
-      "prereqs": [
-        "B11",
-        "R09"
-      ],
-      "module": "explorable:posiwid",
-      "sources": [
-        "08"
-      ],
-      "hook": "别让 eval 分数直接驱动迭代。"
-    },
-    {
       "id": "C02",
       "zh": "统一框架：七个杠杆",
       "en": "The Seven Levers",
       "branch": "converge",
-      "tier": 5,
+      "tier": 3,
       "prereqs": [
         "R01",
         "B01",
@@ -668,10 +621,11 @@
       "zh": "反 Goodhart 设计实验室",
       "en": "Anti-Goodhart Lab",
       "branch": "converge",
-      "tier": 5,
+      "tier": 4,
       "prereqs": [
-        "B11",
-        "C02"
+        "C02",
+        "G03",
+        "G05"
       ],
       "module": "sandbox:design-robust-eval",
       "sources": [
@@ -685,11 +639,11 @@
       "zh": "你的 Eval 事后剖析",
       "en": "Your Eval Postmortem",
       "branch": "converge",
-      "tier": 6,
+      "tier": 5,
       "prereqs": [
         "C03",
-        "C04",
-        "Y02"
+        "Y02",
+        "Y14"
       ],
       "module": "explorable:eval-checklist",
       "sources": [
@@ -698,6 +652,289 @@
         "10"
       ],
       "hook": "你发现 eval 前后毫无区别，这个发现比多数 eval 值钱。"
+    },
+    {
+      "id": "G01",
+      "zh": "诚实信号与权衡",
+      "en": "Honest Signals & Trade-offs",
+      "branch": "green",
+      "tier": 1,
+      "prereqs": [
+        "B12",
+        "B01"
+      ],
+      "module": "explorable:handicap",
+      "sources": [
+        "10"
+      ],
+      "hook": "难伪造的信号才诚实，但「昂贵」够吗？"
+    },
+    {
+      "id": "G02",
+      "zh": "解耦：Deming 与 POSIWID",
+      "en": "Decoupling",
+      "branch": "green",
+      "tier": 1,
+      "prereqs": [
+        "B11",
+        "R09"
+      ],
+      "module": "explorable:posiwid",
+      "sources": [
+        "08"
+      ],
+      "hook": "别让 eval 分数直接驱动迭代。"
+    },
+    {
+      "id": "K00",
+      "zh": "案例库总览",
+      "en": "Cross-Domain Case Vault",
+      "branch": "case",
+      "tier": 1,
+      "prereqs": [
+        "R01",
+        "B04"
+      ],
+      "module": "explorable:case-vault",
+      "sources": [
+        "04"
+      ],
+      "hook": "从 US News 到 Doing Business 到刷单。"
+    },
+    {
+      "id": "R12",
+      "zh": "机械客观性",
+      "en": "Mechanical Objectivity",
+      "branch": "red",
+      "tier": 3,
+      "prereqs": [
+        "R03"
+      ],
+      "module": "static:porter",
+      "sources": [
+        "02",
+        "D1"
+      ],
+      "hook": "「客观」不是发现出来的，是制度需要出来的。"
+    },
+    {
+      "id": "R13",
+      "zh": "排名的反击",
+      "en": "Boycott, Exit & Plurality",
+      "branch": "red",
+      "tier": 3,
+      "prereqs": [
+        "R01",
+        "R04"
+      ],
+      "module": "static:boycott",
+      "sources": [
+        "01",
+        "D3"
+      ],
+      "hook": "集体退出排名两年后，排名毫发无损。"
+    },
+    {
+      "id": "B14",
+      "zh": "良性指标的条件",
+      "en": "When Metrics Work",
+      "branch": "blue",
+      "tier": 5,
+      "prereqs": [
+        "B10"
+      ],
+      "module": "static:benign",
+      "sources": [
+        "06",
+        "04",
+        "D2"
+      ],
+      "hook": "什么时候应试就是学习？定律的边界条件。"
+    },
+    {
+      "id": "Y13",
+      "zh": "污染取证学",
+      "en": "Contamination Forensics",
+      "branch": "yellow",
+      "tier": 3,
+      "prereqs": [
+        "Y03"
+      ],
+      "module": "static:forensics",
+      "sources": [
+        "D4"
+      ],
+      "hook": "你甚至无法证明一个分数是干净的。"
+    },
+    {
+      "id": "Y14",
+      "zh": "智能体评测前线",
+      "en": "Agent Eval Frontier",
+      "branch": "yellow",
+      "tier": 4,
+      "prereqs": [
+        "Y12"
+      ],
+      "module": "static:agent-eval",
+      "sources": [
+        "D4",
+        "D5"
+      ],
+      "hook": "被测的不再是答案，而是一连串行为。"
+    },
+    {
+      "id": "Y15",
+      "zh": "评测科学运动",
+      "en": "The Science of Evals",
+      "branch": "yellow",
+      "tier": 4,
+      "prereqs": [
+        "Y11"
+      ],
+      "module": "static:eval-science",
+      "sources": [
+        "D5"
+      ],
+      "hook": "给评测本身做评测。"
+    },
+    {
+      "id": "G03",
+      "zh": "留出与动态评测",
+      "en": "Held-Out & Dynamic Benchmarks",
+      "branch": "green",
+      "tier": 2,
+      "prereqs": [
+        "Y02",
+        "Y03"
+      ],
+      "module": "static:heldout",
+      "sources": [
+        "D4",
+        "D7"
+      ],
+      "hook": "让优化循环永远追不上你的题库。"
+    },
+    {
+      "id": "G04",
+      "zh": "多指标制衡与轮换",
+      "en": "Metric Portfolios & Rotation",
+      "branch": "green",
+      "tier": 2,
+      "prereqs": [
+        "B09",
+        "B07"
+      ],
+      "module": "static:portfolio",
+      "sources": [
+        "06",
+        "03b",
+        "D7"
+      ],
+      "hook": "单靠一把尺子必被博弈，一组呢？"
+    },
+    {
+      "id": "G05",
+      "zh": "抗博弈机制设计",
+      "en": "Anti-Gaming Mechanism Design",
+      "branch": "green",
+      "tier": 3,
+      "prereqs": [
+        "G01",
+        "B11"
+      ],
+      "module": "static:mechanism",
+      "sources": [
+        "06",
+        "09",
+        "D7"
+      ],
+      "hook": "把作弊成本抬到比真本事还贵。"
+    },
+    {
+      "id": "G06",
+      "zh": "制度层防御",
+      "en": "Institutional Defenses",
+      "branch": "green",
+      "tier": 3,
+      "prereqs": [
+        "G02",
+        "R13"
+      ],
+      "module": "static:institutions",
+      "sources": [
+        "04",
+        "D3",
+        "D7"
+      ],
+      "hook": "尺子的尺子：谁来审计审计者。"
+    },
+    {
+      "id": "K01",
+      "zh": "教育：应试与作弊",
+      "en": "Education: Teaching to the Test",
+      "branch": "case",
+      "tier": 2,
+      "prereqs": [
+        "K00",
+        "B02"
+      ],
+      "module": "static:edu",
+      "sources": [
+        "04",
+        "D3"
+      ],
+      "hook": "分数上去了，学习没有。"
+    },
+    {
+      "id": "K02",
+      "zh": "治理：目标与恐怖",
+      "en": "Governance: Targets & Terror",
+      "branch": "case",
+      "tier": 2,
+      "prereqs": [
+        "K00",
+        "R04"
+      ],
+      "module": "static:gov",
+      "sources": [
+        "04",
+        "D3"
+      ],
+      "hook": "等候名单的四小时奇迹。"
+    },
+    {
+      "id": "K03",
+      "zh": "学术：引用的军备竞赛",
+      "en": "Academia: Citation Arms Race",
+      "branch": "case",
+      "tier": 2,
+      "prereqs": [
+        "K00",
+        "R10"
+      ],
+      "module": "static:academia",
+      "sources": [
+        "04",
+        "D3"
+      ],
+      "hook": "影响因子自己就是最大的受害者与共犯。"
+    },
+    {
+      "id": "K04",
+      "zh": "市场：评分与刷单",
+      "en": "Markets: Ratings & Fake Reviews",
+      "branch": "case",
+      "tier": 2,
+      "prereqs": [
+        "K00",
+        "R08"
+      ],
+      "module": "static:market",
+      "sources": [
+        "04",
+        "D3"
+      ],
+      "hook": "五星好评的生产线。"
     }
   ]
 }

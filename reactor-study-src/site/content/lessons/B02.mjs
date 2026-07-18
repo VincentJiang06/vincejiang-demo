@@ -4,7 +4,7 @@ export default {
     { t: "prose", html: `
 <p>Campbell 定律是这个家族里社会科学的一支，来自教育测试与社会项目评估的田野。Donald Campbell 的表述比 Goodhart 多说了一层，强调腐蚀的必然性：</p>
 <p class="pullquote">"The more any quantitative social indicator is used for social decision-making, the more subject it will be to corruption pressures and the more apt it will be to distort and corrupt the social processes it is intended to monitor."<span class="src">Campbell, 1976/1979</span></p>
-<p>指标不只是失效，它还会反过来腐蚀它本要监测的过程本身。测高考分，不只是分数失去意义，教育本身被应试改造了。原始例子就是标准化测试的应试化与警务犯罪统计的操纵，两者后来都有了成规模的实证（见 <code>C06</code> 案例库：Atlanta 改卷案、CompStat 降级）。</p>` },
+<p>指标不只是失效，它还会反过来腐蚀它本要监测的过程本身。测高考分，不只是分数失去意义，教育本身被应试改造了。原始例子就是标准化测试的应试化与警务犯罪统计的操纵，两者后来都有了成规模的实证（见 <code>K00</code> 案例库：Atlanta 改卷案、CompStat 降级）。</p>` },
 
     { t: "module", module: "explorable:corruption-pressure", title: "Campbell 的张力：他既提出腐蚀定律，也主张实验社会", config: {
       mode: "steps",

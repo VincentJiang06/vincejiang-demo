@@ -25,7 +25,7 @@ export default {
 <p><strong>防御手段的效力在图上一眼可见：</strong><br>
 ① <strong>留出集（held-out）</strong>：留一组优化循环永远看不到的题，题目过拟合无处藏。<br>
 ② <strong>动态轮换题库</strong>：让博弈追不上（Dynabench、LiveBench 的抗污染设计）。<br>
-③ <strong>把 eval 和优化循环解耦</strong>：eval 只做诊断、不直接驱动改模型，Deming 的老处方（<code>C05</code>）。<br>
+③ <strong>把 eval 和优化循环解耦</strong>：eval 只做诊断、不直接驱动改模型，Deming 的老处方（<code>G02</code>）。<br>
 ④ <strong>承认容量约束</strong>：别把所有优化压力压在一个窄 eval 上。<br>
 完整的抗博弈 eval 清单见 <code>C07</code>。</p>` },
 
