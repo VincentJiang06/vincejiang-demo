@@ -25,7 +25,8 @@ assert.doesNotMatch(home, /id="ambient-dot|id="ambient-ripple"|id="wave-|class="
 assert.doesNotMatch(home, /\.ambient-bg|body::before\{/);
 assert.match(home, /--status-g1:#a8c0ff; --status-g2:#ffd3e0; --status-g3:#c2f5e9; --status-g4:#e7d5ff;/);
 assert.match(home, /--status-g1:#1e3a8a; --status-g2:#5b2a6e; --status-g3:#0f5a52; --status-g4:#3b2a72;/);
-assert.match(home, /background:\n    radial-gradient\(40rem 40rem at 18% 22%,color-mix\(in srgb,var\(--status-g1\) 58%,transparent\) 0%,transparent 62%\),\n    radial-gradient\(38rem 38rem at 82% 18%,color-mix\(in srgb,var\(--status-g2\) 54%,transparent\) 0%,transparent 64%\),\n    radial-gradient\(45rem 45rem at 25% 82%,color-mix\(in srgb,var\(--status-g3\) 48%,transparent\) 0%,transparent 62%\),\n    radial-gradient\(42rem 42rem at 78% 80%,color-mix\(in srgb,var\(--status-g4\) 52%,transparent\) 0%,transparent 64%\),\n    var\(--page\);\n  background-attachment:fixed;/);
+assert.match(home, /background:var\(--page\);\s*\/\* 纯色背景/);
+assert.doesNotMatch(home, /radial-gradient\(\d+rem \d+rem at \d+% \d+%,color-mix\(in srgb,var\(--status-g/);
 assert.doesNotMatch(home, /linear-gradient\(135deg,color-mix\(in srgb,var\(--ambient-wash-a\)/);
 assert.doesNotMatch(home, /--ambient-line-[abc]/);
 assert.doesNotMatch(home, /data-period|\[data-period=|morning-a|afternoon-a|evening-a|按时间自动/);
