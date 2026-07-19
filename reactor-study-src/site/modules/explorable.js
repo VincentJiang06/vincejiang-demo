@@ -96,48 +96,48 @@ function threePhase(body, cfg, render) {
   sync();
 }
 
-/* —— steps：论证链。侧栏导轨 + 底部步进器双向同步，走到最后一步算「操作完成」 —— */
+/* —— steps：论证链（v2 用户裁决:不再步进翻页,全部阶段一次性纵向展示,
+   左侧 LED 脊柱随滚动自上而下依次点亮,亮过不复暗;全部亮过=操作完成）—— */
 function steps(body, cfg, onact = () => {}) {
   const items = cfg.steps || [];
   if (!items.length) return;
-  const wrap = document.createElement("div");
-  wrap.style.cssText = "display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:20px;align-items:start";
-  const rail = document.createElement("div");
-  rail.style.cssText = "display:flex;flex-direction:column;gap:6px";
-  const panel = document.createElement("div");
-  panel.className = "glass bolted"; panel.style.minHeight = "150px";
+  const stack = document.createElement("div");
+  stack.className = "steps-stack";
   items.forEach((s, i) => {
-    const b = document.createElement("button");
-    b.type = "button";
-    b.style.cssText = "display:flex;align-items:center;gap:8px;text-align:left;font:inherit;color:var(--text-2);background:transparent;border:0;border-left:2px solid var(--line);padding:8px 10px;cursor:pointer;transition:.15s";
-    b.innerHTML = `<span class="led"></span><span style="font-family:var(--font-mono);font-size:.72rem;letter-spacing:.05em">${s.k || "0" + (i + 1)}</span><span style="font-size:.82rem">${s.t || ""}</span>`;
-    b.onclick = () => sel(i);
-    rail.appendChild(b);
-  });
-  let cur = -1;
-  function sel(i) {
-    if (i === cur) return;                            // 值没变就不动 DOM
-    cur = i;
-    [...rail.children].forEach((c, j) => {
-      c.style.borderLeftColor = j === i ? "var(--accent)" : "var(--line)";
-      c.style.color = j === i ? "var(--text)" : "var(--text-2)";
-      c.querySelector(".led").className = j <= i ? "led on" : "led";
-    });
-    const s = items[i];
-    panel.innerHTML = `<div class="label" style="color:var(--accent);margin-bottom:10px">${s.k || "0" + (i + 1)} · ${s.t || ""}</div><div class="read">${s.html}</div>`
-      + (s.ev ? `<div class="ev"><button type="button" class="btn ev-toggle">看证据</button><div class="ev-body">${s.ev}</div></div>` : "");
+    const row = document.createElement("div");
+    row.className = "step-row";
+    row.innerHTML = `<span class="step-spine"><span class="led"></span></span>
+      <div class="step-body">
+        <div class="label step-k">${s.k || "0" + (i + 1)}${s.t ? " · " + s.t : ""}</div>
+        <div class="read">${s.html}</div>
+        ${s.ev ? `<div class="ev"><button type="button" class="btn ev-toggle">看证据</button><div class="ev-body">${s.ev}</div></div>` : ""}
+      </div>`;
     if (s.ev) {
-      const ev = panel.querySelector(".ev");
-      const tg = panel.querySelector(".ev-toggle");
+      const ev = row.querySelector(".ev");
+      const tg = row.querySelector(".ev-toggle");
       tg.onclick = () => { tg.textContent = ev.classList.toggle("open") ? "收起证据" : "看证据"; };
     }
-    st.go(i);                                         // go 到同一步是空操作，不会循环触发
-    if (i === items.length - 1) onact();
-  }
-  wrap.append(rail, panel);
-  body.appendChild(wrap);
-  const st = stepper(body, { count: items.length, onstep: i => sel(i) });
-  sel(0);
+    stack.appendChild(row);
+  });
+  body.appendChild(stack);
+  // 单调点亮:进入视口即亮到该行(含之前所有行),永不回退
+  let lit = -1;
+  const rows = [...stack.children];
+  const lightTo = i => {
+    if (i <= lit) return;
+    for (let j = lit + 1; j <= i; j++) {
+      rows[j].classList.add("lit");
+      rows[j].querySelector(".led").className = "led on";
+    }
+    lit = i;
+    if (lit === rows.length - 1) onact();
+  };
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) lightTo(rows.indexOf(e.target));
+    }), { threshold: 0.35 });
+    rows.forEach(r => io.observe(r));
+  } else lightTo(rows.length - 1);
 }
 
 /* —— compare：A/B 切换 + 并排对照。A、B 都看过（或直接并排看）算「操作完成」 —— */

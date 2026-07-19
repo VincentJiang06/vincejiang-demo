@@ -7,8 +7,8 @@
 import { progress } from "/modules/boot.js";
 import { TREE } from "/modules/tree-data.js";
 
-const HALF_H = 48;         // full 模式芯片可视半高（连线端点吸附用,实际按 offsetHeight 量）
-const BAND = 54;           // 行带半高：同一行芯片占据 y±BAND，行带之间即走廊
+const HALF_H = 67;         // full 模式芯片可视半高（连线端点吸附用,实际按 offsetHeight 量）
+const BAND = 74;           // 行带半高：同一行芯片占据 y±BAND，行带之间即走廊
 const svgNS = "http://www.w3.org/2000/svg";
 
 document.querySelectorAll(".tree-viewport").forEach(vp =>
@@ -123,21 +123,19 @@ function init(vp, mode) {
   const svg = document.createElementNS(svgNS, "svg");
   svg.setAttribute("class", "tree-svg");
   svg.setAttribute("width", W); svg.setAttribute("height", H);
-  // 难度分层线:横穿全宽的虚线 + 左端 LEVEL 标签(mini 里线更淡、无标签)
-  for (const lv of (data.levels || [])) {
+  // 难度分层:只留 LEVEL 标签 + 标签旁一小截刻度线(用户裁决:贯穿虚线影响阅读,撤)
+  if (mode !== "mini") for (const lv of (data.levels || [])) {
     const ly = TY(lv.y);
-    const line = document.createElementNS(svgNS, "line");
-    line.setAttribute("x1", 0); line.setAttribute("x2", W);
-    line.setAttribute("y1", ly); line.setAttribute("y2", ly);
-    line.setAttribute("class", "level-line");
-    svg.appendChild(line);
-    if (mode !== "mini") {
-      const t = document.createElementNS(svgNS, "text");
-      t.setAttribute("x", 14); t.setAttribute("y", ly - 10);
-      t.setAttribute("class", "level-label");
-      t.textContent = lv.label;
-      svg.appendChild(t);
-    }
+    const tick = document.createElementNS(svgNS, "line");
+    tick.setAttribute("x1", 14); tick.setAttribute("x2", 58);
+    tick.setAttribute("y1", ly); tick.setAttribute("y2", ly);
+    tick.setAttribute("class", "level-line");
+    svg.appendChild(tick);
+    const t = document.createElementNS(svgNS, "text");
+    t.setAttribute("x", 14); t.setAttribute("y", ly - 10);
+    t.setAttribute("class", "level-label");
+    t.textContent = lv.label;
+    svg.appendChild(t);
   }
   const edgeEls = [];
   const pending = [];
@@ -212,8 +210,13 @@ function init(vp, mode) {
   }
   function fit() {
     const r = vp.getBoundingClientRect();
-    scale = Math.min(r.width / W, r.height / H) * 0.94;
-    tx = (r.width - W * scale) / 2;
+    // 与 home 同一套「避开介绍浮层」逻辑:在浮层右侧的剩余空间里适配
+    const intro = vp.closest(".tree-full")?.querySelector(".tree-intro");
+    let left = 0;
+    if (intro && getComputedStyle(intro).position === "absolute")
+      left = intro.offsetLeft + intro.offsetWidth;
+    scale = Math.min((r.width - left - 32) / W, (r.height - 24) / H) * 0.96;
+    tx = left + 16 + (r.width - left - 32 - W * scale) / 2;
     ty = (r.height - H * scale) / 2;
     glide(); apply();
   }

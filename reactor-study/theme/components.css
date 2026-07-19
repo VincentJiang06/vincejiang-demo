@@ -295,7 +295,7 @@
 .prov-card .fc-front-text{font-family:var(--font-sans);font-size:.98rem;line-height:1.5}
 .prov-card .fc-flip-hint{margin-top:auto;opacity:.55}
 .prov-card .fc-back{transform:rotateY(180deg);background:var(--panel);
-  border-radius:var(--radius-panel);overflow-y:auto}
+  border-radius:var(--radius-panel);overflow:visible}
 .prov-card .fc-back-text{font-size:.86rem;line-height:1.55}
 .prov-card .fc-quote-btn{align-self:flex-start;margin-top:auto;font-family:var(--font-mono);
   font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);background:none;
@@ -304,7 +304,7 @@
 .prov-card .fc-quote-btn:hover{border-color:var(--accent)}
 .prov-card .fc-quote{display:none;margin:8px 0 0;padding:10px 12px;border-left:2px solid var(--accent);
   background:color-mix(in srgb,var(--accent) 6%,transparent);font-size:.82rem;line-height:1.6}
-.prov-card.q-open .fc-inner{min-height:340px}
+
 .prov-card.q-open .fc-quote{display:block}
 .prov-card .fc-cite{display:block;margin-top:8px}
 
@@ -380,3 +380,16 @@ mark.hl-b{background:color-mix(in srgb,var(--green) 20%,transparent);color:var(-
   box-shadow:0 0 0 6px color-mix(in srgb,var(--accent) 8%,transparent);border-radius:var(--radius);
   transition:background .15s,box-shadow .15s}
 .control.lever-focus label{color:var(--accent)}
+
+
+/* ===== steps 堆叠式论证链(v2):LED 脊柱依次点亮 ===== */
+.steps-stack{display:flex;flex-direction:column}
+.step-row{display:grid;grid-template-columns:26px minmax(0,1fr);gap:0 14px;position:relative;
+  padding:0 0 20px;opacity:.55;transition:opacity .35s}
+.step-row.lit{opacity:1}
+.step-spine{position:relative;display:flex;justify-content:center;padding-top:5px}
+.step-row:not(:last-child) .step-spine::after{content:"";position:absolute;top:22px;bottom:-2px;
+  left:50%;width:2px;transform:translateX(-50%);background:var(--line);transition:background .35s}
+.step-row.lit:not(:last-child) .step-spine::after{background:color-mix(in srgb,var(--accent) 55%,var(--line))}
+.step-row .step-k{color:var(--accent);margin-bottom:6px}
+.step-row .read{font-size:.94rem}

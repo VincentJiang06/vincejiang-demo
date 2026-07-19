@@ -63,6 +63,20 @@ mount("provenance", (body, fig, { config }) => {
   });
   body.appendChild(grid);
 
+  /* —— 卡尺寸以翻面后的内容为准(用户裁决):量正反两面自然高,全组取最大,杜绝内滚动 —— */
+  const sizeCards = () => {
+    let max = 150;
+    const cs = grid.querySelectorAll(".prov-card");
+    cs.forEach(c => { c.style.minHeight = ""; });
+    cs.forEach(c => c.querySelectorAll(".fc-face").forEach(fc => {
+      max = Math.max(max, fc.scrollHeight + 8);
+    }));
+    cs.forEach(c => { c.style.minHeight = max + "px"; });
+  };
+  requestAnimationFrame(sizeCards);
+  addEventListener("resize", sizeCards);
+  grid.addEventListener("click", () => requestAnimationFrame(sizeCards));  // 引文展开后重量
+
   /* —— 讹传/原文对照（翻开一张卡后点亮） —— */
   if (config.contrast) {
     const ct = config.contrast;

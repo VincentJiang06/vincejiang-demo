@@ -62,8 +62,8 @@
 
 /* 主题：亮色 = 白手册纸 */
 :root[data-theme="light"]{
-  --bg:var(--paper); --bg-2:var(--paper-2); --panel:var(--white);
-  --card:var(--white); --line:#D8D8D2; --line-2:#C2C2BA;
+  --bg:#FFFFFF; --bg-2:#FAFAFA; --panel:var(--white);   /* 纯白底(用户裁决) */
+  --card:var(--white); --line:#E2E2DE; --line-2:#CACAC2;
   --text:#141416; --text-2:#55555C; --text-mute:#6B6B75; /* 4.79:1 on #F4F4F2 */
   --glass-bg:color-mix(in srgb,var(--white) 66%,transparent);
   --glass-brd:color-mix(in srgb,#000 10%,transparent);

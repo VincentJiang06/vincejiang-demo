@@ -11,11 +11,11 @@ const THEORY = new Set(["root", "red", "blue", "yellow"]);
 const CLUSTER_ORDER = ["red", "blue", "yellow"];   // 理论区三纵簇左→右
 
 export function layoutTree(nodes, C = {}) {
-  const CHIP_W = C.chipW ?? 164;
-  const GAP_X = C.gapX ?? 52;                       // 芯片水平最小缝
-  const ROW_H = C.rowH ?? 244;                      // 行距(芯片高~112+走廊)
+  const CHIP_W = C.chipW ?? 190;
+  const GAP_X = C.gapX ?? 40;                       // 芯片水平最小缝(-23%,用户裁决)
+  const ROW_H = C.rowH ?? 196;                      // 行距(统一芯片高 134+走廊 62,纵向-50%)
   const GUTTER = C.gutter ?? 104;                   // 簇间隔
-  const BAND_GAP = C.bandGap ?? 0.72;               // 区与区之间的额外行距倍数
+  const BAND_GAP = C.bandGap ?? 0.45;               // 区与区之间的额外行距倍数(南区贴近主树)
   const CAP_W = C.capW ?? 300;                      // 汇流舱横条卡宽
   const MIN_SEP = CHIP_W + GAP_X;
 
@@ -125,11 +125,12 @@ export function layoutTree(nodes, C = {}) {
   };
   levels.push({ y: rowY["theory:1"] - ROW_H / 2 + 20, label: "LEVEL 01 · 入门" });
   cut(2, "LEVEL 02 · 进阶"); cut(4, "LEVEL 03 · 深水区");
+  // y 此刻 = 下一行应放置的位置。带间隙 = 额外 0.28 行(行内 1 行距的基础上),
+  // 保证不同带相邻两行间距 = 1.28×ROW_H,恒大于芯片高,物理上不可能叠卡。
   const openBand = (rows, key, label) => {
-    y += ROW_H * (BAND_GAP - 1) + ROW_H;            // 额外区间隙
-    levels.push({ y: y - ROW_H / 2 - 26, label });
+    y += ROW_H * 0.28;
+    levels.push({ y: y - ROW_H * 0.42, label });
     rows.forEach((r, i) => { rowY[key + ":" + i] = y; y += ROW_H; });
-    y -= ROW_H;
   };
   openBand(caseRows, "case", "LEVEL 04 · 案例带");
   openBand(greenRows, "green", "LEVEL 05 · 防御与设计");

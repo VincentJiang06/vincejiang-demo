@@ -136,8 +136,9 @@
 .edge.hot[data-branch="converge"],.edge.hot[data-branch="case"]{stroke:var(--text);filter:drop-shadow(0 0 3px var(--glass-hi))}
 
 /* 节点芯片 */
-.node{position:absolute;width:164px;transform:translate(-50%,-50%);
-  display:flex;flex-direction:column;gap:7px;padding:12px 13px;cursor:pointer;
+.node{position:absolute;width:190px;height:134px;transform:translate(-50%,-50%);
+  display:flex;flex-direction:column;gap:6px;padding:12px 14px;cursor:pointer;
+  /* 统一尺寸(用户裁决):恒为「两行中文+两行英文」的高度,视觉整齐划一 */
   border:1px solid var(--line);border-radius:var(--radius-panel);
   /* 性能红线：芯片不用 backdrop-filter——58 个模糊层叠在整块可平移的 stage 上,
      每帧平移/缩放都要重采样 58 次,GPU 内存与合成时间双爆。近似色直接混进背景色。 */
@@ -145,11 +146,13 @@
   text-decoration:none;transition:transform .15s,border-color .15s}
 .node:hover{transform:translate(-50%,-50%) scale(1.05);text-decoration:none}
 .node .n-head{display:flex;align-items:center;justify-content:space-between;
-  font-family:var(--font-mono);font-size:.68rem;letter-spacing:.1em;color:var(--text-2)}
+  font-family:var(--font-mono);font-size:.8rem;letter-spacing:.1em;color:var(--text-2)}
 .node .n-id{color:var(--accent)}
-.node .n-zh{font-family:var(--font-display);font-weight:700;font-size:1.06rem;line-height:1.18;
+.node .n-zh{font-family:var(--font-display);font-weight:700;font-size:1.26rem;line-height:1.18;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
   color:var(--text)}
-.node .n-en{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.06em;
+.node .n-en{font-family:var(--font-mono);font-size:.72rem;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;letter-spacing:.06em;
   color:var(--text-mute);text-transform:uppercase;line-height:1.2}
 .node[data-branch]{}
 /* 汇流舱：里程碑异形卡（横条，白色微光，与普通芯片形制不同——异形而非放大）*/
@@ -262,3 +265,9 @@
   .bootline.typing{width:100%}
   .tree-stage.gliding{transition:none}
 }
+
+
+/* 亮色主题:纯白无点(用户裁决:灰底+点阵可读性差) */
+:root[data-theme="light"] .bg-dots{display:none}
+:root[data-theme="light"] .tree-rail{background:transparent}
+:root[data-theme="light"] .tree-viewport{background-image:none}
