@@ -8,7 +8,7 @@ import { progress } from "/modules/boot.js";
 import { TREE } from "/modules/tree-data.js";
 
 const HALF_H = 67;         // full 模式芯片可视半高（连线端点吸附用,实际按 offsetHeight 量）
-const BAND = 74;           // 行带半高：同一行芯片占据 y±BAND，行带之间即走廊
+const BAND = 70;           // 行带半高：同一行芯片占据 y±BAND，行带之间即走廊
 const svgNS = "http://www.w3.org/2000/svg";
 
 document.querySelectorAll(".tree-viewport").forEach(vp =>

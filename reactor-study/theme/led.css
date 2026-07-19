@@ -172,10 +172,13 @@
   letter-spacing:.18em}
 .mini .level-line{opacity:.28}
 
-/* 状态：locked 也要能看清整棵树的分支结构（首页即全图，太暗=地图失明），
-   只降饱和不降存在感，边框带极淡分支色 */
-.node.locked{opacity:.8;border-color:color-mix(in srgb,var(--accent) 28%,var(--line))}
-.node.locked .n-zh{color:var(--text-2)}
+/* 状态：locked 的正文保持满对比度(用户裁决:未点亮也要读得清),
+   淡化只作用于外框/编号行/LED——「灯没亮,字照亮」 */
+.node.locked{border-color:color-mix(in srgb,var(--accent) 26%,var(--line))}
+.node.locked .n-zh{color:var(--text)}
+.node.locked .n-en{color:var(--text-mute)}
+.node.locked .n-head{opacity:.52}
+.node.locked .n-led{opacity:.4}
 .node.available{border-color:var(--accent)}
 .node.available::before{content:"";position:absolute;inset:-1px;border-radius:inherit;
   border:1px solid var(--accent);box-shadow:0 0 8px var(--accent-glow);
