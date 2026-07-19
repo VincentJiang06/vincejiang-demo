@@ -2,8 +2,8 @@
    两种形态，一套数据（tree-data.js）：
    - full：首页全屏树（拖动/滚轮平移，⌘/Ctrl+滚轮或双指捏合缩放，图例点击跳分支）
    - mini：课程页左侧导轨（各向异性压缩成窄条点阵图，当前节点高亮，纯点击导航）
-   连线 = 正交电路走线：从前置芯片下边缘出发，借行间「走廊」水平横穿，再垂直落到
-   目标芯片上边缘；同支实线、跨支虚线，默认压暗，悬停节点时相关线路点亮。 */
+   连线 = mindmap 大弧度 S 曲线(用户裁决弃正交电路风)：从前置芯片下边缘出发,
+   平滑弯到目标芯片上边缘;同支实线、跨支虚线,默认压暗,悬停节点时相关线路点亮。 */
 import { progress } from "/modules/boot.js?v=340ed36aa6";
 import { TREE } from "/modules/tree-data.js?v=4e27999186";
 
@@ -14,28 +14,12 @@ const svgNS = "http://www.w3.org/2000/svg";
 document.querySelectorAll(".tree-viewport").forEach(vp =>
   init(vp, vp.dataset.mode === "mini" ? "mini" : "full"));
 
-/* ---- 走廊：把所有行带合并后,取相邻带之间的整段区域(top/mid/bottom) ---- */
-function corridors(nodes) {
-  const rows = [...new Set(nodes.map(n => n.y))].sort((a, b) => a - b);
-  const bands = [];
-  for (const y of rows) {
-    const last = bands[bands.length - 1];
-    if (last && y - BAND <= last[1]) last[1] = y + BAND;
-    else bands.push([y - BAND, y + BAND]);
-  }
-  const cors = [];
-  for (let i = 1; i < bands.length; i++)
-    cors.push({ top: bands[i - 1][1], bottom: bands[i][0], mid: (bands[i - 1][1] + bands[i][0]) / 2 });
-  return cors;
-}
-
 function init(vp, mode) {
   const data = TREE;
   const { nodes, bounds } = data;
   const byId = Object.fromEntries(nodes.map(n => [n.id, n]));
   const done = progress.get();
   const focusId = vp.dataset.focus || null;
-  const mids = corridors(nodes);
 
   const isDone = id => done.has(id);
   const isAvail = n => n.prereqs.every(isDone);
@@ -61,26 +45,14 @@ function init(vp, mode) {
   stage.className = "tree-stage";
   stage.style.width = W + "px"; stage.style.height = H + "px";
 
-  function routeSpec(a, b) {
-    // 端点吸附芯片真实边缘;返回走线要素,水平总线段的最终 y 由车道分配统一微调
+  function route(a, b) {
+    // mindmap 风:从前置下边缘到目标上边缘的大弧度 S 曲线。
+    // 弧度 k 随垂直距离放大(至少 30px),同列时近乎直线,跨列时甩出饱满的弯。
     const x1 = TX(a.x), y1 = TY(a.y) + half(a), x2 = TX(b.x), y2 = TY(b.y) - half(b);
-    if (Math.abs(x2 - x1) < 1) return { d: `M${x1},${y1} L${x2},${y2}` };
-    if (y2 - y1 < 18) {
-      const my = (y1 + y2) / 2;
-      return { d: `M${x1},${y1} C${x1},${my + 24} ${x2},${my - 24} ${x2},${y2}` };
-    }
-    const usable = mids.filter(c => TY(c.mid) > y1 + 6 && TY(c.mid) < y2 - 6);
-    const c = usable.length ? usable[usable.length - 1] : null;
-    const ym = c ? TY(c.mid) : (y1 + y2) / 2;
-    return { bus: { x1, y1, x2, y2, ym,
-      corTop: c ? TY(c.top) : ym - 14, corBot: c ? TY(c.bottom) : ym + 14 } };
+    if (Math.abs(x2 - x1) < 1 && y2 > y1) return `M${x1},${y1} L${x2},${y2}`;
+    const k = Math.max(30, (y2 - y1) * 0.55);
+    return `M${x1},${y1} C${x1},${y1 + k} ${x2},${y2 - k} ${x2},${y2}`;
   }
-  const busPath = ({ x1, y1, x2, y2, ym }) => {
-    const s = x2 > x1 ? 1 : -1;
-    const r = Math.min(10, Math.abs(x2 - x1) / 2, (ym - y1) / 2, (y2 - ym) / 2);
-    return `M${x1},${y1} L${x1},${ym - r} Q${x1},${ym} ${x1 + s * r},${ym}` +
-           ` L${x2 - s * r},${ym} Q${x2},${ym} ${x2},${ym + r} L${x2},${y2}`;
-  };
 
   /* ---- 节点（先渲染，才能量出芯片高度供连线吸附）---- */
   const nodeEls = {};
@@ -141,53 +113,16 @@ function init(vp, mode) {
     svg.appendChild(t);
   }
   const edgeEls = [];
-  const pending = [];
   for (const n of nodes) {
     for (const p of n.prereqs) {
       const a = byId[p]; if (!a) continue;
-      pending.push({ a, n, spec: routeSpec(a, n) });
+      const path = document.createElementNS(svgNS, "path");
+      path.setAttribute("d", route(a, n));
+      const cross = a.branch !== n.branch && a.branch !== "root" && n.branch !== "converge";
+      path.setAttribute("class", "edge" + (cross ? " cross" : ""));
+      path.dataset.from = a.id; path.dataset.to = n.id; path.dataset.branch = n.branch;
+      svg.appendChild(path); edgeEls.push(path);
     }
-  }
-  // 等分线分配(用户裁决):把两行卡之间的走廊区域三等分(线少)或五等分(线多),
-  // 横线一律落在等分线上;同一条等分线只在水平区间互不重叠时共用,
-  // 优先用靠中的等分线,由内向外扩散——线自然铺满走廊而不是挤在中线。
-  const groups = {};
-  for (const e of pending) if (e.spec.bus) (groups[Math.round(e.spec.bus.ym / 4)] ||= []).push(e);
-  for (const g of Object.values(groups)) {
-    const { corTop, corBot } = g[0].spec.bus;
-    const D = g.length <= 2 ? 3 : 5;                       // 三等分或五等分
-    const lines = [];
-    for (let k = 1; k < D; k++) lines.push({ y: corTop + (corBot - corTop) * k / D, iv: [] });
-    // 靠中优先的尝试顺序:D=3→[1,0](即 2/3,1/3);D=5→[2,1,3,0,4]-1 → [1,0,2](中,上,下)…
-    const order = [];
-    const mid = Math.floor((lines.length - 1) / 2);
-    for (let d = 0; d <= lines.length; d++) {
-      if (mid - d >= 0) order.push(mid - d);
-      if (d > 0 && mid + d < lines.length) order.push(mid + d);
-    }
-    g.sort((u, v) => (Math.abs(u.spec.bus.x2 - u.spec.bus.x1) - Math.abs(v.spec.bus.x2 - v.spec.bus.x1))
-      || (u.n.id < v.n.id ? -1 : 1));                      // 短线先占中线,长线外扩
-    for (const e of g) {
-      const b = e.spec.bus;
-      const lo = Math.min(b.x1, b.x2) - 14, hi = Math.max(b.x1, b.x2) + 14;
-      let pick = null;
-      for (const li of order) {
-        if (!lines[li].iv.some(([a, z]) => lo < z && hi > a)) { pick = li; break; }
-      }
-      if (pick === null) {                                 // 全被占:选负载最轻的
-        pick = order.reduce((best, li) => lines[li].iv.length < lines[best].iv.length ? li : best, order[0]);
-      }
-      lines[pick].iv.push([lo, hi]);
-      b.ym = lines[pick].y;
-    }
-  }
-  for (const { a, n, spec } of pending) {
-    const path = document.createElementNS(svgNS, "path");
-    path.setAttribute("d", spec.d || busPath(spec.bus));
-    const cross = a.branch !== n.branch && a.branch !== "root" && n.branch !== "converge";
-    path.setAttribute("class", "edge" + (cross ? " cross" : ""));
-    path.dataset.from = a.id; path.dataset.to = n.id; path.dataset.branch = n.branch;
-    svg.appendChild(path); edgeEls.push(path);
   }
   stage.insertBefore(svg, stage.firstChild);
 
