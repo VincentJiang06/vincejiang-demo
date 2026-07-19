@@ -131,12 +131,26 @@
 .theme-toggle .tt-label{letter-spacing:.1em}
 
 @media (max-width:720px){
-  /* 以前这里把导航整条藏了，图鉴在手机上就此无路可达。改成换行 + 收紧字号 */
-  .site-head{flex-wrap:wrap;gap:var(--u) calc(var(--u)*1.5)}
-  .site-head nav{margin-left:auto;gap:calc(var(--u)*1.75);font-size:.9em}
-  .site-head nav a{font-size:.66rem;letter-spacing:.1em}
-  .theme-toggle{padding:.5em .6em}
+  /* 移动端 header 恒为一行(用户裁决,禁折行):LED+REACTOR 居左,三个导航链接与
+     明暗按钮同排靠右。手段=收紧 brand 字号/LED 尺寸 + 压 nav gap/字距 +
+     明暗按钮只留 ◑ 藏文字。触摸目标≥40px:nav 链接与按钮给 min-height:40px,
+     并把 header padding-block 压到 6px 抵消,保持 header 不臃肿。 */
+  .site-head{flex-wrap:nowrap;gap:8px;padding-block:6px}
+  .site-head .brand{flex:0 0 auto;font-size:.82rem;gap:6px}
+  .site-head .brand .glyph-strip{gap:4px}
+  .site-head .brand .glyph-strip .led{width:5px;height:5px}
+  .site-head nav{margin-left:auto;flex:0 1 auto;min-width:0;gap:10px}
+  .site-head nav a{font-size:.62rem;letter-spacing:.02em;white-space:nowrap;
+    min-height:40px;display:inline-flex;align-items:center}
+  .theme-toggle{padding:.5em;min-width:40px;min-height:40px;justify-content:center;gap:0}
+  .theme-toggle .tt-label{display:none}
   .module .controls{gap:var(--u) calc(var(--u)*2)}
+
+  /* 正文左右对称占满(用户反馈:手机右侧留白比左侧大)。诊断结论:内容盒本就是
+     对称的 padding-inline:16px(见 base.css .wrap;article/.read/p 实测 left=16 right=374,
+     rGap=16,无横向溢出)——右侧多出的观感留白是中文整字换行的『锯齿右缘』。
+     用 justify 让每行铺满到右边界,左右留白即相等(末行仍自然收尾)。仅移动端。 */
+  .read p,.read li,.callout p{text-align:justify}
 }
 
 /* ============================================================

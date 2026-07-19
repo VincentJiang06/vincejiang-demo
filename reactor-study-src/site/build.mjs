@@ -15,7 +15,7 @@ const DIST = path.join(ROOT, "dist");
      BASE=/reactor-study  → 站点挂在子路径下，所有内部链接加前缀
      SITE=https://…       → canonical / sitemap 用的绝对前缀 */
 const BASE = (process.env.BASE || "").replace(/\/$/, "");
-const SITE = process.env.SITE || "https://reactor.study";
+const SITE = process.env.SITE || "https://reactor.vincejiang.com";  // 2026-07 已迁子域,默认即新域(防裸跑 build 回退)
 
 const tree = JSON.parse(await readFile(path.join(ROOT, "content/tree.json"), "utf8"));
 const byId = Object.fromEntries(tree.nodes.map(n => [n.id, n]));

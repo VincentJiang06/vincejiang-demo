@@ -287,8 +287,8 @@
 }
 
 
-/* 亮色主题:纯白无点(用户裁决:灰底+点阵可读性差) */
-:root[data-theme="light"] .bg-dots{display:none}
+/* 亮色主题:点阵回归(用户新裁决 2026-07:隐约灰点,浓度见 tokens.css 的 --dot)。
+   .bg-dots 不再隐藏;树导轨/视口仍保持无背景纹理(纯白托盘)。 */
 :root[data-theme="light"] .tree-rail{background:transparent}
 :root[data-theme="light"] .tree-viewport{background-image:none}
 
