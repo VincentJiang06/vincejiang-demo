@@ -156,14 +156,14 @@
   color:var(--text-mute);text-transform:uppercase;line-height:1.2}
 .node[data-branch]{}
 /* 汇流舱：里程碑异形卡（横条，白色微光，与普通芯片形制不同——异形而非放大）*/
-.node.node-cap{width:auto;min-width:264px;max-width:320px;
+.node.node-cap{width:auto;min-width:300px;max-width:360px;height:auto;min-height:76px;
   flex-direction:row;align-items:center;gap:12px;padding:14px 18px;
   border-color:color-mix(in srgb,var(--text) 45%,var(--line));
   box-shadow:0 0 0 1px color-mix(in srgb,var(--text) 12%,transparent),
              0 0 18px color-mix(in srgb,var(--glass-hi) 60%,transparent)}
-.node-cap .n-id{font-family:var(--font-mono);font-size:.7rem;color:var(--text)}
+.node-cap .n-id{font-family:var(--font-mono);font-size:.8rem;color:var(--text)}
 .node-cap .cap-txt{display:flex;flex-direction:column;gap:2px}
-.node-cap .n-zh{font-size:1rem}
+.node-cap .n-zh{font-size:1.26rem}
 .node-cap.locked{opacity:.8}
 
 /* 难度分层线与标签 */
@@ -242,13 +242,13 @@
 
 /* 迷你树点阵：详细度分级——
    当前节点=发光边框的迷你芯片(内嵌标号)；直接前置/后继=挂标号的点；其余=素点 */
-.mini .dot{position:absolute;width:13px;height:13px;transform:translate(-50%,-50%);
-  border-radius:3px;border:1px solid color-mix(in srgb,var(--accent) 45%,var(--line-2));
-  background:var(--panel);cursor:pointer}
+.mini .dot{position:absolute;width:14px;height:14px;transform:translate(-50%,-50%);
+  border-radius:3px;border:1.5px solid color-mix(in srgb,var(--accent) 80%,var(--line-2));
+  background:color-mix(in srgb,var(--accent) 14%,var(--panel));cursor:pointer}
 .mini .dot:hover{border-color:var(--accent);z-index:3}
 .mini .dot.available{border-color:var(--accent)}
 .mini .dot.completed{background:var(--accent);border-color:var(--accent)}
-.mini .dot.locked{opacity:.5}
+.mini .dot.locked{opacity:.85}
 .mini .dot.near{border-color:var(--accent);z-index:2}
 .mini .dot.current{width:34px;height:20px;border:1px solid var(--accent);z-index:4;
   display:flex;align-items:center;justify-content:center;background:var(--bg-2);
@@ -259,8 +259,8 @@
 .mini .dot-tag{position:absolute;top:-15px;left:50%;transform:translateX(-50%);
   font-family:var(--font-mono);font-size:.54rem;letter-spacing:.06em;white-space:nowrap;
   color:var(--accent);opacity:.85}
-.mini .edge{stroke-width:1;opacity:.35}
-.mini .edge.hot{stroke-width:1.5;opacity:.9}
+.mini .edge{stroke-width:1.2;opacity:.6}
+.mini .edge.hot{stroke-width:1.8;opacity:1}
 
 @media (prefers-reduced-motion:reduce){
   .glyph-strip .led,.led.pulse,.node.available::before,.bootline.typing{animation:none}
@@ -274,3 +274,7 @@
 :root[data-theme="light"] .bg-dots{display:none}
 :root[data-theme="light"] .tree-rail{background:transparent}
 :root[data-theme="light"] .tree-viewport{background-image:none}
+
+
+/* 亮色主题:连背景渐变彩斑也不要——纯白就是纯白(用户裁决) */
+:root[data-theme="light"] .bg-field{display:none}
