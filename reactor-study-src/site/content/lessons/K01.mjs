@@ -8,7 +8,7 @@ export default {
     { t: "prose", html: `
 <p>先看第一现场。你在 <code>B02</code> 读过 Campbell 定律：指标承载的社会决策压力越大，它越容易腐化、也越容易腐蚀它本要测量的过程。Campbell 1970 年代提出这个命题时（出版细节见来源），教育就是第一例证：Texarkana 绩效合同案（Stake 1971 记录）里，按学生成绩涨幅付费的承包商，直接教期末考题。钱挂在涨幅上，涨幅最便宜的来源就是题目本身。Campbell 关于考试的原话值得整段读：</p>
 <p class="pullquote">"Achievement tests may well be valuable indicators of general school achievement under conditions of normal teaching aimed at general competence. But when test scores become the goal of the teaching process, they both lose their value as indicators of educational status and distort the educational process in undesirable ways."<span class="src">Campbell, 1976/1979</span></p>
-<p>白话拆开：正常教学之下，考试是不错的指标；可一旦分数成了教学的目标，两层损失同时发生，指标失效（分数不再指示学力），过程腐蚀（教学本身被应试改造）。本课其余内容，就是这两句话此后五十年的实证展开。机制标注：对抗型（<code>K00</code> 的标注体系，细讲在 <code>B08</code>），拉满的杠杆是利害绑定与可操纵通道。</p>` },
+<p>白话拆开：正常教学之下，考试是不错的指标；可一旦分数成了教学的目标，两层损失同时发生，指标失效（分数不再指示学力），过程腐蚀（教学本身被应试改造）。本课其余内容，就是这两句话此后五十年的实证展开。机制标注：对抗型（<code>K01</code> 的标注体系，细讲在 <code>B08</code>），拉满的杠杆是利害绑定与可操纵通道。</p>` },
 
     { t: "h", text: "分数通胀的计量学" },
     { t: "prose", html: `

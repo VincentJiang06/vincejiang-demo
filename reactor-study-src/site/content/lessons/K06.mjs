@@ -3,7 +3,7 @@ export default {
   blocks: [
     { t: "prose", html: `
 <p>你多半听过那个段子：苏联的钉子厂，上头按重量下指标，厂里就造几根巨钉交差；改成按数量考核，厂里就造出海量的小钉子。这节课要做两件事：一是把这套「指标的一百种死法」讲清楚，一个笨拙的考核指标能从多少个方向被钻空子；二是把这个段子本身的证据分级摆正，因为它太好用了，好用到被当成信史反复引用，可它其实是寓言，一手史料一片空白。真正扎实的，是它背后那套被经济学家做成学问的东西。值得花十分钟的地方在于，你会同时学到一个机制清单，和一条考据纪律：机制真实，不等于故事真实。</p>
-<p>先接上两个前置。<code>B04</code> 的眼镜蛇效应已经给你打过预防针：那个殖民地悬赏灭蛇、市民转而养蛇的故事同样没有可靠史料，机制成立、故事存疑，有档案的版本在河内的老鼠悬赏。<code>K00</code> 案例库把这条立成了纪律：寓言可以讲，但引用时必须标明它是寓言。钉子厂，正是这条纪律又一次的用武之地。</p>` },
+<p>先接上两个前置。<code>B04</code> 的眼镜蛇效应已经给你打过预防针：那个殖民地悬赏灭蛇、市民转而养蛇的故事同样没有可靠史料，机制成立、故事存疑，有档案的版本在河内的老鼠悬赏。<code>K01</code> 案例库把这条立成了纪律：寓言可以讲，但引用时必须标明它是寓言。钉子厂，正是这条纪律又一次的用武之地。</p>` },
 
     { t: "callout", variant: "myth", html: `
 <p><strong>流行说法：「苏联某家钉子厂真造过巨钉；那幅巨钉漫画出自 1954 年的《鳄鱼》杂志。」</strong>复核结论：它是讽刺画的一个体裁，不是哪家工厂的档案史实。经济学家 Alec Nove 在 1977 年的《苏联经济体系》第 94 页转述过一幅苏联漫画，画里车间悬着一根巨钉，厂长指着它说本月计划完成了，当然，是按吨算的。这个体裁通常被系到官方讽刺杂志《鳄鱼》（Krokodil）头上，可那幅著名漫画的确切刊期从未被可靠定位，1954、1955、1957 各种说法没有一个有一手实证，有研究者回忆见过原件却怎么也找不回出处。至于西方流行的加料版，厂长因超额完成吨位获颁列宁勋章、两台起重机吊着一根巨钉，那已经是演绎再加工。它和德里眼镜蛇是同一级别的寓言，真正有档案的是河内老鼠。所以，讲它可以，别把它当已证实的历史事件引用。</p>` },
@@ -31,7 +31,7 @@ export default {
       `Berliner, Joseph (1957). <em>Factory and Manager in the USSR</em>. Harvard UP（安全系数、月末突击 shturmovshchina、催料员 tolkach、关系网 blat）。`,
       `Ridgway, V.F. (1956). "Dysfunctional Consequences of Performance Measurements." <em>Administrative Science Quarterly</em>（最早的系统综述；苏联 1940 年已得出结论）。`,
       `Bevan, G. & Hood, C. (2006). "What's Measured Is What Matters." <em>Public Administration</em> 84(3):517–538（NHS targets and terror 明言与苏联体制相似、月末冲量同构）。`,
-      `考据（钉子厂为寓言、无一手史料、与德里眼镜蛇同级）见 <code>research/03-goodhart-family.md</code> §6.5、§6.6 与 §10、<code>research/deep/D2</code>；案例库纪律见 <code>research/04</code> §10–11 与 <code>K00</code>。`
+      `考据（钉子厂为寓言、无一手史料、与德里眼镜蛇同级）见 <code>research/03-goodhart-family.md</code> §6.5、§6.6 与 §10、<code>research/deep/D2</code>；案例库纪律见 <code>research/04</code> §10–11 与 <code>K01</code>。`
     ] }
   ]
 };

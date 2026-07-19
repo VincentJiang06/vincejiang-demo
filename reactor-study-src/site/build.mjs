@@ -303,7 +303,7 @@ const MYTHS = [
   ["“Grafen 证明了障碍原则”", "该流行叙事被 Penn & Számadó (2020) 论证为对模型的误读。", "G01"],
   ["NUS 归于 Alex Turner", "更准的溯源是 Yudkowsky / Arbital（约 2015）。", "Y05"],
   ["Pygmalion 效应是铁证", "效应主要限一二年级、复制不稳定，被 Thorndike 1968 批评。", "R02"],
-  ["苏联钉子厂", "寓言级证据，无一手史料；巨钉漫画的《鳄鱼》刊期从未被可靠定位。机制真实但别当史实引用。", "K00 / K06"],
+  ["苏联钉子厂", "寓言级证据，无一手史料；巨钉漫画的《鳄鱼》刊期从未被可靠定位。机制真实但别当史实引用。", "K06"],
   ["家族起点是 Campbell / Goodhart", "需前推：Ridgway 1956 (ASQ) 是最早的成文系统综述，早 19 年；三方原文互不引用，大概率独立发现。", "B01 / B15"],
   ["Goodhart 与 Lucas 独立发现", "需收紧：Chrystal & Mizen (2003) 裁定「若两者等价，Lucas 几乎肯定先说」。", "B01 / B03"],
   ["Campbell 1976 与 1979 是两说", "同一文本：油印本 (1976) ＝ 期刊版 (1979)，措辞一致。", "B02"],
@@ -394,6 +394,7 @@ await writeFile(path.join(DIST, "index.html"), homePage());
 await writeFile(path.join(DIST, "atlas.html"), atlasPage());
 const urls = [SITE + "/", SITE + "/atlas.html"];
 for (const [id, lesson] of Object.entries(lessons)) {
+  if (!byId[id]) { console.log(`  ⚠ 课文 ${id} 无对应树节点,跳过(节点已被裁撤)`); continue; }
   await writeFile(path.join(DIST, "lesson", id + ".html"), lessonPage(byId[id], lesson));
   urls.push(`${SITE}/lesson/${id}.html`);
 }

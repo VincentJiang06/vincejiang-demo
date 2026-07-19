@@ -693,22 +693,6 @@
       "hook": "别让 eval 分数直接驱动迭代。"
     },
     {
-      "id": "K00",
-      "zh": "案例库总览",
-      "en": "Cross-Domain Case Vault",
-      "branch": "case",
-      "tier": 1,
-      "prereqs": [
-        "R01",
-        "B04"
-      ],
-      "module": "explorable:case-vault",
-      "sources": [
-        "04"
-      ],
-      "hook": "从 US News 到 Doing Business 到刷单。"
-    },
-    {
       "id": "R12",
       "zh": "机械客观性",
       "en": "Mechanical Objectivity",
@@ -882,7 +866,6 @@
       "branch": "case",
       "tier": 2,
       "prereqs": [
-        "K00",
         "B02"
       ],
       "module": "static:edu",
@@ -899,7 +882,6 @@
       "branch": "case",
       "tier": 2,
       "prereqs": [
-        "K00",
         "R04"
       ],
       "module": "static:gov",
@@ -916,7 +898,6 @@
       "branch": "case",
       "tier": 2,
       "prereqs": [
-        "K00",
         "R10"
       ],
       "module": "static:academia",
@@ -933,7 +914,6 @@
       "branch": "case",
       "tier": 3,
       "prereqs": [
-        "K00",
         "R08"
       ],
       "module": "static:market",
@@ -1096,7 +1076,6 @@
       "branch": "case",
       "tier": 3,
       "prereqs": [
-        "K00",
         "B02"
       ],
       "module": "static:medicine",
@@ -1113,7 +1092,6 @@
       "branch": "case",
       "tier": 3,
       "prereqs": [
-        "K00",
         "B04"
       ],
       "module": "static:quota",
