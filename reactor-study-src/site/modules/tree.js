@@ -14,7 +14,7 @@ const svgNS = "http://www.w3.org/2000/svg";
 document.querySelectorAll(".tree-viewport").forEach(vp =>
   init(vp, vp.dataset.mode === "mini" ? "mini" : "full"));
 
-/* ---- 走廊：把所有行带合并后，取相邻带之间的中线 ---- */
+/* ---- 走廊：把所有行带合并后,取相邻带之间的整段区域(top/mid/bottom) ---- */
 function corridors(nodes) {
   const rows = [...new Set(nodes.map(n => n.y))].sort((a, b) => a - b);
   const bands = [];
@@ -23,9 +23,10 @@ function corridors(nodes) {
     if (last && y - BAND <= last[1]) last[1] = y + BAND;
     else bands.push([y - BAND, y + BAND]);
   }
-  const mids = [];
-  for (let i = 1; i < bands.length; i++) mids.push((bands[i - 1][1] + bands[i][0]) / 2);
-  return mids;
+  const cors = [];
+  for (let i = 1; i < bands.length; i++)
+    cors.push({ top: bands[i - 1][1], bottom: bands[i][0], mid: (bands[i - 1][1] + bands[i][0]) / 2 });
+  return cors;
 }
 
 function init(vp, mode) {
@@ -68,9 +69,11 @@ function init(vp, mode) {
       const my = (y1 + y2) / 2;
       return { d: `M${x1},${y1} C${x1},${my + 24} ${x2},${my - 24} ${x2},${y2}` };
     }
-    const usable = mids.filter(c => TY(c) > y1 + 6 && TY(c) < y2 - 6);
-    const ym = usable.length ? TY(usable[usable.length - 1]) : (y1 + y2) / 2;
-    return { bus: { x1, y1, x2, y2, ym } };
+    const usable = mids.filter(c => TY(c.mid) > y1 + 6 && TY(c.mid) < y2 - 6);
+    const c = usable.length ? usable[usable.length - 1] : null;
+    const ym = c ? TY(c.mid) : (y1 + y2) / 2;
+    return { bus: { x1, y1, x2, y2, ym,
+      corTop: c ? TY(c.top) : ym - 14, corBot: c ? TY(c.bottom) : ym + 14 } };
   }
   const busPath = ({ x1, y1, x2, y2, ym }) => {
     const s = x2 > x1 ? 1 : -1;
@@ -145,13 +148,38 @@ function init(vp, mode) {
       pending.push({ a, n, spec: routeSpec(a, n) });
     }
   }
-  // 车道分配:同一走廊(ym 相近)的总线按水平段中点排序,各领 ±LANE 间距的车道,不再叠线
-  const LANE = mode === "mini" ? 2.5 : 7;
+  // 等分线分配(用户裁决):把两行卡之间的走廊区域三等分(线少)或五等分(线多),
+  // 横线一律落在等分线上;同一条等分线只在水平区间互不重叠时共用,
+  // 优先用靠中的等分线,由内向外扩散——线自然铺满走廊而不是挤在中线。
   const groups = {};
   for (const e of pending) if (e.spec.bus) (groups[Math.round(e.spec.bus.ym / 4)] ||= []).push(e);
   for (const g of Object.values(groups)) {
-    g.sort((u, v) => ((u.spec.bus.x1 + u.spec.bus.x2) - (v.spec.bus.x1 + v.spec.bus.x2)) || (u.n.id < v.n.id ? -1 : 1));
-    g.forEach((e, i) => { e.spec.bus.ym += (i - (g.length - 1) / 2) * LANE; });
+    const { corTop, corBot } = g[0].spec.bus;
+    const D = g.length <= 2 ? 3 : 5;                       // 三等分或五等分
+    const lines = [];
+    for (let k = 1; k < D; k++) lines.push({ y: corTop + (corBot - corTop) * k / D, iv: [] });
+    // 靠中优先的尝试顺序:D=3→[1,0](即 2/3,1/3);D=5→[2,1,3,0,4]-1 → [1,0,2](中,上,下)…
+    const order = [];
+    const mid = Math.floor((lines.length - 1) / 2);
+    for (let d = 0; d <= lines.length; d++) {
+      if (mid - d >= 0) order.push(mid - d);
+      if (d > 0 && mid + d < lines.length) order.push(mid + d);
+    }
+    g.sort((u, v) => (Math.abs(u.spec.bus.x2 - u.spec.bus.x1) - Math.abs(v.spec.bus.x2 - v.spec.bus.x1))
+      || (u.n.id < v.n.id ? -1 : 1));                      // 短线先占中线,长线外扩
+    for (const e of g) {
+      const b = e.spec.bus;
+      const lo = Math.min(b.x1, b.x2) - 14, hi = Math.max(b.x1, b.x2) + 14;
+      let pick = null;
+      for (const li of order) {
+        if (!lines[li].iv.some(([a, z]) => lo < z && hi > a)) { pick = li; break; }
+      }
+      if (pick === null) {                                 // 全被占:选负载最轻的
+        pick = order.reduce((best, li) => lines[li].iv.length < lines[best].iv.length ? li : best, order[0]);
+      }
+      lines[pick].iv.push([lo, hi]);
+      b.ym = lines[pick].y;
+    }
   }
   for (const { a, n, spec } of pending) {
     const path = document.createElementNS(svgNS, "path");
