@@ -213,10 +213,9 @@ function introMap() {
     green: "var(--green)", case: "var(--text-mute)", converge: "var(--text)" };
   return ["red", "blue", "yellow", "green", "case", "converge"].map(b => {
     const n = tree.nodes.filter(x => x.branch === b).length;
-    return `<button class="im-row" data-jump="${b}"><span class="im-dot" style="background:${SW[b]}"></span>` +
-      `<span class="im-name">${BRANCH_LABEL[b]}</span><span class="im-n">${n} 节</span>` +
-      `<span class="im-desc">${DESC[b]}</span></button>`;
-  }).join("\n");
+    return `<button class="im-pill" data-jump="${b}" title="${DESC[b]}"><span class="im-dot" style="background:${SW[b]}"></span>` +
+      `<span class="im-name">${BRANCH_LABEL[b]}</span><span class="im-n">${n}</span></button>`;
+  }).join("");
 }
 
 /* ---- homepage：v3 全屏天赋树（树即首页即核心导航）---- */
@@ -231,24 +230,20 @@ function homePage() {
   return head({ title: "REACTOR · 排名、评测与指标失灵的互动课程", desc: jsonld.description, url, jsonld })
     + siteHead({ home: true })
     + `<main class="tree-full" data-branch="root">
-  <section class="tree-intro glass bolted">
-    <div class="nameplate"><span class="tag">REACTOR</span><span>互动课程</span>
-      <span class="rule"></span><span class="rev">${tree.nodes.length} 节点</span></div>
-    <h1>当指标成为目标，一切开始失灵</h1>
-    <p class="lede">排名会反过来改造被排名的世界，AI 评测会被模型反向博弈。这门免费课程把这件事
-    从社会学讲到 AI 前沿：每节点一门十分钟短课，配一个能上手玩的小实验。</p>
-    <nav class="intro-map" aria-label="内容总览">${introMap()}</nav>
-    <div class="intro-cta">
+  <div class="intro-strip">
+    <div class="is-title">
+      <h1>当指标成为目标，一切开始失灵</h1>
+      <span class="is-sub">${tree.nodes.length} 节互动短课 · 排名、评测与指标失灵 · 每课一个可玩实验</span>
+    </div>
+    <nav class="is-map" aria-label="内容总览">${introMap()}</nav>
+    <div class="is-actions">
       <a class="btn btn-primary" href="/lesson/N00.html">从第一课开始 →</a>
-      <a class="btn" href="/atlas.html">图鉴</a>
+      <span class="intro-controls" aria-label="地图控制">
+        <button data-tree-zout aria-label="缩小">−</button><button data-tree-zin aria-label="放大">+</button>
+        <button data-tree-fit>适配</button><button data-tree-reset-progress>重置</button>
+      </span>
     </div>
-    <div class="intro-spacer"></div>
-    <div class="intro-controls" aria-label="地图控制">
-      <button data-tree-zout aria-label="缩小">−</button><button data-tree-zin aria-label="放大">+</button>
-      <button data-tree-fit>适配全图</button><button data-tree-reset-progress>重置进度</button>
-    </div>
-    <p class="intro-hint">右边是完整课程地图 · 拖动平移 · 点亮的是推荐下一步</p>
-  </section>
+  </div>
   <div class="tree-viewport" id="tree-viewport" data-mode="full">
     <noscript><div class="noscript-fallback">天赋树需要 JavaScript。你可以直接从
       <a href="/lesson/N00.html">根节点</a>顺序阅读，或从<a href="/atlas.html">图鉴</a>进入各节点。</div></noscript>

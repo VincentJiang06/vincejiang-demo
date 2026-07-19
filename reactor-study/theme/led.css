@@ -77,10 +77,28 @@
 .tree-stage.gliding{transition:transform .45s cubic-bezier(.22,.9,.3,1)}
 .tree-svg{position:absolute;top:0;left:0;overflow:visible;pointer-events:none}
 
-/* ── 首页全屏形态 ── */
-.tree-full{position:relative}
-.tree-full .tree-viewport{height:calc(100dvh - var(--headh));border:0;border-radius:0;
+/* ── 首页全屏形态:导航条 → 介绍横条 → 树占满剩余(用户裁决:竖栏挤占内容,并入顶部) ── */
+.tree-full{position:relative;display:flex;flex-direction:column;height:calc(100dvh - var(--headh))}
+.tree-full .tree-viewport{flex:1;height:auto;min-height:0;border:0;border-radius:0;
   background-color:var(--bg);touch-action:none}
+.intro-strip{display:flex;align-items:center;gap:clamp(12px,2vw,28px);
+  padding:10px clamp(14px,2.5vw,32px);border-bottom:1px solid var(--line);
+  background:color-mix(in srgb,var(--bg-2) 60%,var(--bg))}
+.is-title{display:flex;flex-direction:column;gap:2px;min-width:0}
+.is-title h1{font-size:1.06rem;line-height:1.3;margin:0;white-space:nowrap}
+.is-sub{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.08em;color:var(--text-mute);white-space:nowrap}
+.is-map{display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;min-width:0}
+.is-map::-webkit-scrollbar{display:none}
+.im-pill{display:inline-flex;align-items:center;gap:.45em;flex:none;
+  background:none;border:1px solid var(--line);border-radius:999px;
+  padding:.34em .8em;cursor:pointer;font-family:inherit;color:var(--text-2);
+  font-size:.76rem;transition:border-color .15s,color .15s}
+.im-pill:hover{border-color:var(--text-2);color:var(--text)}
+.im-pill .im-dot{width:8px;height:8px;border-radius:2px}
+.im-pill .im-name{font-weight:700;color:var(--text)}
+.im-pill .im-n{font-family:var(--font-mono);font-size:.6rem;color:var(--text-mute)}
+.is-actions{display:flex;align-items:center;gap:10px;margin-left:auto;flex:none}
+.is-actions .btn{font-size:.66rem;padding:.55em .9em;white-space:nowrap}
 /* 介绍卡：窄长竖栏，贴视口上下边；地图控制钮并入卡底（树=绝对核心,卡=它的仪表柱）*/
 .tree-intro{position:absolute;left:clamp(14px,2vw,28px);top:14px;
   bottom:14px;z-index:6;width:min(330px,calc(100vw - 28px));
@@ -103,9 +121,8 @@
 .tree-intro .intro-cta{display:flex;flex-wrap:wrap;gap:calc(var(--u)*1.25)}
 .tree-intro .intro-cta .btn{font-size:.68rem;padding:.6em .9em}
 .intro-spacer{flex:1;min-height:12px}
-/* 地图控制钮（原浮动 HUD 收编进卡底）*/
-.intro-controls{display:flex;gap:6px;border-top:1px solid var(--line);
-  padding-top:10px;font-family:var(--font-mono)}
+/* 地图控制钮 */
+.intro-controls{display:flex;gap:6px;font-family:var(--font-mono)}
 .intro-controls button{background:color-mix(in srgb,var(--bg-2) 90%,transparent);
   border:1px solid var(--glass-brd);color:var(--text-2);border-radius:var(--radius);
   font-family:var(--font-mono);font-size:.64rem;letter-spacing:.06em;
@@ -114,9 +131,9 @@
 .tree-intro .intro-hint{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.08em;
   color:var(--text-mute);margin:.8em 0 0}
 @media (max-width:860px){
-  .tree-intro{position:static;width:auto;margin:12px 12px 0;bottom:auto;overflow:visible}
-  .intro-spacer{display:none}
-  .tree-full .tree-viewport{height:min(66dvh,640px)}
+  .intro-strip{flex-wrap:wrap;gap:8px 12px}
+  .is-title h1{white-space:normal;font-size:.98rem}
+  .is-actions{margin-left:0;width:100%;justify-content:space-between}
 }
 
 /* 连线（电路走线：正交总线，默认压暗；跨支虚线；悬停/点亮才上色）*/
