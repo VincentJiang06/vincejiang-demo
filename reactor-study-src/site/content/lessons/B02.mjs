@@ -2,7 +2,7 @@ export default {
   id: "B02",
   blocks: [
     { t: "prose", html: `
-<p>上一课 <code>B01</code> 说，指标一旦被当成目标就会失准。这一课的 Campbell 定律再狠一层：指标不只自己失准，它还会把被测量的那件事本身带坏。考试分数变得没意义只是小损失，教育本身被应试改造才是大损失。这一课你会看到警察局和学校里的真实案卷，拿到一条判断「指标什么时候危险」的剂量曲线，最后还有一个反直觉的事实：提出这条悲观定律的人，恰恰是最相信测量的人。</p>
+<p>Goodhart 定律说指标一旦被当成目标就会失准（<code>B01</code>）。Campbell 定律再狠一层：指标不只自己失准，它还会把被测量的那件事本身带坏。考试分数变得没意义只是小损失，教育本身被应试改造才是大损失。</p>
 <p>Donald Campbell 是研究「社会项目到底有没有效」的方法论大家。他的定律比 Goodhart 多说了一层，强调腐蚀的必然性：</p>
 <p class="pullquote">"The more any quantitative social indicator is used for social decision-making, the more subject it will be to corruption pressures and the more apt it will be to distort and corrupt the social processes it is intended to monitor."<span class="src">Campbell, 1976/1979</span></p>
 <p>翻译成白话：一个量化指标越是被用来做重要决策，它受到的腐蚀压力就越大，而且它越会扭曲、腐蚀它本来要监测的那个过程。注意最后半句：受害的不只是数字，还有数字背后的事。这句话出自小节标题就叫「量化指标的腐蚀效应」的一节，Campbell 用的字眼是复数的 pessimistic laws：他给出的是一组悲观定律，后人只记住了这一条。</p>` },
@@ -35,7 +35,7 @@ export default {
 <p><strong>四处考证，都是引用漂移的现场。</strong>其一，「Campbell 1976」与「Campbell 1979」是同一文本：1974 年 5 月在匈牙利 Visegrád 的会议宣读，1975 年入 Dartmouth 的《Social Research and Public Policies》文集，1976 年 12 月由西密歇根大学评估中心以 Occasional Paper #8 重印，1979 年才在《Evaluation and Program Planning》正式刊出（此版被引超过 1600 次），2011 年《Journal of MultiDisciplinary Evaluation》再度重印。五次登台，措辞一致，年份只取决于作者手边是哪个版本。其二，「Campbell's law」不是他自己起的名，引用时宜写「后来被称为 Campbell 定律的腐蚀命题」。其三，「中国科举导致八股文」的例子是后人附会，不在原文里。其四，漂移至今仍在发生：2025 年还有工作论文一边署 1976、一边写「社会科学家 Campbell 宣称他的定律」，仿佛命名出自本人。另按 Rodamar 2018 年的梳理：Campbell 的核心思想 1969 年已见于《Reforms as Experiments》，在「社会指标腐蚀」这个主题上，他的优先权强于 Goodhart。一个研究指标如何在使用中变形的定律，自己的引用史就在持续变形，与 <code>B01</code> 的措辞谱系同病相怜。</p>` },
 
     { t: "prose", html: `
-<p>反方证据同样要摆上桌，这是本课程与警世故事集的分界。</p>
+<p>反方证据同样要摆上桌，这是严肃考证与警世故事集的分界。</p>
 <p>Dee 与 Jacob 2011 年利用美国各州引入问责制的时间差，检验「不让一个孩子掉队」法案（NCLB，把学校拨款与统考分数挂钩的联邦法）：到 2007 年，四年级数学在 NAEP 上提高约 0.22 个标准差。NAEP 是全国抽查性质的审计考试，低利害，教师没有理由为它应试，所以这个涨幅更可能是真实学习。0.22 个标准差是什么概念：大约把一个中游学生挪到中上游，在教育干预里算相当可观的效应；而且增益遍布全部五个数学子量表，不是只涨易应试的题型。公平起见，同一研究里阅读科目两个年级均无效应，应试科目挤占其他课程的代价也有记录。</p>
 <p>通胀那一侧的画面更早就有：Cannell 1987 年的调查发现，各州在自家高利害州考上都宣称高于全国平均。统计上不可能人人高于平均，这个集体幻觉因此得名「Lake Wobegon 效应」（一个虚构小镇，那里所有孩子都高于平均水平）。</p>
 <p>合并的读法是：高利害分数同时包含真实增益与通胀成分，Campbell 定律断言的是后者必然存在，而不是前者必然为零；一条不可博弈的审计通道（比如 NAEP 这种没人有动机应试的考试）可以把两者分开。定律的完整边界条件在 <code>B14</code>（良性指标的条件），教育战场的全量证据（肯塔基 KIRIS 的分数通胀、芝加哥 4% 到 5% 班级的教师改卷检测）在 <code>K01</code>（案例带的教育卷宗）。</p>` },

@@ -2,13 +2,13 @@ export default {
   id: "K01",
   blocks: [
     { t: "prose", html: `
-<p>你多半亲历过这一课要讲的事：一场考试的分数在涨，而它本该代表的东西没跟着涨。教育是 Campbell 定律的原产地，也是它证据最全的领域。事实链分三段，像一条压力从低到高的斜坡：高利害考试的分数可以在真实学力不变的情况下持续大涨（分数通胀，有跨考试对照的计量证据）；压力足够大时，膨胀越过合法边界变成集体造假（亚特兰大，有刑事定罪档案）；而同一套问责在低利害审计考试上也留下过真实增益（NCLB 的数学成绩）。三段合起来是本课结论：应试化不是教育界道德滑坡的故事，而是把高利害绑在远端代理指标上的结构后果。分数与学力之间裂缝的宽度，取决于指标设计，不取决于教师的人品。</p>` },
+<p>一场考试的分数在涨，而它本该代表的东西没跟着涨，这事你多半亲历过。教育是 Campbell 定律的原产地，也是它证据最全的领域。事实链分三段，像一条压力从低到高的斜坡：高利害考试的分数可以在真实学力不变的情况下持续大涨（分数通胀，有跨考试对照的计量证据）；压力足够大时，膨胀越过合法边界变成集体造假（亚特兰大，有刑事定罪档案）；而同一套问责在低利害审计考试上也留下过真实增益（NCLB 的数学成绩）。三段合起来的结论是：应试化不是教育界道德滑坡的故事，而是把高利害绑在远端代理指标上的结构后果。分数与学力之间裂缝的宽度，取决于指标设计，不取决于教师的人品。</p>` },
 
     { t: "h", text: "Campbell 定律的原产地" },
     { t: "prose", html: `
 <p>先看第一现场。你在 <code>B02</code> 读过 Campbell 定律：指标承载的社会决策压力越大，它越容易腐化、也越容易腐蚀它本要测量的过程。Campbell 1970 年代提出这个命题时（出版细节见来源），教育就是第一例证：Texarkana 绩效合同案（Stake 1971 记录）里，按学生成绩涨幅付费的承包商，直接教期末考题。钱挂在涨幅上，涨幅最便宜的来源就是题目本身。Campbell 关于考试的原话值得整段读：</p>
 <p class="pullquote">"Achievement tests may well be valuable indicators of general school achievement under conditions of normal teaching aimed at general competence. But when test scores become the goal of the teaching process, they both lose their value as indicators of educational status and distort the educational process in undesirable ways."<span class="src">Campbell, 1976/1979</span></p>
-<p>白话拆开：正常教学之下，考试是不错的指标；可一旦分数成了教学的目标，两层损失同时发生，指标失效（分数不再指示学力），过程腐蚀（教学本身被应试改造）。本课其余内容，就是这两句话此后五十年的实证展开。机制标注：对抗型（<code>K01</code> 的标注体系，细讲在 <code>B08</code>），拉满的杠杆是利害绑定与可操纵通道。</p>` },
+<p>白话拆开：正常教学之下，考试是不错的指标；可一旦分数成了教学的目标，两层损失同时发生，指标失效（分数不再指示学力），过程腐蚀（教学本身被应试改造）。此后五十年的实证，就是这两句话的展开。机制标注：对抗型（<code>K01</code> 的标注体系，细讲在 <code>B08</code>），拉满的杠杆是利害绑定与可操纵通道。</p>` },
 
     { t: "h", text: "分数通胀的计量学" },
     { t: "prose", html: `

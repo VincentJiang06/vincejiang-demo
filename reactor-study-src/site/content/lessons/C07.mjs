@@ -2,7 +2,7 @@ export default {
   id: "C07",
   blocks: [
     { t: "prose", html: `
-<p>回到最初那句话：「我构建 skill 时极其大量地依赖 eval，结果被证明 eval 前后 skill 性能毫无区别，实际上只是机械地严格拟合了 eval。」走到这里，你已经有了一整套词汇精确描述它：这是反应性（<code>R01</code>）、是 Goodhart 定律（<code>B01</code>）、是适应性过拟合（<code>Y02</code>）。尺子没变长，是被量的东西学会了踮脚。这一课把前面所有的诊断和防御，收成一张你能直接拿去用的事后剖析清单，也把 <code>C03</code> 那台抗博弈机器落到你自己的 eval 上。</p>` },
+<p>回到最初那句话：「我构建 skill 时极其大量地依赖 eval，结果被证明 eval 前后 skill 性能毫无区别，实际上只是机械地严格拟合了 eval。」现在你有了一整套词汇精确描述它：这是反应性（<code>R01</code>）、是 Goodhart 定律（<code>B01</code>）、是适应性过拟合（<code>Y02</code>）。尺子没变长，是被量的东西学会了踮脚。前面所有的诊断和防御，在这里收成一张能直接拿去用的事后剖析清单，也把 <code>C03</code> 那台抗博弈机器落到你自己的 eval 上。</p>` },
 
     { t: "prose", html: `
 <p>先做诊断，把「eval 越多越退化」拆成三个成分，三者对策完全不同。</p>
@@ -44,7 +44,7 @@ export default {
 <p><strong>一句话带走：</strong>你能发现 eval 前后毫无区别，这个发现比多数 eval 都值钱；剩下的事，是照着清单把它修成一套从一开始就知道自己会被博弈的评估。</p>` },
 
     { t: "sources", items: [
-      `综合全课；清单条目见 <code>research/05、09、10、14</code> 与 <code>00-SYNTHESIS-总纲.md</code>。`,
+      `综合全树；清单条目见 <code>research/05、09、10、14</code> 与 <code>00-SYNTHESIS-总纲.md</code>。`,
       `智能体评测失效面：METR (2025) 43×；Aleithan et al. (2024) SWE-bench+（32.67% solution leakage）；FrontierMath 资助争议（TechCrunch 2025-01）；见 <code>Y14</code> 与 <code>research/deep/D4</code> 子主线五。`,
       `命题的分项裁决与三通道开放问题见 <code>research/deep/D5</code> §7 与 <code>research/deep/D0</code> C 节。`
     ] }
