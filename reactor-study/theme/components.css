@@ -407,3 +407,10 @@ mark.hl-b{background:color-mix(in srgb,var(--green) 20%,transparent);color:var(-
 .step-row.lit:not(:last-child) .step-spine::after{background:color-mix(in srgb,var(--accent) 55%,var(--line))}
 .step-row .step-k{color:var(--accent);margin-bottom:6px}
 .step-row .read{font-size:.94rem}
+
+/* 移动端导航精简(用户裁决):只留 品牌 · 天赋树(返回) · 明暗切换 */
+@media (max-width:720px){
+  .site-head nav a[href="/lesson/N00.html"],
+  .site-head nav a[href="/atlas.html"]{display:none}
+  .site-head nav a{font-size:.72rem;letter-spacing:.08em}
+}

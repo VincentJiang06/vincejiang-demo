@@ -68,7 +68,7 @@
   --glass-bg:color-mix(in srgb,var(--white) 66%,transparent);
   --glass-brd:color-mix(in srgb,#000 10%,transparent);
   --glass-hi:color-mix(in srgb,#fff 60%,transparent);
-  --dot:color-mix(in srgb,#000 6%,transparent);
+  --dot:color-mix(in srgb,#000 4%,transparent);   /* 亮色点阵比暗色更淡一档 */
 
   /* 亮底要另一套分支色：暗底那套（尤其黄 1.45:1、绿 2.32:1）在纸白上根本读不了。
      2026-07 提亮一档（保住 ≥4.5:1 附近的正文可读线）*/

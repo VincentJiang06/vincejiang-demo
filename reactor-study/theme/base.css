@@ -50,6 +50,8 @@ hr{border:0;height:1px;background:var(--line);margin:calc(var(--u)*4) 0}
 
 /* ── 布局容器 ── */
 .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
+/* 手机:内容吃满宽度,右侧贴边(左距保持,用户裁决) */
+@media (max-width:720px){.wrap{padding-left:16px;padding-right:10px}}
 .stack>*+*{margin-top:calc(var(--u)*3)}
 .grid{display:grid;gap:calc(var(--u)*3)}
 .section{padding-block:calc(var(--u)*8)}
