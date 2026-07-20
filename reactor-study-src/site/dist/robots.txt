@@ -1,3 +1,26 @@
 User-agent: *
 Allow: /
+
+# AI 检索/抓取器显式放行(GEO):内容欢迎被检索、摘要与引用
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://reactor.vincejiang.com/sitemap.xml

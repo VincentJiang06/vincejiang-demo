@@ -36,7 +36,7 @@ const SITE = {
   name: 'Vince Jiang', url: 'https://vincejiang.com', lang: 'zh-CN',
   tagline: '小蒋的个人站 —— 博客杂谈、作品集,以及六个香港高校「非官方」野史站的入口。',
   author: 'Vince Jiang', github: 'https://github.com/VincentJiang06',
-  image: 'https://vincejiang.com/favicon.png',
+  image: 'https://vincejiang.com/assets/og.png',   // 1200x630 社交分享大图(favicon 当 OG 图=分享出去只有小图标)
 };
 const RESEARCH_PATH = '/research/';
 const NAV_ITEMS = [
@@ -520,6 +520,25 @@ function renderBackgroundTest() {
 }
 
 // ---- sitemap / rss / llms ----
+// 扫描产物目录里所有可索引 HTML —— sitemap 的兜底来源。
+// 显式条目(文章/collection/gallery)带精确 lastmod 与 priority,此处只补它们没覆盖到的页面,
+// 从根上杜绝「新增页面忘了进 sitemap」。带 noindex 的页面(测试页)自动跳过。
+function scanIndexablePages(dir = OUT, base = '') {
+  const out = [];
+  const SITEMAP_SKIP = new Set(['reactor-study']);   // 已迁子域:文件要留(nginx root 指它),但不进主站索引
+  for (const e of readdirSync(dir, { withFileTypes: true })) {
+    if (e.name.startsWith('.')) continue;
+    if (base === '' && SITEMAP_SKIP.has(e.name)) continue;
+    const full = join(dir, e.name);
+    if (e.isDirectory()) { out.push(...scanIndexablePages(full, base + '/' + e.name)); continue; }
+    if (!e.name.endsWith('.html')) continue;
+    const html = readFileSync(full, 'utf8');
+    if (/<meta[^>]+name=["']robots["'][^>]*noindex/i.test(html)) continue;
+    out.push(e.name === 'index.html' ? (base + '/') : (base + '/' + e.name));
+  }
+  return out;
+}
+
 function buildSitemap(posts) {
   const newest = posts[0]?.updated || today();
   const cfgDate = dOnly(MANIFEST?.paths?.['site.config.json']) || today();
@@ -543,6 +562,13 @@ function buildSitemap(posts) {
     const key = g.href.replace(/^\/|\/$/g, '');
     const lm = dOnly(MANIFEST?.paths?.[key]) || newest;
     urls.push({ loc: g.href, lastmod: lm, cf: 'monthly', pri: '0.6' });
+  }
+  // 兜底:把产物里其余可索引页面补齐(显式条目优先,不覆盖)
+  const seen = new Set(urls.map(u => u.loc));
+  for (const loc of scanIndexablePages().sort()) {
+    if (seen.has(loc)) continue;
+    seen.add(loc);
+    urls.push({ loc, lastmod: dOnly(MANIFEST?.paths?.[loc.replace(/^\/|\/$/g, '')]) || shellDate, cf: 'monthly', pri: '0.5' });
   }
   const body = urls.map(u => `  <url><loc>${SITE.url}${u.loc}</loc><lastmod>${u.lastmod}</lastmod><changefreq>${u.cf}</changefreq><priority>${u.pri}</priority></url>`).join('\n');
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
@@ -603,6 +629,9 @@ ${works}
 const COPY_EXCLUDE = new Set(['.git', '.github', '.gitignore', '.dockerignore', 'Dockerfile', 'docker', 'tools', 'templates',
   'posts', 'posts-manifest.json', 'site.config.json', 'SPEC.md', 'README.md', 'LICENSE', 'node_modules', 'site', '.DS_Store',
   'reactor-study-src',   // reactor-study 的研究源料与生成器源码:只存仓库,不发布(产物在 reactor-study/)
+  // 注意:'reactor-study' 绝不可加进本表 —— docker/site.conf 里 reactor 子域的
+  // root 就指向 html/reactor-study,从产物里删掉它 = 整个子域 404。
+  // 它不该被主站索引的问题,由下面 scanIndexablePages 的排除 + nginx 301 解决。
   'index.html', 'sitemap.xml', 'llms.txt', 'blog', 'research', 'release']);
 const ASSET_DIRS = new Set(['assets',   // 纯静态资源目录:随内容拷贝但不要求 index.html(无干净 URL)
   'gallery']);   // gallery 页由生成器产出 index.html,仓库里的 gallery/<name>/ 可放嵌套静态 demo(/gallery/<name>/)
