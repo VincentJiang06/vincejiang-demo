@@ -112,7 +112,7 @@ function siteHead({ home = false } = {}) {
 function siteFoot() {
   return `<footer class="site-foot"><div class="wrap">
   <span>REACTOR · 当尺子开始回看你 · 一部关于反应性的现场手册</span>
-  <span>self-hosted · no-react</span>
+  <span class="foot-by"><a href="https://vincejiang.com">by Vince Jiang ↗</a><span class="sep">·</span>self-hosted · no-react</span>
 </div></footer><script type="module" src="/modules/boot.js"></script></body></html>`;
 }
 

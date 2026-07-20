@@ -414,3 +414,11 @@ mark.hl-b{background:color-mix(in srgb,var(--green) 20%,transparent);color:var(-
   .site-head nav a[href="/atlas.html"]{display:none}
   .site-head nav a{font-size:.72rem;letter-spacing:.08em}
 }
+
+
+/* 页脚署名:回主站的出口 */
+.foot-by{display:inline-flex;align-items:center;gap:.6em;flex-wrap:wrap}
+.foot-by a{color:var(--text-2);border-bottom:1px solid var(--line-2);padding-bottom:1px;
+  transition:color .15s,border-color .15s}
+.foot-by a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.foot-by .sep{color:var(--text-mute)}
