@@ -8,7 +8,8 @@ const LS = { theme: "reactor.theme", done: "reactor.done" };
 localStorage.removeItem("reactor.accent"); // 清掉旧版留下的强调色
 const MODES = ["auto", "light", "dark"];
 /* 主题按钮标签随页面语种走(英文页不该出现中文「自动」) */
-const MODE_LABEL = (document.documentElement.lang || "zh").toLowerCase().startsWith("en")
+const IS_EN = (document.documentElement.lang || "zh").toLowerCase().startsWith("en");
+const MODE_LABEL = IS_EN
   ? { auto: "Auto", light: "Light", dark: "Dark" }
   : { auto: "自动", light: "亮", dark: "暗" };
 const mq = matchMedia("(prefers-color-scheme: light)");
@@ -20,8 +21,9 @@ function applyTheme(repaint) {
   document.querySelectorAll("[data-theme-toggle]").forEach(btn => {
     btn.querySelector(".tt-label").textContent = MODE_LABEL[mode];
     const nextMode = MODES[(MODES.indexOf(mode) + 1) % MODES.length];
-    btn.setAttribute("aria-label",
-      `配色：${MODE_ZH[mode]}${mode === "auto" ? "（跟随系统）" : ""}。点击切换到${MODE_ZH[nextMode]}`);
+    btn.setAttribute("aria-label", IS_EN
+      ? `Theme: ${MODE_LABEL[mode]}${mode === "auto" ? " (follows system)" : ""}. Click to switch to ${MODE_LABEL[nextMode]}`
+      : `配色：${MODE_LABEL[mode]}${mode === "auto" ? "（跟随系统）" : ""}。点击切换到${MODE_LABEL[nextMode]}`);
   });
   // canvas 是位图：主题换了 CSS 变量跟着换，但已经画上去的像素不会。
   // 各模块都监听 resize 重绘，借这个事件让它们用新调色板重画一遍。
