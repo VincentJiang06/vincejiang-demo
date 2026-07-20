@@ -149,7 +149,23 @@ function init(vp, mode) {
   const rootNode = nodes.find(n => n.branch === "root") || nodes[0];
   let scale = 1, tx = 0, ty = 0;
 
-  function apply() { stage.style.transform = `translate(${tx}px,${ty}px) scale(${scale})`; }
+  /* 平移边界:把「屏幕里必须看得见树」翻译成一段固定区间,每次 apply 前钳位。
+     记 SW/SH 为当前缩放下的树尺寸,视口 vpW×vpH:
+       横向——树左缘最远退到屏幕中线(tx ≤ vpW-KEEP_X),树右缘最近到中线(tx ≥ KEEP_X-SW)
+       纵向——同理但只要求 1/4 屏,因为树很高、纵向本来就要多留探索余地
+     树比视口小时区间自然退化成「树只能在那条线附近晃」,不会飞出屏幕。
+     视口尺寸走缓存,拖动逐帧不查 getBoundingClientRect(不触发同步 layout)。 */
+  let vpW = vp.clientWidth, vpH = vp.clientHeight;
+  function clampPan() {
+    const keepX = vpW * 0.5, keepY = vpH * 0.25;
+    const SW = W * scale, SH = H * scale;
+    tx = Math.min(vpW - keepX, Math.max(keepX - SW, tx));
+    ty = Math.min(vpH - keepY, Math.max(keepY - SH, ty));
+  }
+  function apply() {
+    clampPan();
+    stage.style.transform = `translate(${tx}px,${ty}px) scale(${scale})`;
+  }
   function glide() {               // 带过渡的一次性视角切换
     stage.classList.add("gliding");
     setTimeout(() => stage.classList.remove("gliding"), 500);
@@ -263,6 +279,10 @@ function init(vp, mode) {
   // 不能借这个事件把用户拖好的视角吹回原点。
   let lw = vp.clientWidth, lh = vp.clientHeight;
   addEventListener("resize", () => {
-    if (vp.clientWidth !== lw || vp.clientHeight !== lh) { lw = vp.clientWidth; lh = vp.clientHeight; home(); }
+    if (vp.clientWidth !== lw || vp.clientHeight !== lh) {
+      lw = vp.clientWidth; lh = vp.clientHeight;
+      vpW = lw; vpH = lh;                      // 钳位用的视口缓存跟着更新
+      home();
+    }
   });
 }

@@ -294,7 +294,8 @@
 /* 亮色主题:点阵回归(用户新裁决 2026-07:隐约灰点,浓度见 tokens.css 的 --dot)。
    .bg-dots 不再隐藏;树导轨/视口仍保持无背景纹理(纯白托盘)。 */
 :root[data-theme="light"] .tree-rail{background:transparent}
-:root[data-theme="light"] .tree-viewport{background-image:none}
+/* 注意:不要给 .tree-viewport 加 background-image:none —— 那条规则权重(0,3,0)高过
+   .tree-full .tree-viewport(0,2,0),会把首页树的点阵整个压掉,亮色下看着像纯色板。 */
 
 
 /* 亮色主题:连背景渐变彩斑也不要——纯白就是纯白(用户裁决) */
