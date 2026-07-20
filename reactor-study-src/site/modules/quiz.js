@@ -3,6 +3,7 @@
    另导出 optionGroup()：quiz 自己用，也给 explorable 的「先猜一猜」环节复用。
    mode "check" = 立即判分（绿对红错）；mode "pick" = 中性选择，只记录不判分。 */
 import { mount } from "/modules/mod-kit.js";
+import { t, tf } from "/modules/mod-i18n.js";
 
 export function optionGroup(container, { q, index, options = [], explain = "", mode = "check", onpick }) {
   const block = document.createElement("div");
@@ -31,7 +32,7 @@ export function optionGroup(container, { q, index, options = [], explain = "", m
       if (mode === "check") {
         b.classList.add(o.ok ? "ok" : "no");
         expl.style.display = "block";
-        expl.innerHTML = `<span class="mono ${o.ok ? "t-ok" : "t-no"}">${o.ok ? "✓ 答对了" : "✕ 不是这个，再想想"}</span> · ${explain}`;
+        expl.innerHTML = `<span class="mono ${o.ok ? "t-ok" : "t-no"}">${o.ok ? t("✓ 答对了") : t("✕ 不是这个，再想想")}</span> · ${explain}`;
       } else {
         b.classList.add("sel");
       }
@@ -48,7 +49,7 @@ mount("quiz", (body, fig, { config }) => {
   const qs = config.questions || [];
   const intro = document.createElement("p");
   intro.className = "label"; intro.style.marginBottom = "12px";
-  intro.textContent = config.hint || "自测 · 每题选一个答案，绿灯是对，红灯是错。";
+  intro.textContent = config.hint || t("自测 · 每题选一个答案，绿灯是对，红灯是错。");
   body.appendChild(intro);
 
   const state = qs.map(() => null);
@@ -78,6 +79,6 @@ mount("quiz", (body, fig, { config }) => {
     });
     const done = state.filter(s => s != null).length;
     const right = state.filter(Boolean).length;
-    strip.querySelector(".qs-text").textContent = `已答 ${done} / ${qs.length} · 答对 ${right}`;
+    strip.querySelector(".qs-text").textContent = tf("已答 {} / {} · 答对 {}", done, qs.length, right);
   }
 });

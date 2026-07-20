@@ -6,6 +6,7 @@
    平滑弯到目标芯片上边缘;同支实线、跨支虚线,默认压暗,悬停节点时相关线路点亮。 */
 import { progress } from "/modules/boot.js";
 import { TREE } from "/modules/tree-data.js";
+import { t } from "/modules/mod-i18n.js";
 
 /* 语言:由 <html lang> 与 data-lp(语种路径前缀)决定,树的链接与标题跟着走 */
 const LANG = (document.documentElement.lang || "zh").toLowerCase().startsWith("en") ? "en" : "zh";
@@ -276,7 +277,7 @@ function init(vp, mode) {
   document.querySelector("[data-tree-zin]")?.addEventListener("click", () => zoomBy(1.25));
   document.querySelector("[data-tree-zout]")?.addEventListener("click", () => zoomBy(0.8));
   document.querySelector("[data-tree-reset-progress]")?.addEventListener("click", () => {
-    if (confirm("重置学习进度？")) { progress.clear(); refreshAll(); }
+    if (confirm(t("重置学习进度？"))) { progress.clear(); refreshAll(); }
   });
   document.querySelectorAll("[data-jump]").forEach(b =>
     b.addEventListener("click", () => fitBranch(b.dataset.jump)));

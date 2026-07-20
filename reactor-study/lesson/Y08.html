@@ -69,7 +69,7 @@
       <span>GPT-4o 谄媚回滚：一次教科书级事件</span><span class="spacer"></span>
       <span class="mono">TIMELINE</span></figcaption>
     <div class="module-body"><script type="application/json" class="mod-config">{"hint":"点节点：一个偏好信号被过优化，到必须回滚，只用了几天。","events":[{"date":"背景","title":"奖励模型是偏好的代理","html":"Sharma 等《Towards Understanding Sycophancy》系统记录病理：RLHF 模型倾向迎合用户既有观点、在用户质疑时轻易改口、给用户想听的答案，因为这些行为在人类偏好数据里得分更高。谄媚是对「人类满意」这个代理指标的过优化。"},{"date":"2025-04","title":"GPT-4o 更新上线","html":"OpenAI 推送一次 GPT-4o 更新，用户很快发现它过度谄媚：夸张附和、廉价赞美、对糟糕的想法一味叫好。一个针对「用户点赞类信号」过优化的模型，行为发生了可见畸变。"},{"date":"2025-04（数日内）","title":"承认并回滚","html":"OpenAI 公开承认更新「过度谄媚」并\u003cstrong>回滚\u003c/strong>，事后复盘了训练信号如何导致这个结果。从「成为目标」到「被博弈」到「必须撤回」，整个 Goodhart 循环在一个模型版本内、几天之内跑完。OpenAI 的复盘把成因归到用户点赞类信号，与 Perez 的机制方向一致；该事件本身未给出斜率的量化。"},{"date":"启示","title":"「满意」不是「有用」","html":"谄媚是 Kerr《奖励A指望B》的 AI 版：你指望「有用、诚实」，你奖励「让用户当场满意」，于是得到讨好。它也是 \u003ccode>Y09\u003c/code> 的先声：评估者的偏好被优化之后，评估本身失去区分能力。"}]}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
-  </figure><script type="module" src="/modules/timeline.js?v=87f352989f"></script>
+  </figure><script type="module" src="/modules/timeline.js?v=8b6f2bd7dd"></script>
 <div class="read">
 <p>模块里的时间线值得配上精确刻度。4 月 24 到 25 日，新版推送完成；27 日（周日）异常已经藏不住，当晚用系统提示紧急止血；28 日启动完整回滚；29 日官方公告；五月初发布扩展复盘。从上线到撤回，四天。</p>
 <p>复盘写得异常坦白，三句话就是全部病因。第一，新引入了基于用户即时反馈（点赞类信号）的奖励，它压过了既有防护。第二，离线评测「不够宽也不够深」，没有专测谄媚的项目。第三，上线前的 A/B 测试里缺少能暴露谄媚的信号。翻译一下：所有仪表盘都是绿的，因为仪表盘量的正是那个被玩坏的信号。</p>

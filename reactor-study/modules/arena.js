@@ -4,25 +4,26 @@
    miniTable 逐策略对账（真实实力 / 发布分 / 榜上名次）。
    模拟数值逻辑与原版同源：displayScore() 的公式一个字没动，
    只是参数化成 (variants, style)，诚实一侧固定 (1, 0)。 */
-import { mount, controls, slider, add, readout, legend, scoped, gauss, compareCanvas, miniTable } from "/modules/mod-kit.js?v=49b358d492";
-import { optionGroup } from "/modules/quiz.js?v=97821644bf";
+import { mount, controls, slider, add, readout, legend, scoped, gauss, compareCanvas, miniTable } from "/modules/mod-kit.js?v=4501323cdd";
+import { optionGroup } from "/modules/quiz.js?v=b664eb3a7c";
+import { t, tf } from "/modules/mod-i18n.js?v=fe1fe69deb";
 
 mount("arena", (body, fig, { config }) => {
   const C = scoped(fig);
   const intro = document.createElement("p"); intro.className = "label"; intro.style.marginBottom = "10px";
-  intro.textContent = "20 个模型，真实能力各不同。你的模型真实能力排第 11。左右两块榜单是同一个模型的两种发布策略——真实能力一模一样，只有『怎么发布』不同。";
+  intro.textContent = t("20 个模型，真实能力各不同。你的模型真实能力排第 11。左右两块榜单是同一个模型的两种发布策略——真实能力一模一样，只有『怎么发布』不同。");
   body.appendChild(intro);
 
   predictGate(body, {
-    q: "先押一注：你的模型真实能力排第 11。发布前私下测 20 个变体、只把分数最高的那次挂上榜，名次大概会怎样？",
+    q: t("先押一注：你的模型真实能力排第 11。发布前私下测 20 个变体、只把分数最高的那次挂上榜，名次大概会怎样？"),
     options: [
-      { t: "明显抬高：发布分掺进了『运气最好的一次』，名次能冲进前几", ok: true },
-      { t: "基本不变：多测几次，噪声正负互相抵消，平均下来还是第 11" },
-      { t: "反而变差：测得越多，越容易把短板暴露出来" }
+      { t: t("明显抬高：发布分掺进了『运气最好的一次』，名次能冲进前几"), ok: true },
+      { t: t("基本不变：多测几次，噪声正负互相抵消，平均下来还是第 11") },
+      { t: t("反而变差：测得越多，越容易把短板暴露出来") }
     ],
-    reveal: `每一次私测都是一次带噪声的抽签；「只发布最高分」= 专挑运气最好的那张签（<code>B13</code> 优化者诅咒的引擎）。噪声不会互相抵消，因为你根本没在求平均——你在取最大值。现实对照：《The Leaderboard Illusion》指控 Meta 在 Llama 4 发布前私测了多达 27 个变体只发最高；论文另一个估计是，哪怕只拿少量 Arena 对战数据去调优，也能带来最高 112% 的相对提升——不用把模型变好，学会这个榜的口味就够。`,
-    plain: "看到『发布即登顶』的新闻，先问三个问题：私测了几个变体？拿到多少对战数据？看过 style control（把回答长度、排版这些风格因素扣掉）之后的名次没有？——图里那条真实能力的灰色刻度线，从头到尾没动过。",
-    actHint: "拖一拖变体数/风格分，或点『再抽一次』，就能对答案"
+    reveal: t(`每一次私测都是一次带噪声的抽签；「只发布最高分」= 专挑运气最好的那张签（<code>B13</code> 优化者诅咒的引擎）。噪声不会互相抵消，因为你根本没在求平均——你在取最大值。现实对照：《The Leaderboard Illusion》指控 Meta 在 Llama 4 发布前私测了多达 27 个变体只发最高；论文另一个估计是，哪怕只拿少量 Arena 对战数据去调优，也能带来最高 112% 的相对提升——不用把模型变好，学会这个榜的口味就够。`),
+    plain: t("看到『发布即登顶』的新闻，先问三个问题：私测了几个变体？拿到多少对战数据？看过 style control（把回答长度、排版这些风格因素扣掉）之后的名次没有？——图里那条真实能力的灰色刻度线，从头到尾没动过。"),
+    actHint: t("拖一拖变体数/风格分，或点『再抽一次』，就能对答案")
   }, buildSim);
 
   function buildSim(host, act) {
@@ -31,22 +32,22 @@ mount("arena", (body, fig, { config }) => {
     let variants = 10, style = 0;
     const ctrl = controls(host);
     add(ctrl,
-      slider(host, { label: "私测变体数 N（只发布最高分）", min: 1, max: 30, step: 1, value: 10, fmt: v => v }).on(v => { variants = v; draw(); act(); }),
-      slider(host, { label: "风格分投入（长回复/emoji 讨好评委）", min: 0, max: 20, step: 2, value: 0, fmt: v => (v / 10).toFixed(1) }).on(v => { style = v / 10; draw(); act(); })
+      slider(host, { label: t("私测变体数 N（只发布最高分）"), min: 1, max: 30, step: 1, value: 10, fmt: v => v }).on(v => { variants = v; draw(); act(); }),
+      slider(host, { label: t("风格分投入（长回复/emoji 讨好评委）"), min: 0, max: 20, step: 2, value: 0, fmt: v => (v / 10).toFixed(1) }).on(v => { style = v / 10; draw(); act(); })
     );
     const again = document.createElement("button");
-    again.className = "btn"; again.textContent = "再抽一次 ▸";
+    again.className = "btn"; again.textContent = t("再抽一次 ▸");
     again.onclick = () => { draw(); act(); };
     const btnWrap = document.createElement("div"); btnWrap.className = "control";
     btnWrap.style.flexDirection = "row"; btnWrap.style.alignItems = "flex-end";
     btnWrap.appendChild(again); ctrl.appendChild(btnWrap);
 
-    const duo = compareCanvas(host, { a: "诚实发布：测一次就发", b: "私测 N 个变体，只发最高分", h: 260 });
+    const duo = compareCanvas(host, { a: t("诚实发布：测一次就发"), b: t("私测 N 个变体，只发最高分"), h: 260 });
     const out = readout(host, "");
-    legend(host, [{ c: "var(--ink-300)", t: "各模型真实能力（刻度线）" }, { c: "var(--accent)", t: "你的模型（显示分）" }]);
+    legend(host, [{ c: "var(--ink-300)", t: t("各模型真实能力（刻度线）") }, { c: "var(--accent)", t: t("你的模型（显示分）") }]);
     const mt = miniTable(host, {
-      cols: ["策略", "真实实力", "发布分", "榜上名次"], rows: [],
-      note: "逐策略对账：「真实实力」两行一模一样，名次差全部来自发布策略。分数带噪声，点「再抽一次」看名次抖动。"
+      cols: [t("策略"), t("真实实力"), t("发布分"), t("榜上名次")], rows: [],
+      note: t("逐策略对账：「真实实力」两行一模一样，名次差全部来自发布策略。分数带噪声，点「再抽一次」看名次抖动。")
     });
 
     // display score = real skill + a strong best-of-N boost + style bonus（与原版同源）
@@ -86,7 +87,7 @@ mount("arena", (body, fig, { config }) => {
         ctx.lineWidth = 1; ctx.strokeStyle = C("--ink-300");
         ctx.beginPath(); ctx.moveTo(x + 1, ty); ctx.lineTo(x + bw - 1, ty); ctx.stroke();
       });
-      ctx.fillStyle = C("--ink-400"); ctx.font = "10px monospace"; ctx.fillText("榜单名次（左=第一）→", pad + 4, h - 8);
+      ctx.fillStyle = C("--ink-400"); ctx.font = "10px monospace"; ctx.fillText(t("榜单名次（左=第一）→"), pad + 4, h - 8);
     }
 
     function draw() {
@@ -96,14 +97,14 @@ mount("arena", (body, fig, { config }) => {
       drawBoard(duo.a, A, hi);
       drawBoard(duo.b, B, hi);
 
-      out.innerHTML = `同一个模型（真实第 <span class="big">11</span>）：诚实发布第 <span class="big">${A.myRank}</span> 名 &nbsp;·&nbsp; 私测择优第 <span class="big">${B.myRank}</span> 名
+      out.innerHTML = `${tf(`同一个模型（真实第 <span class="big">11</span>）：诚实发布第 <span class="big">{}</span> 名 &nbsp;·&nbsp; 私测择优第 <span class="big">{}</span> 名`, A.myRank, B.myRank)}
         <div style="font-size:.82rem;margin-top:6px;opacity:.9">${B.myRank < 8
-          ? "『发布即登顶』：私测择优 + 风格分把名次抬了上去，真实能力那条灰线纹丝不动。看 Arena 时，优先看 Style-Control 后的排名和置信区间。"
-          : "把私测变体数和风格分推上去，右边的名次会脱离真实能力往上爬，左边只能跟着运气小幅抖动。"}</div>`;
+          ? t("『发布即登顶』：私测择优 + 风格分把名次抬了上去，真实能力那条灰线纹丝不动。看 Arena 时，优先看 Style-Control 后的排名和置信区间。")
+          : t("把私测变体数和风格分推上去，右边的名次会脱离真实能力往上爬，左边只能跟着运气小幅抖动。")}</div>`;
 
       mt.update([
-        ["诚实发布：测一次就发", "第 11 名", A.myScore.toFixed(2), "第 " + A.myRank + " 名"],
-        [`私测 ${variants} 个只发最高${style ? "，加风格分" : ""}`, "第 11 名", B.myScore.toFixed(2), "第 " + B.myRank + " 名"]
+        [t("诚实发布：测一次就发"), t("第 11 名"), A.myScore.toFixed(2), tf("第 {} 名", A.myRank)],
+        [style ? tf("私测 {} 个只发最高，加风格分", variants) : tf("私测 {} 个只发最高", variants), t("第 11 名"), B.myScore.toFixed(2), tf("第 {} 名", B.myRank)]
       ]);
       mt.highlight(1);
     }
@@ -120,7 +121,7 @@ function predictGate(body, P, buildStage) {
 
   const gate = document.createElement("div");
   gate.className = "predict-gate";
-  gate.innerHTML = `<div class="phase-tag"><span class="led on"></span>第 1 步 · 先猜一猜</div>`;
+  gate.innerHTML = `<div class="phase-tag"><span class="led on"></span>${t("第 1 步 · 先猜一猜")}</div>`;
   body.appendChild(gate);
   optionGroup(gate, {
     q: P.q, options: opts, mode: "pick",
@@ -131,18 +132,18 @@ function predictGate(body, P, buildStage) {
   stage.className = "stage";
   const stageTag = document.createElement("div");
   stageTag.className = "phase-tag";
-  stageTag.innerHTML = `<span class="led"></span>第 2 步 · 亲手试`;
+  stageTag.innerHTML = `<span class="led"></span>${t("第 2 步 · 亲手试")}`;
   const inner = document.createElement("div"); inner.className = "stage-inner";
   const shutter = document.createElement("div"); shutter.className = "shutter";
-  shutter.innerHTML = `<span class="led"></span><span>先在上面选一个你的猜测，这块面板才会亮</span>`;
+  shutter.innerHTML = `<span class="led"></span><span>${t("先在上面选一个你的猜测，这块面板才会亮")}</span>`;
   stage.append(stageTag, inner, shutter);
   body.appendChild(stage);
 
   const rev = document.createElement("div");
   rev.className = "reveal";
-  rev.innerHTML = `<div class="phase-tag"><span class="led"></span>第 3 步 · 对答案</div>`;
+  rev.innerHTML = `<div class="phase-tag"><span class="led"></span>${t("第 3 步 · 对答案")}</div>`;
   const btn = document.createElement("button");
-  btn.type = "button"; btn.className = "btn"; btn.textContent = "对答案"; btn.disabled = true;
+  btn.type = "button"; btn.className = "btn"; btn.textContent = t("对答案"); btn.disabled = true;
   const note = document.createElement("span");
   note.className = "label"; note.style.marginLeft = "12px";
   const row = document.createElement("div");
@@ -157,11 +158,11 @@ function predictGate(body, P, buildStage) {
     if (revealed || predicted == null) return;
     revealed = true;
     const hit = predicted === answer;
-    panel.innerHTML = `<div class="rv-row"><span class="label">你的猜测</span><span>${opts[predicted].t}</span></div>
-      <div class="rv-row"><span class="label">实际情况</span><span>${opts[answer].t}</span></div>
-      <div class="rv-verdict ${hit ? "ok" : "no"}"><span class="led on"></span>${hit ? "猜对了" : "和实际不一样，差别在下面"}</div>
+    panel.innerHTML = `<div class="rv-row"><span class="label">${t("你的猜测")}</span><span>${opts[predicted].t}</span></div>
+      <div class="rv-row"><span class="label">${t("实际情况")}</span><span>${opts[answer].t}</span></div>
+      <div class="rv-verdict ${hit ? "ok" : "no"}"><span class="led on"></span>${hit ? t("猜对了") : t("和实际不一样，差别在下面")}</div>
       ${P.reveal ? `<div class="read rv-read">${P.reveal}</div>` : ""}
-      ${P.plain ? `<div class="rv-plain"><span class="label">这说明什么</span><div class="rv-plain-body">${P.plain}</div></div>` : ""}`;
+      ${P.plain ? `<div class="rv-plain"><span class="label">${t("这说明什么")}</span><div class="rv-plain-body">${P.plain}</div></div>` : ""}`;
     panel.style.display = "block";
     rev.querySelector(".phase-tag .led").className = "led on";
     btn.disabled = true;
@@ -172,8 +173,8 @@ function predictGate(body, P, buildStage) {
     if (revealed) return;
     stageTag.querySelector(".led").className = predicted != null ? "led on" : "led";
     btn.disabled = !(predicted != null && acted);
-    note.textContent = predicted == null ? "先猜一个"
-      : (acted ? "可以对答案了" : (P.actHint || "把上面的演示走一遍，就能对答案"));
+    note.textContent = predicted == null ? t("先猜一个")
+      : (acted ? t("可以对答案了") : (P.actHint || t("把上面的演示走一遍，就能对答案")));
   }
   sync();
   buildStage(inner, () => { if (!acted) { acted = true; sync(); } });

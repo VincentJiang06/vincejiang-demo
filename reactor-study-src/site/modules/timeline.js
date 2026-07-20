@@ -3,6 +3,7 @@
    more 为新增可选字段：详情面板里可再展开的一段补充背景。
    交互：点节点看详情 · 鼠标按住轴左右拖 · 键盘左右键/Home/End · 当前节点高亮。 */
 import { mount } from "/modules/mod-kit.js";
+import { t } from "/modules/mod-i18n.js";
 
 mount("timeline", (body, fig, { config }) => {
   const events = config.events || [];
@@ -12,7 +13,7 @@ mount("timeline", (body, fig, { config }) => {
   head.style.cssText = "display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px";
   const hint = document.createElement("p");
   hint.className = "label"; hint.style.margin = "0";
-  hint.textContent = config.hint || "点节点看详情 · 按住轴可以左右拖 · 键盘左右键也能走。";
+  hint.textContent = config.hint || t("点节点看详情 · 按住轴可以左右拖 · 键盘左右键也能走。");
   const counter = document.createElement("span");
   counter.className = "mono";
   counter.style.cssText = "font-size:.72rem;color:var(--accent);flex:none";
@@ -22,7 +23,7 @@ mount("timeline", (body, fig, { config }) => {
   const track = document.createElement("div");
   track.className = "tl-track";
   track.tabIndex = 0;
-  track.setAttribute("aria-label", "时间轴，左右方向键切换节点");
+  track.setAttribute("aria-label", t("时间轴，左右方向键切换节点"));
   const detail = document.createElement("div");
   detail.className = "glass bolted";
   detail.style.marginTop = "16px";
@@ -52,11 +53,11 @@ mount("timeline", (body, fig, { config }) => {
     counter.textContent = `${String(i + 1).padStart(2, "0")} / ${String(events.length).padStart(2, "0")}`;
     const e = events[i];
     detail.innerHTML = `<div class="label" style="color:var(--accent);margin-bottom:8px">${e.date} · ${e.title}</div><div class="read">${e.html}</div>`
-      + (e.more ? `<div class="tl-more"><button type="button" class="btn tl-more-btn">展开更多背景</button><div class="tl-more-body">${e.more}</div></div>` : "");
+      + (e.more ? `<div class="tl-more"><button type="button" class="btn tl-more-btn">${t("展开更多背景")}</button><div class="tl-more-body">${e.more}</div></div>` : "");
     if (e.more) {
       const box = detail.querySelector(".tl-more");
       const tg = detail.querySelector(".tl-more-btn");
-      tg.onclick = () => { tg.textContent = box.classList.toggle("open") ? "收起背景" : "展开更多背景"; };
+      tg.onclick = () => { tg.textContent = box.classList.toggle("open") ? t("收起背景") : t("展开更多背景"); };
     }
     ensureVisible(i);
   }

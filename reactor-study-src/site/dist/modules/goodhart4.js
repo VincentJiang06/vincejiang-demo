@@ -3,34 +3,35 @@
    tabs 一型一面板（各自的模拟画布 + 白话机制说明）+
    miniTable 逐型对账「指标涨幅 vs 真实目标涨幅」（看过的页签才填数）。
    模拟数值逻辑与原版同源：TYPES.gen / stats() / causalStats() 一字未动。 */
-import { mount, readout, legend, scoped, gauss, tabs, miniTable } from "/modules/mod-kit.js?v=49b358d492";
-import { optionGroup } from "/modules/quiz.js?v=97821644bf";
+import { mount, readout, legend, scoped, gauss, tabs, miniTable } from "/modules/mod-kit.js?v=4501323cdd";
+import { optionGroup } from "/modules/quiz.js?v=b664eb3a7c";
+import { t } from "/modules/mod-i18n.js?v=fe1fe69deb";
 
 const TYPES = {
-  regressional: { name: "回归型 · 赢者诅咒", gen: (n, r) => { const t = gauss(); return [t + gauss(), t]; },
-    note: "proxy = target + 噪声。按 proxy 择优，选出的 target 期望必低于 proxy（向均值回归）。target 仍缓慢上升，是最温和的一型。" },
-  extremal: { name: "极值型 · 尾部崩坏", gen: (n, r) => { const x = gauss(); return [x + gauss() * .3, x - 1.2 * Math.max(0, x - 2) ** 2]; },
-    note: "proxy 与 target 只在正常范围相关。压力把你推进从未见过的尾部，隐藏约束被突破，target 掉头向下。" },
-  causal: { name: "因果型 · 干预错节点", gen: (n, r) => { const x = gauss(); return [x + r * 1.4, x]; },
-    note: "proxy 与 target 只是共因相关。直接干预 proxy（而非共因）会切断关联：proxy 涨，target 纹丝不动。" },
-  adversarial: { name: "对抗型 · 针对你造假", gen: (n, r) => { const real = gauss(), fake = (0.5 * Math.log1p(n)) * Math.abs(gauss() + 1); return [real + fake + gauss() * .3, real - 0.5 * fake]; },
-    note: "对手知道你的 proxy 后，专造 proxy 高/target 低的选项。压力越大，选中的 target 越差，被压到负值。" }
+  regressional: { name: t("回归型 · 赢者诅咒"), gen: (n, r) => { const tv = gauss(); return [tv + gauss(), tv]; },   // tv 原名 t，与 i18n 的 t() 撞名
+    note: t("proxy = target + 噪声。按 proxy 择优，选出的 target 期望必低于 proxy（向均值回归）。target 仍缓慢上升，是最温和的一型。") },
+  extremal: { name: t("极值型 · 尾部崩坏"), gen: (n, r) => { const x = gauss(); return [x + gauss() * .3, x - 1.2 * Math.max(0, x - 2) ** 2]; },
+    note: t("proxy 与 target 只在正常范围相关。压力把你推进从未见过的尾部，隐藏约束被突破，target 掉头向下。") },
+  causal: { name: t("因果型 · 干预错节点"), gen: (n, r) => { const x = gauss(); return [x + r * 1.4, x]; },
+    note: t("proxy 与 target 只是共因相关。直接干预 proxy（而非共因）会切断关联：proxy 涨，target 纹丝不动。") },
+  adversarial: { name: t("对抗型 · 针对你造假"), gen: (n, r) => { const real = gauss(), fake = (0.5 * Math.log1p(n)) * Math.abs(gauss() + 1); return [real + fake + gauss() * .3, real - 0.5 * fake]; },
+    note: t("对手知道你的 proxy 后，专造 proxy 高/target 低的选项。压力越大，选中的 target 越差，被压到负值。") }
 };
 const ORDER = ["regressional", "extremal", "causal", "adversarial"];
 /* 每型一句白话故事 + 判词 + 解药（呈现层，数字全部来自下面的模拟） */
 const PLAIN = {
   regressional: {
-    story: "按身高选篮球天赋：全国最高的那个人，多半不是最好的球员——他的第一名，一半靠与球技无关的成分（基因彩票）恰好拉满。",
-    verdict: "缓涨但打折", advice: "解药：给估计打折扣（向平均值收缩）+ 留出集。" },
+    story: t("按身高选篮球天赋：全国最高的那个人，多半不是最好的球员——他的第一名，一半靠与球技无关的成分（基因彩票）恰好拉满。"),
+    verdict: t("缓涨但打折"), advice: t("解药：给估计打折扣（向平均值收缩）+ 留出集。") },
   extremal: {
-    story: "体温和健康相关，但把「升温」推向极致，得到的不是超级健康，是发烧致死——那条相关只在日常区间被验证过。",
-    verdict: "先升后崩", advice: "解药：别外推到没验证过的区域，设护栏、及早收手。" },
+    story: t("体温和健康相关，但把「升温」推向极致，得到的不是超级健康，是发烧致死——那条相关只在日常区间被验证过。"),
+    verdict: t("先升后崩"), advice: t("解药：别外推到没验证过的区域，设护栏、及早收手。") },
   causal: {
-    story: "篮球运动员都很高，但让孩子打篮球不会让他长高——箭头方向反了，你推的是共因的影子。",
-    verdict: "指标独涨，目标不动", advice: "解药：做干预实验，找到真正的因再动手。" },
+    story: t("篮球运动员都很高，但让孩子打篮球不会让他长高——箭头方向反了，你推的是共因的影子。"),
+    verdict: t("指标独涨，目标不动"), advice: t("解药：做干预实验，找到真正的因再动手。") },
   adversarial: {
-    story: "应试作弊、刷榜的 SEO、粉饰财报：对手知道你按什么打分，就专门生产「指标高、目标低」的东西喂你。",
-    verdict: "越优化越糟，压到负值", advice: "解药：机制设计——指标保密、轮换、多指标、独立审计。" }
+    story: t("应试作弊、刷榜的 SEO、粉饰财报：对手知道你按什么打分，就专门生产「指标高、目标低」的东西喂你。"),
+    verdict: t("越优化越糟，压到负值"), advice: t("解药：机制设计——指标保密、轮换、多指标、独立审计。") }
 };
 
 const PRESSURES = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048];
@@ -53,16 +54,16 @@ mount("goodhart4", (body, fig, { config }) => {
   const C = scoped(fig);
 
   predictGate(body, {
-    q: "先猜：四种失灵里，哪一型最难防？",
+    q: t("先猜：四种失灵里，哪一型最难防？"),
     options: [
-      { t: "回归型：择优必然带来的「打折」" },
-      { t: "极值型：把系统推出验证过的区域" },
-      { t: "因果型：把相关当因果，推错节点" },
-      { t: "对抗型：有对手专门针对你的指标造假", ok: true }
+      { t: t("回归型：择优必然带来的「打折」") },
+      { t: t("极值型：把系统推出验证过的区域") },
+      { t: t("因果型：把相关当因果，推错节点") },
+      { t: t("对抗型：有对手专门针对你的指标造假"), ok: true }
     ],
-    reveal: `回归型确实「防不掉」——但它温和、可预期，事后打个折扣就能校准。对抗型的对面是会学习的人（或模型）：你改指标，他跟着改；任何一次性的补丁都会过期，只能靠机制设计（保密、轮换、多指标、独立审计）持续过招。下面的对账表也看得出来：只有对抗型把「真实目标涨幅」压成了负数——压力越大越糟。`,
-    plain: "没有对手的失灵，修一次就好；有对手的失灵，是一场不会结束的军备竞赛。诊断你的 eval 时，第一个要问的就是：有没有人在针对它优化？",
-    actHint: "把四个页签都点开看一遍，就能对答案"
+    reveal: t(`回归型确实「防不掉」——但它温和、可预期，事后打个折扣就能校准。对抗型的对面是会学习的人（或模型）：你改指标，他跟着改；任何一次性的补丁都会过期，只能靠机制设计（保密、轮换、多指标、独立审计）持续过招。下面的对账表也看得出来：只有对抗型把「真实目标涨幅」压成了负数——压力越大越糟。`),
+    plain: t("没有对手的失灵，修一次就好；有对手的失灵，是一场不会结束的军备竞赛。诊断你的 eval 时，第一个要问的就是：有没有人在针对它优化？"),
+    actHint: t("把四个页签都点开看一遍，就能对答案")
   }, buildStage);
 
   function buildStage(host, act) {
@@ -76,7 +77,7 @@ mount("goodhart4", (body, fig, { config }) => {
       const root = document.createElement("div");
       const story = document.createElement("p");
       story.style.cssText = "font-size:.9rem;color:var(--text-2);margin:0 0 10px;line-height:1.7";
-      story.innerHTML = `<strong style="color:var(--text)">白话版：</strong>${PLAIN[k].story}`;
+      story.innerHTML = `<strong style="color:var(--text)">${t("白话版：")}</strong>${PLAIN[k].story}`;
       const c = document.createElement("canvas");
       root.append(story, c);
       const ro = readout(root, `<div class="big" style="font-size:1rem">${TYPES[k].name}</div>
@@ -99,20 +100,20 @@ mount("goodhart4", (body, fig, { config }) => {
       value: 0
     });
     legend(host, [
-      { c: "var(--accent)", t: "选中者的 proxy（你优化的指标）" },
-      { c: "var(--red)", t: "选中者的 target（你真正想要的）" }
+      { c: "var(--accent)", t: t("选中者的 proxy（你优化的指标）") },
+      { c: "var(--red)", t: t("选中者的 target（你真正想要的）") }
     ]);
     mt = miniTable(host, {
-      cols: ["类型", "指标涨幅", "真实目标涨幅", "一句话判词"],
+      cols: [t("类型"), t("指标涨幅"), t("真实目标涨幅"), t("一句话判词")],
       rows: tableRows(),
-      note: "涨幅 = 优化压力从 1 加到 2048 时的变化，数字来自你刚跑的模拟。四个页签都看过，才能对答案。"
+      note: t("涨幅 = 优化压力从 1 加到 2048 时的变化，数字来自你刚跑的模拟。四个页签都看过，才能对答案。")
     });
     mt.highlight(0);
 
     function tableRows() {
       return ORDER.map(k => {
         const d = cache[k];
-        if (!d) return [TYPES[k].name.split(" ")[0], "—", "—", "还没看：点开该页签"];
+        if (!d) return [TYPES[k].name.split(" ")[0], "—", "—", t("还没看：点开该页签")];
         const f = v => (v >= 0 ? "+" : "") + v.toFixed(2);
         return [TYPES[k].name.split(" ")[0], f(d.at(-1)[0] - d[0][0]), f(d.at(-1)[1] - d[0][1]), PLAIN[k].verdict];
       });
@@ -149,7 +150,7 @@ mount("goodhart4", (body, fig, { config }) => {
       line(0, C("--accent"), C("--accent-glow"));
       line(1, C("--red"));
       ctx.fillStyle = C("--ink-400"); ctx.font = "10px monospace";
-      ctx.fillText("优化压力（候选数 n，对数）→", pad + 4, h - 8);
+      ctx.fillText(t("优化压力（候选数 n，对数）→"), pad + 4, h - 8);
     }
 
     window.addEventListener("resize", () => {      // boot.js 主题切换也走这条广播重绘
@@ -167,7 +168,7 @@ function predictGate(body, P, buildStage) {
 
   const gate = document.createElement("div");
   gate.className = "predict-gate";
-  gate.innerHTML = `<div class="phase-tag"><span class="led on"></span>第 1 步 · 先猜一猜</div>`;
+  gate.innerHTML = `<div class="phase-tag"><span class="led on"></span>${t("第 1 步 · 先猜一猜")}</div>`;
   body.appendChild(gate);
   optionGroup(gate, {
     q: P.q, options: opts, mode: "pick",
@@ -178,18 +179,18 @@ function predictGate(body, P, buildStage) {
   stage.className = "stage";
   const stageTag = document.createElement("div");
   stageTag.className = "phase-tag";
-  stageTag.innerHTML = `<span class="led"></span>第 2 步 · 亲手试`;
+  stageTag.innerHTML = `<span class="led"></span>${t("第 2 步 · 亲手试")}`;
   const inner = document.createElement("div"); inner.className = "stage-inner";
   const shutter = document.createElement("div"); shutter.className = "shutter";
-  shutter.innerHTML = `<span class="led"></span><span>先在上面选一个你的猜测，这块面板才会亮</span>`;
+  shutter.innerHTML = `<span class="led"></span><span>${t("先在上面选一个你的猜测，这块面板才会亮")}</span>`;
   stage.append(stageTag, inner, shutter);
   body.appendChild(stage);
 
   const rev = document.createElement("div");
   rev.className = "reveal";
-  rev.innerHTML = `<div class="phase-tag"><span class="led"></span>第 3 步 · 对答案</div>`;
+  rev.innerHTML = `<div class="phase-tag"><span class="led"></span>${t("第 3 步 · 对答案")}</div>`;
   const btn = document.createElement("button");
-  btn.type = "button"; btn.className = "btn"; btn.textContent = "对答案"; btn.disabled = true;
+  btn.type = "button"; btn.className = "btn"; btn.textContent = t("对答案"); btn.disabled = true;
   const note = document.createElement("span");
   note.className = "label"; note.style.marginLeft = "12px";
   const row = document.createElement("div");
@@ -204,11 +205,11 @@ function predictGate(body, P, buildStage) {
     if (revealed || predicted == null) return;
     revealed = true;
     const hit = predicted === answer;
-    panel.innerHTML = `<div class="rv-row"><span class="label">你的猜测</span><span>${opts[predicted].t}</span></div>
-      <div class="rv-row"><span class="label">实际情况</span><span>${opts[answer].t}</span></div>
-      <div class="rv-verdict ${hit ? "ok" : "no"}"><span class="led on"></span>${hit ? "猜对了" : "和实际不一样，差别在下面"}</div>
+    panel.innerHTML = `<div class="rv-row"><span class="label">${t("你的猜测")}</span><span>${opts[predicted].t}</span></div>
+      <div class="rv-row"><span class="label">${t("实际情况")}</span><span>${opts[answer].t}</span></div>
+      <div class="rv-verdict ${hit ? "ok" : "no"}"><span class="led on"></span>${hit ? t("猜对了") : t("和实际不一样，差别在下面")}</div>
       ${P.reveal ? `<div class="read rv-read">${P.reveal}</div>` : ""}
-      ${P.plain ? `<div class="rv-plain"><span class="label">这说明什么</span><div class="rv-plain-body">${P.plain}</div></div>` : ""}`;
+      ${P.plain ? `<div class="rv-plain"><span class="label">${t("这说明什么")}</span><div class="rv-plain-body">${P.plain}</div></div>` : ""}`;
     panel.style.display = "block";
     rev.querySelector(".phase-tag .led").className = "led on";
     btn.disabled = true;
@@ -219,8 +220,8 @@ function predictGate(body, P, buildStage) {
     if (revealed) return;
     stageTag.querySelector(".led").className = predicted != null ? "led on" : "led";
     btn.disabled = !(predicted != null && acted);
-    note.textContent = predicted == null ? "先猜一个"
-      : (acted ? "可以对答案了" : (P.actHint || "把上面的演示走一遍，就能对答案"));
+    note.textContent = predicted == null ? t("先猜一个")
+      : (acted ? t("可以对答案了") : (P.actHint || t("把上面的演示走一遍，就能对答案")));
   }
   sync();
   buildStage(inner, () => { if (!acted) { acted = true; sync(); } });

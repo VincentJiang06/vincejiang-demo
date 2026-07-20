@@ -69,7 +69,7 @@
       <span>先升后降：过优化的抛物线</span><span class="spacer"></span>
       <span class="mono">SIM</span></figcaption>
     <div class="module-body"><script type="application/json" class="mod-config">{}</script><noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript></div>
-  </figure><script type="module" src="/modules/overopt.js?v=692c8ad8bd"></script>
+  </figure><script type="module" src="/modules/overopt.js?v=39f500b94d"></script>
 <div class="read">
 <p>先解释横轴。「优化强度」在论文里用 <strong>KL 距离</strong>度量：模型被推离它初始版本的远近。白话版：改造的幅度。改造得越狠，模型离出厂状态越远，KL 就越大。所谓 <strong>KL 预算</strong>，就是给改造幅度设一个上限。</p>
 <p>拖动滑块能看到两件事。第一，proxy 与真实目标错配越大（打分器越不像真人），真实质量见顶越早、掉得越狠。第二，加一条 KL 约束能让你在峰值附近停手，这是 RLHF 对抗过优化的标准做法：不是不优化，是限制优化的深度。</p>

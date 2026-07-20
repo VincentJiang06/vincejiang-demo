@@ -7,6 +7,7 @@
    }
    现有课页（cards + timeline 数组）零改动可用。 */
 import { mount } from "/modules/mod-kit.js";
+import { t } from "/modules/mod-i18n.js";
 
 mount("provenance", (body, fig, { config }) => {
   const cards = config.cards || [];
@@ -17,7 +18,7 @@ mount("provenance", (body, fig, { config }) => {
 
   const p = document.createElement("p");
   p.className = "label"; p.style.marginBottom = "12px";
-  p.textContent = config.hint || "点卡片翻面 · 流行的说法往往不是原文。";
+  p.textContent = config.hint || t("点卡片翻面 · 流行的说法往往不是原文。");
   body.appendChild(p);
 
   /* —— 翻卡 —— */
@@ -33,11 +34,11 @@ mount("provenance", (body, fig, { config }) => {
       <div class="fc-face">
         <span class="label" style="color:var(--accent)">${cd.frontTag || ""}</span>
         <span class="fc-front-text">${cd.front}</span>
-        <span class="label fc-flip-hint">翻面 ▸</span></div>
+        <span class="label fc-flip-hint">${t("翻面 ▸")}</span></div>
       <div class="fc-face fc-back">
-        <span class="label" style="color:var(--accent)">${cd.backTag || "档案"}</span>
+        <span class="label" style="color:var(--accent)">${cd.backTag || t("档案")}</span>
         <span class="fc-back-text">${cd.back}</span>
-        ${cd.quote ? `<button type="button" class="fc-quote-btn">看原文引文</button>
+        ${cd.quote ? `<button type="button" class="fc-quote-btn">${t("看原文引文")}</button>
           <blockquote class="fc-quote">${cd.quote}${cd.cite ? `<span class="label fc-cite">${cd.cite}</span>` : ""}</blockquote>` : ""}
       </div></div>`;
     let f = false;
@@ -57,7 +58,7 @@ mount("provenance", (body, fig, { config }) => {
     });
     if (cd.quote) {
       const qb = card.querySelector(".fc-quote-btn");
-      qb.onclick = () => { qb.textContent = card.classList.toggle("q-open") ? "收起引文" : "看原文引文"; };
+      qb.onclick = () => { qb.textContent = card.classList.toggle("q-open") ? t("收起引文") : t("看原文引文"); };
     }
     grid.appendChild(card);
   });
@@ -83,10 +84,10 @@ mount("provenance", (body, fig, { config }) => {
     const hl = (txt, cls) => String(txt).replace(/\[\[(.+?)\]\]/g, `<mark class="${cls}">$1</mark>`);
     const c = document.createElement("div");
     c.className = "contrast locked";
-    c.innerHTML = `<div class="label" style="margin-bottom:10px">${ct.label || "两个版本，一句一句对着看"}</div>
-      <div class="contrast-row"><span class="ct-tag ct-a">${ct.a.tag || "讹传"}</span><span>${hl(ct.a.text, "hl-a")}</span></div>
-      <div class="contrast-row"><span class="ct-tag ct-b">${ct.b.tag || "原文"}</span><span>${hl(ct.b.text, "hl-b")}</span></div>
-      <div class="label ct-note">高亮的字，就是两个版本分岔的地方</div>`;
+    c.innerHTML = `<div class="label" style="margin-bottom:10px">${ct.label || t("两个版本，一句一句对着看")}</div>
+      <div class="contrast-row"><span class="ct-tag ct-a">${ct.a.tag || t("讹传")}</span><span>${hl(ct.a.text, "hl-a")}</span></div>
+      <div class="contrast-row"><span class="ct-tag ct-b">${ct.b.tag || t("原文")}</span><span>${hl(ct.b.text, "hl-b")}</span></div>
+      <div class="label ct-note">${t("高亮的字，就是两个版本分岔的地方")}</div>`;
     body.appendChild(c);
   }
 
@@ -97,11 +98,11 @@ mount("provenance", (body, fig, { config }) => {
     const lockNote = document.createElement("div");
     lockNote.className = "label chain-note";
     lockNote.style.marginBottom = "10px";
-    lockNote.textContent = "先翻开上面的一张卡片，这条证据链才会通电";
+    lockNote.textContent = t("先翻开上面的一张卡片，这条证据链才会通电");
     const track = document.createElement("div");
     track.className = "chain-track";
     track.tabIndex = 0;
-    track.setAttribute("aria-label", "证据链时间轴，左右方向键切换");
+    track.setAttribute("aria-label", t("证据链时间轴，左右方向键切换"));
     const detail = document.createElement("div");
     detail.className = "chain-detail";
     let cur = -1;
@@ -122,7 +123,7 @@ mount("provenance", (body, fig, { config }) => {
         c.querySelector(".led").className = j <= i ? "led on" : "led";
       });
       const e = chainData[i];
-      detail.innerHTML = `<span class="label" style="color:var(--accent)">${e.y} · ${e.kind === "myth" ? "讹传在这里出现" : "证据"}</span>
+      detail.innerHTML = `<span class="label" style="color:var(--accent)">${e.y} · ${e.kind === "myth" ? t("讹传在这里出现") : t("证据")}</span>
         <div class="read" style="margin-top:6px;font-size:.88rem">${e.html || e.t}</div>`;
     }
     track.addEventListener("keydown", e => {
@@ -139,7 +140,7 @@ mount("provenance", (body, fig, { config }) => {
     unlocked = true;
     body.querySelectorAll(".locked").forEach(el => el.classList.remove("locked"));
     const note = body.querySelector(".chain-note");
-    if (note) note.textContent = "证据链已通电 · 点年份，看这一年发生了什么";
+    if (note) note.textContent = t("证据链已通电 · 点年份，看这一年发生了什么");
     if (chainSel) chainSel(0);
   }
 });

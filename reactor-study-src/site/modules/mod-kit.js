@@ -1,4 +1,5 @@
 /* REACTOR · mod-kit.js — shared helpers for interactive modules */
+import { t, tf } from "/modules/mod-i18n.js";
 
 export function mount(name, factory) {
   document.querySelectorAll(`figure.module[data-module="${name}"]`).forEach(fig => {
@@ -9,7 +10,7 @@ export function mount(name, factory) {
     const variant = fig.dataset.modname || name;
     body.innerHTML = "";
     try { factory(body, fig, { config, variant }); }
-    catch (e) { body.innerHTML = `<div class="noscript-fallback">模块加载失败：${e.message}</div>`; console.error(e); }
+    catch (e) { body.innerHTML = `<div class="noscript-fallback">${t("模块加载失败：")}${e.message}</div>`; console.error(e); }
   });
 }
 /* branch-scoped CSS var reader bound to a module element */
@@ -96,7 +97,7 @@ export function gauss() { let u = 0, v = 0; while (!u) u = rng(); while (!v) v =
 /* presets — 场景预设 chip 组。一键把一组参数换成典型场景。
    items:[{k?,t,note?,...任意负载}] → {el, select(i, fire?), index}
    select(i,false) 只改高亮不触发回调（初始化用）。 */
-export function presets(body, { label = "一键换场景", items = [], value = null, onselect }) {
+export function presets(body, { label = t("一键换场景"), items = [], value = null, onselect }) {
   const wrap = document.createElement("div");
   wrap.className = "control";
   wrap.innerHTML = `<label>${label}</label>`;
@@ -127,12 +128,12 @@ export function presets(body, { label = "一键换场景", items = [], value = n
 /* stepper — 分步演示器：上一步/下一步 + 进度点 + 计数 + 键盘左右键。
    {count, value?, onstep(i, dir)} → {el, go(i), next(), prev(), index}
    go 到相同步号是空操作，因此和别的导航（侧栏、点击）互相同步不会循环触发。 */
-export function stepper(body, { count, value = 0, onstep, prevLabel = "上一步", nextLabel = "下一步" }) {
+export function stepper(body, { count, value = 0, onstep, prevLabel = t("上一步"), nextLabel = t("下一步") }) {
   const bar = document.createElement("div");
   bar.className = "stepper-bar";
   bar.tabIndex = 0;
   bar.setAttribute("role", "group");
-  bar.setAttribute("aria-label", "分步演示，可用左右方向键切换");
+  bar.setAttribute("aria-label", t("分步演示，可用左右方向键切换"));
   const mkBtn = (t, dir) => {
     const b = document.createElement("button");
     b.type = "button"; b.className = "btn step-btn";
@@ -145,7 +146,7 @@ export function stepper(body, { count, value = 0, onstep, prevLabel = "上一步
   for (let d = 0; d < count; d++) {
     const dot = document.createElement("button");
     dot.type = "button"; dot.className = "dot";
-    dot.setAttribute("aria-label", `跳到第 ${d + 1} 步`);
+    dot.setAttribute("aria-label", tf("跳到第 {} 步", d + 1));
     dot.onclick = ((n) => () => go(n))(d);
     dots.appendChild(dot);
   }

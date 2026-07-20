@@ -71,7 +71,7 @@ if (lessonId && /^[NRBYC]\d/.test(lessonId) && document.querySelector("article.s
 }
 
 /* ---- lazily boot the talent tree if present（首页全屏树 / 课程页导轨迷你树）---- */
-if (document.querySelector(".tree-viewport")) import("/modules/tree.js?v=68d0020bc7");
+if (document.querySelector(".tree-viewport")) import("/modules/tree.js?v=c8d8aa917c");
 
 /* ---- respect reduced motion for typing bootlines ---- */
 if (matchMedia("(prefers-reduced-motion: reduce)").matches)

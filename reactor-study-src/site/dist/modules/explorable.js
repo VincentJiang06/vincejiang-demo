@@ -9,8 +9,9 @@
                 answer?: 正确项下标（或在 options 里标 ok:true；都不给就是开放猜测，不判对错）,
                 reveal?: "<html> 对照解说", plain?: "一句大白话：这说明什么" }
    流程：先猜一个 → 面板通电、亲手操作 → 操作过了才能对答案。 */
-import { mount, stepper } from "/modules/mod-kit.js?v=49b358d492";
-import { optionGroup } from "/modules/quiz.js?v=97821644bf";
+import { mount, stepper } from "/modules/mod-kit.js?v=4501323cdd";
+import { optionGroup } from "/modules/quiz.js?v=b664eb3a7c";
+import { t } from "/modules/mod-i18n.js?v=fe1fe69deb";
 
 mount("explorable", (body, fig, { config }) => {
   const mode = config.mode || "steps";
@@ -29,7 +30,7 @@ function threePhase(body, cfg, render) {
   /* 01 · 先猜一猜 */
   const gate = document.createElement("div");
   gate.className = "predict-gate";
-  gate.innerHTML = `<div class="phase-tag"><span class="led on"></span>第 1 步 · 先猜一猜</div>`;
+  gate.innerHTML = `<div class="phase-tag"><span class="led on"></span>${t("第 1 步 · 先猜一猜")}</div>`;
   body.appendChild(gate);
   optionGroup(gate, {
     q: P.q, options: opts, mode: "pick",
@@ -41,12 +42,12 @@ function threePhase(body, cfg, render) {
   stage.className = "stage";
   const stageTag = document.createElement("div");
   stageTag.className = "phase-tag";
-  stageTag.innerHTML = `<span class="led"></span>第 2 步 · 亲手试`;
+  stageTag.innerHTML = `<span class="led"></span>${t("第 2 步 · 亲手试")}`;
   const inner = document.createElement("div");
   inner.className = "stage-inner";
   const shutter = document.createElement("div");
   shutter.className = "shutter";
-  shutter.innerHTML = `<span class="led"></span><span>先在上面选一个你的猜测，这块面板才会亮</span>`;
+  shutter.innerHTML = `<span class="led"></span><span>${t("先在上面选一个你的猜测，这块面板才会亮")}</span>`;
   stage.append(stageTag, inner, shutter);
   body.appendChild(stage);
   render(inner, cfg, () => { if (!acted) { acted = true; sync(); } });
@@ -54,9 +55,9 @@ function threePhase(body, cfg, render) {
   /* 03 · 对答案 */
   const rev = document.createElement("div");
   rev.className = "reveal";
-  rev.innerHTML = `<div class="phase-tag"><span class="led"></span>第 3 步 · 对答案</div>`;
+  rev.innerHTML = `<div class="phase-tag"><span class="led"></span>${t("第 3 步 · 对答案")}</div>`;
   const btn = document.createElement("button");
-  btn.type = "button"; btn.className = "btn"; btn.textContent = "对答案"; btn.disabled = true;
+  btn.type = "button"; btn.className = "btn"; btn.textContent = t("对答案"); btn.disabled = true;
   const note = document.createElement("span");
   note.className = "label"; note.style.marginLeft = "12px";
   const row = document.createElement("div");
@@ -71,14 +72,14 @@ function threePhase(body, cfg, render) {
   btn.onclick = () => {
     if (revealed || predicted == null) return;
     revealed = true;
-    let html = `<div class="rv-row"><span class="label">你的猜测</span><span>${opts[predicted].t}</span></div>`;
+    let html = `<div class="rv-row"><span class="label">${t("你的猜测")}</span><span>${opts[predicted].t}</span></div>`;
     if (answer >= 0) {
       const hit = predicted === answer;
-      html += `<div class="rv-row"><span class="label">实际情况</span><span>${opts[answer].t}</span></div>
-        <div class="rv-verdict ${hit ? "ok" : "no"}"><span class="led on"></span>${hit ? "猜对了" : "和实际不一样，差别在下面"}</div>`;
+      html += `<div class="rv-row"><span class="label">${t("实际情况")}</span><span>${opts[answer].t}</span></div>
+        <div class="rv-verdict ${hit ? "ok" : "no"}"><span class="led on"></span>${hit ? t("猜对了") : t("和实际不一样，差别在下面")}</div>`;
     }
     if (P.reveal) html += `<div class="read rv-read">${P.reveal}</div>`;
-    if (P.plain) html += `<div class="rv-plain"><span class="label">这说明什么</span><div class="rv-plain-body">${P.plain}</div></div>`;
+    if (P.plain) html += `<div class="rv-plain"><span class="label">${t("这说明什么")}</span><div class="rv-plain-body">${P.plain}</div></div>`;
     panel.innerHTML = html;
     panel.style.display = "block";
     rev.querySelector(".phase-tag .led").className = "led on";
@@ -90,8 +91,8 @@ function threePhase(body, cfg, render) {
     if (revealed) return;
     stageTag.querySelector(".led").className = predicted != null ? "led on" : "led";
     btn.disabled = !(predicted != null && acted);
-    note.textContent = predicted == null ? "先猜一个"
-      : (acted ? "可以对答案了" : "把上面的演示走一遍，就能对答案");
+    note.textContent = predicted == null ? t("先猜一个")
+      : (acted ? t("可以对答案了") : t("把上面的演示走一遍，就能对答案"));
   }
   sync();
 }
@@ -110,12 +111,12 @@ function steps(body, cfg, onact = () => {}) {
       <div class="step-body">
         <div class="label step-k">${s.k || "0" + (i + 1)}${s.t ? " · " + s.t : ""}</div>
         <div class="read">${s.html}</div>
-        ${s.ev ? `<div class="ev"><button type="button" class="btn ev-toggle">看证据</button><div class="ev-body">${s.ev}</div></div>` : ""}
+        ${s.ev ? `<div class="ev"><button type="button" class="btn ev-toggle">${t("看证据")}</button><div class="ev-body">${s.ev}</div></div>` : ""}
       </div>`;
     if (s.ev) {
       const ev = row.querySelector(".ev");
       const tg = row.querySelector(".ev-toggle");
-      tg.onclick = () => { tg.textContent = ev.classList.toggle("open") ? "收起证据" : "看证据"; };
+      tg.onclick = () => { tg.textContent = ev.classList.toggle("open") ? t("收起证据") : t("看证据"); };
     }
     stack.appendChild(row);
   });
@@ -143,7 +144,7 @@ function steps(body, cfg, onact = () => {}) {
 /* —— compare：A/B 切换 + 并排对照。A、B 都看过（或直接并排看）算「操作完成」 —— */
 function compare(body, cfg, onact = () => {}) {
   const st = { view: "a", seen: { a: false, b: false } };
-  const views = [["a", cfg.a.t || "A"], ["b", cfg.b.t || "B"], ["ab", "两个一起看"]];
+  const views = [["a", cfg.a.t || "A"], ["b", cfg.b.t || "B"], ["ab", t("两个一起看")]];
   const bar = document.createElement("div"); bar.className = "controls";
   const bank = document.createElement("div"); bank.className = "toggle-bank";
   views.forEach(([v, lbl]) => {
@@ -153,7 +154,7 @@ function compare(body, cfg, onact = () => {}) {
     bank.appendChild(b);
   });
   const cwrap = document.createElement("div"); cwrap.className = "control";
-  cwrap.innerHTML = `<label>${cfg.label || "对照"}</label>`;
+  cwrap.innerHTML = `<label>${cfg.label || t("对照")}</label>`;
   cwrap.appendChild(bank);
   bar.appendChild(cwrap);
   const panel = document.createElement("div");
@@ -190,7 +191,7 @@ function cards(body, cfg, onact = () => {}) {
     b.onclick = () => { if (active !== m) { active = m; render(); onact(); } };
     return b;
   };
-  filt.appendChild(chip("全部", null, items.length));
+  filt.appendChild(chip(t("全部"), null, items.length));
   mechs.forEach(m => filt.appendChild(chip(m, m, items.filter(c => c.mech === m).length)));
   const grid = document.createElement("div"); grid.className = "cards";
   function render() {
@@ -199,12 +200,12 @@ function cards(body, cfg, onact = () => {}) {
     items.filter(c => !active || c.mech === active).forEach(c => {
       const el = document.createElement("div"); el.className = "card";
       el.innerHTML = `${c.tag ? `<span class="num">${c.tag}</span>` : ""}<h3>${c.title}</h3><p>${c.html}</p>`
-        + (c.detail ? `<button type="button" class="card-more">展开细节 +</button><div class="card-detail">${c.detail}</div>` : "")
-        + (c.mech ? `<div class="label" style="margin-top:10px;color:var(--accent)">机制 · ${c.mech}</div>` : "");
+        + (c.detail ? `<button type="button" class="card-more">${t("展开细节 +")}</button><div class="card-detail">${c.detail}</div>` : "")
+        + (c.mech ? `<div class="label" style="margin-top:10px;color:var(--accent)">${t("机制")} · ${c.mech}</div>` : "");
       if (c.detail) {
         const more = el.querySelector(".card-more");
         more.onclick = () => {
-          more.textContent = el.classList.toggle("open") ? "收起细节" : "展开细节 +";
+          more.textContent = el.classList.toggle("open") ? t("收起细节") : t("展开细节 +");
           onact();
         };
       }
@@ -217,7 +218,7 @@ function cards(body, cfg, onact = () => {}) {
 
 /* —— matrix：行列十字联动高亮 + 点击钉行 —— */
 function matrix(body, cfg, onact = () => {}) {
-  const t = document.createElement("div"); t.className = "scroll-x";
+  const wrap = document.createElement("div"); wrap.className = "scroll-x";   // 原名 t，与 i18n 的 t() 撞名
   const tbl = document.createElement("table");
   tbl.className = "atlas-table"; tbl.style.minWidth = "560px";
   tbl.innerHTML = `<tr>${["", ...cfg.cols].map(c => `<th>${c}</th>`).join("")}</tr>` +
@@ -249,10 +250,10 @@ function matrix(body, cfg, onact = () => {}) {
     paint();
     act();
   });
-  t.appendChild(tbl);
-  body.appendChild(t);
+  wrap.appendChild(tbl);
+  body.appendChild(wrap);
   const n = document.createElement("p");
   n.className = "label"; n.style.marginTop = "12px";
-  n.innerHTML = cfg.note || "鼠标放到格子上，同一行和同一列会一起亮；点一行可以钉住它，再点一下取消。";
+  n.innerHTML = cfg.note || t("鼠标放到格子上，同一行和同一列会一起亮；点一行可以钉住它，再点一下取消。");
   body.appendChild(n);
 }

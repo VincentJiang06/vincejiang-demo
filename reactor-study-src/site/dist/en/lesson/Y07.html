@@ -69,7 +69,7 @@
       <span>先升后降：过优化的抛物线</span><span class="spacer"></span>
       <span class="mono">SIM</span></figcaption>
     <div class="module-body"><script type="application/json" class="mod-config">{}</script><noscript><div class="noscript-fallback">This interactive module needs JavaScript. The key conclusions are given in the text and the figures.</div></noscript></div>
-  </figure><script type="module" src="/modules/overopt.js?v=692c8ad8bd"></script>
+  </figure><script type="module" src="/modules/overopt.js?v=39f500b94d"></script>
 <div class="read">
 <p>First the horizontal axis. The paper measures "optimisation strength" with <strong>KL distance</strong>: how far the model has been pushed from its initial version. Plainly: how much it has been remade. The harder the remaking, the further the model is from its factory state and the larger the KL. A <strong>KL budget</strong> is simply a cap on the extent of remaking.</p>
 <p>Dragging the slider shows two things. First, the greater the mismatch between proxy and true objective (the less the scorer resembles a real person), the earlier true quality peaks and the harder it drops. Second, adding a KL constraint lets you stop near the peak, which is the standard RLHF countermeasure to overoptimisation: not refusing to optimise, but limiting how deep the optimisation goes.</p>
