@@ -23,8 +23,11 @@ h1,h2,h3,h4{font-family:var(--font-sans);font-weight:700;line-height:1.12;letter
 h1{font-size:clamp(2.5rem,6.4vw,5rem);line-height:1.02}
 h2{font-size:clamp(1.6rem,3.4vw,2.4rem);margin:calc(var(--u)*5) 0 calc(var(--u)*2)}
 h3{font-size:1.24rem;margin:calc(var(--u)*3) 0 var(--u)}
-p{margin:0 0 calc(var(--u)*2);max-width:68ch;text-wrap:pretty}
+p{margin:0 0 calc(var(--u)*2);max-width:78ch;text-wrap:pretty}
 li{text-wrap:pretty}
+/* 课程正文与互动模块等宽(用户裁决:阅读区太窄)——.read 在 article 里吃满容器,
+   68ch 的舒适行长上限对 1200px 版心太保守,交互卡是满宽,两者不齐很扎眼 */
+.read p,.read li,.callout p{max-width:none}
 .read p,.read li{font-family:var(--font-sans);font-size:1.04rem;line-height:1.92}
 /* 引用：全站同一套无衬线，靠字号/字重/竖线区分，不再换字体 */
 .pullquote,blockquote,.cite{font-family:var(--font-sans);font-weight:500}
@@ -41,7 +44,7 @@ code,kbd,.mono{font-family:var(--font-mono)}
 :where(code):not(pre code){background:color-mix(in srgb,var(--accent) 12%,transparent);
   padding:.05em .35em;border-radius:var(--radius);font-size:.9em}
 ul,ol{margin:0 0 calc(var(--u)*2) 1.4em}
-li{margin:.3em 0;max-width:64ch}
+li{margin:.3em 0;max-width:74ch}
 hr{border:0;height:1px;background:var(--line);margin:calc(var(--u)*4) 0}
 
 /* ── 等宽功能标签（铭牌基因）── */

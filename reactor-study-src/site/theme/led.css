@@ -80,7 +80,11 @@
 /* ── 首页全屏形态:导航条 → 介绍横条 → 树占满剩余(用户裁决:竖栏挤占内容,并入顶部) ── */
 .tree-full{position:relative;display:flex;flex-direction:column;height:calc(100dvh - var(--headh))}
 .tree-full .tree-viewport{flex:1;height:auto;min-height:0;border:0;border-radius:0;
-  background-color:var(--bg);touch-action:none}
+  background-color:var(--bg);touch-action:none;
+  /* 点阵底纹与全站一致(用户裁决):.tree-viewport 基类已带 radial-gradient,
+     这里只覆写底色,不要覆写 background-image */
+  background-image:radial-gradient(var(--dot) 1px,transparent 1.4px);
+  background-size:var(--dot-gap) var(--dot-gap)}
 .intro-strip{display:flex;align-items:center;gap:clamp(12px,2vw,28px);
   padding:10px clamp(14px,2.5vw,32px);border-bottom:1px solid var(--line);
   background:color-mix(in srgb,var(--bg-2) 60%,var(--bg))}
