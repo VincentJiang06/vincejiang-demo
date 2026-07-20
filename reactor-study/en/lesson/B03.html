@@ -1,0 +1,96 @@
+<!doctype html><html lang="en" data-theme="dark" data-lp="/en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>B03 Lucas Critique · REACTOR</title>
+<meta name="description" content="The moment you act on a regularity, people change their behavior.">
+<link rel="canonical" href="https://reactor.vincejiang.com/en/lesson/B03.html">
+<meta property="og:type" content="website"><meta property="og:title" content="B03 Lucas Critique · REACTOR">
+<meta property="og:description" content="The moment you act on a regularity, people change their behavior."><meta property="og:url" content="https://reactor.vincejiang.com/en/lesson/B03.html">
+<meta property="og:image" content="https://reactor.vincejiang.com/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:site_name" content="REACTOR"><meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<link rel="alternate" hreflang="zh-Hans" href="https://reactor.vincejiang.com/lesson/B03.html">
+<link rel="alternate" hreflang="en" href="https://reactor.vincejiang.com/en/lesson/B03.html">
+<link rel="alternate" hreflang="x-default" href="https://reactor.vincejiang.com/lesson/B03.html">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://reactor.vincejiang.com/og.png">
+<meta name="author" content="Vince Jiang">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="icon" href="/favicon.svg"><link rel="mask-icon" href="/favicon.svg" color="#E11D3A">
+<script>try{var m=localStorage.getItem("reactor.theme")||"auto",t=(m==="light"||m==="dark")?m:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
+<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=27ef2859b9">
+<link rel="stylesheet" href="/theme/components.css?v=906e7a3bf4"><link rel="stylesheet" href="/theme/led.css?v=36a7cb3942">
+<link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"LearningResource","name":"Lucas Critique","description":"The moment you act on a regularity, people change their behavior.","inLanguage":"en","url":"https://reactor.vincejiang.com/en/lesson/B03.html","author":{"@type":"Person","name":"Vince Jiang","url":"https://vincejiang.com"},"isAccessibleForFree":true,"learningResourceType":"lesson","educationalLevel":"advanced","timeRequired":"PT10M","teaches":"Lucas Critique","isPartOf":{"@type":"Course","name":"REACTOR","url":"https://reactor.vincejiang.com/en/"},"coursePrerequisites":"Goodhart's Law"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Skill Tree","item":"https://reactor.vincejiang.com/en/"},{"@type":"ListItem","position":2,"name":"Laws","item":"https://reactor.vincejiang.com/en/atlas.html"},{"@type":"ListItem","position":3,"name":"B03 Lucas Critique","item":"https://reactor.vincejiang.com/en/lesson/B03.html"}]}]</script>
+</head><body><div class="bg-dots" aria-hidden="true"></div>
+<div class="bg-field" aria-hidden="true"></div><header class="site-head">
+  <a class="brand persist" href="/en/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
+  <nav>
+    <a href="/en/">Skill Tree</a>
+    <a href="/en/lesson/N00.html">Start Here</a>
+    <a href="/en/atlas.html">Atlas</a>
+    <a class="btn lang-toggle persist" href="/lesson/B03.html" data-lang-switch
+    hreflang="zh-Hans" aria-label="切换到中文"
+    ><span class="tt-glyph" aria-hidden="true">⇄</span><span class="tt-label">中</span></a>
+    <button class="btn theme-toggle" data-theme-toggle><span class="tt-glyph" aria-hidden="true">◑</span><span class="tt-label">Auto</span></button>
+  </nav>
+</header><div class="lesson-shell"><aside class="tree-rail" aria-label="Skill Tree">
+  <div class="rail-head"><span class="rh-id">B03</span><span>Lucas Critique</span><span class="rh-count" data-tree-count></span></div>
+  <div class="tree-viewport mini" data-mode="mini" data-focus="B03"></div>
+  <div class="rail-foot"><a href="/en/">⛶ Expand map</a><span class="label">TREE</span></div>
+</aside><main class="wrap" data-branch="blue">
+    <div class="hero">
+      <div class="nameplate"><span class="tag">B03</span>
+        <span>Laws</span><span class="rule"></span>
+        <span class="rev">Laws · REV.3</span></div>
+      <p class="bootline typing" style="margin:16px 0">SELF-TEST OK · REACTOR v3 · LOADING [ B03 ]…<span class="cursor"></span></p>
+      <h1>Lucas Critique</h1>
+      <p class="lede">The moment you act on a regularity, people change their behavior.</p>
+      <div class="prereq-row">
+    <span class="label">Requires</span> <a href="/en/lesson/B01.html">B01 Goodhart's Law</a>
+    <span class="label" style="margin-left:auto">Unlocks</span> <span class='stub'>—</span>
+  </div>
+    </div>
+    <article class="stack"><div class="read">
+<p>Goodhart's law has a twin brother: the Lucas critique, put forward in 1976 by the economist Robert Lucas (<code>B01</code> planted this thread at the end). The plain version: you find a stable regularity in historical data and want to use it as a lever; but the regularity has people's expectations about the old rules baked into it, so the moment you pull, expectations change, behaviour changes, and the regularity dissolves on the spot. The regularity you used to predict stops working because you used it. This explains why relationships computed from old data cannot hold up under new policy, and it explains why a benchmark (a public question set giving every model the same problems and scoring) starts failing as soon as it becomes a target.</p>
+<p>Start with the textbook accident. Data from the 1960s showed an apparently stable trade-off curve between inflation and unemployment, called the Phillips curve: a bit more inflation, a bit less unemployment. Policymakers read a tempting operational implication out of it: tolerate steady moderate inflation and you can buy steady low unemployment. But the slope of that curve itself had the public's expectations about the old policy environment baked in. Once the government started systematically exploiting it, the public saw through the routine, wage and price setting changed accordingly, and the trade-off vanished. The 1970s ended in stagflation: high inflation and high unemployment together, with the bargain the curve promised simply not existing. The regularity was not wrong. What was wrong was treating a passively observed regularity as a lever you could actively push. The curve was not falsified, it was used to death. That sentence could be carved, unchanged, onto every saturated benchmark.</p>
+<p>Lucas compressed the logic behind the accident into what he called a "single syllogism." In plain terms: first, the parameters of an econometric model (the system of equations estimated from historical data) come from millions of ordinary people making optimal decisions under the old policy; second, people's optimal decisions vary systematically with changes in the rules; third, therefore any change in policy will systematically alter the structure of econometric models. Not one of the three sentences is spare. Parameters are not natural constants. They are the reduced-form shadow of behaviour under the old rules, and change the rules and the shadow rearranges. The conclusion follows: using the current econometric model to compare the effects of alternative policies is invalid, no matter how beautifully the model fits history or how accurate its short run forecasts are.</p></div>
+<figure class="module reg" data-module="policy-invariance" data-modname="policy-invariance" data-modtype="sim">
+    <figcaption class="module-head"><span class="fig">FIG.01</span>
+      <span>规律一旦被用于决策，就不再成立</span><span class="spacer"></span>
+      <span class="mono">SIM</span></figcaption>
+    <div class="module-body"><script type="application/json" class="mod-config">{}</script><noscript><div class="noscript-fallback">This interactive module needs JavaScript. The key conclusions are given in the text and the figures.</div></noscript></div>
+  </figure><script type="module" src="/modules/policy-invariance.js?v=5bd348810f"></script>
+<div class="read">
+<p>Goodhart's British scene (the failure of monetary targeting covered in <code>B01</code>) slots into that syllogism sentence by sentence, and the two laws annotate each other inside the same stretch of history. The stable relationship between monetary aggregates and the economy was the reduced-form shadow of banks and firms behaving optimally under the old controls. The central bank rewrote the policy rule twice (loosening controls in 1971, hard controls at the end of 1973), agents reoptimized, banks invented new liabilities outside the controlled definition, and the relationship between the targeted aggregate and the economy came apart at once. The only difference is where the narrator stands. Lucas stands on the modeller's side and says "your parameters will drift." Goodhart stands on the central bank's side and says "your target will collapse." They are describing the same accident.</p>
+<p>Lucas's constructive claim is often ignored: the way out of the critique is to build models on deep structural parameters, that is on preferences, technology and resource constraints, the quantities that do not change with policy (the term of art is policy-invariant), and to eject the surface parameters that drift with policy from the extrapolation chain. In one line: <strong>a prediction that will not be destroyed by reactivity must be built on causal structure, not surface correlation.</strong> Fifty years later that judgment acquired a formal counterpart in machine learning: <code>Y10</code> (strategic classification) proves that gaming-proof prediction requires causal modelling, and <code>Y09</code> (performative prediction) writes "the prediction itself changes the distribution" as mathematics.</p></div>
+<aside class="callout intuit"><span class="co-tag">// INTUITION</span>
+<p><strong>Reduced-form parameters are the shadow of behaviour, not its skeleton.</strong> Every coefficient you estimate is the aggregated solution of millions of agents solving optimization problems under the old rules. It looks stable only because the rules have not changed yet. Change the policy, agents resolve their problems, and the shadow moves with the body. So "stable historically" and "stable under intervention" are two different kinds of stability: the first only requires the environment to hold still, the second requires the parameters to be rooted in deep structure that does not drift under intervention. Mistaking the first for the second is the distinction macroeconometrics only grasped after paying for it with stagflation in the 1970s. It also explains why in-sample goodness of fit cannot rescue policy evaluation: fit asks whether the shadow was drawn accurately, policy asks whether the shadow is still there once the skeleton moves.</p></aside>
+<div class="read">
+<p>Its relation to Goodhart's law is closer than "similar." Chrystal and Mizen's 2003 ruling reads: it can be argued that Goodhart's law and the Lucas critique are essentially the same thing, and if so, Lucas almost certainly said it first. Their division of labour lies in the register. The Lucas critique changed the methodology of macroeconometrics (models must be built on deep parameters); Goodhart's law changed the design of monetary policy (money targeting left the stage, inflation targeting took it). As for "who was first," it depends on whether you count reading at a conference or formal publication as the debut: Goodhart read his paper in Sydney in July 1975, Lucas published formally in 1976, and Lucas's conference draft actually circulated earlier. That priority question is still unresolved.</p>
+<p>Placed in the larger family tree, the Lucas critique is the economic-methodology version of the same insight. Ridgway had already reviewed measurement failure in organizational research in 1956 (the prequel covered in <code>B01</code>), Campbell's corruption proposition was already in embryo in 1969 (<code>B02</code>: indicators corrupt the social processes they measure), Goodhart gave the empirical generalization for monetary institutions in 1975, and Lucas gave the microfoundations and a general theorem in 1976: the mechanism is rational expectations (the assumption that people anticipate policy and adjust behaviour accordingly), and the way out is to separate deep parameters from reduced-form ones. Several disciplines hit the same wall one after another, and Lucas is the one who wrote the mechanics of the wall as a theorem.</p>
+<p>For the same reason Goodhart's law can be read, roughly, as the Lucas critique plus gaming avoidance in a monetary setting. Lucas's agents merely reoptimize their own decisions; the banks Goodhart faced also actively invented new liability instruments to get around the controlled definition, and that extra layer is adversarial. The full taxonomy of adversarial mechanisms is in <code>B08</code> (the four Goodhart types: a vocabulary splitting measure collapse into regressional, extremal, adversarial and causal mechanisms).</p>
+<p>The mapping onto evaluation is very direct. For a static benchmark, "score correlates with capability" is a reduced-form parameter estimated on a distribution where nobody was optimizing against it: the training recipe, data mixture and sampling strategy did not treat that benchmark as a target at the time. The moment it is published and treated as a target is equivalent to a policy change. The trainers reoptimize, the score's generating mechanism changes, and the old correlation no longer answers for real capability after deployment. <code>Y02</code> (adaptive overfitting) and <code>Y03</code> (benchmark saturation) are two readings of that same parameter-drift curve on the leaderboard.</p></div>
+<aside class="callout myth"><span class="co-tag">// CORRECTION</span>
+<p><strong>The popular claim: "The Lucas critique proves econometrics is useless."</strong> Verified conclusion: the critique points toward better modelling, not toward nihilism. Lucas's intent was to switch the object of modelling from "surface correlations that drift with policy" to "deep parameters that policy leaves invariant." Reading it as a rejection of quantification itself is the same class of misreading as taking Campbell to be against measurement. Two side notes on provenance: the concluding sentence on page 41 of the original paper is singular, any change in policy, and the common secondary citation writes the plural any changes, which is a misquotation; and the paper has no abstract, with the core proposition buried in the closing remarks of section seven, changing a discipline from an inconspicuous position exactly as Goodhart's footnote did.</p></aside>
+<aside class="callout applied"><span class="co-tag">// APPLIED TO AI EVAL</span>
+<p><strong>Swap "policy" for "your eval or training objective."</strong> You observe that some proxy measure correlates with real capability, so you make it the optimization target; but the parameters of that correlation were measured while the model was not yet optimizing against it. Once optimization starts, model behaviour changes and the correlation dissolves. The eval version of the Lucas critique in one line: do not treat a correlation measured before optimization as a structure that still holds after it. The remedy can be lifted straight from Lucas: either anchor on quantities that do not drift under optimization, or hold out a test distribution that has never entered the optimization loop, so that "policy" can never catch up with your parameter estimates (<code>G03</code>: holdouts and dynamic evaluation, devoted to how to lock part of the question bank outside the optimization loop).</p></aside>
+<div class="read">
+<p>One open question: what exactly is a deep parameter in the eval setting? Economics treats preferences and technology as the bedrock that policy does not move, but for a model that training itself reshapes, almost no internal quantity is "optimization invariant." Finding eval's deep parameters, or proving they do not exist: which do you bet happens first?</p>
+<p><strong>The one-line takeaway:</strong> a historical regularity is the shadow of everyone's behaviour under the old rules; change the rules and the shadow moves, so a prediction that survives intervention has to grip something the rules do not move.</p></div>
+<details class="sources"><summary class="label">Sources / further reading</summary><div class="read"><ul><li>Lucas, R. E. (1976). "Econometric Policy Evaluation: A Critique." <em>Carnegie-Rochester Conference Series on Public Policy</em> 1:19–46 (the core sentence at p.41, singular any change in the original).</li><li>Chrystal, K. A. & Mizen, P. D. (2003). "Goodhart's Law: Its Origins, Meaning and Implications for Monetary Policy." (the priority ruling and division of labour with Goodhart's law).</li><li>Ridgway (1956), Campbell (1969): the earlier part of the family tree, see <code>B01</code>, <code>B02</code>.</li><li>Documentation in <code>research/03</code> §4 and <code>research/deep/D2</code> §2.</li></ul></div></details></article>
+    <nav class="prereq-row" style="margin-top:48px">
+      <a class="btn" href="/en/">← Back to the tree</a>
+      
+    </nav>
+  </main></div><footer class="site-foot"><div class="wrap">
+  <span>REACTOR · when the ruler starts looking back at you · a field manual on reactivity</span>
+  <span class="foot-by"><a href="https://vincejiang.com">by Vince Jiang ↗</a><span class="sep">·</span>self-hosted · no-react</span>
+</div></footer><script type="module" src="/modules/boot.js?v=908e387845"></script></body></html>

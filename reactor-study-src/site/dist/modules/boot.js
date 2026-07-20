@@ -7,7 +7,10 @@ const LS = { theme: "reactor.theme", done: "reactor.done" };
    用户就再也没法把选择权交还给系统了。<head> 里的内联脚本已经先落好 data-theme。*/
 localStorage.removeItem("reactor.accent"); // 清掉旧版留下的强调色
 const MODES = ["auto", "light", "dark"];
-const MODE_ZH = { auto: "自动", light: "亮", dark: "暗" };
+/* 主题按钮标签随页面语种走(英文页不该出现中文「自动」) */
+const MODE_LABEL = (document.documentElement.lang || "zh").toLowerCase().startsWith("en")
+  ? { auto: "Auto", light: "Light", dark: "Dark" }
+  : { auto: "自动", light: "亮", dark: "暗" };
 const mq = matchMedia("(prefers-color-scheme: light)");
 let mode = MODES.includes(localStorage.getItem(LS.theme)) ? localStorage.getItem(LS.theme) : "auto";
 
@@ -15,7 +18,7 @@ function resolved() { return mode === "auto" ? (mq.matches ? "light" : "dark") :
 function applyTheme(repaint) {
   root.setAttribute("data-theme", resolved());
   document.querySelectorAll("[data-theme-toggle]").forEach(btn => {
-    btn.querySelector(".tt-label").textContent = MODE_ZH[mode];
+    btn.querySelector(".tt-label").textContent = MODE_LABEL[mode];
     const nextMode = MODES[(MODES.indexOf(mode) + 1) % MODES.length];
     btn.setAttribute("aria-label",
       `配色：${MODE_ZH[mode]}${mode === "auto" ? "（跟随系统）" : ""}。点击切换到${MODE_ZH[nextMode]}`);
@@ -66,8 +69,15 @@ if (lessonId && /^[NRBYC]\d/.test(lessonId) && document.querySelector("article.s
 }
 
 /* ---- lazily boot the talent tree if present（首页全屏树 / 课程页导轨迷你树）---- */
-if (document.querySelector(".tree-viewport")) import("/modules/tree.js?v=97b6e944d5");
+if (document.querySelector(".tree-viewport")) import("/modules/tree.js?v=68d0020bc7");
 
 /* ---- respect reduced motion for typing bootlines ---- */
 if (matchMedia("(prefers-reduced-motion: reduce)").matches)
   document.querySelectorAll(".bootline.typing").forEach(el => el.classList.remove("typing"));
+
+
+/* 语言切换:点一下记住选择(localStorage),但绝不做首屏自动重定向——
+   自动跳转会伤 SEO 也惹恼用户。记忆只用于将来可能的「回到上次语种」提示。 */
+document.querySelector("[data-lang-switch]")?.addEventListener("click", () => {
+  try { localStorage.setItem("reactor.lang", document.documentElement.lang.startsWith("en") ? "zh" : "en"); } catch {}
+});

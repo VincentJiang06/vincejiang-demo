@@ -1,0 +1,100 @@
+<!doctype html><html lang="en" data-theme="dark" data-lp="/en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>G03 Held-Out &amp; Dynamic Benchmarks · REACTOR</title>
+<meta name="description" content="Keep the optimization loop permanently behind your question bank.">
+<link rel="canonical" href="https://reactor.vincejiang.com/en/lesson/G03.html">
+<meta property="og:type" content="website"><meta property="og:title" content="G03 Held-Out &amp; Dynamic Benchmarks · REACTOR">
+<meta property="og:description" content="Keep the optimization loop permanently behind your question bank."><meta property="og:url" content="https://reactor.vincejiang.com/en/lesson/G03.html">
+<meta property="og:image" content="https://reactor.vincejiang.com/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:site_name" content="REACTOR"><meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<link rel="alternate" hreflang="zh-Hans" href="https://reactor.vincejiang.com/lesson/G03.html">
+<link rel="alternate" hreflang="en" href="https://reactor.vincejiang.com/en/lesson/G03.html">
+<link rel="alternate" hreflang="x-default" href="https://reactor.vincejiang.com/lesson/G03.html">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://reactor.vincejiang.com/og.png">
+<meta name="author" content="Vince Jiang">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="icon" href="/favicon.svg"><link rel="mask-icon" href="/favicon.svg" color="#E11D3A">
+<script>try{var m=localStorage.getItem("reactor.theme")||"auto",t=(m==="light"||m==="dark")?m:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
+<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=27ef2859b9">
+<link rel="stylesheet" href="/theme/components.css?v=906e7a3bf4"><link rel="stylesheet" href="/theme/led.css?v=36a7cb3942">
+<link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"LearningResource","name":"Held-Out & Dynamic Benchmarks","description":"Keep the optimization loop permanently behind your question bank.","inLanguage":"en","url":"https://reactor.vincejiang.com/en/lesson/G03.html","author":{"@type":"Person","name":"Vince Jiang","url":"https://vincejiang.com"},"isAccessibleForFree":true,"learningResourceType":"lesson","educationalLevel":"advanced","timeRequired":"PT10M","teaches":"Held-Out & Dynamic Benchmarks","isPartOf":{"@type":"Course","name":"REACTOR","url":"https://reactor.vincejiang.com/en/"},"coursePrerequisites":"Adaptive Overfitting, Contamination & Saturation"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Skill Tree","item":"https://reactor.vincejiang.com/en/"},{"@type":"ListItem","position":2,"name":"Defense","item":"https://reactor.vincejiang.com/en/atlas.html"},{"@type":"ListItem","position":3,"name":"G03 Held-Out & Dynamic Benchmarks","item":"https://reactor.vincejiang.com/en/lesson/G03.html"}]}]</script>
+</head><body><div class="bg-dots" aria-hidden="true"></div>
+<div class="bg-field" aria-hidden="true"></div><header class="site-head">
+  <a class="brand persist" href="/en/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
+  <nav>
+    <a href="/en/">Skill Tree</a>
+    <a href="/en/lesson/N00.html">Start Here</a>
+    <a href="/en/atlas.html">Atlas</a>
+    <a class="btn lang-toggle persist" href="/lesson/G03.html" data-lang-switch
+    hreflang="zh-Hans" aria-label="切换到中文"
+    ><span class="tt-glyph" aria-hidden="true">⇄</span><span class="tt-label">中</span></a>
+    <button class="btn theme-toggle" data-theme-toggle><span class="tt-glyph" aria-hidden="true">◑</span><span class="tt-label">Auto</span></button>
+  </nav>
+</header><div class="lesson-shell"><aside class="tree-rail" aria-label="Skill Tree">
+  <div class="rail-head"><span class="rh-id">G03</span><span>Held-Out &amp; Dynamic Benchmarks</span><span class="rh-count" data-tree-count></span></div>
+  <div class="tree-viewport mini" data-mode="mini" data-focus="G03"></div>
+  <div class="rail-foot"><a href="/en/">⛶ Expand map</a><span class="label">TREE</span></div>
+</aside><main class="wrap" data-branch="green">
+    <div class="hero">
+      <div class="nameplate"><span class="tag">G03</span>
+        <span>Defense</span><span class="rule"></span>
+        <span class="rev">Defense · REV.3</span></div>
+      <p class="bootline typing" style="margin:16px 0">SELF-TEST OK · REACTOR v3 · LOADING [ G03 ]…<span class="cursor"></span></p>
+      <h1>Held-Out &amp; Dynamic Benchmarks</h1>
+      <p class="lede">Keep the optimization loop permanently behind your question bank.</p>
+      <div class="prereq-row">
+    <span class="label">Requires</span> <a href="/en/lesson/Y02.html">Y02 Adaptive Overfitting</a> <a href="/en/lesson/Y03.html">Y03 Contamination &amp; Saturation</a>
+    <span class="label" style="margin-left:auto">Unlocks</span> <a href="/en/lesson/C03.html">C03 Anti-Goodhart Lab</a> <a href="/en/lesson/G08.html">G08 Reality as the Ultimate Held-Out</a>
+  </div>
+    </div>
+    <article class="stack"><div class="read">
+<p>How do you keep the test ahead of the cheater? It is one move in three variants: hold a batch of items back, test only on items that appeared after release, and rotate items on a schedule. First, a cold fact: holding items back buys time, not immunity. It slows cheating down; it does not stop it.</p>
+<p>You met adaptive overfitting in <code>Y02</code>: compare models repeatedly on the same set of items, pick the best each time, and you eventually overfit to the luck of that set. <code>Y03</code> covered contamination: items leak into the training set, and what the score measures is memory rather than capability. Both are handled by the same idea.</p>
+<p>There is only one idea: leave the tested party no way to know in advance, and no way to memorize, what will be tested. It lands as three moves, soft to hard:</p>
+<ul>
+<li><strong>Keep a private set</strong>: publish which dimensions you test and by what method, but keep a batch of items unpublished, never entering any training or tuning, used once at final scoring.</li>
+<li><strong>Time slicing</strong>: test only on items that appeared after the model's training cutoff. It has not seen the future, so it cannot have memorized it.</li>
+<li><strong>Dynamic refresh</strong>: swap in a new batch periodically, shortening the window in which any one batch can be figured out.</li>
+</ul>
+<p>There are working examples of the last two. Some benchmarks rotate in a new batch of items every month and score objectively with automated scripts, so by design there is no fixed set to memorize. Others have humans and models write items against each other, deliberately picking awkward samples the current model fails on. Patch one weakness and it hands you another. What these share is a live item pool rather than a list frozen at publication.</p>
+<p>Two more things about the underlying principle, plus a twist. Comparing models on the same item set repeatedly and picking the best leaks information about that set on every pick, and enough picks overfit to the luck of the items. That is why a private item bank has to be strictly isolated. Smarter mechanisms have been designed for public leaderboards, for instance updating the published score only when your new result clearly beats the historical best, which caps the information leaked per submission. But discount the panic somewhat: a review of over a hundred data competitions found this kind of overfitting surprisingly weak, because everyone's models are highly similar, which amounts to far fewer genuinely independent attempts than the count suggests. So on the specific question of reusing one item set repeatedly, the theory is alarming and the measurements are mild. The real damage happens when you grind on a single objective and let the model see the answers.</p></div>
+<div class="read">
+<p>None of the three moves is new, and all of them hit a wall on contact with reality. The history of the coding benchmark SWE-bench is a record of that. After the original came out, one team paid people to review it item by item and produced a "verified" version. A later check found that at least 16.4% of items had broken tests, and among the hardest 138 items, the ones that best separate top models, roughly 59% were broken. So a human-reviewed clean benchmark is not that clean. Worse, frontier models from several labs could reproduce, almost word for word, the fix patches humans had written back then. That is reciting, not reasoning. Then came a contamination-resistant upgrade holding part of the items back as a private bank, and a 2026 audit found roughly 30% of its items broken, with pass rates jumping from 23.3% to 80.3% in eight months. The maintainers withdrew their recommendation. Every repaired generation gets saturated, then a new one is built, and each new version has a shorter life than the last.</p>
+<p>A private item bank has a hole nastier than contamination: an asymmetry between test setter and tested party in money and in who gets to see the items. FrontierMath, a math benchmark built from original hard problems, was meant to be the model of contamination resistance, and at first models solved under 2% of it. Media reporting later revealed that it was funded by an AI company, and that this company had access to the great majority of the hardest problems and their answers, while the six paid mathematicians who wrote items had not been told in advance. The company then used it to announce that its own model scored 25%. The issue is not whether that number is true. It is that when the test setter is funded by the tested party and also controls who gets to see the items, the guarantee that "the model has not seen this problem" is no longer determined by technology but by governance. This connects to <code>G06</code>.</p>
+<p>A last bucket of cold water: do not treat holding items back as a silver bullet. A 2026 study dug through 60 mainstream benchmarks and found that older items saturate more readily, meaning top models can no longer be told apart, rising from 42.9% for benchmarks under two years old to 54.5% for those over five. The rise is not steep. The stinging part is elsewhere: public item banks and private held-back banks showed no statistically significant difference in saturation rate. Hiding items does not prevent saturation. What hiding does is push the moment of being figured out further out, buying you a window to swap and rotate. It buys time, not immunity. The real defence is running all three moves as a pipeline that never stops turning, not hoping one batch of hidden items stays clean forever.</p>
+<p>When designing an eval, work through this list:</p>
+<ul>
+<li>Keep a private set for final adjudication only, never entering the training or tuning loop.</li>
+<li>Use time slicing where you can, favouring real tasks generated after the model's training cutoff.</li>
+<li>Rotate items on a schedule, giving each set a service life and swapping it when that expires.</li>
+<li>Run contamination audits proactively, and retire items whose answers can be recited word for word or whose scores drop when you reorder the options.</li>
+</ul></div>
+<aside class="callout myth"><span class="co-tag">// CORRECTION</span>
+<p><strong>The popular claim: "hide the items and run a private test, and you extend the benchmark's life; hidden scores are clean scores."</strong> Verdict on review: discount both halves. The cross-benchmark study by Akhtar, Reuel et al. in 2026 (arXiv:2602.16763) shows no statistically significant difference in saturation rate between public and private test sets. Hiding does not prevent saturation. Worse, "proving cleanliness" is methodologically shaky in itself: n-gram overlap and embedding similarity can both be fooled by rewritten or translated items (Yang et al. 2023), membership inference attacks are barely better than chance on large models (Duan et al. 2024), and evading detection has been shown to be too easy (Dekoninck et al. 2024). So do not treat one negative contamination test as a certificate that a score is clean. The forensic difficulties are covered in <code>Y13</code>.</p></aside>
+<aside class="callout intuit"><span class="co-tag">// INTUITION</span>
+<p><strong>Time slicing is the toughest of the three because it swaps money for causality as the anti-cheating mechanism.</strong> Hiding items, encryption and private banks all raise the cost of obtaining the items, and a cost barrier can always be routed around with money or a leak (FrontierMath is the example). Testing only on items that appeared after the training cutoff rests on causality instead: future data physically cannot enter a past training set, and nobody can memorize what has not happened yet. This is exactly how the index signal from <code>G01</code> lands in eval work: not expensive, just structurally unfakeable. The price is recalibrating item difficulty each cycle and losing easy year-to-year comparability.</p></aside>
+<aside class="callout applied"><span class="co-tag">// APPLIED TO AI EVAL</span>
+<p><strong>If you suspect your own scores are contaminated, three quick self-checks:</strong> First, ask the model to continue a test item. If it can complete the item or the answer word for word, it has probably seen it. Second, shuffle the option order and change the numbers. If the score drops noticeably, it memorized the surface of the item rather than the method (this is the mechanism behind the GSM series collapsing when you change a number, in <code>Y03</code>). Third, compare items from before and after the training cutoff. If pre-cutoff items score systematically higher, that is contamination's time fingerprint. If any one of the three hits, stop using that set's scores as evidence of capability.</p></aside>
+<div class="read">
+<p><strong>One open question:</strong> what share of frontier models' high scores is contamination? One study gives a counterintuitive answer: a single leaked item entering pretraining is devastating, but continuing to train on vast amounts of new data afterwards dilutes or even erases it, so large models barely lose points after massive training while small models lose a lot. But we still have no cross-benchmark, cross-vendor accounting that says how much of a high score is contamination, how much is scaffolding, and how much is real capability.</p>
+<p><strong>The one-line takeaway:</strong> hidden items, time slicing and scheduled rotation are a pipeline that has to keep turning; it buys time, not immunity.</p></div>
+<details class="sources"><summary class="label">Sources / further reading</summary><div class="read"><ul><li>Blum, A. & Hardt, M. (2015). "The Ladder: A Reliable Leaderboard for Machine Learning Competitions." ICML, arXiv:1502.04585 (update the public score only on a significant improvement).</li><li>Dwork, Feldman, Hardt, Pitassi, Reingold & Roth (2015). "The reusable holdout." <em>Science</em> 349:636.</li><li>Roelofs, Shankar, Recht et al. (2019). "A Meta-Analysis of Overfitting in Machine Learning." NeurIPS; Mania et al. (2019). "Model Similarity Mitigates Test Set Overuse." (weak overfitting across a hundred competitions; model similarity).</li><li>OpenAI (2026). "Why We No Longer Evaluate SWE-bench Verified" and "Separating Signal from Noise in Coding Evaluations" (Verified 16.4%/59% defective; Pro ~30% broken, recommendation withdrawn).</li><li>Glazer et al. (2024). <em>FrontierMath</em>, arXiv:2411.04872; the OpenAI funding and exclusive access controversy — TechCrunch 2025-01-19.</li><li>Kiela et al. (2021). <em>Dynabench</em>; White et al. (2024). <em>LiveBench</em>; Jain et al. (2025). <em>LiveCodeBench</em>, arXiv:2403.07974 (time slicing).</li><li>Akhtar, Reuel, Soni et al. (2026). "A Systematic Study of Benchmark Saturation." arXiv:2602.16763 (saturation 42.9%→54.5%; no significant difference between public and private).</li><li>Schaeffer et al. (2026). "Quantifying the Effect of Test Set Contamination on Generative Evaluations." arXiv:2601.04301 (the contamination paradox).</li><li>Primary sources <code>research/deep/D4</code> sub-threads 1/2/3/5 and <code>research/deep/D7</code> §5 (held-out as one of the four fallbacks).</li></ul></div></details></article>
+    <nav class="prereq-row" style="margin-top:48px">
+      <a class="btn" href="/en/">← Back to the tree</a>
+      <a class="btn btn-primary" href="/en/lesson/C03.html">Suggested next · Anti-Goodhart Lab →</a>
+    </nav>
+  </main></div><footer class="site-foot"><div class="wrap">
+  <span>REACTOR · when the ruler starts looking back at you · a field manual on reactivity</span>
+  <span class="foot-by"><a href="https://vincejiang.com">by Vince Jiang ↗</a><span class="sep">·</span>self-hosted · no-react</span>
+</div></footer><script type="module" src="/modules/boot.js?v=908e387845"></script></body></html>

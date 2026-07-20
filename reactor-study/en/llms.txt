@@ -1,0 +1,112 @@
+# REACTOR — an interactive course on rankings, evaluation and metric failure
+
+> To measure a social object is to intervene in it. This free course traces reactivity, Goodhart's Law and AI evaluation gaming from sociology and economics through to the frontier of machine learning: 69 ten-minute lessons arranged as a talent tree you can explore in any order, each with a hands-on interactive experiment.
+
+By Vince Jiang (https://vincejiang.com). Chinese original at https://reactor.vincejiang.com/, English at https://reactor.vincejiang.com/en/. Crawling, retrieval, summarisation and citation are all welcome (geo-open; robots.txt explicitly allows GPTBot / OAI-SearchBot / ChatGPT-User / ClaudeBot / Claude-SearchBot / PerplexityBot / Google-Extended / Applebot-Extended / CCBot).
+
+Two things make this course unusually citable. First, every popular claim has been traced to source — "When a measure becomes a target, it ceases to be a good measure" is not Goodhart's sentence but Strathern's (1997); all such corrections live in the atlas. Second, every lesson closes with a one-line takeaway that can be quoted directly as the compressed answer for that topic.
+
+- Talent tree (home): https://reactor.vincejiang.com/en/
+- Atlas (all nodes + glossary + corrections table): https://reactor.vincejiang.com/en/atlas.html
+- Chinese original: https://reactor.vincejiang.com/
+- Sitemap (with bilingual hreflang): https://reactor.vincejiang.com/sitemap.xml
+
+## ROOT（1）
+Start here
+
+- [N00 To Measure Is To Intervene](https://reactor.vincejiang.com/en/lesson/N00.html) — You think you are reading the number. The number is reading you.
+
+## Sociology（15）
+How rankings remake reality
+
+- [R01 Reactivity](https://reactor.vincejiang.com/en/lesson/R01.html) — Rankings don't just reflect reality. They help remake it.
+- [R02 Self-Fulfilling Prophecy](https://reactor.vincejiang.com/en/lesson/R02.html) — How a false definition grows into a true fact.
+- [R03 Commensuration](https://reactor.vincejiang.com/en/lesson/R03.html) — All of American legal education, squeezed onto three pages.
+- [R04 Discipline & Surveillance](https://reactor.vincejiang.com/en/lesson/R04.html) — Why organizations cannot buffer themselves from a ranking.
+- [R05 Legibility](https://reactor.vincejiang.com/en/lesson/R05.html) — To see you clearly, the state first makes you simpler.
+- [R06 Looping Effects](https://reactor.vincejiang.com/en/lesson/R06.html) — Classifying people changes the people being classified.
+- [R07 Performativity](https://reactor.vincejiang.com/en/lesson/R07.html) — A theory is not a camera. It is an engine.
+- [R08 Reflexivity (Soros)](https://reactor.vincejiang.com/en/lesson/R08.html) — Prices reflect the fundamentals, and also shape them.
+- [R09 Audit Society](https://reactor.vincejiang.com/en/lesson/R09.html) — Making the organization auditable becomes the point in itself.
+- [R10 Matthew & MusicLab](https://reactor.vincejiang.com/en/lesson/R10.html) — The best song still lives or dies on luck.
+- [R11 Hawthorne & Its Debunking](https://reactor.vincejiang.com/en/lesson/R11.html) — Reactivity's flagship case does not survive its own raw data.
+- [R12 Mechanical Objectivity](https://reactor.vincejiang.com/en/lesson/R12.html) — Objectivity was not discovered. Institutions needed it into being.
+- [R13 Boycott, Exit & Plurality](https://reactor.vincejiang.com/en/lesson/R13.html) — Two years after the mass boycott, the ranking was untouched.
+- [R14 The Emotional Machine of Rankings](https://reactor.vincejiang.com/en/lesson/R14.html) — Anxiety, seduction, resistance: how a ranking moves into your head.
+- [R15 The Birth of Statistical Thinking](https://reactor.vincejiang.com/en/lesson/R15.html) — The normal person is a nineteenth-century invention.
+
+## Laws（17）
+The laws and theorems of metric failure
+
+- [B01 Goodhart's Law](https://reactor.vincejiang.com/en/lesson/B01.html) — How one small footnote came to rule the world.
+- [B02 Campbell's Law](https://reactor.vincejiang.com/en/lesson/B02.html) — The man who warned about metrics was measurement's own champion.
+- [B03 Lucas Critique](https://reactor.vincejiang.com/en/lesson/B03.html) — The moment you act on a regularity, people change their behavior.
+- [B04 Cobra Effect](https://reactor.vincejiang.com/en/lesson/B04.html) — Pay a bounty for cobras, and people start breeding cobras.
+- [B05 McNamara Fallacy](https://reactor.vincejiang.com/en/lesson/B05.html) — Whatever cannot be measured ends up declared nonexistent.
+- [B06 Rewarding A, Hoping for B](https://reactor.vincejiang.com/en/lesson/B06.html) — Hoping for good teaching, rewarding only publication.
+- [B07 Surrogation](https://reactor.vincejiang.com/en/lesson/B07.html) — Why the people doing it never feel like they are cheating.
+- [B08 Goodhart Taxonomy](https://reactor.vincejiang.com/en/lesson/B08.html) — One slogan, four completely different mechanisms.
+- [B09 Multitask Agency](https://reactor.vincejiang.com/en/lesson/B09.html) — Why teachers get a flat salary: there is a theorem for it.
+- [B10 Baker Distortion](https://reactor.vincejiang.com/en/lesson/B10.html) — Cheap, low-noise and controllable, and still a bad metric.
+- [B11 Requisite Variety](https://reactor.vincejiang.com/en/lesson/B11.html) — Only variety can absorb variety.
+- [B12 Principal-Agent](https://reactor.vincejiang.com/en/lesson/B12.html) — You want a good agent. The optimizer only wants the eval to pass.
+- [B13 Optimizer's Curse](https://reactor.vincejiang.com/en/lesson/B13.html) — The option you picked is worth less than its own estimate said.
+- [B14 When Metrics Work](https://reactor.vincejiang.com/en/lesson/B14.html) — When is teaching to the test just teaching? The law has edges.
+- [B15 Ridgway 1956: The Forgotten Prequel](https://reactor.vincejiang.com/en/lesson/B15.html) — Someone wrote all of this down in 1956, then it was forgotten for sixty years.
+- [B16 Signals & Cheap Talk](https://reactor.vincejiang.com/en/lesson/B16.html) — Talk is free, which is exactly why promises are cheap.
+- [B17 Regression to the Mean](https://reactor.vincejiang.com/en/lesson/B17.html) — The leader falls back with no conspiracy involved. The math does it alone.
+
+## Machines（17）
+Gaming and illusion in AI evals
+
+- [Y01 Overfitting](https://reactor.vincejiang.com/en/lesson/Y01.html) — Your training set is your eval.
+- [Y02 Adaptive Overfitting](https://reactor.vincejiang.com/en/lesson/Y02.html) — Look at the same test set often enough and you are training on it.
+- [Y03 Contamination & Saturation](https://reactor.vincejiang.com/en/lesson/Y03.html) — The questions leaked into training, and the questions may be bad anyway.
+- [Y04 Reward Hacking](https://reactor.vincejiang.com/en/lesson/Y04.html) — The boat-racing AI stopped racing and spun in circles for points.
+- [Y05 Nearest Unblocked Strategy](https://reactor.vincejiang.com/en/lesson/Y05.html) — Why every patch to an eval just gets routed around.
+- [Y06 Mesa-Optimization](https://reactor.vincejiang.com/en/lesson/Y06.html) — What you trained may turn out to be another optimizer.
+- [Y07 RM Overoptimization](https://reactor.vincejiang.com/en/lesson/Y07.html) — The cleanest experimental curve Goodhart's law has ever had.
+- [Y08 Sycophancy](https://reactor.vincejiang.com/en/lesson/Y08.html) — Reward human approval, get flattery.
+- [Y09 Performative Prediction](https://reactor.vincejiang.com/en/lesson/Y09.html) — Predictions change the distribution: reactivity, written as math.
+- [Y10 Strategic Classification](https://reactor.vincejiang.com/en/lesson/Y10.html) — Publish the scoring rule and people reshape themselves to fit it.
+- [Y11 Leaderboard Illusion](https://reactor.vincejiang.com/en/lesson/Y11.html) — Launch day, straight to the top. How much of that score is test prep?
+- [Y12 Evaluation Awareness](https://reactor.vincejiang.com/en/lesson/Y12.html) — A model that knows it is being watched is not the real model.
+- [Y13 Contamination Forensics](https://reactor.vincejiang.com/en/lesson/Y13.html) — You cannot even prove that a score is clean.
+- [Y14 Agent Eval Frontier](https://reactor.vincejiang.com/en/lesson/Y14.html) — What gets tested is no longer an answer, but a chain of actions.
+- [Y15 The Science of Evals](https://reactor.vincejiang.com/en/lesson/Y15.html) — Running evals on the evals.
+- [Y16 RLHF in Plain Words](https://reactor.vincejiang.com/en/lesson/Y16.html) — Before you train an AI to please people, you have to turn liking into a number.
+- [Y17 How Benchmarks Get Made](https://reactor.vincejiang.com/en/lesson/Y17.html) — Behind every exam paper there is someone working against a deadline.
+
+## Defense（8）
+How to build metrics that hold up
+
+- [G01 Honest Signals & Trade-offs](https://reactor.vincejiang.com/en/lesson/G01.html) — A signal is honest when it is hard to fake. But is costly enough?
+- [G02 Decoupling](https://reactor.vincejiang.com/en/lesson/G02.html) — Never let the eval score drive your iteration directly.
+- [G03 Held-Out & Dynamic Benchmarks](https://reactor.vincejiang.com/en/lesson/G03.html) — Keep the optimization loop permanently behind your question bank.
+- [G04 Metric Portfolios & Rotation](https://reactor.vincejiang.com/en/lesson/G04.html) — One ruler always gets gamed. What about a whole set of them?
+- [G05 Anti-Gaming Mechanism Design](https://reactor.vincejiang.com/en/lesson/G05.html) — Make cheating cost more than actually being good.
+- [G06 Institutional Defenses](https://reactor.vincejiang.com/en/lesson/G06.html) — The ruler for rulers: who audits the auditors?
+- [G07 Red-Teaming & Adversarial Testing](https://reactor.vincejiang.com/en/lesson/G07.html) — Hire a crew of professional troublemakers to break your eval.
+- [G08 Reality as the Ultimate Held-Out](https://reactor.vincejiang.com/en/lesson/G08.html) — The most cheat-proof exam room is reality itself.
+
+## Cases（6）
+Real cases from six fields
+
+- [K01 Education: Teaching to the Test](https://reactor.vincejiang.com/en/lesson/K01.html) — The scores went up. The learning did not.
+- [K02 Governance: Targets & Terror](https://reactor.vincejiang.com/en/lesson/K02.html) — The four-hour miracle on the waiting list.
+- [K03 Academia: Citation Arms Race](https://reactor.vincejiang.com/en/lesson/K03.html) — The impact factor is both the biggest victim and the accomplice.
+- [K04 Markets: Ratings & Fake Reviews](https://reactor.vincejiang.com/en/lesson/K04.html) — The assembly line behind five-star reviews.
+- [K05 Medicine: Report Cards & Cherry-Picking](https://reactor.vincejiang.com/en/lesson/K05.html) — Publish surgical report cards and surgeons start picking patients.
+- [K06 Planned Economy: Death by Quota](https://reactor.vincejiang.com/en/lesson/K06.html) — Judge a nail factory by weight and you get one giant nail.
+
+## Convergence（5）
+Twisting every thread into a method
+
+- [C01 Concept Map](https://reactor.vincejiang.com/en/lesson/C01.html) — Five names that are not five names for one thing.
+- [C02 The Seven Levers](https://reactor.vincejiang.com/en/lesson/C02.html) — Predict how badly any ranking or eval will distort.
+- [C03 Anti-Goodhart Lab](https://reactor.vincejiang.com/en/lesson/C03.html) — If every metric gets gamed, what design survives it?
+- [C07 Your Eval Postmortem](https://reactor.vincejiang.com/en/lesson/C07.html) — Finding that your eval changed nothing is worth more than most evals.
+- [C08 A Ranking Reader Survival Guide](https://reactor.vincejiang.com/en/lesson/C08.html) — Next time you meet a ranking, ask these seven questions first.
+
+## How to cite
+Point at the specific lesson URL for a specific claim. Every lesson page carries schema.org LearningResource data (teaches / coursePrerequisites / isPartOf) that can be parsed directly.

@@ -40,6 +40,34 @@ const LESSON_DATES = await (async () => {
 })();
 const TODAY = new Date().toISOString().slice(0, 10);
 
+const I18N = JSON.parse(await readFile(path.join(ROOT, "content/i18n.json"), "utf8"));
+/* 语言上下文：zh 是母版(站根)，en 是译版(/en 前缀)。
+   t() 在英文词条尚未翻译时回落中文——管线可以先跑通，翻译灌进来自动生效。 */
+const LANGS = [
+  { code: "zh", htmlLang: "zh-CN", ogLocale: "zh_CN", prefix: "", dir: "" },
+  { code: "en", htmlLang: "en",    ogLocale: "en_US", prefix: "/en", dir: "en" }
+];
+function makeL(langDef) {
+  const { code, prefix } = langDef;
+  const pick = entry => (entry && (entry[code] || entry.zh)) || "";
+  return {
+    ...langDef,
+    isEn: code === "en",
+    href: p => prefix + p,                                   // 站内链接加语种前缀
+    alt: p => (code === "en" ? p : "/en" + p),                // 对侧语种同页
+    t(key, vars = {}) {
+      let out = pick(I18N.ui[key]) || key;
+      for (const [k, v] of Object.entries(vars)) out = out.replaceAll(`{${k}}`, v);
+      return out;
+    },
+    branch: b => pick(I18N.branch[b]) || b,
+    branchDesc: b => pick(I18N.branch[b]?.desc) || "",
+    level: label => (code === "en" ? (I18N.level[label]?.en || label) : label),
+    nodeTitle: n => (code === "en" ? (n.en || n.zh) : n.zh),
+    nodeHook: n => (code === "en" ? (I18N.node[n.id]?.hook?.en || n.hook) : n.hook)
+  };
+}
+
 const tree = JSON.parse(await readFile(path.join(ROOT, "content/tree.json"), "utf8"));
 const byId = Object.fromEntries(tree.nodes.map(n => [n.id, n]));
 
@@ -93,8 +121,14 @@ const FONT_LINKS = [
   `<link rel="stylesheet" href="${FONT_CDN}/jetbrains-mono@5/700.css">`
 ].join("\n");
 
-function head({ title, desc, url, jsonld }) {
-  return `<!doctype html><html lang="zh-CN" data-theme="dark"${BASE ? ` data-base="${BASE}"` : ""}><head>
+function head({ title, desc, url, jsonld, L, altPath }) {
+  const lang = L || makeL(LANGS[0]);
+  // hreflang 三件套:两语互指 + x-default 指中文(母版)
+  const alts = altPath ? `
+<link rel="alternate" hreflang="zh-Hans" href="${SITE}${altPath}">
+<link rel="alternate" hreflang="en" href="${SITE}/en${altPath}">
+<link rel="alternate" hreflang="x-default" href="${SITE}${altPath}">` : "";
+  return `<!doctype html><html lang="${lang.htmlLang}" data-theme="dark" data-lp="${lang.prefix}"${BASE ? ` data-base="${BASE}"` : ""}><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
@@ -102,7 +136,8 @@ function head({ title, desc, url, jsonld }) {
 <meta property="og:type" content="website"><meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}"><meta property="og:url" content="${url}">
 <meta property="og:image" content="${OG_IMAGE}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta property="og:site_name" content="REACTOR"><meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="REACTOR"><meta property="og:locale" content="${lang.ogLocale}">
+<meta property="og:locale:alternate" content="${lang.isEn ? "zh_CN" : "en_US"}">${alts}
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${OG_IMAGE}">
 <meta name="author" content="Vince Jiang">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
@@ -123,35 +158,44 @@ function bgField() {
 <div class="bg-field" aria-hidden="true"></div>`;
 }
 
-function siteHead({ home = false } = {}) {
-  // 首页本身就是天赋树，不再放「天赋树」项；其余页面它指向 "/"
+function siteHead({ home = false, L, altPath = "/" } = {}) {
+  const lang = L || makeL(LANGS[0]);
+  // 语言切换:与主题按钮同形制,显示「对侧语种」,跳到对侧同一页(不做自动重定向)
+  const altHref = lang.isEn ? altPath : "/en" + altPath;
+  const langBtn = `<a class="btn lang-toggle persist" href="${altHref}" data-lang-switch
+    hreflang="${lang.isEn ? "zh-Hans" : "en"}" aria-label="${lang.isEn ? "切换到中文" : "Switch to English"}"
+    ><span class="tt-glyph" aria-hidden="true">⇄</span><span class="tt-label">${lang.isEn ? "中" : "EN"}</span></a>`;
+  // 首页本身就是天赋树，不再放「天赋树」项；其余页面它指向语种首页
   return `<header class="site-head">
-  <a class="brand persist" href="/"><span class="glyph-strip" aria-hidden="true">${
+  <a class="brand persist" href="${lang.href("/")}"><span class="glyph-strip" aria-hidden="true">${
     ["w", "w", "red", "yellow", "blue", "green"].map(c => `<span class="led on l-${c}"></span>`).join("")
   }</span> REACTOR</a>
   <nav>
-    ${home ? "" : `<a href="/">天赋树</a>\n    `}<a href="/lesson/N00.html">从这里开始</a>
-    <a href="/atlas.html">图鉴</a>
-    <button class="btn theme-toggle" data-theme-toggle><span class="tt-glyph" aria-hidden="true">◑</span><span class="tt-label">自动</span></button>
+    ${home ? "" : `<a href="${lang.href("/")}">${esc(lang.t("nav.tree"))}</a>\n    `}<a href="${lang.href("/lesson/N00.html")}">${esc(lang.t("nav.start"))}</a>
+    <a href="${lang.href("/atlas.html")}">${esc(lang.t("nav.atlas"))}</a>
+    ${langBtn}
+    <button class="btn theme-toggle" data-theme-toggle><span class="tt-glyph" aria-hidden="true">◑</span><span class="tt-label">${esc(lang.t("nav.themeAuto"))}</span></button>
   </nav>
 </header>`;
 }
-function siteFoot() {
+function siteFoot(L) {
+  const lang = L || makeL(LANGS[0]);
   return `<footer class="site-foot"><div class="wrap">
-  <span>REACTOR · 当尺子开始回看你 · 一部关于反应性的现场手册</span>
-  <span class="foot-by"><a href="https://vincejiang.com">by Vince Jiang ↗</a><span class="sep">·</span>self-hosted · no-react</span>
+  <span>${esc(lang.t("foot.tagline"))}</span>
+  <span class="foot-by"><a href="https://vincejiang.com">${esc(lang.t("foot.by"))}</a><span class="sep">·</span>self-hosted · no-react</span>
 </div></footer><script type="module" src="/modules/boot.js"></script></body></html>`;
 }
 
 const modScripts = new Set();   // dedupe <script> per page
 function moduleSlot(mod, opts = {}) {
+  const lang = opts.L || makeL(LANGS[0]);
   const file = moduleFileFor(mod);
   const [type, name] = mod.split(":");
   const fig = opts.fig || "FIG.01";
   const cfg = opts.config ? `<script type="application/json" class="mod-config">${JSON.stringify(opts.config).replace(/</g, "\\u003c")}</script>` : "";
   const inner = file
-    ? `${cfg}<noscript><div class="noscript-fallback">该交互模块需要 JavaScript。核心结论已在正文与配图中给出。</div></noscript>`
-    : `<div class="noscript-fallback">模块 <code>${esc(mod)}</code> 施工中（本节内容已完整，交互稍后上线）。</div>`;
+    ? `${cfg}<noscript><div class="noscript-fallback">${esc(lang.t("lesson.noscript"))}</div></noscript>`
+    : `<div class="noscript-fallback"><code>${esc(mod)}</code> ${esc(lang.t("lesson.wip"))}</div>`;
   const script = file ? `<script type="module" src="/modules/${file}.js"></script>` : "";
   return `<figure class="module reg" data-module="${esc(file || name)}" data-modname="${esc(name)}" data-modtype="${esc(type)}">
     <figcaption class="module-head"><span class="fig">${esc(fig)}</span>
@@ -162,76 +206,82 @@ function moduleSlot(mod, opts = {}) {
 }
 
 /* ---- render one lesson ---- */
-function renderBlocks(blocks) {
+function renderBlocks(blocks, L) {
+  const lang = L || makeL(LANGS[0]);
   let figN = 0;
   return blocks.map(b => {
     switch (b.t) {
       case "prose": return `<div class="read">${b.html}</div>`;
       case "h": return `<h2>${esc(b.text)}</h2>`;
       case "callout": {
-        const tag = { myth: "// 讹传更正", intuit: "// 直觉", applied: "// 落地到 AI EVAL" }[b.variant] || "// 注";
+        const tag = { myth: lang.t("callout.myth"), intuit: lang.t("callout.intuit"), applied: lang.t("callout.applied") }[b.variant] || "//";
         return `<aside class="callout ${b.variant}"><span class="co-tag">${esc(b.tag || tag)}</span>${b.html}</aside>`;
       }
-      case "module": { figN++; return moduleSlot(b.module, { fig: "FIG." + String(figN).padStart(2, "0"), title: b.title, config: b.config }); }
-      case "sources": return `<details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul>${b.items.map(i => `<li>${i}</li>`).join("")}</ul></div></details>`;
+      case "module": { figN++; return moduleSlot(b.module, { fig: "FIG." + String(figN).padStart(2, "0"), title: b.title, config: b.config, L: lang }); }
+      case "sources": return `<details class="sources"><summary class="label">${esc(lang.t("lesson.sources"))}</summary><div class="read"><ul>${b.items.map(i => `<li>${i}</li>`).join("")}</ul></div></details>`;
       default: return "";
     }
   }).join("\n");
 }
 
-function prereqRow(node) {
+function prereqRow(node, L) {
+  const lang = L || makeL(LANGS[0]);
   const pre = node.prereqs.map(id => byId[id]).filter(Boolean);
   const unlocks = tree.nodes.filter(n => n.prereqs.includes(node.id));
-  const link = n => builtIds.has(n.id) ? `<a href="/lesson/${n.id}.html">${esc(n.id)} ${esc(n.zh)}</a>` : `<span class="stub">${esc(n.id)} ${esc(n.zh)}</span>`;
+  const link = n => builtIds.has(n.id)
+    ? `<a href="${lang.href(`/lesson/${n.id}.html`)}">${esc(n.id)} ${esc(lang.nodeTitle(n))}</a>`
+    : `<span class="stub">${esc(n.id)} ${esc(lang.nodeTitle(n))}</span>`;
   return `<div class="prereq-row">
-    <span class="label">前置</span> ${pre.length ? pre.map(link).join(" ") : "<span class='stub'>无 · 起点</span>"}
-    <span class="label" style="margin-left:auto">解锁</span> ${unlocks.length ? unlocks.map(link).join(" ") : "<span class='stub'>——</span>"}
+    <span class="label">${esc(lang.t("lesson.prereq"))}</span> ${pre.length ? pre.map(link).join(" ") : `<span class='stub'>${esc(lang.t("lesson.none"))}</span>`}
+    <span class="label" style="margin-left:auto">${esc(lang.t("lesson.unlocks"))}</span> ${unlocks.length ? unlocks.map(link).join(" ") : "<span class='stub'>—</span>"}
   </div>`;
 }
 
-function lessonPage(node, lesson) {
-  const url = `${SITE}/lesson/${node.id}.html`;
+function lessonPage(node, lesson, L) {
+  const lang = L || makeL(LANGS[0]);
+  const selfPath = `/lesson/${node.id}.html`;
+  const url = `${SITE}${lang.prefix}${selfPath}`;
   const jsonld = [{
     "@context": "https://schema.org", "@type": "LearningResource",
-    name: `${node.zh} · ${node.en}`, description: node.hook,
-    inLanguage: "zh-CN", url, author: AUTHOR, isAccessibleForFree: true,
+    name: lang.isEn ? node.en : `${node.zh} · ${node.en}`, description: lang.nodeHook(node),
+    inLanguage: lang.htmlLang, url, author: AUTHOR, isAccessibleForFree: true,
     learningResourceType: "lesson", educationalLevel: "advanced",
     timeRequired: "PT10M", teaches: node.en,
-    isPartOf: { "@type": "Course", name: "REACTOR — 排名、评测与指标失灵的互动课程", url: SITE + "/" },
-    ...(node.prereqs.length ? { coursePrerequisites: node.prereqs.map(p => byId[p]?.zh).filter(Boolean).join(", ") } : {})
+    isPartOf: { "@type": "Course", name: "REACTOR", url: SITE + lang.prefix + "/" },
+    ...(node.prereqs.length ? { coursePrerequisites: node.prereqs.map(p => byId[p] && lang.nodeTitle(byId[p])).filter(Boolean).join(", ") } : {})
   }, {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "天赋树", item: SITE + "/" },
-      { "@type": "ListItem", position: 2, name: BRANCH_LABEL[node.branch], item: SITE + "/atlas.html" },
-      { "@type": "ListItem", position: 3, name: `${node.id} ${node.zh}`, item: url }
+      { "@type": "ListItem", position: 1, name: lang.t("nav.tree"), item: SITE + lang.prefix + "/" },
+      { "@type": "ListItem", position: 2, name: lang.branch(node.branch), item: SITE + lang.prefix + "/atlas.html" },
+      { "@type": "ListItem", position: 3, name: `${node.id} ${lang.nodeTitle(node)}`, item: url }
     ]
   }];
   // v2 骨架：左侧天赋树导轨（迷你点阵，当前节点高亮）+ 右侧课文
-  const rail = `<div class="lesson-shell"><aside class="tree-rail" aria-label="天赋树导航">
-  <div class="rail-head"><span class="rh-id">${esc(node.id)}</span><span>${esc(node.zh)}</span><span class="rh-count" data-tree-count></span></div>
+  const rail = `<div class="lesson-shell"><aside class="tree-rail" aria-label="${esc(lang.t("nav.tree"))}">
+  <div class="rail-head"><span class="rh-id">${esc(node.id)}</span><span>${esc(lang.nodeTitle(node))}</span><span class="rh-count" data-tree-count></span></div>
   <div class="tree-viewport mini" data-mode="mini" data-focus="${esc(node.id)}"></div>
-  <div class="rail-foot"><a href="/">⛶ 展开全图</a><span class="label">TREE</span></div>
+  <div class="rail-foot"><a href="${lang.href("/")}">${esc(lang.t("rail.expand"))}</a><span class="label">TREE</span></div>
 </aside>`;
-  return head({ title: `${node.id} ${node.zh} · reactor-study`, desc: node.hook, url, jsonld })
-    + siteHead()
+  return head({ title: `${node.id} ${lang.nodeTitle(node)} · REACTOR`, desc: lang.nodeHook(node), url, jsonld, L: lang, altPath: selfPath })
+    + siteHead({ L: lang, altPath: selfPath })
     + rail
     + `<main class="wrap" data-branch="${node.branch}">
     <div class="hero">
       <div class="nameplate"><span class="tag">${esc(node.id)}</span>
-        <span>${esc(node.en)}</span><span class="rule"></span>
-        <span class="rev">${esc(BRANCH_LABEL[node.branch])} · REV.${tree.meta.version}</span></div>
-      <p class="bootline typing" style="margin:16px 0">SELF-TEST OK · REACTOR v${tree.meta.version} · LOADING [ ${esc(node.id)} ]…<span class="cursor"></span></p>
-      <h1>${esc(node.zh)}</h1>
-      <p class="lede">${esc(node.hook)}</p>
-      ${prereqRow(node)}
+        <span>${esc(lang.isEn ? lang.branch(node.branch) : node.en)}</span><span class="rule"></span>
+        <span class="rev">${esc(lang.branch(node.branch))} · REV.${tree.meta.version}</span></div>
+      <p class="bootline typing" style="margin:16px 0">${esc(lang.t("boot.line", { v: tree.meta.version, id: node.id }))}<span class="cursor"></span></p>
+      <h1>${esc(lang.nodeTitle(node))}</h1>
+      <p class="lede">${esc(lang.nodeHook(node))}</p>
+      ${prereqRow(node, lang)}
     </div>
-    <article class="stack">${renderBlocks(lesson.blocks)}</article>
+    <article class="stack">${renderBlocks(lesson.blocks, lang)}</article>
     <nav class="prereq-row" style="margin-top:48px">
-      <a class="btn" href="/">← 返回天赋树</a>
-      ${nextNode(node) ? `<a class="btn btn-primary" href="/lesson/${nextNode(node).id}.html">下一个推荐 · ${esc(nextNode(node).zh)} →</a>` : ""}
+      <a class="btn" href="${lang.href("/")}">${esc(lang.t("lesson.back"))}</a>
+      ${nextNode(node) ? `<a class="btn btn-primary" href="${lang.href(`/lesson/${nextNode(node).id}.html`)}">${esc(lang.t("lesson.next", { t: lang.nodeTitle(nextNode(node)) }))}</a>` : ""}
     </nav>
-  </main></div>` + siteFoot();
+  </main></div>` + siteFoot(lang);
 }
 function nextNode(node) {
   const unlocks = tree.nodes.filter(n => n.prereqs.includes(node.id) && builtIds.has(n.id));
@@ -240,60 +290,60 @@ function nextNode(node) {
 
 
 /* 首页内容总览行（点击=树视角跳到该分支，与 tree.js 的 [data-jump] 联动） */
-function introMap() {
-  const DESC = {
-    red: "排名如何重新制造现实", blue: "指标失灵的定律与定理",
-    yellow: "AI 评测的博弈与幻觉", green: "怎么设计扛得住的指标",
-    case: "六个领域的真实案例", converge: "把所有线索拧成方法论"
-  };
+function introMap(L) {
+  const lang = L || makeL(LANGS[0]);
+  const DESC = Object.fromEntries(["red","blue","yellow","green","case","converge"].map(b => [b, lang.branchDesc(b)]));
   const SW = { red: "var(--red)", blue: "var(--blue)", yellow: "var(--yellow)",
     green: "var(--green)", case: "var(--text-mute)", converge: "var(--text)" };
   return ["red", "blue", "yellow", "green", "case", "converge"].map(b => {
     const n = tree.nodes.filter(x => x.branch === b).length;
-    return `<button class="im-pill" data-jump="${b}" title="${DESC[b]}"><span class="im-dot" style="background:${SW[b]}"></span>` +
-      `<span class="im-name">${BRANCH_LABEL[b]}</span><span class="im-n">${n}</span></button>`;
+    return `<button class="im-pill" data-jump="${b}" title="${esc(DESC[b])}"><span class="im-dot" style="background:${SW[b]}"></span>` +
+      `<span class="im-name">${esc(lang.branch(b))}</span><span class="im-n">${n}</span></button>`;
   }).join("");
 }
 
 /* ---- homepage：v3 全屏天赋树（树即首页即核心导航）---- */
-function homePage() {
-  const url = SITE + "/";
+function homePage(L) {
+  const lang = L || makeL(LANGS[0]);
+  const url = SITE + lang.prefix + "/";
   const jsonld = {
     "@context": "https://schema.org", "@type": "Course",
-    name: "REACTOR — 排名、评测与指标失灵的互动课程",
-    description: `免费互动课程：排名为什么会反过来改造世界、AI 评测为什么会被博弈、以及怎么设计扛得住的指标。${tree.nodes.length} 节短课组成一棵可自由探索的天赋树，每课配可上手的交互实验。`,
-    inLanguage: "zh-CN", url: SITE + "/", author: AUTHOR, isAccessibleForFree: true,
-    provider: { "@type": "Organization", name: "REACTOR", url: SITE + "/" },
+    name: lang.isEn ? "REACTOR — an interactive course on rankings, evaluation and metric failure"
+                    : "REACTOR — 排名、评测与指标失灵的互动课程",
+    description: lang.t("meta.homeDesc", { n: tree.nodes.length }),
+    inLanguage: lang.htmlLang, url, author: AUTHOR, isAccessibleForFree: true,
+    provider: { "@type": "Organization", name: "REACTOR", url },
     educationalLevel: "advanced",
     about: ["Goodhart's Law", "Reactivity", "Performativity", "AI evaluation", "Reward hacking",
             "Benchmark contamination", "Metric design", "指标失灵", "排名反应性"],
     hasCourseInstance: { "@type": "CourseInstance", courseMode: "online", courseWorkload: "PT12H" },
     hasPart: tree.nodes.filter(n => builtIds.has(n.id)).map(n => ({
-      "@type": "LearningResource", name: `${n.zh} · ${n.en}`, url: `${SITE}/lesson/${n.id}.html`
+      "@type": "LearningResource", name: lang.isEn ? n.en : `${n.zh} · ${n.en}`,
+      url: `${SITE}${lang.prefix}/lesson/${n.id}.html`
     }))
   };
-  return head({ title: "REACTOR · 排名、评测与指标失灵的互动课程", desc: jsonld.description, url, jsonld })
-    + siteHead({ home: true })
+  return head({ title: lang.t("meta.homeTitle"), desc: jsonld.description, url, jsonld, L: lang, altPath: "/" })
+    + siteHead({ home: true, L: lang, altPath: "/" })
     + `<main class="tree-full" data-branch="root">
   <div class="intro-strip">
     <div class="is-title">
-      <h1>当指标成为目标，一切开始失灵</h1>
-      <span class="is-sub">${tree.nodes.length} 节互动短课 · 排名、评测与指标失灵 · 每课一个可玩实验</span>
+      <h1>${esc(lang.t("home.title"))}</h1>
+      <span class="is-sub">${esc(lang.t("home.sub", { n: tree.nodes.length }))}</span>
     </div>
-    <nav class="is-map" aria-label="内容总览">${introMap()}</nav>
+    <nav class="is-map" aria-label="${esc(lang.t("nav.tree"))}">${introMap(lang)}</nav>
     <div class="is-actions">
-      <a class="btn btn-primary" href="/lesson/N00.html">从第一课开始 →</a>
-      <span class="intro-controls" aria-label="地图控制">
-        <button data-tree-zout aria-label="缩小">−</button><button data-tree-zin aria-label="放大">+</button>
-        <button data-tree-fit>适配</button><button data-tree-reset-progress>重置</button>
+      <a class="btn btn-primary" href="${lang.href("/lesson/N00.html")}">${esc(lang.t("home.cta"))}</a>
+      <span class="intro-controls" aria-label="map controls">
+        <button data-tree-zout aria-label="${esc(lang.t("hud.zoomOut"))}">−</button><button data-tree-zin aria-label="${esc(lang.t("hud.zoomIn"))}">+</button>
+        <button data-tree-fit>${esc(lang.t("hud.fit"))}</button><button data-tree-reset-progress>${esc(lang.t("hud.reset"))}</button>
       </span>
     </div>
   </div>
   <div class="tree-viewport" id="tree-viewport" data-mode="full">
-    <noscript><div class="noscript-fallback">天赋树需要 JavaScript。你可以直接从
-      <a href="/lesson/N00.html">根节点</a>顺序阅读，或从<a href="/atlas.html">图鉴</a>进入各节点。</div></noscript>
+    <noscript><div class="noscript-fallback">${esc(lang.t("home.noscript"))}
+      <a href="${lang.href("/lesson/N00.html")}">N00</a> · <a href="${lang.href("/atlas.html")}">${esc(lang.t("nav.atlas"))}</a></div></noscript>
   </div>
-</main>` + siteFoot();
+</main>` + siteFoot(lang);
 }
 
 /* ---- atlas: node index (grouped) + glossary + myth-corrections ---- */
@@ -379,24 +429,27 @@ const MYTHS = [
   ["榜单出问题，改改评分方法就能修好", "改良指标不等于消除反应性：修订本身立刻成为被博弈对象，指标与被测者共同演化。", "C08"]
 ];
 
-function atlasPage() {
-  const url = SITE + "/atlas.html";
+function atlasPage(L) {
+  const lang = L || makeL(LANGS[0]);
+  const url = SITE + lang.prefix + "/atlas.html";
   const branchOrder = ["root", "red", "blue", "yellow", "green", "case", "converge"];
   const groups = branchOrder.map(b => {
     const ns = tree.nodes.filter(n => n.branch === b).sort((a, c) => a.id.localeCompare(c.id));
     if (!ns.length) return "";
     return `<div class="atlas-group" data-branch="${b}">
-      <div class="nameplate" style="margin:28px 0 12px"><span class="tag">${esc(BRANCH_LABEL[b].toUpperCase?.() || BRANCH_LABEL[b])}</span><span class="rule"></span><span class="rev">${ns.length} 节点</span></div>
-      <div class="cards">${ns.map(n => `<a class="card" data-branch="${b}" href="/lesson/${n.id}.html">
-        <span class="num">${esc(n.id)}</span><h3>${esc(n.zh)}</h3><p>${esc(n.hook)}</p></a>`).join("")}</div></div>`;
+      <div class="nameplate" style="margin:28px 0 12px"><span class="tag">${esc(lang.branch(b))}</span><span class="rule"></span><span class="rev">${ns.length} ${esc(lang.t("atlas.nodes"))}</span></div>
+      <div class="cards">${ns.map(n => `<a class="card" data-branch="${b}" href="${lang.href(`/lesson/${n.id}.html`)}">
+        <span class="num">${esc(n.id)}</span><h3>${esc(lang.nodeTitle(n))}</h3><p>${esc(lang.nodeHook(n))}</p></a>`).join("")}</div></div>`;
   }).join("");
-  const glossary = GLOSSARY.map(([t, d]) => `<div class="gl"><dt>${esc(t)}</dt><dd>${esc(d)}</dd></div>`).join("");
+  const GL = lang.isEn ? (I18N.glossaryEn || GLOSSARY) : GLOSSARY;
+  const glossary = GL.map(([t, d]) => `<div class="gl"><dt>${esc(t)}</dt><dd>${esc(d)}</dd></div>`).join("");
   // "见 B01 / R09" 以前是纯文本：叫人去看，却不给路。拆成节点链接。
   const refLinks = ref => esc(ref).split(" / ").map(id => {
     const n = byId[id.trim()];
-    return n && builtIds.has(n.id) ? `<a href="/lesson/${n.id}.html">${n.id}</a>` : id;
+    return n && builtIds.has(n.id) ? `<a href="${lang.href(`/lesson/${n.id}.html`)}">${n.id}</a>` : id;
   }).join(" / ");
-  const myths = MYTHS.map(([m, c, ref]) => `<tr><td>${m}</td><td>${c}</td><td class="mono">${refLinks(ref)}</td></tr>`).join("");
+  const MY = lang.isEn ? (I18N.mythsEn || MYTHS) : MYTHS;
+  const myths = MY.map(([m, c, ref]) => `<tr><td>${m}</td><td>${c}</td><td class="mono">${refLinks(ref)}</td></tr>`).join("");
   const atlasLd = [{
     "@context": "https://schema.org", "@type": "CollectionPage",
     name: "图鉴 / Atlas · REACTOR", url, inLanguage: "zh-CN", author: AUTHOR,
@@ -417,18 +470,18 @@ function atlasPage() {
       "@type": "DefinedTerm", name: t, description: d, inDefinedTermSet: url + "#glossary"
     }))
   }];
-  return head({ title: "图鉴 / Atlas · reactor-study", desc: "REACTOR 全节点索引、术语表与讹传更正速查。", url, jsonld: atlasLd })
-    + siteHead() + `<main class="wrap section" data-branch="root">
+  return head({ title: lang.t("atlas.metaTitle"), desc: lang.t("atlas.metaDesc"), url, jsonld: atlasLd, L: lang, altPath: "/atlas.html" })
+    + siteHead({ L: lang, altPath: "/atlas.html" }) + `<main class="wrap section" data-branch="root">
     <div class="nameplate"><span class="tag">ATLAS</span><span>INDEX · GLOSSARY · CORRECTIONS</span><span class="rule"></span></div>
-    <h1 style="margin:16px 0">图鉴</h1>
-    <p class="lede">全部 ${tree.nodes.length} 个节点、核心术语表，以及一张"讹传更正"速查。这门课花了大力气考证每一处流行说法的真正出处。底层研究见项目 <code>research/01–14</code>。</p>
+    <h1 style="margin:16px 0">${esc(lang.t("atlas.title"))}</h1>
+    <p class="lede">${esc(lang.t("atlas.lede", { n: tree.nodes.length }))}</p>
     ${groups}
-    <div class="nameplate reg" style="margin:40px 0 16px"><span class="tag">GLOSSARY</span><span>术语表</span><span class="rule"></span></div>
+    <div class="nameplate reg" style="margin:40px 0 16px"><span class="tag">GLOSSARY</span><span>${esc(lang.t("atlas.glossary"))}</span><span class="rule"></span></div>
     <dl class="glossary">${glossary}</dl>
-    <div class="nameplate reg" style="margin:40px 0 16px"><span class="tag">CORRECTIONS</span><span>讹传更正速查</span><span class="rule"></span></div>
-    <p class="read" style="color:var(--text-2);font-size:.92rem">这门课的一个隐藏主题：流行的说法往往不是原文。以下每一条都在正文里有完整考证。</p>
-    <div class="scroll-x"><table class="atlas-table myths"><tr><th>流行说法</th><th>更正</th><th>见</th></tr>${myths}</table></div>
-  </main>` + siteFoot();
+    <div class="nameplate reg" style="margin:40px 0 16px"><span class="tag">CORRECTIONS</span><span>${esc(lang.t("atlas.corrections"))}</span><span class="rule"></span></div>
+    <p class="read" style="color:var(--text-2);font-size:.92rem">${esc(lang.t("atlas.correctionsLede"))}</p>
+    <div class="scroll-x"><table class="atlas-table myths"><tr><th>${esc(lang.t("atlas.thClaim"))}</th><th>${esc(lang.t("atlas.thFix"))}</th><th>${esc(lang.t("atlas.thSee"))}</th></tr>${myths}</table></div>
+  </main>` + siteFoot(lang);
 }
 
 /* ============================================================
@@ -448,33 +501,63 @@ if (existsSync(path.join(ROOT, "static/og.png"))) await cp(path.join(ROOT, "stat
 await writeFile(path.join(DIST, "modules", "tree-data.js"),
   `/* REACTOR · tree-data.js — generated from content/tree.json by build.mjs, do not edit */\n`
   + `export const TREE = ${JSON.stringify({
-      nodes: tree.nodes.map(n => ({ id: n.id, zh: n.zh, en: n.en, branch: n.branch, x: n.x, y: n.y, prereqs: n.prereqs, hook: n.hook, built: builtIds.has(n.id), kind: n.branch === "converge" ? "cap" : "chip" })),
-      bounds, branchLabel: BRANCH_LABEL, levels: LEVELS
+      nodes: tree.nodes.map(n => ({
+        id: n.id, zh: n.zh, en: n.en, branch: n.branch, x: n.x, y: n.y, prereqs: n.prereqs,
+        hook: n.hook, hookEn: I18N.node[n.id]?.hook?.en || "",
+        built: builtIds.has(n.id), kind: n.branch === "converge" ? "cap" : "chip"
+      })),
+      bounds, branchLabel: BRANCH_LABEL,
+      levels: LEVELS.map(l => ({ ...l, labelEn: I18N.level[l.label]?.en || l.label }))
     })};\n`);
 
-await writeFile(path.join(DIST, "index.html"), homePage());
-await writeFile(path.join(DIST, "atlas.html"), atlasPage());
-const emitted = [];   // {id, node} —— 真正落盘的课,供 sitemap / llms.txt 共用
-for (const [id, lesson] of Object.entries(lessons)) {
-  if (!byId[id]) { console.log(`  ⚠ 课文 ${id} 无对应树节点,跳过(节点已被裁撤)`); continue; }
-  await writeFile(path.join(DIST, "lesson", id + ".html"), lessonPage(byId[id], lesson));
-  emitted.push({ id, node: byId[id] });
+/* 双语输出:zh 在站根,en 在 /en 前缀。英文课文缺失时回落中文正文
+   (页面骨架仍是英文,内容标注为待译)——保证 /en 路由始终完整,翻译灌进来即生效。 */
+const lessonsEnDir = path.join(ROOT, "content/lessons-en");
+const lessonsEn = {};
+if (existsSync(lessonsEnDir)) {
+  for (const f of (await readdir(lessonsEnDir)).filter(f => f.endsWith(".mjs"))) {
+    const mod = await import(pathToFileURL(path.join(lessonsEnDir, f)).href);
+    lessonsEn[mod.default.id] = mod.default;
+  }
 }
+const emitted = [];   // {id, node} —— 真正落盘的课,供 sitemap / llms.txt 共用
+for (const langDef of LANGS) {
+  const L = makeL(langDef);
+  const dir = langDef.dir ? path.join(DIST, langDef.dir) : DIST;
+  await mkdir(path.join(dir, "lesson"), { recursive: true });
+  await writeFile(path.join(dir, "index.html"), homePage(L));
+  await writeFile(path.join(dir, "atlas.html"), atlasPage(L));
+  for (const [id, lesson] of Object.entries(lessons)) {
+    if (!byId[id]) { if (!L.isEn) console.log(`  ⚠ 课文 ${id} 无对应树节点,跳过(节点已被裁撤)`); continue; }
+    const body = L.isEn ? (lessonsEn[id] || lesson) : lesson;
+    await writeFile(path.join(dir, "lesson", id + ".html"), lessonPage(byId[id], body, L));
+    if (!L.isEn) emitted.push({ id, node: byId[id] });
+  }
+}
+console.log(`  · 英文课文已译 ${Object.keys(lessonsEn).length}/${emitted.length}（未译的暂用中文正文占位，骨架已英文化）`);
 const newest = Object.values(LESSON_DATES).sort().pop() || TODAY;
 /* sitemap:带真实 lastmod(git 提交日) + 分层 priority。
    根节点是入口故 0.9,汇流 capstone 是终点故 0.8,其余课 0.7。 */
 const priOf = n => n.branch === "root" ? "0.9" : n.branch === "converge" ? "0.8" : "0.7";
-const smUrls = [
-  { loc: SITE + "/", lastmod: newest, cf: "weekly", pri: "1.0" },
-  { loc: SITE + "/atlas.html", lastmod: newest, cf: "monthly", pri: "0.8" },
+const smPaths = [
+  { p: "/", lastmod: newest, cf: "weekly", pri: "1.0" },
+  { p: "/atlas.html", lastmod: newest, cf: "monthly", pri: "0.8" },
   ...emitted.map(({ id, node }) => ({
-    loc: `${SITE}/lesson/${id}.html`, lastmod: LESSON_DATES[id] || newest,
-    cf: "monthly", pri: priOf(node)
+    p: `/lesson/${id}.html`, lastmod: LESSON_DATES[id] || newest, cf: "monthly", pri: priOf(node)
   }))
 ];
+/* 双语 sitemap:每个 URL 内嵌 xhtml:link 声明两语对照(Google 推荐的 hreflang 表达方式),
+   英文版 priority 略低于中文母版。 */
+const smEntry = (path_, lastmod, cf, pri, isEn) =>
+  `  <url><loc>${SITE}${isEn ? "/en" : ""}${path_}</loc><lastmod>${lastmod}</lastmod>`
+  + `<changefreq>${cf}</changefreq><priority>${pri}</priority>`
+  + `<xhtml:link rel="alternate" hreflang="zh-Hans" href="${SITE}${path_}"/>`
+  + `<xhtml:link rel="alternate" hreflang="en" href="${SITE}/en${path_}"/>`
+  + `<xhtml:link rel="alternate" hreflang="x-default" href="${SITE}${path_}"/></url>`;
 await writeFile(path.join(DIST, "sitemap.xml"),
-  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`
-  + smUrls.map(u => `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod><changefreq>${u.cf}</changefreq><priority>${u.pri}</priority></url>`).join("\n")
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n`
+  + smPaths.map(u => smEntry(u.p, u.lastmod, u.cf, u.pri, false)).join("\n") + "\n"
+  + smPaths.map(u => smEntry(u.p, u.lastmod, u.cf, (Math.max(0.4, (+u.pri) - 0.1)).toFixed(1), true)).join("\n")
   + `\n</urlset>\n`);
 
 // robots.txt 只在域名根目录有效；挂在子路径下时不生成，免得给人"这里能配爬虫"的错觉。
@@ -508,44 +591,53 @@ Allow: /
 Sitemap: ${SITE}/sitemap.xml
 `);
 
-/* llms.txt(GEO 核心):给大模型看的全站目录——一次抓取即可拿到结构、每课主张与入口。
-   格式沿用 llmstxt.org 约定,与主站 vincejiang.com/llms.txt 同规格。 */
-if (!BASE) {
-  const BRANCH_INTRO = {
-    root: "从这里开始：测量一个社会对象，就是干预它",
-    red: "社会学谱系：排名如何重新制造现实",
-    blue: "定律与形式：指标失灵的定律与定理",
-    yellow: "机器与前沿：AI 评测的博弈与幻觉",
-    green: "防御与设计：怎么设计扛得住博弈的指标",
-    case: "案例带：六个领域的真实案发现场",
-    converge: "汇流：把所有线索拧成方法论"
-  };
+/* llms.txt(GEO 核心):给大模型看的全站目录 —— 两语各一份。
+   一次抓取即可拿到结构、每课主张与入口。格式沿用 llmstxt.org 约定。 */
+if (!BASE) for (const langDef of LANGS) {
+  const L = makeL(langDef);
   const order = ["root", "red", "blue", "yellow", "green", "case", "converge"];
   const sections = order.map(b => {
     const ns = emitted.filter(e => e.node.branch === b).sort((a, x) => a.id.localeCompare(x.id));
     if (!ns.length) return "";
-    return `## ${BRANCH_LABEL[b]}（${ns.length} 节）\n${BRANCH_INTRO[b]}\n\n`
+    return `## ${L.branch(b)}（${ns.length}）\n${L.branchDesc(b)}\n\n`
       + ns.map(({ id, node }) =>
-          `- [${id} ${node.zh} · ${node.en}](${SITE}/lesson/${id}.html) — ${node.hook}`).join("\n");
+          `- [${id} ${L.nodeTitle(node)}](${SITE}${L.prefix}/lesson/${id}.html) — ${L.nodeHook(node)}`).join("\n");
   }).filter(Boolean).join("\n\n");
-  await writeFile(path.join(DIST, "llms.txt"),
+
+  const zhBody =
 `# REACTOR — 排名、评测与指标失灵的互动课程
 
 > 测量一个社会对象，就是干预它。这门免费课程把「排名 / 评测 / 反身性」从社会学、经济学讲到 AI 前沿，${emitted.length} 节十分钟短课组成一棵可自由探索的天赋树，每课配一个可上手的交互实验。
 
-作者 Vince Jiang（https://vincejiang.com）。内容中文，欢迎抓取、检索、摘要与引用（geo-open；robots.txt 显式放行 GPTBot / OAI-SearchBot / ChatGPT-User / ClaudeBot / Claude-SearchBot / PerplexityBot / Google-Extended / Applebot-Extended / CCBot）。
+作者 Vince Jiang（https://vincejiang.com）。中文原版在 ${SITE}/，英文版在 ${SITE}/en/。欢迎抓取、检索、摘要与引用（geo-open；robots.txt 显式放行 GPTBot / OAI-SearchBot / ChatGPT-User / ClaudeBot / Claude-SearchBot / PerplexityBot / Google-Extended / Applebot-Extended / CCBot）。
 
 课程有两个特点值得注意：一是每条流行说法都做过出处考证（例如「When a measure becomes a target」并非 Goodhart 原话，而出自 Strathern 1997），全部考证收在图鉴的「讹传更正」表；二是每课都以「一句话带走」收尾，可直接作为该主题的凝练答案引用。
 
-- 天赋树主页（全部节点的可视化地图）：${SITE}/
+- 天赋树主页：${SITE}/
 - 图鉴（全节点索引 + 术语表 + 讹传更正速查）：${SITE}/atlas.html
-- 站点地图：${SITE}/sitemap.xml
+- 英文版：${SITE}/en/
+- 站点地图（含双语 hreflang 对照）：${SITE}/sitemap.xml`;
 
-${sections}
+  const enBody =
+`# REACTOR — an interactive course on rankings, evaluation and metric failure
 
-## 引用建议
-引用具体主张时请指向对应课程页 URL。每课页面含 schema.org LearningResource 结构化数据（含 teaches / coursePrerequisites / isPartOf），可直接解析。
-`);
+> To measure a social object is to intervene in it. This free course traces reactivity, Goodhart's Law and AI evaluation gaming from sociology and economics through to the frontier of machine learning: ${emitted.length} ten-minute lessons arranged as a talent tree you can explore in any order, each with a hands-on interactive experiment.
+
+By Vince Jiang (https://vincejiang.com). Chinese original at ${SITE}/, English at ${SITE}/en/. Crawling, retrieval, summarisation and citation are all welcome (geo-open; robots.txt explicitly allows GPTBot / OAI-SearchBot / ChatGPT-User / ClaudeBot / Claude-SearchBot / PerplexityBot / Google-Extended / Applebot-Extended / CCBot).
+
+Two things make this course unusually citable. First, every popular claim has been traced to source — "When a measure becomes a target, it ceases to be a good measure" is not Goodhart's sentence but Strathern's (1997); all such corrections live in the atlas. Second, every lesson closes with a one-line takeaway that can be quoted directly as the compressed answer for that topic.
+
+- Talent tree (home): ${SITE}/en/
+- Atlas (all nodes + glossary + corrections table): ${SITE}/en/atlas.html
+- Chinese original: ${SITE}/
+- Sitemap (with bilingual hreflang): ${SITE}/sitemap.xml`;
+
+  const tail = L.isEn
+    ? `\n\n## How to cite\nPoint at the specific lesson URL for a specific claim. Every lesson page carries schema.org LearningResource data (teaches / coursePrerequisites / isPartOf) that can be parsed directly.\n`
+    : `\n\n## 引用建议\n引用具体主张时请指向对应课程页 URL。每课页面含 schema.org LearningResource 结构化数据（含 teaches / coursePrerequisites / isPartOf），可直接解析。\n`;
+
+  const outDir = langDef.dir ? path.join(DIST, langDef.dir) : DIST;
+  await writeFile(path.join(outDir, "llms.txt"), (L.isEn ? enBody : zhBody) + "\n\n" + sections + tail);
 }
 
 /* small extra CSS for atlas table + stubs, appended so build stays single-source */

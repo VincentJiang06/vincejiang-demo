@@ -422,3 +422,14 @@ mark.hl-b{background:color-mix(in srgb,var(--green) 20%,transparent);color:var(-
   transition:color .15s,border-color .15s}
 .foot-by a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
 .foot-by .sep{color:var(--text-mute)}
+
+
+/* 语言切换:与主题按钮同形制的胶囊 */
+.lang-toggle{gap:.45em;padding:.55em .8em;text-decoration:none}
+.lang-toggle:hover{text-decoration:none}
+.lang-toggle .tt-label{letter-spacing:.1em;font-weight:700}
+@media (max-width:720px){
+  /* 手机 header 只留 品牌 · 天赋树 · 语言 · 明暗 */
+  .lang-toggle{padding:.5em .55em}
+  .lang-toggle .tt-glyph{display:none}
+}

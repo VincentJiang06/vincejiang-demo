@@ -4,8 +4,15 @@
    - mini：课程页左侧导轨（各向异性压缩成窄条点阵图，当前节点高亮，纯点击导航）
    连线 = mindmap 大弧度 S 曲线(用户裁决弃正交电路风)：从前置芯片下边缘出发,
    平滑弯到目标芯片上边缘;同支实线、跨支虚线,默认压暗,悬停节点时相关线路点亮。 */
-import { progress } from "/modules/boot.js?v=340ed36aa6";
-import { TREE } from "/modules/tree-data.js?v=4e27999186";
+import { progress } from "/modules/boot.js?v=908e387845";
+import { TREE } from "/modules/tree-data.js?v=b9b35d6443";
+
+/* 语言:由 <html lang> 与 data-lp(语种路径前缀)决定,树的链接与标题跟着走 */
+const LANG = (document.documentElement.lang || "zh").toLowerCase().startsWith("en") ? "en" : "zh";
+const LP = document.documentElement.dataset.lp || "";
+const titleOf = n => (LANG === "en" ? (n.en || n.zh) : n.zh);
+const subOf = n => (LANG === "en" ? "" : n.en);
+const hookOf = n => (LANG === "en" ? (n.hookEn || n.hook) : n.hook);
 
 const HALF_H = 67;         // full 模式芯片可视半高（连线端点吸附用,实际按 offsetHeight 量）
 const BAND = 70;           // 行带半高：同一行芯片占据 y±BAND，行带之间即走廊
@@ -58,7 +65,7 @@ function init(vp, mode) {
   const nodeEls = {};
   for (const n of nodes) {
     const el = document.createElement(n.built ? "a" : "div");
-    if (n.built) el.href = `/lesson/${n.id}.html`;
+    if (n.built) el.href = `${LP}/lesson/${n.id}.html`;
     el.dataset.branch = n.branch; el.dataset.id = n.id;
     el.style.left = TX(n.x) + "px"; el.style.top = TY(n.y) + "px";
     if (mode === "mini") {
@@ -66,22 +73,22 @@ function init(vp, mode) {
       const focus = focusId ? byId[focusId] : null;
       const near = focus && (focus.prereqs.includes(n.id) || n.prereqs.includes(focusId));
       el.className = "dot" + (n.id === focusId ? " current" : near ? " near" : "");
-      el.title = `${n.id} ${n.zh}`;
-      el.setAttribute("aria-label", `${n.id} ${n.zh}`);
+      el.title = `${n.id} ${titleOf(n)}`;
+      el.setAttribute("aria-label", `${n.id} ${titleOf(n)}`);
       if (n.id === focusId) el.innerHTML = `<span class="dot-id">${n.id}</span>`;
       else if (near) el.innerHTML = `<span class="dot-tag">${n.id}</span>`;
     } else if (n.kind === "cap") {
       // 汇流舱:横条卡形制,与普通芯片明确异形(里程碑不放大同款,换形)
       el.className = "node node-cap";
-      el.title = n.hook;
+      el.title = hookOf(n);
       el.innerHTML = `<span class="n-led"></span><span class="n-id">${n.id}</span>
-        <span class="cap-txt"><span class="n-zh">${n.zh}</span><span class="n-en">${n.en}</span></span>`;
+        <span class="cap-txt"><span class="n-zh">${titleOf(n)}</span><span class="n-en">${subOf(n)}</span></span>`;
     } else {
       el.className = "node";
-      el.title = n.hook;
+      el.title = hookOf(n);
       el.innerHTML = `<span class="n-led"></span>
         <span class="n-head"><span class="n-id">${n.id}</span><span>${n.built ? "" : "···"}</span></span>
-        <span class="n-zh">${n.zh}</span><span class="n-en">${n.en}</span>`;
+        <span class="n-zh">${titleOf(n)}</span><span class="n-en">${subOf(n)}</span>`;
     }
     // 悬停点亮与该节点相连的线路
     el.addEventListener("mouseenter", () => edgeEls.forEach(e =>
@@ -109,7 +116,7 @@ function init(vp, mode) {
     const t = document.createElementNS(svgNS, "text");
     t.setAttribute("x", 14); t.setAttribute("y", ly - 10);
     t.setAttribute("class", "level-label");
-    t.textContent = lv.label;
+    t.textContent = LANG === "en" ? (lv.labelEn || lv.label) : lv.label;
     svg.appendChild(t);
   }
   const edgeEls = [];

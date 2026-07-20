@@ -1,0 +1,106 @@
+<!doctype html><html lang="en" data-theme="dark" data-lp="/en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Y02 Adaptive Overfitting · REACTOR</title>
+<meta name="description" content="Look at the same test set often enough and you are training on it.">
+<link rel="canonical" href="https://reactor.vincejiang.com/en/lesson/Y02.html">
+<meta property="og:type" content="website"><meta property="og:title" content="Y02 Adaptive Overfitting · REACTOR">
+<meta property="og:description" content="Look at the same test set often enough and you are training on it."><meta property="og:url" content="https://reactor.vincejiang.com/en/lesson/Y02.html">
+<meta property="og:image" content="https://reactor.vincejiang.com/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:site_name" content="REACTOR"><meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<link rel="alternate" hreflang="zh-Hans" href="https://reactor.vincejiang.com/lesson/Y02.html">
+<link rel="alternate" hreflang="en" href="https://reactor.vincejiang.com/en/lesson/Y02.html">
+<link rel="alternate" hreflang="x-default" href="https://reactor.vincejiang.com/lesson/Y02.html">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://reactor.vincejiang.com/og.png">
+<meta name="author" content="Vince Jiang">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="icon" href="/favicon.svg"><link rel="mask-icon" href="/favicon.svg" color="#E11D3A">
+<script>try{var m=localStorage.getItem("reactor.theme")||"auto",t=(m==="light"||m==="dark")?m:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
+<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=27ef2859b9">
+<link rel="stylesheet" href="/theme/components.css?v=906e7a3bf4"><link rel="stylesheet" href="/theme/led.css?v=36a7cb3942">
+<link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"LearningResource","name":"Adaptive Overfitting","description":"Look at the same test set often enough and you are training on it.","inLanguage":"en","url":"https://reactor.vincejiang.com/en/lesson/Y02.html","author":{"@type":"Person","name":"Vince Jiang","url":"https://vincejiang.com"},"isAccessibleForFree":true,"learningResourceType":"lesson","educationalLevel":"advanced","timeRequired":"PT10M","teaches":"Adaptive Overfitting","isPartOf":{"@type":"Course","name":"REACTOR","url":"https://reactor.vincejiang.com/en/"},"coursePrerequisites":"Overfitting"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Skill Tree","item":"https://reactor.vincejiang.com/en/"},{"@type":"ListItem","position":2,"name":"Machines","item":"https://reactor.vincejiang.com/en/atlas.html"},{"@type":"ListItem","position":3,"name":"Y02 Adaptive Overfitting","item":"https://reactor.vincejiang.com/en/lesson/Y02.html"}]}]</script>
+</head><body><div class="bg-dots" aria-hidden="true"></div>
+<div class="bg-field" aria-hidden="true"></div><header class="site-head">
+  <a class="brand persist" href="/en/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
+  <nav>
+    <a href="/en/">Skill Tree</a>
+    <a href="/en/lesson/N00.html">Start Here</a>
+    <a href="/en/atlas.html">Atlas</a>
+    <a class="btn lang-toggle persist" href="/lesson/Y02.html" data-lang-switch
+    hreflang="zh-Hans" aria-label="切换到中文"
+    ><span class="tt-glyph" aria-hidden="true">⇄</span><span class="tt-label">中</span></a>
+    <button class="btn theme-toggle" data-theme-toggle><span class="tt-glyph" aria-hidden="true">◑</span><span class="tt-label">Auto</span></button>
+  </nav>
+</header><div class="lesson-shell"><aside class="tree-rail" aria-label="Skill Tree">
+  <div class="rail-head"><span class="rh-id">Y02</span><span>Adaptive Overfitting</span><span class="rh-count" data-tree-count></span></div>
+  <div class="tree-viewport mini" data-mode="mini" data-focus="Y02"></div>
+  <div class="rail-foot"><a href="/en/">⛶ Expand map</a><span class="label">TREE</span></div>
+</aside><main class="wrap" data-branch="yellow">
+    <div class="hero">
+      <div class="nameplate"><span class="tag">Y02</span>
+        <span>Machines</span><span class="rule"></span>
+        <span class="rev">Machines · REV.3</span></div>
+      <p class="bootline typing" style="margin:16px 0">SELF-TEST OK · REACTOR v3 · LOADING [ Y02 ]…<span class="cursor"></span></p>
+      <h1>Adaptive Overfitting</h1>
+      <p class="lede">Look at the same test set often enough and you are training on it.</p>
+      <div class="prereq-row">
+    <span class="label">Requires</span> <a href="/en/lesson/Y01.html">Y01 Overfitting</a>
+    <span class="label" style="margin-left:auto">Unlocks</span> <a href="/en/lesson/C07.html">C07 Your Eval Postmortem</a> <a href="/en/lesson/G03.html">G03 Held-Out &amp; Dynamic Benchmarks</a>
+  </div>
+    </div>
+    <article class="stack"><div class="read">
+<p>Looking is a form of training. <strong>Adaptive overfitting</strong> says: you never trained on the test set, you only looked at it repeatedly and used it to select models, and yet the act of looking at the same paper over and over to make choices is itself pouring that paper's idiosyncrasies into your model.</p>
+<p>You have probably lived this. You build an eval to measure how good your agent is, use it over and over to filter, tune and pick the best version, and the eval score climbs beautifully. In real use, nothing has changed. The model only learned to fit your eval snugly. This is not a personal failure: any process that uses the same eval as both the selector and the report card is structurally re-enacting this move, and the more times you select, the more distorted the report card gets.</p>
+<p>The move has a formal name in statistics: adaptive data analysis. The distinction takes one sentence. Non-adaptive: every question you will ask of the data is listed before you see the data, and all the guarantees of classical statistics rest on that premise. Adaptive: the next question depends on the last answer. Every time you decide what to change next based on the last round's score, you are doing the latter, and the classical guarantees fail wholesale.</p>
+<p>Two pieces of work from 2015 turned this into accounting. Blum and Hardt designed the Ladder algorithm for Kaggle-style leaderboards (Kaggle being the data science competition platform where entrants submit models repeatedly and watch their rank), and named the pathology bluntly: participants are allowed to evaluate their submissions on the leaderboard repeatedly, and so may start to overfit. Their fix updates the public score only when a new submission is significantly better than the historical best, capping the information leaked per submission. Dwork et al., in Science, gave the more general pricing: mediate access to the holdout through a differential privacy mechanism (covered in <code>Y01</code>: deliberately blur the reading, cap the per-query leak), and you can support exponentially many adaptive queries without invalidating it. Together the two established an accounting view: the test set is a budget, a query is a spend, and the cost of looking has to be booked.</p></div>
+<figure class="module reg" data-module="eval-overfit-lab" data-modname="eval-overfit-lab" data-modtype="sim">
+    <figcaption class="module-head"><span class="fig">FIG.01</span>
+      <span>Eval 过拟合实验室：解剖榜面分数</span><span class="spacer"></span>
+      <span class="mono">SIM</span></figcaption>
+    <div class="module-body"><noscript><div class="noscript-fallback">This interactive module needs JavaScript. The key conclusions are given in the text and the figures.</div></noscript></div>
+  </figure><script type="module" src="/modules/eval-overfit-lab.js?v=99c162538a"></script>
+<div class="read">
+<p>The simulator above is worth a few minutes. Run the defaults to the end and the leaderboard score (the glowing line) rockets, while "full-dimensional true ability" (the red line, what users actually experience) barely moves. The glowing gap in between is the illusion, and it has two parts:</p>
+<ul>
+<li><strong>Question overfitting</strong>: the model has memorised the tricks, coincidences and phrasings of this specific set of questions. Swap in a new set and this part vanishes instantly. Switch "question bank policy" to "new questions each generation" and you will see it zero out on the spot. The real-world counterpart is benchmark contamination: GSM8K (the most-used grade-school word problem benchmark) had its questions eaten into training sets, and when it was replaced with GSM1k, freshly written in the same style, a batch of models dropped on the spot (details in <code>Y03</code>).</li>
+<li><strong>Dimensional narrowing</strong>: the model really did get stronger, but only on the small slice of dimensions the eval covers (10% in the simulation's defaults). It is legitimate but partial. You are training where the streetlight shines.</li>
+</ul>
+<p>Now set "capacity constraint" to zero-sum, the setting with the heaviest consequences. In reality, model capacity, data mix and RL compute are all finite, and what you spend on the measured dimensions has to be taken from somewhere else. You will watch ability on the unmeasured dimensions genuinely go negative: the model is not merely failing to improve elsewhere, it is actively regressing, reshaped by the eval's contours. This is the cleanest picture of "the more evals, the more the AI degrades into the eval".</p></div>
+<aside class="callout intuit"><span class="co-tag">// INTUITION</span>
+<p><strong>"Only looking, never training" contaminates the test set just the same.</strong> On a noisy test set, picking the top scorer out of 20 random variants mostly picks the one that got lucky on this paper's noise (<code>B13</code>'s optimiser's curse: take the maximum of noisy scores and the value you picked is necessarily inflated in expectation). Repeat for a few hundred generations and you are doing gradient ascent along the test set's noise, without ever having backpropagated through it once. The more queries and the smaller the question bank, the faster the illusion grows. There are rigorous statistical upper bounds for this: Blum and Hardt's Ladder and Dwork et al.'s reusable holdout are both, at bottom, ways of charging for looking at the test set.</p></aside>
+<aside class="callout myth"><span class="co-tag">// CORRECTION</span>
+<p><strong>Popular claim: "Grinding the same leaderboard repeatedly must cause severe overfitting."</strong> Verdict on review: theory warns about the worst case, and the empirical verdict is far gentler. Roelofs, Recht et al. re-examined more than a hundred Kaggle competitions in 2019 (each has a public and a private leaderboard, a natural control), and the paper's conclusion is little evidence of substantial overfitting. Mania et al. supplied the mechanism: candidate models are highly similar to one another, the number of effectively independent queries against the test set is far smaller than the number of submissions, and the overfitting budget drains slowly. The decade-long ImageNet retest also showed inflated absolute scores but stable relative rankings (<code>Y01</code>). <strong>The accurate version of the claim: degradation from classic test set reuse is heavily diluted by model similarity; where degradation really does bite is when optimisation pressure concentrates on a single, memorisable target, such as RLHF (fine-tuning a model with human preference scores as the reward) grinding on preference scores, or an agent memorising a fixed bank of coding problems and their patches.</strong> That boundary was drawn by the D4 report.</p></aside>
+<div class="read">
+<p>To see the gap between theory and experience, look first at the shape of the evidence. Every Kaggle competition has a public and a private leaderboard: the public one gives day-to-day readings and is queried constantly, the private one is revealed only at the close and is looked at once. That is a natural control group. Roelofs et al. measured the distribution of the gap between the two boards across a hundred-plus competitions, and the gap turned out to be explained mainly by random fluctuation, not by systematic adaptive overdraft. What that result says: the whole community ground the public board for months and left no trace of a collective faceplant on the private one.</p>
+<p>Why did the theoretical worst case not materialise? Ladder and the reusable holdout defend against an idealised adversary that extracts maximum information from every query, and real leaderboard grinders are far less efficient than that: everyone's models resemble one another, and a thousand submissions may contain only a few dozen effectively independent probes. There is corroboration too: Miller et al. re-examined question-answering benchmarks in 2020 and likewise found no evidence of adaptive overfitting, with the drops coming almost entirely from the natural drift of slightly harder new questions. On that basis the Roelofs group wrote that the holdout method is quite robust across data domains, loss functions, model classes and analysts. This line of work now has its own programme: Hardt in 2026 made the benchmark itself the object of study, calling it the emerging science of machine learning benchmarks, and <code>Y15</code> at the end of the yellow branch comes back to it.</p>
+<p>So the map splits in two. On the classic supervised learning half, the question bank is rich enough, the optimisation objectives are diffuse, and the community advances by changing architectures rather than pure score-chasing, so degradation is diluted to nearly unmeasurable. The other half is where optimisation pressure concentrates on a single memorisable target: RLHF grinding on the human preference proxy, which produces sycophancy and padding (<code>Y07</code>, <code>Y08</code>); agentic coding grinding on a fixed question bank, where frontier models have been audited reproducing, word for word, the human-written fix patches inside SWE-bench (<code>Y03</code>). Between the halves there is also a man-made amplifier: a few vendors privately test many variants before releasing on LMArena (the model leaderboard voted on by users in blind comparisons) and publish only the best one, which concentrates the community's diffuse adaptive queries into a single pair of hands (<code>Y11</code>). On the concentrated half, "degrading into the eval" is proven. To judge whether the eval in your hands is dangerous, look at two variables first: how concentrated the optimisation pressure is, and how memorisable the target is.</p></div>
+<aside class="callout applied"><span class="co-tag">// APPLIED TO AI EVAL</span>
+<p><strong>The effect of each defence is visible at a glance on the chart:</strong><br>
+1. <strong>Held-out set</strong>: keep a set of questions the optimisation loop never sees, and question overfitting has nowhere to hide.<br>
+2. <strong>Rotate the question bank</strong>: keep the game from catching up (the anti-contamination designs of Dynabench and LiveBench, unpacked in <code>Y03</code>).<br>
+3. <strong>Decouple the eval from the optimisation loop</strong>: let the eval diagnose only, never drive model changes directly. Deming's old prescription (<code>G02</code>).<br>
+4. <strong>Admit the capacity constraint</strong>: do not pile all your optimisation pressure onto one narrow eval.<br>
+And one cheap piece of discipline: keep a query ledger for your eval, and note a line every time you use it to make a decision. The ledger does not need to be precise, since its existence alone reminds you when it is time for new questions. The full anti-gaming eval checklist is in <code>C07</code>, the engineering details in <code>G03</code>.</p></aside>
+<div class="read">
+<p>If you can notice that "nothing changed before and after the eval", the noticing is worth more than the eval. Level one: all eval lights green counts as progress. Level two: you see the failure of the measurement itself. Level three: you build an evaluation system that knows from the start it will be gamed and is designed for it.</p>
+<p>One open question: the Kaggle verdict comes from supervised learning competitions before 2019, when "model selection" meant submitting a file of predictions. Today you tune prompts, swap scaffolds and pick checkpoints against the same eval, and the shape of the adaptive query has changed entirely. Whether the classic verdict extrapolates has no re-examination of comparable scale. The other half of the question is more twisted: model similarity is both protecting the holdout (fewer effective queries) and manufacturing ecosystem homogeneity (everyone distilling from the same few strong models). The same fact has opposite signs on two ledgers. How should it be booked?</p>
+<p><strong>The one-line takeaway:</strong> the test set is an account, not a mirror, and every look is a withdrawal; the classic settings just debit slowly, while settings that grind on a single target debit fast.</p></div>
+<details class="sources"><summary class="label">Sources / further reading</summary><div class="read"><ul><li>Blum & Hardt (2015). "The Ladder." <em>ICML</em>, arXiv:1502.04585; Dwork et al. (2015). "The Reusable Holdout." <em>Science</em> 349:636, STOC version arXiv:1411.2664.</li><li>Roelofs, Shankar, Recht et al. (2019). "A Meta-Analysis of Overfitting in Machine Learning." <em>NeurIPS</em>, arXiv:1902.03570 (the hundred-competition Kaggle verdict).</li><li>Mania et al. (2019). "Model Similarity Mitigates Test Set Overuse." <em>NeurIPS</em> (the mechanism); Miller et al. (2020). QA benchmark re-examination, <em>ICML</em>.</li><li>Recht et al. (2019). arXiv:1902.10811; GSM1k (Zhang et al. 2024). arXiv:2405.00332.</li><li>Deeper treatment in <code>research/deep/D4</code> §1; simulation corresponds to <code>experiments/exp4</code>.</li></ul></div></details></article>
+    <nav class="prereq-row" style="margin-top:48px">
+      <a class="btn" href="/en/">← Back to the tree</a>
+      <a class="btn btn-primary" href="/en/lesson/C07.html">Suggested next · Your Eval Postmortem →</a>
+    </nav>
+  </main></div><footer class="site-foot"><div class="wrap">
+  <span>REACTOR · when the ruler starts looking back at you · a field manual on reactivity</span>
+  <span class="foot-by"><a href="https://vincejiang.com">by Vince Jiang ↗</a><span class="sep">·</span>self-hosted · no-react</span>
+</div></footer><script type="module" src="/modules/boot.js?v=908e387845"></script></body></html>

@@ -1,0 +1,98 @@
+<!doctype html><html lang="en" data-theme="dark" data-lp="/en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Y01 Overfitting · REACTOR</title>
+<meta name="description" content="Your training set is your eval.">
+<link rel="canonical" href="https://reactor.vincejiang.com/en/lesson/Y01.html">
+<meta property="og:type" content="website"><meta property="og:title" content="Y01 Overfitting · REACTOR">
+<meta property="og:description" content="Your training set is your eval."><meta property="og:url" content="https://reactor.vincejiang.com/en/lesson/Y01.html">
+<meta property="og:image" content="https://reactor.vincejiang.com/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:site_name" content="REACTOR"><meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<link rel="alternate" hreflang="zh-Hans" href="https://reactor.vincejiang.com/lesson/Y01.html">
+<link rel="alternate" hreflang="en" href="https://reactor.vincejiang.com/en/lesson/Y01.html">
+<link rel="alternate" hreflang="x-default" href="https://reactor.vincejiang.com/lesson/Y01.html">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://reactor.vincejiang.com/og.png">
+<meta name="author" content="Vince Jiang">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="icon" href="/favicon.svg"><link rel="mask-icon" href="/favicon.svg" color="#E11D3A">
+<script>try{var m=localStorage.getItem("reactor.theme")||"auto",t=(m==="light"||m==="dark")?m:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
+<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=27ef2859b9">
+<link rel="stylesheet" href="/theme/components.css?v=906e7a3bf4"><link rel="stylesheet" href="/theme/led.css?v=36a7cb3942">
+<link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"LearningResource","name":"Overfitting","description":"Your training set is your eval.","inLanguage":"en","url":"https://reactor.vincejiang.com/en/lesson/Y01.html","author":{"@type":"Person","name":"Vince Jiang","url":"https://vincejiang.com"},"isAccessibleForFree":true,"learningResourceType":"lesson","educationalLevel":"advanced","timeRequired":"PT10M","teaches":"Overfitting","isPartOf":{"@type":"Course","name":"REACTOR","url":"https://reactor.vincejiang.com/en/"},"coursePrerequisites":"To Measure Is To Intervene"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Skill Tree","item":"https://reactor.vincejiang.com/en/"},{"@type":"ListItem","position":2,"name":"Machines","item":"https://reactor.vincejiang.com/en/atlas.html"},{"@type":"ListItem","position":3,"name":"Y01 Overfitting","item":"https://reactor.vincejiang.com/en/lesson/Y01.html"}]}]</script>
+</head><body><div class="bg-dots" aria-hidden="true"></div>
+<div class="bg-field" aria-hidden="true"></div><header class="site-head">
+  <a class="brand persist" href="/en/"><span class="glyph-strip" aria-hidden="true"><span class="led on l-w"></span><span class="led on l-w"></span><span class="led on l-red"></span><span class="led on l-yellow"></span><span class="led on l-blue"></span><span class="led on l-green"></span></span> REACTOR</a>
+  <nav>
+    <a href="/en/">Skill Tree</a>
+    <a href="/en/lesson/N00.html">Start Here</a>
+    <a href="/en/atlas.html">Atlas</a>
+    <a class="btn lang-toggle persist" href="/lesson/Y01.html" data-lang-switch
+    hreflang="zh-Hans" aria-label="切换到中文"
+    ><span class="tt-glyph" aria-hidden="true">⇄</span><span class="tt-label">中</span></a>
+    <button class="btn theme-toggle" data-theme-toggle><span class="tt-glyph" aria-hidden="true">◑</span><span class="tt-label">Auto</span></button>
+  </nav>
+</header><div class="lesson-shell"><aside class="tree-rail" aria-label="Skill Tree">
+  <div class="rail-head"><span class="rh-id">Y01</span><span>Overfitting</span><span class="rh-count" data-tree-count></span></div>
+  <div class="tree-viewport mini" data-mode="mini" data-focus="Y01"></div>
+  <div class="rail-foot"><a href="/en/">⛶ Expand map</a><span class="label">TREE</span></div>
+</aside><main class="wrap" data-branch="yellow">
+    <div class="hero">
+      <div class="nameplate"><span class="tag">Y01</span>
+        <span>Machines</span><span class="rule"></span>
+        <span class="rev">Machines · REV.3</span></div>
+      <p class="bootline typing" style="margin:16px 0">SELF-TEST OK · REACTOR v3 · LOADING [ Y01 ]…<span class="cursor"></span></p>
+      <h1>Overfitting</h1>
+      <p class="lede">Your training set is your eval.</p>
+      <div class="prereq-row">
+    <span class="label">Requires</span> <a href="/en/lesson/N00.html">N00 To Measure Is To Intervene</a>
+    <span class="label" style="margin-left:auto">Unlocks</span> <a href="/en/lesson/Y02.html">Y02 Adaptive Overfitting</a> <a href="/en/lesson/Y10.html">Y10 Strategic Classification</a> <a href="/en/lesson/Y16.html">Y16 RLHF in Plain Words</a> <a href="/en/lesson/Y17.html">Y17 How Benchmarks Get Made</a>
+  </div>
+    </div>
+    <article class="stack"><div class="read">
+<p>Machine learning has its own name for Goodhart's law: <strong>overfitting</strong>. Statistical learning theory describes the same thing, it just never says the word Goodhart.</p>
+<p>You have met this student. He preps for the exam by memorising past papers and their answers cold, then takes the past papers as mock exams and scores full marks every time. On the day, the paper is new. He falls apart. He never learned the pattern. He memorised that particular set of questions.</p>
+<p>Machine learning replays the same scene. You have a batch of data (the training set, the worked examples you give the model) and you want the model to learn the pattern. Keep raising model capacity (how much it can memorise, how many bends its fitted curve can make, the degree of a polynomial for instance) and the error on the training set keeps falling, as if it were getting better and better. But test it on data it has never seen (the test set) and the error falls, then rises. Past a certain point the model stops learning the pattern and starts memorising the coincidences and noise specific to this batch of examples. A high-degree polynomial that passes through every sample point yet oscillates wildly between them is the most vivid picture of that memorisation. Perfection on the training set is bought with real generalisation (performance on new data).</p>
+<p>The phenomenon has a clean algebraic skeleton, written down by Geman et al. in 1992 as the classic bias-variance decomposition: a model's expected error splits into three parts. Bias: the model is too simple, it never captures the full pattern, and no amount of training closes the gap. Variance: the model is too flexible, it treats the accidental texture of this particular batch as pattern, and it falls over on the next batch. Plus the noise in the data itself, which nobody can remove. As capacity rises, bias falls and variance rises, and the sum of the two falls then rises. That is where the textbook U-shaped curve comes from. Its correspondence with Goodhart is visible at a glance: training error is the proxy you can optimise directly, generalisation error is the target you actually care about, the two move together under low pressure, and they decouple once pressure crosses a point.</p></div>
+<figure class="module reg" data-module="overfit" data-modname="overfit" data-modtype="sim">
+    <figcaption class="module-head"><span class="fig">FIG.01</span>
+      <span>训练集就是你的 eval</span><span class="spacer"></span>
+      <span class="mono">SIM</span></figcaption>
+    <div class="module-body"><script type="application/json" class="mod-config">{}</script><noscript><div class="noscript-fallback">This interactive module needs JavaScript. The key conclusions are given in the text and the figures.</div></noscript></div>
+  </figure><script type="module" src="/modules/overfit.js?v=6114b2add2"></script>
+<div class="read">
+<p>Write the mapping out term by term: training set = the proxy you optimise; true distribution = the target you actually want; model capacity = optimisation pressure. "Overfitting the training set" and "inflating a benchmark score" (a benchmark being a public question bank that scores all models on the same questions) are two names for one thing.</p>
+<p>The isomorphism goes one layer deeper. The blue branch's <code>B08</code> splits Goodhart collapse into four types, two of which need nobody to act in bad faith, since pure statistics produces them. Overfitting demonstrates exactly those two. Regressional: test score = true ability + noise, so picking the highest scorer out of a pile of candidates systematically picks the one whose noise happened to run high, which means the leader's true ability is in expectation lower than its score. This is also called the optimiser's curse (<code>B13</code> covers it). Extremal: push a score to the extreme of its distribution and the correlation between proxy and target breaks at that extreme, so on a benchmark pushed to 99% the final percentage point is usually no longer measuring ability. The other two types (adversarial, where a vendor games the leaderboard on purpose, and causal, where the change moves the score without improving real utility) get their scenes in <code>Y11</code> and <code>Y03</code>.</p>
+<p>The machine learning community grew a three-way discipline for this: the training set tunes parameters; the validation set (another slice cut out of the data) picks models and hyperparameters; the test set is looked at once at the very end, as the report card. The most overlooked role of the three is the validation set. It absorbs all the day-to-day selection, so it wears out first, and the best configuration you picked on it is partly the optimum of its noise. That is precisely why the final report has to go back to the test set.</p>
+<p>And "look only once" is not fastidiousness, it is priced. Dwork et al. gave the rigorous version in Science in 2015: every decision you make using the test set is an adaptive query against it, and each one consumes its statistical validity. They also gave the antidote, Thresholdout: mediate access to the test set through a differential privacy mechanism (a technique that deliberately blurs query results to cap how much information each one leaks), and you can keep generalisation guarantees across exponentially many queries. What the blurring does is plain: the reading is too fuzzy to locate the test set's noise, so the noise cannot flow into your decisions. The test set is therefore more like an account than a mirror. The balance is finite, every look is a withdrawal, and the statement never arrives in the post.</p></div>
+<aside class="callout intuit"><span class="co-tag">// INTUITION</span>
+<p><strong>Selection itself carries information.</strong> Training on the test set is not the only contamination channel. Compare twenty candidates on the same test set and keep the top scorer, and the act of selection is already transmitting test set information: the model you kept is partly there because it happened to guess this paper's noise correctly. The more times you repeat the selection, the more information flows in. So what a test set has to be defended from is not only "being trained on", but also "being used repeatedly to make decisions". This is why a fixed public leaderboard is an overfitting machine by construction: it turns repeated selection into a community-wide daily habit. The mechanics of this ledger and its empirical limits are laid out in <code>Y02</code>.</p></aside>
+<aside class="callout myth"><span class="co-tag">// CORRECTION</span>
+<p><strong>Popular claim: "Overfitting is bad, and bigger models overfit more easily."</strong> Verdict on review: in the overparameterised regime of deep learning this is an out-of-date intuition. Belkin et al. proposed double descent in 2019: past the interpolation threshold (the point where the model is big enough to drive training error to zero), test error can descend a second time, which is to say that going bigger starts helping again. Nakkiran et al. reproduced the curve systematically on modern deep networks. Bartlett et al. in 2020 went further and characterised benign overfitting: a very large linear model can fit a noisy training set perfectly and still generalise well. So the accurate picture places the classic U shape and double descent side by side, and "interpolation must be harmful" does not hold. The limit needs stating just as clearly: double descent corrects a conclusion on the capacity axis, not the ledger on the optimisation-pressure axis. "Repeatedly making choices on the same test set overdraws it" has nothing to do with parameter count and still holds.</p></aside>
+<div class="read">
+<p>How far that account has actually been overdrawn in practice has one surprising measurement. Recht et al. in 2019 rebuilt a fresh ImageNet test set following the original protocol (ImageNet being the most important image recognition benchmark of the deep learning era) and made every model of the past decade sit the new exam. Every model lost ground: across the CIFAR-10 and ImageNet studies combined, drops of roughly 3% to 15%, about 10% on ImageNet. At first glance this looks like hard proof of a decade of collective overfitting.</p>
+<p>But the key finding is the opposite: relative rankings were almost perfectly preserved. The drop came mainly from the mild distribution shift of a slightly harder new test set, not from a decade of the whole community iterating on one test set and overdrawing it adaptively. This detail is worth chewing on. Distribution shift docks all models in roughly the same direction, like the whole exam being swapped for a harder paper, where everybody loses a few points but the order stays put. Adaptive overfitting should instead favour the models that were selected on most often, and make them fall hardest on the new paper. That did not happen, and its absence is the evidence that the overdraft is limited.</p>
+<p>This draws an empirical upper bound on "evals degrade with use": the ledger is real, the worst-case theoretical guarantees are real, but where the question bank is rich enough and the community advances by changing architectures rather than by pure score-chasing, the drawdown is far slower than the panic. Degradation runs at different speeds in different settings. <code>Y02</code> is the fast-degrading side: when optimisation pressure concentrates on a single target, degradation turns severe. <code>Y03</code> is the most literal version: the test questions go straight into the training corpus, and overfitting no longer needs any statistical mechanism, since memorisation suffices. The defensive prescription is <code>G03</code>'s held-out and dynamic evaluation: since every look is a withdrawal, lock part of the question bank somewhere the optimisation loop can never see.</p></div>
+<aside class="callout applied"><span class="co-tag">// APPLIED TO AI EVAL</span>
+<p><strong>The key line: your training set is your eval.</strong> The whole discipline machine learning invented to fight overfitting (held-out validation sets, cross-validation, regularisation, early stopping) is the discipline for fighting Goodhart. There is a sneakier version too (<code>Y02</code>): even if you never train on the test set, looking at it repeatedly to make model choices still overfits it. Looking is a form of training. Empirically this version is far milder than theory predicts, and the limits are in <code>Y02</code>. In practice: do not iterate your prompt or your agent over the same set of evals again and again, because every "run the score, change it, run again" is one adaptive query. Keep a private held-out set (held-out meaning the portion you deliberately lock away and never look at) that you open once at milestone moments. That one reflects real generalisation.</p></aside>
+<div class="read">
+<p>One open question: benign overfitting shows that a very large model can fit a noisy training set word for word and still generalise well, so where should the boundary of "overfitting" actually be drawn? At "fitted the noise", or at "fitted something that belongs only to this paper and evaporates on the next one"? The second way of drawing it is exactly the definition used in <code>Y02</code> and <code>Y03</code>.</p>
+<p><strong>The one-line takeaway:</strong> perfection on the worked examples is purchasable, and the price is the truth on new ones; your eval is that batch of worked examples.</p></div>
+<details class="sources"><summary class="label">Sources / further reading</summary><div class="read"><ul><li>Geman, Bienenstock & Doursat (1992). "Neural Networks and the Bias/Variance Dilemma." <em>Neural Computation</em> (bias-variance decomposition).</li><li>Vapnik, V. (1995). <em>The Nature of Statistical Learning Theory</em>; Hastie, Tibshirani & Friedman (2009). <em>The Elements of Statistical Learning</em> (VC dimension, regularisation).</li><li>Belkin et al. (2019). Double descent, arXiv:1812.11118 (PNAS); Nakkiran et al. (2019). "Deep Double Descent." arXiv:1912.02292; Bartlett et al. (2020). Benign overfitting, <em>PNAS</em>.</li><li>Dwork et al. (2015). "The Reusable Holdout." <em>Science</em> 349:636; STOC version arXiv:1411.2664 (the statistical price of adaptive queries).</li><li>Recht et al. (2019). "Do ImageNet Classifiers Generalize to ImageNet?" arXiv:1902.10811 (the decade retest: scores drop, rankings hold).</li><li>See <code>research/13</code> (Y01 brief), <code>research/05</code> §5, <code>research/deep/D4</code> main line 1.</li></ul></div></details></article>
+    <nav class="prereq-row" style="margin-top:48px">
+      <a class="btn" href="/en/">← Back to the tree</a>
+      <a class="btn btn-primary" href="/en/lesson/Y02.html">Suggested next · Adaptive Overfitting →</a>
+    </nav>
+  </main></div><footer class="site-foot"><div class="wrap">
+  <span>REACTOR · when the ruler starts looking back at you · a field manual on reactivity</span>
+  <span class="foot-by"><a href="https://vincejiang.com">by Vince Jiang ↗</a><span class="sep">·</span>self-hosted · no-react</span>
+</div></footer><script type="module" src="/modules/boot.js?v=908e387845"></script></body></html>
