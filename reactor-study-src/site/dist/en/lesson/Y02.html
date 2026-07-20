@@ -65,7 +65,7 @@
 <p>Two pieces of work from 2015 turned this into accounting. Blum and Hardt designed the Ladder algorithm for Kaggle-style leaderboards (Kaggle being the data science competition platform where entrants submit models repeatedly and watch their rank), and named the pathology bluntly: participants are allowed to evaluate their submissions on the leaderboard repeatedly, and so may start to overfit. Their fix updates the public score only when a new submission is significantly better than the historical best, capping the information leaked per submission. Dwork et al., in Science, gave the more general pricing: mediate access to the holdout through a differential privacy mechanism (covered in <code>Y01</code>: deliberately blur the reading, cap the per-query leak), and you can support exponentially many adaptive queries without invalidating it. Together the two established an accounting view: the test set is a budget, a query is a spend, and the cost of looking has to be booked.</p></div>
 <figure class="module reg" data-module="eval-overfit-lab" data-modname="eval-overfit-lab" data-modtype="sim">
     <figcaption class="module-head"><span class="fig">FIG.01</span>
-      <span>Eval 过拟合实验室：解剖榜面分数</span><span class="spacer"></span>
+      <span>Eval overfitting lab: dissecting a leaderboard score</span><span class="spacer"></span>
       <span class="mono">SIM</span></figcaption>
     <div class="module-body"><noscript><div class="noscript-fallback">This interactive module needs JavaScript. The key conclusions are given in the text and the figures.</div></noscript></div>
   </figure><script type="module" src="/modules/eval-overfit-lab.js?v=78d8b6a037"></script>

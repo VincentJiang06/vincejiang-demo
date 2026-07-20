@@ -7,13 +7,13 @@ export default {
 <p class="pullquote">"The more any quantitative social indicator is used for social decision-making, the more subject it will be to corruption pressures and the more apt it will be to distort and corrupt the social processes it is intended to monitor."<span class="src">Campbell, 1976/1979</span></p>
 <p>In plain terms: the more a quantitative indicator is used to make important decisions, the more corruption pressure it comes under, and the more it will distort and corrupt the very process it was meant to monitor. Note the second half. The casualty is not only the number but the thing behind the number. The sentence comes from a subsection literally titled "The corrupting effect of quantitative indicators," and Campbell's own phrase is plural, pessimistic laws. He offered a set of pessimistic laws; posterity remembered only this one.</p>` },
 
-    { t: "module", module: "explorable:corruption-pressure", title: "Campbell 的张力：他既提出腐蚀定律，也主张实验社会", config: {
-      predict: { q: "把「教师奖金与学生考分挂钩」的力度加倍，Campbell 定律预测最先发生什么？", options: ["学生的真实水平同步加倍上涨", "分数上涨快于真实水平，教学本身被应试重塑", "没有变化，指标照常工作"], answer: 1, reveal: "定律说腐蚀压力随利害程度上升：分数确实会涨，但涨幅里掺进应试与操纵的成分，而且教学过程本身开始围着考题转。", plain: "这说明挂在指标上的利害越重，指标离真相越远，被测的活动也越走样。" },
+    { t: "module", module: "explorable:corruption-pressure", title: "Campbell's tension: he wrote the corruption law and argued for the experimenting society", config: {
+      predict: { q: "Double the strength of the link between teacher bonuses and student test scores. What does Campbell's law say happens first?", options: ["Real student ability doubles along with it", "Scores rise faster than real ability, and teaching itself is reshaped around the test", "Nothing changes, the measure keeps working as before"], answer: 1, reveal: "The law says corruption pressure rises with the stakes. Scores do go up, but the rise carries test prep and manipulation inside it, and the teaching process itself starts orbiting the exam.", plain: "So the heavier the stakes hung on a measure, the further it drifts from the truth, and the more the activity being measured deforms." },
       mode: "steps",
       steps: [
-        { k: "01", t: "定律本身", html: "指标越被用于高利害的社会决策，越容易受腐蚀压力，也越会扭曲它本要监测的过程。原始例子：标准化测试的应试化、警务犯罪统计的操纵。" },
-        { k: "02", t: "关键张力", html: "定律常被读成反对量化。原文立场相反：他是「实验社会（experimenting society）」最有力的倡导者，主张用严格的实地实验改进社会政策。提出定律的人，正是最相信测量的人。" },
-        { k: "03", t: "为什么重要", html: "这个张力划定了本枝的批判边界：批判指标不等于反对测量。目标不是废除尺子，而是知道哪把尺子在什么条件下会腐蚀它所测的东西。" }
+        { k: "01", t: "The law itself", html: "The more a measure is used for high stakes social decision making, the more it is subject to corruption pressure, and the more it distorts the process it was meant to monitor. The original examples: teaching to the test in standardized testing, and manipulation of police crime statistics." },
+        { k: "02", t: "The key tension", html: "The law is often read as an argument against quantification. His own position was the opposite. He was the strongest advocate of the experimenting society, arguing for rigorous field experiments to improve social policy. The man who wrote the law was the one who believed in measurement most." },
+        { k: "03", t: "Why it matters", html: "This tension marks the boundary of the criticism in this branch: criticizing measures is not the same as opposing measurement. The goal is not to abolish rulers, but to know which ruler corrodes what it measures, and under what conditions." }
       ]
     } },
 

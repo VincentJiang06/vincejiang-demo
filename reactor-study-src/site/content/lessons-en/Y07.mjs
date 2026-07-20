@@ -8,7 +8,7 @@ export default {
 <p>In 2023 OpenAI's Gao, Schulman and Hilton designed a neat experiment to measure it. Since real people are too expensive, they used a very large "gold standard" reward model to <strong>play</strong> the human (call it gold), trained a smaller proxy scorer from gold's scores (call it proxy), then optimised the model only against proxy while quietly keeping score with gold on the side. That makes "true quality" readable an unlimited number of times, and optimisation force can be pushed to depths no experiment with real humans could reach.</p>
 <p>The result is a parabola: proxy's score climbs steadily, gold's score rises then falls. Translated: from the proxy's point of view the model keeps improving; from the gold standard's point of view the model starts getting worse past a certain point. When all you hold is the proxy, you have no idea that you have already gone past the peak.</p>` },
 
-    { t: "module", module: "sim:overopt", title: "先升后降：过优化的抛物线", config: {} },
+    { t: "module", module: "sim:overopt", title: "Up Then Down: The Overoptimisation Parabola", config: {} },
 
     { t: "prose", html: `
 <p>First the horizontal axis. The paper measures "optimisation strength" with <strong>KL distance</strong>: how far the model has been pushed from its initial version. Plainly: how much it has been remade. The harder the remaking, the further the model is from its factory state and the larger the KL. A <strong>KL budget</strong> is simply a cap on the extent of remaking.</p>

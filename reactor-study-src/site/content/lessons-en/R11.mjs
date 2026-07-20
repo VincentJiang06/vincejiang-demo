@@ -5,25 +5,25 @@ export default {
 <p>A story management courses have told for seventy years: in the 1920s, at the Hawthorne works outside Chicago, researchers turned up the lights on the shop floor and output rose; they turned them down and output rose again; they changed nothing at all and it still rose. Conclusion: what mattered was not the lighting but the fact of being paid attention to. That is the <strong>Hawthorne effect</strong>, probably the most famous evidence that being observed changes behaviour. It also has a second half far fewer people know: once the original data was dug out and checked, the story collapsed. This is not trivia. The whole red branch is about measurement changing the measured, so the most famous showcase for that claim has to survive the same scrutiny.</p>
 <p>From 1924 to 1932 the Western Electric Hawthorne works in Cicero, Illinois ran a series of studies: the illumination experiments (from 1924, in collaboration with the National Research Council) examined the relation between light levels and output; the relay assembly test room (1927 to 1932) put five women workers in a separate room and varied hours, breaks and pay schemes one at a time. The authoritative report is Roethlisberger and Dickson's <em>Management and the Worker</em> (1939), on which Harvard's Elton Mayo built his theory, and the entire management doctrine of the "human relations school" rests on this story. One piece of trivia along the way: the name "Hawthorne effect" was not coined by the original researchers, it was minted by French in 1953 and popularised by Landsberger's 1958 reanalysis, so pinning it retroactively on Mayo is an anachronism. What was overturned is only this case, and reactivity itself is untouched. Tracing it shows two things: classics also need checking, and the real scale of reactivity is institutional, not psychological.</p>` },
 
-    { t: "module", module: "provenance:hawthorne", title: "神话 vs 原始档案", config: {
-      hint: "翻开卡片：一个被神话的效应，和它真正的证据。",
+    { t: "module", module: "provenance:hawthorne", title: "The myth vs the original archive", config: {
+      hint: "Flip the cards: a mythologized effect, and the evidence actually behind it.",
       cards: [
-        { frontTag: "流行版 · 你听过的", front: "无论灯调亮、调暗、还是保持不变，产出都上升。「被关注本身」提升了绩效。",
-          backTag: "档案 · 判决", back: "Levitt & List (2011) 在图书馆<strong>找回了一度被认为已销毁、从未被正式分析过</strong>的原始照明数据，重新分析后判定：文献描述的那些惊人模式在档案里<strong>查无实据</strong>，原文用词是 entirely fictional。" },
-        { frontTag: "问：那产出波动是什么？", front: "如果不是「被观察」，工人产量的起伏由什么解释？",
-          backTag: "档案 · 更朴素的答案", back: "产出波动更干净地由 <strong>day-of-week 周期（周一/周五）与发薪周期</strong>解释，控制之后处理组与对照组差异<strong>基本消失</strong>。更早的两轮重审同向：Franke & Kaul (1978) 首次统计重估，发现管理纪律（替换低产工人）与大萧条压力解释力更强；Jones (1992) 重审继电器室数据，同样没找到稳健证据。" },
-        { frontTag: "问：这名字谁起的？", front: "「Hawthorne effect」是当年那些实验者起的吗？",
-          backTag: "档案 · 时代误置", back: "不是。这个名字由 <strong>John R. P. French 1953 年</strong>铸造、Landsberger (1958) 推广，回溯安到 Elton Mayo 头上是时代误置。「工人在近乎月光的照度下还在增产」的戏剧化细节，原始档案同样<strong>无干净证据</strong>。早期继电器室的增产，至少部分源于两名低产工人被替换（Chiesa & Hobbs 2008）。" },
-        { frontTag: "问：医学界怎么判？", front: "循证医学领域现在还用「霍桑效应」这个概念吗？",
-          backTag: "档案 · 弃名判决", back: "McCambridge, Witton & Elbourne (2014) 系统综述 19 项研究后的结论：这个概念太笼统、机制不清，应改用 <strong>research participation effects</strong>。这篇论文被引约 3800 次，实质上是主张放弃「Hawthorne effect」这个名字。此后越严格的设计越难复现强效应：2019 年一项专门想诱发霍桑效应的随机试验，什么也没测到。" }
+        { frontTag: "The popular version - what you have heard", front: "Turn the lights up, turn them down, or leave them alone, and output rises either way. Being paid attention to is itself what lifted performance.",
+          backTag: "The archive - the verdict", back: "Levitt & List (2011) <strong>recovered in a library the original illumination data</strong>, long thought destroyed and never formally analyzed. Reanalyzing it, they found <strong>no trace in the archive</strong> of the striking patterns the literature describes. Their word for it was entirely fictional." },
+        { frontTag: "Q: then what were the output swings?", front: "If it was not \"being observed,\" what explains the ups and downs in worker output?",
+          backTag: "The archive - a plainer answer", back: "Output swings are explained more cleanly by <strong>day-of-week cycles (Monday/Friday) and the pay cycle</strong>, and once those are controlled for the difference between treatment and control <strong>largely disappears</strong>. Two earlier reexaminations point the same way: Franke & Kaul (1978), the first statistical reappraisal, found managerial discipline (replacing low-output workers) and Depression-era pressure had more explanatory power; Jones (1992), reexamining the relay-room data, likewise found no robust evidence." },
+        { frontTag: "Q: who coined the name?", front: "Was \"Hawthorne effect\" the name the original experimenters used?",
+          backTag: "The archive - an anachronism", back: "No. The name was coined by <strong>John R. P. French in 1953</strong> and popularized by Landsberger (1958); pinning it retroactively on Elton Mayo is an anachronism. The dramatic detail about workers still raising output at near-moonlight illumination has <strong>no clean evidence</strong> in the original archive either. The early relay-room gains came at least partly from two low-output workers being replaced (Chiesa & Hobbs 2008)." },
+        { frontTag: "Q: what does medicine say?", front: "Does evidence-based medicine still use the concept of the \"Hawthorne effect\"?",
+          backTag: "The archive - drop the name", back: "McCambridge, Witton & Elbourne (2014) reviewed 19 studies and concluded that the concept is too vague and its mechanism too unclear, and that the field should switch to <strong>research participation effects</strong>. That paper has around 3800 citations and amounts to an argument for abandoning the name \"Hawthorne effect.\" Since then, the stricter the design, the harder the strong effect is to reproduce: a 2019 randomized trial built specifically to induce a Hawthorne effect measured nothing at all." }
       ],
       timeline: [
-        ["1924–32", "Western Electric 霍桑工厂做照明与继电器实验"],
-        ["1953", "French 铸造 Hawthorne effect 这个名字"],
-        ["1978", "Franke & Kaul 首次统计重估：纪律与经济因素解释更强"],
-        ["1992", "Jones 重审：无稳健证据"],
-        ["2011", "Levitt & List 找回原始数据：entirely fictional"],
-        ["2014", "McCambridge 系统综述：建议弃名，改用 research participation effects"]
+        ["1924–32", "Western Electric runs the illumination and relay experiments at its Hawthorne plant"],
+        ["1953", "French coins the name Hawthorne effect"],
+        ["1978", "Franke & Kaul, the first statistical reappraisal: discipline and economic factors explain more"],
+        ["1992", "Jones reexamines: no robust evidence"],
+        ["2011", "Levitt & List recover the original data: entirely fictional"],
+        ["2014", "McCambridge systematic review: drop the name, use research participation effects"]
       ]
     } },
 

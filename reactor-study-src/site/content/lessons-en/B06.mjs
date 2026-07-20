@@ -7,17 +7,17 @@ export default {
 <p>The doctor example is subtler. Society punishes "judging a sick patient healthy" (a missed diagnosis) far more heavily than "judging a healthy person sick" (overdiagnosis), so rational doctors lean toward over-testing and over-intervening. What is written on the reward list is not "make the correct judgment," it is "do not make the kind of mistake that ends up in the news," and behaviour grows toward the latter.</p>
 <p>The paper's core sentence deserves quoting in the original: most organisms seek information concerning what activities are rewarded, and then seek to do (or at least pretend to do) those things, often to the virtual exclusion of activities not rewarded. Three of the words hide a blade. "Organisms": Kerr deliberately did not write "employees." This is not an indictment of human nature but a behavioural description of anything shaped by rewards, and read fifty years later the word is precise enough to be prophecy. "Pretend to do": a reward structure does not merely change how behaviour is allocated, it changes whether the behaviour is real, and pretence is a normal product of incentives, not a pathology. "Virtual exclusion": crowding out is not a proportional discount. Unrewarded activity can be pushed to zero.</p>` },
 
-    { t: "module", module: "explorable:reward-b-prime", title: "你奖励的 A，和你指望的 B", config: {
-      predict: { q: "一所大学嘴上重视教学，但晋升和奖金只看论文数量。Kerr 预测教授们会怎么分配时间？", options: ["教学科研并重，毕竟教学是本职", "科研挤占教学，直到教学只剩不至于出事的最低限度", "多数人凭理想坚持教学优先"], answer: 1, reveal: "理性的人做被奖励的 A（发论文），不做只被指望的 B（教学）；不被奖励的活动会被挤到近乎为零。换一批更有理想的人进来，同一张奖励清单会把他们训练成同样的行为分布。", plain: "这说明行为跟着奖励清单走，不跟着愿望清单走。" },
+    { t: "module", module: "explorable:reward-b-prime", title: "The A you reward, and the B you hope for", config: {
+      predict: { q: "A university says it values teaching, but promotion and bonuses count only publications. How does Kerr predict the faculty will spend their time?", options: ["Teaching and research equally, since teaching is the core job", "Research crowds out teaching until only the bare minimum that avoids trouble is left", "Most people hold the line on teaching out of principle"], answer: 1, reveal: "Rational people do the rewarded A (publish) and not the merely hoped for B (teach). Unrewarded activity gets squeezed toward zero. Bring in a more idealistic cohort and the same reward sheet trains them into the same distribution of behaviour.", plain: "So behaviour follows the reward sheet, not the wish list." },
       mode: "matrix",
-      cols: ["你嘴上希望的 B", "你实际奖励的 A", "于是你得到"],
+      cols: ["The B you say you want", "The A you actually reward", "So this is what you get"],
       rows: [
-        { h: "大学", cells: ["老师教得好", "论文发得多", "教学被科研挤到边缘"] },
-        { h: "医疗", cells: ["医生做正确的判断", "不出「把病人误判为健康」的错(Type 2)", "过度检查、过度干预(宁可误判为病)"] },
-        { h: "越战", cells: ["士兵完成任务", "服从命令的表面证据", "「搜索并回避」、甚至 fragging"] },
-        { h: "企业", cells: ["长期、协作、创新", "短期可量化的个人业绩(MBO)", "短视、抢功、不投长期"] }
+        { h: "University", cells: ["Teachers who teach well", "Papers published", "Teaching pushed to the margin by research"] },
+        { h: "Medicine", cells: ["Doctors who judge correctly", "Never calling a sick patient healthy (Type 2)", "Over-testing and over-treatment (better to call a healthy patient sick)"] },
+        { h: "Vietnam", cells: ["Soldiers who complete the mission", "Visible evidence of obeying orders", "“Search and evade,” and even fragging"] },
+        { h: "Companies", cells: ["Long term work, collaboration, innovation", "Short term quantifiable individual results (MBO)", "Short sightedness, credit grabbing, no long term investment"] }
       ],
-      note: "每一行是同一个结构：想要的 B 难测、未被奖励；易测的 A 被奖励，于是挤占 B。"
+      note: "Every row has the same structure: the B you want is hard to measure and goes unrewarded; the easy to measure A is rewarded, and it crowds B out."
     } },
 
     { t: "prose", html: `

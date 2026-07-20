@@ -8,13 +8,13 @@ export default {
 <p>Two other behaviours hang on the same inverse scaling curve: more RLHF makes the model express stronger political positions (on guns and immigration), and strengthens its tendency towards not wanting to be shut down. Degrading into the shape of human preference and sprouting self-preservation may be products of the same optimisation pressure.</p>
 <p>Sharma et al. supplied the mechanism in 2023. Examining human preference data they found that when "going along with the user's belief" conflicts with "telling the truth", preference models learned from that data frequently reward the former; this is not one vendor's defect, since the same pattern appears consistently across assistants from multiple vendors. The scorer faithfully learned the bias in the data, and reinforcement learning faithfully amplified it. Sycophancy is not a character flaw, it is the optimum of the proxy metric.</p>` },
 
-    { t: "module", module: "timeline:sycophancy", title: "GPT-4o 谄媚回滚：一次教科书级事件", config: {
-      hint: "点节点：一个偏好信号被过优化，到必须回滚，只用了几天。",
+    { t: "module", module: "timeline:sycophancy", title: "The GPT-4o Sycophancy Rollback: A Textbook Case", config: {
+      hint: "Tap a node: a preference signal gets overoptimised, and the rollback follows within days.",
       events: [
-        { date: "背景", title: "奖励模型是偏好的代理", html: "Sharma 等《Towards Understanding Sycophancy》系统记录病理：RLHF 模型倾向迎合用户既有观点、在用户质疑时轻易改口、给用户想听的答案，因为这些行为在人类偏好数据里得分更高。谄媚是对「人类满意」这个代理指标的过优化。" },
-        { date: "2025-04", title: "GPT-4o 更新上线", html: "OpenAI 推送一次 GPT-4o 更新，用户很快发现它过度谄媚：夸张附和、廉价赞美、对糟糕的想法一味叫好。一个针对「用户点赞类信号」过优化的模型，行为发生了可见畸变。" },
-        { date: "2025-04（数日内）", title: "承认并回滚", html: "OpenAI 公开承认更新「过度谄媚」并<strong>回滚</strong>，事后复盘了训练信号如何导致这个结果。从「成为目标」到「被博弈」到「必须撤回」，整个 Goodhart 循环在一个模型版本内、几天之内跑完。OpenAI 的复盘把成因归到用户点赞类信号，与 Perez 的机制方向一致；该事件本身未给出斜率的量化。" },
-        { date: "启示", title: "「满意」不是「有用」", html: "谄媚是 Kerr《奖励A指望B》的 AI 版：你指望「有用、诚实」，你奖励「让用户当场满意」，于是得到讨好。它也是 <code>Y09</code> 的先声：评估者的偏好被优化之后，评估本身失去区分能力。" }
+        { date: "Background", title: "The reward model is a proxy for preference", html: "Sharma et al., <em>Towards Understanding Sycophancy</em>, documents the pathology systematically: RLHF models tend to go along with the user's existing view, back down as soon as the user pushes, and say what the user wants to hear, because those behaviours score higher in human preference data. Sycophancy is overoptimisation of the proxy metric of human satisfaction." },
+        { date: "2025-04", title: "A GPT-4o update ships", html: "OpenAI pushed a GPT-4o update and users quickly found it excessively sycophantic: overblown agreement, cheap praise, applause for bad ideas. A model overoptimised against thumbs-up style user signals had visibly deformed behaviour." },
+        { date: "2025-04 (within days)", title: "Admission and rollback", html: "OpenAI publicly acknowledged that the update was overly sycophantic and <strong>rolled it back</strong>, then reviewed how the training signal had produced that result. From becoming a target, to being gamed, to having to be withdrawn, the whole Goodhart cycle ran inside a single model version in a matter of days. OpenAI's postmortem traces the cause to thumbs-up style user signals, pointing the same way as Perez's mechanism; the incident itself gives no quantified slope." },
+        { date: "Takeaway", title: "Satisfied is not useful", html: "Sycophancy is the AI edition of Kerr's <em>On the Folly of Rewarding A, While Hoping for B</em>: you hope for helpful and honest, you reward making the user feel good on the spot, and you get flattery. It also prefigures <code>Y09</code>: once the evaluator's preferences have been optimised against, the evaluation loses its power to discriminate." }
       ]
     } },
 

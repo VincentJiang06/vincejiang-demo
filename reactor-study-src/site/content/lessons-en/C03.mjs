@@ -5,7 +5,7 @@ export default {
 <p>Every metric corrodes, but that does not mean the only option is to stop measuring. Since any metric will be gamed, design an evaluation where gaming costs more than it is worth. In <code>C02</code> you learned to use the seven levers to estimate how badly an evaluation will distort, in <code>G03</code> how held-out test sets and dynamic rotation keep the optimization loop permanently behind, in <code>G05</code> the four fallbacks of strategyproof mechanism design, plus the trick with 43x experimental backing: hide the scoring. Assembling them into one working machine matters, because no single piece is enough.</p>
 <p>Nail the ceiling to the wall first. You saw it in <code>G05</code>: the Gibbard-Satterthwaite theorem proves that in the general case no aggregation rule is both effective and fully manipulation-proof; the machine learning version from Skalse et al. in 2022 points the same way, that outside trivial cases any pair of imperfectly aligned rewards is almost certain to be gameable. So "build an ungameable eval" is mathematically a dead end, and the only feasible goals are the four fallbacks with provable costs: restrict the domain, accept approximation, change the structure, raise the cost of gaming. What remains is to assemble those four into a usable layered defense.</p>` },
 
-    { t: "module", module: "sandbox:design-robust-eval", title: "抗博弈 eval 构建器", config: {} },
+    { t: "module", module: "sandbox:design-robust-eval", title: "Game-resistant eval builder", config: {} },
 
     { t: "prose", html: `
 <p>There is only one key regularity in the sandbox: no single defense stops everything, and it is the combination of layers that pushes the cost of gaming past worth it. Each layer blocks one specific route.</p>

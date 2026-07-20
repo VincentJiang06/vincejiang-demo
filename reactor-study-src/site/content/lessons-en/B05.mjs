@@ -7,15 +7,15 @@ export default {
 <p>Then the law unfolds as standard. Officers at every level of the front found that promotion and assessment turned on that number, so the number got padded as it moved up the chain. The assessment pressure also induced indiscriminate killing, and Campbell (the social scientist behind the corruption law in <code>B02</code>) in 1979 put body count and the My Lai massacre side by side as examples. Meanwhile the things that actually decided the course of the war, the political mood of the villages and where the people's loyalties lay, went by the name x-factor in systems analysis jargon: because they could not be quantified, they were simply discarded. The reports said "we are winning," until the unmeasurable part of reality came to collect.</p>
 <p>One thing matters here: McNamara was not a cartoon villain, and that is precisely what makes the fallacy frightening. He came from Ford's "Whiz Kids" statistical management team, and bringing systems analysis into the Pentagon was, in management history, an innovation. The tool was not the problem. The problem was mistaking the boundary of the tool for the boundary of reality. The four-step slope describes how that single leap gets completed in four moves, each of which looks reasonable at the time.</p>` },
 
-    { t: "module", module: "provenance:mcnamara", title: "四步谬误，和它真正的作者", config: {
-      hint: "翻卡：最有名的那段引文，其实不是 McNamara 说的。",
+    { t: "module", module: "provenance:mcnamara", title: "The four step fallacy, and who actually wrote it", config: {
+      hint: "Flip the cards. The most famous passage was not said by McNamara.",
       cards: [
-        { frontTag: "四步谬误 · 第一步", front: "「先测量能轻易测量的。」这一步没问题。",
-          backTag: "后三步的滑落", back: "第二步：无视测不了的，或给它一个随意的量值（人为、误导）。第三步：假定测不了的不重要（这是盲目）。第四步：断言测不了的不存在（这是自杀）。" },
-        { frontTag: "问：这段话谁写的？", front: "这段四步引文是 McNamara 本人说的吗？",
-          backTag: "档案 · 真正的作者", back: "<strong>不是。</strong>它出自民意研究者 <strong>Daniel Yankelovich 1971 年的演讲</strong>（The New Odds）。Charles Handy 1994 年在书里把它误归给 McNamara（还拼错了名字），这段引文才和他绑定流传。谬误以他命名，是因为他<em>示范</em>了这套失败模式，不是因为他写了这段话。" },
-        { frontTag: "越战语境", front: "body count 真的失灵了吗？",
-          backTag: "档案 · 属实", back: "属实。没有战线的反叛乱战争里，进展只能靠代理指标；body count 被逐级灌水上报，制造出「我们在赢」的幻觉，而真正决定战争走向、无法量化的政治维度被排除在视野之外。McNamara 谬误是可通约化（把异质事物压进同一把尺子）加 Goodhart 的战场版。" }
+        { frontTag: "The four step fallacy · step one", front: "“Measure whatever can be easily measured.” Nothing wrong with this step.",
+          backTag: "The slide through the next three", back: "Step two: disregard that which cannot be measured, or give it an arbitrary quantitative value. This is artificial and misleading. Step three: presume that what cannot be measured easily really is not important. This is blindness. Step four: say that what cannot be easily measured really does not exist. This is suicide." },
+        { frontTag: "Question: who wrote it?", front: "Did McNamara himself say the four step passage?",
+          backTag: "Archive · the real author", back: "<strong>No.</strong> It comes from a 1971 lecture by the public opinion researcher <strong>Daniel Yankelovich</strong> (The New Odds). Charles Handy misattributed it to McNamara in a 1994 book, misspelling the name along the way, and that is how the passage got bound to him. The fallacy carries his name because he <em>demonstrated</em> the failure mode, not because he wrote these words." },
+        { frontTag: "The Vietnam context", front: "Did body count really fail?",
+          backTag: "Archive · confirmed", back: "It did. In a counterinsurgency war with no front line, progress can only be tracked through proxy measures. Body counts were inflated at every level as they were passed upward, manufacturing the illusion that the war was being won, while the political dimensions that actually decided the war and could not be quantified were kept out of view. The McNamara fallacy is commensuration (forcing unlike things onto one ruler) plus Goodhart, in battlefield form." }
       ]
     } },
 

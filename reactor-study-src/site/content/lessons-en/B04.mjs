@@ -5,15 +5,15 @@ export default {
 <p>The story goes that in colonial India the government wanted to wipe out cobras, so it paid a bounty for every dead snake handed in. Citizens quickly worked something out: the corpses did not have to come from the wild, and breeding snakes yourself was more reliable. When the government discovered the bounty was having no effect and cancelled it, the breeders' snakes were worthless, so they let them go. The result: more snakes than at the start. The German economist Horst Siebert used it as a book title in 2001, and the "cobra effect" has been shorthand for perverse incentives ever since.</p>
 <p>Put the honesty boundary up front: this story has no reliable historical source. Even the place name "Delhi" was added by later hands, and Siebert's original book only tells a general bounty legend from British India. The mechanism holds, the story is doubtful. The version with an archive behind it happened in Hanoi, and comes below.</p>` },
 
-    { t: "module", module: "provenance:cobra", title: "一个太好用的故事，和一个有档案的故事", config: {
-      hint: "翻卡：并非每个流行的警世故事都有史料。",
+    { t: "module", module: "provenance:cobra", title: "One story too good to check, and one with an archive behind it", config: {
+      hint: "Flip the cards. Not every popular cautionary tale has a paper trail.",
       cards: [
-        { frontTag: "德里眼镜蛇", front: "政府悬赏蛇尸，市民养蛇，取消赏金后放蛇，蛇更多。",
-          backTag: "档案 · 存疑", back: "这个故事<strong>没有可靠的一手史料</strong>，Siebert 自己也是当传说讲的；2025 年的期刊文献仍把它定性为 anecdotal。连「德里」都是后来被安上的地点。它机制成立，但引用时不能当「确有其事」的历史。" },
-        { frontTag: "河内老鼠 (1902)", front: "法属河内为灭鼠悬赏，凭鼠尾领钱。",
-          backTag: "档案 · 有据可查", back: "历史学家 <strong>Michael Vann</strong> 的研究有真实档案：1902 年法属河内悬赏灭鼠，凭<strong>鼠尾</strong>领钱。结果街上出现<strong>没有尾巴的活老鼠</strong>：有人剪尾领赏后放生，让它继续繁殖；郊外甚至出现<strong>养鼠场</strong>。要引一个确有其事的反常激励案例，用河内老鼠。" },
-        { frontTag: "术语归位", front: "「眼镜蛇效应」在形式分类学里是什么？",
-          backTag: "档案 · Manheim 的命名", back: "Manheim 与 Garrabrant (2018) 把这类情形正式命名为 <strong>non-causal cobra effect</strong>：行为人对指标的响应是真实的（蛇尸、鼠尾都是真的），却与真目标（灭蛇、灭鼠）因果脱钩。眼镜蛇故事只是寓言，被它例示的机制却有形式化定义，Manheim 的命名把两者接上。" }
+        { frontTag: "The Delhi cobras", front: "The government pays a bounty for dead cobras, people breed cobras, the bounty ends, the snakes are released, and there are more cobras than before.",
+          backTag: "Archive · unverified", back: "This story has <strong>no reliable primary source</strong>. Siebert himself told it as a legend, and the journal literature in 2025 still classes it as anecdotal. Even the Delhi setting was attached to it later. The mechanism holds up, but you cannot cite it as history that actually happened." },
+        { frontTag: "The Hanoi rats (1902)", front: "French colonial Hanoi paid a bounty for killing rats, redeemable against a rat tail.",
+          backTag: "Archive · documented", back: "The historian <strong>Michael Vann</strong>'s research rests on real archives. In 1902 French colonial Hanoi paid a bounty for killing rats, redeemable against a <strong>rat tail</strong>. What appeared on the streets was <strong>live rats with no tails</strong>: people cut the tail off, claimed the money and released the rat to keep breeding. Rat <strong>farms</strong> even appeared outside the city. If you want a perverse incentive case that genuinely happened, use the Hanoi rats." },
+        { frontTag: "Putting the term in its place", front: "What is the cobra effect in the formal taxonomy?",
+          backTag: "Archive · Manheim's naming", back: "Manheim and Garrabrant (2018) formally named this class of case the <strong>non-causal cobra effect</strong>: the agent's response to the measure is real (the dead snakes and the rat tails are real enough), but causally decoupled from the true goal of fewer snakes and fewer rats. The cobra story is only a fable, yet the mechanism it illustrates has a formal definition, and Manheim's naming connects the two." }
       ]
     } },
 

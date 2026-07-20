@@ -8,7 +8,7 @@ export default {
     { t: "prose", html: `
 <p>You want to know how well a class has learned, so you write an exam. You assume this works like putting a ruler against a table: the table does not get longer because you measured it, and whatever you read off is the answer. But students are not tables. They know they are being tested, so they start studying for the test, guessing what you will ask, drilling the kind of answer you reward. The ruler goes up and the thing being measured moves. What you end up measuring is no longer "how well they learned" but "how well they handle your exam." The two are related. They are not the same thing.</p>` },
 
-    { t: "module", module: "explorable:the-loop", title: "观察会改变被观察的东西" },
+    { t: "module", module: "explorable:the-loop", title: "Observing changes the thing observed" },
 
     { t: "prose", html: `
 <p>The dots in the module are the true values. Moving your cursor over them is observing them. Watch what happens: dots the cursor sweeps across brighten and drift upward, as if leaning toward your gaze. At the same time, the agreement between the "measured value" the screen reports and the "true value" gets worse the more you look. The harder you look, the more false what you see becomes. The program is not cheating you. That is the machine, in its smallest form.</p>

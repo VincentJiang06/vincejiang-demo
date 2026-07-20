@@ -5,7 +5,7 @@ export default {
 <p>The seven levers are a scorecard. Take any ranking or evaluation, score it item by item, and you get an estimate of how badly it will be distorted. You learned reactivity in <code>R01</code>, Goodhart's law in <code>B01</code>, and reward hacking in <code>Y04</code>, and all three describe the same thing, but all three stop at the qualitative judgment that "it will distort." What this scorecard does is turn that judgment into a quantity you can compare across cases: which system is more dangerous, and which way a given system is drifting over time.</p>
 <p>It is not an empirically calibrated absolute index, so do not treat the final number as having measured anything. It is a structured comb, forcing you to break the vague worry of "will this leaderboard get broken" into seven concrete questions you can answer separately.</p>` },
 
-    { t: "module", module: "sim:seven-levers", title: "七个杠杆：反应性强度记分卡", config: {} },
+    { t: "module", module: "sim:seven-levers", title: "Seven levers: a reactivity-strength scorecard", config: {} },
 
     { t: "prose", html: `
 <p>Here is what each of the seven levers asks:</p>

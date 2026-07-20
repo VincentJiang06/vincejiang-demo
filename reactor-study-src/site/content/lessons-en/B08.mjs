@@ -5,7 +5,7 @@ export default {
 <p>Goodhart's law says a measure stops working once it becomes a target (<code>B01</code>). How exactly does it stop working? The answer is slightly surprising: there is not one failure, there are four, with completely different mechanisms and completely different remedies. Rather as "fever" is not one disease and may sit on top of an infection, heatstroke or an immune problem, so an antipyretic only helps for some of them. Get the type wrong and the medicine goes to the wrong stage.</p>
 <p>The people who drew this table are David Manheim and Scott Garrabrant, in the 2018 paper "Categorizing Variants of Goodhart's Law." Both come from the AI alignment research world (Garrabrant worked at the research institute MIRI), and their original question was why AI is always able to exploit loopholes in a reward function. To answer it they took Goodhart's maxim apart and rebuilt it: let the thing you actually want be the true goal G, let the number you can actually measure be the proxy M, then apply optimization pressure to M and see under what conditions the relationship between M and G breaks. They found four independent ways for it to break.</p>` },
 
-    { t: "module", module: "sim:goodhart4", title: "四种 Goodhart，四条不同的曲线", config: {} },
+    { t: "module", module: "sim:goodhart4", title: "Four kinds of Goodhart, four different curves", config: {} },
 
     { t: "prose", html: `
 <p>Switch between the four types and watch what the "true goal of the selected item" (the red line) does. Each type comes with a story:</p>

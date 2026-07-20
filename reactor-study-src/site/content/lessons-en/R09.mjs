@@ -6,13 +6,13 @@ export default {
 <p>Where did the explosion come from? Power's answer is political rather than efficiency-based: public sector reform since the 1980s demanded that everything be accountable, accountability needs evidence, evidence needs verification, and so auditing became the default move. One insight will be developed later (<code>R12</code>, mechanical objectivity): when a society stops trusting the discretion of professionals, it turns to trusting procedures and numbers instead, because procedures look checkable by anyone. Auditing is an institutional response to an absence of trust, not a source of trust.</p>
 <p>The core concept is a verb phrase: making things auditable. Auditing does not arrive with a ruler to measure an organisation as it stands; the organisation grows compliance departments, documentation systems and indicator frameworks in advance, arranging itself into a shape the audit can read. Power points to the crack in this: between the assurance auditing promises and the assurance it can actually deliver lies a gap that cannot be filled, and the two "coexist uneasily." The ritual gets performed fully while the substance may be absent, and auditability gradually displaces substance.</p>` },
 
-    { t: "module", module: "explorable:auditability", title: "逐层加审计，会发生什么", config: {
+    { t: "module", module: "explorable:auditability", title: "What happens as you add audit layer by layer", config: {
       mode: "steps",
       steps: [
-        { k: "01", t: "审计爆炸", html: "财务审计之外，医疗/环境/质量/教学审计层出不穷。Power 的判断是，「让一切可审计」已成为现代治理的默认动作。根源是问责的政治诉求，不是效率。" },
-        { k: "02", t: "making things auditable", html: "为迎合审计的凝视，组织长出<strong>合规部门、文档系统、指标体系</strong>。真正的工作被「生产可审计的证据」挤占：大学为科研评估（RAE/REF）重排内部结构、生产大批合规文档。" },
-        { k: "03", t: "operational–normative gap", html: "审计<em>实际能提供的保证</em>与它<em>承诺的保证</em>之间有一道裂缝，两者不安地共存。仪式做足了，实质未必在。" },
-        { k: "04", t: "可审计性取代实质", html: "可测的代理指标压过真正想保障的东西。审计的凝视<strong>塑造</strong>被审计对象：组织变成「为了通过审计而存在」的样子。2026 年 Kongsgaard 的街头官僚研究记录了另一面：一线机构自建「秘密电子表格」，把真实工作和上报指标分成两本账。" }
+        { k: "01", t: "the audit explosion", html: "Beyond financial audit, medical, environmental, quality and teaching audits keep multiplying. Power's judgment is that \"make everything auditable\" has become the default move of modern governance. The root of it is a political demand for accountability, not efficiency." },
+        { k: "02", t: "making things auditable", html: "To meet the audit gaze, organizations grow <strong>compliance departments, documentation systems, indicator frameworks</strong>. The real work gets crowded out by \"producing auditable evidence\": universities rearrange their internal structure for research assessment (RAE/REF) and generate mountains of compliance paperwork." },
+        { k: "03", t: "operational–normative gap", html: "There is a crack between the assurance an audit <em>can actually deliver</em> and the assurance it <em>promises</em>, and the two coexist uneasily. The ritual is fully performed; the substance may not be there." },
+        { k: "04", t: "auditability displaces substance", html: "The measurable proxy overrides the thing you actually wanted to protect. The audit gaze <strong>shapes</strong> what it audits: the organization turns into something that exists in order to pass the audit. Kongsgaard's 2026 study of street-level bureaucrats records the other side of this: frontline agencies build their own \"secret spreadsheets,\" keeping real work and reported metrics on two separate sets of books." }
       ]
     } },
 

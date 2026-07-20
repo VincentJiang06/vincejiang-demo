@@ -57,9 +57,19 @@ content/i18n.json              UI 骨架 + 分支名 + 节点标题/钩子的双
    「留一个问题」→ "One open question" and 「一句话带走」→ "The one-line takeaway".
 5. **Cross-references**: `<code>R01</code>` node IDs stay as-is (IDs are language
    neutral); the surrounding sentence gets translated.
-6. **Module blocks are byte-identical to the Chinese file** — the interactive
-   modules read their own copy from `modules/*.js`; module UI strings are handled
-   separately in the i18n pass, not per-lesson.
+6. **Module blocks（2026-07-20 修订）**：早先要求「字节一致」，实测有缺口——
+   explorable / provenance / timeline / quiz 是 config 驱动的，steps、cards、
+   questions、timeline 事件这些**教学文案就写在课文的 module 块里**，字节复制等于
+   让英文页继续显示中文（43 门课、1.14 万字）。现行规则：
+   - **冻结**：`module` 字段（引擎名）、所有数值参数、数组长度与顺序、字段名、
+     `id` 与结构。这些是交互逻辑与课文引用的数字，动了就对不上正文。
+   - **翻译**：`title`，以及 config 内的文案字段——`hint`/`label`/`note`,
+     `predict.{q,options[],reveal,plain}`、`steps[].{k,t,html,ev}`、
+     `cards[].{frontTag,front,backTag,back,quote,cite}`、`contrast.*`、
+     `timeline[].{t,html}`、`rows`/`cols` 等表格文案、`presets[].{label,why}`。
+   - 已是英文的原文引语（Goodhart/Campbell 原句等）保持原样，不要「再译」。
+   - 校验相应放宽为「结构一致」：块数、块类型、module 引擎名、config 的键集合与
+     数组长度一致即可，不再要求字节一致。
 7. Character rules: no em dash 「——」, no exclamation marks, straight quotes are
    fine in English (the 「」 rule is Chinese-only).
 

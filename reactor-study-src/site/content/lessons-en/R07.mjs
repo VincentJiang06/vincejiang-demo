@@ -6,13 +6,13 @@ export default {
 <p>The term comes from the French sociologist Michel Callon in 1998. His words: economics is not observing how the economy works, it is "performing, shaping and formatting" the economy. His full claim goes further: the economy is not embedded in society, it is embedded in economics. For a market to run you first need calculating buyers and sellers, plus rules and instruments that cut a transaction out of its tangle of personal ties, and those are exactly what economics supplies. The textbook "economic man" who recognises nothing but self-interest is, to Callon, not a false assumption about human nature but a specification sheet that instruments gradually implement.</p>
 <p>The Scottish sociologist Donald MacKenzie then took the crucial next step: grading "theory shapes reality" into four strengths, from "merely being used" through "pulling the world toward itself" to "falsifying itself," so it does not degenerate into a slogan that explains everything. You saw in <code>R06</code> that classification changes the people classified; this is the theory-level version: a theory changes the world the theory describes.</p>` },
 
-    { t: "module", module: "explorable:performativity", title: "操演性的强度谱系", config: {
+    { t: "module", module: "explorable:performativity", title: "The strength scale of performativity", config: {
       mode: "steps",
       steps: [
-        { k: "01", t: "generic", html: "理论只是被实际使用了，最弱的一档。人们谈论它、教它，但它未必改变什么。" },
-        { k: "02", t: "effective", html: "使用确实造成差别：模型进入实践，改变了计算方式与决策方式。" },
-        { k: "03", t: "Barnesian", html: "最强的一档：使用把过程<strong>拉向更符合理论</strong>的样子。市场价格向模型收敛，模型因此「越来越真」。这是操演性的自我实现版本，得名自爱丁堡学派的 Barry Barnes。" },
-        { k: "04", t: "counterperformativity", html: "反向：使用反而<strong>削弱</strong>了理论所描述过程的成立，表述把自己变假。一个理论可以因为太多人相信它而变得不真。" }
+        { k: "01", t: "generic", html: "The theory is simply used in practice, the weakest rung. People talk about it and teach it, but it need not change anything." },
+        { k: "02", t: "effective", html: "The use makes a real difference: the model enters practice and changes how things are calculated and how decisions are made." },
+        { k: "03", t: "Barnesian", html: "The strongest rung: the use pulls the process <strong>into closer conformity with the theory</strong>. Market prices converge on the model, and the model gets \"truer\" as a result. This is the self-fulfilling version of performativity, named after Barry Barnes of the Edinburgh School." },
+        { k: "04", t: "counterperformativity", html: "The reverse: the use <strong>undermines</strong> the process the theory describes, and the statement makes itself false. A theory can become untrue because too many people believe it." }
       ]
     } },
 
