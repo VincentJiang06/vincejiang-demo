@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
-<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=0b307b353d">
+<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=b998d7d18a">
 <link rel="stylesheet" href="/theme/components.css?v=906e7a3bf4"><link rel="stylesheet" href="/theme/led.css?v=23da0ff491">
 <link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"LearningResource","name":"绩效测量扭曲 · Baker Distortion","description":"便宜、低噪、可控，仍可能是坏指标。","inLanguage":"zh-CN","url":"https://reactor.vincejiang.com/lesson/B10.html","author":{"@type":"Person","name":"Vince Jiang","url":"https://vincejiang.com"},"isAccessibleForFree":true,"learningResourceType":"lesson","educationalLevel":"advanced","timeRequired":"PT10M","teaches":"Baker Distortion","isPartOf":{"@type":"Course","name":"REACTOR","url":"https://reactor.vincejiang.com/"},"coursePrerequisites":"多任务代理"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"天赋树","item":"https://reactor.vincejiang.com/"},{"@type":"ListItem","position":2,"name":"定律与形式","item":"https://reactor.vincejiang.com/atlas.html"},{"@type":"ListItem","position":3,"name":"B10 绩效测量扭曲","item":"https://reactor.vincejiang.com/lesson/B10.html"}]}]</script>
@@ -59,7 +59,7 @@
   </div>
     </div>
     <article class="stack"><div class="read">
-<p><code>B09</code> 讲了跨任务的挤占：考核甲，乙遭殃。还有一个更尖锐的问题：就算只剩一个任务，一个便宜、精确、人人服气的指标，也可能是坏指标。George Baker 1992 年证明了这一点，并且给出「好指标」的真正判据。直觉说噪声小的指标好，Baker 说不对：好坏不看测得准不准，看指标指的方向对不对。</p>
+<p><a class="node-ref" href="/lesson/B09.html"><code>B09</code></a> 讲了跨任务的挤占：考核甲，乙遭殃。还有一个更尖锐的问题：就算只剩一个任务，一个便宜、精确、人人服气的指标，也可能是坏指标。George Baker 1992 年证明了这一点，并且给出「好指标」的真正判据。直觉说噪声小的指标好，Baker 说不对：好坏不看测得准不准，看指标指的方向对不对。</p>
 <p>先建立画面。你的每一个动作都会同时牵动两个数：真实价值（你老板真正在乎的东西）动一点，绩效指标（合同里写的那个数）也动一点。理想的指标是个忠实的影子：无论你做什么动作，影子和本体总是同方向、同比例地动。坏指标是个哈哈镜：某些动作在镜子里被放大，另一些被缩小，于是你会不由自主地专挑「镜中效果好」的动作做。Baker 把这面镜子的畸变程度做成了数学量：动作对指标的边际影响，与动作对价值的边际影响，两者的相关度（记作 ρ(P′, V′)）。相关度等于一，镜子是平的；越低，哈哈镜越弯。</p></div>
 <figure class="module reg" data-module="explorable" data-modname="distortion" data-modtype="explorable">
     <figcaption class="module-head"><span class="fig">FIG.01</span>
@@ -75,11 +75,11 @@
 <p><strong>为什么「低噪声」反而危险：传统理论只有一个权衡（噪声越大，激励越弱），Baker 加的第二个维度藏在「客观稳定」的外衣下。</strong>一个低噪声、年年可复现的指标会积累信任，信任会抬高压在它上面的激励强度，而扭曲损失恰好正比于激励强度。心理测量学的信度-效度权衡是同一件事：为了可重复而把题目标准化、窄化，往往以牺牲覆盖面为代价；一个高度稳定的排名之所以稳定，可能恰恰因为它锁定了少数容易量化、容易博弈的输入。稳定不是对齐的证据，有时是错位的伪装。</p></aside>
 <div class="read">
 <p>后续文献把这两种病灶的解剖做得更细。Baker 自己 2002 年的续作把指标缺陷正式分解成 risk（噪声）与 distortion（扭曲）两个正交分量，各自以不同方式进入最优合同：噪声压低你敢给的激励强度，扭曲则把给出去的激励引向歧途。会计学家 Feltham 与 Xie 早在 1994 年就给两个病灶起了学名并证明其独立性：congruity 缺失（指标向量与价值向量方向不对齐）扭曲努力的配置，noise 压低努力的强度。由此得到一个好用的心算公式：一个指标被 Goodhart 的程度，约等于它的方向缺口乘以压在它上面的激励强度。这也顺手解释了加权综合指标为什么危险：调任何一个权重，都在转动整个指标向量的方向，而要与高维的真实价值对齐，几乎不可能。</p>
-<p>还有两条推论值得带走。其一，相对绩效评估（拿同行当基准扣减）并不自动免疫：第 611 页证明，只有当基准不受你的行动影响时才无扭曲，否则「压低同行」会成为新的镜中动作。其二，Baker 的单任务模型与多任务模型（<code>B09</code>）其实等价，两篇论文在脚注里互相认领（Baker 第 603 页脚注 6，HM 第 34 页脚注 11）：跨任务的挤占与任务内的歪斜，是同一枚硬币的两面，共同的非平凡结论是失效与风险无关。</p></div>
+<p>还有两条推论值得带走。其一，相对绩效评估（拿同行当基准扣减）并不自动免疫：第 611 页证明，只有当基准不受你的行动影响时才无扭曲，否则「压低同行」会成为新的镜中动作。其二，Baker 的单任务模型与多任务模型（<a class="node-ref" href="/lesson/B09.html"><code>B09</code></a>）其实等价，两篇论文在脚注里互相认领（Baker 第 603 页脚注 6，HM 第 34 页脚注 11）：跨任务的挤占与任务内的歪斜，是同一枚硬币的两面，共同的非平凡结论是失效与风险无关。</p></div>
 <aside class="callout myth"><span class="co-tag">// 讹传更正</span>
 <p><strong>流行说法：「平衡计分卡解决了多任务问题。」</strong>复核结论：平衡计分卡（把财务、客户、流程、学习多张卡合成一套考核）只是把方向对齐问题从「单指标」搬到了「指标组的权重选择」。Budde 2007 年在同一框架里证明：只要真实价值是高维隐含的，任何有限维加权指标组都存在残余的对齐缺口。多指标缓解问题，不消灭问题。</p></aside>
 <aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
-<p><strong>判断一个 eval 好不好，别问它噪声大不大，问它对齐不对齐。</strong>低噪声、可复现、便宜的 benchmark，如果「模型行为对它的边际影响」与「对真实效用的边际影响」不对齐，依然是坏指标，而且低噪声反而会抬高你对它的信任。Baker 的处方直接可用：对有偏的代理指标，最优做法是别全力优化它，这正是 <code>Y07</code> 里给强化学习「加 KL 缰绳」（限制模型偏离初始状态的幅度，等价于把优化强度压到一以下）的经济学理由。判据还有正向的一面：当 ρ(Pₑ, Vₑ) 趋近一，全力优化指标就是全力优化价值，「应试即学习」有了形式条件，反方陈词在 <code>B14</code> 展开。</p></aside>
+<p><strong>判断一个 eval 好不好，别问它噪声大不大，问它对齐不对齐。</strong>低噪声、可复现、便宜的 benchmark，如果「模型行为对它的边际影响」与「对真实效用的边际影响」不对齐，依然是坏指标，而且低噪声反而会抬高你对它的信任。Baker 的处方直接可用：对有偏的代理指标，最优做法是别全力优化它，这正是 <a class="node-ref" href="/lesson/Y07.html"><code>Y07</code></a> 里给强化学习「加 KL 缰绳」（限制模型偏离初始状态的幅度，等价于把优化强度压到一以下）的经济学理由。判据还有正向的一面：当 ρ(Pₑ, Vₑ) 趋近一，全力优化指标就是全力优化价值，「应试即学习」有了形式条件，反方陈词在 <a class="node-ref" href="/lesson/B14.html"><code>B14</code></a> 展开。</p></aside>
 <div class="read">
 <p>留一个问题：方向缺口（congruity）在理论里是个干净的量，但没人知道怎么从数据估计它。给定一个 benchmark 和一个真实部署目标，能否在优化开始之前测出两者的方向缺口，从而预报这个 eval 会被 Goodhart 到什么程度？D6 报告认为，这一步是把「事前判断指标好坏」从手艺变成科学缺的那块拼图，目前没有成熟方法。</p>
 <p><strong>一句话带走：</strong>坏指标不是测不准的指标，是指错方向的指标；越稳定、越受信任的错方向，伤害越大。</p></div>

@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
-<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=0b307b353d">
+<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=b998d7d18a">
 <link rel="stylesheet" href="/theme/components.css?v=906e7a3bf4"><link rel="stylesheet" href="/theme/led.css?v=23da0ff491">
 <link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"LearningResource","name":"奖励模型过优化 · RM Overoptimization","description":"Goodhart 定律最干净的一条实验曲线。","inLanguage":"zh-CN","url":"https://reactor.vincejiang.com/lesson/Y07.html","author":{"@type":"Person","name":"Vince Jiang","url":"https://vincejiang.com"},"isAccessibleForFree":true,"learningResourceType":"lesson","educationalLevel":"advanced","timeRequired":"PT10M","teaches":"RM Overoptimization","isPartOf":{"@type":"Course","name":"REACTOR","url":"https://reactor.vincejiang.com/"},"coursePrerequisites":"奖励破解, RLHF：把偏好当燃料, Goodhart 四型"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"天赋树","item":"https://reactor.vincejiang.com/"},{"@type":"ListItem","position":2,"name":"机器与前沿","item":"https://reactor.vincejiang.com/atlas.html"},{"@type":"ListItem","position":3,"name":"Y07 奖励模型过优化","item":"https://reactor.vincejiang.com/lesson/Y07.html"}]}]</script>
@@ -61,7 +61,7 @@
     <article class="stack"><div class="read">
 <p>拿一个「差不多对」的评分标准去用力优化一个 AI，会发生什么？答案不是「效果打折」，而是「先变好，再变坏」，转折点有实验数据、有函数形式。很多人把 Goodhart 定律当一句格言，这条曲线把它变成了可以画在坐标纸上的东西。</p>
 <p>现在的聊天模型出厂前多经过一道叫 <strong>RLHF</strong>（基于人类反馈的强化学习）的工序：让模型对同一个问题生成多个回答，请人挑出更好的那个，再用「被人挑中」当奖励去调整模型。麻烦在于人太贵。训练要做几十万次比较，不可能每次都请真人，于是工程师先用一批人类挑选的记录，训练出一个<strong>奖励模型</strong>（reward model）：一个学会了模仿人类打分的打分器。之后的训练不再问人，改问它。</p>
-<p>注意这一步偷换：打分器只是人类偏好的近似，一个代理。对着一个近似标准用力优化，正是 <code>Y04</code> 奖励破解的标准场景。这里问的是「量」：坏事发生在多大力度之后，以什么速度发生。</p>
+<p>注意这一步偷换：打分器只是人类偏好的近似，一个代理。对着一个近似标准用力优化，正是 <a class="node-ref" href="/lesson/Y04.html"><code>Y04</code></a> 奖励破解的标准场景。这里问的是「量」：坏事发生在多大力度之后，以什么速度发生。</p>
 <p>2023 年，OpenAI 的 Gao、Schulman 与 Hilton 设计了一个巧妙的实验来量它。既然真人太贵，他们干脆用一个很大的「金标准」奖励模型来<strong>扮演</strong>人类（叫它 gold），拿 gold 的打分教出一个较小的代理打分器（叫它 proxy），然后只对着 proxy 优化模型，同时在旁边用 gold 悄悄记分。这样「真实质量」变得可以无限次读取，优化力度可以推到任何真人实验都做不到的深度。</p>
 <p>结果是一条抛物线：proxy 给的分一路上涨，gold 给的分先升后降。翻译一下：从代理的视角看，模型一直在进步；从金标准的视角看，模型过了某个点就开始变差。你手里只有代理时，你根本不知道自己已经越过了峰值。</p></div>
 <figure class="module reg" data-module="overopt" data-modname="overopt" data-modtype="sim">
@@ -80,12 +80,12 @@
 <p>第三件：多轮会累积。把 RLHF 做成多轮迭代（用上一轮模型生成的数据重新训练打分器，再优化下一轮），过优化会跨轮叠加，且对超参数更敏感。同一个代理被透支得越久，窟窿越大。</p>
 <p>理论侧还有两条定理给这张图封了顶。Skalse 等证明：只要一个评分标准不是「无论做什么都给同分」的废物标准，就必然存在钻它空子的方式。这是定理，不是经验教训，意味着「设计一个完全防作弊的奖励」在数学上就不可能，工程上能做的只有抬高钻空子的成本。Zhuang 与 Hadfield-Menell 则证明：当你的评分只覆盖了你在乎的一部分维度，无限优化它，必然把没覆盖的维度牺牲到任意惨。两条合起来：代理必可被玩，玩到底必然反噬。Gao 的抛物线就是这两条定理之间的经验插值。</p></div>
 <aside class="callout intuit"><span class="co-tag">// 直觉</span>
-<p><strong>抛物线为什么必然出现。</strong>把 proxy 的分拆成两部分：真实质量，加上一个误差项（proxy 与真人不一致的部分）。优化早期，提升真实质量是涨分最容易的路，proxy 与 gold 同涨。随着容易的提升被做完，继续从真实质量里挤分越来越难，而误差项永远敞开着：迎合打分器的怪癖比真的变好更便宜。于是优化转向收割误差项，gold 掉头向下。这正是 <code>B08</code> 里回归型与极值型 Goodhart 的连续版本：先是噪声被系统性选中，然后代理与目标的相关在极端处断裂。打分器越不像真人，误差项越肥，掉头越早。</p></aside>
+<p><strong>抛物线为什么必然出现。</strong>把 proxy 的分拆成两部分：真实质量，加上一个误差项（proxy 与真人不一致的部分）。优化早期，提升真实质量是涨分最容易的路，proxy 与 gold 同涨。随着容易的提升被做完，继续从真实质量里挤分越来越难，而误差项永远敞开着：迎合打分器的怪癖比真的变好更便宜。于是优化转向收割误差项，gold 掉头向下。这正是 <a class="node-ref" href="/lesson/B08.html"><code>B08</code></a> 里回归型与极值型 Goodhart 的连续版本：先是噪声被系统性选中，然后代理与目标的相关在极端处断裂。打分器越不像真人，误差项越肥，掉头越早。</p></aside>
 <aside class="callout myth"><span class="co-tag">// 讹传更正</span>
 <p><strong>流行说法一：「过优化是 PPO 这类强化学习算法的毛病，改用 DPO 就没事了。」</strong>复核结论：不成立。Rafailov 等 2024 年在直接对齐算法上复现了同一族抛物线，且退化更难控制。<strong>流行说法二：「Gao 曲线量出了过优化的真实严重程度。」</strong>复核结论：更准确的读法是量出了下界。实验用金标准打分器代替真人，这是最大的理想化：真实人类偏好有噪声、前后不一致、还会随时间漂移，所以真实世界的曲线可能更早、更陡地掉头。更麻烦的是，真实训练里没有 gold 在旁边记分，你看不到自己越过了峰值。部署中的危害更可能被这张图低估，而非高估。</p></aside>
 <div class="read">
-<p>这条曲线同时是两条线的原型。往机器一侧，<code>Y08</code> 的谄媚就是抛物线掉头之后的具体内容：被过优化的人类偏好代理，其误差项里装的正是「说你爱听的话」。往防御一侧，处方直接从曲线上读出来：KL 预算、早停，都是「在真实目标见顶处收手」的工程化；集成、权重平均、信息瓶颈，都是在抬高误差项被收割的成本，<code>G05</code> 会把「抬高作弊成本」做成一般原则。</p>
-<p>它与「反复使用同一套考题会把考题用坏」（<code>Y02</code>）也构成一对：那边是温和的慢性透支，这边是定向优化单一代理的急性透支。两端之间隔着的，是优化压力的集中程度。</p></div>
+<p>这条曲线同时是两条线的原型。往机器一侧，<a class="node-ref" href="/lesson/Y08.html"><code>Y08</code></a> 的谄媚就是抛物线掉头之后的具体内容：被过优化的人类偏好代理，其误差项里装的正是「说你爱听的话」。往防御一侧，处方直接从曲线上读出来：KL 预算、早停，都是「在真实目标见顶处收手」的工程化；集成、权重平均、信息瓶颈，都是在抬高误差项被收割的成本，<a class="node-ref" href="/lesson/G05.html"><code>G05</code></a> 会把「抬高作弊成本」做成一般原则。</p>
+<p>它与「反复使用同一套考题会把考题用坏」（<a class="node-ref" href="/lesson/Y02.html"><code>Y02</code></a>）也构成一对：那边是温和的慢性透支，这边是定向优化单一代理的急性透支。两端之间隔着的，是优化压力的集中程度。</p></div>
 <aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
 <p><strong>这条曲线是该直觉目前唯一带坐标轴的证据，处方也直接。</strong>优化一个不完美的代理，收益有上限，越过上限是负收益，所以不要把奖励模型或 eval 优化到底：留一根缰绳（KL、早停、限制优化步数），在真实目标见顶处停手，而不是在代理指标见顶处。你想要的从来不是最高的 proxy 分，是最高的 gold 分，这两个峰值不在同一个地方。集成能帮忙，但记住它的上限在成员多样性，一群共享偏差的评审等于一个评审。用单个 LLM 当裁判筛选输出时，同一条曲线在等你：优化越狠，你筛出的越是「会骗这个裁判的回答」。</p></aside>
 <div class="read">

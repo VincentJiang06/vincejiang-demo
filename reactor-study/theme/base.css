@@ -43,6 +43,11 @@ em{font-style:normal;color:var(--accent);font-weight:600}
 code,kbd,.mono{font-family:var(--font-mono)}
 :where(code):not(pre code){background:color-mix(in srgb,var(--accent) 12%,transparent);
   padding:.05em .35em;border-radius:var(--radius);font-size:.9em}
+/* 节点引用链接:可点跳到该节点;下划虚线示意可点,悬停实底 */
+a.node-ref{text-decoration:none;border-bottom:0}
+a.node-ref code{cursor:pointer;text-decoration:underline;text-decoration-style:dotted;
+  text-underline-offset:2px;transition:background .12s,color .12s}
+a.node-ref:hover code{background:var(--accent);color:var(--bg);text-decoration:none}
 ul,ol{margin:0 0 calc(var(--u)*2) 1.4em}
 li{margin:.3em 0;max-width:74ch}
 hr{border:0;height:1px;background:var(--line);margin:calc(var(--u)*4) 0}

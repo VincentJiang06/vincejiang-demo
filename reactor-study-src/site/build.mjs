@@ -206,19 +206,28 @@ function moduleSlot(mod, opts = {}) {
 }
 
 /* ---- render one lesson ---- */
+/* 正文里的节点引用 <code>R05</code> 转成跳转链接(仅真实存在的节点;跟随语种前缀)。
+   sources 里的 <code>research/deep/D2</code> 不匹配 [A-Z]\d\d 整串,不会误伤。 */
+function linkNodeRefs(html, lang) {
+  return String(html).replace(/<code>([A-Z]\d\d)<\/code>/g, (m, id) =>
+    (byId[id] && builtIds.has(id))
+      ? `<a class="node-ref" href="${lang.href(`/lesson/${id}.html`)}"><code>${id}</code></a>`
+      : m);
+}
+
 function renderBlocks(blocks, L) {
   const lang = L || makeL(LANGS[0]);
   let figN = 0;
   return blocks.map(b => {
     switch (b.t) {
-      case "prose": return `<div class="read">${b.html}</div>`;
+      case "prose": return `<div class="read">${linkNodeRefs(b.html, lang)}</div>`;
       case "h": return `<h2>${esc(b.text)}</h2>`;
       case "callout": {
         const tag = { myth: lang.t("callout.myth"), intuit: lang.t("callout.intuit"), applied: lang.t("callout.applied") }[b.variant] || "//";
-        return `<aside class="callout ${b.variant}"><span class="co-tag">${esc(b.tag || tag)}</span>${b.html}</aside>`;
+        return `<aside class="callout ${b.variant}"><span class="co-tag">${esc(b.tag || tag)}</span>${linkNodeRefs(b.html, lang)}</aside>`;
       }
       case "module": { figN++; return moduleSlot(b.module, { fig: "FIG." + String(figN).padStart(2, "0"), title: b.title, config: b.config, L: lang }); }
-      case "sources": return `<details class="sources"><summary class="label">${esc(lang.t("lesson.sources"))}</summary><div class="read"><ul>${b.items.map(i => `<li>${i}</li>`).join("")}</ul></div></details>`;
+      case "sources": return `<details class="sources"><summary class="label">${esc(lang.t("lesson.sources"))}</summary><div class="read"><ul>${b.items.map(i => `<li>${linkNodeRefs(i, lang)}</li>`).join("")}</ul></div></details>`;
       default: return "";
     }
   }).join("\n");

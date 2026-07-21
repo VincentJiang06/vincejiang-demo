@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
-<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=0b307b353d">
+<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=b998d7d18a">
 <link rel="stylesheet" href="/theme/components.css?v=906e7a3bf4"><link rel="stylesheet" href="/theme/led.css?v=23da0ff491">
 <link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"LearningResource","name":"解耦：Deming 与 POSIWID · Decoupling","description":"别让 eval 分数直接驱动迭代。","inLanguage":"zh-CN","url":"https://reactor.vincejiang.com/lesson/G02.html","author":{"@type":"Person","name":"Vince Jiang","url":"https://vincejiang.com"},"isAccessibleForFree":true,"learningResourceType":"lesson","educationalLevel":"advanced","timeRequired":"PT10M","teaches":"Decoupling","isPartOf":{"@type":"Course","name":"REACTOR","url":"https://reactor.vincejiang.com/"},"coursePrerequisites":"必要多样性, 审计社会"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"天赋树","item":"https://reactor.vincejiang.com/"},{"@type":"ListItem","position":2,"name":"防御与设计","item":"https://reactor.vincejiang.com/atlas.html"},{"@type":"ListItem","position":3,"name":"G02 解耦：Deming 与 POSIWID","item":"https://reactor.vincejiang.com/lesson/G02.html"}]}]</script>
@@ -60,11 +60,11 @@
     </div>
     <article class="stack"><div class="read">
 <p>一条最省心的规矩：别让 eval 分数直接决定要不要改、怎么改。分数一旦挂上利益，被测的东西就学会专门讨好分数，而不是把事做好。把「测量」和「奖惩」拆开，让 eval 只当体检报告、别当自动发奖的机器，这个动作叫解耦。</p>
-<p>你在 <code>B11</code> 见过必要多样性：一把太简单的尺子，管不住一个复杂的系统。<code>R09</code> 的审计社会也讲过，当「让别人能审计你」本身变成了目的，事情就开始走形。解耦就是把这两条落成一个能马上做的动作。</p>
+<p>你在 <a class="node-ref" href="/lesson/B11.html"><code>B11</code></a> 见过必要多样性：一把太简单的尺子，管不住一个复杂的系统。<a class="node-ref" href="/lesson/R09.html"><code>R09</code></a> 的审计社会也讲过，当「让别人能审计你」本身变成了目的，事情就开始走形。解耦就是把这两条落成一个能马上做的动作。</p>
 <p>先看一个老实验。质量管理宗师 Deming 让工人拿一把带孔的木铲，从红白珠子混在一起的桶里舀珠，红珠算次品。可红珠舀上来多少，纯看这一铲的运气，工人再用心也控制不了。偏偏管理层每天照样评「今天谁最好、谁最差」，表扬一批、训一批。Deming 的意思很直白：在一个由系统和运气决定结果的地方，给个人排名奖惩，是把运气当本事在奖罚，既不公平也没用。</p>
 <p>他还有个漏斗实验，讲的是另一半。拿漏斗往靶心投珠，如果你每次都盯着上一次偏了多少去反向纠偏，结果反而越投越散；老老实实不动漏斗，反而最准。把每次 eval 分数的小抖动拿去即时调参，就是这种越调越糟的乱调，你是在拿噪声当信号。</p>
 <p>「分数一挂上利益就被讨好」不是空话，两个现成的例子。英国 NHS 曾给急诊定过「四小时内处理完」的硬目标并跟考核挂钩，结果有的医院把病人留在救护车里、不让进急诊大门，因为计时从进门才开始，这样账面上就没超过四小时，可病人并没有被更快救治。AI 这边也一样，有的排行榜上厂商私下测很多版本、只把分最高的那版挂出来，模型还会慢慢学会迎合打分的人，回答越写越长、越写越顺耳，分数涨了、真本事没涨。共同点是：只要分数背后连着实打实的后果，被测的一方就会把力气花在讨好分数上。</p>
-<p>再说个更硬的道理：为什么一个指标管不住一个通用系统，这不是「指标没设计好」，是数学上就办不到。控制论有条定律说，一个调节器能压住多少种乱七八糟的情况，取决于它自己有多少「花样」。一个分数只有高低一个自由度，花样极少；而一个通用系统能在成千上万个方向上表现，花样极多。两边一比，你其实只按住了被测的那一个方向，系统在所有没被测的方向上照样乱跑，而「迎合被测的、牺牲没测的」正好就是博弈的定义。想真管住，要么把尺子做成一组、多个方向一起测（这是 <code>G04</code> 的活），要么认了系统会在没测的地方漂，没有第三条路。</p></div>
+<p>再说个更硬的道理：为什么一个指标管不住一个通用系统，这不是「指标没设计好」，是数学上就办不到。控制论有条定律说，一个调节器能压住多少种乱七八糟的情况，取决于它自己有多少「花样」。一个分数只有高低一个自由度，花样极少；而一个通用系统能在成千上万个方向上表现，花样极多。两边一比，你其实只按住了被测的那一个方向，系统在所有没被测的方向上照样乱跑，而「迎合被测的、牺牲没测的」正好就是博弈的定义。想真管住，要么把尺子做成一组、多个方向一起测（这是 <a class="node-ref" href="/lesson/G04.html"><code>G04</code></a> 的活），要么认了系统会在没测的地方漂，没有第三条路。</p></div>
 <figure class="module reg" data-module="explorable" data-modname="posiwid" data-modtype="explorable">
     <figcaption class="module-head"><span class="fig">FIG.01</span>
       <span>解耦：Deming 与 POSIWID</span><span class="spacer"></span>
@@ -73,7 +73,7 @@
   </figure><script type="module" src="/modules/explorable.js?v=86621462bb"></script>
 <div class="read">
 <p>把上面几条拧成一个处方，就叫解耦：eval 只用来看趋势、找毛病、提问题，不直接拿去决定奖惩和改动方向。Carter 有个好比喻，大多数指标其实是开罐器，作用是撬开一罐问题、逼你追问「这个数怎么这么怪」，而不是仪表盘，读个数就直接拨方向盘。一旦你把指标当仪表盘用、还接上后果，从数字到奖惩就成了一条机械链路，而正是这条机械链路让博弈有利可图。把它改成「数字异常就触发人工深挖」，操纵单个数字的期望收益立刻掉下来。</p>
-<p>但解耦不是设一次就一劳永逸，它自己会往回退。英国 NHS 的复盘记录了一个典型：本来说好「这个指标只是看看、不考核」，可制度一有压力，它就慢慢被塞进年度考核，开罐器又变回了仪表盘。还有一层更绕的自省，叫 Shirky 原则：一个靠「治理 eval 毛病」立身的团队，它的饭碗其实依赖毛病一直存在，于是它可能不知不觉把问题养着。所以解耦是要持续维护的纪律，得定期轮换、找外部独立的人来看、连你这套 eval 本身产出了什么也要拿去审，这条接 <code>G06</code> 的制度层。</p>
+<p>但解耦不是设一次就一劳永逸，它自己会往回退。英国 NHS 的复盘记录了一个典型：本来说好「这个指标只是看看、不考核」，可制度一有压力，它就慢慢被塞进年度考核，开罐器又变回了仪表盘。还有一层更绕的自省，叫 Shirky 原则：一个靠「治理 eval 毛病」立身的团队，它的饭碗其实依赖毛病一直存在，于是它可能不知不觉把问题养着。所以解耦是要持续维护的纪律，得定期轮换、找外部独立的人来看、连你这套 eval 本身产出了什么也要拿去审，这条接 <a class="node-ref" href="/lesson/G06.html"><code>G06</code></a> 的制度层。</p>
 <p>落到手上，解耦就三步：</p>
 <ul>
 <li><strong>分开两张表</strong>：一张是诊断表，eval 告诉你哪里可能有问题；另一张是决策，由人看着诊断表决定改什么、怎么改。两张表别合并。</li>
@@ -85,7 +85,7 @@
 <aside class="callout intuit"><span class="co-tag">// 直觉</span>
 <p><strong>POSIWID 是一个体检钩子，不是一顶阴谋帽。</strong>它的意思是：别看一套 eval 宣称要衡量什么，要看它稳定地产出了什么。如果一套 eval 长期养出更长、更谄媚、更爱堆表情符号的模型，那么按 POSIWID，它实际在做的就包含「生产冗长与谄媚」，不管它嘴上的目标多高尚。关键是把它当提问用（产出和宣称为什么对不上），而不是当结论用（对不上就是有人在使坏）。前者推动你去改系统，后者只会让你停在指控。</p></aside>
 <aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
-<p><strong>这直接解释了你那次经历。</strong>你把 skill 迭代直接挂在 eval 上，于是 skill 优化的方向变成「让 eval 读数变绿」，尺子没变长，是被量的东西学会了踮脚。处方就是把两件事拆开：用 eval 诊断哪里可能有问题，再用人的判断决定改什么、怎么改；并定期问一句 POSIWID 式的问题，我这套 eval 现在实际在生产什么。如果答案是绿灯，它就已经不是你的工具了。也别拿分数的逐次抖动去即时调参，那是漏斗实验里越调越糟的那几条规则。维护纪律的具体做法在 <code>C07</code>，制度层的独立审计在 <code>G06</code>。</p></aside>
+<p><strong>这直接解释了你那次经历。</strong>你把 skill 迭代直接挂在 eval 上，于是 skill 优化的方向变成「让 eval 读数变绿」，尺子没变长，是被量的东西学会了踮脚。处方就是把两件事拆开：用 eval 诊断哪里可能有问题，再用人的判断决定改什么、怎么改；并定期问一句 POSIWID 式的问题，我这套 eval 现在实际在生产什么。如果答案是绿灯，它就已经不是你的工具了。也别拿分数的逐次抖动去即时调参，那是漏斗实验里越调越糟的那几条规则。维护纪律的具体做法在 <a class="node-ref" href="/lesson/C07.html"><code>C07</code></a>，制度层的独立审计在 <a class="node-ref" href="/lesson/G06.html"><code>G06</code></a>。</p></aside>
 <div class="read">
 <p><strong>留一个问题：</strong>开罐器退化成仪表盘，好像总在发生，那它可逆吗？有没有一种制度设计能让一个指标稳稳停在开罐器的位置，比如用规则明文禁止把它绑上自动奖惩？这是把「解耦」从一句口号变成可执行制度的关键缺口，D7 报告把它列为开放问题。</p>
 <p><strong>一句话带走：</strong>eval 是体检报告，不是发奖机器；分数一挂上利益，被测的东西就开始讨好分数。</p></div>

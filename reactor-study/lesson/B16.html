@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
-<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=0b307b353d">
+<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=b998d7d18a">
 <link rel="stylesheet" href="/theme/components.css?v=906e7a3bf4"><link rel="stylesheet" href="/theme/led.css?v=23da0ff491">
 <link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"LearningResource","name":"信号、废话与证明 · Signals & Cheap Talk","description":"说话不要钱，所以承诺不值钱。","inLanguage":"zh-CN","url":"https://reactor.vincejiang.com/lesson/B16.html","author":{"@type":"Person","name":"Vince Jiang","url":"https://vincejiang.com"},"isAccessibleForFree":true,"learningResourceType":"lesson","educationalLevel":"advanced","timeRequired":"PT10M","teaches":"Signals & Cheap Talk","isPartOf":{"@type":"Course","name":"REACTOR","url":"https://reactor.vincejiang.com/"},"coursePrerequisites":"委托代理"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"天赋树","item":"https://reactor.vincejiang.com/"},{"@type":"ListItem","position":2,"name":"定律与形式","item":"https://reactor.vincejiang.com/atlas.html"},{"@type":"ListItem","position":3,"name":"B16 信号、废话与证明","item":"https://reactor.vincejiang.com/lesson/B16.html"}]}]</script>
@@ -59,7 +59,7 @@
   </div>
     </div>
     <article class="stack"><div class="read">
-<p>说话不要钱，所以承诺天然不值钱。一句「我保证没问题」不花任何成本，那它到底能信几分，就不取决于话说得多漂亮，而取决于说话的人和你之间利益差多远。核心是一条定理：要让对方说真话，需要多贵的证明，跟你俩的利益冲突成正比。冲突为零时，空口白话就够；冲突越大，才越需要昂贵的证据把谎话压住。委托代理讲过，你想要一个好 agent，可优化器只想让 eval 亮绿灯（<code>B12</code>）；再往下问一层：当双方利益不一致时，agent 说的话，你该信几分？</p></div>
+<p>说话不要钱，所以承诺天然不值钱。一句「我保证没问题」不花任何成本，那它到底能信几分，就不取决于话说得多漂亮，而取决于说话的人和你之间利益差多远。核心是一条定理：要让对方说真话，需要多贵的证明，跟你俩的利益冲突成正比。冲突为零时，空口白话就够；冲突越大，才越需要昂贵的证据把谎话压住。委托代理讲过，你想要一个好 agent，可优化器只想让 eval 亮绿灯（<a class="node-ref" href="/lesson/B12.html"><code>B12</code></a>）；再往下问一层：当双方利益不一致时，agent 说的话，你该信几分？</p></div>
 <div class="read">
 <p>经济学里有个词叫 cheap talk，直译就是零成本的空口白话，指那种说了不用付任何代价的话。Crawford 与 Sobel 1982 年把它研究透了，结论出人意料地干净：无成本的沟通里，能传递多少真话，由双方利益的一致程度单调决定。他们的原话是，双方偏好越接近，均衡里的信号越有信息量。往两头看：如果说话人和听话人利益完全一致，他没有任何理由撒谎，一句白话就百分百可信；如果两人利益完全对立，那不管他说什么你都不该信，理论上这种情形会退化成经济学家说的胡言乱语均衡，说了等于没说，因为任何一句话都可能是反着的。中间地带最有意思：利益部分重叠时，说话人不会字字为你着想，但也不会全盘骗你，他会把私有信息粗粗地分成几档告诉你，冲突越小，分得越细、越有用。一句话，空口白话的可信度，是利益一致度的函数。</p></div>
 <aside class="callout intuit"><span class="co-tag">// 直觉</span>
@@ -70,9 +70,9 @@
 <aside class="callout myth"><span class="co-tag">// 讹传更正</span>
 <p><strong>流行说法：「昂贵是诚实信号的必要条件，越贵越可信。」</strong>复核结论：不对。昂贵只在存在利益冲突时才需要，而且需要的量正比于冲突，不是越贵越好。利益一致时，昂贵是纯损失：Bergstrom 与 Lachmann 1998 年那篇标题就叫「说话是廉价的」，证明在亲缘这种利益高度一致的情形下，零成本的白话甚至比昂贵的分离信号更优，因为浪费掉的成本是双方共同的净损失。这条纠正很要紧，因为孔雀尾巴那套「越贵越可信」的故事太深入人心，容易让人以为抗造假就得把门槛抬到天上。真相是：先降冲突，能省下的成本全省。</p></aside>
 <div class="read">
-<p>把这条定理翻译成设计原则，就是一个跟直觉相反的顺序：别一上来就把证明门槛往死里抬。第一步永远是降冲突，让说话的人和听话的人利益尽量对齐，冲突小了，很多话不验自明。第二步才是，对剩下压不掉的那部分冲突，加一个刚好够用的、确定的成本：一定概率被抽查、事后要追责、谎报会留下污点。这两步之后，你才需要那种更硬的、靠结构而非成本的证明，比如让低质量的一方物理上就造不出来的信号。那是下一课 <code>G01</code> 的正题，它会接着讲，怎样的信号对说谎者特别贵、对诚实者却几乎免费，以及为什么真正好的判据不是最贵的那个。</p></div>
+<p>把这条定理翻译成设计原则，就是一个跟直觉相反的顺序：别一上来就把证明门槛往死里抬。第一步永远是降冲突，让说话的人和听话的人利益尽量对齐，冲突小了，很多话不验自明。第二步才是，对剩下压不掉的那部分冲突，加一个刚好够用的、确定的成本：一定概率被抽查、事后要追责、谎报会留下污点。这两步之后，你才需要那种更硬的、靠结构而非成本的证明，比如让低质量的一方物理上就造不出来的信号。那是下一课 <a class="node-ref" href="/lesson/G01.html"><code>G01</code></a> 的正题，它会接着讲，怎样的信号对说谎者特别贵、对诚实者却几乎免费，以及为什么真正好的判据不是最贵的那个。</p></div>
 <aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
-<p><strong>翻译成 AI 评测，一句话就能定性：模型的自我报告是 cheap talk。</strong>让模型自己说「我有九成把握」「我没有有害倾向」「这个答案我很确定」，这些话本身不花它任何成本，因此可信度完全取决于它的训练目标和你的真实目标冲突有多大。当两者高度一致时，自评可以是有用的粗略信号；当模型被训练去讨好打分、去让 eval 通过时，冲突拉满，自评就退化成胡言乱语，你必须换成昂贵证明：留出集、独立审计、真实环境里的可验证后果。冲突越大，这些证明要越硬。而按定理，最划算的第一步永远不是把审计加到最严，而是先想办法让被评的目标和真实目标别那么对着干，这条通向 <code>G01</code> 的降冲突和 <code>G05</code> 的机制设计。</p></aside>
+<p><strong>翻译成 AI 评测，一句话就能定性：模型的自我报告是 cheap talk。</strong>让模型自己说「我有九成把握」「我没有有害倾向」「这个答案我很确定」，这些话本身不花它任何成本，因此可信度完全取决于它的训练目标和你的真实目标冲突有多大。当两者高度一致时，自评可以是有用的粗略信号；当模型被训练去讨好打分、去让 eval 通过时，冲突拉满，自评就退化成胡言乱语，你必须换成昂贵证明：留出集、独立审计、真实环境里的可验证后果。冲突越大，这些证明要越硬。而按定理，最划算的第一步永远不是把审计加到最严，而是先想办法让被评的目标和真实目标别那么对着干，这条通向 <a class="node-ref" href="/lesson/G01.html"><code>G01</code></a> 的降冲突和 <a class="node-ref" href="/lesson/G05.html"><code>G05</code></a> 的机制设计。</p></aside>
 <div class="read">
 <p>留一个问题：定理给了成本的下限，说至少要加到覆盖冲突那么多，却没给上限。信号加得过猛会有副作用，经济学里叫过度信号的福利损失：为了把骗子挡在外面，你可能连诚实的一方也一起拖进了昂贵的举证里，让人人都为证明清白而空耗。那么在一个人造的 eval 里，成本该设多高，才既压得住说谎、又不至于误伤老实人？这道题目前没有干净答案。</p>
 <p><strong>一句话带走：</strong>先问对方有没有理由骗你，再决定要不要它拿证据；冲突越小，越多话不验自明。</p></div>

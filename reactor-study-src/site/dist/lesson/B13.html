@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
-<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=0b307b353d">
+<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=b998d7d18a">
 <link rel="stylesheet" href="/theme/components.css?v=906e7a3bf4"><link rel="stylesheet" href="/theme/led.css?v=23da0ff491">
 <link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"LearningResource","name":"优化者诅咒 · Optimizer's Curse","description":"选中的那个，真值期望低于它的估计。","inLanguage":"zh-CN","url":"https://reactor.vincejiang.com/lesson/B13.html","author":{"@type":"Person","name":"Vince Jiang","url":"https://vincejiang.com"},"isAccessibleForFree":true,"learningResourceType":"lesson","educationalLevel":"advanced","timeRequired":"PT10M","teaches":"Optimizer's Curse","isPartOf":{"@type":"Course","name":"REACTOR","url":"https://reactor.vincejiang.com/"},"coursePrerequisites":"Goodhart 四型, 向均值回归"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"天赋树","item":"https://reactor.vincejiang.com/"},{"@type":"ListItem","position":2,"name":"定律与形式","item":"https://reactor.vincejiang.com/atlas.html"},{"@type":"ListItem","position":3,"name":"B13 优化者诅咒","item":"https://reactor.vincejiang.com/lesson/B13.html"}]}]</script>
@@ -59,7 +59,7 @@
   </div>
     </div>
     <article class="stack"><div class="read">
-<p><code>B08</code> 的四型里有一型：被选中者的真实水平必然低于它的读数，回归型。它是全家族最反直觉的一条：不需要作弊者，不需要坏指标，甚至不需要任何人犯错。哪怕每一个估计都无偏（平均而言不高估也不低估），只要你做了「挑估计值最高的那个」这个动作，失望就已经写进了数学。它的名字叫优化者诅咒（optimizer's curse），2006 年由决策科学家 Smith 与 Winkler 给出干净的形式。你从三家外卖店的评分里挑最高的那家、从一轮面试里挑分数最高的候选人、从 N 个 checkpoint 里挑 eval 分最高的那个，每一次都在触发它。</p></div>
+<p><a class="node-ref" href="/lesson/B08.html"><code>B08</code></a> 的四型里有一型：被选中者的真实水平必然低于它的读数，回归型。它是全家族最反直觉的一条：不需要作弊者，不需要坏指标，甚至不需要任何人犯错。哪怕每一个估计都无偏（平均而言不高估也不低估），只要你做了「挑估计值最高的那个」这个动作，失望就已经写进了数学。它的名字叫优化者诅咒（optimizer's curse），2006 年由决策科学家 Smith 与 Winkler 给出干净的形式。你从三家外卖店的评分里挑最高的那家、从一轮面试里挑分数最高的候选人、从 N 个 checkpoint 里挑 eval 分最高的那个，每一次都在触发它。</p></div>
 <figure class="module reg" data-module="winners-curse" data-modname="winners-curse" data-modtype="sim">
     <figcaption class="module-head"><span class="fig">FIG.01</span>
       <span>选中的那个，真值期望低于它的估计值</span><span class="spacer"></span>
@@ -77,7 +77,7 @@
 <aside class="callout myth"><span class="co-tag">// 讹传更正</span>
 <p><strong>流行说法：「赢者诅咒是行为经济学家 Thaler 提出的。」</strong>复核结论：概念源自 1971 年三位石油工程师 Capen、Clapp 与 Campbell 对墨西哥湾油田竞标的观察，中标者往往是最高估油田价值的公司，赢了拍卖、亏了钱；Thaler 1988 年在 JEP 的 Anomalies 专栏把它推广成经济学疑难，是通俗化者而非提出者。另一处常见混用：赢者诅咒是多人竞价的专有名词，优化者诅咒覆盖一切择优决策，Smith 与 Winkler 在论文第一节明确区分了两者。</p></aside>
 <aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
-<p><strong>best-of-N 就是优化者诅咒的引擎。</strong>从 N 个 checkpoint 里挑 eval 分最高的、厂商从 N 个私测变体里只发布最高分的（<code>Y11</code> 的核心指控）、对一批 prompt 采样 N 次取最优，每一次都在放大正向噪声。2026 年这套统计学正式进了 LLM 评测：SIREN 协议（selection-aware repeated-split reporting）给出证据表明报告榜首分数会乐观虚高、甚至改变部署结论，并给出校正后的诚实区间（单篇新近结果）；统计学界同期给出通用工具（Zrnic 与 Fithian 2024 的赢者诅咒弹性防御），值得玩味的是 Zrnic 正是 performative prediction（<code>Y09</code>）的共同奠基者，反应性与选择偏差两条线已握在同一批人手里。贝叶斯收缩不是保守，而是对选择偏差的校正。</p></aside>
+<p><strong>best-of-N 就是优化者诅咒的引擎。</strong>从 N 个 checkpoint 里挑 eval 分最高的、厂商从 N 个私测变体里只发布最高分的（<a class="node-ref" href="/lesson/Y11.html"><code>Y11</code></a> 的核心指控）、对一批 prompt 采样 N 次取最优，每一次都在放大正向噪声。2026 年这套统计学正式进了 LLM 评测：SIREN 协议（selection-aware repeated-split reporting）给出证据表明报告榜首分数会乐观虚高、甚至改变部署结论，并给出校正后的诚实区间（单篇新近结果）；统计学界同期给出通用工具（Zrnic 与 Fithian 2024 的赢者诅咒弹性防御），值得玩味的是 Zrnic 正是 performative prediction（<a class="node-ref" href="/lesson/Y09.html"><code>Y09</code></a>）的共同奠基者，反应性与选择偏差两条线已握在同一批人手里。贝叶斯收缩不是保守，而是对选择偏差的校正。</p></aside>
 <div class="read">
 <p>留一个问题：「榜首模型真实能力低于分数」这件事里，多少来自反应性（被评者回应测量），多少来自选择偏差（评者按分择优）？两条通道叠加，但目前没有任何框架能把它们分离并联合校正。D6 报告认为这是 eval 退化研究最缺的下一步。</p>
 <p><strong>一句话带走：</strong>冠军的分数里永远掺着运气，候选越多、噪声越大，掺得越多；聪明的做法不是不选，是选完打折。</p></div>

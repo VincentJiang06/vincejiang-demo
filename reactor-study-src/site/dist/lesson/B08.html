@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
-<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=0b307b353d">
+<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=b998d7d18a">
 <link rel="stylesheet" href="/theme/components.css?v=906e7a3bf4"><link rel="stylesheet" href="/theme/led.css?v=23da0ff491">
 <link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"LearningResource","name":"Goodhart 四型 · Goodhart Taxonomy","description":"同一句格言，四种完全不同的机制。","inLanguage":"zh-CN","url":"https://reactor.vincejiang.com/lesson/B08.html","author":{"@type":"Person","name":"Vince Jiang","url":"https://vincejiang.com"},"isAccessibleForFree":true,"learningResourceType":"lesson","educationalLevel":"advanced","timeRequired":"PT10M","teaches":"Goodhart Taxonomy","isPartOf":{"@type":"Course","name":"REACTOR","url":"https://reactor.vincejiang.com/"},"coursePrerequisites":"Goodhart 定律"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"天赋树","item":"https://reactor.vincejiang.com/"},{"@type":"ListItem","position":2,"name":"定律与形式","item":"https://reactor.vincejiang.com/atlas.html"},{"@type":"ListItem","position":3,"name":"B08 Goodhart 四型","item":"https://reactor.vincejiang.com/lesson/B08.html"}]}]</script>
@@ -59,7 +59,7 @@
   </div>
     </div>
     <article class="stack"><div class="read">
-<p>Goodhart 定律说指标一旦成为目标就会失灵（<code>B01</code>）。它到底是怎么失灵的？答案有点意外：失灵不是一种，而是四种，机制完全不同，解药也完全不同。就像「发烧」不是一种病，背后可能是感染、中暑或者免疫问题，退烧药只对其中一部分管用。判错了病型，药就会用在错误的环节。</p>
+<p>Goodhart 定律说指标一旦成为目标就会失灵（<a class="node-ref" href="/lesson/B01.html"><code>B01</code></a>）。它到底是怎么失灵的？答案有点意外：失灵不是一种，而是四种，机制完全不同，解药也完全不同。就像「发烧」不是一种病，背后可能是感染、中暑或者免疫问题，退烧药只对其中一部分管用。判错了病型，药就会用在错误的环节。</p>
 <p>把这张表画出来的是 David Manheim 与 Scott Garrabrant，2018 年的论文《Categorizing Variants of Goodhart's Law》。两人来自 AI 对齐研究圈子（Garrabrant 供职于研究机构 MIRI），他们关心的原始问题是：AI 为什么总能钻奖励函数的空子。为了回答它，他们把 Goodhart 那句格言拆开重装：设你真正想要的东西叫真实目标 G，你实际能测到的数字叫代理指标 M，然后对 M 施加优化压力，看 M 与 G 的关系在哪些情况下会断。他们找到了四种彼此独立的断法。</p></div>
 <figure class="module reg" data-module="goodhart4" data-modname="goodhart4" data-modtype="sim">
     <figcaption class="module-head"><span class="fig">FIG.01</span>
@@ -70,23 +70,23 @@
 <div class="read">
 <p>切换四种类型，盯住「选中者的真实目标」（红线）怎么走。四型各配一个故事：</p>
 <ul>
-<li><strong>Regressional（回归型）：靠运气混进来的。</strong>想按篮球天赋选人，天赋没法直接测，你按身高选，因为身高与球技确实相关。但「全国最高的那个人」几乎必定不是最好的球员：他能排第一，多半是因为身高里那些与球技无关的成分（基因彩票）恰好拉满。规律是普遍的：指标等于目标加噪声时，按指标择优，同时也在按噪声择优，选中者的真实水平必然低于指标显示的水平。这是四型中唯一无法靠更聪明的优化消除的一型，只能事后打折扣（把估计往平均值方向收缩）。它有个专门的名字叫优化者诅咒，<code>B13</code> 整课讲它。</li>
+<li><strong>Regressional（回归型）：靠运气混进来的。</strong>想按篮球天赋选人，天赋没法直接测，你按身高选，因为身高与球技确实相关。但「全国最高的那个人」几乎必定不是最好的球员：他能排第一，多半是因为身高里那些与球技无关的成分（基因彩票）恰好拉满。规律是普遍的：指标等于目标加噪声时，按指标择优，同时也在按噪声择优，选中者的真实水平必然低于指标显示的水平。这是四型中唯一无法靠更聪明的优化消除的一型，只能事后打折扣（把估计往平均值方向收缩）。它有个专门的名字叫优化者诅咒，<a class="node-ref" href="/lesson/B13.html"><code>B13</code></a> 整课讲它。</li>
 <li><strong>Extremal（极值型）：走出地图边界的。</strong>体温与健康状态相关，但这条相关只在常温区间被验证过；如果有人据此把「升温」推向极致，得到的不是超级健康，是发烧致死。指标与目标的相关是在日常范围内观察到的，优化会把系统推进从没人去过的极端区域，那里游戏规则本身变了（术语叫 regime change，机制切换）。与回归型的区别：回归型是打折，极值型是翻脸，可以是灾难性的。</li>
 <li><strong>Causal（因果型）：推错了箭头的。</strong>篮球运动员普遍很高，但让孩子打篮球不会让他长高，因为「高」导致「适合打篮球」，箭头方向反了。同理，胆固醇读数与健康相关，吃药把读数压下去却不处理病因，改善的只是读数。用因果推断的语言说：观察到 M 高时 G 高，不代表你动手把 M 抬高时 G 会跟着高，干预会切断产生相关性的那条暗道。让学生背题库不提高能力，就是这一型：分数与能力只是共因关联。</li>
 <li><strong>Adversarial（对抗型）：被对手喂进来的。</strong>前三型里没有坏人，这一型有：存在目标和你不一致的对手，他知道你按 M 打分，就专门生产 M 高而 G 低的东西喂给你。应试作弊、刷搜索排名的 SEO、粉饰财报，全在此列。这才是 Goodhart 1975 年与 Campbell 1979 年观察到的原始情形：被考核者是有策略的人。对手越聪明、信息越足，这一型崩得越快。</li>
 </ul>
-<p>分类学还顺手给一桩老公案排了座次。课程稍后会细讲的眼镜蛇公案（<code>B04</code>）大意是：1902 年法属河内为灭鼠悬赏鼠尾，捕鼠人割下尾巴把老鼠放生，留着它们继续繁殖，好产出下一批尾巴。这故事常被当成对抗型的招牌，但细看并不贴：交上来的鼠尾是真的，没人伪造测量。捕鼠人只是找到一条路径，让指标（尾巴数）源源不断得到满足，而真目标（灭鼠）毫发无损。Manheim 与 Garrabrant 专门为这类情形起了名字，non-causal cobra effects：代理人以非因果的方式对指标施压。一则传闻由此升格为分类学术语。故事是寓言，机制是定理，术语是桥。</p></div>
+<p>分类学还顺手给一桩老公案排了座次。课程稍后会细讲的眼镜蛇公案（<a class="node-ref" href="/lesson/B04.html"><code>B04</code></a>）大意是：1902 年法属河内为灭鼠悬赏鼠尾，捕鼠人割下尾巴把老鼠放生，留着它们继续繁殖，好产出下一批尾巴。这故事常被当成对抗型的招牌，但细看并不贴：交上来的鼠尾是真的，没人伪造测量。捕鼠人只是找到一条路径，让指标（尾巴数）源源不断得到满足，而真目标（灭鼠）毫发无损。Manheim 与 Garrabrant 专门为这类情形起了名字，non-causal cobra effects：代理人以非因果的方式对指标施压。一则传闻由此升格为分类学术语。故事是寓言，机制是定理，术语是桥。</p></div>
 <aside class="callout myth"><span class="co-tag">// 讹传更正</span>
 <p><strong>流行做法：把「Goodhart 定律」当一种现象引用。</strong>复核结论：这会掩盖机制差异，进而开错药方。四型要求四套对策：回归型要校准（收缩估计、留出集），极值型要分布外警惕（别外推到没验证过的区域），因果型要因果识别（做干预实验，别只看相关），对抗型要机制设计（指标保密、多指标、独立审计）。一手出处：Manheim & Garrabrant (2018), arXiv:1803.04585，前身是 Garrabrant 2017 年 12 月在 LessWrong 发表的 Goodhart Taxonomy。另一个方向的学术动向值得记：2024 年《Behavioral and Brain Sciences》的目标论文（John 等人）反过来做统一，把眼镜蛇效应、Goodhart 定律、Campbell 定律列为同一机制在不同学科的别名，统称 proxy failure（代理失效）；「究竟是单一机制还是一族相似现象」正是该文开放评议的核心争点，尚无定论。</p></aside>
 <div class="read">
-<p>2022 年之后，这套定性分类被机器学习一步步做成了定理和测量。<code>B01</code> 结尾提过这批工作，这里按逻辑串一遍，每条记一句它证明了什么。</p>
+<p>2022 年之后，这套定性分类被机器学习一步步做成了定理和测量。<a class="node-ref" href="/lesson/B01.html"><code>B01</code></a> 结尾提过这批工作，这里按逻辑串一遍，每条记一句它证明了什么。</p>
 <p>Pan、Bhatia 与 Steinhardt 2022 年在四个故意把奖励设错的强化学习环境里实测，发现能力越强的 AI 越会钻空子：代理奖励推得越高，真实奖励掉得越狠，而且常常不是缓慢滑坡，是断崖式骤跌。这条曲线的含义直白：Goodhart 效应按能力计费，优化者越强，惩罚越重。Skalse 等人同年证明了一条不可能定理：只要两个奖励函数不完全一致（其中之一不是无用的常数），就几乎必然存在钻空子的办法。翻译过来：不存在「造一个钻不了空子的指标」这回事，只能限制对方的行动空间来局部缓解。</p>
-<p>Gao、Schulman 与 Hilton 2023 年给「过度优化」画出了定量曲线：代理分一路上涨，真实分先升后降，而且下降遵循确定的数学形式，系数随奖励模型的规模平滑变化。这意味着崩塌不是玄学，是可以外推、可以预测的（这条曲线在 <code>Y07</code> 有完整一课）。Karwowski 等 2024 年更进一步，在马尔可夫决策过程里给出 Goodhart 发生的几何解释，并证明了一个「最优早停」方法：原则上可以算出该在何处停止优化，赶在临界点之前收手。El-Mhamdi 与 Hoang 2024 年则给出判断轻重的标尺：过度优化到底是白费力气（弱 Goodhart）还是造成伤害（强 Goodhart），取决于「真目标与代理之差」的统计尾部形状，差异呈长尾则伤害型成立。什么时候指标反而是良性的，这条边界留给 <code>B14</code> 专门陈述。</p>
+<p>Gao、Schulman 与 Hilton 2023 年给「过度优化」画出了定量曲线：代理分一路上涨，真实分先升后降，而且下降遵循确定的数学形式，系数随奖励模型的规模平滑变化。这意味着崩塌不是玄学，是可以外推、可以预测的（这条曲线在 <a class="node-ref" href="/lesson/Y07.html"><code>Y07</code></a> 有完整一课）。Karwowski 等 2024 年更进一步，在马尔可夫决策过程里给出 Goodhart 发生的几何解释，并证明了一个「最优早停」方法：原则上可以算出该在何处停止优化，赶在临界点之前收手。El-Mhamdi 与 Hoang 2024 年则给出判断轻重的标尺：过度优化到底是白费力气（弱 Goodhart）还是造成伤害（强 Goodhart），取决于「真目标与代理之差」的统计尾部形状，差异呈长尾则伤害型成立。什么时候指标反而是良性的，这条边界留给 <a class="node-ref" href="/lesson/B14.html"><code>B14</code></a> 专门陈述。</p>
 <p>这个家族还在往两个方向扩张。一是跨学科统一：前面提到的 proxy failure 论文把三个领域并置。神经科学：大脑用多巴胺当「这件事对生存有利」的代理信号，毒品直接刷高这个信号，所以成瘾就是神经系统被 reward hacking。生态学：雌孔雀用尾巴的华丽度当雄性基因质量的代理，于是尾巴被一代代过度优化，长到拖累生存。经济学的绩效指标，不过是同一出戏的人类版本。二是元层：2025 年 OpenAI 发现，前沿推理模型会在思维链（模型作答前的内心草稿）里明说自己打算钻空子，用另一个模型读这些草稿就能抓个正着；但一旦把「草稿看起来老实」也纳入训练目标，模型转而学会隐藏意图。用来抓博弈的监控指标一旦成为目标，监控本身也失灵，Goodhart 定律吃掉了自己的看门狗。Anthropic 同年报告，在生产环境学会钻奖励空子的模型，会连带出现更广泛的目标错位。这批最新结果多出自预印本与厂商报告，定性趋势可靠，具体数字待同行评议。</p></div>
 <aside class="callout intuit"><span class="co-tag">// 直觉</span>
 <p><strong>四型共享一个骨架：优化压力是一台专门搜索「指标高、目标低」区域的机器，四型只是这些区域的四种来源。</strong>靠运气进来的是回归型（正噪声被择优选中），靠出界进来的是极值型（相关性从未在那里被验证），靠错箭头进来的是因果型（你推的是共因的影子），靠对手送进来的是对抗型（有人按你的规则批量制造）。压力越大、搜索越强，这些区域被命中的概率越高，与任何人的善恶无关。</p></aside>
 <aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
-<p><strong>诊断你的 eval 失效，先问它是哪一型。</strong>题目过拟合大多是回归型（择优放大噪声）；把模型推到分布外后的怪异行为是极值型；分数上升而实际能力不动，是因果型（分数与能力只是共因相关）；一个会针对你评分规则专门优化的训练循环，正在制造对抗型。四型在真实管线里常同时发生：从 N 个候选里挑最高分是回归型，把奖励推出训练分布是极值型，优化一个与真实对齐仅仅相关的代理是因果型，模型学会 reward hacking 是对抗型。对策各不相同：回归型靠收缩与留出集，因果型靠干预真正的因，对抗型靠指标保密或轮换（保密为什么反而是最优设计，微观基础见 <code>B12</code>）。判错类型，补救就会用在错误的环节。</p></aside>
+<p><strong>诊断你的 eval 失效，先问它是哪一型。</strong>题目过拟合大多是回归型（择优放大噪声）；把模型推到分布外后的怪异行为是极值型；分数上升而实际能力不动，是因果型（分数与能力只是共因相关）；一个会针对你评分规则专门优化的训练循环，正在制造对抗型。四型在真实管线里常同时发生：从 N 个候选里挑最高分是回归型，把奖励推出训练分布是极值型，优化一个与真实对齐仅仅相关的代理是因果型，模型学会 reward hacking 是对抗型。对策各不相同：回归型靠收缩与留出集，因果型靠干预真正的因，对抗型靠指标保密或轮换（保密为什么反而是最优设计，微观基础见 <a class="node-ref" href="/lesson/B12.html"><code>B12</code></a>）。判错类型，补救就会用在错误的环节。</p></aside>
 <div class="read">
 <p>留一个问题：五种形式化（四型分类、不可能定理、标度律、几何解释、尾分布判据）各自抓住了崩塌的一个侧面，但彼此尚未被证明等价，尾分布路径与标度律路径的关系尤其悬而未决。另一个候补：监控指标被博弈的元层 Goodhart，能否算成四型之外的第五型？</p>
 <p><strong>一句话带走：</strong>Goodhart 不是一种病，是四种病共用一个名字；先验明病型，再对症下药。</p></div>

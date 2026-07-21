@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
-<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=0b307b353d">
+<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=b998d7d18a">
 <link rel="stylesheet" href="/theme/components.css?v=906e7a3bf4"><link rel="stylesheet" href="/theme/led.css?v=23da0ff491">
 <link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"LearningResource","name":"留出与动态评测 · Held-Out & Dynamic Benchmarks","description":"让优化循环永远追不上你的题库。","inLanguage":"zh-CN","url":"https://reactor.vincejiang.com/lesson/G03.html","author":{"@type":"Person","name":"Vince Jiang","url":"https://vincejiang.com"},"isAccessibleForFree":true,"learningResourceType":"lesson","educationalLevel":"advanced","timeRequired":"PT10M","teaches":"Held-Out & Dynamic Benchmarks","isPartOf":{"@type":"Course","name":"REACTOR","url":"https://reactor.vincejiang.com/"},"coursePrerequisites":"自适应过拟合, 基准污染与饱和"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"天赋树","item":"https://reactor.vincejiang.com/"},{"@type":"ListItem","position":2,"name":"防御与设计","item":"https://reactor.vincejiang.com/atlas.html"},{"@type":"ListItem","position":3,"name":"G03 留出与动态评测","item":"https://reactor.vincejiang.com/lesson/G03.html"}]}]</script>
@@ -60,7 +60,7 @@
     </div>
     <article class="stack"><div class="read">
 <p>怎么让考题永远追不上作弊的人？核心就一招的三个变体：藏一批题不公开、只考「发布之后才出现」的新题、定期换题。先记住一个泼冷水的事实，藏题买来的是时间，不是免疫，它拖慢作弊，但挡不住。</p>
-<p>你在 <code>Y02</code> 见过自适应过拟合：反复拿同一批题去比模型、挑最好的，挑着挑着就过拟合到这批题的运气上。<code>Y03</code> 又讲过污染：题漏进了训练集，分数量的就成了记忆而不是能力。这两件事，都靠同一条思路对付。</p>
+<p>你在 <a class="node-ref" href="/lesson/Y02.html"><code>Y02</code></a> 见过自适应过拟合：反复拿同一批题去比模型、挑最好的，挑着挑着就过拟合到这批题的运气上。<a class="node-ref" href="/lesson/Y03.html"><code>Y03</code></a> 又讲过污染：题漏进了训练集，分数量的就成了记忆而不是能力。这两件事，都靠同一条思路对付。</p>
 <p>思路只有一条，让被考的一方没法提前知道、也没法背下要考什么。落地成三招，从软到硬：</p>
 <ul>
 <li><strong>留一批私题</strong>：公开你考哪些维度、用什么方法，但留一批题从不公开、从不进任何训练和调参，只在最后打分时用一次。</li>
@@ -71,7 +71,7 @@
 <p>顺带把背后的原理和一个反转说清。反复拿同一批题比模型、挑最好的，每挑一次都在悄悄泄漏这批题的信息，挑多了就过拟合到题的运气上，这就是私题库为什么要严格隔离。有人为公开榜设计过更聪明的机制，比如只在你的新成绩明显超过历史最好时才更新公开分，把每次泄漏的信息量卡到最小。不过要给恐慌打个折：有人复核了一百多场数据竞赛，发现这种过拟合弱得出奇，因为大家的模型高度相似，等于没做那么多次真正独立的尝试。所以在「反复重用同一批题」这件事上，理论很吓人、实测挺温和；真正的实锤发生在你死磕单一目标、还让模型看得见答案的时候。</p></div>
 <div class="read">
 <p>三招都不新，可一落地就撞墙，编程测试 SWE-bench 的经历就是一部血泪史。原版出来后，有团队请人一道道审、做了个「干净版」。可后来一查，至少 16.4% 的题测试本身有毛病，在最能拉开顶尖模型的最难 138 题里，约 59% 是坏的，这说明人审过的干净基准也没那么干净。更糟的是，各家前沿模型几乎能一字不差背出人类当年写好的修复补丁，那是背答案，不是推理。接着有人做了抗污染的升级版，藏了一部分题当私题库，结果 2026 年一审，大约 30% 的题是坏的，通过率八个月里从 23.3% 蹿到 80.3%，官方干脆撤回了推荐。每修好一代都被刷爆，然后再造新的，而新版的寿命一代比一代短。</p>
-<p>私题库还有个比污染更阴的漏洞：出题的人和被考的人之间，钱和「谁能看到题」不对等。有个用原创难题命制的数学基准 FrontierMath，本是抗污染的样板，起初模型只能做对不到 2%。后来媒体披露它由一家 AI 公司出资，而且这家公司能看到绝大多数最难的题和答案，六位付费出题的数学家事先都不知情，公司随后用它宣布自家模型拿了 25%。问题不在这个数字真假，而在于：当出题方被被测方供养、还掌握谁能看题，「它没见过这题」这层保证就不再由技术决定，而由治理决定，这条接 <code>G06</code>。</p>
+<p>私题库还有个比污染更阴的漏洞：出题的人和被考的人之间，钱和「谁能看到题」不对等。有个用原创难题命制的数学基准 FrontierMath，本是抗污染的样板，起初模型只能做对不到 2%。后来媒体披露它由一家 AI 公司出资，而且这家公司能看到绝大多数最难的题和答案，六位付费出题的数学家事先都不知情，公司随后用它宣布自家模型拿了 25%。问题不在这个数字真假，而在于：当出题方被被测方供养、还掌握谁能看题，「它没见过这题」这层保证就不再由技术决定，而由治理决定，这条接 <a class="node-ref" href="/lesson/G06.html"><code>G06</code></a>。</p>
 <p>最后必须泼一盆冷水，别把藏题当银弹。2026 年一项研究扒了 60 个主流基准，发现题目越老越容易饱和，也就是顶尖模型之间分不出高下，从发布不到两年的 42.9% 升到超过五年的 54.5%，但涨得并不猛。真正扎心的是另一条：公开题库和私有藏题库，饱和的比例没有统计上的差别。也就是说，把题藏起来并不能阻止它饱和。藏题的作用是把「被摸透」的时间往后拖，给你争取换题、轮换的窗口，它买的是时间，不是免疫。真正的防线是把三招当成一条一直在转的流水线，而不是指望某一批藏起来的题永远干净。</p>
 <p>设计 eval 时，照着这张清单走：</p>
 <ul>
@@ -81,11 +81,11 @@
 <li>主动做污染审计，把「答案能被一字不差背出」「换个选项顺序就掉分」的题作废。</li>
 </ul></div>
 <aside class="callout myth"><span class="co-tag">// 讹传更正</span>
-<p><strong>流行说法：「把题藏起来做私测，就能给基准续命，藏起来的分就是干净的。」</strong>复核结论：两头都要打折。Akhtar、Reuel 等 2026 年的跨基准研究（arXiv:2602.16763）显示，公开与私有测试集在饱和率上没有统计显著差异，藏题不阻止饱和。更麻烦的是「证明干净」本身在方法上站不住：n-gram 重叠、嵌入相似度都能被改写或翻译过的题骗过（Yang 等 2023），成员推断攻击在大模型上几乎不比瞎猜强（Duan 等 2024），规避检测被证明太容易（Dekoninck 等 2024）。所以别把一次「污染检测阴性」当成分数干净的证书，取证的困境详见 <code>Y13</code>。</p></aside>
+<p><strong>流行说法：「把题藏起来做私测，就能给基准续命，藏起来的分就是干净的。」</strong>复核结论：两头都要打折。Akhtar、Reuel 等 2026 年的跨基准研究（arXiv:2602.16763）显示，公开与私有测试集在饱和率上没有统计显著差异，藏题不阻止饱和。更麻烦的是「证明干净」本身在方法上站不住：n-gram 重叠、嵌入相似度都能被改写或翻译过的题骗过（Yang 等 2023），成员推断攻击在大模型上几乎不比瞎猜强（Duan 等 2024），规避检测被证明太容易（Dekoninck 等 2024）。所以别把一次「污染检测阴性」当成分数干净的证书，取证的困境详见 <a class="node-ref" href="/lesson/Y13.html"><code>Y13</code></a>。</p></aside>
 <aside class="callout intuit"><span class="co-tag">// 直觉</span>
-<p><strong>三招里时间切分最狠，因为它把「防作弊」从花钱换成了讲因果。</strong>藏题、加密、私有题库都是在抬高「拿到题」的成本，成本壁垒总能被钱或泄漏绕过（FrontierMath 就是例子）；而只考训练截止日之后才出现的题，靠的是因果，未来的数据物理上进不了过去的训练集，谁也没法背下还没发生的东西。这正是 <code>G01</code> 讲的 index 信号在 eval 里的落地，不靠贵、靠结构上做不了假。代价是每期题目难度要重新校准、跨年份不好直接比。</p></aside>
+<p><strong>三招里时间切分最狠，因为它把「防作弊」从花钱换成了讲因果。</strong>藏题、加密、私有题库都是在抬高「拿到题」的成本，成本壁垒总能被钱或泄漏绕过（FrontierMath 就是例子）；而只考训练截止日之后才出现的题，靠的是因果，未来的数据物理上进不了过去的训练集，谁也没法背下还没发生的东西。这正是 <a class="node-ref" href="/lesson/G01.html"><code>G01</code></a> 讲的 index 信号在 eval 里的落地，不靠贵、靠结构上做不了假。代价是每期题目难度要重新校准、跨年份不好直接比。</p></aside>
 <aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
-<p><strong>怀疑自己的分数被污染了，三个快速自查：</strong>其一，让模型把测试题「续写」出来，如果它能一字不差补全题目或答案，多半见过；其二，把选项顺序打乱、把数字换掉，如果分数明显掉，说明它记的是题面不是解法（这正是 <code>Y03</code> 里 GSM 系列换个数就崩的机理）；其三，比一比训练截止日前后的题，如果截止日之前的题分数系统性偏高，那就是污染的时间指纹。三条里任何一条命中，这批题的分数就别再当能力证据用了。</p></aside>
+<p><strong>怀疑自己的分数被污染了，三个快速自查：</strong>其一，让模型把测试题「续写」出来，如果它能一字不差补全题目或答案，多半见过；其二，把选项顺序打乱、把数字换掉，如果分数明显掉，说明它记的是题面不是解法（这正是 <a class="node-ref" href="/lesson/Y03.html"><code>Y03</code></a> 里 GSM 系列换个数就崩的机理）；其三，比一比训练截止日前后的题，如果截止日之前的题分数系统性偏高，那就是污染的时间指纹。三条里任何一条命中，这批题的分数就别再当能力证据用了。</p></aside>
 <div class="read">
 <p><strong>留一个问题：</strong>前沿模型的高分里，污染到底占几成？有研究给了个反直觉的答案，一条泄漏的题进预训练很致命，可后续拿海量新数据接着训又会把它冲淡甚至抹掉，所以大模型经历海量训练后几乎不掉分、小模型掉得多。但我们至今没有一个跨基准、跨厂商的拆账，说清高分里多少是污染、多少是脚手架、多少是真本事。</p>
 <p><strong>一句话带走：</strong>藏题、时间切分、定期换题是一条要一直转的流水线；它买的是时间，不是免疫。</p></div>

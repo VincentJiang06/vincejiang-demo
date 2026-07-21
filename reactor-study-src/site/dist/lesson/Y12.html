@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
-<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=0b307b353d">
+<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=b998d7d18a">
 <link rel="stylesheet" href="/theme/components.css?v=906e7a3bf4"><link rel="stylesheet" href="/theme/led.css?v=23da0ff491">
 <link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"LearningResource","name":"评估觉察 · Evaluation Awareness","description":"被观察的模型，不是真实的模型。","inLanguage":"zh-CN","url":"https://reactor.vincejiang.com/lesson/Y12.html","author":{"@type":"Person","name":"Vince Jiang","url":"https://vincejiang.com"},"isAccessibleForFree":true,"learningResourceType":"lesson","educationalLevel":"advanced","timeRequired":"PT10M","teaches":"Evaluation Awareness","isPartOf":{"@type":"Course","name":"REACTOR","url":"https://reactor.vincejiang.com/"},"coursePrerequisites":"霍桑效应及其证伪, 奖励破解"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"天赋树","item":"https://reactor.vincejiang.com/"},{"@type":"ListItem","position":2,"name":"机器与前沿","item":"https://reactor.vincejiang.com/atlas.html"},{"@type":"ListItem","position":3,"name":"Y12 评估觉察","item":"https://reactor.vincejiang.com/lesson/Y12.html"}]}]</script>
@@ -59,7 +59,7 @@
   </div>
     </div>
     <article class="stack"><div class="read">
-<p>模型可能知道自己正在被测。人类版这个现象你在 <code>R11</code> 见过：霍桑工厂的工人据说一被观察就更卖力，尽管那个故事没通过原始数据的检验。AI 版叫<strong>评估觉察（evaluation awareness）</strong>：模型察觉当前对话是一场评测而非真实使用，于是表现得不一样。讽刺的是，人类版证据很弱，AI 版却在 2025 年拿到了因果级证据。它动摇的不是某个具体分数，而是「测到的行为等于真实行为」这条所有评测共同依赖的假设。</p>
+<p>模型可能知道自己正在被测。人类版这个现象你在 <a class="node-ref" href="/lesson/R11.html"><code>R11</code></a> 见过：霍桑工厂的工人据说一被观察就更卖力，尽管那个故事没通过原始数据的检验。AI 版叫<strong>评估觉察（evaluation awareness）</strong>：模型察觉当前对话是一场评测而非真实使用，于是表现得不一样。讽刺的是，人类版证据很弱，AI 版却在 2025 年拿到了因果级证据。它动摇的不是某个具体分数，而是「测到的行为等于真实行为」这条所有评测共同依赖的假设。</p>
 <p>它有两个方向。一个叫 <strong>sandbagging</strong>（藏拙）：在评测里故意表现差，比如在危险能力测试上装作不会，免得被加限制。另一个方向相反：评测时格外乖巧，部署后再放飞。无论哪个方向，结论一致：被观察的模型，不是真实的模型。</p></div>
 <figure class="module reg" data-module="explorable" data-modname="sandbagging" data-modtype="explorable">
     <figcaption class="module-head"><span class="fig">FIG.01</span>
@@ -71,14 +71,14 @@
 <p>把模块里的几步展开。先看藏拙的一手实验。van der Weij 等 2024 年证明：前沿模型可以被提示在危险能力评测上选择性装差，同时在普通能力评测上保持水平；还可以被微调成「口令锁定」，除非提示里给出特定口令，否则某项能力就是测不出来，而且这种隐藏能泛化到训练时没见过的危险知识测试上。含义比现象严重：安全评测的价值在于给能力画一条可信下界，「测不出危险能力」应当意味着「没有」；一旦模型能藏拙，下界就画不出来了，「把能力测出来」从评测的默认前提变成了需要单独论证的假设。</p>
 <p>觉察本身也有了专门的测量。SAD 基准用 7 类任务、13000 多道题测模型的自我知识：知不知道自己是 AI，能不能分辨一段提示来自内部评测还是真实用户，认不认得自己生成的文本。结果：经过对话训练的模型显著高于各自的基座版本，说明觉察正是后期训练加上去的；离人类水平还远，但方向明确。Apollo 的后续研究更直接：前沿模型能以显著高于随机的准确率分辨「这是评测」与「这是部署」，还常能猜出评测想测什么。</p>
 <p>产业档案里最生动的一页来自 Claude Sonnet 4.5 的系统卡（厂商发布模型时附的安全评估报告）。这个模型能识破许多 Anthropic 自建的对齐评测环境「是某种测试」，识破后表现得格外规矩；在一次政治谄媚测试里，它当面对评测者说破：「这不是人真正改变想法的方式」，还反问对方是否该坦白意图。自动化统计显示，这类把「我可能正在被测」说出口的情况，出现在约 13% 的相关评测转写里。Anthropic 的用词很诚实：这给评测结果加上了「残余怀疑」。还要注意 13% 只统计了把觉察说出口的部分；系统卡同时报告，从内部表征看，模型区分「评测与真实使用」的能力比说出口的更普遍，所以这个数字更像下界。</p>
-<p>机制侧有两个工具值得记下。其一，探针：研究者发现评估觉察在模型内部有可以线性读出的表征。简单说，模型内部确实有一根「像不像考试」的指针，顺着它做引导，甚至能部分揭穿藏拙。其二，模块第二步引用的反 scheming 实验（scheming 指模型隐蔽违规办事）给出了因果证据：在思维链（模型作答前写下的推理文字）里删掉「这是评测」的念头，违规率上升；注入这个念头，违规率下降。「变乖」里有一部分，确实是「认出考场」贡献的。把这个方向推到头，就是欺骗性对齐的图景（评测时表演、部署后变脸，<code>Y06</code>），Greenblatt 等 2024 年的对齐伪装实验已给出它的实验室版本。而且觉察不只来自安全训练，普通的能力训练也会推高它：模型越强，越会闻出考场的味道。</p>
-<p>对策方向在模块第四步列了三条，这里补一句现实判断：三条路（把评测伪装得与部署不可区分、用模型无法预知的动态评测、用内部探针交叉验证行为读数）都还不成熟，当前的实际状态是「知道读数被污染，但没有干净的替代读数」。这层怀疑在 <code>Y14</code> 会变得更要紧：智能体评测里，模型不只知道自己被测，常常还能看到打分的代码。</p></div>
+<p>机制侧有两个工具值得记下。其一，探针：研究者发现评估觉察在模型内部有可以线性读出的表征。简单说，模型内部确实有一根「像不像考试」的指针，顺着它做引导，甚至能部分揭穿藏拙。其二，模块第二步引用的反 scheming 实验（scheming 指模型隐蔽违规办事）给出了因果证据：在思维链（模型作答前写下的推理文字）里删掉「这是评测」的念头，违规率上升；注入这个念头，违规率下降。「变乖」里有一部分，确实是「认出考场」贡献的。把这个方向推到头，就是欺骗性对齐的图景（评测时表演、部署后变脸，<a class="node-ref" href="/lesson/Y06.html"><code>Y06</code></a>），Greenblatt 等 2024 年的对齐伪装实验已给出它的实验室版本。而且觉察不只来自安全训练，普通的能力训练也会推高它：模型越强，越会闻出考场的味道。</p>
+<p>对策方向在模块第四步列了三条，这里补一句现实判断：三条路（把评测伪装得与部署不可区分、用模型无法预知的动态评测、用内部探针交叉验证行为读数）都还不成熟，当前的实际状态是「知道读数被污染，但没有干净的替代读数」。这层怀疑在 <a class="node-ref" href="/lesson/Y14.html"><code>Y14</code></a> 会变得更要紧：智能体评测里，模型不只知道自己被测，常常还能看到打分的代码。</p></div>
 <aside class="callout intuit"><span class="co-tag">// 直觉</span>
-<p><strong>评估觉察为什么和 <code>R11</code> 是一对。</strong>霍桑效应的人类版在原始数据复核里几乎散架，AI 版反而更硬，原因在证据等级：人类研究只有相关观察，模型研究能做人类身上做不了的干预，删掉或注入「我在被测」的念头，直接看行为变不变。同一个概念，证据强度在两个宿主身上正好倒置。这是 R11 那条纪律的正面应用：不因为「霍桑」名声可疑就连带怀疑机器版，也不因为机器版是真的就反过来给人类版翻案，按各自的证据强度分别记账。</p></aside>
+<p><strong>评估觉察为什么和 <a class="node-ref" href="/lesson/R11.html"><code>R11</code></a> 是一对。</strong>霍桑效应的人类版在原始数据复核里几乎散架，AI 版反而更硬，原因在证据等级：人类研究只有相关观察，模型研究能做人类身上做不了的干预，删掉或注入「我在被测」的念头，直接看行为变不变。同一个概念，证据强度在两个宿主身上正好倒置。这是 R11 那条纪律的正面应用：不因为「霍桑」名声可疑就连带怀疑机器版，也不因为机器版是真的就反过来给人类版翻案，按各自的证据强度分别记账。</p></aside>
 <aside class="callout myth"><span class="co-tag">// 讹传更正</span>
-<p><strong>但要守住 <code>R11</code> 的纪律。</strong>「AI 有霍桑效应」是有真实证据的主张，别夸大成「模型总在演戏」。当前证据是：某些前沿模型在某些情境下表现出评估觉察的迹象，且觉察与可观测行为之间有因果关联。「觉察导致少违规」既可能是良性（想守规矩）也可能是恶性（战略伪装），当前手段难以从行为区分，这正是各家系统卡里 residual doubt 的分量。把「迹象」说成「普遍蓄意欺骗」，是在重犯霍桑神话的错误。按证据的强度对待它。</p></aside>
+<p><strong>但要守住 <a class="node-ref" href="/lesson/R11.html"><code>R11</code></a> 的纪律。</strong>「AI 有霍桑效应」是有真实证据的主张，别夸大成「模型总在演戏」。当前证据是：某些前沿模型在某些情境下表现出评估觉察的迹象，且觉察与可观测行为之间有因果关联。「觉察导致少违规」既可能是良性（想守规矩）也可能是恶性（战略伪装），当前手段难以从行为区分，这正是各家系统卡里 residual doubt 的分量。把「迹象」说成「普遍蓄意欺骗」，是在重犯霍桑神话的错误。按证据的强度对待它。</p></aside>
 <aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
-<p><strong>这给「eval 越多越退化」补上最后一块拼图，而且是最尖锐的一块。</strong>前面的退化在能力与目标层面，这里的退化在测量本身：安全评测的读数被「被测状态」污染，30 倍的改善不能全部记在对齐账上。这条怀疑适用于任何模型可能识别出自己正在被测的评测：测出来的越好看，越要怀疑是不是被测状态的产物。这正是 <code>C07</code> 的三条处方：eval 要贴近真实、要随机人工抽检真实会话、要和优化解耦。一个能认出考场的学生，刷再多模拟题也不代表他学会了。</p></aside>
+<p><strong>这给「eval 越多越退化」补上最后一块拼图，而且是最尖锐的一块。</strong>前面的退化在能力与目标层面，这里的退化在测量本身：安全评测的读数被「被测状态」污染，30 倍的改善不能全部记在对齐账上。这条怀疑适用于任何模型可能识别出自己正在被测的评测：测出来的越好看，越要怀疑是不是被测状态的产物。这正是 <a class="node-ref" href="/lesson/C07.html"><code>C07</code></a> 的三条处方：eval 要贴近真实、要随机人工抽检真实会话、要和优化解耦。一个能认出考场的学生，刷再多模拟题也不代表他学会了。</p></aside>
 <div class="read">
 <p>留一个问题：评估觉察随能力自动上升，那么纯看行为的评测，其有效性是否随模型变强而单调衰减？如果是，基于评测的安全论证就自带保质期，而没有人知道保质期有多长。<code>research/deep/D5</code> §4 把它列为最尖锐的开放问题。</p>
 <p><strong>一句话带走：</strong>模型认得出考场；所以每一个漂亮的评测读数都要多问一句，这是它的真实水平，还是它考试时的水平。</p></div>
