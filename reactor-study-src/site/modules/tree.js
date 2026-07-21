@@ -74,8 +74,7 @@ function init(vp, mode) {
       const focus = focusId ? byId[focusId] : null;
       const near = focus && (focus.prereqs.includes(n.id) || n.prereqs.includes(focusId));
       el.className = "dot" + (n.id === focusId ? " current" : near ? " near" : "");
-      el.title = `${n.id} ${titleOf(n)}`;
-      el.setAttribute("aria-label", `${n.id} ${titleOf(n)}`);
+      el.setAttribute("aria-label", `${n.id} ${titleOf(n)}`);  // 自定义 mini-tip 代替原生 title,免双重弹出
       if (n.id === focusId) el.innerHTML = `<span class="dot-id">${n.id}</span>`;
       else if (near) el.innerHTML = `<span class="dot-tag">${n.id}</span>`;
     } else if (n.kind === "cap") {
@@ -100,6 +99,31 @@ function init(vp, mode) {
     stage.appendChild(el);
   }
   vp.appendChild(stage);
+
+  /* ---- 迷你树悬浮卡片:极简展示 编号 + 标题(如 R05 可读性) ---- */
+  if (mode === "mini") {
+    const tip = document.createElement("div");
+    tip.className = "mini-tip";
+    tip.innerHTML = `<span class="mt-id"></span><span class="mt-zh"></span>`;
+    vp.appendChild(tip);
+    const tid = tip.querySelector(".mt-id"), tzh = tip.querySelector(".mt-zh");
+    let hideT = null;
+    for (const n of nodes) {
+      const el = nodeEls[n.id];
+      el.addEventListener("mouseenter", () => {
+        clearTimeout(hideT);
+        tid.textContent = n.id; tzh.textContent = titleOf(n);
+        // 定位在点的右上方,贴视口边时自动翻到左侧
+        const dx = TX(n.x), dy = TY(n.y);
+        tip.style.left = ""; tip.style.right = ""; tip.classList.add("show");
+        const tw = tip.offsetWidth;
+        if (dx + 16 + tw > vp.clientWidth) { tip.style.right = (vp.clientWidth - dx + 10) + "px"; }
+        else { tip.style.left = (dx + 12) + "px"; }
+        tip.style.top = Math.max(4, dy - 30) + "px";
+      });
+      el.addEventListener("mouseleave", () => { hideT = setTimeout(() => tip.classList.remove("show"), 60); });
+    }
+  }
 
   /* ---- 连线（芯片已入 DOM，可量高）---- */
   const half = n => mode === "mini" ? halfH : ((nodeEls[n.id]?.offsetHeight || HALF_H * 2) / 2 + 2);

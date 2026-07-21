@@ -28,7 +28,7 @@ li{text-wrap:pretty}
 /* 课程正文与互动模块等宽(用户裁决:阅读区太窄)——.read 在 article 里吃满容器,
    68ch 的舒适行长上限对 1200px 版心太保守,交互卡是满宽,两者不齐很扎眼 */
 .read p,.read li,.callout p{max-width:none}
-.read p,.read li{font-family:var(--font-sans);font-size:1.04rem;line-height:1.92}
+.read p,.read li{font-family:var(--font-sans);font-size:1.125rem;line-height:1.9}  /* 18px(用户裁决) */
 /* 引用：全站同一套无衬线，靠字号/字重/竖线区分，不再换字体 */
 .pullquote,blockquote,.cite{font-family:var(--font-sans);font-weight:500}
 .pullquote{font-size:clamp(1.15rem,2.2vw,1.5rem);line-height:1.6;

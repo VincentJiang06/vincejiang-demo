@@ -305,3 +305,14 @@
 
 /* 亮色主题:连背景渐变彩斑也不要——纯白就是纯白(用户裁决) */
 :root[data-theme="light"] .bg-field{display:none}
+
+
+/* 迷你树悬浮卡片:节点旁跟一张极简卡,只显示 编号 + 标题(如 R05 可读性) */
+.mini-tip{position:absolute;z-index:20;pointer-events:none;opacity:0;
+  transform:translateY(3px);transition:opacity .12s,transform .12s;
+  display:flex;align-items:baseline;gap:.5em;white-space:nowrap;
+  padding:.4em .7em;border:1px solid var(--accent);border-radius:var(--radius);
+  background:var(--bg-2);box-shadow:0 4px 14px rgba(0,0,0,.35),0 0 0 1px var(--bg) inset}
+.mini-tip.show{opacity:1;transform:translateY(0)}
+.mini-tip .mt-id{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.06em;color:var(--accent)}
+.mini-tip .mt-zh{font-weight:700;font-size:.82rem;color:var(--text)}
