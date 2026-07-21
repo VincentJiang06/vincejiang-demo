@@ -4,7 +4,7 @@
    - mini：课程页左侧导轨（各向异性压缩成窄条点阵图，当前节点高亮，纯点击导航）
    连线 = mindmap 大弧度 S 曲线(用户裁决弃正交电路风)：从前置芯片下边缘出发,
    平滑弯到目标芯片上边缘;同支实线、跨支虚线,默认压暗,悬停节点时相关线路点亮。 */
-import { progress } from "/modules/boot.js?v=639a449a0e";
+import { progress } from "/modules/boot.js?v=b7e3c44530";
 import { TREE } from "/modules/tree-data.js?v=2e268a34a2";
 import { t } from "/modules/mod-i18n.js?v=fe1fe69deb";
 
@@ -95,6 +95,27 @@ function init(vp, mode) {
       e.classList.toggle("hot", e.dataset.from === n.id || e.dataset.to === n.id)));
     el.addEventListener("mouseleave", () => edgeEls.forEach(e => e.classList.remove("hot")));
     updateNodeClass(el, n);
+    // 右上角状态徽章可点=切换已读/未读(卡片本身是链接,故 badge 上要拦截冒泡与默认导航)
+    if (mode !== "mini") {
+      const badge = el.querySelector(".n-led");
+      if (badge) {
+        badge.classList.add("badge-btn");
+        badge.setAttribute("role", "button");
+        badge.tabIndex = 0;
+        const setLabel = () => {
+          const lbl = done.has(n.id)
+            ? (LANG === "en" ? "Mark as unread" : "标记为未读")
+            : (LANG === "en" ? "Mark as read" : "标记为已读");
+          badge.setAttribute("aria-label", `${n.id} · ${lbl}`);
+          badge.title = lbl;
+        };
+        const toggle = ev => { ev.preventDefault(); ev.stopPropagation(); progress.toggle(n.id); refreshAll(); setLabel(); };
+        badge.addEventListener("pointerdown", ev => ev.stopPropagation());  // 别启动拖拽/触发链接
+        badge.addEventListener("click", toggle);
+        badge.addEventListener("keydown", ev => { if (ev.key === "Enter" || ev.key === " ") toggle(ev); });
+        setLabel();
+      }
+    }
     nodeEls[n.id] = el;
     stage.appendChild(el);
   }

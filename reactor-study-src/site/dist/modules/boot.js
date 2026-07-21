@@ -42,6 +42,8 @@ applyTheme(false);
 export const progress = {
   get() { try { return new Set(JSON.parse(localStorage.getItem(LS.done) || "[]")); } catch { return new Set(); } },
   add(id) { const s = this.get(); s.add(id); localStorage.setItem(LS.done, JSON.stringify([...s])); },
+  remove(id) { const s = this.get(); s.delete(id); localStorage.setItem(LS.done, JSON.stringify([...s])); },
+  toggle(id) { return this.get().has(id) ? (this.remove(id), false) : (this.add(id), true); },
   clear() { localStorage.removeItem(LS.done); }
 };
 
@@ -85,7 +87,7 @@ if (lessonId && /^[NRBYC]\d/.test(lessonId) && document.querySelector("article.s
 })();
 
 /* ---- lazily boot the talent tree if present（首页全屏树 / 课程页导轨迷你树）---- */
-if (document.querySelector(".tree-viewport")) import("/modules/tree.js?v=a53da7f3fa");
+if (document.querySelector(".tree-viewport")) import("/modules/tree.js?v=50d859a6a1");
 
 /* ---- respect reduced motion for typing bootlines ---- */
 if (matchMedia("(prefers-reduced-motion: reduce)").matches)

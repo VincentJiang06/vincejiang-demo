@@ -225,6 +225,12 @@
 .node.completed .n-led{background:var(--accent);border-color:var(--accent);color:var(--bg);
   box-shadow:0 0 8px var(--accent-glow)}
 .node.completed .n-led::after{content:"✓"}
+/* 徽章可点=切换已读/未读:光标+悬停放大;::before 扩出点击热区(照顾 locked 的小圆点) */
+.node .n-led.badge-btn{cursor:pointer}
+.node .n-led.badge-btn::before{content:"";position:absolute;inset:-8px;border-radius:50%}
+.node .n-led.badge-btn:hover{transform:scale(1.18)}
+.node.locked .n-led.badge-btn:hover{transform:scale(1.7)}
+.node .n-led.badge-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
 /* 分支色作用（节点自带 data-branch，tokens.css 已映射 --accent）*/
 /* 案例带节点＝证据卡片：虚线边框区别于理论节点 */

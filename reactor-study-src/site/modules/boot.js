@@ -42,6 +42,8 @@ applyTheme(false);
 export const progress = {
   get() { try { return new Set(JSON.parse(localStorage.getItem(LS.done) || "[]")); } catch { return new Set(); } },
   add(id) { const s = this.get(); s.add(id); localStorage.setItem(LS.done, JSON.stringify([...s])); },
+  remove(id) { const s = this.get(); s.delete(id); localStorage.setItem(LS.done, JSON.stringify([...s])); },
+  toggle(id) { return this.get().has(id) ? (this.remove(id), false) : (this.add(id), true); },
   clear() { localStorage.removeItem(LS.done); }
 };
 

@@ -95,6 +95,27 @@ function init(vp, mode) {
       e.classList.toggle("hot", e.dataset.from === n.id || e.dataset.to === n.id)));
     el.addEventListener("mouseleave", () => edgeEls.forEach(e => e.classList.remove("hot")));
     updateNodeClass(el, n);
+    // 右上角状态徽章可点=切换已读/未读(卡片本身是链接,故 badge 上要拦截冒泡与默认导航)
+    if (mode !== "mini") {
+      const badge = el.querySelector(".n-led");
+      if (badge) {
+        badge.classList.add("badge-btn");
+        badge.setAttribute("role", "button");
+        badge.tabIndex = 0;
+        const setLabel = () => {
+          const lbl = done.has(n.id)
+            ? (LANG === "en" ? "Mark as unread" : "标记为未读")
+            : (LANG === "en" ? "Mark as read" : "标记为已读");
+          badge.setAttribute("aria-label", `${n.id} · ${lbl}`);
+          badge.title = lbl;
+        };
+        const toggle = ev => { ev.preventDefault(); ev.stopPropagation(); progress.toggle(n.id); refreshAll(); setLabel(); };
+        badge.addEventListener("pointerdown", ev => ev.stopPropagation());  // 别启动拖拽/触发链接
+        badge.addEventListener("click", toggle);
+        badge.addEventListener("keydown", ev => { if (ev.key === "Enter" || ev.key === " ") toggle(ev); });
+        setLabel();
+      }
+    }
     nodeEls[n.id] = el;
     stage.appendChild(el);
   }
