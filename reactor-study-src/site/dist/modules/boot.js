@@ -70,6 +70,20 @@ if (lessonId && /^[NRBYC]\d/.test(lessonId) && document.querySelector("article.s
   }
 }
 
+/* ---- 「接下来去哪」推荐:标了 data-rec-filter="explored" 的组(同层同色),
+   把已读过的节点隐掉;整组读完则整组消失。无 JS 时全部照常显示(渐进增强)。---- */
+(() => {
+  const done = progress.get();
+  if (!done.size) return;
+  document.querySelectorAll('.rec-group[data-rec-filter="explored"]').forEach(g => {
+    let left = 0;
+    g.querySelectorAll(".rec-item[data-node]").forEach(a => {
+      if (done.has(a.dataset.node)) a.hidden = true; else left++;
+    });
+    if (!left) g.hidden = true;
+  });
+})();
+
 /* ---- lazily boot the talent tree if present（首页全屏树 / 课程页导轨迷你树）---- */
 if (document.querySelector(".tree-viewport")) import("/modules/tree.js?v=a53da7f3fa");
 

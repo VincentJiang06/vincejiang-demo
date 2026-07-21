@@ -31,9 +31,11 @@ li{text-wrap:pretty}
 .read p,.read li{font-family:var(--font-sans);font-size:1.125rem;line-height:1.9}  /* 18px(用户裁决) */
 /* 引用：全站同一套无衬线，靠字号/字重/竖线区分，不再换字体 */
 .pullquote,blockquote,.cite{font-family:var(--font-sans);font-weight:500}
-.pullquote{font-size:clamp(1.15rem,2.2vw,1.5rem);line-height:1.6;
+/* pullquote 恒独占一行:即便作为 <span> 内联嵌在段落中间(如「X 写下:」后接引文),
+   也 display:block 断到自己一行,引文与出处各占一行,前后文各自成行 */
+.pullquote{display:block;font-size:clamp(1.15rem,2.2vw,1.5rem);line-height:1.6;
   border-left:2px solid var(--accent);padding:calc(var(--u)*.5) 0 calc(var(--u)*.5) calc(var(--u)*2.5);
-  margin:calc(var(--u)*3) 0;color:var(--text)}
+  margin:calc(var(--u)*2.5) 0;color:var(--text)}
 .pullquote .src{display:block;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.1em;
   text-transform:uppercase;color:var(--text-2);margin-top:calc(var(--u)*1.5)}
 a{color:var(--accent);text-decoration:none;text-underline-offset:3px}
@@ -90,3 +92,30 @@ hr{border:0;height:1px;background:var(--line);margin:calc(var(--u)*4) 0}
 
 img,svg,canvas{max-width:100%;display:block}
 .scroll-x{overflow-x:auto}
+
+/* ── 「接下来去哪」推荐:三组候选卡 ── */
+.recommend{display:block}
+.recommend .rec-title{display:block;margin-bottom:calc(var(--u)*2.5)}
+.rec-group{margin-top:calc(var(--u)*3)}
+.rec-group[hidden]{display:none}
+.rec-glabel{display:block;font-weight:700;font-size:.95rem;color:var(--text);
+  margin-bottom:calc(var(--u)*1.5);letter-spacing:.01em}
+.rec-items{display:grid;gap:calc(var(--u)*1.5);
+  grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.rec-item{display:flex;align-items:baseline;gap:calc(var(--u)*1.25);
+  padding:calc(var(--u)*1.5) calc(var(--u)*2);
+  border:1px solid var(--line);border-left:3px solid var(--_c,var(--accent));
+  border-radius:var(--radius-panel);background:var(--card);
+  color:var(--text);text-decoration:none;
+  transition:border-color .14s,background .14s,transform .14s}
+.rec-item[hidden]{display:none}
+.rec-item:hover{text-decoration:none;transform:translateY(-1px);
+  border-color:var(--_c,var(--accent));background:color-mix(in srgb,var(--_c,var(--accent)) 8%,var(--card))}
+.rec-item .rec-id{flex:none;font-family:var(--font-mono);font-weight:700;font-size:.78rem;
+  letter-spacing:.06em;color:var(--_c,var(--accent))}
+.rec-item .rec-name{font-weight:600;font-size:.98rem;line-height:1.3}
+.rec-item[data-branch="red"]   {--_c:var(--branch-red)}
+.rec-item[data-branch="blue"]  {--_c:var(--branch-blue)}
+.rec-item[data-branch="yellow"]{--_c:var(--branch-yellow)}
+.rec-item[data-branch="green"] {--_c:var(--branch-green)}
+.rec-item[data-branch="case"],.rec-item[data-branch="converge"]{--_c:var(--text-2)}

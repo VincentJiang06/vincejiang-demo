@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc@5/700.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5/700.css">
-<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=b998d7d18a">
+<link rel="stylesheet" href="/theme/tokens.css?v=e5eaeb5b3d"><link rel="stylesheet" href="/theme/base.css?v=91ebf88a04">
 <link rel="stylesheet" href="/theme/components.css?v=906e7a3bf4"><link rel="stylesheet" href="/theme/led.css?v=23da0ff491">
 <link rel="stylesheet" href="/theme/bg.css?v=f75382785d"><link rel="stylesheet" href="/theme/extra.css?v=a9bfb1b0f7">
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"LearningResource","name":"红队与对抗测试 · Red-Teaming & Adversarial Testing","description":"雇一群专业捣蛋鬼来打你的 eval。","inLanguage":"zh-CN","url":"https://reactor.vincejiang.com/lesson/G07.html","author":{"@type":"Person","name":"Vince Jiang","url":"https://vincejiang.com"},"isAccessibleForFree":true,"learningResourceType":"lesson","educationalLevel":"advanced","timeRequired":"PT10M","teaches":"Red-Teaming & Adversarial Testing","isPartOf":{"@type":"Course","name":"REACTOR","url":"https://reactor.vincejiang.com/"},"coursePrerequisites":"抗博弈机制设计"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"天赋树","item":"https://reactor.vincejiang.com/"},{"@type":"ListItem","position":2,"name":"防御与设计","item":"https://reactor.vincejiang.com/atlas.html"},{"@type":"ListItem","position":3,"name":"G07 红队与对抗测试","item":"https://reactor.vincejiang.com/lesson/G07.html"}]}]</script>
@@ -77,11 +77,11 @@
 <p><strong>留一个问题：</strong>红队只能给下界，而 sandbagging 和评测意识让这个下界越来越不可信，那有没有办法给出一个「能力至少有多强」的可信下界，而不是我们现在手里这个「至少能被破成这样」的下界？换句话说，当对手会藏拙时，怎么逼它把真本事亮出来，这是把红队从「找漏洞」升级成「测真能力」的最后一道坎，目前还没有干净的答案。</p>
 <p><strong>一句话带走：</strong>红队是雇人抢在优化器前头找最近的出口，它能证明这里能破，永远证不了哪里都破不了，所以打完的漏洞一定要回流去修设计。</p></div>
 <details class="sources"><summary class="label">来源 / 延伸阅读</summary><div class="read"><ul><li>Krakovna et al. (2018–). "Specification gaming examples in AI"（众包案例集，30 例起、增至 60+）；OpenAI (2016). "Faulty Reward Functions in the Wild"（CoastRunners）。</li><li>van der Weij et al. (2024). "AI Sandbagging: Language Models can Strategically Underperform on Evaluations." arXiv:2406.07358。</li><li>Needham et al. (2025). "Large Language Models Often Know When They Are Being Evaluated." arXiv:2505.23836；Anthropic (2025-09). Claude Sonnet 4.5 System Card（约 13% 转写出现言语化评测意识）。</li><li>Denison et al. (2024). "Sycophancy to Subterfuge: Investigating Reward-Tampering in LLMs." arXiv:2406.10162（可作弊环境课程，小作弊零样本泛化到改写奖励函数；发生率极低）。</li><li>METR (2025). "Recent Frontier Models Are Reward Hacking"（可见评分 30.4% vs 隐藏 0.7%，43×）；EvilGenie（held-out 单测 + 模型裁判 + 改测试文件检测三路交叉）。</li><li>Kiela et al. (2021). "Dynabench." arXiv:2104.14337（人机回环对抗造题）。</li><li>主源 <code>research/09</code> §一、§三、§五、§七与 <code>research/deep/D7</code> §5。</li></ul></div></details></article>
-    <nav class="prereq-row" style="margin-top:48px">
+    <section class="recommend" aria-label="接下来去哪" style="margin-top:56px"><span class="label rec-title">接下来去哪</span><div class="rec-group" data-rec-filter="explored"><span class="rec-glabel">同层的其他话题</span><div class="rec-items"><a class="rec-item" data-node="G06" data-branch="green" href="/lesson/G06.html"><span class="rec-id">G06</span><span class="rec-name">制度层防御</span></a><a class="rec-item" data-node="G05" data-branch="green" href="/lesson/G05.html"><span class="rec-id">G05</span><span class="rec-name">抗博弈机制设计</span></a><a class="rec-item" data-node="G08" data-branch="green" href="/lesson/G08.html"><span class="rec-id">G08</span><span class="rec-name">终极留出集：现实</span></a></div></div></section>
+    <nav class="prereq-row" style="margin-top:32px">
       <a class="btn" href="/">← 返回天赋树</a>
-      
     </nav>
   </main></div><footer class="site-foot"><div class="wrap">
   <span>REACTOR · 当尺子开始回看你 · 一部关于反应性的现场手册</span>
   <span class="foot-by"><a href="https://vincejiang.com">by Vince Jiang ↗</a><span class="sep">·</span>self-hosted · no-react</span>
-</div></footer><script type="module" src="/modules/boot.js?v=a3c8d90821"></script></body></html>
+</div></footer><script type="module" src="/modules/boot.js?v=639a449a0e"></script></body></html>

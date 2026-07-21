@@ -286,15 +286,46 @@ function lessonPage(node, lesson, L) {
       ${prereqRow(node, lang)}
     </div>
     <article class="stack">${renderBlocks(lesson.blocks, lang)}</article>
-    <nav class="prereq-row" style="margin-top:48px">
+    ${recommendRow(node, lang)}
+    <nav class="prereq-row" style="margin-top:32px">
       <a class="btn" href="${lang.href("/")}">${esc(lang.t("lesson.back"))}</a>
-      ${nextNode(node) ? `<a class="btn btn-primary" href="${lang.href(`/lesson/${nextNode(node).id}.html`)}">${esc(lang.t("lesson.next", { t: lang.nodeTitle(nextNode(node)) }))}</a>` : ""}
     </nav>
   </main></div>` + siteFoot(lang);
 }
-function nextNode(node) {
-  const unlocks = tree.nodes.filter(n => n.prereqs.includes(node.id) && builtIds.has(n.id));
-  return unlocks[0] || null;
+
+/* 「接下来去哪」——三组候选,而非单一「下一课」:
+   1) 继续往下探索 = 以本节点为前置、图上更深一层的节点(down)
+   2) 同层的其他话题 = 同色(同分支)同层(同 y)的其他节点;客户端会隐去已探索的,整组读完即整组消失
+   3) 换个领域看看 = 同层但不同颜色(不同分支)的节点
+   每组无候选即不渲染。同 y 即同层(布局把同层节点排在同一行 y)。 */
+function recommendRow(node, L) {
+  const lang = L || makeL(LANGS[0]);
+  const built = n => builtIds.has(n.id);
+  const byX = (a, b) => (a.x - b.x) || a.id.localeCompare(b.id);
+  const item = n => `<a class="rec-item" data-node="${esc(n.id)}" data-branch="${esc(n.branch)}" href="${lang.href(`/lesson/${n.id}.html`)}">`
+    + `<span class="rec-id">${esc(n.id)}</span><span class="rec-name">${esc(lang.nodeTitle(n))}</span></a>`;
+
+  const down = tree.nodes.filter(n => n.prereqs.includes(node.id) && built(n)).sort(byX);
+  const downSet = new Set(down.map(n => n.id));
+  const sameLevel = tree.nodes.filter(n => n.id !== node.id && built(n)
+    && Math.abs(n.y - node.y) < 1 && !downSet.has(n.id));
+  const sameColor = sameLevel.filter(n => n.branch === node.branch).sort(byX);
+  const otherColor = sameLevel.filter(n => n.branch !== node.branch && n.branch !== "root").sort(byX);
+
+  const group = (key, items, filter) => items.length
+    ? `<div class="rec-group"${filter ? ` data-rec-filter="${filter}"` : ""}>`
+      + `<span class="rec-glabel">${esc(lang.t(key))}</span>`
+      + `<div class="rec-items">${items.slice(0, 6).map(item).join("")}</div></div>`
+    : "";
+
+  const groups = [
+    group("rec.down", down),
+    group("rec.same", sameColor, "explored"),
+    group("rec.other", otherColor)
+  ].filter(Boolean).join("");
+  if (!groups) return "";
+  return `<section class="recommend" aria-label="${esc(lang.t("rec.title"))}" style="margin-top:56px">`
+    + `<span class="label rec-title">${esc(lang.t("rec.title"))}</span>${groups}</section>`;
 }
 
 
