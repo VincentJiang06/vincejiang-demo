@@ -194,28 +194,37 @@
 
 /* 难度分层线与标签 */
 .level-line{stroke:var(--line-2);stroke-width:1;stroke-dasharray:7 9;opacity:.5}
-.level-label{fill:var(--text-mute);font-family:var(--font-mono);font-size:12px;
-  letter-spacing:.18em}
+.level-label{fill:var(--text-mute);font-family:var(--font-mono);font-size:13px;
+  letter-spacing:.14em}
 .mini .level-line{opacity:.28}
 
-/* 状态：locked 的正文保持满对比度(用户裁决:未点亮也要读得清),
-   淡化只作用于外框/编号行/LED——「灯没亮,字照亮」 */
-.node.locked{border-color:color-mix(in srgb,var(--accent) 26%,var(--line))}
+/* 状态三档(用户裁决 2026-07-22):亮度阶梯 completed > available > locked,
+   语义靠右上角徽章清晰区分——locked 素点 / available 空心环(可读未读) / completed 实心对勾(已读)。
+   locked 的正文保持满对比度(未点亮也要读得清),淡化只作用于外框/编号行/徽章。 */
+.node.locked{border-color:color-mix(in srgb,var(--accent) 16%,var(--line))}
 .node.locked .n-zh{color:var(--text)}
 .node.locked .n-en{color:var(--text-mute)}
-.node.locked .n-head{opacity:.52}
-.node.locked .n-led{opacity:.4}
-.node.available{border-color:var(--accent)}
-.node.available::before{content:"";position:absolute;inset:-1px;border-radius:inherit;
-  border:1px solid var(--accent);box-shadow:0 0 8px var(--accent-glow);
-  animation:led-pulse 2.4s ease-in-out infinite;pointer-events:none}
+.node.locked .n-head{opacity:.45}
+/* available=可读未读完:整块相对低调(边框半亮、无脉冲),但徽章明确标出「可读」 */
+.node.available{border-color:color-mix(in srgb,var(--accent) 52%,var(--line))}
+.node.available .n-head{opacity:.78}
+/* completed=已读:最醒目——满亮边框 + 内发光 + 放大的对勾徽章 */
 .node.completed{border-color:var(--accent);
   box-shadow:0 0 0 1px var(--accent) inset,0 0 16px color-mix(in srgb,var(--accent-glow) 30%,transparent)}
-.node.completed .n-id::after{content:" ✓";color:var(--accent)}
-.node .n-led{position:absolute;top:-4px;right:-4px;width:8px;height:8px;border-radius:50%;
-  background:var(--line-2)}
-.node.available .n-led,.node.completed .n-led{background:var(--accent);
-  box-shadow:0 0 6px var(--accent-glow),0 0 14px var(--accent-glow)}
+
+/* ── 右上角状态徽章 ── */
+.node .n-led{position:absolute;top:-11px;right:-11px;width:22px;height:22px;border-radius:50%;
+  box-sizing:border-box;display:grid;place-items:center;
+  background:var(--panel);border:2px solid var(--line-2);
+  font-family:var(--font-mono);font-size:14px;font-weight:800;line-height:1;color:transparent;
+  transition:background .15s,border-color .15s}
+.node.locked .n-led{width:9px;height:9px;top:-4px;right:-4px;border:none;
+  background:var(--line-2);opacity:.55}
+.node.available .n-led{border-color:var(--accent);background:var(--bg);
+  box-shadow:0 0 7px var(--accent-glow)}
+.node.completed .n-led{background:var(--accent);border-color:var(--accent);color:var(--bg);
+  box-shadow:0 0 8px var(--accent-glow)}
+.node.completed .n-led::after{content:"✓"}
 
 /* 分支色作用（节点自带 data-branch，tokens.css 已映射 --accent）*/
 /* 案例带节点＝证据卡片：虚线边框区别于理论节点 */
@@ -289,8 +298,7 @@
 .mini .edge.hot{stroke-width:1.8;opacity:1}
 
 @media (prefers-reduced-motion:reduce){
-  .glyph-strip .led,.led.pulse,.node.available::before,.bootline.typing{animation:none}
-  .node.available::before{opacity:.7}
+  .glyph-strip .led,.led.pulse,.bootline.typing{animation:none}
   .bootline.typing{width:100%}
   .tree-stage.gliding{transition:none}
 }

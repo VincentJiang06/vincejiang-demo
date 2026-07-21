@@ -345,7 +345,8 @@ export function layoutTree(nodes, C = {}) {
     pos: Object.fromEntries(nodes.map(n => [n.id, { x: X[n.id], y: Y[n.id] }])),
     levels,
     bounds: {
-      minX: Math.min(...xsAll) - CAP_W / 2 - 40, maxX: Math.max(...xsAll) + CAP_W / 2 + 40,
+      // 左侧多留 96px 空槽给 LEVEL 标签(否则最左芯片会盖住标签后半段,如 LEVEL 02·进阶)
+      minX: Math.min(...xsAll) - CAP_W / 2 - 40 - 96, maxX: Math.max(...xsAll) + CAP_W / 2 + 40,
       minY: Math.min(...ysAll) - 110, maxY: Math.max(...ysAll) + 130
     }
   };

@@ -5,7 +5,7 @@
    连线 = mindmap 大弧度 S 曲线(用户裁决弃正交电路风)：从前置芯片下边缘出发,
    平滑弯到目标芯片上边缘;同支实线、跨支虚线,默认压暗,悬停节点时相关线路点亮。 */
 import { progress } from "/modules/boot.js?v=639a449a0e";
-import { TREE } from "/modules/tree-data.js?v=b9b35d6443";
+import { TREE } from "/modules/tree-data.js?v=2e268a34a2";
 import { t } from "/modules/mod-i18n.js?v=fe1fe69deb";
 
 /* 语言:由 <html lang> 与 data-lp(语种路径前缀)决定,树的链接与标题跟着走 */

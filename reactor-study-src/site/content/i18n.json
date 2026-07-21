@@ -81,13 +81,9 @@
       "zh": "继续往下探索",
       "en": "Go deeper"
     },
-    "rec.same": {
-      "zh": "同层的其他话题",
-      "en": "More at this level"
-    },
-    "rec.other": {
-      "zh": "换个领域看看",
-      "en": "Jump to another field"
+    "rec.explore": {
+      "zh": "去树上其他地方看看",
+      "en": "Explore elsewhere on the tree"
     },
     "lesson.sources": {
       "zh": "来源 / 延伸阅读",

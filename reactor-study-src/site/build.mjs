@@ -293,11 +293,11 @@ function lessonPage(node, lesson, L) {
   </main></div>` + siteFoot(lang);
 }
 
-/* 「接下来去哪」——三组候选,而非单一「下一课」:
-   1) 继续往下探索 = 以本节点为前置、图上更深一层的节点(down)
-   2) 同层的其他话题 = 同色(同分支)同层(同 y)的其他节点;客户端会隐去已探索的,整组读完即整组消失
-   3) 换个领域看看 = 同层但不同颜色(不同分支)的节点
-   每组无候选即不渲染。同 y 即同层(布局把同层节点排在同一行 y)。 */
+/* 「接下来去哪」——两组候选,而非单一「下一课」:
+   1) 继续往下探索 = 以本节点为前置、图上更深一层的节点(prereq 下游 unlocks)
+   2) 去树上其他地方看看 = 树上其他可探索的节点(用户 2026-07-22 更正:不再按「同层」,
+      而是给出树上别处的入口)。跨分支优先、偏好浅前置(更可能已解锁),客户端隐去已读的。
+   每组无候选即不渲染。 */
 function recommendRow(node, L) {
   const lang = L || makeL(LANGS[0]);
   const built = n => builtIds.has(n.id);
@@ -306,11 +306,20 @@ function recommendRow(node, L) {
     + `<span class="rec-id">${esc(n.id)}</span><span class="rec-name">${esc(lang.nodeTitle(n))}</span></a>`;
 
   const down = tree.nodes.filter(n => n.prereqs.includes(node.id) && built(n)).sort(byX);
-  const downSet = new Set(down.map(n => n.id));
-  const sameLevel = tree.nodes.filter(n => n.id !== node.id && built(n)
-    && Math.abs(n.y - node.y) < 1 && !downSet.has(n.id));
-  const sameColor = sameLevel.filter(n => n.branch === node.branch).sort(byX);
-  const otherColor = sameLevel.filter(n => n.branch !== node.branch && n.branch !== "root").sort(byX);
+  const skip = new Set([node.id, ...down.map(n => n.id), ...node.prereqs]);
+
+  /* 树上其他可探索节点:按分支分桶,桶内偏好浅前置(入口更可能已解锁)+靠左;
+     再跨分支轮转取样,当前分支排最后,凑够 6 个——保证广度、避免全挤在一支。 */
+  const buckets = {};
+  for (const n of tree.nodes) {
+    if (!built(n) || skip.has(n.id) || n.branch === "root") continue;
+    (buckets[n.branch] ||= []).push(n);
+  }
+  for (const b in buckets) buckets[b].sort((a, c) => (a.prereqs.length - c.prereqs.length) || byX(a, c));
+  const order = Object.keys(buckets).sort((a, b) => (a === node.branch) - (b === node.branch) || a.localeCompare(b));
+  const explore = [];
+  for (let i = 0; explore.length < 6 && order.some(b => buckets[b][i]); i++)
+    for (const b of order) { if (buckets[b][i] && explore.length < 6) explore.push(buckets[b][i]); }
 
   const group = (key, items, filter) => items.length
     ? `<div class="rec-group"${filter ? ` data-rec-filter="${filter}"` : ""}>`
@@ -320,8 +329,7 @@ function recommendRow(node, L) {
 
   const groups = [
     group("rec.down", down),
-    group("rec.same", sameColor, "explored"),
-    group("rec.other", otherColor)
+    group("rec.explore", explore, "explored")
   ].filter(Boolean).join("");
   if (!groups) return "";
   return `<section class="recommend" aria-label="${esc(lang.t("rec.title"))}" style="margin-top:56px">`
