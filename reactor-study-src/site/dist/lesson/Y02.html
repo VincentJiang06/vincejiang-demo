@@ -59,10 +59,10 @@
   </div>
     </div>
     <article class="stack"><div class="read">
-<p>看，也是一种训练。<strong>自适应过拟合（adaptive overfitting）</strong>说的是：你从来没把测试集拿去训练，只是反复看它、用它筛选模型，可反复看同一套题来做选择这个动作本身，就在把这套题的特异性灌进你的模型。</p>
+<p>看，也是一种训练。<strong>自适应过拟合（adaptive overfitting）</strong>说的是：你从来没把测试集拿去训练，只是反复看它、用它筛选模型。可反复看同一套题来做选择，这个动作本身就是一种筛选：你留下的，永远是那个恰好在这批题上表现最好的版本。久而久之，这套题的特异性，就这样被灌进了你的模型。</p>
 <p>你多半经历过这件事。你搭了一套 eval 衡量 agent 好不好，反复用它筛选、调参、挑最优版本，eval 分数漂亮地涨了；放到真实使用里，前后毫无区别。模型只是学会了严丝合缝地拟合你那套 eval。这不是个人失误：凡把同一套 eval 同时用作筛选器与成绩单的流程，结构上都在重演这个动作，筛选的次数越多，成绩单越失真。</p>
 <p>这个动作在统计学里有正式名字：适应性数据分析。区别一句话就能讲清。非适应性：所有要问数据的问题，在看到数据之前就列好了，经典统计的全部保证建立在这个前提上。适应性：下一个问题取决于上一个答案。你每次根据上一轮分数决定下一步改什么，恰好是后者，于是经典保证整体失效。</p>
-<p>两份 2015 年的工作把这件事变成了会计学。Blum 与 Hardt 给 Kaggle 式排行榜（Kaggle：数据科学竞赛平台，选手反复提交模型看排名）设计了 Ladder 算法，病灶点得很直白：参与者被允许反复在排行榜上评估自己的提交，于是可能开始过拟合；他们的解法是只在新提交显著优于历史最好时才更新公开分数，把每次提交泄漏的信息量卡死。Dwork 等人在 Science 上给出更一般的定价：用差分隐私机制（<a class="node-ref" href="/lesson/Y01.html"><code>Y01</code></a> 讲过：故意把读数弄糊、限制单次泄漏）中介对 holdout 的访问，可支持指数级多次适应性查询而不失效。两份工作共同确立了一个会计视角：测试集是一笔预算，查询就是支出，「看」的成本必须被记账。</p></div>
+<p>两份 2015 年的工作把这件事变成了会计学。Blum 与 Hardt 给 Kaggle 式排行榜（Kaggle：数据科学竞赛平台，选手反复提交模型看排名）设计了 Ladder 算法，病灶点得很直白：参与者被允许反复在排行榜上评估自己的提交，于是可能开始过拟合；他们的解法是只在新提交显著优于历史最好时才更新公开分数：分数不更新，参与者就等于没拿到反馈，这次提交也就没泄漏什么可用信息；只有真正显著超越历史最好的提交才换来一次更新，而这样的超越次数有限。每次提交泄漏的信息量，就这样被卡死了。Dwork 等人在 Science 上给出更一般的定价：用差分隐私机制（<a class="node-ref" href="/lesson/Y01.html"><code>Y01</code></a> 讲过：故意把读数弄糊、限制单次泄漏）中介对 holdout 的访问，可支持指数级多次适应性查询而不失效。两份工作共同确立了一个会计视角：测试集是一笔预算，查询就是支出，「看」的成本必须被记账。</p></div>
 <figure class="module reg" data-module="eval-overfit-lab" data-modname="eval-overfit-lab" data-modtype="sim">
     <figcaption class="module-head"><span class="fig">FIG.01</span>
       <span>Eval 过拟合实验室：解剖榜面分数</span><span class="spacer"></span>
@@ -79,11 +79,11 @@
 <aside class="callout intuit"><span class="co-tag">// 直觉</span>
 <p><strong>「只看不训练」同样会污染测试集。</strong>在有噪声的测试集上，从 20 个随机变体里挑分数最高的那个，你挑中的多半是「恰好在这套题的噪声上运气好」的那个（<a class="node-ref" href="/lesson/B13.html"><code>B13</code></a> 的优化者诅咒：从带噪声的分数里挑最大值，挑中的期望值必然虚高）。重复几百代，你就是在沿着测试集的噪声做梯度上升，哪怕一次都没反向传播过它。查询次数越多、题库越小，幻觉涨得越快。这有严格的统计上界：Blum 与 Hardt 的 Ladder、Dwork 等人的可重用 holdout，本质都是给「看测试集」记账收费。</p></aside>
 <aside class="callout myth"><span class="co-tag">// 讹传更正</span>
-<p><strong>流行说法：「反复刷同一个榜，必然严重过拟合。」</strong>复核结论：理论警告的是最坏情况，经验裁决温和得多。Roelofs 与 Recht 等人 2019 年复核了一百多场 Kaggle 竞赛（每场都有公开榜与私有榜，天然对照），原文结论是 little evidence of substantial overfitting，几乎没查到实质性过拟合；Mania 等人给出机制：候选模型彼此高度相似，对测试集的有效独立查询数远小于提交次数，过拟合预算消耗得慢。ImageNet 十年重测也显示绝对分虚高但相对排名稳定（<a class="node-ref" href="/lesson/Y01.html"><code>Y01</code></a>）。<strong>命题的准确版本：经典测试集重用的退化被模型相似性稀释得很弱；退化真正凶猛的场景，是优化压力高度集中于单一、可记忆目标的时候，比如 RLHF（用人类偏好评分当奖励微调模型）死磕偏好分，比如 agent 死记一套固定编程题库的补丁。</strong>这条边界是 D4 报告画出来的。</p></aside>
+<p><strong>流行说法：「反复刷同一个榜，必然严重过拟合。」</strong>复核结论：理论警告的是最坏情况，经验裁决温和得多。Roelofs 与 Recht 等人 2019 年复核了一百多场 Kaggle 竞赛（每场都有公开榜与私有榜，天然对照），原文结论是 little evidence of substantial overfitting，几乎没查到实质性过拟合；Mania 等人给出机制：候选模型彼此高度相似——同一批参赛者交出的版本，往往只是彼此的变体，变体之间高度相关，算不上新的独立观察。于是对测试集的有效独立查询数，远小于提交次数本身；查询数少，过拟合预算就消耗得慢。ImageNet 十年重测也显示绝对分虚高但相对排名稳定（<a class="node-ref" href="/lesson/Y01.html"><code>Y01</code></a>）。<strong>命题的准确版本：经典测试集重用的退化被模型相似性稀释得很弱；退化真正凶猛的场景，是优化压力高度集中于单一、可记忆目标的时候，比如 RLHF（用人类偏好评分当奖励微调模型）死磕偏好分，比如 agent 死记一套固定编程题库的补丁。</strong>这条边界是 D4 报告画出来的。</p></aside>
 <div class="read">
 <p>理论与经验之间这道缝，先看证据的形状。Kaggle 每场竞赛都有公开榜与私有榜：公榜给日常提交读数，被反复查询；私榜只在赛末揭晓，只看一次。这天然构成对照组。Roelofs 等人量取上百场竞赛里两榜分差的分布，结果分差主要由随机波动解释，不是系统性的适应性透支。这个结果说明什么：全社区反复刷了几个月的公榜，居然没在私榜上露出集体翻车的痕迹。</p>
 <p>为什么理论的最坏情况没有兑现？Ladder 与可重用 holdout 防的是一个每次查询都榨取最大信息量的理想对手，现实中的刷榜者效率远低于此：大家的模型彼此相似，一千次提交里有效的独立试探可能只有几十次。旁证还有一组：Miller 等人 2020 年在问答基准上复核，同样未发现适应性过拟合的证据，掉分几乎全部来自新题稍难的自然漂移。Roelofs 那批作者据此写道，holdout 方法跨数据领域、跨损失函数、跨模型类别、跨分析者都相当稳健。这条线如今有了自己的纲领：Hardt 2026 年把 benchmark 本身立为研究对象，称之为机器学习基准的新兴科学，黄支末端的 <a class="node-ref" href="/lesson/Y15.html"><code>Y15</code></a> 会回到它。</p>
-<p>于是版图分成两半。经典监督学习那一半，题库足够丰富、优化目标分散、社区靠换架构而非纯刷分推进，退化被稀释到几乎测不到。另一半是优化压力高度集中于单一、可记忆目标的场景：RLHF 死磕人类偏好这个代理，学出谄媚与堆料（<a class="node-ref" href="/lesson/Y07.html"><code>Y07</code></a>、<a class="node-ref" href="/lesson/Y08.html"><code>Y08</code></a>）；agentic coding 死磕一套固定题库，前沿模型被审计出能逐词复现 SWE-bench 里人类写好的修复补丁（<a class="node-ref" href="/lesson/Y03.html"><code>Y03</code></a>）。两半之间还有人为放大器：少数厂商在 LMArena（用户盲测投票的模型排行榜）发布前私测多个变体、只公开最好的那个，等于把全社区分散的适应性查询集中到一家之手（<a class="node-ref" href="/lesson/Y11.html"><code>Y11</code></a>）。在集中的这一半，「退化到 eval」是实锤。判断你手里的 eval 危不危险，先看这两个变量：优化压力有多集中，目标有多可记忆。</p></div>
+<p>于是版图分成两半。经典监督学习那一半，题库足够丰富、优化目标分散、社区靠换架构而非纯刷分推进，退化被稀释到几乎测不到。另一半是优化压力高度集中于单一、可记忆目标的场景：RLHF 死磕人类偏好这个代理，学出谄媚与堆料（<a class="node-ref" href="/lesson/Y07.html"><code>Y07</code></a>、<a class="node-ref" href="/lesson/Y08.html"><code>Y08</code></a>）；agentic coding 死磕一套固定题库，前沿模型被审计出能逐词复现 SWE-bench 里人类写好的修复补丁（<a class="node-ref" href="/lesson/Y03.html"><code>Y03</code></a>）。两半之间还有人为放大器：少数厂商在 LMArena（用户盲测投票的模型排行榜）发布前私测多个变体、只公开最好的那个——这些变体全部出自同一家，不像公开竞赛那样被许多彼此独立的参赛者稀释。它等于把全社区分散的适应性查询，集中到了一家之手（<a class="node-ref" href="/lesson/Y11.html"><code>Y11</code></a>）。在集中的这一半，「退化到 eval」是实锤。判断你手里的 eval 危不危险，先看这两个变量：优化压力有多集中，目标有多可记忆。</p></div>
 <aside class="callout applied"><span class="co-tag">// 落地到 AI EVAL</span>
 <p><strong>防御手段的效力在图上一眼可见：</strong><br>
 ① <strong>留出集（held-out）</strong>：留一组优化循环永远看不到的题，题目过拟合无处藏。<br>
