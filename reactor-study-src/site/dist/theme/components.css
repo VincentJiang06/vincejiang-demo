@@ -145,12 +145,9 @@
   .theme-toggle{padding:.5em;min-width:40px;min-height:40px;justify-content:center;gap:0}
   .theme-toggle .tt-label{display:none}
   .module .controls{gap:var(--u) calc(var(--u)*2)}
-
-  /* 正文左右对称占满(用户反馈:手机右侧留白比左侧大)。诊断结论:内容盒本就是
-     对称的 padding-inline:16px(见 base.css .wrap;article/.read/p 实测 left=16 right=374,
-     rGap=16,无横向溢出)——右侧多出的观感留白是中文整字换行的『锯齿右缘』。
-     用 justify 让每行铺满到右边界,左右留白即相等(末行仍自然收尾)。仅移动端。 */
-  .read p,.read li,.callout p{text-align:justify}
+  /* 正文移动端保持自然左对齐(用户裁决 2026-07-22:不要 justify 硬撑满,
+     中文字距被强行拉开很难看)。左右留白相等靠 .wrap 的对称 padding 保证,
+     右缘的『锯齿』是中文整字换行的自然形态,接受即可。 */
 }
 
 /* ============================================================
