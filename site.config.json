@@ -84,6 +84,18 @@
   ],
   "gallery": [
     {
+      "title": "图工程：深度研究全集",
+      "href": "/gallery/graph-engineering/",
+      "desc": "22 个图工程里程碑项目的深度案例研究：从 Neo4j 无索引邻接、Pregel BSP、Facebook Tao，到 GNN 消息传递、收缩层次路由、LLVM CFG、Bazel 增量构建。每篇含架构分析、设计权衡与第一人称设计思考，配 9 张 SVG 架构节点图、分类体系与对比矩阵，明暗双主题，单文件自包含。",
+      "badge": "22 案例 · 9 架构图"
+    },
+    {
+      "title": "智能体图工程：深度研究全集",
+      "href": "/gallery/agent-graph-engineering/",
+      "desc": "20 个智能体图工程里程碑项目与模式：从 LangGraph 状态机、ReAct 原子循环、多智能体编排（Swarm/CrewAI/AutoGen），到智能体 RAG、人机协同、Temporal 持久执行与评估纪律。每篇含架构分析、设计权衡与模拟设计者思考，配 6 张 SVG 架构节点图、分类体系与对比矩阵，明暗双主题，单文件自包含。",
+      "badge": "20 案例 · 6 架构图"
+    },
+    {
       "title": "AI 行业生产力调研报告（2026）",
       "href": "/gallery/ai-industry-report/",
       "desc": "12 个行业、73 条可溯源用例的 AI 生产力全景：用例卡片 + 方法论与结构分析、10 条跨行业趋势、7 个短期节点预测（行业影响矩阵 + 可证伪观测指标）。科技风开屏，单文件自包含，全部来源可点击溯源。",
