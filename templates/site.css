@@ -35,10 +35,17 @@ html,body{margin:0}
 html{scroll-behavior:smooth;background:var(--page)}
 body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;
-  color:var(--fg); background:var(--page);   /* 纯色背景(用户裁决:去掉四团渐变色斑) */
+  color:var(--fg); background:var(--page);   /* 底色兜底;实际背景=固定层 .bgwaves 静态海浪(2026-08-03 用户裁决,替代旧纯色) */
   line-height:1.7; -webkit-font-smoothing:antialiased;
   min-height:100vh; position:relative; overflow-x:hidden; transition:background .4s,color .4s; isolation:isolate;
 }
+/* 海浪背景:固定层 + 静态 SVG(tools/gen-waves.mjs 产物)。远看白+灰 mono(暗色=近黑+深灰),
+   细看波带间交替埋低饱和色相(青/紫/橙/蓝/绿/粉/靛)。零动画、零滤镜、零脚本,无持续渲染开销。 */
+.bgwaves{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:var(--page) url(/assets/bg-waves-light.svg) center bottom / cover no-repeat}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bgwaves{background-image:url(/assets/bg-waves-dark.svg)}}
+:root[data-theme="dark"] .bgwaves{background-image:url(/assets/bg-waves-dark.svg)}
+:root[data-theme="light"] .bgwaves{background-image:url(/assets/bg-waves-light.svg)}
 
 a{color:var(--link); text-decoration:none}
 a:hover{color:var(--link-h)}
@@ -57,6 +64,14 @@ a:hover{color:var(--link-h)}
   background:linear-gradient(150deg,var(--glass-top),var(--glass-bottom)); color:var(--fg);
   cursor:pointer; font-size:1rem; line-height:1; box-shadow:var(--shadow),0 1px 0 var(--glass-shine) inset; transition:transform .2s,box-shadow .24s,border-color .24s}
 .nav .toggle:hover{transform:translateY(-1px);box-shadow:var(--shadow-h),0 1px 0 var(--glass-shine) inset;border-color:color-mix(in srgb,var(--link) 28%,var(--border))}
+/* 窄屏导航:标签禁止字内折行,放不下时整条横向滑动(隐藏滚动条),不再出现「首/页」竖排字 */
+@media (max-width:680px){
+  .nav .in{gap:.7rem;padding:.65rem .9rem;overflow-x:auto;scrollbar-width:none}
+  .nav .in::-webkit-scrollbar{display:none}
+  .nav .brand,.nav a.item{white-space:nowrap}
+  .nav a.item{font-size:.88rem}
+  .nav .toggle{flex:none}
+}
 
 .wrap{max-width:1000px; margin:0 auto; padding:2.4rem 1.2rem 3rem}
 .narrow{max-width:720px}
@@ -261,29 +276,32 @@ a:hover{color:var(--link-h)}
   backdrop-filter:blur(22px) saturate(1.14);-webkit-backdrop-filter:blur(22px) saturate(1.14);transition:transform .18s,box-shadow .24s,border-color .24s}
 .backlink:hover{transform:translateY(-1px);box-shadow:var(--shadow-h),0 1px 0 var(--glass-shine) inset;border-color:color-mix(in srgb,var(--link) 24%,var(--border))}
 
-/* ── 友链:港铁「纸皮石」瓦纹(assets/mosaic.svg 灰阶)+ 站色相(--hue)信号色 ──
-   瓦纹本身极淡(近港铁月台墙),站身份靠信号条 + 线色圆点 + 一抹站色染层承担;克制、一屏一种怀旧元素。 */
-.friend{position:relative; overflow:hidden; display:flex; color:inherit; border-radius:var(--radius);
+/* ── 友链:真实首屏截图卡(与作品卡同构)+ 港铁「纸皮石」瓦纹 + 站色相(--hue)信号色 ──
+   截图顶图沿用 .proj-shot;正文区保留纸皮石瓦纹、信号条、线色圆牌与站色染层 —— 怀旧元素只落在正文区,不脏截图。 */
+.grid.friends{gap:1.05rem;align-items:stretch}
+.friend{position:relative; overflow:hidden; display:flex; flex-direction:column; color:inherit; border-radius:var(--radius);
   border:1px solid var(--border); background:linear-gradient(145deg,color-mix(in srgb,var(--glass-top) 86%,transparent),color-mix(in srgb,var(--glass-bottom) 74%,transparent));
   box-shadow:var(--shadow),0 1px 0 var(--glass-shine) inset,0 -1px 0 color-mix(in srgb,var(--glass-shine) 16%,transparent) inset;
   backdrop-filter:blur(24px) saturate(1.18);-webkit-backdrop-filter:blur(24px) saturate(1.18);
   transition:transform .18s, box-shadow .24s, border-color .24s}
-.friend:hover{transform:translateY(-1px); box-shadow:var(--shadow-h),0 1px 0 var(--glass-shine) inset; border-color:hsl(var(--hue,220) 55% 60% / .5)}
-.friend .mosaic{position:absolute; inset:0; background:url(/assets/mosaic.svg); background-size:132px; pointer-events:none;opacity:.62}
-.friend::before{content:""; position:absolute; inset:0; pointer-events:none;
-  background:linear-gradient(120deg, hsl(var(--hue,220) 48% 55% / .12), transparent 60%)}
+.friend:hover{transform:translateY(-2px); box-shadow:var(--shadow-h),0 1px 0 var(--glass-shine) inset; border-color:hsl(var(--hue,220) 55% 60% / .5)}
+.friend:hover .proj-shot img{transform:scale(1.04)}
 .friend::after{content:"";position:absolute;inset:1px;border-radius:calc(var(--radius) - 1px);pointer-events:none;
   background:linear-gradient(120deg,color-mix(in srgb,var(--glass-shine) 22%,transparent),transparent 38%,transparent 72%,color-mix(in srgb,var(--glass-shine) 12%,transparent));
   opacity:.65}
-.friend .fc{position:relative; z-index:1; display:flex; flex-direction:column; gap:.4rem; width:100%;
-  padding:1.05rem 1.15rem 1.05rem 1.25rem; border-left:3px solid hsl(var(--hue,220) 52% 54%)}
-.friend.neutral .fc{border-left-color:var(--faint)}
+.friend .fc{position:relative; display:block; flex:1 1 auto}
+.friend .fc .mosaic{position:absolute; inset:0; background:url(/assets/mosaic.svg); background-size:132px; pointer-events:none;opacity:.62}
+.friend .fc::before{content:""; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(120deg, hsl(var(--hue,220) 48% 55% / .12), transparent 60%)}
+.friend .fbody{position:relative; z-index:1; display:flex; flex-direction:column; gap:.4rem; height:100%;
+  padding:.95rem 1.1rem 1.05rem 1.25rem; border-left:3px solid hsl(var(--hue,220) 52% 54%)}
+.friend.neutral .fbody{border-left-color:var(--faint)}
 .friend .t{font-weight:650; font-size:1.02rem; color:var(--fg); display:flex; align-items:center; gap:.5rem}
 .friend .t::before{content:""; width:14px; height:8px; border-radius:5px; flex:none;
   background:hsl(var(--hue,220) 55% 50%); box-shadow:0 0 0 3px hsl(var(--hue,220) 55% 50% / .18)}
 .friend.neutral .t::before{background:var(--faint); box-shadow:0 0 0 3px var(--chip)}
 .friend .d{font-size:.86rem; color:var(--sub); line-height:1.55}
-.friend .host{font-size:.75rem; color:var(--faint); font-family:ui-monospace,SFMono-Regular,Menlo,monospace; margin-top:.1rem}
+.friend .host{font-size:.75rem; color:var(--faint); font-family:ui-monospace,SFMono-Regular,Menlo,monospace; margin-top:auto;padding-top:.15rem}
 
 /* ── collection 落地页:与 blog 索引同用 .postlist(见上);仅论文标签轻蓝 ── */
 .postlist .tag.paper{color:var(--link);border-color:color-mix(in srgb,var(--link) 40%,var(--border))}
@@ -378,12 +396,12 @@ a:hover{color:var(--link-h)}
 .proj.neutral:hover{border-color:color-mix(in srgb,var(--link) 24%,var(--border))}
 .proj-shot{position:relative;display:block;aspect-ratio:960/520;overflow:hidden;flex:none;
   border-bottom:2px solid hsl(var(--hue,220) 52% 52%);background:var(--chip)}
-.proj.neutral .proj-shot{border-bottom-color:var(--border)}
+.proj.neutral .proj-shot,.friend.neutral .proj-shot{border-bottom-color:var(--border)}
 .proj-shot img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:transform .5s ease}
 .proj:hover .proj-shot img{transform:scale(1.04)}
 .proj-shot::after{content:"";position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(180deg,transparent 58%,hsl(var(--hue,220) 45% 38% / .12))}
-.proj.neutral .proj-shot::after{background:linear-gradient(180deg,transparent 58%,rgba(20,20,40,.08))}
+.proj.neutral .proj-shot::after,.friend.neutral .proj-shot::after{background:linear-gradient(180deg,transparent 58%,rgba(20,20,40,.08))}
 .proj-body{display:flex;flex-direction:column;gap:.4rem;padding:.95rem 1.1rem 1.05rem;flex:1 1 auto}
 .proj .t{font-weight:650;font-size:1.02rem;color:var(--fg);display:flex;align-items:center;gap:.5rem}
 .proj .t::before{content:"";width:9px;height:9px;border-radius:50%;flex:none;

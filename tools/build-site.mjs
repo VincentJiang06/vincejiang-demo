@@ -430,7 +430,10 @@ function renderBlogIndex(posts) {
   const desc = `Vince Jiang 的博客 —— 共 ${total} 篇杂谈与技术笔记。`;
   const head = { titleFull: `Blog · ${SITE.name}`, html: headHtml({ path: '/blog/', title: 'Blog', desc, jsonld: [{ '@context': 'https://schema.org', '@type': 'Blog', name: `${SITE.name} 的 Blog`, url: SITE.url + '/blog/', author: personLd }] }) };
   const main = `<main class="wrap narrow index-page"><div class="hero"><h1>Blog</h1><p>杂谈、技术笔记、随手记的实验。共 ${total} 篇。</p></div>
-<ul class="postlist">${items || '<p class="note">还没有已发布的文章。</p>'}</ul></main>`;
+${listTools({ placeholder: '搜索文章:标题 / 简介 / 标签…' })}
+<ul class="postlist" id="tool-grid" data-unit="篇">${items || '<p class="note">还没有已发布的文章。</p>'}</ul>
+<p class="gempty" id="gempty" hidden>没有匹配的条目。</p>
+${LIST_TOOLS_SCRIPT}</main>`;
   return pageHtml({ active: 'blog', head, main });
 }
 // ---- 作品卡(gallery):真实首屏截图 + 提取色相,与友链卡同一套 --hue 设计语言 ----
@@ -500,12 +503,15 @@ function highlightCard(g) {
     <span class="hl-scrim" aria-hidden="true"></span>
     <div class="hl-copy"><div class="t">${esc(g.title)}</div><div class="d">${esc(g.desc)}</div><div class="meta">${date}${badge}${host}</div></div></a>`;
 }
-// 友链卡:纸皮石马赛克底纹 + 站色相(--hue),港铁导视克制调性
+// 友链卡:真实首屏截图 + 纸皮石马赛克底纹 + 站色相(--hue),港铁导视克制调性;
+// 截图由 shots.sh 一并生成,但 hue 是手选的设计决定(反官色),shots 不覆盖
 function friendCard(w) {
   const host = esc(w.url.replace(/^https?:\/\//, '').replace(/\/$/, ''));
   const hue = Number.isFinite(w.hue) ? ` style="--hue:${w.hue}"` : '';
   const neutral = w.hue == null ? ' neutral' : '';
-  return `<a class="friend${neutral}"${hue} href="${w.url}" target="_blank" rel="noopener"><span class="mosaic" aria-hidden="true"></span><span class="fc"><span class="t">${esc(w.name)}</span><span class="d">${esc(w.desc)}</span><span class="host">${host} ↗</span></span></a>`;
+  const shot = shotPath(w.key);
+  const thumb = shot ? `<span class="proj-shot"><img src="${shot}" alt="${esc(w.name)} 首页截图" loading="lazy" decoding="async" width="960" height="600"></span>` : '';
+  return `<a class="friend${neutral}"${hue} href="${w.url}" target="_blank" rel="noopener">${thumb}<span class="fc"><span class="mosaic" aria-hidden="true"></span><span class="fbody"><span class="t">${esc(w.name)}</span><span class="d">${esc(w.desc)}</span><span class="host">${host} ↗</span></span></span></a>`;
 }
 function renderHome(posts) {
   const latest = posts.filter(p => !p.collectionKey).slice(0, LATEST_N);   // 论文专辑不进 blog 最新
@@ -533,7 +539,7 @@ ${researchSec ? `\n<div class="sec research-sec"><h2><span class="section-icon r
 <div class="grid c2 projects">${gallery}</div>
 
 <div class="sec"><h2>🔗 友链 · 香港高校「非官方」野史集群</h2><span class="note">六站互链,各守一校 · 纸皮石取自港铁月台墙</span></div>
-<div class="grid c3 friends">${friends}</div>
+<div class="grid c2 friends">${friends}</div>
 </main>`;
   return pageHtml({ active: 'home', head, main });
 }
@@ -552,25 +558,40 @@ function renderGallery() {
       { '@context': 'https://schema.org', '@type': 'CollectionPage', name: `${SITE.name} · Gallery`, url: SITE.url + '/gallery/', description: desc, author: personLd, mainEntity: { '@type': 'ItemList', itemListElement: list } },
     ] }),
   };
-  const tools = `<div class="gtools">
-<input id="gq" class="gsearch" type="search" placeholder="搜索作品:标题 / 简介 / 标签…" aria-label="搜索作品">
-<div class="gseg" role="group" aria-label="筛选"><button class="gbtn" data-filter="all" aria-pressed="true">全部</button><button class="gbtn" data-filter="hl" aria-pressed="false">✨ 主打</button><button class="gbtn" data-filter="in" aria-pressed="false">站内</button><button class="gbtn" data-filter="ext" aria-pressed="false">独立站点</button></div>
+  const main = `<main class="wrap index-page gallery-page"><div class="hero"><h1>Gallery</h1><p>做过的交互式 demo 与实验,共 ${total} 件。原地址不变,这里只是索引;卡片配色取自各站首屏截图的主色。</p></div>
+${listTools({ placeholder: '搜索作品:标题 / 简介 / 标签…', filters: `<div class="gseg" role="group" aria-label="筛选"><button class="gbtn" data-filter="all" aria-pressed="true">全部</button><button class="gbtn" data-filter="hl" aria-pressed="false">✨ 主打</button><button class="gbtn" data-filter="in" aria-pressed="false">站内</button><button class="gbtn" data-filter="ext" aria-pressed="false">独立站点</button></div>` })}
+<div class="grid c2 projects" id="tool-grid" data-unit="件">${cards}</div>
+<p class="gempty" id="gempty" hidden>没有匹配的条目。</p>
+${LIST_TOOLS_SCRIPT}</main>`;
+  return pageHtml({ active: 'gallery', head, main });
+}
+
+// ---- 列表工具栏(搜索/可选筛选/排序)—— gallery 与 blog 索引共用 ----
+// 约定:#tool-grid 的直接子元素为条目,每项含 .t(名称)与 <time datetime>(日期);data-unit 为计数单位。
+// 筛选按钮(data-filter)只有 gallery 有,脚本对不存在的筛选组自动跳过;无 JS 时 noscript 隐藏整条工具栏。
+function listTools({ placeholder, filters = '' }) {
+  return `<div class="gtools">
+<input id="gq" class="gsearch" type="search" placeholder="${placeholder}" aria-label="搜索">
+${filters}
 <div class="gseg" role="group" aria-label="排序"><button class="gbtn" data-sort="new" aria-pressed="true">最新</button><button class="gbtn" data-sort="old" aria-pressed="false">最早</button><button class="gbtn" data-sort="name" aria-pressed="false">名称</button></div>
 <span class="gcount" id="gcount" aria-live="polite"></span>
 </div>
 <noscript><style>.gtools{display:none}</style></noscript>`;
-  const script = `<script>
+}
+const LIST_TOOLS_SCRIPT = `<script>
 (function(){
-  var grid=document.getElementById('proj-grid');if(!grid)return;
+  var grid=document.getElementById('tool-grid');if(!grid)return;
+  var unit=grid.getAttribute('data-unit')||'项';
   var cards=[].slice.call(grid.children);
   var q=document.getElementById('gq'),empty=document.getElementById('gempty'),count=document.getElementById('gcount');
   var sortMode='new',filter='all';
   function dateOf(c){var t=c.querySelector('time');return t?t.getAttribute('datetime'):''}
   function nameOf(c){var t=c.querySelector('.t');return t?t.textContent:''}
+  function extEl(c){return c.tagName==='A'?c:c.querySelector('a')}
   function match(c){
     if(filter==='hl'&&!c.querySelector('.tag.star'))return false;
-    if(filter==='ext'&&!c.hasAttribute('target'))return false;
-    if(filter==='in'&&c.hasAttribute('target'))return false;
+    if(filter==='ext'&&!extEl(c).hasAttribute('target'))return false;
+    if(filter==='in'&&extEl(c).hasAttribute('target'))return false;
     var s=(q&&q.value||'').trim().toLowerCase();
     return !s||c.textContent.toLowerCase().indexOf(s)>=0;
   }
@@ -584,7 +605,7 @@ function renderGallery() {
     var vis=0;
     cards.forEach(function(c){var ok=match(c);c.style.display=ok?'':'none';if(ok)vis++;grid.appendChild(c);});
     if(empty)empty.hidden=vis>0;
-    if(count)count.textContent=vis===cards.length?cards.length+' 件作品':vis+' / '+cards.length+' 件';
+    if(count)count.textContent=vis===cards.length?cards.length+' '+unit:vis+' / '+cards.length+' '+unit;
   }
   function bind(sel,fn){[].forEach.call(document.querySelectorAll(sel),fn)}
   if(q)q.addEventListener('input',apply);
@@ -599,13 +620,6 @@ function renderGallery() {
   apply();
 })();
 </script>`;
-  const main = `<main class="wrap index-page gallery-page"><div class="hero"><h1>Gallery</h1><p>做过的交互式 demo 与实验,共 ${total} 件。原地址不变,这里只是索引;卡片配色取自各站首屏截图的主色。</p></div>
-${tools}
-<div class="grid c2 projects" id="proj-grid">${cards}</div>
-<p class="gempty" id="gempty" hidden>没有匹配的作品。</p>
-${script}</main>`;
-  return pageHtml({ active: 'gallery', head, main });
-}
 function renderBackgroundTest() {
   const path = '/background-test/';
   const desc = 'Background gradient test page for vincejiang.com.';
@@ -613,7 +627,7 @@ function renderBackgroundTest() {
     titleFull: `Background Test · ${SITE.name}`,
     html: headHtml({ path, title: 'Background Test', desc, robots: 'noindex, nofollow' }),
   };
-  const main = `<main class="background-test" aria-label="background gradient test"><section class="background-test-badge" aria-label="page label"><h1>Background Test</h1><p>CSS gradient fallback</p></section></main>`;
+  const main = `<main class="background-test" aria-label="background gradient test"><section class="background-test-badge" aria-label="page label"><h1>Background Test</h1><p>静态海浪 SVG · tools/gen-waves.mjs</p></section></main>`;
   return pageHtml({ head, main, chrome: false });
 }
 

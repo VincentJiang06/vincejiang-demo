@@ -76,14 +76,19 @@ async function extractHue(page, jpgBuffer) {
 }
 
 const config = JSON.parse(readFileSync(CONFIG_PATH, 'utf8'));
-const targets = (config.gallery || []).filter(g => g.key && (!only.length || only.includes(g.key)));
-if (!targets.length) { console.error('没有匹配的 gallery 条目(检查 key)'); process.exit(1); }
+// gallery 提取 hue 并写回;wildSites 只截图 —— 站色相是手选的设计决定(反官色),不被提取值覆盖
+const pool = [
+  ...(config.gallery || []).map(g => ({ entry: g, href: g.href, writeHue: true })),
+  ...(config.wildSites || []).map(w => ({ entry: w, href: w.url, writeHue: false })),
+];
+const targets = pool.filter(t => t.entry.key && (!only.length || only.includes(t.entry.key)));
+if (!targets.length) { console.error('没有匹配的 gallery/wildSites 条目(检查 key)'); process.exit(1); }
 mkdirSync(SHOTS_DIR, { recursive: true });
 
 const browser = await chromium.launch({ args: ['--no-sandbox', '--disable-dev-shm-usage'] });
 const failures = [];
-for (const g of targets) {
-  const url = /^https?:/.test(g.href) ? g.href : ORIGIN + g.href;
+for (const { entry: g, href, writeHue } of targets) {
+  const url = /^https?:/.test(href) ? href : ORIGIN + href;
   const context = await browser.newContext({
     viewport: { width: 1280, height: 800 }, deviceScaleFactor: 0.75,
     colorScheme: 'light', locale: 'zh-CN',
@@ -102,8 +107,8 @@ for (const g of targets) {
     writeFileSync(join(SHOTS_DIR, g.key + '.jpg'), jpg);
     const blank = await context.newPage();                      // 提色在 about:blank 做,避开目标站 CSP
     const { hue, coverage } = await extractHue(blank, jpg);
-    g.hue = coverage >= 0.015 ? hue : null;
-    console.log(`✓ ${g.key.padEnd(20)} ${url}  hue=${g.hue ?? 'null(中性)'}  彩色占比=${(coverage * 100).toFixed(1)}%`);
+    if (writeHue) g.hue = coverage >= 0.015 ? hue : null;
+    console.log(`✓ ${g.key.padEnd(20)} ${url}  hue=${writeHue ? (g.hue ?? 'null(中性)') : `[手选 ${g.hue ?? '无'};提取 ${hue} 仅记录]`}  彩色占比=${(coverage * 100).toFixed(1)}%`);
   } catch (e) {
     failures.push(g.key);
     console.error(`✗ ${g.key}: ${e.message}`);

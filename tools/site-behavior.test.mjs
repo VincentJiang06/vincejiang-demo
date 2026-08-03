@@ -25,7 +25,16 @@ assert.doesNotMatch(home, /id="ambient-dot|id="ambient-ripple"|id="wave-|class="
 assert.doesNotMatch(home, /\.ambient-bg|body::before\{/);
 assert.match(home, /--status-g1:#a8c0ff; --status-g2:#ffd3e0; --status-g3:#c2f5e9; --status-g4:#e7d5ff;/);
 assert.match(home, /--status-g1:#1e3a8a; --status-g2:#5b2a6e; --status-g3:#0f5a52; --status-g4:#3b2a72;/);
-assert.match(home, /background:var\(--page\);\s*\/\* 纯色背景/);
+assert.match(home, /background:var\(--page\);\s*\/\* 底色兜底;实际背景=固定层 \.bgwaves 静态海浪/);
+// ── 海浪背景(2026-08-03 用户裁决,替代旧「纯色背景」):固定层 + 静态 SVG,明暗双版,零动画 ──
+assert.match(home, /<div class="bgwaves" aria-hidden="true"><\/div>/);
+assert.match(home, /\.bgwaves\{position:fixed;inset:0;z-index:-1;pointer-events:none;/);
+assert.match(home, /bg-waves-light\.svg/);
+assert.match(home, /bg-waves-dark\.svg/);
+assert.ok(existsSync(join(OUT, 'assets', 'bg-waves-light.svg')), 'light waves SVG should be in the build');
+assert.ok(existsSync(join(OUT, 'assets', 'bg-waves-dark.svg')), 'dark waves SVG should be in the build');
+const wavesSvg = readFileSync(join(OUT, 'assets', 'bg-waves-light.svg'), 'utf8');
+assert.doesNotMatch(wavesSvg, /<animate|<script|feTurbulence|feDisplacementMap/, 'waves must stay static');
 assert.doesNotMatch(home, /radial-gradient\(\d+rem \d+rem at \d+% \d+%,color-mix\(in srgb,var\(--status-g/);
 assert.doesNotMatch(home, /linear-gradient\(135deg,color-mix\(in srgb,var\(--ambient-wash-a\)/);
 assert.doesNotMatch(home, /--ambient-line-[abc]/);
@@ -93,10 +102,16 @@ assert.match(home, /class="proj card neutral"/, 'near-monochrome sites should re
 assert.match(home, /assets\/shots\/reactor\.jpg/, 'highlight cards should use real screenshots as background');
 assert.doesNotMatch(home, /theme-reactor\.svg|theme-cus\.svg/, 'theme SVGs are replaced by real screenshots');
 assert.ok(existsSync(join(OUT, 'assets', 'shots', 'paletter.jpg')), 'screenshots should be copied into the build');
-assert.match(galleryIndex, /id="proj-grid"/);
+assert.match(galleryIndex, /id="tool-grid"/);
 assert.match(galleryIndex, /id="gq"/);
 assert.match(galleryIndex, /data-sort="new"/);
 assert.match(galleryIndex, /data-filter="hl"/);
+// Blog 索引复用同一工具栏(搜索+排序,无筛选);友链 = 截图卡两列
+assert.match(blogIndex, /id="tool-grid" data-unit="篇"/);
+assert.match(blogIndex, /data-sort="old"/);
+assert.doesNotMatch(blogIndex, /data-filter=/, 'blog toolbar should not have gallery-only filters');
+assert.match(home, /<div class="grid c2 friends">/);
+assert.match(home, /assets\/shots\/hkuwild\.jpg/, 'friend cards should carry real screenshots');
 assert.match(galleryIndex, /style="--hue:\d+" href="https:\/\/cus\.vincejiang\.com"/, 'cus hueManual should win over extracted null hue');
 // 色相防撞:所有带色相的卡两两间隔 ≥15°(圆周),蓝色扎堆时渲染层要推开
 const gHues = [...galleryIndex.matchAll(/class="proj card" style="--hue:(\d+)"/g)].map(m => +m[1]).sort((a, b) => a - b);
@@ -142,7 +157,8 @@ const backgroundTest = html('background-test');
 assert.match(backgroundTest, /<title>Background Test · Vince Jiang<\/title>/);
 assert.match(backgroundTest, /<meta name="robots" content="noindex, nofollow">/);
 assert.match(backgroundTest, /<main class="background-test" aria-label="background gradient test">/);
-assert.match(backgroundTest, /CSS gradient fallback/);
+assert.match(backgroundTest, /静态海浪 SVG · tools\/gen-waves\.mjs/);
+assert.match(backgroundTest, /<div class="bgwaves" aria-hidden="true"><\/div>/);
 assert.doesNotMatch(backgroundTest, /<div class="ambient-bg"|<svg viewBox="0 0 1440 980"|id="ambient-dot|id="wave-|feMorphology|class="dot-wave-matrix"/);
 assert.doesNotMatch(backgroundTest, /<nav class="nav">/);
 assert.doesNotMatch(backgroundTest, /<footer class="foot">/);

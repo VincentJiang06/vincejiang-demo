@@ -116,9 +116,19 @@ git add assets/shots site.config.json
 ```
 
 - `shots.sh` 在 playwright 容器(`mcr.microsoft.com/playwright:v1.61.1-jammy`)里跑 `tools/shots.mjs`,`playwright-core` 装在 `~/.cache/vj-shots-pw-*`(**不进 `tools/package.json`**,CI 的 `npm ci` 不需要它);默认对线上截图,`ORIGIN=http://localhost:8080 ./tools/shots.sh` 可打本地。
-- 产物:`assets/shots/<key>.jpg`(960×600 首屏,jpeg q84)+ 写回 `site.config.json` 各条 `hue`(主色相;首屏近单色的站写 `null` = 中性灰卡)。开屏动画站在 `shots.mjs` 的 `EXTRA_WAIT` 里按 key 加等待。
-- 品牌色明确但首屏低饱和的站,可手填 `hueManual`(优先于 `hue`,如 cus=243);`hue` 本身**勿手填**,重跑会被覆盖。
-- 生成器侧:`projectCard`/`highlightCard`(build-site.mjs)按 `assets/shots/<key>.jpg` 是否存在决定有无截图头;缺截图只是没图,不报错。
+- **中文字体**:容器只有文泉驿,截图字形会错。`shots.sh` 自动下载 Noto Sans/Serif SC 变量字体到 `~/.cache/vj-shots-fonts` 并连同 fontconfig 偏好(PingFang/雅黑/宋体→Noto)挂载进容器,勿删这段。
+- 产物:`assets/shots/<key>.jpg`(960×600 首屏,jpeg q84)+ 写回 `site.config.json` 各 gallery 条 `hue`(主色相;首屏近单色的站写 `null` = 中性灰卡)。**wildSites 也一并截图(友链卡用),但其 `hue` 是手选反官色,shots 只记录提取值、绝不覆盖**。开屏动画站在 `shots.mjs` 的 `EXTRA_WAIT` 里按 key 加等待;首屏空态站(如 cus)在 `ACTIONS` 里加预操作切到有内容的视图。
+- 品牌色明确但首屏低饱和的站,可手填 `hueManual`(优先于 `hue`);`hue` 本身**勿手填**,重跑会被覆盖。渲染层另有色相防撞(spreadHues 保序聚簇,相邻 ≥18°),展示色相 ≠ config 提取值属正常。
+- 生成器侧:`projectCard`/`highlightCard`/`friendCard`(build-site.mjs)按 `assets/shots/<key>.jpg` 是否存在决定有无截图头;缺截图只是没图,不报错(highlight 缺截图又缺 theme 会 warn)。
+- **列表工具栏**:/gallery/ 与 /blog/ 共用 `listTools()` + `LIST_TOOLS_SCRIPT`(约定 `#tool-grid` 直接子元素含 `.t` 与 `<time datetime>`;`data-unit` 是计数单位;筛选 chips 仅 gallery 有)。
+
+### 3.3 全站海浪背景(2026-08-03)
+
+生成器页面(首页/blog/research/gallery/background-test)的背景 = 固定层 `.bgwaves` + 静态 SVG 海浪
+(`assets/bg-waves-{light,dark}.svg`,由 `tools/gen-waves.mjs` 生成)。设计:远看白+灰(暗色=近黑+深灰)mono,
+细看八条波带交替埋低饱和色相(青/紫/橙/蓝/绿/粉/靛/灰蓝)+ 三根波峰细线;**纯静态,无动画无滤镜无脚本**。
+论文页(paper 模板)与各 demo 不受影响(它们不吃 site.css)。改波形/配色 → 改 `gen-waves.mjs` 后重跑
+`node tools/gen-waves.mjs`,产物要提交。此决定推翻了更早的「纯色背景」裁决,行为测试断言已同步。
 
 ---
 
