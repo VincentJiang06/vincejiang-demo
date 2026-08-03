@@ -82,7 +82,36 @@ assert.ok(!existsSync(join(OUT, 'blog', 'pension-demo-revision')), 'revision col
 const blogIndex = html('blog');
 const galleryIndex = html('gallery');
 assert.match(blogIndex, /<main class="wrap narrow index-page">/);
-assert.match(galleryIndex, /<main class="wrap narrow index-page">/);
+
+// ── 作品区新版式:两列截图卡 + 截图提取色相(--hue)+ Gallery 工具栏(搜索/筛选/排序) ──
+assert.match(galleryIndex, /<main class="wrap index-page gallery-page">/);
+assert.match(home, /<div class="grid c2 projects">/);
+assert.doesNotMatch(home, /<div class="grid c3">/, 'old 3-col gallery grid should be gone (friends grid keeps its own class)');
+assert.match(home, /assets\/shots\/paletter\.jpg/);
+assert.match(home, /class="proj card" style="--hue:\d+"/, 'extracted hue should land on the card as --hue');
+assert.match(home, /class="proj card neutral"/, 'near-monochrome sites should render as neutral cards');
+assert.match(home, /assets\/shots\/reactor\.jpg/, 'highlight cards should use real screenshots as background');
+assert.doesNotMatch(home, /theme-reactor\.svg|theme-cus\.svg/, 'theme SVGs are replaced by real screenshots');
+assert.ok(existsSync(join(OUT, 'assets', 'shots', 'paletter.jpg')), 'screenshots should be copied into the build');
+assert.match(galleryIndex, /id="proj-grid"/);
+assert.match(galleryIndex, /id="gq"/);
+assert.match(galleryIndex, /data-sort="new"/);
+assert.match(galleryIndex, /data-filter="hl"/);
+assert.match(galleryIndex, /style="--hue:\d+" href="https:\/\/cus\.vincejiang\.com"/, 'cus hueManual should win over extracted null hue');
+// 色相防撞:所有带色相的卡两两间隔 ≥15°(圆周),蓝色扎堆时渲染层要推开
+const gHues = [...galleryIndex.matchAll(/class="proj card" style="--hue:(\d+)"/g)].map(m => +m[1]).sort((a, b) => a - b);
+assert.ok(gHues.length >= 6, `expected >=6 hued cards, got ${gHues.length}`);
+for (let i = 1; i < gHues.length; i++) {
+  assert.ok(gHues[i] - gHues[i - 1] >= 15, `hue 防撞失效:${gHues[i - 1]} 与 ${gHues[i]} 间隔 <15°`);
+}
+const cfgGallery = JSON.parse(readFileSync(join(ROOT, 'site.config.json'), 'utf8')).gallery;
+const gCards = [...galleryIndex.matchAll(/<a class="proj card[^"]*"[^>]*href="([^"]+)"/g)].map(m => m[1]);
+assert.equal(gCards.length, cfgGallery.length, `gallery should list all ${cfgGallery.length} projects as cards`);
+const newestDate = cfgGallery.map(g => g.date).sort().reverse()[0];
+const firstCardDate = galleryIndex.match(/<time datetime="(\d{4}-\d{2}-\d{2})">/)[1];
+assert.equal(firstCardDate, newestDate, 'gallery default order should be newest-first');
+const gDates = [...galleryIndex.matchAll(/<time datetime="(\d{4}-\d{2}-\d{2})">/g)].map(m => m[1]);
+assert.deepEqual(gDates, [...gDates].sort().reverse(), 'gallery cards should be sorted by date desc');
 assert.doesNotMatch(home, /mac-buying-demo|M 系列 Mac 纯文本选购终端/);
 assert.doesNotMatch(galleryIndex, /mac-buying-demo|M 系列 Mac 纯文本选购终端|Mac 选购/);
 assert.ok(!existsSync(join(OUT, 'mac-buying-demo')), 'retired Mac demo should not be copied into the build');

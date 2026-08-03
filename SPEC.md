@@ -72,7 +72,7 @@ frontmatter 写 `layout: paper` → 用论文模板渲染:A4 排版、左侧大�
 1. 在**仓库根目录**建一个文件夹,如 `my-demo/`,里面至少放一个 `index.html`(可带 js/css/图片,全静态);
 2. 生成器会**原样收录**根目录下的内容文件夹(除基础设施/元文件外);
 3. `git commit && git push`。约 1~2 分钟后 `https://vincejiang.com/my-demo/` 可访问。
-4. 想让它出现在 Gallery / 首页,往 `site.config.json` 的 `gallery` 数组加一条。
+4. 想让它出现在 Gallery / 首页,往 `site.config.json` 的 `gallery` 数组加一条 —— 至少 `key`(截图文件名,一般=文件夹名)、`title`、`href`、`date`(上线日=该目录 git 首次提交,禁虚刷)、`desc`;然后跑一遍截图管线(见 §3.2)生成卡片截图与主色相。
 
 干净 URL:`/my-demo` 自动找 `/my-demo/index.html`;`/foo` 找 `/foo.html`。
 
@@ -104,6 +104,22 @@ rsync -a --delete dist/ ../../reactor-study/
 
 `reactor-study-src/` 里还有 `research/`(14 份专题报告 + 7 份深化报告 + 64 份原始搜索转储)、`experiments/`(5 个可复现实验)、`course/`(课程策划与文风契约)。**不含论文 PDF 与全文转录**——受版权保护,取回信息见 `reactor-study-src/papers/SOURCES.md`。
 
+### 3.2 作品卡截图与主色相(2026-08 版式)
+
+首页与 `/gallery/` 的作品区是**两列截图卡**:卡顶是各站真实首屏截图,标题圆点/截图底边/hover 描边用从截图提取的主色相染色(与友链卡同一套 `--hue` 语言)。`/gallery/` 页另有纯前端工具栏:搜索、筛选(全部/✨主打/站内/独立站点)、排序(最新/最早/名称);无 JS 时工具栏隐藏,顺序退化为服务端渲出的时间倒序。首页 Highlight 大卡以截图为满幅底图,普通两列卡**不再重复列主打项**。
+
+**加/改一个 demo 后跑截图管线**(手动,CI 不跑):
+
+```bash
+./tools/shots.sh                # 截全部;或 ./tools/shots.sh <key> 只重截一个
+git add assets/shots site.config.json
+```
+
+- `shots.sh` 在 playwright 容器(`mcr.microsoft.com/playwright:v1.61.1-jammy`)里跑 `tools/shots.mjs`,`playwright-core` 装在 `~/.cache/vj-shots-pw-*`(**不进 `tools/package.json`**,CI 的 `npm ci` 不需要它);默认对线上截图,`ORIGIN=http://localhost:8080 ./tools/shots.sh` 可打本地。
+- 产物:`assets/shots/<key>.jpg`(960×600 首屏,jpeg q84)+ 写回 `site.config.json` 各条 `hue`(主色相;首屏近单色的站写 `null` = 中性灰卡)。开屏动画站在 `shots.mjs` 的 `EXTRA_WAIT` 里按 key 加等待。
+- 品牌色明确但首屏低饱和的站,可手填 `hueManual`(优先于 `hue`,如 cus=243);`hue` 本身**勿手填**,重跑会被覆盖。
+- 生成器侧:`projectCard`/`highlightCard`(build-site.mjs)按 `assets/shots/<key>.jpg` 是否存在决定有无截图头;缺截图只是没图,不报错。
+
 ---
 
 ## 4. 目录结构
@@ -112,7 +128,7 @@ rsync -a --delete dist/ ../../reactor-study/
 posts/            # 博客 md 源:posts/<slug>.md、posts/<slug>/index.md+图,或 posts/<group>/<slug>.md 分组;<slug>.en.md 为英文译版
 templates/        # base.html + site.css(博客)+ paper.{html,css,js}(论文模板)+ PAPER-SPEC.md(论文写法规范)
 tools/            # 生成器 —— build-site.mjs / paper.mjs / paper-charts.mjs / gen-manifest.mjs / audit.mjs
-assets/           # 纯静态资源(mosaic.svg 友链纸皮石瓦纹),原样收录,不需 index.html
+assets/           # 纯静态资源(mosaic.svg 友链纸皮石瓦纹、shots/ 作品卡首屏截图),原样收录,不需 index.html
 release/          # 论文源内容暂存(不对外发布)
 reactor-study-src/# /reactor-study/ 那个 demo 的源料:研究报告、实验脚本、课程策划、站点生成器源码。
                   # 只存仓库供后续开发,不对外发布(产物是 reactor-study/)。见 §3.1

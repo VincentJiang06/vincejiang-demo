@@ -433,23 +433,72 @@ function renderBlogIndex(posts) {
 <ul class="postlist">${items || '<p class="note">还没有已发布的文章。</p>'}</ul></main>`;
   return pageHtml({ active: 'blog', head, main });
 }
-function tileCard(href, title, desc, extra = '', theme = null) {
-  const external = /^https?:/.test(href);
-  const host = external ? `<span class="host">${esc(href.replace(/^https?:\/\//, '').replace(/\/$/, ''))} ↗</span>` : '';
-  const attr = external ? ' target="_blank" rel="noopener"' : '';
-  const thumb = theme ? `<span class="tile-thumb" style="background-image:url(/assets/theme-${theme}.svg)" aria-hidden="true"></span>` : '';
-  return `<a class="tile card${theme ? ' themed' : ''}" href="${href}"${attr}>${thumb}<div class="t">${esc(title)}</div><div class="d">${esc(desc)}</div>${extra}${host}</a>`;
+// ---- 作品卡(gallery):真实首屏截图 + 提取色相,与友链卡同一套 --hue 设计语言 ----
+// 截图由 tools/shots.sh 生成到 assets/shots/<key>.jpg;色相在 site.config.json(hue 自动/hueManual 人工)。
+const shotPath = key => (key && existsSync(join(ROOT, 'assets', 'shots', `${key}.jpg`))) ? `/assets/shots/${key}.jpg` : null;
+const effHue = g => (Number.isFinite(g.hueManual) ? g.hueManual : (Number.isFinite(g.hue) ? g.hue : null));
+const hostOf = href => href.replace(/^https?:\/\//, '').replace(/\/$/, '');
+const galleryByDate = list => list.slice().sort((a, b) => ((a.date || '') < (b.date || '') ? 1 : (a.date || '') > (b.date || '') ? -1 : 0));
+// 色相防撞:提取色相要诚实,但多站同为蓝系会让强调色失去区分度(评审实测 219 vs 211 圆点肉眼同色)。
+// 只在渲染层调整、config 里的提取值不动。算法 = 保序聚簇均摊(pool-adjacent-violators 思路):
+// 排序后把相邻间隔 < minSep 的点并成簇,簇心取原值均值、簇内按 minSep 等距铺开;铺开后与后簇重叠则继续并簇。
+// (注意不能用「相邻对各推一半」的松弛 —— 推开量大时会越过邻居,交叉对在环上呈 ~358° 假大间隔,永不收敛。)
+function spreadHues(list, minSep = 18) {
+  const hued = list.filter(g => effHue(g) != null).sort((a, b) => effHue(a) - effHue(b));
+  if (hued.length * minSep > 360) minSep = Math.floor(360 / hued.length);   // 极端多项时退化为均匀分布间隔
+  const clusters = [];
+  for (const g of hued) {
+    clusters.push({ sum: effHue(g), n: 1 });
+    while (clusters.length > 1) {
+      const b = clusters[clusters.length - 1], a = clusters[clusters.length - 2];
+      const aEnd = a.sum / a.n + (a.n - 1) * minSep / 2;
+      const bStart = b.sum / b.n - (b.n - 1) * minSep / 2;
+      if (bStart - aEnd >= minSep) break;
+      a.sum += b.sum; a.n += b.n; clusters.pop();
+    }
+  }
+  const out = [];
+  for (const c of clusters) {
+    let h = c.sum / c.n - (c.n - 1) * minSep / 2;
+    for (let k = 0; k < c.n; k++, h += minSep) out.push(h);
+  }
+  // 首尾环绕间隔不足时整体均匀化兜底(现实数据里 0°/360° 附近有大空档,基本走不到)
+  if (out.length > 1 && (360 - (out[out.length - 1] - out[0])) % 360 < minSep) {
+    out.forEach((_, i) => { out[i] = out[0] + i * Math.floor(360 / out.length); });
+  }
+  const m = new Map();
+  hued.forEach((g, i) => m.set(g, Math.round(((out[i] % 360) + 360) % 360)));
+  return m;
 }
-// Highlight 大卡:blog 卡同构(题/述/meta),但以主题图为底 + 压字渐晕
+const HUE_DISPLAY = spreadHues(CONFIG.gallery || []);
+const displayHue = g => (HUE_DISPLAY.has(g) ? HUE_DISPLAY.get(g) : null);
+function projectCard(g) {
+  const external = /^https?:/.test(g.href);
+  const attr = external ? ' target="_blank" rel="noopener"' : '';
+  const host = external ? `<span class="host">${esc(hostOf(g.href))} ↗</span>` : '';
+  const shot = shotPath(g.key);
+  const hue = displayHue(g);
+  const hueAttr = hue != null ? ` style="--hue:${hue}"` : '';
+  const thumb = shot ? `<span class="proj-shot"><img src="${shot}" alt="${esc(g.title)} 首屏截图" loading="lazy" decoding="async" width="960" height="600"></span>` : '';
+  const star = g.highlight ? `<span class="tag star">✨ 主打</span>` : '';
+  const badge = g.badge ? `<span class="tag">${esc(g.badge)}</span>` : '';
+  const date = g.date ? `<time datetime="${g.date}">${g.date}</time>` : '';
+  return `<a class="proj card${hue == null ? ' neutral' : ''}"${hueAttr} href="${g.href}"${attr}>${thumb}<span class="proj-body"><span class="t">${esc(g.title)}</span><span class="d">${esc(g.desc)}</span><span class="meta">${date}${star}${badge}${host}</span></span></a>`;
+}
+// Highlight 大卡:与作品卡同数据源,但以首屏截图为满幅底图 + 压字渐晕
 function highlightCard(g) {
   const external = /^https?:/.test(g.href);
   const attr = external ? ' target="_blank" rel="noopener"' : '';
-  const host = external ? `<span class="host">${esc(g.href.replace(/^https?:\/\//, '').replace(/\/$/, ''))} ↗</span>` : '';
+  const host = external ? `<span class="host">${esc(hostOf(g.href))} ↗</span>` : '';
   const badge = g.badge ? `<span class="tag">${esc(g.badge)}</span>` : '';
-  return `<a class="tile card hl" href="${g.href}"${attr}>
-    <span class="hl-bg" style="background-image:url(/assets/theme-${g.theme}.svg)" aria-hidden="true"></span>
+  const date = g.date ? `<time datetime="${g.date}">${g.date}</time>` : '';
+  const bg = shotPath(g.key) || (g.theme ? `/assets/theme-${g.theme}.svg` : null);   // 无截图时退回旧主题图
+  if (!bg) warn(`highlight 项 ${g.key || g.title} 既无截图(assets/shots/${g.key}.jpg)也无 theme,大卡将无底图 —— 跑一遍 tools/shots.sh`);
+  const hue = displayHue(g);
+  return `<a class="tile card hl"${hue != null ? ` style="--hue:${hue}"` : ''} href="${g.href}"${attr}>
+    ${bg ? `<span class="hl-bg" style="background-image:url(${bg})" aria-hidden="true"></span>` : ''}
     <span class="hl-scrim" aria-hidden="true"></span>
-    <div class="t">${esc(g.title)}</div><div class="d">${esc(g.desc)}</div><div class="meta">${badge}${host}</div></a>`;
+    <div class="hl-copy"><div class="t">${esc(g.title)}</div><div class="d">${esc(g.desc)}</div><div class="meta">${date}${badge}${host}</div></div></a>`;
 }
 // 友链卡:纸皮石马赛克底纹 + 站色相(--hue),港铁导视克制调性
 function friendCard(w) {
@@ -461,8 +510,9 @@ function friendCard(w) {
 function renderHome(posts) {
   const latest = posts.filter(p => !p.collectionKey).slice(0, LATEST_N);   // 论文专辑不进 blog 最新
   const friends = (CONFIG.wildSites || []).map(friendCard).join('\n');
-  const gallery = (CONFIG.gallery || []).map(g => tileCard(g.href, g.title, g.desc, '', g.theme)).join('\n');
-  const highlights = (CONFIG.gallery || []).filter(g => g.highlight && g.theme).map(highlightCard).join('\n');
+  // 主打进 Highlight 大卡,其余按上线时间倒序进两列作品卡 —— 首页不再重复展示同一项目
+  const gallery = galleryByDate((CONFIG.gallery || []).filter(g => !g.highlight)).map(projectCard).join('\n');
+  const highlights = (CONFIG.gallery || []).filter(g => g.highlight).map(highlightCard).join('\n');
   const blog = latest.map(p => `<a class="tile card" href="${p.path}"><div class="t">${esc(p.title)}</div><div class="d">${esc(p.description)}</div><div class="meta">${p.date}</div></a>`).join('\n');
   const researchSec = researchPairs(posts).map((pair, i) => researchPairBlock(pair, posts, i, { compact: true, heading: 'h3', framed: false })).join('\n');
   const head = {
@@ -479,8 +529,8 @@ ${highlights ? `<div class="sec"><h2>✨ Highlight</h2></div>\n<div class="grid 
 <div class="sec"><h2>📝 Blog</h2><a class="more" href="/blog/">全部文章 →</a></div>
 <div class="grid c2">${blog || '<p class="note">敬请期待。</p>'}</div>
 ${researchSec ? `\n<div class="sec research-sec"><h2><span class="section-icon research-icon" aria-hidden="true">🧪</span>Research</h2><a class="more" href="${RESEARCH_PATH}">全部 Research →</a></div>\n<section class="research-home card"><div class="research-pairs home">${researchSec}</div></section>\n` : ''}
-<div class="sec"><h2>🎨 Gallery</h2><a class="more" href="/gallery/">全部作品 →</a></div>
-<div class="grid c3">${gallery}</div>
+<div class="sec"><h2>🎨 Gallery</h2><span class="note">按上线时间排序 · 主打见上方 Highlight</span><a class="more" href="/gallery/">全部作品 · 可搜索 →</a></div>
+<div class="grid c2 projects">${gallery}</div>
 
 <div class="sec"><h2>🔗 友链 · 香港高校「非官方」野史集群</h2><span class="note">六站互链,各守一校 · 纸皮石取自港铁月台墙</span></div>
 <div class="grid c3 friends">${friends}</div>
@@ -488,24 +538,72 @@ ${researchSec ? `\n<div class="sec research-sec"><h2><span class="section-icon r
   return pageHtml({ active: 'home', head, main });
 }
 function renderGallery() {
-  // 与 blog 索引同一列表版式(.wrap.narrow + .postlist)
-  const items = (CONFIG.gallery || []).map(g => {
-    const ext = /^https?:/.test(g.href);
-    const host = ext ? `<span class="host">${esc(g.href.replace(/^https?:\/\//, '').replace(/\/$/, ''))} ↗</span>` : '';
-    const attr = ext ? ' target="_blank" rel="noopener"' : '';
-    const badge = g.badge ? `<span class="tag">${esc(g.badge)}</span>` : '';
-    const thumb = g.theme ? `<span class="pl-thumb" style="background-image:url(/assets/theme-${g.theme}.svg)" aria-hidden="true"></span>` : '';
-    return `<li${g.theme ? ' class="themed"' : ''}><a href="${g.href}"${attr}>${thumb}<div class="t">${esc(g.title)}</div><div class="d">${esc(g.desc)}</div><div class="meta">${badge}${host}</div></a></li>`;
-  }).join('\n');
-  const list = (CONFIG.gallery || []).map((g, i) => ({ '@type': 'ListItem', position: i + 1, name: g.title, url: /^https?:/.test(g.href) ? g.href : SITE.url + g.href }));
+  // 两列作品卡(截图 + 提取色相)+ 纯前端工具栏:搜索 / 筛选 / 排序。默认按上线时间倒序,无 JS 也是这个顺序。
+  const items = galleryByDate(CONFIG.gallery || []);
+  const cards = items.map(projectCard).join('\n');
+  const list = items.map((g, i) => ({ '@type': 'ListItem', position: i + 1, name: g.title,
+    url: /^https?:/.test(g.href) ? g.href : SITE.url + g.href,
+    ...(shotPath(g.key) ? { image: SITE.url + shotPath(g.key) } : {}) }));
+  const total = items.length;
+  const desc = `作品集 —— ${total} 件交互式 demo 与实验:AI 服务状态、配色工具、互动课程、全字符弹球等。可搜索、筛选、按时间排序。`;
   const head = {
     titleFull: `Gallery · ${SITE.name}`,
-    html: headHtml({ path: '/gallery/', title: 'Gallery', desc: '作品集 —— AI 服务状态、HiFi 声学笔记与 Pretext 全字符弹球等交互式实验。', jsonld: [
-      { '@context': 'https://schema.org', '@type': 'CollectionPage', name: `${SITE.name} · Gallery`, url: SITE.url + '/gallery/', author: personLd, mainEntity: { '@type': 'ItemList', itemListElement: list } },
+    html: headHtml({ path: '/gallery/', title: 'Gallery', desc, jsonld: [
+      { '@context': 'https://schema.org', '@type': 'CollectionPage', name: `${SITE.name} · Gallery`, url: SITE.url + '/gallery/', description: desc, author: personLd, mainEntity: { '@type': 'ItemList', itemListElement: list } },
     ] }),
   };
-  const main = `<main class="wrap narrow index-page"><div class="hero"><h1>Gallery</h1><p>做过的交互式 demo 与实验。原地址不变,这里只是索引。</p></div>
-<ul class="postlist">${items}</ul></main>`;
+  const tools = `<div class="gtools">
+<input id="gq" class="gsearch" type="search" placeholder="搜索作品:标题 / 简介 / 标签…" aria-label="搜索作品">
+<div class="gseg" role="group" aria-label="筛选"><button class="gbtn" data-filter="all" aria-pressed="true">全部</button><button class="gbtn" data-filter="hl" aria-pressed="false">✨ 主打</button><button class="gbtn" data-filter="in" aria-pressed="false">站内</button><button class="gbtn" data-filter="ext" aria-pressed="false">独立站点</button></div>
+<div class="gseg" role="group" aria-label="排序"><button class="gbtn" data-sort="new" aria-pressed="true">最新</button><button class="gbtn" data-sort="old" aria-pressed="false">最早</button><button class="gbtn" data-sort="name" aria-pressed="false">名称</button></div>
+<span class="gcount" id="gcount" aria-live="polite"></span>
+</div>
+<noscript><style>.gtools{display:none}</style></noscript>`;
+  const script = `<script>
+(function(){
+  var grid=document.getElementById('proj-grid');if(!grid)return;
+  var cards=[].slice.call(grid.children);
+  var q=document.getElementById('gq'),empty=document.getElementById('gempty'),count=document.getElementById('gcount');
+  var sortMode='new',filter='all';
+  function dateOf(c){var t=c.querySelector('time');return t?t.getAttribute('datetime'):''}
+  function nameOf(c){var t=c.querySelector('.t');return t?t.textContent:''}
+  function match(c){
+    if(filter==='hl'&&!c.querySelector('.tag.star'))return false;
+    if(filter==='ext'&&!c.hasAttribute('target'))return false;
+    if(filter==='in'&&c.hasAttribute('target'))return false;
+    var s=(q&&q.value||'').trim().toLowerCase();
+    return !s||c.textContent.toLowerCase().indexOf(s)>=0;
+  }
+  function apply(){
+    cards.sort(function(a,b){
+      if(sortMode==='name')return nameOf(a).localeCompare(nameOf(b),'zh-Hans-CN');
+      var da=dateOf(a),db=dateOf(b);
+      if(da===db)return 0;
+      return sortMode==='old'?(da<db?-1:1):(da<db?1:-1);
+    });
+    var vis=0;
+    cards.forEach(function(c){var ok=match(c);c.style.display=ok?'':'none';if(ok)vis++;grid.appendChild(c);});
+    if(empty)empty.hidden=vis>0;
+    if(count)count.textContent=vis===cards.length?cards.length+' 件作品':vis+' / '+cards.length+' 件';
+  }
+  function bind(sel,fn){[].forEach.call(document.querySelectorAll(sel),fn)}
+  if(q)q.addEventListener('input',apply);
+  bind('.gbtn[data-sort]',function(b){b.addEventListener('click',function(){
+    sortMode=b.getAttribute('data-sort');
+    bind('.gbtn[data-sort]',function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    apply();});});
+  bind('.gbtn[data-filter]',function(b){b.addEventListener('click',function(){
+    filter=b.getAttribute('data-filter');
+    bind('.gbtn[data-filter]',function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    apply();});});
+  apply();
+})();
+</script>`;
+  const main = `<main class="wrap index-page gallery-page"><div class="hero"><h1>Gallery</h1><p>做过的交互式 demo 与实验,共 ${total} 件。原地址不变,这里只是索引;卡片配色取自各站首屏截图的主色。</p></div>
+${tools}
+<div class="grid c2 projects" id="proj-grid">${cards}</div>
+<p class="gempty" id="gempty" hidden>没有匹配的作品。</p>
+${script}</main>`;
   return pageHtml({ active: 'gallery', head, main });
 }
 function renderBackgroundTest() {

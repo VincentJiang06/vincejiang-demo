@@ -1,5 +1,5 @@
 {
-  "_note": "首页、gallery、Research 的单一数据源。改这里即改首页/gallery/Research,无需动模板。href 为 http(s) 视作外链、本站相对路径视作内部作品(进 sitemap)。wildSites[].hue = 友链纸皮石站色相(反官色,见 uniwild runbook);collections = Research collections(posts/<key>/ 下的文章按 order 排),layout:paper 用论文格式;正文 collection 用 revisedBy 指向 revision collection,revision collection 用 revisionOf 指回正文,Research 页会自动成对展示。",
+  "_note": "首页、gallery、Research 的单一数据源。改这里即改首页/gallery/Research,无需动模板。href 为 http(s) 视作外链、本站相对路径视作内部作品(进 sitemap)。wildSites[].hue = 友链纸皮石站色相(反官色,见 uniwild runbook);collections = Research collections(posts/<key>/ 下的文章按 order 排),layout:paper 用论文格式;正文 collection 用 revisedBy 指向 revision collection,revision collection 用 revisionOf 指回正文,Research 页会自动成对展示。gallery[].key = 截图文件名(assets/shots/<key>.jpg,由 tools/shots.sh 生成);date = 上线日(该目录 git 首次提交,禁虚刷);hue = 从首屏截图提取的主色相(shots.sh 自动写回,勿手填;首屏近单色的站写 null=中性卡);hueManual = 人工指定色相(优先于 hue,给品牌色明确但首屏低饱和的站用)。",
   "wildSites": [
     {
       "key": "hkuwild",
@@ -84,80 +84,116 @@
   ],
   "gallery": [
     {
+      "key": "graph-engineering",
       "title": "图工程：深度研究全集",
       "href": "/gallery/graph-engineering/",
+      "date": "2026-08-03",
       "desc": "22 个图工程里程碑项目的深度案例研究：从 Neo4j 无索引邻接、Pregel BSP、Facebook Tao，到 GNN 消息传递、收缩层次路由、LLVM CFG、Bazel 增量构建。每篇含架构分析、设计权衡与第一人称设计思考，配 9 张 SVG 架构节点图、分类体系与对比矩阵，明暗双主题，单文件自包含。",
-      "badge": "22 案例 · 9 架构图"
+      "badge": "22 案例 · 9 架构图",
+      "hue": 206
     },
     {
+      "key": "agent-graph-engineering",
       "title": "智能体图工程：深度研究全集",
       "href": "/gallery/agent-graph-engineering/",
+      "date": "2026-08-03",
       "desc": "20 个智能体图工程里程碑项目与模式：从 LangGraph 状态机、ReAct 原子循环、多智能体编排（Swarm/CrewAI/AutoGen），到智能体 RAG、人机协同、Temporal 持久执行与评估纪律。每篇含架构分析、设计权衡与模拟设计者思考，配 6 张 SVG 架构节点图、分类体系与对比矩阵，明暗双主题，单文件自包含。",
-      "badge": "20 案例 · 6 架构图"
+      "badge": "20 案例 · 6 架构图",
+      "hue": 206
     },
     {
+      "key": "qoder-training",
       "title": "Qoder 系列产品全景培训",
       "href": "/gallery/qoder-training/",
+      "date": "2026-08-03",
       "desc": "128 页 Qoder 产品线内部培训材料：Desktop、CLI、JetBrains Plugin、Cloud/Mobile/Web、QoderWork、Connectors、AI Slides、QoderWake、Enterprise、Pricing 共 12 章。方向键翻页、章节目录跳转，全部内容基于公开资料。",
-      "badge": "128 页 · 12 章"
+      "badge": "128 页 · 12 章",
+      "hue": 72
     },
     {
+      "key": "ai-industry-report",
       "title": "AI 行业生产力调研报告（2026）",
       "href": "/gallery/ai-industry-report/",
+      "date": "2026-08-03",
       "desc": "12 个行业、73 条可溯源用例的 AI 生产力全景：用例卡片 + 方法论与结构分析、10 条跨行业趋势、7 个短期节点预测（行业影响矩阵 + 可证伪观测指标）。科技风开屏，单文件自包含，全部来源可点击溯源。",
-      "badge": "单文件 · 73 用例 · 7 预测节点"
+      "badge": "单文件 · 73 用例 · 7 预测节点",
+      "hue": 219
     },
     {
+      "key": "paletter",
       "title": "Paletter 配色工具",
       "href": "/gallery/paletter/",
+      "date": "2026-07-19",
       "desc": "从一个起始色出发生成和谐配色：取色画布、色彩方案、色阶、渐变混合、WCAG 对比度校验（AAA/AA 三级），内置 563 个预制色板库（Pantone 年度色、名画、自然、设计系统），支持链接分享色板，中英双语。",
-      "badge": "单文件 · 563 色板库"
+      "badge": "单文件 · 563 色板库",
+      "hue": 211
     },
     {
+      "key": "reactor",
       "title": "REACTOR · 当尺子开始回看你",
       "href": "https://reactor.vincejiang.com/",
+      "date": "2026-07-18",
       "desc": "一部关于测量反应性的互动课程:70 个节点的天赋树,从排名如何改造世界、Goodhart 定律家族,讲到 AI 评测的博弈与抗博弈设计。每节配可上手的交互实验。",
       "badge": "70 节 · 交互天赋树",
       "highlight": true,
-      "theme": "reactor"
+      "theme": "reactor",
+      "hue": null
     },
     {
+      "key": "status-ai",
       "title": "AI 服务状态",
       "href": "/status-ai/",
+      "date": "2026-06-25",
       "desc": "一眼看懂 OpenAI 与 Anthropic 现在能不能用:聚合官方状态 + 通俗中文解说,附开放 JSON 接口。",
-      "badge": "带后端 · 开放接口"
+      "badge": "带后端 · 开放接口",
+      "hue": 227
     },
     {
+      "key": "vince-hifi-notes",
       "title": "Vince 的 HiFi 笔记",
       "href": "/vince-hifi-notes/",
+      "date": "2026-07-02",
       "desc": "把 HiFi 声学里最迷惑的概念逐一折算成能画出来的 dB:分压器、线材、阻抗、目标曲线。",
-      "badge": "长文技术笔记"
+      "badge": "长文技术笔记",
+      "hue": null
     },
     {
+      "key": "caoliao-skill-demo",
       "title": "草料文风 Skill 对比 Demo",
       "href": "/caoliao-skill-demo/",
+      "date": "2026-07-15",
       "desc": "草料文风 skill 家族 v2.3 的测试集三栏对比页:同一篇原文并排展示 skill 各档输出与问题清单,直观看到自动改写与人工判定的边界。",
-      "badge": "Skill 评测 · 单文件"
+      "badge": "Skill 评测 · 单文件",
+      "hue": 7
     },
     {
+      "key": "glyph-pinball",
       "title": "TYPE//PINBALL",
       "href": "/glyph-pinball/",
+      "date": "2026-07-15",
       "desc": "用底部字符板把字符球顶回满屏文字；顶部反射板用侧墙折返预测与限速追踪回球，移动物体会让 Pretext 持续重排整页 RedHatMono 等宽字流。",
-      "badge": "Pretext · 全字符弹球"
+      "badge": "Pretext · 全字符弹球",
+      "hue": 205
     },
     {
+      "key": "font-compare",
       "title": "标签字体对比工坊",
       "href": "/font-compare/",
+      "date": "2026-07-16",
       "desc": "在同一组二维码标签卡上一次看遍 52 款字体：14 款免费商用中文黑体 × 38 款等宽编号字体，标注开源可改 / 仅免费商用与品牌来源，支持改文字、上传 QR 图、切换命名字重。",
-      "badge": "52 款字体 · 懒加载"
+      "badge": "52 款字体 · 懒加载",
+      "hue": 36
     },
     {
+      "key": "cus",
       "title": "CUHK Schedule",
       "href": "https://cus.vincejiang.com",
+      "date": "2026-07-10",
       "desc": "中大选课助手:粘贴课号排出无冲突课表,筛选本学期还能选什么,解析先修/反修条件,支持 A/B 对比与 .ics 导出。",
       "badge": "React · 选课工具",
       "highlight": true,
-      "theme": "cus"
+      "theme": "cus",
+      "hue": 279
     }
   ]
 }
