@@ -1,0 +1,304 @@
+<!-- ai-slides: slot=slot-tk3v8c -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extensions：扩展开发工作台</title>
+  <style>
+@font-face { font-family: 'Alibaba PuHuiTi 3.0'; src: url('../assets/fonts/AlibabaPuHuiTi-3-55-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Alibaba PuHuiTi 3.0'; src: url('../assets/fonts/AlibabaPuHuiTi-3-65-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Alibaba PuHuiTi 3.0'; src: url('../assets/fonts/AlibabaPuHuiTi-3-85-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+
+    :root {
+      --canvas: #0B0D08;
+      --surface: #14180F;
+      --border: #2B3120;
+      --text: #F5F7EA;
+      --text-2: #AEB69B;
+      --accent: #22F7EE;
+      --aux: #7A5CFF;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html,
+    body {
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      background: var(--canvas);
+    }
+
+    body {
+      font-family: 'Alibaba PuHuiTi 3.0', sans-serif;
+      color: var(--text);
+      font-weight: 400;
+      line-height: 1.55;
+    }
+
+    .slide-container {
+      position: relative;
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      background: var(--canvas);
+      padding: 48px 56px 44px 56px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .corner-accent {
+      position: absolute;
+      top: 28px;
+      right: 32px;
+      width: 14px;
+      height: 14px;
+      background: var(--accent);
+      transform: rotate(45deg);
+    }
+
+    .slide-header {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex: 0 0 auto;
+    }
+
+    .section-divider {
+      width: 72px;
+      height: 3px;
+      background: var(--accent);
+    }
+
+    .slide-title {
+      font-family: 'Alibaba PuHuiTi 3.0', sans-serif;
+      font-size: 68px;
+      line-height: 1.18;
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: var(--text);
+    }
+
+    .slide-title .t-accent {
+      color: var(--accent);
+    }
+
+    .slide-sub {
+      font-size: 24px;
+      line-height: 1.5;
+      font-weight: 400;
+      color: var(--text-2);
+      max-width: 1168px;
+    }
+
+    .card-grid {
+      flex: 1;
+      min-height: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .card-item {
+      min-width: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-top: 2px solid var(--accent);
+      padding: 24px 24px 22px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .card-item.is-aux {
+      border-top-color: var(--aux);
+    }
+
+    .icon-box {
+      width: 54px;
+      height: 54px;
+      border: 1px solid rgba(34, 247, 238, 0.5);
+      background: rgba(34, 247, 238, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      flex: 0 0 auto;
+    }
+
+    .icon-box svg {
+      width: 32px;
+      height: 32px;
+      display: block;
+    }
+
+    .is-aux .icon-box {
+      border-color: rgba(122, 92, 255, 0.5);
+      background: rgba(122, 92, 255, 0.10);
+      color: var(--aux);
+    }
+
+    .card-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card-kicker {
+      font-size: 20px;
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+    }
+
+    .is-aux .card-kicker {
+      color: var(--aux);
+    }
+
+    .card-title {
+      font-family: 'Alibaba PuHuiTi 3.0', sans-serif;
+      font-size: 30px;
+      line-height: 1.2;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .card-desc {
+      font-size: 24px;
+      line-height: 1.5;
+      font-weight: 400;
+      color: var(--text-2);
+    }
+
+    .card-tag {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      font-size: 20px;
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+    }
+
+    .is-aux .card-tag {
+      color: var(--aux);
+    }
+
+    .takeaway {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border: 1px solid rgba(122, 92, 255, 0.45);
+      background: rgba(122, 92, 255, 0.10);
+      padding: 15px 24px;
+    }
+
+    .takeaway-icon {
+      width: 26px;
+      height: 26px;
+      color: var(--aux);
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .takeaway-icon svg {
+      width: 26px;
+      height: 26px;
+      display: block;
+    }
+
+    .takeaway-text {
+      font-size: 24px;
+      line-height: 1.4;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .takeaway-text .tk-em {
+      color: var(--accent);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <main class="slide-container" aria-label="Extensions 扩展开发工作台">
+    <div class="corner-accent" aria-hidden="true"></div>
+
+    <header class="slide-header">
+      <div class="section-divider" aria-hidden="true"></div>
+      <h1 class="slide-title"><span class="t-accent">Extensions</span>：扩展开发工作台</h1>
+      <p class="slide-sub">Desktop 扩展能力的统一入口——把核心能力开放给开发者，让每个好想法在工作台里生长。</p>
+    </header>
+
+    <section class="card-grid" aria-label="Extensions 三重意义">
+      <article class="card-item">
+        <div class="icon-box" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="18" y="18" width="12" height="12" stroke="currentColor" stroke-width="3"/>
+            <path d="M24 12v6M24 30v6M12 24h6M30 24h6" stroke="currentColor" stroke-width="3"/>
+            <rect x="20" y="6" width="8" height="6" stroke="currentColor" stroke-width="3"/>
+            <rect x="20" y="36" width="8" height="6" stroke="currentColor" stroke-width="3"/>
+            <rect x="6" y="20" width="6" height="8" stroke="currentColor" stroke-width="3"/>
+            <rect x="36" y="20" width="6" height="8" stroke="currentColor" stroke-width="3"/>
+          </svg>
+        </div>
+        <div class="card-copy">
+          <div class="card-kicker">OPEN API</div>
+          <h2 class="card-title">能力开放</h2>
+          <p class="card-desc">Desktop 的窗口、数据与命令等核心能力通过标准接口开放，供扩展自由调用与编排。</p>
+        </div>
+        <div class="card-tag">API / Hooks / Events</div>
+      </article>
+
+      <article class="card-item">
+        <div class="icon-box" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 15l-9 9 9 9" stroke="currentColor" stroke-width="3"/>
+            <path d="M32 15l9 9-9 9" stroke="currentColor" stroke-width="3"/>
+            <path d="M27 12l-6 24" stroke="currentColor" stroke-width="3"/>
+          </svg>
+        </div>
+        <div class="card-copy">
+          <div class="card-kicker">DEV EXPERIENCE</div>
+          <h2 class="card-title">低门槛开发</h2>
+          <p class="card-desc">用熟悉的 Web 技术栈编写扩展，模板与示例齐备，本地热更新即时预览效果。</p>
+        </div>
+        <div class="card-tag">模板 / 示例 / 热更新</div>
+      </article>
+
+      <article class="card-item is-aux">
+        <div class="icon-box" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 26v12h28V26" stroke="currentColor" stroke-width="3"/>
+            <path d="M24 30V10" stroke="currentColor" stroke-width="3"/>
+            <path d="M17 17l7-7 7 7" stroke="currentColor" stroke-width="3"/>
+          </svg>
+        </div>
+        <div class="card-copy">
+          <div class="card-kicker">ECOSYSTEM</div>
+          <h2 class="card-title">生态分发</h2>
+          <p class="card-desc">扩展一键发布至市场，用户即装即用；开发者与产品共同生长，形成正向循环。</p>
+        </div>
+        <div class="card-tag">市场 / 安装 / 更新</div>
+      </article>
+    </section>
+
+    <footer class="takeaway">
+      <div class="takeaway-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="7.5" y="7.5" width="9" height="9" transform="rotate(45 12 12)" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </div>
+      <p class="takeaway-text">一个入口，连接平台与开发者——<span class="tk-em">Extensions</span> 让 Desktop 从工具进化为持续生长的生态。</p>
+    </footer>
+  </main>
+<script id="__qw_sel_bridge">/* ai-slides-present-keyforward-v28 */;(function(){var t=null,imgClicked=false;var editMode=false,editTimer=null,composing=false;var presentMode=false;var EDIT_STYLE_ID="__qw_edit_style";var fmtTarget=null;var colorPopupOpen=false;var COLOR_PRESETS=["#FFFFFF","#F5F5F5","#E0E0E0","#BDBDBD","#9E9E9E","#757575","#616161","#424242","#212121","#000000","#FFEBEE","#FFF3E0","#FFFDE7","#E8F5E9","#E0F7FA","#E3F2FD","#EDE7F6","#FCE4EC","#FBE9E7","#EFEBE9","#FFCDD2","#FFE0B2","#FFF9C4","#C8E6C9","#B2EBF2","#BBDEFB","#D1C4E9","#F8BBD0","#FFCCBC","#D7CCC8","#EF5350","#FF9800","#FFEE58","#66BB6A","#26C6DA","#42A5F5","#7E57C2","#EC407A","#FF7043","#8D6E63","#C62828","#E65100","#F9A825","#2E7D32","#00838F","#1565C0","#4527A0","#AD1457","#D84315","#4E342E","#7F0000","#7C2D12","#F57F17","#1B5E20","#004D40","#0D47A1","#311B92","#880E4F","#BF360C","#3E2723","#FF1744","#FF9100","#FFEA00","#00E676","#00BCD4","#2979FF","#651FFF","#F50057","#FF3D00","#795548"];function rgbToHex(rgb){if(!rgb)return"";if(rgb.charAt(0)==="#")return rgb.toUpperCase();var m=rgb.match(/(d+)/g);if(!m||m.length<3)return"";return"#"+((1<<24)+(parseInt(m[0])<<16)+(parseInt(m[1])<<8)+parseInt(m[2])).toString(16).slice(1).toUpperCase()}var EDIT_SELECTOR="div,p,h1,h2,h3,h4,h5,h6,li,td,th,dt,dd,blockquote,figcaption,span,a,em,strong,b,i,u,code";function s(){if(editMode)return;var e=window.getSelection(),x=e?e.toString().trim():"",r=null;if(e&&!e.isCollapsed&&e.rangeCount>0){var b=e.getRangeAt(0).getBoundingClientRect();r={top:b.top,left:b.left,bottom:b.bottom,right:b.right,width:b.width,height:b.height}}window.parent.postMessage({type:"ai-slides-selection",text:x,rect:r},"*")}document.addEventListener("mouseup",function(){if(editMode)return;clearTimeout(t);t=setTimeout(function(){if(imgClicked){imgClicked=false;return}s()},16)});document.addEventListener("mousedown",function(){if(editMode)return;clearTimeout(t);imgClicked=false;window.parent.postMessage({type:"ai-slides-selection",text:"",rect:null},"*")});document.addEventListener("click",function(ev){if(editMode)return;if(ev.button!==0)return;var sel=window.getSelection();if(sel&&sel.toString&&sel.toString().trim().length>0)return;var el=ev.target;while(el&&el!==document.body&&el.tagName!=="IMG"){el=el.parentNode}if(!el||el.tagName!=="IMG")return;imgClicked=true;var b=el.getBoundingClientRect();var rawSrc=el.getAttribute("src")||"";var resolvedSrc=el.currentSrc||el.src||"";window.parent.postMessage({type:"ai-slides-image-selection",rect:{top:b.top,left:b.left,bottom:b.bottom,right:b.right,width:b.width,height:b.height},rawSrc:rawSrc,resolvedSrc:resolvedSrc},"*")},true);function hasOwnText(el){var c=el.childNodes;for(var i=0;i<c.length;i++){var n=c[i];if(n.nodeType===3&&n.nodeValue&&n.nodeValue.trim().length>0)return true}return false}function ensureEditStyle(){if(document.getElementById(EDIT_STYLE_ID))return;var st=document.createElement("style");st.id=EDIT_STYLE_ID;st.textContent="body.qw-edit-mode .qw-editable{outline:1px dashed transparent;cursor:text;border-radius:2px;}body.qw-edit-mode .qw-editable:hover{outline-color:rgba(56,114,255,0.6);}body.qw-edit-mode .qw-editable:focus{outline:2px solid #3b82f6;outline-offset:2px;}";document.head.appendChild(st)}function ensureFormatBar(){if(document.getElementById("__qw_fmt_bar"))return;var fmtSt=document.createElement("style");fmtSt.id="__qw_fmt_style";fmtSt.textContent="#__qw_fmt_bar,#__qw_fmt_bar *,#__qw_color_popup,#__qw_color_popup *{-webkit-user-select:none!important;user-select:none!important;cursor:pointer!important}#__qw_fmt_bar button:focus,#__qw_color_btn:focus{outline:none!important}";document.head.appendChild(fmtSt);var bar=document.createElement("div");bar.id="__qw_fmt_bar";bar.style.cssText="position:fixed;z-index:9999;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:8px;padding:4px;display:none;align-items:center;gap:2px;box-shadow:0 4px 12px rgba(0,0,0,.08),0 1px 3px rgba(0,0,0,.04);font-family:system-ui,-apple-system,sans-serif;";var bld=document.createElement("button");bld.id="__qw_bold_btn";bld.title="Bold (Cmd+B)";bld.textContent="B";bld.style.cssText="appearance:none;display:inline-flex;align-items:center;justify-content:center;height:32px;min-width:36px;padding:6px 8px;border:0;border-radius:4px;background:transparent;color:#1a1a1a;font-weight:700;font-size:14px;cursor:pointer;";var sep=document.createElement("div");sep.style.cssText="width:1px;height:20px;background:rgba(0,0,0,0.09);flex-shrink:0;margin:0 2px;";var dec=document.createElement("button");dec.id="__qw_fs_dec";dec.textContent="-";dec.style.cssText="appearance:none;display:inline-flex;align-items:center;justify-content:center;height:32px;min-width:32px;padding:6px;border:0;border-radius:4px;background:transparent;color:#1a1a1a;font-size:16px;line-height:1;cursor:pointer;";var val=document.createElement("span");val.id="__qw_fs_val";val.style.cssText="color:#1a1a1a;font-size:12px;min-width:36px;text-align:center;";var inc=document.createElement("button");inc.id="__qw_fs_inc";inc.textContent="+";inc.style.cssText="appearance:none;display:inline-flex;align-items:center;justify-content:center;height:32px;min-width:32px;padding:6px;border:0;border-radius:4px;background:transparent;color:#1a1a1a;font-size:16px;line-height:1;cursor:pointer;";var sep2=document.createElement("div");sep2.style.cssText="width:1px;height:20px;background:rgba(0,0,0,0.09);flex-shrink:0;margin:0 2px;";var cbtn=document.createElement("button");cbtn.id="__qw_color_btn";cbtn.title="Text Color";cbtn.style.cssText="appearance:none;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;height:32px;min-width:36px;padding:4px 8px;border:0;border-radius:4px;background:transparent;gap:2px;";var cLetter=document.createElement("span");cLetter.textContent="A";cLetter.style.cssText="font-weight:700;font-size:14px;color:#1a1a1a;line-height:1;pointer-events:none;";var cInd=document.createElement("span");cInd.id="__qw_color_ind";cInd.style.cssText="display:block;width:16px;height:4px;border-radius:1px;background:#1a1a1a;pointer-events:none;";cbtn.appendChild(cLetter);cbtn.appendChild(cInd);bar.appendChild(bld);bar.appendChild(sep);bar.appendChild(dec);bar.appendChild(val);bar.appendChild(inc);bar.appendChild(sep2);bar.appendChild(cbtn);document.body.appendChild(bar);var popup=document.createElement("div");popup.id="__qw_color_popup";popup.style.cssText="position:fixed;z-index:10000;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:8px;padding:8px;display:none;grid-template-columns:repeat(10,1fr);gap:3px;box-shadow:0 4px 12px rgba(0,0,0,.08),0 1px 3px rgba(0,0,0,.04);-webkit-user-select:none;user-select:none;";for(var ci=0;ci<COLOR_PRESETS.length;ci++){if(ci===60){var sepLine=document.createElement("div");sepLine.style.cssText="grid-column:1/-1;height:1px;background:rgba(0,0,0,0.09);margin:3px 0;";popup.appendChild(sepLine)}var sw=document.createElement("div");sw.setAttribute("data-color",COLOR_PRESETS[ci]);sw.style.cssText="width:20px;height:20px;border-radius:2px;border:1px solid rgba(0,0,0,0.1);cursor:pointer;box-sizing:border-box;background:"+COLOR_PRESETS[ci]+";";sw.addEventListener("mousedown",function(e){e.preventDefault();if(!fmtTarget)return;var hex=this.getAttribute("data-color");fmtTarget.style.color=hex;colorPopupOpen=false;popup.style.display="none";updateFormatBar(fmtTarget);scheduleFlush()});popup.appendChild(sw)}document.body.appendChild(popup);bld.addEventListener("mousedown",function(e){e.preventDefault();if(!fmtTarget)return;var w=parseInt(window.getComputedStyle(fmtTarget).fontWeight)||400;fmtTarget.style.fontWeight=w>=600?"400":"700";updateFormatBar(fmtTarget);scheduleFlush()});dec.addEventListener("mousedown",function(e){e.preventDefault();if(!fmtTarget)return;var sz=Math.round(parseFloat(window.getComputedStyle(fmtTarget).fontSize));fmtTarget.style.fontSize=Math.max(8,sz-2)+"px";updateFormatBar(fmtTarget);scheduleFlush()});inc.addEventListener("mousedown",function(e){e.preventDefault();if(!fmtTarget)return;var sz=Math.round(parseFloat(window.getComputedStyle(fmtTarget).fontSize));fmtTarget.style.fontSize=Math.min(144,sz+2)+"px";updateFormatBar(fmtTarget);scheduleFlush()});cbtn.addEventListener("mousedown",function(e){e.preventDefault();if(!fmtTarget)return;if(colorPopupOpen){colorPopupOpen=false;popup.style.display="none"}else{colorPopupOpen=true;var scale=1.4;popup.style.transform="scale("+scale+")";popup.style.transformOrigin="top left";popup.style.display="grid";var barEl=document.getElementById("__qw_fmt_bar");var barRect=barEl?barEl.getBoundingClientRect():{top:0,bottom:0,left:0,right:0};var elRect=fmtTarget.getBoundingClientRect();var popH=181;var popW=243;var scaledPopH=popH*scale;var scaledPopW=popW*scale;var gap=10;var docH=document.documentElement.clientHeight||720;var docW=document.documentElement.clientWidth||1280;var top;var barAbove=barRect.bottom<=elRect.top;if(barAbove){var spaceAbove=barRect.top;var spaceBelow=docH-elRect.bottom;if(spaceAbove>=scaledPopH+gap){top=barRect.top-scaledPopH-gap}else if(spaceBelow>=scaledPopH+gap){top=elRect.bottom+gap}else if(spaceAbove>spaceBelow){top=4}else{top=docH-scaledPopH-4}}else{var spaceBelow2=docH-barRect.bottom;var spaceAbove2=elRect.top;if(spaceBelow2>=scaledPopH+gap){top=barRect.bottom+gap}else if(spaceAbove2>=scaledPopH+gap){top=elRect.top-scaledPopH-gap}else if(spaceBelow2>spaceAbove2){top=docH-scaledPopH-4}else{top=4}}var left=barRect.right-scaledPopW;if(left<4)left=barRect.left;if(left+scaledPopW>docW)left=docW-scaledPopW-4;popup.style.top=Math.max(4,top)+"px";popup.style.left=Math.max(4,left)+"px";updateFormatBar(fmtTarget)}})}function showFormatBar(el){ensureFormatBar();fmtTarget=el;colorPopupOpen=false;var cp=document.getElementById("__qw_color_popup");if(cp)cp.style.display="none";updateFormatBar(el);positionFormatBar(el);document.getElementById("__qw_fmt_bar").style.display="flex"}function hideFormatBar(){fmtTarget=null;colorPopupOpen=false;var bar=document.getElementById("__qw_fmt_bar");if(bar)bar.style.display="none";var cp=document.getElementById("__qw_color_popup");if(cp)cp.style.display="none"}function updateFormatBar(el){var bar=document.getElementById("__qw_fmt_bar");if(!bar)return;var cs=window.getComputedStyle(el);var isBold=(parseInt(cs.fontWeight)||400)>=600;var btn=document.getElementById("__qw_bold_btn");if(btn)btn.style.background=isBold?"rgba(0,0,0,0.1)":"transparent";var fsv=document.getElementById("__qw_fs_val");if(fsv)fsv.textContent=Math.round(parseFloat(cs.fontSize))+"px";var cInd=document.getElementById("__qw_color_ind");if(cInd)cInd.style.background=cs.color;var curHex=rgbToHex(cs.color);var popup=document.getElementById("__qw_color_popup");if(popup){var swatches=popup.children;for(var i=0;i<swatches.length;i++){var sh=swatches[i].getAttribute("data-color");swatches[i].style.boxShadow=sh&&sh.toUpperCase()===curHex?"0 0 0 2px #3b82f6":"none"}}}function positionFormatBar(el){var bar=document.getElementById("__qw_fmt_bar");if(!bar)return;var rect=el.getBoundingClientRect();var docW=document.documentElement.clientWidth||1280;var scale=1.4;bar.style.transform="scale("+scale+")";bar.style.transformOrigin="top left";var barW=250*scale;var barH=40*scale;var top=rect.top>barH+24?rect.top-barH-16:rect.bottom+16;var left=Math.max(8,Math.min(rect.left,docW-barW-8));bar.style.top=top+"px";bar.style.left=left+"px"}function onFmtFocus(ev){if(editMode&&ev.target&&ev.target.getAttribute&&ev.target.getAttribute("data-qw-editable")==="1")showFormatBar(ev.target)}function onFmtBlur(){setTimeout(function(){if(!editMode)return;var a=document.activeElement;if(!a||!a.getAttribute||a.getAttribute("data-qw-editable")!=="1")hideFormatBar()},100)}function enableEdit(){if(editMode)return;editMode=true;ensureEditStyle();ensureFormatBar();document.body.classList.add("qw-edit-mode");var els=document.querySelectorAll(EDIT_SELECTOR);for(var i=0;i<els.length;i++){var el=els[i];if(!hasOwnText(el))continue;var p=el.parentNode,skip=false;while(p&&p!==document.body&&p.nodeType===1){if(p.getAttribute&&p.getAttribute("data-qw-editable")==="1"){skip=true;break}p=p.parentNode}if(skip)continue;el.setAttribute("contenteditable","true");el.setAttribute("data-qw-editable","1");el.classList.add("qw-editable")}document.addEventListener("focus",onFmtFocus,true);document.addEventListener("blur",onFmtBlur,true)}function serializeClean(){var c=document.documentElement.cloneNode(true);try{var dirty=c.querySelectorAll("[data-qw-editable]");for(var i=0;i<dirty.length;i++){var el=dirty[i];el.removeAttribute("contenteditable");el.removeAttribute("data-qw-editable");el.classList.remove("qw-editable");if(el.classList.length===0)el.removeAttribute("class")}var st=c.querySelector("#"+EDIT_STYLE_ID);if(st)st.parentNode.removeChild(st);var fs=c.querySelector("#__qw_fmt_style");if(fs)fs.parentNode.removeChild(fs);var br=c.querySelector("#__qw_sel_bridge");if(br)br.parentNode.removeChild(br);var fb=c.querySelector("#__qw_fmt_bar");if(fb)fb.parentNode.removeChild(fb);var cp=c.querySelector("#__qw_color_popup");if(cp)cp.parentNode.removeChild(cp);var b=c.querySelector("body");if(b)b.classList.remove("qw-edit-mode");if(b&&b.classList.length===0)b.removeAttribute("class")}catch(e){}return"<!DOCTYPE html>\n"+c.outerHTML}function flushNow(){if(!editMode)return;var html;try{html=serializeClean()}catch(e){return}if(!html)return;if(html.length>2097152){window.parent.postMessage({type:"ai-slides-edit-content-too-large",size:html.length},"*");return}window.parent.postMessage({type:"ai-slides-edit-content-changed",html:html,ts:Date.now()},"*")}function scheduleFlush(){if(composing)return;clearTimeout(editTimer);editTimer=setTimeout(flushNow,500)}function disableEdit(){if(!editMode)return;clearTimeout(editTimer);try{flushNow()}catch(e){}editMode=false;hideFormatBar();document.removeEventListener("focus",onFmtFocus,true);document.removeEventListener("blur",onFmtBlur,true);document.body.classList.remove("qw-edit-mode");var els=document.querySelectorAll("[data-qw-editable]");for(var i=0;i<els.length;i++){var el=els[i];el.removeAttribute("contenteditable");el.removeAttribute("data-qw-editable");el.classList.remove("qw-editable")}var st=document.getElementById(EDIT_STYLE_ID);if(st&&st.parentNode)st.parentNode.removeChild(st);var sel=window.getSelection();if(sel&&sel.removeAllRanges)sel.removeAllRanges()}document.addEventListener("input",function(ev){if(!editMode)return;var tg=ev.target;if(!tg||!tg.getAttribute||tg.getAttribute("data-qw-editable")!=="1")return;scheduleFlush()},true);document.addEventListener("compositionstart",function(){composing=true},true);document.addEventListener("compositionend",function(){composing=false;if(editMode)scheduleFlush()},true);document.addEventListener("paste",function(ev){if(!editMode)return;var tg=ev.target;if(!tg||!tg.getAttribute||tg.getAttribute("data-qw-editable")!=="1")return;ev.preventDefault();var dt=ev.clipboardData||window.clipboardData;if(!dt)return;var text=dt.getData&&dt.getData("text/plain");if(!text)return;try{document.execCommand("insertText",false,text)}catch(e){}},true);document.addEventListener("keydown",function(ev){if(!editMode){if(presentMode){var NK=["ArrowLeft","ArrowRight","ArrowUp","ArrowDown","PageUp","PageDown"," ","Escape"];if(NK.indexOf(ev.key)>=0){window.parent.postMessage({type:"ai-slides-present-keydown",key:ev.key},"*");ev.preventDefault()}}return}if(ev.key==="Escape"){ev.preventDefault();window.parent.postMessage({type:"ai-slides-edit-escape"},"*")}else if(ev.key==="Tab"){ev.preventDefault()}else if((ev.metaKey||ev.ctrlKey)&&ev.key==="b"){ev.preventDefault();if(fmtTarget){var w=parseInt(window.getComputedStyle(fmtTarget).fontWeight)||400;fmtTarget.style.fontWeight=w>=600?"400":"700";updateFormatBar(fmtTarget);scheduleFlush()}}},true);window.addEventListener("message",function(ev){if(ev.source!==window.parent)return;if(!ev.data)return;if(ev.data.type==="ai-slides-clear-selection"){var e=window.getSelection();if(e)e.removeAllRanges()}else if(ev.data.type==="ai-slides-enable-edit"){enableEdit()}else if(ev.data.type==="ai-slides-disable-edit"){disableEdit()}else if(ev.data.type==="ai-slides-set-present"){presentMode=!!ev.data.value}else if(ev.data.type==="ai-slides-ping-bridge"){window.parent.postMessage({type:"ai-slides-bridge-pong",version:"v28"},"*")}});})();</script></body>
+</html>

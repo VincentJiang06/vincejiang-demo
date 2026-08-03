@@ -1,0 +1,111 @@
+<!-- ai-slides: slot=slot-c829ut -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@font-face { font-family: 'Alibaba PuHuiTi 3.0'; src: url('../assets/fonts/AlibabaPuHuiTi-3-55-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Alibaba PuHuiTi 3.0'; src: url('../assets/fonts/AlibabaPuHuiTi-3-65-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Alibaba PuHuiTi 3.0'; src: url('../assets/fonts/AlibabaPuHuiTi-3-85-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1280px; height: 720px; }
+body { background-color: #0B0D08; color: #F5F7EA; font-family: 'Alibaba PuHuiTi 3.0', sans-serif; font-weight: 400; overflow: hidden; }
+
+.slide { position: relative; width: 1280px; height: 720px; padding: 38px 56px 34px; display: flex; flex-direction: column; }
+.corner-accent { position: absolute; top: 28px; right: 32px; width: 14px; height: 14px; background: #FF3DBE; transform: rotate(45deg); }
+
+.kicker { font-size: 20px; font-weight: 500; letter-spacing: 4px; color: #E4FF32; }
+h1.slide-title { font-size: 44px; font-weight: 700; line-height: 1.18; color: #F5F7EA; margin-top: 8px; }
+.section-divider { width: 72px; height: 3px; background: #FF3DBE; margin-top: 14px; }
+
+.columns { display: flex; gap: 28px; margin-top: 24px; flex: 1; min-height: 0; }
+.column { flex: 1; background: #14180F; border: 1px solid #2B3120; display: flex; flex-direction: column; padding: 22px 28px; min-width: 0; }
+.column.left { border-top: 3px solid #FF3DBE; }
+.column.right { border-top: 3px solid #22F7EE; }
+
+.column-header { display: flex; align-items: baseline; gap: 14px; padding-bottom: 12px; border-bottom: 1px solid #2B3120; }
+.column-tag { font-size: 20px; font-weight: 500; letter-spacing: 3px; }
+.left .column-tag { color: #FF3DBE; }
+.right .column-tag { color: #22F7EE; }
+.column-name { font-size: 26px; font-weight: 700; color: #F5F7EA; line-height: 1.2; }
+
+.column-content { flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; padding-top: 14px; }
+.row { display: flex; align-items: flex-start; gap: 14px; font-size: 24px; font-weight: 400; line-height: 1.5; color: #F5F7EA; }
+.row svg { flex: none; margin-top: 7px; }
+.left .row svg { color: #FF3DBE; }
+.right .row svg { color: #22F7EE; }
+
+.verdict { margin-top: 20px; background: #14180F; border: 1px solid #2B3120; border-left: 3px solid #E4FF32; padding: 14px 24px; display: flex; align-items: center; gap: 20px; }
+.verdict-label { font-size: 24px; font-weight: 700; color: #E4FF32; white-space: nowrap; }
+.verdict-text { font-size: 24px; font-weight: 500; color: #F5F7EA; line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="corner-accent"></div>
+
+  <div class="kicker">BOUNDARIES · 选对工具做对事</div>
+  <h1 class="slide-title">QoderWork 的使用边界</h1>
+  <div class="section-divider"></div>
+
+  <div class="columns">
+    <div class="column left">
+      <div class="column-header">
+        <span class="column-tag">STAY</span>
+        <span class="column-name">继续用 QoderWork</span>
+      </div>
+      <div class="column-content">
+        <div class="row">
+          <svg width="16" height="16" viewBox="0 0 16 16"><rect x="4.6" y="4.6" width="6.8" height="6.8" transform="rotate(45 8 8)" fill="currentColor"/></svg>
+          <span>文档、报告、幻灯片快速交付——交给智能体、只收结果</span>
+        </div>
+        <div class="row">
+          <svg width="16" height="16" viewBox="0 0 16 16"><rect x="4.6" y="4.6" width="6.8" height="6.8" transform="rotate(45 8 8)" fill="currentColor"/></svg>
+          <span>调研、检索、数据分析等轻日常——异步跑、不占本地环境</span>
+        </div>
+        <div class="row">
+          <svg width="16" height="16" viewBox="0 0 16 16"><rect x="4.6" y="4.6" width="6.8" height="6.8" transform="rotate(45 8 8)" fill="currentColor"/></svg>
+          <span>手机发起、电脑接续——任务状态在云端、跨设备不断档</span>
+        </div>
+        <div class="row">
+          <svg width="16" height="16" viewBox="0 0 16 16"><rect x="4.6" y="4.6" width="6.8" height="6.8" transform="rotate(45 8 8)" fill="currentColor"/></svg>
+          <span>重复流程沉淀为技能——一次配置、跨会话复用</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="column right">
+      <div class="column-header">
+        <span class="column-tag">SWITCH</span>
+        <span class="column-name">转用 Desktop / CLI</span>
+      </div>
+      <div class="column-content">
+        <div class="row">
+          <svg width="16" height="16" viewBox="0 0 16 16"><path d="M5 2.5 L10.5 8 L5 13.5" stroke="currentColor" stroke-width="2.4" fill="none"/></svg>
+          <span>本地代码库深度改造、多文件联编——选 Qoder Desktop</span>
+        </div>
+        <div class="row">
+          <svg width="16" height="16" viewBox="0 0 16 16"><path d="M5 2.5 L10.5 8 L5 13.5" stroke="currentColor" stroke-width="2.4" fill="none"/></svg>
+          <span>终端、环境、本地工具链要深度掌控——选 Qoder CLI</span>
+        </div>
+        <div class="row">
+          <svg width="16" height="16" viewBox="0 0 16 16"><path d="M5 2.5 L10.5 8 L5 13.5" stroke="currentColor" stroke-width="2.4" fill="none"/></svg>
+          <span>离线作业，或合规要求数据不出本地</span>
+        </div>
+        <div class="row">
+          <svg width="16" height="16" viewBox="0 0 16 16"><path d="M5 2.5 L10.5 8 L5 13.5" stroke="currentColor" stroke-width="2.4" fill="none"/></svg>
+          <span>需要逐步介入执行过程、细调参数</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="verdict">
+    <span class="verdict-label">一句话判断</span>
+    <span class="verdict-text">交给云端、只要结果——QoderWork；贴近本地、掌控过程——Desktop / CLI</span>
+  </div>
+</div>
+<script id="__qw_sel_bridge">/* ai-slides-present-keyforward-v28 */;(function(){var t=null,imgClicked=false;var editMode=false,editTimer=null,composing=false;var presentMode=false;var EDIT_STYLE_ID="__qw_edit_style";var fmtTarget=null;var colorPopupOpen=false;var COLOR_PRESETS=["#FFFFFF","#F5F5F5","#E0E0E0","#BDBDBD","#9E9E9E","#757575","#616161","#424242","#212121","#000000","#FFEBEE","#FFF3E0","#FFFDE7","#E8F5E9","#E0F7FA","#E3F2FD","#EDE7F6","#FCE4EC","#FBE9E7","#EFEBE9","#FFCDD2","#FFE0B2","#FFF9C4","#C8E6C9","#B2EBF2","#BBDEFB","#D1C4E9","#F8BBD0","#FFCCBC","#D7CCC8","#EF5350","#FF9800","#FFEE58","#66BB6A","#26C6DA","#42A5F5","#7E57C2","#EC407A","#FF7043","#8D6E63","#C62828","#E65100","#F9A825","#2E7D32","#00838F","#1565C0","#4527A0","#AD1457","#D84315","#4E342E","#7F0000","#7C2D12","#F57F17","#1B5E20","#004D40","#0D47A1","#311B92","#880E4F","#BF360C","#3E2723","#FF1744","#FF9100","#FFEA00","#00E676","#00BCD4","#2979FF","#651FFF","#F50057","#FF3D00","#795548"];function rgbToHex(rgb){if(!rgb)return"";if(rgb.charAt(0)==="#")return rgb.toUpperCase();var m=rgb.match(/(d+)/g);if(!m||m.length<3)return"";return"#"+((1<<24)+(parseInt(m[0])<<16)+(parseInt(m[1])<<8)+parseInt(m[2])).toString(16).slice(1).toUpperCase()}var EDIT_SELECTOR="div,p,h1,h2,h3,h4,h5,h6,li,td,th,dt,dd,blockquote,figcaption,span,a,em,strong,b,i,u,code";function s(){if(editMode)return;var e=window.getSelection(),x=e?e.toString().trim():"",r=null;if(e&&!e.isCollapsed&&e.rangeCount>0){var b=e.getRangeAt(0).getBoundingClientRect();r={top:b.top,left:b.left,bottom:b.bottom,right:b.right,width:b.width,height:b.height}}window.parent.postMessage({type:"ai-slides-selection",text:x,rect:r},"*")}document.addEventListener("mouseup",function(){if(editMode)return;clearTimeout(t);t=setTimeout(function(){if(imgClicked){imgClicked=false;return}s()},16)});document.addEventListener("mousedown",function(){if(editMode)return;clearTimeout(t);imgClicked=false;window.parent.postMessage({type:"ai-slides-selection",text:"",rect:null},"*")});document.addEventListener("click",function(ev){if(editMode)return;if(ev.button!==0)return;var sel=window.getSelection();if(sel&&sel.toString&&sel.toString().trim().length>0)return;var el=ev.target;while(el&&el!==document.body&&el.tagName!=="IMG"){el=el.parentNode}if(!el||el.tagName!=="IMG")return;imgClicked=true;var b=el.getBoundingClientRect();var rawSrc=el.getAttribute("src")||"";var resolvedSrc=el.currentSrc||el.src||"";window.parent.postMessage({type:"ai-slides-image-selection",rect:{top:b.top,left:b.left,bottom:b.bottom,right:b.right,width:b.width,height:b.height},rawSrc:rawSrc,resolvedSrc:resolvedSrc},"*")},true);function hasOwnText(el){var c=el.childNodes;for(var i=0;i<c.length;i++){var n=c[i];if(n.nodeType===3&&n.nodeValue&&n.nodeValue.trim().length>0)return true}return false}function ensureEditStyle(){if(document.getElementById(EDIT_STYLE_ID))return;var st=document.createElement("style");st.id=EDIT_STYLE_ID;st.textContent="body.qw-edit-mode .qw-editable{outline:1px dashed transparent;cursor:text;border-radius:2px;}body.qw-edit-mode .qw-editable:hover{outline-color:rgba(56,114,255,0.6);}body.qw-edit-mode .qw-editable:focus{outline:2px solid #3b82f6;outline-offset:2px;}";document.head.appendChild(st)}function ensureFormatBar(){if(document.getElementById("__qw_fmt_bar"))return;var fmtSt=document.createElement("style");fmtSt.id="__qw_fmt_style";fmtSt.textContent="#__qw_fmt_bar,#__qw_fmt_bar *,#__qw_color_popup,#__qw_color_popup *{-webkit-user-select:none!important;user-select:none!important;cursor:pointer!important}#__qw_fmt_bar button:focus,#__qw_color_btn:focus{outline:none!important}";document.head.appendChild(fmtSt);var bar=document.createElement("div");bar.id="__qw_fmt_bar";bar.style.cssText="position:fixed;z-index:9999;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:8px;padding:4px;display:none;align-items:center;gap:2px;box-shadow:0 4px 12px rgba(0,0,0,.08),0 1px 3px rgba(0,0,0,.04);font-family:system-ui,-apple-system,sans-serif;";var bld=document.createElement("button");bld.id="__qw_bold_btn";bld.title="Bold (Cmd+B)";bld.textContent="B";bld.style.cssText="appearance:none;display:inline-flex;align-items:center;justify-content:center;height:32px;min-width:36px;padding:6px 8px;border:0;border-radius:4px;background:transparent;color:#1a1a1a;font-weight:700;font-size:14px;cursor:pointer;";var sep=document.createElement("div");sep.style.cssText="width:1px;height:20px;background:rgba(0,0,0,0.09);flex-shrink:0;margin:0 2px;";var dec=document.createElement("button");dec.id="__qw_fs_dec";dec.textContent="-";dec.style.cssText="appearance:none;display:inline-flex;align-items:center;justify-content:center;height:32px;min-width:32px;padding:6px;border:0;border-radius:4px;background:transparent;color:#1a1a1a;font-size:16px;line-height:1;cursor:pointer;";var val=document.createElement("span");val.id="__qw_fs_val";val.style.cssText="color:#1a1a1a;font-size:12px;min-width:36px;text-align:center;";var inc=document.createElement("button");inc.id="__qw_fs_inc";inc.textContent="+";inc.style.cssText="appearance:none;display:inline-flex;align-items:center;justify-content:center;height:32px;min-width:32px;padding:6px;border:0;border-radius:4px;background:transparent;color:#1a1a1a;font-size:16px;line-height:1;cursor:pointer;";var sep2=document.createElement("div");sep2.style.cssText="width:1px;height:20px;background:rgba(0,0,0,0.09);flex-shrink:0;margin:0 2px;";var cbtn=document.createElement("button");cbtn.id="__qw_color_btn";cbtn.title="Text Color";cbtn.style.cssText="appearance:none;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;height:32px;min-width:36px;padding:4px 8px;border:0;border-radius:4px;background:transparent;gap:2px;";var cLetter=document.createElement("span");cLetter.textContent="A";cLetter.style.cssText="font-weight:700;font-size:14px;color:#1a1a1a;line-height:1;pointer-events:none;";var cInd=document.createElement("span");cInd.id="__qw_color_ind";cInd.style.cssText="display:block;width:16px;height:4px;border-radius:1px;background:#1a1a1a;pointer-events:none;";cbtn.appendChild(cLetter);cbtn.appendChild(cInd);bar.appendChild(bld);bar.appendChild(sep);bar.appendChild(dec);bar.appendChild(val);bar.appendChild(inc);bar.appendChild(sep2);bar.appendChild(cbtn);document.body.appendChild(bar);var popup=document.createElement("div");popup.id="__qw_color_popup";popup.style.cssText="position:fixed;z-index:10000;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:8px;padding:8px;display:none;grid-template-columns:repeat(10,1fr);gap:3px;box-shadow:0 4px 12px rgba(0,0,0,.08),0 1px 3px rgba(0,0,0,.04);-webkit-user-select:none;user-select:none;";for(var ci=0;ci<COLOR_PRESETS.length;ci++){if(ci===60){var sepLine=document.createElement("div");sepLine.style.cssText="grid-column:1/-1;height:1px;background:rgba(0,0,0,0.09);margin:3px 0;";popup.appendChild(sepLine)}var sw=document.createElement("div");sw.setAttribute("data-color",COLOR_PRESETS[ci]);sw.style.cssText="width:20px;height:20px;border-radius:2px;border:1px solid rgba(0,0,0,0.1);cursor:pointer;box-sizing:border-box;background:"+COLOR_PRESETS[ci]+";";sw.addEventListener("mousedown",function(e){e.preventDefault();if(!fmtTarget)return;var hex=this.getAttribute("data-color");fmtTarget.style.color=hex;colorPopupOpen=false;popup.style.display="none";updateFormatBar(fmtTarget);scheduleFlush()});popup.appendChild(sw)}document.body.appendChild(popup);bld.addEventListener("mousedown",function(e){e.preventDefault();if(!fmtTarget)return;var w=parseInt(window.getComputedStyle(fmtTarget).fontWeight)||400;fmtTarget.style.fontWeight=w>=600?"400":"700";updateFormatBar(fmtTarget);scheduleFlush()});dec.addEventListener("mousedown",function(e){e.preventDefault();if(!fmtTarget)return;var sz=Math.round(parseFloat(window.getComputedStyle(fmtTarget).fontSize));fmtTarget.style.fontSize=Math.max(8,sz-2)+"px";updateFormatBar(fmtTarget);scheduleFlush()});inc.addEventListener("mousedown",function(e){e.preventDefault();if(!fmtTarget)return;var sz=Math.round(parseFloat(window.getComputedStyle(fmtTarget).fontSize));fmtTarget.style.fontSize=Math.min(144,sz+2)+"px";updateFormatBar(fmtTarget);scheduleFlush()});cbtn.addEventListener("mousedown",function(e){e.preventDefault();if(!fmtTarget)return;if(colorPopupOpen){colorPopupOpen=false;popup.style.display="none"}else{colorPopupOpen=true;var scale=1.4;popup.style.transform="scale("+scale+")";popup.style.transformOrigin="top left";popup.style.display="grid";var barEl=document.getElementById("__qw_fmt_bar");var barRect=barEl?barEl.getBoundingClientRect():{top:0,bottom:0,left:0,right:0};var elRect=fmtTarget.getBoundingClientRect();var popH=181;var popW=243;var scaledPopH=popH*scale;var scaledPopW=popW*scale;var gap=10;var docH=document.documentElement.clientHeight||720;var docW=document.documentElement.clientWidth||1280;var top;var barAbove=barRect.bottom<=elRect.top;if(barAbove){var spaceAbove=barRect.top;var spaceBelow=docH-elRect.bottom;if(spaceAbove>=scaledPopH+gap){top=barRect.top-scaledPopH-gap}else if(spaceBelow>=scaledPopH+gap){top=elRect.bottom+gap}else if(spaceAbove>spaceBelow){top=4}else{top=docH-scaledPopH-4}}else{var spaceBelow2=docH-barRect.bottom;var spaceAbove2=elRect.top;if(spaceBelow2>=scaledPopH+gap){top=barRect.bottom+gap}else if(spaceAbove2>=scaledPopH+gap){top=elRect.top-scaledPopH-gap}else if(spaceBelow2>spaceAbove2){top=docH-scaledPopH-4}else{top=4}}var left=barRect.right-scaledPopW;if(left<4)left=barRect.left;if(left+scaledPopW>docW)left=docW-scaledPopW-4;popup.style.top=Math.max(4,top)+"px";popup.style.left=Math.max(4,left)+"px";updateFormatBar(fmtTarget)}})}function showFormatBar(el){ensureFormatBar();fmtTarget=el;colorPopupOpen=false;var cp=document.getElementById("__qw_color_popup");if(cp)cp.style.display="none";updateFormatBar(el);positionFormatBar(el);document.getElementById("__qw_fmt_bar").style.display="flex"}function hideFormatBar(){fmtTarget=null;colorPopupOpen=false;var bar=document.getElementById("__qw_fmt_bar");if(bar)bar.style.display="none";var cp=document.getElementById("__qw_color_popup");if(cp)cp.style.display="none"}function updateFormatBar(el){var bar=document.getElementById("__qw_fmt_bar");if(!bar)return;var cs=window.getComputedStyle(el);var isBold=(parseInt(cs.fontWeight)||400)>=600;var btn=document.getElementById("__qw_bold_btn");if(btn)btn.style.background=isBold?"rgba(0,0,0,0.1)":"transparent";var fsv=document.getElementById("__qw_fs_val");if(fsv)fsv.textContent=Math.round(parseFloat(cs.fontSize))+"px";var cInd=document.getElementById("__qw_color_ind");if(cInd)cInd.style.background=cs.color;var curHex=rgbToHex(cs.color);var popup=document.getElementById("__qw_color_popup");if(popup){var swatches=popup.children;for(var i=0;i<swatches.length;i++){var sh=swatches[i].getAttribute("data-color");swatches[i].style.boxShadow=sh&&sh.toUpperCase()===curHex?"0 0 0 2px #3b82f6":"none"}}}function positionFormatBar(el){var bar=document.getElementById("__qw_fmt_bar");if(!bar)return;var rect=el.getBoundingClientRect();var docW=document.documentElement.clientWidth||1280;var scale=1.4;bar.style.transform="scale("+scale+")";bar.style.transformOrigin="top left";var barW=250*scale;var barH=40*scale;var top=rect.top>barH+24?rect.top-barH-16:rect.bottom+16;var left=Math.max(8,Math.min(rect.left,docW-barW-8));bar.style.top=top+"px";bar.style.left=left+"px"}function onFmtFocus(ev){if(editMode&&ev.target&&ev.target.getAttribute&&ev.target.getAttribute("data-qw-editable")==="1")showFormatBar(ev.target)}function onFmtBlur(){setTimeout(function(){if(!editMode)return;var a=document.activeElement;if(!a||!a.getAttribute||a.getAttribute("data-qw-editable")!=="1")hideFormatBar()},100)}function enableEdit(){if(editMode)return;editMode=true;ensureEditStyle();ensureFormatBar();document.body.classList.add("qw-edit-mode");var els=document.querySelectorAll(EDIT_SELECTOR);for(var i=0;i<els.length;i++){var el=els[i];if(!hasOwnText(el))continue;var p=el.parentNode,skip=false;while(p&&p!==document.body&&p.nodeType===1){if(p.getAttribute&&p.getAttribute("data-qw-editable")==="1"){skip=true;break}p=p.parentNode}if(skip)continue;el.setAttribute("contenteditable","true");el.setAttribute("data-qw-editable","1");el.classList.add("qw-editable")}document.addEventListener("focus",onFmtFocus,true);document.addEventListener("blur",onFmtBlur,true)}function serializeClean(){var c=document.documentElement.cloneNode(true);try{var dirty=c.querySelectorAll("[data-qw-editable]");for(var i=0;i<dirty.length;i++){var el=dirty[i];el.removeAttribute("contenteditable");el.removeAttribute("data-qw-editable");el.classList.remove("qw-editable");if(el.classList.length===0)el.removeAttribute("class")}var st=c.querySelector("#"+EDIT_STYLE_ID);if(st)st.parentNode.removeChild(st);var fs=c.querySelector("#__qw_fmt_style");if(fs)fs.parentNode.removeChild(fs);var br=c.querySelector("#__qw_sel_bridge");if(br)br.parentNode.removeChild(br);var fb=c.querySelector("#__qw_fmt_bar");if(fb)fb.parentNode.removeChild(fb);var cp=c.querySelector("#__qw_color_popup");if(cp)cp.parentNode.removeChild(cp);var b=c.querySelector("body");if(b)b.classList.remove("qw-edit-mode");if(b&&b.classList.length===0)b.removeAttribute("class")}catch(e){}return"<!DOCTYPE html>\n"+c.outerHTML}function flushNow(){if(!editMode)return;var html;try{html=serializeClean()}catch(e){return}if(!html)return;if(html.length>2097152){window.parent.postMessage({type:"ai-slides-edit-content-too-large",size:html.length},"*");return}window.parent.postMessage({type:"ai-slides-edit-content-changed",html:html,ts:Date.now()},"*")}function scheduleFlush(){if(composing)return;clearTimeout(editTimer);editTimer=setTimeout(flushNow,500)}function disableEdit(){if(!editMode)return;clearTimeout(editTimer);try{flushNow()}catch(e){}editMode=false;hideFormatBar();document.removeEventListener("focus",onFmtFocus,true);document.removeEventListener("blur",onFmtBlur,true);document.body.classList.remove("qw-edit-mode");var els=document.querySelectorAll("[data-qw-editable]");for(var i=0;i<els.length;i++){var el=els[i];el.removeAttribute("contenteditable");el.removeAttribute("data-qw-editable");el.classList.remove("qw-editable")}var st=document.getElementById(EDIT_STYLE_ID);if(st&&st.parentNode)st.parentNode.removeChild(st);var sel=window.getSelection();if(sel&&sel.removeAllRanges)sel.removeAllRanges()}document.addEventListener("input",function(ev){if(!editMode)return;var tg=ev.target;if(!tg||!tg.getAttribute||tg.getAttribute("data-qw-editable")!=="1")return;scheduleFlush()},true);document.addEventListener("compositionstart",function(){composing=true},true);document.addEventListener("compositionend",function(){composing=false;if(editMode)scheduleFlush()},true);document.addEventListener("paste",function(ev){if(!editMode)return;var tg=ev.target;if(!tg||!tg.getAttribute||tg.getAttribute("data-qw-editable")!=="1")return;ev.preventDefault();var dt=ev.clipboardData||window.clipboardData;if(!dt)return;var text=dt.getData&&dt.getData("text/plain");if(!text)return;try{document.execCommand("insertText",false,text)}catch(e){}},true);document.addEventListener("keydown",function(ev){if(!editMode){if(presentMode){var NK=["ArrowLeft","ArrowRight","ArrowUp","ArrowDown","PageUp","PageDown"," ","Escape"];if(NK.indexOf(ev.key)>=0){window.parent.postMessage({type:"ai-slides-present-keydown",key:ev.key},"*");ev.preventDefault()}}return}if(ev.key==="Escape"){ev.preventDefault();window.parent.postMessage({type:"ai-slides-edit-escape"},"*")}else if(ev.key==="Tab"){ev.preventDefault()}else if((ev.metaKey||ev.ctrlKey)&&ev.key==="b"){ev.preventDefault();if(fmtTarget){var w=parseInt(window.getComputedStyle(fmtTarget).fontWeight)||400;fmtTarget.style.fontWeight=w>=600?"400":"700";updateFormatBar(fmtTarget);scheduleFlush()}}},true);window.addEventListener("message",function(ev){if(ev.source!==window.parent)return;if(!ev.data)return;if(ev.data.type==="ai-slides-clear-selection"){var e=window.getSelection();if(e)e.removeAllRanges()}else if(ev.data.type==="ai-slides-enable-edit"){enableEdit()}else if(ev.data.type==="ai-slides-disable-edit"){disableEdit()}else if(ev.data.type==="ai-slides-set-present"){presentMode=!!ev.data.value}else if(ev.data.type==="ai-slides-ping-bridge"){window.parent.postMessage({type:"ai-slides-bridge-pong",version:"v28"},"*")}});})();</script></body>
+</html>

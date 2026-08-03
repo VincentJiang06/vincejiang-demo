@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qoder 系列产品全景培训 · 128 页</title>
+<meta name="description" content="128 页 Qoder 系列产品内部培训材料：Desktop、CLI、JetBrains Plugin、Cloud/Mobile/Web、QoderWork、Connectors、AI Slides、QoderWake、Enterprise、Pricing 全章节，键盘左右翻页，含章节索引。">
+<style>
+:root{--bg:#0B0D08;--surface:#14180F;--lime:#E4FF32;--text:#F5F7EA;--muted:#AEB69B;--border:#2B3120;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{height:100%;}
+body{background:var(--bg);color:var(--text);font-family:"Alibaba PuHuiTi 3.0","PingFang SC","Microsoft YaHei",sans-serif;display:flex;flex-direction:column;overflow:hidden;}
+@font-face{font-family:"Alibaba PuHuiTi 3.0";src:url("assets/fonts/AlibabaPuHuiTi-3-55-Regular.woff2") format("woff2");font-weight:400;font-display:swap;}
+@font-face{font-family:"Alibaba PuHuiTi 3.0";src:url("assets/fonts/AlibabaPuHuiTi-3-65-Medium.woff2") format("woff2");font-weight:500;font-display:swap;}
+@font-face{font-family:"Alibaba PuHuiTi 3.0";src:url("assets/fonts/AlibabaPuHuiTi-3-85-Bold.woff2") format("woff2");font-weight:700;font-display:swap;}
+header{display:flex;align-items:center;gap:14px;padding:12px 20px;border-bottom:1px solid var(--border);flex:0 0 auto;}
+header .mark{width:12px;height:12px;background:var(--lime);transform:rotate(45deg);flex:0 0 auto;}
+header h1{font-size:17px;font-weight:700;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+header .hint{font-size:13px;color:var(--muted);white-space:nowrap;margin-left:auto;}
+#stage{flex:1 1 auto;position:relative;display:flex;align-items:center;justify-content:center;min-height:0;background:#060705;}
+#frame-wrap{position:relative;}
+iframe{display:block;border:0;background:var(--bg);width:1280px;height:720px;transform-origin:top left;}
+footer{flex:0 0 auto;display:flex;align-items:center;gap:14px;padding:12px 20px;border-top:1px solid var(--border);}
+button{background:var(--surface);color:var(--text);border:1px solid var(--border);padding:8px 16px;font-size:14px;font-family:inherit;cursor:pointer;border-radius:2px;transition:border-color .15s,color .15s;}
+button:hover{border-color:var(--lime);color:var(--lime);}
+button:disabled{opacity:.35;cursor:default;}
+button.primary{background:var(--lime);color:#0B0D08;border-color:var(--lime);font-weight:700;}
+button.primary:hover{color:#0B0D08;opacity:.9;}
+#counter{font-size:14px;color:var(--muted);min-width:74px;text-align:center;font-variant-numeric:tabular-nums;}
+#progress{flex:1;height:3px;background:var(--surface);position:relative;border-radius:2px;}
+#progress i{position:absolute;left:0;top:0;bottom:0;background:var(--lime);width:0;transition:width .2s;}
+#drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,92vw);background:var(--surface);border-left:1px solid var(--border);transform:translateX(100%);transition:transform .25s;z-index:20;display:flex;flex-direction:column;}
+#drawer.open{transform:translateX(0);}
+#drawer .d-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--border);}
+#drawer .d-head b{font-size:16px;}
+#drawer ol{list-style:none;overflow-y:auto;padding:8px 0;flex:1;}
+#drawer li.chapter{padding:14px 20px 6px;font-size:12px;letter-spacing:.08em;color:var(--lime);font-weight:700;}
+#drawer li.item a{display:flex;gap:10px;padding:7px 20px;color:var(--text);text-decoration:none;font-size:14px;line-height:1.4;}
+#drawer li.item a:hover{background:rgba(228,255,50,.07);}
+#drawer li.item a.cur{color:var(--lime);}
+#drawer li.item a .no{color:var(--muted);font-size:12px;min-width:30px;font-variant-numeric:tabular-nums;}
+#scrim{position:fixed;inset:0;background:rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity .25s;z-index:15;}
+#scrim.open{opacity:1;pointer-events:auto;}
+@media (max-width:720px){header .hint{display:none;}header h1{font-size:14px;}}
+</style>
+</head>
+<body>
+<header>
+  <span class="mark"></span>
+  <h1 id="slide-title">Qoder 系列产品全景培训</h1>
+  <span class="hint">← / → 翻页 · I 打开目录</span>
+</header>
+<div id="stage"><div id="frame-wrap"><iframe id="slide" title="slide"></iframe></div></div>
+<footer>
+  <button id="prev" aria-label="上一页">← 上一页</button>
+  <span id="counter">1 / 128</span>
+  <button id="next" aria-label="下一页">下一页 →</button>
+  <div id="progress"><i></i></div>
+  <button id="index-btn" class="primary">目录</button>
+</footer>
+<div id="scrim"></div>
+<nav id="drawer" aria-label="章节目录">
+  <div class="d-head"><b>章节目录 · 128 页</b><button id="close-drawer" aria-label="关闭">✕</button></div>
+  <ol id="toc"></ol>
+</nav>
+<script>
+const DATA = {"titles": ["Qoder 系列产品全景培训", "如何使用这份培训材料", "资料边界：公开可验证优先", "Qoder 产品家族地图", "两条主线：Coding 与 Work", "按角色选择学习路径", "第一章：平台定位与产品战略", "Qoder 的一句话定位", "从 Chat 到 Agentic Workflow", "能力演进：补全、协作、委托、执行", "平台底座能力总览", "产品之间如何分工", "产品矩阵：入口与平台", "Credits：统一资源计量语言", "第一章小结：把能力连成系统", "第二章：Qoder Desktop", "Qoder Desktop 是什么", "Desktop 的目标用户", "Code with me vs Run it for me", "Editor：实时协作开发", "Agentic Chat：面向代码库的对话", "Quest Window：把任务交给 Agent", "Quest 任务生命周期", "NEXT：智能补全与开发节奏", "RepoWiki：代码库知识地图", "大代码库上下文理解", "Knowledge Engine：上下文工程核心", "Context：让 Agent 知道该看什么", "手动上下文 vs 自动上下文", "Extensions：扩展开发工作台", "Desktop 平台兼容性", "Desktop 与其他开发工具的差异", "Desktop 典型任务清单", "研发一日工作流：Desktop 版", "Desktop 小结：真实开发的主战场", "第三章：Qoder CLI", "Qoder CLI 是什么", "CLI 的目标用户与场景", "CLI 平台与安装入口", "Desktop 与 CLI 如何配合", "CLI 的自动化价值", "CLI 任务流程示例", "CLI 讲解口径", "CLI 小结：把 Agent 带进终端", "第四章：JetBrains Plugin", "JetBrains Plugin 是什么", "插件适合谁", "Plugin vs Desktop", "插件的迁移成本优势", "插件安装与账号入口", "何时推荐插件，何时推荐 Desktop", "Plugin 小结：嵌入既有 IDE", "第五章：Cloud、Mobile 与 Web", "Cloud Agents 是什么", "Cloud Agents 的典型价值", "Local Agent vs Cloud Agent", "Mobile & Web 入口", "跨设备 Agent 工作流", "跨端协作的讲解口径", "第五章小结：从单点到跨端", "第六章：QoderWork", "QoderWork 是什么", "QoderWork 与 Qoder Desktop 的关系", "QoderWork 任务闭环", "QoderWork Quick Start 流程", "本地文件处理与授权目录", "Artifacts：专业输出物", "Browser Automation：更快更精确的网页操作", "Computer Use：让 Agent 操作电脑", "Browser Automation vs Computer Use", "Scheduled Tasks：周期性工作", "IM Channels：把任务带到消息流", "Voice Input：自然表达任务", "Awareness：环境感知与上下文", "Skills & Extensions：可复用专业能力", "Marketplace：能力市场", "Skills、Plugins、Connectors 的区别", "账号体系与 Credits 共享", "任务历史与本地存储边界", "QoderWork 的使用边界", "运营一日工作流：QoderWork 版", "销售/CS 一日工作流：QoderWork 版", "QoderWork 小结：Beyond chat, get it done", "第七章：Connectors 生态", "Connector 是什么", "内置连接器", "集成市场覆盖面", "默认不激活：授权优先", "Connector 启用流程", "三类上下文来源", "MCP：自定义连接能力", "Connector 权限边界", "Connector 客户价值表达", "Connector 小结：连接但不越权", "第八章：AI Slides 与专业输出", "AI Slides 是什么", "AI Slides 生成流程", "模板系统：风格与效率", "AI Slides vs 传统 PPT", "从数据到演示文稿", "AI Slides 讲解边界", "AI Slides 小结：让输出可展示", "第九章：QoderWake", "QoderWake 是什么", "QoderWake 平台支持", "QoderWake 与其他入口的关系", "QoderWake 讲解边界", "QoderWake 小结：入口明确，能力谨慎", "第十章：Enterprise 与团队采用", "Enterprise 是什么", "组织治理关注点", "个人、团队、企业的差异", "隐私与权限公开口径", "高风险操作与确认机制", "企业导入的训练口径", "Enterprise 小结：先治理，再规模化", "第十一章：Pricing 与 Credits", "公开计划结构", "个人计划价格与 Credits", "Trial 与 Credit Packs", "如何向用户解释 Credits", "Pricing 常见问答口径", "第十二章：资源、社区与落地", "公开资源入口地图", "如何验证产品信息", "培训实践作业设计", "最终产品矩阵复盘", "结语：把真实工作交给 Agent"], "chapters": {"7": "第一章 · 平台定位与产品战略", "16": "第二章 · Qoder Desktop", "36": "第三章 · Qoder CLI", "45": "第四章 · JetBrains Plugin", "53": "第五章 · Cloud、Mobile 与 Web", "61": "第六章 · QoderWork", "84": "第七章 · Connectors 生态", "95": "第八章 · AI Slides 与专业输出", "103": "第九章 · QoderWake", "109": "第十章 · Enterprise 与团队采用", "117": "第十一章 · Pricing 与 Credits", "123": "第十二章 · 资源、社区与落地"}};
+const N = DATA.titles.length;
+const chapters = Object.fromEntries(Object.entries(DATA.chapters).map(([k,v])=>[+k,v]));
+let cur = 1;
+const frame = document.getElementById('slide');
+const wrap = document.getElementById('frame-wrap');
+function pad(n){return String(n).padStart(3,'0');}
+function show(n, push=true){
+  cur = Math.min(Math.max(n,1), N);
+  frame.src = 'slides/'+pad(cur)+'.html';
+  document.getElementById('slide-title').textContent = DATA.titles[cur-1];
+  document.getElementById('counter').textContent = cur+' / '+N;
+  document.querySelector('#progress i').style.width = (cur/N*100)+'%';
+  document.getElementById('prev').disabled = cur===1;
+  document.getElementById('next').disabled = cur===N;
+  if(push) history.replaceState(null,'','#'+cur);
+  document.querySelectorAll('#toc a.cur').forEach(a=>a.classList.remove('cur'));
+  const a = document.querySelector('#toc a[data-n="'+cur+'"]');
+  if(a) a.classList.add('cur');
+}
+function fit(){
+  const st = document.getElementById('stage');
+  const s = Math.min(st.clientWidth/1280, st.clientHeight/720);
+  wrap.style.width = (1280*s)+'px'; wrap.style.height = (720*s)+'px';
+  frame.style.transform = 'scale('+s+')';
+}
+addEventListener('resize', fit);
+document.getElementById('prev').onclick = ()=>show(cur-1);
+document.getElementById('next').onclick = ()=>show(cur+1);
+addEventListener('keydown', e=>{
+  if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){e.preventDefault();show(cur+1);}
+  else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();show(cur-1);}
+  else if(e.key==='Home'){show(1);}
+  else if(e.key==='End'){show(N);}
+  else if(e.key==='i'||e.key==='I'){toggleDrawer();}
+  else if(e.key==='Escape'){closeDrawer();}
+});
+let tx=null;
+document.getElementById('stage').addEventListener('touchstart',e=>{tx=e.touches[0].clientX;},{passive:true});
+document.getElementById('stage').addEventListener('touchend',e=>{
+  if(tx===null) return;
+  const dx = e.changedTouches[0].clientX - tx; tx=null;
+  if(Math.abs(dx)>48) show(cur + (dx<0?1:-1));
+},{passive:true});
+const toc = document.getElementById('toc');
+const drawer = document.getElementById('drawer');
+const scrim = document.getElementById('scrim');
+(function buildToc(){
+  let html='';
+  for(let i=1;i<=N;i++){
+    if(chapters[i]) html += '<li class="chapter">'+chapters[i]+'</li>';
+    html += '<li class="item"><a href="#'+i+'" data-n="'+i+'"><span class="no">'+pad(i)+'</span><span>'+DATA.titles[i-1]+'</span></a></li>';
+  }
+  toc.innerHTML = html;
+  toc.addEventListener('click', e=>{
+    const a = e.target.closest('a[data-n]');
+    if(a){e.preventDefault(); show(+a.dataset.n); closeDrawer();}
+  });
+})();
+function toggleDrawer(){drawer.classList.toggle('open');scrim.classList.toggle('open',drawer.classList.contains('open'));}
+function closeDrawer(){drawer.classList.remove('open');scrim.classList.remove('open');}
+document.getElementById('index-btn').onclick = toggleDrawer;
+document.getElementById('close-drawer').onclick = closeDrawer;
+scrim.onclick = closeDrawer;
+const m = location.hash.match(/^#(\d+)$/);
+show(m ? +m[1] : 1, false);
+fit();
+</script>
+</body>
+</html>
