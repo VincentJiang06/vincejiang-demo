@@ -483,7 +483,7 @@ function projectCard(g, { hl = false } = {}) {
   const host = external ? `<span class="host">${esc(hostOf(g.href))} ↗</span>` : '';
   const hue = displayHue(g);
   const hueAttr = hue != null ? ` style="--hue:${hue}"` : '';
-  const star = g.highlight ? `<span class="tag star">✨ 主打</span>` : '';
+  const star = g.highlight ? `<span class="tag star">主打</span>` : '';   // 星形由 CSS ::before 画,emoji 排版不稳
   const badge = g.badge ? `<span class="tag">${esc(g.badge)}</span>` : '';
   const date = g.date ? `<time datetime="${g.date}">${g.date}</time>` : '';
   return `<a class="proj card${hl ? ' hl' : ''}${hue == null ? ' neutral' : ''}"${hueAttr} href="${g.href}"${attr}><span class="proj-bar" aria-hidden="true"></span><span class="proj-body"><span class="t">${esc(g.title)}</span><span class="d">${esc(g.desc)}</span><span class="meta">${date}${star}${badge}${host}</span></span></a>`;
@@ -548,7 +548,7 @@ function renderGallery() {
     ] }),
   };
   const main = `<main class="wrap index-page gallery-page"><div class="hero"><h1>Gallery</h1><p>做过的交互式 demo 与实验,共 ${total} 件。原地址不变,这里只是索引;卡片配色取自各站首屏截图的主色。</p></div>
-${listTools({ placeholder: '搜索作品:标题 / 简介 / 标签…', filters: `<div class="gseg" role="group" aria-label="筛选"><button class="gbtn" data-filter="all" aria-pressed="true">全部</button><button class="gbtn" data-filter="hl" aria-pressed="false">✨ 主打</button><button class="gbtn" data-filter="in" aria-pressed="false">站内</button><button class="gbtn" data-filter="ext" aria-pressed="false">独立站点</button></div>` })}
+${listTools({ placeholder: '搜索作品:标题 / 简介 / 标签…', filters: `<div class="gseg" role="group" aria-label="筛选"><button class="gbtn" data-filter="all" aria-pressed="true">全部</button><button class="gbtn" data-filter="hl" aria-pressed="false">★ 主打</button><button class="gbtn" data-filter="in" aria-pressed="false">站内</button><button class="gbtn" data-filter="ext" aria-pressed="false">独立站点</button></div>` })}
 <div class="grid c2 projects" id="tool-grid" data-unit="件">${cards}</div>
 <p class="gempty" id="gempty" hidden>没有匹配的条目。</p>
 ${LIST_TOOLS_SCRIPT}</main>`;
