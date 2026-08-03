@@ -29,7 +29,7 @@ const args = process.argv.slice(2);
 const CHECK = args.includes('--check');
 const outIdx = args.indexOf('--out');
 const OUT = outIdx >= 0 ? args[outIdx + 1] : join(ROOT, 'site');
-const LATEST_N = 5;
+const LATEST_N = 4;   // 首页最新文章:两列卡取偶数,行齐
 
 // ---- 站点常量 ----
 const SITE = {
@@ -341,12 +341,12 @@ function renderCollection(coll, posts) {
     .sort((a, b) => (order.indexOf(a.slug) - order.indexOf(b.slug)));
   const path = collectionPath(coll.key);
   const isRev = coll.kind === 'revision';
-  // 与 blog 索引同版式(.postlist)
+  // 与 gallery 同版式(两列色条卡);hue = collection 语义色
   const items = members.map(p => {
     const tldr = p.card === 'tldr';
     const badge = tldr ? `<span class="tag tldr">TL;DR · 先读这篇</span>`
       : (p.layout === 'paper' ? `<span class="tag paper">论文</span>` : `<span class="tag">评述</span>`);
-    return `<li class="${tldr ? 'is-tldr' : ''}"><a href="${p.path}"><div class="t">${esc(p.title)}</div><div class="d">${esc(p.description)}</div><div class="meta"><time datetime="${p.date}">${p.date}</time>${badge}</div></a></li>`;
+    return postCard(p, { hue: isRev ? 32 : 245, tagHtml: badge, extraCls: tldr ? 'is-tldr' : '' });
   }).join('\n');
   const list = members.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.title, url: SITE.url + p.path }));
   const revOf = coll.revisionOf ? collectionOf(coll.revisionOf) : null;
@@ -377,11 +377,12 @@ function renderCollection(coll, posts) {
       { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: crumbs },
     ] }),
   };
-  const main = `<main class="wrap narrow"><div class="hero${isRev ? ' rev' : ' research'}">${heroTag}<h1>${esc(coll.title)}</h1><p>${esc(coll.desc)}</p>${coll.note ? `<p class="note">${esc(coll.note)}</p>` : ''}${cross}</div>
-<ul class="postlist">${items || '<p class="note">敬请期待。</p>'}</ul>
+  const main = `<main class="wrap"><div class="hero${isRev ? ' rev' : ' research'}">${heroTag}<h1>${esc(coll.title)}</h1><p>${esc(coll.desc)}</p>${coll.note ? `<p class="note">${esc(coll.note)}</p>` : ''}${cross}</div>
+<div class="grid c2 projects">${items || '<p class="note">敬请期待。</p>'}</div>
 <a class="backlink" href="/">← 返回首页</a></main>`;
   return pageHtml({ active: 'research', head, main });
 }
+// Research collection 卡:与作品卡同构(色条卡),语义色 = 论文 245 靛 / Revision 32 琥珀
 function researchCollectionCard(c, posts, role, { compact = false } = {}) {
   const count = collectionPostCount(posts, c.key);
   const isRevision = role === 'revision';
@@ -389,10 +390,10 @@ function researchCollectionCard(c, posts, role, { compact = false } = {}) {
   const meta = isRevision ? `修订复盘 · ${count} 篇` : `Research · ${count} 篇`;
   const title = isRevision ? c.title : '论文正文';
   const desc = compact ? (c.homeCardDesc || c.homeDesc || c.desc) : c.desc;
-  return `<a class="research-card ${role}" href="${collectionPath(c.key)}"><span class="research-role">${label}</span><span class="research-card-copy"><span class="t">${esc(title)}</span><span class="d">${esc(desc)}</span></span><span class="meta">${meta}</span></a>`;
+  return `<a class="proj card research-card" style="--hue:${isRevision ? 32 : 245}" href="${collectionPath(c.key)}"><span class="proj-bar" aria-hidden="true"></span><span class="proj-body"><span class="t">${esc(title)}</span><span class="d">${esc(desc)}</span><span class="meta"><span class="tag ${isRevision ? 'rev-role' : 'paper-role'}">${label}</span><span>${meta}</span></span></span></a>`;
 }
 function missingRevisionCard() {
-  return `<div class="research-card revision missing"><span class="research-role">Revision</span><span class="research-card-copy"><span class="t">Revision 准备中</span><span class="d">这组研究的修订、评述或复盘尚未发布。</span></span><span class="meta">即将补齐</span></div>`;
+  return `<div class="proj card research-card missing neutral"><span class="proj-bar" aria-hidden="true"></span><span class="proj-body"><span class="t">Revision 准备中</span><span class="d">这组研究的修订、评述或复盘尚未发布。</span><span class="meta"><span class="tag rev-role">Revision</span><span>即将补齐</span></span></span></div>`;
 }
 function researchPairBlock(pair, posts, _index, { compact = false, heading = 'h2', framed = true } = {}) {
   const revCards = pair.revisions.length ? pair.revisions.map(c => researchCollectionCard(c, posts, 'revision', { compact })).join('\n') : missingRevisionCard();
@@ -401,7 +402,7 @@ function researchPairBlock(pair, posts, _index, { compact = false, heading = 'h2
   const desc = compact ? (pair.primary.homeDesc || pair.primary.desc) : pair.primary.desc;
   return `<section class="${classes}">
 <div class="research-pair-head"><${titleTag}>${esc(pair.primary.title)}</${titleTag}><p>${esc(desc)}</p></div>
-<div class="research-card-list">${researchCollectionCard(pair.primary, posts, 'paper', { compact })}${revCards}</div>
+<div class="research-card-list grid c2 projects">${researchCollectionCard(pair.primary, posts, 'paper', { compact })}${revCards}</div>
 </section>`;
 }
 function renderResearchIndex(posts) {
@@ -425,20 +426,20 @@ function renderResearchIndex(posts) {
 function renderBlogIndex(posts) {
   // Research collections 不进 blog —— 仅经 header「Research」/ 首页 Research 区进入。blog 只列散篇。
   const loose = posts.filter(p => !p.collectionKey);
-  const items = loose.map(p => `<li><a href="${p.path}"><div class="t">${esc(p.title)}</div><div class="d">${esc(p.description)}</div><div class="meta"><time datetime="${p.date}">${p.date}</time>${p.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div></a></li>`).join('\n');
+  const items = loose.map(p => postCard(p, { tagHtml: p.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('') })).join('\n');
   const total = loose.length;
   const desc = `Vince Jiang 的博客 —— 共 ${total} 篇杂谈与技术笔记。`;
   const head = { titleFull: `Blog · ${SITE.name}`, html: headHtml({ path: '/blog/', title: 'Blog', desc, jsonld: [{ '@context': 'https://schema.org', '@type': 'Blog', name: `${SITE.name} 的 Blog`, url: SITE.url + '/blog/', author: personLd }] }) };
-  const main = `<main class="wrap narrow index-page"><div class="hero"><h1>Blog</h1><p>杂谈、技术笔记、随手记的实验。共 ${total} 篇。</p></div>
+  const main = `<main class="wrap index-page"><div class="hero"><h1>Blog</h1><p>杂谈、技术笔记、随手记的实验。共 ${total} 篇。</p></div>
 ${listTools({ placeholder: '搜索文章:标题 / 简介 / 标签…' })}
-<ul class="postlist" id="tool-grid" data-unit="篇">${items || '<p class="note">还没有已发布的文章。</p>'}</ul>
+<div class="grid c2 projects" id="tool-grid" data-unit="篇">${items || '<p class="note">还没有已发布的文章。</p>'}</div>
 <p class="gempty" id="gempty" hidden>没有匹配的条目。</p>
 ${LIST_TOOLS_SCRIPT}</main>`;
   return pageHtml({ active: 'blog', head, main });
 }
-// ---- 作品卡(gallery):真实首屏截图 + 提取色相,与友链卡同一套 --hue 设计语言 ----
-// 截图由 tools/shots.sh 生成到 assets/shots/<key>.jpg;色相在 site.config.json(hue 自动/hueManual 人工)。
-const shotPath = key => (key && existsSync(join(ROOT, 'assets', 'shots', `${key}.jpg`))) ? `/assets/shots/${key}.jpg` : null;
+// ---- 作品卡(gallery):色条 + 提取色相,与友链卡同一套 --hue 设计语言 ----
+// 色相来源仍是各站首屏截图(tools/shots.sh 提取写回 site.config.json 的 hue/hueManual),
+// 但卡片上只展示色条不展示截图 —— 截图裁切不全/字体等呈现问题一刀切消掉,jpg 只留本地不入库。
 const effHue = g => (Number.isFinite(g.hueManual) ? g.hueManual : (Number.isFinite(g.hue) ? g.hue : null));
 const hostOf = href => href.replace(/^https?:\/\//, '').replace(/\/$/, '');
 const galleryByDate = list => list.slice().sort((a, b) => ((a.date || '') < (b.date || '') ? 1 : (a.date || '') > (b.date || '') ? -1 : 0));
@@ -475,51 +476,40 @@ function spreadHues(list, minSep = 18) {
 }
 const HUE_DISPLAY = spreadHues(CONFIG.gallery || []);
 const displayHue = g => (HUE_DISPLAY.has(g) ? HUE_DISPLAY.get(g) : null);
-function projectCard(g) {
+// hl=true 渲染主打大卡:同一结构,色条更厚 + 站色染层 + 标题放大(样式见 .proj.hl)
+function projectCard(g, { hl = false } = {}) {
   const external = /^https?:/.test(g.href);
   const attr = external ? ' target="_blank" rel="noopener"' : '';
   const host = external ? `<span class="host">${esc(hostOf(g.href))} ↗</span>` : '';
-  const shot = shotPath(g.key);
   const hue = displayHue(g);
   const hueAttr = hue != null ? ` style="--hue:${hue}"` : '';
-  const thumb = shot ? `<span class="proj-shot"><img src="${shot}" alt="${esc(g.title)} 首屏截图" loading="lazy" decoding="async" width="960" height="600"></span>` : '';
   const star = g.highlight ? `<span class="tag star">✨ 主打</span>` : '';
   const badge = g.badge ? `<span class="tag">${esc(g.badge)}</span>` : '';
   const date = g.date ? `<time datetime="${g.date}">${g.date}</time>` : '';
-  return `<a class="proj card${hue == null ? ' neutral' : ''}"${hueAttr} href="${g.href}"${attr}>${thumb}<span class="proj-body"><span class="t">${esc(g.title)}</span><span class="d">${esc(g.desc)}</span><span class="meta">${date}${star}${badge}${host}</span></span></a>`;
+  return `<a class="proj card${hl ? ' hl' : ''}${hue == null ? ' neutral' : ''}"${hueAttr} href="${g.href}"${attr}><span class="proj-bar" aria-hidden="true"></span><span class="proj-body"><span class="t">${esc(g.title)}</span><span class="d">${esc(g.desc)}</span><span class="meta">${date}${star}${badge}${host}</span></span></a>`;
 }
-// Highlight 大卡:与作品卡同数据源,但以首屏截图为满幅底图 + 压字渐晕
-function highlightCard(g) {
-  const external = /^https?:/.test(g.href);
-  const attr = external ? ' target="_blank" rel="noopener"' : '';
-  const host = external ? `<span class="host">${esc(hostOf(g.href))} ↗</span>` : '';
-  const badge = g.badge ? `<span class="tag">${esc(g.badge)}</span>` : '';
-  const date = g.date ? `<time datetime="${g.date}">${g.date}</time>` : '';
-  const bg = shotPath(g.key) || (g.theme ? `/assets/theme-${g.theme}.svg` : null);   // 无截图时退回旧主题图
-  if (!bg) warn(`highlight 项 ${g.key || g.title} 既无截图(assets/shots/${g.key}.jpg)也无 theme,大卡将无底图 —— 跑一遍 tools/shots.sh`);
-  const hue = displayHue(g);
-  return `<a class="tile card hl"${hue != null ? ` style="--hue:${hue}"` : ''} href="${g.href}"${attr}>
-    ${bg ? `<span class="hl-bg" style="background-image:url(${bg})" aria-hidden="true"></span>` : ''}
-    <span class="hl-scrim" aria-hidden="true"></span>
-    <div class="hl-copy"><div class="t">${esc(g.title)}</div><div class="d">${esc(g.desc)}</div><div class="meta">${date}${badge}${host}</div></div></a>`;
+// 文章卡:与作品卡同构(色条+题/述/meta)。hue 来源:散篇 = slug 确定性哈希(稳定标识色);
+// collection 成员/卡 = 固定语义色(论文 245 靛 / 评述 32 琥珀)。extraCls 用于 is-tldr 等强调。
+const hashHue = s => { let h = 0; for (const ch of String(s)) h = (h * 31 + ch.codePointAt(0)) >>> 0; return h % 360; };
+function postCard(p, { hue = null, tagHtml = '', extraCls = '' } = {}) {
+  const h = hue != null ? hue : hashHue(p.slug);
+  return `<a class="proj card${extraCls ? ' ' + extraCls : ''}" style="--hue:${h}" href="${p.path}"><span class="proj-bar" aria-hidden="true"></span><span class="proj-body"><span class="t">${esc(p.title)}</span><span class="d">${esc(p.description)}</span><span class="meta"><time datetime="${p.date}">${p.date}</time>${tagHtml}</span></span></a>`;
 }
-// 友链卡:真实首屏截图 + 纸皮石马赛克底纹 + 站色相(--hue),港铁导视克制调性;
-// 截图由 shots.sh 一并生成,但 hue 是手选的设计决定(反官色),shots 不覆盖
+
+// 友链卡:纸皮石马赛克底纹 + 站色相(--hue)信号条,港铁导视克制调性(hue 是手选反官色,非提取值)
 function friendCard(w) {
   const host = esc(w.url.replace(/^https?:\/\//, '').replace(/\/$/, ''));
   const hue = Number.isFinite(w.hue) ? ` style="--hue:${w.hue}"` : '';
   const neutral = w.hue == null ? ' neutral' : '';
-  const shot = shotPath(w.key);
-  const thumb = shot ? `<span class="proj-shot"><img src="${shot}" alt="${esc(w.name)} 首页截图" loading="lazy" decoding="async" width="960" height="600"></span>` : '';
-  return `<a class="friend${neutral}"${hue} href="${w.url}" target="_blank" rel="noopener">${thumb}<span class="fc"><span class="mosaic" aria-hidden="true"></span><span class="fbody"><span class="t">${esc(w.name)}</span><span class="d">${esc(w.desc)}</span><span class="host">${host} ↗</span></span></span></a>`;
+  return `<a class="friend${neutral}"${hue} href="${w.url}" target="_blank" rel="noopener"><span class="fc"><span class="mosaic" aria-hidden="true"></span><span class="fbody"><span class="t">${esc(w.name)}</span><span class="d">${esc(w.desc)}</span><span class="host">${host} ↗</span></span></span></a>`;
 }
 function renderHome(posts) {
   const latest = posts.filter(p => !p.collectionKey).slice(0, LATEST_N);   // 论文专辑不进 blog 最新
   const friends = (CONFIG.wildSites || []).map(friendCard).join('\n');
   // 主打进 Highlight 大卡,其余按上线时间倒序进两列作品卡 —— 首页不再重复展示同一项目
-  const gallery = galleryByDate((CONFIG.gallery || []).filter(g => !g.highlight)).map(projectCard).join('\n');
-  const highlights = (CONFIG.gallery || []).filter(g => g.highlight).map(highlightCard).join('\n');
-  const blog = latest.map(p => `<a class="tile card" href="${p.path}"><div class="t">${esc(p.title)}</div><div class="d">${esc(p.description)}</div><div class="meta">${p.date}</div></a>`).join('\n');
+  const gallery = galleryByDate((CONFIG.gallery || []).filter(g => !g.highlight)).map(g => projectCard(g)).join('\n');
+  const highlights = (CONFIG.gallery || []).filter(g => g.highlight).map(g => projectCard(g, { hl: true })).join('\n');
+  const blog = latest.map(p => postCard(p)).join('\n');
   const researchSec = researchPairs(posts).map((pair, i) => researchPairBlock(pair, posts, i, { compact: true, heading: 'h3', framed: false })).join('\n');
   const head = {
     titleFull: `${SITE.name} · 个人站`,
@@ -533,23 +523,22 @@ function renderHome(posts) {
 
 ${highlights ? `<div class="sec"><h2>✨ Highlight</h2></div>\n<div class="grid c2 highlights">${highlights}</div>\n` : ''}
 <div class="sec"><h2>📝 Blog</h2><a class="more" href="/blog/">全部文章 →</a></div>
-<div class="grid c2">${blog || '<p class="note">敬请期待。</p>'}</div>
+<div class="grid c2 projects">${blog || '<p class="note">敬请期待。</p>'}</div>
 ${researchSec ? `\n<div class="sec research-sec"><h2><span class="section-icon research-icon" aria-hidden="true">🧪</span>Research</h2><a class="more" href="${RESEARCH_PATH}">全部 Research →</a></div>\n<section class="research-home card"><div class="research-pairs home">${researchSec}</div></section>\n` : ''}
 <div class="sec"><h2>🎨 Gallery</h2><span class="note">按上线时间排序 · 主打见上方 Highlight</span><a class="more" href="/gallery/">全部作品 · 可搜索 →</a></div>
 <div class="grid c2 projects">${gallery}</div>
 
 <div class="sec"><h2>🔗 友链 · 香港高校「非官方」野史集群</h2><span class="note">六站互链,各守一校 · 纸皮石取自港铁月台墙</span></div>
-<div class="grid c2 friends">${friends}</div>
+<div class="grid c3 friends">${friends}</div>
 </main>`;
   return pageHtml({ active: 'home', head, main });
 }
 function renderGallery() {
   // 两列作品卡(截图 + 提取色相)+ 纯前端工具栏:搜索 / 筛选 / 排序。默认按上线时间倒序,无 JS 也是这个顺序。
   const items = galleryByDate(CONFIG.gallery || []);
-  const cards = items.map(projectCard).join('\n');
+  const cards = items.map(g => projectCard(g)).join('\n');
   const list = items.map((g, i) => ({ '@type': 'ListItem', position: i + 1, name: g.title,
-    url: /^https?:/.test(g.href) ? g.href : SITE.url + g.href,
-    ...(shotPath(g.key) ? { image: SITE.url + shotPath(g.key) } : {}) }));
+    url: /^https?:/.test(g.href) ? g.href : SITE.url + g.href }));
   const total = items.length;
   const desc = `作品集 —— ${total} 件交互式 demo 与实验:AI 服务状态、配色工具、互动课程、全字符弹球等。可搜索、筛选、按时间排序。`;
   const head = {
@@ -799,6 +788,8 @@ function runBuild(posts) {
   mkdirSync(OUT, { recursive: true });
   // 1) 拷贝静态内容
   for (const c of contentDirs()) copyDir(join(ROOT, c.name), join(OUT, c.name));
+  // assets/shots 是 shots.sh 的本地取色产物(已 gitignore),不上站 —— 本地构建也显式剔除,保证与 CI 产物一致
+  rmSync(join(OUT, 'assets', 'shots'), { recursive: true, force: true });
   // 2) 文章(中文主页 + 可选英文子页)
   const pub = posts.filter(p => p.published);
   for (const p of pub) {

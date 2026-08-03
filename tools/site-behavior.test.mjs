@@ -25,10 +25,14 @@ assert.doesNotMatch(home, /id="ambient-dot|id="ambient-ripple"|id="wave-|class="
 assert.doesNotMatch(home, /\.ambient-bg|body::before\{/);
 assert.match(home, /--status-g1:#a8c0ff; --status-g2:#ffd3e0; --status-g3:#c2f5e9; --status-g4:#e7d5ff;/);
 assert.match(home, /--status-g1:#1e3a8a; --status-g2:#5b2a6e; --status-g3:#0f5a52; --status-g4:#3b2a72;/);
-assert.match(home, /background:var\(--page\);\s*\/\* 底色兜底;实际背景=固定层 \.bgwaves 静态海浪/);
-// ── 海浪背景(2026-08-03 用户裁决,替代旧「纯色背景」):固定层 + 静态 SVG,明暗双版,零动画 ──
-assert.match(home, /<div class="bgwaves" aria-hidden="true"><\/div>/);
-assert.match(home, /\.bgwaves\{position:fixed;inset:0;z-index:-1;pointer-events:none;/);
+assert.match(home, /background:var\(--page\);\s*\/\* 底色兜底;实际背景=固定层 \.bgfx 粒子堆砌动画/);
+// ── 粒子堆砌背景(2026-08-04 用户裁决):固定层 Canvas + 脚本;reduced-motion/无 JS 退静态海浪 SVG ──
+assert.match(home, /<canvas class="bgfx" id="bgfx" aria-hidden="true"><\/canvas>/);
+assert.match(home, /\.bgfx\{position:fixed;inset:0;z-index:-1;pointer-events:none;/);
+assert.match(home, /prefers-reduced-motion:reduce/);
+assert.match(home, /粒子堆砌背景/);
+assert.match(home, /requestAnimationFrame\(frame\)/);
+assert.match(home, /visibilitychange/);
 assert.match(home, /bg-waves-light\.svg/);
 assert.match(home, /bg-waves-dark\.svg/);
 assert.ok(existsSync(join(OUT, 'assets', 'bg-waves-light.svg')), 'light waves SVG should be in the build');
@@ -68,7 +72,6 @@ assert.doesNotMatch(home, /research-more/);
 assert.doesNotMatch(home, /论文正文和 revision 成对展示/);
 assert.match(home, /<section class="research-home card">/);
 assert.doesNotMatch(home, /class="research-pair card compact"/);
-assert.match(home, /\.research-card\{display:grid;grid-template-columns:auto minmax\(0,1fr\) auto;gap:\.85rem;align-items:center;\n  padding:\.86rem 0;color:inherit;border-top:1px solid var\(--border\);transition:color \.14s\}/);
 assert.doesNotMatch(home, /\.research-card\{[^}]*border-radius:14px/);
 assert.ok(existsSync(join(OUT, 'research', 'index.html')), 'Research index should be generated');
 
@@ -81,8 +84,8 @@ assert.doesNotMatch(research, />0[1-9]</);
 const pair = research.match(/<section class="research-pair[^"]*"[\s\S]*?<\/section>/)?.[0] || '';
 assert.ok(pair.includes('href="/research/pension-demo/"'), 'paper collection card should be in the pair');
 assert.ok(pair.includes('href="/research/pension-demo-revision/"'), 'revision collection card should be in the pair');
-assert.equal((pair.match(/class="research-card /g) || []).length, 2);
-assert.ok(pair.includes('class="research-card-list"'), 'collection rows should be grouped in a list');
+assert.equal((pair.match(/proj card research-card/g) || []).length, 2, 'pair should hold two color-bar cards');
+assert.ok(pair.includes('research-card-list'), 'collection cards should be grouped in a list');
 assert.ok(existsSync(join(OUT, 'research', 'pension-demo', 'index.html')), 'paper collection should live under /research/');
 assert.ok(existsSync(join(OUT, 'research', 'pension-demo-revision', 'index.html')), 'revision collection should live under /research/');
 assert.ok(!existsSync(join(OUT, 'blog', 'pension-demo')), 'paper collection should not live under /blog/');
@@ -90,18 +93,19 @@ assert.ok(!existsSync(join(OUT, 'blog', 'pension-demo-revision')), 'revision col
 
 const blogIndex = html('blog');
 const galleryIndex = html('gallery');
-assert.match(blogIndex, /<main class="wrap narrow index-page">/);
+assert.match(blogIndex, /<main class="wrap index-page">/, 'blog index adopts the wide gallery layout');
+assert.match(blogIndex, /<div class="grid c2 projects" id="tool-grid" data-unit="篇">/);
 
 // ── 作品区新版式:两列截图卡 + 截图提取色相(--hue)+ Gallery 工具栏(搜索/筛选/排序) ──
 assert.match(galleryIndex, /<main class="wrap index-page gallery-page">/);
 assert.match(home, /<div class="grid c2 projects">/);
 assert.doesNotMatch(home, /<div class="grid c3">/, 'old 3-col gallery grid should be gone (friends grid keeps its own class)');
-assert.match(home, /assets\/shots\/paletter\.jpg/);
+assert.match(home, /class="proj-bar" aria-hidden="true"/, 'cards should carry the hue color bar');
 assert.match(home, /class="proj card" style="--hue:\d+"/, 'extracted hue should land on the card as --hue');
 assert.match(home, /class="proj card neutral"/, 'near-monochrome sites should render as neutral cards');
-assert.match(home, /assets\/shots\/reactor\.jpg/, 'highlight cards should use real screenshots as background');
+assert.match(home, /class="proj card hl"/, 'highlight renders as an emphasized color-bar card');
 assert.doesNotMatch(home, /theme-reactor\.svg|theme-cus\.svg/, 'theme SVGs are replaced by real screenshots');
-assert.ok(existsSync(join(OUT, 'assets', 'shots', 'paletter.jpg')), 'screenshots should be copied into the build');
+assert.ok(!existsSync(join(OUT, 'assets', 'shots')), 'local screenshots must NOT ship into the build');
 assert.match(galleryIndex, /id="tool-grid"/);
 assert.match(galleryIndex, /id="gq"/);
 assert.match(galleryIndex, /data-sort="new"/);
@@ -110,8 +114,8 @@ assert.match(galleryIndex, /data-filter="hl"/);
 assert.match(blogIndex, /id="tool-grid" data-unit="篇"/);
 assert.match(blogIndex, /data-sort="old"/);
 assert.doesNotMatch(blogIndex, /data-filter=/, 'blog toolbar should not have gallery-only filters');
-assert.match(home, /<div class="grid c2 friends">/);
-assert.match(home, /assets\/shots\/hkuwild\.jpg/, 'friend cards should carry real screenshots');
+assert.match(home, /<div class="grid c3 friends">/);
+assert.match(home, /class="mosaic" aria-hidden="true"/, 'friend cards keep the mosaic texture');
 assert.match(galleryIndex, /style="--hue:\d+" href="https:\/\/cus\.vincejiang\.com"/, 'cus hueManual should win over extracted null hue');
 // 色相防撞:所有带色相的卡两两间隔 ≥15°(圆周),蓝色扎堆时渲染层要推开
 const gHues = [...galleryIndex.matchAll(/class="proj card" style="--hue:(\d+)"/g)].map(m => +m[1]).sort((a, b) => a - b);
@@ -158,7 +162,7 @@ assert.match(backgroundTest, /<title>Background Test · Vince Jiang<\/title>/);
 assert.match(backgroundTest, /<meta name="robots" content="noindex, nofollow">/);
 assert.match(backgroundTest, /<main class="background-test" aria-label="background gradient test">/);
 assert.match(backgroundTest, /静态海浪 SVG · tools\/gen-waves\.mjs/);
-assert.match(backgroundTest, /<div class="bgwaves" aria-hidden="true"><\/div>/);
+assert.match(backgroundTest, /<canvas class="bgfx" id="bgfx" aria-hidden="true"><\/canvas>/);
 assert.doesNotMatch(backgroundTest, /<div class="ambient-bg"|<svg viewBox="0 0 1440 980"|id="ambient-dot|id="wave-|feMorphology|class="dot-wave-matrix"/);
 assert.doesNotMatch(backgroundTest, /<nav class="nav">/);
 assert.doesNotMatch(backgroundTest, /<footer class="foot">/);

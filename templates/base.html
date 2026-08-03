@@ -11,7 +11,12 @@
 <style>{{CSS}}</style>
 </head>
 <body>
-<div class="bgwaves" aria-hidden="true"></div>
+<canvas class="bgfx" id="bgfx" aria-hidden="true"></canvas>
+<noscript><style>
+.bgfx{background-image:url(/assets/bg-waves-light.svg);background-position:center bottom;background-size:cover;background-repeat:no-repeat}
+:root[data-theme="dark"] .bgfx{background-image:url(/assets/bg-waves-dark.svg)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bgfx{background-image:url(/assets/bg-waves-dark.svg)}}
+</style></noscript>
 {{NAV}}
 {{MAIN}}
 {{FOOTER}}
@@ -27,6 +32,82 @@
   if(btn)btn.addEventListener('click',function(){localStorage.setItem('theme',effective()==='dark'?'light':'dark');apply();});
   if(media&&media.addEventListener)media.addEventListener('change',function(){if(!stored())apply();});
   apply();
+})();
+// 粒子堆砌背景:灰为主 + 低饱和彩点缓落,页底渐积成微彩沉积层(sediment 画在离屏 canvas,每帧一次 drawImage)。
+// 性能:粒子数按面积上限 140;30fps 节流;DPR≤1.5;页隐藏即停;reduced-motion 由 CSS 回退静态海浪,不启动脚本。
+(function(){
+  var cv=document.getElementById('bgfx'); if(!cv) return;
+  var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)');
+  if(RM&&RM.matches) return;
+  var ctx=cv.getContext&&cv.getContext('2d');
+  if(!ctx){cv.className+=' static';return}
+  var HUES=[205,268,24,215,165,330,242];
+  var seed=20260804;
+  function rnd(){seed=(seed*1664525+1013904223)>>>0;return seed/4294967296}
+  var media=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function isDark(){var t=document.documentElement.getAttribute('data-theme');return t?t==='dark':!!(media&&media.matches)}
+  var W,H,dpr,parts,heights,sed,sedCv,sedCtx,cap,colW=14,running=true,last=0,dark;
+  function pcolor(h,settled){
+    if(dark) return h==null?'hsla(228,8%,60%,'+(settled?.15:.3)+')':'hsla('+h+',30%,36%,'+(settled?.3:.46)+')';
+    return h==null?'hsla(228,10%,46%,'+(settled?.12:.24)+')':'hsla('+h+',46%,68%,'+(settled?.24:.4)+')';
+  }
+  function drawDot(c,p,settled){c.beginPath();c.arc(p.x,p.y,p.r,0,6.2832);c.fillStyle=pcolor(p.h,settled);c.fill()}
+  function redrawSed(){sedCtx.clearRect(0,0,W,H);for(var i=0;i<sed.length;i++)drawDot(sedCtx,sed[i],true)}
+  function spawn(y){
+    var h=rnd()<0.34?HUES[(rnd()*HUES.length)|0]:null;
+    return {x:rnd()*W,y:y==null?-6:y,r:.9+rnd()*1.7,v:9+rnd()*13,ph:rnd()*6.2832,w:.3+rnd()*.7,h:h};
+  }
+  function settle(p){
+    var ci=Math.max(0,Math.min(heights.length-1,p.x/colW|0));
+    if(heights[ci]>=cap) return false;             // 该列已满:粒子继续落出屏,不再增高
+    var floor=H-heights[ci];
+    if(p.y<floor) return false;
+    p.y=floor-p.r*.4;
+    var s={x:p.x,y:p.y,r:p.r,h:p.h};
+    sed.push(s);drawDot(sedCtx,s,true);
+    heights[ci]+=p.r*.9;
+    if(ci>0)heights[ci-1]=Math.max(heights[ci-1],heights[ci]-3);
+    if(ci<heights.length-1)heights[ci+1]=Math.max(heights[ci+1],heights[ci]-3);
+    return true;
+  }
+  function init(){
+    dpr=Math.min(window.devicePixelRatio||1,1.5);
+    W=innerWidth;H=innerHeight;
+    cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);
+    sedCv=document.createElement('canvas');sedCv.width=cv.width;sedCv.height=cv.height;
+    sedCtx=sedCv.getContext('2d');sedCtx.setTransform(dpr,0,0,dpr,0,0);
+    dark=isDark();
+    heights=[];for(var i=0;i<Math.ceil(W/colW)+1;i++)heights.push(0);
+    sed=[];cap=H*.2;
+    var n=Math.min(140,(W*H/11000)|0);
+    parts=[];for(var j=0;j<n;j++)parts.push(spawn(rnd()*H));
+    for(var k=0;k<n*4;k++){var q=spawn(0);q.y=H;settle(q)}   // 预铺:开屏即有浅浅一层彩砂海岸
+  }
+  function frame(t){
+    if(!running)return;
+    requestAnimationFrame(frame);
+    if(t-last<33)return;
+    var dt=Math.min((t-last)/1000,.1);last=t;
+    ctx.clearRect(0,0,W,H);
+    ctx.drawImage(sedCv,0,0,W,H);
+    for(var i=0;i<parts.length;i++){
+      var p=parts[i];
+      p.y+=p.v*dt;p.x+=Math.sin(t/1000*p.w+p.ph)*.25;
+      if(p.x<-4)p.x=W+4;else if(p.x>W+4)p.x=-4;
+      if(settle(p)||p.y>H+6)parts[i]=spawn();
+      else drawDot(ctx,p,false);
+    }
+  }
+  var rsz;
+  addEventListener('resize',function(){clearTimeout(rsz);rsz=setTimeout(init,180)});
+  document.addEventListener('visibilitychange',function(){
+    if(document.hidden){running=false}
+    else if(!running){running=true;last=performance.now();requestAnimationFrame(frame)}
+  });
+  function themeChange(){var d=isDark();if(d!==dark){dark=d;redrawSed()}}
+  if(media&&media.addEventListener)media.addEventListener('change',themeChange);
+  if(window.MutationObserver)new MutationObserver(themeChange).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+  init();requestAnimationFrame(frame);
 })();
 </script>
 </body>

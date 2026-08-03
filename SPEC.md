@@ -104,31 +104,31 @@ rsync -a --delete dist/ ../../reactor-study/
 
 `reactor-study-src/` 里还有 `research/`(14 份专题报告 + 7 份深化报告 + 64 份原始搜索转储)、`experiments/`(5 个可复现实验)、`course/`(课程策划与文风契约)。**不含论文 PDF 与全文转录**——受版权保护,取回信息见 `reactor-study-src/papers/SOURCES.md`。
 
-### 3.2 作品卡截图与主色相(2026-08 版式)
+### 3.2 色条卡与主色相(2026-08 版式)
 
-首页与 `/gallery/` 的作品区是**两列截图卡**:卡顶是各站真实首屏截图,标题圆点/截图底边/hover 描边用从截图提取的主色相染色(与友链卡同一套 `--hue` 语言)。`/gallery/` 页另有纯前端工具栏:搜索、筛选(全部/✨主打/站内/独立站点)、排序(最新/最早/名称);无 JS 时工具栏隐藏,顺序退化为服务端渲出的时间倒序。首页 Highlight 大卡以截图为满幅底图,普通两列卡**不再重复列主打项**。
+首页/Gallery/Blog/Research 的列表统一为**两列色条卡**(`.proj`):顶部一条色相条(6px;主打卡 10px+站色染层)+
+标题圆点/hover 描边同色;简介裁 3 行保证卡片尺寸相近。**卡上不展示截图**(截取不全、字形等呈现问题一刀切),
+但色相仍来自各站首屏截图的主色提取:
 
-**加/改一个 demo 后跑截图管线**(手动,CI 不跑):
+- **gallery 项**:`./tools/shots.sh <key>` 截图(存本地 `assets/shots/`,**已 gitignore 不入库不上站**)并把提取的
+  `hue` 写回 `site.config.json`;`hueManual` 人工覆盖优先;近单色站 `hue:null` = 中性灰卡。渲染层另有色相防撞
+  (spreadHues 保序聚簇,相邻 ≥18°)。截图容器的中文字体/预操作等细节见 shots.sh/shots.mjs 头注释。
+- **blog 散篇**:slug 确定性哈希 → hue(稳定标识色,无需配置)。
+- **research/collection**:固定语义色 —— 论文 245 靛 / Revision 32 琥珀。
+- **友链 wildSites**:手选反官色 hue(shots 只记录提取值绝不覆盖),纸皮石纹理卡,三列。
 
-```bash
-./tools/shots.sh                # 截全部;或 ./tools/shots.sh <key> 只重截一个
-git add assets/shots site.config.json
-```
+**列表工具栏**:/gallery/ 与 /blog/ 共用 `listTools()` + `LIST_TOOLS_SCRIPT`(约定 `#tool-grid` 直接子元素含
+`.t` 与 `<time datetime>`;`data-unit` 计数单位;筛选 chips 仅 gallery 有)。全站圆角已统一缩小(--radius 8px,
+局部 4~10px),偏长方形调性。
 
-- `shots.sh` 在 playwright 容器(`mcr.microsoft.com/playwright:v1.61.1-jammy`)里跑 `tools/shots.mjs`,`playwright-core` 装在 `~/.cache/vj-shots-pw-*`(**不进 `tools/package.json`**,CI 的 `npm ci` 不需要它);默认对线上截图,`ORIGIN=http://localhost:8080 ./tools/shots.sh` 可打本地。
-- **中文字体**:容器只有文泉驿,截图字形会错。`shots.sh` 自动下载 Noto Sans/Serif SC 变量字体到 `~/.cache/vj-shots-fonts` 并连同 fontconfig 偏好(PingFang/雅黑/宋体→Noto)挂载进容器,勿删这段。
-- 产物:`assets/shots/<key>.jpg`(960×600 首屏,jpeg q84)+ 写回 `site.config.json` 各 gallery 条 `hue`(主色相;首屏近单色的站写 `null` = 中性灰卡)。**wildSites 也一并截图(友链卡用),但其 `hue` 是手选反官色,shots 只记录提取值、绝不覆盖**。开屏动画站在 `shots.mjs` 的 `EXTRA_WAIT` 里按 key 加等待;首屏空态站(如 cus)在 `ACTIONS` 里加预操作切到有内容的视图。
-- 品牌色明确但首屏低饱和的站,可手填 `hueManual`(优先于 `hue`);`hue` 本身**勿手填**,重跑会被覆盖。渲染层另有色相防撞(spreadHues 保序聚簇,相邻 ≥18°),展示色相 ≠ config 提取值属正常。
-- 生成器侧:`projectCard`/`highlightCard`/`friendCard`(build-site.mjs)按 `assets/shots/<key>.jpg` 是否存在决定有无截图头;缺截图只是没图,不报错(highlight 缺截图又缺 theme 会 warn)。
-- **列表工具栏**:/gallery/ 与 /blog/ 共用 `listTools()` + `LIST_TOOLS_SCRIPT`(约定 `#tool-grid` 直接子元素含 `.t` 与 `<time datetime>`;`data-unit` 是计数单位;筛选 chips 仅 gallery 有)。
+### 3.3 粒子堆砌背景(2026-08-04)
 
-### 3.3 全站海浪背景(2026-08-03)
-
-生成器页面(首页/blog/research/gallery/background-test)的背景 = 固定层 `.bgwaves` + 静态 SVG 海浪
-(`assets/bg-waves-{light,dark}.svg`,由 `tools/gen-waves.mjs` 生成)。设计:远看白+灰(暗色=近黑+深灰)mono,
-细看八条波带交替埋低饱和色相(青/紫/橙/蓝/绿/粉/靛/灰蓝)+ 三根波峰细线;**纯静态,无动画无滤镜无脚本**。
-论文页(paper 模板)与各 demo 不受影响(它们不吃 site.css)。改波形/配色 → 改 `gen-waves.mjs` 后重跑
-`node tools/gen-waves.mjs`,产物要提交。此决定推翻了更早的「纯色背景」裁决,行为测试断言已同步。
+生成器页面的背景 = 固定层 `<canvas class="bgfx">` + base.html 内联粒子脚本:灰为主、约 1/3 低饱和彩点
+(色相集 205/268/24/215/165/330/242,与色条同语言)缓落,页底渐积成微彩沉积层(沉积画在离屏 canvas,每帧一次
+drawImage)。**性能红线:粒子 ≤140、30fps 节流、DPR≤1.5、页隐藏即停**。`prefers-reduced-motion` / 无 JS /
+无 canvas 一律退回静态海浪 SVG(`assets/bg-waves-{light,dark}.svg`,由 `tools/gen-waves.mjs` 生成,改波形重跑
+后提交产物)。论文页(paper 模板)与各 demo 不吃 site.css,不受影响。行为测试断言已随此裁决改写(替代 08-03 的
+静态海浪一版,更早的「纯色背景」裁决作废)。
 
 ---
 
@@ -138,7 +138,7 @@ git add assets/shots site.config.json
 posts/            # 博客 md 源:posts/<slug>.md、posts/<slug>/index.md+图,或 posts/<group>/<slug>.md 分组;<slug>.en.md 为英文译版
 templates/        # base.html + site.css(博客)+ paper.{html,css,js}(论文模板)+ PAPER-SPEC.md(论文写法规范)
 tools/            # 生成器 —— build-site.mjs / paper.mjs / paper-charts.mjs / gen-manifest.mjs / audit.mjs
-assets/           # 纯静态资源(mosaic.svg 友链纸皮石瓦纹、shots/ 作品卡首屏截图),原样收录,不需 index.html
+assets/           # 纯静态资源(mosaic.svg 纸皮石瓦纹、bg-waves-*.svg 背景兜底),原样收录;shots/ 是本地取色产物(gitignore,构建时剔除)
 release/          # 论文源内容暂存(不对外发布)
 reactor-study-src/# /reactor-study/ 那个 demo 的源料:研究报告、实验脚本、课程策划、站点生成器源码。
                   # 只存仓库供后续开发,不对外发布(产物是 reactor-study/)。见 §3.1
