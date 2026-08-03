@@ -4,15 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI 行业生产力调研报告（截至 2026 年 8 月）— 12 行业 · 73 用例</title>
+<script>
+(function(){try{var t=localStorage.getItem('ai-report-theme');
+if(t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark');}
+}catch(e){}})();
+</script>
 <style>
 /* ============ tokens ============ */
 :root{
   --ink:#18202e;--ink2:#4a5568;--ink3:#8a94a6;
   --paper:#f5f6f8;--card:#ffffff;--line:#e3e6ec;--line2:#d3d8e0;
+  --fill:#fafbfd;--fill2:#f7f9fc;--claim-ink:#0b7a55;
   --acc:#2563eb;--acc-soft:#e8efff;--grn:#0e9f6e;--grn-soft:#e2f7ef;--amb:#d97706;--amb-soft:#fdf1de;--red:#dc4c4c;
   --dk:#060a14;--dk2:#0a1122;--cy:#4dd6ff;--cy2:#7aa2ff;--vio:#9a7bff;
   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+html.dark{
+  --ink:#e8edf5;--ink2:#a3b1c4;--ink3:#6d7e95;
+  --paper:#0b0f16;--card:#131924;--line:#20293a;--line2:#2c3849;
+  --fill:#161d2a;--fill2:#111724;--claim-ink:#48d59e;
+  --acc:#4d9fff;--acc-soft:rgba(77,159,255,.13);--grn:#4ad6a0;--grn-soft:rgba(74,214,160,.1);--amb:#f0b23c;--amb-soft:rgba(240,178,60,.1);--red:#f07a7a;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -20,16 +32,42 @@ body{margin:0;background:var(--paper);color:var(--ink);font:16.5px/1.9 var(--san
 a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
 
 /* ============ nav ============ */
-nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:10px 28px;transition:background .35s,border-color .35s,box-shadow .35s;border-bottom:1px solid transparent}
-nav b{margin-right:12px;font-size:14px;font-family:var(--mono);letter-spacing:.06em;color:#cfe3ff;transition:color .35s}
-nav a{padding:3px 11px;border-radius:999px;font-size:13px;color:#9fb4d8;background:rgba(255,255,255,.06);transition:color .35s,background .35s}
-nav a:hover{color:#fff;text-decoration:none}
-nav.scrolled{background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-color:var(--line);box-shadow:0 2px 14px rgba(20,30,60,.06)}
-nav.scrolled b{color:var(--ink)}
-nav.scrolled a{color:var(--ink2);background:rgba(20,30,60,.05)}
-nav.scrolled a:hover{color:var(--ink);background:rgba(20,30,60,.09)}
-nav .nav-sep{width:1px;height:18px;background:#8fa5c6;opacity:.4;margin:0 8px}
-nav.scrolled .nav-sep{background:#5b6b84}
+/* ============ topbar (scroll-revealed) ============ */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:60;height:54px;display:flex;align-items:center;gap:12px;padding:0 22px;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);box-shadow:0 2px 14px rgba(20,30,60,.05);transform:translateY(-102%);transition:transform .38s cubic-bezier(.4,0,.2,1)}
+body.scrolled .topbar{transform:none}
+.topbar a{font-size:13.5px;color:var(--ink2);white-space:nowrap}
+.topbar a:hover{color:var(--acc);text-decoration:none}
+.topbar .home{font-weight:600;color:var(--ink)}
+.topbar .crumb-sep{color:var(--ink3);font-size:12px}
+.topbar .crumb-title{flex:1;text-align:center;font-size:13px;color:var(--ink3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.topbar .to-top{color:var(--ink2)}
+.topbar .progress{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:linear-gradient(90deg,var(--acc),var(--vio));transition:width .1s linear}
+.toc-toggle,.theme-toggle{display:none;border:1px solid var(--line2);background:var(--card);color:var(--ink2);font-size:12.5px;border-radius:999px;padding:4px 12px;cursor:pointer;transition:.2s}
+.theme-toggle{display:inline-flex}
+.toc-toggle:hover,.theme-toggle:hover{color:var(--acc);border-color:var(--acc)}
+
+/* ============ left TOC rail (spine) ============ */
+.toc{position:fixed;z-index:55;top:92px;left:max(14px,calc(50vw - 674px));width:178px;max-height:calc(100vh - 130px);overflow-y:auto;opacity:0;transform:translateX(-16px);pointer-events:none;transition:opacity .4s ease,transform .4s ease}
+body.scrolled .toc{opacity:1;transform:none;pointer-events:auto}
+.toc-h{font-size:11px;letter-spacing:.2em;color:var(--ink3);margin:0 0 8px 2px}
+.toc ol{list-style:none;margin:0 0 16px 7px;padding:0;border-left:1px solid var(--line2)}
+.toc ol a{position:relative;display:block;padding:4.5px 8px 4.5px 16px;font-size:13px;color:var(--ink2);border-radius:0 8px 8px 0;transition:color .2s,background .2s}
+.toc ol a::before{content:"";position:absolute;left:-4px;top:50%;width:7px;height:7px;border-radius:50%;transform:translateY(-50%);background:var(--card);border:2px solid var(--line2);transition:.25s}
+.toc ol a:hover{color:var(--ink);background:rgba(37,99,235,.05);text-decoration:none}
+.toc ol a.active{color:var(--acc);font-weight:600;background:rgba(37,99,235,.06)}
+.toc ol a.active::before{background:var(--acc);border-color:var(--acc);box-shadow:0 0 0 3px rgba(37,99,235,.15)}
+.toc .sectors{display:flex;flex-wrap:wrap;gap:5px;padding-left:2px}
+.toc .sectors a{font-size:11.5px;color:var(--ink2);padding:2.5px 9px;border:1px solid var(--line2);border-radius:999px;background:var(--card);transition:.2s}
+.toc .sectors a:hover{color:var(--acc);border-color:var(--acc);text-decoration:none}
+section.block{scroll-margin-top:66px}
+section.sector{scroll-margin-top:66px}
+@media (max-width:1199px){
+  .toc-toggle{display:inline-flex}
+  .topbar .crumb-title{display:none}
+  .toc{top:62px;left:12px;width:238px;max-height:calc(100vh - 90px);background:rgba(255,255,255,.97);border:1px solid var(--line);border-radius:14px;padding:16px 14px;box-shadow:0 14px 44px rgba(20,30,60,.16);opacity:1;pointer-events:auto}
+  body.scrolled .toc{transform:translateX(-112%)}
+  body.scrolled.toc-open .toc{transform:none}
+}
 ::selection{background:rgba(37,99,235,.22)}
 a:focus-visible{outline:2px solid var(--acc);outline-offset:2px;border-radius:4px}
 
@@ -96,9 +134,9 @@ section.sector h3 .count,.trend h4 .count{font-size:12px;color:var(--acc);backgr
 .card h4{margin:2px 0 0;font-size:16.5px;color:var(--ink)}
 .card h4 .co{color:var(--ink3);font-weight:400;font-size:13px}
 .uc{margin:0;font-size:14.5px;color:var(--ink2);line-height:1.75}
-.claim{margin:0;font-size:14px;color:#0b7a55;background:var(--grn-soft);border-radius:8px;padding:7px 12px;line-height:1.7}
+.claim{margin:0;font-size:14px;color:var(--claim-ink);background:var(--grn-soft);border-radius:8px;padding:7px 12px;line-height:1.7}
 .tags{display:flex;gap:6px;flex-wrap:wrap}
-.tag{font-size:11px;color:var(--ink2);border:1px solid var(--line2);border-radius:999px;padding:1px 9px;background:#fafbfc}
+.tag{font-size:11px;color:var(--ink2);border:1px solid var(--line2);border-radius:999px;padding:1px 9px;background:var(--fill)}
 .srcs{display:flex;flex-direction:column;gap:4px;font-size:13px}
 .srcs a{color:var(--ink2)}
 .srcs a:hover{color:var(--acc)}
@@ -118,24 +156,36 @@ details summary{cursor:pointer;color:var(--ink3)}
 .badge.w{background:var(--acc-soft);color:var(--acc)}
 .badge.c-high{background:var(--grn-soft);color:var(--grn)}
 .badge.c-medium{background:var(--amb-soft);color:var(--amb)}
-.badge.c-low{background:#eef0f4;color:var(--ink2)}
+.badge.c-low{background:var(--fill2);color:var(--ink2)}
 .mech{font-size:14.5px;color:var(--ink2);margin:12px 0;line-height:1.8}
-details.analysis{margin:4px 0 10px;background:#f7f9fc;border:1px solid var(--line);border-radius:8px;padding:10px 16px}
+details.analysis{margin:4px 0 10px;background:var(--fill2);border:1px solid var(--line);border-radius:8px;padding:10px 16px}
 details.analysis summary{cursor:pointer;font-size:13.5px;font-weight:600;color:var(--acc)}
 details.analysis .prose p{font-size:14.5px;color:var(--ink2)}
 table.impact{width:100%;border-collapse:collapse;font-size:13.5px;margin:10px 0 14px}
 table.impact th{text-align:left;color:var(--ink3);font-weight:500;border-bottom:2px solid var(--line2);padding:7px 10px;font-size:12.5px;letter-spacing:.04em}
 table.impact td{border-bottom:1px solid var(--line);padding:8px 10px;vertical-align:top;line-height:1.7;color:var(--ink2)}
-table.impact tr:nth-child(even) td{background:#fafbfd}
+table.impact tr:nth-child(even) td{background:var(--fill)}
 table.impact td:first-child{color:var(--ink);white-space:nowrap}
 table.impact td.pos{color:var(--grn);font-weight:700}
 table.impact td.neg{color:var(--red);font-weight:700}
 table.impact td.mix{color:var(--amb);font-weight:700}
 .mag{font-family:var(--mono);color:var(--acc);letter-spacing:2px;font-size:12px}
-.inds{font-size:13.5px;color:var(--ink2);background:#f7f9fc;border:1px dashed var(--line2);border-radius:8px;padding:12px 16px}
+.inds{font-size:13.5px;color:var(--ink2);background:var(--fill2);border:1px dashed var(--line2);border-radius:8px;padding:12px 16px}
 .inds b{color:var(--ink)}
 .inds ul{margin:8px 0 0;padding-left:20px}
 .inds li{margin:5px 0}
+
+/* dark-mode component overrides */
+html.dark .topbar{background:rgba(11,15,22,.88);box-shadow:0 2px 14px rgba(0,0,0,.45)}
+html.dark .card,html.dark .trend,html.dark .ms{box-shadow:none}
+html.dark .card:hover{border-color:#3b4a62}
+html.dark .toc{color-scheme:dark}
+html.dark .prose strong,html.dark .trend h4,html.dark .ms-head h4{color:#f2f6fc}
+.hero-theme{position:absolute;top:26px;right:34px;z-index:6;background:transparent;border:1px solid rgba(122,162,255,.35);color:#9fb4d8;font-size:12px;font-family:var(--mono);letter-spacing:.1em;padding:5px 15px;border-radius:999px;cursor:pointer;transition:.25s}
+.hero-theme:hover{color:#fff;border-color:var(--cy);box-shadow:0 0 14px rgba(77,214,255,.25)}
+@media (max-width:1199px){
+  html.dark .toc{background:rgba(15,20,29,.97)}
+}
 
 /* reveal + footer */
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
@@ -146,16 +196,31 @@ footer{border-top:1px solid var(--line2);margin-top:70px;padding:26px 0 10px;col
 </style>
 </head>
 <body>
-<nav id="topnav">
-  <b>AI 行业生产力调研</b>
-  <a href="#use-cases">用例全景</a>
-  <a href="#methodology">方法论分析</a>
-  <a href="#structure">结构分析</a>
-  <a href="#productivity">生产力提升机制</a>
-  <a href="#trends">趋势深度分析</a>
-  <a href="#forecast">短期节点预测</a>
-  <a href="#limits">调研边界</a>
-  <span class="nav-sep"></span>
+<header class="topbar" id="topbar">
+  <a class="home" href="https://vincejiang.com/">← 主站</a>
+  <span class="crumb-sep">/</span>
+  <a href="https://vincejiang.com/gallery/">作品集</a>
+  <span class="crumb-title">AI 行业生产力调研报告（截至 2026 年 8 月）</span>
+  <a class="to-top" href="#top">回到开屏 ↑</a>
+  <button class="theme-toggle" type="button" aria-label="切换深浅色模式">暗色</button>
+  <button class="toc-toggle" id="tocToggle" aria-label="打开目录">目录</button>
+  <i class="progress" id="progress"></i>
+</header>
+
+<nav class="toc" id="toc" aria-label="目录">
+  <p class="toc-h">目录</p>
+  <ol>
+    <li><a href="#guide">阅读指南</a></li>
+    <li><a href="#use-cases">用例全景</a></li>
+    <li><a href="#methodology">方法论分析</a></li>
+    <li><a href="#structure">结构分析</a></li>
+    <li><a href="#productivity">提升机制</a></li>
+    <li><a href="#trends">趋势分析</a></li>
+    <li><a href="#forecast">节点预测</a></li>
+    <li><a href="#limits">调研边界</a></li>
+  </ol>
+  <p class="toc-h">行业直达</p>
+  <div class="sectors">
   <a href="#sector-manufacturing">制造业</a>
   <a href="#sector-software-dev">软件开发</a>
   <a href="#sector-customer-service">客服与联络中心</a>
@@ -168,6 +233,7 @@ footer{border-top:1px solid var(--line2);margin-top:70px;padding:26px 0 10px;col
   <a href="#sector-media">内容与营销</a>
   <a href="#sector-legal">法律与专业服务</a>
   <a href="#sector-education">教育与培训</a>
+  </div>
 </nav>
 
 <header class="hero" id="top">
@@ -176,6 +242,7 @@ footer{border-top:1px solid var(--line2);margin-top:70px;padding:26px 0 10px;col
   <div class="orb o2"></div>
   <div class="scan"></div>
   <div class="frame"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+  <button class="hero-theme" type="button" aria-label="切换深浅色模式">暗色</button>
   <div class="hud"><span><span class="dot"></span>研究控制台 // 在线</span><span>构建 2026.08.03</span><span>数据截止 &lt; 2026-08-01</span></div>
   <h1>AI 行业生产力<span class="grad">调研报告</span><br>实际生产与工业使用全景 · 趋势与短期预测</h1>
   <p class="sub">本报告基于 12 个行业、73 条可溯源用例（64 条含量化数字，所有来源发布于 2026-08-01 之前）构建，回答一个问题：AI 究竟如何在实际生产与产业运行中提升生产力。</p>
@@ -1732,16 +1799,43 @@ footer{border-top:1px solid var(--line2);margin-top:70px;padding:26px 0 10px;col
   本页面为单文件自包含交付物：样式与脚本内联、语料内嵌（data-corpus）、无外部资源引用。
   所有量化数字的来源等级（厂商自报 / 独立实测 / 估算）已逐条标注；解读请参照「调研边界」。
   语料与检索日志见 .loop/research/（validate_corpus.mjs 可复跑全部门控检查）。
-  <br><a href="#top">回到开屏 ↑</a>
+  <br><a href="https://vincejiang.com/">返回 vincejiang.com</a> · <a href="https://vincejiang.com/gallery/">作品集 Gallery</a> · <a href="#top">回到开屏 ↑</a>
 </footer>
 </main>
 
 <script>
 (function(){
-  var nav=document.getElementById('topnav');
   var hero=document.querySelector('.hero');
-  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>(hero.offsetHeight-80));}
+  var bar=document.getElementById('progress');
+  var toc=document.getElementById('toc');
+  var tog=document.getElementById('tocToggle');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    document.body.classList.toggle('scrolled',y>hero.offsetHeight-80);
+    var max=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.width=(max>0?Math.min(100,y/max*100):0)+'%';
+  }
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var tocLinks={};
+  toc.querySelectorAll('ol a').forEach(function(a){tocLinks[a.getAttribute('href').slice(1)]=a;});
+  if('IntersectionObserver' in window){
+    var spy=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        var a=tocLinks[e.target.id];
+        if(a&&e.isIntersecting){
+          Object.values(tocLinks).forEach(function(x){x.classList.remove('active');});
+          a.classList.add('active');
+        }
+      });
+    },{rootMargin:'-18% 0px -72% 0px'});
+    Object.keys(tocLinks).forEach(function(id){var s=document.getElementById(id);if(s)spy.observe(s);});
+  }
+  if(tog){tog.addEventListener('click',function(){document.body.classList.toggle('toc-open');});}
+  toc.addEventListener('click',function(e){if(e.target.closest('a'))document.body.classList.remove('toc-open');});
+  var themeBtns=document.querySelectorAll('.theme-toggle,.hero-theme');
+  function themeLabel(){var d=document.documentElement.classList.contains('dark');themeBtns.forEach(function(b){b.textContent=d?'亮色':'暗色';});}
+  themeBtns.forEach(function(b){b.addEventListener('click',function(){var d=document.documentElement.classList.toggle('dark');try{localStorage.setItem('ai-report-theme',d?'dark':'light');}catch(e){}themeLabel();});});
+  themeLabel();
   function countUp(el){var n=+el.getAttribute('data-n')||0,t0=null,dur=1100;
     function step(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/dur);el.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step);}
     requestAnimationFrame(step);}
