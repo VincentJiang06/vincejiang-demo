@@ -11,12 +11,7 @@
 <style>{{CSS}}</style>
 </head>
 <body>
-<canvas class="bgfx" id="bgfx" aria-hidden="true"></canvas>
-<noscript><style>
-.bgfx{background-image:url(/assets/bg-waves-light.svg);background-position:center bottom;background-size:cover;background-repeat:no-repeat}
-:root[data-theme="dark"] .bgfx{background-image:url(/assets/bg-waves-dark.svg)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bgfx{background-image:url(/assets/bg-waves-dark.svg)}}
-</style></noscript>
+<div class="bgfx" aria-hidden="true"></div>
 {{NAV}}
 {{MAIN}}
 {{FOOTER}}
@@ -33,106 +28,7 @@
   if(media&&media.addEventListener)media.addEventListener('change',function(){if(!stored())apply();});
   apply();
 })();
-// 流场星尘 + 流星干涉背景:点状星尘沿缓慢流场漂移(短拖尾,罩层快衰减不留残迹,两色模式分别调校);
-// 每 4~9s 一颗流星斜划而过(亮头渐隐尾),途经处星尘被冲开扰动、数秒后回归流场 —— 「干涉」可见。
-// 性能:星尘按面积上限 150 + 流星 ≤2;30fps 节流;DPR≤1.5;页隐藏即停;reduced-motion 由 CSS 回退静态海浪。
-(function(){
-  var cv=document.getElementById('bgfx'); if(!cv) return;
-  var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)');
-  if(RM&&RM.matches) return;
-  var ctx=cv.getContext&&cv.getContext('2d');
-  if(!ctx){cv.className+=' static';return}
-  var HUES=[205,268,24,215,165,330,242];
-  var seed=20260804;
-  function rnd(){seed=(seed*1664525+1013904223)>>>0;return seed/4294967296}
-  var media=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
-  function isDark(){var t=document.documentElement.getAttribute('data-theme');return t?t==='dark':!!(media&&media.matches)}
-  var W,H,dpr,parts,meteors,nextMeteor,running=true,last=0,dark,simT=0;
-  function baseColor(){return dark?'#000000':'#ffffff'}
-  function fadeColor(){return dark?'rgba(0,0,0,.10)':'rgba(255,255,255,.12)'}   // 快衰减=短尾不攒乱
-  function dotColor(p){
-    if(p.h==null) return dark?'hsla(228,12%,80%,.5)':'hsla(228,10%,42%,.34)';
-    return dark?'hsla('+p.h+',55%,72%,.55)':'hsla('+p.h+',55%,52%,.44)';
-  }
-  function fieldAngle(x,y,t){
-    return (Math.sin(x*.0016+t*.00006)+Math.cos(y*.0021-t*.00004)+.6*Math.sin((x+y)*.0009+t*.00003))*1.9;
-  }
-  function spawn(){
-    var h=rnd()<.38?HUES[(rnd()*HUES.length)|0]:null;
-    return {x:rnd()*W,y:rnd()*H,v:9+rnd()*15,r:.7+rnd()*1.2,h:h,kx:0,ky:0,life:8+rnd()*12};
-  }
-  function spawnMeteor(){
-    var fromLeft=rnd()<.5;
-    var sp=560+rnd()*360;
-    var ang=fromLeft?(.28+rnd()*.4):(Math.PI-.28-rnd()*.4);   // 斜向下划过
-    meteors.push({x:fromLeft?-30:W+30,y:rnd()*H*.45,vx:Math.cos(ang)*sp,vy:Math.abs(Math.sin(ang))*sp*.6+70,
-      h:HUES[(rnd()*HUES.length)|0],trail:[],life:3});
-  }
-  function step(dt,t){
-    ctx.fillStyle=fadeColor();ctx.fillRect(0,0,W,H);
-    // 流星:先动(星尘的扰动要用到当前位置)
-    for(var m=meteors.length-1;m>=0;m--){
-      var mt=meteors[m];
-      mt.x+=mt.vx*dt;mt.y+=mt.vy*dt;mt.life-=dt;
-      mt.trail.push([mt.x,mt.y]);if(mt.trail.length>16)mt.trail.shift();
-      for(var q=1;q<mt.trail.length;q++){
-        var a=q/mt.trail.length;
-        ctx.strokeStyle=dark?'hsla('+mt.h+',75%,'+(55+30*a)+'%,'+(a*.7)+')':'hsla('+mt.h+',65%,'+(62-14*a)+'%,'+(a*.55)+')';
-        ctx.lineWidth=.6+1.8*a;
-        ctx.beginPath();ctx.moveTo(mt.trail[q-1][0],mt.trail[q-1][1]);ctx.lineTo(mt.trail[q][0],mt.trail[q][1]);ctx.stroke();
-      }
-      ctx.beginPath();ctx.arc(mt.x,mt.y,1.9,0,6.2832);   // 亮头
-      ctx.fillStyle=dark?'hsla('+mt.h+',80%,88%,.95)':'hsla('+mt.h+',70%,45%,.8)';ctx.fill();
-      if(mt.life<0||mt.x<-80||mt.x>W+80||mt.y>H+80)meteors.splice(m,1);
-    }
-    // 星尘:流场方向 + 流星冲击的衰减动量
-    for(var i=0;i<parts.length;i++){
-      var p=parts[i];
-      for(var m2=0;m2<meteors.length;m2++){
-        var mm=meteors[m2],dx=p.x-mm.x,dy=p.y-mm.y,d2=dx*dx+dy*dy;
-        if(d2<19600){var d=Math.sqrt(d2)+.01,f=(1-d/140)*520;p.kx+=dx/d*f*dt;p.ky+=dy/d*f*dt}   // 140px 内被冲开
-      }
-      var ang=fieldAngle(p.x,p.y,t);
-      p.x+=(Math.cos(ang)*p.v+p.kx)*dt;p.y+=(Math.sin(ang)*p.v+p.ky)*dt;
-      p.kx*=Math.pow(.25,dt);p.ky*=Math.pow(.25,dt);      // 扰动 ~1.5s 内回归流场
-      p.life-=dt;
-      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.2832);ctx.fillStyle=dotColor(p);ctx.fill();
-      if(p.life<0||p.x<-10||p.x>W+10||p.y<-10||p.y>H+10)parts[i]=spawn();
-    }
-  }
-  function paintBase(){ctx.fillStyle=baseColor();ctx.fillRect(0,0,W,H)}
-  function init(){
-    dpr=Math.min(window.devicePixelRatio||1,1.5);
-    W=innerWidth;H=innerHeight;
-    cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);
-    dark=isDark();
-    var n=Math.min(150,(W*H/7500)|0);
-    parts=[];for(var j=0;j<n;j++)parts.push(spawn());
-    meteors=[];nextMeteor=1200+rnd()*1800;                 // 开屏 1~3s 内先来一颗
-    paintBase();
-    for(var k=0;k<24;k++){simT+=33;step(.033,simT)}        // 轻预热,开屏即有星尘
-  }
-  function frame(t){
-    if(!running)return;
-    requestAnimationFrame(frame);
-    if(t-last<33)return;
-    var dt=Math.min((t-last)/1000,.1);last=t;
-    simT+=33;
-    nextMeteor-=dt*1000;
-    if(nextMeteor<0){spawnMeteor();if(rnd()<.22)spawnMeteor();nextMeteor=4000+rnd()*5000}
-    step(dt,simT);
-  }
-  var rsz;
-  addEventListener('resize',function(){clearTimeout(rsz);rsz=setTimeout(init,180)});
-  document.addEventListener('visibilitychange',function(){
-    if(document.hidden){running=false}
-    else if(!running){running=true;last=performance.now();requestAnimationFrame(frame)}
-  });
-  function themeChange(){var d=isDark();if(d!==dark){dark=d;paintBase()}}
-  if(media&&media.addEventListener)media.addEventListener('change',themeChange);
-  if(window.MutationObserver)new MutationObserver(themeChange).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
-  init();requestAnimationFrame(frame);
-})();
+// 背景为纯静态等高线 SVG(见 site.css 的 .bgfx),无任何背景脚本。
 </script>
 </body>
 </html>
