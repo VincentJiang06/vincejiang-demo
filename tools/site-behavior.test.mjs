@@ -30,7 +30,7 @@ assert.match(home, /background:var\(--page\);\s*\/\* 底色兜底;实际背景=�
 assert.match(home, /<canvas class="bgfx" id="bgfx" aria-hidden="true"><\/canvas>/);
 assert.match(home, /\.bgfx\{position:fixed;inset:0;z-index:-1;pointer-events:none;/);
 assert.match(home, /prefers-reduced-motion:reduce/);
-assert.match(home, /粒子堆砌背景/);
+assert.match(home, /流场粒子背景/);
 assert.match(home, /requestAnimationFrame\(frame\)/);
 assert.match(home, /visibilitychange/);
 assert.match(home, /bg-waves-light\.svg/);

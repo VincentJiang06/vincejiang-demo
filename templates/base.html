@@ -33,8 +33,9 @@
   if(media&&media.addEventListener)media.addEventListener('change',function(){if(!stored())apply();});
   apply();
 })();
-// 粒子堆砌背景:灰为主 + 低饱和彩点缓落,页底渐积成微彩沉积层(sediment 画在离屏 canvas,每帧一次 drawImage)。
-// 性能:粒子数按面积上限 140;30fps 节流;DPR≤1.5;页隐藏即停;reduced-motion 由 CSS 回退静态海浪,不启动脚本。
+// 流场粒子背景:粒子沿缓慢演化的层叠正弦流场漂移,拖出丝绸状细流痕,整页织成抽象流动纹理。
+// 渐隐靠半透明罩层(无逐帧清屏);灰为主 + 低饱和彩线,克制不抢正文。性能:粒子按面积上限 260、
+// 30fps 节流、DPR≤1.5、页隐藏即停;reduced-motion 由 CSS 回退静态海浪,不启动脚本。
 (function(){
   var cv=document.getElementById('bgfx'); if(!cv) return;
   var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)');
@@ -46,57 +47,54 @@
   function rnd(){seed=(seed*1664525+1013904223)>>>0;return seed/4294967296}
   var media=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
   function isDark(){var t=document.documentElement.getAttribute('data-theme');return t?t==='dark':!!(media&&media.matches)}
-  var W,H,dpr,parts,heights,sed,sedCv,sedCtx,cap,colW=14,running=true,last=0,dark;
-  function pcolor(h,settled){
-    if(dark) return h==null?'hsla(228,8%,60%,'+(settled?.15:.3)+')':'hsla('+h+',30%,36%,'+(settled?.3:.46)+')';
-    return h==null?'hsla(228,10%,46%,'+(settled?.12:.24)+')':'hsla('+h+',46%,68%,'+(settled?.24:.4)+')';
+  var W,H,dpr,parts,running=true,last=0,dark,simT=0;
+  function baseColor(){return dark?'#000000':'#ffffff'}
+  function fadeColor(){return dark?'rgba(0,0,0,.018)':'rgba(255,255,255,.06)'}
+  function strokeOf(p){
+    if(p.h==null) return dark?'hsla(228,10%,72%,.24)':'hsla(228,10%,42%,.08)';
+    return dark?'hsla('+p.h+',48%,64%,.3)':'hsla('+p.h+',52%,58%,.11)';
   }
-  function drawDot(c,p,settled){c.beginPath();c.arc(p.x,p.y,p.r,0,6.2832);c.fillStyle=pcolor(p.h,settled);c.fill()}
-  function redrawSed(){sedCtx.clearRect(0,0,W,H);for(var i=0;i<sed.length;i++)drawDot(sedCtx,sed[i],true)}
-  function spawn(y){
-    var h=rnd()<0.34?HUES[(rnd()*HUES.length)|0]:null;
-    return {x:rnd()*W,y:y==null?-6:y,r:.9+rnd()*1.7,v:9+rnd()*13,ph:rnd()*6.2832,w:.3+rnd()*.7,h:h};
+  // 层叠正弦伪噪声流场:空间上平滑、时间上缓慢换向,粒子沿场向漂出弯曲流线
+  function fieldAngle(x,y,t){
+    return (Math.sin(x*.0016+t*.00006)+Math.cos(y*.0021-t*.00004)+.6*Math.sin((x+y)*.0009+t*.00003))*1.9;
   }
-  function settle(p){
-    var ci=Math.max(0,Math.min(heights.length-1,p.x/colW|0));
-    if(heights[ci]>=cap) return false;             // 该列已满:粒子继续落出屏,不再增高
-    var floor=H-heights[ci];
-    if(p.y<floor) return false;
-    p.y=floor-p.r*.4;
-    var s={x:p.x,y:p.y,r:p.r,h:p.h};
-    sed.push(s);drawDot(sedCtx,s,true);
-    heights[ci]+=p.r*.9;
-    if(ci>0)heights[ci-1]=Math.max(heights[ci-1],heights[ci]-3);
-    if(ci<heights.length-1)heights[ci+1]=Math.max(heights[ci+1],heights[ci]-3);
-    return true;
+  function spawn(){
+    var h=rnd()<.4?HUES[(rnd()*HUES.length)|0]:null;
+    return {x:rnd()*W,y:rnd()*H,v:16+rnd()*26,lw:.8+rnd()*.8,h:h,life:6+rnd()*10,c:null};
+  }
+  function step(dt,t){
+    ctx.fillStyle=fadeColor();ctx.fillRect(0,0,W,H);
+    for(var i=0;i<parts.length;i++){
+      var p=parts[i];
+      var ang=fieldAngle(p.x,p.y,t);
+      var nx=p.x+Math.cos(ang)*p.v*dt, ny=p.y+Math.sin(ang)*p.v*dt;
+      if(!p.c)p.c=strokeOf(p);
+      ctx.strokeStyle=p.c;ctx.lineWidth=p.lw;
+      ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(nx,ny);ctx.stroke();
+      p.x=nx;p.y=ny;p.life-=dt;
+      if(p.life<0||p.x<-8||p.x>W+8||p.y<-8||p.y>H+8)parts[i]=spawn();
+    }
+  }
+  function paintBase(){ctx.fillStyle=baseColor();ctx.fillRect(0,0,W,H)}
+  function warmup(){ // 预热 ~5s 纹理,开屏即有织好的流线,不从空白开始
+    for(var k=0;k<150;k++){simT+=33;step(.033,simT)}
   }
   function init(){
     dpr=Math.min(window.devicePixelRatio||1,1.5);
     W=innerWidth;H=innerHeight;
     cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);
-    sedCv=document.createElement('canvas');sedCv.width=cv.width;sedCv.height=cv.height;
-    sedCtx=sedCv.getContext('2d');sedCtx.setTransform(dpr,0,0,dpr,0,0);
     dark=isDark();
-    heights=[];for(var i=0;i<Math.ceil(W/colW)+1;i++)heights.push(0);
-    sed=[];cap=H*.2;
-    var n=Math.min(140,(W*H/11000)|0);
-    parts=[];for(var j=0;j<n;j++)parts.push(spawn(rnd()*H));
-    for(var k=0;k<n*4;k++){var q=spawn(0);q.y=H;settle(q)}   // 预铺:开屏即有浅浅一层彩砂海岸
+    var n=Math.min(260,(W*H/4200)|0);
+    parts=[];for(var j=0;j<n;j++)parts.push(spawn());
+    paintBase();warmup();
   }
   function frame(t){
     if(!running)return;
     requestAnimationFrame(frame);
     if(t-last<33)return;
     var dt=Math.min((t-last)/1000,.1);last=t;
-    ctx.clearRect(0,0,W,H);
-    ctx.drawImage(sedCv,0,0,W,H);
-    for(var i=0;i<parts.length;i++){
-      var p=parts[i];
-      p.y+=p.v*dt;p.x+=Math.sin(t/1000*p.w+p.ph)*.25;
-      if(p.x<-4)p.x=W+4;else if(p.x>W+4)p.x=-4;
-      if(settle(p)||p.y>H+6)parts[i]=spawn();
-      else drawDot(ctx,p,false);
-    }
+    simT+=33;
+    step(dt,simT);
   }
   var rsz;
   addEventListener('resize',function(){clearTimeout(rsz);rsz=setTimeout(init,180)});
@@ -104,7 +102,7 @@
     if(document.hidden){running=false}
     else if(!running){running=true;last=performance.now();requestAnimationFrame(frame)}
   });
-  function themeChange(){var d=isDark();if(d!==dark){dark=d;redrawSed()}}
+  function themeChange(){var d=isDark();if(d!==dark){dark=d;for(var i=0;i<parts.length;i++)parts[i].c=null;paintBase();warmup()}}
   if(media&&media.addEventListener)media.addEventListener('change',themeChange);
   if(window.MutationObserver)new MutationObserver(themeChange).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
   init();requestAnimationFrame(frame);
