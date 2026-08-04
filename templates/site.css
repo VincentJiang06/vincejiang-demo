@@ -35,18 +35,10 @@ html,body{margin:0}
 html{scroll-behavior:smooth;background:var(--page)}
 body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;
-  color:var(--fg); background:var(--page);   /* 底色兜底;实际背景=固定层 .bgfx 静态渐变 SVG(2026-08-04 终版,gen-bg.mjs 产物) */
+  color:var(--fg); background:var(--page);   /* 纯色背景:亮=纯白 #fff,暗=纯黑 #000(2026-08-04 用户裁决,全部背景图形方案作废) */
   line-height:1.7; -webkit-font-smoothing:antialiased;
   min-height:100vh; position:relative; overflow-x:hidden; transition:background .4s,color .4s; isolation:isolate;
 }
-/* 渐变背景(2026-08-04 终版):固定层 + 静态渐变 SVG(tools/gen-bg.mjs 产物,~2KB)。
-   构图沿用等高线那套高程场峰谷分布,但只出柔和的多色晕染;纯静态,零脚本零动画零滤镜。 */
-.bgfx{position:fixed;inset:0;z-index:-1;pointer-events:none;
-  background:var(--page) url(/assets/bg-light.svg) center / cover no-repeat}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bgfx{background-image:url(/assets/bg-dark.svg)}}
-:root[data-theme="dark"] .bgfx{background-image:url(/assets/bg-dark.svg)}
-:root[data-theme="light"] .bgfx{background-image:url(/assets/bg-light.svg)}
-
 a{color:var(--link); text-decoration:none}
 a:hover{color:var(--link-h)}
 .wrap,.foot{position:relative;z-index:1}

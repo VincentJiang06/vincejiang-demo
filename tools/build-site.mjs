@@ -616,7 +616,7 @@ function renderBackgroundTest() {
     titleFull: `Background Test · ${SITE.name}`,
     html: headHtml({ path, title: 'Background Test', desc, robots: 'noindex, nofollow' }),
   };
-  const main = `<main class="background-test" aria-label="background gradient test"><section class="background-test-badge" aria-label="page label"><h1>Background Test</h1><p>渐变 SVG · tools/gen-bg.mjs</p></section></main>`;
+  const main = `<main class="background-test" aria-label="background gradient test"><section class="background-test-badge" aria-label="page label"><h1>Background Test</h1><p>纯色背景 · 无背景图形</p></section></main>`;
   return pageHtml({ head, main, chrome: false });
 }
 
