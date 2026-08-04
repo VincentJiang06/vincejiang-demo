@@ -121,15 +121,23 @@ rsync -a --delete dist/ ../../reactor-study/
 `.t` 与 `<time datetime>`;`data-unit` 计数单位;筛选 chips 仅 gallery 有)。全站圆角已统一缩小(--radius 8px,
 局部 4~10px),偏长方形调性。
 
-### 3.3 等高线背景(2026-08-04 终版)
+### 3.3 渐变背景(2026-08-04 终版)
 
-生成器页面的背景 = 固定层 `.bgfx` div + **纯静态等高线 SVG**(`assets/bg-topo-{light,dark}.svg`,各 ~13KB,
-由 `tools/gen-topo.mjs` 生成:种子化高程场(高斯峰谷+缓和正弦)→ marching squares 取 16 档等值线 → 链段抽稀)。
-样式仿真实地形图:灰色首曲线 + 每第 4 条加粗计曲线,4 档染低饱和色(蓝/橙/绿/紫,与全站色条同语言);
-亮=白底灰线,暗=近黑底深灰线。**零脚本、零动画、无回退分支**(本身就是静态)。改地形/配色改 gen-topo.mjs
-重跑后提交产物。论文页与各 demo 不吃 site.css,不受影响。
-背景裁决链:纯色→静态海浪→粒子堆砌(否)→流场丝线(否)→星尘流星(否)→**等高线(终版,用户指定回归静态 SVG)**;
-海浪与全部动画代码已删除。行为测试断言随裁决走。
+生成器页面的背景 = 固定层 `.bgfx` div + **静态渐变 SVG**(`assets/bg-{light,dark}.svg`,各 ~2KB,由
+`tools/gen-bg.mjs` 生成)。构图沿用等高线那版的「高程场峰谷」分布,但只出柔和的多色晕染:5 团
+radialGradient 椭圆(蓝/紫/青绿/藕粉/暖橙,与全站色条同一套色相语言),亮=白底粉彩、暗=近黑底冷调。
+**纯静态:零脚本、零动画、零滤镜**(不用 feGaussianBlur,大面积模糊在低端机上是真开销)。
+
+调校经验(踩过的坑,改之前先看):
+1. 晕团别铺满、别互相全覆盖 —— 半径压在画布 40~55%,留干净底色,色团才分得出来;
+2. **别加全幅 wash 罩层** —— 会把所有色相压成一片脏灰(第一版就这么翻车);
+3. 亮色要「高明度 + 够高饱和」(hsl ~72% 91%),饱和度低了在白底上只剩灰;
+4. 暗色底 `#07070c`、色团亮度 ~15%,否则死黑没层次;
+5. **暗色下暖色(橙/粉)会发浑** —— 用 `dk` 权重单独压低或归零,暗色只留冷调三团。
+
+改构图/配色 → 改 `gen-bg.mjs` 重跑 `node tools/gen-bg.mjs`,产物要提交。论文页与各 demo 不吃 site.css。
+背景裁决链:纯色→静态海浪→粒子堆砌(否)→流场丝线(否)→星尘流星(否)→等高线(否,"太丑")→**渐变(终版)**;
+海浪/等高线/全部动画代码均已删除,**别再提动画背景**。
 
 另:全站交互规范 —— **hover 一律不位移、不改字色**(2026-08-04 用户两次裁决;紫色 --link 是旧链接色,
 不作主题强调用),指示 = 色相描边光环 + 色条提亮;标签 chip 统一 flat 化(.tag inline-flex),**chip 内禁用
@@ -143,7 +151,7 @@ emoji**(排版不稳,星形用 CSS ::before 画)。
 posts/            # 博客 md 源:posts/<slug>.md、posts/<slug>/index.md+图,或 posts/<group>/<slug>.md 分组;<slug>.en.md 为英文译版
 templates/        # base.html + site.css(博客)+ paper.{html,css,js}(论文模板)+ PAPER-SPEC.md(论文写法规范)
 tools/            # 生成器 —— build-site.mjs / paper.mjs / paper-charts.mjs / gen-manifest.mjs / audit.mjs
-assets/           # 纯静态资源(mosaic.svg 纸皮石瓦纹、bg-waves-*.svg 背景兜底),原样收录;shots/ 是本地取色产物(gitignore,构建时剔除)
+assets/           # 纯静态资源(mosaic.svg 纸皮石瓦纹、bg-{light,dark}.svg 渐变背景),原样收录;shots/ 是本地取色产物(gitignore,构建时剔除)
 release/          # 论文源内容暂存(不对外发布)
 reactor-study-src/# /reactor-study/ 那个 demo 的源料:研究报告、实验脚本、课程策划、站点生成器源码。
                   # 只存仓库供后续开发,不对外发布(产物是 reactor-study/)。见 §3.1

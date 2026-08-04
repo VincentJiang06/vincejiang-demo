@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+<defs>
+<radialGradient id="g0" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="hsl(210 72% 91% / 0.620)"/>
+<stop offset="45%" stop-color="hsl(210 72% 91% / 0.384)"/>
+<stop offset="78%" stop-color="hsl(210 72% 91% / 0.124)"/>
+    <stop offset="100%" stop-color="hsl(210 60% 93% / 0)"/>
+  </radialGradient>
+<radialGradient id="g1" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="hsl(275 72% 91% / 0.533)"/>
+<stop offset="45%" stop-color="hsl(275 72% 91% / 0.331)"/>
+<stop offset="78%" stop-color="hsl(275 72% 91% / 0.107)"/>
+    <stop offset="100%" stop-color="hsl(275 60% 93% / 0)"/>
+  </radialGradient>
+<radialGradient id="g2" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="hsl(168 72% 91% / 0.484)"/>
+<stop offset="45%" stop-color="hsl(168 72% 91% / 0.300)"/>
+<stop offset="78%" stop-color="hsl(168 72% 91% / 0.097)"/>
+    <stop offset="100%" stop-color="hsl(168 60% 93% / 0)"/>
+  </radialGradient>
+<radialGradient id="g3" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="hsl(332 72% 91% / 0.459)"/>
+<stop offset="45%" stop-color="hsl(332 72% 91% / 0.284)"/>
+<stop offset="78%" stop-color="hsl(332 72% 91% / 0.092)"/>
+    <stop offset="100%" stop-color="hsl(332 60% 93% / 0)"/>
+  </radialGradient>
+<radialGradient id="g4" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="hsl(28 72% 91% / 0.322)"/>
+<stop offset="45%" stop-color="hsl(28 72% 91% / 0.200)"/>
+<stop offset="78%" stop-color="hsl(28 72% 91% / 0.064)"/>
+    <stop offset="100%" stop-color="hsl(28 60% 93% / 0)"/>
+  </radialGradient>
+</defs>
+<rect width="1440" height="900" fill="#ffffff"/>
+<ellipse cx="173" cy="36" rx="662" ry="558" fill="url(#g0)"/>
+<ellipse cx="1267" cy="126" rx="605" ry="522" fill="url(#g1)"/>
+<ellipse cx="1008" cy="648" rx="634" ry="540" fill="url(#g2)"/>
+<ellipse cx="288" cy="828" rx="576" ry="468" fill="url(#g3)"/>
+<ellipse cx="749" cy="306" rx="432" ry="360" fill="url(#g4)"/>
+</svg>

@@ -25,18 +25,18 @@ assert.doesNotMatch(home, /id="ambient-dot|id="ambient-ripple"|id="wave-|class="
 assert.doesNotMatch(home, /\.ambient-bg|body::before\{/);
 assert.match(home, /--status-g1:#a8c0ff; --status-g2:#ffd3e0; --status-g3:#c2f5e9; --status-g4:#e7d5ff;/);
 assert.match(home, /--status-g1:#1e3a8a; --status-g2:#5b2a6e; --status-g3:#0f5a52; --status-g4:#3b2a72;/);
-assert.match(home, /background:var\(--page\);\s*\/\* 底色兜底;实际背景=固定层 \.bgfx 静态等高线 SVG/);
-// ── 等高线背景(2026-08-04 用户裁决,动画方案全部作废):固定 div + 静态 SVG,零脚本零动画 ──
+assert.match(home, /background:var\(--page\);\s*\/\* 底色兜底;实际背景=固定层 \.bgfx 静态渐变 SVG/);
+// ── 渐变背景(2026-08-04 终版,动画与等高线方案均作废):固定 div + 静态渐变 SVG,零脚本零动画 ──
 assert.match(home, /<div class="bgfx" aria-hidden="true"><\/div>/);
 assert.match(home, /\.bgfx\{position:fixed;inset:0;z-index:-1;pointer-events:none;/);
-assert.match(home, /bg-topo-light\.svg/);
-assert.match(home, /bg-topo-dark\.svg/);
+assert.match(home, /bg-light\.svg/);
+assert.match(home, /bg-dark\.svg/);
 assert.doesNotMatch(home, /bgfx.*requestAnimationFrame|流星|星尘/, 'background must carry no animation script');
-assert.ok(existsSync(join(OUT, 'assets', 'bg-topo-light.svg')), 'light topo SVG should be in the build');
-assert.ok(existsSync(join(OUT, 'assets', 'bg-topo-dark.svg')), 'dark topo SVG should be in the build');
-const topoSvg = readFileSync(join(OUT, 'assets', 'bg-topo-light.svg'), 'utf8');
-assert.doesNotMatch(topoSvg, /<animate|<script|feTurbulence|feDisplacementMap/, 'topo must stay static');
-assert.ok(!existsSync(join(OUT, 'assets', 'bg-waves-light.svg')), 'retired waves SVG should be gone');
+assert.ok(existsSync(join(OUT, 'assets', 'bg-light.svg')), 'light gradient SVG should be in the build');
+assert.ok(existsSync(join(OUT, 'assets', 'bg-dark.svg')), 'dark gradient SVG should be in the build');
+const bgSvg = readFileSync(join(OUT, 'assets', 'bg-light.svg'), 'utf8');
+assert.doesNotMatch(bgSvg, /<animate|<script|feTurbulence|feDisplacementMap|feGaussianBlur/, 'background must stay static and filter-free');
+assert.ok(!existsSync(join(OUT, 'assets', 'bg-topo-light.svg')), 'retired topo SVG should be gone');
 assert.doesNotMatch(home, /radial-gradient\(\d+rem \d+rem at \d+% \d+%,color-mix\(in srgb,var\(--status-g/);
 assert.doesNotMatch(home, /linear-gradient\(135deg,color-mix\(in srgb,var\(--ambient-wash-a\)/);
 assert.doesNotMatch(home, /--ambient-line-[abc]/);
@@ -159,7 +159,7 @@ const backgroundTest = html('background-test');
 assert.match(backgroundTest, /<title>Background Test · Vince Jiang<\/title>/);
 assert.match(backgroundTest, /<meta name="robots" content="noindex, nofollow">/);
 assert.match(backgroundTest, /<main class="background-test" aria-label="background gradient test">/);
-assert.match(backgroundTest, /等高线 SVG · tools\/gen-topo\.mjs/);
+assert.match(backgroundTest, /渐变 SVG · tools\/gen-bg\.mjs/);
 assert.match(backgroundTest, /<div class="bgfx" aria-hidden="true"><\/div>/);
 assert.doesNotMatch(backgroundTest, /<div class="ambient-bg"|<svg viewBox="0 0 1440 980"|id="ambient-dot|id="wave-|feMorphology|class="dot-wave-matrix"/);
 assert.doesNotMatch(backgroundTest, /<nav class="nav">/);

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+<defs>
+<radialGradient id="g0" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="hsl(210 52% 15% / 0.720)"/>
+<stop offset="45%" stop-color="hsl(210 52% 15% / 0.446)"/>
+<stop offset="78%" stop-color="hsl(210 52% 15% / 0.144)"/>
+    <stop offset="100%" stop-color="hsl(210 40% 12% / 0)"/>
+  </radialGradient>
+<radialGradient id="g1" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="hsl(275 52% 15% / 0.576)"/>
+<stop offset="45%" stop-color="hsl(275 52% 15% / 0.357)"/>
+<stop offset="78%" stop-color="hsl(275 52% 15% / 0.115)"/>
+    <stop offset="100%" stop-color="hsl(275 40% 12% / 0)"/>
+  </radialGradient>
+<radialGradient id="g2" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="hsl(168 52% 15% / 0.446)"/>
+<stop offset="45%" stop-color="hsl(168 52% 15% / 0.277)"/>
+<stop offset="78%" stop-color="hsl(168 52% 15% / 0.089)"/>
+    <stop offset="100%" stop-color="hsl(168 40% 12% / 0)"/>
+  </radialGradient>
+<radialGradient id="g3" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="hsl(332 52% 15% / 0.173)"/>
+<stop offset="45%" stop-color="hsl(332 52% 15% / 0.107)"/>
+<stop offset="78%" stop-color="hsl(332 52% 15% / 0.035)"/>
+    <stop offset="100%" stop-color="hsl(332 40% 12% / 0)"/>
+  </radialGradient>
+<radialGradient id="g4" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="hsl(28 52% 15% / 0.000)"/>
+<stop offset="45%" stop-color="hsl(28 52% 15% / 0.000)"/>
+<stop offset="78%" stop-color="hsl(28 52% 15% / 0.000)"/>
+    <stop offset="100%" stop-color="hsl(28 40% 12% / 0)"/>
+  </radialGradient>
+</defs>
+<rect width="1440" height="900" fill="#07070c"/>
+<ellipse cx="173" cy="36" rx="662" ry="558" fill="url(#g0)"/>
+<ellipse cx="1267" cy="126" rx="605" ry="522" fill="url(#g1)"/>
+<ellipse cx="1008" cy="648" rx="634" ry="540" fill="url(#g2)"/>
+<ellipse cx="288" cy="828" rx="576" ry="468" fill="url(#g3)"/>
+</svg>
