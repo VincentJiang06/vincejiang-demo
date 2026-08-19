@@ -1,6 +1,6 @@
 ---
 title: "造工具的工厂：验收证据随制品出厂"
-description: "dsh-tool-creator 三天开发全程复盘：五角色门控流水线如何把「验收证据」打进每一个出厂制品，攻击轮抓获的真 P1、独立修复审计用我自己的证据反驳我、以及便宜模型为什么是门地板的推论而不是赌博。附架构图与 flash 分层两轮实测数据。"
+description: "dsh-tool-creator 的机制级拆解：受限子代理派发的接缝解剖（八条实测偏差）、三层哈希证据链与一次自我逮捕、verdict 折算代数与被攻击轮击穿的单向地板、六条 boot 不变量、机器记录为什么天生 O-L3，以及 flash 分层的一次夹逼实验。三天开发，全部主张可溯源至台账与会话日志。"
 tags: [AI, agent, dsh, 技术报告]
 date: 2026-08-19
 updated: 2026-08-19
@@ -34,27 +34,50 @@ lang: zh-CN
 .vz figcaption{font-size:.85rem;color:var(--sub,#63637a);margin-top:.5rem;line-height:1.5}
 </style>
 
-[上上篇](/blog/fable-scaling-layering/)写模型和 harness，[上一篇](/blog/skill-spiral/)写夹在中间的 skill。这一篇写第三层：**造 skill 的工厂**。对象是 [dsh-tool-creator](https://github.com/VincentJiang06/dsh-tool-creator)——2026-08-17 至 08-19，三天，从深夜调研到 GitHub v0.1.0 + npm 双发布：一个跑在 dsh（DeepSeek Harness）上的制品工厂，五个受限角色子代理被确定性步进，造出 dsh skill / plugin / preset，并把一份**机器裁定、可复验的验收证据**打进每一个出厂制品内部。执行器 [dsh-pipeline-executor](https://www.npmjs.com/package/dsh-pipeline-executor) 独立发在 npm 上，本项目是它的第一个 dogfood 消费者。
+[上上篇](/blog/fable-scaling-layering/)写模型和 harness，[上一篇](/blog/skill-spiral/)写夹在中间的 skill。这一篇写第三层：**造 skill 的工厂**。对象是 [dsh-tool-creator](https://github.com/VincentJiang06/dsh-tool-creator)——2026-08-17 至 08-19 三天造出来的 dsh（DeepSeek Harness）制品工厂：五个受限角色子代理被确定性步进，产出 dsh skill / plugin / preset，每个出厂制品内部打着一份**机器裁定、可复验的验收证据**。执行器 [dsh-pipeline-executor](https://www.npmjs.com/package/dsh-pipeline-executor) 独立发在 npm。这篇不是新闻稿，是机制拆解：每一节讲一个子系统的工作原理、它防的那类具体伪造、以及它被真机击穿过的地方。
 
 结论先行：
 
-1. **每个非确定性都要一个机械保证，不要一条指令。** capability 等级由执行器盖章而不是让模型写对；跨会话台账污染由逐行 sha 校验 fail-close；工具结果深冻结就 clone-before-write。指令层的「请你保证……」在 deepseek-v4-pro 上被实测击穿过太多次，最后活下来的全是机械层。
-2. **质量地板由门保证，所以换便宜模型是推论，不是赌博。** 三个机械阶段换 deepseek-v4-flash，单次提速 33–64%；敢换的全部理由是每一关的验收门在下面兜着——两轮 live 各抓住一类真缺陷，地板被证明真实存在。
-3. **修复者不能审计自己的修复。** 独立修复审计（一个没写过这些修复的新鲜上下文）用**同一个提交里我自己修正过的证据**反驳了我的修复论证——「契约层拒绝 ≠ 机械保证」这个错，我在修它的当口又犯了一次。
+1. **多代理流水线的可信度上限，取决于有多少约束住在机械层而不是 prompt 里。** 本文逐个接缝清点：哪些是宿主强制的（toolFilter 白名单、outputSchema 校验、产物落盘权）、哪些只是嘱托（helper 派生、SEED 纪律）、错把后者当前者会发生什么——发生了，两次，其中一次在修复它的提交里。
+2. **证据不可伪造不是一句口号，是一条三层哈希链 + 一个折算代数 + 三处独立重算。** 链上每个哈希防一类具体的作弊；链的一个已知时序缺口不修而是披露——因为它机械上不可修，谎称修了才是真缺口。
+3. **便宜模型上桌的前提是验收不依赖模型自觉。** flash 分层是一次夹逼实验：三个阶段三个预算,把故障死因框进一个 16K token 的区间；修复后两个此前必死的派发全部首过——而同一轮里 pro 阶段偷懒被电池当场抓获压级。地板对谁都生效。
 
-## 1. 任务定义：为什么是工厂，不是又一个 skill
+## 1. 问题定义：green-but-wrong 与证据的信任链
 
-[上一篇](/blog/skill-spiral/)的终点是 skill-creator-max：从哲学知识库重新推导出的薄 conductor，人在环上判每一关——那是一条**人判传承线**。dsh-tool-creator 走的是另一条线：**机器判工厂线**。全程 headless，没有人在环上，每一关由可执行的验证器判 exit code，验收由对抗电池打，评级由装配器机械折算。两条线共享同一套哲学底座，分界只有一个问题：判断权在谁手里。
+所有生成器类工具（skill-creator 及其同类）共享一个结构性缺陷，且与生成质量无关：**验证发生在工厂里，证据死在打包时**。生成器说"我验证过了"，这句话的信任链只有一环——生成器自己。制品到手的人无法复验，目录收录方无法复验，三个月后宿主升了版本更无法复验。这在 eval 工程里有个专名：green-but-wrong——绿灯照常亮，命题早已失效，而且没人能发现，因为验证的原始凭据根本没随制品走。
 
-工厂线要成立，有一个市面上没人做的前提：**验收证据必须随制品出厂**。市面上的生成器（skill-creator 类）共同的缺陷不是生成质量，而是证据在打包时被丢掉——生成器自称验证过，但制品到手后没有任何人能复验这句话。dsh-tool-creator 的每个制品根部都躺着一份 `acceptance-manifest.json`：逐文件 sha256 + rootHash、模型与 dsh 版本钉死、verdict 折算规则、可重跑的 reverify 命令。拿到目录的人跑一条命令：
+dsh-tool-creator 把优化目标从"生成得更好"换成"**让验收证据的信任链延伸到制品的整个生命周期**"。具体地，每个制品根部有一份 `acceptance-manifest.json`（结构见 §3），拿到目录的人跑：
 
 ```
 node tools/reverify.mjs <artifact-dir>
 ```
 
-byte 完整性 + 制品自带的确定性 harness 当场重证。「verified on rc.6」从一句自述变成「re-verify on rc.7」的一次执行。
+reverify 是零依赖的（node ≥20，无 npm install），跑三段 fail-closed 检查：**shape**（schema + 语义规则 + verdict 折算重算）→ **bytes**（逐文件重哈希、盘上多出的文件即篡改、symlink 非法、rootHash 重算）→ **commands**（`execFile` 逐条跑制品自带的确定性 harness，比对 exit code，跑完把整棵树**再哈希一遍**证明命令无副作用）。顺序本身是安全设计：哈希不绿，命令一条不跑——**永不执行未验证的字节**。
 
-## 2. 架构：控制流不在模型手里
+这套东西为什么需要一个"工厂"而不是一个 skill 来产出？因为证据的每一环都要求生成过程本身是可审计的：谁写的文件、哪次尝试、哪个模型、门判了什么——这些字段没法事后补写，只能在生成时由一个**不经过模型转写**的机械层记录。控制流必须住在模型外面。
+
+## 2. 执行器：受限派发的接缝解剖
+
+执行器的核心是一次 `subagents.start` 调用。全部约束力来自这个调用的五个参数，每个参数的实际语义都在动工前用一个可行性 spike 逐条实测过（fakes 不算数，只认真机宿主）：
+
+```js
+subagents.start('spawn', {
+  prompt:  [{ type: 'text', text: dispatchLine }],   // 短派发行,不携带任何产物内容
+  persona: rolePackText,                             // 角色包全文作为 persona,不拼进 prompt
+  toolFilter: { allow: ['read'] },                   // 白名单,宿主侧强制
+  agentOptions: { provider, model, maxTokens },      // 模型按 stage 钉死
+  outputSchema: schema,                              // 结构化返回,宿主校验
+  signal, parent,                                    // 必传:in-process driver 进门就解引用
+})
+```
+
+spike 落了十条"实现法"，捡最有分量的几条：
+
+- **`toolFilter.restrict()` 对未知工具名直接 throw**，白名单是宿主强制的——这是真机械。但它**只遮蔽继承的工具**：宿主给每个子会话注入的 own-scope `subagent` 工具不在遮蔽范围内。翻译成安全语言：**tool-surface 级的约束是机械的，delegation 级的约束不是**——一个 `allow:['read']` 的只读子代理，仍然可以派生一个继承全局完整工具面（含 write/bash）的 helper。这个门在宿主侧，插件关不掉。项目的处理是三层：prompt 禁令（嘱托层）、battery 的会话日志审计（检测层，§4 会讲它的盲区）、以及在一切证据文档里如实降级表述（披露层）。
+- **结构化返回的运行以空文本收尾**：子代理调用 `structured_output` 工具后,`run.result` 的正文是空的,产物在结构块里。这决定了一个关键设计——**产物由执行器从结构块落盘,模型从头到尾没有转写文件的机会**。上上篇实测过 v4-pro 的字节转写 5/6 不可信；这里的答案不是"提醒它小心"，是取消它的转写岗位。
+- **outputSchema 只认一个关键字子集**（`type/oneOf/properties/required/additionalProperties/items/enum/const` + 注解），顶层带 `$schema` 直接被宿主拒。这条是 live 首跑撞出来的——离线 fake 全绿。
+- **`reasoningEffort` 不可按派发钉**，来自部署级默认。记住这条，§7 的两具尸体都是它埋的。
+- **persona 是叠加的**：harness 身份 + 工具指引仍会垫在角色包底下。角色包必须假设自己不是唯一的声音。
 
 <figure class="vz">
 <svg viewBox="0 0 680 252" role="img" aria-label="五角色流水线架构图：五个阶段各带验收门，下方是执行器与两份出厂证据">
@@ -95,40 +118,109 @@ byte 完整性 + 制品自带的确定性 harness 当场重证。「verified on 
   <text x="510" y="208" text-anchor="middle" class="tb">acceptance-manifest.json（随制品出厂）</text>
   <text x="510" y="226" text-anchor="middle" class="t2">逐文件 sha256 · verdict 折算 · reverify 一条命令复验</text>
 </svg>
-<figcaption>图 1 · 五角色流水线。控制流在声明式 manifest 里由执行器机械步进，模型零转写；每关一个可执行验收门，绿了进下一关，红了按宪章重试表最多三次，全绿才出厂。flash / pro 标注为 L7 之后的模型分层（§5）。</figcaption>
+<figcaption>图 1 · 五角色流水线。控制流在声明式 manifest 里由执行器步进，模型零转写；每关一个可执行验收门（`execFile` argv,无 shell,无插值）,绿了进下一关,红了按宪章重试表最多三次,第三次仍红则整跑以 `stopped_unmet` 停机——绝不为凑一个 done 放宽任何门。flash / pro 是 L7 之后的模型分层（§7）。</figcaption>
 </figure>
 
-几个设计决定值得单独说：
+宪章（conductor 的 persona）里只有控制律,没有产物知识：准入门（spec 不齐立刻以 `stopped_needs_spec` 拒收,几分钟内退回,绝不让一个含糊的需求消耗一小时流水线）、目标路由（plugin/preset 关键词命中否则 skill）、重试表（attempt 1→2→3 → STOP,唯一分支依据是 gateExit）、七类错误码的处置、以及格式错误工具调用的自拦截。conductor 被刻意做笨——所有聪明都被没收,存进可校验的验证器里。
 
-- **产物由执行器落盘，不由模型转写。** 角色子代理的返回是结构化对象（outputSchema 钉死），写文件的是执行器。上上篇写过 v4-pro 字节转写实测 5/6 不可信——那就不让它转写。
-- **角色包作为 persona 派发，不作为 prompt 拼接。** 上一篇 B15 案例的根因（role-pack 稀释）在这里从结构上消失。
-- **台账机器写入、逐行钉 manifest sha。** 有一次我在跑到一半时装了新版本 preset，台账立刻出现两个 manifestSha256，装配器整跑拒绝——被自己的机械保证抓获的感觉相当微妙，但这正是它存在的意义：**「绝不中途安装」从纪律变成了被强制执行的事实**。
-- **验收电池是流水线的一等公民**，三个透镜（coherence / gaming / reality）各自独立打制品，synthesis 汇总写 decision record，装配器从**磁盘上的透镜产物**机械计数——verdict 说了不算，findings 才算。
+## 3. 证据链：三层哈希与一次自我逮捕
 
-## 3. 三天时间线与 live 战绩
+台账是执行器写的 JSONL,每次 stage 尝试落一行,长这样（字段为真实 shape）：
 
-- **08-17**：深夜自主调研（dsh 源码深读 + v4-pro 行为学），定五个结构性决定；L0 脚手架 + L1 执行器（先跑可行性 spike，把受限派发的每个接缝实测一遍再写代码）。
-- **08-18**：L2 conductor 宪章（准入门 / 重试表 / 停机语义）+ L3 三个 target 的建造手册（plugin 六条 boot 不变量、preset 八条挂载守则，全部是真机踩雷换来的）+ L4 acceptance-manifest 标准与零依赖 reverify。
-- **08-18/19**：L5 三 target live 矩阵——skill / preset / plugin 全部拿到绿 manifest，外加一次故障注入实测（zipper 门被种死 → conductor 三次重试后诚实报 `stopped_unmet`，绝不放水）。上一篇输掉的 B15 头对头，这次 2 胜 1 平 1 微负，「不再输」达成。
-- **08-19**：L6 攻击轮 + 发布（§4）；L7 flash 分层两轮实测（§5）。
+```json
+{"ts":"2026-08-19T13:39:xx Z","pipeline":"tool-creator",
+ "manifestSha256":"<pipeline.manifest.json 的 sha256>",
+ "stage":"composer","attempt":1,"childSessionIds":["c3363b15…"],
+ "gateExit":0,"roleModel":"deepseek-v4-flash","tokens":42581,"error":null}
+```
 
-离线测试面收在 187 项：61 个验证器 selftest 陷阱（每个陷阱是一类伪造，全部必须被抓住）+ 126 个 node 用例。CI 全离线零依赖，14 秒跑完。
+注意 `manifestSha256`：它钉的是**流水线控制流文件本身**。这一个字段配一条装配器规则——"台账里出现 ≥2 个不同 manifestSha256 ⇒ 整跑拒绝"——构成了一个我本人亲测有效的陷阱：某次跑到一半,我顺手装了新版 preset,下一行台账的 sha 变了,装配器当场拒绝整跑的证据。**"绝不中途安装"从一条纪律变成一个被强制执行的事实**,而且抓的是作者本人。机械保证的意思就是它不认人。
 
-## 4. 攻击轮：对自己动手
+<figure class="vz">
+<svg viewBox="0 0 680 246" role="img" aria-label="三层哈希证据链：流水线 manifest 逐行钉进台账，台账整本哈希与制品文件树哈希进验收 manifest">
+  <rect class="bx" x="8" y="18" width="212" height="56" rx="4"/>
+  <text x="114" y="38" text-anchor="middle" class="tb">pipeline.manifest.json</text>
+  <text x="114" y="54" text-anchor="middle" class="t2">声明式控制流 · sha256 = M</text>
+  <rect class="bx" x="460" y="18" width="212" height="56" rx="4"/>
+  <text x="566" y="38" text-anchor="middle" class="tb">制品文件树</text>
+  <text x="566" y="54" text-anchor="middle" class="t2">逐文件 sha256 → rootHash</text>
+  <line class="ar" x1="114" y1="74" x2="114" y2="106"/><polygon points="110,106 114,113 118,106" fill="var(--vz-axis)"/>
+  <text x="124" y="96" class="t2">每次尝试落一行，行内钉 M</text>
+  <line class="ar" x1="566" y1="74" x2="566" y2="106"/><polygon points="562,106 566,113 570,106" fill="var(--vz-axis)"/>
+  <text x="380" y="96" class="t2">shasum -a 256 行格式,可用 coreutils 复核</text>
+  <rect class="bx" x="8" y="114" width="300" height="72" rx="4"/>
+  <text x="158" y="134" text-anchor="middle" class="tb">evidence-ledger.jsonl（append-only）</text>
+  <text x="158" y="150" text-anchor="middle" class="t2">{stage, attempt, gateExit, roleModel,</text>
+  <text x="158" y="164" text-anchor="middle" class="t2">manifestSha256: M, childSessionIds, tokens}</text>
+  <text x="158" y="180" text-anchor="middle" class="t2">≥2 个不同 M ⇒ 装配器拒绝整跑</text>
+  <line class="ar" x1="308" y1="150" x2="336" y2="150"/><polygon points="336,146 343,150 336,154" fill="var(--vz-axis)"/>
+  <text x="326" y="140" class="t2">整本 sha</text>
+  <rect class="bx" x="346" y="114" width="326" height="72" rx="4"/>
+  <text x="509" y="134" text-anchor="middle" class="tb">acceptance-manifest.json</text>
+  <text x="509" y="150" text-anchor="middle" class="t2">artifact.files + rootHash ← 文件树</text>
+  <text x="509" y="164" text-anchor="middle" class="t2">evidenceLedgerSha256 ← 台账 · pipelineVersion = manifest:M</text>
+  <text x="509" y="180" text-anchor="middle" class="t2">verdicts = min-fold 重算 · limits[] 披露</text>
+  <text x="340" y="216" text-anchor="middle" class="t2">已知时序缺口（披露而非掩盖）：装配发生在 battery 门内，battery 自己的台账行在装配之后才落——</text>
+  <text x="340" y="232" text-anchor="middle" class="t2">evidenceLedgerSha256 覆盖除装配尝试自身外的所有行；这条限制原文写进每份出厂 manifest 的 limits[]</text>
+</svg>
+<figcaption>图 2 · 三层哈希链。每个哈希防一类具体作弊：逐行 M 防「中途换控制流」，rootHash 防「篡改/夹带文件」（盘上多一个未列文件即判篡改，symlink 非法），evidenceLedgerSha256 防「事后改台账」。reverify 三段 fail-closed 消费这条链：shape → bytes → commands，哈希不绿不执行任何命令,命令跑完整树再哈希一遍证明无副作用。</figcaption>
+</figure>
 
-发布前，五个独立攻击透镜 + 交叉综合对全套系统做对抗验收——SEED 门保证攻击者不瞎（每个透镜带一个已知缺陷，没抓到就整轮作废）。抓获 1 P1 + 6 P2，P1 是真家伙：
+rootHash 的算法刻意选得土：把 `files` 里的路径按 UTF-8 字节序排序,每行 `<sha256>␣␣<path>`,`\n` 连接、结尾换行,对这段文本取 sha256——**正是 `shasum -a 256` 的输出格式**,所以第三方用 coreutils 就能独立复核,不需要信任 reverify 本身。信任链的最后一环留给了操作系统发行版。
 
-> 验收装配器的地板是单向的——它拒绝「报了 breaches 却零 findings」，但**不拒绝「报 clean 而磁盘上躺着 P1/P2 findings」**。而 clean 恰是唯一解锁 industrial 顶级评级的 verdict：一个偷懒的 synthesis 能给说谎的制品盖出最高章。
+## 4. verdict 代数、单向地板，与用我自己的证据反驳我
 
-修复是 repro-first 的：先造一个说谎的 manifest 证明它现在能过（能过），再加反向地板（磁盘上有 P1/P2 强制 breaches_found），证明它现在被拒（被拒），全程留痕。攻击台账先于修复提交进 git——防的是修复者顺手删发现。
+评级折算是一段小代数,三个值域一个偏序：`draft < candidate < industrial`。battery 的 verdict 先映射成一个上限：
 
-真正的心路低谷在下一步。攻击者纪律要求**修复审计轮换**：一个没写过这些修复的新鲜上下文，重新五透镜打修复 diff。它的头号发现是：我在修复论证里写「synthesis 子代理 toolFilter 只读，物理上不能篡改透镜产物」——**错**。宿主侧的 subagent 门是开着的，只读子代理仍能派生不受限 helper 去改文件，而证明这一点的证据，就躺在**同一个提交里我自己修正过的 T-D2 数据**里。同一类错误（把契约层拒绝当机械保证），在修正它的提交里复发，被独立审计当场抓获。修复者不能审计自己的修复——这句话从纪律变成了亲身经历。
+```python
+def battery_cap(battery_verdict):
+    return "industrial" if battery_verdict == "clean" else "candidate"
+    # breaches_found / not_run 都封顶 candidate
 
-修不掉的不藏：空壳透镜的假阴性（验收电池全员不作为时，零 findings 的 clean 无法被计数抓住）写进每份出厂 manifest 的 limits[]，真解（机械 SEED 门）排进 v0.2。**修机械可修的，披露修不掉的**——这是整个项目的发布姿态。
+def min_fold(re_audit, battery):
+    return min(re_audit, battery_cap(battery), key=VERDICT_ORDER.get)
+```
 
-## 5. L7：便宜模型是门地板的推论
+`effective = min(re_audit, cap(battery))`。这个 fold 在**三处独立重算**：battery 门的 `validate_decision`（写入侧,synthesis 敢写一个高于折算的 effective 当场被拒——r1c 真实发生过,synthesis 低报成 draft 被门打回重试）、装配器（组装侧）、reverify（消费侧,manifest 里写的 effective 高于重算值即判伪造）。三处共用同一段算术,任何一处被绕过还有两处。
 
-L5 实测单跑 62.4 分钟，两根长杆是 engineer（26.5，真实现+30 组语料，不能动——B15 的胜利就是从语料深度来的）和 battery（17.8，刚按预算砍过 47%，再砍就伤攻击面）。剩下的杠杆只有一个：三个机械阶段换 deepseek-v4-flash，**敢换的理由是每关的门在下面兜着**。
+攻击轮（五个独立透镜 + SEED 门 + 交叉综合,发现先于修复提交进 git 防止修复者顺手删发现）在这段代数里抓到了整个项目唯一的 P1：
+
+> 地板是单向的。装配器拒绝「`breaches_found` 而计数为零」（无 findings 的 breaches 是被压制的证据）,但**不拒绝「`clean` 而磁盘上躺着 P1/P2 findings」**。而 `clean` 恰是唯一把上限抬到 `industrial` 的 verdict——一个偷懒或作弊的 synthesis,把 verdict 一改,说谎的制品就顶着最高评级出厂,三处 fold 重算全部照绿,因为 fold 只检查 effective 与 verdict 的一致性,不检查 **verdict 与证据**的一致性。
+
+修复是 repro-first：先构造说谎 manifest（`clean` + 磁盘上真 P1）证明现行代码放行,再补反向地板——**磁盘上计到 P1/P2 就强制 `breaches_found`**,同一个说谎 manifest 现在被拒,两次运行都留痕。两个设计细节值得写出来：其一,反向地板容忍 P3——`clean` 允许携带已披露的 P3 minor（计数原样进 manifest 的 `batteryFindingsCounts`）,因为把「有小瑕疵」和「有breach」折进同一个标签,只会教会上游把 P3 也藏起来；其二,计数的数据源是**磁盘上的透镜产物文件**,而这些文件是执行器从透镜的结构块落盘的,synthesis 的 toolFilter 是 `['read']`——它改不了自己被计数的证据。
+
+至少,我当时是这么论证的。攻击者纪律要求**修复审计轮换**：一个没写过这些修复的新鲜上下文,重打修复 diff。它的头号发现让我坐了很久：
+
+> 「synthesis 只读,物理上改不了透镜产物」——错。宿主 own-scope `subagent` 门不受 toolFilter 遮蔽（§2 第一条）,只读子代理可以派生一个**不受限** helper 去改文件。证据不用现找：**同一个提交里,你自己刚把 T-D2 的证据修正为"r1c 的 synthesis 子会话确实派生过 helper"**。
+
+同一类错误——把嘱托当保证——在修复它的提交里复发,被独立审计用我自己修正过的数据反驳。这不是流程演习,是「修复者不能审计自己的修复」的一次亲身兑现。修正后的表述降了一级：反向地板守的是 **synthesis 的改口**（verdict 与证据不一致）,不守**证据文件本身的完整性**（那需要机械 SEED 门 + 关掉 subagent 门,排进 v0.2）；这个残余连同「空壳透镜假阴性」（电池全员不作为时,零 findings 的 clean 无法被计数抓住）一起,原文写进每份出厂 manifest 的 `limits[]`。**修机械可修的,披露修不掉的**——所谓诚实边界,就是把这句话执行到字段级。
+
+顺带一提,decision record 本身也有 schema 级的反敷衍设计：每个门裁决必须是完整决策对象（问题、证据指针、考虑过的选项、**被拒绝的选项及其理由**——空 rejected 列表被视作未思考信号）,裁决人字段只有 `human | machine` 两个值,骗不出第三种含糊。
+
+## 5. 六条 boot 不变量：fakes 全绿、真机爆雷的完整类目
+
+plugin 目标的建造手册里沉淀了六条不变量,每一条都是「离线测试全绿、真宿主 boot 即崩」的实付学费。列全,因为这类知识只有清单形态才有复用价值：
+
+1. **`Config` 必须是 Standard-Schema 对象**,普通对象宿主拒载;
+2. **`lib/index.js` 里 import 的每个 `@deepseek-ai/*` 包必须出现在 `peerDependencies`**——漏一个,装的时候好好的,boot 时模块解析直接炸;
+3. **每个工具的 OBJECT schema 必须显式写 `additionalProperties`**,缺省不是宽松是拒载;
+4. **`@deepseek-ai/*` 绝不进 `dependencies`,「可选」依赖走条件 import**——否则宿主里出现同一包的第二实例,轻则工具全挂重则 boot 崩(这一条在另一个项目里造成过全部工具下线的事故);
+5. **宿主会校验工具 execute 的返回值 against 声明的 output schema**——返回里多塞一个未声明字段,live 被拒,而离线 fake 根本不校验返回方向;
+6. **宿主发回的工具结果是深冻结的,就地改写直接 TypeError**——必须 `structuredClone` 后再动。这条的发现路径最典型:capability 盖章功能 0.1.6 在全部 111 个离线用例下全绿,首次真机跑崩,因为 fakes 冻结行为与真宿主不一致;修复(clone-before-write)带着一个冻结输入回归用例进了套件,该用例经 mutation 验证——把修复改回去,用例必红。
+
+这六条的元教训比条目本身值钱：**E-L4 类（宿主组合行为）不存在离线证明,只有 live 证明**。所以工厂给每个制品出厂的证据里,E-L4 若未实测就必须以 `not_run` 落进 limits——绿灯没亮过的层,连"绿"字都不许写。
+
+## 6. 机器记录为什么天生 O-L3
+
+治理字段 `capability_level` 走 O-L0（每关人判）到 O-L4（全自动+人抽查）的阶梯,教义是"从 O-L0 出厂,凭证据升级"。工厂线在这里撞上一个干净的死锁：headless 全机器记录里,每个门的 adjudicator 都是 `machine`,而校验器的机器工厂不变量**拒绝** O-L0/L1/L2（那三级都要求人在环上）——于是"从 O-L0 出厂"对这条流水线是**非法值**。R2 那次跑,模型老实写了 O-L0,被门拒,按表重试三轮,最后诚实 `stopped_unmet`——死锁的每一步都符合规则,合起来永不停机产出。
+
+裁决:O-L3 对机器工厂不是"挣来的等级",是**结构下限**——校验器能容忍的最低值,由执行器**机械盖章**成常量,不再让模型写(模型写,就会有 R2 与 R3 各写各的非确定性)。同时把语义修正为诚实版:O-L3 读作"机器自裁定;人的否决权保留但在 headless 运行中从未行使"——**否决权是一条披露出来的限制,不是一张安全网**,因为运行中根本没有人。这条修正传播到了教义文档、schema 描述、和每份出厂 manifest 的 limits[](一条由装配器从门裁决人字段**推导**出来的机器自裁定披露——selftest 里有一个带人判门的 fixture 证明它会被正确抑制,防止披露本身沦为硬编码装饰)。
+
+治理字段的通则:**无人在场时,治理字段的每个值都必须要么被机械强制,要么被机械披露**。既不强制也不披露的治理字段,就是 fig leaf。
+
+## 7. L7：一次夹逼实验
+
+L5 实测整跑 62.4 分钟:composer 8.6 + guidance 9.5 + engineer 26.5 + zipper（skill 目标才跑）+ battery 17.8。两根长杆不能动——engineer 的 26.5 分钟买的是真实现加 30 组带 golden 对的语料（B15 头对头从全败翻到 2胜1平1微负,赢的就是语料深度）,battery 刚按预算砍过 47%,再砍伤攻击面。可动的只剩三个机械阶段的模型档位,而敢动的全部理由在 §1-§4 已经铺好:**这三个阶段的输出全部经过可执行验收门,质量下限由门保证,不由模型自觉保证**。
 
 <figure class="vz">
 <svg viewBox="0 0 680 264" role="img" aria-label="五阶段耗时三跑对比柱状图：基线、V1 含重试、V2 全首过">
@@ -168,24 +260,29 @@ L5 实测单跑 62.4 分钟，两根长杆是 engineer（26.5，真实现+30 组
   <text x="603" y="228" text-anchor="middle" class="t2">battery</text>
   <text x="603" y="242" text-anchor="middle" class="t2">pro</text>
 </svg>
-<figcaption>图 2 · 同题（csv-md-table skill，请求字节级相同）三跑分阶段耗时，纵轴分钟。合计：基线 62.4 → V1 62.0 → V2 <b>59.69</b>。flash 绿次提速 composer −33% / guidance −35% / zipper −64%；V1 的两次重试（+10.0 分）恰好吃掉全部提速，V2 消灭重试后 sub-60，但 0.3 分的余量小于 engineer 的同模型方差（跨跑 21.2 / 26.5 / 30.2）——诚实表述是「典型 sub-60，非保证」。</figcaption>
+<figcaption>图 3 · 同题（csv-md-table skill,请求字节级相同）三跑分阶段耗时,纵轴分钟。合计:基线 62.4 → V1 62.0 → V2 <b>59.69</b>。flash 绿次提速 composer −33% / guidance −35% / zipper −64%;V1 两次重试（+10.0 分）恰好吃掉全部提速;V2 消灭重试后 sub-60,但 0.3 分的余量小于 engineer 同模型方差（跨跑 21.2 / 26.5 / 30.2）——诚实表述是「典型 sub-60,非保证;剩余方差在 pro 阶段,与 flash 无关」。</figcaption>
 </figure>
 
-V1 判 partial 之后的尸检（会话日志逐帧）把死因定得很干净：两次 `ROLE_NO_OUTPUT` 都是 **reasoning 膨胀撞 maxTokens**——flash 在部署级 `reasoningEffort=high`（不可按派发下调，接缝层实测确认）下，推理量远超为 pro 调的预算。composer 死于 24576（1.8 万 token 是 reasoning，结构化输出已开流 22 个 delta 被掐断）；zipper 死于 32768（**百分之百是 reasoning**，自检循环，输出从未开始）；而 guidance 在 40960 下两轮全首过。三个阶段把故障夹出一个干净的区间：24576 死、32768 死、40960 过。修复是纯 manifest 预算头寸（cap 是上限不是支出，空余不计费），V2 实证 0/4 死亡。
+V1 判 partial:总 62.0 分 ≈ 基线,flash 四次派发死了两次,`ROLE_NO_OUTPUT`。这里是全文技术密度最高的一段——**尸检**。把两具尸体的子会话日志逐帧解开:
 
-两个附赠发现比主线还有味道：
+- **composer a1**（maxTokens 24576）:调了 10 次 `read`、1 次 `bash`,写了 1.2KB 的正文前导,然后开始流式输出 `structured_output` 调用——**流到第 22 个 tool-call delta 时被掐断**。终帧:`outputTokens 24576 == cap`,其中 reasoning 18,243;`turn/end {"kind":"max-tokens"}`。离产出只差几百 token。
+- **zipper a1**（maxTokens 32768）:调了 18 次 `read`、1 次 `bash`,然后终帧 **32,768 / 32,768 全部是 reasoning**——一个自我核对循环（日志尾部:「…occurrences: none. Wait — …」）,正文与工具调用一个字节都没开始。
 
-- **死配置**：排查时发现 zipper 的 role 块里躺着一对 `provider/model: flash` 键——更早的优化轮配的，但执行器只读 stage 级配置，**这对键从未生效过**，此前所有跑的 zipper 一直是 pro。杠杆只在执行器**读取的位置**才是真的，验证配置生效的唯一凭据是运行时台账里的 roleModel。
-- **门地板的实证**：V2 的 engineer（pro，跑间方差）把触发电池做成了形状检查没实跑，battery 的 gaming 与 reality 透镜**各自独立**把它定为 P1，verdict 压到 candidate——真实质量回归被抓住、计数、写进出厂评级，而不是溜出厂。换便宜模型敢，是因为验收从不依赖模型自觉；这个论断在两轮 live 里各兑现了一次。
+死因定性:**reasoning 膨胀撞 maxTokens**。flash 在部署级 `reasoningEffort=high`（§2:不可按派发下调）下,同样的任务比 pro 多产出数倍推理 token,而预算是按 pro 的行为调的。三个 flash 阶段恰好构成一次现成的夹逼:**24576 死、32768 死、40960 过**（guidance 两轮全首过）。修复因此不需要猜:composer 提到 40960（已证充足值）,zipper 提到 49152;cap 是上限不是支出,空余不计费。V2:四次 flash 派发**零死亡,五关全首过**,此前必死的两个派发分别 4.7 分、2.7 分过关。
 
-## 6. 复盘：嘱托与保证
+比主线更有味道的是两个副产物:
 
-上一篇的判据是「说不清谁在判、凭什么判、失手了谁兜底的概念只是嘱托」。这个项目把同一句话推到执行层：
+- **死配置考古**。排查时发现 zipper 的 role 块里躺着一对 `provider/model: flash` 键——更早的优化轮写的。但执行器读模型只认 stage 级(`stage.model ?? defaults.model`),role 级这两个键**从未被读过**,也就是说此前所有跑的 zipper 一直是 pro,包括那条被我当作"flash 基线"引用过的 6.9 分。修正方式不是相信任何文档,是对账运行时台账的 `roleModel` 字段——**配置是否生效,唯一凭据是执行器读取路径上的运行时记录**。
+- **门地板的双向实证**。V2 的 engineer(pro,跑间方差)把触发电池做成了形状检查:31 个用例全部 `live_run:false`、`observed:null`,没有像上一跑那样实际执行确定性激活代理。battery 的 gaming 与 reality 两个透镜**互不知情地**各自把这一点定为 P1,verdict `breaches_found`,effective 压到 `candidate`——真实的质量回归被抓住、计数、写进出厂评级。同一轮实验里,flash 的故障被门拦下重试,pro 的偷懒被电池压级:**地板不挑模型**。这就是"便宜模型是推论不是赌博"的完整证明结构。
 
-> 如果一条约束只存在于 prompt 里——它是嘱托。嘱托在足够多的采样下必然被击穿。
+## 8. 复盘：嘱托与保证
+
+上一篇的判据是「说不清谁在判、凭什么判、失手了谁兜底的概念只是嘱托」。这个项目把它推进到执行层,并且被同一句话打脸过一次(§4)。留三条判据,每条都能对着任意一个多代理系统逐项检查:
+
+> **约束住在哪一层？** 只在 prompt 里 = 嘱托,足够多采样必被击穿;击穿时有机械层当场拒绝 = 保证。headless 系统的可信度 = 保证清单的覆盖率,与 prompt 写得多恳切无关。
 >
-> 如果一条约束被击穿时有机械层当场拒绝——它才是保证。工厂能 headless 运转的全部前提，是把每条 load-bearing 的约束从前者搬到后者。
+> **证据能走多远？** 验证发生时的凭据若不随制品走,「验证过」三个字的信任链只有一环。逐文件哈希 + 台账哈希 + 折算重算,信任链才延伸到任何一个拿到目录的人。
+>
+> **修不掉的说了没有？** 机械上修不掉的残余(宿主开着的门、同族模型的盲区、时序缺口)写没写进出厂证据?没写的那部分,才是系统真正的上限。
 
-搬不动的怎么办？**披露**。机器判工厂线和人判传承线的真正差别不在质量，在于工厂必须把「谁裁定的、什么没裁定、veto 在不在场」原原本本写进出厂证据——因为没有人在场替它背书。出厂 manifest 的 limits[] 里躺着机器自裁定声明、空壳透镜残余、独立性边界（全程同族模型互攻，跨厂商盲区结构性不可见）——这些不是免责声明，是这条产品线的定义的一部分。
-
-三天，约 ¥110–120 API 消耗，10 个 live 运行工作区，一个 P1 教训，一次被独立审计反驳的羞辱，两轮 flash 实测。仓库在 [github.com/VincentJiang06/dsh-tool-creator](https://github.com/VincentJiang06/dsh-tool-creator)（含攻击台账、差异电池、L7 实测的全部证据文档），执行器在 [npm](https://www.npmjs.com/package/dsh-pipeline-executor)。下一个高地已经排好：机械 SEED 门，把「验收电池自己不作为」也从嘱托搬进保证。
+三天,约 ¥110–120 API 消耗,10 个 live 工作区,61 个 selftest 陷阱 + 126 个 node 用例,1 个 P1,一次被独立审计用我自己的证据反驳。仓库在 [github.com/VincentJiang06/dsh-tool-creator](https://github.com/VincentJiang06/dsh-tool-creator)(攻击台账、差异电池、L7 实测全部在 docs/evidence/),执行器在 [npm](https://www.npmjs.com/package/dsh-pipeline-executor)。下一个高地排好了:机械 SEED 门——把「验收电池自己不作为」也从嘱托搬进保证。

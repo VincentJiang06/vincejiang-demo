@@ -1,6 +1,6 @@
 ---
 title: "The Tool Factory: Acceptance Evidence Ships Inside the Artifact"
-description: "A three-day development retrospective of dsh-tool-creator: how a five-role, gate-guarded pipeline bakes re-verifiable acceptance evidence into every artifact it ships — the real P1 an attack round caught, the independent fix-audit that refuted me with my own evidence, and why a cheaper model is a corollary of the gate floor, not a gamble. With architecture and two rounds of flash-tier measurements."
+description: "A mechanism-level teardown of dsh-tool-creator: the anatomy of confined subagent dispatch (eight measured deviations), a three-layer hash evidence chain and one self-arrest, the verdict-fold algebra and the one-directional floor an attack round breached, six boot invariants, why a machine record is born at O-L3, and a bracketing experiment on flash tiering. Three days of development; every claim traceable to ledgers and session logs."
 tags: [AI, agent, dsh, tech-report]
 date: 2026-08-19
 updated: 2026-08-19
@@ -34,27 +34,50 @@ lang: en
 .vz figcaption{font-size:.85rem;color:var(--sub,#63637a);margin-top:.5rem;line-height:1.5}
 </style>
 
-[Two posts ago](/blog/fable-scaling-layering/) I wrote about models and harnesses; [the last one](/blog/skill-spiral/) covered the thing wedged in between: skills. This one is about the third layer — **the factory that makes skills**. The subject is [dsh-tool-creator](https://github.com/VincentJiang06/dsh-tool-creator): 2026-08-17 to 08-19, three days from a late-night research session to a GitHub v0.1.0 + npm double release. It is an artifact factory running on dsh (DeepSeek Harness): five confined role subagents deterministically stepped through to CREATE dsh skills / plugins / presets, with a **machine-adjudicated, re-runnable acceptance record** baked inside every shipped artifact. The executor, [dsh-pipeline-executor](https://www.npmjs.com/package/dsh-pipeline-executor), ships independently on npm; this project is its first dogfood consumer.
+[Two posts ago](/blog/fable-scaling-layering/) I wrote about models and harnesses; [the last one](/blog/skill-spiral/) covered the thing wedged in between: skills. This one is about the third layer — **the factory that makes skills**. The subject is [dsh-tool-creator](https://github.com/VincentJiang06/dsh-tool-creator), a dsh (DeepSeek Harness) artifact factory built in three days (2026-08-17 to 08-19): five confined role subagents deterministically stepped to produce dsh skills / plugins / presets, with a **machine-adjudicated, re-verifiable acceptance record** baked into every shipped artifact. The executor, [dsh-pipeline-executor](https://www.npmjs.com/package/dsh-pipeline-executor), ships independently on npm. This is not a press release — it is a mechanism teardown: each section explains how one subsystem works, the specific forgery class it exists to stop, and where it was breached on a live host.
 
 Conclusions first:
 
-1. **Every nondeterminism gets a mechanical guarantee, never an instruction.** The capability level is stamped by the executor rather than trusted to the model; cross-session ledger contamination fail-closes on per-line sha checks; deep-frozen tool results get clone-before-write. Instruction-level "please ensure…" was empirically breached on deepseek-v4-pro too many times; everything that survived is mechanical.
-2. **The quality floor is held by gates, so switching to a cheaper model is a corollary, not a gamble.** Three mechanical stages moved to deepseek-v4-flash for per-attempt speedups of 33–64%; the entire justification is the acceptance gate under each stage — and two live rounds each caught a real defect class, proving the floor exists.
-3. **A fixer must not audit its own fix.** An independent fix-audit (a fresh context that had written none of the fixes) refuted my fix rationale using **evidence I had corrected myself in the very same commit** — I re-committed the exact "contract-level refusal ≠ mechanical guarantee" error while fixing it elsewhere.
+1. **The trust ceiling of a multi-agent pipeline is set by how many of its constraints live in the mechanical layer rather than in prompts.** This post takes inventory, seam by seam: which constraints the host enforces (tool whitelists, outputSchema validation, artifact-write authority), which are mere entrustments (helper delegation, SEED discipline), and what happens when you mistake the latter for the former — it happened twice, once inside the very commit that was fixing it.
+2. **"Evidence cannot be faked" is not a slogan; it is a three-layer hash chain plus a fold algebra recomputed at three independent sites.** Every hash on the chain stops one concrete cheat. The chain's one known timing gap is disclosed rather than patched — because it is mechanically unpatchable, and claiming otherwise would be the real defect.
+3. **A cheaper model earns its seat only because acceptance never depends on the model's diligence.** Flash tiering ran as a bracketing experiment — three stages, three budgets, pinning the failure mechanism inside a 16K-token interval; after the fix, both previously-fatal dispatches passed first-try — while in the same run, a pro-stage shortcut got caught by the battery and demoted. The floor plays no favorites.
 
-## 1. Why a factory, not yet another skill
+## 1. The problem: green-but-wrong and the chain of custody
 
-[The last post](/blog/skill-spiral/) ended at skill-creator-max: a thin conductor re-derived from a philosophy KB, with a human adjudicating every gate — the **human-judged lineage**. dsh-tool-creator walks the other line: the **machine-judged factory**. Fully headless, no human in the loop; every gate is decided by an executable validator's exit code, acceptance is beaten on by an adversarial battery, and the grade is folded mechanically by an assembler. Both lines share the same philosophical base; the fork is a single question — who holds the judgment.
+Every generator-class tool (skill-creator and its kin) shares one structural defect that has nothing to do with generation quality: **verification happens in the factory, and the evidence dies at packaging time.** The generator says "I verified it," and the trust chain for that sentence has exactly one link — the generator itself. The person holding the artifact cannot re-verify; a directory listing it cannot re-verify; three host versions later, nobody can. Eval engineering has a name for this: green-but-wrong — the light stays green after the proposition it certifies has quietly died, and nobody can tell, because the underlying exhibits never traveled.
 
-For the factory line to stand, there is one prerequisite nobody in the ecosystem ships: **acceptance evidence must travel inside the artifact**. The common defect of generator-style tools isn't generation quality — it's that evidence is discarded at packaging time. The generator claims it verified; nobody holding the artifact can re-verify that claim. Every dsh-tool-creator artifact carries an `acceptance-manifest.json` at its root: per-file sha256 + rootHash, model and dsh versions pinned, the verdict fold, and re-runnable reverify commands. Whoever holds the directory runs one command:
+dsh-tool-creator swaps the optimization target from "generate better" to "**extend the evidence's chain of custody across the artifact's whole life**." Concretely, every artifact carries an `acceptance-manifest.json` at its root (structure in §3), and whoever holds the directory runs:
 
 ```
 node tools/reverify.mjs <artifact-dir>
 ```
 
-Byte integrity plus the artifact's own deterministic harness are re-proven on the spot. "Verified on rc.6" stops being a claim and becomes an execution of "re-verify on rc.7".
+reverify is dependency-free (node ≥20, no npm install) and runs three fail-closed phases: **shape** (schema + semantic rules + a recomputation of the verdict fold) → **bytes** (every file re-hashed; a file on disk that the manifest doesn't list is tampering; symlinks are illegal; rootHash recomputed) → **commands** (each shipped deterministic harness command runs via `execFile`, exit codes compared, then the whole tree is **re-hashed once more** to prove the commands had no side effects). The ordering is itself a security decision: if hashes aren't green, no command runs — **never execute unverified bytes**.
 
-## 2. Architecture: control flow never touches the model
+Why does producing this take a *factory* rather than a skill? Because every link demands that the generation process itself be auditable: which process wrote which file, on which attempt, under which model, and what each gate ruled — fields that cannot be reconstructed after the fact. They can only be recorded at generation time by a mechanical layer that the model's prose never passes through. Control flow has to live outside the model.
+
+## 2. The executor: an anatomy of confined dispatch
+
+The executor's atom is one `subagents.start` call. All of its constraining power comes from five parameters, and the actual semantics of each were measured against a real host by a feasibility spike before any real code was written (fakes don't count):
+
+```js
+subagents.start('spawn', {
+  prompt:  [{ type: 'text', text: dispatchLine }],   // a short dispatch line; carries no artifact content
+  persona: rolePackText,                             // the role pack rides as persona, never concatenated into prompts
+  toolFilter: { allow: ['read'] },                   // whitelist, enforced host-side
+  agentOptions: { provider, model, maxTokens },      // model pinned per stage
+  outputSchema: schema,                              // structured return, host-validated
+  signal, parent,                                    // required: the in-process driver derefs on entry
+})
+```
+
+The spike produced ten "implementation laws." The heaviest ones:
+
+- **`toolFilter.restrict()` throws on unknown tool names** — the whitelist is host-enforced, genuinely mechanical. But it **masks inherited tools only**: the own-scope `subagent` tool the host injects into every child session is exempt. In security terms: **tool-surface confinement is mechanical; delegation confinement is not.** A read-only `allow:['read']` child can still spawn a helper that inherits the full global tool surface, write and bash included. That door is host-side; a plugin cannot close it. The project's handling is three-layered: a prompt-level ban (entrustment), a battery-stage session-log audit (detection — §4 covers its blind spot), and honest downgraded wording in every evidence document (disclosure).
+- **Structured runs end with empty text**: after the child calls the `structured_output` tool, `run.result`'s prose is empty; the payload is the structured block. This forces the key design — **artifacts are written to disk by the executor from structured returns; the model never gets a transcription job.** Two posts ago I measured v4-pro byte transcription at 5/6 reliability. The answer is not "remind it to be careful"; it is abolishing the position.
+- **outputSchema accepts a fixed keyword subset** (`type/oneOf/properties/required/additionalProperties/items/enum/const` plus annotations); a top-level `$schema` is refused outright by the web host. Found on the first live run — offline fakes were all green.
+- **`reasoningEffort` cannot be pinned per dispatch**; it comes from deployment defaults. Hold that thought — both corpses in §7 died of it.
+- **Personas are additive**: harness identity and tool guidance still sit under the role pack. A role pack must assume it is not the only voice in the room.
 
 <figure class="vz">
 <svg viewBox="0 0 680 252" role="img" aria-label="Five-role pipeline architecture: five stages each with an acceptance gate, the executor beneath, and two shipped evidence artifacts">
@@ -85,7 +108,7 @@ Byte integrity plus the artifact's own deterministic harness are re-proven on th
   <line class="ar" x1="340" y1="88" x2="340" y2="104"/><polygon points="336,104 340,111 344,104" fill="var(--vz-axis)"/>
   <rect class="bd" x="8" y="112" width="664" height="52" rx="4"/>
   <text x="340" y="132" text-anchor="middle" class="tb">dsh-pipeline-executor (standalone npm package)</text>
-  <text x="340" y="150" text-anchor="middle" class="t2">declarative manifest · confined subagent dispatch (persona + tool whitelist + outputSchema) · executor writes artifacts · execFile gates · append-only ledger</text>
+  <text x="340" y="150" text-anchor="middle" class="t2">declarative manifest · confined dispatch (persona + tool whitelist + outputSchema) · executor writes artifacts · execFile gates · append-only ledger</text>
   <line class="ar" x1="170" y1="164" x2="170" y2="180"/><polygon points="166,180 170,187 174,180" fill="var(--vz-axis)"/>
   <line class="ar" x1="510" y1="164" x2="510" y2="180"/><polygon points="506,180 510,187 514,180" fill="var(--vz-axis)"/>
   <rect class="bx" x="8" y="188" width="324" height="52" rx="4"/>
@@ -95,40 +118,109 @@ Byte integrity plus the artifact's own deterministic harness are re-proven on th
   <text x="510" y="208" text-anchor="middle" class="tb">acceptance-manifest.json (ships inside the artifact)</text>
   <text x="510" y="226" text-anchor="middle" class="t2">per-file sha256 · verdict fold · one-command reverify</text>
 </svg>
-<figcaption>Fig. 1 · The five-role pipeline. Control flow lives in a declarative manifest stepped mechanically by the executor — the model never transcribes it; each stage has an executable acceptance gate (green advances, red retries per the charter's table, at most three attempts, all-green to ship). The flash/pro tags reflect the post-L7 model tiering (§5).</figcaption>
+<figcaption>Fig. 1 · The five-role pipeline. Control flow lives in a declarative manifest stepped by the executor — the model never transcribes it. Each stage has an executable acceptance gate (`execFile` argv, no shell, no interpolation): green advances, red retries per the charter's table (attempts 1→2→3), and a third red halts the whole run as `stopped_unmet` — no gate is ever loosened to force a done. The flash/pro tags are the post-L7 model tiering (§7).</figcaption>
 </figure>
 
-A few design decisions deserve their own lines:
+The charter (the conductor's persona) contains control law only, no product knowledge: an intake gate (an under-specified request is refused within minutes as `stopped_needs_spec`, never allowed to burn an hour of pipeline), target routing, the retry table (branching on gateExit and nothing else), dispositions for seven error codes, and self-interception of malformed tool calls. The conductor is deliberately kept dumb — every piece of cleverness is confiscated and moved into a checkable validator.
 
-- **Artifacts are written by the executor, never transcribed by the model.** Role subagents return structured objects (pinned by outputSchema); the executor writes the files. Two posts ago I measured v4-pro byte transcription at 5/6 reliability — so it doesn't get to transcribe.
-- **Role packs are dispatched as personas, not concatenated into prompts.** The root cause of the B15 loss in the last post (role-pack dilution) is structurally gone.
-- **The ledger is machine-written and pins the manifest sha per line.** Once, mid-run, I installed a new preset version; the ledger immediately carried two manifestSha256 values and the assembler refused the entire run. Being caught by your own mechanical guarantee is a peculiar feeling — and exactly the point: **"never install mid-run" stopped being discipline and became an enforced fact**.
-- **The acceptance battery is a first-class pipeline stage.** Three lenses (coherence / gaming / reality) attack the artifact independently; a synthesis writes the decision record; the assembler counts findings mechanically **from the lens artifacts on disk** — the verdict's word doesn't count, the findings do.
+## 3. The evidence chain: three hash layers and one self-arrest
 
-## 3. Three days, live scoreboard
+The ledger is executor-written JSONL, one line per stage attempt (real shape):
 
-- **08-17**: late-night autonomous research (dsh source deep-read + v4-pro behavioral studies), five structural decisions; L0 scaffold + L1 executor (a feasibility spike first — every seam of confined dispatch measured before writing the real thing).
-- **08-18**: L2 conductor charter (intake gate / retry table / halt semantics) + L3 build manuals for the three targets (six plugin boot invariants, eight preset mount rules — all paid for by live-host mines) + L4 the acceptance-manifest standard with a zero-dependency reverifier.
-- **08-18/19**: L5 live matrix — skill / preset / plugin all banked green manifests, plus one fault-injection run (a seeded-red zipper gate → three retries → an honest `stopped_unmet`, never a watered-down pass). The B15 head-to-head lost in the last post came back as 2 wins / 1 tie / 1 narrow loss — "no longer losing."
-- **08-19**: L6 attack round + release (§4); L7 flash-tier, two live rounds (§5).
+```json
+{"ts":"2026-08-19T13:39:xx Z","pipeline":"tool-creator",
+ "manifestSha256":"<sha256 of pipeline.manifest.json>",
+ "stage":"composer","attempt":1,"childSessionIds":["c3363b15…"],
+ "gateExit":0,"roleModel":"deepseek-v4-flash","tokens":42581,"error":null}
+```
 
-The offline test surface settled at 187: 61 validator selftest traps (each trap is a forgery class that must be caught) + 126 node cases. CI is fully offline and dependency-free — 14 seconds.
+Note `manifestSha256`: it pins **the control-flow file itself**. That one field plus one assembler rule — "two distinct manifestSha256 values in a ledger ⇒ refuse the whole run" — forms a trap I personally validated the hard way. Mid-run, I casually installed a new preset version; the next ledger line carried a different sha, and the assembler refused the run's entire evidence. **"Never install mid-run" stopped being discipline and became an enforced fact** — and the first person it arrested was the author. That is what mechanical means: it doesn't recognize faces.
 
-## 4. The attack round: turning the guns on ourselves
+<figure class="vz">
+<svg viewBox="0 0 680 246" role="img" aria-label="Three-layer hash evidence chain: the pipeline manifest pinned per ledger line, the ledger hashed whole into the acceptance manifest along with the artifact tree">
+  <rect class="bx" x="8" y="18" width="212" height="56" rx="4"/>
+  <text x="114" y="38" text-anchor="middle" class="tb">pipeline.manifest.json</text>
+  <text x="114" y="54" text-anchor="middle" class="t2">declarative control flow · sha256 = M</text>
+  <rect class="bx" x="460" y="18" width="212" height="56" rx="4"/>
+  <text x="566" y="38" text-anchor="middle" class="tb">artifact file tree</text>
+  <text x="566" y="54" text-anchor="middle" class="t2">per-file sha256 → rootHash</text>
+  <line class="ar" x1="114" y1="74" x2="114" y2="106"/><polygon points="110,106 114,113 118,106" fill="var(--vz-axis)"/>
+  <text x="124" y="96" class="t2">one line per attempt, M pinned per line</text>
+  <line class="ar" x1="566" y1="74" x2="566" y2="106"/><polygon points="562,106 566,113 570,106" fill="var(--vz-axis)"/>
+  <text x="356" y="96" class="t2">shasum -a 256 line format — coreutils can re-check it</text>
+  <rect class="bx" x="8" y="114" width="300" height="72" rx="4"/>
+  <text x="158" y="134" text-anchor="middle" class="tb">evidence-ledger.jsonl (append-only)</text>
+  <text x="158" y="150" text-anchor="middle" class="t2">{stage, attempt, gateExit, roleModel,</text>
+  <text x="158" y="164" text-anchor="middle" class="t2">manifestSha256: M, childSessionIds, tokens}</text>
+  <text x="158" y="180" text-anchor="middle" class="t2">≥2 distinct M ⇒ assembler refuses the run</text>
+  <line class="ar" x1="308" y1="150" x2="336" y2="150"/><polygon points="336,146 343,150 336,154" fill="var(--vz-axis)"/>
+  <text x="322" y="140" class="t2">whole-file sha</text>
+  <rect class="bx" x="346" y="114" width="326" height="72" rx="4"/>
+  <text x="509" y="134" text-anchor="middle" class="tb">acceptance-manifest.json</text>
+  <text x="509" y="150" text-anchor="middle" class="t2">artifact.files + rootHash ← tree</text>
+  <text x="509" y="164" text-anchor="middle" class="t2">evidenceLedgerSha256 ← ledger · pipelineVersion = manifest:M</text>
+  <text x="509" y="180" text-anchor="middle" class="t2">verdicts = min-fold recomputed · limits[] disclosures</text>
+  <text x="340" y="216" text-anchor="middle" class="t2">Known timing gap (disclosed, not papered over): assembly runs inside the battery gate, so the battery's own</text>
+  <text x="340" y="232" text-anchor="middle" class="t2">ledger line lands after assembly — evidenceLedgerSha256 covers every line except the assembling attempt's own.</text>
+</svg>
+<figcaption>Fig. 2 · The three-layer hash chain. Each hash stops one concrete cheat: per-line M stops "swap the control flow mid-run"; rootHash stops "tamper with or smuggle files" (an unlisted on-disk file is ruled tampering; symlinks are illegal); evidenceLedgerSha256 stops "rewrite the ledger after the fact." reverify consumes the chain in three fail-closed phases — shape → bytes → commands — with no command executed over unverified bytes and a full re-hash afterwards proving zero side effects.</figcaption>
+</figure>
 
-Before release, five independent attack lenses plus a cross-lens synthesis adversarially reviewed the whole system — a SEED gate keeps attackers honest (each lens gets a planted defect; miss it and the whole run is void). The haul: 1 P1 + 6 P2. The P1 was real:
+The rootHash algorithm is deliberately boring: sort the paths in `files` by UTF-8 byte order, emit one `<sha256>␣␣<path>` line each, join with `\n`, trailing newline, sha256 the text — **exactly the `shasum -a 256` output format**, so a third party can re-check it with coreutils alone, without trusting reverify itself. The last link of the chain of custody is handed to the OS distribution.
 
-> The assembler's floor was one-directional — it refused "breaches_found with zero findings" but **not "clean while P1/P2 findings sit on disk."** And clean is the only verdict that unlocks the top grade: a lazy synthesis could stamp the highest rating onto a lying artifact.
+## 4. The verdict algebra, the one-directional floor, and being refuted with my own evidence
 
-The fix was repro-first: craft a lying manifest, prove it currently passes (it did), add the converse floor (on-disk P1/P2 findings force breaches_found), prove it now refuses (it did) — all on the record. The attack ledger was committed to git **before** the fixes, so a fixer can't quietly delete a finding.
+Grading is a small algebra: three values, one order — `draft < candidate < industrial`. The battery verdict first maps to a cap:
 
-The real low point came next. Attacker discipline requires a **fix-audit rotation**: a fresh context that wrote none of the fixes re-aims all five lenses at the fix diff. Its top finding: my fix rationale claimed "the synthesis subagent is toolFilter read-only, so it physically cannot tamper with the lens artifacts" — **wrong**. The host-side subagent door stays open; a read-only child can still spawn an unconfined helper to rewrite files, and the proof sat in **the T-D2 data I had corrected myself in the same commit**. The same error class — mistaking a contract-level refusal for a mechanical guarantee — recommitted inside the commit that was fixing it, caught by an independent audit. "A fixer must not audit its own fix" went from doctrine to lived experience.
+```python
+def battery_cap(battery_verdict):
+    return "industrial" if battery_verdict == "clean" else "candidate"
+    # breaches_found / not_run both cap at candidate
 
-What can't be fixed isn't hidden: the hollow-lens false negative (if the battery collectively does nothing, a zero-finding clean can't be caught by counting) is disclosed in every shipped manifest's limits[], with the real cure (a mechanically enforced SEED gate) queued for v0.2. **Fix what is mechanically fixable; disclose what isn't** — that is the release posture.
+def min_fold(re_audit, battery):
+    return min(re_audit, battery_cap(battery), key=VERDICT_ORDER.get)
+```
 
-## 5. L7: the cheaper model as a corollary of the gate floor
+`effective = min(re_audit, cap(battery))`, recomputed at **three independent sites**: `validate_decision` at the battery gate (writer side — a synthesis writing an effective above the fold is refused on the spot; in run r1c this fired for real, the synthesis under-reported `draft` and got bounced into a retry), the assembler (assembly side), and reverify (consumer side — a shipped effective above the recomputation is ruled fabricated). One algebra, three copies; bypass one and two remain.
 
-L5 measured a full run at 62.4 minutes. The two long poles are the engineer (26.5 — real implementation plus a 30-pair corpus; untouchable, the B15 win came from corpus depth) and the battery (17.8 — already cut 47% by budget; cutting further erodes the attack surface). The one lever left: move the three mechanical stages to deepseek-v4-flash — **justified entirely by the gates underneath**.
+The attack round (five independent lenses + a SEED gate + a cross-lens synthesis, findings committed to git **before** any fix so a fixer can't quietly delete one) found the project's only P1 exactly here:
+
+> The floor was one-directional. The assembler refused "`breaches_found` with a zero count" (breaches without findings = suppressed evidence) but **not "`clean` while P1/P2 findings sit on disk."** And `clean` is the only verdict that lifts the cap to `industrial` — one lazy or gaming synthesis flips a word, and a lying artifact ships with the top grade while all three fold recomputations stay green, because the fold checks effective-vs-verdict consistency, never **verdict-vs-evidence** consistency.
+
+The fix was repro-first: craft a lying manifest (`clean` + a real P1 on disk), prove the current code passes it, add the converse floor — **a counted P1/P2 on disk forces `breaches_found`** — and prove the same manifest is now refused; both runs on the record. Two design details worth spelling out. First, the converse floor tolerates P3: `clean` may carry disclosed P3 minors (counts travel verbatim in `batteryFindingsCounts`), because folding "has small flaws" into the same label as "has breaches" only teaches the upstream to hide the P3s too. Second, the count's data source is **the lens artifact files on disk**, which the executor wrote from the lenses' structured returns — and the synthesis's toolFilter is `['read']`, so it cannot edit the evidence being counted against it.
+
+At least, that was my argument. Attacker discipline mandates a **fix-audit rotation**: a fresh context that wrote none of the fixes re-attacks the fix diff. Its top finding kept me quiet for a while:
+
+> "The synthesis is read-only, so it physically cannot alter the lens artifacts" — wrong. The host's own-scope `subagent` door is exempt from toolFilter (§2, first law); a read-only child can spawn an **unconfined** helper to rewrite files. And no new evidence is needed: **in this same commit, you yourself corrected the T-D2 record to state that r1c's synthesis child did spawn a helper.**
+
+The same error class — mistaking an entrustment for a guarantee — recommitted inside the commit fixing it, refuted by an independent audit using data I had corrected myself. Not a process drill; a lived instance of "a fixer must not audit its own fix." The corrected claim is one rung weaker: the converse floor guards against **the synthesis's relabeling** (verdict inconsistent with evidence), not against **the integrity of the evidence files themselves** (that needs a mechanical SEED gate plus closing the subagent door — queued for v0.2). That residual, together with the hollow-lens false negative (a battery that collectively does nothing produces a zero-finding `clean` no count can catch), is written verbatim into every shipped manifest's `limits[]`. **Fix what is mechanically fixable; disclose what isn't** — "honest limits" means executing that sentence down to the field level.
+
+One more anti-perfunctory device at the schema level: every gate ruling in the decision record must be a complete decision object — the question, evidence pointers, options considered, and **options rejected with reasons** (an empty rejected list is treated as a signal of non-thought); the adjudicator field admits exactly `human | machine`, no third mumble.
+
+## 5. Six boot invariants: the complete catalog of fakes-green, live-red
+
+The plugin target's build manual distills six invariants, each paid for by an "offline tests all green, real host boot explodes" incident. Listed in full, because this knowledge class is only reusable as a checklist:
+
+1. **`Config` must be a Standard-Schema object** — a plain object is refused at load;
+2. **every `@deepseek-ai/*` package imported by `lib/index.js` must appear in `peerDependencies`** — miss one and installation succeeds while boot-time module resolution detonates;
+3. **every OBJECT schema a tool declares must set `additionalProperties` explicitly** — omission is not leniency, it is refusal;
+4. **`@deepseek-ai/*` never goes in `dependencies`, and "optional" dependencies use conditional imports** — otherwise a second instance of the same package appears inside the host; in a sibling project this once took every tool offline at once;
+5. **the live host validates each tool's execute RETURN VALUE against its declared output schema** — one undeclared extra field in the return and live rejects it, while offline fakes never validate the return direction at all;
+6. **every tool result the host hands back is DEEP-FROZEN; never mutate in place** — `structuredClone` first. The discovery path here is the archetype: the capability-stamping feature was green under all 111 offline cases and crashed on first live contact, because the fakes' freezing behavior didn't match the host's. The fix (clone-before-write) landed with a frozen-input regression case that is mutation-verified — revert the fix and the case must go red.
+
+The meta-lesson outvalues the entries: **host-composition behavior (E-L4 class) has no offline proof, only live proof.** Hence a factory rule: if E-L4 wasn't actually run for an artifact, it ships as `not_run` in the limits — a layer whose green light never lit doesn't get to use the word.
+
+## 6. Why a machine record is born at O-L3
+
+The governance field `capability_level` walks a ladder from O-L0 (every gate human-judged) to O-L4 (fully automatic + human spot checks), and the doctrine says "ship at O-L0, earn upgrades with evidence." The factory line hits a clean deadlock here: in a headless all-machine record every gate's adjudicator is `machine`, and the validator's machine-factory invariant **rejects** O-L0/L1/L2 (all three require a human in the loop) — so "ship at O-L0" is an illegal value for the only kind of record this pipeline can produce. In run R2 the model honestly wrote O-L0, got refused, retried per the table, and closed with an honest `stopped_unmet` — every step rule-abiding, the composition a guaranteed non-producer.
+
+The ruling: for a machine factory, O-L3 is not an *earned* level but a **structural floor** — the lowest label the validator tolerates — stamped as a constant by the executor rather than written by the model (let the model write it and you get R2 and R3 each rolling their own, which is exactly what happened). The semantics were corrected to the honest reading: O-L3 means "machine-adjudicated; the human veto is reserved but never exercised in headless operation" — **the veto is a disclosed limitation, not a safety net**, because no human is present during the run. The correction propagated to the doctrine text, the schema description, and every shipped manifest's limits[] — where the machine-self-adjudication disclosure is **derived** by the assembler from the gates' adjudicator fields (a selftest fixture with a human-judged gate proves the disclosure gets suppressed, so the disclosure itself can't rot into hardcoded decoration).
+
+The general rule for governance fields: **when no human is present, every governance value must be either mechanically enforced or mechanically disclosed.** A field that is neither is a fig leaf.
+
+## 7. L7: a bracketing experiment
+
+L5 measured a full run at 62.4 minutes: composer 8.6 + guidance 9.5 + engineer 26.5 + zipper (skill targets only) + battery 17.8. The two long poles are untouchable — the engineer's 26.5 buys a real implementation plus a 30-pair golden corpus (the B15 head-to-head flipped from a clean loss to 2 wins / 1 tie / 1 narrow loss on corpus depth alone), and the battery had already been budget-cut 47%. The only lever left is the model tier of the three mechanical stages, and the licence to pull it was built in §1–§4: **their outputs all pass executable acceptance gates; the floor is held by gates, not by model diligence.**
 
 <figure class="vz">
 <svg viewBox="0 0 680 264" role="img" aria-label="Per-stage wall-clock, three runs compared: baseline, V1 with retries, V2 all first-pass">
@@ -151,7 +243,7 @@ L5 measured a full run at 62.4 minutes. The two long poles are the engineer (26.
   <rect x="305" y="51" width="32" height="159" fill="var(--vz-s1)"><title>engineer baseline 26.5 min (pro)</title></rect>
   <rect x="343" y="82.8" width="32" height="127.2" fill="var(--vz-s2)"><title>engineer V1 21.2 min (pro, fast-side variance)</title></rect>
   <rect x="381" y="28.8" width="32" height="181.2" fill="var(--vz-s3)"><title>engineer V2 30.2 min (pro, slow-side variance)</title></rect>
-  <rect x="427" y="168.6" width="32" height="41.4" fill="var(--vz-s1)"><title>zipper baseline 6.9 min (r1c — actually pro at the time)</title></rect>
+  <rect x="427" y="168.6" width="32" height="41.4" fill="var(--vz-s1)"><title>zipper baseline 6.9 min (r1c — actually pro at the time, see the dead-config note)</title></rect>
   <rect x="465" y="157.8" width="32" height="52.2" fill="var(--vz-s2)"><title>zipper V1 8.7 min (incl. an a1 ROLE_NO_OUTPUT retry; green attempt 2.5)</title></rect>
   <rect x="503" y="193.8" width="32" height="16.2" fill="var(--vz-s3)"><title>zipper V2 2.7 min (first-pass under the 49152 budget)</title></rect>
   <rect x="549" y="103.2" width="32" height="106.8" fill="var(--vz-s1)"><title>battery baseline 17.8 min (pro)</title></rect>
@@ -168,24 +260,29 @@ L5 measured a full run at 62.4 minutes. The two long poles are the engineer (26.
   <text x="603" y="228" text-anchor="middle" class="t2">battery</text>
   <text x="603" y="242" text-anchor="middle" class="t2">pro</text>
 </svg>
-<figcaption>Fig. 2 · Per-stage wall-clock across three runs of the same task (csv-md-table skill, byte-identical request), y-axis in minutes. Totals: baseline 62.4 → V1 62.0 → V2 <b>59.69</b>. Flash green-attempt speedups: composer −33% / guidance −35% / zipper −64%. V1's two retries (+10.0 min) ate exactly the speedup; V2 eliminated the retries and landed sub-60 — but the 0.3-min margin is smaller than the engineer's same-model variance (21.2 / 26.5 / 30.2 across runs), so the honest claim is "typically sub-60, not guaranteed."</figcaption>
+<figcaption>Fig. 3 · Per-stage wall-clock across three runs of the same task (csv-md-table skill, byte-identical request), y-axis in minutes. Totals: baseline 62.4 → V1 62.0 → V2 <b>59.69</b>. Flash green-attempt speedups: composer −33% / guidance −35% / zipper −64%. V1's two retries (+10.0 min) ate exactly the speedup; V2 eliminated them and landed sub-60 — but the 0.3-min margin is smaller than the engineer's same-model variance (21.2 / 26.5 / 30.2 across runs), so the honest claim is "typically sub-60, not guaranteed; the residual variance is pro-stage, unrelated to flash."</figcaption>
 </figure>
 
-After V1's partial verdict, a frame-by-frame session-log autopsy pinned the death mechanism cleanly: both `ROLE_NO_OUTPUT` failures were **reasoning blowout into maxTokens** — flash under deployment-level `reasoningEffort=high` (not pinnable per dispatch; confirmed at the seam) reasons far past budgets tuned for pro. The composer died at 24576 (18K of it reasoning, its structured output already streaming — 22 deltas in — when cut); the zipper died at 32768 (**one hundred percent reasoning**, a self-checking loop, output never began); guidance passed twice at 40960. Three stages bracket the failure into a clean interval: 24576 dies, 32768 dies, 40960 passes. The fix is pure manifest budget headroom (a cap is a ceiling, not a spend), and V2 delivered 0/4 deaths.
+V1 came back partial: 62.0 total ≈ baseline, with two of four flash dispatches dead of `ROLE_NO_OUTPUT`. This is the densest part of the story — **the autopsy**, frame by frame through the two children's session logs:
 
-Two side findings outshone the main plot:
+- **composer a1** (maxTokens 24576): 10 `read` calls, 1 `bash`, a 1.2KB prose preamble, then it began streaming its `structured_output` call — **cut off at the 22nd tool-call delta**. Final frame: `outputTokens 24576 == cap`, 18,243 of them reasoning; `turn/end {"kind":"max-tokens"}`. A few hundred tokens short of delivery.
+- **zipper a1** (maxTokens 32768): 18 `read` calls, 1 `bash`, then a final frame of **32,768 / 32,768 tokens — one hundred percent reasoning** — a self-checking loop (log tail: "…occurrences: none. Wait — …") in which neither prose nor a tool call ever began.
 
-- **Dead config.** While digging, I found a `provider/model: flash` pair sitting in the zipper's role block — from an earlier optimization round. The executor reads stage-level config only; **those keys never took effect**, and every prior run's zipper had silently been pro. A lever is only real where the executor reads it; the only proof a config is live is the roleModel in the runtime ledger.
-- **The gate floor, live.** V2's engineer (pro, run-to-run variance) shape-checked the trigger battery instead of executing it; the battery's gaming and reality lenses **independently** flagged exactly that as their P1s, and the verdict got pressed down to candidate. A real quality regression was caught, counted, and shipped in the grade — instead of slipping out the door. The claim "a cheaper model is safe because acceptance never relies on the model's diligence" cashed out once per live round.
+Mechanism: **reasoning blowout into maxTokens**. Under the deployment-level `reasoningEffort=high` (§2: not pinnable per dispatch), flash emits several times pro's reasoning volume on the same task, against budgets tuned for pro's behavior. And the three flash stages happened to form a ready-made bracket: **24576 dies, 32768 dies, 40960 passes** (guidance was first-pass in both rounds). The fix therefore required no guessing: composer raised to 40960 (the proven-sufficient value), zipper to 49152 — a cap is a ceiling, not a spend; headroom bills nothing. V2: four flash dispatches, **zero deaths, five stages first-pass**; the two previously-fatal dispatches cleared in 4.7 and 2.7 minutes.
 
-## 6. Retrospective: entrustments vs. guarantees
+Two byproducts outshone the main plot:
 
-The last post's criterion was "a concept that can't say who judges, by what standard, and who backstops a miss is just an entrustment." This project pushes the same sentence down to the execution layer:
+- **Dead-config archaeology.** During the dig I found a `provider/model: flash` pair sitting in the zipper's *role* block — written by an earlier optimization round. But the executor reads the model at *stage* level only (`stage.model ?? defaults.model`); those role-level keys **had never been read**. Every earlier run's zipper had silently been pro — including the 6.9-minute figure I had been citing as a "flash baseline." The correction method is not to trust any document but to reconcile against the runtime ledger's `roleModel` field: **whether a config is live is provable only by a runtime record on the executor's actual read path.**
+- **The gate floor, proven in both directions.** V2's engineer (pro, run-to-run variance) shape-checked the trigger battery instead of executing it: all 31 cases `live_run:false`, `observed:null`. The battery's gaming and reality lenses — with no knowledge of each other — each flagged exactly that as their P1; verdict `breaches_found`, effective pressed to `candidate`. A real quality regression caught, counted, and shipped in the grade. In one experiment, flash's failures were stopped and retried by gates while pro's shortcut was demoted by the battery: **the floor plays no favorites.** That is the complete proof structure behind "a cheaper model is a corollary, not a gamble."
 
-> If a constraint exists only in a prompt — it is an entrustment. Given enough samples it will be breached.
+## 8. Retrospective: entrustments vs. guarantees
+
+The last post's criterion was "a concept that can't say who judges, by what standard, and who backstops a miss is just an entrustment." This project pushed it down to the execution layer — and got slapped by its own sentence once (§4). Three criteria remain, each checkable item-by-item against any multi-agent system:
+
+> **Which layer does the constraint live in?** Prompt-only = entrustment; breached under enough samples. Breach triggers a mechanical refusal = guarantee. A headless system's trustworthiness equals the coverage of its guarantee list — not the sincerity of its prompts.
 >
-> If breaching it triggers a mechanical refusal on the spot — it is a guarantee. The entire precondition for a headless factory is moving every load-bearing constraint from the former to the latter.
+> **How far does the evidence travel?** If the exhibits from verification time don't travel with the artifact, "verified" has a one-link trust chain. Per-file hashes + a ledger hash + a recomputed fold extend the chain to anyone holding the directory.
+>
+> **Is the unfixable disclosed?** The mechanically unfixable residue (the host's open door, same-family model blind spots, the timing gap) — is it written into the shipped evidence? The part that isn't is the system's true ceiling.
 
-And what can't be moved? **Disclose it.** The real difference between the machine-judged factory and the human-judged lineage isn't quality — it's that the factory must write "who adjudicated, what wasn't adjudicated, whether a veto was present" into the shipped evidence verbatim, because no human is there to vouch for it. The shipped manifest's limits[] carries the machine-self-adjudication statement, the hollow-lens residual, the independence boundary (same-model-family attackers throughout; cross-vendor blind spots structurally invisible). These aren't disclaimers — they are part of the product's definition.
-
-Three days, roughly ¥110–120 of API spend, ten live run workspaces, one P1 lesson, one humbling refutation by an independent audit, two rounds of flash measurements. The repo is at [github.com/VincentJiang06/dsh-tool-creator](https://github.com/VincentJiang06/dsh-tool-creator) (attack ledger, differential battery, and L7 measurements all in the evidence docs); the executor is on [npm](https://www.npmjs.com/package/dsh-pipeline-executor). The next hill is already queued: a mechanical SEED gate — moving "the acceptance battery itself slacking off" from entrustment to guarantee as well.
+Three days, roughly ¥110–120 of API spend, ten live workspaces, 61 selftest traps + 126 node cases, one P1, one refutation by an independent audit armed with my own evidence. The repo is at [github.com/VincentJiang06/dsh-tool-creator](https://github.com/VincentJiang06/dsh-tool-creator) (attack ledger, differential battery, and L7 measurements under docs/evidence/); the executor is on [npm](https://www.npmjs.com/package/dsh-pipeline-executor). The next hill is queued: a mechanical SEED gate — moving "the acceptance battery itself slacking off" from entrustment to guarantee as well.
