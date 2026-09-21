@@ -84,6 +84,16 @@
   ],
   "gallery": [
     {
+      "key": "closed-back-atlas",
+      "title": "封闭监听耳机坐标",
+      "href": "/gallery/closed-back-atlas/",
+      "date": "2026-09-21",
+      "desc": "178 款封闭式监听耳机的测量优先评测：可自选 XY 轴与着色方式的散点图、多维筛选、听歌 / 挑错 / 性价比三张排行榜；每款附完整评测报告与原始频响曲线（共 340 条，B&K 5128 优先，按台架匹配参考曲线），外加标注人头麦型号、混合台架会警告的多款曲线对比工具。明暗双主题。",
+      "badge": "178 款 · 340 条原始曲线",
+      "hue": null,
+      "hueManual": 165
+    },
+    {
       "key": "graph-engineering",
       "title": "图工程：深度研究全集",
       "href": "/gallery/graph-engineering/",
