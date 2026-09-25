@@ -1,32 +1,52 @@
-# push 到 main → ⓪ 校验内容 → ① 构建镜像推 GHCR(latest + 本次 sha)
-#                → ② self-hosted runner 把镜像 pin 到本次 sha 部署,过健康门才算成功,失败自动回滚。
-# 发文章:把 md 丢进 posts/,commit message 写「发布」,push。详见仓库根目录 SPEC.md。
+# push 到 main → ① build:校验内容 + 构建镜像推 GHCR(latest + 本次 sha)
+#               → ② deploy:self-hosted runner 把镜像 pin 到本次 sha 部署,过健康门才算成功,失败自动回滚
+#               → ③ verify:从公网(经 Cloudflare)读 /version.json,确认线上真的是本次 sha。
+# PR / 非 main 手动触发:只跑 ① 的校验 + 试构建,不推镜像、不部署。
+# 发文章:把 md 丢进 posts/,commit message 写「发布」,push。详见仓库根目录 SPEC.md §6。
 name: build-and-deploy
 
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
   contents: read
 
-concurrency:
-  group: vincejiang-${{ github.ref }}
-  cancel-in-progress: true
+# 注意:这里故意【没有】workflow 级 concurrency。
+# 旧版在 workflow 级 cancel-in-progress,会把正在跑 deploy-pinned.sh 的整个 run 一起取消
+# (脚本被杀在「已改 .env / 已 recreate、还没过健康门」之间 → 回滚逻辑来不及执行)。
+# 现在取消只作用于 build;deploy 单独串行、永不中途取消。
 
 env:
   IMAGE: ghcr.io/vincentjiang06/vincejiang-demo   # 必须全小写
+  # 只有 main 上的 push / 手动触发才推镜像并部署
+  PUBLISH: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
 
 jobs:
-  # ── ⓪ 构建前校验(硬伤挡住构建:frontmatter 坏 / slug 重复 / 内容目录缺 index.html)──
-  check:
+  # ── ① 校验 + 构建镜像(GitHub 托管 runner)────────────────────────────
+  # 旧版 check / image 两个 job 各自全量 clone(约 285MB)并各跑一次 gen-manifest;合并后只做一次。
+  build:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
+    concurrency:
+      group: build-${{ github.ref }}
+      cancel-in-progress: true        # 同一分支连推:只构建最新的,旧的构建直接作废(构建可安全中断)
+    permissions:
+      contents: read
+      packages: write                 # 推 GHCR 需要
     steps:
-      - uses: actions/checkout@v4
-        with: { fetch-depth: 0 }        # 全历史:发布判定要读 git log
-      - name: 生成发布 manifest(git 历史推导)
+      - uses: actions/checkout@v7
+        with: { fetch-depth: 0 }      # 全历史:发布判定要读 git log
+
+      - uses: actions/setup-node@v7   # 钉住 Node 版本(与 Dockerfile 构建阶段一致),不随 ubuntu-latest 漂移
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tools/package-lock.json
+
+      - name: 生成发布 manifest(git 历史推导;随后进 Docker 构建上下文)
         run: node tools/gen-manifest.mjs
       - name: 装生成器依赖
         run: cd tools && npm ci --no-audit --no-fund
@@ -36,50 +56,89 @@ jobs:
         run: cd tools && npm test
       - name: HTML 粗校验(warn-only,不阻塞)
         run: |
-          cd tools && node build-site.mjs --out /tmp/site
-          npx --yes html-validate "/tmp/site/index.html" "/tmp/site/blog/**/*.html" "/tmp/site/research/**/*.html" "/tmp/site/gallery/**/*.html" || true
+          cd tools && node build-site.mjs --out "$RUNNER_TEMP/site"
+          npx --yes html-validate@11 "$RUNNER_TEMP/site/index.html" "$RUNNER_TEMP/site/blog/**/*.html" "$RUNNER_TEMP/site/research/**/*.html" "$RUNNER_TEMP/site/gallery/**/*.html" || true
 
-  # ── ① 构建并推送镜像(GitHub 托管 runner)──────────────────────────────
-  image:
-    needs: check
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    permissions:
-      contents: read
-      packages: write          # 推 GHCR 需要
-    steps:
-      - uses: actions/checkout@v4
-        with: { fetch-depth: 0 }        # 全历史:gen-manifest 要
-      - name: 生成发布 manifest(进构建上下文,容器内 build-site 消费)
-        run: node tools/gen-manifest.mjs
-      - uses: docker/setup-buildx-action@v3
+      - uses: docker/setup-buildx-action@v4
       - name: Log in to GHCR
-        uses: docker/login-action@v3
+        if: env.PUBLISH == 'true'
+        uses: docker/login-action@v4
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build & push
-        uses: docker/build-push-action@v6
+      - name: Build (& push on main)
+        uses: docker/build-push-action@v7
         with:
           context: .
-          push: true
+          push: ${{ env.PUBLISH == 'true' }}
+          build-args: |
+            GIT_SHA=${{ github.sha }}
           tags: |
             ${{ env.IMAGE }}:latest
             ${{ env.IMAGE }}:${{ github.sha }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          # 两路缓存:gha(快)+ 线上 latest 镜像的 inline 缓存(gha 被逐出时兜底)。
+          # 命中缓存 = 字体层复用同一个 blob → 服务器 pull 时直接跳过这 ~290MB。
+          cache-from: |
+            type=gha
+            type=registry,ref=${{ env.IMAGE }}:latest
+          cache-to: |
+            type=gha,mode=max
+            type=inline
 
   # ── ② 服务器侧 pin sha 部署 + 健康门 + 失败回滚(self-hosted runner)──
   deploy:
-    needs: image
+    needs: build
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     runs-on: [self-hosted, vincejiang]
     timeout-minutes: 10
     concurrency:
       group: vincejiang-deploy-serial
-      cancel-in-progress: false
+      cancel-in-progress: false       # 正在部署的绝不打断;排队中的只保留最新一个
+    outputs:
+      deployed: ${{ steps.deploy.outputs.deployed }}
     steps:
+      # 取消 workflow 级 cancel 后,慢的旧 run 可能在新 run 部署完之后才轮到 deploy ——
+      # 不拦的话会把线上倒退回旧版。main 已前进就跳过,交给更新的那次 run。
+      # 查询失败时照常部署(宁可多部署一次,不因 API 抖动卡住发布)。
+      - name: 跳过已被更新 commit 取代的部署
+        id: guard
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          head=$(curl -fsS -m 10 \
+                   -H "Authorization: Bearer $GH_TOKEN" \
+                   -H "Accept: application/vnd.github.sha" \
+                   "$GITHUB_API_URL/repos/$GITHUB_REPOSITORY/commits/main" || true)
+          if [[ "$head" =~ ^[0-9a-f]{40}$ && "$head" != "$GITHUB_SHA" ]]; then
+            echo "::notice::main 已前进到 ${head:0:7},跳过部署 ${GITHUB_SHA:0:7}(由更新的 run 负责上线)"
+            echo "stale=true" >> "$GITHUB_OUTPUT"
+          else
+            [[ "$head" =~ ^[0-9a-f]{40}$ ]] || echo "::warning::查不到 main 头(${head:-空}),照常部署"
+            echo "stale=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Pin image to this sha, deploy behind health gate (auto-rollback on failure)
+        id: deploy
+        if: steps.guard.outputs.stale != 'true'
+        shell: bash
         run: |
           cd /home/vince/platform
-          ./deploy-pinned.sh svc-vincejiang ${{ github.sha }}
+          ./deploy-pinned.sh svc-vincejiang "$GITHUB_SHA"
+          echo "deployed=true" >> "$GITHUB_OUTPUT"
+
+  # ── ③ 公网端到端验证(GitHub 托管 runner)──────────────────────────────
+  # 服务器健康门只证明「容器 + Traefik」没问题;这里再走一遍 Cloudflare 边缘 → 隧道 → Traefik → 容器,
+  # 并核对 /version.json 里的 sha,确认用户看到的就是本次提交。
+  verify:
+    needs: deploy
+    if: needs.deploy.outputs.deployed == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          sparse-checkout: tools/verify-live.sh
+          sparse-checkout-cone-mode: false   # sparse 自带 blob:none,只拉这一个脚本
+      - name: 线上 /version.json == 本次 sha
+        run: bash tools/verify-live.sh "$GITHUB_SHA"

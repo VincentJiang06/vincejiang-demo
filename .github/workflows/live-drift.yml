@@ -1,0 +1,33 @@
+# 定时巡检:main 的最新 commit 是否真的在线上。
+# 为什么:deploy job 跑在 self-hosted runner 上,runner 掉线时 job 只会「排队」而不会失败
+# (GitHub 要排满 24h 才判超时),push 了却没上线可以安静地持续很久。本巡检把这种状态变成一次红叉 + 邮件。
+# 刚推不到 30 分钟的 commit 不查(可能正在部署)。手动触发:Actions → live-drift → Run workflow。
+name: live-drift
+
+on:
+  schedule:
+    - cron: '23 */6 * * *'   # 每 6 小时(UTC,错开整点)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          sparse-checkout: tools/verify-live.sh
+          sparse-checkout-cone-mode: false
+      - name: main 头是否已上线
+        run: |
+          sha=$(git rev-parse HEAD)
+          age=$(( $(date +%s) - $(git log -1 --format=%ct HEAD) ))
+          if [ "$age" -lt 1800 ]; then
+            echo "main 头 ${sha:0:7} 推送不足 30 分钟,可能仍在部署,本轮跳过"
+            exit 0
+          fi
+          bash tools/verify-live.sh "$sha" https://vincejiang.com 3

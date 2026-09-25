@@ -1,0 +1,21 @@
+# 依赖保鲜:每月一次,按生态各合成一个 PR(不刷屏)。
+# PR 会触发 build-and-deploy 的 build job(只校验 + 试构建,不部署);绿了再合并即上线。
+version: 2
+updates:
+  - package-ecosystem: github-actions      # .github/workflows/*.yml 里的 actions/*、docker/* 版本
+    directory: /
+    schedule: { interval: monthly }
+    groups:
+      actions: { patterns: ['*'] }
+
+  - package-ecosystem: docker              # Dockerfile 的 node / nginx 基础镜像
+    directory: /
+    schedule: { interval: monthly }
+    groups:
+      base-images: { patterns: ['*'] }
+
+  - package-ecosystem: npm                 # tools/ 生成器依赖(markdown-it 等)
+    directory: /tools
+    schedule: { interval: monthly }
+    groups:
+      generator: { patterns: ['*'] }
