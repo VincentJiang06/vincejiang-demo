@@ -151,7 +151,8 @@ site.config.json  # 首页 / gallery / 友链(wildSites) / Research collections 
 <demo>/           # 各 demo 文件夹(status-ai / vince-hifi-notes …),原样收录
 docker/           # nginx 配置(site.conf + snippets/security-headers.conf)
 Dockerfile        # 多阶段:node 编译 → nginx 发布
-.github/workflows/# deploy.yml(check→image→deploy)+ audit.yml(手动审计)
+.github/workflows/# deploy.yml(build→deploy→verify)+ live-drift.yml(定时巡检)+ audit.yml(手动审计)
+.github/dependabot.yml # 每月一次:actions / 基础镜像 / tools npm 依赖各一个合并 PR
 ```
 **生成物**(不入库,构建时产出):`index.html`、`/blog/**`、`/research/`、`/gallery/`、`sitemap.xml`、`llms.txt`、`posts-manifest.json`。
 
@@ -180,18 +181,34 @@ Dockerfile        # 多阶段:node 编译 → nginx 发布
 
 ## 6. CI/CD 细节
 
-文件:`.github/workflows/deploy.yml`,push `main` 触发三个 job 串起来:
+文件:`.github/workflows/deploy.yml`。push `main` 触发三个 job 串起来;**PR / 非 main 的手动触发只跑 `build`(校验 + 试构建,不推镜像不部署)**。
 
 | job | 跑在哪 | 干什么 |
 |-----|--------|--------|
-| `check` | GitHub 托管 | 生成 manifest → `build-site.mjs --check`(frontmatter/slug/内容目录 index.html 硬 gate)+ html-validate(warn-only) |
-| `image` | GitHub 托管 | 生成 manifest → 多阶段 `docker build` → 推 `ghcr.io/...:{latest, <sha>}` |
-| `deploy` | **服务器 self-hosted runner** | `cd /home/vince/platform && ./deploy-pinned.sh svc-vincejiang <sha>` |
+| `build` | GitHub 托管 | 生成 manifest → `build-site.mjs --check` + `npm test`(硬 gate)+ html-validate(warn-only)→ 多阶段 `docker build` → 推 `ghcr.io/...:{latest, <sha>}` |
+| `deploy` | **服务器 self-hosted runner** | 先查 main 头:已被更新 commit 取代就跳过;否则 `cd /home/vince/platform && ./deploy-pinned.sh svc-vincejiang <sha>` |
+| `verify` | GitHub 托管 | `tools/verify-live.sh <sha>`:经公网(Cloudflare → 隧道 → Traefik → 容器)读 `/version.json`,核对 sha + 首页 200 |
 
 **deploy-pinned.sh(在 platform 仓库)** 做的事:把 `<sha>` 写进 `platform/.env` 的 `VINCEJIANG_TAG` → `docker compose pull/up -d` → **健康门**(容器 healthcheck 变 healthy + 经 Traefik 真路由验 `/health`=ok 且 `/`=200)→ **任一步失败自动回滚上一个 tag 并让 job 变红**。
 - compose 里 `image: ghcr.io/...:${VINCEJIANG_TAG:-latest}`;所以部署镜像与触发 commit 强绑定,可精确回滚。
-- 顶层最小权限 `contents: read`;`image` job 单独 `packages: write`。
-- `deploy` 单独串行 concurrency(`cancel-in-progress: false`),滚动更新中途不被后一次 push 取消。
+- 顶层最小权限 `contents: read`;`build` job 单独 `packages: write`。
+
+**并发语义(2026-09 重构的核心)**:
+- **没有 workflow 级 cancel-in-progress**。旧版有,它会把「正在跑 deploy-pinned.sh」的整个 run 一起取消 —— 脚本可能死在已 recreate、未过健康门之间,回滚来不及执行。
+- `build`:按分支 `cancel-in-progress: true`,连推只构建最新的(构建可安全中断)。
+- `deploy`:全局串行组 `vincejiang-deploy-serial`,`cancel-in-progress: false` —— 正在部署的绝不打断,排队的只留最新一个。
+- **防倒退**:慢的旧 run 可能在新 run 部署完后才轮到 deploy,所以 deploy 先用 API 查 main 头,不是自己就跳过(`::notice::`,`verify` 随之跳过)。查询失败时照常部署。
+
+**镜像分层**:`font-compare/fonts`(约 320MB)在 Dockerfile 里单独 `COPY --link` 成层,直接取自源码,不经 build-site;站点产物(约 28MB)是另一层。字体不变时构建缓存(gha + `latest` 的 inline 缓存)复用同一个 blob → GHCR 不再每次涨 ~290MB、服务器 pull 跳过、字体 mtime/ETag 不变。**以后再加大块静态资源,照此在 Dockerfile 加一行 COPY,并在 build 阶段的 `rm` 里摘掉。**
+
+**版本戳**:Dockerfile 用 build-arg `GIT_SHA` 写 `/version.json`(`{"sha":"..."}`),nginx 侧 `no-store` + `noindex`。本地构建为 `{"sha":"dev"}`。
+
+**健康检查**:`--start-interval=1s`,新容器 ~1s 就 healthy(旧版 `--interval=30s`,且 Traefik 不路由非 healthy 容器 → 每次部署约 30s 不可用)。需服务器 Docker Engine ≥ 25,更老的会忽略该参数、退化为 10s。
+
+**依赖保鲜**:Actions 全部是 node24 的新大版本(checkout/setup-node v7、docker/* v4/v7);Node 由 `setup-node` 钉在 24,与 Dockerfile 的 `node:24-alpine` 一致;nginx 钉 `1.30-alpine`(stable)。`.github/dependabot.yml` 每月为 actions / 基础镜像 / tools npm 依赖各开一个合并 PR,PR 会跑 `build` 校验,绿了再合。
+
+**live-drift 巡检**(`.github/workflows/live-drift.yml`):每 6 小时查一次「main 头(推送超过 30 分钟的)是否已在线上」。self-hosted runner 掉线时 deploy 只会一直排队而不报错,这个巡检把它变成红叉 + 邮件。可在 Actions 页手动触发。
+
 - 只有本仓库用 self-hosted runner 自动部署;其余 6 站仍手动 `redeploy.sh`。
 
 ---
@@ -205,6 +222,8 @@ cd /home/vince/platform
 grep VINCEJIANG_TAG .env                            # 看当前部署的是哪个 sha
 ```
 GHCR 保留每个 sha 的镜像,`<旧-git-sha>` 用要回退到的那次 commit 的完整 sha。
+
+> 别用 Actions 页「Re-run」旧 run 来回滚:deploy 的防倒退检查发现 main 头不是它,会直接跳过。回滚走上面的服务器命令,或在 main 上 `git revert` 后正常 push。
 
 ---
 
@@ -220,8 +239,10 @@ GHCR 保留每个 sha 的镜像,`<旧-git-sha>` 用要回退到的那次 commit 
 
 | 症状 | 多半是 | 怎么查 / 修 |
 |------|--------|-------------|
-| push 了但网站没变 | check/image job 失败,或 runner 没在线 | 仓库 Actions 页看红在哪一 job;服务器 `pgrep -f Runner.Listener` 看 runner |
+| push 了但网站没变 | build job 失败;或 deploy 一直 Queued(runner 没在线);或 deploy 显示「跳过部署」(被更新的 commit 取代,看最新那次 run) | 仓库 Actions 页看红/黄在哪一 job;服务器 `pgrep -f Runner.Listener` 看 runner |
 | `deploy` job 红、线上仍是旧版 | 健康门没过,已自动回滚(符合预期) | 看 Actions 里 deploy-pinned 的输出;多半是新构建内容坏了 |
+| `verify` job 红 | 服务器上已部署成功,但公网看到的不是本次 sha(CF 隧道 / Traefik / 缓存规则问题) | `curl -s 'https://vincejiang.com/version.json?x=1'`;服务器 `grep VINCEJIANG_TAG platform/.env`;CF 若对该 URL 开了 Cache Everything 要排除 `/version.json` |
+| `live-drift` 红 | main 头推送超过 30 分钟仍未上线 | 同「push 了但网站没变」;修好后手动 Run 一次 live-drift 确认 |
 | 文章 push 了不显示 | commit 没写「发布」,或 `draft: true` | 补一次带「发布」的 commit 碰该文件;去掉 draft |
 | `pull access denied` | GHCR 包非 public | 把 `vincejiang-demo` 包设 public |
 | 返回 404(Traefik 纯文本) | 容器没起来 / 路由不匹配 | `docker ps` 看 svc-vincejiang;compose HostRegexp |

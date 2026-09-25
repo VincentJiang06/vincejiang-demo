@@ -14,8 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with: { fetch-depth: 0 }        # 真实 git 日期
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tools/package-lock.json
       - name: 生成发布 manifest
         run: node tools/gen-manifest.mjs
       - name: 装生成器依赖
@@ -25,7 +30,7 @@ jobs:
       - name: 报告进 job summary
         run: cat "$RUNNER_TEMP/audit.md" >> "$GITHUB_STEP_SUMMARY"
       - name: 上传报告 artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: seo-geo-audit
           path: ${{ runner.temp }}/audit.md
