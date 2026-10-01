@@ -1,15 +1,17 @@
 import {readFileSync,writeFileSync,mkdirSync,cpSync} from 'node:fs';
 import path from 'node:path';
+import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {renderDocuments,esc,url,BASE} from './study.mjs';
 import {COURSES} from './study-import.mjs';
 const ROOT=fileURLToPath(new URL('../',import.meta.url));
+const assetVersion=f=>createHash('sha256').update(readFileSync(path.join(ROOT,'templates',f))).digest('hex').slice(0,12);
 const names={CSCI3130:'计算理论',CSCI3150:'操作系统',CSCI3160:'算法设计与分析',CSCI3230:'人工智能'};
 const kind=d=>{const f=path.basename(d.key);return /^HW|^Ex|^Sp/.test(f)?'作业与题解':/^Lab/.test(f)?'实验':/^T\d/.test(f)?'辅导':/^L\d/.test(f)?'课程伴读':/^ESTR/.test(f)?'拓展阅读':'阅读与复习';};
 const title=d=>d.headings.find(h=>h.level===1)?.title||path.basename(d.key,'.md');
 const link=d=>`<a href="${esc(url(d.key))}">${esc(path.basename(d.key,'.md'))}</a>`;
 function shell(t,body,course='',article=false){
- return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(t)} · Study</title><meta name="description" content="Vince 的课程伴读、作业解析与复习笔记"><link rel="stylesheet" href="${BASE}study.css"><link rel="stylesheet" href="${BASE}katex/katex.min.css"><script src="${BASE}study.js" defer></script></head><body${article?' class="reading"':''}><a class="skip" href="#main">跳到正文</a><header><a class="brand" href="/">Vince Jiang</a><nav aria-label="面包屑"><a href="${BASE}">Study · 2026T1</a>${course?`<span>/</span><a href="${BASE}${course}/">${course}</a>`:''}</nav></header>${body}<footer>课程学习笔记 · 原始课件留在本地 <a href="${BASE}">返回四门课程</a></footer></body></html>`;
+ return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(t)} · Study</title><meta name="description" content="Vince 的课程伴读、作业解析与复习笔记"><link rel="stylesheet" href="${BASE}study.css?v=${assetVersion('study.css')}"><link rel="stylesheet" href="${BASE}katex/katex.min.css"><script src="${BASE}study.js?v=${assetVersion('study.js')}" defer></script></head><body${article?' class="reading"':''}><a class="skip" href="#main">跳到正文</a><header><a class="brand" href="/">Vince Jiang</a><nav aria-label="面包屑"><a href="${BASE}">Study · 2026T1</a>${course?`<span>/</span><a href="${BASE}${course}/">${course}</a>`:''}</nav></header>${body}<footer>课程学习笔记 · 原始课件留在本地 <a href="${BASE}">返回四门课程</a></footer></body></html>`;
 }
 export function buildStudy(out,{check=false}={}){
  const manifest=JSON.parse(readFileSync(path.join(ROOT,'tools/study-content/manifest.json'),'utf8'));

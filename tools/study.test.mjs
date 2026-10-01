@@ -33,3 +33,17 @@ test('publication projection removes workflow metadata and private paths without
 test('source catalog rejects duplicate output keys rather than silently overwriting a page', () => {
  assert.throws(()=>renderDocuments([{key:'CSCI3130/a.md',text:'# A'},{key:'CSCI3130/a.md',text:'# B'}]),/duplicate document/);
 });
+
+test('generated study pages version their UI assets so updated styles reach returning readers', async () => {
+ const {mkdtempSync,readFileSync,rmSync}=await import('node:fs');
+ const {tmpdir}=await import('node:os');
+ const {join}=await import('node:path');
+ const {buildStudy}=await import('./study-build.mjs');
+ const out=mkdtempSync(join(tmpdir(),'study-output-'));
+ try {
+  buildStudy(out);
+  const html=readFileSync(join(out,'study/2026T1/index.html'),'utf8');
+  assert.match(html,/study\.css\?v=[a-f0-9]{12}/);
+  assert.match(html,/study\.js\?v=[a-f0-9]{12}/);
+ } finally {rmSync(out,{recursive:true,force:true});}
+});
