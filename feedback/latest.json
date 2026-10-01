@@ -1,13 +1,13 @@
 {
-  "exportedAt": "2026-10-01T13:41:44.466896+00:00",
+  "exportedAt": "2026-10-01T14:14:16.072336+00:00",
   "items": {
     "hn-2026-10-01-ai-math": {
       "counts": {
         "down": 0,
         "heart": 0,
-        "up": 0
+        "up": 1
       },
-      "lastChangedAtUnix": null
+      "lastChangedAtUnix": 1790862974
     },
     "hn-2026-10-01-family-technology": {
       "counts": {
@@ -165,6 +165,6 @@
   "schema": "dots.feedback.snapshot/1",
   "scope": "anonymous-public",
   "source": "https://dots.vincejiang.com/api/feedback/summary",
-  "version": "8a60b945d7d460b75cd6c5f68a17a867af0556e502231b9688861ce0a6966b8c",
+  "version": "331e265f51fd98763b79238fb578aeba1ae018e9e029d9e07b793047575c1e8b",
   "window": "lifetime-current-state"
 }
