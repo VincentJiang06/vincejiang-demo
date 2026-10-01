@@ -20,6 +20,7 @@ import anchor from 'markdown-it-anchor';
 import hljs from 'highlight.js';
 import { renderPaper } from './paper.mjs';
 import { buildStudy } from './study-build.mjs';
+import { versionDotsAssets } from './dots-assets.mjs';
 
 const ROOT = new URL('..', import.meta.url).pathname.replace(/\/$/, '');
 const TPL = join(ROOT, 'templates');
@@ -792,6 +793,7 @@ function runBuild(posts) {
   mkdirSync(OUT, { recursive: true });
   // 1) 拷贝静态内容
   for (const c of contentDirs()) copyDir(join(ROOT, c.name), join(OUT, c.name));
+  versionDotsAssets(join(OUT, 'dots'));
   // assets/shots 是 shots.sh 的本地取色产物(已 gitignore),不上站 —— 本地构建也显式剔除,保证与 CI 产物一致
   rmSync(join(OUT, 'assets', 'shots'), { recursive: true, force: true });
   // 2) 文章(中文主页 + 可选英文子页)

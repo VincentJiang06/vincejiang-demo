@@ -291,6 +291,16 @@ curl -s localhost:8080/health          # → ok
 - 单次读 GitHub：`gh api repos/VincentJiang06/vincejiang-demo/contents/feedback/latest.json?ref=dots-feedback --jq .content` 后 base64 解码（返回的是公开数据，不是凭证）。同步脚本只在调用时运行；未新建 cron/第三套定时任务。
 - SQLite 数据持久卷不能删除。人工备份应使用 SQLite backup API 生成一致快照，而不是只复制 WAL 模式主文件。后台备份策略接入另行确认；当前容器重建可保留反馈，不能宣称已具备异地灾备。
 
+### 14.1 精读与唱片架 UI 契约
+
+- HN 首页用 `preview`（可选；默认正文首段）作短预览，展开完整剩余段落；独立期次保留全部正文。首次十篇各四节，保持原 ID 与排序。
+- 音乐 `artwork` 可选，只接受 `https://is1-ssl.mzstatic.com/image/thumb/.../320x320bb.jpg` 固定图片地址，无查询参数。需人工核验曲目/专辑匹配；字段白名单不等于内容真实性核验。图片失败显示艺人文字封套，链接和介绍仍可用。
+- 唱片架使用 CSS 透视、封套侧边、唱片和层板阴影；原生 details/summary 支持触屏与键盘。减少动态效果设置关闭倾斜和动画。必要阅读局限留在期次正文/说明，重复功能介绍移到关于页。
+- `dots/feedback.css` 为独立 SVG 反馈组件，`feedback-state.mjs` 管理乐观更新、同条目 pending、失败回滚、排除写入前已开始的旧读取；后台回执才提示保存完成。公开 API 契约不变。请求超时提示未确认，后续读服务器状态收敛。
+- `node --test tools/dots-client.test.mjs` 测状态行为与封面边界，CI 与 SQLite 行为测试一起执行；nginx 明确为两个 `.mjs` 模块发送 JavaScript MIME。
+
+- 构建在新拷贝的 Dots 产物中为 JS/CSS/SVG 及两个模块 import 加同一 SHA256 内容版本参数；资源内容变化即换 URL，不依赖访问者清理旧版缓存。源码不写死版本。HTML 和资源继续发送 no-cache 以复核；新页面引用版本 URL，避开此前已永久缓存的无版本资产。
+
 ## 15. Study 课程笔记
 
 入口 `/study/2026T1/` → 四个课号 → 对应笔记 `.html`，保留中文文件名和 `exercise/` 子目录。`/study/` 提供学期入口。246 份发布 Markdown 在 `tools/study-content/`，由 `tools/study-build.mjs` 在主构建/检查流程中处理；不会将该源目录复制到网站。它们按课号分别为 66、42、74、64 份，包含作业答案、解题过程、实验与 Exercise 索引。
