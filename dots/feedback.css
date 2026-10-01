@@ -1,0 +1,18 @@
+/* Independent feedback control: the API is authoritative; animation never implies success. */
+.feedback-control{display:flex;align-items:center;gap:7px;margin:12px 0 0;isolation:isolate}
+.feedback-control .reaction{--accent:#3267da;position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:57px;min-height:40px;padding:7px 11px;border:1px solid #d9e2ef;border-radius:12px;background:linear-gradient(#fff,#f0f4fa);color:#64728b;box-shadow:0 2px 0 #d2dbe8,0 3px 7px #1f3e5b08;cursor:pointer;transition:transform .18s,box-shadow .18s,color .18s,background .18s;touch-action:manipulation}
+.feedback-control .reaction[data-reaction=down]{--accent:#aa6444}.feedback-control .reaction[data-reaction=heart]{--accent:#d4517d}
+.feedback-control svg{width:18px;height:18px;fill:transparent;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;transition:fill .2s,transform .2s}
+.feedback-control .count{font-size:11px;font-variant-numeric:tabular-nums;color:inherit;min-width:8px}
+.feedback-control .reaction:hover:not(:disabled){color:var(--accent);transform:translateY(-2px);box-shadow:0 3px 0 #d2dbe8,0 6px 12px #253e5c15}
+.feedback-control .reaction:active:not(:disabled){transform:translateY(2px) scale(.96);box-shadow:0 0 0 #d2dbe8}
+.feedback-control .reaction[aria-pressed=true]{color:var(--accent);border-color:currentColor;background:#fff;box-shadow:inset 0 0 0 1px currentColor,0 2px 0 #d2dbe8}
+.feedback-control .reaction[aria-pressed=true] svg{fill:color-mix(in srgb,var(--accent) 20%,transparent)}
+.feedback-control .reaction[aria-pressed=true][data-reaction=heart] svg{fill:var(--accent);stroke:var(--accent)}
+.feedback-control .reaction:focus-visible{outline:3px solid #537ded;outline-offset:4px}
+.feedback-control .reaction:disabled{cursor:wait;opacity:.65}.feedback-control .reaction[aria-busy=true]:after{content:'';position:absolute;bottom:3px;left:25%;right:25%;height:2px;background:var(--accent);border-radius:2px;animation:feedback-pending .7s ease-in-out infinite alternate}
+.reaction-changed svg{animation:feedback-pop .42s cubic-bezier(.2,.8,.3,1.4)}.count-changed{animation:feedback-count .3s ease-out}
+@keyframes feedback-pop{0%{transform:scale(.7) rotate(-12deg)}55%{transform:scale(1.25) rotate(5deg)}100%{transform:scale(1) rotate(0)}}
+@keyframes feedback-count{0%{transform:translateY(5px);opacity:.3}100%{transform:translateY(0);opacity:1}}
+@keyframes feedback-pending{to{opacity:.25;transform:scaleX(.4)}}
+@media(prefers-reduced-motion:reduce){.feedback-control *, .feedback-control *:after{animation:none!important;transition:none!important;transform:none!important}}

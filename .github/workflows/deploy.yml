@@ -38,6 +38,7 @@ jobs:
         run: |
           node tools/dots-validate.mjs
           node --check dots/app.js
+          node --test tools/dots-client.test.mjs
           python3 -m unittest discover -s tools/dots-service -p 'test_*.py' -v
       - name: HTML 粗校验(warn-only,不阻塞)
         run: |

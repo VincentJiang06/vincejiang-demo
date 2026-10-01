@@ -290,3 +290,11 @@ curl -s localhost:8080/health          # → ok
 - 双向任务顺序：先 `dots-sync-feedback.py` → 读取远端 `dots-feedback:feedback/latest.json` → 生成新一期 → 人工/任务审校公开边界 → publish + validate + commit + push main → 等该 SHA 的 CI 成功。不存在任意网页点击唤醒助手的接口；反馈在下一期读取时影响选题，不等于实时通知，更不是用户本人的偏好。
 - 单次读 GitHub：`gh api repos/VincentJiang06/vincejiang-demo/contents/feedback/latest.json?ref=dots-feedback --jq .content` 后 base64 解码（返回的是公开数据，不是凭证）。同步脚本只在调用时运行；未新建 cron/第三套定时任务。
 - SQLite 数据持久卷不能删除。人工备份应使用 SQLite backup API 生成一致快照，而不是只复制 WAL 模式主文件。后台备份策略接入另行确认；当前容器重建可保留反馈，不能宣称已具备异地灾备。
+
+### 14.1 精读与唱片架 UI 契约
+
+- HN 首页用 `preview`（可选；默认正文首段）作短预览，展开完整剩余段落；独立期次保留全部正文。首次十篇各四节，保持原 ID 与排序。
+- 音乐 `artwork` 可选，只接受 `https://is1-ssl.mzstatic.com/image/thumb/.../320x320bb.jpg` 固定图片地址，无查询参数。需人工核验曲目/专辑匹配；字段白名单不等于内容真实性核验。图片失败显示艺人文字封套，链接和介绍仍可用。
+- 唱片架使用 CSS 透视、封套侧边、唱片和层板阴影；原生 details/summary 支持触屏与键盘。减少动态效果设置关闭倾斜和动画。必要阅读局限留在期次正文/说明，重复功能介绍移到关于页。
+- `dots/feedback.css` 为独立 SVG 反馈组件，`feedback-state.mjs` 管理乐观更新、同条目 pending、失败回滚、排除写入前已开始的旧读取；后台回执才提示保存完成。公开 API 契约不变。请求超时提示未确认，后续读服务器状态收敛。
+- `node --test tools/dots-client.test.mjs` 测状态行为与封面边界，CI 与 SQLite 行为测试一起执行；nginx 明确为两个 `.mjs` 模块发送 JavaScript MIME。
