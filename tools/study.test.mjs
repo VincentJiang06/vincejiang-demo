@@ -67,3 +67,56 @@ test('hint disclosures are nested, closed by default, and preserve math and chec
  assert.throws(()=>renderDocuments([{key:'CSCI3230/a.md',text:':::hint 未结束\n\n正文'}]),/unclosed hint/);
  assert.throws(()=>renderDocuments([{key:'CSCI3230/a.md',text:':::endhint'}]),/unmatched hint/);
 });
+
+test('course-scoped import reads only selected sources and preserves other published courses', async () => {
+ const {importNotes,COURSES}=await import('./study-import.mjs');
+ const {mkdtempSync,mkdirSync,writeFileSync,readFileSync,copyFileSync,rmSync,existsSync,realpathSync}=await import('node:fs');
+ const {tmpdir}=await import('node:os');
+ const {join}=await import('node:path');
+ const {fileURLToPath}=await import('node:url');
+ const {spawnSync}=await import('node:child_process');
+ const root=realpathSync(mkdtempSync(join(tmpdir(),'study-scope-')));
+ const desktop=join(root,'Desktop'), dest=join(root,'published');
+ const put=(base,rel,text)=>{const file=join(base,rel);mkdirSync(join(file,'..'),{recursive:true});writeFileSync(file,text);};
+ try {
+  // Only the selected source exists: touching another course is a scope violation.
+  const authored='# CSCI3230 阅读导航\n\n先学向量，再学线性回归。\n';
+  put(desktop,'CSCI3230/study/阅读导航.md',authored);
+  put(desktop,'CSCI3230/study/第一 讲.md','# 第一讲\n\n$x=1$\n');
+  const retained={key:'CSCI3150/留存.md',sourceSha256:'unchanged-source',publishedSha256:'unchanged-published',projection:false,extra:'retain metadata'};
+  put(dest,'CSCI3150/留存.md','do not change other course bytes\n');
+  put(dest,'manifest.json',JSON.stringify([retained,{key:'CSCI3230/旧清单.md',sourceSha256:'old'}]));
+  const report=importNotes(desktop,dest,{courses:['CSCI3230']});
+  assert.equal(readFileSync(join(dest,'CSCI3230/阅读导航.md'),'utf8'),authored);
+  assert.equal(readFileSync(join(dest,'CSCI3150/留存.md'),'utf8'),'do not change other course bytes\n');
+  assert.deepEqual(report.filter(x=>!x.key.startsWith('CSCI3230/')),[retained]);
+  assert.deepEqual(report.filter(x=>x.key.startsWith('CSCI3230/')).map(x=>x.key).sort(),['CSCI3230/第一 讲.md','CSCI3230/阅读导航.md'].sort());
+  assert.deepEqual(JSON.parse(readFileSync(join(dest,'manifest.json'),'utf8')),report);
+  assert.equal(existsSync(join(dest,'CSCI3130')),false);
+  const before=readFileSync(join(dest,'manifest.json'),'utf8');
+  for(const courses of [[],['CSCI9999'],['../CSCI3230'],['CSCI3230','CSCI3230'],'CSCI3230',null]) {
+   assert.throws(()=>importNotes(desktop,dest,{courses}),/course/i);
+   assert.equal(readFileSync(join(dest,'manifest.json'),'utf8'),before);
+  }
+  // Exercise CLI in an isolated copy so its default destination cannot touch the repo.
+  const cli=join(root,'tools/study-import.mjs');mkdirSync(join(root,'tools'),{recursive:true});
+  copyFileSync(fileURLToPath(new URL('./study-import.mjs',import.meta.url)),cli);
+  const result=spawnSync(process.execPath,[cli,desktop,'--course=CSCI3230'],{encoding:'utf8'});
+  assert.equal(result.status,0,result.stderr);
+  assert.equal(readFileSync(join(root,'tools/study-content/CSCI3230/阅读导航.md'),'utf8'),authored);
+  const rejected=spawnSync(process.execPath,[cli,desktop,'--course=CSCI9999'],{encoding:'utf8'});
+  assert.notEqual(rejected.status,0);assert.match(rejected.stderr,/course/i);
+  // Default remains a four-course import; existing synthetic navigation stays for 3130/3150.
+  for(const course of COURSES.filter(x=>x!=='CSCI3230')) {
+   put(desktop,course+'/study/阅读导航.md','# '+course+' 原创导引\n');
+   put(desktop,course+'/study/讲义.md','# 讲义\n');
+  }
+  const all=importNotes(desktop,join(root,'full'));
+  assert.equal(all.length,8);
+  for(const course of COURSES)assert.equal(all.filter(x=>x.key.startsWith(course+'/')).length,2);
+  assert.match(readFileSync(join(root,'full/CSCI3130/阅读导航.md'),'utf8'),/讲义\.md/);
+  assert.match(readFileSync(join(root,'full/CSCI3150/阅读导航.md'),'utf8'),/讲义\.md/);
+  assert.equal(readFileSync(join(root,'full/CSCI3160/阅读导航.md'),'utf8'),'# CSCI3160 原创导引\n');
+  assert.equal(readFileSync(join(root,'full/CSCI3230/阅读导航.md'),'utf8'),authored);
+ } finally {rmSync(root,{recursive:true,force:true});}
+});

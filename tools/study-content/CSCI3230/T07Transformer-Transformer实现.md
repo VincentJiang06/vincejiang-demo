@@ -4,105 +4,129 @@
 > 本讲：T07Transformer，第 1 部分 / 共 1 部分 · 原件 [T07-Transformer-未核.pdf](../辅导/T07-Transformer-未核.pdf) p.1–11
 > 定位：用形状与信息流读完整 encoder–decoder；配套输出只是随机输入前向运行。
 
+原 PDF 与配套 notebook 文件名均标“未核”：本文核对了二者可见内容，但材料的学期与教师身份仍待确认，不据此推定 2026T1 作业要求。未运行训练，保存输出不等于本次实验。
+
 配套：[T07-Transformer-未核.ipynb](../辅导/T07-Transformer-未核.ipynb)。按 PDF 顺序解释；打印版裁掉的代码由 notebook 原始单元核对。来源未核的身份保留。
 
 ### 位置编码先告诉模型“在哪里”（p.1）
 
-> **p.1** `class PositionalEncoding(nn.Module)`
+这份notebook把模块按顺序组装起来，最后只对随机整数输入做一次前向计算。目标是读懂轴、信息流和mask，不是证明模型已会翻译。前置是 [L08注意力的逐步手算](L08-P1-注意力基础.md)。
 
-注意力配对本身不会自动知道 token 的先后，位置编码把位置加到词向量。偶数、奇数维分别为
+如果两处出现同一个token，它们的初始embedding相同；只看内容的注意力没有自动的“第几个词”概念。位置编码把位置变成同样宽度的向量再相加。这里采用固定正弦/余弦，而不是学一张位置参数表：
 
 $$
-PE(pos,2i)=\sin\left(pos/10000^{2i/d_{model}}\right),\quad PE(pos,2i+1)=\cos\left(pos/10000^{2i/d_{model}}\right).
+\begin{aligned}
+PE(pos,2i)&=\sin\left(\frac{pos}{10000^{2i/d_{\rm model}}}\right),\\
+PE(pos,2i+1)&=\cos\left(\frac{pos}{10000^{2i/d_{\rm model}}}\right).
+\end{aligned}
 $$
 
-不同维度的频率不同，组合成位置特征。注册为 buffer 表示它随模型迁移设备、保存状态，但不是通过梯度学习的参数。代码预先存到 `max_len`，实际序列不能超过这个表；当前切片实现还隐含偶数 $d_{model}$，奇数宽度可能使余弦赋值形状不匹配。
+$pos$ 从0开始数位置，$d_{\rm model}$ 是向量宽度，$i$ 为一对特征的编号，$2i$ 与 $2i+1$ 是这对偶/奇数下标。同一对用相同尺度，不同对变化快慢不同。
 
-“可构造更长位置的编码”与“模型在更长序列上可靠泛化”不同。前者来自公式，后者仍需实验，本 notebook 没有提供这类测试。
+补充自取 $d_{\rm model}=4$：第一对除数1，第二对除数100。位置0为 $(0,1,0,1)$；位置1约 $(0.8415,0.5403,0.0100,0.99995)$。把它逐元素加到词向量，而不是把位置数字直接当词ID，也不新增序列元素。
+
+源码把表注册为buffer：它随模型迁设备、保存状态，但不是梯度更新的参数。表只预存到max_len；超过表长不能靠一句“正弦能外推”让当前切片自动变长。公式能定义更长位置，也不证明训练模型在超长序列一定可靠。当前实现偶/奇列赋值还隐含偶数宽度，奇数宽度需另行处理形状。
 
 ### 批、序列、模型宽度与头（p.2）
 
-> **p.2** `d_k = d_model // num_heads`
+先给每条轴写名字，避免看到两个8就当它们是一回事。位置编码演示输入2×10×128，分别是2条序列、每条10个位置、每位置128个特征。位置表1×100×128取前10行，沿batch广播相加，输出仍2×10×128。
 
-位置编码演示输入为 $2\times10\times128$，分别是批数、长度、特征宽度；位置表前十行按批广播相加，输出形状不变。注意力类演示改用 $d_{model}=256$、8 个头，所以每头 $d_k=32$。需保证 256 可被 8 整除。
+多头示例随后改为模型宽256、头数8。每个头宽 $d_k=256/8=32$；代码先assert能整除，避免静默丢特征。
 
-四个线性映射 $W_Q,W_K,W_V,W_O$ 都是 256 到 256，分头发生在投影之后。不是给每个头复制一份完整 256 维注意力；总特征宽度被拆成八份。
+Q、K、V、输出各有一个256→256线性映射，前三个先投影，再把最后维度拆成8×32。补充小例：一token宽8、两头时，reshape相当于把8个槽分成两组4个；这是分特征轴，不是把一半token交给某头。每头仍能读取全部允许的key。
+
+四个投影各有独立权重。一次合并大矩阵运算可以等价承载多个头的不同投影，不代表所有头共享完全相同的4维表示。
 
 ### 多头内部的配对、掩码与汇集（p.3）
 
-> **p.3** `scores.masked_fill(mask == 0, -1e9)`
+沿代码的八步顺序拆开。输入query形状为 $B\times L_q\times D$，key/value为 $B\times L_k\times D$。$B$ 是batch，$L_q$ 是要产生几个输出位置，$L_k$ 是可读取多少位置，$D$ 是总特征宽。key与value必须按位置配对，所以长度相同。
 
-投影后从 $B\times L\times D$ reshape、transpose 成 $B\times h\times L\times d_k$。计算
+投影后view成 $B\times L\times h\times d_k$，transpose换成 $B\times h\times L\times d_k$。对每个batch、每个头独立做：
 
 $$
-S=QK^T/\sqrt{d_k},\quad A=\operatorname{softmax}(S,\text{over keys}),\quad H=AV.
+S=\frac{QK^T}{\sqrt{d_k}},\qquad
+A=\operatorname{softmax}(S),\qquad H=AV.
 $$
 
-$S$ 形状为 $B\times h\times L_q\times L_k$，每个 query 行对所有 key 分配权重。比如一行得分 $(0,\log3)$，softmax 为 $(1/4,3/4)$；若 value 分别是 2、6，输出为 $1/4\cdot2+3/4\cdot6=5$。这说明权重作用于 value，而非直接输出得分。
+$S,A$ 最后两轴是 $L_q\times L_k$，softmax沿最后一轴，即同一个query在各key之间归一化。乘V后，$L_k$ 这条求和轴消失，留下 $L_q\times d_k$。
 
-mask 在 softmax 前将不可见位置改成很大的负数，使其概率接近零。若整行都被填成同一个有限的 $-10^9$，softmax 反而给均匀分布，不能假定全被屏蔽的行自动输出零。应保证有效 query 至少有可读 key，并正确处理 padding。
+补充自取一行缩放后得分 $(0,\ln3)$，指数为1和3，权重为1/4、3/4；若value是2和6，则输出 $2/4+18/4=5$。这是加权内容，不是输出最大分数或key编号。
 
-代码对注意力权重再做 dropout，因此返回的训练态权重不再保证每行精确和为 1。最后转回 $B\times L_q\times D$，调用 `contiguous()` 后再 view，是为了处理 transpose 后的内存布局。
+mask在softmax前把不可读位置改成很大负数。若只允许第一个位置，上例第二个指数几乎0，权重接近 $(1,0)$，输出接近2。若一整行都写成有限的 $-10^9$，它们仍相等，softmax反而近似均匀；不能假定“全mask就输出0”。应保证有效query至少有可读key，并妥善处理padding。
+
+源码在softmax后还对权重用dropout，训练态返回的权重因随机置零与缩放，不保证每行恰好和为1。合并各头时先transpose回 $B\times L_q\times h\times d_k$，`contiguous()`整理存储后再view成 $B\times L_q\times D$，最后做输出投影。reshape不学习新参数，投影才学习。
 
 ### 输出形状与逐位置前馈层（p.4）
 
-> **p.4** `class FeedForward(nn.Module)`
+示例Q/K/V输入都为2×10×256，输出为2×10×256，权重为2×8×10×10。最后两个10分别是query位置和key位置；形状相同不表示它们角色相同。源码这个独立MHA演示分别随机生成query/key/value，严格说不是同一输入张量的self-attention演示；encoder调用时才明确传同一个x三次。
 
-示例 self-attention 输入 $2\times10\times256$，输出同形状，权重 $2\times8\times10\times10$。两个 10 分别对应 query 与 key；换成交叉注意力时它们可以不同。
+FFN为256→1024→256，中间ReLU和dropout。它对每个位置独立用同一组线性参数，改变的是特征宽度，不是序列长度。2×10×256在内部变2×10×1024，再回2×10×256。
 
-FFN 是 $256\to1024\to256$，中间 ReLU 与 dropout。它独立处理每个位置的特征，因此扩展的是特征维度，不是把长度 10 变成 1024；输出仍是 $2\times10\times256$。跨位置混合由注意力负责，FFN 提供每位置的非线性变换。
+补充追踪一个位置：原来256个特征，第一层产生1024种组合，ReLU保留正响应，第二层将这些组合重新混合为256维。这个过程没有直接读取邻词；邻词信息来自此前attention。若把序列长度10改20，FFN处理的行数翻倍，而每行的矩阵形状与参数量不变。
 
 ### Encoder 的残差与归一化（p.5–6）
 
-> **p.5** `class EncoderLayer(nn.Module)`
+encoder将整个输入序列编码成上下文表示。源码先调用`self_attention(x,x,x,mask)`，再执行残差加法与LayerNorm；然后FFN，再一次残差与LayerNorm。这是post-norm顺序，不能与“先归一化再进子层”的pre-norm混写。
 
-此实现先 self-attention，再 residual add 与 LayerNorm，然后 FFN，再 add 与 LayerNorm，是 post-norm 结构。残差相加要求两支宽度相同；LayerNorm 归一化最后的特征维，而不是把整个 batch 混合成一个均值。
+以一个宽度2的位置作补充自取例：输入 $x=(1,3)$，假设attention输出 $(0.5,-0.5)$，暂不考虑dropout，残差相加得 $(1.5,2.5)$。均值2，平均平方偏差0.25，暂略极小项且缩放1平移0，LayerNorm给 $(-1,1)$。实际网络宽256或512、缩放平移可训练，但“对每个位置自己的特征做归一化”的逻辑相同。
 
-输入不变的形状方便把多层堆起来，但“形状相同”不表示数值未变。每层都会重新用上下文更新表示。p.6 的演示检查输出仍为 $2\times10\times256$，随后进入 decoder。
+两支相加必须形状一致。残差提供保留原表示与梯度传播的路径，并不意味着该层输出等于输入。p.6的2×10×256只证实接口形状；值已经经过attention、归一化和FFN改变。把多个encoder层堆起，仍每层保持同一外部形状，才方便继续连接。
 
 ### Decoder 的两类注意力（p.7）
 
-> **p.7** `self.cross_attention(tgt, memory, memory, src_mask)`
+decoder比encoder多一段“向源序列查资料”。第一段对目标序列自身做attention，第二段用目标当前表示当query、encoder输出当key和value，第三段FFN。每段后都有残差与归一化。
 
-第一段是目标序列 self-attention；第二段交叉注意力中，query 来自 decoder 当前目标表示，key/value 来自 encoder 的源序列表示；最后接 FFN。三段各有残差和归一化。
+源码实际调用为`self.cross_attention(x, encoder_output, encoder_output, src_mask)`。目标位置问“为生成下一步，源句哪些位置有关”，源表示同时提供匹配索引和读取内容。这是cross-attention，与源序列在自身内部更新不是同一次操作。
 
-若目标长 8、源长 10，批为 2、头为 8，则交叉注意力权重形状 $2\times8\times8\times10$；这里第一个 8 是头数，第二个 8 是目标 query 数。单层演示直接调用 decoder 而没有传 mask，因此**该演示本身并不因类名为 decoder 就具有因果性**；因果掩码在下面的完整模型中构造。
+例中目标长度8、源长度10、batch2、头8，因此交叉注意力权重为2×8×8×10。第一个8是头数，第二个8是目标query个数，10是源key数。每个目标位置都会得到新表示，输出长度仍8，不因为源长10就变10。
+
+这一单层演示调用decoder时没有传mask；类名里写decoder不自动给它因果约束。完整模型在p.9才构造掩码。读实现应看参数实际有没有传入，不能只看注释标题。
 
 ### 完整模型的规模（p.8）
 
-> **p.8** `class Transformer(nn.Module)`
+完整实例源词表10000、目标词表8000，宽度512、8头，encoder和decoder各6层，FFN内部宽2048。这里的词表大小回答“能用多少种ID”；序列长度回答“本次输入多少个位置”。两者无须相等。
 
-源词表 10000、目标词表 8000，模型宽度 512、8 个头，编码器和解码器各六层，FFN 隐宽 2048。输入是整数 token ID，经两个独立 embedding 表转换为向量；词表大小与序列长度不同，一个决定可表示多少种 token，另一个决定本次放了多少位置。
+源码先用两套独立embedding查表，把源ID与目标ID分别变512维向量。补充极小例：词表5种、宽3时，embedding是5×3参数表，输入ID序列 $(2,4)$ 就取第2、4行，输出2×3，并不是把数字2和4按连续大小送进回归。
 
-模型不是图像分类的 ViT；这里是源序列到目标序列的 encoder–decoder。与 [L08](L08-P2-视觉Transformer.md) 对照时，应把 patch token 与词 token 区分，同时看到它们共享注意力与残差等组件。
+此模型是序列到序列encoder–decoder，不是 [ViT图片分类](L08-P2-视觉Transformer.md)。两者共享attention、FFN等积木，但输入准备、输出头和任务不同。没有实际tokenizer、训练数据、loss循环和解码过程，只建模型类并不能直接变成可用翻译系统。
 
 ### padding 与未来信息的两个屏蔽条件（p.9）
 
-> **p.9** `torch.tril`
+两条不同长度的句子放进一个矩形batch，需要在短句末尾补padding。padding不是有意义词，不能让其他位置把它当正文读取。源码源mask形状为 $B\times1\times1\times L_{\rm src}$，会广播到各头及各query，屏蔽padding **key**。
 
-源 mask 形状 $B\times1\times1\times L_{src}$，屏蔽作为 key 的 padding。目标 mask 把非 padding key 条件与下三角矩阵相与，形状 $B\times1\times L_{tgt}\times L_{tgt}$。长度 3 的因果可见性为
+目标还要防读取未来。长度3时下三角可见性为
 
 $$
-\begin{pmatrix}1&0&0\\1&1&0\\1&1&1\end{pmatrix}.
+C=\begin{pmatrix}1&0&0\\1&1&0\\1&1&1\end{pmatrix}.
 $$
 
-第 2 个位置可读自己和第 1 个位置，不能读未来第 3 个位置。这个矩阵仍不自动把 padding query 的输出清零；训练损失还应忽略 padding 目标。模型给 ID 0 作为 padding，随机生成示例可能恰好出现 0，需要按此约定解释。
+行是提问位置，列是被读取位置。第二行允许读第一和第二位置，不允许第三。再把key非padding条件逐元素相与。
 
-embedding 乘 $\sqrt{d_{model}}$ 后加位置编码，是调整两种信息的相对尺度。它不是注意力得分里除 $\sqrt{d_k}$ 的同一操作：发生位置与目的不同。
+补充自取目标ID为 $(7,9,0)$，0代表padding，key有效性为 $(1,1,0)$，合并得到
+
+$$
+M=\begin{pmatrix}1&0&0\\1&1&0\\1&1&0\end{pmatrix}.
+$$
+
+第三行并没全变0，因为这份mask屏蔽的是padding作为key，不是把padding query的输出清零。训练loss仍应忽略padding标签，不能只靠attention mask处理一切。示例随机ID可能出现0，也会按padding解释。
+
+源码还把embedding乘 $\sqrt{d_{\rm model}}$ 再加位置编码，以调节尺度。这与attention分数除 $\sqrt{d_k}$ 发生在不同地方、处理不同对象：一个是输入表示，一个是匹配得分。
 
 ### 从 encoder 到词表得分（p.10）
 
-> **p.10** `self.output_projection(dec_output)`
+把整个前向按输入输出读一遍：源整数ID经embedding、位置编码、六层encoder，成为每个源位置512维的memory；目标整数ID经自己的embedding与位置编码，带mask经过六层decoder，得到每个目标位置512维表示。
 
-源表示通过六个 encoder，目标表示带掩码通过六个 decoder，最后每个目标位置从 512 映射到 8000 个 logits。代码注释若称概率分布，需要补充 softmax 才成立；返回 tensor 本身没有保证非负与和为 1。
+最后源码是`output = self.fc_out(decoder_output)`。这个Linear把每个位置512维映射到8000个词表logits，输出形状为 $B\times L_{\rm tgt}\times8000$。旧笔记写`output_projection(dec_output)`并非实际源码标识，本次按PDF及ipynb纠正。
 
-若要训练下一 token，必须使 decoder 输入与目标标签错开一位，并在损失中忽略 padding；本页只是网络前向接口，并未提供完整训练与生成循环。没有训练就不能从随机 logits 读出翻译质量。
+logits不是概率。补充自取三个候选得分 $(2,1,0)$，softmax约 $(0.665,0.245,0.090)$ 才和为1；代码返回前并没有这一步，所以原注释里的“Probability distribution”不准确。若接CrossEntropyLoss，应按接口直接传logits，不盲目补softmax。
+
+若训练下一token预测，decoder输入和目标标签必须错开一位，否则可能让位置直接看到要预测的词。补充示意：输入“起始符、我、吃”，标签“我、吃、苹果”。因果mask负责不看未来，错位负责定义正确的预测任务，两者不可互相代替。原件没有给完整训练与生成循环，也没有翻译质量证据。
 
 ### 输出与 57458496 个参数如何组成（p.11）
 
-> **p.11** “Total parameters: 57,458,496”
+原件保存输出写“Model parameter count: 57,458,496”，源输入2×10、目标输入2×8、结果2×8×8000。它说明随机样本可走过所示前向，不能说明模型已经学会语言。
 
-保存输出：源输入 $2\times10$，目标输入 $2\times8$，输出 $2\times8\times8000$。参数可按组件独立核对：
+把大参数数拆成能独立检查的小块。宽度512的线性512→512，每个输出有512权重加1偏置，共 $512^2+512$；一个MHA有Q、K、V、O四层，所以乘4。FFN两层要分别数各自输出偏置。LayerNorm每个特征有缩放与平移，因此一层为 $2\cdot512=1024$。
 
 |组件|含偏置计数|总数|
 |---|---|---:|
@@ -114,6 +138,12 @@ embedding 乘 $\sqrt{d_{model}}$ 后加位置编码，是调整两种信息的�
 |输出投影|$512\cdot8000+8000$|4104000|
 
 总数将两套 embedding、六层 encoder、六层 decoder、输出投影四行相加得 **57458496**；中间 MHA/FFN 行只是分项，不再重复相加。每个 LayerNorm 有 512 个缩放和 512 个平移，共 1024。固定位置编码不是可训练参数，因此不计入。这个数与原件吻合，验证的是结构计数，不是学习效果。
+
+小检查：序列从10个词变20个词，embedding参数是否翻倍？
+
+:::hint 参考答案
+不会。embedding表由词表大小与模型宽度决定；访问更多行会增加计算/激活，表本身不自动变大。标准attention配对开销则会随序列长度明显增加。
+:::endhint
 
 ## 本讲核心考点
 
@@ -128,5 +158,5 @@ embedding 乘 $\sqrt{d_{model}}$ 后加位置编码，是调整两种信息的�
 ## 来源与证据
 
 - 原件：[T07-Transformer-未核.pdf](../辅导/T07-Transformer-未核.pdf)，p.1–11；均为当前 PDF 页号。
-- 考试证据：读了 大纲-2025T1.pdf、HW01-2025T1-题目.pdf、HW02-2025T1-题目.pdf、HW03-2025T1-题目.pdf、HW04-2025T1-题目.pdf、ESTR-Final-Exam-2023T1.pdf、ESTR-Final-Exam-2024T1.pdf、Final-Exam-CSCI3230-Record-2025T1-官方节选.pdf、Final-Exam-ESTR-Record-2025T1-官方节选.pdf、Final-Exam-Example-Question-未核.pdf；未识别用途的 PDF：无
+- 本次重写核对本篇所列讲义页码；旧版作业/试题题面如保留，属于历史练习，不代表 2026T1 考核要求。未以未公开试题推断考试内容。
 - 往年卷仅证明相应年份考过；2024 卷及 2025 节选未公开的选择题不作推断。

@@ -115,8 +115,8 @@ article{font-size:11pt}
 .katex-display,pre,.table-scroll{overflow:visible}
 a{color:inherit}
 }
-/* Long inline equations scroll within the text column on narrow screens. */
-article .katex{display:inline-block;max-width:100%;overflow-x:auto;overflow-y:hidden;vertical-align:middle;padding:3px 0}
+/* Keep italic overhang inside inline math, and anchor KaTeX’s absolute accessibility layer locally. */
+article .katex{position:relative;display:inline-block;max-width:100%;overflow-x:auto;overflow-y:hidden;vertical-align:middle;padding:3px .25em 3px 0}
 article .katex-display>.katex{display:block;max-width:none;overflow:visible;vertical-align:baseline;padding:0}
 
 .study-hint{margin:1rem 0;padding:.15rem 1rem;border:1px solid var(--line,#dce2e8);border-radius:8px;background:#f8fafc}

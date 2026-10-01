@@ -1,4 +1,4 @@
-import {readdirSync,readFileSync,writeFileSync,mkdirSync,lstatSync} from 'node:fs';
+import {readdirSync,readFileSync,writeFileSync,mkdirSync,lstatSync,existsSync} from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
@@ -25,9 +25,14 @@ function walk(dir,rel=''){
   return isNote(key)?[key]:[];
  });
 }
-export function importNotes(desktop,dest){
- const report=[];
- for(const course of COURSES){
+export function importNotes(desktop,dest,{courses=COURSES}={}){
+ if(!Array.isArray(courses)||courses.length===0||courses.some(c=>!COURSES.includes(c))||new Set(courses).size!==courses.length)
+  throw new Error('courses must be a non-empty list of distinct supported course codes: '+COURSES.join(', '));
+ const manifest=path.join(dest,'manifest.json');
+ // A scoped sync replaces only its own catalog entries; other course sources stay unread.
+ const report=courses.length<COURSES.length&&existsSync(manifest)
+  ?JSON.parse(readFileSync(manifest,'utf8')).filter(d=>!courses.includes(d.key.split('/')[0])):[];
+ for(const course of courses){
   const root=path.join(desktop,course,'study');
   if(lstatSync(path.dirname(root)).isSymbolicLink()||lstatSync(root).isSymbolicLink())throw new Error('study must be a real directory');
   const files=walk(root).sort((a,b)=>a.localeCompare(b,'zh-CN',{numeric:true}));
@@ -35,8 +40,8 @@ export function importNotes(desktop,dest){
    const source=readFileSync(path.join(root,rel),'utf8');let text=publicText(source);
    if(course==='CSCI3160'&&rel==='exercise/Ex02-分治与线性合并.md')text=text.replaceAll('${a,b\\}$','$\\{a,b\\}$').replaceAll('${c,d\\}$','$\\{c,d\\}$');
    if(course==='CSCI3230'&&rel==='L05-P4-层次聚类.md')text=text.replaceAll('\\rvertd','\\rvert d');
-   if(rel==='阅读导航.md'&&course!=='CSCI3160'){
-    const boundary={CSCI3130:'各讲保留原有来源与考试证据说明。',CSCI3150:'L00–L02 与 Lab01 为 2026T1；L03–L06、L08–L15 为 2022 未核版；T01–T12 为 2025T2。',CSCI3230:'L01–L05 为 2026T1；L06–L10 为 2025T1 历史预习资料。正文保留各自版本和页码说明。'}[course];
+   if(rel==='阅读导航.md'&&!['CSCI3160','CSCI3230'].includes(course)){
+    const boundary={CSCI3130:'各讲保留原有来源与考试证据说明。',CSCI3150:'L00–L02 与 Lab01 为 2026T1；L03–L06、L08–L15 为 2022 未核版；T01–T12 为 2025T2。'}[course];
     text=`# ${course} 阅读导航\n\n${boundary}\n\n`+files.filter(f=>f!==rel).map(f=>`- [${f.replace(/\.md$/,'')}](${f.replaceAll(' ','%20')})`).join('\n')+'\n';
    }
    // Memory paths are internal even when their visible labels are course concepts.
@@ -46,11 +51,15 @@ export function importNotes(desktop,dest){
    report.push({key:course+'/'+rel,sourceSha256:createHash('sha256').update(source).digest('hex'),publishedSha256:createHash('sha256').update(text).digest('hex'),projection:source!==text});
   }
  }
- writeFileSync(path.join(dest,'manifest.json'),JSON.stringify(report,null,2)+'\n');
+ mkdirSync(dest,{recursive:true});
+ writeFileSync(manifest,JSON.stringify(report,null,2)+'\n');
  return report;
 }
 if(process.argv[1]===fileURLToPath(import.meta.url)){
- const desktop=process.argv[2];if(!desktop)throw new Error('Usage: node tools/study-import.mjs /path/to/Desktop');
- const result=importNotes(desktop,fileURLToPath(new URL('./study-content/',import.meta.url)));
- console.log(JSON.stringify(Object.fromEntries(COURSES.map(c=>[c,result.filter(d=>d.key.startsWith(c+'/')).length]))));
+ const [desktop,...options]=process.argv.slice(2);
+ if(!desktop||desktop.startsWith('--')||options.length>1||options.some(x=>!x.startsWith('--course=')))
+  throw new Error('Usage: node tools/study-import.mjs /path/to/Desktop [--course=CSCI3230]');
+ const courses=options.length?[options[0].slice('--course='.length)]:COURSES;
+ const result=importNotes(desktop,fileURLToPath(new URL('./study-content/',import.meta.url)),{courses});
+ console.log(JSON.stringify(Object.fromEntries(courses.map(c=>[c,result.filter(d=>d.key.startsWith(c+'/')).length]))));
 }
