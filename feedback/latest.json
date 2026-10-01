@@ -1,0 +1,170 @@
+{
+  "exportedAt": "2026-10-01T13:41:44.466896+00:00",
+  "items": {
+    "hn-2026-10-01-ai-math": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "hn-2026-10-01-family-technology": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "hn-2026-10-01-gemini-argon": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "hn-2026-10-01-gpt-synopsys": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "hn-2026-10-01-japan-phd": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "hn-2026-10-01-jev": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "hn-2026-10-01-magnitude": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "hn-2026-10-01-opendlss": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "hn-2026-10-01-pi-mcp": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "hn-2026-10-01-pssa": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "music-2026-10-01-apple-1468872430": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "music-2026-10-01-apple-1470603728": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "music-2026-10-01-apple-1545327490": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "music-2026-10-01-apple-1582492050": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "music-2026-10-01-apple-1595783293": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "music-2026-10-01-apple-1754118661": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "music-2026-10-01-apple-1799904365": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "music-2026-10-01-apple-1824595172": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "music-2026-10-01-apple-1846001999": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "music-2026-10-01-apple-1849610705": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    }
+  },
+  "schema": "dots.feedback.snapshot/1",
+  "scope": "anonymous-public",
+  "source": "https://dots.vincejiang.com/api/feedback/summary",
+  "version": "8a60b945d7d460b75cd6c5f68a17a867af0556e502231b9688861ce0a6966b8c",
+  "window": "lifetime-current-state"
+}
