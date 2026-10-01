@@ -17,3 +17,7 @@
 ## Dots 云朵书桌
 
 `https://dots.vincejiang.com`：每日 HN 精读、每周歌单、归档与匿名反馈。公开内容在 `dots/content/index.json`；反馈汇总在同仓库 `dots-feedback` 分支的 `feedback/latest.json`。沿用本仓库 CI/CD，无新凭证。内容发布、Mac 同步和接口约定见 [SPEC §14](SPEC.md#14-dots--mandy-的云朵书桌2026-10-01)。
+
+## Study 课程笔记
+
+[`/study/2026T1/`](https://vincejiang.com/study/2026T1/) 按 CSCI3130、CSCI3150、CSCI3160、CSCI3230 收录课程伴读、作业题解与实验解析。Markdown 在构建时转成 HTML，公式使用本地 KaTeX，原始课件不发布。同步命令、范围和验证见 [SPEC §15](SPEC.md#15-study-课程笔记)。

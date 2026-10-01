@@ -1,0 +1,80 @@
+# CSCI3130 L06 Part 3 CYK成员算法
+
+> 课程：CSCI3130 Formal Languages and Automata Theory · 资料包，学期待核
+> 本讲：L06 Part 3 CYK成员算法 · 原件 [L06-文法变换与范式-资料包.pdf](../课件/L06-文法变换与范式-资料包.pdf) p.53–62
+> 定位：按子串长度动态规划，计算全部可能生成变量并回溯推导。
+> 前后：上一份 [L06-P2-乔姆斯基与格雷巴赫范式.md](L06-P2-乔姆斯基与格雷巴赫范式.md) · 下一份 [L06-P4-范式小测.md](L06-P4-范式小测.md)
+
+p.53 Outline，进入带星号的成员算法部分；本讲原件确实包含它，照顺序保留。
+
+### CYK 的输入先要标准化（p.54–56）【新】
+
+p.54 比较穷举的指数候选数与 CYK 的立方量级，指文法固定时随输入长度的变化。p.55 列出算法名称来源。p.56 输入为 CNF 文法与串 w，输出 w 是否属于语言。CNF 的二变量规则保证一个长串能从某一切点分成左右两块，这是递推成立的结构前提。
+
+### 子串表格存的是变量集合（p.57–59）
+
+**题面**（本讲 · p.57；公式按讲义重排）
+
+> **p.57** Input example:
+>
+> Grammar G: $S\to AB,\quad A\to BB\mid a,\quad B\to AB\mid b$.
+>
+> String w: aabbb
+
+p.58 列出全部连续子串，按长度由短到长填。用 $V_{ij}$ 表示能生成位置 i 到 j 子串的变量集合；不是存一个状态，也不是只存 S。p.59 一字符格由终结规则得 $\{A\},\{A\},\{B\},\{B\},\{B\}$。长子串试每个切点 k；左格有 X、右格有 Y 且存在 Z→XY，就把 Z 放入该格。
+
+### 长度二和更长的格子（p.60–61）
+
+p.60：aa 的组合 AA 无对应规则，集合为空；ab 的 AB 同时被 S、B 产生，所以是 $\{S,B\}$；bb 的 BB 被 A 产生，所以两个 bb 格都是 $\{A\}$。空格表示空集合，不能当“尚未填”再跳过解释。
+
+p.61 完成表：
+
+| 长度 | 从左到右的子串 | 对应变量集合 |
+|---|---|---|
+| 1 | a，a，b，b，b | A；A；B；B；B |
+| 2 | aa，ab，bb，bb | 空；S/B；A；A |
+| 3 | aab，abb，bbb | S/B；A；S/B |
+| 4 | aabb，abbb | A；S/B |
+| 5 | aabbb | S/B |
+
+例如 abb：切 a·bb 为 A与A，AA无规则；切 ab·b 为{S,B}与{B}，BB产生 A，SB无规则，故只有 A。各格的所有切点与回溯[见附录 A1](#a1)。<a name="r-a1"></a>
+
+### 接受条件与复杂度（p.62）
+
+> **p.62** The CYK algorithm can be easily converted to a parser
+
+顶格含开始变量 S，所以接受 aabbb。若只含 A或B则不能接受，即使那些变量能生成全串。每格同时记录“哪条规则、哪个切点”便能回溯出树；只保存真假或变量集合得到的是识别器。子串有平方多个，每格试线性多个切点，固定文法下为立方时间；文法也作为可变输入时还要计规则查找成本。
+
+**考试角度**：（C 级 通识）常见考法是完整填三角表、解释一个多变量格的来源，并回溯一条生成推导。
+
+## 本讲核心考点
+
+- 表格条目是变量集合（p.56–60，C 级）。
+- 枚举切点与二变量规则（p.60–61，C 级）。
+- 开始变量检查与解析回溯（p.62，C 级）。
+
+## 附录
+
+### A1 全部切点与一条推导
+
+<a name="a1"></a>长度3：aab 的 a·ab 用 A与B得到 S、B，aa·b 左格空，无贡献。abb 的两切点正文已算，得 A。bbb 的 b·bb 用 BA无规则，bb·b 用 AB得 S、B。
+
+长度4：aabb 的 a·abb 为 AA，无贡献；aa·bb 左格空；aab·b 为{S,B}×{B}，仅 BB给 A。abbb 的 a·bbb 为 A×{S,B}，仅 AB给 S、B；ab·bb 为{S,B}×A，SA、BA均无规则；abb·b 为 AB，再给 S、B，去重后仍{S,B}。
+
+长度5：a·abbb 为 A×{S,B}，AB给 S、B；aa·bbb 左空；aab·bb 为{S,B}×A，无规则；aabb·b 为 AB，又给 S、B。每个切点已穷尽，顶格为{S,B}。
+
+回溯可选顶格 S→AB，左 A生成第一 a，右 B生成 abbb；右 B→AB，A生成第二 a，B生成 bbb；该 B→AB，其中 A→BB 生成前两个 b，右 B生成最后 b。完整最左推导：
+
+$$
+S\Rightarrow AB\Rightarrow aB\Rightarrow aAB\Rightarrow aaB\Rightarrow aaAB\Rightarrow aaBBB\Rightarrow aabBB\Rightarrow aabbB\Rightarrow aabbb.
+$$
+
+共有9步，5个终结叶各一次终结规则，4次二分规则，符合完整二叉结构。每个中间串都只替换最左变量，能直接按原产生式核验。
+
+[回到正文](#r-a1)
+
+## 来源与证据
+
+考试证据：读了 HW01-2025T1-题目.pdf、HW01-2026T1-题目.pdf、HW02-2025T1-题目-更新.pdf、HW03-2025T1-题目.pdf、HW04-2025T1-题目.pdf、HW05-2025T1-题目.pdf、期中练习-含解答-学期待核.pdf、期末-2022T1-资料包.pdf、Final-Exam-2023T1-题目.pdf、Final-Exam-2024T1-题目.pdf、Final-Exam-2025T1-题目.pdf、期末-2023T1-资料包.pdf、期末-2024未核-资料包.pdf；未识别用途的 PDF：无
+
+- 原件：[L06-文法变换与范式-资料包.pdf](../课件/L06-文法变换与范式-资料包.pdf)，PDF p.53–62。

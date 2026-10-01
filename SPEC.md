@@ -290,3 +290,35 @@ curl -s localhost:8080/health          # → ok
 - 双向任务顺序：先 `dots-sync-feedback.py` → 读取远端 `dots-feedback:feedback/latest.json` → 生成新一期 → 人工/任务审校公开边界 → publish + validate + commit + push main → 等该 SHA 的 CI 成功。不存在任意网页点击唤醒助手的接口；反馈在下一期读取时影响选题，不等于实时通知，更不是用户本人的偏好。
 - 单次读 GitHub：`gh api repos/VincentJiang06/vincejiang-demo/contents/feedback/latest.json?ref=dots-feedback --jq .content` 后 base64 解码（返回的是公开数据，不是凭证）。同步脚本只在调用时运行；未新建 cron/第三套定时任务。
 - SQLite 数据持久卷不能删除。人工备份应使用 SQLite backup API 生成一致快照，而不是只复制 WAL 模式主文件。后台备份策略接入另行确认；当前容器重建可保留反馈，不能宣称已具备异地灾备。
+
+## 15. Study 课程笔记
+
+入口 `/study/2026T1/` → 四个课号 → 对应笔记 `.html`，保留中文文件名和 `exercise/` 子目录。`/study/` 提供学期入口。246 份发布 Markdown 在 `tools/study-content/`，由 `tools/study-build.mjs` 在主构建/检查流程中处理；不会将该源目录复制到网站。它们按课号分别为 66、42、74、64 份，包含作业答案、解题过程、实验与 Exercise 索引。
+
+### 同步与验证
+
+在独立分支操作，参数为桌面路径；导入器只读取四个固定课号的 `study/`，不改源文件，不跟随符号链接。
+
+```bash
+node tools/study-import.mjs "$HOME/Desktop"
+node tools/study-build.mjs /tmp/vince-study-preview
+python3 tools/study-verify.py /tmp/vince-study-preview --desktop "$HOME/Desktop"
+cd tools && npm test && npm run check
+```
+
+导入后审查 `tools/study-content/` 与 `manifest.json` 的 diff，再提交并正常合并 main。manifest 记录各源文件及发布副本的 SHA-256；验证命令确认原笔记未变。新笔记、敏感内容、图片范围与版本变化需要人工审阅；导入成功不等同于内容审查通过。删除源笔记不会自动删除仓库里的旧副本，但 manifest 不再引用它，页面构建以 manifest 为准。
+
+复用 prompt：
+
+> 将桌面四门 CSCI 的 study 学习笔记同步到 /study/2026T1/。先读取 SPEC §15，使用独立分支执行现有导入与检查，审查新增/变更及敏感内容；包含 study 内作业与实验解析，不读取或上传目录外资料、原课件和内部核验文件。不改本地源笔记。验证全文、公式、内部链接及手机实页，协调 main 提交顺序后沿现有 CI 发布，并报告该 SHA 的部署与线上验证结果。
+
+### 发布投影与边界
+
+- 327 个原 Markdown 中选入 246 个；81 个不作为网页正文：课程记忆索引 64 个、核验 Markdown 9 个、更新记录 4 个、根 README 4 个。根 README 的入口由课程首页替代；`exercise/README.md` 保留。
+- 三门课旧阅读导航含生成流程，替换为公开学习目录，保留资料版本边界；CSCI3160 学术阅读导引保留。技能编写行、内部运行叙述从发布副本移除，个人绝对路径泛化，课程正文和考试证据保留。
+- 所有 PDF/PPT、核验文本/JSON/截图、配置、缓存不导入。七处图片引用标为“本地素材，未公开”，不读取/复制目录外作业图片。原课件链接变为不可点击的“本地课件”文字，保留原链接文字与页码。
+- 三处已确认 TeX 排版修正只发生在发布副本：CSCI3160 Ex02 两个集合左花括号补反斜线；CSCI3230 L05-P4 的 `\rvertd` 拆为 `\rvert d`。不改变运算含义。
+- 原始 HTML 默认转义，只允许空的 `a id/name` 锚点。构建期 KaTeX 严格渲染，不加载远程公式脚本/字体。每篇标题 ID 稳定去重；显式 ID 保持大小写；内部 `.md#fragment` 转换后验证目标文档及锚点。目录外资料只标本地，目录内遗漏 Markdown 或坏锚点阻断构建。
+- 文章使用桌面三列/手机折叠导航；公式、表格、代码各自横滚。课程筛选在浏览器本地进行，正文无需 JavaScript。
+
+`tools/study-verify.py` 检查整个生成子树的链接、锚点、重复 ID 和资产扩展名；当前基线为 252 个 HTML、3,172 个正文标题、3,465 个正文锚点、3,812 处公式。源内容校对与学术正确性仍依赖原笔记，渲染验证不替代数学证明审阅。

@@ -1,0 +1,468 @@
+# CSCI3150 Assignment One：从输入命令到进程管道
+
+> 课程：CSCI3150 Introduction to Operating Systems · 2026T1
+> 本讲：HW01 Tutorial for Assignment One · 原件 [HW01-教程-2026T1.pdf](../项目/HW01/HW01-教程-2026T1.pdf) p.1–4；配套管道图解 p.1
+> 定位：跟着原始 Shell 的输入、解析、执行过程，再逐个追踪四条命令的文件描述符。读完能解释每个进程执行什么、数据流向哪里，以及程序为什么可能卡住。
+> 前后：基础 [L02 进程](L02-系统调用-进程.md) · 配合 [L04 文件与管道](L04-系统调用-文件与目录.md)
+> 承接：#L02-03 Fork、#L02-05 Wait、#L02-06 Exec；#L04-02 Descriptor、#L04-04 Dup、#L04-05 Pipe、#L04-06 EOF
+
+正文沿教程顺序，再读独立管道图解。“教程 p.N”“图解 p.1”“题目 p.1”属于不同 PDF。第一次读请顺读；指针基础见附录 A1，进程与内核资源的关系见附录 A2，作业演算见附录 A3。下文推演不是本次重新运行代码所得的测试记录。
+
+## 1. Compile and Run：先看清正在运行谁
+
+### 从 make 到 SimpleShell（教程 p.1）【已会】
+
+> **p.1** In this tutorial, we will present how a simple shell program works.
+
+这一页让你观察 Shell 的完整循环：显示提示符，接收命令，执行命令，回到提示符。Shell 本身也是程序；它把用户输入转成启动其他程序的操作。
+
+```sh
+make
+./SimpleShell
+```
+
+`make` 根据 Makefile 编译和链接。原始 Makefile 把 `simple-shell.o` 和 `simple-execute.o` 链接成 `SimpleShell`：前者提供输入循环和参数解析，后者提供执行函数。`.c` 是源文件，`.o` 是目标文件，`SimpleShell` 是可执行文件。编译完成不等于程序已经运行；第二行才启动它。编译知识承接 [Lab01 GCC 与 Makefile](Lab01-P2-GCC与Makefile.md)。
+
+图（教程 p.1）：编译、启动、执行命令和退出的两张终端截图。  
+元素：上图是 `make`、`./SimpleShell`、欢迎信息和三美元符提示符；下图输入 `ls`、`ls -l`、`EXIT`，最后回到外层提示符。  
+看什么：结束 SimpleShell 后，终端与外层 Shell 仍在；屏幕没换不等于进程没换。
+
+**补充（结合原始源码）**：`./` 表示当前目录。外层 Shell 启动 SimpleShell，SimpleShell 又启动 `ls`。教程说通过 `fork()` 执行命令，具体要接 p.4：fork 创建子进程，exec 才替换它运行的程序。
+
+### 为什么 EXIT 由 Shell 自己处理（教程 p.1）【新】
+
+> **p.1** you can input “EXIT” to exit from the shell.
+
+`EXIT` 是教学程序定义的控制命令，不需要在磁盘上找一个同名可执行文件。输入 `ls -l` 是“运行另一个程序”；独立 `EXIT` 是“结束接收命令的循环”。原始 `main()` 看到 `shell_execute()` 返回负数便 `break`，然后释放内存、结束程序。
+
+因此执行函数的 `return -1` 是给外层输入循环的信号，不能与子进程的退出状态混为一谈。
+
+**考试角度**：（A 级：HW01-题目-2026T1.pdf，Assignment One，p.1，独立 EXIT 要求）本次作业明确要求独立 `EXIT` 仍可用；这不是实现 Bash 全部内建命令的要求。
+
+## 2. Implementation：字符怎样变成运行中的程序
+
+### 三个函数怎样交接（教程 p.2）【新】
+
+> **p.2** Three core functions in the simple shell program are:
+
+原页随后列出三个声明。先按传递的数据读，不要同时追所有指针。
+
+| 函数 | 输入 | 做什么 | 交给下一步 |
+|---|---|---|---|
+| `shell_read_line(char *)` | 可写字符缓冲区 | 读到换行，把整行存好 | 以 `\0` 结束的字符序列 |
+| `get_line_args(char *, char **)` | 整行和指针数组 | 找词并记录词的起始地址 | 末尾为 `NULL` 的参数数组 |
+| `shell_execute(char **, int)` | 参数数组和计数 | 处理控制命令或创建并等待孩子 | 是否继续输入循环的返回值 |
+
+输入 `ls -l`，第一步得到一行文字，第二步得到两个参数，第三步才启动程序。**解析完毕时还没有执行 ls。** 若 `char **` 让你卡住，先<a name="r-a1"></a>[见附录 A1](#a1)，理解字符、字符串地址、地址数组这三层。
+
+### 换行不是字符串结尾（教程 p.2）【新】
+
+> **p.2** we read characters one by one and store each into the command buffer (pointed by cmd_buf) until we found the input character is “\n” (that is the newline character)
+
+回车产生换行字符 `\n`。函数遇到它，在缓冲区当前位置写 `\0`，然后返回此前读入的字符数。`\n` 属于输入流；`\0` 是 C 字符串结束标记。换行没有保留为命令参数的一部分。
+
+**算一遍**：用教程 p.4 的 `ls -l`，位置由字符串逐字符数出。
+
+| 读到的字符 | 写入位置 | 随后的 position |
+|---|---:|---:|
+| `l` | 0 | 1 |
+| `s` | 1 | 2 |
+| 空格 | 2 | 3 |
+| `-` | 3 | 4 |
+| `l` | 4 | 5 |
+| `\n` | 在 5 写 `\0` | 返回 5 |
+
+五个命令字符还需要第六个槽位放终止符。原码 `MAX_LINE_SIZE` 为 1024，空间必须兼顾这个终止符。
+
+**补充（原码边界）**：该教学函数用 `char` 接收 `getchar()`，没有单独处理输入流结束 `EOF`。因此不能从“回车结束本行”推出“输入流关闭就正常退出 Shell”。原教程规定的独立 `EXIT` 与关闭输入不是同一种操作。
+
+### 拆词到底修改了哪里（教程 p.3）【新】
+
+> **p.3** args[argc] = & line[start_position];
+
+这行把字符的**地址**写进参数数组，没有复制整个词。`start_position` 是词的起点，`end_position` 向后扫描到空格、制表符或字符串结尾。找到分隔空白，就将它改成 `\0`，使前面的词成为独立字符串。
+
+**算一遍**：仍用 `ls -l`，沿 p.3 代码逐轮执行。
+
+| 轮次 | 扫描位置 | 修改 | argc |
+|---|---|---|---:|
+| 第一词 | 0 起，在 2 遇空格 | `line[2]='\0'`；`args[0]=&line[0]` | 1 |
+| 第二词 | 3 起，在 5 遇结尾 | `args[1]=&line[3]`；原结尾不变 | 2 |
+| 终点 | 5 已是 `\0` | `args[2]=NULL`，然后递增 | 返回 3 |
+
+**这份解析器的 argc 把末尾 NULL 槽也计入。** 两个有效字符串，返回 3。标准 C 入口 `main(int argc, char **argv)` 的 argc 通常不计终止空指针；不要因变量同名就套用那个含义。
+
+该解析器只按空格与制表符拆词，没有实现引号组合，也没有把管道符变成管道。空格分隔的 `|` 先成为普通参数字符串，执行层再识别它。题目保证管道符两侧有空格，正好适配这个框架。
+
+### args 有两层终止标记（教程 p.4 上半页）【新】
+
+> **p.4** An example with the input as “ls -l” is shown below to illustrate the input and output of get_line_args().
+
+图（教程 p.4）：调用解析函数前后的字符缓冲区。  
+元素：Before 是五个可见字符加 `\0`；After 将空格替换为红色 `\0`，`args[0]` 指向 `l`，`args[1]` 指向 `-`，另标 `args[2]=NULL`。  
+看什么：红色 `\0` 结束一个字符串；`NULL` 结束整个参数列表。
+
+示意图（教程 p.4，我画的，非讲义原图）：两个指针引用同一缓冲区的不同位置。
+
+```text
+line:      [ l ][ s ][\0][ - ][ l ][\0]
+             ^             ^
+args[0] -----+             |
+args[1] -------------------+
+args[2] = NULL
+```
+
+读 `args[0]` 指向的字符串，遇到第一处 `\0` 就停，因此得到 `ls`。读 `args[1]` 得到 `-l`。遍历参数数组时则读到空指针才停。
+
+空字符串仍有有效地址，只是第一个字符就是 `\0`；`NULL` 是不应拿来读取字符的空指针；字符串 `"NULL"` 则真有四个字母。这三者不能互换。
+
+### fork：一次调用后谁走哪条分支（教程 p.4）【延伸 L02 p.8–10】
+
+> **p.4** we use fork() to generate a child process.
+
+承接 [#L02-03](local:course-index)。原执行函数识别 `EXIT` 后调用 fork，再按返回值分支。孩子从 fork 返回之后继续，不从 main 第一行重新执行。
+
+**补充与算一遍**：下面 PID 是我为演示取的，讲义没给；假设创建成功。
+
+| 执行者 | 自己的 PID | fork 返回值 | 分支任务 |
+|---|---:|---:|---|
+| 父亲 SimpleShell | 5000 | 5001 | 等孩子 |
+| 新孩子 | 5001 | 0 | 调用 execvp |
+
+孩子看到 0，不代表孩子的真实 PID 为 0。它是 fork 给孩子的分支标记。父亲拿到孩子 PID，才能指定要等谁。失败返回 -1，此时没有创建出孩子。父子先后运行没有固定保证；普通内存各自独立，父亲修改变量不会借此通知孩子。[fork(2)](https://man7.org/linux/man-pages/man2/fork.2.html)
+
+但描述符可能仍引用同一个内核对象。“变量独立”和“管道共享”怎样同时成立，<a name="r-a2"></a>[见附录 A2](#a2)。
+
+### execvp：进程还在，运行的程序换了（教程 p.4）【延伸 L02 p.14–17】
+
+> **p.4** The exec() family of functions replaces the current process image with a new process image.
+
+承接 [#L02-06](local:course-index)。刚 fork 后，父亲和孩子都在执行 SimpleShell 的代码。孩子成功 exec 之后，仍是同一个孩子，却开始运行 ls 的代码；exec 没有再创建第三个进程。
+
+“映像”包括程序执行所需的代码与相关内存。成功替换后，旧程序不再继续，所以 exec 不是“调用一个函数，做完再回来”。ls 结束时孩子结束，不会回到原 exec 下一行再输出 Shell 提示符。
+
+> **p.4** The array of pointers must be terminated by a NULL pointer.
+
+`execvp(file, argv)` 的第一个参数选择程序，第二个参数提供程序名和各个选项组成的列表。教程使用 `execvp(args[0], args)`：对 `ls -l`，第一个参数指向 `ls`，列表依次为 `ls`、`-l`、`NULL`。不能把整行 `ls -l` 当成一个程序文件名；execvp 不承担这份 Shell 的拆词工作。
+
+**补充**：后缀 v 表示向量参数，p 表示没有斜杠的程序名按 PATH 搜索。失败返回 -1，成功不返回。失败时孩子仍运行旧程序，必须走错误退出分支；否则它可能返回输入循环，意外多出一个 Shell。[exec(3)](https://man7.org/linux/man-pages/man3/exec.3.html)
+
+**补充**：打开的描述符通常跨 exec 保留，`FD_CLOEXEC` 是例外。因此先把孩子的标准输出接到管道，再 exec，新的程序就会沿这个连接输出。这是管道 Shell 可以控制任意外部命令输入输出的关键。[execve(2)](https://man7.org/linux/man-pages/man2/execve.2.html)
+
+### wait：等待、回收、退出码不是同一个值（教程 p.4）【延伸 L02 p.12–13】
+
+> **p.4** the parent process attempts to wait for the child process and then continue for next input.
+
+承接 [#L02-05](local:course-index)。原程序只有一个外部命令的孩子，调用一次 `wait(&status)`。孩子尚未结束就等待；孩子已结束但未被回收，就取得其终止信息。父亲不必抢在孩子结束前调用 wait。
+
+| 值 | 表达什么 |
+|---|---|
+| wait 返回值 | 成功回收的孩子 PID，或错误 |
+| 写入 status 的内容 | 孩子怎样结束的编码信息 |
+| shell_execute 返回值 | 这个 Shell 是否继续输入循环 |
+
+**补充**：先用 `WIFEXITED(status)` 判断正常退出，再用 `WEXITSTATUS(status)` 取退出码，不直接把整个 status 当退出码。`waitpid(pid, &status, 0)` 可指定孩子；等待因 `EINTR` 失败只是被信号中断，不表示已经回收孩子。[wait(2)](https://man7.org/linux/man-pages/man2/waitpid.2.html)
+
+多个命令有多个孩子，等一次就不够。但也不能把 wait 简单放在每次 fork 后；下面会看到等待位置怎样造成相互等待。
+
+## 3. 配套管道图解：程序不用知道邻居是谁
+
+### 沿箭头读四个命令（图解 p.1）【延伸 L04 p.20–28】
+
+来源：[HW01-管道图解-2026T1.pdf](../项目/HW01/HW01-管道图解-2026T1.pdf)，唯一一页。图解示例原文（无题号）：
+
+> **p.1** cat Makefile | head -n 5 | tail -n 3 | grep shell
+
+图（图解 p.1）：四命令管道与父进程输入循环。  
+元素：左侧 main 和参数列表，四个 Child 圆形，三条 Pipe，close、dup、execvp 框；红叉表示标准流旧连接被替换；底部有退出和返回输入循环的连线。Pipe 1、3 在版面上向右流，Pipe 2 向左流。  
+看什么：沿数据箭头读出 cat → head → tail → grep，不按版面的左右位置重排命令。
+
+原图写 “Parent thread”“Child thread”，但结合教程的 fork，这里实际是父子**进程**，不是 pthread 线程。底部退出圆形的排列也不保证孩子按从第四个到第一个的顺序退出。管道规定数据流向，不规定调度先后。
+
+cat 读取 Makefile 并写标准输出；head 取标准输入的前五行；tail 取收到内容的最后三行；grep 输出匹配 shell 的行。各程序只使用自己的输入输出接口；Shell 把接口连接起来。head 不必知道上游是不是 cat。
+
+### 读写端与标准描述符（图解 p.1）【延伸 L04 p.6–7】
+
+> **p.1** pipe[0]->R
+
+> **p.1** pipe[1]->W
+
+原图上方区分读端 R 和写端 W。承接 [#L04-02、#L04-05](local:course-index)：**文件描述符（file descriptor，fd）是进程引用打开资源的非负整数**。资源可以是终端、管道、普通文件，不限于磁盘文件。
+
+标准约定中 0 是标准输入，1 是标准输出，2 是标准错误。这些编号不会永远绑定键盘和屏幕；重定向正是改变连接，让程序仍用原来的编号。
+
+**补充与算一遍**：假设当前只打开 0、1、2，`pipe(p)` 成功得到 3、4。这些编号是我为演示取的，图中没给；真实程序必须使用返回到数组里的编号。
+
+| 写法 | 值 | 意义 |
+|---|---:|---|
+| `p[0]` | 3 | 管道读端 |
+| `p[1]` | 4 | 管道写端 |
+| `read(p[0], ...)` | 使用 3 | 从管道读 |
+| `write(p[1], ...)` | 使用 4 | 向管道写 |
+
+**数组下标 0、1 和描述符编号 0、1 不同。** `p[0]` 不天然等于标准输入。pipe 的成功返回值是 0，端点编号经数组传出。[pipe(2)](https://man7.org/linux/man-pages/man2/pipe.2.html)
+
+常见安排是在父亲里建管道，再 fork，让孩子继承同一管道的端点。两个孩子若各建一条新管道，即便都得到数字 3、4，也不是同一个内核对象，数据不会自动连通。
+
+### dup 改的是连接，不是管道内容（图解 p.1）【延伸 L04 p.10–19】
+
+> **p.1** close(1)
+
+> **p.1** dup(pipe1[1])
+
+图中第一个孩子先关标准输出，再复制第一条管道写端。承接 [#L04-04](local:course-index)：dup 选择最小空闲描述符。标准描述符原来均打开的情况下，关闭 1 后，复制能占用 1。
+
+**补充与算一遍**：继续用写端 4，`dup2(4, 1)` 明确指定目标编号为 1。成功后 1 和 4 都引用管道写端。它没有复制数据，也没有把变量里的 4 改成 1。[dup(2)](https://man7.org/linux/man-pages/man2/dup.2.html)
+
+| 阶段 | 当前进程 fd 1 | 当前进程 fd 4 |
+|---|---|---|
+| 调用前 | 终端输出 | 管道写端 |
+| dup2 成功后 | 管道写端 | 同一个管道写端 |
+| 再 close(4) | 仍是管道写端 | 关闭 |
+
+第三行解释了为什么复制后还能关闭原编号：1 仍持有引用。反过来，若未复制就关 4，输出仍去终端。读端也一样：`dup2(3, 0)` 改标准输入；写反成 `dup2(0, 3)` 就只改了 3，输入没有接到管道。
+
+父子各自拥有描述符表，所以孩子重定向自己的 1，不会把父亲下一次提示符送进管道。更完整的内存与内核对象区别见 [附录 A2](#a2)。
+
+### 四个孩子逐个留下什么（图解 p.1）【已会】
+
+原图中间两个孩子各有两个重定向步骤：输入取上一条管道，输出送下一条管道。第一个孩子只改输出，最后一个只改输入。下面用一套固定编号把图走完。
+
+**补充与算一遍**：假设父亲先创建三条管道，成功后再创建四个孩子。数字 3–8 是我为演示取的，讲义没给。
+
+| 管道 | 读端 | 写端 | 数据用途 |
+|---|---:|---:|---|
+| P1 | 3 | 4 | cat → head |
+| P2 | 5 | 6 | head → tail |
+| P3 | 7 | 8 | tail → grep |
+
+若父亲创建孩子前尚未关闭这些端点，每个孩子最初都继承 3–8，而不只是自己用得上的那一对。对每个孩子，先按需要复制到 0 或 1，再关闭全部多余的原端点 3–8：
+
+| 孩子 | 输入如何接 | 输出如何接 | 清理后 fd 0 | 清理后 fd 1 |
+|---|---|---|---|---|
+| cat | 不变；实际读命名文件 Makefile | `dup2(4, 1)` | 继承的标准输入 | P1 写端 |
+| head | `dup2(3, 0)` | `dup2(6, 1)` | P1 读端 | P2 写端 |
+| tail | `dup2(5, 0)` | `dup2(8, 1)` | P2 读端 | P3 写端 |
+| grep | `dup2(7, 0)` | 不变 | P3 读端 | 继承的标准输出 |
+
+只看 head：它需要从 P1 读、向 P2 写。复制后 fd 0 和 3 同指 P1 读端，fd 1 和 6 同指 P2 写端。关闭 3、6 不切断 0、1。它还要关 4、5、7、8：尤其保留 4 会让 head 自己也持有上游 P1 的写端，从而干扰 EOF。
+
+父亲不参与搬运命令输出。孩子创建完成后，父亲关掉自己的 3–8，保留原来的 0、1、2，然后等待。所有孩子的 fd 2 也保留原标准错误连接；普通管道只连接 stdout 与 stdin，错误消息不自动流进下一条命令。
+
+此安排里，一条四命令管道由一个 Shell 父进程和四个命令子进程组成。孩子 exec 成功便离开原创建逻辑，不能继续父亲的循环，否则进程数会意外增加。上表展示的是端点连接状态，不承诺这些动作发生的固定时间顺序。
+
+### 为什么少关一个写端就等不到结束（图解 p.1 的 close；补充 EOF）【延伸 L04 p.29】
+
+图解画了关闭旧标准流，题目进一步要求父子双方关闭无用管道端点。要理解其必要性，承接 [#L04-06](local:course-index)：**缓冲数据读完，并且所有写端引用都关闭，读才返回 0 表示 EOF。** “暂时没有数据”并不等于“再也没有数据”。
+
+**补充**：管道是字节流。默认阻塞读取时，空管道若仍有写端打开，读取者等待；没有写端且数据耗尽，才返回 EOF。管道满时写入者可能阻塞；没有任何读端时继续写会触发 SIGPIPE，忽略该信号时写入以 EPIPE 失败。[pipe(7)](https://man7.org/linux/man-pages/man7/pipe.7.html)
+
+把这个规则代入原图里的 tail：tail 要确定“最后三行”，必须知道整个输入何时结束。假设 head 已经退出，P2 中的数据也已读完，但父亲忘了关闭 P2 写端 6：
+
+1. head 的退出关闭了它自己的 P2 写端引用。
+2. 父亲的 6 仍然打开。内核无法把“父亲还可以写”解释成“父亲保证不再写”。
+3. tail 再次读取 P2，看到空管道但尚有写端，于是等待新数据。
+4. 父亲又在等待 tail 结束。双方各等对方造成的条件，无法完成。
+
+不只父亲会造成这类问题。若 tail 自己意外继承并保留 P2 写端 6，它就一边等 EOF，一边让 EOF 的条件无法成立。**所以“我从不往那个端点写”不能替代 close。** 必须数清所有进程里仍活着的引用。
+
+这个推导解释的是 EOF 条件；不是说所有读取程序都必须读到 EOF 才能退出。例如 head 达到所需行数可以提前结束。此时及时关闭无用读端也很重要，才能让上游观察到真正“没有读者”的情况。
+
+### 为什么要先启动所有命令再等（图解 p.1 的整体执行；补充阻塞）【已会】
+
+图解四个孩子通过三条管道连接。它表达的是可以并发推进的数据流，不是四个程序串行执行完再传文件。
+
+**补充（根据管道容量有限这一语义推导）**：假设父亲先启动 cat，立刻等待 cat 完成，尚未启动 head。cat 的输出如果超过管道能容纳的数据量，就会等待读者取走数据；但读者还没出生，父亲又在等 cat，于是卡住。小文件可能全塞进缓冲区，让错误顺序看似有效；它不能证明这种结构正确。这里不假定某个固定的管道容量。
+
+因此应该先让各阶段都有运行机会，再等待所有孩子。**按某个 PID 顺序等待，不等于让孩子按那个顺序运行。** 只要孩子已经全部启动，即使父亲先等待第一个，后面的也能继续读写。
+
+**考试角度**：（A 级：HW01-题目-2026T1.pdf，Assignment One，p.1，启动与等待要求）题目明确要求启动管道全部命令后才等待，并在下一次提示符前等完全部孩子。具体要求与官方示例<a name="r-a3"></a>[见附录 A3](#a3)。
+
+### 把图里的 Makefile 数据流算完（图解 p.1）【已会】
+
+题面已在本节开头逐字列出：`cat Makefile | head -n 5 | tail -n 3 | grep shell`。现在只演算该示例；输入取教师 ZIP 内原始 Makefile，而不是修改过的工作文件。
+
+原始 Makefile 前五行如下。表中“空行”和“两个 Tab”是显示说明，不是文件内容。
+
+| 原行号 | 内容 |
+|---:|---|
+| 1 | `CC=gcc` |
+| 2 | 空行 |
+| 3 | `SimpleShell: simple-shell.o simple-execute.o` |
+| 4 | 两个 Tab 后接 `$(CC) -o SimpleShell simple-shell.o simple-execute.o` |
+| 5 | 空行 |
+
+cat 输出文件；head 仅保留这五行，包括两条空行。tail 从这五行中取最后三行，留下原第 3、4、5 行。grep 再查找小写 `shell`，第 3、4 行因 `simple-shell` 而匹配，第 5 行不匹配。因此最终出现两个非空行：目标依赖行和链接命令行，链接行仍保留原来的缩进。
+
+注意 `SimpleShell` 中的大小写与小写 `shell` 不同；这里匹配成功依据是同一行内的小写 `simple-shell`。整个过程中传递的是文件里的文本。看到文本含 `$(CC)`，不代表管道又执行了一次 make，也不会在这条管道里自动把它展开为 gcc。
+
+## 本讲核心考点
+
+- 参数缓冲区中的 `\0` 与参数数组末尾 `NULL` 分属两层；原解析器计数包含 NULL 槽。（教程 p.2–4，C 级通识代码阅读）
+- fork 后父子从调用之后继续，以不同返回值区分角色。（教程 p.4，C 级通识过程追踪）
+- exec 替换程序映像，成功不回到旧代码；描述符连接可跨替换保留。（教程 p.4、图解 p.1，C 级通识）
+- 相邻命令的标准输出连接到标准输入。（题目 p.1，A 级：Assignment One 直接要求）
+- dup 与 dup2 改描述符引用；复制后关闭原编号不关闭仍保留的标准流引用。（图解 p.1；题目 p.1 Tips，A 级：Assignment One 指定实现接口）
+- 父子都要关无用管道端点；EOF 取决于全部写端引用。（题目 p.1，A 级：关闭要求；EOF 原理为 C 级补充）
+- 全部命令启动后再等，下一提示符前回收全部孩子。（题目 p.1，A 级：Assignment One 直接要求）
+- 0–3 个管道、无管道命令与独立 EXIT 都在要求范围内。（题目 p.1，A 级：Assignment One 直接要求）
+
+## 附录
+
+### A1 前置知识速补：char、char 指针与双重指针（非讲义内容）
+
+<a name="a1"></a>这里补齐教程 p.2–4 用到的 C 表示法，止于读懂参数传递。
+
+`char` 存一个字符；`char *` 存字符地址；`char **` 可以指向存放字符地址的槽位。教程的 args 就用来访问一个指针数组：每个元素都指向一个字符串的起点。
+
+用教程原例 `ls -l`，假设缓冲区起始地址是 1000（地址数字是我为演示取的，讲义没给）：l 在 1000，s 在 1001，分隔空格在 1002，- 在 1003，l 在 1004，结尾在 1005。解析器将 1002 处改为 `\0`，然后让 args 的第一个槽存地址 1000，第二个槽存地址 1003，第三个槽存 NULL。
+
+所以 `args[1]` 取得的是地址 1003；`args[1][0]` 才取得该地址的第一个字符 `-`。`&line[3]` 表示“第 3 个字符的地址”，而 `line[3]` 表示“那个字符本身”。`&` 在这里取地址，`*` 在类型声明里表示指针层数。
+
+`execvp(args[0], args)` 的第二个参数需要从第一个槽开始读取整列地址，因而传 args；若误传 `args[0]`，给出的只是第一个字符串的地址，层次不对。传 `&args[k]` 则可以从第 k 个槽开始提供一段参数列表，前提是这段列表最终有 NULL。
+
+必须保证 args 指向的字符缓冲区仍然有效。这里缓冲区在外层循环期间存在，fork 后孩子还有自己的地址空间；不能将“地址是一个数”误认为地址在任意进程、任意时刻都指向同一个东西。
+
+[回到正文：三个函数怎样交接（教程 p.2）](#r-a1)
+
+### A2 前置知识速补：哪些复制，哪些共享（非讲义内容）
+
+<a name="a2"></a>这里补齐教程 p.4 的 fork 与图解 p.1 的描述符继承之间缺少的连接，承接 L02、L04 已有条目。
+
+先把三个层次分开：第一层是 C 变量，例如数组 p 中存着整数 3、4；第二层是每个进程自己的描述符表，记录 3、4 引用什么；第三层是内核维护的打开对象与管道数据。整数数组不是管道本身，复制数组也不会把管道内的数据复制一份。
+
+**补充**：fork 后，父子的普通内存独立；文件描述符的副本却指向相同的打开文件描述对象。对普通文件，这也意味着可以共享文件偏移；本次管道则共享同一条数据通路。[fork(2)](https://man7.org/linux/man-pages/man2/fork.2.html)
+
+示意图（对应教程 p.4、图解 p.1，我画的，非讲义原图）：以演示编号 4 表示同一写端，孩子再复制到 1。
+
+```text
+父亲的描述符表                  内核对象                  孩子的描述符表
+fd 4 -----------------------> 同一管道写端 <---------------- fd 4
+                                  ^
+                                  +------------------------ fd 1
+                                                 （dup2 后）
+```
+
+此刻共有三条画出的写端引用。孩子 close(4)，只去掉右上那条，父亲的 4 和孩子的 1 都保留。父亲再 close(4)，只剩孩子的 1。孩子退出或关 1 后，这里画出的写端才都没有了；若还有其他孩子保留写端，也必须一起数进去。
+
+这与修改数组不同：孩子执行 `p[1] = -1` 只改自己内存里的整数，没有调用 close，不会移除内核中的描述符引用；父亲的数组值也不变。反过来，`close(p[1])` 移除描述符，但 C 数组槽里的数字通常仍旧是 4。程序不能凭数组里“还存着 4”判断它仍打开。
+
+dup 也是增加引用，而不是复制文件内容。对普通文件，两个描述符可能共享偏移；对管道，不能把它想成可以各自倒回开头阅读的文件。这里真正需要掌握的是：**画每个进程的表，再数同一端点的引用，最后判断读写条件。**
+
+[回到正文：fork 的父子分支（教程 p.4）](#r-a2)
+
+### A3 作业/往年题演练（非讲义内容）：Assignment One
+
+<a name="a3"></a>来源：[HW01-题目-2026T1.pdf](../项目/HW01/HW01-题目-2026T1.pdf)，Assignment One，p.1。以下保留题目中的小组规定、完整实现要求、提交规定和提示；行政 Note 的环境、迟交与联系信息请直接对照原 PDF。原题总分 100，截止时间为 2026-10-13 23:59。
+
+> **p.1** This is a group assignment; each group can have up to 3 members and only need to submit one assignment by one member (by including all group members’ names and student IDs). Please download Assign1.zip from the Blackboard. Following the instruction in Readme, you can find a simple shell program that can interpret and execute a command inputted.
+
+> **p.1** In Assignment One, revise shell_execute() in simple-execute.c to support commands with 0 to 3 pipes (up to 4 commands). For each pipe, the standard output of one command must become the standard input of the next command. For example:
+>
+> ```text
+> $$$ seq 1 10 | tail -n 4 | wc -l
+> $$$ seq 1 20 | head -n 12 | tail -n 5 | wc -l
+> ```
+
+> **p.1** In all test cases, each "|" will have at least one space before and after it. Inputs such as "ls|" will not be tested. Commands without pipes and the standalone EXIT must still work. Close unused pipe file descriptors in both the parent and child processes. Start all commands in a pipeline before waiting, and wait for every child before the next prompt.
+
+> **p.1** Submission: Submit only simple-execute.c, with all members' names and SIDs in code comments. DO NOT modify simple-shell.c or Makefile.
+
+> **p.1** Tips: 1. Start by printing the arguments and argument count to understand how they are passed to your function. 2. Use fork(), pipe() and execvp(), and either dup() or dup2(), to implement pipelines. Both descriptor-duplication calls are acceptable; you do not need to use both. Use wait() or waitpid() to wait for child processes.
+
+#### 这道作业考核什么
+
+题目给出了输入和解析框架，因此核心是把一个命令扩展成能同时推进的命令链：拆出每段的参数，用子进程运行它们，连接相邻标准流，处理描述符的生命周期，再等所有孩子结束。这些责任合在一起，才构成一个可重复接收下一条命令的 Shell。
+
+| 明确要求 | 对应能力 | 理解不到位的表现 |
+|---|---|---|
+| 0–3 管道 | 参数分段、首中末阶段的区别 | 只会处理两条命令，或无管道时下标越界 |
+| stdout 接下一条 stdin | pipe 与描述符重定向 | 所有结果仍打印到屏幕 |
+| 父子都关无用 fd | 引用生命周期与 EOF | 消费者永远等不到输入结束 |
+| 全启动后再等 | 并发与有限缓冲区 | 小输入成功，大输入挂住 |
+| 等每个孩子 | 回收与交互循环控制 | 提示符过早出现，或留下未回收孩子 |
+| 保留无管道和 EXIT | 接口约定与控制流 | 改完管道反而不能执行普通命令或退出 |
+
+题目没有提供这些方面各占几分，不能自行杜撰评分细则；也不能从本作业直接断言期末必考某种题型。环境可编译运行和提交范围是原题另行明确的交付要求。
+
+#### 官方示例一：结果为什么是 4
+
+原题输入已逐字列在上方。三条命令、两根管道：
+
+```text
+seq 1 10       -> 1,2,3,4,5,6,7,8,9,10（每个数各占一行）
+tail -n 4      -> 7,8,9,10（四行）
+wc -l          -> 4
+```
+
+逗号只是本解释的紧凑写法，不是 seq 的真实分隔符。wc 统计的是换行数，不是把数字相加。第二阶段要知道输入已结束，才能确定最后四行，所以 EOF 的关闭条件直接影响这条命令能否给出结果。
+
+从解析角度，原框架先得到 10 个有效词：seq、1、10、管道符、tail、-n、4、管道符、wc、-l，随后一个 NULL，返回计数 11。交给三个 exec 的参数应分别结束在各自的 NULL：
+
+```text
+第一段：seq, 1, 10, NULL
+第二段：tail, -n, 4, NULL
+第三段：wc, -l, NULL
+```
+
+若把整条数组原封不动交给第一个 exec，seq 会把管道符和后续命令都当成自己的参数；它不会替 Shell 启动 tail。分段可通过把分隔符所在的指针槽改成 NULL，再记录各段起点来理解。这里改的是参数列表的槽位，与 p.3 把字符空格改成 `\0` 属于不同层次。
+
+#### 官方示例二：结果为什么是 5
+
+四条命令、三根管道：
+
+```text
+seq 1 20       -> 1 至 20，共二十行
+head -n 12     -> 1 至 12，共十二行
+tail -n 5      -> 8、9、10、11、12，共五行
+wc -l          -> 5
+```
+
+tail 接到的是 head 的十二行输出，所以其最后五行从 8 开始。不能直接对原始二十行取最后五行，再把 head 当成无关步骤。中间每个阶段都改变了下一阶段看到的数据。
+
+这一条特别检验中间孩子同时重定向输入和输出的情况。只给 head 接好 stdin，却忘了接 stdout，它的输出就会跑到屏幕，tail 仍没有正确的数据源。只看最后显示的数字，不能替代检查每段的连接关系。
+
+#### 从题目推回执行顺序
+
+可以用以下概念步骤核对自己的理解，它不是可直接提交的 C 实现：
+
+```text
+识别独立 EXIT，或把参数识别为若干命令段
+为相邻命令准备共享管道
+为每一段启动孩子
+每个孩子接好自己的输入和输出，关闭多余端点，再替换为命令程序
+父亲关闭自己不用的管道端点
+父亲回收所有已经启动的孩子
+外层循环才显示下一次提示符
+```
+
+无管道时只有一个命令孩子，不需要 pipe，也不需要改变标准输入输出；仍需要 exec 和 wait。独立 EXIT 则由父亲的输入循环控制，不应通过启动一个外部 EXIT 程序来完成。
+
+**补充（工程错误路径，不是新增题目要求）**：pipe、fork、dup2、exec 都可能失败。失败处理应明确“到这里实际创建了哪些孩子、打开了哪些端点”；不能拿未创建的 PID 去等，也不能让 exec 失败的孩子继续创建其他孩子。等待被 EINTR 中断时仍应继续完成回收。题目没有给出各错误路径的单独分值，本文不据此承诺评分结果。
+
+#### 小组名字究竟怎么写
+
+按原题，最多三人，每组只需一名成员提交一份；提交文件只包括 `simple-execute.c`，代码注释列全体成员姓名和 SID。原题没有要求另写一个虚构“组名”，也没有给固定注释排版。
+
+下面只示范署名注释。每位实际成员写一行；只有一位就保留一行。占位符可用于准备阶段，提交前必须换为真实信息。
+
+```c
+/*
+ * Assignment One
+ * Members:
+ *   YOUR_NAME_HERE — YOUR_SID_HERE
+ */
+```
+
+[回到正文：为什么要先启动所有命令再等](#r-a3)
+
+## 来源与证据
+
+- 主体原件：[HW01-教程-2026T1.pdf](../项目/HW01/HW01-教程-2026T1.pdf)，p.1–4；[HW01-管道图解-2026T1.pdf](../项目/HW01/HW01-管道图解-2026T1.pdf)，p.1。图形与代码页已结合渲染页核对，页码均为各自 PDF 页号。
+- 框架与示例输入：[HW01-原始代码-2026T1.zip](../项目/HW01/HW01-原始代码-2026T1.zip) 中的教师源码、Makefile。解析计数和 Makefile 行内容以该原件为准。
+- 作业证据：[HW01-题目-2026T1.pdf](../项目/HW01/HW01-题目-2026T1.pdf)，Assignment One，p.1。A 级表示本次作业的直接要求，不代表期末考试承诺。
+- 补充接口文档：Linux man-pages 的 [fork(2)](https://man7.org/linux/man-pages/man2/fork.2.html)、[exec(3)](https://man7.org/linux/man-pages/man3/exec.3.html)、[execve(2)](https://man7.org/linux/man-pages/man2/execve.2.html)、[wait(2)](https://man7.org/linux/man-pages/man2/waitpid.2.html)、[pipe(2)](https://man7.org/linux/man-pages/man2/pipe.2.html)、[pipe(7)](https://man7.org/linux/man-pages/man7/pipe.7.html)、[dup(2)](https://man7.org/linux/man-pages/man2/dup.2.html)，2026-09-23 核对。网页补充不冒充讲义原话。
+- 课程索引承接：[L02](local:course-index)、[L04](local:course-index)。L02 为 2026T1；L04 原件为 2022未核版，仅用于已有条目衔接，不据此声称它是本学期最新课件。
+- 本次按 Tutorial 处理，只给已有条目追加演练引用；参数计数等 Tutorial 特有内容和补充示例不新建讲义知识条目。
+- 未读 / 跳过：非官方笔记、同学答案与已完成作答均不作为本次教学解释的来源。原题末尾的 how.dev 扩展链接未作为机制依据，补充改用上列接口文档。
+- 考试证据：读了 HW01-题目-2026T1.pdf；未识别用途的 PDF：无

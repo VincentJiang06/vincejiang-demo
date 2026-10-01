@@ -7,13 +7,15 @@
   "scripts": {
     "build": "node build-site.mjs --out ../site",
     "check": "node build-site.mjs --check",
-    "test": "node site-behavior.test.mjs && node glyph-arcade.test.mjs",
+    "test": "node site-behavior.test.mjs && node glyph-arcade.test.mjs && node --test study.test.mjs",
     "audit": "node audit.mjs"
   },
   "dependencies": {
     "gray-matter": "4.0.3",
     "highlight.js": "11.10.0",
+    "katex": "0.16.22",
     "markdown-it": "14.1.0",
-    "markdown-it-anchor": "9.2.0"
+    "markdown-it-anchor": "9.2.0",
+    "markdown-it-texmath": "1.0.0"
   }
 }

@@ -19,6 +19,7 @@ import MarkdownIt from 'markdown-it';
 import anchor from 'markdown-it-anchor';
 import hljs from 'highlight.js';
 import { renderPaper } from './paper.mjs';
+import { buildStudy } from './study-build.mjs';
 
 const ROOT = new URL('..', import.meta.url).pathname.replace(/\/$/, '');
 const TPL = join(ROOT, 'templates');
@@ -759,6 +760,7 @@ function injectBeacon(dir) {
 
 // ---- CHECK 模式 ----
 function runCheck(posts) {
+  buildStudy(OUT, { check: true });
   // 每个对外发布的顶层目录必须有 index.html
   for (const c of contentDirs()) {
     if (c.dir && !ASSET_DIRS.has(c.name) && !existsSync(join(ROOT, c.name, 'index.html'))) err(`内容目录缺 index.html: ${c.name}/`);
@@ -825,6 +827,7 @@ function runBuild(posts) {
   writeFileSync(join(OUT, 'background-test', 'index.html'), renderBackgroundTest());
   writeFileSync(join(OUT, 'sitemap.xml'), buildSitemap(pub));
   writeFileSync(join(OUT, 'llms.txt'), buildLlms(pub));
+  buildStudy(OUT);
   injectBeacon(OUT);
 
   for (const w of warnings) console.error('  ⚠ ' + w);
