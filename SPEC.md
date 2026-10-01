@@ -276,6 +276,7 @@ curl -s localhost:8080/health          # → ok
 ## 14. Dots — Mandy 的云朵书桌（2026-10-01）
 
 - 独立公开子域 `https://dots.vincejiang.com`；静态源 `dots/` 随当前网站镜像发布，nginx 专用 server root。已有 wildcard Tunnel/Traefik 已可到达，无需新 DNS/隧道/凭证。
+- 旧浏览器若把上线前根路径的 301 缓存为跳主站，可打开 `https://dots.vincejiang.com/refresh`：此专用入口发送 `Clear-Site-Data: "cache"` 与 no-store，再 302 到已确认可访问的 `/index.html`。只请求清当前 HTTPS origin 的缓存，不清 Cookie/DOM storage；不支持该头的浏览器仍可使用 `/index.html` 或带版本参数的入口。不得用全站 Cookie 清理或改无关 Cloudflare 规则解决。
 - 角色：钴蓝云朵、黑色画师帽、大竖胶囊眼与白色高光，云内少量笔触和星点；首页以多条新闻正文摘要和歌单侧栏为主，无大 Hero；不依赖远程头像或过期签名 URL。Dots 不注入本站 analytics beacon。
 - 内容真源 `dots/content/index.json`，`dots.content/1`，香港日期。每日 HN 十篇、每周歌单、归档搜索。正文以纯文本段落渲染；公开字段白名单由 `tools/dots-validate.mjs` 校验。内容只能包含审校后的公开材料。
 - 发布时间由调用方现有任务管理：每日香港 10:00、周日香港 19:00 左右。本仓库没有新增内容调度，也不能自行读取 ChatGPT 聊天。
