@@ -19,6 +19,17 @@ export function renderDocuments(docs) {
    catch(e){errors.push('math: '+e.message);return '';}
   };
  }
+ // A narrow Markdown directive produces native, nested disclosures without raw HTML.
+ md.block.ruler.before('fence','study_hint',(state,start,end,silent)=>{
+  const line=state.src.slice(state.bMarks[start]+state.tShift[start],state.eMarks[start]);
+  const open=line.match(/^:::hint (.+)$/), close=line===':::endhint';
+  if(!open&&!close)return false;
+  if(silent)return true;
+  const t=state.push(open?'study_hint_open':'study_hint_close','details',open?1:-1);
+  t.content=open?open[1]:'';t.map=[start,start+1];state.line=start+1;return true;
+ },{alt:['paragraph']});
+ md.renderer.rules.study_hint_open=(tokens,i)=>`<details class="study-hint"><summary>${esc(tokens[i].content)}</summary>\n`;
+ md.renderer.rules.study_hint_close=()=>'</details>\n';
  // Only empty anchor elements are admitted; all other raw HTML stays escaped.
  md.inline.ruler.before('text','study_anchor',(state,silent)=>{
   const m=state.src.slice(state.pos).match(/^<a\s+(?:id|name)=["']([^"'<>]+)["']\s*><\/a>/i);
@@ -32,6 +43,12 @@ export function renderDocuments(docs) {
  // Parse all documents before resolving links, so forward references are checked.
  for(const d of docs){
   d.tokens=md.parse(d.text,{});d.ids=new Set();d.headings=[];
+  let hintDepth=0;
+  for(const token of d.tokens){
+   if(token.type==='study_hint_open')hintDepth++;
+   if(token.type==='study_hint_close'&&--hintDepth<0)errors.push(`${d.key}: unmatched hint closing directive`);
+  }
+  if(hintDepth>0)errors.push(`${d.key}: unclosed hint directive`);
   for(let i=0;i<d.tokens.length;i++){
    const t=d.tokens[i];
    for(const c of t.children||[])if(c.type==='study_anchor'){

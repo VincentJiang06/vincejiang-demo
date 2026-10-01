@@ -31,10 +31,10 @@ export function buildStudy(out,{check=false}={}){
   const contents=groups.map(g=>`<section class="note-group"><h2>${g.k}<small>${g.ds.length}</small></h2><ul class="note-list">${g.ds.map(d=>`<li>${link(d)}</li>`).join('')}</ul></section>`).join('');
   write(`${c}/index.html`,shell(`${c} ${names[c]}`,`<main id="main" class="landing"><p class="eyebrow">${c} / ${ds.length} 份笔记</p><h1>${names[c]}</h1><label class="search">筛选笔记<input type="search" placeholder="输入讲次或主题…" aria-label="筛选课程笔记"></label><p id="filter-status" role="status"></p>${contents}</main>`,c));
   for(let i=0;i<ds.length;i++){
-   const d=ds[i];
-   const nav=`<details class="course-nav"><summary>课程目录 · ${c}</summary><nav aria-label="课程目录">${groups.map(g=>`<h2>${g.k}</h2><ul>${g.ds.map(x=>`<li><a ${x===d?'aria-current="page" ':''}href="${esc(url(x.key))}">${esc(path.basename(x.key,'.md'))}</a></li>`).join('')}</ul>`).join('')}</nav></details>`;
+   const d=ds[i], hintMode=d.key.includes("分级提示");
+   const nav=hintMode?`<p class="hint-boundary">提示模式 · 逐级展开<br><a href="${BASE}${c}/">返回课程目录（离开提示模式）</a></p>`:`<details class="course-nav"><summary>课程目录 · ${c}</summary><nav aria-label="课程目录">${groups.map(g=>`<h2>${g.k}</h2><ul>${g.ds.map(x=>`<li><a ${x===d?'aria-current="page" ':''}href="${esc(url(x.key))}">${esc(path.basename(x.key,'.md'))}</a></li>`).join('')}</ul>`).join('')}</nav></details>`;
    const toc=`<details class="toc"><summary>本文目录</summary><nav aria-label="本文目录"><ol>${d.headings.filter(h=>h.level>1&&h.level<=3).map(h=>`<li class="level-${h.level}"><a href="#${esc(encodeURIComponent(h.id))}">${esc(h.title)}</a></li>`).join('')}</ol></nav></details>`;
-   write(d.key.replace(/\.md$/,'.html'),shell(title(d),`<div class="reading-layout"><aside>${nav}</aside><main id="main"><p class="eyebrow">${c} / ${kind(d)}</p><article>${d.html}</article><nav class="adjacent" aria-label="相邻笔记">${i?`<div><small>上一篇</small>${link(ds[i-1])}</div>`:'<div></div>'}${i<ds.length-1?`<div><small>下一篇</small>${link(ds[i+1])}</div>`:''}</nav></main><aside>${toc}</aside></div>`,c,true));
+   write(d.key.replace(/\.md$/,'.html'),shell(title(d),`<div class="reading-layout"><aside>${nav}</aside><main id="main"><p class="eyebrow">${c} / ${kind(d)}</p><article>${d.html}</article>${hintMode?'':`<nav class="adjacent" aria-label="相邻笔记">${i?`<div><small>上一篇</small>${link(ds[i-1])}</div>`:'<div></div>'}${i<ds.length-1?`<div><small>下一篇</small>${link(ds[i+1])}</div>`:''}</nav>`}</main><aside>${toc}</aside></div>`,c,true));
   }
  }
  mkdirSync(path.join(out,'study'),{recursive:true});writeFileSync(path.join(out,'study/index.html'),shell('课程笔记',`<main id="main" class="landing"><h1>课程笔记</h1><a href="${BASE}">2026T1 · 四门课程</a></main>`));

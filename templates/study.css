@@ -118,3 +118,9 @@ a{color:inherit}
 /* Long inline equations scroll within the text column on narrow screens. */
 article .katex{display:inline-block;max-width:100%;overflow-x:auto;overflow-y:hidden;vertical-align:middle;padding:3px 0}
 article .katex-display>.katex{display:block;max-width:none;overflow:visible;vertical-align:baseline;padding:0}
+
+.study-hint{margin:1rem 0;padding:.15rem 1rem;border:1px solid var(--line,#dce2e8);border-radius:8px;background:#f8fafc}
+.study-hint>summary{padding:.8rem 0;cursor:pointer;font-weight:600;color:#214d6c}
+.study-hint>summary:focus-visible{outline:2px solid #286daa;outline-offset:3px}
+.study-hint .study-hint{background:#fff;margin:.8rem 0;padding:0 .75rem}
+@media(max-width:760px){.study-hint{padding:0 .65rem}.study-hint .study-hint{padding:0 .5rem}}

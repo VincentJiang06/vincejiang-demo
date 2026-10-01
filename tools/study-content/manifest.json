@@ -398,8 +398,14 @@
   {
     "key": "CSCI3150/阅读导航.md",
     "sourceSha256": "eff3c5cbed9b5f43133cfd2f2a6b7163e1383b291b5e37cf08302163fb350f77",
-    "publishedSha256": "d8cd1622dfb684133664f494c3122418b6252a9c3bbbf6ed148dc24d12d47e73",
+    "publishedSha256": "b42071a037d6444eee83e1b22ab86dd4f6ac3a66a6e1ad1882b7d27f5cf5c4b5",
     "projection": true
+  },
+  {
+    "key": "CSCI3150/HW01-Shell分级提示-2026T1.md",
+    "sourceSha256": "f864fcf5ee10b4a8f1432db99a4bfd604d134a249b056664ebb6265b92b8bcf9",
+    "publishedSha256": "f864fcf5ee10b4a8f1432db99a4bfd604d134a249b056664ebb6265b92b8bcf9",
+    "projection": false
   },
   {
     "key": "CSCI3150/HW01-Shell进程与管道-2026T1.md",
@@ -1094,7 +1100,7 @@
   {
     "key": "CSCI3230/阅读导航.md",
     "sourceSha256": "0f52186a2b8372ff901d7b2bd5d579f0915e3eee9391bd6ff389a1948bff5ddb",
-    "publishedSha256": "f18c3d609966e36312c8c32dd9a7333e6bab4e38ba8c4de337c8661307ccc68f",
+    "publishedSha256": "e20e77d818668c97fa0d3e3420c5ba6a4b7d89b272c2d7e5465fcba9a198bfe5",
     "projection": true
   },
   {
@@ -1113,6 +1119,12 @@
     "key": "CSCI3230/ESTRTopics-阅读与项目选题.md",
     "sourceSha256": "6ab77d6acc772d712762ac951c568a3456f3184fdf07475265f52626b3eaa7c1",
     "publishedSha256": "6ab77d6acc772d712762ac951c568a3456f3184fdf07475265f52626b3eaa7c1",
+    "projection": false
+  },
+  {
+    "key": "CSCI3230/HW01-2026T1-分级提示.md",
+    "sourceSha256": "fd9d63db04eac255f2d9b6b923b31ddc317a71c4e804f5644037ccac502d8a91",
+    "publishedSha256": "fd9d63db04eac255f2d9b6b923b31ddc317a71c4e804f5644037ccac502d8a91",
     "projection": false
   },
   {

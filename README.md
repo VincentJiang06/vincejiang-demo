@@ -21,3 +21,5 @@
 ## Study 课程笔记
 
 [`/study/2026T1/`](https://vincejiang.com/study/2026T1/) 按 CSCI3130、CSCI3150、CSCI3160、CSCI3230 收录课程伴读、作业题解与实验解析。Markdown 在构建时转成 HTML，公式使用本地 KaTeX，原始课件不发布。同步命令、范围和验证见 [SPEC §15](SPEC.md#15-study-课程笔记)。
+
+CSCI3230 与 CSCI3150 的 HW01 另有分级提示版：按小问或实现单元逐层展开，完整解析需要单独确认。

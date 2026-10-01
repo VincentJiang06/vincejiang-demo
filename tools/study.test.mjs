@@ -45,5 +45,25 @@ test('generated study pages version their UI assets so updated styles reach retu
   const html=readFileSync(join(out,'study/2026T1/index.html'),'utf8');
   assert.match(html,/study\.css\?v=[a-f0-9]{12}/);
   assert.match(html,/study\.js\?v=[a-f0-9]{12}/);
+  for(const key of ['CSCI3230/HW01-2026T1-分级提示','CSCI3150/HW01-Shell分级提示-2026T1']){
+   const hint=readFileSync(join(out,'study/2026T1',key+'.html'),'utf8');
+   const outside=hint.replace(/<article>[\s\S]*?<\/article>/,'');
+   assert.doesNotMatch(outside,/相邻笔记|HW01[^"<>]*解析|HW01-Shell进程与管道/);
+   assert.match(outside,/返回课程目录（离开提示模式）/);
+   assert.doesNotMatch(hint,/<details class="study-hint" open/);
+  }
  } finally {rmSync(out,{recursive:true,force:true});}
+});
+
+test('hint disclosures are nested, closed by default, and preserve math and checked links', () => {
+ const text='# 提示版\n\n## Q1a\n\n:::hint 提示 1 · 切入点\n\n先想概念。\n\n:::hint 提示 2 · 关键关系\n\n$x^2$\n\n:::hint 提示 3 · 自检\n\n[回题目](#q1a)\n\n:::endhint\n:::endhint\n:::endhint\n\n:::hint 查看完整解析前确认\n\n[确认查看](答案.md)\n\n:::endhint';
+ const html=renderDocuments([{key:'CSCI3230/hint.md',text},{key:'CSCI3230/答案.md',text:'# 完整解法'}])[0].html;
+ assert.equal((html.match(/<details class="study-hint">/g)||[]).length,4);
+ assert.doesNotMatch(html,/<details[^>]*\sopen(?:[\s=>])/);
+ assert.match(html,/<summary>提示 1 · 切入点<\/summary>[\s\S]*<details class="study-hint">[\s\S]*<summary>提示 2/);
+ assert.match(html,/<\/details>\s*<\/details>\s*<\/details>/);
+ assert.match(html,/class="katex"/); assert.match(html,/href="#q1a"/);
+ assert.match(html,/<summary>查看完整解析前确认<\/summary>[\s\S]*href="[^\"]*答案.html"/);
+ assert.throws(()=>renderDocuments([{key:'CSCI3230/a.md',text:':::hint 未结束\n\n正文'}]),/unclosed hint/);
+ assert.throws(()=>renderDocuments([{key:'CSCI3230/a.md',text:':::endhint'}]),/unmatched hint/);
 });
