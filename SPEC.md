@@ -298,3 +298,5 @@ curl -s localhost:8080/health          # → ok
 - 唱片架使用 CSS 透视、封套侧边、唱片和层板阴影；原生 details/summary 支持触屏与键盘。减少动态效果设置关闭倾斜和动画。必要阅读局限留在期次正文/说明，重复功能介绍移到关于页。
 - `dots/feedback.css` 为独立 SVG 反馈组件，`feedback-state.mjs` 管理乐观更新、同条目 pending、失败回滚、排除写入前已开始的旧读取；后台回执才提示保存完成。公开 API 契约不变。请求超时提示未确认，后续读服务器状态收敛。
 - `node --test tools/dots-client.test.mjs` 测状态行为与封面边界，CI 与 SQLite 行为测试一起执行；nginx 明确为两个 `.mjs` 模块发送 JavaScript MIME。
+
+- 构建在新拷贝的 Dots 产物中为 JS/CSS/SVG 及两个模块 import 加同一 SHA256 内容版本参数；资源内容变化即换 URL，不依赖访问者清理旧版缓存。源码不写死版本。HTML 和资源继续发送 no-cache 以复核；新页面引用版本 URL，避开此前已永久缓存的无版本资产。
