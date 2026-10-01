@@ -149,13 +149,14 @@ class Handler(BaseHTTPRequestHandler):
         try:
             with connect() as db:
                 db.execute('BEGIN IMMEDIATE')
-                db.execute('INSERT OR IGNORE INTO votes (item, visitor, updated) VALUES (?, ?, ?)', (item, visitor, now))
+                if value:
+                    db.execute('INSERT OR IGNORE INTO votes (item, visitor, updated) VALUES (?, ?, ?)', (item, visitor, now))
                 if reaction == 'heart':
-                    db.execute('UPDATE votes SET heart=?, updated=? WHERE item=? AND visitor=?', (int(value), now, item, visitor))
+                    db.execute('UPDATE votes SET heart=?, updated=? WHERE item=? AND visitor=? AND heart<>?', (int(value), now, item, visitor, int(value)))
                 elif value:
-                    db.execute('UPDATE votes SET opinion=?, updated=? WHERE item=? AND visitor=?', (reaction, now, item, visitor))
+                    db.execute('UPDATE votes SET opinion=?, updated=? WHERE item=? AND visitor=? AND opinion IS NOT ?', (reaction, now, item, visitor, reaction))
                 else:
-                    db.execute('UPDATE votes SET opinion=CASE WHEN opinion=? THEN NULL ELSE opinion END, updated=? WHERE item=? AND visitor=?', (reaction, now, item, visitor))
+                    db.execute('UPDATE votes SET opinion=NULL, updated=? WHERE item=? AND visitor=? AND opinion=?', (now, item, visitor, reaction))
             # 事务提交完成后才确认成功；撤回保留零值行的更新时间便于汇总读取。
             return self.send(200, summary(visitor)['items'][item], None if previous else visitor)
         except sqlite3.Error:

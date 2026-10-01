@@ -4,6 +4,7 @@ import json
 import tempfile
 import threading
 import unittest
+from unittest.mock import patch
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -70,6 +71,17 @@ class FeedbackTest(unittest.TestCase):
         self.request(self.vote('down', False), cookie)
         data = self.request(self.vote('heart', False), cookie)[1]
         self.assertEqual(data['counts'], {'up': 0, 'down': 0, 'heart': 0})
+
+    def test_duplicate_does_not_change_aggregate_timestamp(self):
+        with patch.object(f.time, 'time', return_value=1000):
+            _, original, headers = self.request(self.vote())
+        cookie = headers['Set-Cookie'].split(';')[0]
+        with patch.object(f.time, 'time', return_value=2000):
+            _, repeated, _ = self.request(self.vote(), cookie)
+        self.assertEqual(repeated['updated'], original['updated'])
+        with patch.object(f.time, 'time', return_value=3000):
+            _, revoked, _ = self.request(self.vote('up', False), cookie)
+        self.assertEqual(revoked['updated'], 3000)
 
     def test_summary_does_not_publish_visitor_or_mine(self):
         _, _, headers = self.request(self.vote())
