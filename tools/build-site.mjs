@@ -626,7 +626,7 @@ function renderBackgroundTest() {
 // 从根上杜绝「新增页面忘了进 sitemap」。带 noindex 的页面(测试页)自动跳过。
 function scanIndexablePages(dir = OUT, base = '') {
   const out = [];
-  const SITEMAP_SKIP = new Set(['reactor-study']);   // 已迁子域:文件要留(nginx root 指它),但不进主站索引
+  const SITEMAP_SKIP = new Set(['reactor-study', 'dots']);   // 已迁子域:文件要留(nginx root 指它),但不进主站索引
   for (const e of readdirSync(dir, { withFileTypes: true })) {
     if (e.name.startsWith('.')) continue;
     if (base === '' && SITEMAP_SKIP.has(e.name)) continue;
@@ -743,6 +743,8 @@ function contentDirs() {
     .map(e => ({ name: e.name, dir: e.isDirectory() }));
 }
 function injectBeacon(dir) {
+  // Dots 仅使用反馈所需匿名 Cookie，不注入全站访问埋点。
+  if (dir === join(OUT, 'dots')) return;
   if (!existsSync(join(OUT, 'assets', 'beacon.js'))) return;
   for (const e of readdirSync(dir, { withFileTypes: true })) {
     const p = join(dir, e.name);

@@ -272,3 +272,20 @@ python3 -m http.server -d ../site 8000 # 访问 http://localhost:8000
 docker build -t svc-vincejiang . && docker run --rm -p 8080:80 svc-vincejiang
 curl -s localhost:8080/health          # → ok
 ```
+
+## 14. Dots — Mandy 的云朵书桌（2026-10-01）
+
+- 独立公开子域 `https://dots.vincejiang.com`；静态源 `dots/` 随当前网站镜像发布，nginx 专用 server root。已有 wildcard Tunnel/Traefik 已可到达，无需新 DNS/隧道/凭证。
+- 角色：钴蓝云朵、黑色画师帽；不依赖远程头像或过期签名 URL。Dots 不注入本站 analytics beacon。
+- 内容真源 `dots/content/index.json`，`dots.content/1`，香港日期。每日 HN 十篇、每周歌单、归档搜索。正文以纯文本段落渲染；公开字段白名单由 `tools/dots-validate.mjs` 校验。内容只能包含审校后的公开材料。
+- 发布时间由调用方现有任务管理：每日香港 10:00、周日香港 19:00 左右。本仓库没有新增内容调度，也不能自行读取 ChatGPT 聊天。
+- `node tools/dots-publish.mjs /path/to/edition.json` 导入已审校单期；修订保留期次和条目 ID。`node tools/dots-validate.mjs` 校验；仅提交 `dots/content/index.json`，推 `main` 即运行现有 CI。
+- 反馈服务 `tools/dots-service/` 构建同一 GHCR package 的 `feedback-<sha>` 镜像。`platform` 新增 `svc-dots-feedback` 和 `dots-feedback` 持久卷；仅 `Host(dots.vincejiang.com) && PathPrefix(/api/)`，优先级 1100，无宿主机公开端口。不改 status/cus 等服务。
+- CI 先通过原有 `deploy-pinned.sh` 发布静态站，再用 `./deploy-pinned.sh svc-dots-feedback feedback-<sha> dots.vincejiang.com` 发布反馈服务，服务各自可回滚。静态服务成功而反馈失败时 CI 失败，页面可读但需修复/回滚反馈服务后再验收。
+- `POST /api/feedback` 只收 `{id,reaction:up|down|heart,value:boolean}`，同源 Origin 检查、有限 ID 白名单、1KiB 上限、短时 IP 限流（仅进程内哈希）与 Traefik 限流。SQLite 事务提交之后才确认成功；同匿名浏览器同条目 up/down 互斥、heart 独立。Cookie 仅用于去重，不能声称识别真实身份或完全防刷。
+- `GET /api/feedback` 返回当前匿名浏览器选择和公共计数；`GET /api/feedback/summary` 仅返回匿名公共汇总，`dots.feedback/1`；均 no-store。前端约每 30 秒刷新公共计数，自己写入成功即时更新。
+- Mac 执行 `python3 tools/dots-sync-feedback.py`：读取公开汇总，用 Mac 已有 gh 身份将白名单投影提交至同仓库 **dots-feedback 分支 / feedback/latest.json**。不向服务器复制私钥或 token。分支不匹配部署 workflow 的 main 触发条件。无变化不提交，普通 fast-forward push 防覆盖；竞态失败重跑即可。
+- 快照 `dots.feedback.snapshot/1`：`window=lifetime-current-state`，是可撤回的累计当前状态，**不可把多份快照相加**；稳定 item_id 关联内容，version=内容 SHA256，exportedAt 表示抓取时刻，lastChangedAtUnix 表示条目最近变更。仅公开 up/down/heart 汇总，不公开 IP、Cookie 或原始逐访客记录；样例票不导出。
+- 双向任务顺序：先 `dots-sync-feedback.py` → 读取远端 `dots-feedback:feedback/latest.json` → 生成新一期 → 人工/任务审校公开边界 → publish + validate + commit + push main → 等该 SHA 的 CI 成功。不存在任意网页点击唤醒助手的接口；反馈在下一期读取时影响选题，不等于实时通知，更不是用户本人的偏好。
+- 单次读 GitHub：`gh api repos/VincentJiang06/vincejiang-demo/contents/feedback/latest.json?ref=dots-feedback --jq .content` 后 base64 解码（返回的是公开数据，不是凭证）。同步脚本只在调用时运行；未新建 cron/第三套定时任务。
+- SQLite 数据持久卷不能删除。人工备份应使用 SQLite backup API 生成一致快照，而不是只复制 WAL 模式主文件。后台备份策略接入另行确认；当前容器重建可保留反馈，不能宣称已具备异地灾备。

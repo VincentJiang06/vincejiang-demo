@@ -1,0 +1,25 @@
+  # Dots 的匿名反馈：复用现有仓库/GHCR/runner；仅 dots 主机的 /api/，无公网端口。
+  svc-dots-feedback:
+    image: ghcr.io/vincentjiang06/vincejiang-demo:${DOTS_FEEDBACK_TAG:-feedback-latest}
+    restart: always
+    mem_limit: 128m
+    pids_limit: 64
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    networks: [web]
+    volumes:
+      - dots-feedback:/data
+    tmpfs:
+      - /tmp:size=8m,mode=1777
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.dots-feedback.rule=Host(`dots.vincejiang.com`) && PathPrefix(`/api/`)
+      - traefik.http.routers.dots-feedback.priority=1100
+      - traefik.http.routers.dots-feedback.entrypoints=web
+      - traefik.http.routers.dots-feedback.middlewares=dots-feedback-limit
+      - traefik.http.services.dots-feedback.loadbalancer.server.port=8080
+      - traefik.http.middlewares.dots-feedback-limit.ratelimit.average=5
+      - traefik.http.middlewares.dots-feedback-limit.ratelimit.burst=20
+      - traefik.http.middlewares.dots-feedback-limit.ratelimit.period=1s
+      - traefik.http.middlewares.dots-feedback-limit.ratelimit.sourcecriterion.requestheadername=Cf-Connecting-Ip

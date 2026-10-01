@@ -4,3 +4,7 @@ node_modules/
 /site/
 posts-manifest.json
 assets/shots/
+
+# Python feedback test artifacts
+__pycache__/
+*.pyc

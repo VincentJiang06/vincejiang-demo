@@ -34,6 +34,11 @@ jobs:
         run: cd tools && node build-site.mjs --check
       - name: 行为与 Glyph 契约测试(硬 gate)
         run: cd tools && npm test
+      - name: Dots content and persistent feedback checks
+        run: |
+          node tools/dots-validate.mjs
+          node --check dots/app.js
+          python3 -m unittest discover -s tools/dots-service -p 'test_*.py' -v
       - name: HTML 粗校验(warn-only,不阻塞)
         run: |
           cd tools && node build-site.mjs --out /tmp/site
@@ -70,6 +75,18 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
+      - name: Build & push Dots feedback image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: tools/dots-service/Dockerfile
+          push: true
+          tags: |
+            ${{ env.IMAGE }}:feedback-latest
+            ${{ env.IMAGE }}:feedback-${{ github.sha }}
+          cache-from: type=gha,scope=dots-feedback
+          cache-to: type=gha,mode=max,scope=dots-feedback
+
   # ── ② 服务器侧 pin sha 部署 + 健康门 + 失败回滚(self-hosted runner)──
   deploy:
     needs: image
@@ -83,3 +100,5 @@ jobs:
         run: |
           cd /home/vince/platform
           ./deploy-pinned.sh svc-vincejiang ${{ github.sha }}
+          ./deploy-pinned.sh svc-dots-feedback feedback-${{ github.sha }} dots.vincejiang.com
+          curl --fail --silent --show-error --retry 5 --retry-delay 2 -H 'Host: dots.vincejiang.com' -H 'X-Forwarded-Proto: https' http://127.0.0.1:8080/api/health

@@ -1,0 +1,563 @@
+{
+  "schema": "dots.content/1",
+  "timezone": "Asia/Hong_Kong",
+  "editions": [
+    {
+      "id": "hn-2026-10-01",
+      "kind": "hn",
+      "date": "2026-10-01",
+      "title": "十篇精读：数字背后，先看证据",
+      "intro": "本期三条结论：性能宣传要检查比较基线与配置；Agent 工具的价值取决于编排、状态与权限边界；突破需要区分厂商声明、独立复现与实际可用性。",
+      "note": "阅读说明：完整阅读文章、发布正文或 README，并选读 HN 的实质讨论；未运行项目或独立复现，未逐条看完大型帖的全部评论。本期不含播客。",
+      "items": [
+        {
+          "id": "hn-2026-10-01-pi-mcp",
+          "title": "Pi 为什么接纳 MCP",
+          "category": "原文 2026-09-29",
+          "body": [
+            {
+              "heading": "核心与证据",
+              "text": "工具发现、延迟加载、结构化返回和 Codemode，使调用能在 JavaScript 沙箱里组合。文章示例用四个 worker 分析 167 个 Linear issue，会话保留结果，后续无需重新获取全部材料。"
+            },
+            {
+              "heading": "争议与边界",
+              "text": "讨论者指出 CLI 同样能组合，复杂度放入核心可能背离极简。隔离凭证有价值，但 MCP 自身不保证安全。"
+            }
+          ],
+          "takeaway": "值得学的是程序先处理大量结果，再让模型推理。原文没有受控测量，不可断言 MCP 更省 token。",
+          "sources": [
+            {
+              "label": "原文 / 项目",
+              "url": "https://earendil.com/posts/you-said-no-mcp/"
+            },
+            {
+              "label": "HN 讨论",
+              "url": "https://news.ycombinator.com/item?id=49906637"
+            }
+          ]
+        },
+        {
+          "id": "hn-2026-10-01-jev",
+          "title": "Jev：无需逐任务微调的通用分类器",
+          "category": "原文 2026-09-29",
+          "body": [
+            {
+              "heading": "核心与证据",
+              "text": "Raschka 测试 25,000 条 IMDb 数据，报告准确率 96.47%、成本 $0.6492、耗时 22 分 24 秒。无需逐任务微调，是这类通用分类器的价值。"
+            },
+            {
+              "heading": "争议与边界",
+              "text": "不知道 IMDb 是否进入训练数据。Jev 架构和 RLCD 未完整公开，文中用另一种 RLCR 方法解释可能思路，并不是已确认的实现。准确率也不代表概率校准。"
+            }
+          ],
+          "takeaway": "先在未公开数据上测分类、校准与拒答门槛，再决定是否用于廉价模型路由。",
+          "sources": [
+            {
+              "label": "原文 / 项目",
+              "url": "https://magazine.sebastianraschka.com/p/classifier-history-and-jev"
+            },
+            {
+              "label": "HN 讨论",
+              "url": "https://news.ycombinator.com/item?id=49891203"
+            }
+          ]
+        },
+        {
+          "id": "hn-2026-10-01-pssa",
+          "title": "PSSA：一个非 Transformer 原型",
+          "category": "2026-09-30 出现在 HN；仓库无单一发布日期",
+          "body": [
+            {
+              "heading": "核心与证据",
+              "text": "状态空间递归加 512 槽记忆库、top-4 检索和快权重合并。作者在约 150 万参数、1,270 万 token 的小实验中报告：留出集困惑度为 54.4，对照为 83.8；同 CPU 生成 200 token 耗时 226ms，对照为 2735ms。"
+            },
+            {
+              "heading": "争议与边界",
+              "text": "架构与实现同时改变，弱基线可能放大收益。缺少记忆库消融与跨语料保持测试；README 新旧描述也存在未同步。"
+            }
+          ],
+          "takeaway": "这是待复现的原型，不能宣布它取代 Transformer，或已经解决持续学习。",
+          "sources": [
+            {
+              "label": "原文 / 项目",
+              "url": "https://github.com/Sparticle62ops/pssa"
+            },
+            {
+              "label": "HN 讨论",
+              "url": "https://news.ycombinator.com/item?id=49903993"
+            }
+          ]
+        },
+        {
+          "id": "hn-2026-10-01-family-technology",
+          "title": "家族上一次被技术取代的时候",
+          "category": "原文 2026-09-30",
+          "body": [
+            {
+              "heading": "核心与证据",
+              "text": "作者的高祖父从给马钉蹄、修马车转为汽车机械师：工具变了，帮助人出行的目的延续。作者用它讨论 AI 下开发者的身份，也承认不知道没能转型者的遭遇。"
+            },
+            {
+              "heading": "争议与边界",
+              "text": "技术扩散速度、地域保护与竞争范围都不同，单个家族的经历无法预测整体就业。"
+            }
+          ],
+          "takeaway": "适合用来辨认可迁移的能力，不能证明所有人都能适应，也不能抵消转型代价。",
+          "sources": [
+            {
+              "label": "原文 / 项目",
+              "url": "https://manuel.darcemont.fr/posts/the-last-time-my-family-was-replaced-by-technology/"
+            },
+            {
+              "label": "HN 讨论",
+              "url": "https://news.ycombinator.com/item?id=49908394"
+            }
+          ]
+        },
+        {
+          "id": "hn-2026-10-01-japan-phd",
+          "title": "在 Google 工作，同时在日本读 ML 博士",
+          "category": "2026-09-30 出现在 HN；正文无可确认发布日期",
+          "body": [
+            {
+              "heading": "核心与证据",
+              "text": "作者综合研究方向、导师、产业联系和毕业后的居住地选择项目。入学前已有 Google 经验、储蓄与研究基础；转到东京后每周工作两天，奖学金结束后又自费半年。"
+            },
+            {
+              "heading": "争议与边界",
+              "text": "个人安排难以直接复制。评论中有资深教师提醒，三年毕业不是普遍保证。奖学金政策变化需要另查官方，不能把评论当定论。"
+            }
+          ],
+          "takeaway": "先确定毕业去向，再反推导师网络与资金安排。",
+          "sources": [
+            {
+              "label": "原文 / 项目",
+              "url": "https://www.tokyodev.com/articles/doing-a-machine-learning-phd-while-working-in-japan"
+            },
+            {
+              "label": "HN 讨论",
+              "url": "https://news.ycombinator.com/item?id=49905644"
+            }
+          ]
+        },
+        {
+          "id": "hn-2026-10-01-gemini-argon",
+          "title": "Gemini 4 Argon：性能数字需要完整的比较对象",
+          "category": "原文 2026-09-30",
+          "body": [
+            {
+              "heading": "核心与证据",
+              "text": "Google 称 Agent 通过反复 profiling、观察编译器，改写 libgav1 Rust 移植版的 SIMD 代码以促成自动向量化。2.7 倍比较对象是此前的 Rust 版本，并没有超过优化后的 C++。1M 是单次输出上限，不是输入窗口；大型迁移仍有人工作业审查和模拟测试。"
+            },
+            {
+              "heading": "争议与边界",
+              "text": "完整评测矩阵、模型版本与推理预算才利于比较，不能因为选择性展示就断言作弊。目前先对可信网络防御者分阶段开放；图表与外链技术附录未在本期完整审计。"
+            }
+          ],
+          "takeaway": "追踪长任务完成率、耗时与总成本。官方案例不是部署验证。",
+          "sources": [
+            {
+              "label": "原文 / 项目",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+            },
+            {
+              "label": "HN 讨论",
+              "url": "https://news.ycombinator.com/item?id=49913571"
+            }
+          ]
+        },
+        {
+          "id": "hn-2026-10-01-magnitude",
+          "title": "Magnitude 本地推理：近两倍背后的 KV 配置",
+          "category": "2026-09-30 出现在 HN",
+          "body": [
+            {
+              "heading": "核心与证据",
+              "text": "项目采用设备端 kernel 调参、动态会话内存和共享前缀缓存。近两倍提升来自 M4 Pro、Qwen3.6 35B A3B 4bit、64K《白鲸》复述的配置，关闭了推测解码，并不是多轮 Agent 跑分。"
+            },
+            {
+              "heading": "争议与边界",
+              "text": "最关键的作者说明是：Magnitude 使用 8bit K / 4bit V，llama.cpp 对照使用 FP16 KV，因为其同量化路径较慢。因此不能把全部收益归给自动调优。M5 用户在部分配置下更慢，作者承认 Metal 4 利用不足，多 GPU 仍在 roadmap。"
+            }
+          ],
+          "takeaway": "用真实工具轨迹测逐轮延迟、缓存与峰值内存，再决定是否替换。",
+          "sources": [
+            {
+              "label": "原文 / 项目",
+              "url": "https://github.com/magnitudedev/magnitude"
+            },
+            {
+              "label": "HN 讨论",
+              "url": "https://news.ycombinator.com/item?id=49911995"
+            },
+            {
+              "label": "作者的 KV 配置说明",
+              "url": "https://news.ycombinator.com/item?id=49912452"
+            }
+          ]
+        },
+        {
+          "id": "hn-2026-10-01-gpt-synopsys",
+          "title": "GPT-Synopsys：合作计划，还不是工程实绩",
+          "category": "原文 2026-09-30",
+          "body": [
+            {
+              "heading": "核心与证据",
+              "text": "合作计划用专门模型操作 EDA、读取时序等反馈、修改并再次验证，服务打包模型、算力与许可证。"
+            },
+            {
+              "heading": "争议与边界",
+              "text": "没有公开的 PPA 改善、流片案例、错误率或上线日期。评论中有使用过工具者指出，难点是判断时序问题，不只是写脚本；这仍属于个人经验。官方数据保护承诺也不代表客户已经接受云端 IP 边界。"
+            }
+          ],
+          "takeaway": "目前是合作计划，后续看工程实绩。",
+          "sources": [
+            {
+              "label": "原文 / 项目",
+              "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design"
+            },
+            {
+              "label": "HN 讨论",
+              "url": "https://news.ycombinator.com/item?id=49919910"
+            }
+          ]
+        },
+        {
+          "id": "hn-2026-10-01-opendlss",
+          "title": "OpenDLSS-NR：可检查的神经重渲染",
+          "category": "HN 绝对日期 2026-09-30，并非 10 月 1 日首发",
+          "body": [
+            {
+              "heading": "核心与证据",
+              "text": "这是同分辨率的生成式神经重渲染，不是超分辨率：从当前图像、历史帧等生成残差和混合权重。作者称 75 个中间边界逐字节一致，但权重和原始 captures 未附带，独立复核仍需材料。"
+            },
+            {
+              "heading": "争议与边界",
+              "text": "4070 SUPER、1080p 下网络耗时 7.8ms，取的是 40 帧最小值，且未包含游戏渲染预算。快路径仍需要 NVIDIA Ada 或更新硬件。"
+            }
+          ],
+          "takeaway": "价值在于可检查结构与数值过程，不能理解成全显卡即插即用的 DLSS。",
+          "sources": [
+            {
+              "label": "原文 / 项目",
+              "url": "https://github.com/maanHimself/OpenDLSS-NR"
+            },
+            {
+              "label": "HN 讨论",
+              "url": "https://news.ycombinator.com/item?id=49906100"
+            }
+          ]
+        },
+        {
+          "id": "hn-2026-10-01-ai-math",
+          "title": "AI 数学成果，怎样负责任地发布？",
+          "category": "原文 2026-09-29",
+          "body": [
+            {
+              "heading": "核心与证据",
+              "text": "倡议由 600 多份反馈形成，并不是全体数学家的共识。对于尚无人理解的 AI 结果，它建议披露引用、版本、模型、成本与同批失败尝试，鼓励形式化验证，并资助解释工作。"
+            },
+            {
+              "heading": "争议与边界",
+              "text": "争议包括：有效证明是否已经足够，实验室是否还负有教学义务？支持方担心，海量难读成果会把整理成本转嫁给社区。"
+            }
+          ],
+          "takeaway": "可核验、可理解、可复用是三个标准，应分别评估。把证据规范与治理主张分开，不把“证明文本看似完整”当成已经验证的突破。",
+          "sources": [
+            {
+              "label": "原文 / 项目",
+              "url": "https://agmai.org/general-sep29/"
+            },
+            {
+              "label": "HN 讨论",
+              "url": "https://news.ycombinator.com/item?id=49903713"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "music-2026-10-01",
+      "kind": "music",
+      "date": "2026-10-01",
+      "title": "Mandy 本周发现 · 01",
+      "intro": "从中文说唱与电子灵魂乐出发，穿过台语乐队，最后留一首电子探索。首期重点先听陈娴静、Fishdoll、DSPS。",
+      "note": "编辑日期 2026-10-01。曲名、艺人、版本与发行日期已核对 Apple Music 目录。这不是全部新发行，也没有实际逐首试听；以下是基于目录与发行资料的探索推荐。",
+      "items": [
+        {
+          "id": "music-2026-10-01-apple-1799904365",
+          "catalogId": "1799904365",
+          "title": "吸尘器 维他命 (Beat by Flowstrong)",
+          "artist": "陈娴静",
+          "album": "如果每天都可以 happy happy 谁想要sad: * - 合作的秘密",
+          "releaseDate": "2025-03-07",
+          "durationMs": 152751,
+          "category": "本期重点",
+          "body": [
+            {
+              "heading": "为什么选它",
+              "text": "用陈娴静与 Flowstrong 的合作开启这一期，听中文饶舌与 beatmaker 编排的结合。这里选的是 Beat by Flowstrong 版本。"
+            }
+          ],
+          "sources": [
+            {
+              "label": "在 Apple Music 打开",
+              "url": "https://music.apple.com/cn/album/%E5%90%B8%E5%B0%98%E5%99%A8-%E7%BB%B4%E4%BB%96%E5%91%BD-beat-by-flowstrong/1799904359?i=1799904365"
+            }
+          ]
+        },
+        {
+          "id": "music-2026-10-01-apple-1595783293",
+          "catalogId": "1595783293",
+          "title": "当站在大海面前",
+          "artist": "Fishdoll",
+          "album": "月感",
+          "releaseDate": "2021-11-18",
+          "durationMs": 214582,
+          "category": "本期重点",
+          "body": [
+            {
+              "heading": "为什么选它",
+              "text": "中文独立流行与电子、爵士和灵魂乐交会；艺人发行资料确认周士爵参与作词，适合从说唱走向更开阔的声音。"
+            }
+          ],
+          "sources": [
+            {
+              "label": "在 Apple Music 打开",
+              "url": "https://music.apple.com/cn/album/%E5%BD%93%E7%AB%99%E5%9C%A8%E5%A4%A7%E6%B5%B7%E9%9D%A2%E5%89%8D/1595783289?i=1595783293"
+            }
+          ]
+        },
+        {
+          "id": "music-2026-10-01-apple-1545327490",
+          "catalogId": "1545327490",
+          "title": "深呼吸 (feat. 李权哲)",
+          "artist": "春艳",
+          "album": "感恩的心",
+          "releaseDate": "2020-12-29",
+          "durationMs": 185133,
+          "category": "音乐发现",
+          "body": [
+            {
+              "heading": "为什么选它",
+              "text": "春艳与李权哲合作，把台湾饶舌接到 R&B、灵魂乐和放克的制作脉络。"
+            }
+          ],
+          "sources": [
+            {
+              "label": "在 Apple Music 打开",
+              "url": "https://music.apple.com/cn/album/%E6%B7%B1%E5%91%BC%E5%90%B8-feat-%E6%9D%8E%E6%9D%83%E5%93%B2/1545327183?i=1545327490"
+            }
+          ]
+        },
+        {
+          "id": "music-2026-10-01-apple-1754118661",
+          "catalogId": "1754118661",
+          "title": "居礼夫人说",
+          "artist": "YILE LIN 林以乐",
+          "album": "居礼夫人说 - Single",
+          "releaseDate": "2024-06-28",
+          "durationMs": 248523,
+          "category": "音乐发现",
+          "body": [
+            {
+              "heading": "为什么选它",
+              "text": "林以乐从雀斑、skip skip ben ben 等乐队走来的创作线索，为这一期补上中文独立流行的一面。"
+            }
+          ],
+          "sources": [
+            {
+              "label": "在 Apple Music 打开",
+              "url": "https://music.apple.com/cn/album/%E5%B1%85%E7%A4%BC%E5%A4%AB%E4%BA%BA%E8%AF%B4/1754118660?i=1754118661"
+            }
+          ]
+        },
+        {
+          "id": "music-2026-10-01-apple-1470603728",
+          "catalogId": "1470603728",
+          "title": "跤麻麻",
+          "artist": "百合花",
+          "album": "烧金蕉",
+          "releaseDate": "2019-06-30",
+          "durationMs": 182089,
+          "category": "音乐发现",
+          "body": [
+            {
+              "heading": "为什么选它",
+              "text": "台语乐队作品；原始制作名单中的木吉他、木贝斯、直笛与打击乐值得留意，也为歌单换一种语言节奏。"
+            }
+          ],
+          "sources": [
+            {
+              "label": "在 Apple Music 打开",
+              "url": "https://music.apple.com/cn/album/%E8%B7%A4%E9%BA%BB%E9%BA%BB/1470603717?i=1470603728"
+            }
+          ]
+        },
+        {
+          "id": "music-2026-10-01-apple-1582492050",
+          "catalogId": "1582492050",
+          "title": "Chaos (Part I)",
+          "artist": "Sonia Calico",
+          "album": "Simulation of an Overloaded World",
+          "releaseDate": "2020-10-15",
+          "durationMs": 234250,
+          "category": "音乐发现",
+          "body": [
+            {
+              "heading": "为什么选它",
+              "text": "本期唯一纯电子选曲，从 Sonia Calico 的《Simulation of an Overloaded World》延伸一次节奏探索。不是《Lotus Chasm》。"
+            }
+          ],
+          "sources": [
+            {
+              "label": "在 Apple Music 打开",
+              "url": "https://music.apple.com/cn/album/chaos-part-i/1582492034?i=1582492050"
+            }
+          ]
+        },
+        {
+          "id": "music-2026-10-01-apple-1849610705",
+          "catalogId": "1849610705",
+          "title": "眼耳口鼻手",
+          "artist": "DSPS",
+          "album": "yolk on rice",
+          "releaseDate": "2025-11-03",
+          "durationMs": 423500,
+          "category": "本期重点",
+          "body": [
+            {
+              "heading": "为什么选它",
+              "text": "一首七分钟的中文独立流行长曲，留出空间给乐队合奏与合成器层次展开。"
+            }
+          ],
+          "sources": [
+            {
+              "label": "在 Apple Music 打开",
+              "url": "https://music.apple.com/cn/album/%E7%9C%BC%E8%80%B3%E5%8F%A3%E9%BC%BB%E6%89%8B/1849610704?i=1849610705"
+            }
+          ]
+        },
+        {
+          "id": "music-2026-10-01-apple-1846001999",
+          "catalogId": "1846001999",
+          "title": "巧克力 (feat. 邹序 Hogan T.)",
+          "artist": "Flowstrong",
+          "album": "流水席 Flow's Banquet",
+          "releaseDate": "2025-10-24",
+          "durationMs": 237280,
+          "category": "音乐发现",
+          "body": [
+            {
+              "heading": "为什么选它",
+              "text": "R&B 旋律和 UK garage 的一次交会；发行资料提到生活声响与 Vocoder 的使用。"
+            }
+          ],
+          "sources": [
+            {
+              "label": "在 Apple Music 打开",
+              "url": "https://music.apple.com/cn/album/%E5%B7%A7%E5%85%8B%E5%8A%9B-feat-%E9%82%B9%E5%BA%8F-hogan-t/1846001992?i=1846001999"
+            }
+          ]
+        },
+        {
+          "id": "music-2026-10-01-apple-1824595172",
+          "catalogId": "1824595172",
+          "title": "找到你",
+          "artist": "雷擎",
+          "album": "南洋探险队",
+          "releaseDate": "2024-07-19",
+          "durationMs": 259693,
+          "category": "音乐发现",
+          "body": [
+            {
+              "heading": "为什么选它",
+              "text": "从南洋旅行和跨国合作生长出来的另类流行，让这一期从说唱与电子转向另一条创作路径。"
+            }
+          ],
+          "sources": [
+            {
+              "label": "在 Apple Music 打开",
+              "url": "https://music.apple.com/cn/album/%E6%89%BE%E5%88%B0%E4%BD%A0/1824595164?i=1824595172"
+            }
+          ]
+        },
+        {
+          "id": "music-2026-10-01-apple-1468872430",
+          "catalogId": "1468872430",
+          "title": "Call Me When Night Go Blue",
+          "artist": "イルカポリス 海豚刑警",
+          "album": "豚爱特攻队",
+          "releaseDate": "2019-06-19",
+          "durationMs": 183360,
+          "category": "音乐发现",
+          "body": [
+            {
+              "heading": "为什么选它",
+              "text": "用海豚刑警《豚爱特攻队》的开场曲收尾，为这期补足中文独立摇滚的乐队方向。"
+            }
+          ],
+          "sources": [
+            {
+              "label": "在 Apple Music 打开",
+              "url": "https://music.apple.com/cn/album/call-me-when-night-go-blue/1468872429?i=1468872430"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "id": "sample-hn",
+      "kind": "hn",
+      "date": null,
+      "title": "一篇精读，会留下什么？",
+      "sample": true,
+      "intro": "这是版式示例，不是一条真实新闻。正式上线后，每期会收录十篇经过阅读与整理的 Hacker News 文章。",
+      "items": [
+        {
+          "id": "sample-hn-01",
+          "title": "从一个好问题开始",
+          "category": "精读样例",
+          "body": [
+            {
+              "heading": "先弄清楚发生了什么",
+              "text": "这里放经过核实的事件背景、核心论点与必要上下文。不会只搬运标题，也不会把尚未读到的原文写成已经确认的事实。"
+            },
+            {
+              "heading": "再问一句：为什么值得读？",
+              "text": "这里解释文章带来的新知识、它与已有做法的区别，以及证据的边界。重要数字和引述会保留出处，让你能继续读下去。"
+            }
+          ],
+          "takeaway": "保留来源、日期和完整精读正文；样例没有虚构的作者、时间或链接。",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "sample-music",
+      "kind": "music",
+      "date": null,
+      "title": "下一份歌单，从这里开始",
+      "sample": true,
+      "intro": "这是歌单结构示例，不是真实推荐。每周以华语作品为主，保留推荐理由和官方试听链接。",
+      "items": [
+        {
+          "id": "sample-music-01",
+          "title": "待选曲目",
+          "artist": "歌手待填",
+          "category": "歌单样例",
+          "body": [
+            {
+              "heading": "推荐理由",
+              "text": "不只说“好听”：这里会写旋律、编曲、人声或歌词中值得留意的细节，也会说明它适合怎样的聆听时刻。"
+            }
+          ],
+          "takeaway": "曲目和官方链接确认后才发布。不会公开个人音乐库、听歌记录或账户信息。",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
