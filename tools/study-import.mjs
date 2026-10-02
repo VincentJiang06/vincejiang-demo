@@ -2,7 +2,7 @@ import {readdirSync,readFileSync,writeFileSync,mkdirSync,lstatSync,existsSync} f
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
-export const COURSES=['CSCI3130','CSCI3150','CSCI3160','CSCI3230'];
+export const COURSES=['CSCI3130','CSCI3150','CSCI3160','CSCI3230','GENA2122'];
 export const isNote=p=>p.endsWith('.md')&&!p.split('/').some(x=>['核验','记忆库','PDF','AGENTS.md','CLAUDE.md','更新记录.md'].includes(x))&&p!=='README.md';
 export function publicText(s){
  return s.split('\n').filter(l=>!/^(- 编写：|本次来源核对范围|本次范围内索引共有|原件已归档，工作包已解压|.*`study\/exercise\/` 是用户明确指定)/.test(l))
@@ -40,10 +40,6 @@ export function importNotes(desktop,dest,{courses=COURSES}={}){
    const source=readFileSync(path.join(root,rel),'utf8');let text=publicText(source);
    if(course==='CSCI3160'&&rel==='exercise/Ex02-分治与线性合并.md')text=text.replaceAll('${a,b\\}$','$\\{a,b\\}$').replaceAll('${c,d\\}$','$\\{c,d\\}$');
    if(course==='CSCI3230'&&rel==='L05-P4-层次聚类.md')text=text.replaceAll('\\rvertd','\\rvert d');
-   if(rel==='阅读导航.md'&&!['CSCI3160','CSCI3230'].includes(course)){
-    const boundary={CSCI3130:'各讲保留原有来源与考试证据说明。',CSCI3150:'L00–L02 与 Lab01 为 2026T1；L03–L06、L08–L15 为 2022 未核版；T01–T12 为 2025T2。'}[course];
-    text=`# ${course} 阅读导航\n\n${boundary}\n\n`+files.filter(f=>f!==rel).map(f=>`- [${f.replace(/\.md$/,'')}](${f.replaceAll(' ','%20')})`).join('\n')+'\n';
-   }
    // Memory paths are internal even when their visible labels are course concepts.
    text=text.replace(/\]\(([^)\n]*课程索引[^)\n]*)\)/g,'](local:course-index)');
    if(/vince-course|AGENTS\.md|CLAUDE\.md|\/Users\//.test(text))throw new Error('Review metadata in '+course+'/'+rel);

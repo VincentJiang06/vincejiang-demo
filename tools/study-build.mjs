@@ -6,12 +6,12 @@ import {renderDocuments,esc,url,BASE} from './study.mjs';
 import {COURSES} from './study-import.mjs';
 const ROOT=fileURLToPath(new URL('../',import.meta.url));
 const assetVersion=f=>createHash('sha256').update(readFileSync(path.join(ROOT,'templates',f))).digest('hex').slice(0,12);
-const names={CSCI3130:'计算理论',CSCI3150:'操作系统',CSCI3160:'算法设计与分析',CSCI3230:'人工智能'};
+const names={CSCI3130:'计算理论',CSCI3150:'操作系统',CSCI3160:'算法设计与分析',CSCI3230:'人工智能',GENA2122:'美国文化与历史议题'};
 const kind=d=>{const f=path.basename(d.key);return /^HW|^Ex|^Sp/.test(f)?'作业与题解':/^Lab/.test(f)?'实验':/^T\d/.test(f)?'辅导':/^L\d/.test(f)?'课程伴读':/^ESTR/.test(f)?'拓展阅读':'阅读与复习';};
 const title=d=>d.headings.find(h=>h.level===1)?.title||path.basename(d.key,'.md');
 const link=d=>`<a href="${esc(url(d.key))}">${esc(path.basename(d.key,'.md'))}</a>`;
 function shell(t,body,course='',article=false){
- return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(t)} · Study</title><meta name="description" content="Vince 的课程伴读、作业解析与复习笔记"><link rel="stylesheet" href="${BASE}study.css?v=${assetVersion('study.css')}"><link rel="stylesheet" href="${BASE}katex/katex.min.css"><script src="${BASE}study.js?v=${assetVersion('study.js')}" defer></script></head><body${article?' class="reading"':''}><a class="skip" href="#main">跳到正文</a><header><a class="brand" href="/">Vince Jiang</a><nav aria-label="面包屑"><a href="${BASE}">Study · 2026T1</a>${course?`<span>/</span><a href="${BASE}${course}/">${course}</a>`:''}</nav></header>${body}<footer>课程学习笔记 · 原始课件留在本地 <a href="${BASE}">返回四门课程</a></footer></body></html>`;
+ return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(t)} · Study</title><meta name="description" content="Vince 的课程伴读、作业解析与复习笔记"><link rel="stylesheet" href="${BASE}study.css?v=${assetVersion('study.css')}"><link rel="stylesheet" href="${BASE}katex/katex.min.css"><script src="${BASE}study.js?v=${assetVersion('study.js')}" defer></script></head><body${article?' class="reading"':''}><a class="skip" href="#main">跳到正文</a><header><a class="brand" href="/">Vince Jiang</a><nav aria-label="面包屑"><a href="${BASE}">Study · 2026T1</a>${course?`<span>/</span><a href="${BASE}${course}/">${course}</a>`:''}</nav></header>${body}<footer>课程学习笔记 · 原始课件留在本地 <a href="${BASE}">返回课程目录</a></footer></body></html>`;
 }
 export function buildStudy(out,{check=false}={}){
  const manifest=JSON.parse(readFileSync(path.join(ROOT,'tools/study-content/manifest.json'),'utf8'));
@@ -37,7 +37,7 @@ export function buildStudy(out,{check=false}={}){
    write(d.key.replace(/\.md$/,'.html'),shell(title(d),`<div class="reading-layout"><aside>${nav}</aside><main id="main"><p class="eyebrow">${c} / ${kind(d)}</p><article>${d.html}</article>${hintMode?'':`<nav class="adjacent" aria-label="相邻笔记">${i?`<div><small>上一篇</small>${link(ds[i-1])}</div>`:'<div></div>'}${i<ds.length-1?`<div><small>下一篇</small>${link(ds[i+1])}</div>`:''}</nav>`}</main><aside>${toc}</aside></div>`,c,true));
   }
  }
- mkdirSync(path.join(out,'study'),{recursive:true});writeFileSync(path.join(out,'study/index.html'),shell('课程笔记',`<main id="main" class="landing"><h1>课程笔记</h1><a href="${BASE}">2026T1 · 四门课程</a></main>`));
+ mkdirSync(path.join(out,'study'),{recursive:true});writeFileSync(path.join(out,'study/index.html'),shell('课程笔记',`<main id="main" class="landing"><h1>课程笔记</h1><a href="${BASE}">2026T1 · 课程笔记</a></main>`));
  console.error('study build ✓ '+JSON.stringify(metrics));return metrics;
 }
 if(process.argv[1]===fileURLToPath(import.meta.url))buildStudy(process.argv[2]||'/tmp/vince-study-preview',{check:process.argv.includes('--check')});

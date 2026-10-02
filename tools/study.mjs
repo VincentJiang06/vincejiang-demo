@@ -72,7 +72,7 @@ export function renderDocuments(docs) {
     if(fragment&&!target.ids.has(fragment))errors.push(`${d.key}: missing anchor ${key}#${fragment}`);
     return {href:(raw?url(key):'')+(fragment?'#'+encodeURIComponent(fragment):'')};
    }
-   if(/^CSCI\d+\/README\.md$/.test(key))return {href:BASE+key.split('/')[0]+'/'};
+   if(/^(?:CSCI|GENA)\d+\/README\.md$/.test(key))return {href:BASE+key.split('/')[0]+'/'};
    if(/\.md$/i.test(raw)&&key.startsWith(d.key.split('/')[0]+'/')&&!/(?:记忆库|核验|README|更新记录)/.test(raw))errors.push(`${d.key}: missing document ${key}`);
    return {local:true,courseware:/\.(pdf|pptx?)(?:$|\?)/i.test(raw),page:fragment.match(/^page=(\d+)$/)?.[1]};
   };

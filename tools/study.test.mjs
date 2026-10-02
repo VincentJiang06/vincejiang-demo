@@ -7,8 +7,13 @@ test('study rendering preserves equations, explicit/repeated anchors and resolve
   {key:'CSCI3130/第一 讲.md', text:'# 第一讲\n\n<a id="a1"></a>\n## 标题\n## 标题\n\n[显式](#a1) [重复](#标题-1) [下一篇](子目录/第二讲.md#证明) [课件](../课件/原文.pdf#page=3) [课程](README.md)\n\n$x^2$\n\n$$\n\\frac{1}{2}\n$$\n\n| A | B |\n|---|---|\n| 1 | 2 |\n\n```c\nint x = 1;\n```\n\n<script>alert(1)</script>'},
   {key:'CSCI3130/子目录/第二讲.md',text:'# 第二讲\n\n## 证明\n\n[返回](../第一%20讲.md#a1)'}
  ];
+ docs.push({key:'GENA2122/历史 讲义.md',text:'# 历史\n\n[入口](README.md) [课件](../课件/L04.pptx) [同课](第二篇.md#证据)'});
+ docs.push({key:'GENA2122/第二篇.md',text:'# 第二篇\n\n## 证据'});
  const result=renderDocuments(docs);
- assert.equal(result.length,2);
+ assert.equal(result.length,4);
+ assert.match(result[2].html,/href="\/study\/2026T1\/GENA2122\/"/);
+ assert.match(result[2].html,/第二篇.html#证据/);
+ assert.match(result[2].html,/本地课件/);
  const a=result[0].html, b=result[1].html;
  assert.match(a,/id="a1"/); assert.match(a,/id="标题-1"/);
  assert.match(a,/href="\/study\/2026T1\/CSCI3130\/子目录\/第二讲.html#证明"/);
@@ -106,16 +111,18 @@ test('course-scoped import reads only selected sources and preserves other publi
   assert.equal(readFileSync(join(root,'tools/study-content/CSCI3230/阅读导航.md'),'utf8'),authored);
   const rejected=spawnSync(process.execPath,[cli,desktop,'--course=CSCI9999'],{encoding:'utf8'});
   assert.notEqual(rejected.status,0);assert.match(rejected.stderr,/course/i);
-  // Default remains a four-course import; existing synthetic navigation stays for 3130/3150.
+  // Five courses preserve each authored reading guide rather than replacing it with a file list.
+  assert.ok(COURSES.includes('GENA2122'));
   for(const course of COURSES.filter(x=>x!=='CSCI3230')) {
    put(desktop,course+'/study/阅读导航.md','# '+course+' 原创导引\n');
    put(desktop,course+'/study/讲义.md','# 讲义\n');
   }
   const all=importNotes(desktop,join(root,'full'));
-  assert.equal(all.length,8);
+  assert.equal(all.length,10);
   for(const course of COURSES)assert.equal(all.filter(x=>x.key.startsWith(course+'/')).length,2);
-  assert.match(readFileSync(join(root,'full/CSCI3130/阅读导航.md'),'utf8'),/讲义\.md/);
-  assert.match(readFileSync(join(root,'full/CSCI3150/阅读导航.md'),'utf8'),/讲义\.md/);
+  assert.equal(readFileSync(join(root,'full/CSCI3130/阅读导航.md'),'utf8'),'# CSCI3130 原创导引\n');
+  assert.equal(readFileSync(join(root,'full/CSCI3150/阅读导航.md'),'utf8'),'# CSCI3150 原创导引\n');
+  assert.equal(readFileSync(join(root,'full/GENA2122/阅读导航.md'),'utf8'),'# GENA2122 原创导引\n');
   assert.equal(readFileSync(join(root,'full/CSCI3160/阅读导航.md'),'utf8'),'# CSCI3160 原创导引\n');
   assert.equal(readFileSync(join(root,'full/CSCI3230/阅读导航.md'),'utf8'),authored);
  } finally {rmSync(root,{recursive:true,force:true});}
