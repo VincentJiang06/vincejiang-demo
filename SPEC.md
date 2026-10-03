@@ -375,3 +375,7 @@ node tools/build-site.mjs --check
 GENA2122名称依据现有课程材料的 Issues in American Culture & History，正文保留明确日期的安排冲突，不擅自合并成一个“最新”日期。补充例子与原课件材料区分标明；来源复核按实际覆盖范围记录，不把历史实验写成此次运行，也不把有限枚举当作一般证明。
 
 本地页面验收覆盖五门课程、7篇代表笔记的桌面及375px手机视口（14次），包含搜索、锚点定位、公式排版和键盘折叠。后续同步前先比较源稿与已发布稿的差异，避免用旧本地副本覆盖已深化的网页版本。
+
+## 16. Netstall 支持路径（2026-10-03）
+
+正式支持地址为 `https://vincejiang.com/netstall`（无尾斜杠），隐私政策为 `https://vincejiang.com/netstall#privacy`。静态源码从 `cellprobe/` 移到 `netstall/`；Nginx 精确路由直接提供 index.html，旧 `/cellprobe`、`/cellprobe/`、`/cellprobe/index.html` 及新路径尾斜杠/index.html 变体 301 到正式地址，保留查询参数，浏览器保留隐私 fragment。不使用 netstall 子域。复用现有 Tunnel / Traefik / svc-vincejiang 与标准 CI/CD，回滚沿用镜像 SHA 回滚。

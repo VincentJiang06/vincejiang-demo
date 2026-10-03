@@ -6,7 +6,7 @@ date: 2026-09-22
 updated: 2026-10-03
 ---
 
-支持与当前隐私政策统一位于 [Netstall 支持页面](https://vincejiang.com/cellprobe/#privacy)。
+支持与当前隐私政策统一位于 [Netstall 支持页面](https://vincejiang.com/netstall#privacy)。
 
 
 最后更新：2026-10-03
