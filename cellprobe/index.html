@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Netstall — 支持与隐私 · Vince Jiang</title><meta name="description" content="Netstall iPhone 网络测量工具：使用帮助、技术支持与隐私政策。Support and privacy for Netstall.">
+<link rel="canonical" href="https://vincejiang.com/cellprobe/">
+<meta property="og:title" content="Netstall — 支持与隐私"><meta property="og:description" content="iPhone 网络测量工具的使用帮助与隐私政策。"><meta property="og:type" content="website"><meta property="og:url" content="https://vincejiang.com/cellprobe/"><meta name="twitter:card" content="summary">
+<style>:root{color-scheme:light dark;--bg:#f5f7fa;--card:#fff;--fg:#18252e;--muted:#57636e;--line:#dce3e9;--accent:#087c78}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.8 system-ui,-apple-system,sans-serif}main,nav,footer{max-width:860px;margin:auto;padding:24px}nav{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}a{color:var(--accent);text-underline-offset:4px}header{padding:48px 0 28px}h1{font-size:clamp(42px,9vw,72px);letter-spacing:-.05em;line-height:1.1;margin:12px 0}h2{font-size:26px;line-height:1.4}h3{font-size:19px}p,li{overflow-wrap:anywhere}.intro{font-size:22px;max-width:650px}.muted,footer{color:var(--muted)}section{margin:24px 0;padding:28px;background:var(--card);border:1px solid var(--line);border-radius:20px;scroll-margin-top:24px}.tag{font-size:14px;letter-spacing:.06em;color:var(--accent)}ul{padding-left:24px}hr{border:0;border-top:1px solid var(--line);margin:32px 0}a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}@media(prefers-color-scheme:dark){:root{--bg:#10171c;--card:#172128;--fg:#ecf0f3;--muted:#b3bfc8;--line:#34434e;--accent:#77d5c5}}@media(max-width:500px){main,nav,footer{padding:18px}section{padding:20px}}</style></head>
+<body><nav aria-label="导航"><a href="/">Vince Jiang</a><span><a href="#support">支持 / Support</a> · <a href="#privacy">隐私 / Privacy</a></span></nav><main>
+<header><div class="tag">NETSTALL · IPHONE</div><h1>看清网络表现。</h1><p class="intro">观察吞吐、延迟与连接稳定性，理解视频和音频为什么卡顿。</p><p class="muted" lang="en">Measure throughput, latency and connection stability on your iPhone.</p><p class="muted">当前开发版本 0.0.1。尚未在 App Store 正式发布。<br><span lang="en">Version 0.0.1 is in development and is not yet available on the App Store.</span></p></header>
+<section id="support"><h2>支持 / Support</h2><p>使用中遇到问题，请联系 <a href="mailto:wenxuan.j@gmail.com">wenxuan.j@gmail.com</a>。请附上 App 版本、iOS 版本、网络模式，以及重现步骤。报告可能包含你填写的服务器地址；发送前请自行检查和删去不希望分享的内容。</p><p lang="en">For help, email <a href="mailto:wenxuan.j@gmail.com">wenxuan.j@gmail.com</a> with your app and iOS versions, network mode, and steps to reproduce the problem. Review reports before sharing: they may include server addresses you entered.</p>
+<h3>开始测试</h3><ul><li>选择蜂窝、Wi-Fi 或系统路由，再选择测试目标。</li><li>快测约 30 秒；需要观察持续变化时，使用常规测试或自定义方案。</li><li>测试会实际传输数据。快测配置预算约 100 MB，全面检测约 640 MB 加自定义目标预算；周期检查和协议开销可能使实际流量超出预算。</li><li>请保持 App 在前台；切到后台会停止测试。</li><li>系统路由可能经过 VPN 或代理，因此仅提供吞吐对照，不生成依赖端到端延迟的评分。</li><li>结果是本次测量的记录，不能单独确定网络故障原因。</li></ul>
+<h3 lang="en">Getting started</h3><p lang="en">Choose an interface and destination, then run a quick, standard or custom test. Tests transfer real data and require the app to remain in the foreground. System routing can pass through a VPN or proxy, so latency-based ratings are unavailable in that mode. Results describe the measurement; they do not establish the cause of a network problem.</p>
+<h3>常见问题 / Common questions</h3><p><strong>目标失败：</strong>检查网络和权限，也可能是远端服务不可用。可以更换目标进行对照；失败步骤不会当作有效速度。</p><p><strong>保存失败：</strong>请在退出 App 前复制报告并检查设备剩余存储空间。</p><p lang="en"><strong>Failed destination:</strong> Check connectivity and permissions; the remote service may also be unavailable. Failed steps are excluded from valid speed measurements. <strong>Save failed:</strong> Copy the report before closing the app and check available storage.</p></section>
+<section id="privacy"><h2>隐私政策 / Privacy Policy</h2><p>最后更新：2026-10-03</p>
+<p><strong>Netstall 不提供向开发者上传测量记录的功能。测试会连接用户所选的第三方服务器。</strong></p>
+<ul>
+<li>没有账号，没有登录，没有分析统计，没有广告，没有第三方 SDK。</li>
+<li>测量记录和测试结果保存在本机 app 的文档目录（可在「文件」app 中查看）；自定义目标和设置保存在本机偏好中。系统备份与用户主动分享由系统及用户控制。</li>
+<li>进行测试时，app 会向你选择的目标服务器（苹果、Cloudflare、Netflix、哔哩哔哩等公开地址，或你自己填写的地址）发起下载、上传测试数据与连接请求。这些服务器会收到你的 IP 地址与请求信息；其日志留存和数据处理由各服务的隐私政策决定，不能保证服务器不留存。本 App 未核实所有端点的具体日志保留期限。</li>
+<li>「复制」按钮会把测试报告写入系统剪贴板，只在你点击时发生（开启了 iCloud 通用剪贴板的设备之间会同步剪贴板，这是系统行为）。</li>
+<li>仅 Debug 开发构建支持通过数据线由电脑驱动的自动测试，App Store / Release 构建不包含该入口。开发自动化只在本机文件系统内交换文件；其中的 DNS 对比步骤会向公共解析器（如 1.1.1.1、8.8.8.8）查询域名。</li>
+</ul>
+<p>联系：wenxuan.j@gmail.com</p>
+<hr>
+<p><strong>Netstall has no feature for uploading measurement records to the developer. Tests connect to third-party servers selected by the user.</strong></p>
+<ul>
+<li>No account, no sign-in, no analytics, no ads, no third-party SDKs.</li>
+<li>Measurements and results are stored in the app's local Documents folder (visible in Files). Custom targets and settings are stored in local preferences. System backups and user-initiated sharing are controlled by the system and user.</li>
+<li>During a test the app downloads from, sends upload-test data to, and connects to the servers you pick (public endpoints such as Apple, Cloudflare, Netflix, Bilibili, or an address you enter). Those servers receive your IP address and request information. Their retention and processing are governed by their own privacy policies; no claim is made that those servers retain nothing. The app has not verified specific log-retention periods for every endpoint.</li>
+<li>The Copy button writes the report to the system clipboard only when you tap it (iCloud Universal Clipboard may sync it between your own devices; that is a system feature).</li>
+<li>Computer-driven automation is available only in Debug development builds, not App Store / Release builds. It exchanges files on the local file system only; its DNS comparison steps query public resolvers (e.g. 1.1.1.1, 8.8.8.8).</li>
+</ul>
+<p>Contact: wenxuan.j@gmail.com</p>
+</section>
+</main><footer>© 2026 Vince Jiang · <a href="#support">联系支持 / Contact support</a></footer></body></html>
