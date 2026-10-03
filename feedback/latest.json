@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-10-01T14:14:16.072336+00:00",
+  "exportedAt": "2026-10-03T02:00:38.767477+00:00",
   "items": {
     "hn-2026-10-01-ai-math": {
       "counts": {
@@ -74,6 +74,86 @@
       "lastChangedAtUnix": null
     },
     "hn-2026-10-01-pssa": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "hn-2026-10-02-aweb": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "hn-2026-10-02-bez-browser-generation": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "hn-2026-10-02-clef": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "hn-2026-10-02-context-language-models": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "hn-2026-10-02-dodo-archives": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "hn-2026-10-02-dogbench": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "hn-2026-10-02-goalposts-poll": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "hn-2026-10-02-janus": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "hn-2026-10-02-pi-1": {
+      "counts": {
+        "down": 0,
+        "heart": 0,
+        "up": 0
+      },
+      "lastChangedAtUnix": null
+    },
+    "hn-2026-10-02-turbopuffer-v3": {
       "counts": {
         "down": 0,
         "heart": 0,
@@ -165,6 +245,6 @@
   "schema": "dots.feedback.snapshot/1",
   "scope": "anonymous-public",
   "source": "https://dots.vincejiang.com/api/feedback/summary",
-  "version": "331e265f51fd98763b79238fb578aeba1ae018e9e029d9e07b793047575c1e8b",
+  "version": "909fdbe7c7b4979c7ce15b3ba3b9af1165a7a08a2697610e2d2616c8fa77bdf5",
   "window": "lifetime-current-state"
 }
