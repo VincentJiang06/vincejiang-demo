@@ -1,6 +1,6 @@
 import {readFileSync,writeFileSync,readdirSync} from 'node:fs';
 import {join} from 'node:path';
-import {esc} from './seo.mjs';
+import {esc,publicPagePath} from './seo.mjs';
 import MarkdownIt from 'markdown-it';
 const {unescapeAll: decode} = new MarkdownIt().utils;
 // Static demos have independent layouts. Supply missing metadata in the build only.
@@ -17,7 +17,7 @@ export function enrichStaticPages(root,gallery){
   const existingTitle=html.match(/<title>([^<]+)<\/title>/i)?.[1];
   const title=existingTitle?decode(existingTitle):text(html.match(/<h[12]\b[^>]*>([\s\S]*?)<\/h[12]>/i)?.[1]||'');if(!title)continue;
   if(!existingTitle)html=html.replace(/<\/head>/i,`<title>${esc(title)}</title></head>`);
-  const route=rel.replace(/index\.html$/,'');
+  const route=publicPagePath(rel);
   const url=new URL(route,'https://vincejiang.com').href;
   const existingMatch=html.match(/<meta\b(?=[^>]*\bname=["']description["'])[^>]*\bcontent=("([^"]*)"|'([^']*)')/i);
   const existing=existingMatch?decode(existingMatch[2]??existingMatch[3]):null;

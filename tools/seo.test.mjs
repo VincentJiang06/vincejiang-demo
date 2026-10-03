@@ -38,6 +38,8 @@ test('built public pages have consistent host sitemaps, published Dots prose, an
   assert.deepEqual(report.pages.filter(p=>p.issues.length).map(p=>({url:p.url,issues:p.issues})),[]);
   for(const line of report.sitemaps)assert.match(line,/缺失 0；无效 0/);
   const sitemap=readFileSync(join(out,'sitemap.xml'),'utf8');
+  assert.ok(sitemap.includes('<loc>https://vincejiang.com/netstall</loc>'));
+  assert.doesNotMatch(sitemap, /<loc>https:\/\/vincejiang\.com\/(?:cellprobe\/?|netstall\/)<\/loc>/);
   const notes=JSON.parse(readFileSync(join(ROOT,'tools/study-content/manifest.json'),'utf8'));
   for(const d of notes){
    const path='/study/2026T1/'+d.key.replace(/\.md$/,'.html');

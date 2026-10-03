@@ -5,6 +5,7 @@ import {readFileSync,writeFileSync,readdirSync,existsSync,mkdtempSync,statSync} 
 import {join,resolve} from 'node:path';
 import {tmpdir} from 'node:os';
 import MarkdownIt from 'markdown-it';
+import {publicPagePath} from './seo.mjs';
 const ROOT=new URL('..',import.meta.url).pathname;
 const args=process.argv.slice(2),arg=k=>args.includes(k)?args[args.indexOf(k)+1]:null;
 let DIR=arg('--dir');
@@ -19,7 +20,7 @@ function resolves(url){const host=hosts.find(h=>h.origin===url.origin);if(!host)
  let p;try{p=join(host.root,decodeURIComponent(url.pathname));}catch{return false;}for(const file of [p,join(p,'index.html'),p+'.html'])if(existsSync(file)&&statSync(file).isFile())return true;return false;}
 const pages=[],omitted=[];
 for(const host of hosts){for(const f of files(host.root,host.skip)){
- const html=readFileSync(f,'utf8'),url=new URL(f.slice(host.root.length).replace(/index\.html$/,''),host.origin).href;
+ const html=readFileSync(f,'utf8'),url=new URL(publicPagePath(f.slice(host.root.length)),host.origin).href;
  const metas=(html.match(/<meta\b[^>]*>/gi)||[]).map(attrs),links=(html.match(/<link\b[^>]*>/gi)||[]).map(attrs);
  if(!/<html\b/i.test(html)||metas.some(m=>(m.name||'').toLowerCase()==='robots'&&/noindex/i.test(m.content||''))){omitted.push(url);continue;}
  const issues=[],suggestions=[],title=html.match(/<title>([^<]+)<\/title>/i)?.[1];

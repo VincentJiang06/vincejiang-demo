@@ -379,3 +379,5 @@ GENA2122名称依据现有课程材料的 Issues in American Culture & History�
 ## 16. Netstall 支持路径（2026-10-03）
 
 正式支持地址为 `https://vincejiang.com/netstall`（无尾斜杠），隐私政策为 `https://vincejiang.com/netstall#privacy`。静态源码从 `cellprobe/` 移到 `netstall/`；Nginx 精确路由直接提供 index.html，旧 `/cellprobe`、`/cellprobe/`、`/cellprobe/index.html` 及新路径尾斜杠/index.html 变体 301 到正式地址，保留查询参数，浏览器保留隐私 fragment。不使用 netstall 子域。复用现有 Tunnel / Traefik / svc-vincejiang 与标准 CI/CD，回滚沿用镜像 SHA 回滚。
+
+`tools/seo.mjs` 的 `publicPagePath` 将 `/netstall/index.html` 映射为 `/netstall`，构建 sitemap、静态元数据和审计共享映射；其余目录继续保留原有尾斜杠。SEO 集成测试验证新地址被收录且旧地址未残留。

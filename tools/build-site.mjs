@@ -23,6 +23,7 @@ import { buildStudy } from './study-build.mjs';
 import { versionDotsAssets } from './dots-assets.mjs';
 import { buildDots } from './dots-build.mjs';
 import { enrichStaticPages } from './static-seo.mjs';
+import { publicPagePath } from './seo.mjs';
 
 const ROOT = new URL('..', import.meta.url).pathname.replace(/\/$/, '');
 const TPL = join(ROOT, 'templates');
@@ -640,7 +641,7 @@ function scanIndexablePages(dir = OUT, base = '') {
     const html = readFileSync(full, 'utf8');
     if (!/<html\b/i.test(html) || !/<title>[^<]+<\/title>/i.test(html)) continue;
     if (/<meta[^>]+name=["']robots["'][^>]*noindex/i.test(html)) continue;
-    out.push(e.name === 'index.html' ? (base + '/') : (base + '/' + e.name));
+    out.push(publicPagePath(base + '/' + e.name));
   }
   return out;
 }
