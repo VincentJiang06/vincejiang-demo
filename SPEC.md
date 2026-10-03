@@ -212,7 +212,7 @@ GHCR 保留每个 sha 的镜像,`<旧-git-sha>` 用要回退到的那次 commit 
 
 - 线上触发:仓库 **Actions → seo-geo-audit → Run workflow**(`.github/workflows/audit.yml`);报告进 job summary + artifact。**只审计不部署**。
 - 本地等价:`cd tools && node audit.mjs`(或 `--out report.md`)。
-- 审计内容:逐页对照 MUST(title/desc/canonical/OG/twitter/lang/viewport/单 h1)+ 断链 + img alt + JSON-LD 可解析 + sitemap 双向覆盖。report-only。
+- 审计按主站、Dots、Reactor 三个实际主机根目录解析 canonical、相对链接和 sitemap；noindex 跳转页与 HTML 片段不参加内容页统计。核心项为 title / description / canonical / lang、JSON-LD 可解析及站内断链；h1、viewport、图片 alt 与社交卡片单列建议，不冒充排名硬要求。忽略 script/style 内的模板字符串；status-ai/api 是已知独立服务。报告不阻塞部署；构建失败会返回非零。可加 `--json /tmp/audit.json` 供比较，实际爬虫访问仍需线上及站长工具验证。
 
 ---
 
@@ -257,7 +257,9 @@ GHCR 保留每个 sha 的镜像,`<旧-git-sha>` 用要回退到的那次 commit 
 ## 12. SEO/GEO 基建(长在模板/生成器里,零维护)
 
 生成器保证每页 MUST:`<title> · Vince Jiang`、自指 canonical、meta description、OG 四件套 + twitter card、`<html lang>`、viewport、单 h1。JSON-LD 单一来源在 build-site.mjs / paper.mjs(禁手写内嵌):首页 `WebSite`+`Person`;博客文章 `BlogPosting`+`BreadcrumbList`;论文 `ScholarlyArticle`(摘要/关键词/`about`/`genre`/`isPartOf` Research collection + `workTranslation`↔`translationOfWork` 中英互链)+`BreadcrumbList`;Research 索引 `CollectionPage`;Research collection 落地页 `CollectionPage`+`CreativeWorkSeries`(`hasPart` 含各篇摘要)。日期一律真实 git 日期。
-机读层(GEO):每篇文章的 md 源副本 `/blog/<…>/index.md`(英文 `en/index.md`);`llms.txt`(Research collections 逐篇列出 + 每篇机读 md 链接,置顶于 blog 之上);RSS;sitemap(Research 与各 collection 优先级更高,lastmod 真实 git 日期);`robots.txt` 显式放行 GPTBot / OAI-SearchBot / ChatGPT-User / ClaudeBot / Claude-SearchBot / PerplexityBot / Google-Extended。
+可抓取内容：每篇文章的 Markdown 副本、RSS 和 sitemap 保留；`llms.txt` 只是现有目录，没有已证实的排名增益。GEO 遵循 [Google AI features](https://developers.google.com/search/docs/appearance/ai-features) 的普通 SEO 原则：正文可读取、内部链接可发现、结构化数据与可见内容相符，不保证进入 AI 回答；无需额外 AI 文件或专用 schema。[OpenAI crawlers](https://developers.openai.com/api/docs/bots) 将 OAI-SearchBot 搜索与 GPTBot 训练分开控制，本次不改变训练偏好或 CDN 策略。
+
+构建先生成 Study 再扫描 sitemap，避免遗漏课程页面；URL 使用绝对编码形式并 XML 转义。Study 的 lastmod 来自 `tools/study-content/<key>.md` 的 Git 修改日期，未知日期省略。静态作品由 `tools/static-seo.mjs` 在产物中补齐缺失标题、简介、canonical 和基本分享字段：仅使用已有可见标题、段落或 Gallery 介绍，保留独立版式和已有 metadata。noindex 重定向页保留。JSON-LD 中的 `<` 转义，防止内容截断 script。
 
 ---
 
@@ -278,6 +280,7 @@ curl -s localhost:8080/health          # → ok
 - 独立公开子域 `https://dots.vincejiang.com`；静态源 `dots/` 随当前网站镜像发布，nginx 专用 server root。已有 wildcard Tunnel/Traefik 已可到达，无需新 DNS/隧道/凭证。
 - 旧浏览器若把上线前根路径的 301 缓存为跳主站，可打开 `https://dots.vincejiang.com/refresh`：此专用入口发送 `Clear-Site-Data: "cache"` 与 no-store，再 302 到已确认可访问的 `/index.html`。只请求清当前 HTTPS origin 的缓存，不清 Cookie/DOM storage；不支持该头的浏览器仍可使用 `/index.html` 或带版本参数的入口。不得用全站 Cookie 清理或改无关 Cloudflare 规则解决。
 - 角色：钴蓝云朵、黑色画师帽、大竖胶囊眼与白色高光，云内少量笔触和星点；首页以多条新闻正文摘要和歌单侧栏为主，无大 Hero；不依赖远程头像或过期签名 URL。Dots 不注入本站 analytics beacon。
+- 构建 `tools/dots-build.mjs` 从同一已验证内容生成 `/editions/` 与 `/editions/<id>/`：完整正文、香港日期、来源链接和 CollectionPage 数据均来自正式期次，不发布 examples。首页 HTML 含可抓取目录，JS 启动后继续现有互动界面；页脚保留文章目录链接。静态期次提供返回互动版的入口，不加载反馈或分析脚本。Dots 独立生成 robots.txt 与 sitemap.xml；CDN 附加的 robots 规则仍需线上检查。
 - 内容真源 `dots/content/index.json`，`dots.content/1`，香港日期。每日 HN 十篇、每周歌单、归档搜索。正文以纯文本段落渲染；公开字段白名单由 `tools/dots-validate.mjs` 校验。内容只能包含审校后的公开材料。
 - 发布时间由调用方现有任务管理：每日香港 10:00、周日香港 19:00 左右。本仓库没有新增内容调度，也不能自行读取 ChatGPT 聊天。
 - `node tools/dots-publish.mjs /path/to/edition.json` 导入已审校单期；修订保留期次和条目 ID。`node tools/dots-validate.mjs` 校验；仅提交 `dots/content/index.json`，推 `main` 即运行现有 CI。
@@ -304,6 +307,8 @@ curl -s localhost:8080/health          # → ok
 ## 15. Study 课程笔记
 
 入口 `/study/2026T1/` → 五个课号 → 对应笔记 `.html`，保留中文文件名和 `exercise/` 子目录。`/study/` 提供学期入口。254 份发布 Markdown 在 `tools/study-content/`，由 `tools/study-build.mjs` 在主构建/检查流程中处理；不会将该源目录复制到网站。CSCI3130、CSCI3150、CSCI3160、CSCI3230、GENA2122 分别为 66、43、74、65、6 份，包含作业答案、解题过程、实验与 Exercise 索引。
+
+每页具备自指 canonical、课程与文章区分的标题/简介及分享 metadata。正文页的 LearningResource 与可见课程笔记身份一致；“本站更新”和 dateModified 取发布副本的 Git 日期，不推断原课件日期。纯元数据优化不重导入 Desktop 笔记。
 
 ### 同步与验证
 

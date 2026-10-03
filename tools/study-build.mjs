@@ -1,20 +1,27 @@
-import {readFileSync,writeFileSync,mkdirSync,cpSync} from 'node:fs';
+import {readFileSync,writeFileSync,mkdirSync,cpSync,existsSync} from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {renderDocuments,esc,url,BASE} from './study.mjs';
 import {COURSES} from './study-import.mjs';
+import {metadata} from './seo.mjs';
 const ROOT=fileURLToPath(new URL('../',import.meta.url));
 const assetVersion=f=>createHash('sha256').update(readFileSync(path.join(ROOT,'templates',f))).digest('hex').slice(0,12);
 const names={CSCI3130:'计算理论',CSCI3150:'操作系统',CSCI3160:'算法设计与分析',CSCI3230:'人工智能',GENA2122:'美国文化与历史议题'};
 const kind=d=>{const f=path.basename(d.key);return /^HW|^Ex|^Sp/.test(f)?'作业与题解':/^Lab/.test(f)?'实验':/^T\d/.test(f)?'辅导':/^L\d/.test(f)?'课程伴读':/^ESTR/.test(f)?'拓展阅读':'阅读与复习';};
 const title=d=>d.headings.find(h=>h.level===1)?.title||path.basename(d.key,'.md');
 const link=d=>`<a href="${esc(url(d.key))}">${esc(path.basename(d.key,'.md'))}</a>`;
-function shell(t,body,course='',article=false){
- return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(t)} · Study</title><meta name="description" content="Vince 的课程伴读、作业解析与复习笔记"><link rel="stylesheet" href="${BASE}study.css?v=${assetVersion('study.css')}"><link rel="stylesheet" href="${BASE}katex/katex.min.css"><script src="${BASE}study.js?v=${assetVersion('study.js')}" defer></script></head><body${article?' class="reading"':''}><a class="skip" href="#main">跳到正文</a><header><a class="brand" href="/">Vince Jiang</a><nav aria-label="面包屑"><a href="${BASE}">Study · 2026T1</a>${course?`<span>/</span><a href="${BASE}${course}/">${course}</a>`:''}</nav></header>${body}<footer>课程学习笔记 · 原始课件留在本地 <a href="${BASE}">返回课程目录</a></footer></body></html>`;
+function shell(t,body,course='',article=false,seo={}){
+ const canonical='https://vincejiang.com'+(seo.path||BASE+(course?course+'/':''));
+ const label=(article?course+' · ':'')+t+' · Study';
+ const description=seo.description||`${course?course+' '+names[course]+'：':''}${t}，Vince 的课程伴读、作业解析与复习笔记。`;
+ const head=metadata({title:label,description,url:canonical,image:'https://vincejiang.com/assets/og.png',data:{'@context':'https://schema.org','@type':article?'LearningResource':'CollectionPage',name:t,description,url:canonical,inLanguage:'zh-CN',...(seo.updated?{dateModified:seo.updated}:{}),...(article?{author:{'@type':'Person',name:'Vince Jiang',url:'https://vincejiang.com/'}}:{})}});
+ return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(label)}</title>${head}<link rel="stylesheet" href="${BASE}study.css?v=${assetVersion('study.css')}"><link rel="stylesheet" href="${BASE}katex/katex.min.css"><script src="${BASE}study.js?v=${assetVersion('study.js')}" defer></script></head><body${article?' class="reading"':''}><a class="skip" href="#main">跳到正文</a><header><a class="brand" href="/">Vince Jiang</a><nav aria-label="面包屑"><a href="${BASE}">Study · 2026T1</a>${course?`<span>/</span><a href="${BASE}${course}/">${course}</a>`:''}</nav></header>${body}<footer>Vince 的课程学习笔记 · 原始课件留在本地 <a href="${BASE}">返回课程目录</a></footer></body></html>`;
 }
 export function buildStudy(out,{check=false}={}){
  const manifest=JSON.parse(readFileSync(path.join(ROOT,'tools/study-content/manifest.json'),'utf8'));
+ const historyPath=path.join(ROOT,'posts-manifest.json');
+ const history=existsSync(historyPath)?JSON.parse(readFileSync(historyPath,'utf8')).paths||{}:{};
  const docs=renderDocuments(manifest.map(d=>({...d,text:readFileSync(path.join(ROOT,'tools/study-content',d.key),'utf8')})));
  const metrics={documents:docs.length,headings:docs.reduce((s,d)=>s+d.headings.length,0),anchors:docs.reduce((s,d)=>s+d.ids.size,0),formulas:docs.reduce((s,d)=>s+(d.html.match(/class="katex"/g)||[]).length,0)};
  if(check){console.error('study check ✓ '+JSON.stringify(metrics));return metrics;}
@@ -31,13 +38,13 @@ export function buildStudy(out,{check=false}={}){
   const contents=groups.map(g=>`<section class="note-group"><h2>${g.k}<small>${g.ds.length}</small></h2><ul class="note-list">${g.ds.map(d=>`<li>${link(d)}</li>`).join('')}</ul></section>`).join('');
   write(`${c}/index.html`,shell(`${c} ${names[c]}`,`<main id="main" class="landing"><p class="eyebrow">${c} / ${ds.length} 份笔记</p><h1>${names[c]}</h1><label class="search">筛选笔记<input type="search" placeholder="输入讲次或主题…" aria-label="筛选课程笔记"></label><p id="filter-status" role="status"></p>${contents}</main>`,c));
   for(let i=0;i<ds.length;i++){
-   const d=ds[i], hintMode=d.key.includes("分级提示");
+   const d=ds[i], hintMode=d.key.includes("分级提示"),updated=history['tools/study-content/'+d.key]?.slice(0,10);
    const nav=hintMode?`<p class="hint-boundary">提示模式 · 逐级展开<br><a href="${BASE}${c}/">返回课程目录（离开提示模式）</a></p>`:`<details class="course-nav"><summary>课程目录 · ${c}</summary><nav aria-label="课程目录">${groups.map(g=>`<h2>${g.k}</h2><ul>${g.ds.map(x=>`<li><a ${x===d?'aria-current="page" ':''}href="${esc(url(x.key))}">${esc(path.basename(x.key,'.md'))}</a></li>`).join('')}</ul>`).join('')}</nav></details>`;
    const toc=`<details class="toc"><summary>本文目录</summary><nav aria-label="本文目录"><ol>${d.headings.filter(h=>h.level>1&&h.level<=3).map(h=>`<li class="level-${h.level}"><a href="#${esc(encodeURIComponent(h.id))}">${esc(h.title)}</a></li>`).join('')}</ol></nav></details>`;
-   write(d.key.replace(/\.md$/,'.html'),shell(title(d),`<div class="reading-layout"><aside>${nav}</aside><main id="main"><p class="eyebrow">${c} / ${kind(d)}</p><article>${d.html}</article>${hintMode?'':`<nav class="adjacent" aria-label="相邻笔记">${i?`<div><small>上一篇</small>${link(ds[i-1])}</div>`:'<div></div>'}${i<ds.length-1?`<div><small>下一篇</small>${link(ds[i+1])}</div>`:''}</nav>`}</main><aside>${toc}</aside></div>`,c,true));
+   write(d.key.replace(/\.md$/,'.html'),shell(title(d),`<div class="reading-layout"><aside>${nav}</aside><main id="main"><p class="eyebrow">${c} / ${kind(d)}${updated?` · 本站更新 <time datetime="${updated}">${updated}</time>`:''}</p><article>${d.html}</article>${hintMode?'':`<nav class="adjacent" aria-label="相邻笔记">${i?`<div><small>上一篇</small>${link(ds[i-1])}</div>`:'<div></div>'}${i<ds.length-1?`<div><small>下一篇</small>${link(ds[i+1])}</div>`:''}</nav>`}</main><aside>${toc}</aside></div>`,c,true,{path:url(d.key),updated,description:`${c} ${names[c]} · ${kind(d)}：${title(d)}。${hintMode?'分级提示逐级展开，先独立尝试，再按需继续。':d.headings.filter(h=>h.level===2).slice(0,4).map(h=>h.title).join('；')}`.slice(0,170)}));
   }
  }
- mkdirSync(path.join(out,'study'),{recursive:true});writeFileSync(path.join(out,'study/index.html'),shell('课程笔记',`<main id="main" class="landing"><h1>课程笔记</h1><a href="${BASE}">2026T1 · 课程笔记</a></main>`));
+ mkdirSync(path.join(out,'study'),{recursive:true});writeFileSync(path.join(out,'study/index.html'),shell('课程笔记',`<main id="main" class="landing"><h1>课程笔记</h1><a href="${BASE}">2026T1 · 课程笔记</a></main>`,'',false,{path:'/study/'}));
  console.error('study build ✓ '+JSON.stringify(metrics));return metrics;
 }
 if(process.argv[1]===fileURLToPath(import.meta.url))buildStudy(process.argv[2]||'/tmp/vince-study-preview',{check:process.argv.includes('--check')});

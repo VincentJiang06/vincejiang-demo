@@ -21,6 +21,8 @@ import hljs from 'highlight.js';
 import { renderPaper } from './paper.mjs';
 import { buildStudy } from './study-build.mjs';
 import { versionDotsAssets } from './dots-assets.mjs';
+import { buildDots } from './dots-build.mjs';
+import { enrichStaticPages } from './static-seo.mjs';
 
 const ROOT = new URL('..', import.meta.url).pathname.replace(/\/$/, '');
 const TPL = join(ROOT, 'templates');
@@ -117,7 +119,7 @@ function plain(mdText) {
 // ---- <head> 生成(每页 MUST:title/canonical/desc/OG/twitter/robots/theme + JSON-LD)----
 function headHtml({ type = 'website', path = '/', title, desc, image = SITE.image, jsonld = [], locale = 'zh_CN', robots = 'index, follow, max-image-preview:large' }) {
   const url = SITE.url + path;
-  const ld = jsonld.length ? `<script type="application/ld+json">${JSON.stringify(jsonld.length === 1 ? jsonld[0] : jsonld)}</script>` : '';
+  const ld = jsonld.length ? `<script type="application/ld+json">${JSON.stringify(jsonld.length === 1 ? jsonld[0] : jsonld).replace(/</g, '\\u003c')}</script>` : '';
   return [
     `<meta name="description" content="${esc(desc)}">`,
     `<meta name="robots" content="${robots}">`,
@@ -636,6 +638,7 @@ function scanIndexablePages(dir = OUT, base = '') {
     if (e.isDirectory()) { out.push(...scanIndexablePages(full, base + '/' + e.name)); continue; }
     if (!e.name.endsWith('.html')) continue;
     const html = readFileSync(full, 'utf8');
+    if (!/<html\b/i.test(html) || !/<title>[^<]+<\/title>/i.test(html)) continue;
     if (/<meta[^>]+name=["']robots["'][^>]*noindex/i.test(html)) continue;
     out.push(e.name === 'index.html' ? (base + '/') : (base + '/' + e.name));
   }
@@ -671,9 +674,13 @@ function buildSitemap(posts) {
   for (const loc of scanIndexablePages().sort()) {
     if (seen.has(loc)) continue;
     seen.add(loc);
-    urls.push({ loc, lastmod: dOnly(MANIFEST?.paths?.[loc.replace(/^\/|\/$/g, '')]) || shellDate, cf: 'monthly', pri: '0.5' });
+    // Unknown source dates are omitted instead of refreshing every page on unrelated builds.
+    const key = loc.startsWith('/study/2026T1/') && loc.endsWith('.html')
+      ? 'tools/study-content/' + loc.slice('/study/2026T1/'.length).replace(/\.html$/, '.md')
+      : loc.replace(/^\/|\/$/g, '');
+    urls.push({ loc, lastmod: dOnly(MANIFEST?.paths?.[key]), cf: 'monthly', pri: '0.5' });
   }
-  const body = urls.map(u => `  <url><loc>${SITE.url}${u.loc}</loc><lastmod>${u.lastmod}</lastmod><changefreq>${u.cf}</changefreq><priority>${u.pri}</priority></url>`).join('\n');
+  const body = urls.map(u => `  <url><loc>${esc(new URL(u.loc, SITE.url).href)}</loc>${u.lastmod ? `<lastmod>${u.lastmod}</lastmod>` : ''}<changefreq>${u.cf}</changefreq><priority>${u.pri}</priority></url>`).join('\n');
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
 }
 function buildRss(posts) {
@@ -793,6 +800,8 @@ function runBuild(posts) {
   mkdirSync(OUT, { recursive: true });
   // 1) 拷贝静态内容
   for (const c of contentDirs()) copyDir(join(ROOT, c.name), join(OUT, c.name));
+  enrichStaticPages(OUT, CONFIG.gallery || []);
+  buildDots(join(OUT, 'dots'));
   versionDotsAssets(join(OUT, 'dots'));
   // assets/shots 是 shots.sh 的本地取色产物(已 gitignore),不上站 —— 本地构建也显式剔除,保证与 CI 产物一致
   rmSync(join(OUT, 'assets', 'shots'), { recursive: true, force: true });
@@ -827,9 +836,9 @@ function runBuild(posts) {
   writeFileSync(join(OUT, 'gallery', 'index.html'), renderGallery());
   mkdirSync(join(OUT, 'background-test'), { recursive: true });
   writeFileSync(join(OUT, 'background-test', 'index.html'), renderBackgroundTest());
+  buildStudy(OUT);
   writeFileSync(join(OUT, 'sitemap.xml'), buildSitemap(pub));
   writeFileSync(join(OUT, 'llms.txt'), buildLlms(pub));
-  buildStudy(OUT);
   injectBeacon(OUT);
 
   for (const w of warnings) console.error('  ⚠ ' + w);
