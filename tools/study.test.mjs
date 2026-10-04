@@ -48,6 +48,8 @@ test('generated study pages version their UI assets so updated styles reach retu
  try {
   buildStudy(out);
   const html=readFileSync(join(out,'study/2026T1/index.html'),'utf8');
+  assert.ok(html.indexOf('vince-study-theme') < html.indexOf('rel="stylesheet"'), 'theme initialization precedes CSS and first paint');
+  assert.match(html, /id="study-theme" aria-label="Study 外观"/);
   assert.match(html,/study\.css\?v=[a-f0-9]{12}/);
   assert.match(html,/study\.js\?v=[a-f0-9]{12}/);
   for(const key of ['CSCI3230/HW01-2026T1-分级提示','CSCI3150/HW01-Shell分级提示-2026T1']){
@@ -126,4 +128,27 @@ test('course-scoped import reads only selected sources and preserves other publi
   assert.equal(readFileSync(join(root,'full/CSCI3160/阅读导航.md'),'utf8'),'# CSCI3160 原创导引\n');
   assert.equal(readFileSync(join(root,'full/CSCI3230/阅读导航.md'),'utf8'),authored);
  } finally {rmSync(root,{recursive:true,force:true});}
+});
+
+test('theme applies before paint, persists, tracks Auto and tolerates blocked storage', async () => {
+ const {readFileSync}=await import('node:fs');
+ const {runInNewContext}=await import('node:vm');
+ const source=readFileSync(new URL('../templates/study-theme.js',import.meta.url),'utf8');
+ for (const blocked of [false,true]) {
+  const listeners={}, media={matches:true,addEventListener:(type,fn)=>listeners.media=fn};
+  const select={value:'',addEventListener:(type,fn)=>listeners.select=fn};
+  const root={dataset:{}};
+  let saved='invalid', mounted=false;
+  const document={documentElement:root,querySelector:()=>mounted?select:null,addEventListener:(type,fn)=>listeners[type]=fn};
+  runInNewContext(source,{document,matchMedia:()=>media,addEventListener:(type,fn)=>listeners[type]=fn,localStorage:{getItem(){if(blocked)throw Error();return saved;},setItem(key,value){if(blocked)throw Error();saved=value;}}});
+  assert.equal(root.dataset.theme,'dark');
+  mounted=true;listeners.DOMContentLoaded();assert.equal(select.value,'system');
+  select.value='light';listeners.select();assert.equal(root.dataset.theme,'light');
+  if(!blocked)assert.equal(saved,'light');
+  media.matches=false;listeners.media();media.matches=true;listeners.media();assert.equal(root.dataset.theme,'light');
+  select.value='system';listeners.select();assert.equal(root.dataset.theme,'dark');
+  media.matches=false;listeners.media();assert.equal(root.dataset.theme,'light');
+  listeners.storage({key:'vince-study-theme',newValue:'dark'});assert.equal(root.dataset.theme,'dark');assert.equal(select.value,'dark');
+  listeners.storage({key:null,newValue:null});assert.equal(select.value,'system');assert.equal(root.dataset.theme,'light');
+ }
 });
