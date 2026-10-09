@@ -3,7 +3,7 @@ import { parseArgs } from "node:util";
 import { readFile, writeFile, access } from "node:fs/promises";
 import { spawnSync } from "node:child_process";
 import { createRequire } from "node:module";
-import { resolve } from "node:path";
+import { resolve, dirname } from "node:path";
 import { makeRecord, makeResult, markdown } from "./profile.mjs";
 
 const help = `sound-dashboard — 直接生成耳机声音仪表盘 JPEG、简介及分享链接
@@ -60,7 +60,11 @@ try {
     const require = createRequire(import.meta.url);
     const p = spawnSync(
       process.execPath,
-      [require.resolve("playwright/cli"), "install", "chromium"],
+      [
+        resolve(dirname(require.resolve("playwright/package.json")), "cli.js"),
+        "install",
+        "chromium",
+      ],
       { stdio: "inherit" },
     );
     process.exit(p.status ?? 1);

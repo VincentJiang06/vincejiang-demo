@@ -12,7 +12,7 @@
 
 `npm install` 后 `npm run dev -- --port 4173`，打开 `http://localhost:4173/sound_dashboard/`。
 
-`npm run build` 输出静态文件至 `dist/client/`；把该目录内容部署到网站 `/sound_dashboard/` 目录，对应目标 `https://vincejiang.com/sound_dashboard/`。资源路径已设置同一前缀。正式部署后复制分享链接会自动使用正式域名；本地预览复制的链接为本地地址。此项目尚未部署。
+`npm run build` 输出静态文件至 `dist/client/`；把该目录内容部署到网站 `/sound_dashboard/` 目录，对应目标 `https://vincejiang.com/sound_dashboard/`。资源路径已设置同一前缀。正式部署后复制分享链接会自动使用正式域名；本地预览复制的链接为本地地址。生产发布走 `vincejiang-demo` 的 main 分支 CI；源码位于该仓库 `tools/sound-dashboard/`，流水线生成 `/sound_dashboard/` 静态站点。
 
 `npm test` 验证中文 / Unicode 链接往返、全部状态还原、五档约束和无效数据处理。
 
