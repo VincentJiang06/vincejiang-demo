@@ -23,3 +23,9 @@
 [`/study/2026T1/`](https://vincejiang.com/study/2026T1/) 按 CSCI3130、CSCI3150、CSCI3160、CSCI3230、GENA2122 收录课程伴读、作业题解与实验解析。Markdown 在构建时转成 HTML，公式使用本地 KaTeX，原始课件不发布。五门共254份笔记；CS笔记展开例题、推导与程序过程，GENA2122按历史背景、论点与证据阅读。保留来源年份及ESTR边界。支持按单课同步；命令、范围和验证见 [SPEC §15](SPEC.md#15-study-课程笔记)。
 
 CSCI3230 与 CSCI3150 的 HW01 另有分级提示版：按小问或实现单元逐层展开，完整解析需要单独确认。
+
+## 声音仪表盘
+
+源码位于 `tools/sound-dashboard/`，上线地址 `/sound_dashboard/`。首次 `cd tools/sound-dashboard && npm ci`，然后在仓库根运行 `node tools/build-sound-dashboard.mjs`，再运行站点生成器。CI 和 Docker 已包含此步骤，生成的 `/sound_dashboard/` 不入 Git。
+
+命令行直接生成图片：进入 `tools/sound-dashboard`，`npm run build && npm link`，首次运行 `sound-dashboard --install-browser`，然后 `sound-dashboard --input examples/dashboard.json --jpeg card.jpg`。默认同时输出中英简介和正式分享链接。

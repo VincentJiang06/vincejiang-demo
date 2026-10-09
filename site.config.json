@@ -84,6 +84,15 @@
   ],
   "gallery": [
     {
+      "key": "sound-dashboard",
+      "title": "声音仪表盘",
+      "href": "/sound_dashboard/",
+      "date": "2026-10-09",
+      "desc": "记录耳机的五段频响与五项听感，切换主题，生成分享链接与轻量 JPEG。",
+      "badge": "交互工具 · 耳机听感",
+      "hue": null
+    },
+    {
       "key": "closed-back-atlas",
       "title": "封闭监听耳机坐标",
       "href": "/gallery/closed-back-atlas/",

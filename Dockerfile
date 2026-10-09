@@ -16,6 +16,8 @@ COPY tools/package.json tools/package-lock.json ./tools/
 RUN cd tools && npm ci --no-audit --no-fund
 # 再拷全部源码并编译(build-site 的 COPY_EXCLUDE 决定哪些进 /out,替代旧 Dockerfile 的 rm 清理)
 COPY . .
+RUN cd tools/sound-dashboard && npm ci --no-audit --no-fund
+RUN node tools/build-sound-dashboard.mjs
 RUN cd tools && node build-site.mjs --out /out
 
 FROM nginx:alpine

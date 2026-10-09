@@ -30,6 +30,13 @@ jobs:
         run: node tools/gen-manifest.mjs
       - name: 装生成器依赖
         run: cd tools && npm ci --no-audit --no-fund
+      - name: Build and test sound dashboard
+        run: |
+          cd tools/sound-dashboard
+          npm ci --no-audit --no-fund
+          npm test
+          cd ../..
+          node tools/build-sound-dashboard.mjs
       - name: 生成器 --check(硬 gate)
         run: cd tools && node build-site.mjs --check
       - name: 行为与 Glyph 契约测试(硬 gate)

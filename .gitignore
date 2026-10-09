@@ -8,3 +8,7 @@ assets/shots/
 # Python feedback test artifacts
 __pycache__/
 *.pyc
+
+# Sound dashboard generated site and nested build output
+/sound_dashboard/
+/tools/sound-dashboard/dist/

@@ -20,6 +20,11 @@ jobs:
         run: node tools/gen-manifest.mjs
       - name: 装生成器依赖
         run: cd tools && npm ci --no-audit --no-fund
+      - name: Build sound dashboard
+        run: |
+          cd tools/sound-dashboard && npm ci --no-audit --no-fund
+          cd ../..
+          node tools/build-sound-dashboard.mjs
       - name: 跑审计
         run: cd tools && node audit.mjs --out "$RUNNER_TEMP/audit.md"
       - name: 报告进 job summary

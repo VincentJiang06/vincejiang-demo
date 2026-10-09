@@ -1,0 +1,10 @@
+import { spawnSync } from 'node:child_process';
+import { cpSync, rmSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+const source = fileURLToPath(new URL('./sound-dashboard/', import.meta.url));
+const result = spawnSync('npm', ['run', 'build'], {cwd: source, stdio: 'inherit'});
+if (result.status !== 0) process.exit(result.status || 1);
+const destination = fileURLToPath(new URL('../sound_dashboard/', import.meta.url));
+rmSync(destination, {recursive: true, force: true});
+cpSync(new URL('./sound-dashboard/dist/client/', import.meta.url), destination, {recursive: true});
+console.log('Built /sound_dashboard/ from tools/sound-dashboard');
