@@ -34,7 +34,15 @@ p.4列诊断、治疗方案、药物、生物信息、个体化医疗与监测�
 
 **一个可动笔的小表：**第一列“论文实际测了什么”，第二列“我想声称什么”。若第一列只有图像准确率，第二列却写“减少所有医疗风险”，中间缺了推理和证据。先把第二列收窄，比用更多专业词填空更诚实。
 
-p.5 推荐：Intelligent surgical workflow recognition for endoscopic submucosal dissection with real-time animal study (2023)；Towards a general-purpose foundation model for computational pathology (2024)；Artificial intelligence-enhanced echocardiography in cardiovascular disease management (2025)；AI in health and medicine (2022)；Application of large language models in medicine (2025)。
+p.4图从病理切片的高/低注意力区域与缩略图，连到超声工作流程：图像采集（自动识别视角、质量与完整性检查）→图像分析（自动分析、解释、纵向监测）→医生review（展示相关数据、报告、辅助诊断建议）→报告（自然语言处理与非结构化信息抽取）→数据分析（风险预测、聚类、表型分组和临床决策支持）。图展示可介入的环节，不等于每环已在本课实验验证。
+
+p.5原书目（以下期刊、机构、年份按该页记录，未独立核验论文全文）：
+
+- Intelligent surgical workflow recognition for endoscopic submucosal dissection with real-time animal study（Nature Communications, 2023）。
+- Towards a general-purpose foundation model for computational pathology（Nature Medicine, 2024）。
+- Artificial intelligence-enhanced echocardiography in cardiovascular disease management（Nature Reviews Cardiology, 2025）。
+- AI in health and medicine（Nature Medicine, 2022）。
+- Application of large language models in medicine（Nature Reviews Bioengineering, 2025）。
 
 阅读这些题目时可以先选一个具体任务，不必同时覆盖全部医疗应用。书目里的foundation model等名字尚不熟悉也无妨，先读摘要确认输入、输出、验证，再决定要补哪些技术前置。
 
@@ -46,7 +54,15 @@ p.6区分理解周围与路径规划。**感知**回答“附近有什么、在�
 
 阅读实验时再区分游戏、仿真、真实环境。同样的“成功率90%”，如果一项来自固定仿真道路，另一项来自不同天气的真实道路，条件不同，数字不能不加说明地横向排名。90%是此处教学举例，不是下列论文结果。
 
-p.7 推荐：Dense reinforcement learning for safety validation of autonomous vehicles (2023)；Integrating artificial intelligence in unmanned vehicles: navigating uncertainties, risks, and the path forward for the fourth industrial revolution (2025)；Outracing champion Gran Turismo drivers with deep reinforcement learning (2022)；Learning vision-based agile flight via differentiable physics (2025)；MetaDrive: Composing Diverse Driving Scenarios for Generalizable Reinforcement Learning (2022)。
+p.6拼图包括车辆与历史FSD订阅推文、AI/无人车/风险管理关系网络、从真实数据重建与程序生成道路、仿真中的RGB/深度/点云/鸟瞰观测、人类驾驶控制，以及飞行器穿过障碍和杂乱环境的轨迹。它把驾驶、仿真与敏捷飞行作为相关但不同的环境理解/控制问题；未给可比较的性能表。
+
+p.7原书目（以下期刊、机构、年份按该页记录，未独立核验论文全文）：
+
+- Dense reinforcement learning for safety validation of autonomous vehicles（Nature, 2023）。
+- Integrating artificial intelligence in unmanned vehicles: navigating uncertainties, risks, and the path forward for the fourth industrial revolution（Humanities and Social Sciences Communications, 2025）。
+- Outracing champion Gran Turismo drivers with deep reinforcement learning（Nature, 2022）。
+- Learning vision-based agile flight via differentiable physics（Nature Machine Intelligence, 2025）。
+- MetaDrive: Composing Diverse Driving Scenarios for Generalizable Reinforcement Learning（TPAMI, 2022）。
 
 **自查动作：**在论文中圈出测试环境，再列一个未覆盖但你关心的环境。把它写为待验证问题，而不是写成作者已经解决的能力。
 
@@ -56,7 +72,15 @@ p.8把机器人学习定义为学习新技能或适应环境的方法。理解�
 
 **补充例子：**机械臂抓一个杯子，观测可能含相机图像与关节状态；动作可能是末端位置或关节控制量；成功可以先明确为抬起并保持，而不是“手靠近杯子”。把杯子换材质、换位置、换环境，分别改变了不同条件。说“能适应新环境”时，应说明到底新在哪里。
 
-p.9 推荐：Surgical embodied intelligence for generalized task autonomy in laparoscopic robot-assisted surgery (2025)；Will generative AI transform robotics? (2024)；Lifelike agility and play in quadrupedal robots using reinforcement learning and generative pre-trained models (2024)；RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control (2023)；π0: A Vision-Language-Action Flow Model for General Robot Control (2024)。
+p.8图片分别呈现机械臂操作、夹持末端、人形机器人、工厂多机械臂与人机交谈；“There are some cute robots”是视频链接提示，外观不能代替学习算法说明。
+
+p.9原书目（以下期刊、机构、年份按该页记录，未独立核验论文全文）：
+
+- Surgical embodied intelligence for generalized task autonomy in laparoscopic robot-assisted surgery（Science Robotics, 2025）。
+- Will generative AI transform robotics?（Nature Machine Intelligence, 2024）。
+- Lifelike agility and play in quadrupedal robots using reinforcement learning and generative pre-trained models（Nature Machine Intelligence, 2024）。
+- RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control（Google DeepMind, 2023）。
+- π0: A Vision-Language-Action Flow Model for General Robot Control（Physical Intelligence, 2024）。
 
 不要只凭成功视频判断泛化：还要找试验次数、失败情况、训练与测试对象是否重合。一个演示可以说明存在一次成功，不自动给出成功概率。读者可以把“新物体”“新背景”“新动作组合”分三行记录，避免把一种变化的成功推广到所有变化。
 
@@ -68,7 +92,15 @@ p.10提AI辅助生物、化学、物理研究。首先问模型正在输出预�
 
 这里容易出现一个误解：“准确率高，所以发现科学规律。”预测可利用相关性，科学解释还要看问题本身需要什么机制或验证。具体论文是否提出机制，必须读实际方法，不能仅凭AI应用领域推断。
 
-p.11 推荐：Scientific discovery in the age of artificial intelligence (2023)；AI-powered omics-based drug pair discovery for pyroptosis therapy targeting triple-negative breast cancer (2024)；Highly accurate protein structure prediction with AlphaFold (2021)；Scaling deep learning for materials discovery (2023)；Autonomous chemical research with large language models (2023)。
+p.10图列Pangu-Weather天气预测、AlphaFold 2蛋白结构、AI与数学/物理，以及化合物空间→高通量量子力学计算→数据→机器学习分析→反馈探索的循环。Pangu宣传图片还出现“10,000×”预测速度说法，这是原图宣传文字，不是本笔记独立实验结论。
+
+p.11原书目（以下期刊、机构、年份按该页记录，未独立核验论文全文）：
+
+- Scientific discovery in the age of artificial intelligence（Nature, 2023）。
+- AI-powered omics-based drug pair discovery for pyroptosis therapy targeting triple-negative breast cancer（Nature Communications, 2024）。
+- Highly accurate protein structure prediction with AlphaFold（Nature, 2021）。
+- Scaling deep learning for materials discovery（Nature, 2023）。
+- Autonomous chemical research with large language models（Nature, 2023）。
 
 **自查动作：**用不同颜色标论文中的“预测”“实验”“解释”。这些词如果被自己笔记写成同义词，就返回原文重新分开。
 
@@ -80,7 +112,15 @@ p.12列客户消费习惯分析与客服机器人，并不把金融AI限定为�
 
 若任务是客服，重点又不同：是否依据正确资料、能否完成询问、是否需要人工接手。不能拿一个交易预测的指标来概括客服质量。先辨任务，才知道论文该用哪一种对照。
 
-p.13 推荐：Intelligent finance and change management implications (2023)；AI integration in financial services: a systematic review of trends and regulatory challenges (2025)；Revolutionizing finance with conversational AI: a focus on ChatGPT implementation and challenges (2025)；Artificial Intelligence in Finance: Valuations and Opportunities (2024)；AI in Finance: Challenges, Techniques, and Opportunities (2022)。
+p.12金融关系图把machine learning、big data、artificial intelligence连到NLP/情感分析、文本挖掘、信用风险、股市预测、神经网络、算法交易、区块链与数字金融等词；旁边股票报价与机器人是应用示意，没有给投资回报数据。
+
+p.13原书目（以下期刊、机构、年份按该页记录，未独立核验论文全文）：
+
+- Intelligent finance and change management implications（Humanities and Social Sciences Communications, 2023）。
+- AI integration in financial services: a systematic review of trends and regulatory challenges（Humanities and Social Sciences Communications, 2025）。
+- Revolutionizing finance with conversational AI: a focus on ChatGPT implementation and challenges（Humanities and Social Sciences Communications, 2025）。
+- Artificial Intelligence in Finance: Valuations and Opportunities（Finance Research Letters, 2024）。
+- AI in Finance: Challenges, Techniques, and Opportunities（ACM Computing Surveys, 2022）。
 
 **自查动作：**给每个输入字段写一个“最早何时知道”的时间，再与预测时间比较；若是客服题目，则写清回答所依据的资料与评价标准。这些是核查方法，不是假设所列论文都存在相同问题。
 
@@ -92,7 +132,15 @@ p.14把自然语言处理放在人类语言与计算机的交叉处。第一步�
 
 研究还可能改变不同阶段：预训练积累一般规律，适配或后训练调整任务行为，推理阶段决定当前怎么生成。某篇论文在哪一阶段做改进，应从方法中核对，不能把所有改进都叫“模型更大”。
 
-p.15 推荐：Attention Is All You Need (2017)；Language Models are Few-Shot Learners (2020)；Improving Language Understanding by Generative Pre-Training (2018)；DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning (2025)；A Survey of Large Language Models（课件标 continuously refined）。课件的 GitHub 星数是旧快照，不能作为当前统计。
+p.14历史产品拼图列ChatGPT、Zhipu AI、Google LaMDA、Llama 3.1与DeepSeek。Llama图标出8B/70B/405B，是图片当时的模型尺寸信息，不能视为当前完整产品列表。
+
+p.15原书目（以下期刊、机构、年份按该页记录，未独立核验论文全文）：
+
+- Attention Is All You Need（NIPS, 2017）。
+- Language Models are Few-Shot Learners（NIPS, 2020）。
+- Improving Language Understanding by Generative Pre-Training（OpenAI, 2018）。
+- DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning（DeepSeek-AI, 2025）。
+- A Survey of Large Language Models（持续更新综述；课件GitHub星数11.8K，历史快照）。
 
 课件的GitHub星数是历史快照，不是模型质量指标。**自查动作：**写清论文输入、输出、训练信息、测试任务四项；若一个测试只查选择题正确率，就不要自动写成已经证明所有开放对话同样可靠。
 
@@ -104,7 +152,15 @@ p.16以NPC智能行为介绍游戏AI；p.17的书目还涉及竞技、规划与�
 
 比较模型时也要看是否拿到相同信息：一个看得到完整地图，一个只能看当前画面，任务难度可能不同。计算资源与可尝试次数也会影响公平比较。
 
-p.17 推荐：AI in Human-computer Gaming: Techniques, Challenges and Opportunities (2023)；World and Human Action Models towards gameplay ideation (2025)；Mastering Atari, Go, chess and shogi by planning with a learned model (2020)；High-accuracy model-based reinforcement learning, a survey (2023)；Grandmaster level in StarCraft II using multi-agent reinforcement learning (2019)。
+p.16图示AlphaGo纪录片与围棋、机器人与人下国际象棋、OpenAI游戏演示、电竞AI分析面板及多人竞技画面。它说明AI既可成为玩家/NPC，也可服务游戏分析；本页没有提供统一竞技基准。
+
+p.17原书目（以下期刊、机构、年份按该页记录，未独立核验论文全文）：
+
+- AI in Human-computer Gaming: Techniques, Challenges and Opportunities（Machine Intelligence Research, 2023）。
+- World and Human Action Models towards gameplay ideation（Nature, 2025）。
+- Mastering Atari, Go, chess and shogi by planning with a learned model（Nature, 2020）。
+- High-accuracy model-based reinforcement learning, a survey（Artificial Intelligence Review, 2023）。
+- Grandmaster level in StarCraft II using multi-agent reinforcement learning（Nature, 2019）。
 
 **自查动作：**把奖励规则、观察范围、对手条件写在分数旁边。脱离这三项的“某AI分数更高”，往往还不足以支持你想做的比较。
 
@@ -116,7 +172,15 @@ p.18涵盖系统自主生成与人机协作创作，作品可为音乐、照片�
 
 若研究的是协作创作，还要看用户需要做多少选择、改写和筛选。把最终结果全部归于模型，可能漏掉人的贡献；只统计生成文件数量也不一定衡量作品质量。
 
-p.19 推荐：Spontaneous emergence of rudimentary music detectors in deep neural networks (2024)；Bias against AI art can enhance perceptions of human creativity (2023)；A fuzzy control algorithm based on artificial intelligence for the fusion of traditional Chinese painting and AI painting (2024)；Art and the science of generative AI (2023)；Enhancing art creation through AI-based generative adversarial networks in educational auxiliary system (2025)。
+p.18图包括人像风格变换、机械臂与人共同绘画、肖像画与音乐谱面。谱面题头保留“AI-music, 192x96x576, 193 epochs, 805 seconds, 7 training sets”（Russell E Glaue）；原页未解释三个尺寸或实验设置，不能据此推导课程要求或跨模型效率。
+
+p.19原书目（以下期刊、机构、年份按该页记录，未独立核验论文全文）：
+
+- Spontaneous emergence of rudimentary music detectors in deep neural networks（Nature Communications, 2024）。
+- Bias against AI art can enhance perceptions of human creativity（Scientific Reports, 2023）。
+- A fuzzy control algorithm based on artificial intelligence for the fusion of traditional Chinese painting and AI painting（Scientific Reports, 2024）。
+- Art and the science of generative AI（Science, 2023）。
+- Enhancing art creation through AI-based generative adversarial networks in educational auxiliary system（Scientific Reports, 2025）。
 
 **自查动作：**写清谁在评价、用什么问题或量表、是否知道作品来源、是否比较同样的任务。书目与教师材料以外的同学观点没有用作本篇学术来源。
 
@@ -130,7 +194,15 @@ could描述可能性，不是已经证明每个教学系统都有效。对这份
 
 一个教学研究也要说明学习者基础。对熟练者有用的短提示，对第一次见公式的人可能仍然太快。阅读时找参与者、课程、比较条件与测试时点，不只看“使用AI后满意度提升”。
 
-p.21 推荐：Education in the AI era: a long-term classroom technology based on intelligent robotics (2024)；Exploring the impact of artificial intelligence on higher education: The dynamics of ethical, social, and educational implications (2024)；A systematic review of AI-driven intelligent tutoring systems (ITS) in K-12 education (2025)；Navigating the landscape of AI literacy education: insights from a decade of research (2014–2024) (2025)；State of the art and practice in AI in education (2022)。
+p.20还提出AI辅导可能减轻一些学生在真人辅导中的焦虑/压力，未来课堂的ambient informatics可能有帮助。旁边主题网络联系AI literacy、教育、数字能力、机器学习与生成式AI；这些是研究方向和可能性，不是已证明每种系统都有效。
+
+p.21原书目（以下期刊、机构、年份按该页记录，未独立核验论文全文）：
+
+- Education in the AI era: a long-term classroom technology based on intelligent robotics（Humanities and Social Sciences Communications, 2024）。
+- Exploring the impact of artificial intelligence on higher education: The dynamics of ethical, social, and educational implications（Humanities and Social Sciences Communications, 2024）。
+- A systematic review of AI-driven intelligent tutoring systems (ITS) in K-12 education（npj Science of Learning, 2025）。
+- Navigating the landscape of AI literacy education: insights from a decade of research (2014–2024)（Humanities and Social Sciences Communications, 2025）。
+- State of the art and practice in AI in education（European Journal of Education, 2022）。
 
 **小检查：**学生靠完整答案交对练习，能否单凭这一点证明已经学会？
 
@@ -146,7 +218,15 @@ p.22关注人与机器作为多个参与者共同解决问题。模型单独强�
 
 这个例子也解释为什么至少需要人单独、AI单独、组合三个相关对照。若只报合作比人高，就不能进一步声称合作发挥了双方之长、超过所有替代方案。
 
-p.23 推荐：Human–AI collaboration enables more empathic conversations in text-based peer-to-peer mental health support (2023)；When combinations of humans and AI are useful: A systematic review and meta-analysis (2024)；Examining human–AI collaboration in hybrid intelligence learning environments: insight from the Synergy Degree Model (2025)；How human–AI feedback loops alter human perceptual, emotional and social judgements (2024)；AI-enhanced collective intelligence (2024)。
+p.22将协作定义为分布式、多agent网络，每个人或机器自主贡献。右图对照human–AI、human–human、把AI认作人、把人认作AI四种交互，区分信息整合、分类系统、交互后的判断变化三个层次；参与者认为自己在与谁互动，也是实验条件。
+
+p.23原书目（以下期刊、机构、年份按该页记录，未独立核验论文全文）：
+
+- Human–AI collaboration enables more empathic conversations in text-based peer-to-peer mental health support（Nature Machine Intelligence, 2023）。
+- When combinations of humans and AI are useful: A systematic review and meta-analysis（Nature Human Behaviour, 2024）。
+- Examining human–AI collaboration in hybrid intelligence learning environments: insight from the Synergy Degree Model（Humanities and Social Sciences Communications, 2025）。
+- How human–AI feedback loops alter human perceptual, emotional and social judgements（Nature Human Behaviour, 2024）。
+- AI-enhanced collective intelligence（Patterns, 2024）。
 
 **自查动作：**画出信息顺序：谁先给判断，谁看得到谁的结果，谁作最终决定。信息流不同，哪怕参与者与模型一样，也可能形成不同实验条件。
 
@@ -158,7 +238,15 @@ p.24把AI伦理分成人类设计、制造、使用系统的行为，以及机�
 
 研究阅读中还要分开规范主张与经验事实：“应给申诉机会”是在讨论制度原则；“提供某界面后多少人成功申诉”是可以观察的结果。一个漂亮原则不自动证明措施有效，一个统计差异也需要解释适用条件。
 
-p.25 推荐：Unraveling the Ethical Enigma: Artificial Intelligence in Healthcare (2023)；Importance and limitations of AI ethics in contemporary society (2022)；Ethics and discrimination in artificial intelligence-enabled recruitment practices (2023)；Embedding responsibility in intelligent systems: from AI ethics to responsible AI ecosystems (2023)；The Ethics of AI Ethics: An Evaluation of Guidelines (2020)。
+p.24用机器人手持法槌与天平象征责任和伦理判断。该图是概念插图，未给出某司法系统已经采用AI裁决的实证，也没有新增法律规则。
+
+p.25原书目（以下期刊、机构、年份按该页记录，未独立核验论文全文）：
+
+- Unraveling the Ethical Enigma: Artificial Intelligence in Healthcare（Cureus, 2023）。
+- Importance and limitations of AI ethics in contemporary society（Humanities and Social Sciences Communications, 2022）。
+- Ethics and discrimination in artificial intelligence-enabled recruitment practices（Humanities and Social Sciences Communications, 2023）。
+- Embedding responsibility in intelligent systems: from AI ethics to responsible AI ecosystems（Scientific Reports, 2023）。
+- The Ethics of AI Ethics: An Evaluation of Guidelines（Minds and Machines, 2020）。
 
 **自查动作：**给每段结论标“应该怎样”或“观察到什么”，再核对它依赖的理由或数据。这样讨论会比只列隐私、公平、责任三个名词更清楚。本篇没有把选题建议升级成新的课程或法律要求。
 

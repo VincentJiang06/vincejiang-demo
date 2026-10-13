@@ -30,6 +30,37 @@ $$
 
 `round(..., 10)` 把数值舍入到10位小数，可能在靠近阈值时影响比较，因此手算讲义时先保持精度，最后展示才舍入。`x_last` 在此页虽保存旧值，循环判据却没有用它；不要因为定义了“旧值”就误以为当前算法在比较两次参数距离。
 
+p.1原代码的可读转写如下，保留舍入、未使用的旧值和打印行为；输出笔误已在上文单独说明。无需依赖PDF截图读取缩进：
+
+```python
+import numpy as np
+f = lambda x: x ** 2
+```
+
+上面只需导入NumPy，完整循环为：
+
+```python
+df = lambda x: 2 * x
+epsilon = 0.01
+alpha = 0.4
+x = 10
+x_last = np.inf * np.ones_like(x)
+print('Initialize: x =', x)
+print('')
+iters = 0
+while round(abs(f(x)), 10) > epsilon:
+    x_last = x
+    x = round(x - alpha * df(x), 10)
+    iters += 1
+    print('==> Iter %s, x=%s, f(x)=%s' %
+          (iters, x, round(f(x), 10)))
+print('------------- The model is converged -------------')
+print('\nOptimal solution = ', x)
+print('Minimum f(x) = x^2 = ', f(x))
+```
+
+`lambda`定义匿名函数，`**`是幂，`%s`将循环计数和数值填进输出；这些显示语句不参与更新。
+
 ### 抽象成函数与迭代上限（p.2–3）
 
 p.2 的 `grad_descent` 把同一个循环抽成函数：`obj_fn` 计算损失，`grad_fn` 计算梯度，`alpha` 控制步幅，`is_converge` 判断是否停止，`init_x` 提供初始位置，`max_iters` 提供上限。原件真实参数名是 `max_iters`；核对调用时，应按这个名字查找定义。
@@ -43,6 +74,38 @@ p.3 将学习率改为1，参数10与−10来回跳，目标恒100，直到100�
 **补充·初始化的工程限制**：代码用无穷大参数构造 `x_last`，希望第一次比较一定开始。然而一般目标未必能接受无穷大，矩阵计算可能产生 `NaN`。更清楚的设计是先算初始损失，再做一次合法更新后比较两个有限损失。这是阅读代码的稳健性提示，不声称原件采用了该实现。
 
 还要注意上限检查在更新后：若刚好最后一轮达到容差，原函数可能先打印达到上限而返回。停止标签与实际状态需要分开核对，不能仅看一句日志。
+
+p.2–3共用的封装函数完整流程如下；仅整理缩进，不更改原停止逻辑：
+
+```python
+def grad_descent(obj_fn, grad_fn, alpha, is_converge,
+                 init_x, max_iters=100):
+    x = init_x
+    x_last = np.inf * np.ones_like(init_x)
+    iters = 0
+    while not is_converge(obj_fn(x_last), obj_fn(x)):
+        x_last = x
+        x = x - alpha * grad_fn(x)
+        iters += 1
+        if iters >= max_iters:
+            print('Not converged in %s steps' % iters)
+            return x
+    print('Converged in %s steps' % iters)
+    print('Optimal solution = ', x)
+    print('Minimum f(x) = x^2 = ', obj_fn(x))
+    return x
+
+if __name__ == '__main__':
+    f = lambda x: x ** 2
+    df = lambda x: 2 * x
+    epsilon = 0.01
+    alpha = 0.4
+    x0 = 10
+    converge_criterion = lambda last, curr: abs(curr) <= epsilon
+    grad_descent(f, df, alpha, converge_criterion, x0)
+```
+
+`if __name__ == '__main__'`使脚本直接执行时才运行示例。p.3只把`alpha`改1，其余流程相同；按上文递推100步后仍为10，日志“Not converged in 100 steps”是上限停止。
 
 ### 六点分类与形状（p.4–5）
 
@@ -62,6 +125,31 @@ p.4 给两个特征列表和六个标签，用 `np.stack(..., axis=1)` 把同一
 p.5 先按真实标签画散点：布尔掩码选择0类和1类行，再取两特征当横纵坐标。此时颜色表示人工标签，不代表模型预测正确与否；因为模型尚未训练。坐标轴的输入特征单位原件未给，不把它们擅自称为厘米或概率。
 
 这里没有常数1列，也没有另加偏置，所以模型只有两个权重。分数为 $z=\theta_1x_1+\theta_2x_2$，零分数边界必须经过原点。**增加训练轮数无法改变这个结构限制**；若要截距需明确改变模型，而不是以为算法会自动补上。
+
+p.4–5原数据准备和画图步骤可直接从下列转写学习：
+
+```python
+import matplotlib.pyplot as plt
+raw_x1 = [0.959, 0.750, 0.395, 0.823, 0.761, 0.844]
+raw_x2 = [0.382, 0.306, 0.760, 0.764, 0.874, 0.435]
+raw_labels = [0, 0, 0, 1, 1, 1]
+data_X = np.stack([raw_x1, raw_x2], axis=1)
+gt_Y = np.array(raw_labels, dtype=np.float32)
+gt_Y = gt_Y[:, np.newaxis]
+print('data_X', data_X)
+print('gt_Y', gt_Y)
+neg_labels_idx = gt_Y[:, 0] == 0
+plt.scatter(data_X[neg_labels_idx, 0], data_X[neg_labels_idx, 1])
+pos_labels_idx = gt_Y[:, 0] == 1
+plt.scatter(data_X[pos_labels_idx, 0], data_X[pos_labels_idx, 1])
+for i, txt in enumerate(gt_Y[:, 0]):
+    plt.annotate(txt, data_X[i, 0:2], fontsize=17)
+plt.xlabel('$x_1$')
+plt.ylabel('$x_2$')
+plt.show()
+```
+
+`[:,0]`选第一列；布尔掩码按行选样本；`enumerate`同时给行号和标签；`annotate`在对应二维坐标写标签。输出数组就是上表六行，不会因画图改变训练数据。
 
 ### 概率、交叉熵与梯度（p.6）
 
@@ -95,6 +183,36 @@ $$
 
 这是同一个未裁剪目标的数值稳定写法，不是另换损失。$e^{-\lvert z\rvert}$ 不会指数爆炸，也不必先把概率舍入成0或1再取对数。此处只说明改进方向，没有修改或宣称重跑原代码。
 
+p.6模型部分完整转写如下，**保留原裁剪与硬编码阈值**，以便逐行理解前述限制：
+
+```python
+sigmoid = lambda z: 1.0 / (1 + np.exp(-z))
+P = lambda X, Theta: np.clip(sigmoid(X @ Theta), 1e-3, 1-1e-3)
+ce_loss = lambda X, Theta, Y_true: np.sum(
+    -Y_true * np.log(P(X, Theta))
+    - (1.0-Y_true) * np.log(1-P(X, Theta)))
+d_ce_loss = lambda X, Theta, Y_true: np.sum(
+    (P(X, Theta)-Y_true) * X, axis=0, keepdims=True).T
+
+def prob2category(prob_ls, threshold=0.5):
+    prob_ls = prob_ls.copy()
+    prob_ls[prob_ls >= 0.5] = 1
+    prob_ls[prob_ls < 0.5] = 0
+    return prob_ls
+
+def logistic_regress(X, Y, learning_rate=0.01):
+    Theta_0 = np.random.randn(X.shape[1], 1)
+    converge_criterion3 = lambda last, curr: abs(last-curr) < 1e-5
+    obj_f = lambda Theta: ce_loss(X, Theta, Y)
+    d_obj_f = lambda Theta: d_ce_loss(X, Theta, Y)
+    Theta_optim = grad_descent(
+        obj_f, d_obj_f, learning_rate, converge_criterion3,
+        Theta_0, max_iters=10000)
+    return Theta_optim
+```
+
+此处沿用前面的`grad_descent`；p.6重复版本仅省略了成功时打印最优解和最小平方值的两行，循环和返回行为相同。`obj_f`与`d_obj_f`将固定X/Y封装进只接收Theta的函数；优化器因此不必知道数据有六行。`copy()`避免判类时把原概率数组就地改成0/1。
+
 小检查：若把损失改成平均六条，但梯度仍用上面的总和，一次更新还与新损失的梯度相符吗？
 
 :::hint 参考答案
@@ -116,6 +234,30 @@ p.6–7 的训练用随机初始化，学习率默认0.01，最多10000步；停
 画边界来自 $\theta_1x_1+\theta_2x_2=0$。若 $\theta_2\ne0$，移项除以它，得 $x_2=-\theta_1x_1/\theta_2$，于是可给一串横坐标画纵坐标。这个除法有条件：$\theta_2=0,\theta_1\ne0$ 时边界是竖线 $x_1=0$；两权重全为0时所有点概率0.5，没有唯一分界直线。
 
 p.7 的散点颜色基于预测标签，旁边数字注释仍是真实标签。读图要把两种信息比较，不能把注释也当作预测。图只能显示这六点及画出的范围，不证明整片特征空间预测正确。
+
+p.7从训练到作图的完整调用：
+
+```python
+Theta_optim_1 = logistic_regress(data_X, gt_Y)
+print('Theta_optim_1', Theta_optim_1)
+prob_ls = P(data_X, Theta_optim_1)
+pred_Y = prob2category(prob_ls)
+print('pred_Y', pred_Y)
+neg_labels_idx = pred_Y[:, 0] == 0
+plt.scatter(data_X[neg_labels_idx, 0], data_X[neg_labels_idx, 1])
+pos_labels_idx = pred_Y[:, 0] == 1
+plt.scatter(data_X[pos_labels_idx, 0], data_X[pos_labels_idx, 1])
+for i, txt in enumerate(gt_Y[:, 0]):
+    plt.annotate(txt, data_X[i, 0:2], fontsize=17)
+range_x1 = np.linspace(0.4, 1, 100)
+lin_eq = lambda x1: -Theta_optim_1[0] * x1 / Theta_optim_1[1]
+plt.plot(range_x1, lin_eq(range_x1))
+plt.xlabel('$x_1$')
+plt.ylabel('$x_2$')
+plt.show()
+```
+
+`linspace(0.4,1,100)`只选择画线的100个横坐标，不是再产生100条训练数据。上面代码按课件解释而未执行随机训练；原件的输出图不能作为这台机器上的复现记录。
 
 ## 本讲核心考点
 

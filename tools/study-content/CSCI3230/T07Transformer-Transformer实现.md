@@ -8,6 +8,20 @@
 
 配套：[T07-Transformer-未核.ipynb](../辅导/T07-Transformer-未核.ipynb)。按 PDF 顺序解释；打印版裁掉的代码由 notebook 原始单元核对。来源未核的身份保留。
 
+#### 配套原代码：单元 1
+
+以下保留原代码与原注释，注释的局限按正文解释；依单元顺序运行，下载和训练只在自行执行时发生。
+
+```python
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import math
+import numpy as np
+
+torch.manual_seed(42)
+```
+
 ### 位置编码先告诉模型“在哪里”（p.1）
 
 这份notebook把模块按顺序组装起来，最后只对随机整数输入做一次前向计算。目标是读懂轴、信息流和mask，不是证明模型已会翻译。前置是 [L08注意力的逐步手算](L08-P1-注意力基础.md)。
@@ -26,6 +40,85 @@ $pos$ 从0开始数位置，$d_{\rm model}$ 是向量宽度，$i$ 为一对特�
 补充自取 $d_{\rm model}=4$：第一对除数1，第二对除数100。位置0为 $(0,1,0,1)$；位置1约 $(0.8415,0.5403,0.0100,0.99995)$。把它逐元素加到词向量，而不是把位置数字直接当词ID，也不新增序列元素。
 
 源码把表注册为buffer：它随模型迁设备、保存状态，但不是梯度更新的参数。表只预存到max_len；超过表长不能靠一句“正弦能外推”让当前切片自动变长。公式能定义更长位置，也不证明训练模型在超长序列一定可靠。当前实现偶/奇列赋值还隐含偶数宽度，奇数宽度需另行处理形状。
+
+#### 配套原代码：单元 2
+
+以下保留原代码与原注释，注释的局限按正文解释；依单元顺序运行，下载和训练只在自行执行时发生。
+
+```python
+class PositionalEncoding(nn.Module):
+    """
+    Positional Encoding: Transformers lack a recurrent structure, so we need to explicitly inform the model of token positions.
+
+    Uses sine and cosine functions of different frequencies:
+    PE(pos, 2i)   = sin(pos / 10000^(2i/d_model))
+    PE(pos, 2i+1) = cos(pos / 10000^(2i/d_model))
+
+    Why this design?
+    - Different frequencies encode positional information at different scales
+    - The periodicity of sin/cos allows the model to learn relative positions
+    - Can extrapolate to sequence lengths not seen during training
+    """
+
+    def __init__(self, d_model, max_len=5000, dropout=0.1):
+        super(PositionalEncoding, self).__init__()
+        self.dropout = nn.Dropout(p=dropout)
+
+        # Create positional encoding matrix [max_len, d_model]
+        pe = torch.zeros(max_len, d_model)
+
+        # Position indices [max_len, 1]
+        position = torch.arange(0, max_len, dtype=torch.float).unsqueeze(1)
+
+        # Frequency term: 10000^(2i/d_model)
+        div_term = torch.exp(
+            torch.arange(0, d_model, 2).float() *
+            (-math.log(10000.0) / d_model)
+        )
+
+        # Even dimensions use sin, odd dimensions use cos
+        pe[:, 0::2] = torch.sin(position * div_term)
+        pe[:, 1::2] = torch.cos(position * div_term)
+
+        # Add batch dimension [1, max_len, d_model]
+        pe = pe.unsqueeze(0)
+
+        # Register as buffer (not a parameter, no gradient needed)
+        self.register_buffer('pe', pe)
+
+    def forward(self, x):
+        """
+        Args:
+            x: [batch_size, seq_len, d_model]
+        Returns:
+            Tensor with positional encoding added
+        """
+        x = x + self.pe[:, :x.size(1), :]
+        return self.dropout(x)
+
+# Demonstrate positional encoding
+print("\n[Demonstration] Effect of Positional Encoding")
+d_model = 128
+max_len = 100
+pos_encoder = PositionalEncoding(d_model, max_len)
+
+# Create a dummy input
+dummy_input = torch.randn(2, 10, d_model)  # batch=2, seq_len=10
+output = pos_encoder(dummy_input)
+
+print(f"Input shape: {dummy_input.shape}")
+print(f"Output shape: {output.shape}")
+print(f"Positional encoding matrix shape: {pos_encoder.pe.shape}")
+```
+
+原件保存输出（非本次运行）：
+
+```text
+[Demonstration] Effect of Positional Encoding
+Input shape: torch.Size([2, 10, 128])
+Output shape: torch.Size([2, 10, 128])
+Positional encoding matrix shape: torch.Size([1, 100, 128])
+```
 
 ### 批、序列、模型宽度与头（p.2）
 
@@ -56,6 +149,150 @@ mask在softmax前把不可读位置改成很大负数。若只允许第一个位
 
 源码在softmax后还对权重用dropout，训练态返回的权重因随机置零与缩放，不保证每行恰好和为1。合并各头时先transpose回 $B\times L_q\times h\times d_k$，`contiguous()`整理存储后再view成 $B\times L_q\times D$，最后做输出投影。reshape不学习新参数，投影才学习。
 
+#### 配套原代码：单元 3
+
+以下保留原代码与原注释，注释的局限按正文解释；依单元顺序运行，下载和训练只在自行执行时发生。
+
+```python
+class MultiHeadAttention(nn.Module):
+    """
+    Multi-Head Attention Mechanism
+
+    Core Idea:
+    1. Split d_model into num_heads heads, each with dimension d_k = d_model / num_heads
+    2. Each head independently computes attention: Attention(Q,K,V) = softmax(QK^T/√d_k)V
+    3. Concatenate outputs of all heads and pass through a linear layer
+
+    Why use multiple heads?
+    - Different heads can focus on different types of relationships
+    - Similar to multi-channel CNNs, enhances expressive power
+    """
+
+    def __init__(self, d_model, num_heads, dropout=0.1):
+        super(MultiHeadAttention, self).__init__()
+
+        assert d_model % num_heads == 0, "d_model must be divisible by num_heads"
+
+        self.d_model = d_model
+        self.num_heads = num_heads
+        self.d_k = d_model // num_heads  # Dimension per head
+
+        # Linear transformations for Q, K, V (parameters for all heads combined)
+        self.W_q = nn.Linear(d_model, d_model)
+        self.W_k = nn.Linear(d_model, d_model)
+        self.W_v = nn.Linear(d_model, d_model)
+
+        # Output linear transformation
+        self.W_o = nn.Linear(d_model, d_model)
+
+        self.dropout = nn.Dropout(dropout)
+
+    def split_heads(self, x):
+        """
+        Split the last dimension into multiple heads
+
+        Args:
+            x: [batch_size, seq_len, d_model]
+        Returns:
+            [batch_size, num_heads, seq_len, d_k]
+        """
+        batch_size, seq_len, d_model = x.size()
+        # Reshape to [batch_size, seq_len, num_heads, d_k]
+        x = x.view(batch_size, seq_len, self.num_heads, self.d_k)
+        # Transpose to [batch_size, num_heads, seq_len, d_k]
+        return x.transpose(1, 2)
+
+    def forward(self, query, key, value, mask=None):
+        """
+        Args:
+            query: [batch_size, seq_len_q, d_model]
+            key:   [batch_size, seq_len_k, d_model]
+            value: [batch_size, seq_len_v, d_model]  (seq_len_k == seq_len_v)
+            mask:  [batch_size, 1, 1, seq_len_k] or [batch_size, 1, seq_len_q, seq_len_k]
+
+        Returns:
+            output: [batch_size, seq_len_q, d_model]
+            attention_weights: [batch_size, num_heads, seq_len_q, seq_len_k]
+        """
+        batch_size = query.size(0)
+
+        # 1. Linear transformations
+        Q = self.W_q(query)  # [batch_size, seq_len_q, d_model]
+        K = self.W_k(key)    # [batch_size, seq_len_k, d_model]
+        V = self.W_v(value)  # [batch_size, seq_len_v, d_model]
+
+        # 2. Split into multiple heads
+        Q = self.split_heads(Q)  # [batch_size, num_heads, seq_len_q, d_k]
+        K = self.split_heads(K)  # [batch_size, num_heads, seq_len_k, d_k]
+        V = self.split_heads(V)  # [batch_size, num_heads, seq_len_v, d_k]
+
+        # 3. Compute attention scores: QK^T / √d_k
+        # [batch_size, num_heads, seq_len_q, d_k] @ [batch_size, num_heads, d_k, seq_len_k]
+        # -> [batch_size, num_heads, seq_len_q, seq_len_k]
+        scores = torch.matmul(Q, K.transpose(-2, -1)) / math.sqrt(self.d_k)
+
+        # 4. Apply mask (optional)
+        # Mask purpose:
+        # - Padding mask: Ignore padding positions
+        # - Look-ahead mask: Prevent seeing future information in decoder
+        if mask is not None:
+            scores = scores.masked_fill(mask == 0, -1e9)
+
+        # 5. Softmax to get attention weights
+        attention_weights = F.softmax(scores, dim=-1)
+        attention_weights = self.dropout(attention_weights)
+
+        # 6. Weighted sum: attention_weights @ V
+        # [batch_size, num_heads, seq_len_q, seq_len_k] @ [batch_size, num_heads, seq_len_v, d_k]
+        # -> [batch_size, num_heads, seq_len_q, d_k]
+        context = torch.matmul(attention_weights, V)
+
+        # 7. Concatenate heads
+        # [batch_size, num_heads, seq_len_q, d_k] -> [batch_size, seq_len_q, num_heads, d_k]
+        context = context.transpose(1, 2).contiguous()
+        # -> [batch_size, seq_len_q, d_model]
+        context = context.view(batch_size, -1, self.d_model)
+
+        # 8. Final linear transformation
+        output = self.W_o(context)
+
+        return output, attention_weights
+
+# Demonstrate multi-head attention
+print("\n[Demonstration] Multi-Head Attention Computation")
+d_model = 256
+num_heads = 8
+mha = MultiHeadAttention(d_model, num_heads)
+
+# Create input
+batch_size = 2
+seq_len = 10
+query = torch.randn(batch_size, seq_len, d_model)
+key = torch.randn(batch_size, seq_len, d_model)
+value = torch.randn(batch_size, seq_len, d_model)
+
+output, attn_weights = mha(query, key, value)
+
+print(f"Input shape: {query.shape}")
+print(f"Output shape: {output.shape}")
+print(f"Attention weights shape: {attn_weights.shape}")
+print(f"  - batch_size: {attn_weights.shape[0]}")
+print(f"  - num_heads: {attn_weights.shape[1]}")
+print(f"  - seq_len_q x seq_len_k: {attn_weights.shape[2]} x {attn_weights.shape[3]}")
+```
+
+原件保存输出（非本次运行）：
+
+```text
+[Demonstration] Multi-Head Attention Computation
+Input shape: torch.Size([2, 10, 256])
+Output shape: torch.Size([2, 10, 256])
+Attention weights shape: torch.Size([2, 8, 10, 10])
+  - batch_size: 2
+  - num_heads: 8
+  - seq_len_q x seq_len_k: 10 x 10
+```
+
 ### 输出形状与逐位置前馈层（p.4）
 
 示例Q/K/V输入都为2×10×256，输出为2×10×256，权重为2×8×10×10。最后两个10分别是query位置和key位置；形状相同不表示它们角色相同。源码这个独立MHA演示分别随机生成query/key/value，严格说不是同一输入张量的self-attention演示；encoder调用时才明确传同一个x三次。
@@ -64,6 +301,71 @@ FFN为256→1024→256，中间ReLU和dropout。它对每个位置独立用同�
 
 补充追踪一个位置：原来256个特征，第一层产生1024种组合，ReLU保留正响应，第二层将这些组合重新混合为256维。这个过程没有直接读取邻词；邻词信息来自此前attention。若把序列长度10改20，FFN处理的行数翻倍，而每行的矩阵形状与参数量不变。
 
+#### 配套原代码：单元 4
+
+以下保留原代码与原注释，注释的局限按正文解释；依单元顺序运行，下载和训练只在自行执行时发生。
+
+```python
+print("\n" + "="*70)
+print("Part 3: Feed-Forward Network - Position-Independent Nonlinear Transformation")
+print("="*70)
+
+class FeedForward(nn.Module):
+    """
+    Feed-Forward Neural Network: Two-layer fully connected network
+
+    FFN(x) = max(0, xW1 + b1)W2 + b2
+
+    Features:
+    - Applied independently to each position in the sequence (position-wise)
+    - The intermediate layer is typically larger than d_model (commonly 4 times)
+    - Enhances the model's nonlinear expressive power
+    """
+
+    def __init__(self, d_model, d_ff, dropout=0.1):
+        super(FeedForward, self).__init__()
+
+        self.linear1 = nn.Linear(d_model, d_ff)
+        self.linear2 = nn.Linear(d_ff, d_model)
+        self.dropout = nn.Dropout(dropout)
+
+    def forward(self, x):
+        """
+        Args:
+            x: [batch_size, seq_len, d_model]
+        Returns:
+            [batch_size, seq_len, d_model]
+        """
+        # x -> [batch_size, seq_len, d_ff] -> [batch_size, seq_len, d_model]
+        return self.linear2(self.dropout(F.relu(self.linear1(x))))
+
+# Demonstrate feed-forward network
+print("\n[Demonstration] Feed-Forward Network")
+d_model = 256
+d_ff = 1024  # Typically 4 times d_model
+ffn = FeedForward(d_model, d_ff)
+
+x = torch.randn(2, 10, d_model)
+output = ffn(x)
+
+print(f"Input shape: {x.shape}")
+print(f"Output shape: {output.shape}")
+print(f"Intermediate layer dimension: {d_ff}")
+```
+
+原件保存输出（非本次运行）：
+
+```text
+======================================================================
+Part 3: Feed-Forward Network - Position-Independent Nonlinear Transformation
+======================================================================
+
+[Demonstration] Feed-Forward Network
+Input shape: torch.Size([2, 10, 256])
+Output shape: torch.Size([2, 10, 256])
+Intermediate layer dimension: 1024
+```
+
 ### Encoder 的残差与归一化（p.5–6）
 
 encoder将整个输入序列编码成上下文表示。源码先调用`self_attention(x,x,x,mask)`，再执行残差加法与LayerNorm；然后FFN，再一次残差与LayerNorm。这是post-norm顺序，不能与“先归一化再进子层”的pre-norm混写。
@@ -71,6 +373,83 @@ encoder将整个输入序列编码成上下文表示。源码先调用`self_atte
 以一个宽度2的位置作补充自取例：输入 $x=(1,3)$，假设attention输出 $(0.5,-0.5)$，暂不考虑dropout，残差相加得 $(1.5,2.5)$。均值2，平均平方偏差0.25，暂略极小项且缩放1平移0，LayerNorm给 $(-1,1)$。实际网络宽256或512、缩放平移可训练，但“对每个位置自己的特征做归一化”的逻辑相同。
 
 两支相加必须形状一致。残差提供保留原表示与梯度传播的路径，并不意味着该层输出等于输入。p.6的2×10×256只证实接口形状；值已经经过attention、归一化和FFN改变。把多个encoder层堆起，仍每层保持同一外部形状，才方便继续连接。
+
+#### 配套原代码：单元 5
+
+以下保留原代码与原注释，注释的局限按正文解释；依单元顺序运行，下载和训练只在自行执行时发生。
+
+```python
+print("\n" + "="*70)
+print("Part 4: Encoder Layer - Combining Components")
+print("="*70)
+
+class EncoderLayer(nn.Module):
+    """
+    Transformer Encoder Layer
+
+    Structure:
+    1. Multi-Head Self-Attention
+    2. Add & Norm (Residual Connection + Layer Normalization)
+    3. Feed-Forward Network
+    4. Add & Norm
+
+    Why Add & Norm?
+    - Residual Connection: Mitigates vanishing gradients, aids deep network training
+    - Layer Norm: Stabilizes training, accelerates convergence
+    """
+
+    def __init__(self, d_model, num_heads, d_ff, dropout=0.1):
+        super(EncoderLayer, self).__init__()
+
+        self.self_attention = MultiHeadAttention(d_model, num_heads, dropout)
+        self.feed_forward = FeedForward(d_model, d_ff, dropout)
+
+        # Layer Normalization
+        self.norm1 = nn.LayerNorm(d_model)
+        self.norm2 = nn.LayerNorm(d_model)
+
+        self.dropout = nn.Dropout(dropout)
+
+    def forward(self, x, mask=None):
+        """
+        Args:
+            x: [batch_size, seq_len, d_model]
+            mask: [batch_size, 1, 1, seq_len]
+        Returns:
+            [batch_size, seq_len, d_model]
+        """
+        # Self-Attention sublayer
+        attn_output, _ = self.self_attention(x, x, x, mask)
+        x = self.norm1(x + self.dropout(attn_output))  # Add & Norm
+
+        # Feed-Forward sublayer
+        ff_output = self.feed_forward(x)
+        x = self.norm2(x + self.dropout(ff_output))  # Add & Norm
+
+        return x
+
+# Demonstrate Encoder layer
+print("\n[Demonstration] Encoder Layer")
+encoder_layer = EncoderLayer(d_model=256, num_heads=8, d_ff=1024)
+
+x = torch.randn(2, 10, 256)
+output = encoder_layer(x)
+
+print(f"Input shape: {x.shape}")
+print(f"Output shape: {output.shape}")
+```
+
+原件保存输出（非本次运行）：
+
+```text
+======================================================================
+Part 4: Encoder Layer - Combining Components
+======================================================================
+
+[Demonstration] Encoder Layer
+Input shape: torch.Size([2, 10, 256])
+Output shape: torch.Size([2, 10, 256])
+```
 
 ### Decoder 的两类注意力（p.7）
 
@@ -81,6 +460,96 @@ decoder比encoder多一段“向源序列查资料”。第一段对目标序列
 例中目标长度8、源长度10、batch2、头8，因此交叉注意力权重为2×8×8×10。第一个8是头数，第二个8是目标query个数，10是源key数。每个目标位置都会得到新表示，输出长度仍8，不因为源长10就变10。
 
 这一单层演示调用decoder时没有传mask；类名里写decoder不自动给它因果约束。完整模型在p.9才构造掩码。读实现应看参数实际有没有传入，不能只看注释标题。
+
+#### 配套原代码：单元 6
+
+以下保留原代码与原注释，注释的局限按正文解释；依单元顺序运行，下载和训练只在自行执行时发生。
+
+```python
+print("\n" + "="*70)
+print("Part 5: Decoder Layer - Adding Cross-Attention")
+print("="*70)
+
+class DecoderLayer(nn.Module):
+    """
+    Transformer Decoder Layer
+
+    Structure:
+    1. Masked Multi-Head Self-Attention (prevents attending to future information)
+    2. Add & Norm
+    3. Multi-Head Cross-Attention (attends to Encoder output)
+    4. Add & Norm
+    5. Feed-Forward Network
+    6. Add & Norm
+
+    Differences from Encoder:
+    - Includes Masked Self-Attention
+    - Includes Cross-Attention (connects Encoder and Decoder)
+    """
+
+    def __init__(self, d_model, num_heads, d_ff, dropout=0.1):
+        super(DecoderLayer, self).__init__()
+
+        self.self_attention = MultiHeadAttention(d_model, num_heads, dropout)
+        self.cross_attention = MultiHeadAttention(d_model, num_heads, dropout)
+        self.feed_forward = FeedForward(d_model, d_ff, dropout)
+
+        self.norm1 = nn.LayerNorm(d_model)
+        self.norm2 = nn.LayerNorm(d_model)
+        self.norm3 = nn.LayerNorm(d_model)
+
+        self.dropout = nn.Dropout(dropout)
+
+    def forward(self, x, encoder_output, src_mask=None, tgt_mask=None):
+        """
+        Args:
+            x: [batch_size, tgt_len, d_model] - decoder input
+            encoder_output: [batch_size, src_len, d_model] - encoder output
+            src_mask: [batch_size, 1, 1, src_len] - source sequence mask
+            tgt_mask: [batch_size, 1, tgt_len, tgt_len] - target sequence mask
+        Returns:
+            [batch_size, tgt_len, d_model]
+        """
+        # 1. Masked Self-Attention
+        attn_output, _ = self.self_attention(x, x, x, tgt_mask)
+        x = self.norm1(x + self.dropout(attn_output))
+
+        # 2. Cross-Attention (attending to encoder output)
+        attn_output, _ = self.cross_attention(x, encoder_output, encoder_output, src_mask)
+        x = self.norm2(x + self.dropout(attn_output))
+
+        # 3. Feed-Forward
+        ff_output = self.feed_forward(x)
+        x = self.norm3(x + self.dropout(ff_output))
+
+        return x
+
+# Demonstrate Decoder layer
+print("\n[Demonstration] Decoder Layer")
+decoder_layer = DecoderLayer(d_model=256, num_heads=8, d_ff=1024)
+
+tgt = torch.randn(2, 8, 256)  # decoder input
+encoder_out = torch.randn(2, 10, 256)  # encoder output
+
+output = decoder_layer(tgt, encoder_out)
+
+print(f"Decoder input shape: {tgt.shape}")
+print(f"Encoder output shape: {encoder_out.shape}")
+print(f"Decoder output shape: {output.shape}")
+```
+
+原件保存输出（非本次运行）：
+
+```text
+======================================================================
+Part 5: Decoder Layer - Adding Cross-Attention
+======================================================================
+
+[Demonstration] Decoder Layer
+Decoder input shape: torch.Size([2, 8, 256])
+Encoder output shape: torch.Size([2, 10, 256])
+Decoder output shape: torch.Size([2, 8, 256])
+```
 
 ### 完整模型的规模（p.8）
 
@@ -152,6 +621,222 @@ logits不是概率。补充自取三个候选得分 $(2,1,0)$，softmax约 $(0.6
 :::hint 参考答案
 不会。embedding表由词表大小与模型宽度决定；访问更多行会增加计算/激活，表本身不自动变大。标准attention配对开销则会随序列长度明显增加。
 :::endhint
+
+#### 配套原代码：单元 7
+
+以下保留原代码与原注释，注释的局限按正文解释；依单元顺序运行，下载和训练只在自行执行时发生。
+
+```python
+print("\n" + "="*70)
+print("Part 6: Complete Transformer - Assembling All Components")
+print("="*70)
+
+class Transformer(nn.Module):
+    """
+    Complete Transformer Model
+
+    Structure:
+    - Encoder: Stack of N EncoderLayer
+    - Decoder: Stack of N DecoderLayer
+    - Embedding layer
+    - Positional encoding
+    - Output layer (Linear + Softmax)
+    """
+
+    def __init__(self,
+                 src_vocab_size,    # Source language vocabulary size
+                 tgt_vocab_size,    # Target language vocabulary size
+                 d_model=512,       # Model dimension
+                 num_heads=8,       # Number of attention heads
+                 num_layers=6,      # Number of encoder/decoder layers
+                 d_ff=2048,         # Feed-forward network intermediate dimension
+                 dropout=0.1,       # Dropout probability
+                 max_len=5000):     # Maximum sequence length
+
+        super(Transformer, self).__init__()
+
+        self.d_model = d_model
+
+        # Embedding layers (convert token ids to vectors)
+        self.src_embedding = nn.Embedding(src_vocab_size, d_model)
+        self.tgt_embedding = nn.Embedding(tgt_vocab_size, d_model)
+
+        # Positional encoding
+        self.pos_encoding = PositionalEncoding(d_model, max_len, dropout)
+
+        # Encoder layers
+        self.encoder_layers = nn.ModuleList([
+            EncoderLayer(d_model, num_heads, d_ff, dropout)
+            for _ in range(num_layers)
+        ])
+
+        # Decoder layers
+        self.decoder_layers = nn.ModuleList([
+            DecoderLayer(d_model, num_heads, d_ff, dropout)
+            for _ in range(num_layers)
+        ])
+
+        # Output layer (project to target vocabulary)
+        self.fc_out = nn.Linear(d_model, tgt_vocab_size)
+
+        self.dropout = nn.Dropout(dropout)
+
+    def make_src_mask(self, src, pad_idx=0):
+        """
+        Create source sequence mask (to ignore padding)
+
+        Args:
+            src: [batch_size, src_len]
+            pad_idx: Index of padding token
+        Returns:
+            [batch_size, 1, 1, src_len]
+        """
+        src_mask = (src != pad_idx).unsqueeze(1).unsqueeze(2)
+        return src_mask
+
+    def make_tgt_mask(self, tgt, pad_idx=0):
+        """
+        Create target sequence mask (padding + prevent seeing future)
+
+        Args:
+            tgt: [batch_size, tgt_len]
+        Returns:
+            [batch_size, 1, tgt_len, tgt_len]
+        """
+        tgt_len = tgt.size(1)
+
+        # Lower triangular matrix (prevents seeing future information)
+        tgt_sub_mask = torch.tril(
+            torch.ones(tgt_len, tgt_len, device=tgt.device)
+        ).bool()
+
+        # Padding mask
+        tgt_pad_mask = (tgt != pad_idx).unsqueeze(1).unsqueeze(2)
+
+        # Combine both masks
+        tgt_mask = tgt_sub_mask & tgt_pad_mask
+
+        return tgt_mask
+
+    def encode(self, src, src_mask):
+        """
+        Encoder forward pass
+
+        Args:
+            src: [batch_size, src_len]
+            src_mask: [batch_size, 1, 1, src_len]
+        Returns:
+            [batch_size, src_len, d_model]
+        """
+        # Embedding + positional encoding
+        x = self.src_embedding(src) * math.sqrt(self.d_model)
+        x = self.pos_encoding(x)
+
+        # Pass through all encoder layers
+        for layer in self.encoder_layers:
+            x = layer(x, src_mask)
+
+        return x
+
+    def decode(self, tgt, encoder_output, src_mask, tgt_mask):
+        """
+        Decoder forward pass
+
+        Args:
+            tgt: [batch_size, tgt_len]
+            encoder_output: [batch_size, src_len, d_model]
+            src_mask: [batch_size, 1, 1, src_len]
+            tgt_mask: [batch_size, 1, tgt_len, tgt_len]
+        Returns:
+            [batch_size, tgt_len, d_model]
+        """
+        # Embedding + positional encoding
+        x = self.tgt_embedding(tgt) * math.sqrt(self.d_model)
+        x = self.pos_encoding(x)
+
+        # Pass through all decoder layers
+        for layer in self.decoder_layers:
+            x = layer(x, encoder_output, src_mask, tgt_mask)
+
+        return x
+
+    def forward(self, src, tgt):
+        """
+        Complete forward pass
+
+        Args:
+            src: [batch_size, src_len] - Source sequence token ids
+            tgt: [batch_size, tgt_len] - Target sequence token ids
+        Returns:
+            [batch_size, tgt_len, tgt_vocab_size] - Probability distribution over target vocabulary for each position
+        """
+        # Create masks
+        src_mask = self.make_src_mask(src)
+        tgt_mask = self.make_tgt_mask(tgt)
+
+        # Encoder
+        encoder_output = self.encode(src, src_mask)
+
+        # Decoder
+        decoder_output = self.decode(tgt, encoder_output, src_mask, tgt_mask)
+
+        # Project to vocabulary
+        output = self.fc_out(decoder_output)
+
+        return output
+
+# Create a Transformer instance
+print("\n[Demonstration] Complete Transformer Model")
+model = Transformer(
+    src_vocab_size=10000,  # Source language vocabulary size
+    tgt_vocab_size=8000,   # Target language vocabulary size
+    d_model=512,
+    num_heads=8,
+    num_layers=6,
+    d_ff=2048,
+    dropout=0.1
+)
+
+# Count parameters
+num_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+print(f"\nModel parameter count: {num_params:,}")
+
+# Demonstrate forward pass
+batch_size = 2
+src_len = 10
+tgt_len = 8
+
+src = torch.randint(0, 10000, (batch_size, src_len))  # Source sequence
+tgt = torch.randint(0, 8000, (batch_size, tgt_len))   # Target sequence
+
+output = model(src, tgt)
+
+print(f"\nInput:")
+print(f"  Source sequence src: {src.shape}")
+print(f"  Target sequence tgt: {tgt.shape}")
+print(f"Output:")
+print(f"  logits: {output.shape}")
+print(f"    - Probability distribution over target vocabulary for each position")
+```
+
+原件保存输出（非本次运行）：
+
+```text
+======================================================================
+Part 6: Complete Transformer - Assembling All Components
+======================================================================
+
+[Demonstration] Complete Transformer Model
+
+Model parameter count: 57,458,496
+
+Input:
+  Source sequence src: torch.Size([2, 10])
+  Target sequence tgt: torch.Size([2, 8])
+Output:
+  logits: torch.Size([2, 8, 8000])
+    - Probability distribution over target vocabulary for each position
+```
 
 ## 本讲核心考点
 

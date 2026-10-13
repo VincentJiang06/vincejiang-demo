@@ -9,6 +9,8 @@
 
 本篇是2025T1的ESTR背景调查伴读，**不是一套应先做完才准进入CSCI3230的入学测验**。p.24为Survey扉页，p.25问希望ESTR在概念、算法、数学、编程、应用、研究方面增加多少内容，p.26问相关课程与自学经历。
 
+p.25六行依次是AI concepts、algorithms、mathematics、programming、applications、research，每行三选一：“A lot more!”（多很多）、“A bit more”（多一点）、“No, just same as CSCI3230”（与主课相同）。p.26三列为AI/ML/Deep Learning/Data Mining、linear algebra、optimization；每列按经历选择：上过CUHK课程、上过Coursera等网课、未上课但自学过材料、只懂基本概念、完全没有。原页要求去uReply作答，本笔记只保留问卷内容，不代填或提交。
+
 动机与能力是两件事：希望多学数学，不表示已经会优化；做过调库项目，也不表示已经能解释每一行公式。对初学者最有用的回答是暴露缺口，而不是把听过的词全部标成掌握。
 
 **补充自评方法：**选择一项小任务，例如“给两条数据算一次预测”，分别标出能独立完成、看例子能完成、还不理解三种状态。先把卡点缩小到具体一步，再选择前置内容。下面六个词只作低门槛预览；不要求在调查页一次掌握六个完整理论。
@@ -16,6 +18,8 @@
 ### 六个术语的准备度（p.27）
 
 p.27列semi-definite matrix、cross-entropy、L2-Norm、duality、SVD、gradient descent。原页只是调查熟悉程度，**以下直觉、数字与公式均为补充教学内容**，不是该页已经教过的推导，也不是必考清单。
+
+p.27对每个术语使用同样四档：“I can teach this topic!”（能教别人）、“I know it”（理解）、“Sort of heard about it”（听说过）、“Huh?”（陌生）。这些是自评选项，不是六道有固定分值的考试题。
 
 #### 先从长度与平方开始：L2范数
 
