@@ -9,7 +9,7 @@ p.53 Outline，进入带星号的成员算法部分；本讲原件确实包含�
 
 ### CYK 的输入先要标准化（p.54–56）【新】
 
-p.54 比较穷举的指数候选数与 CYK 的立方量级，指文法固定时随输入长度的变化。p.55 列出算法名称来源。p.56 输入为 CNF 文法与串 w，输出 w 是否属于语言。CNF 的二变量规则保证一个长串能从某一切点分成左右两块，这是递推成立的结构前提。
+p.54 比较穷举的指数候选数与 CYK 的立方量级，指文法固定时随输入长度的变化。p.55 列出算法名称来源：J. Cocke、D. H. Younger、T. Kasami，合称 CYK。p.56 输入为 CNF 文法与串 w，输出 w 是否属于语言。CNF 的二变量规则保证一个长串能从某一切点分成左右两块，这是递推成立的结构前提。
 
 ### 子串表格存的是变量集合（p.57–59）
 
@@ -38,6 +38,22 @@ p.61 完成表：
 | 5 | aabbb | S/B |
 
 例如 abb：切 a·bb 为 A与A，AA无规则；切 ab·b 为{S,B}与{B}，BB产生 A，SB无规则，故只有 A。各格的所有切点与回溯[见附录 A1](#a1)。<a name="r-a1"></a>
+
+### 逐格试完全部切点并回溯（p.61–62）
+
+长度3：aab 的 a·ab 用 A与B得到 S、B，aa·b 左格空，无贡献。abb 的两切点正文已算，得 A。bbb 的 b·bb 用 BA无规则，bb·b 用 AB得 S、B。
+
+长度4：aabb 的 a·abb 为 AA，无贡献；aa·bb 左格空；aab·b 为{S,B}×{B}，仅 BB给 A。abbb 的 a·bbb 为 A×{S,B}，仅 AB给 S、B；ab·bb 为{S,B}×A，SA、BA均无规则；abb·b 为 AB，再给 S、B，去重后仍{S,B}。
+
+长度5：a·abbb 为 A×{S,B}，AB给 S、B；aa·bbb 左空；aab·bb 为{S,B}×A，无规则；aabb·b 为 AB，又给 S、B。每个切点已穷尽，顶格为{S,B}。
+
+回溯可选顶格 S→AB，左 A生成第一 a，右 B生成 abbb；右 B→AB，A生成第二 a，B生成 bbb；该 B→AB，其中 A→BB 生成前两个 b，右 B生成最后 b。完整最左推导：
+
+$$
+S\Rightarrow AB\Rightarrow aB\Rightarrow aAB\Rightarrow aaB\Rightarrow aaAB\Rightarrow aaBBB\Rightarrow aabBB\Rightarrow aabbB\Rightarrow aabbb.
+$$
+
+共有9步，5个终结叶各一次终结规则，4次二分规则，符合完整二叉结构。每个中间串都只替换最左变量，能直接按原产生式核验。
 
 ### 接受条件与复杂度（p.62）
 
@@ -94,6 +110,8 @@ $$
 
 ## 来源与证据
 
-考试证据：读了 HW01-2025T1-题目.pdf、HW01-2026T1-题目.pdf、HW02-2025T1-题目-更新.pdf、HW03-2025T1-题目.pdf、HW04-2025T1-题目.pdf、HW05-2025T1-题目.pdf、期中练习-含解答-学期待核.pdf、期末-2022T1-资料包.pdf、Final-Exam-2023T1-题目.pdf、Final-Exam-2024T1-题目.pdf、Final-Exam-2025T1-题目.pdf、期末-2023T1-资料包.pdf、期末-2024未核-资料包.pdf；未识别用途的 PDF：无
+历史版本考试证据（本次未重新读取全部试卷）：读了 HW01-2025T1-题目.pdf、HW01-2026T1-题目.pdf、HW02-2025T1-题目-更新.pdf、HW03-2025T1-题目.pdf、HW04-2025T1-题目.pdf、HW05-2025T1-题目.pdf、期中练习-含解答-学期待核.pdf、期末-2022T1-资料包.pdf、Final-Exam-2023T1-题目.pdf、Final-Exam-2024T1-题目.pdf、Final-Exam-2025T1-题目.pdf、期末-2023T1-资料包.pdf、期末-2024未核-资料包.pdf；未识别用途的 PDF：无
 
 - 原件：[L06-文法变换与范式-资料包.pdf](../课件/L06-文法变换与范式-资料包.pdf)，PDF p.53–62。
+
+- 本次独立学习修订：核对本讲64页文本，视觉复核 p.5–7、20–21、61、63–64；补全删除标记、完整规则与 CYK 正文计算。
