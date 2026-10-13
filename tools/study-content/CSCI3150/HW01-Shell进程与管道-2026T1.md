@@ -479,5 +479,6 @@ tail 接到的是 head 的十二行输出，所以其最后五行从 8 开始。
 - 作业证据：[HW01-题目-2026T1.pdf](../项目/HW01/HW01-题目-2026T1.pdf)，Assignment One，p.1。A 级表示本次作业的直接要求，不代表期末考试承诺。
 - 补充接口文档：Linux man-pages 的 [fork(2)](https://man7.org/linux/man-pages/man2/fork.2.html)、[exec(3)](https://man7.org/linux/man-pages/man3/exec.3.html)、[execve(2)](https://man7.org/linux/man-pages/man2/execve.2.html)、[wait(2)](https://man7.org/linux/man-pages/man2/waitpid.2.html)、[pipe(2)](https://man7.org/linux/man-pages/man2/pipe.2.html)、[pipe(7)](https://man7.org/linux/man-pages/man7/pipe.7.html)、[dup(2)](https://man7.org/linux/man-pages/man2/dup.2.html)，2026-09-23 核对。网页补充不冒充讲义原话。
 - 课程索引承接：[L02](local:course-index)、[L04](local:course-index)。L02 为 2026T1；L04 原件为 2022未核版，仅用于已有条目衔接，不据此声称它是本学期最新课件。
+- 本次按 Tutorial 处理，只给已有条目追加演练引用；参数计数等 Tutorial 特有内容和补充示例不新建讲义知识条目。
 - 未读 / 跳过：非官方笔记、同学答案与已完成作答均不作为本次教学解释的来源。原题末尾的 how.dev 扩展链接未作为机制依据，补充改用上列接口文档。
 - 考试证据：读了 HW01-题目-2026T1.pdf；未识别用途的 PDF：无

@@ -9,13 +9,55 @@
 
 ### p.1–3：这份练习来自历史Spring2026
 
+> **p.1** Multilevel Feedback Queue
+>
+> CSCI3150 Introduction to Operating Systems, Spring 2026
+
+> **p.2** Assignment 2
+>
+> Due at 23:59:59 p.m., Sunday, March 1stask as soon as possible.
+>
+> Please accept the task ASAP.
+>
+> Invitation URL: https://classroom.github.com/a/RKvPmvxf
+>
+> Submission: Github classroom (refer to the Assignment 1 guide: https://piazza.com/class/mjxsr09gf91dw/post/11)
+
+> **p.3** Assignment 2
+>
+> For students who have already accepted asg2, please run git pull to update
+
 封面2月26日，作业2截止3月1日。更新提示仅说明该历史作业材料曾调整，本次不执行git pull或提交操作。
 
 ### p.4–6：自动反馈也有延迟
 
+> **p.4** Assignment 2
+>
+> If you can't access asg2 via this URL, please try the solution also mentioned in asg1:
+>
+> https://piazza.com/class/mjxsr09gf91dw/post/19
+
+> **p.5** Assignment 2as possible.
+>
+> Autograding: https://piazza.com/class/mjxsr09gf91dw/post/57\#
+
+> **p.5** New update: Considering GitHub's permission security issues, we have made some adjustments to how you can view the autograding feedback:
+>
+> You can continue to check the basic test results (e.g., whether the compilation passes, whether files are missing, etc.) in the Actions tab of your personal repo after pushing asg2.
+>
+> Detailed results will be pushed to the Issues tab of your personal repo with a delay. However, due to the instability of GitHub's schedule triggers for automated testing (which may be dropped or delayed), it may take 10 minutes or even longer to actually receive the feedback. It is recommended to test as early as possible.
+
+> **p.6** Assignment 2as possible.
+>
+> https://piazza.com/class/mjxsr09gf91dw/post/57\#
+
 课件把基础检查放Actions，详细结果延迟到Issues，说明没有即时报告不等于程序没有运行。截图是当时工作流记录，不能作为当期作业平台承诺。
 
 ### p.7–9：本题最关键的额外假设
+
+> **p.9** All examples used in this tutorial:
+>
+> https://github.com/henryhxu/CSCI3150/tree/2026-Spring/tutorial/T07
 
 p.7 FAQ说明空闲区间不用填表、周期到来要排序，极长任务耗尽所有级预算不计该次作业；同一时刻周期排序与新到达先后允许两种。p.8补充新任务入最高队尾，同刻片到期的旧任务先于新任务入队。
 
@@ -23,15 +65,55 @@ p.7 FAQ说明空闲区间不用填表、周期到来要排序，极长任务耗�
 
 因此本题高优先级新到达不会立即打断正在运行的时间片；周期提升仍按后面的演示在300发生。不能直接套L08一般抢占式MLFQ来填同一张表。p.9说明本次目标是填调度表。
 
+**p.7–8 的 FAQ 条件补齐。** 原页还有两个不可省略的回答：该次作业的 reader/writer 临界操作不被抢占；README 中“每到 Period_S 且 time slice 长度为 10 时排序”是笔误，改为每到 Period_S 都排序。这里描述的是这份历史模拟作业的约定，不能据此认定真实操作系统在读写锁内禁用抢占。周期提升遇到同刻新到达，原 FAQ 允许先排序或让新任务参加排序，均不影响当次作业评分；手算一道确定的题仍须固定一种规则，不能中途切换。
+
 ### p.10–12：时间片与allotment不是同一个计数
+
+> **p.10** We have process A and process B.
+>
+> Rule 1: If Priority(A) \> Priority(B), A runs (B doesn’t).
+>
+> Rule 2: If Priority(A) = Priority(B), A & B run in round-robin fashion using the time slice (quantum length) of the given queue.
+>
+> Rule 3: When a job enters the system, it is placed at the highest priority (the topmost queue). For the jobs arriving at the same time, schedule the job with largest(or smallest) pid first.
+
+> **p.11** We have process A and process B.
+>
+> Rule 4: Once a job uses up its time allotment at a given level (regardless of how many times it has given up the CPU), its priority is reduced (i.e., it moves down one queue and will be at the tail of the target queue, which means it will be scheduled last).
+>
+> Rule 5: After some time period S, move all the jobs in the system to the topmost queue, and sort all the jobs by pid. The job with the largest(or smallest) pid will be scheduled first.
+
+> **p.12** This is a common question that often appears in final exams.
+>
+> In recent 3 years, it appeared in the final exams of
+>
+> First term of 2023-2024
+>
+> First term of 2022-2023
+>
+> First term of 2021-2022
+>
+> Second term of 2021-2022
 
 高队优先，同队RR，新任务先入最高队；在某级累计用尽allotment才降级，主动让出也不清零。p.12声称历年多次考过，只能说明本Tutorial引用过历史试题，不能推出2026T1一定再考。
 
 ### p.13–15：完整读题再落笔
 
+> **p.13** This question will give you the MLFQ rules. For example, Question 3 in Course Examination 1st Term, 2023-2024
+>
+> Pay attention to the details.
+
+> **p.14** Next, this question will give you the related information, such as
+
+> **p.15** Finally, you are required to fill the MLFQ table.
+
 截图引用2023–24 T1 Q3：同刻到达取较大PID先，降级放目标队尾；每S将任务提升，先按原到达时间早者，平局再较大PID。p.15给部分已填行，40–80整段运行PID45也与p.8的时间片内不抢占一致。
 
 ### p.16–18：完整题面与第一行
+
+> **p.16** Arriving at the same time → Largest pid first
+>
+> After period S → Earliest, Largest pid first
 
 五任务为下表，初始无任务，未说明I/O，按纯CPU执行；Q3/Q2/Q1从高到低，周期S=300。
 
@@ -91,7 +173,7 @@ t=0–10空闲不填；p.17在10把45放Q3预算30，p.18执行10–20，剩工�
 
 ### p.43–45：收尾与总量反算
 
-360–370跑1242完成；370–378跑122完成；p.45为Q&A。总CPU需求130+28+20+90+100=368，开始于10且此后无空闲，最后378，和逐行表一致。完整26行见[附录](#trace)。
+360–370跑1242完成；370–378跑122完成；p.45为Q&A。总CPU需求130+28+20+90+100=368，开始于10且此后无空闲，最后378，和逐行表一致。完整26行在本节下表。
 
 **补充指标**：完成时刻45/323/2023/122/1242分别340/168/130/378/370，周转330/118/80/298/290，平均223.2；首次运行10/90/80/110/100，响应0/40/30/30/20，平均24。这里沿用本题非抢占到达规则，换规则应整表重算。
 
@@ -101,18 +183,9 @@ t=0–10空闲不填；p.17在10把45放Q3预算30，p.18执行10–20，剩工�
 
 :::endhint
 
-## 本讲核心考点
-
-- [A-历史题截图] 2023–24 T1 Q3的MLFQ填表；证据是本Tutorial p.13–15所嵌题面，并非已取得该期完整试卷。
-- [B] 分别扣减工作量、时间片和本级累计预算。
-- [B] 处理同刻到达、完成、降级入尾和周期提升。
-- [B] 用CPU总量与完成时间反算调度表。
-
-## 附录
-
 <a name="trace"></a>
 
-### 原例26行完整结果
+#### 原例26行完整结果
 
 | 行 | 执行区间 | PID | 到达 | 执行后剩余 |
 |---|---|---|---|---|
@@ -145,7 +218,20 @@ t=0–10空闲不填；p.17在10把45放Q3预算30，p.18执行10–20，剩工�
 
 总执行368，所有任务剩余归零。[回逐页推导](#逐页伴读)。
 
+## 本讲核心考点
+
+- [A-历史题截图] 2023–24 T1 Q3的MLFQ填表；证据是本Tutorial p.13–15所嵌题面，并非已取得该期完整试卷。
+- [C] 分别扣减工作量、时间片和本级累计预算。
+- [C] 处理同刻到达、完成、降级入尾和周期提升。
+- [C] 用CPU总量与完成时间反算调度表。
+
+## 附录
+
+完整演算已放回相应页的正文，原链接锚点继续保留。
+
 ## 来源与证据
 
 - 原件：[T07-多级反馈队列-2025T2.pptx](../辅导/T07-多级反馈队列-2025T2.pptx)；[PDF副本](PDF/T07-多级反馈队列-2025T2.pdf) p.1–45。本文页码均为 PDF 页号。
 - 考试证据：读了 课程大纲-2026T1.pdf、教学计划-2026T1.pdf、T08-期中参考-2025T2-题目-解答.pdf、T07-多级反馈队列-2025T2.pdf（p.13–15内嵌历史试题）；未识别用途的 PDF：无
+
+- 2026-10-13 内容补全：保留原页顺序与版本，补入对应页的程序、接口、字段、条件和演算；原程序片段保留课件行号、拼写与省略处，不能据此视为经过编译的完整软件。本文已有运行记录属于其标注日期，本次未重新运行课程容器或提交作业。

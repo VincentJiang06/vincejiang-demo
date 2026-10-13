@@ -1,263 +1,5 @@
 [
   {
-    "key": "CSCI3150/阅读导航.md",
-    "sourceSha256": "605be73bd938e030f49526b175917dfaba70dff138c46adaec7ad9ab82abc2b6",
-    "publishedSha256": "605be73bd938e030f49526b175917dfaba70dff138c46adaec7ad9ab82abc2b6",
-    "projection": false
-  },
-  {
-    "key": "CSCI3150/HW01-Shell分级提示-2026T1.md",
-    "sourceSha256": "4aa21c314c68f9af417933b2c3356b08317ce4e9f54f4587314390b55c96ed3e",
-    "publishedSha256": "4aa21c314c68f9af417933b2c3356b08317ce4e9f54f4587314390b55c96ed3e",
-    "projection": false
-  },
-  {
-    "key": "CSCI3150/HW01-Shell进程与管道-2026T1.md",
-    "sourceSha256": "db751af0d3413844eb8936419d91f192dc125e866c2eff28bfef52f025cad257",
-    "publishedSha256": "11d59d4716ce513fce63169971950036b06b840bf6b889fa3cfc20f6ae2e6ee1",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L00-课程介绍.md",
-    "sourceSha256": "98ca2056f9e05259322c78b3c288109d1b9e37d02dae93916198a3884e03e075",
-    "publishedSha256": "9bf267d5cb83baa45bd9bb391075cfa0fcaddbd044b9c7fec2903a2a26da5acc",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L01-课程概览.md",
-    "sourceSha256": "2b5095183bc6389ef2697aea29effb0832a361a3c0329096870fd88d2ab7f1e6",
-    "publishedSha256": "1cf4e662e4cf75174f868e9a44d5717b3bb2dbc9f82b2d3a87607300a7f50419",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L02-系统调用-进程.md",
-    "sourceSha256": "41f1057f6ada3b1b80da7eb78f672b2aed3ddccc398e2688192087892e75a226",
-    "publishedSha256": "549c801324c2ea9b91804663154c71e67d4ba4354cffb93bb39c7adce87ece18",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L03-系统调用-内存.md",
-    "sourceSha256": "48e65d36f814e8d0b7907cff1ae64c3db86905cc24f6d069deaa677caaa86c16",
-    "publishedSha256": "c1b2cb73a59169440822db0dee3c6114992cb705b5f7ed6cf33e91171877ee38",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L04-系统调用-文件与目录.md",
-    "sourceSha256": "40ad85bcde7013c4cb09cedfe984492e7791ad23e123b534b50ae054551b2a89",
-    "publishedSha256": "8b0d269490e8eeb483d4da82037c9c36482e3d56025cef59c5f4931c3734853c",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L05-文件系统实现.md",
-    "sourceSha256": "7479d7fbed6a13d5e56498e75e64179363c2c3a16b259bcb9f4c26bc5b5320ce",
-    "publishedSha256": "0bfb06318fa6aa622ebf030589c8316f81273d8ec7ede90134641e904c7015e1",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L06-IO设备.md",
-    "sourceSha256": "cd5b54f22fab0082c976c6f88c2ddfae78bde63551102dc0db6009696ee03632",
-    "publishedSha256": "41f39da891cf834a32aef09291375113da3441c37721d2629ca16c00ce9680e4",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L08-P1-调度入门.md",
-    "sourceSha256": "ceede25fd4863120fb04431fbabd21c5dd187a6c9a3862e8980a57b4b5cfe71a",
-    "publishedSha256": "cc737eef546b3a018b0a44a437218beaa9c69ac28f94607419c52a65bef87002",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L08-P2-多级反馈队列.md",
-    "sourceSha256": "e0ef773d3641b6da3c981513d6734028f368ba5df79720911b80750ab664bb7f",
-    "publishedSha256": "927a729fd579def96e0c697e0900fe009c38bf7df56d3b7356dc65c04a0105d1",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L08-P3-比例份额.md",
-    "sourceSha256": "f7bd14d568351e87992815406992c16b1813f5395995dbae10056b5ea822ef1b",
-    "publishedSha256": "39ef57fb23697c191f58a448ff77ae5c98b9791c2020234ea1c58c549917f726",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L08-P4-多处理器调度.md",
-    "sourceSha256": "229e98ee7dec48932e6f215bbef7bc011af7e28e7c28c3e085ef2297c240b6d8",
-    "publishedSha256": "3a4f754058e70d811822e09010beda95365c0f5e2180cca1ae4521517ac46b5c",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L09-P1-地址空间.md",
-    "sourceSha256": "7b1480ecc3636ea55c4b5095df38298aa6dc3a807fa44c0129c3db06f78c06f9",
-    "publishedSha256": "247090718fd83a5632262923e55e5d0ddb685d51d13316a55c0c6787be38cbe9",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L09-P2-地址转换.md",
-    "sourceSha256": "9677f8d58eafc11190d888ed25efb7e9a01260f082dd4461197ee5543430eb9f",
-    "publishedSha256": "dca70e6ed966c47b84f2d01f26ad7c655b719f444c95d9bd0955c0d66f7214f7",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L10-P1-分段.md",
-    "sourceSha256": "e625f30fc1ed80f8ae693432a74bcacd04f81d2e3f4e9206171210cf2e04936f",
-    "publishedSha256": "1da7c7db5f5bb374b1058760791d2df02701938f632644564a63610d36032a1f",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L10-P2-分页.md",
-    "sourceSha256": "aa82d849e787b1a4a2d49da911819a3476e2f5137c51676d57d13853c8b628ec",
-    "publishedSha256": "3d21cc0e9491566c50278e0b79c4802fc4c6299c817b0b781b55f46356d24c99",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L11-P1-TLB.md",
-    "sourceSha256": "cd7f6cc1cfd821beb6e421705aca8f1bd2fc2fb02487a0138f575378ad4fb3ed",
-    "publishedSha256": "610194673c9ad34b31e56ae64a8ffadee2945d81389e69a0b79fec94bacf3459",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L11-P2-高级分页.md",
-    "sourceSha256": "ef0e280dd7bde065cd2be3ab7731db9b70321b3b0840e1ac8ecd96e2a57be944",
-    "publishedSha256": "5c6e594cdc8c8d8e9aeefadf3edad7f9363aa27434a5bf3f47451a581115307f",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L12-交换空间与缺页.md",
-    "sourceSha256": "6e28dae70bc4068e0b25470d47bb0a40b10e968973ec3b36c1cbf6b76f41d8be",
-    "publishedSha256": "016f6eebd48ad4539566cdd0aa25c448e3c939fe858eee06a8921dbdd7452062",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L13-P1-线程与竞争.md",
-    "sourceSha256": "24e8f1947f226b9781f7324363d3b3f1a1cd96b11124a91972a931aa205491e6",
-    "publishedSha256": "ef1dbf9328efb5c032545de27eb4de3570f9beb5a0da165493a0360b462bcfff",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L13-P2-线程API.md",
-    "sourceSha256": "5df1875dd5f99e7574819f32f1ab0066171582bc45aa62aad901a10c01cf4730",
-    "publishedSha256": "c0955e9a6c8e6cdb4be07a1d0ddd45699e7f642e2ed8ae846eaf8cb2f7c2a73f",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L14-P1-锁的实现.md",
-    "sourceSha256": "fb348c1462d4d137175934313e3b79d08e6d311b12121cd50f4d46e03307dec8",
-    "publishedSha256": "f348b3e3496334eec9d3250441fcb3225e5f8880efe9a59c9d0bc6150a0a4c1f",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L14-P2-条件变量.md",
-    "sourceSha256": "9e40928fb148e19b4c330238f3514a3332f27a67da08f7daa83050eb193b234f",
-    "publishedSha256": "1cb18ed261468b8ae9d3849281e4085871bcf8f0b0317f45327ee2bcdc930e5a",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L15-P1-信号量.md",
-    "sourceSha256": "3db4118daae11a91591c10f96eef83daeea6aa3a72f64ef7ab7cb13923b05c44",
-    "publishedSha256": "42269726e8d6b0a2c2eb6e9c5af7b4954d5632376bbcf33bcf31fbbd48107eee",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L15-P2-并发故障.md",
-    "sourceSha256": "24265dc3399b9f0b06bde63806a003f19e589dfc9563b05e188606af6ae3f620",
-    "publishedSha256": "47d61f06aaf44cbbad08936e0e55e76f048f787815939773e654d530adef83b9",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/Lab01-P1-环境配置.md",
-    "sourceSha256": "c8dd6b03cdbd9e6d0a920dec0acb777095731b90aca98e11aa52d0da21c5a419",
-    "publishedSha256": "803737d7687313e5363f8e708f1aee9477eefa31c09bd2ab5ea30a8ef157092d",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/Lab01-P2-GCC与Makefile.md",
-    "sourceSha256": "5ea3e0505403fd1c9073cf2de3f853e745114141a81bd760aa478fdabc9de123",
-    "publishedSha256": "4be3942e724d154e5af045fd417ce506b37c69b6ce7c504d7f3e8a93b0156b4a",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/Lab02-操作教程-2026T1.md",
-    "sourceSha256": "726cf26ff4fca1b71ec6f45fc3cad00732ddc091c52e08786ddef4206b88ade8",
-    "publishedSha256": "5cad50857d9e6d6c6c81ec5c63ce35d356a3b8b4736d9ab546186553d4361eb1",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/Lab02-C内存与文件IO-2026T1.md",
-    "sourceSha256": "58fd6fc3b96f8d11f60ae52dae87287af5d5d387ab6fa9f9ca921a863d045849",
-    "publishedSha256": "787c5656c4a23a32bf4569a124b29e912adb07de3d30bcd7026374a62f8b94af",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/T01-Linux与C基础.md",
-    "sourceSha256": "9654a42df31b8d8852e5a4af02fb3ee39152a9b606b1fad33c051e361eae2116",
-    "publishedSha256": "fc1157f8e90f4ebf9e988c535212d9f8904d24bf9fa1c9efd4731fb7ed590c6a",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/T02-Shell行为与框架.md",
-    "sourceSha256": "7570e732377569e8a682950937df6caa3bdc220a6cfe6d6eb87ce6eb6f09afb5",
-    "publishedSha256": "3f5cde0d2b0e61c7159f3586846d5d403f72d926aac0110ac7e893b8cd32a13a",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/T03-系统调用与管道.md",
-    "sourceSha256": "b7afd0b3e461d0b3789d6e84694295fcdd69e886ee29e4dbfbc4a88ee2c1fb11",
-    "publishedSha256": "2871c5e190371f624b25b6681a4397757c8434afbeaa9639f0a171cc09b9b426",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/T04-pthread与读写锁.md",
-    "sourceSha256": "f8e67ef4ec8e0e394a09dfad52824db0b72f03374ed3ba83c8dafadbcfc79d36",
-    "publishedSha256": "e23a92699a0e44eb149d5c52cdd9b324cc8a69e038c8aed4ed15ec44fb500fe9",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/T05-条件变量与屏障.md",
-    "sourceSha256": "4d6f3fddf715cb302a578e2479a9e0f37ec76fc05b65a3f246447a8938ac70e0",
-    "publishedSha256": "29f417906f306d7b02cd966c2f9dd22a75fd4346b2e7467359b4cb9c6a64f7b9",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/T06-进程间信号量.md",
-    "sourceSha256": "593ba7ce5c47260572862f4521ab707fb248d9446125381877252f1d20eac22c",
-    "publishedSha256": "55177d6d83a29b5a24811aefbf09fe79a85dd3def0d3872a4ac824de535a91b8",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/T07-MLFQ逐步演算.md",
-    "sourceSha256": "8bd1a1858823d634c9c702e5f0eda44155d1281bbc8c65a55d5e26a50684f193",
-    "publishedSha256": "d0b7c0c58bbf5a67a779907aabd0abcfa92b940a5229dca2dfff003b4fc4a696",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/T08-期中题与解答核验.md",
-    "sourceSha256": "226c290d14e467ac77fd48cf7cf4ebd539161227d53eeebb5c3f91ed1fe7f70a",
-    "publishedSha256": "e25428163db94ede60debf41f063ca41762656577d60131ac65edbacf07ec649",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/T09-换页算法演算.md",
-    "sourceSha256": "b524ca5013ecb60e09f7f3986b6fb5cdbcdcfb214ef59553249f60a95829629c",
-    "publishedSha256": "a88e87be663cbbf114aaa9e814ac42de593d3ab181ad81f46bb3d7e4071e3cb4",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/T10-分页地址转换.md",
-    "sourceSha256": "c01ea6b47db1df5ee0aa09bd6e44a41c0bb16a17ee1a574ca3baf9ced5d540a1",
-    "publishedSha256": "6822e370e3b724727777cda7ea0033cf2547384a458526e22a63db851ea8469f",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/T11-文件系统API.md",
-    "sourceSha256": "b1daaa4ac92717cfd6443c4f2ceccf7b5d4399e6aaaf065f6bc06664291f8666",
-    "publishedSha256": "1a2460d55f9a577b20ed46dcb89d3e8c0c6fc01d72b4895a8a2778684df1abb3",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/T12-FAT文件系统.md",
-    "sourceSha256": "937f1818d95c8c2ca5f73a3e16e8a5964387a9f0b87cb6f62238b1b432f64276",
-    "publishedSha256": "b1c15c3515b190093d676b0f0eaf6b1016d4c9955fe350af89922d7b882570bf",
-    "projection": true
-  },
-  {
     "key": "CSCI3160/复习笔记.md",
     "sourceSha256": "922339ffc59638b4562eb5bdaab81e4e05e759b094fedca914fbc460ab2604d6",
     "publishedSha256": "922339ffc59638b4562eb5bdaab81e4e05e759b094fedca914fbc460ab2604d6",
@@ -1558,5 +1300,269 @@
     "sourceSha256": "45dcdde3d2ee02f7dbf05714d55f968462feb2f4079e1a730924716bc9d80c4e",
     "publishedSha256": "45dcdde3d2ee02f7dbf05714d55f968462feb2f4079e1a730924716bc9d80c4e",
     "projection": false
+  },
+  {
+    "key": "CSCI3150/阅读导航.md",
+    "sourceSha256": "b273a9be2d4e7fcfb5bee604cfa977ad307240201f658f2d5c926ecc4120c0dc",
+    "publishedSha256": "d05a83ae2c4147af70e1e4b011b48f8948e87f9b03aa926186dacf576140c185",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/HW01-Shell分级提示-2026T1.md",
+    "sourceSha256": "4aa21c314c68f9af417933b2c3356b08317ce4e9f54f4587314390b55c96ed3e",
+    "publishedSha256": "4aa21c314c68f9af417933b2c3356b08317ce4e9f54f4587314390b55c96ed3e",
+    "projection": false
+  },
+  {
+    "key": "CSCI3150/HW01-Shell进程与管道-2026T1.md",
+    "sourceSha256": "d674aeb582d3c9d7ff7811afd54b22f9d4f66ea4918138890a32c826c78930b0",
+    "publishedSha256": "d055d8a582c908550a79dba96fb75d34dd5b4a142285d795553a7c758bf309e1",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/HW02-2026T1-详细解析.md",
+    "sourceSha256": "fb7cce5c22abb0424ea27b3b3c678b557f905e7100faf422dc9f42c42f7e9a46",
+    "publishedSha256": "b60ccc173ed79bb12140cd5c0945effcaf2ab9a57f2554df27439cec6d3de89c",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L00-课程介绍.md",
+    "sourceSha256": "a760476f36c2af04fd96ae60d6dc05c1c6e6a557c3c5a3a1e7e0b01289328a22",
+    "publishedSha256": "86d429da8e8b993f219c7715facbece46ef10d5e8289d6c383e82f6f96598318",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L01-课程概览.md",
+    "sourceSha256": "f491d331e84534a85505374174c3aa327a71af2f528959b8f10f0faf284d1136",
+    "publishedSha256": "d5c89b20cfcb4d694f6ea5f72b34f92efdc99b780ce034878b43b07daca2e1f3",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L02-系统调用-进程.md",
+    "sourceSha256": "99304d7a014dc5ba9c534f05de6de28301b66fe0ae655235fefec6dda3f29ccd",
+    "publishedSha256": "63fa1dbcd60ee3a3278c7103bd6b3fdab1c0f36cdf4b6ffe47142d49dd58c424",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L03-系统调用-内存.md",
+    "sourceSha256": "d1550e696569c1f21a82cddbc27611772ae0def3c387d1bc6ece6aa24ff0dad8",
+    "publishedSha256": "11f38fb1502a4063ed1ab2e588d29c610ff43eb25f525688aab07c56e180dc79",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L04-系统调用-文件与目录.md",
+    "sourceSha256": "a7965490f1690bf0adb91fb20d63a1240d901e569e7356ab25a5ed6682192735",
+    "publishedSha256": "310b35df438c55a9970914a2a833f9f5c449fc39eb9927d6236781e5f71a794c",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L05-文件系统实现.md",
+    "sourceSha256": "d8417eaee2cd5e662f1374ed4ee5f99a197f01e62a8f86ea6a3ad2f66589195b",
+    "publishedSha256": "057910bcb4fe506d7eade679a9faf979d07afea6db8571536789ea87c1e9699b",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L06-IO设备.md",
+    "sourceSha256": "fcc11cb59d220e0c840ec2fa13e674cd056ba92f3b35628acf3d7d7c80041c32",
+    "publishedSha256": "492d21829deab257850171dd87f262fc6aa469e798113513c803c917e8a59094",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L08-P1-调度入门.md",
+    "sourceSha256": "0df25af7abae5b3fd248fd9eaa9499ec7615f501cd2cde9a307abbaaafad9cc6",
+    "publishedSha256": "202a48fb08fca087f89ff4d20ed332fa23077af6719fc5f777473dd033758258",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L08-P2-多级反馈队列.md",
+    "sourceSha256": "ec83a67a4c5b585efa6971caf3eebceb0c7343ebd73d939dbc073a58768e7221",
+    "publishedSha256": "f1cc3e70b80e755e3393e30291188f20c133086132d5581858f70f6c3997241d",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L08-P3-比例份额.md",
+    "sourceSha256": "90a56493ab0c0c8303bd4cadef3673b583d1b9420105bc704de7137239e43606",
+    "publishedSha256": "53a762d87dd96a4bf2f83871cc47ab4492186a96fd213ff5b0f25ea8add9cdad",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L08-P4-多处理器调度.md",
+    "sourceSha256": "414c945ddd11cf1cf8d4f0ca4206774837cbd9e8c6bc16a4c6dc4f4f62528d08",
+    "publishedSha256": "493355f98b8c317cc84415e219c073ca90be8309f07c24d347efef5cff8f4a7e",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L09-P1-地址空间.md",
+    "sourceSha256": "4ab75bde6c8ca36108c73f596f44be7559a0df19221bd663b9c95c0066700bae",
+    "publishedSha256": "0714949d287e3fc7462a85bf491c01211c4bcffaaaaec65fc0ef117d0be6d248",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L09-P2-地址转换.md",
+    "sourceSha256": "67ab014d17405674f48daee5222cf220e50d57e2c0d2e1ad0f9e145663ac40ee",
+    "publishedSha256": "16d3c72653d8aab0887b8ab47400a8fb761e3fb717b1309c0bac565ab48c1fbf",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L10-P1-分段.md",
+    "sourceSha256": "96a4605fd561e6acfbf06e6bda1beac644ecc6f0fda171a4bc62ce0c06808ce9",
+    "publishedSha256": "ed3a058845aa1a6535a552d895517d696710f01dc2901472f6d69a3c609e6b09",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L10-P2-分页.md",
+    "sourceSha256": "9199ac3bb4986626a4fba95390f22dc74211e4f057407251bd0a73077a31bf8e",
+    "publishedSha256": "ee338b7ee01ae97a648aefc2b93669a66551f71c2142d15ea4306f14ced263b2",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L11-P1-TLB.md",
+    "sourceSha256": "2ca4c42deaf1f4541e1d03c0c40049073f80a1836bbc353a9e6e6d3081b43799",
+    "publishedSha256": "9bbfb0cb74cd0dd8e6e65bdbeeaa7f405cbba7ae4e0aa193f27c5f433b966523",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L11-P2-高级分页.md",
+    "sourceSha256": "b9664d156fb81d0c821b2d57dab8403b669437bc57f46920375f6303dd9b046e",
+    "publishedSha256": "d076c2f8e7eb9faef448bbb991402ca8cb07c804371460dcaaac8685d94459f3",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L12-交换空间与缺页.md",
+    "sourceSha256": "db77046de18f0cb451bc7b5d55c328d829a4a97f1a30f4c2acccccf6ce5c0a5b",
+    "publishedSha256": "a83789f3fed63949954015d16d6a58292a7c76c65677302857284f7c80d78b61",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L13-P1-线程与竞争.md",
+    "sourceSha256": "6810f3f1fa1cf06e9b839f058b1ed6f7bd054f0d8f55bd89d8eea867a665f70c",
+    "publishedSha256": "ab42755d931c7635fab116cdffab8611cee0546d19a87f9d91ae6434c17e4ee6",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L13-P2-线程API.md",
+    "sourceSha256": "cfaa4e04edd751a12361e1d8af42d486ac396e7de20300fb1371f49ef0000693",
+    "publishedSha256": "82d9c5851247e439fdc051916a9c9ff5cb0b4c003715a72e29669e5423a56336",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L14-P1-锁的实现.md",
+    "sourceSha256": "4fb9393ba0134cce6000d14d36bf5fa279bcfe32cf69f95d97df70f9f27f1b88",
+    "publishedSha256": "8760b7bb8f3fa479a84215ba4ca53ae57b318ba94bef4bc986b2c3a332223168",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L14-P2-条件变量.md",
+    "sourceSha256": "ba20e861a11863794145f7026173ac92d48177c81958f4348d6486a56e7ff667",
+    "publishedSha256": "8e2c26d6a6072a91939f7fbcb54e5885086f7cad3325d72956b8172d491f9071",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L15-P1-信号量.md",
+    "sourceSha256": "d59a180a862fc603020341eca6fab2e4f438c4db9453ffd7e8f81bb6eca829fb",
+    "publishedSha256": "a3433e88df30a3f78d8371b41d54c4eedb69dde5bd7ccf60ce66c1305df8c1cd",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L15-P2-并发故障.md",
+    "sourceSha256": "ec4ecbb4371d0bb72e03e3e2b7f0cde579f5e0d0b94ea4173f6b4e3540ad5b4f",
+    "publishedSha256": "c3b207a3ecf05a2fc4c3f22c013251b48b370e86b46980c79000ee1534a99088",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/Lab01-P1-环境配置.md",
+    "sourceSha256": "658a855815436060caef41432642626d3bbfa69565a109acd4624a552f549f53",
+    "publishedSha256": "9cd3f31ce6760572242b15ed54e16fd8e07476b7fcf41d10faa2dcc4977cbe52",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/Lab01-P2-GCC与Makefile.md",
+    "sourceSha256": "fff269ec02879d7af11958494c38275ea5e004f59868a73cc2741a248524db81",
+    "publishedSha256": "1d677401f397fe3cc5ea1472d47a1aba6a0b069321ea00ca2908bd57034e1d33",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/Lab02-操作教程-2026T1.md",
+    "sourceSha256": "8eaf6a63ee1d2b6e38318db720236e627f3696e5043d1d8f2073eff3eaa43161",
+    "publishedSha256": "cb739c5f6693ff89980b56f15b27a0311fe37f4c13942f08d38a138fa6e12f74",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/Lab02-C内存与文件IO-2026T1.md",
+    "sourceSha256": "e468962a8d178795948f5e468f1ab6565161a4ede9fbf9daee0246ccc3dd403b",
+    "publishedSha256": "862560fa7c6aeb52a6fd6624e34bb1a397c82c7e58383a361bce7fa3d38fee05",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/T01-Linux与C基础.md",
+    "sourceSha256": "f970f8c62d9d884c8df883042354d48caa5b72dc4a7df8a40cec09b1d740e9c9",
+    "publishedSha256": "b7d0867ae48149c8a82e3a3f80bbb2a572d59ed2fcee2ce162fbb29604572574",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/T02-Shell行为与框架.md",
+    "sourceSha256": "9875561e47a774e096a8e61176d0a41e5ddfeab99340133a2092cb8271a23e5d",
+    "publishedSha256": "80d21dbfcf14e47c0d0cda51df74041c30697e1b9c7baaed10d6645cef951dc6",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/T03-系统调用与管道.md",
+    "sourceSha256": "049faaa10215342d37c995647d98d7e77431be61bc5081aeea8ed34b7589a537",
+    "publishedSha256": "8a89cafb42e8f3104a324698cf3f1a90cf92d36e68a15104cac2eac9355c596a",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/T04-pthread与读写锁.md",
+    "sourceSha256": "6228239bb071dca256d34df70bbeffbd12cac2b929476ed45c42cab1a9330485",
+    "publishedSha256": "97943fa7c8889559d611cd877e375d13bfc177d93ff0d4a81640a867de823df3",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/T05-条件变量与屏障.md",
+    "sourceSha256": "50311442656b6b7c9d46d3e8868d383807718c6b1a5589e399e09fbe035aca34",
+    "publishedSha256": "286662685d13e217b8800eec977cbfcea2b71b40777a7932f6924233e24f3289",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/T06-进程间信号量.md",
+    "sourceSha256": "507cf145df7d0580927b3a91458cefd39832bf76286a7f303ed9af78aac7dc3a",
+    "publishedSha256": "44133c48f25a53da18ffc890654c1f45a5d905fa84fab5048efc38cdf9881627",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/T07-MLFQ逐步演算.md",
+    "sourceSha256": "4e35e1d887a18e8da54349d997e4949a209e8778dd14087dab5f0ae42f8126cf",
+    "publishedSha256": "85319854bfe71e9dc7ca5140817060eef44ea3117244b40cd0899843c2ffafaa",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/T08-期中题与解答核验.md",
+    "sourceSha256": "9a49ec6eb0cf3df3633331c37c4b5c851e2ab1e724c45bba87b9c6bf2715cebb",
+    "publishedSha256": "00b8c09c262acc801ef69fd555fc04f6bd1a039fbc0bff8ab9fbada877148309",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/T09-换页算法演算.md",
+    "sourceSha256": "f8eff5169635a4b3b7a2c589a5a9d909816d7e78de2bd096f2ad6776838fa067",
+    "publishedSha256": "669f3308b4f0f8abd6962dbeec1f9677b7a482c3163b207225314602b21c7fe9",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/T10-分页地址转换.md",
+    "sourceSha256": "1ac8b2eb1f307aadf092c7d2af4d023ba863cd878a196572a8942f14d15dfacd",
+    "publishedSha256": "19002bce4c31ea02d54e5c8b135de97a5dd03a8731adbe200fc41f472e42dbb7",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/T11-文件系统API.md",
+    "sourceSha256": "bb908919bc5486d0ed1c9c7c61595fbf1fe87e1b5c3fa98ffc7500b2f3dacb4e",
+    "publishedSha256": "02e4e7c49cb7dd506233d828f73de3b0eb6047f8bdab124c6bad2b3097dbef24",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/T12-FAT文件系统.md",
+    "sourceSha256": "a2a6988a12dcc89c54b22ce91ddf32e79e034fac124791f0573485120d85fb88",
+    "publishedSha256": "63aeb9a4ca1387d465400913081ca93a147316c07c5a77d3b01b2d1552c5d125",
+    "projection": true
   }
 ]

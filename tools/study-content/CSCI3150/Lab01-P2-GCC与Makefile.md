@@ -19,6 +19,38 @@
 
 p.18原例hellomake.c调用 `myPrintHelloMake()`，hellofunc.c定义它，hellomake.h声明它；编译命令 `gcc -o hellomake hellomake.c hellofunc.c -I .`。两个.c都必须参与链接，否则调用方只有声明，没有函数实现。-I .把当前目录加入头文件查找路径，头文件本身不是拿来独立链接的对象。
 
+**p.18 的三个文件完整写出。** 原图中的排版引号与换行已规范为 C 源码排版；函数名、调用关系和输出文字保持一致。
+
+`hellomake.c`：
+
+```c
+#include "hellomake.h"
+int main() {
+    /* call a function in another file */
+    myPrintHelloMake();
+    return 0;
+}
+```
+
+`hellofunc.c`：
+
+```c
+#include <stdio.h>
+#include <hellomake.h>
+void myPrintHelloMake(void) {
+    printf("Hello makefiles!\n");
+    return;
+}
+```
+
+`hellomake.h`：
+
+```c
+void myPrintHelloMake(void);
+```
+
+执行链是 main → myPrintHelloMake → printf → 返回 main → 返回 0。头文件让调用方先知道参数和返回类型；链接器再把调用连接到另一 `.c` 中的定义。第二个文件用尖括号引入本地头文件，原命令的 `-I .` 正是使该写法能够找到头文件的条件。
+
 ### p.19–21：直接构建、隐式对象、显式对象
 
 p.19直接规则在任一.c变化时重编整个可执行文件。p.20目标改依赖两个.o，通过make隐式规则生成对象；链接时把对象组合起来。p.21显式写出每个.o由哪个.c以-c编译，便于控制参数。
@@ -43,6 +75,53 @@ clean规则删除生成物，应明确只针对对象与可执行文件；将cle
 
 :::endhint
 
+**三版 Makefile 的完整内容（p.19–21，去掉截图行号）。** 命令行开头为 Tab，不能用普通空格替代。
+
+p.19 直接构建：
+
+```makefile
+CC = gcc
+CFLAGS = -Wall -g
+
+hellomake: hellomake.c hellofunc.c
+	$(CC) $(CFLAGS) -o hellomake hellomake.c hellofunc.c
+
+clean:
+	rm -f hellomake
+```
+
+p.20 借助对象文件与 make 隐式规则：
+
+```makefile
+CC=gcc
+CFLAGS=-Wall
+
+hellomake: hellomake.o hellofunc.o
+	$(CC) $(CFLAGS) -o hellomake hellomake.o hellofunc.o
+clean:
+	rm -f *.o hellomake
+```
+
+p.21 显式声明对象构建：
+
+```makefile
+CC=gcc
+CFLAGS=-Wall
+hellomake: hellomake.o hellofunc.o
+	$(CC) $(CFLAGS) -o hellomake hellomake.o hellofunc.o
+
+hellomake.o: hellomake.c
+	$(CC) $(CFLAGS) -c hellomake.c
+
+hellofunc.o: hellofunc.c
+	$(CC) $(CFLAGS) -c hellofunc.c
+
+clean:
+	rm -f *.o hellomake
+```
+
+**连起来检查。** p.18 的 hellofunc.c 使用 `<hellomake.h>`，而这三版截图没有保留 `-I .`。若按这组文件实际练习，要给编译命令补 `-I .`，或把本地头文件改为双引号包含；这属于使示例组合一致的修正，不是原图已有的参数。`.h` 依赖缺失也是原例的教学简化；完整依赖应让两个对象都依赖 hellomake.h。
+
 ### p.22：把题目要求变成依赖关系
 
 原题给main.c，以及stats/stats.c和format/format.c；main调用两模块，stats计算数组和与最大值，format打印报告。要求补全exercise中的Makefile，生成lab1_report，仅提交Makefile。
@@ -51,9 +130,9 @@ clean规则删除生成物，应明确只针对对象与可执行文件；将cle
 
 ## 本讲核心考点
 
-- [B] 区分编译-c与链接，解释-o、-I、-g、-Wall。
-- [B] 根据依赖与时间戳判断哪些对象需要重建。
-- [B] 识别漏写头文件依赖和错误输出名。
+- [C] 区分编译-c与链接，解释-o、-I、-g、-Wall。
+- [C] 根据依赖与时间戳判断哪些对象需要重建。
+- [C] 识别漏写头文件依赖和错误输出名。
 
 ## 附录
 
@@ -63,3 +142,5 @@ clean规则删除生成物，应明确只针对对象与可执行文件；将cle
 
 - 原件：[Lab01-环境配置与编译-2026T1.pdf](../项目/Lab01/Lab01-环境配置与编译-2026T1.pdf)；[PDF副本](../项目/Lab01/Lab01-环境配置与编译-2026T1.pdf) p.15–22。本文页码均为 PDF 页号。
 - 考试证据：读了 课程大纲-2026T1.pdf、教学计划-2026T1.pdf、T08-期中参考-2025T2-题目-解答.pdf、T07-多级反馈队列-2025T2.pdf（p.13–15内嵌历史试题）；未识别用途的 PDF：无
+
+- 2026-10-13 内容补全：保留原页顺序与版本，补入对应页的程序、接口、字段、条件和演算；原程序片段保留课件行号、拼写与省略处，不能据此视为经过编译的完整软件。本文已有运行记录属于其标注日期，本次未重新运行课程容器或提交作业。
