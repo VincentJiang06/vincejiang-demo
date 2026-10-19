@@ -132,3 +132,11 @@ article .katex-display>.katex{display:block;max-width:none;overflow:visible;vert
 @media print{
  :root,:root[data-theme="dark"]{color-scheme:light;--ink:#222a32;--muted:#5c6873;--line:#e1e5e8;--accent:#245a79;--paper:#fff;--surface:#f7f9fa;--code:#f1f4f6;--selected:#eef4f7;--quote:#455765;--keyword:#81498e;--string:#257050;--comment:#64717c;--number:#966017}
 }
+
+.midterm-overview{margin:36px 0 42px}
+.section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+.section-heading h2{margin:0}
+.section-heading>a{font-size:14px}
+.midterm-course{scroll-margin-top:24px;margin-top:42px}
+.midterm-docs a{padding:18px 0}
+.midterm-docs a span{display:block;font-size:14px;font-weight:400;color:var(--muted);margin-top:6px}

@@ -7,6 +7,9 @@ export const isNote=p=>p.endsWith('.md')&&!p.split('/').some(x=>['核验','记�
 export function publicText(s){
  return s.split('\n').filter(l=>!/^(- 编写：|本次来源核对范围|本次范围内索引共有|原件已归档，工作包已解压|.*`study\/exercise\/` 是用户明确指定)/.test(l))
  .join('\n')
+ .replace(/^本轮替换前的稿件和导航保存在.*$/gm,'')
+ .replace(/^2026-10-19 已依据原始课件从头重写三稿。替换前稿件保存在.*$/gm,'')
+ .replace(/现存 PDF 导出属于旧快照；(?:本轮重写以 Markdown 为准，网站尚未同步本轮内容。|现行复习文档以 Markdown 为准。)/g,'')
  .replace(/(?:使用|按) \*\*vince-course-study [\d.]+\*\* (?:编写，[^。]+。|从原始 PDF 全新编写，)/g,'')
  .replace(/\/Users\/[^/\s`）)]+\//g,'课程工作目录/')
  .replace(/；旧版 study 已整体备份，不再混入当前正文。/g,'。')

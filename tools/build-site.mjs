@@ -49,6 +49,7 @@ const NAV_ITEMS = [
   { key: 'blog', label: 'Blog', href: '/blog/' },
   { key: 'research', label: 'Research', href: RESEARCH_PATH },
   { key: 'gallery', label: 'Gallery', href: '/gallery/' },
+  { key: 'study', label: 'Study', href: '/study/' },
   { key: 'cus', label: 'CU排课', href: 'https://cus.vincejiang.com', external: true },
 ];
 

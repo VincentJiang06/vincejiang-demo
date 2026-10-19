@@ -20,9 +20,11 @@
 
 ## Study 课程笔记
 
-[`/study/2026T1/`](https://vincejiang.com/study/2026T1/) 按 CSCI3130、CSCI3150、CSCI3160、CSCI3230、GENA2122 收录课程伴读、作业题解与实验解析。Markdown 在构建时转成 HTML，公式使用本地 KaTeX，原始课件不发布。五门共254份笔记；CS笔记展开例题、推导与程序过程，GENA2122按历史背景、论点与证据阅读。保留来源年份及ESTR边界。支持按单课同步；命令、范围和验证见 [SPEC §15](SPEC.md#15-study-课程笔记)。
+[`/study/2026T1/`](https://vincejiang.com/study/2026T1/) 按 CSCI3130、CSCI3150、CSCI3160、CSCI3230、GENA2122 收录课程伴读、作业题解与实验解析。Markdown 在构建时转成 HTML，公式使用本地 KaTeX，原始课件不发布。五门共262份笔记；CS笔记展开例题、推导与程序过程，GENA2122按历史背景、论点与证据阅读。保留来源年份及ESTR边界。支持按单课同步；命令、范围和验证见 [SPEC §15](SPEC.md#15-study-课程笔记)。
 
 CSCI3230 与 CSCI3150 的 HW01 另有分级提示版：按小问或实现单元逐层展开，完整解析需要单独确认。
+
+期中复习入口：[`/study/2026T1/midterm/`](https://vincejiang.com/study/2026T1/midterm/)，收录 CSCI3130 的两份复习稿与 CSCI3160 的三份复习/真题稿。主页 Gallery 和公共导航均提供 Study 入口。
 
 ## 声音仪表盘
 

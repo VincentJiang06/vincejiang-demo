@@ -84,6 +84,15 @@
   ],
   "gallery": [
     {
+      "key": "study",
+      "title": "Study · 课程学习笔记",
+      "href": "/study/",
+      "date": "2026-10-01",
+      "desc": "按课程阅读概念、算法与推导。期中复习专区收录 CSCI3130、CSCI3160 的详细知识点、简略总结与现有真题解析。",
+      "badge": "课程笔记 · 期中复习",
+      "hue": null
+    },
+    {
       "key": "sound-dashboard",
       "title": "声音仪表盘",
       "href": "/sound_dashboard/",

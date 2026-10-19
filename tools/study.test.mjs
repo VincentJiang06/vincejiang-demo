@@ -52,6 +52,26 @@ test('generated study pages version their UI assets so updated styles reach retu
   assert.match(html, /id="study-theme" aria-label="Study 外观"/);
   assert.match(html,/study\.css\?v=[a-f0-9]{12}/);
   assert.match(html,/study\.js\?v=[a-f0-9]{12}/);
+  const hub=readFileSync(join(out,'study/2026T1/midterm/index.html'),'utf8');
+  const reviewFiles={CSCI3130:['L01-L06-期中详细复习','L01-L06-期中简略复习'],CSCI3160:['期中-全面复习稿','期中-快速总结稿','MT-真题精讲与标准答案']};
+  for(const [course,files] of Object.entries(reviewFiles)){
+   const coursePage=readFileSync(join(out,'study/2026T1',course,'index.html'),'utf8');
+   const group=coursePage.match(/<section class="note-group"><h2>期中复习[\s\S]*?<\/section>/)?.[0];
+   assert.ok(group,course+' exposes its midterm group before the ordinary notes');
+   assert.equal((group.match(/<li>/g)||[]).length,files.length);
+   for(const name of files){
+    const target='/study/2026T1/'+course+'/'+name+'.html';
+    assert.ok(decodeURI(hub).includes('href="'+target+'"'));
+    assert.ok(decodeURI(group).includes('href="'+target+'"'));
+    assert.match(readFileSync(join(out,'study/2026T1',course,name+'.html'),'utf8'),/<article>/);
+   }
+  }
+  assert.doesNotMatch(hub,/CSCI3150|CSCI3230|模拟卷/);
+  for(const entry of ['study/index.html','study/2026T1/index.html'])assert.match(readFileSync(join(out,entry),'utf8'),/href="\/study\/2026T1\/midterm\/"/);
+  const retired=readFileSync(join(out,'study/2026T1/CSCI3130/L00-L06-期中全面复习.html'),'utf8');
+  assert.match(retired,/noindex,follow/);
+  assert.ok(decodeURI(retired).includes('url=/study/2026T1/CSCI3130/L01-L06-期中详细复习.html'));
+  assert.doesNotMatch(retired,/<article>/);
   for(const key of ['CSCI3230/HW01-2026T1-分级提示','CSCI3150/HW01-Shell分级提示-2026T1']){
    const hint=readFileSync(join(out,'study/2026T1',key+'.html'),'utf8');
    const outside=hint.replace(/<article>[\s\S]*?<\/article>/,'');

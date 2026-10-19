@@ -7,8 +7,8 @@
   },
   {
     "key": "CSCI3160/课程全览.md",
-    "sourceSha256": "4d1012e14f20e58027b488acba2adad35c584a395952554c3959803e7c66ec89",
-    "publishedSha256": "9911edf2509ac76ea2fca93f91efec1efcd3d9716e549ac58857f2734b189cf8",
+    "sourceSha256": "e072457d10df618f7831764def90568b58ad0241a484ff0e553d6d9be25ced8f",
+    "publishedSha256": "b70aa78a91c870357f7d4eb84937ac4ddd3a09ddefb633c845b61a4be86a5f82",
     "projection": true
   },
   {
@@ -444,6 +444,24 @@
     "projection": false
   },
   {
+    "key": "CSCI3160/期中-快速总结稿.md",
+    "sourceSha256": "4651c87b349d08b7bb286d55c18a08c4c3302dea20c85cb66e4040cd1d0584c9",
+    "publishedSha256": "4651c87b349d08b7bb286d55c18a08c4c3302dea20c85cb66e4040cd1d0584c9",
+    "projection": false
+  },
+  {
+    "key": "CSCI3160/期中-全面复习稿.md",
+    "sourceSha256": "bf5025df1a77fefec3190798ec3d844a25d7e11ea438f2bdc69cf85f53795108",
+    "publishedSha256": "bf5025df1a77fefec3190798ec3d844a25d7e11ea438f2bdc69cf85f53795108",
+    "projection": false
+  },
+  {
+    "key": "CSCI3160/MT-真题精讲与标准答案.md",
+    "sourceSha256": "d2cbf9dafdab095d799ce2aa9a5197d533bcf8088bd84c2e476ea6d60346b7a2",
+    "publishedSha256": "d2cbf9dafdab095d799ce2aa9a5197d533bcf8088bd84c2e476ea6d60346b7a2",
+    "projection": false
+  },
+  {
     "key": "GENA2122/00-逐页精读入口.md",
     "sourceSha256": "9e5d26e6336274f95fe5e325862dad7a0de869f65625fa0230342d22671b4a48",
     "publishedSha256": "9e5d26e6336274f95fe5e325862dad7a0de869f65625fa0230342d22671b4a48",
@@ -745,8 +763,8 @@
   },
   {
     "key": "CSCI3130/阅读导航.md",
-    "sourceSha256": "30c4d6e81f0ac09842288c1f1499b85ef8cb0a5be6a004e93f97a8a97eded92d",
-    "publishedSha256": "4204fb638357c878ca39f6d09bc7fcb779b1f7a5d376c483511e24a73b39e552",
+    "sourceSha256": "66aa8785f77ef121c401a1a840b9f8e69d3a42c71cc934ed797ab4d83086cb4b",
+    "publishedSha256": "d7486319181541f7be73c93f2b5771d42c36dfa90321218d823dbd2380e9880d",
     "projection": true
   },
   {
@@ -766,30 +784,6 @@
     "sourceSha256": "0e2e6d1294381440102b7df5b37624f5dfb7df44c095f4a617869f282a0f4b1b",
     "publishedSha256": "0e2e6d1294381440102b7df5b37624f5dfb7df44c095f4a617869f282a0f4b1b",
     "projection": false
-  },
-  {
-    "key": "CSCI3130/L00-L06-模拟卷解析.md",
-    "sourceSha256": "94c6f7185f348b38f383c147edc6ca0c6ae7d06332bb7488865d64b72e011a39",
-    "publishedSha256": "94c6f7185f348b38f383c147edc6ca0c6ae7d06332bb7488865d64b72e011a39",
-    "projection": false
-  },
-  {
-    "key": "CSCI3130/L00-L06-期中快速总结.md",
-    "sourceSha256": "9ad4e3858bc4ecba8fcd057520261c1bab5881ee765dabd1d103aa6b45e3ba26",
-    "publishedSha256": "603c69178fcfe060f951ab25cb40f7d274fa3855a1575fcee926ace5ab805bb6",
-    "projection": true
-  },
-  {
-    "key": "CSCI3130/L00-L06-期中模拟卷.md",
-    "sourceSha256": "ef7cd3aa85353e99b5a55f7f68a7f0c0d9045895328b62586fbca4b3c1745254",
-    "publishedSha256": "ef7cd3aa85353e99b5a55f7f68a7f0c0d9045895328b62586fbca4b3c1745254",
-    "projection": false
-  },
-  {
-    "key": "CSCI3130/L00-L06-期中全面复习.md",
-    "sourceSha256": "bb101b697e91d116ce6d6cc7535cba2c7d5c3426f850d18dc298e6f9eab9d62a",
-    "publishedSha256": "aac1ca5cd28c60ea6be6e2448aced2b506a3e2329dd979beb660980491868adb",
-    "projection": true
   },
   {
     "key": "CSCI3130/L00-P1-课程安排.md",
@@ -1173,6 +1167,18 @@
     "key": "CSCI3130/T07-P4-可数与不可识别.md",
     "sourceSha256": "45dcdde3d2ee02f7dbf05714d55f968462feb2f4079e1a730924716bc9d80c4e",
     "publishedSha256": "45dcdde3d2ee02f7dbf05714d55f968462feb2f4079e1a730924716bc9d80c4e",
+    "projection": false
+  },
+  {
+    "key": "CSCI3130/L01-L06-期中简略复习.md",
+    "sourceSha256": "35ebb0d6ef0acff8b400ecb82d61ef8ee8cffa60db942ed6bcaffa00d366fa21",
+    "publishedSha256": "35ebb0d6ef0acff8b400ecb82d61ef8ee8cffa60db942ed6bcaffa00d366fa21",
+    "projection": false
+  },
+  {
+    "key": "CSCI3130/L01-L06-期中详细复习.md",
+    "sourceSha256": "37f1a07c428f15938ed7c7f234ef35dde56350b5735db7659f991ff44cb65093",
+    "publishedSha256": "37f1a07c428f15938ed7c7f234ef35dde56350b5735db7659f991ff44cb65093",
     "projection": false
   },
   {
