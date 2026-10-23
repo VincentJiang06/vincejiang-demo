@@ -16,7 +16,7 @@ const {unescapeAll:decode}=new MarkdownIt().utils;
 function attrs(tag){return Object.fromEntries([...tag.matchAll(/([\w:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)')/g)].map(m=>[m[1].toLowerCase(),decode(m[2]??m[3]) ]));}
 function files(dir,skip=[],base=''){return readdirSync(dir,{withFileTypes:true}).flatMap(e=>{if(e.name.startsWith('.')||(!base&&skip.includes(e.name)))return [];const p=join(dir,e.name);return e.isDirectory()?files(p,skip,base+'/'+e.name):e.name.endsWith('.html')?[p]:[];});}
 function resolves(url){const host=hosts.find(h=>h.origin===url.origin);if(!host)return true;
- if(url.origin==='https://vincejiang.com'&&url.pathname==='/status-ai/api')return true; // documented separate public service
+ if(url.origin==='https://vincejiang.com'&&['/status-ai/api','/S16-prediction','/S16-prediction/'].includes(url.pathname))return true; // documented separate public services; verify their routes against production
  let p;try{p=join(host.root,decodeURIComponent(url.pathname));}catch{return false;}for(const file of [p,join(p,'index.html'),p+'.html'])if(existsSync(file)&&statSync(file).isFile())return true;return false;}
 const pages=[],omitted=[];
 for(const host of hosts){for(const f of files(host.root,host.skip)){

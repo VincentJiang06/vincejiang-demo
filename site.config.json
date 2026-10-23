@@ -84,6 +84,15 @@
   ],
   "gallery": [
     {
+      "key": "s16-prediction",
+      "title": "S16-prediction · 全球总决赛观赛看板",
+      "href": "/S16-prediction/",
+      "date": "2026-10-24",
+      "desc": "只读观察公开赔率：六个来源等权汇总，Polymarket 与 Thunderpick 走势在开赛后每 30 秒更新，赛后显示终场赛果。不提供下注功能。",
+      "badge": "六源等权 · 30 秒走势",
+      "hue": null
+    },
+    {
       "key": "study",
       "title": "Study · 课程学习笔记",
       "href": "/study/",

@@ -137,6 +137,14 @@ emoji**(排版不稳,星形用 CSS ::before 画)。
 
 ---
 
+### 3.4 S16-prediction 观赛入口（2026-10-24）
+
+顶栏「S16观赛」和首页/Gallery 最新作品卡指向 `/S16-prediction/`。入口来自 `NAV_ITEMS` 和
+`site.config.json.gallery`；页面与只读采集服务由独立 S16 容器提供，不在主站静态目录重建。
+只读观察公开赔率：六源等权汇总，Polymarket / Thunderpick 双源走势在网页打开且比赛开始后每 30 秒更新，
+赛后展示终场结果；不提供下注功能。主站入口更新不需要重启 S16 服务。静态断链审计仅将该服务入口
+`/S16-prediction` 和 `/S16-prediction/` 识别为独立服务；可用性仍须用线上 HTTP 实测验证。
+
 ## 4. 目录结构
 
 ```
