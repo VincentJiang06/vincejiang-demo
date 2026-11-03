@@ -202,18 +202,14 @@ p.11框架make后能运行但仅支持exit；可编译不等于功能完成。p.
 **课件程序与接口（p.13，原页片段）**
 
 ```text
-simple-execute.c
-int shell_execute(char ** args, int argc);
-Arguments
-Args: pointer to the pointer array of parsed command
-Argc: number of parsed items
-For example, input “ls –l” and enter
-Args = {“ls”, “-l”}
-Argc = 3
-Return value
-0 for next loop(normal execution)
--1 for break loop(error or exit)
+int shell_execute(char **args, int argc);
 ```
+
+**思路分析（逐步读）**
+
+1. args 是字符串指针数组，`char **` 表示先找到某一项指针，再沿指针读取字符串。
+2. argc 是这份骨架约定的项目数；原说明把结尾 NULL 也计入，因此 ls -l 写为 3，不能照搬普通 main 的 argc 约定。
+3. 函数返回 0 表示继续 Shell 循环，-1 表示退出；这是本项目接口，不是 exec 的返回约定。
 
 **课件程序与接口（p.13，原页片段）**
 
@@ -251,6 +247,12 @@ int shell_execute(char ** args, int argc){
 ```
 
 > **p.14** Hint: use necessary system calls to implement these functionalities
+
+**思路分析（逐步读）**
+
+1. 先识别内建 exit，匹配后直接返回 -1，让外层 Shell 结束。
+2. 普通命令才 fork：失败打印错误，孩子进入待实现的执行分支，父进程应保留 Shell 管理逻辑。
+3. 末尾 wait 循环回收孩子；TODO 尚未实现 cd、exec 和管道，不能把此骨架当成可完整工作的 Shell。
 
 原例输入 `ls -l`，参数数组实际应为 `{"ls","-l",NULL}`，框架把末尾NULL也计入而给argc=3。它不同于常见main的argc=2语义，遍历时不能混用。shell_execute返回0进入下一轮，-1退出循环；系统调用失败的处理与Shell退出策略也要分清。
 

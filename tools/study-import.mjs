@@ -3,7 +3,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 export const COURSES=['CSCI3130','CSCI3150','CSCI3160','CSCI3230','GENA2122'];
-export const isNote=p=>p.endsWith('.md')&&!p.split('/').some(x=>['核验','记忆库','PDF','AGENTS.md','CLAUDE.md','更新记录.md'].includes(x))&&p!=='README.md';
+export const isNote=p=>p.endsWith('.md')&&!p.split('/').some(x=>x.endsWith('工作记录'))&&!p.split('/').some(x=>['核验','记忆库','PDF','AGENTS.md','CLAUDE.md','更新记录.md'].includes(x))&&p!=='README.md';
 export function publicText(s){
  return s.split('\n').filter(l=>!/^(- 编写：|本次来源核对范围|本次范围内索引共有|原件已归档，工作包已解压|.*`study\/exercise\/` 是用户明确指定)/.test(l))
  .join('\n')
@@ -40,7 +40,7 @@ export function importNotes(desktop,dest,{courses=COURSES}={}){
   if(lstatSync(path.dirname(root)).isSymbolicLink()||lstatSync(root).isSymbolicLink())throw new Error('study must be a real directory');
   const files=walk(root).sort((a,b)=>a.localeCompare(b,'zh-CN',{numeric:true}));
   for(const rel of files){
-   const source=readFileSync(path.join(root,rel),'utf8');let text=publicText(source);
+   const source=readFileSync(path.join(root,rel),'utf8');let text=publicText(source.replaceAll(path.join(root)+'/','').replaceAll(path.dirname(root)+'/','../'));
    if(course==='CSCI3160'&&rel==='exercise/Ex02-分治与线性合并.md')text=text.replaceAll('${a,b\\}$','$\\{a,b\\}$').replaceAll('${c,d\\}$','$\\{c,d\\}$');
    if(course==='CSCI3230'&&rel==='L05-P4-层次聚类.md')text=text.replaceAll('\\rvertd','\\rvert d');
    // Memory paths are internal even when their visible labels are course concepts.

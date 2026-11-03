@@ -1,28 +1,65 @@
-# CSCI3160 期中真题详细解析
+<a name="csci3160-期中真题详细解析"></a>
 
-本文保留已保存转录中的 10 道大题、全部判断小问、输入数据和题面自带的演示，并从题意重新推导答案。没有添加额外练习。概念的系统讲解见[详细复习](期中-全面复习稿.md)，集中回顾见[简略复习](期中-快速总结稿.md)。
+# CSCI3160 MT 中文翻译与详细题解
 
-当前课程目录没有这张试卷的原始照片，因此题干依据此前保存的两页转录；本次没有重新核对照片，也不能确认年份或参考答案的发布身份。以下解答是重新推导的学习答案。题干有歧义或算法与文字条件不一致的地方，会在该题中明确处理。
+版本：2024 年（年份据用户说明；照片未显示年份）。用途：MT review。覆盖：10 道大题、Problem 1 的全部 7 个判断小问。
 
-试卷的共同要求：
+已找回并逐页核对用户在 2026-10-12 提供的两张原题照片和一张答案长图。下文按原题顺序保留英文题干，补齐中文翻译、随卷答案译文及完整推导。随卷答案的发布身份未标明，因此称“随卷答案”，不标为官方答案。
+
+- [原题照片 PDF](../期中复习/期中试卷/MT-2024-原题照片.pdf)
+- [随卷答案 PDF](../期中复习/期中试卷/MT-2024-随卷答案.pdf)
+- [本解析 PDF](../期中复习/期中试卷/MT-2024-中文翻译与详解.pdf)
+
+原图保存为[原题第 1 页](../考试/MT-2024-原题-01.png)、[原题第 2 页](../考试/MT-2024-原题-02.jpg)、[答案长图](../考试/MT-2024-随卷答案.jpg)。原图像素、手写标记和照片边缘保留；排版版的公式仅重新排版。全部题号可直接跳转：1 · 2 · 3 · 4 · 5 · 6 · 7 · 8 · 9 · 10。
+
+## 答题说明
+
+**英文原文（原题照片 p.1，视觉核对）**
 
 > Note 1: Write all your solutions in the answer book.
 >
 > Note 2: Whenever you are asked to design an algorithm, you must provide a proof of its correctness. However, you do not need to describe or analyze algorithms that have been discussed in lectures, tutorials, and regular exercises.
 
-这意味着设计题不能只报算法名称：可以引用课堂算法作为黑盒，但要说明传入什么、取回什么、怎样据此解决本题，并证明新增步骤正确。
+**中文翻译**
+
+说明 1：把所有解答写在答题册上。
+
+说明 2：凡是要求设计算法，都必须给出正确性证明。不过，对于课堂、辅导课及 Regular Exercises 中已经讨论过的算法，不必重新描述或分析。
+
+设计题可以把课内算法当作黑盒，但应写清传入什么、得到什么、如何据此解决本题，并证明新增步骤正确。
+
+## 答案速查
+
+| 题号 | 答案或关键结论 |
+|---|---|
+| 1 | T，F，T，T，F，F，T |
+| 2 | 3，6，9，12，15，18，21 |
+| 3 | ad，cd，de，ab，ef；总权重 17 |
+| 4 | a:1，b:01，c:001，d:0001，e:0000 |
+| 5 | 把元素变成点 $(i,-A[i])$，做支配计数后求和 |
+| 6 | 构造等长前缀码，以 Huffman 最优性比较平均码长 |
+| 7 | 分开“不切”和“至少切一刀”；只在真正切割时扣费 |
+| 8 | 选择中位数，再选择第 k 小距离；期望线性时间 |
+| 9 | 按整数点覆盖证明交换不变式；连续覆盖需修正推进规则 |
+| 10 | 从大秩向小秩选择并缩小集合；时间由几何级数求和 |
+
+Problem 9 的原题文字与算法存在连续覆盖/整数点覆盖的差别；译文保留原题，解析分别说明。Problem 6 的随卷答案编号写法也单独说明边界，方便复习时辨别。
 
 ## Problem 1：七个判断题（14%）
 
-<a id="q1"></a>
+**英文原题（原题照片 p.1，视觉核对）**
 
-> Problem 1 (14%). Determine whether the following statements are true (if you think statement $i\in[1,7]$ is true, write “$i$: T” in the answer book; otherwise, write “$i$: F”):
+<a id="q1"></a>> Problem 1 (14%). Determine whether the following statements are true (if you think statement $i\in[1,7]$ is true, write “$i$: T” in the answer book; otherwise, write “$i$: F”):
 
-本题的结论为：**1 T，2 F，3 T（按课程的简单图约定），4 见计数口径说明，5 F，6 F，7 T。** 第 4 问按“直到首次正面所需的总投掷次数”的通常含义为 T；如果把成功那次排除，只数此前失败次数，则为 F。
+**中文翻译：**判断下列 7 个陈述是否正确。若第 $i$ 个陈述正确，在答题册写“$i$: T”，否则写“$i$: F”。
+
+**随卷答案：1 T，2 F，3 T，4 T，5 F，6 F，7 T。** 下面分别解释；第 3 问采用课程的简单图约定，第 4 问包括首次出现正面的那一次投掷。
 
 ### 1.1 两个上界相加
 
 > 1. If $f(n)=O(n^{0.95}\log n)$ and $g(n)=O(\sqrt n)$, then $f(n)+g(n)=O(n\log n)$.
+
+**中文翻译：**如果 $f(n)=O(n^{0.95}\log n)$ 且 $g(n)=O(\sqrt n)$，那么 $f(n)+g(n)=O(n\log n)$。
 
 **答案：T。** 需要证明的是一个上界，不要求这个上界最紧。
 
@@ -46,6 +83,8 @@ $$
 
 > 2. $2^n=O(n^{\sqrt n})$.
 
+**中文翻译：**$2^n=O(n^{\sqrt n})$。
+
 **答案：F。** 两边都随 $n$ 很快增长，仅凭外形无法比较。把它们改写成以 $e$ 为底的指数，比较指数即可：
 
 $$
@@ -66,6 +105,8 @@ $$
 
 > 3. Consider any connected graph $G=(V,E)$ (i.e., $G$ has only one connected component). If an algorithm has running time $O(\lvert E\rvert^{100})$ on $G$, then the running time is polynomial in $\lvert V\rvert$.
 
+**中文翻译：**考虑任意连通图 $G=(V,E)$，即只有一个连通分量的图。若某算法在该图上的运行时间为 $O(\lvert E\rvert^{100})$，那么它的运行时间是关于顶点数 $\lvert V\rvert$ 的多项式。
+
 **答案：按本课简单图约定为 T。** 简单无向图每对顶点最多一条边，因此
 
 $$
@@ -79,6 +120,8 @@ $$
 ### 1.4 首次成功的总次数与此前失败次数
 
 > 4. Consider a biased coin which comes up heads with probability $1/10$. Then, in expectation, you need to toss it 10 times before seeing “heads” for the first time.
+
+**中文翻译：**一枚有偏硬币每次出现正面的概率为 $1/10$。那么，首次看到正面平均需要投掷 10 次。
 
 令 $N$ 为直到首次正面为止的投掷总数，**包含出现正面的那一次**。每次成功概率为 $p=1/10$。第一下总要投；如果失败，后续又回到同一个等待问题：
 
@@ -97,11 +140,13 @@ $$
 每次运行都有 N = F + 1
 ```
 
-**按“要投多少次才首次看到正面”的通常理解，题目为 T。** 如果出题者严格把 `before` 理解为排除成功那次，只问此前投掷次数，才应判 F，并把期望写为 9。已保存题干没有更明确地区分这两个变量；原图又未能重读，因此不能把其中一种口径冒充无歧义的唯一题意。计算本身确定的是上述两个期望。
+**答案：T，与随卷答案一致。** 本题采用“直到首次正面所需的总投掷次数”，所以是 10。9 是正面出现前的反面次数，回答的是另一个随机变量；考试时不要把两种计数混在一起。
 
 ### 1.5 不同端点能否保证最优解唯一
 
 > 5. In the activity selection problem, if all intervals have distinct start times and distinct finish times, then there can be only one optimal solution.
+
+**中文翻译：**在活动选择问题中，如果所有区间的开始时间彼此不同、结束时间也彼此不同，那么最优解只能有一个。
 
 **答案：F。** 端点互异保证排序没有相同时间，并不能保证达到最多活动数的集合唯一。
 
@@ -122,6 +167,8 @@ $A$ 与 $B$ 相交，所以任何解最多从它们中选一个；$C$ 在两者�
 ### 1.6 递归调用数是否为线性
 
 > 6. The following algorithm finishes in $O(n)$ time.
+
+**中文翻译：**下面给出的算法能在 $O(n)$ 时间内完成。伪代码如下，其中同一参数的递归结果没有缓存。
 
 题面伪代码为：
 
@@ -156,6 +203,8 @@ $C(n)$ 随 $n$ 非减，因此 $C(n)\ge2C(n-2)$。反复应用，得到 $C(n)\ge
 
 > 7. Let $G$ be a connected undirected weighted graph where all edges have distinct weights. Let $e$ be the edge in $G$ with the largest weight. If $G$ remains connected even with $e$ removed, we can assert that $e$ does not belong to any MST of $G$.
 
+**中文翻译：**设 $G$ 是连通的无向带权图，各边权重互不相同。令 $e$ 为全图最重的边。如果删除 $e$ 后图仍连通，那么可以断言：$e$ 不属于 $G$ 的任何最小生成树。
+
 **答案：T。** 设 $e$ 的两个端点为 $u,v$。删除 $e$ 后图仍连通，所以还有一条从 $u$ 到 $v$、不使用 $e$ 的简单路径。把 $e$ 接回去，便构成一个环。$e$ 是全图唯一最重边，因此也是这个环唯一最重边，按环性质不属于任何 MST。
 
 直接交换也能说明结论：若某棵 MST 含 $e$，删除它会把树分成两部分。那条备用 $u$ 到 $v$ 路径必有另一条边 $f$ 跨过两部分。用 $f$ 替换 $e$ 仍连通且边数不变，是一棵生成树，而 $w(f)<w(e)$，总重量严格降低，与最优性矛盾。
@@ -170,15 +219,23 @@ u ───────── e：全图最重 ───────── v
 
 ## Problem 2：钢条切割填表（6%）
 
-<a id="q2"></a>
+**英文原题（原题照片 p.1，视觉核对）**
 
-> Problem 2 (6%). For the rod cutting problem, consider the price table below:
+<a id="q2"></a>> Problem 2 (6%). For the rod cutting problem, consider the price table below:
 
 | 长度 $i$ | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
 |---|---|---|---|---|---|---|---|
 | $P[i]$ | 3 | 5 | 8 | 9 | 10 | 17 | 17 |
 
 > Define $\operatorname{opt}(n)$ as the maximum revenue from selling a rod of length $n$. Give the values of $\operatorname{opt}(n)$ for all $n\in[1,7]$.
+
+**中文翻译**
+
+考虑钢条切割问题，上表给出了长度为 1 到 7 的完整钢条售价。令 $\operatorname{opt}(n)$ 表示售出长度为 $n$ 的钢条所能获得的最大收入。给出所有 $n\in[1,7]$ 的 $\operatorname{opt}(n)$。
+
+**随卷答案译文：**$\operatorname{opt}(1)=3$，$\operatorname{opt}(2)=6$，依次为 9、12、15、18、21。
+
+**详细解题过程**
 
 **答案：$3,6,9,12,15,18,21$。** 价格 $P[i]$ 是一整段的售价，$\operatorname{opt}(i)$ 则允许切割后求最高总收入。本题没有切割费。
 
@@ -213,19 +270,27 @@ $$
 
 ## Problem 3：Prim 的选边顺序（5%）
 
-<a id="q3"></a>
+**英文原题（原题照片 p.1-2，视觉核对）**
 
-> Problem 3 (5%). Consider the weighted undirected graph below (the number beside each edge indicates the edge’s weight).
+<a id="q3"></a>> Problem 3 (5%). Consider the weighted undirected graph below (the number beside each edge indicates the edge’s weight).
 >
 > Suppose that we run Prim’s algorithm to find a minimum spanning tree (MST) of this graph. Write down the edges of the MST in the order picked by the algorithm.
 
-转录中的原图有六个顶点 $a,b,c,d,e,f$，全部十条无向边如下。$cd$ 是连接 $c,d$ 的边。
+**中文翻译**
+
+考虑图中的无向带权图，边旁数字为相应边权。运行 Prim 算法求最小生成树，按照算法选中边的先后顺序写出最小生成树的各条边。
+
+**随卷答案译文：**依次选择 $ad,cd,de,ab,ef$。
+
+**详细解题过程**
+
+已核对的原图有六个顶点 $a,b,c,d,e,f$，全部十条无向边如下。$cd$ 是连接 $c,d$ 的边。
 
 | 边 | $ad$ | $cd$ | $de$ | $ae$ | $ab$ | $ef$ | $bf$ | $cf$ | $bc$ | $be$ |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 权重 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 
-**按本课“先取全图最轻边”的 Prim 初始化，答案为 $ad,cd,de,ab,ef$。** 标准 Prim 也常从指定顶点开始，但题干转录没有指定顶点；这里明确采用 Lec 4 的初始化方式。
+**按随卷答案所用的“先取全图最轻边”初始化，答案为 $ad,cd,de,ab,ef$。** 标准 Prim 也常从指定顶点开始，但原题没有指定顶点；这里以随卷答案给出的第一条边 $ad$ 确定初始化。
 
 选中第一条边后，用 $S$ 表示已在树中的顶点。每轮只比较一端在 $S$、另一端在外的跨边。两个端点都在 $S$ 内的边，即使很轻，也不能再选；两个端点都在外的边也不是当前树的扩展候选。
 
@@ -253,9 +318,17 @@ $$
 
 ## Problem 4：Huffman 编码树（5%）
 
-<a id="q4"></a>
+**英文原题（原题照片 p.2，视觉核对）**
 
-> Problem 4 (5%). Consider an alphabet $\Sigma$ that contains letters $a,b,c,d$, and $e$ whose frequencies are 80%, 10%, 5%, 3%, 2%, respectively. Show the code tree obtained by running Huffman’s algorithm.
+<a id="q4"></a>> Problem 4 (5%). Consider an alphabet $\Sigma$ that contains letters $a,b,c,d$, and $e$ whose frequencies are 80%, 10%, 5%, 3%, 2%, respectively. Show the code tree obtained by running Huffman’s algorithm.
+
+**中文翻译**
+
+字母表 $\Sigma$ 含 $a,b,c,d,e$ 五个字符，它们的频率分别为 80%、10%、5%、3%、2%。画出运行 Huffman 算法得到的编码树。
+
+**随卷答案译文：**原答案给出一棵逐层合并的树：$e,d$ 先合并，再依次与 $c,b,a$ 合并。按原图的边标号，各码字为 $a=1$、$b=01$、$c=001$、$d=0001$、$e=0000$。
+
+**详细解题过程**
 
 Huffman 每次合并当前最小的两棵树，合并后的权重为频率之和。用百分数作为权重即可，不必先换成小数。
 
@@ -269,22 +342,22 @@ Huffman 每次合并当前最小的两棵树，合并后的权重为频率之和
 **一棵合法输出树如下。** 左边标 0，右边标 1；节点旁数字为整棵子树的频率和。
 
 ```text
-                 (100)
-                /     \
-             0 /       \ 1
-             a:80      (20)
-                       /   \
-                    0 /     \ 1
-                    b:10    (10)
-                            /  \
-                         0 /    \ 1
-                         c:5    (5)
-                                / \
-                             0 /   \ 1
-                             e:2   d:3
+                      (100)
+                     /     \
+                  0 /       \ 1
+                  (20)      a:80
+                 /    \
+              0 /      \ 1
+              (10)     b:10
+             /    \
+          0 /      \ 1
+          (5)      c:5
+         /   \
+      0 /     \ 1
+      e:2     d:3
 ```
 
-从根读到各字符叶子的边标签，可得 $a=0$、$b=10$、$c=110$、$e=1110$、$d=1111$。字符都在叶子上，所以没有一个码字成为另一个的前缀。
+从根读到各字符叶子的边标签，可得 $a=1$、$b=01$、$c=001$、$e=0000$、$d=0001$，与随卷答案的左右标号一致。字符都在叶子上，所以没有一个码字成为另一个的前缀。
 
 平均长度为
 
@@ -297,11 +370,21 @@ $$
 
 ## Problem 5：将逆序对归约为二维支配计数（12%）
 
-<a id="q5"></a>
+**英文原题（原题照片 p.2，视觉核对）**
 
-> Problem 5 (12%). Prove: if you can solve the dominance counting on $n$ points in $f(n)$ time, then you can solve the counting inversion problem in $f(n)+O(n)$ time.
+<a id="q5"></a>> Problem 5 (12%). Prove: if you can solve the dominance counting on $n$ points in $f(n)$ time, then you can solve the counting inversion problem in $f(n)+O(n)$ time.
 >
 > (Hint: you can convert inversion counting to dominance counting. You are reminded that the input to inversion counting is an array of $n$ distinct numbers.)
+
+**中文翻译**
+
+证明：如果能在 $f(n)$ 时间内解决 $n$ 个点的支配计数问题，就能在 $f(n)+O(n)$ 时间内解决逆序对计数问题。提示：把逆序对计数转化为支配计数；逆序对问题的输入是一个含 $n$ 个互不相同数值的数组。
+
+**随卷答案译文**
+
+令输入数组为 $A$。对每个 $i\in[1,n]$，建立点 $p_i=(i,-A[i])$，得到点集 $P$。$(i,j)$ 是逆序对，当且仅当 $p_j$ 支配 $p_i$。调用支配计数算法，为每个 $p_j$ 求出它支配的点数 $c_j$，再把这些计数相加。建点需 $O(n)$，所以总时间是 $f(n)+O(n)$。
+
+**详细解题过程**
 
 逆序对条件是 $i<j$ 且 $A[i]>A[j]$。二维支配要求两个坐标沿同一方向比较，因此把值的方向反过来：
 
@@ -328,9 +411,21 @@ $$
 
 ## Problem 6：Huffman 平均码长的上界（12%）
 
-<a id="q6"></a>
+**英文原题（原题照片 p.2，视觉核对）**
 
-> Problem 6 (12%). Consider an alphabet $\Sigma$ that contains $n$ letters with their frequencies given, where $n$ is a power of 2. Prove: the prefix code constructed using Huffman’s algorithm has an average length of at most $\log_2 n$.
+<a id="q6"></a>> Problem 6 (12%). Consider an alphabet $\Sigma$ that contains $n$ letters with their frequencies given, where $n$ is a power of 2. Prove: the prefix code constructed using Huffman’s algorithm has an average length of at most $\log_2 n$.
+
+**中文翻译**
+
+字母表 $\Sigma$ 含有 $n$ 个字符，每个字符的频率已给出，而且 $n$ 是 2 的幂。证明：Huffman 算法构造出的前缀码，其平均码长至多为 $\log_2 n$。
+
+**随卷答案译文**
+
+可以用 $\log_2 n$ 位为每个字符编码，给第 $i$ 个字符分配 $i$ 的二进制表示。这样得到的前缀码平均长度为 $\log_2 n$。因为 Huffman 算法构造最优前缀码，它的平均码长不超过这个值。
+
+**编号说明：**原答案同时写了 $i\in[1,n]$；当 $i=n=2^h$ 时，$n$ 的二进制表示需要 $h+1$ 位。严谨构造应给第 $i$ 个字符分配 $i-1$ 的 $h$ 位二进制表示，或直接使用 $0,\ldots,n-1$ 编号。下面的证明采用所有长度恰为 $h$ 的二进制串，避免这个边界问题。
+
+**详细解题过程**
 
 本题只要求证明一个上界，不需要推算每个字符在 Huffman 树中的实际深度。**先构造一套平均长度为 $\log_2n$ 的合法前缀码，再利用 Huffman 的最优性即可。**
 
@@ -364,11 +459,23 @@ $$
 
 ## Problem 7：切割有固定费用时的递推（11%）
 
-<a id="q7"></a>
+**英文原题（原题照片 p.2，视觉核对）**
 
-> Problem 7 (11%). Consider a modification of the rod-cutting problem where, in addition to a price $P[i]$ for each length $i\in[1,n]$, each cut incurs a fixed cost of $c$. The revenue is now the sum of the segments obtained from the cuts made, minus the total cost of making the cuts. Give a recursive function for computing the maximum revenue.
+<a id="q7"></a>> Problem 7 (11%). Consider a modification of the rod-cutting problem where, in addition to a price $P[i]$ for each length $i\in[1,n]$, each cut incurs a fixed cost of $c$. The revenue is now the sum of the segments obtained from the cuts made, minus the total cost of making the cuts. Give a recursive function for computing the maximum revenue.
 >
 > For example, assume the price table given in Problem 2, $n=7$, and $c=1$. If we make two cuts to obtain three segments of lengths 1, 2, and 4, respectively, then the revenue is $P[1]+P[2]+P[4]-2c=15$.
+
+**中文翻译**
+
+在钢条切割问题中，长度为 $i$ 的一段钢条售价是 $P[i]$，其中 $i\in[1,n]$。现在每切一刀还要付固定费用 $c$。净收入等于切后各段的总售价减去全部切割费。给出用于计算最大净收入的递归函数。
+
+例如，采用 Problem 2 的价格表，取 $n=7$、$c=1$。如果切两刀，分成长度为 1、2、4 的三段，净收入为 $P[1]+P[2]+P[4]-2c=15$。
+
+**随卷答案译文**
+
+长度为 0 时返回 0。否则比较两类收入：不切时的 $P[n]$，以及切第一刀时的 $P[i]+\operatorname{opt}(n-i)-c$，其中 $1\le i<n$；取最大值。
+
+**详细解题过程**
 
 题面自带的切法有三段、两刀，所以净收入是 $3+5+9-2=15$。它用于解释收费规则，并没有断言这是最优切法。
 
@@ -417,15 +524,27 @@ Revenue(k):
 
 题目只要求递归函数。若要高效执行，给每个长度加缓存或按长度递增填表，每个状态枚举至多 $k-1$ 种切法，总时间为 $O(n^2)$、空间为 $O(n)$。
 
-## Problem 8：找到最接近中位数的 $k$ 个数（10%）
+## Problem 8：找到最接近中位数的 k 个数（10%）
 
-<a id="q8"></a>
+**英文原题（原题照片 p.2，视觉核对）**
 
-> Problem 8 (10%). Let $S$ be a set of $n$ distinct integers given in an (unsorted) array, and $k\le n$ be an integer. Describe an algorithm to find the $k$ numbers in $S$ that are closest to the median $m$ of $S$ (the median is the $\lceil n/2\rceil$-th smallest integer in $S$). Your algorithm must finish in $O(n)$ expected time. You can assume that $S$ does not have two distinct numbers $x$ and $y$ equally close to $m$, namely, $\lvert x-m\rvert=\lvert y-m\rvert$. You must analyze the running time of your algorithm.
+<a id="q8"></a>> Problem 8 (10%). Let $S$ be a set of $n$ distinct integers given in an (unsorted) array, and $k\le n$ be an integer. Describe an algorithm to find the $k$ numbers in $S$ that are closest to the median $m$ of $S$ (the median is the $\lceil n/2\rceil$-th smallest integer in $S$). Your algorithm must finish in $O(n)$ expected time. You can assume that $S$ does not have two distinct numbers $x$ and $y$ equally close to $m$, namely, $\lvert x-m\rvert=\lvert y-m\rvert$. You must analyze the running time of your algorithm.
 >
 > For example, suppose that $S=\{50,30,76,15,97,55,43,48,69\}$ and $k=3$; then the median is 50, and your algorithm should output 50, 55, and 48.
 >
 > (Hint: Use k-selection as a black box.)
+
+**中文翻译**
+
+集合 $S$ 由 $n$ 个互不相同的整数构成，存放在未排序的数组中。给定整数 $k\le n$，设计一个算法，找出 $S$ 中最接近其中位数 $m$ 的 $k$ 个数。这里中位数定义为第 $\lceil n/2\rceil$ 小的整数。算法必须在期望 $O(n)$ 时间内完成，并分析运行时间。
+
+可以假设不同元素到中位数的距离不会相等，即不存在两个不同的 $x,y$ 使 $\lvert x-m\rvert=\lvert y-m\rvert$。例如，$S=\{50,30,76,15,97,55,43,48,69\}$，$k=3$ 时，中位数为 50，应输出 50、55、48。提示：把 k-selection 当作黑盒使用。
+
+**随卷答案译文**
+
+先在期望 $O(n)$ 时间内找到中位数 $m$。建立距离集合 $T=\{\lvert x-m\rvert\mid x\in S\}$，再用 k-selection 在期望 $O(n)$ 时间内找到 $T$ 的第 $k$ 小元素。如果返回的距离是 $\lvert x-m\rvert$，则输出所有满足 $\lvert y-m\rvert\le\lvert x-m\rvert$ 的原元素 $y\in S$。
+
+**详细解题过程**
 
 距离中位数最近，比较的是 $|x-m|$，而非 $x$ 本身。算法需要解决两个选择问题：先选择中位数，再选择第 $k$ 小距离。
 
@@ -462,9 +581,9 @@ ClosestToMedian(S, k):
 
 ## Problem 9：最少区间覆盖的贪心证明（10%）
 
-<a id="q9"></a>
+**英文原题（原题照片 p.2，视觉核对）**
 
-> Problem 9 (10%). Let $\mathcal I$ be a set of $n$ intervals of the form $[x,y]$, where $x$ and $y$ are integers. The union of all the intervals in $\mathcal I$ equals $[0,U]$ (i.e., every value in $[0,U]$ is covered by at least one interval in $\mathcal I$). A subset $S\subseteq\mathcal I$ is called a solution if the union of the intervals in $S$ equals $[0,U]$. A solution is optimal if it has the smallest size among all solutions.
+<a id="q9"></a>> Problem 9 (10%). Let $\mathcal I$ be a set of $n$ intervals of the form $[x,y]$, where $x$ and $y$ are integers. The union of all the intervals in $\mathcal I$ equals $[0,U]$ (i.e., every value in $[0,U]$ is covered by at least one interval in $\mathcal I$). A subset $S\subseteq\mathcal I$ is called a solution if the union of the intervals in $S$ equals $[0,U]$. A solution is optimal if it has the smallest size among all solutions.
 >
 > For example, suppose that $\mathcal I=\{[10,15],[0,35],[20,50],[55,60],[5,30],[0,25],[40,60],[45,50],[25,45]\}$ and $U=60$. An optimal solution has size 3, e.g., $\{[0,35],[20,50],[40,60]\}$. Another optimal solution is $\{[0,25],[25,45],[40,60]\}$.
 >
@@ -480,9 +599,43 @@ ClosestToMedian(S, k):
 >
 > As an illustration, consider the $\mathcal I$ given in our earlier example. In the beginning, $a=0$, and Line 2 adds to $S$ the interval $[0,35]$. Then, $a=36$, and Line 2 adds to $S$ the interval $[20,50]$. Next, $a=51$, and Line 2 adds to $S$ the interval $[40,60]$.
 
+**中文翻译**
+
+设 $\mathcal I$ 是 $n$ 个区间组成的集合，每个区间形如 $[x,y]$，且 $x,y$ 都是整数。所有区间的并集为 $[0,U]$，即其中每个值都被至少一个区间覆盖。如果子集 $S\subseteq\mathcal I$ 的区间并集也是 $[0,U]$，则称 $S$ 是一个解。区间数最少的解称为最优解。
+
+例如，$U=60$，区间集合为
+
+$$
+\begin{aligned}
+\mathcal I=\{&[10,15],[0,35],[20,50],[55,60],\\
+&[5,30],[0,25],[40,60],[45,50],[25,45]\}.
+\end{aligned}
+$$
+
+最优解含 3 个区间，例如 $\{[0,35],[20,50],[40,60]\}$；另一个最优解为 $\{[0,25],[25,45],[40,60]\}$。
+
+证明下面的算法返回最优解：
+
+1. 初始化 $a=0$，$S=\varnothing$。
+2. 在所有覆盖 $a$ 的区间中，选择右端点 $y$ 最大的区间 $I=[x,y]$。
+3. 将 $I$ 加入 $S$，并令 $a=y+1$。原题注释：$a$ 是尚未被 $S$ 覆盖的最小整数。
+4. 若 $a>U$ 则返回 $S$；否则回到第 2 步。
+
+对上述示例，第一次在 $a=0$ 时选 $[0,35]$，然后 $a=36$，选 $[20,50]$；再令 $a=51$，选 $[40,60]$。
+
+**随卷答案译文**
+
+设算法依次选择 $I_1,I_2,\ldots,I_t$。要证明：对于每个 $i\in[1,t]$，存在一个最优解包含 $\{I_1,\ldots,I_i\}$。
+
+基础情况 $i=1$：$I_1$ 是从 0 开始、向右延伸最远的区间。任取最优解 $T$，其中必须有一个覆盖 0 的区间 $I'$；用 $I_1$ 替换 $I'$，得到的仍是最优解。
+
+归纳步骤：假设结论对 $i=k<t$ 成立，取一个包含前 $k$ 个选择的最优解 $T$。考察算法选择 $I_{k+1}$ 之前第 2 行的 $a$。原答案写道，$T$ 必有区间 $I'$ 覆盖 $a+1$；将其替换为 $I_{k+1}$，仍得到最优解。
+
+**需要修正之处：**按算法注释，$a$ 本身已是最小未覆盖整数，因此交换证明应选覆盖 $a$ 的 $I'$，不能把 $a+1$ 直接当作所需条件。更关键的是，原题“每个值”的表述与 $a=y+1$ 的整数推进不一致。下面保留原题，明确给出整数版本的完整证明，以及连续版本的反例和修正。
+
 ### 先确定到底覆盖什么
 
-原转录有一处实质不一致：文字要求覆盖 $[0,U]$ 中的每个值，这是连续区间；伪代码却把下一处未覆盖位置设为 $y+1$，对应的是整数点。**整数端点并不代表只需覆盖整数点。**
+原题照片第 2 页有一处实质不一致：文字要求覆盖 $[0,U]$ 中的每个值，这是连续区间；伪代码却把下一处未覆盖位置设为 $y+1$，对应的是整数点。**整数端点并不代表只需覆盖整数点。**
 
 下面的参数化结构足以说明原算法对连续覆盖不成立。取任意整数 $r\ge1$，令三个输入区间为
 
@@ -553,11 +706,23 @@ ContinuousCover(I, U):
 
 ## Problem 10：同时求二次幂位置的顺序统计量（15%）
 
-<a id="q10"></a>
+**英文原题（原题照片 p.2，视觉核对）**
 
-> Problem 10 (15%). Let $S$ be a set of $n$ distinct integers where $n$ is a power of 2. Design an algorithm to output the $i$-th smallest integer in $S$ for $i=2^0,2^1,2^2,\ldots,2^{\log_2 n}$ (namely, $1+\log_2 n$ integers to output in total). Design an algorithm to achieve the purpose in $O(n)$ expected time. You must analyze the running time of your algorithm. For example, if the input array is $(8,10,2,4,12,16,14,6)$, then your algorithm should output 2, 4, 8, and 16.
+<a id="q10"></a>> Problem 10 (15%). Let $S$ be a set of $n$ distinct integers where $n$ is a power of 2. Design an algorithm to output the $i$-th smallest integer in $S$ for $i=2^0,2^1,2^2,\ldots,2^{\log_2 n}$ (namely, $1+\log_2 n$ integers to output in total). Design an algorithm to achieve the purpose in $O(n)$ expected time. You must analyze the running time of your algorithm. For example, if the input array is $(8,10,2,4,12,16,14,6)$, then your algorithm should output 2, 4, 8, and 16.
 >
 > (Hint: Find the numbers in descending order and geometric series is your friend.)
+
+**中文翻译**
+
+集合 $S$ 有 $n$ 个互不相同的整数，且 $n$ 是 2 的幂。设计一个算法，输出其中秩为 $1,2,4,\ldots,n$ 的元素，即第 $i$ 小元素，其中 $i=2^0,2^1,\ldots,2^{\log_2 n}$，共输出 $1+\log_2 n$ 个数。算法必须在期望 $O(n)$ 时间内完成，并分析运行时间。
+
+例如输入 $(8,10,2,4,12,16,14,6)$，应输出 2、4、8、16。提示：按从大到小的顺序寻找结果，并利用几何级数。
+
+**随卷答案译文**
+
+先在 $O(n)$ 时间内找出最大值，即第 $n$ 小元素。用 k-selection 在期望 $O(n)$ 时间内找到第 $n/2$ 小的元素 $e_1$，删除所有大于 $e_1$ 的数，此时集合大小为 $n/2$。再在期望 $O(n/2)$ 时间内找到第 $n/4$ 小的元素 $e_2$，继续删除所有较大的元素。重复这个过程直到只剩一个元素。总期望时间为 $O(n)+O(n/2)+O(n/4)+\cdots+O(1)=O(n)$。
+
+**详细解题过程**
 
 需要的是秩 $1,2,4,\ldots,n$，不是输出数值为这些数字的元素。如果对每个秩都在原长度 $n$ 的数组上调用一次选择，$1+\log_2n$ 次调用会得到 $O(n\log n)$，不满足要求。
 
@@ -626,4 +791,16 @@ $$
 | 9 | 覆盖问题的状态含义、交换论证与终止 |
 | 10 | 选择、秩保持与几何级数 |
 
-考试证据：题干沿用已保存的两页期中试卷转录；本次重新推导答案，未重新读取原始图片。
+## 完成检查
+
+- 已核对原题 2 页、10 道大题和判断题 7 个小问，表格及图中数据完整保留。
+- 英文题干之后均有对应中文翻译；随卷答案与补充推导明确分开。
+- 钢条收入逐项计算，Prim 按轮次列候选边，Huffman 给合并表和编码树。
+- 归约、Huffman 上界、切割递推、距离选择、区间覆盖、多个秩选择均给正确性说明和题目要求的复杂度分析。
+- Problem 9 的连续/整数语义差别及随卷证明的 a+1 写法已标出；原题与随卷答案 PDF 不作内容改写。
+
+## 来源与证据
+
+考试证据：视觉核对用户提供的原题照片 2 页与随卷答案长图（Problem 1-10）；年份 2024 据用户说明，照片未显示年份；随卷答案发布身份未标明。
+
+本稿基于已存解析逐题对照原图修订。原图、随卷答案和独立推导各自保留身份，未使用其他年份的试卷替代本题。

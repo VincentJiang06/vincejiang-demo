@@ -1,7 +1,7 @@
 # CSCI3150 L06 I/O Devices
 
 > 课程：CSCI3150 Introduction to Operating Systems · 2022未核
-> 本讲：L06 I/O Devices · 原件 [L06-IO设备-2022未核.pptx](../课件/L06-IO设备-2022未核.pptx) · [PDF页码副本](PDF/L06-IO设备-2022未核.pdf) p.1–26
+> 本讲：L06 I/O Devices · 原件 [L06-IO设备-2022未核.pptx](../旧版课件/L06-IO设备-2022未核.pptx) · [PDF页码副本](PDF/L06-IO设备-2022未核.pdf) p.1–26
 > 定位：分清等待设备与搬运数据的开销，读懂轮询、中断、DMA时间线，并追踪一个IDE请求从入队到完成。
 > 承接：#L05-07 文件读写访问路径
 
@@ -78,14 +78,19 @@ p.5把总线定义为CPU、RAM与设备间的信息通路，设备经端口、�
 **课件程序与接口（p.8，原页片段）**
 
 ```text
-while ( STATUS == BUSY)
-    ; //wait until device is not busy
-write data to data register
-write command to command register
-    Doing so starts the device and executes the command
-while ( STATUS == BUSY)
-    ; //wait until device is done with your request
+while (STATUS == BUSY)
+    ; // 等待设备可接收请求
+向数据寄存器写入数据
+向命令寄存器写入命令，启动请求
+while (STATUS == BUSY)
+    ; // 等待本次请求完成
 ```
+
+**思路分析（逐步读）**
+
+1. 先检查 STATUS，设备忙时持续轮询；空循环只重复检查，不处理别的工作。
+2. 设备可接受请求后，依次提供数据和命令，写命令触发本次操作。
+3. 最后再次轮询，直到设备完成；这是忙等的伪代码，不是标准 C 可编译实现。
 
 p.7的status用来观察当前状态，command指定要做什么，data搬运要写或读出的内容。p.8先等待设备不忙，再写数据与命令，最后等待该请求完成。前一次等待防止设备仍忙就塞入新请求，后一次等待防止把“已发命令”误当成“已经完成”。
 
@@ -95,6 +100,12 @@ p.7的status用来观察当前状态，command指定要做什么，data搬运要
 向命令接口写入操作
 再次检查状态，直到请求完成
 ```
+
+**思路分析（逐步读）**
+
+1. 第一次读取状态，是避免在设备仍忙时提交新请求。
+2. 先准备数据再提交命令，让设备知道处理什么以及执行哪种操作。
+3. 最后等待本次请求完成；持续检查会占用 CPU，理解后再与中断方式比较。
 
 **算一遍（补充；数字是我为演示取的，讲义没给）**：若设备依次报告busy=1、1、0，前置检查读3次才可下命令；命令后状态为1、0，再读2次完成，总计5次状态读取。即使没有新有用数据，CPU仍在执行这些检查。
 
@@ -342,6 +353,12 @@ static int ide_wait_ready() {
 }
 ```
 
+**思路分析（逐步读）**
+
+1. inb 读取状态端口 0x1f7；按位与 IDE_BSY 检查忙位，按位与 IDE_DRDY 检查就绪位。
+2. 条件使用逻辑或：只要仍忙，或者尚未就绪，就继续空循环；两项都为假才结束。
+3. 这是不完整的驱动片段：标准 C 不能在这里这样声明 r，int 返回函数也缺少返回值，不能原样编译。
+
 **课件程序与接口（p.23，原页片段）**
 
 ```text
@@ -362,6 +379,12 @@ outb(0x1f7, IDE_CMD_READ); // this is a READ (no data)
 }
 ```
 
+**思路分析（逐步读）**
+
+1. b 指向一次请求，先等设备就绪，再设置控制端口、扇区数和扇区地址。
+2. `>>` 把高位移到低位，`& 0xff` 取出一个字节；多次 outb 将扇区编号拆开写进寄存器。
+3. 若 B_DIRTY 置位则发写命令并传出 512/4 个双字，否则发读命令；读数据在完成中断中接收。
+
 p.21的顺序是等待不忙且READY，配置扇区数/LBA/驱动器，写读或写命令，按协议传数据，处理完成中断，并检查错误。p.22的循环条件是busy为真“或”ready为假就继续，只有busy=0且ready=1才退出；把或改成且会放过不满足条件的设备。
 
 p.23把b->sector拆成低8位、中8位、高8位和最高4位。**算一遍（补充；数字是我为演示取的，讲义没给）**：LBA=0x01234567时，各部分为0x67、0x45、0x23、0x01，分别送到对应寄存器；不是把十进制数字一位位拆开。写分支向0x1F7发WRITE，再经outsl传512/4=128个4字节单位，共512字节；读分支先发READ，数据等完成路径再取。
@@ -374,7 +397,7 @@ p.23把b->sector拆成低8位、中8位、高8位和最高4位。**算一遍（�
 
 **课件程序与接口（p.24，原页片段）**
 
-```text
+```c
 void ide_rw(struct buf *b) {
    acquire(&ide_lock);
    for (struct buf **pp = &ide_queue; *pp; pp=&(*pp)->qnext)
@@ -388,22 +411,13 @@ void ide_rw(struct buf *b) {
 }
 ```
 
-**课件程序与接口（p.25，原页片段）**
+**思路分析（逐步读）**
 
-```text
-void ide_intr() {
-   struct buf *b;
-   acquire(&ide_lock);
-   if (!(b->flags & B_DIRTY) && ide_wait_ready(1) >= 0)
-      insl(0x1f0, b->data, 512/4); // if READ: get data
-   b->flags |= B_VALID;
-   b->flags &= ˜B_DIRTY;
-   wakeup(b); // wake waiting process
-   if ((ide_queue = b->qnext) != 0) // start next request
-      ide_start_request(ide_queue); // (if one exists)
-   release(&ide_lock);
-}
-```
+1. 先 acquire 锁，再用指向指针的 pp 沿 qnext 找到队尾，`*pp=b` 意图把新请求接上。
+2. 若新请求成为队首就立即启动，否则排队；随后检查 B_VALID/B_DIRTY，未完成则 sleep，并在睡眠时让出锁。
+3. 完成后重新检查条件再 release；片段把 pp 声明在 for 内却在循环外使用，是作用域错误，不能当完整 C 实现。
+
+**课件程序与接口（p.25，原页片段）**
 
 > **p.26** IO Devices
 >
@@ -418,6 +432,27 @@ void ide_intr() {
 > Chapter 4
 >
 > Chapter 6
+
+```c
+void ide_intr() {
+   struct buf *b;
+   acquire(&ide_lock);
+   if (!(b->flags & B_DIRTY) && ide_wait_ready(1) >= 0)
+      insl(0x1f0, b->data, 512/4); // if READ: get data
+   b->flags |= B_VALID;
+   b->flags &= ˜B_DIRTY;
+   wakeup(b); // wake waiting process
+   if ((ide_queue = b->qnext) != 0) // start next request
+      ide_start_request(ide_queue); // (if one exists)
+   release(&ide_lock);
+}
+```
+
+**思路分析（逐步读）**
+
+1. 意图是在中断到来后持锁处理当前队首请求：读请求先把数据读进 b->data。
+2. 置 B_VALID、清 B_DIRTY，再 wakeup(b)，让等待该缓冲区的进程继续。
+3. 把队首移到 b->qnext 并启动下一项；但片段没有初始化 b，且 ide_wait_ready 参数与前段不一致，必须视为缺失代码的示意。
 
 p.24先取得ide_lock，把请求追加到队尾；若它就是队头，启动设备。完成条件为B_VALID置位且B_DIRTY清除，未达到就sleep并配合锁等待。**补充**：这里的sleep接口具有释放锁并进入等待的协调语义，普通“先解锁再随便睡一下”不能代替它，否则可能丢失完成通知。
 
@@ -476,7 +511,7 @@ p.25 的 `flags |= B_VALID` 置有效位，`flags &= ~B_DIRTY` 清脏位；二�
 
 ## 来源与证据
 
-- 原件：[L06-IO设备-2022未核.pptx](../课件/L06-IO设备-2022未核.pptx)；[PDF副本](PDF/L06-IO设备-2022未核.pdf) p.1–26。本文页码均为 PDF 页号。
+- 原件：[L06-IO设备-2022未核.pptx](../旧版课件/L06-IO设备-2022未核.pptx)；[PDF副本](PDF/L06-IO设备-2022未核.pdf) p.1–26。本文页码均为 PDF 页号。
 - 考试证据：读了 课程大纲-2026T1.pdf、教学计划-2026T1.pdf、T08-期中参考-2025T2-题目-解答.pdf、T07-多级反馈队列-2025T2.pdf（p.13–15内嵌历史试题）；未识别用途的 PDF：无
 
 - 2026-10-13 内容补全：保留原页顺序与版本，补入对应页的程序、接口、字段、条件和演算；原程序片段保留课件行号、拼写与省略处，不能据此视为经过编译的完整软件。本文已有运行记录属于其标注日期，本次未重新运行课程容器或提交作业。

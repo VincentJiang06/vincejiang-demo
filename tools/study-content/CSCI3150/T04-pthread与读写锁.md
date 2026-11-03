@@ -49,12 +49,24 @@ int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(
 >
 > arg: argument passed to the thread function (start\_routine).
 
+**思路分析（逐步读）**
+
+1. thread 是句柄输出地址，attr 为属性，NULL 使用默认值。
+2. start_routine 是接收并返回 void 指针的线程入口函数，arg 原样传给入口。
+3. create 成功返回 0，线程执行顺序由调度决定，不保证先于或晚于创建者下一句。
+
 **课件程序与接口（p.4，原页片段）**
 
 ```text
 pthread_t tid;
 pthread_create(&tid, NULL, thread_function, NULL);
 ```
+
+**思路分析（逐步读）**
+
+1. 先声明 tid，用来保存新线程的句柄。
+2. 传 `&tid` 让 create 写回句柄，thread_function 指定线程入口，最后的 NULL 表示不给入口额外数据。
+3. 检查返回值成功后才用 tid 去 join；create 返回不表示线程已经完成。
 
 **课件程序与接口（p.5，原页片段）**
 
@@ -66,6 +78,12 @@ void pthread_exit(void *retval);
 >
 > retval: value returned to any joining thread.
 
+**思路分析（逐步读）**
+
+1. pthread_exit 接收线程要交给 join 者的结果指针。
+2. 调用它会结束当前线程，而不是默认结束进程里的所有线程。
+3. 结果指向的对象必须在线程退出后仍有效，不能返回线程栈上的局部对象地址。
+
 **课件程序与接口（p.5，原页片段）**
 
 ```text
@@ -73,6 +91,12 @@ pthread_exit(NULL); // Exit thread without returning a value.
 ```
 
 > **p.6** Purpose: wait for a specific thread to terminate.
+
+**思路分析（逐步读）**
+
+1. NULL 表示没有返回结果对象。
+2. 执行 pthread_exit 后当前线程停止，后续语句不会继续。
+3. 其他存活线程仍可执行；不要把它与 exit 结束整个进程混淆。
 
 **课件程序与接口（p.6，原页片段）**
 
@@ -86,11 +110,23 @@ int pthread_join(pthread_t thread, void **retval);
 >
 > retval: pointer to a location where the exit status of the thread will be stored (can be NULL).
 
+**思路分析（逐步读）**
+
+1. thread 指定要等待的目标，retval 是用于接收返回指针的地址。
+2. join 等目标结束，并完成对可连接线程的回收。
+3. 成功返回 0；retval 接收到的线程结果与 join 的整数错误码不是同一个值。
+
 **课件程序与接口（p.6，原页片段）**
 
 ```text
 pthread_join(tid, NULL); // Wait for thread 'tid' to finish.
 ```
+
+**思路分析（逐步读）**
+
+1. tid 选择此前创建的线程，第二参数 NULL 表示忽略其返回对象。
+2. 当前线程在 join 内等待目标终止。
+3. 返回成功后再使用该线程完成的结果或销毁相关资源，不能把 join 当作对共享递增自动加锁。
 
 create通过pthread_t指针返回新线程标识，入口与arg决定从哪里开始；pthread_exit终止**调用线程**并返回指针结果；join等指定线程结束，可用NULL忽略返回值。它们不会自动把两个worker的共享更新变为原子动作。
 
@@ -108,6 +144,12 @@ int pthread_mutex_init(pthread_mutex_t *mutex, const pthread_mutexattr_t *a
 >
 > attr: mutex attributes (can be NULL for default attributes).
 
+**思路分析（逐步读）**
+
+1. mutex 参数给出待初始化互斥量的地址，attr 可选择属性。
+2. attr 为 NULL 时创建默认属性的互斥量。
+3. 返回 0 才算成功，必须先初始化后 lock；声明一个变量本身不完成初始化。
+
 **课件程序与接口（p.7，原页片段）**
 
 ```text
@@ -117,11 +159,23 @@ pthread_mutex_init(&lock, NULL); // Initialize mutex 'lock'.
 
 > **p.8** Purpose: lock a mutex, blocking if it is already locked.
 
+**思路分析（逐步读）**
+
+1. 先为 lock 对象提供存储，再传 `&lock` 进行动态初始化。
+2. NULL 选择默认属性，不表示没有锁。
+3. 初始化成功后所有线程必须使用同一个 lock 对象；不再使用且无人等待时才销毁。
+
 **课件程序与接口（p.8，原页片段）**
 
 ```text
 int pthread_mutex_lock(pthread_mutex_t *mutex);
 ```
+
+**思路分析（逐步读）**
+
+1. 接口接收互斥量指针，调用者必须传已初始化锁的地址。
+2. 锁空闲时取得它，已被占用时通常阻塞等待。
+3. 成功返回后才能把受保护操作视为处于临界区，失败返回应显式处理。
 
 **课件程序与接口（p.8，原页片段）**
 
@@ -129,17 +183,35 @@ int pthread_mutex_lock(pthread_mutex_t *mutex);
 pthread_mutex_lock(&lock); // Lock the mutex 'lock'.
 ```
 
+**思路分析（逐步读）**
+
+1. `&lock` 取出共享锁的地址，不是修改变量的数值。
+2. 当前线程尝试取得这把锁，成功后继续下一句。
+3. 受保护的读写应放在此调用之后、对应 unlock 之前，不能只给某一个访问者加锁。
+
 **课件程序与接口（p.9，原页片段）**
 
 ```text
 int pthread_mutex_unlock(pthread_mutex_t *mutex);
 ```
 
+**思路分析（逐步读）**
+
+1. unlock 用来释放当前线程持有的互斥量。
+2. 其他等待者此后可能取得锁，但不保证哪一个先获得。
+3. 它不代表唤醒顺序或公平性保证，也不能用于释放自己未持有的普通锁。
+
 **课件程序与接口（p.9，原页片段）**
 
 ```text
 pthread_mutex_unlock(&lock); // Unlock the mutex 'lock'.
 ```
+
+**思路分析（逐步读）**
+
+1. 完成临界区内全部共享操作后，对同一 lock 调用 unlock。
+2. 释放后不再享有独占访问资格，后续读写需要重新判断是否受保护。
+3. 不要遗漏错误路径上的释放，否则其他线程可能一直等待。
 
 先init，再成功lock，访问临界区后unlock。init不是每次加锁时都调用；锁正在使用时也不能重新初始化。unlock释放的是该互斥锁的所有权，不是退出线程。函数返回码需要检查，避免在未成功取得锁时继续访问共享对象。
 
@@ -177,36 +249,52 @@ int main() {
 }
 ```
 
+**思路分析（逐步读）**
+
+1. main 先初始化锁，再创建两个 increment，最后逐个 join。
+2. 每个 increment 取得锁后一次性做一百万次 counter++，整个循环期间另一线程无法进入。
+3. 在各调用成功的前提下总数为两百万；join 完再销毁锁，锁保护了正确性但使两个长循环串行执行。
+
 **课件程序与接口（p.10，原页片段）**
 
 ```text
-shared resource:
 int counter = 0;
 pthread_mutex_t lock;
 ```
 
+**思路分析（逐步读）**
+
+1. counter 是需要保护的共享数据，lock 是独立的同步对象。
+2. 线程要共享同一 counter，就必须也约定用同一 lock 保护竞争访问。
+3. 这里只声明二者，没有初始化锁或执行加锁；后面的初始化及 lock 调用不能省略。
+
 **课件程序与接口（p.10，原页片段）**
 
 ```text
-critical section:
 for (int i = 0; i < 100000; i++) {
         counter++;
     }
 ```
 
+**思路分析（逐步读）**
+
+1. i 从 0 到 99999，每轮给共享 counter 加 1。
+2. 这一整段是需要保护的临界区，进入前取锁、完成后释放。
+3. 本片段上界为十万，而完整示例是一百万，计算总量时必须看当前代码，不能套用前段数字。
+
 **课件程序与接口（p.10，原页片段）**
 
 ```text
-acquire() to hold lock:
 pthread_mutex_lock(&lock);
 ```
 
-**课件程序与接口（p.10，原页片段）**
+**思路分析（逐步读）**
 
-```text
-release() to release lock:
-pthread_mutex_unlock(&lock);
-```
+1. 在接触 counter 之前调用 pthread_mutex_lock。
+2. 取得锁后其他遵守同锁协议的线程不能同时更新 counter。
+3. 只有成功取得锁才进入临界区；它不是普通函数名 acquire 的自动替代，而是实际 pthread 调用。
+
+**课件程序与接口（p.10，原页片段）**
 
 > **p.10** TODO:
 >
@@ -217,6 +305,16 @@ pthread_mutex_unlock(&lock);
 > prevent simultaneous access to counter
 >
 > ensure data consistency
+
+```text
+pthread_mutex_unlock(&lock);
+```
+
+**思路分析（逐步读）**
+
+1. 完成共享修改后调用 pthread_mutex_unlock。
+2. 这一步使下一位竞争者有机会进入。
+3. 释放应与前面的成功加锁配对，不能把循环中途释放后续更新仍视为受保护。
 
 **课件程序与接口（p.11，原页片段）**
 
@@ -258,6 +356,12 @@ int main() {
 >
 > only 1 thread can enter the critical region and modify counter at any time
 
+**思路分析（逐步读）**
+
+1. main 创建十个线程，把句柄逐一存入 threads 数组。
+2. 每个线程持同一把锁做一百万次递增，因此更新不会相互覆盖。
+3. 十次 join 全部成功后才销毁锁并打印，正常总数为一千万；线程数增加不代表该串行临界区更快。
+
 原图左侧完整代码每线程循环1,000,000次，右侧解释框却写100,000，二者不一致。以完整代码为题面：初值0、所有创建成功、同一mutex保护整个循环，两线程最终2,000,000，十线程10,000,000；若按右框次数才分别200,000和1,000,000。
 
 锁在循环外意味着一个线程做完全部增量才交给另一个，结果正确但这段工作串行。删锁后普通C共享counter有数据竞争，不能承诺固定最终值，也不能因某次恰巧正确就判定没有问题。join保证打印发生在更新结束后。
@@ -292,6 +396,12 @@ void* writer(void* arg) {
 ```
 
 > **p.12** Advanced mutex lock implementation (Read/Write Locks)
+
+**思路分析（逐步读）**
+
+1. reader 取得读锁后读取 shared_data，多个读者可同时持读锁。
+2. writer 取得写锁后递增 shared_data，写锁排斥其他读者与写者。
+3. 两条路径结束都用 rwlock_unlock；读者应只读不改，否则破坏读锁的共享前提。
 
 **课件程序与接口（p.12，原页片段）**
 
@@ -332,12 +442,24 @@ int main() {
 >
 > Non-blocking locks
 
+**思路分析（逐步读）**
+
+1. 先初始化 rwlock，再启动两个 reader 和一个 writer。
+2. 创建顺序不保证执行顺序，读者可能看到写前的 0 或写后的 1。
+3. 等待三个线程全部结束后再销毁锁；读写锁保证访问协调，不强制 writer 先执行。
+
 **课件程序与接口（p.13，原页片段）**
 
 ```text
 int pthread_mutex_trylock(pthread_mutex_t *mutex);
 int pthread_mutex_timedlock(pthread_mutex_t *mutex, const struct timespec* abs_timeout);
 ```
+
+**思路分析（逐步读）**
+
+1. trylock 不能立即取得锁时返回忙，调用者可选择别的工作。
+2. timedlock 允许等待到 abs_timeout 指定的绝对时间，超时返回错误编号。
+3. 两者都应检查返回值，失败时不能进入临界区或调用 unlock 假装已经持锁。
 
 原例shared_data初值0，两reader各在rdlock内打印，一writer在wrlock内加1。根据获取顺序，两个读者可能都读0、一个0一个1或都读1；已正确同步不等于打印顺序固定。最后在所有线程join后销毁锁。
 

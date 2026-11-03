@@ -29,7 +29,7 @@ test('study rendering preserves equations, explicit/repeated anchors and resolve
 test('publication projection removes workflow metadata and private paths without deleting academic prose', async () => {
  const {publicText, isNote} = await import('./study-import.mjs');
  assert.equal(isNote('exercise/Ex01.md'),true);
- for(const name of ['核验/a.md','记忆库/L01.md','AGENTS.md','更新记录.md','PDF/a.pdf'])assert.equal(isNote(name),false);
+ for(const name of ['核验/a.md','记忆库/L01.md','AGENTS.md','更新记录.md','PDF/a.pdf','Douglass-Opus55-工作记录/01-译文.md'])assert.equal(isNote(name),false);
  const result=publicText('# 例题\n$x=1$\n- 编写：vince-course-study 4.2.0\n路径 `/Users/vince/Lab`。\n补充内容不进入讲义记忆库。');
  assert.match(result,/\$x=1\$/);assert.doesNotMatch(result,/vince-course|\/Users\/vince|记忆库/);
  assert.match(result,/课程工作目录/);

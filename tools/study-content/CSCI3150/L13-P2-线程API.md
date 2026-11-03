@@ -1,7 +1,7 @@
 # CSCI3150 L13 线程API
 
 > 课程：CSCI3150 Introduction to Operating Systems · 2022未核
-> 本讲：L13 线程API，第 2 部分 / 共 2 部分 · 原件 [L13-线程与线程API-2022未核.pptx](../课件/L13-线程与线程API-2022未核.pptx) · [PDF页码副本](PDF/L13-线程与线程API-2022未核.pdf) p.38–51
+> 本讲：L13 线程API，第 2 部分 / 共 2 部分 · 原件 [L13-线程与线程API-2022未核.pptx](../旧版课件/L13-线程与线程API-2022未核.pptx) · [PDF页码副本](PDF/L13-线程与线程API-2022未核.pdf) p.38–51
 > 定位：正确创建、等待线程，并使参数、返回值和锁的生命周期覆盖实际使用。
 > 前后：前接 [线程与竞争](L13-P1-线程与竞争.md)；后接 [L14 锁](L14-P1-锁的实现.md)。
 
@@ -37,6 +37,12 @@ pthread_create(      pthread_t*      thread,
                      void*           arg);
 ```
 
+**思路分析（逐步读）**
+
+1. thread 是输出参数，传句柄变量的地址；attr 指向属性，NULL 表示使用默认属性。
+2. `void *(*start_routine)(void *)` 是函数指针：新线程执行它，接收一个 void 指针，返回一个 void 指针。
+3. arg 原样传给入口函数；create 返回 0 表示成功，非零是错误编号，不能按 fork 的返回规则理解。
+
 **课件程序与接口（p.40，原页片段）**
 
 ```text
@@ -65,6 +71,12 @@ int main(int argc, char *argv[]) {
 }
 ```
 
+**思路分析（逐步读）**
+
+1. 先定义含 a、b 的结构，把 args.a、args.b 分别设为 10、20。
+2. 把 `&args` 作为 void 指针传入线程，线程再转回 myarg_t 指针，通过 `m->a`、`m->b` 读成员。
+3. 必须保证 args 在线程读取时仍活着，通常主线程 join 后再离开作用域；这里省略号不能替代生命周期管理。
+
 原型为 `pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine)(void *), void *arg)`。第一个参数接收线程标识，attr指定属性或NULL默认，入口接收并返回 `void *`，arg指向需要交给线程的数据。
 
 原例定义含a、b的结构，main设置10、20后传 `&args`，worker转回结构指针后打印10和20。传地址不复制结构；main必须保证args在worker读取期间仍存在，且不能无同步地同时修改它。课件main末尾省略号不能解释为可以马上退出。
@@ -82,6 +94,12 @@ int main(int argc, char *argv[]) {
 ```text
 int pthread_join(pthread_t thread, void **value_ptr);
 ```
+
+**思路分析（逐步读）**
+
+1. thread 指定等待哪个线程，join 会等它终止。
+2. 第二参数是 `void **`，因为 join 要把线程返回的指针写进调用者的指针变量。
+3. 不需要结果时传 NULL；成功为 0，线程返回内容不是 join 本身的整数返回值。
 
 **课件程序与接口（p.42，原页片段）**
 
@@ -113,6 +131,12 @@ int pthread_join(pthread_t thread, void **value_ptr);
 
 > **p.43** Example: Waiting for Thread Completion (Cont.)
 
+**思路分析（逐步读）**
+
+1. 先把 arg 转回参数结构指针，读取 a、b。
+2. malloc 在堆上分配返回结构，令 r->x=1、r->y=2，再返回 r。
+3. 堆对象不会随着线程函数返回自动消失，调用者可在 join 后使用并 free；仍须补做分配失败检查。
+
 **课件程序与接口（p.43，原页片段）**
 
 ```text
@@ -130,6 +154,12 @@ int main(int argc, char *argv[]) {
      return 0;
  }
 ```
+
+**思路分析（逐步读）**
+
+1. 主线程创建 args 并启动线程，再通过 join 等待完成。
+2. `&m` 是结果指针变量的地址，join 将 worker 返回的 r 写入 m，所以之后能读取 m->x 和 m->y。
+3. 读取完应该 free(m)，并检查 create/join 的返回值；片段没有展示这些收尾步骤。
 
 原例worker用malloc创建含x、y的返回结构，设1、2后返回其指针；main执行 `pthread_join(p,(void **)&m)` 后读 `m->x,m->y`，输出returned 1 2。入口先打印10 20，join后才有main的返回值打印。
 
@@ -160,6 +190,12 @@ void *mythread(void *arg) {
 
 > **p.45** Example: Simpler Argument Passing to a Thread
 
+**思路分析（逐步读）**
+
+1. r 是线程函数栈上的局部结构，赋值只在它的生命周期内有效。
+2. `&r` 取地址并不延长 r 的生命；函数一返回，局部对象已失效。
+3. 调用者即使成功 join，也不能合法解引用这个悬空地址；应返回堆对象或由调用者提供的有效存储。
+
 **课件程序与接口（p.45，原页片段）**
 
 ```text
@@ -178,6 +214,12 @@ void *mythread(void *arg) {
      return 0;
  }
 ```
+
+**思路分析（逐步读）**
+
+1. 片段想把整数 100 塞进 void 指针，再在线程中加 1 传回。
+2. 但 void 指针算术不是标准 C，整数和指针直接转换也不保证这种用法可移植。
+3. 更严重的是把 `int m` 的地址强转为 void 双指针，join 可能按指针宽度写入而越界；宜改用参数/结果结构，不能把本例当通用模板。
 
 p.44原例在worker栈上声明 `myret_t r; r.x=1; r.y=2; return (void *)&r;`。函数结束后r生命周期结束，join不能让这个对象复活，解引用返回指针无效。应使用生命周期足够长的对象，例如堆分配或由调用方提供存储。
 
@@ -202,6 +244,12 @@ int pthread_mutex_lock(pthread_mutex_t *mutex);
 int pthread_mutex_unlock(pthread_mutex_t *mutex);
 ```
 
+**思路分析（逐步读）**
+
+1. lock/unlock 都接收同一个互斥量的地址，而不是复制锁对象。
+2. lock 成功返回后，当前线程获得临界区执行资格；遇到已占用锁可能等待。
+3. 访问共享数据完成后 unlock；检查返回值，且必须遵守锁的初始化及持有关系。
+
 **课件程序与接口（p.46，原页片段）**
 
 ```text
@@ -217,11 +265,23 @@ pthread_mutex_unlock(&lock);
 >
 > The dynamic way: using pthread\_mutex\_init()
 
+**思路分析（逐步读）**
+
+1. 先定位临界区是 `x=x+1` 的整个读改写。
+2. 在它前后分别 lock 和 unlock，让所有同锁访问串行。
+3. 本段只有锁变量声明，没有初始化；使用前还必须用静态初始化器或 pthread_mutex_init 完成初始化。
+
 **课件程序与接口（p.47，原页片段）**
 
 ```text
 pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 ```
+
+**思路分析（逐步读）**
+
+1. 声明 lock 的同时，用 PTHREAD_MUTEX_INITIALIZER 建立默认互斥量初始状态。
+2. 后续调用统一传 `&lock`，不能复制该对象来代替共享同一把锁。
+3. 这一行只是初始化，没有取得锁；进入临界区仍须调用 lock。
 
 **课件程序与接口（p.47，原页片段）**
 
@@ -234,6 +294,12 @@ assert(rc == 0); // always check success!
 >
 > An example wrapper
 
+**思路分析（逐步读）**
+
+1. `&lock` 提供待初始化对象的位置，NULL 选择默认属性。
+2. 返回值 rc=0 才表示初始化成功，assert 用来在失败时终止调试示例。
+3. assert 在定义 NDEBUG 的构建中可能被移除；需要可靠处理错误时应显式检查返回值。
+
 **课件程序与接口（p.48，原页片段）**
 
 ```text
@@ -244,6 +310,12 @@ assert(rc == 0); // always check success!
      assert(rc == 0);
  }
 ```
+
+**思路分析（逐步读）**
+
+1. 这是自定义大写 Pthread_mutex_lock 包装函数，内部调用真正的 pthread_mutex_lock。
+2. 把返回值保存为 rc，再用断言检查为 0，让调用处更简洁。
+3. 它采用失败即终止的策略，且断言可能被关闭；不要误认为大写函数是另一个标准 pthread API。
 
 `pthread_mutex_lock`成功取得锁才返回，unlock释放。静态初始化用 `PTHREAD_MUTEX_INITIALIZER`，动态初始化用 `pthread_mutex_init(&lock,NULL)`，不可直接使用未初始化的mutex。
 
@@ -275,6 +347,12 @@ int pthread_mutex_trylock(pthread_mutex_t *mutex);
 >
 > For more information,
 
+**思路分析（逐步读）**
+
+1. trylock 尝试立即获得锁，已被占用时报告忙，不像普通 lock 一直等待。
+2. 定时版本只允许等到指定绝对时间，超时需要由调用者处理。
+3. 片段把名称写成 pthread_mutex_timelock；标准接口名是 pthread_mutex_timedlock，示意声明不能原样照抄。
+
 **课件程序与接口（p.50，原页片段）**
 
 ```text
@@ -301,6 +379,12 @@ prompt> gcc –o main main.c –Wall -pthread
 >
 > Next: Semaphore
 
+**思路分析（逐步读）**
+
+1. gcc 读取 main.c，`-o main` 指定输出程序名。
+2. `-Wall` 开启常用警告，`-pthread` 同时处理线程相关编译与链接配置。
+3. 片段部分短横线是排版长横线，实际输入终端应使用普通 ASCII `-`，否则不会被识别为选项。
+
 trylock拿不到时返回错误码而非无限阻塞；定时版本达到截止时刻仍未获得则返回超时。p.49把名字写成 `pthread_mutex_timelock`，正确接口名称是 `pthread_mutex_timedlock`；参数为绝对截止时间，不能随手把相对等待秒数填入。
 
 p.50用 `gcc -o main main.c -Wall -pthread` 编译链接，源文件包含 `<pthread.h>`。课件排版的长横线应换成命令行ASCII `-`。p.51总结提到条件变量，但细节在L14；本讲先掌握create启动执行、join等结束、mutex保护共享状态三种不同关系。
@@ -326,7 +410,7 @@ pthread类接口通常直接返回错误码，不能不加区分地套用所有�
 
 ## 来源与证据
 
-- 原件：[L13-线程与线程API-2022未核.pptx](../课件/L13-线程与线程API-2022未核.pptx)；[PDF副本](PDF/L13-线程与线程API-2022未核.pdf) p.38–51。本文页码均为 PDF 页号。
+- 原件：[L13-线程与线程API-2022未核.pptx](../旧版课件/L13-线程与线程API-2022未核.pptx)；[PDF副本](PDF/L13-线程与线程API-2022未核.pdf) p.38–51。本文页码均为 PDF 页号。
 - 考试证据：读了 课程大纲-2026T1.pdf、教学计划-2026T1.pdf、T08-期中参考-2025T2-题目-解答.pdf、T07-多级反馈队列-2025T2.pdf（p.13–15内嵌历史试题）；未识别用途的 PDF：无
 
 - 2026-10-13 内容补全：保留原页顺序与版本，补入对应页的程序、接口、字段、条件和演算；原程序片段保留课件行号、拼写与省略处，不能据此视为经过编译的完整软件。本文已有运行记录属于其标注日期，本次未重新运行课程容器或提交作业。

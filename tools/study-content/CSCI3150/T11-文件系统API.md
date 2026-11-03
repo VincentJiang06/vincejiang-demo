@@ -77,21 +77,27 @@ struct stat {
 };
 ```
 
+**思路分析（逐步读）**
+
+1. stat 结构保存元数据而非文件正文，先由 stat/fstat 等接口填入。
+2. st_ino 标识 inode，st_size 是逻辑字节数，st_nlink 是硬链接数，st_mode 含类型和权限。
+3. st_blocks 与 st_size 不能直接按同一单位比较；时间字段分别描述访问、内容修改和状态变化。
+
 p.6是API标题，p.7混列POSIX、C库、Python和Windows函数，只为比较职责。rename重命名不等于open/close，opendir/readdir属于目录访问库接口，也不宜一概称为一条独立系统调用。
 
 p.8 stat字段：st_size逻辑字节数，st_blocks已分配块计数，st_blksize建议I/O块大小；st_mtime是内容修改时间，st_ctime是状态更改时间，不是创建时间。
 
-**表（p.7）：课件完整字段与状态。** 下表保留原页术语和数值；读写轨迹的同一格按原页由上到下排列，空格以“—”表示。
+**数据与状态对照（p.7）**
 
-| Feature | Description | Examples |
+| 操作目的 | 需要区分的对象 | C / POSIX 接口示例 |
 |---|---|---|
-| File Metadata Handling | Operations to access or modify file metadata such as size, permissions, and modification date. | stat(), os.stat() |
-| File Opening and Closing | Functions to open and close files for various operations like reading, writing. | open(), fopen(), CreateFile(), rename() |
-| File Reading and Writing | Methods to read from and write to files in different modes (binary or text). | read(), write(), fread(), WriteFile() |
-| File Positioning | Functions to manipulate the read/write pointer's position within a file (seek operations). | lseek(), fseek(), SetFilePointer() |
-| File Creation and Deletion | Functions to create or delete files and directories. | unlink(), os.remove(), DeleteFile() |
-| Directory Management | Tools for handling directories, including creation, deletion, and listing contents. | mkdir(), os.mkdir(), shutil.rmtree() |
-| Link Creation and Deletion | Create a direct link to the same underlying file content/shortcut or pointer to another file or directory. | link(), symlink(), unlink() |
+| 查询元数据 | 文件长度、权限、inode 等信息，不是文件正文。 | stat、fstat |
+| 打开与关闭 | 获取或释放描述符、文件流的引用。 | open / close、fopen / fclose |
+| 读写内容 | 数据缓冲区、请求字节数与实际传输量。 | read / write、fread / fwrite |
+| 改变访问位置 | 文件内偏移；定位本身不传输数据。 | lseek、fseek |
+| 创建与删除 | 创建对象或删除名字，不等于立即擦除数据。 | open 配合 O_CREAT、unlink |
+| 管理目录 | 目录对象及其中的条目。 | mkdir、opendir、readdir、closedir |
+| 建立链接 | 同一 inode 的另一个名字，或独立的路径引用。 | link、symlink |
 
 ### p.9–11：大小、原子替换与unlink
 
@@ -110,6 +116,12 @@ Modify: 2011-05-03 15:50:20.157594748 -0500
 Change: 2011-05-03 15:50:20.157594748 -0500
 ```
 
+**思路分析（逐步读）**
+
+1. echo 写入 hello 加换行，所以 Size 为 6。
+2. Blocks:8 表示此类 Linux 输出中的八个 512 字节单位，不是八个 4096 字节块。
+3. 再看 inode、Links 与权限，区分名字、对象和存储量；日期和编号只是这次示例记录。
+
 **课件程序与接口（p.10，原页片段）**
 
 ```text
@@ -126,6 +138,12 @@ int fd = open("foo.txt.tmp", O_WRONLY|O_CREAT|O_TRUNC);
 >
 > rm calls unlink() to remove a file.
 
+**思路分析（逐步读）**
+
+1. 意图先把新内容写到临时文件，再 fsync 确认同步，close 后 rename 替换目标名字。
+2. 这样避免让读者看到目标文件被逐步覆盖的中间版本。
+3. 片段 open 使用 O_CREAT 却缺少权限参数，所有返回值和短写也未处理；若要求断电后的名字持久化，还需同步父目录。
+
 **课件程序与接口（p.11，原页片段）**
 
 ```text
@@ -135,6 +153,12 @@ unlink(“foo”)
 ...
 prompt>
 ```
+
+**思路分析（逐步读）**
+
+1. strace 显示 rm 内部发起 unlink 删除名字。
+2. unlink 改变目录项与链接计数，不是擦除文件字节的命令。
+3. 若仍有硬链接或打开引用，文件对象可能继续存在；本片段省略了系统调用返回值。
 
 原例 `echo hello > file`写hello加换行，共6B；stat显示Blocks8、IO Block4096。在该Unix示例的512B计量约定下，8×512=4096B分配空间，与逻辑6B并不矛盾。
 
@@ -171,6 +195,12 @@ drwxr-x--- 26 root root 4096 Apr 30 16:17 ../
 >
 > A sample code to read directory entries.
 
+**思路分析（逐步读）**
+
+1. ls -al 显示隐藏目录项和详细元数据。
+2. `.` 是当前目录，`..` 是父目录，首字符 d 说明它们是目录。
+3. 权限、所有者与大小各有独立含义，不能把目录大小直接当作所有子文件内容大小总和。
+
 **课件程序与接口（p.13，原页片段）**
 
 ```text
@@ -186,6 +216,12 @@ int main(int argc, char *argv[]) {
  }
 ```
 
+**思路分析（逐步读）**
+
+1. opendir(".") 打开当前目录，检查返回指针有效。
+2. 每轮 readdir 取一项，赋给 d 后判是否为空，非空则打印 inode 与名字。
+3. 读完 closedir；要进一步区分读完和读取错误需检查 errno，片段也省略了头文件。
+
 **课件程序与接口（p.14，原页片段）**
 
 ```text
@@ -197,6 +233,12 @@ unsigned short d_reclen; /* length of this record */
 unsigned char d_type; /* type of file */
 };
 ```
+
+**思路分析（逐步读）**
+
+1. 这段意图展示目录记录包含的字段，名字存在 d_name，inode 号在 d_ino。
+2. 通过 readdir 得到记录指针后，才访问这些成员。
+3. 标准使用的结构名是 struct dirent，此处 direct 为历史/片段写法；d_off 与 d_type 也不能一律当作可靠字节偏移和已知类型。
 
 mkdir创建目录，Unix目录示意含`.`和`..`；readdir逐个返回目录项，示例打印inode号和名字，最后closedir。返回NULL需结合错误状态区分目录末尾与失败，原assert示例只做简化。
 
@@ -229,6 +271,12 @@ prompt> cat file2
 hello
 ```
 
+**思路分析（逐步读）**
+
+1. 先写入 file 并用 cat 核对内容。
+2. ln 新建 file2 这个硬链接名，它与 file 指向同一 inode。
+3. cat file2 读取同一份内容；修改同一文件会从两个名字看到，不能理解为独立复制。
+
 **课件程序与接口（p.16，原页片段）**
 
 ```text
@@ -249,6 +297,12 @@ prompt>
 > After creating a hard link to file, old and new files have no difference.
 >
 > Thus, to remove a file, we call unlink().
+
+**思路分析（逐步读）**
+
+1. ls -i 在名字前显示 inode 号。
+2. 两个名字显示同一编号，结合前一段创建操作，可确认它们共享 inode。
+3. 这结论限于同一文件系统，不能拿不同设备上的相同号码直接判定同一文件。
 
 rmdir要求目录空。原例ln file file2后两个名字都显示inode67158084，说明共享同一inode；修改数据经任一名字都作用到同一对象。p.17“Make an inode”描述若用于已有文件的新硬链接并不准确：link新增目录项并增加链接数，不为同一文件复制一份新inode。
 
@@ -287,6 +341,12 @@ hello
 >
 > Symbolic link is subject to the dangling reference.
 
+**思路分析（逐步读）**
+
+1. ln -s 创建符号链接 file2，保存目标路径 file。
+2. cat 沿目标路径访问真正内容，所以可显示 hello。
+3. 链接有独立 inode，目标名字消失会使它悬空；实际命令需使用普通短横线 `-s`。
+
 **课件程序与接口（p.20，原页片段）**
 
 ```text
@@ -296,6 +356,12 @@ drwxr-x--- 27 remzi remzi 4096 May 3 15:14 ../       /* directory */
 -rw-r----- 1 remzi remzi 6 May 3 19:10 file          /* regular file */
 lrwxrwxrwx 1 remzi remzi 4 May 3 19:10 file2 -> file /* symbolic link */
 ```
+
+**思路分析（逐步读）**
+
+1. 看首字符区分目录 d、普通文件 - 和符号链接 l。
+2. `file2 -> file` 显示链接路径，链接大小 4 对应目标路径字符串长度。
+3. 目标文件大小 6 是 hello 加换行，与符号链接自身大小是两个不同量。
 
 **课件程序与接口（p.20，原页片段）**
 
@@ -308,6 +374,12 @@ prompt> rm file
 prompt> cat file2
 cat: file2: No such file or directory
 ```
+
+**思路分析（逐步读）**
+
+1. 目标存在时，通过 file2 可以读到 hello。
+2. rm file 移除目标名字，并不把符号链接 file2 一起删除。
+3. 再次 cat 解析不到目标而报错，这就是悬空链接；硬链接在同样操作下行为不同。
 
 unlink减少链接数；降为0后仍需考虑打开文件的引用，最后引用释放才可回收底层存储。符号链接则是另一个文件对象，内容是目标路径；可跨文件系统，也可指目录，目标消失后可能悬空。
 
