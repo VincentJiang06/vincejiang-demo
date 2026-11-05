@@ -1,0 +1,47 @@
+# Course connections
+
+The core comparison draws on the history sequence in Lectures 1–6. Lecture 7 supplies an additional source-reading method. Lecture references are course-context references; the object-level claims depend on the outside sources identified in each case. Original Blackboard files are retained locally.
+
+## 1650 — The iron nail
+
+Lecture 2, pp. 12–13 frames colonial commercial ties. Saugus complicates a simple trade map: English investment and colonial rules organized local production, while success remained uncertain. Lecture 1, pp. 25–26 helps ask what a map of materials leaves out, including labor obligations.
+
+## 1835 — Cotton cloth
+
+Lecture 3, slides 4–6 contrasts northern and southern identities. The 1835 textile case shows economic dependence across that division; it is not evidence about factory totals at the later outbreak of war. Lecture 4, slide 4 provides a later comparison with southern textile industrialization.
+
+## 1901 — Canned beef
+
+Lecture 4, slides 6–7 links rail expansion, concentrated capital and industrial labor. Chicago shows how these conditions could combine at a processing center; the Vacaville advertisement adds a distinct retail observation. Slide 15's food reforms belong to a later period, not the 1901 film's cause.
+
+## 1928 — The Model A
+
+Lecture 5, slide 10 places automobiles within 1920s manufacturing. Rouge shows how corporate control could integrate geographically separated work, rather than proving that every operation occupied one site. Slide 12 supplies Great Migration context, not the identities of photographed workers.
+
+## 1965 — Color television
+
+Lecture 6, slide 8 frames postwar regional change, while slide 19 discusses NAFTA-era globalization. Cowie dates RCA employment in Mexico to 1968 and traces earlier US relocations: the case complicates a story that begins cross-border production in the 1990s. These dates are outside research, not lecture claims.
+
+## 2007 — The first iPhone
+
+Lecture 6, slide 19 supplies a globalization framework. The packaging adds a question central to the course: who tells an American product's story, and whose contribution is named? The 2007 case compares corporate organization with physical manufacture; a separately dated 2025 afterword does not alter its map.
+
+## Method across the exhibition
+
+Lecture 1, pp. 25–26 asks what maps include or omit and how spatial patterns might be explained. The atlas applies those questions to role-based maps with explicit gaps. Lecture 5, slides 18–20 asks for a debatable thesis, deliberate primary/secondary source use and contextual interpretation of primary materials. Lecture 7, slides 15–16 develops close reading of sources including advertisements and images.
+
+## Course references
+
+Galvan, A., & Muñoz, M. G. (2026). *GENA2122, Lecture 1: Issues in American Culture & History* [Course slides, pp. 25–26]. The Chinese University of Hong Kong.
+
+Muñoz, M. G. (2026). *The birth of a nation* [GENA2122 Lecture 2 course slides, pp. 12–13]. The Chinese University of Hong Kong.
+
+Muñoz, M. G. (2026). *Antebellum, Civil War, and Reconstruction* [GENA2122 Lecture 3 course slides, slides 4–6]. The Chinese University of Hong Kong.
+
+Muñoz, M. G. (2026). *American empire and industrialization* [GENA2122 Lecture 4 course slides, slides 4, 6–7, 15]. The Chinese University of Hong Kong.
+
+Muñoz, M. G. (2026). *The world wars* [GENA2122 Lecture 5 course slides, slides 10, 12, 18–20]. The Chinese University of Hong Kong.
+
+Muñoz, M. G. (2026). *The Cold War* [GENA2122 Lecture 6 course slides, slides 8, 19]. The Chinese University of Hong Kong.
+
+Galvan, A., & Muñoz, M. G. (2026). *An immigrant ethos* [GENA2122 Lecture 7 course slides, slides 15–16]. The Chinese University of Hong Kong.

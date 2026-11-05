@@ -1,0 +1,10 @@
+{
+  "us-states.json": {
+    "source": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_admin_1_states_provinces.geojson",
+    "dataset": "Natural Earth 1:50m admin 1 states and provinces",
+    "license": "Public domain",
+    "transform": "Filter admin == United States of America; retain name, postal, admin and geometry",
+    "date": "2026-11-04"
+  },
+  "interpretation": "Modern borders orient the reader. Colour indicates selected roles, not share, complete sourcing territory or historical borders. Ellipses are explicitly schematic regions. Leaders connect labels to geographic anchors, not freight routes."
+}

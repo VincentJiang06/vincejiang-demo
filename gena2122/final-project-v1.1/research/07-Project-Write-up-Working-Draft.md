@@ -1,0 +1,77 @@
+# Where Work Happens and Who Connects It
+
+## Introduction
+
+The geography of American manufacturing is better understood by distinguishing where work occurred from who controlled its connections. Across these six cases, ownership, exchange, contracts and coercive labor relations crossed production locations in different ways; distance alone does not describe a progression from local work to globalization.
+
+*Made Across America* tests this argument through six dated cases. Each complicates a simple reading of production: Saugus challenges an entirely local colonial economy; Lowell separates northern industrial identity from economic independence from slavery; Armour distinguishes a processing center from a product’s untraced retail origin; Ford separates integration from territorial self-sufficiency; RCA shows company plants alongside outside sales; and the iPhone separates a US brand from domestic manufacture. The title concerns American participation in manufacturing, including connections beyond US borders. These are selected cases, not a representative sample or six equally documented snapshots.
+
+## Course context and creative method
+
+Lecture 4’s account of northern capital in southern industry implies a distinction between productive activity and economic control (Muñoz, 2026, slide 4). The exhibition develops that question through objects. Selecting a task highlights components and places; an accompanying relationship label identifies ownership, trade, labor coercion, contracts or an unresolved connection. The comparison asks readers to reconsider a place after learning how it was linked to others. Generated components explain structure, while sources establish historical claims. The GDP panel supplies dated national context, not a measure of these networks’ concentration or economic effects.
+
+## Six cases
+
+At Saugus around 1650, demanding iron processing took place at one works, while most nail rods went to Boston and other New England settlements (National Park Service, 2021a). English investment and colonial privileges helped organize the venture; a local-supply condition qualified its export freedom. The works nevertheless ceased operating around 1670 amid mismanagement and litigation (Regan & White, n.d., pp.27,32). This unusual, ultimately unsuccessful venture cannot stand for all colonial production. It brings Lecture 2’s colonial commercial relations into a specific institution: local processing could depend on overseas capital and public privileges. Scottish prisoners worked under indenture, including in woodcutting and charcoal making (National Park Service, 2021b). Materials and labor were secured through different relationships.
+
+The 1835 Lowell case makes slavery a condition of the network, rather than incidental background. Lowell mills used southern cotton produced through enslaved labor; Lowell Manufacturing Company also made cloth sold to enslavers (National Park Service, 2020). A compilation dated 1835 by NPS places a racialized clothing category alongside household textiles. The table records commercial classification; the historical interpretation establishes the sales relationship. The particular clothing’s fiber composition and any same-bale return journey remain unknown. Lecture 3’s sectional contrast is therefore complicated by economic interdependence: locating a mill in the North did not separate its business from slavery. This was an actively maintained commercial relationship, not necessarily hidden from its participants.
+
+Armour requires a composite evidence window. An 1893 Vacaville advertisement names Armour Corned Beef; a catalog records a 1901 film of labeling in Armour’s Chicago Canned Meat Department (J. & I. Blum, 1893; American Film Institute, n.d.). The latter is not specifically a record of the advertised beef. Chicago’s industry received Midwestern livestock by rail and concentrated specialized processing jobs (Clark, n.d., pp.1–2). These observations connect Lecture 4’s railways, capital and labor to a processing center, while leaving the advertised cans’ factory and contracting chain unresolved. Regional supply and distant retail presence are evidence of different relationships, not a verified shipment between the two points.
+
+The Model A case asks what integration actually joined. A February 1928 photograph records assembly at Rouge; museum accounts describe regional coal supply and wooden body parts routed through Iron Mountain and body suppliers (Ford Motor Company, Photographic Department, 1928; The Henry Ford, n.d.-a; Anderson, n.d.). The strongest counterreading is that vertical integration did internalize substantial coordination. That is compatible with resources and company facilities outside Rouge, and with external suppliers. Work inside one site, ownership across sites and purchases from other firms must be distinguished. Richmond’s separate Model A assembly plant opened in 1931, beyond the map’s 1928 anchor (National Park Service, n.d.). Lecture 5’s automotive economy thus becomes a question about corporate organization rather than proof that one enormous factory did everything.
+
+RCA’s June 1965 plans directed $36.4 million of a $50-million program toward picture-tube expansion. Lancaster already made rectangular tubes; Marion was to be equipped for them. The company also sold tubes to competing receiver makers (Broadcasting, 1965, pp.28–29). This industry already combined internal production with trade between firms. Its capital-plan report reveals selected RCA facilities, but cannot establish what RCA bought elsewhere. The report’s industry sales estimate was “entirely dependent upon” tube availability (p.28): the conditional figure concerned sales, not whether expansion could occur. Management’s reduced 1965 tube forecast during changeover and its limits on competitors’ requests identify capacity and allocation as separate problems.
+
+Apple’s 2007 disclosure gives concentration another meaning. It places final assembly of substantially all portable products, including iPhone, with third-party vendors in China, while describing outsourced manufacturing as concentrated among few manufacturers and often single locations (Apple Inc., 2007, pp.12,16). The same company-wide report lists its own Cork facility and US production relationships; those are not iPhone-specific locations. RCA and Apple therefore do not establish a clean transition from internal production to outsourcing. Their sources disclose different slices of mixed arrangements. Apple’s warning that outsourcing can “reduce the Company’s direct control” (p.16) makes contractual dependence explicit. The packaging also tells a selective American story: Apple and California receive named design credit, while the assembly statement names China without naming the assembler (The Henry Ford, n.d.-b).
+
+## Competing explanations and limits
+
+Transport remains part of the explanation. Klein and Crafts (2009) compare market potential and factor endowments across states and two-digit industries; their account includes scale economies relative to transport costs (pp.15,24,28–29). Agricultural inputs remain a significant natural-advantage channel through 1900. Their discussion also identifies food as an exception in cited aggregate scale-economy evidence. The study therefore prompts questions about both livestock and market access, rather than proving an Armour-specific mechanism or defeating a transport explanation. Gereffi et al. (2003) provide an analytical framework for asking how transaction complexity, codification and supplier capability affect coordination. Their types are tools for inquiry, not classifications established by this exhibition’s map points.
+
+Cowie offers a stronger challenge to an account centered on technical capacity: RCA’s assembly relocations pursued cheaper, more controllable labor as established workers developed bargaining power (n.d., pp.4–6,9). The consulted management report cannot adjudicate that explanation. His account includes gendered labor markets, acknowledged here without opening another research strand. He dates Mexican employment to 1968 and treats crossing borders as both continuity and a consequential change in industrial relations (p.2). This qualifies a reading of Lecture 6’s globalization context that would begin the process with 1990s agreements. Neither the iPhone records nor a supplier-office map can settle the weight of wages in assembly location.
+
+Selection and source genre also limit the argument. Cases with surviving external links are especially visible; no prevalence estimate follows. The interpretation would need revision if plant or contract records disproved the attributed relationships. A competing account could place national regulation or labor conditions ahead of corporate coordination; resolving that ranking would require evidence beyond the selected cases. The 2025 afterword keeps the question current: Apple again describes concentrated supply chains, single-source partners and reduced direct control (2025, Item 1A). These company-wide statements support comparison with the 2007 risk, not a reconstruction of the original phone using later suppliers.
+
+## Conclusion
+
+The exhibition’s contribution is to place a second question beside every production location: what connected this work to other places? The answer varies from colonial privileges and coerced labor to ownership, sales and supplier contracts, with gaps left visible. This approach connects small objects to the course’s account of regional development and to its question of who tells American stories. It preserves the significance of borders and institutions while resisting the idea that a larger map alone explains historical change.
+
+## References
+
+American Film Institute. (n.d.). *Labeling cans*. AFI Catalog. https://catalog.afi.com/Film/30841-LABELING-CANS
+
+Anderson, M. (n.d.). *Building Ford station wagons at Iron Mountain*. The Henry Ford. https://www.thehenryford.org/collections/explore/sets/detail/building-ford-station-wagons-at-iron-mountain
+
+Apple Inc. (2007). *Form 10-K for the fiscal year ended September 29, 2007*. https://www.annualreports.com/HostedData/AnnualReportArchive/a/NASDAQ_AAPL_2007.pdf
+
+Apple Inc. (2025). *Form 10-K for the fiscal year ended September 27, 2025*. https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm
+
+Broadcasting. (1965, June 21). All-color TV only one year away? *Broadcasting*, 27–29. https://device.report/m/f6d8e80e9bcc56abc09058c692502ce3de14da6fb193f40cd1704b4e8bf0f054.pdf
+
+Clark, M. (n.d.). *City on the make: Impact of the stockyards and meatpacking industries* [Gallery video transcript]. https://www.chicagohistory.org/app/uploads/2023/08/English.Stockyards-Industry-Video-Script-FINAL.pdf
+
+Cowie, J. (n.d.). Introduction. In *Capital moves: RCA’s seventy-year quest for cheap labor* (pp.1–9 consulted). The New Press. [Repository dates original work 1999; consulted excerpt lacks a copyright page identifying its reprint date.] https://ecommons.cornell.edu/entities/publication/4c5a39de-e388-42b0-9621-443567f0d81c
+
+Ford Motor Company, Photographic Department. (1928, February 8). *Ford Model A assembly line, Ford Motor Company Rouge Plant, Dearborn, Michigan, 1928* [Photograph]. The Henry Ford. https://www.thehenryford.org/collections/explore/artifact/22694
+
+Gereffi, G., Humphrey, J., & Sturgeon, T. (2003, November 4). *The governance of global value chains* [Author manuscript]. https://www.soc.duke.edu/sloan_2004/Papers/governance_of_gvcs_final.pdf
+
+J. & I. Blum. (1893, January 28). [Retail advertisement naming Armour Corned Beef]. *Vacaville Reporter*, 3. Vacaville Heritage Council. https://www.vacavilleheritagecouncil.org/oni/lccn/sn93004521/1893-01-28/ed-1/seq-3/
+
+Klein, A., & Crafts, N. (2009, May 5). *Making sense of the manufacturing belt: Determinants of U.S. industrial location, 1880–1920* [Working paper]. University of Warwick. https://www.economics.uci.edu/files/economics/docs/thdworkshop/s09/klein.pdf
+
+Muñoz, M. G. (2026). *GENA2122 Lectures 3–6* [Course slides: Lecture 3, slides 4–6; Lecture 4, slides 4, 6–7; Lecture 5, slide 10; Lecture 6, slide 19]. The Chinese University of Hong Kong.
+
+National Park Service. (2020, September 22). *Southern ties & northern gospels*. https://www.nps.gov/lowe/learn/historyculture/southern-ties-northern-gospels.htm
+
+National Park Service. (2021a, July 17). *Take an industrial site tour*. https://www.nps.gov/thingstodo/take-an-industrial-site-tour.htm
+
+National Park Service. (2021b, August 15). *Scottish prisoners at the iron works*. https://www.nps.gov/articles/000/scottish-prisoners-at-the-iron-works.htm
+
+National Park Service. (n.d.). *Ford assembly plant*. Rosie the Riveter/WWII Home Front National Historical Park. https://www.nps.gov/rori/learn/historyculture/ford-assembly-plant.htm
+
+Regan, J., & White, C. (n.d.). Hammersmith through the historical texts. In W. A. Griswold & D. W. Linebaugh (Eds.), *Saugus iron works: The Roland W. Robbins excavations, 1948–1953* (chapter 2; consulted pp. 27–28, 32). National Park Service. https://www.nps.gov/sair/learn/historyculture/upload/03Chapter2-508x.pdf
+
+The Henry Ford. (n.d.-a). *Ford Rouge railroad*. https://www.thehenryford.org/collections/explore/sets/detail/ford-rouge-railroad
+
+The Henry Ford. (n.d.-b). *iPhone, 2007* [Apple artifact and packaging; object 2008.146.1, catalog transcription]. https://www.thehenryford.org/collections/explore/artifact/359642
