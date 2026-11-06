@@ -1,0 +1,165 @@
+/* Era-specific ornament is interpretive graphic design, not a historical facsimile. */
+body[data-era=nail]{--era-pattern:url('assets/patterns/nail.svg');--ornament:#c1aa92}
+body[data-era=cloth]{--era-pattern:url('assets/patterns/cloth.svg');--ornament:#aabbb1}
+body[data-era=can]{--era-pattern:url('assets/patterns/can.svg');--ornament:#c1a28d}
+body[data-era=car]{--era-pattern:url('assets/patterns/car.svg');--ornament:#9ab5c5}
+body[data-era=tv]{--era-pattern:url('assets/patterns/tv.svg');--ornament:#d3ad86}
+body[data-era=phone]{--era-pattern:url('assets/patterns/phone.svg');--ornament:#aebdc7}
+html[data-era=overview],body[data-era=overview],html[data-era=conclusion],body[data-era=conclusion]{--paper:#fcfcf8;--ink:#25393b;--accent:#355f61;--muted:#4d6060;--panel:#f0f3ee;--line:#d4dcd5}
+.bookend-nav{display:flex;gap:12px;margin:0 0 20px;font-size:11px;line-height:1.4}
+.bookend-nav a{padding:7px 0;text-decoration:none;border-bottom:1px solid transparent}
+.bookend-nav a.active,.bookend-nav a:hover{border-bottom-color:var(--accent);color:var(--accent)}
+.rail-intro{margin-bottom:12px}
+.object-study{margin-top:28px}
+.object-stage{height:480px;padding:26px 24px;position:relative}
+.object-stage::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:var(--era-pattern) center/100% 100% no-repeat;opacity:.72}
+.object-stage>img,.photo-part img{mix-blend-mode:multiply}
+.diagram-label{background:var(--paper);padding:2px 5px}
+.material-place{background:var(--paper)}
+.object-study>figcaption{padding:16px 2px 20px}
+.era-context{position:relative;isolation:isolate;padding-bottom:12px}
+.era-context::after{content:'';position:absolute;top:26px;right:-14px;width:180px;height:145px;z-index:-1;pointer-events:none;background:var(--era-pattern) right top/450px 360px no-repeat;opacity:.20}
+.context-top{letter-spacing:.04em}
+.reading h2{padding-bottom:14px;border-bottom:1px solid var(--line)}
+.sources ol{counter-reset:source}.sources li{position:relative;padding-left:25px}.sources li:before{counter-increment:source;content:counter(source,decimal-leading-zero);position:absolute;left:0;top:1px;font-size:11px;color:var(--muted)}
+/* 1650: an inked border, press ornaments and a centered broadside title. */
+body[data-era=nail] .chapter-count{border-top:1px solid var(--accent);border-bottom:3px double var(--accent);padding-top:10px}
+body[data-era=nail] .chapter-heading h1{text-align:center;max-width:none;font-size:clamp(38px,3.7vw,58px);margin-top:30px}
+body[data-era=nail] .chapter-heading>p{text-align:center;margin:0 auto}
+body[data-era=nail] .object-controls{border-top:3px double var(--accent);border-bottom:3px double var(--accent)}
+body[data-era=nail] .era-year{font-weight:700;font-size:88px}
+body[data-era=nail] .context-top{border-bottom:3px double var(--accent)}
+/* 1835: selvage edges and interlaced warp/weft. */
+body[data-era=cloth] .chapter-heading{padding:0 0 22px;border-bottom:6px double var(--accent)}
+body[data-era=cloth] .chapter-heading h1{text-align:right;max-width:none;font-size:clamp(40px,4.1vw,64px)}
+body[data-era=cloth] .chapter-heading>p{text-align:right;margin-left:auto}
+body[data-era=cloth] .object-stage{padding:36px 30px}
+body[data-era=cloth] .era-year{font-size:88px;border-bottom:5px double var(--ornament);padding-bottom:8px}
+body[data-era=cloth] .context-top{border-bottom-style:dashed}
+body[data-era=cloth] .course-bridge{background:linear-gradient(90deg,var(--panel),transparent);padding-left:14px;padding-right:14px}
+/* 1901: a shipping-label silhouette and railway linework. */
+body[data-era=can] .chapter-heading{border:3px double var(--accent);padding:18px 22px 22px;background:#fdf8ef}
+body[data-era=can] .chapter-count{border-bottom-color:var(--ornament);font-size:11px}
+body[data-era=can] .chapter-heading h1{font-size:clamp(34px,3.4vw,52px);max-width:none;line-height:1.1;margin-top:20px}
+body[data-era=can] .object-stage{padding:36px 26px}
+body[data-era=can] .era-year{display:inline-block;border-bottom:4px double var(--accent);font-size:82px}
+body[data-era=can] .context-top{border-top:1px solid var(--accent);padding-top:10px}
+body[data-era=can] .object-controls button[aria-pressed=true]{background:var(--accent)}
+/* 1928: measured drawing conventions, with no invented dimensions. */
+body[data-era=car] .chapter-heading{border-top:1px solid var(--accent);padding-top:12px;border-bottom:0}
+body[data-era=car] .chapter-heading h1{text-transform:uppercase;font-size:clamp(34px,3.5vw,54px);letter-spacing:-.02em;max-width:none}
+body[data-era=car] .object-stage{background:#f3f8fb;padding:38px 30px 34px}
+body[data-era=car] .object-stage::before{opacity:.80}
+body[data-era=car] .diagram-label,body[data-era=car] .material-place{background:#f3f8fb}
+body[data-era=car] .era-year{text-align:right;font-size:92px;border-bottom:1px solid var(--accent);padding-bottom:12px}
+body[data-era=car] .era-context h2{max-width:20ch}
+body[data-era=car] .object-controls{border-color:var(--accent)}
+/* 1965: a picture-tube contour, warm broadcast arcs and tuning marks. */
+body[data-era=tv] .chapter-heading h1{font-size:clamp(42px,4.2vw,66px);max-width:13ch}
+body[data-era=tv] .chapter-count{border:0;padding-bottom:0}
+body[data-era=tv] .object-stage{padding:40px 30px;background:#fcf7ee;border-radius:48px}
+body[data-era=tv] .diagram-label,body[data-era=tv] .material-place{background:#fcf7ee}
+body[data-era=tv] .era-year{font-size:96px;letter-spacing:-.04em}
+body[data-era=tv] .era-context::after{width:240px;height:200px;opacity:.45}
+body[data-era=tv] .object-controls{border-top:0;border-bottom:1px solid var(--ornament);justify-content:center;gap:10px}
+body[data-era=tv] .object-controls button{border:1px solid var(--ornament);border-radius:3px;padding:8px 18px}
+body[data-era=tv] .object-controls button[aria-pressed=true]{background:var(--accent);border-color:var(--accent)}
+/* 2007: the silver enclosure and clean product-sheet spacing. */
+body[data-era=phone] .chapter-heading h1{font-weight:500;text-align:center;max-width:none;font-size:clamp(35px,3.2vw,49px);margin-top:35px}
+body[data-era=phone] .chapter-heading>p{text-align:center;margin:0 auto;max-width:36ch}
+body[data-era=phone] .object-stage{height:510px;padding:32px 22px}
+body[data-era=phone] .object-stage::before{opacity:.72}
+body[data-era=phone] .era-context::after{display:none}
+body[data-era=phone] .era-year{font-size:88px;font-weight:400;color:var(--ink)}
+body[data-era=phone] .context-top{border-bottom:0}
+body[data-era=phone] .object-controls{justify-content:center;padding:10px;border:1px solid #c9d2d8;background:linear-gradient(#fff,#edf1f4);border-radius:5px}
+body[data-era=phone] .object-controls button[aria-pressed=true]{border-radius:3px}
+/* The opening and closing spread keep the same navigation and type family. */
+.atlas[data-page=overview] main,.atlas[data-page=conclusion] main{grid-column:2/-1;padding-top:44px;padding-bottom:30px}
+.bookend{max-width:1350px;margin:0 auto}
+.bookend-heading{display:grid;grid-template-columns:1fr 1fr;gap:5%;align-items:start;padding-bottom:42px}
+.bookend-heading h1{font-size:clamp(48px,6.1vw,91px);font-weight:700;line-height:1.03;letter-spacing:-.035em;margin:0;text-wrap:balance}
+.bookend-heading h1 span{color:var(--accent)}
+.bookend-heading h1:focus{outline:none}
+.bookend-lead p{font-size:16px;line-height:1.75;margin:0 0 22px;max-width:63ch}
+.bookend-lead .bookend-deck{font-size:24px;line-height:1.35;font-weight:500;letter-spacing:-.015em;margin:6px 0 22px;max-width:28ch}
+.start-link{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--accent);border-bottom:1px solid var(--accent);padding:15px 0;font-weight:500;text-decoration:none;max-width:29ch}
+.start-link span{font-size:27px}.start-link:hover{color:var(--accent);background:var(--panel)}
+.exhibit-span{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:3px double var(--accent);padding:18px 0 13px;font-size:13px;color:var(--muted)}
+.exhibit-span>span:first-child,.exhibit-span>span:last-child{font-size:24px;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums}
+.object-index{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;padding:16px 0 20px}
+.index-object{text-decoration:none;display:flex;flex-direction:column;min-width:0;border-top:1px solid var(--line);padding-top:10px}
+.index-year{font-size:14px;font-weight:500;color:var(--accent);font-variant-numeric:tabular-nums}
+.index-object img{display:block;width:100%;height:180px;object-fit:contain;mix-blend-mode:multiply;transition:transform .3s ease-out;margin:12px 0}
+.index-object:hover img{transform:translateY(-5px)}
+.index-name{font-size:16px;font-weight:500;line-height:1.4;display:flex;justify-content:space-between;gap:5px}
+.index-name>span{color:var(--accent)}
+.index-period{font-size:12px;line-height:1.5;color:var(--muted);margin-top:8px}
+.gallery-note{font-size:12px;color:var(--muted);text-align:right;margin:0 0 30px}
+.overview-questions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px;border-top:1px solid var(--accent);padding:28px 0}
+.overview-questions h2{font-size:22px;line-height:1.25;font-weight:500;margin:0 0 15px;max-width:18ch}
+.overview-questions p{font-size:15px;line-height:1.7;color:var(--muted);margin:0;max-width:34ch}
+.bookend-footer{display:flex;justify-content:space-between;gap:28px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;line-height:1.6;margin-top:15px}
+.bookend-footer>span{color:var(--muted)}.bookend-footer a{min-height:44px;display:inline-flex;align-items:flex-start;padding-top:4px}
+.conclusion .bookend-heading{grid-template-columns:1.05fr 1fr;padding-bottom:48px}
+.conclusion .bookend-heading h1{font-size:clamp(42px,4.8vw,72px)}
+.comparison-section>h2{font-size:29px;font-weight:500;letter-spacing:-.02em;margin:0 0 20px}
+.comparison-row{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:26px;border-top:1px solid var(--line);padding:19px 0;font-size:15px;line-height:1.6}
+.comparison-head{font-size:12px;color:var(--muted);border-top:3px double var(--accent);padding:12px 0}
+.comparison-row a{text-decoration:none;font-weight:500}.comparison-row a:hover{text-decoration:underline}.comparison-year{display:block;font-size:13px;color:var(--accent);font-variant-numeric:tabular-nums;margin-bottom:4px}
+.comparison-pattern{color:var(--muted)}
+.final-question{margin:30px 0;padding:30px 0;border-top:3px double var(--accent);display:grid;grid-template-columns:1fr 1.2fr;gap:5%}
+.final-question h2{font-size:35px;font-weight:500;line-height:1.2;letter-spacing:-.02em;margin:0;max-width:15ch}.final-question p{font-size:18px;line-height:1.75;margin:0;max-width:60ch}
+@media(max-width:1150px){
+ .timeline-rail{display:grid;grid-template-columns:1fr auto;gap:10px 24px;padding:12px 24px 8px}
+ .bookend-nav{margin:0;gap:20px;font-size:13px}
+ #timeline{grid-column:1/-1;margin-top:0;gap:18px}
+ .atlas[data-page=overview] main,.atlas[data-page=conclusion] main{grid-column:1/-1;padding-top:34px}
+ .bookend-heading h1{font-size:clamp(48px,7.5vw,80px)}
+ .object-index{gap:12px}.index-object img{height:150px}
+}
+@media(max-width:760px){
+ .timeline-rail{display:grid;grid-template-columns:1fr auto;padding:9px 16px 0;gap:0 10px}
+ .bookend-nav{font-size:11px;gap:12px}.bookend-nav a{padding:8px 0;min-height:36px}
+ .wordmark{font-size:11px;min-height:auto}
+ #timeline{margin-top:0;gap:4px}
+ main{padding-top:24px}
+ .chapter-count{font-size:10px}
+ .object-stage{height:430px;padding:22px 17px}
+ .object-stage:has(.photo-explosion.nail):not([data-view=whole]){height:600px}
+ body[data-era=cloth] .object-stage,body[data-era=can] .object-stage{padding:30px 20px}
+ body[data-era=car] .object-stage{padding:30px 21px}
+ body[data-era=tv] .object-stage{padding:28px 20px;border-radius:35px}
+ body[data-era=phone] .object-stage{height:460px;padding:22px 15px}
+ body[data-era=phone] .object-stage:has(.photo-explosion.phone):not([data-view=whole]){height:340px}
+ .photo-explosion.phone img{height:245px}.photo-explosion.phone{gap:8px}
+ body[data-era=phone] .diagram-label{font-size:11px;padding:7px 2px 0}
+ body[data-era=nail] .chapter-heading h1{font-size:38px;margin-top:25px}
+ body[data-era=cloth] .chapter-heading h1{font-size:43px}
+ body[data-era=can] .chapter-heading{padding:14px 15px 20px}
+ body[data-era=can] .chapter-heading h1{font-size:33px}
+ body[data-era=car] .chapter-heading h1{font-size:34px}
+ body[data-era=tv] .chapter-heading h1{font-size:43px;max-width:13ch}
+ body[data-era=phone] .chapter-heading h1{font-size:32px;margin-top:24px}
+ body[data-era=nail] .era-year,body[data-era=cloth] .era-year,body[data-era=can] .era-year,body[data-era=car] .era-year,body[data-era=tv] .era-year,body[data-era=phone] .era-year{font-size:64px}
+ .era-context::after{width:150px;height:120px;right:0}
+ body[data-era=tv] .era-context::after{width:180px;height:150px}
+ .bookend-heading,.conclusion .bookend-heading{display:block;padding-bottom:28px}
+ .bookend-heading h1{font-size:clamp(44px,12vw,74px);margin:2px 0 27px}
+ .conclusion .bookend-heading h1{font-size:clamp(38px,9.5vw,58px);margin-bottom:28px}
+ .bookend-lead .bookend-deck{font-size:23px;max-width:27ch}
+ .bookend-lead p{font-size:16px;line-height:1.75}
+ .object-index{grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 20px}
+ .index-object img{height:175px}.index-name{font-size:16px}.index-period{font-size:12px}
+ .gallery-note{text-align:left;margin-top:5px}
+ .exhibit-span{gap:12px;font-size:11px}.exhibit-span span:nth-child(2){text-align:center}
+ .overview-questions{display:block;padding:4px 0 25px}.overview-questions>div{margin-top:26px}.overview-questions h2{max-width:none;font-size:23px;margin-bottom:9px}.overview-questions p{max-width:50ch;font-size:16px}
+ .bookend-footer{display:block}.bookend-footer a{display:flex;margin-top:12px}
+ .comparison-section>h2{font-size:26px}
+ .comparison-row{grid-template-columns:105px minmax(0,1fr);gap:5px 15px;padding:20px 0;font-size:14px}
+ .comparison-head{position:absolute;width:1px;height:1px;padding:0;clip-path:inset(50%);overflow:hidden;border:0}.comparison-row a{grid-row:1/3}.comparison-pattern{font-weight:500;color:var(--ink)}
+ .comparison-relationship{grid-column:2;color:var(--muted)}
+ .final-question{display:block;padding:24px 0}.final-question h2{font-size:30px;margin-bottom:18px}.final-question p{font-size:17px}
+}
+@media(prefers-reduced-motion:reduce){.index-object img{transition:none;transform:none!important}}
+@media(forced-colors:active){.object-stage::before,.era-context::after{display:none}.object-controls button[aria-pressed=true]{outline:2px solid Highlight}}

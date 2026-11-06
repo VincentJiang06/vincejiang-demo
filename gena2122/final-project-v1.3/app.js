@@ -24,7 +24,7 @@ new ResizeObserver(measureContext).observe(contextRail);
 placeContext();
 const chapterIds=CHAPTERS.map(c=>c.id);
 $('timeline').innerHTML=CHAPTERS.map((c,i)=>`<a class="time-link" href="#${c.id}" data-index="${i}"><span class="date">${c.year}</span><span class="name">${escapeHTML(c.nav)}</span></a>`).join('');
-for(const [id,key] of [['intro-text','intro'],['closing-text','closing'],['method-text','method'],['contribution-text','contribution']])$(id).textContent=SITE_COPY[key];
+for(const [id,key] of [['intro-text','intro'],['closing-text','closing']])$(id).textContent=SITE_COPY[key];
 document.querySelector('.map-footnote').textContent=SITE_COPY.mapFootnote;
 function setView(view){
  const separated=view==='parts',c=CHAPTERS[active];
@@ -65,31 +65,42 @@ function selectChapter(i,initial=false){
  if(i<0||i>=CHAPTERS.length)return;clearTimeout(changeTimer);
  const apply=()=>{
   active=i;mapSelected=null;mapGlobal=false;const c=CHAPTERS[i];document.body.dataset.era=c.id;document.documentElement.dataset.era=c.id;
-  document.querySelector('.exhibit-argument').open=i===0;
+  showCase();
   $('chapter-index').textContent=`${String(i+1).padStart(2,'0')} / 06`;$('chapter-period').textContent=c.periodLabel;
   $('chapter-title').innerHTML=c.headline;$('chapter-deck').textContent=c.deck;$('object-name').textContent=c.specimen;
   $('object-image').src=c.wholeImage;$('object-image').alt=c.imageAlt;$('diagram').replaceChildren();
   $('question').textContent=c.question;$('article').innerHTML=c.englishSummary.split(/\n\n+/).map(p=>`<p>${escapeHTML(p)}</p>`).join('');
   $('course-connection').textContent=c.courseConnection;$('relationship-label').textContent=c.relationship.label;$('relationship-text').textContent=c.relationship.text;
-  $('closing-argument').hidden=c.id!=='phone';
   $('source-list').innerHTML=c.sources.map(s=>`<li><span class="source-type">${escapeHTML(s.type)} · ${escapeHTML(s.date||'n.d.')}</span><a href="${escapeHTML(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(s.title)}</a><p class="source-note">${escapeHTML(s.note)}</p></li>`).join('');
   $('era-year').textContent=c.year;$('era-number').textContent=String(i+1).padStart(2,'0');$('era-country').textContent=c.id==='nail'?'MASSACHUSETTS BAY COLONY':c.id==='phone'?'UNITED STATES · CHINA':'THE UNITED STATES';$('era-title').textContent=c.eraTitle;$('era-summary').textContent=c.eraSummary;
   updateMetric(c);setView('whole');renderMap();
-  document.querySelectorAll('.time-link').forEach((a,n)=>{a.classList.toggle('active',n===i);if(n===i)a.setAttribute('aria-current','step');else a.removeAttribute('aria-current')});
-  $('previous').disabled=i===0;$('previous').textContent=i?`← ${CHAPTERS[i-1].nav}`:'Beginning of the exhibit';$('next').disabled=false;$('next').textContent=i<CHAPTERS.length-1?`Next: ${CHAPTERS[i+1].nav} →`:'Return to the first object ↗';
+  syncNavigation(c.id);
+  $('previous').disabled=false;$('previous').textContent=i?`← ${CHAPTERS[i-1].nav}`:'← Overview';$('next').disabled=false;$('next').textContent=i<CHAPTERS.length-1?`Next: ${CHAPTERS[i+1].nav} →`:'Read the conclusion →';
   document.title=`${c.nav} (${c.year}) — Made Across America`;$('announcement').textContent=`Chapter ${i+1}: ${c.nav}, ${c.year}`;document.body.classList.remove('changing');
   if(!initial)$('chapter-title').focus({preventScroll:true});
  };
  apply();
 }
-function go(i){if(i>=0&&i<CHAPTERS.length)location.hash=CHAPTERS[i].id;}
-window.addEventListener('hashchange',()=>{const i=chapterIds.indexOf(location.hash.slice(1));if(i>=0){selectChapter(i);window.scrollTo({top:0,behavior:'instant'})}});
+function go(i){location.hash=i<0?'overview':i>=CHAPTERS.length?'conclusion':CHAPTERS[i].id;}
+function syncNavigation(id){document.querySelectorAll('.time-link,.bookend-nav a').forEach(a=>{const selected=a.hash==='#'+id;a.classList.toggle('active',selected);if(selected)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')})}
+function showCase(){document.querySelector('.atlas').dataset.page='case';$('case-view').hidden=false;$('overview-view').hidden=true;$('conclusion-view').hidden=true;contextRail.hidden=false;}
+function showBookend(id,initial=false){
+ document.body.dataset.era=id;document.documentElement.dataset.era=id;document.querySelector('.atlas').dataset.page=id;
+ $('case-view').hidden=true;$('overview-view').hidden=id!=='overview';$('conclusion-view').hidden=id!=='conclusion';contextRail.hidden=true;
+ if(id==='overview'&&!$('object-index').hasChildNodes())$('object-index').innerHTML=CHAPTERS.map(c=>`<a class="index-object" href="#${c.id}" data-object="${c.id}"><span class="index-year">${c.year}</span><img src="${c.wholeImage}" alt="${escapeHTML(c.imageAlt)}" loading="lazy" decoding="async"><span class="index-name">${escapeHTML(c.nav)} <span aria-hidden="true">↗</span></span><span class="index-period">${escapeHTML(c.periodLabel)}</span></a>`).join('');
+ if(id==='conclusion'&&!$('comparison-rows').hasChildNodes())$('comparison-rows').innerHTML=CHAPTERS.map(c=>`<div class="comparison-row" role="row" data-object="${c.id}"><a role="cell" href="#${c.id}"><span class="comparison-year">${c.year}</span>${escapeHTML(c.nav)} ↗</a><span role="cell" class="comparison-pattern">${escapeHTML(GEO_CASES[c.id].title)}</span><span role="cell" class="comparison-relationship">${escapeHTML(c.relationship.label)}</span></div>`).join('');
+ syncNavigation(id);document.title=`${id==='overview'?'Overview':'Conclusion'} — Made Across America`;$('announcement').textContent=id==='overview'?'Exhibit overview':'Exhibit conclusion';
+ if(!initial)$(id+'-title').focus({preventScroll:true});
+}
+function renderPage(initial=false){const id=location.hash.slice(1)||'overview',i=chapterIds.indexOf(id);if(i>=0)selectChapter(i,initial);else showBookend(id==='conclusion'?'conclusion':'overview',initial);}
+function activeTitle(){const page=document.querySelector('.atlas').dataset.page;return $(page==='case'?'chapter-title':page+'-title');}
+window.addEventListener('hashchange',()=>{renderPage();window.scrollTo({top:0,behavior:'instant'})});
 document.querySelector('.skip').addEventListener('click',e=>{e.preventDefault();$('exhibit').focus({preventScroll:true});$('exhibit').scrollIntoView({behavior:'instant'})});
-document.querySelectorAll('.time-link,.wordmark').forEach(a=>a.addEventListener('click',()=>{if(a.hash===location.hash){$('chapter-title').focus({preventScroll:true});window.scrollTo({top:0,behavior:reduced?'instant':'smooth'})}}));
-$('previous').addEventListener('click',()=>go(active-1));$('next').addEventListener('click',()=>go(active===CHAPTERS.length-1?0:active+1));
+document.querySelectorAll('.time-link,.wordmark,.bookend-nav a').forEach(a=>a.addEventListener('click',()=>{if(a.hash===location.hash){activeTitle().focus({preventScroll:true});window.scrollTo({top:0,behavior:reduced?'instant':'smooth'})}}));
+$('previous').addEventListener('click',()=>go(active-1));$('next').addEventListener('click',()=>go(active+1));
 $('view-whole').addEventListener('click',()=>setView('whole'));$('view-parts').addEventListener('click',()=>setView('parts'));
 $('map-zoom').addEventListener('click',()=>{mapGlobal=!mapGlobal;mapSelected=null;renderMap()});
 $('jump-map').addEventListener('click',()=>{$('geography').scrollIntoView({behavior:reduced?'instant':'smooth'});$('geography').focus({preventScroll:true})});
 $('jump-reading').addEventListener('click',()=>{$('question').scrollIntoView({behavior:reduced?'instant':'smooth'});$('question').focus({preventScroll:true})});
-selectChapter(Math.max(0,chapterIds.indexOf(location.hash.slice(1))),true);
+renderPage(true);
 Promise.all(['world.json','us-states.json'].map(f=>fetch('assets/'+f).then(r=>{if(!r.ok)throw Error('Map unavailable');return r.json()}))).then(([world,states])=>{worldData=world;statesData=states;mapLoadState='ready';renderMap()}).catch(()=>{mapLoadState='error';renderMap()});
