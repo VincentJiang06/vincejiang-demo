@@ -1,0 +1,2004 @@
+[
+  {
+    "id": "northrop",
+    "parent": null,
+    "level": 1,
+    "name": "Northrop loom, E-model visual anchor",
+    "source_id": "draper1905",
+    "render": "IMG",
+    "chain": true,
+    "locator": "Printed p.82 / PDF p.86: forty-inch E model, No.1 hopper, steel harness.",
+    "figure": "assets/northrop-e82.webp",
+    "pdf_page": 86,
+    "bbox": [
+      0.17,
+      0.145,
+      0.67,
+      0.555
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "catalog",
+    "asset": "assets/v2-N01.webp",
+    "also_pdf_pages": [],
+    "image_width": 1536,
+    "image_height": 1024
+  },
+  {
+    "id": "northrop-shuttle",
+    "parent": "northrop",
+    "level": 2,
+    "name": "Shuttle assembly, No.16 example",
+    "source_id": "draper1905",
+    "render": "REUSE",
+    "chain": true,
+    "assembly_kind": "catalog component",
+    "locator": "Printed p.59 / PDF p.63: No.16 shuttle, left illustration. Catalog example, not a certified E-model assembly.",
+    "figure": "assets/northrop-shuttles59.webp",
+    "pdf_page": 63,
+    "bbox": [
+      0.18,
+      0.145,
+      0.165,
+      0.73
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "catalog",
+    "asset": "assets/northrop-shuttle.webp",
+    "also_pdf_pages": [],
+    "image_width": 2172,
+    "image_height": 724
+  },
+  {
+    "id": "northrop-shuttle-body",
+    "parent": "northrop-shuttle",
+    "level": 3,
+    "name": "Wooden shuttle body",
+    "source_id": "draper1905",
+    "render": "REUSE",
+    "chain": true,
+    "locator": "Printed p.59 / PDF p.63: No.16 shuttle, left illustration. Catalog example, not a certified E-model assembly.",
+    "figure": "assets/northrop-shuttles59.webp",
+    "pdf_page": 63,
+    "bbox": [
+      0.18,
+      0.145,
+      0.165,
+      0.73
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "catalog",
+    "asset": "assets/northrop-shuttle-body.webp",
+    "also_pdf_pages": [],
+    "image_width": 2172,
+    "image_height": 724
+  },
+  {
+    "id": "northrop-eye",
+    "parent": "northrop-shuttle",
+    "level": 3,
+    "name": "Stimpson eye casting",
+    "source_id": "draper1905",
+    "render": "IMG",
+    "chain": true,
+    "locator": "Printed p.59: Stimpson eye and its flannel pocket; p.49: slotted eye.",
+    "figure": "assets/northrop-shuttles59.webp",
+    "pdf_page": 63,
+    "bbox": [
+      0.18,
+      0.175,
+      0.16,
+      0.145
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "catalog",
+    "asset": "assets/v2-N04.webp",
+    "also_pdf_pages": [
+      53
+    ],
+    "image_width": 1254,
+    "image_height": 1254
+  },
+  {
+    "id": "northrop-bobbin",
+    "parent": "northrop-shuttle",
+    "level": 3,
+    "name": "Removable bobbin",
+    "source_id": "draper1905",
+    "render": "REUSE",
+    "chain": true,
+    "variant_note": "No.3 catalog example; p61 says new looms use No.5-style larger butt. Do not assert E82 as-built combination.",
+    "locator": "Printed p.61 / PDF p.65: No.3 catalog example; six variants are listed. Not a certified match to the p.82 loom.",
+    "figure": "assets/northrop-bobbins61.webp",
+    "pdf_page": 65,
+    "bbox": [
+      0.42,
+      0.15,
+      0.105,
+      0.36
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "catalog",
+    "asset": "assets/northrop-bobbin.webp",
+    "also_pdf_pages": [
+      63
+    ],
+    "image_width": 2172,
+    "image_height": 724
+  },
+  {
+    "id": "northrop-shuttle-spring",
+    "parent": "northrop-shuttle",
+    "level": 3,
+    "name": "Shuttle retaining spring, No.16 example",
+    "source_id": "draper1905",
+    "render": "IMG",
+    "chain": true,
+    "locator": "Printed p.59: spring at the tail of the left No.16 shuttle; p.49: spring notches. No.167 is a different variant.",
+    "figure": "assets/northrop-shuttles59.webp",
+    "pdf_page": 63,
+    "bbox": [
+      0.205,
+      0.63,
+      0.115,
+      0.095
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "catalog",
+    "asset": "assets/v2-N06.webp",
+    "also_pdf_pages": [
+      53
+    ],
+    "image_width": 2172,
+    "image_height": 724
+  },
+  {
+    "id": "northrop-fastener",
+    "parent": "northrop-shuttle",
+    "level": 3,
+    "name": "Transverse bolt and nut",
+    "source_id": "draper1905",
+    "render": "HS",
+    "chain": false,
+    "locator": "Printed p.59: transverse bolt and nut described in the No.16 text.",
+    "figure": "assets/northrop-shuttles59.webp",
+    "pdf_page": 63,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "text",
+    "also_pdf_pages": []
+  },
+  {
+    "id": "northrop-replenishment",
+    "parent": "northrop",
+    "level": 2,
+    "name": "Weft replenishment",
+    "source_id": "draper1905",
+    "render": "IMG",
+    "chain": false,
+    "variant_note": "Generated p52 A-model action study; show separately from E-model whole view. Not a hybrid as-built reconstruction.",
+    "assembly_kind": "teaching functional group",
+    "locator": "Printed p.52 / PDF p.56: A-model hopper action, a different model from the p.82 E-model anchor.",
+    "figure": "assets/northrop-transfer52.webp",
+    "pdf_page": 56,
+    "bbox": [
+      0.1,
+      0.12,
+      0.69,
+      0.78
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "catalog",
+    "asset": "assets/v2-N07.webp",
+    "also_pdf_pages": [
+      53,
+      61,
+      86
+    ],
+    "image_width": 1024,
+    "image_height": 1536
+  },
+  {
+    "id": "northrop-hopper",
+    "parent": "northrop-replenishment",
+    "level": 3,
+    "name": "Bobbin magazine",
+    "source_id": "draper1905",
+    "render": "HS",
+    "chain": false,
+    "locator": "Printed p.82: No.1 hopper; p.49: mechanism description.",
+    "figure": "assets/northrop-e82.webp",
+    "pdf_page": 86,
+    "bbox": [
+      0.265,
+      0.16,
+      0.115,
+      0.12
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "catalog",
+    "also_pdf_pages": [
+      53
+    ]
+  },
+  {
+    "id": "northrop-transferrer",
+    "parent": "northrop-replenishment",
+    "level": 3,
+    "name": "Pivoted transferrer",
+    "source_id": "draper1905",
+    "render": "HS",
+    "chain": false,
+    "locator": "Printed p.57 / PDF p.61: Transferrer D; mechanism description, not proof of every E-model detail.",
+    "figure": "assets/northrop-page57.webp",
+    "pdf_page": 61,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "catalog",
+    "also_pdf_pages": [
+      53
+    ]
+  },
+  {
+    "id": "northrop-filling-fork",
+    "parent": "northrop-replenishment",
+    "level": 3,
+    "name": "Filling fork",
+    "source_id": "draper1905",
+    "render": "HS",
+    "chain": false,
+    "locator": "Printed p.57 / PDF p.61: Filling fork A; mechanism description, not proof of every E-model detail.",
+    "figure": "assets/northrop-page57.webp",
+    "pdf_page": 61,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "catalog",
+    "also_pdf_pages": [
+      53
+    ]
+  },
+  {
+    "id": "northrop-latch",
+    "parent": "northrop-replenishment",
+    "level": 3,
+    "name": "Latch and connecting rod",
+    "source_id": "draper1905",
+    "render": "TXT",
+    "chain": false,
+    "locator": "Printed p.57 / PDF p.61: Rod B and latch C; mechanism description, not proof of every E-model detail.",
+    "figure": "assets/northrop-page57.webp",
+    "pdf_page": 61,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "text",
+    "also_pdf_pages": [
+      53
+    ]
+  },
+  {
+    "id": "northrop-warp-stop",
+    "parent": "northrop",
+    "level": 2,
+    "name": "Steel-harness warp-stop system",
+    "source_id": "draper1905",
+    "render": "SCH",
+    "chain": false,
+    "assembly_kind": "teaching functional group",
+    "locator": "Printed p.65 / PDF p.69: steel-harness warp-stop description. This page is text, not an assembly drawing.",
+    "figure": "assets/northrop-warpstop65.webp",
+    "pdf_page": 69,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "text",
+    "also_pdf_pages": [
+      86
+    ]
+  },
+  {
+    "id": "northrop-heddles",
+    "parent": "northrop-warp-stop",
+    "level": 3,
+    "name": "Steel heddles",
+    "source_id": "draper1905",
+    "render": "SCH",
+    "chain": false,
+    "locator": "Printed p.65 / PDF p.69: steel-harness warp-stop description. This page is text, not an assembly drawing.",
+    "figure": "assets/northrop-warpstop65.webp",
+    "pdf_page": 69,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "text",
+    "also_pdf_pages": [
+      86
+    ]
+  },
+  {
+    "id": "northrop-bars",
+    "parent": "northrop-warp-stop",
+    "level": 3,
+    "name": "Harness bars",
+    "source_id": "draper1905",
+    "render": "SCH",
+    "chain": false,
+    "locator": "Printed p.65 / PDF p.69: steel-harness warp-stop description. This page is text, not an assembly drawing.",
+    "figure": "assets/northrop-warpstop65.webp",
+    "pdf_page": 69,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "text",
+    "also_pdf_pages": [
+      86
+    ]
+  },
+  {
+    "id": "northrop-vibrator",
+    "parent": "northrop-warp-stop",
+    "level": 3,
+    "name": "Moving vibrator",
+    "source_id": "draper1905",
+    "render": "SCH",
+    "chain": false,
+    "locator": "Printed p.65 / PDF p.69: steel-harness warp-stop description. This page is text, not an assembly drawing.",
+    "figure": "assets/northrop-warpstop65.webp",
+    "pdf_page": 69,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "text",
+    "also_pdf_pages": [
+      86
+    ]
+  },
+  {
+    "id": "northrop-lay",
+    "parent": "northrop",
+    "level": 2,
+    "name": "Lay and beating-up group",
+    "source_id": "draper1905",
+    "render": "HS",
+    "chain": false,
+    "assembly_kind": "teaching functional group",
+    "locator": "Printed p.156 / PDF p.160: Lay discussion continues through p.160.",
+    "figure": "assets/northrop-page156.webp",
+    "pdf_page": 160,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "text",
+    "also_pdf_pages": [
+      161
+    ]
+  },
+  {
+    "id": "northrop-lay-wood",
+    "parent": "northrop-lay",
+    "level": 3,
+    "name": "Wooden lay",
+    "source_id": "draper1905",
+    "render": "TXT",
+    "chain": false,
+    "locator": "Printed p.156 / PDF p.160: Wooden lay; discussion continues on p.157.",
+    "figure": "assets/northrop-page156.webp",
+    "pdf_page": 160,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "text",
+    "also_pdf_pages": [
+      161
+    ]
+  },
+  {
+    "id": "northrop-reed",
+    "parent": "northrop-lay",
+    "level": 3,
+    "name": "Reed",
+    "source_id": "draper1905",
+    "render": "HS",
+    "chain": false,
+    "locator": "Printed p.157 / PDF p.161: Lay and reed discussion, pp.157–159.",
+    "figure": "assets/northrop-page157.webp",
+    "pdf_page": 161,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "text",
+    "also_pdf_pages": [
+      162
+    ]
+  },
+  {
+    "id": "northrop-boxes",
+    "parent": "northrop-lay",
+    "level": 3,
+    "name": "Shuttle boxes and binders",
+    "source_id": "draper1905",
+    "render": "TXT",
+    "chain": false,
+    "locator": "Printed p.160 / PDF p.164: Shuttle boxes and binders, pp.160–161; variants differ.",
+    "figure": "assets/northrop-page160.webp",
+    "pdf_page": 164,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "text",
+    "also_pdf_pages": [
+      165
+    ]
+  },
+  {
+    "id": "northrop-takeup",
+    "parent": "northrop",
+    "level": 2,
+    "name": "Cloth take-up group",
+    "source_id": "draper1905",
+    "render": "HS",
+    "chain": false,
+    "assembly_kind": "teaching functional group",
+    "locator": "Printed p.153 / PDF p.157: Take-up, pp.153–154; high-roll anchor on p.82.",
+    "figure": "assets/northrop-page153.webp",
+    "pdf_page": 157,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "text",
+    "also_pdf_pages": [
+      158
+    ]
+  },
+  {
+    "id": "northrop-takeup-roll",
+    "parent": "northrop-takeup",
+    "level": 3,
+    "name": "High take-up roll",
+    "source_id": "draper1905",
+    "render": "HS",
+    "chain": false,
+    "locator": "Printed p.153 / PDF p.157: High take-up roll.",
+    "figure": "assets/northrop-page153.webp",
+    "pdf_page": 157,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "text",
+    "also_pdf_pages": [
+      158
+    ]
+  },
+  {
+    "id": "northrop-ratchet",
+    "parent": "northrop-takeup",
+    "level": 3,
+    "name": "Ratchet take-up wheel and pawls",
+    "source_id": "draper1905",
+    "render": "TXT",
+    "chain": false,
+    "locator": "Printed p.153 / PDF p.157: Ratchet take-up wheel and pawls.",
+    "figure": "assets/northrop-page153.webp",
+    "pdf_page": 157,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "text",
+    "also_pdf_pages": [
+      158
+    ]
+  },
+  {
+    "id": "northrop-change-gears",
+    "parent": "northrop-takeup",
+    "level": 3,
+    "name": "Change and intermediate gears",
+    "source_id": "draper1905",
+    "render": "TXT",
+    "chain": false,
+    "locator": "Printed p.153 / PDF p.157: Change and intermediate gears.",
+    "figure": "assets/northrop-page153.webp",
+    "pdf_page": 157,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "text",
+    "also_pdf_pages": [
+      158
+    ]
+  },
+  {
+    "id": "northrop-cloth-roll",
+    "parent": "northrop-takeup",
+    "level": 3,
+    "name": "Cloth roll",
+    "source_id": "draper1905",
+    "render": "HS",
+    "chain": false,
+    "locator": "Printed p.153 / PDF p.157: Take-up discussion; cloth roll and follower continue on p.154.",
+    "figure": "assets/northrop-page153.webp",
+    "pdf_page": 157,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "text",
+    "also_pdf_pages": [
+      158
+    ]
+  },
+  {
+    "id": "northrop-frame-drive",
+    "parent": "northrop",
+    "level": 2,
+    "name": "Frame, power and warp supply",
+    "source_id": "draper1905",
+    "render": "HS",
+    "chain": false,
+    "assembly_kind": "teaching functional group",
+    "locator": "Printed p.82 / PDF p.86: E-model frame and right-hand drive pulley. The p.86 catalog illustration is a different variant.",
+    "figure": "assets/northrop-e82.webp",
+    "pdf_page": 86,
+    "bbox": [
+      0.17,
+      0.145,
+      0.67,
+      0.555
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "catalog",
+    "also_pdf_pages": [
+      90,
+      97
+    ]
+  },
+  {
+    "id": "northrop-frame",
+    "parent": "northrop-frame-drive",
+    "level": 3,
+    "name": "Loom frame",
+    "source_id": "draper1905",
+    "render": "HS",
+    "chain": false,
+    "locator": "Printed p.82 / PDF p.86: E-model frame and right-hand drive pulley. The p.86 catalog illustration is a different variant.",
+    "figure": "assets/northrop-e82.webp",
+    "pdf_page": 86,
+    "bbox": [
+      0.17,
+      0.145,
+      0.67,
+      0.555
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "catalog",
+    "also_pdf_pages": [
+      90,
+      97
+    ]
+  },
+  {
+    "id": "northrop-pulley",
+    "parent": "northrop-frame-drive",
+    "level": 3,
+    "name": "Drive pulley",
+    "source_id": "draper1905",
+    "render": "HS",
+    "chain": false,
+    "locator": "Printed p.82 / PDF p.86: E-model frame and right-hand drive pulley. The p.86 catalog illustration is a different variant.",
+    "figure": "assets/northrop-e82.webp",
+    "pdf_page": 86,
+    "bbox": [
+      0.17,
+      0.145,
+      0.67,
+      0.555
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "catalog",
+    "also_pdf_pages": [
+      90,
+      97
+    ]
+  },
+  {
+    "id": "northrop-warp-beam",
+    "parent": "northrop-frame-drive",
+    "level": 3,
+    "name": "Warp beam",
+    "source_id": "draper1905",
+    "render": "HS",
+    "chain": false,
+    "locator": "Printed p.152 / PDF p.156: Warp let-off discussion; begins on p.151.",
+    "figure": "assets/northrop-page152.webp",
+    "pdf_page": 156,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "text",
+    "also_pdf_pages": [
+      155
+    ]
+  },
+  {
+    "id": "northrop-brake",
+    "parent": "northrop-frame-drive",
+    "level": 3,
+    "name": "Brake / protector",
+    "source_id": "draper1905",
+    "render": "TXT",
+    "chain": false,
+    "locator": "Printed p.161 / PDF p.165: Protector and brake discussion, pp.161–162; variants differ.",
+    "figure": "assets/northrop-page161.webp",
+    "pdf_page": 165,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "text",
+    "also_pdf_pages": [
+      166
+    ]
+  },
+  {
+    "id": "bonsack",
+    "parent": null,
+    "level": 1,
+    "name": "Bonsack cigarette machine, 1881 patent",
+    "source_id": "bonsack1881",
+    "render": "IMG",
+    "chain": true,
+    "locator": "Patent US238640, sheet 1, Fig.1; specification PDF pp.6–10.",
+    "figure": "assets/bonsack-01.webp",
+    "pdf_page": 1,
+    "bbox": [
+      0.15,
+      0.22,
+      0.64,
+      0.54
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "asset": "assets/v2-B01.webp",
+    "also_pdf_pages": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "image_width": 1536,
+    "image_height": 1024
+  },
+  {
+    "id": "bonsack-forming",
+    "parent": "bonsack",
+    "level": 2,
+    "name": "Filler-forming group",
+    "source_id": "bonsack1881",
+    "render": "IMG",
+    "chain": true,
+    "assembly_kind": "teaching functional group",
+    "locator": "Sheet 4, Figs.4–7; Fig.3 on sheet 3; specification PDF p.7 and claims 5–7.",
+    "figure": "assets/bonsack-04.webp",
+    "pdf_page": 4,
+    "bbox": [
+      0.44,
+      0.23,
+      0.22,
+      0.5
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "asset": "assets/v2-B02.webp",
+    "also_pdf_pages": [
+      3,
+      7,
+      9,
+      10
+    ],
+    "image_width": 2172,
+    "image_height": 724
+  },
+  {
+    "id": "bonsack-forming-trough",
+    "parent": "bonsack-forming",
+    "level": 3,
+    "name": "Forming trough",
+    "source_id": "bonsack1881",
+    "render": "IMG",
+    "chain": true,
+    "locator": "Sheet 4, upper section of Fig.5 and Fig.4; specification PDF p.7.",
+    "figure": "assets/bonsack-04.webp",
+    "pdf_page": 4,
+    "bbox": [
+      0.45,
+      0.235,
+      0.1,
+      0.215
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "asset": "assets/v2-B03.webp",
+    "also_pdf_pages": [
+      7
+    ],
+    "image_width": 2172,
+    "image_height": 724
+  },
+  {
+    "id": "bonsack-compression-tube",
+    "parent": "bonsack-forming",
+    "level": 3,
+    "name": "Tapered compressing tube",
+    "source_id": "bonsack1881",
+    "render": "IMG",
+    "chain": true,
+    "locator": "Sheet 4, lower section of Fig.5 and sections Figs.6–7; claim 6.",
+    "figure": "assets/bonsack-04.webp",
+    "pdf_page": 4,
+    "bbox": [
+      0.46,
+      0.445,
+      0.19,
+      0.28
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "asset": "assets/v2-B04.webp",
+    "also_pdf_pages": [
+      7,
+      9,
+      10
+    ],
+    "image_width": 2172,
+    "image_height": 724
+  },
+  {
+    "id": "bonsack-forming-belt",
+    "parent": "bonsack-forming",
+    "level": 3,
+    "name": "Endless forming belt",
+    "source_id": "bonsack1881",
+    "render": "IMG",
+    "chain": true,
+    "locator": "Sheet 4, Fig.4 and sections Figs.6–7; specification PDF p.7 describes the roll-making belt.",
+    "figure": "assets/bonsack-04.webp",
+    "pdf_page": 4,
+    "bbox": [
+      0.18,
+      0.19,
+      0.275,
+      0.62
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "asset": "assets/v2-B05.webp",
+    "also_pdf_pages": [
+      7
+    ],
+    "image_width": 2172,
+    "image_height": 724
+  },
+  {
+    "id": "bonsack-paste",
+    "parent": "bonsack",
+    "level": 2,
+    "name": "Paste application group",
+    "source_id": "bonsack1881",
+    "render": "IMG",
+    "chain": false,
+    "assembly_kind": "teaching functional group",
+    "locator": "Sheet 3, Fig.3 paste mechanism; sheet 4 Fig.10 and sheet 5 Fig.16; specification PDF p.8.",
+    "figure": "assets/bonsack-03.webp",
+    "pdf_page": 3,
+    "bbox": [
+      0.32,
+      0.51,
+      0.28,
+      0.13
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "asset": "assets/v2-B06.webp",
+    "also_pdf_pages": [
+      4,
+      5,
+      8
+    ],
+    "image_width": 1024,
+    "image_height": 1536
+  },
+  {
+    "id": "bonsack-paste-wheel",
+    "parent": "bonsack-paste",
+    "level": 3,
+    "name": "Pasting brush I",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 5, Fig.16: pasting brush I. Figs.13–15 are alternative designs.",
+    "figure": "assets/bonsack-05.webp",
+    "pdf_page": 5,
+    "bbox": [
+      0.44,
+      0.235,
+      0.17,
+      0.105
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      3,
+      4,
+      8
+    ]
+  },
+  {
+    "id": "bonsack-paste-delivery-wheel",
+    "parent": "bonsack-paste",
+    "level": 3,
+    "name": "Concave paste delivery wheel I²",
+    "source_id": "bonsack1881",
+    "render": "HS",
+    "chain": false,
+    "locator": "Sheet 3, Fig.3: Concave delivery wheel I² and shaft I³; specification PDF p.8 and claim 9.",
+    "figure": "assets/bonsack-03.webp",
+    "pdf_page": 3,
+    "bbox": [
+      0.32,
+      0.51,
+      0.28,
+      0.13
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      8,
+      10
+    ]
+  },
+  {
+    "id": "bonsack-paste-reservoir",
+    "parent": "bonsack-paste",
+    "level": 3,
+    "name": "Paste reservoir",
+    "source_id": "bonsack1881",
+    "render": "HS",
+    "chain": false,
+    "locator": "Sheet 3, Fig.3: Reservoir I⁴, support I⁵ and strainer; specification PDF p.8 and claim 9.",
+    "figure": "assets/bonsack-03.webp",
+    "pdf_page": 3,
+    "bbox": [
+      0.32,
+      0.51,
+      0.28,
+      0.13
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      8,
+      10
+    ]
+  },
+  {
+    "id": "bonsack-plunger",
+    "parent": "bonsack-paste",
+    "level": 3,
+    "name": "Threaded plunger stem and piston",
+    "source_id": "bonsack1881",
+    "render": "REUSE",
+    "chain": false,
+    "locator": "Sheet 3, Fig.3: Threaded plunger I⁶; specification PDF p.8 and claim 9.",
+    "figure": "assets/bonsack-03.webp",
+    "pdf_page": 3,
+    "bbox": [
+      0.32,
+      0.51,
+      0.28,
+      0.13
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      8,
+      10
+    ]
+  },
+  {
+    "id": "bonsack-worm-drive",
+    "parent": "bonsack-paste",
+    "level": 3,
+    "name": "Worm and worm-wheel drive",
+    "source_id": "bonsack1881",
+    "render": "HS",
+    "chain": false,
+    "locator": "Sheet 3, Fig.3: Worm wheel I⁷, worm I⁸ and belt I⁹; specification PDF p.8 and claim 9.",
+    "figure": "assets/bonsack-03.webp",
+    "pdf_page": 3,
+    "bbox": [
+      0.32,
+      0.51,
+      0.28,
+      0.13
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      8,
+      10
+    ]
+  },
+  {
+    "id": "bonsack-feed",
+    "parent": "bonsack",
+    "level": 2,
+    "name": "First feeding and carding group",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "assembly_kind": "teaching functional group",
+    "locator": "Sheet 2, Fig.2: First feeding and carding group; specification PDF p.6; claims 1–2.",
+    "figure": "assets/bonsack-02.webp",
+    "pdf_page": 2,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      1,
+      6,
+      9
+    ]
+  },
+  {
+    "id": "bonsack-feed-belt",
+    "parent": "bonsack-feed",
+    "level": 3,
+    "name": "First feed belt A",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 2, Fig.2: First feed belt A; specification PDF p.6; claims 1–2.",
+    "figure": "assets/bonsack-02.webp",
+    "pdf_page": 2,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      1,
+      6,
+      9
+    ]
+  },
+  {
+    "id": "bonsack-feed-table",
+    "parent": "bonsack-feed",
+    "level": 3,
+    "name": "Feed table and return roller",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 2, Fig.2: Feed table and return roller; specification PDF p.6; claims 1–2.",
+    "figure": "assets/bonsack-02.webp",
+    "pdf_page": 2,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      1,
+      6,
+      9
+    ]
+  },
+  {
+    "id": "bonsack-feed-roll",
+    "parent": "bonsack-feed",
+    "level": 3,
+    "name": "Roughened feed roller and concave",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 2, Fig.2: Roughened feed roller B; specification PDF p.6; claims 1–2.",
+    "figure": "assets/bonsack-02.webp",
+    "pdf_page": 2,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      1,
+      6,
+      9
+    ]
+  },
+  {
+    "id": "bonsack-card-roll",
+    "parent": "bonsack-feed",
+    "level": 3,
+    "name": "Card-clothed and stripping rollers",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 2, Fig.2: Card-clothed and stripping rollers; specification PDF p.6; claims 1–2.",
+    "figure": "assets/bonsack-02.webp",
+    "pdf_page": 2,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      1,
+      6,
+      9
+    ]
+  },
+  {
+    "id": "bonsack-distribution",
+    "parent": "bonsack",
+    "level": 2,
+    "name": "Distribution and second feed group",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "assembly_kind": "teaching functional group",
+    "locator": "Sheet 2, Fig.2: Distribution and second feeding group; specification PDF p.7.",
+    "figure": "assets/bonsack-02.webp",
+    "pdf_page": 2,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      3,
+      7,
+      9
+    ]
+  },
+  {
+    "id": "bonsack-carrier",
+    "parent": "bonsack-distribution",
+    "level": 3,
+    "name": "Reciprocating carrier C",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 2, Fig.2: Reciprocating carrier C; specification PDF p.7.",
+    "figure": "assets/bonsack-02.webp",
+    "pdf_page": 2,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      3,
+      7,
+      9
+    ]
+  },
+  {
+    "id": "bonsack-second-belt",
+    "parent": "bonsack-distribution",
+    "level": 3,
+    "name": "Second feed belt D",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 2, Fig.2: Second feed belt D; specification PDF p.7.",
+    "figure": "assets/bonsack-02.webp",
+    "pdf_page": 2,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      3,
+      7,
+      9
+    ]
+  },
+  {
+    "id": "bonsack-second-rolls",
+    "parent": "bonsack-distribution",
+    "level": 3,
+    "name": "Second carding and stripping rollers",
+    "source_id": "bonsack1881",
+    "render": "TXT",
+    "chain": false,
+    "locator": "Specification PDF p.7: second carding and stripping rollers.",
+    "figure": "assets/bonsack-text7.webp",
+    "pdf_page": 7,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "text",
+    "also_pdf_pages": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": "bonsack-hopper",
+    "parent": "bonsack-distribution",
+    "level": 3,
+    "name": "Hopper F",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 2, Fig.2: Hopper F; optional horizontal belt described on PDF p.9; specification PDF p.7.",
+    "figure": "assets/bonsack-02.webp",
+    "pdf_page": 2,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      3,
+      7,
+      9
+    ]
+  },
+  {
+    "id": "bonsack-wrapping",
+    "parent": "bonsack",
+    "level": 2,
+    "name": "Paper wrapping group",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "assembly_kind": "teaching functional group",
+    "locator": "Sheet 4, Figs.4 and 8–11½: Paper wrapping group; specification PDF pp.7–8 and claim 8.",
+    "figure": "assets/bonsack-04.webp",
+    "pdf_page": 4,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      3,
+      7,
+      8,
+      10
+    ]
+  },
+  {
+    "id": "bonsack-wrapping-tube",
+    "parent": "bonsack-wrapping",
+    "level": 3,
+    "name": "Wrapping tube",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 4, Figs.4 and 8–11½: Wrapping tube G′, groove a′ and flange b′; specification PDF pp.7–8 and claim 8.",
+    "figure": "assets/bonsack-04.webp",
+    "pdf_page": 4,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      3,
+      7,
+      8,
+      10
+    ]
+  },
+  {
+    "id": "bonsack-wrapping-belt",
+    "parent": "bonsack-wrapping",
+    "level": 3,
+    "name": "Wrapping belt",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 4, Figs.4 and 8–11½: Wrapping belt G², narrower than the paper; specification PDF pp.7–8 and claim 8.",
+    "figure": "assets/bonsack-04.webp",
+    "pdf_page": 4,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      3,
+      7,
+      8,
+      10
+    ]
+  },
+  {
+    "id": "bonsack-paper-spool",
+    "parent": "bonsack-wrapping",
+    "level": 3,
+    "name": "Paper supply spool",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 4, Figs.4 and 8–11½: Spool H′ and paper H; specification PDF pp.7–8 and claim 8.",
+    "figure": "assets/bonsack-04.webp",
+    "pdf_page": 4,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      3,
+      7,
+      8,
+      10
+    ]
+  },
+  {
+    "id": "bonsack-feed-wheel",
+    "parent": "bonsack-wrapping",
+    "level": 3,
+    "name": "Toothed positive-feed wheel",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 4, Figs.4 and 8–11½: Toothed feed wheel H²; specification PDF pp.7–8 and claim 8.",
+    "figure": "assets/bonsack-04.webp",
+    "pdf_page": 4,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      3,
+      7,
+      8,
+      10
+    ]
+  },
+  {
+    "id": "bonsack-cut-count",
+    "parent": "bonsack",
+    "level": 2,
+    "name": "Cutting and counting group",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "assembly_kind": "teaching functional group",
+    "locator": "Sheet 5, Fig.12: Cutting and counting group; specification PDF pp.8–9 and claims 10–12.",
+    "figure": "assets/bonsack-05.webp",
+    "pdf_page": 5,
+    "bbox": [
+      0.32,
+      0.5,
+      0.49,
+      0.29
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      3,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "id": "bonsack-holding-tube",
+    "parent": "bonsack-cut-count",
+    "level": 3,
+    "name": "Holding tube J",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 5, Fig.12: Holding tube J; specification PDF pp.8–9 and claims 10–12.",
+    "figure": "assets/bonsack-05.webp",
+    "pdf_page": 5,
+    "bbox": [
+      0.32,
+      0.5,
+      0.49,
+      0.29
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      3,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "id": "bonsack-knife",
+    "parent": "bonsack-cut-count",
+    "level": 3,
+    "name": "Cutting knife",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 5, Fig.12: Knife mechanism J and track; Fig.17 is an alternative detail; specification PDF pp.8–9 and claims 10–12.",
+    "figure": "assets/bonsack-05.webp",
+    "pdf_page": 5,
+    "bbox": [
+      0.32,
+      0.5,
+      0.49,
+      0.29
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      3,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "id": "bonsack-knife-gears",
+    "parent": "bonsack-cut-count",
+    "level": 3,
+    "name": "Differential cutter gears K¹ and K²",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 5, Fig.12: Cutter shaft K and gears K¹/K²; specification PDF pp.8–9 and claims 10–12.",
+    "figure": "assets/bonsack-05.webp",
+    "pdf_page": 5,
+    "bbox": [
+      0.32,
+      0.5,
+      0.49,
+      0.29
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      3,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "id": "bonsack-counting-belt",
+    "parent": "bonsack-cut-count",
+    "level": 3,
+    "name": "Counting belt",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 5, Fig.12: Counting belt L′ and partitions f; specification PDF pp.8–9 and claims 10–12.",
+    "figure": "assets/bonsack-05.webp",
+    "pdf_page": 5,
+    "bbox": [
+      0.32,
+      0.5,
+      0.49,
+      0.29
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      3,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "id": "bonsack-count-drive",
+    "parent": "bonsack-cut-count",
+    "level": 3,
+    "name": "Counting belt drive",
+    "source_id": "bonsack1881",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 5, Fig.12: Rollers L²/L³ and ratchet L⁴ drive; specification PDF pp.8–9 and claims 10–12.",
+    "figure": "assets/bonsack-05.webp",
+    "pdf_page": 5,
+    "bbox": [
+      0.32,
+      0.5,
+      0.49,
+      0.29
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      3,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "id": "delavaud",
+    "parent": null,
+    "level": 1,
+    "name": "Centrifugal pipe-casting machine, 1916 patent",
+    "source_id": "delavaud1916",
+    "render": "IMG",
+    "chain": true,
+    "locator": "Patent US1199353, sheet 1 Fig.1; sheets 2–3 Figs.2–4.",
+    "figure": "assets/delavaud-1.webp",
+    "pdf_page": 1,
+    "bbox": [
+      0.265,
+      0.18,
+      0.39,
+      0.62
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "asset": "assets/v2-D01.webp",
+    "also_pdf_pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "image_width": 2172,
+    "image_height": 724
+  },
+  {
+    "id": "delavaud-shell",
+    "parent": "delavaud",
+    "level": 2,
+    "name": "Revolving mold group",
+    "source_id": "delavaud1916",
+    "render": "IMG",
+    "chain": true,
+    "assembly_kind": "teaching functional group",
+    "locator": "Sheet 1 Fig.1; sheet 3 Figs.3 and 5; PDF p.4 describes the revolving shell.",
+    "figure": "assets/delavaud-1.webp",
+    "pdf_page": 1,
+    "bbox": [
+      0.285,
+      0.455,
+      0.31,
+      0.305
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "asset": "assets/v2-D02.webp",
+    "also_pdf_pages": [
+      3,
+      4
+    ],
+    "image_width": 2172,
+    "image_height": 724
+  },
+  {
+    "id": "delavaud-mold",
+    "parent": "delavaud-shell",
+    "level": 3,
+    "name": "Metal mold A",
+    "source_id": "delavaud1916",
+    "render": "IMG",
+    "chain": true,
+    "locator": "Sheet 3, Fig.5: sectioned metal mold A. External projections are drawn as solid metal; their function is not specified.",
+    "figure": "assets/delavaud-3.webp",
+    "pdf_page": 3,
+    "bbox": [
+      0.54,
+      0.455,
+      0.28,
+      0.14
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "asset": "assets/v2-D03.webp",
+    "also_pdf_pages": [
+      1,
+      4
+    ],
+    "image_width": 2172,
+    "image_height": 724
+  },
+  {
+    "id": "delavaud-sand-core",
+    "parent": "delavaud-shell",
+    "level": 3,
+    "name": "Sand socket mold B",
+    "source_id": "delavaud1916",
+    "render": "IMG",
+    "chain": true,
+    "locator": "Sheet 1 Fig.1, B: sand socket mold; specification PDF p.4.",
+    "figure": "assets/delavaud-1.webp",
+    "pdf_page": 1,
+    "bbox": [
+      0.36,
+      0.67,
+      0.15,
+      0.065
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "asset": "assets/v2-D04.webp",
+    "also_pdf_pages": [
+      4
+    ],
+    "image_width": 1536,
+    "image_height": 1024
+  },
+  {
+    "id": "delavaud-core-support",
+    "parent": "delavaud-shell",
+    "level": 3,
+    "name": "Tubular core support C",
+    "source_id": "delavaud1916",
+    "render": "IMG",
+    "chain": true,
+    "locator": "Sheet 1 Fig.1, C with flange c: tubular support for the sand socket mold; specification PDF p.4.",
+    "figure": "assets/delavaud-1.webp",
+    "pdf_page": 1,
+    "bbox": [
+      0.36,
+      0.67,
+      0.15,
+      0.065
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "asset": "assets/v2-D05.webp",
+    "also_pdf_pages": [
+      4
+    ],
+    "image_width": 1536,
+    "image_height": 1024
+  },
+  {
+    "id": "delavaud-cam-clamps",
+    "parent": "delavaud-shell",
+    "level": 3,
+    "name": "Pivoting clamps d (four; one illustrated)",
+    "source_id": "delavaud1916",
+    "render": "IMG",
+    "chain": true,
+    "locator": "Sheet 3 Fig.3 and sheet 1 Fig.1: Four clamps d, pivots d′ and inclined faces d²/d³; specification PDF p.4.",
+    "figure": "assets/delavaud-3.webp",
+    "pdf_page": 3,
+    "bbox": [
+      0.45,
+      0.24,
+      0.25,
+      0.135
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "asset": "assets/v2-D06.webp",
+    "also_pdf_pages": [
+      1,
+      4
+    ],
+    "image_width": 1254,
+    "image_height": 1254
+  },
+  {
+    "id": "delavaud-cam-ring",
+    "parent": "delavaud-shell",
+    "level": 3,
+    "name": "Cam ring e",
+    "source_id": "delavaud1916",
+    "render": "IMG",
+    "chain": true,
+    "locator": "Sheet 3 Fig.3 and sheet 1 Fig.1: Cam ring e; specification PDF p.4.",
+    "figure": "assets/delavaud-3.webp",
+    "pdf_page": 3,
+    "bbox": [
+      0.45,
+      0.24,
+      0.25,
+      0.135
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "asset": "assets/v2-D07.webp",
+    "also_pdf_pages": [
+      1,
+      4
+    ],
+    "image_width": 1254,
+    "image_height": 1254
+  },
+  {
+    "id": "delavaud-end-ring",
+    "parent": "delavaud-shell",
+    "level": 3,
+    "name": "End-forming ring f",
+    "source_id": "delavaud1916",
+    "render": "IMG",
+    "chain": true,
+    "locator": "Sheet 1 Fig.1, end ring f; the text places clamp 15 on trough V.",
+    "figure": "assets/delavaud-1.webp",
+    "pdf_page": 1,
+    "bbox": [
+      0.35,
+      0.415,
+      0.15,
+      0.09
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "asset": "assets/v2-D08.webp",
+    "also_pdf_pages": [
+      4,
+      5,
+      7
+    ],
+    "image_width": 1254,
+    "image_height": 1254
+  },
+  {
+    "id": "delavaud-support-drive",
+    "parent": "delavaud",
+    "level": 2,
+    "name": "Support and rotation group",
+    "source_id": "delavaud1916",
+    "render": "SCAN",
+    "chain": false,
+    "assembly_kind": "teaching functional group",
+    "locator": "Sheet 2 Fig.2: Support and rotation group; sheet 3 Figs.3–4 and specification PDF pp.4–5.",
+    "figure": "assets/delavaud-2.webp",
+    "pdf_page": 2,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      1,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "delavaud-rollers",
+    "parent": "delavaud-support-drive",
+    "level": 3,
+    "name": "Roller wheels 3 and 4",
+    "source_id": "delavaud1916",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 2 Fig.2: Roller wheels 3 and 4; sheet 3 Figs.3–4 and specification PDF pp.4–5.",
+    "figure": "assets/delavaud-2.webp",
+    "pdf_page": 2,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      1,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "delavaud-axles",
+    "parent": "delavaud-support-drive",
+    "level": 3,
+    "name": "Parallel axles 1 and 2",
+    "source_id": "delavaud1916",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 2 Fig.2: Parallel axles 1 and 2; bevel gearing 1a; sheet 3 Figs.3–4 and specification PDF pp.4–5.",
+    "figure": "assets/delavaud-2.webp",
+    "pdf_page": 2,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      1,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "delavaud-bearings",
+    "parent": "delavaud-support-drive",
+    "level": 3,
+    "name": "Adjustable bearings 5 and 6",
+    "source_id": "delavaud1916",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 2 Fig.2: Adjustable bearings 5 and 6; sheet 3 Figs.3–4 and specification PDF pp.4–5.",
+    "figure": "assets/delavaud-2.webp",
+    "pdf_page": 2,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      1,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "delavaud-adjustment",
+    "parent": "delavaud-support-drive",
+    "level": 3,
+    "name": "Adjustment screws and handwheels 7 and 8",
+    "source_id": "delavaud1916",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 2 Fig.2: Screws 5a/6a and handwheels 7/8; sheet 3 Figs.3–4 and specification PDF pp.4–5.",
+    "figure": "assets/delavaud-2.webp",
+    "pdf_page": 2,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      1,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "delavaud-pour-carriage",
+    "parent": "delavaud",
+    "level": 2,
+    "name": "Pouring and travelling carriage group",
+    "source_id": "delavaud1916",
+    "render": "SCAN",
+    "chain": false,
+    "assembly_kind": "teaching functional group",
+    "locator": "Sheet 2 Fig.2 and sheet 1 Fig.1: Pouring and travelling carriage group; specification PDF pp.4–5.",
+    "figure": "assets/delavaud-2.webp",
+    "pdf_page": 2,
+    "bbox": [
+      0.37,
+      0.195,
+      0.36,
+      0.33
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      1,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "delavaud-trough",
+    "parent": "delavaud-pour-carriage",
+    "level": 3,
+    "name": "Refractory-lined pouring trough V",
+    "source_id": "delavaud1916",
+    "render": "HS",
+    "chain": false,
+    "locator": "Sheet 2 Fig.2 and sheet 1 Fig.1: Trough V, slot v′ and hopper v²; specification PDF pp.4–5.",
+    "figure": "assets/delavaud-2.webp",
+    "pdf_page": 2,
+    "bbox": [
+      0.37,
+      0.195,
+      0.36,
+      0.33
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      1,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "delavaud-carriage",
+    "parent": "delavaud-pour-carriage",
+    "level": 3,
+    "name": "Carriage 10",
+    "source_id": "delavaud1916",
+    "render": "HS",
+    "chain": false,
+    "locator": "Sheet 2 Fig.2 and sheet 1 Fig.1: Carriage 10 and lever 20; specification PDF pp.4–5.",
+    "figure": "assets/delavaud-2.webp",
+    "pdf_page": 2,
+    "bbox": [
+      0.37,
+      0.195,
+      0.36,
+      0.33
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      1,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "delavaud-rails",
+    "parent": "delavaud-pour-carriage",
+    "level": 3,
+    "name": "Guide lines 11",
+    "source_id": "delavaud1916",
+    "render": "HS",
+    "chain": false,
+    "locator": "Sheet 2 Fig.2 and sheet 1 Fig.1: Guide lines 11 and frame 11a; specification PDF pp.4–5.",
+    "figure": "assets/delavaud-2.webp",
+    "pdf_page": 2,
+    "bbox": [
+      0.37,
+      0.195,
+      0.36,
+      0.33
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      1,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "delavaud-lead-screw",
+    "parent": "delavaud-pour-carriage",
+    "level": 3,
+    "name": "Lead screw 12 and nut13",
+    "source_id": "delavaud1916",
+    "render": "REUSE",
+    "chain": false,
+    "locator": "Sheet 2 Fig.2 and sheet 1 Fig.1: Lead screw 12, nut 13 and drive 14; specification PDF pp.4–5.",
+    "figure": "assets/delavaud-2.webp",
+    "pdf_page": 2,
+    "bbox": [
+      0.37,
+      0.195,
+      0.36,
+      0.33
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      1,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "delavaud-handwheel",
+    "parent": "delavaud-pour-carriage",
+    "level": 3,
+    "name": "Handwheel16",
+    "source_id": "delavaud1916",
+    "render": "HS",
+    "chain": false,
+    "locator": "Sheet 3 Fig.4: handwheel 16, with curved spokes.",
+    "figure": "assets/delavaud-3.webp",
+    "pdf_page": 3,
+    "bbox": [
+      0.43,
+      0.64,
+      0.11,
+      0.07
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      2,
+      5
+    ]
+  },
+  {
+    "id": "delavaud-support-arm",
+    "parent": "delavaud-pour-carriage",
+    "level": 3,
+    "name": "Collapsible support arm25",
+    "source_id": "delavaud1916",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 3 Fig.3: Collapsible arm 25, pivot 17, hole 26 and pin 27; claim 3; specification PDF p.5.",
+    "figure": "assets/delavaud-3.webp",
+    "pdf_page": 3,
+    "bbox": [
+      0.54,
+      0.29,
+      0.06,
+      0.16
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      1,
+      5,
+      6
+    ]
+  },
+  {
+    "id": "delavaud-latch",
+    "parent": "delavaud-pour-carriage",
+    "level": 3,
+    "name": "Spring latch28 and pedal29",
+    "source_id": "delavaud1916",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 3 Fig.3: Spring latch 28 and pedal 29; specification PDF p.5.",
+    "figure": "assets/delavaud-3.webp",
+    "pdf_page": 3,
+    "bbox": [
+      0.54,
+      0.29,
+      0.06,
+      0.16
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      1,
+      5,
+      6
+    ]
+  },
+  {
+    "id": "delavaud-ejector",
+    "parent": "delavaud-pour-carriage",
+    "level": 3,
+    "name": "Removable ejection attachment",
+    "source_id": "delavaud1916",
+    "render": "SCAN",
+    "chain": false,
+    "locator": "Sheet 3 Figs.5–6: removable disk 30 with hole 31; claim 11.",
+    "figure": "assets/delavaud-3.webp",
+    "pdf_page": 3,
+    "bbox": [
+      0.22,
+      0.45,
+      0.69,
+      0.155
+    ],
+    "highlight_note": "Approximate reference region on the original page; not a measured component outline.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      5,
+      7
+    ]
+  },
+  {
+    "id": "delavaud-cooling",
+    "parent": "delavaud",
+    "level": 2,
+    "name": "Open spray-cooling group",
+    "source_id": "delavaud1916",
+    "render": "HS",
+    "chain": false,
+    "assembly_kind": "teaching functional group",
+    "locator": "Sheet 1 Fig.1: Cooling group; specification permits any suitable cooling means; specification PDF p.5.",
+    "figure": "assets/delavaud-1.webp",
+    "pdf_page": 1,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      3,
+      5
+    ]
+  },
+  {
+    "id": "delavaud-spray-pipe",
+    "parent": "delavaud-cooling",
+    "level": 3,
+    "name": "Perforated spray pipe23",
+    "source_id": "delavaud1916",
+    "render": "HS",
+    "chain": false,
+    "locator": "Sheet 1 Fig.1: Perforated spray pipe 23; specification PDF p.5.",
+    "figure": "assets/delavaud-1.webp",
+    "pdf_page": 1,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      3,
+      5
+    ]
+  },
+  {
+    "id": "delavaud-water-tank",
+    "parent": "delavaud-cooling",
+    "level": 3,
+    "name": "Collecting tank18",
+    "source_id": "delavaud1916",
+    "render": "HS",
+    "chain": false,
+    "locator": "Sheet 1 Fig.1: collecting tank 18; specification PDF p.6.",
+    "figure": "assets/delavaud-1.webp",
+    "pdf_page": 1,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "patent",
+    "also_pdf_pages": [
+      2,
+      3,
+      6
+    ]
+  },
+  {
+    "id": "delavaud-drain",
+    "parent": "delavaud-cooling",
+    "level": 3,
+    "name": "Drain outlet19",
+    "source_id": "delavaud1916",
+    "render": "TXT",
+    "chain": false,
+    "locator": "Specification PDF p.6: tank 18 and drain outlet 19; sheet 2 Fig.2.",
+    "figure": "assets/delavaud-text6.webp",
+    "pdf_page": 6,
+    "bbox": null,
+    "highlight_note": "The whole source page is shown; no component location is inferred.",
+    "evidence_type": "text",
+    "also_pdf_pages": [
+      2
+    ]
+  }
+]

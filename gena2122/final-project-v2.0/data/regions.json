@@ -1,0 +1,74 @@
+{
+  "regions": {
+    "South_13": [
+      "AL",
+      "AR",
+      "FL",
+      "GA",
+      "KY",
+      "LA",
+      "MS",
+      "NC",
+      "OK",
+      "SC",
+      "TN",
+      "TX",
+      "VA"
+    ],
+    "Southeast_9": [
+      "AL",
+      "FL",
+      "GA",
+      "KY",
+      "MS",
+      "NC",
+      "SC",
+      "TN",
+      "VA"
+    ],
+    "New_England": [
+      "CT",
+      "ME",
+      "MA",
+      "NH",
+      "RI",
+      "VT"
+    ],
+    "South_14": [
+      "AL",
+      "AR",
+      "FL",
+      "GA",
+      "KY",
+      "LA",
+      "MS",
+      "NC",
+      "OK",
+      "SC",
+      "TN",
+      "TX",
+      "VA",
+      "WV"
+    ],
+    "Confederacy_11_reference_only": [
+      "AL",
+      "AR",
+      "FL",
+      "GA",
+      "LA",
+      "MS",
+      "NC",
+      "SC",
+      "TN",
+      "TX",
+      "VA"
+    ]
+  },
+  "rules": [
+    "Statistical regions stay distinct from political reference layer.",
+    "Modern geometry is orientation only; it does not reproduce 1860/1861 boundaries.",
+    "WV separate state geometry is anachronistic for 1860; no claim of historical boundary accuracy.",
+    "Alaska and Hawaii omitted from lower-48 orientation, not subtracted from source national denominators.",
+    "US remainder must never be renamed North."
+  ]
+}
