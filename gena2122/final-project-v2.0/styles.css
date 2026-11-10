@@ -21,4 +21,6 @@ summary{min-height:44px;padding-top:8px;padding-bottom:8px}.registry>summary{pad
 
 /* Keep the national evidence panel below one quarter of map area at each breakpoint. */
 .map-column .national-map{aspect-ratio:1.645}.national-map svg{height:100%}
-@media(max-width:360px){.map-column .national-map{aspect-ratio:1.54}.econ{height:44px;padding-top:0;padding-bottom:0}}
+@media(max-width:360px){.map-column .national-map{aspect-ratio:1.30}.econ{height:52px;padding-top:0;padding-bottom:0}}
+
+.compact-label{display:none}@media(max-width:500px){.econ .full-label{display:none}.econ .compact-label{display:inline}}
