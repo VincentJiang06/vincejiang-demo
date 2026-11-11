@@ -42,6 +42,27 @@ body.presenting #viewer{bottom:0}body.presenting .toolbar,body.presenting .progr
 @media print{@page{size:1600px 900px;margin:0}html,body{width:1600px;height:auto!important;overflow:visible!important;background:white}.toolbar,.progress-track,.notes-panel,.modal,.sr-only{display:none!important}#viewer{position:static!important;display:block!important;overflow:visible!important;padding:0!important}.stage-shell{width:1600px!important;height:auto!important}.stage{position:static!important;transform:none!important;display:block!important;width:1600px!important;height:auto!important}.thumb-wrap{display:contents!important}.slide,.slide.active,.thumb-wrap .slide{position:relative!important;display:flex!important;flex-direction:column;transform:none!important;width:1600px;height:900px;break-after:page;page-break-after:always;print-color-adjust:exact;-webkit-print-color-adjust:exact}.slide:last-child{break-after:auto}.interaction-actions{display:none!important}.choice-reason,.choice-reveal{display:block!important}.choice-thumbnail,.choice-context-images{display:none!important}.choice-layout .choice-context{grid-template-columns:1fr!important}.choice-layout .choice-question{font-size:34px!important}.choice-layout .choice-scenario{display:none!important}.choice-layout .choice-options{flex:none!important}.choice-option{height:auto!important;min-height:92px!important;padding-bottom:18px!important}.choice-instruction{display:none!important}.input-column textarea{display:none}.audience-print{display:block;font-size:23px;white-space:pre-wrap;min-height:75px;background:#fff;color:var(--ink);padding:12px}.image-frame{cursor:default}}
 
 .slide[data-id="06"] .support-cards,.slide[data-id="13"] .support-cards{flex:none;margin:auto 0;min-height:310px}.slide[data-id="06"] .support-card,.slide[data-id="13"] .support-card{justify-content:flex-start;gap:30px;padding:40px}
+
+/* v2.1 appearance refinement: monochrome conversation wallpaper. */
+.slide::after{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22240%22%20height%3D%22200%22%20viewBox%3D%220%200%20240%20200%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23152c4d%22%20stroke-width%3D%222.5%22%3E%3Cpath%20d%3D%22M24%2025h55v36H49L34%2073V61H24Z%22/%3E%3Cpath%20d%3D%22M151%20122h55v36h-25l-15%2012v-12h-15Z%22/%3E%3Ccircle%20cx%3D%22170%22%20cy%3D%2244%22%20r%3D%2222%22/%3E%3Cpath%20d%3D%22M160%2048q10%2013%2020%200M161%2038h2m14%200h2M38%20140l15-15%2015%2015m-15-15v44M100%2090h25m-12-12v24%22/%3E%3C/g%3E%3C/svg%3E");background-size:240px 200px;opacity:.13;mask-image:linear-gradient(115deg,transparent 38%,#000 100%)}
+
+.slide::before{content:"";position:absolute;left:0;top:0;width:14px;height:100%;background:var(--accent);z-index:-1}
+.slide[data-section="case"]::before{background:var(--ink)}
+.slide[data-section="discussion"]::after{opacity:.18;mask-image:linear-gradient(100deg,transparent 35%,#000)}
+.slide[data-section="discussion"]{background:#edf2f7}
+.slide[data-section="discussion"] .kicker{color:var(--accent)}
+.slide[data-id="15"],.slide[data-id="21"]{background:#e4ebf3}
+.slide-header h2{max-width:1380px}
+.support-card,.synthesis-tile,.belief-card,.authorship-body p{border-radius:16px;background:rgba(234,240,246,.94)}
+.image-frame{box-shadow:0 12px 30px rgba(21,44,77,.10)}
+.image-frame img{width:auto;height:auto;max-width:100%;max-height:100%;flex:0 1 auto;object-fit:contain}
+.image-frame svg{display:block;width:100%;height:100%;min-height:0;object-fit:contain}
+.cover-art .image-frame{box-shadow:none}
+.zoom-inner{width:min(1200px,94vw);height:90vh;max-height:90vh;display:grid;grid-template-rows:minmax(0,1fr) auto;justify-items:center;gap:14px}
+.zoom-inner img{width:100%;height:100%;min-height:0;max-width:100%;max-height:100%;object-fit:contain;background:transparent;border:0}
+.zoom-inner p{width:100%;max-height:18vh;overflow:auto;padding:0 8px}
+.zoom-inner .dialog-close{right:0;top:-30px}
+@media print{.slide::after{opacity:.08}.image-frame{box-shadow:none}}
 </style></head><body><main id="viewer" aria-label="Slide viewer" data-edit-attributes="{&quot;aria-label&quot;:[&quot;/ui/viewerLabel&quot;]}"><div class="stage-shell"><div class="stage"><section class="slide layout-cover has-provenance active" data-id="01" data-section="intro" data-seconds="30" data-time="0:30" data-speaker="A" data-number="1" data-title="Memetic Warfare and Political Radicalisation" aria-label="Slide 1" aria-hidden="false" id="slide-01" data-edit-attributes="{&quot;data-id&quot;:[&quot;/slides/0/id&quot;],&quot;data-section&quot;:[&quot;/slides/0/section&quot;],&quot;data-speaker&quot;:[&quot;/slides/0/speaker&quot;],&quot;data-title&quot;:[&quot;/slides/0/title&quot;],&quot;aria-label&quot;:[&quot;/ui/slideLabel&quot;]}"><header class="slide-header"><div class="kicker"><span id="edit-S01-kicker--1" data-copy-path="/slides/0/kicker">GENA2122</span></div></header>
 <div class="slide-content"><div class="cover-layout"><div class="cover-copy"><h1><span id="edit-S01-title--1" data-copy-path="/slides/0/title">Memetic Warfare and Political Radicalisation</span></h1>
 <p class="lead"><span id="edit-S01-lead--1" data-copy-path="/slides/0/lead">The Boogaloo case, United States, 2019–2020</span></p></div>
