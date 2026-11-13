@@ -1225,8 +1225,8 @@
   },
   {
     "key": "CSCI3230/阅读导航.md",
-    "sourceSha256": "954d3eb834b1a4bc9a74e9bc2e63c39193f72de44abcb5581d20af588402db79",
-    "publishedSha256": "5860b7dfe9c3ff17f19e1603196a167280e2b3387c8c4ae27490e088323a943d",
+    "sourceSha256": "7519d98fde1e1811f706c06776709db40c62a6aa86d3a5a9cc5f6e370c43c28f",
+    "publishedSha256": "79ad908da5141a687392b25f3c0b365e6974db338f20e8cf279e4ef9e31810b4",
     "projection": true
   },
   {
@@ -1417,146 +1417,146 @@
   },
   {
     "key": "CSCI3230/L06-P1-网络结构.md",
-    "sourceSha256": "c437f88a698320b275a0580c129d09dadb1a661dfb4d4eea862f9c8b52414913",
-    "publishedSha256": "a8cb40d1988ead0d7dd80fc29bd595666a88ec02031b24bd67f76126444ca025",
+    "sourceSha256": "6b7bb19d9dba8da3c67209ed57832d4f97d5d23de335785ae4229a5fcabcd8d1",
+    "publishedSha256": "297813ca8ea9e27441711124c52188301ee83fc13cda75ff6cb36caf833b3c88",
     "projection": true
   },
   {
     "key": "CSCI3230/L06-P2-反向传播.md",
-    "sourceSha256": "50640a7d703eb0fbad6787dbf91c836cef781884df47462715cc8a212d316bb0",
-    "publishedSha256": "5e9d082dcb2e8d1ce2ae072cc7562880daffe153ae54cba8ef778ed214379fc7",
+    "sourceSha256": "77008e7be70e1b136b7dc4321fe63a4e76725d5a20b61d85edd51795fb27f5e0",
+    "publishedSha256": "d30f1b0b5e22d44334d05c5f327267459c6fe74a9c9939c4afab931527f050b6",
     "projection": true
   },
   {
     "key": "CSCI3230/L06-P3-训练与验证.md",
-    "sourceSha256": "5ca4f17bdf0383fd0ed133063192989d8c19db13b28f77ee47f7e9dcf513c21b",
-    "publishedSha256": "ea1a3df98dbf3754419a5b51c352ea4e4918f4b2eb3b8bf37bee2b0ba2bff174",
+    "sourceSha256": "e721d309f5825b5061232f64046aae3de68c51cfc55519e935b90b09407b2af5",
+    "publishedSha256": "c17bcd9f91682f02a4678b4e91d77bcc59d309c0ebf5e0345e033f4e310c110a",
     "projection": true
   },
   {
     "key": "CSCI3230/L06-P4-小结.md",
-    "sourceSha256": "cf46409566264b2c3fa9bfde3516bb6a01b19bef05a0f555882a2196e7b56e01",
-    "publishedSha256": "0cf838d44e13115d69dd86d0557f17f401bbb9979e6fce4146454a4a01e9b249",
+    "sourceSha256": "d0cdf63388a767b04a58cea6a33aac9371bd41ed1458ace060cce8a079929837",
+    "publishedSha256": "88124a8ebde7c1ef4f9b0abadc0c5d61ada708546cdf804dc8683d45269bee3f",
     "projection": true
   },
   {
     "key": "CSCI3230/L06-P5-迁移学习.md",
-    "sourceSha256": "2c21945c65f9fc3f752caea519aad6ab34b670ef19b79473dfef760016a86435",
-    "publishedSha256": "cab063a06dfe5d5acd72cc55e2f56170501add47a43a6e4741f35c6fd7b190ab",
+    "sourceSha256": "cab7d8be556fa0be2c00346b3e768cf1be3cf960d02301c13e6f97290e2aca84",
+    "publishedSha256": "7c2328d6dfedc28a9c88c42c97eb05fd490f99b757f0bb73c43200204dc8eb7d",
     "projection": true
   },
   {
     "key": "CSCI3230/L07-P1-卷积基础.md",
-    "sourceSha256": "fef02b4e4b9a51660813cda4ab2a57353529a39b95fca24c7b2ec16fed2ccea8",
-    "publishedSha256": "516679bc6db48ac8ad2068d1acf76f93d762be4115c219f2c706e96cba11c714",
+    "sourceSha256": "e5989274c6c24b0f72a44b36efd51a5978cfbea46fe7434bd77b8abbb1191cad",
+    "publishedSha256": "c2ccd92f9c75b66f89b91af4b98368f5599b6473c7833bb39e9367fbec9ae5ad",
     "projection": true
   },
   {
     "key": "CSCI3230/L07-P2-分类网络.md",
-    "sourceSha256": "eeb4f408a8c0acf81355114f927c77f87bf44fe6b81cf333f1f90b62625a64ea",
-    "publishedSha256": "59a9e348243326d3761a99b0819be8c91229c40873cb38af1c244b270fbcbbe5",
+    "sourceSha256": "9e240fa30bbfb401fed840d186424ca544ef7f7613d8354c70ea61684f75ce30",
+    "publishedSha256": "2bed4174c15836d848c1ca8c0458cd321fdd1ebc634f668cbf8213b5b80734ce",
     "projection": true
   },
   {
     "key": "CSCI3230/L07-P3-训练技巧.md",
-    "sourceSha256": "6fe89aa43444ac042b10f502e312c4a88d704744a998fd4972067070f9d2f0fb",
-    "publishedSha256": "6fe89aa43444ac042b10f502e312c4a88d704744a998fd4972067070f9d2f0fb",
-    "projection": false
+    "sourceSha256": "c6ab6374426bc2b0b49aa2ea79fc37edce4b30ba2970fcbe7d923038493e3e82",
+    "publishedSha256": "c9543fe7a389bc49b57da2aa97a6b51ae4f59529427c1e14d70d0ac157d47509",
+    "projection": true
   },
   {
     "key": "CSCI3230/L07-P4-小结.md",
-    "sourceSha256": "b0b014eca173cc587dfdd7a1377158f91b3d8d3577e637a45793b5f577ece57c",
-    "publishedSha256": "b0b014eca173cc587dfdd7a1377158f91b3d8d3577e637a45793b5f577ece57c",
-    "projection": false
+    "sourceSha256": "4c615349d256dc8d9237e2a6a23510b007402feb6b493df851dd9be62ccff713",
+    "publishedSha256": "267abcf63d034174590da00be21b08ef66cfe91e7304a44d1db3091710f050b4",
+    "projection": true
   },
   {
     "key": "CSCI3230/L08-P1-注意力基础.md",
-    "sourceSha256": "0973b24b1139ea8d91ee95265362d1434eb918a22bf4d22533b613cf8e282c04",
-    "publishedSha256": "690fcb1d64639cd86efcb65ceb09b1f6805d469c0da7445b4a58ecc78f8723ef",
+    "sourceSha256": "9d640030c9db21605be4bb64fe2df4fb1a8c7515d5c349aeb164079270a26cb9",
+    "publishedSha256": "4740ceb8ca2724baadf7fa2b6e36579c558f58641b58eef752aa1a6ffac7cb0b",
     "projection": true
   },
   {
     "key": "CSCI3230/L08-P2-视觉Transformer.md",
-    "sourceSha256": "f4d64381aff5cfcf104ae6e588889e1ddc4211525d23ece0b70c6eb6d9fc8f3c",
-    "publishedSha256": "f0120c0a73e80ef8ac79c70769ac7f29d120f6b85f6fe85bd047a55e03922940",
+    "sourceSha256": "646458f9173007fe05da12e1e1d9eac396fa8262a06dd61c6414002fb04b4a68",
+    "publishedSha256": "a94be260a94dca98107a0b1bc605302ae8f9b990a6faa5045ff44080eae8998c",
     "projection": true
   },
   {
     "key": "CSCI3230/L08-P3-变体与多模态.md",
-    "sourceSha256": "1e25a02355e10c116996281fd901d1ddb6382267ccbf1ce0bce18da87b56a944",
-    "publishedSha256": "1e25a02355e10c116996281fd901d1ddb6382267ccbf1ce0bce18da87b56a944",
-    "projection": false
+    "sourceSha256": "ebf2b91ee1d14577dfc58abd2f5205dc80bbf0fdbe7ef129adc7fa4c5ee087dd",
+    "publishedSha256": "b47c0ffeaf2776a91e5d775e43f8006aaa197ed26fe40425aed283bd43e5365d",
+    "projection": true
   },
   {
     "key": "CSCI3230/L08-P4-小结.md",
-    "sourceSha256": "1a479a80a389d3392cc59239b44cf27faad5d35f3ead0e324784c756dace8c8c",
-    "publishedSha256": "1a479a80a389d3392cc59239b44cf27faad5d35f3ead0e324784c756dace8c8c",
-    "projection": false
+    "sourceSha256": "b4d9c11c85e89fb45e81def313e929890ecc348c9a2dca78fc8f47c4f0e6b841",
+    "publishedSha256": "2e05ac0c2ed7b48742b7091d9600691f601c0bcee78827a4a14c7502e4c75a07",
+    "projection": true
   },
   {
     "key": "CSCI3230/L09-P1-搜索建模.md",
-    "sourceSha256": "b78856f1c50d05aedd81e374ed760866e2949d153080b544bce47a3f40981c61",
-    "publishedSha256": "066b3ae282169d626039f74a27b19a2c1c2a5eef9eeb3e5fe59ab291b7922b37",
+    "sourceSha256": "59f782fb7a36e90b4acaa4d27fb3c611f74a55f9c707da2dbaddd2a2363699ee",
+    "publishedSha256": "c37b02c07f73754f54d17dcf566d57b49127730f601632963f1a33fb5fa19b5a",
     "projection": true
   },
   {
     "key": "CSCI3230/L09-P2-广度优先.md",
-    "sourceSha256": "07a6e5526dcaea8deb4741c9a66ea06a2af7cbfab7af33dfdb26c5712824b354",
-    "publishedSha256": "583b7450d9e15921022b9385348dcd38ceecc8ff12c0e61845834ddc3fc4e42d",
+    "sourceSha256": "877303d5e9de8e94cfe3dcdc9b4533ae27a32ff7435f5e47e8feacc8b206c495",
+    "publishedSha256": "fef25350074d77204aae771a0a118b40edef2befe1e9e3ecf42bdb2a1c5e0bb2",
     "projection": true
   },
   {
     "key": "CSCI3230/L09-P3-一致代价.md",
-    "sourceSha256": "4c35528bfd803913f4ac11ff96f174c0d89debbf7c7f1f98a74e33648940075a",
-    "publishedSha256": "d636c0656bceb4015c5378fa983b0f3a7da76fe2c2a9b195bcb70da9ddc77105",
+    "sourceSha256": "3b4540e3b4fb783bb7f67f5173dfe5535e2ccdb0d62cc2fb94a58e10ad17c303",
+    "publishedSha256": "07dc0fbc690518f47f3f0cd0eb92b3c9c441dd088ebfefbcc07af0d352601bb8",
     "projection": true
   },
   {
     "key": "CSCI3230/L09-P4-深度优先.md",
-    "sourceSha256": "f97f806e727487367af31ea54ae26a2c5c2630e937b7c03565ac0aa2f03af764",
-    "publishedSha256": "4e24c56df5a6fdc4f3ff041d185ad41d93a60676db79a71b211b66bdd49626d4",
+    "sourceSha256": "d08f8b11d3d0e9fc55612a10f05ee6e72f41d71196b45f6e0a59d71dfcd2076f",
+    "publishedSha256": "54154ffc4358cbed138ecea24f0ecbd5d89959fc993dd9ee7577e071c5dd570f",
     "projection": true
   },
   {
     "key": "CSCI3230/L09-P5-深度限制.md",
-    "sourceSha256": "5e2f46db6ffb3d7c501a627b935c7eadbba311b600e77c135c796981a6036003",
-    "publishedSha256": "edaa5a8d334e6bc72e11c725ae6f29abef21e7983a63b36334ad575033b334c7",
+    "sourceSha256": "10d111d4aacd965f0b83442c1200c1198eb43a9e6527bfa54d948361c5444994",
+    "publishedSha256": "1d42b89cd21a1c153cb1dca5cdd8a4840e31b42c681d93d09337853b959bfb04",
     "projection": true
   },
   {
     "key": "CSCI3230/L09-P6-迭代加深.md",
-    "sourceSha256": "2020a349ccb1ae099a3d3560b1963ac960ec5a7e18db61a0a83c388738e376ff",
-    "publishedSha256": "4377898c4acc995538bce8b4d384220caa301491a65e35e5f1b6b102482766d3",
+    "sourceSha256": "144fdeae492e83220c15a8a6d1016f201a8965a6cf86dc6add6326b5db346cec",
+    "publishedSha256": "97d24583dda1ace7be95a1d00d8e883d4c84c6a6662b1ebeb9a2dbb13a052a08",
     "projection": true
   },
   {
     "key": "CSCI3230/L09-P7-小结.md",
-    "sourceSha256": "863df03f90441518f0ea2cf2e7e55c889dc173220f11fa2234ec2ab7cab23a1c",
-    "publishedSha256": "cf2f5f55e2a86e1791e89770dfda67ef5d97b639c8b1f56e8c55da3802cc0ba7",
+    "sourceSha256": "e4763baee3b3ad2040aec9f4922b8e91e0689aca3fc695b038921998e715351a",
+    "publishedSha256": "576b39d4de2d2800c61f0bb5491ba5298059a153c31468cfbeff2b90386bee65",
     "projection": true
   },
   {
     "key": "CSCI3230/L10-P1-启发函数.md",
-    "sourceSha256": "ccc0a235973a93ccb98abd18e6431449b92351f4cb160e8932859e59dff52a12",
-    "publishedSha256": "3de893d60c8f19d21c1dbfc04232d34a80c02c9c20d78bde1e949808d7e35cfd",
+    "sourceSha256": "ed450d129d390578017a6817c035ae0cb5e63abbd1e2dfd11fb761dcfc80e27f",
+    "publishedSha256": "c487d0ca60d26532f1cd6bcbd1447915f33a4b46e05536a8a709aaa0b7ec6c13",
     "projection": true
   },
   {
     "key": "CSCI3230/L10-P2-贪心搜索.md",
-    "sourceSha256": "68669bfe383b0896424b8d85b8b6ccce3507d1aa2a9098419f71a5fc34fa2c8b",
-    "publishedSha256": "8f8ce69112f8c32e219211738a3fd768553ad096d5d46a1b89ffc821eac83999",
+    "sourceSha256": "39ff329cea62de30506222ed97a1670c372c9f19f985159aae00263318b57bad",
+    "publishedSha256": "e4cfe037f1ad41b29b93312ae340b3a019749efb0ed938b1d9896bd3841619e3",
     "projection": true
   },
   {
     "key": "CSCI3230/L10-P3-A星搜索.md",
-    "sourceSha256": "2a09c49431f0ac735cbfc0b8c1b04eead53774cdd4b5b7d9c13088443bbd9122",
-    "publishedSha256": "5fe62c0110feae42235aae61fed019e63d3c032d0de6b5abd0f85782427e1944",
+    "sourceSha256": "ad09b0ee19c47ccd0f4e0e1d2d441642273134247660d727e9c4217b1c4092c7",
+    "publishedSha256": "7e78bc98065f0be0d8c04c51f01c4646d16017a44f92c46f35de3ca7101e96ca",
     "projection": true
   },
   {
     "key": "CSCI3230/L10-P4-小结.md",
-    "sourceSha256": "74ef40a624ec6c8ae7ea63dc06dbfe01c5e567b26acc40f8d6aa39774bebf6e0",
-    "publishedSha256": "ae46f9926d6b9f15f0048b09284bb32ac6fdc9c2f069535b1fc45403112a0a2c",
+    "sourceSha256": "88a2f3834055b630ea2c50d47f95fda8b0c343027090b9b4ec55865029776d85",
+    "publishedSha256": "7e680e8a7a8dc67d876d456f37499cd08ce33072757f12d10ec974f3d484d6c2",
     "projection": true
   },
   {

@@ -1,11 +1,11 @@
 # CSCI3230 L08 · Part 2/4 Vision Transformers
 
-> 课程：CSCI3230 (ESTR3108) Fundamentals of Artificial Intelligence · 2025T1
-> 本讲：L08，第 2 部分 / 共 4 部分 · 原件 [L08-Transformers-2025T1.pdf](../课件/25/L08-Transformers-2025T1.pdf) p.30–42
+> 课程：CSCI3230 (ESTR3108) Fundamentals of Artificial Intelligence · 2026T1
+> 本讲：L08，第 2 部分 / 共 4 部分 · 原件 [L08-Transformer-2026T1.pdf](../课件/L08-Transformer-2026T1.pdf) p.30–42
 > 定位：把图像切为patch，再使用序列模块。
 > 前后：上一份 [Basics](L08-P1-注意力基础.md) · 下一份 [Variants of Transformers](L08-P3-变体与多模态.md)
 
-本文依据 **2025T1 旧版材料**重写，供基础学习与预习；不是 2026T1 新增要求或考试范围。补充数值例均另行标注。
+本文已对齐 2026T1 官方课件的阅读版；正文 p.N 为阅读版物理页，原题与补充数值例仍分别标明。课件发布范围不等于考试范围。
 
 ## 图像怎样变成token
 
@@ -47,7 +47,7 @@ p.38称卷积能形成更好patch embedding，要限定：**仅把同一个不�
 
 ### 两道课堂选择题（p.39–40）
 
-**题面**（L08-Transformers-2025T1.pdf · Quiz · p.39）
+**题面**（L08-Transformer-2026T1.pdf · Quiz · p.39）
 
 > **p.39** For an input RGB image of size 224×224 with patch size of 16×16. The hidden
 > size of Transformer layer is 768. How should we configure the linear projection
@@ -58,7 +58,7 @@ p.38称卷积能形成更好patch embedding，要限定：**仅把同一个不�
 > B The input channel of the linear layer is 256
 > C The output channel of the linear layer is 768
 
-**题面**（L08-Transformers-2025T1.pdf · Quiz · p.40）
+**题面**（L08-Transformer-2026T1.pdf · Quiz · p.40）
 
 > **p.40** For an input RGB image of size 224×224 with patch size of 16×16. The hidden
 > size of Transformer layer is 768. How should we configure the linear projection
@@ -116,6 +116,8 @@ p.42把大规模预训练模型称foundation model。原图左/中分别为Image
 
 ## 来源与证据
 
-- 原件：[L08-Transformers-2025T1.pdf](../课件/25/L08-Transformers-2025T1.pdf)，p.30–42；均为当前 PDF 页号。
+- 版本说明（2026-11-13）：阅读版 p.30–42 对应本期官方完整原件 p.33–49（含动画中间页）；正文使用阅读版页码。既有推导、原题与补充讲解保留，历史题仍按原年份标明。
+
+- 原件：[L08-Transformer-2026T1.pdf](../课件/L08-Transformer-2026T1.pdf)，p.30–42；均为当前 PDF 页号。
 - 本次重写核对本篇所列讲义页码；旧版作业/试题题面如保留，属于历史练习，不代表 2026T1 考核要求。未以未公开试题推断考试内容。
 - 往年卷仅证明相应年份考过；2024 卷及 2025 节选未公开的选择题不作推断。
