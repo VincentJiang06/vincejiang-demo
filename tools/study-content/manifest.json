@@ -1,8 +1,8 @@
 [
   {
     "key": "CSCI3130/阅读导航.md",
-    "sourceSha256": "f1f866a9ad6d22783f15372e3594d6d0807f35c9ebcfdb5bb1d1b95219db9ada",
-    "publishedSha256": "b8b5142fb7d7ab8ecfc8a17c389625af0eecc73080d4496777d44ec8a645af07",
+    "sourceSha256": "17d05691b9f00797402600a89583c7a0ef16a6f004bb63a3592a27467ba503ed",
+    "publishedSha256": "a634c0e37b733994f4f63162734daa61f3c03d36bca8668d9417c3342d37d4f5",
     "projection": true
   },
   {
@@ -217,38 +217,38 @@
   },
   {
     "key": "CSCI3130/L07-P1-非确定下推自动机.md",
-    "sourceSha256": "dff305058aaf0ca1553e238d368ca1dbc1a0306720c175e274d9c1f8500a7c0a",
-    "publishedSha256": "5633f07a2289833810008218b675be0f2660d9f53d6fe9d49c3764b1d2564dd8",
+    "sourceSha256": "712691c0eb431e8f468b5dc79b3cfa6e46bf1c2ca18f114b98418e12593a2ecd",
+    "publishedSha256": "310f7c95a9a9a770cf739d36bcf08a93e7d4e602423256aeff113f3df305c071",
     "projection": true
   },
   {
     "key": "CSCI3130/L07-P2-PDA与文法等价.md",
-    "sourceSha256": "35eec375110502da2131ee04effba2a996fc0e47e65110e32e998319c3ff8c3d",
-    "publishedSha256": "8a8f288ad7dff179c8df2d27b5b59933069e541f8ea912f04425b544181ab9b2",
+    "sourceSha256": "fa6c852c82dcc6412308a1a7a6bbd1a14636ae4368c04dfea36624548cf5d37e",
+    "publishedSha256": "2a93cdc28740639dc05132e771d70a8b2f9b01b405df02bcabcff93664468a80",
     "projection": true
   },
   {
     "key": "CSCI3130/L07-P3-确定性与语言范围.md",
-    "sourceSha256": "7cfda732c0202d72721ead7fd306778dcd30e20095a0dbaa9ccacef1727ef0c6",
-    "publishedSha256": "1801b0b737a525c31080f0e3828d7792e480eb99c8dc82b73e665390e3d0e9f4",
+    "sourceSha256": "233b2e51c186ae03ccd8ed04c7ee970ad4ee24e9a6851f83b8e3220d9f432b73",
+    "publishedSha256": "837c56450519ab05655dd6db09b844c725bcf5f28c647791e80ca8f711627720",
     "projection": true
   },
   {
     "key": "CSCI3130/L07-P4-结尾小测.md",
-    "sourceSha256": "29c704b9da9b9ed7725bbd9759f978dc4944af8d7513a729cafb0852f90d2401",
-    "publishedSha256": "29c704b9da9b9ed7725bbd9759f978dc4944af8d7513a729cafb0852f90d2401",
+    "sourceSha256": "b01c88676e6b29b023bc2d934b79fb4a7f0734f64ec41aa205e6af9481cc5302",
+    "publishedSha256": "b01c88676e6b29b023bc2d934b79fb4a7f0734f64ec41aa205e6af9481cc5302",
     "projection": false
   },
   {
     "key": "CSCI3130/L08-P1-上下文无关泵引理.md",
-    "sourceSha256": "061c9a2fc053826eac99a86735652376bb87392c50a64c17cf30b242db03f261",
-    "publishedSha256": "27c1bf400a4b740889e057883c2ea8089a5248560eacec1216b51509bccb96ad",
+    "sourceSha256": "e476ffc2ef814dd64de492dceb613441405fed5aeb943c544f42e3364e551747",
+    "publishedSha256": "812fd234c2f3db134f8f3a1575433a4bba6a445201dcfa099475f1a47c050b16",
     "projection": true
   },
   {
     "key": "CSCI3130/L08-P2-封闭性与判定.md",
-    "sourceSha256": "5ecf47bcd6d11a05970543d8e1d861267bb4052ff68208d2a159b60545e0386d",
-    "publishedSha256": "5ecf47bcd6d11a05970543d8e1d861267bb4052ff68208d2a159b60545e0386d",
+    "sourceSha256": "0f6ae3703e4ca5073142c3c5c08ec221609ef6e1f6d0a9b9070f871208d13c66",
+    "publishedSha256": "0f6ae3703e4ca5073142c3c5c08ec221609ef6e1f6d0a9b9070f871208d13c66",
     "projection": false
   },
   {
@@ -1677,6 +1677,42 @@
     "key": "GENA2122/L04-美国帝国与工业化-20261002.md",
     "sourceSha256": "3ddd68f91bb04715c5911c2db808c3e83922b541a25c61482e772bfe9551d5ec",
     "publishedSha256": "7f2cbe790c3632f25481299eae91103a86236585c8008dd10b0697ba42344cea",
+    "projection": true
+  },
+  {
+    "key": "CSCI3130/T07-P1-期中判断题-2026T1.md",
+    "sourceSha256": "eb49f4d99b0d9051c101a9677b91607dcfa4046ca6d717042a0359c5a85c5c66",
+    "publishedSha256": "eb49f4d99b0d9051c101a9677b91607dcfa4046ca6d717042a0359c5a85c5c66",
+    "projection": false
+  },
+  {
+    "key": "CSCI3130/T07-P2-期中自动机构造-2026T1.md",
+    "sourceSha256": "b60983b7866528da36e56300b95a97c4e555ee76f838e92da5c7520e8acd55ca",
+    "publishedSha256": "b60983b7866528da36e56300b95a97c4e555ee76f838e92da5c7520e8acd55ca",
+    "projection": false
+  },
+  {
+    "key": "CSCI3130/T07-P3-期中正则表达式-2026T1.md",
+    "sourceSha256": "3b776bb86fdc67164c17fa7c19dcb04cebea1bd70e5352d131ccf30ce86b9f6d",
+    "publishedSha256": "3b776bb86fdc67164c17fa7c19dcb04cebea1bd70e5352d131ccf30ce86b9f6d",
+    "projection": false
+  },
+  {
+    "key": "CSCI3130/T07-P4-期中泵引理-2026T1.md",
+    "sourceSha256": "449ed78e26dbd2bff39a1249a7844a4740e7477432ef479b5cc42bd099f78265",
+    "publishedSha256": "449ed78e26dbd2bff39a1249a7844a4740e7477432ef479b5cc42bd099f78265",
+    "projection": false
+  },
+  {
+    "key": "CSCI3130/T07-P5-期中文法与范式-2026T1.md",
+    "sourceSha256": "2ca2c67cba8189b3c0390d71be3939d3cfedea8bcc5670d6c79336a97a386cf7",
+    "publishedSha256": "2ca2c67cba8189b3c0390d71be3939d3cfedea8bcc5670d6c79336a97a386cf7",
+    "projection": false
+  },
+  {
+    "key": "CSCI3130/T08-Quiz04逐题详解.md",
+    "sourceSha256": "20d230de1c4e5399a467338aa561ac6af06ae4d09a653f0546b17a0402b5f3fe",
+    "publishedSha256": "cebec125fc29d4d5a3ef0d9dc6124f3f8eea550d4e280f922f05a2c0d86a5851",
     "projection": true
   }
 ]
