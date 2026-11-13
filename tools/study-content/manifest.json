@@ -757,8 +757,8 @@
   },
   {
     "key": "CSCI3160/课程全览.md",
-    "sourceSha256": "e072457d10df618f7831764def90568b58ad0241a484ff0e553d6d9be25ced8f",
-    "publishedSha256": "b70aa78a91c870357f7d4eb84937ac4ddd3a09ddefb633c845b61a4be86a5f82",
+    "sourceSha256": "e29d22662d5f661e980bb775906af1eee88b45b28a667cba5339f3ca111d5acc",
+    "publishedSha256": "d164cd0c6b1a0dc6c21c0ecfc2688b3b0ccee425451e4963d853ddf132a04cd8",
     "projection": true
   },
   {
@@ -775,8 +775,8 @@
   },
   {
     "key": "CSCI3160/阅读导航.md",
-    "sourceSha256": "0bef12bc10019ec3885024c762eed34fbf222438152871c8fe290eeaf64ec076",
-    "publishedSha256": "0bef12bc10019ec3885024c762eed34fbf222438152871c8fe290eeaf64ec076",
+    "sourceSha256": "0a20f0df6df02a5d97cca97014bb6219a0c3b3ddd439fc9a0392f0f9e47c93d4",
+    "publishedSha256": "0a20f0df6df02a5d97cca97014bb6219a0c3b3ddd439fc9a0392f0f9e47c93d4",
     "projection": false
   },
   {
@@ -1039,8 +1039,8 @@
   },
   {
     "key": "CSCI3160/L07-钢条切割与最优方案恢复.md",
-    "sourceSha256": "140b6cdb10e801c782fb76c5fcac9784fbe22cbf98fde6f04fcd51f185621adf",
-    "publishedSha256": "94dcacc53fed7bd83f17135676a6f7ab69a818a151a61e29e500d9da5b487f37",
+    "sourceSha256": "a66a42a43eba4d90c520720f75fcf2d927a733c04a619955057dab06c3b09adc",
+    "publishedSha256": "f904256f6f16a258cb30abd1c99966b0840762b1062c46078e63312b40caa5f4",
     "projection": true
   },
   {
@@ -1051,14 +1051,14 @@
   },
   {
     "key": "CSCI3160/L09-最长公共子序列与回溯.md",
-    "sourceSha256": "ab9ebf7540df8ed06e3e1612d06a45d028662dec3c21e5fbb4699211c1a8b994",
-    "publishedSha256": "bf5e6f9da7f1c5ea838a96e3a500e082b059a3e82f3771226854c0a66a04089b",
+    "sourceSha256": "722647594764fc48d78e792d8992039ec15ab31c17a8e791ab1fe18c39e7c2fd",
+    "publishedSha256": "907901dd12832b822bd90d13a1068ae855ed95440115ca130302131642d20005",
     "projection": true
   },
   {
     "key": "CSCI3160/L10-最优二叉搜索树.md",
-    "sourceSha256": "6d53bc39e11291f8ca7769698818bd369419da0e5971f5b4f2789b9373c78484",
-    "publishedSha256": "6d53bc39e11291f8ca7769698818bd369419da0e5971f5b4f2789b9373c78484",
+    "sourceSha256": "f5fe78c43941e8b09880f4fcd2304ff0c85d243f3110c150e91f8caee641b148",
+    "publishedSha256": "f5fe78c43941e8b09880f4fcd2304ff0c85d243f3110c150e91f8caee641b148",
     "projection": false
   },
   {
@@ -1093,8 +1093,8 @@
   },
   {
     "key": "CSCI3160/L16-最大流、残量网络与最小割.md",
-    "sourceSha256": "07c7d006038a009be4043035ab5b358771fcbf773439c28f8b0b5d55862a89bc",
-    "publishedSha256": "07c7d006038a009be4043035ab5b358771fcbf773439c28f8b0b5d55862a89bc",
+    "sourceSha256": "b62c7a4e8668fcc16a9bf4c5081581b28a1b870a3e3a8f6a16b7b729e4136751",
+    "publishedSha256": "b62c7a4e8668fcc16a9bf4c5081581b28a1b870a3e3a8f6a16b7b729e4136751",
     "projection": false
   },
   {
@@ -1189,8 +1189,8 @@
   },
   {
     "key": "CSCI3160/T08-SCC线性实现与汇分量.md",
-    "sourceSha256": "d4e979be8a329671978983a9e9f13fa0ad10af22852427ca65c223de6d02af14",
-    "publishedSha256": "d4e979be8a329671978983a9e9f13fa0ad10af22852427ca65c223de6d02af14",
+    "sourceSha256": "5a12b887afe99af25a23b025cbe59912997334c2d53745a5eb0ecfe6aba78ff9",
+    "publishedSha256": "5a12b887afe99af25a23b025cbe59912997334c2d53745a5eb0ecfe6aba78ff9",
     "projection": false
   },
   {
@@ -1201,8 +1201,8 @@
   },
   {
     "key": "CSCI3160/T10-负环检测与恢复.md",
-    "sourceSha256": "1f9ebcb34febdd9e02bcc4b0da94df57f8a5c5f1f35794d30b47a41b51db1488",
-    "publishedSha256": "4d70f3b54fa31705c83186f3b40010520c4fcff516625ff4b0e5d3d855006f70",
+    "sourceSha256": "dfce86e8834426c721fdad1b9a0c6210ee0f186af25aa4546a70267e14aa4e21",
+    "publishedSha256": "40046ed4a74dde16bf0b4a19bab6fbe2552b5ba38dfbb27732e56503395198ec",
     "projection": true
   },
   {
@@ -1714,5 +1714,47 @@
     "sourceSha256": "20d230de1c4e5399a467338aa561ac6af06ae4d09a653f0546b17a0402b5f3fe",
     "publishedSha256": "cebec125fc29d4d5a3ef0d9dc6124f3f8eea550d4e280f922f05a2c0d86a5851",
     "projection": true
+  },
+  {
+    "key": "CSCI3160/L07-钢条切割-20261113.md",
+    "sourceSha256": "0ecbb429bdf4488913408ee14bbd13698e9228ebe7692ecaefa1512e2f659faf",
+    "publishedSha256": "ff0b909c0b2ca4427ddf398eba26fc6680df23c8c71ae3cd67c01770c2cddc9b",
+    "projection": true
+  },
+  {
+    "key": "CSCI3160/L09-最长公共子序列-20261113.md",
+    "sourceSha256": "34a2c8a8df40ab0e5cde50d47d0374c08852f5a433fe895264c92cae2e2eab59",
+    "publishedSha256": "51f3aa547e7040dac077ba605493733ffe822e34ac12986f086875ce957e6384",
+    "projection": true
+  },
+  {
+    "key": "CSCI3160/L10-最优BST-20261113.md",
+    "sourceSha256": "31f06545ac7169966999fbdc24b7d559a72cdaa24f278e14b6d47456438c36f0",
+    "publishedSha256": "31f06545ac7169966999fbdc24b7d559a72cdaa24f278e14b6d47456438c36f0",
+    "projection": false
+  },
+  {
+    "key": "CSCI3160/L16-最大流-20261113.md",
+    "sourceSha256": "6012a9f338035f34a99d12f7a39dd5a51990153f37b84d705c27128877474e50",
+    "publishedSha256": "6012a9f338035f34a99d12f7a39dd5a51990153f37b84d705c27128877474e50",
+    "projection": false
+  },
+  {
+    "key": "CSCI3160/T07A-白路径定理证明.md",
+    "sourceSha256": "57bc76775bb42d0146bdf9bf6558bf7bcbe6c610be1a731cfda3792240e8f169",
+    "publishedSha256": "57bc76775bb42d0146bdf9bf6558bf7bcbe6c610be1a731cfda3792240e8f169",
+    "projection": false
+  },
+  {
+    "key": "CSCI3160/T08-SCC线性实现-20261113.md",
+    "sourceSha256": "5cf7010ed0d3c07eaf4805898b1a924cf8463bde9fb67dec67a308a44343402c",
+    "publishedSha256": "5cf7010ed0d3c07eaf4805898b1a924cf8463bde9fb67dec67a308a44343402c",
+    "projection": false
+  },
+  {
+    "key": "CSCI3160/T10-负环检测与恢复-20261113.md",
+    "sourceSha256": "ed9b71f690f8336a104826a9fea9361286d98fdc4c175a0e7f35f1607031d7dd",
+    "publishedSha256": "ed9b71f690f8336a104826a9fea9361286d98fdc4c175a0e7f35f1607031d7dd",
+    "projection": false
   }
 ]
