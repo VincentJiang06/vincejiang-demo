@@ -432,6 +432,18 @@
     "projection": false
   },
   {
+    "key": "CSCI3130/T07-P1-期中判断题-2026T1.md",
+    "sourceSha256": "eb49f4d99b0d9051c101a9677b91607dcfa4046ca6d717042a0359c5a85c5c66",
+    "publishedSha256": "eb49f4d99b0d9051c101a9677b91607dcfa4046ca6d717042a0359c5a85c5c66",
+    "projection": false
+  },
+  {
+    "key": "CSCI3130/T07-P2-期中自动机构造-2026T1.md",
+    "sourceSha256": "b60983b7866528da36e56300b95a97c4e555ee76f838e92da5c7520e8acd55ca",
+    "publishedSha256": "b60983b7866528da36e56300b95a97c4e555ee76f838e92da5c7520e8acd55ca",
+    "projection": false
+  },
+  {
     "key": "CSCI3130/T07-P2-双带偶回文.md",
     "sourceSha256": "1f3971550daa3cedf330df60e9739d61ff1e29d07528385ae9668cb90d5aae95",
     "publishedSha256": "1f3971550daa3cedf330df60e9739d61ff1e29d07528385ae9668cb90d5aae95",
@@ -444,16 +456,46 @@
     "projection": false
   },
   {
+    "key": "CSCI3130/T07-P3-期中正则表达式-2026T1.md",
+    "sourceSha256": "3b776bb86fdc67164c17fa7c19dcb04cebea1bd70e5352d131ccf30ce86b9f6d",
+    "publishedSha256": "3b776bb86fdc67164c17fa7c19dcb04cebea1bd70e5352d131ccf30ce86b9f6d",
+    "projection": false
+  },
+  {
     "key": "CSCI3130/T07-P4-可数与不可识别.md",
     "sourceSha256": "45dcdde3d2ee02f7dbf05714d55f968462feb2f4079e1a730924716bc9d80c4e",
     "publishedSha256": "45dcdde3d2ee02f7dbf05714d55f968462feb2f4079e1a730924716bc9d80c4e",
     "projection": false
   },
   {
-    "key": "CSCI3150/阅读导航.md",
-    "sourceSha256": "83c75ddd11ef2f2a3b881e7ff5c0a99e9d63f1606e9e424237f82456265f9dad",
-    "publishedSha256": "3faf8ee4c0b50e9cd8000997060ea4825b5f9e331f552c236659b9e277d73d19",
+    "key": "CSCI3130/T07-P4-期中泵引理-2026T1.md",
+    "sourceSha256": "449ed78e26dbd2bff39a1249a7844a4740e7477432ef479b5cc42bd099f78265",
+    "publishedSha256": "449ed78e26dbd2bff39a1249a7844a4740e7477432ef479b5cc42bd099f78265",
+    "projection": false
+  },
+  {
+    "key": "CSCI3130/T07-P5-期中文法与范式-2026T1.md",
+    "sourceSha256": "2ca2c67cba8189b3c0390d71be3939d3cfedea8bcc5670d6c79336a97a386cf7",
+    "publishedSha256": "2ca2c67cba8189b3c0390d71be3939d3cfedea8bcc5670d6c79336a97a386cf7",
+    "projection": false
+  },
+  {
+    "key": "CSCI3130/T08-Quiz04逐题详解.md",
+    "sourceSha256": "20d230de1c4e5399a467338aa561ac6af06ae4d09a653f0546b17a0402b5f3fe",
+    "publishedSha256": "cebec125fc29d4d5a3ef0d9dc6124f3f8eea550d4e280f922f05a2c0d86a5851",
     "projection": true
+  },
+  {
+    "key": "CSCI3150/阅读导航.md",
+    "sourceSha256": "1149c006a056ebb12b8c8072c876e7fc48755b635cc21ecf8f0be2379709484d",
+    "publishedSha256": "1149c006a056ebb12b8c8072c876e7fc48755b635cc21ecf8f0be2379709484d",
+    "projection": false
+  },
+  {
+    "key": "CSCI3150/正文更新说明.md",
+    "sourceSha256": "2b1fffe8d3c0fd70fc12331bc041e05db9379a491655d9fac3e90bfb331a5935",
+    "publishedSha256": "2b1fffe8d3c0fd70fc12331bc041e05db9379a491655d9fac3e90bfb331a5935",
+    "projection": false
   },
   {
     "key": "CSCI3150/HW01-代码检查-20261006.md",
@@ -487,104 +529,188 @@
   },
   {
     "key": "CSCI3150/L00-课程介绍.md",
-    "sourceSha256": "705595930b9cae073b058f1d862d49e9fc4ab922a264b19f2797f66b32590350",
-    "publishedSha256": "8bd30ce14c6e6a2005569f5ab6a747b6262211d89da89d0fb960ce76497af0a7",
+    "sourceSha256": "8590d618e34b7232c23af1daa42882e8d83bcc1dab0eee70c1b2c316721932c9",
+    "publishedSha256": "35aca6b58eb59c672d3ff38f1f78000f9fceb2ffb8c6dfbc560cb3d25ef577d5",
     "projection": true
   },
   {
     "key": "CSCI3150/L01-课程概览.md",
-    "sourceSha256": "c2beb96db9f3f8ab250551a2da2adac83f59aa17c74942e2c2bcad4c8595a7b9",
-    "publishedSha256": "aae7b9631f5b6a34436523b349f102ae2ff13c54568733d0392b850c7e2e826e",
+    "sourceSha256": "acf717cc92a1d49988a8b605aad54b0e467d5e3fb12773959a8e22f67bd6251c",
+    "publishedSha256": "c7e43a4311cbafeff92bd90acffbcf6b9cc177a03c8b8af20821158866690100",
     "projection": true
   },
   {
     "key": "CSCI3150/L02-系统调用-进程.md",
-    "sourceSha256": "0504565306fc61ff6b79fa83f6cc2e544873a22330da4307ebf533887c1cf20a",
-    "publishedSha256": "780c62ad9fb36f89bee848f625893e4aa392cabd3238d17076ec47835510bace",
+    "sourceSha256": "656da32d64f202a6b0b42e99ea6d5a557b61a971aea25239296d3e94a314bbf9",
+    "publishedSha256": "3b146767f2f5fe8a275347a3dc1894a3871dd558c0827c23922ae917dec0bc3e",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L03-系统调用-内存-2026T1.md",
+    "sourceSha256": "4419ecea494fb0c65c9de3f1c07a20c522bfc591a078582ae4939a02f5f4eb9b",
+    "publishedSha256": "d4ed4b45f446a443fbb82ba9f5f98203c3ad93c91e540f99ba26b4b6bf240fa1",
     "projection": true
   },
   {
     "key": "CSCI3150/L03-系统调用-内存.md",
-    "sourceSha256": "c5fc83cdfb2c0104415305012f662d299a5d58b02166290a82a9f4b1d155a23b",
-    "publishedSha256": "c598e015cdffeb670d78c2bf62c95d23b34b2722db9f4f8b28b0f8f7156de5d5",
+    "sourceSha256": "14e32c1515662de951e41bc6e948629ed8917d1794722588b0b9dd0a47661e54",
+    "publishedSha256": "afcb66b4a8a3eada92e39e44ce33de9f7c8e0b6dbf2a9a1a468f76475c3d4b28",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L04-系统调用-文件与目录-2026T1.md",
+    "sourceSha256": "1ddf9aa971380a16c8692b7dac0c54c6b67e621f3a723c04b2cf3eaeef79197f",
+    "publishedSha256": "523333b21295eb94c8bb0a105d046005fdfce9c56131953301d26be1d91d27ea",
     "projection": true
   },
   {
     "key": "CSCI3150/L04-系统调用-文件与目录.md",
-    "sourceSha256": "0b3dab30e9609e6120cc5408f18b811ae173a3171f2fc872fe60ecc4b4c12621",
-    "publishedSha256": "898a456323ef4ab1622c86d757f66f9b436ad4701e156c0ad7cbac7eb86917cb",
+    "sourceSha256": "56fda73ae31047c622be1155784e25ad2af2c688c9fe8a139aacbf4f9d3ad8cd",
+    "publishedSha256": "1dd67a27e8f3dd675f052040f2d170ac821b17868c073e153b36b94cea9088c3",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L05-文件系统实现-2026T1.md",
+    "sourceSha256": "b2f764dac4d68f5f46651275e4d809a3df43b9ae7725a1e4320f07ba70381c54",
+    "publishedSha256": "903bdc40d365d6d8eea4fd8faf1aa96aa0009430023983ba5018ece7b0e01b7b",
     "projection": true
   },
   {
     "key": "CSCI3150/L05-文件系统实现.md",
-    "sourceSha256": "2c937ac941d2b9c4fc788124015b2bf3ec4dbcbf44d0d4cbc0535115cc73bcc2",
-    "publishedSha256": "246b2c220ec3a08dc4ac8e2aaecc18c82e27af451d259db1d20fe0a36800ec36",
+    "sourceSha256": "dd9426a56174b64ce0a29e33db614adefbb9fe4eb3df0805e025745a184b55e3",
+    "publishedSha256": "ef2a1f28b2b970f8f580115cb1b3e77dc1ee72488323b58ed0b4100f824b8fb3",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L06-IO设备-2026T1.md",
+    "sourceSha256": "f4bc9500dbabda88ee1619b6e37ff93c11148ea2a4f958eb98b64e89e3177b6a",
+    "publishedSha256": "db089e8df8e830595e4fae2596af72a5b90011dfc4a737ccf8c631b098f31e74",
     "projection": true
   },
   {
     "key": "CSCI3150/L06-IO设备.md",
-    "sourceSha256": "aed114faf39fef667481fcaaeeb27531e765f5314d03501aae79a1ab289f32f6",
-    "publishedSha256": "2154397ab7503897c3725c353b7e1e05d08583cd8dc3f84920e075e3929d420e",
+    "sourceSha256": "dbd86b589b37c404ef2b57ed2c260dc0da823c1464ce340941b4a17719770854",
+    "publishedSha256": "4842561181647544caef8a285ed104c3025da09494d4f3eb785ee2c003de1504",
     "projection": true
   },
   {
     "key": "CSCI3150/L07-P1-进程抽象.md",
-    "sourceSha256": "2aee9770a8af052d740304072902383dd9fe8f248ecba5c85cd0475fbcd82427",
-    "publishedSha256": "ad4a2120b710522fb2b11f0f245e6e0900e04e5dc1c1b69fe9e958baf60e6e21",
+    "sourceSha256": "c1eb9314ad5f5692d49eef6610fc9e534d7b4435ad092b697ed3388344ade986",
+    "publishedSha256": "a7c987a269f4e5819c209edc133a80adf10663aa05ab25e872e1873151beddbd",
     "projection": true
   },
   {
     "key": "CSCI3150/L07-P2-受限直接执行.md",
-    "sourceSha256": "1e53bc88ccbfc3dc6ca0f07767d30c7f1e2e92226f22a800582ddba210daa28d",
-    "publishedSha256": "dcfa4572cc1e2a5085c5ad642e762160d256360efbb733c4f551e50a8a182e92",
+    "sourceSha256": "8ec5cafdee3ba51ca39eec78ee8f9ac566be29cbe0935c4e31a7f4179fb4f5e0",
+    "publishedSha256": "9a914c91f1d349df6fe51c5ad86b2feab3686558e477fdabd3d6364b5285487d",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L08-P1-调度入门-2026T1.md",
+    "sourceSha256": "82afd91aa3d9169748e597d934ae7aae927eb297f65ab58ce7a1cfa986b33c41",
+    "publishedSha256": "0ce89933750d0ebd9ca977d4d09e378954b6339190a0fd99144b0bef1ebef141",
     "projection": true
   },
   {
     "key": "CSCI3150/L08-P1-调度入门.md",
-    "sourceSha256": "2ce34487255109067de16da1fc145ea645d974279e3b20e3d3a4c2d2dd599493",
-    "publishedSha256": "f51e82abd6923de1307b000fac71a5a59eb72c47f1e9f640c74d37fcaadc5e6a",
+    "sourceSha256": "a94a28519386fff4164b42423f809a46c19d215d6398c9a1b1d5a193786e7640",
+    "publishedSha256": "fca828240e4077eab80b5c0c0c6e30ef6439abbbebbf033a84de16ac1616778a",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L08-P2-多级反馈队列-2026T1.md",
+    "sourceSha256": "6ba6d3cbbd2e95340f433c7dc29b1b5c18ab17d6e01b0cf40247ba797b6b37cd",
+    "publishedSha256": "b77c8f6e2f5a1b8fedfac22b49acb8e7c98bd125e66ba5a0b43993249299fa4d",
     "projection": true
   },
   {
     "key": "CSCI3150/L08-P2-多级反馈队列.md",
-    "sourceSha256": "536d64ec24e4952f5ac3011c1df73c8f22d72d68961f6c377653282d278a98e0",
-    "publishedSha256": "2a31d45ffd157e71740107ffe685e2610dd1fc29031cbbcbf62a14a0e59b50f3",
+    "sourceSha256": "977e8504d3c2ac98475f2aae2ea18c6c653b7ca6fb4e1b70276ef28e50edb4e1",
+    "publishedSha256": "407ff561f6365fed3d2ca5bc31dae84c4bb11351c43461e422598785fb214d4a",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L08-P3-比例份额-2026T1.md",
+    "sourceSha256": "aac3b8b9e5ca795e776d9cfe8ba6e6a736348f9c5b1703a9de79f4995bb0ed53",
+    "publishedSha256": "542a22dd341e740b905e949e131b4bd39fd2986801e7eeccd666a575c6722111",
     "projection": true
   },
   {
     "key": "CSCI3150/L08-P3-比例份额.md",
-    "sourceSha256": "c7bacae47a61f8cf943ec446e0af793ebc9cc45038f93370787d89387d0bc533",
-    "publishedSha256": "c75b7c4683f007eb1fad67deee8b497dd29824a10e0712d68a1ab52e88442dbe",
+    "sourceSha256": "68c0699bb8820a762b0bd40e3f52bfd05de22dd226eb0a17bd4c28df5c6713a2",
+    "publishedSha256": "d8d24de65be6435d267a1d04967ee10994e025b2a575ab2d9160b874f79db0b7",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L08-P4-多处理器调度-2026T1.md",
+    "sourceSha256": "5e39da2ae75617d9558e9b82eee9b110c00177bcf1f73d921aabdde512341f3f",
+    "publishedSha256": "05a4c25787ca27d18db8b6f917f87c2b5c4cb0e5ec96fef7c7cf5e69ab784dba",
     "projection": true
   },
   {
     "key": "CSCI3150/L08-P4-多处理器调度.md",
-    "sourceSha256": "51ab04cba6b8ba4aa0d4eaccbe0d7e6f78c5c50b13067323304aaac0b12c3c5d",
-    "publishedSha256": "35fbbe9b9f03fd63e4df8676ac9bee4915d3a1b1968fa390a278c1988e1a32bf",
+    "sourceSha256": "ce7c5d57ac5ad6abd8eb972dcfb0aaac56e2418b84e48d2f2a5ac393cca7cb9b",
+    "publishedSha256": "d0a885e1c2b525039c88f8dcc320ff60c6e76c5862cf833f7a1e270867331804",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L09-P1-地址空间-2026T1.md",
+    "sourceSha256": "f495c2c9e0f4d2e14530e7b7df6b53fbb60e7aa369e6e1d045394b1e6f4e2da9",
+    "publishedSha256": "738e93bcefd97375939c02357fcdd66d3f98196e8678b373da880a3de9f05144",
     "projection": true
   },
   {
     "key": "CSCI3150/L09-P1-地址空间.md",
-    "sourceSha256": "c6a03f05b9a606ddfd6cb2f600ba706d2f6971df2b9f5c67d27ec57ad62e4b25",
-    "publishedSha256": "d0575bbadd22a69d9ee139d9bf0dff58790beef41c4235f85ced24a51a9f3017",
+    "sourceSha256": "1ef903d8481a30b76a1949d13fe4627c54aa1dc0531edc73cc81dee71896a4c6",
+    "publishedSha256": "8da5411c7a247b536184535bdfff91e9b56645d3f30efc560057b63eeadb44a6",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L09-P2-地址转换-2026T1.md",
+    "sourceSha256": "9f3c0773ca30d73dfbb6558e1377c2198f01858ecfbef384420d54cfdc9d67b0",
+    "publishedSha256": "b8adca9dcad22bb4ed7474eeb1c5acf6e91e9d26179cac5b7a6fcf197df6d52a",
     "projection": true
   },
   {
     "key": "CSCI3150/L09-P2-地址转换.md",
-    "sourceSha256": "dba3068a25020943eaa1bd90841968777ce8bfcd337efca24a520623dee9e88d",
-    "publishedSha256": "9a95bfd6640eb8cbda8b49e5bd2269d9aa10c97c523418a685a327b2b5315124",
+    "sourceSha256": "50c523782ff61225cb02c9b04e4444eb6fefc0000b809180a6459a2e48893870",
+    "publishedSha256": "04730888dd4e83cceb4cda441e4963bb70e5737569afc7f22ed098d1cab30aaf",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L10-P1-分段-2026T1.md",
+    "sourceSha256": "07ecc027dec6fd7103c14f631f0753410a0bd45dc2030cb954e37caf0b90a1be",
+    "publishedSha256": "092d4210a57a8123893685749b508f88004baccdc2541509817790e21ac9b174",
     "projection": true
   },
   {
     "key": "CSCI3150/L10-P1-分段.md",
-    "sourceSha256": "2d3e89985a634fa6f9d98bd4cd51af440dc6a63480c8111a0497762089e2f36a",
-    "publishedSha256": "44bd96a5dd02fb6a48765a9844c41ca333bf5c83f3f64a35cff7eb16e9da89c5",
+    "sourceSha256": "7ce9cd1fcbab04a95a2ee04a780668b55b0d6bc588d615941e7caff3d0807933",
+    "publishedSha256": "b20d729036dddcfe0eebb288fdc648da28348e5492acebb999f1c4ad87947050",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L10-P2-分页-2026T1.md",
+    "sourceSha256": "dd0223e00507b0502a7e041be87e46e07155bd4ffa2e4388feedf6f45c853981",
+    "publishedSha256": "98f71173bab8a0687041fce7f9ad9b97111164538f031659fc8bb6596cc16450",
     "projection": true
   },
   {
     "key": "CSCI3150/L10-P2-分页.md",
-    "sourceSha256": "98a4b2bf9192db2b9b1f2dfca96f285f09d4779a58de016ff18e1f45e566cbc9",
-    "publishedSha256": "3d9e8bb4625fcbc54fb22e7caff5d9d2ac4c85790f800b86176cf5bf0a5db945",
+    "sourceSha256": "b63d7d9ffedf28f1c4286558d1a4a691977fcb527256477956af127d93984343",
+    "publishedSha256": "812d709145182ff8cfde04e2dd0a1d4956dc0fb086b38c6043ebf32bf49e6728",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L10-P3-地址转换例题-2026T1.md",
+    "sourceSha256": "988b6aadf37de0e3f16c7f0d616dfc578cee368ae074ac7f430d803a1cc38c35",
+    "publishedSha256": "316e259e2b28c5d801451eaf48faebbfcea4bc9899daa1f56d0052fe4f70ac8b",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L11-P1-TLB-2026T1.md",
+    "sourceSha256": "3f3b7826ba7b1a81acee39dbd1f65ff50245e70516de140ea2b2fa880baa0253",
+    "publishedSha256": "250cb6f15992324a59792cebc8e5158a39d62527659bfab1df01253e1868f85b",
     "projection": true
   },
   {
@@ -594,9 +720,21 @@
     "projection": true
   },
   {
+    "key": "CSCI3150/L11-P2-高级分页-2026T1.md",
+    "sourceSha256": "ba86e057d3d362c7435469b387058141e3b179382b19e0a5cda93ffe49bf4497",
+    "publishedSha256": "691383d255bcc5d5b5073541284293cf2c36e91955755480cbe7fd9937653119",
+    "projection": true
+  },
+  {
     "key": "CSCI3150/L11-P2-高级分页.md",
     "sourceSha256": "123166fcb623aeae9a055c59636d4e6737ba0460c7fd117c8242ef9cf5f4449d",
     "publishedSha256": "643ea94e06384a194cf55d7de89d43c8f664e6f2481716099d9dcf0debf65968",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L12-交换空间与缺页-2026T1.md",
+    "sourceSha256": "98c9f20ccf9d1805e04845902dd57eea53457172058d1c69afd7950088a28e48",
+    "publishedSha256": "1acd16b4c93c26c4c9cf87f2da780e57872a499736d989b7fe6137c0740d202d",
     "projection": true
   },
   {
@@ -606,9 +744,21 @@
     "projection": true
   },
   {
+    "key": "CSCI3150/L13-P1-线程与竞争-2026T1.md",
+    "sourceSha256": "6a7ba021ed524a5dc47a524d79b01af37d40c4e791b7d2cfdc49a3e3627bae31",
+    "publishedSha256": "8a773b5aaf4e069b0eb53546227d04adfa9e8b4fa28662666002092fa153c285",
+    "projection": true
+  },
+  {
     "key": "CSCI3150/L13-P1-线程与竞争.md",
     "sourceSha256": "32ccc895d0b3f3845449e36f069f09340c9a5be5e20dfc3452e57844eedd09b9",
     "publishedSha256": "ffdec430f7a31cc93a8d0f4ea35ed31464d057753fb9d2dbec99b0fd6bda5fe8",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L13-P2-线程API-2026T1.md",
+    "sourceSha256": "a13be158a2850dcbe3c216e01df70374a196e50071fa0d4258c5f6c40027c4f9",
+    "publishedSha256": "3106e15caa1bb198774ce63c3be2e3113f5de67a1676fd1ba5e0e6e1efa6c4b5",
     "projection": true
   },
   {
@@ -747,36 +897,6 @@
     "key": "CSCI3150/T12-FAT文件系统.md",
     "sourceSha256": "e32558d88b07283226ec8c0481e71be28517560cd342cfd180b976b0dc99e427",
     "publishedSha256": "7d5b1ed6c89e70fa1b561a68625f5c34f6f407c0047094bab3f8d04a72b7a7ac",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L11-P1-TLB-2026T1.md",
-    "sourceSha256": "3f3b7826ba7b1a81acee39dbd1f65ff50245e70516de140ea2b2fa880baa0253",
-    "publishedSha256": "250cb6f15992324a59792cebc8e5158a39d62527659bfab1df01253e1868f85b",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L11-P2-高级分页-2026T1.md",
-    "sourceSha256": "ba86e057d3d362c7435469b387058141e3b179382b19e0a5cda93ffe49bf4497",
-    "publishedSha256": "691383d255bcc5d5b5073541284293cf2c36e91955755480cbe7fd9937653119",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L12-交换空间与缺页-2026T1.md",
-    "sourceSha256": "98c9f20ccf9d1805e04845902dd57eea53457172058d1c69afd7950088a28e48",
-    "publishedSha256": "1acd16b4c93c26c4c9cf87f2da780e57872a499736d989b7fe6137c0740d202d",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L13-P1-线程与竞争-2026T1.md",
-    "sourceSha256": "6a7ba021ed524a5dc47a524d79b01af37d40c4e791b7d2cfdc49a3e3627bae31",
-    "publishedSha256": "8a773b5aaf4e069b0eb53546227d04adfa9e8b4fa28662666002092fa153c285",
-    "projection": true
-  },
-  {
-    "key": "CSCI3150/L13-P2-线程API-2026T1.md",
-    "sourceSha256": "a13be158a2850dcbe3c216e01df70374a196e50071fa0d4258c5f6c40027c4f9",
-    "publishedSha256": "3106e15caa1bb198774ce63c3be2e3113f5de67a1676fd1ba5e0e6e1efa6c4b5",
     "projection": true
   },
   {
@@ -1068,6 +1188,12 @@
     "projection": true
   },
   {
+    "key": "CSCI3160/L07-钢条切割-20261113.md",
+    "sourceSha256": "0ecbb429bdf4488913408ee14bbd13698e9228ebe7692ecaefa1512e2f659faf",
+    "publishedSha256": "ff0b909c0b2ca4427ddf398eba26fc6680df23c8c71ae3cd67c01770c2cddc9b",
+    "projection": true
+  },
+  {
     "key": "CSCI3160/L07-钢条切割与最优方案恢复.md",
     "sourceSha256": "a66a42a43eba4d90c520720f75fcf2d927a733c04a619955057dab06c3b09adc",
     "publishedSha256": "f904256f6f16a258cb30abd1c99966b0840762b1062c46078e63312b40caa5f4",
@@ -1080,6 +1206,12 @@
     "projection": true
   },
   {
+    "key": "CSCI3160/L09-最长公共子序列-20261113.md",
+    "sourceSha256": "34a2c8a8df40ab0e5cde50d47d0374c08852f5a433fe895264c92cae2e2eab59",
+    "publishedSha256": "51f3aa547e7040dac077ba605493733ffe822e34ac12986f086875ce957e6384",
+    "projection": true
+  },
+  {
     "key": "CSCI3160/L09-最长公共子序列与回溯.md",
     "sourceSha256": "722647594764fc48d78e792d8992039ec15ab31c17a8e791ab1fe18c39e7c2fd",
     "publishedSha256": "907901dd12832b822bd90d13a1068ae855ed95440115ca130302131642d20005",
@@ -1089,6 +1221,12 @@
     "key": "CSCI3160/L10-最优二叉搜索树.md",
     "sourceSha256": "f5fe78c43941e8b09880f4fcd2304ff0c85d243f3110c150e91f8caee641b148",
     "publishedSha256": "f5fe78c43941e8b09880f4fcd2304ff0c85d243f3110c150e91f8caee641b148",
+    "projection": false
+  },
+  {
+    "key": "CSCI3160/L10-最优BST-20261113.md",
+    "sourceSha256": "31f06545ac7169966999fbdc24b7d559a72cdaa24f278e14b6d47456438c36f0",
+    "publishedSha256": "31f06545ac7169966999fbdc24b7d559a72cdaa24f278e14b6d47456438c36f0",
     "projection": false
   },
   {
@@ -1120,6 +1258,12 @@
     "sourceSha256": "96c17d3eb62d2e4ef4bfe69fd09adfc2acd622ae1d8388cade4fda93819995bc",
     "publishedSha256": "cd9199dfb50d7358f0863e00dda1df630da479ff10d8e504d1eb712bd47f9b95",
     "projection": true
+  },
+  {
+    "key": "CSCI3160/L16-最大流-20261113.md",
+    "sourceSha256": "6012a9f338035f34a99d12f7a39dd5a51990153f37b84d705c27128877474e50",
+    "publishedSha256": "6012a9f338035f34a99d12f7a39dd5a51990153f37b84d705c27128877474e50",
+    "projection": false
   },
   {
     "key": "CSCI3160/L16-最大流、残量网络与最小割.md",
@@ -1218,6 +1362,18 @@
     "projection": false
   },
   {
+    "key": "CSCI3160/T07A-白路径定理证明.md",
+    "sourceSha256": "57bc76775bb42d0146bdf9bf6558bf7bcbe6c610be1a731cfda3792240e8f169",
+    "publishedSha256": "57bc76775bb42d0146bdf9bf6558bf7bcbe6c610be1a731cfda3792240e8f169",
+    "projection": false
+  },
+  {
+    "key": "CSCI3160/T08-SCC线性实现-20261113.md",
+    "sourceSha256": "5cf7010ed0d3c07eaf4805898b1a924cf8463bde9fb67dec67a308a44343402c",
+    "publishedSha256": "5cf7010ed0d3c07eaf4805898b1a924cf8463bde9fb67dec67a308a44343402c",
+    "projection": false
+  },
+  {
     "key": "CSCI3160/T08-SCC线性实现与汇分量.md",
     "sourceSha256": "5a12b887afe99af25a23b025cbe59912997334c2d53745a5eb0ecfe6aba78ff9",
     "publishedSha256": "5a12b887afe99af25a23b025cbe59912997334c2d53745a5eb0ecfe6aba78ff9",
@@ -1227,6 +1383,12 @@
     "key": "CSCI3160/T09-Floyd-Warshall全点对路径.md",
     "sourceSha256": "ca9c4b22ec111d6c9febe59f378c4202c30077cfd27a4515cd87b55a387f911b",
     "publishedSha256": "ca9c4b22ec111d6c9febe59f378c4202c30077cfd27a4515cd87b55a387f911b",
+    "projection": false
+  },
+  {
+    "key": "CSCI3160/T10-负环检测与恢复-20261113.md",
+    "sourceSha256": "ed9b71f690f8336a104826a9fea9361286d98fdc4c175a0e7f35f1607031d7dd",
+    "publishedSha256": "ed9b71f690f8336a104826a9fea9361286d98fdc4c175a0e7f35f1607031d7dd",
     "projection": false
   },
   {
@@ -1708,83 +1870,5 @@
     "sourceSha256": "3ddd68f91bb04715c5911c2db808c3e83922b541a25c61482e772bfe9551d5ec",
     "publishedSha256": "7f2cbe790c3632f25481299eae91103a86236585c8008dd10b0697ba42344cea",
     "projection": true
-  },
-  {
-    "key": "CSCI3130/T07-P1-期中判断题-2026T1.md",
-    "sourceSha256": "eb49f4d99b0d9051c101a9677b91607dcfa4046ca6d717042a0359c5a85c5c66",
-    "publishedSha256": "eb49f4d99b0d9051c101a9677b91607dcfa4046ca6d717042a0359c5a85c5c66",
-    "projection": false
-  },
-  {
-    "key": "CSCI3130/T07-P2-期中自动机构造-2026T1.md",
-    "sourceSha256": "b60983b7866528da36e56300b95a97c4e555ee76f838e92da5c7520e8acd55ca",
-    "publishedSha256": "b60983b7866528da36e56300b95a97c4e555ee76f838e92da5c7520e8acd55ca",
-    "projection": false
-  },
-  {
-    "key": "CSCI3130/T07-P3-期中正则表达式-2026T1.md",
-    "sourceSha256": "3b776bb86fdc67164c17fa7c19dcb04cebea1bd70e5352d131ccf30ce86b9f6d",
-    "publishedSha256": "3b776bb86fdc67164c17fa7c19dcb04cebea1bd70e5352d131ccf30ce86b9f6d",
-    "projection": false
-  },
-  {
-    "key": "CSCI3130/T07-P4-期中泵引理-2026T1.md",
-    "sourceSha256": "449ed78e26dbd2bff39a1249a7844a4740e7477432ef479b5cc42bd099f78265",
-    "publishedSha256": "449ed78e26dbd2bff39a1249a7844a4740e7477432ef479b5cc42bd099f78265",
-    "projection": false
-  },
-  {
-    "key": "CSCI3130/T07-P5-期中文法与范式-2026T1.md",
-    "sourceSha256": "2ca2c67cba8189b3c0390d71be3939d3cfedea8bcc5670d6c79336a97a386cf7",
-    "publishedSha256": "2ca2c67cba8189b3c0390d71be3939d3cfedea8bcc5670d6c79336a97a386cf7",
-    "projection": false
-  },
-  {
-    "key": "CSCI3130/T08-Quiz04逐题详解.md",
-    "sourceSha256": "20d230de1c4e5399a467338aa561ac6af06ae4d09a653f0546b17a0402b5f3fe",
-    "publishedSha256": "cebec125fc29d4d5a3ef0d9dc6124f3f8eea550d4e280f922f05a2c0d86a5851",
-    "projection": true
-  },
-  {
-    "key": "CSCI3160/L07-钢条切割-20261113.md",
-    "sourceSha256": "0ecbb429bdf4488913408ee14bbd13698e9228ebe7692ecaefa1512e2f659faf",
-    "publishedSha256": "ff0b909c0b2ca4427ddf398eba26fc6680df23c8c71ae3cd67c01770c2cddc9b",
-    "projection": true
-  },
-  {
-    "key": "CSCI3160/L09-最长公共子序列-20261113.md",
-    "sourceSha256": "34a2c8a8df40ab0e5cde50d47d0374c08852f5a433fe895264c92cae2e2eab59",
-    "publishedSha256": "51f3aa547e7040dac077ba605493733ffe822e34ac12986f086875ce957e6384",
-    "projection": true
-  },
-  {
-    "key": "CSCI3160/L10-最优BST-20261113.md",
-    "sourceSha256": "31f06545ac7169966999fbdc24b7d559a72cdaa24f278e14b6d47456438c36f0",
-    "publishedSha256": "31f06545ac7169966999fbdc24b7d559a72cdaa24f278e14b6d47456438c36f0",
-    "projection": false
-  },
-  {
-    "key": "CSCI3160/L16-最大流-20261113.md",
-    "sourceSha256": "6012a9f338035f34a99d12f7a39dd5a51990153f37b84d705c27128877474e50",
-    "publishedSha256": "6012a9f338035f34a99d12f7a39dd5a51990153f37b84d705c27128877474e50",
-    "projection": false
-  },
-  {
-    "key": "CSCI3160/T07A-白路径定理证明.md",
-    "sourceSha256": "57bc76775bb42d0146bdf9bf6558bf7bcbe6c610be1a731cfda3792240e8f169",
-    "publishedSha256": "57bc76775bb42d0146bdf9bf6558bf7bcbe6c610be1a731cfda3792240e8f169",
-    "projection": false
-  },
-  {
-    "key": "CSCI3160/T08-SCC线性实现-20261113.md",
-    "sourceSha256": "5cf7010ed0d3c07eaf4805898b1a924cf8463bde9fb67dec67a308a44343402c",
-    "publishedSha256": "5cf7010ed0d3c07eaf4805898b1a924cf8463bde9fb67dec67a308a44343402c",
-    "projection": false
-  },
-  {
-    "key": "CSCI3160/T10-负环检测与恢复-20261113.md",
-    "sourceSha256": "ed9b71f690f8336a104826a9fea9361286d98fdc4c175a0e7f35f1607031d7dd",
-    "publishedSha256": "ed9b71f690f8336a104826a9fea9361286d98fdc4c175a0e7f35f1607031d7dd",
-    "projection": false
   }
 ]
