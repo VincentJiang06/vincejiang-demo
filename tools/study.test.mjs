@@ -68,11 +68,24 @@ test('generated study pages version their UI assets so updated styles reach retu
   }
   assert.doesNotMatch(hub,/CSCI3150|CSCI3230|模拟卷/);
   for(const entry of ['study/index.html','study/2026T1/index.html'])assert.match(readFileSync(join(out,entry),'utf8'),/href="\/study\/2026T1\/midterm\/"/);
+  const redirects=JSON.parse(readFileSync(new URL('./study-redirects.json',import.meta.url),'utf8'));
+  const nginx=readFileSync(new URL('../docker/site.conf',import.meta.url),'utf8');
+  const catalog=readFileSync(join(out,'study/2026T1/CSCI3150/index.html'),'utf8');
+  for(const [old,destination] of Object.entries(redirects)){
+   const [key,fragment]=destination.split('#');
+   const oldUrl='/study/2026T1/'+old.replace(/\.md$/,'.html');
+   const target='/study/2026T1/'+key.replace(/\.md$/,'.html');
+   const page=readFileSync(join(out,oldUrl.slice(1)),'utf8');
+   assert.match(page,/noindex,follow/);assert.doesNotMatch(page,/<article>/);
+   assert.ok(decodeURI(page).includes('href="'+target+(fragment?'#'+fragment:'')+'"'));
+   assert.ok(!decodeURI(catalog).includes('href="'+oldUrl+'"'),'retired URL absent from catalog');
+   assert.ok(nginx.includes('location = "'+oldUrl+'" { return 301 "'+encodeURI(target)+'$is_args$args'+(fragment?'#'+encodeURIComponent(fragment):'')+'"; }'),'exact 301 preserves query and destination');
+  }
   const retired=readFileSync(join(out,'study/2026T1/CSCI3130/L00-L06-期中全面复习.html'),'utf8');
   assert.match(retired,/noindex,follow/);
   assert.ok(decodeURI(retired).includes('url=/study/2026T1/CSCI3130/L01-L06-期中详细复习.html'));
   assert.doesNotMatch(retired,/<article>/);
-  for(const key of ['CSCI3230/HW01-2026T1-分级提示','CSCI3150/HW01-Shell分级提示-2026T1']){
+  for(const key of ['CSCI3230/HW01-2026T1-分级提示','CSCI3150/HW01-Shell分级提示']){
    const hint=readFileSync(join(out,'study/2026T1',key+'.html'),'utf8');
    const outside=hint.replace(/<article>[\s\S]*?<\/article>/,'');
    assert.doesNotMatch(outside,/相邻笔记|HW01[^"<>]*解析|HW01-Shell进程与管道/);

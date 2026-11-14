@@ -4,7 +4,7 @@
 > 用途：解释已完成的调度器、事件顺序和验证结果；这是 Programming Assignment 3，不是 progress assignment。
 > 提交：只交 `scheduler-impl.c`；截止 2026-11-19 23:59（UTC+8）。本次未上传或提交 Blackboard。
 > 工作文件：[scheduler-impl.c](课程工作目录/CSCI3150-Lab1/PA03/scheduler-impl.c)；便于提交的副本：[scheduler-impl.c](课程工作目录/Downloads/CSCI3150-PA3/scheduler-impl.c)。
-> 关联：[PA3、HW3 与最终 Project 的联系](PA03-与最终项目的联系-2026T1.md)。
+> 关联：[PA3、HW3 与最终 Project 的联系](PA03-与最终项目的联系.md)。
 
 ## 1. 这道题究竟要写什么
 
@@ -129,7 +129,7 @@ boost 的时间从 0 开始计算，不是“从第一次任务到达后过 S”
 
 ## 6. 与书面 HW3 的直接对照
 
-书面 HW3 的六进程数据不属于 PA3 默认输入，只是本次额外用来辨别规则的测试。完整对照见[关系说明](PA03-与最终项目的联系-2026T1.md)。
+书面 HW3 的六进程数据不属于 PA3 默认输入，只是本次额外用来辨别规则的测试。完整对照见[关系说明](PA03-与最终项目的联系.md)。
 
 把 HW3 数据放入 PA3 规则后，400 前相同；400 的 boost 顺序变成 **57、143、233、333、444**，不是书面题的逆序。接着运行：
 

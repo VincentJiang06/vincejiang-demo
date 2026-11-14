@@ -417,3 +417,12 @@ GENA2122名称依据现有课程材料的 Issues in American Culture & History�
 正式支持地址为 `https://vincejiang.com/netstall`（无尾斜杠），隐私政策为 `https://vincejiang.com/netstall#privacy`。静态源码从 `cellprobe/` 移到 `netstall/`；Nginx 精确路由直接提供 index.html，旧 `/cellprobe`、`/cellprobe/`、`/cellprobe/index.html` 及新路径尾斜杠/index.html 变体 301 到正式地址，保留查询参数，浏览器保留隐私 fragment。不使用 netstall 子域。复用现有 Tunnel / Traefik / svc-vincejiang 与标准 CI/CD，回滚沿用镜像 SHA 回滚。
 
 `tools/seo.mjs` 的 `publicPagePath` 将 `/netstall/index.html` 映射为 `/netstall`，构建 sitemap、静态元数据和审计共享映射；其余目录继续保留原有尾斜杠。SEO 集成测试验证新地址被收录且旧地址未残留。
+
+
+### CSCI3150 仅保留当期与短网址（2026-11-14）
+
+CSCI3150 的 Lecture 正文仅保留 2026T1 L00–L13；旧同名正文由已核对的当期稿替换，L14–L15 历史预习及 T01–T12 历史辅导退出发布清单。该课已发布的当期文件名去掉 `-2026T1`，正文中的来源版本与页码保留。其他课程不变。
+
+`tools/study-redirects.json` 记录 26 个改名 URL 与 16 个退出 URL。改名 URL 转到无后缀正文，退出且没有当期替代的 URL 转到阅读导航的“未收录的历史资料”。`docker/site.conf` 为每个旧 URL 设置精确 301 并保留查询参数；有对应正文的旧 fragment 由浏览器继承，当前稿保留对应旧锚点，无对应章节的历史锚点落在当前文章开头。Study 构建生成不含正文的 noindex 跳转页，供静态预览与无 Nginx 场景使用；这些页不进入目录、搜索或 sitemap。构建验证目标与 fragment，测试核对跳转清单、生成页和 Nginx 路由一致。
+
+只变更路径的保留文章沿用现有发布投影，避免覆盖网站已有内容；Project-Lab 对照仍是本地资料，不因清理版本自动公开正式提交包或代码。

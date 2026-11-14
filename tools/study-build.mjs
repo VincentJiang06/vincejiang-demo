@@ -9,6 +9,8 @@ const ROOT=fileURLToPath(new URL('../',import.meta.url));
 const assetVersion=f=>createHash('sha256').update(readFileSync(path.join(ROOT,'templates',f))).digest('hex').slice(0,12);
 const names={CSCI3130:'计算理论',CSCI3150:'操作系统',CSCI3160:'算法设计与分析',CSCI3230:'人工智能',GENA2122:'美国文化与历史议题'};
 const MIDTERM_PATH=BASE+'midterm/';
+const STUDY_REDIRECTS=JSON.parse(readFileSync(path.join(ROOT,'tools/study-redirects.json'),'utf8'));
+const redirectUrl=target=>{const [key,fragment]=target.split('#');return url(key)+(fragment?'#'+encodeURIComponent(fragment):'');};
 const MIDTERMS=[
  {course:'CSCI3130',scope:'Lec 1–6',notes:[
   {file:'L01-L06-期中详细复习.md',label:'详细知识点',desc:'从定义讲到自动机构造、语言证明、文法转换与 CYK。'},
@@ -43,6 +45,10 @@ export function buildStudy(out,{check=false}={}){
  const history=existsSync(historyPath)?JSON.parse(readFileSync(historyPath,'utf8')).paths||{}:{};
  const docs=renderDocuments(manifest.map(d=>({...d,text:readFileSync(path.join(ROOT,'tools/study-content',d.key),'utf8')})));
  for(const key of midtermKeys)if(!docs.some(d=>d.key===key))throw new Error('Missing midterm document: '+key);
+ for(const [old,target] of Object.entries(STUDY_REDIRECTS)){
+  const [key,fragment]=target.split('#'),doc=docs.find(d=>d.key===key);
+  if(docs.some(d=>d.key===old)||!doc||(fragment&&!doc.ids.has(fragment)))throw new Error('Invalid study redirect: '+old+' → '+target);
+ }
  const metrics={documents:docs.length,headings:docs.reduce((s,d)=>s+d.headings.length,0),anchors:docs.reduce((s,d)=>s+d.ids.size,0),formulas:docs.reduce((s,d)=>s+(d.html.match(/class="katex"/g)||[]).length,0)};
  if(check){console.error('study check ✓ '+JSON.stringify(metrics));return metrics;}
  const dest=path.join(out,'study/2026T1');mkdirSync(dest,{recursive:true});
@@ -66,6 +72,10 @@ export function buildStudy(out,{check=false}={}){
  }
  write('midterm/index.html',shell('期中复习',midtermPage(),'',false,{path:MIDTERM_PATH,description:'CSCI3130 Lec 1–6 与 CSCI3160 Warm Up 1–DP 4 的详细复习、简略总结及现有期中真题解析。'}));
  for(const [old,target] of Object.entries(OLD_MIDTERMS))write(old.replace(/\.md$/,'.html'),`<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow"><meta http-equiv="refresh" content="0; url=${esc(target)}"><link rel="canonical" href="https://vincejiang.com${esc(target.split('#')[0])}"><title>期中复习文档已更新</title></head><body><p>期中复习文档已更新。<a href="${esc(target)}">前往现行复习文档</a></p></body></html>`);
+ for(const [old,destination] of Object.entries(STUDY_REDIRECTS)){
+  const target=redirectUrl(destination);
+  write(old.replace(/\.md$/,'.html'),`<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow"><meta http-equiv="refresh" content="0; url=${esc(target)}"><link rel="canonical" href="https://vincejiang.com${esc(target.split('#')[0])}"><title>学习文档地址已更新</title></head><body><p>学习文档已统一到当期目录。<a href="${esc(target)}">前往当前学习入口</a></p></body></html>`);
+ }
  mkdirSync(path.join(out,'study'),{recursive:true});writeFileSync(path.join(out,'study/index.html'),shell('课程学习笔记',`<main id="main" class="landing"><p class="eyebrow">STUDY</p><h1>课程学习笔记</h1><p class="intro">按课程理解概念与推导，按复习范围回顾重点。</p>${midtermOverview()}<section class="note-group"><h2>课程目录</h2><p><a href="${BASE}">2026T1 · 查看全部课程笔记 →</a></p><p class="boundary">收录 CSCI3130、CSCI3150、CSCI3160、CSCI3230 和 GENA2122 的课程伴读、辅导与作业解析。</p></section></main>`,'',false,{path:'/study/'}));
  console.error('study build ✓ '+JSON.stringify(metrics));return metrics;
 }

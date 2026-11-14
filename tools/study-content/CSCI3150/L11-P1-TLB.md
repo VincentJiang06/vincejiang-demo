@@ -1,238 +1,193 @@
-# CSCI3150 L11 TLB
+# CSCI3150 L11 Part I：TLB 与地址转换缓存
 
-> 课程：CSCI3150 Introduction to Operating Systems · 2022未核
-> 本讲：L11 TLB，第 1 部分 / 共 2 部分 · 原件 [L11-TLB与高级分页-2022未核.pptx](../旧版课件/L11-TLB与高级分页-2022未核.pptx) · [PDF页码副本](PDF/L11-TLB与高级分页-2022未核.pdf) p.1–18
-> 定位：缓存地址转换，使页表不必在每次内存引用时重新读取。
-> 前后：前接 [L10 分页](L10-P2-分页.md)；后接 [高级分页](L11-P2-高级分页.md)。
+<a id="lru"></a>
+<a id="csci3150-l11-tlb"></a>
+<a id="逐页伴读"></a>
+<a id="p57tlb-缓存的是翻译不是目标数据"></a>
+<a id="p89十次数组访问为什么三次-miss"></a>
+<a id="p1011谁填-tlb条目包含什么"></a>
+<a id="p1214换进程后同一个-vpn-会有两个答案"></a>
+<a id="p1516asid-既隔离也允许有意共享"></a>
+<a id="p1718lru-更新最近真实条目增加硬件细节"></a>
+<a id="原课件-p17-的-lru-全过程"></a>
 
-2026T1 新版已另写：[阅读当期伴读](L11-P1-TLB-2026T1.md)。本页保留2022未核版本的原讲解和页码。
+> 课程：CSCI3150 · 2026T1
+> 单元：L11 Part I；原件 [L11-TLB与高级分页-2026T1.pptx](../课件/L11-TLB与高级分页-2026T1.pptx)，对应 [PDF](../课件/L11-TLB与高级分页-2026T1.pdf) p.1–18。
+> 定位：按幻灯片序号逐页解释；先解决翻译速度，再进入页表空间问题。
+> 导航：本篇 → [Part II：高级分页](L11-P2-高级分页.md) → [L12：换入换出](L12-交换空间与缺页.md)。
 
-## 逐页伴读
+## 从资源虚拟化进入 TLB（p.1–3）
 
-p.1 是讲题，p.2–3 回到内存虚拟化在课程中的位置，p.4 是 Part I 标题。
+p.1 是标题页，本讲有两个不同问题：访问一个虚拟地址时，怎样更快找到物理地址；每个进程的页表很大时，怎样减少页表自身占用的内存。
 
-### p.5–7：TLB 缓存的是翻译，不是目标数据
+p.2 的课程图把本讲放在 Memory Management。内存虚拟化让每个进程使用自己的地址编号，而底层物理页框由 OS 分配。图中的 HW#4 只是课程组织标记，不能由此推断具体题目或考试范围。
 
-> **p.5** Part of the chip’s memory-management unit(MMU).
->
-> A hardware cache of popular virtual-to-physical address translation.
+p.3 回顾用户程序、系统调用接口、内核资源管理和硬件之间的关系。程序使用虚拟地址，OS 建立映射和权限，MMU 在运行时执行转换。这并不意味着程序每次读一个变量都显式调用一次系统调用：普通、合法的访存通常沿硬件转换路径完成；需要内核处理的异常才转入内核。
 
-> **p.6** (1 lines) extract the virtual page number(VPN).
->
-> (2 lines) check if the TLB holds the transalation for this VPN.
->
-> (5-8 lines) extract the page frame number from the relevant TLB entry, and form the desired physical address and access memory.
+## 分节页（p.4）
 
-**课件伪代码（p.6，原页片段）**
+p.4 开始 Part I：TLB，完整名称为 Translation Lookaside Buffer。
 
-```text
-1: VPN = (VirtualAddress & VPN_MASK ) >> SHIFT
-2: (Success , TlbEntry) = TLB_Lookup(VPN)
-3: if(Success == Ture){ // TLB Hit
-4:    if(CanAccess(TlbEntry.ProtectBit) == True ){
-5:        offset = VirtualAddress & OFFSET_MASK
-6:        PhysAddr = (TlbEntry.PFN << SHIFT) | Offset
-7:        AccessMemory( PhysAddr )
-8:    }else RaiseException(PROTECTION_ERROR)
+## TLB 缓存的是映射（p.5–7）【延伸 L11 p.5–7（2022未核版）】
+
+> **p.5** A hardware cache containing popular virtual-to-physical address translation.
+
+p.5 图中的 CPU 先产生 logical address，即这里的虚拟地址；MMU 从中分出 VPN（虚拟页号）与页内偏移。TLB 保存少量近期常用的 VPN → PFN 映射，PFN 是物理页框号。命中时直接拿到 PFN；未命中才查页表。TLB 缓存的是“这一页放在哪里、允许怎样访问”，不是这一页的数组或指令内容。图把页表和 TLB 画在同一转换框中是逻辑流程示意，不能据此说完整页表都在芯片内；p.7 明确需要访问内存中的页表。
+
+p.6 的命中路径可以拆成四步。第一步用掩码和右移取 VPN；第二步查 TLB；第三步检查保护位，确认当前读、写或执行操作获准；第四步保留原来的 offset，把 PFN 放在地址高位。设页大小是 $2^b$ 字节，则：
+
+$$
+VA=VPN\cdot 2^b+offset,\qquad PA=PFN\cdot 2^b+offset.
+$$
+
+这里 $0\le offset<2^b$。原伪代码的左移与按位或，就是把两个不重叠的位段拼起来；不是把 offset 再翻译一次。命中了也不能跳过权限检查，例如只读代码页的翻译在 TLB 中，写它仍应失败。原文 `Ture` 是 `True` 的拼写错误，不是另一种状态。
+
+**算一遍（数字是我为演示取的，讲义没给）**：4 KiB 页，$b=12$，虚拟地址 `0x1234` 的 VPN 是1、offset 是 `0x234`（564）。TLB 给出 PFN=9，则物理地址是 $9\times4096+564=37428$，即 `0x9234`。如果相同映射只有读权限，写请求不会得到一次合法写入。
+
+p.7 的 miss 路径用 PTBR（Page Table Base Register，页表基址）定位线性表：
+
+$$
+PTEAddr=PTBR+VPN\cdot sizeof(PTE).
+$$
+
+乘法的原因是 VPN 是“第几项”，而内存地址按字节编号。接上面自取例，若 PTBR=`0x8000`、每项4 B，VPN=1 的 PTE 位于 `0x8004`。取出 PTE、完成有效性和权限等检查后，插入 TLB，再重试原访存指令。原代码中 `(...)` 省略了检查，因此不能把它当作完整可编译程序。若 PTE 合法且页面已经在内存，这次只补一次翻译，不需要磁盘 I/O。
+
+**考试角度**：（C 级 通识）常见考法是给 VA、页长、PTE 大小和 PFN，分别求 PTE 的地址与最终 PA；两者属于不同内存对象，不能混成一个答案。
+
+## 十个数组元素为什么只有三次 miss（p.8–9）【延伸 L11 p.8–9（2022未核版）】
+
+> **p.8** 3 misses and 7 hits. Thus TLB hit rate is 70%.
+
+**题面块｜L11 p.8 · 数组示例（原图与代码）**
+
+```c
+int sum = 0;
+for (i = 0; i < 10; i++) {
+    sum += a[i];
+}
 ```
 
-> **p.7** (11-12 lines)  The hardware accesses the page table to find the translation.
->
-> (16 lines) updates the TLB with the translation.
+原图每页16 B，元素间隔4 B。`a[0]` 并不从页首开始，而在 VPN6 的 offset4；VPN6 容纳 `a[0..2]`，VPN7 容纳 `a[3..6]`，VPN8 容纳 `a[7..9]`。下表逐项读取原图，不把数组误当成从 VPN6 offset0 起排。
 
-**思路分析（逐步读）**
+| 元素 | VPN | offset（B） | 本次 TLB 结果 |
+|---|---:|---:|---|
+| a[0] | 6 | 4 | miss，装入6 |
+| a[1] | 6 | 8 | hit |
+| a[2] | 6 | 12 | hit |
+| a[3] | 7 | 0 | miss，装入7 |
+| a[4] | 7 | 4 | hit |
+| a[5] | 7 | 8 | hit |
+| a[6] | 7 | 12 | hit |
+| a[7] | 8 | 0 | miss，装入8 |
+| a[8] | 8 | 4 | hit |
+| a[9] | 8 | 8 | hit |
 
-1. 先从地址取 VPN，用它查询 TLB，Success 决定是否命中。
-2. 命中还要检查权限；权限不足直接异常，不能因为缓存命中就跳过保护。
-3. 权限允许后，用 PFN 与 offset 组合物理地址再访问；Ture 和 Offset/offset 大小写不一致是片段笔误，应按伪代码理解。
+这对应初始没有这三页翻译、后续翻译没有被提前淘汰的模型；只数十次数组数据访问，不额外把循环取指、sum 的访问算进分母。每页第一次访问 miss，后面同页元素沿用翻译，所以命中率为 $7/10=70\%$。如果把 `a[0]` 改成页首或把元素大小改掉，必须先重新排地址，不能直接记“三次”。
 
-**课件伪代码（p.7，原页片段）**
+p.9 把原因分为两种局部性。时间局部性是“刚访问的内容很可能再访问”，例如反复读取同一计数器；空间局部性是“访问某地址后很可能访问附近地址”，例如顺序遍历数组。p.8 每个数组元素只读一次，却仍能复用同一页的映射，主要体现空间局部性。相邻地址如果跨页，仍然需要另一项翻译；“相邻”不保证 TLB hit。
 
-```text
-11:}else{ //TLB Miss
-12:        PTEAddr = PTBR + (VPN * sizeof(PTE))
-13:        PTE = AccessMemory(PTEAddr)
-14:        (…)
-15:        }else{
-16:        TLB_Insert( VPN , PTE.PFN , PTE.ProtectBits)
-17:        RetryInstruction()
-18:        }
-19:}
-```
+## 谁填充 TLB，TLB 项里有什么（p.10–11）
 
-**思路分析（逐步读）**
+p.10 对比 hardware-managed 与 software-managed 两条 miss 路径。前者由硬件知道页表格式与基址，沿页表取映射、填入 TLB、重试；后者在 miss 时触发异常，由 OS 的处理程序找到映射并填入，再恢复程序。软件管理不等于“每次命中也运行 OS”：两种方式的常见命中路径都是硬件查询。
 
-1. 这是上一段 TLB 未命中分支：先计算 PTEAddr 并从内存读取页表项。
-2. 中间省略号包含必要的有效性和权限检查，不能把它当成无条件插入。
-3. 合法映射写入 TLB 后重试原指令；重试时可走命中路径，TLB 未命中本身不等于需要读磁盘。
+讲义把这两类分别与 CISC、RISC 联系起来。这里应记住的是“谁负责 miss 处理”的机制差别；不能仅凭指令集属于 RISC 或 CISC 就推断任意处理器的 TLB 实现。以下讲解只沿课件这两种模型，不把它当成所有现代处理器的分类定律。
 
-图 p.5 的入口是虚拟地址；命中 TLB 后得到物理页框，仍须访问目标内存。未命中则读取页表，校验映射，填入 TLB，再重试原指令。p.6 的命中分支也检查权限，命中不能绕开保护。
+p.11 使用全相联模型：一个 VPN 可以放在任意 TLB 槽，查询时并行比较各槽标签。VPN 用于匹配，PFN 是结果，其他位保存有效性、权限、ASID 等信息。讲义给出的32、64、128项是小型 TLB 的示例规模，不是虚拟空间只有这么多页。小而快的 TLB 可以不断替换内容，背后仍有完整页表。
 
-p.7 是删略伪代码，省略号不代表忽略 valid、present 或保护位。TLB miss 只说明转换没缓存；页可能早已在物理内存。Page fault 才可能需要 OS 找回缺席页，二者不是同义词。
+TLB 项的 valid 是“这个缓存槽的翻译能否使用”；页表中的 valid 在本课模型里表示“这个虚拟页是否属于合法地址空间”；L12 的 present 还要回答“合法页是否已经在物理内存”。三个问题应分开判断。
 
-**补充：把两种缓存的四种组合分开。** TLB 记录“虚拟页该去哪个物理框”；数据缓存记录“那个位置的内容副本”。翻译命中而数据缓存未命中时，已知道目标地址，仍要取得数据；翻译未命中而目标数据已经在缓存时，仍要先解决地址翻译与访问权限。两种“命中率”不能混加成一个指标。
+## 两个进程都访问 VPN10（p.12–14）【延伸 L11 p.12–16（2022未核版）】
 
-本讲正常命中路径省去页表查找，不是省去访问目标内容。TLB miss 后，如果页表表示页已在 RAM，只需补翻译，未必发生磁盘 I/O；如果页表表示合法页尚未驻留，才沿缺页处理继续。做访存次数题，应先明确是否计 TLB 查询、页表层数、各级缓存与故障处理；不同题目的计数模型不一样，不能只背“一次、两次、三次”几个数。
+p.12 先让进程 A 访问 VPN10，TLB 得到 `VPN10 → PFN100`。这表示 A 的第10号虚拟页放在物理页框100，不表示全系统的 VPN10 都去100。
 
-### p.8–9：十次数组访问为什么三次 miss
+p.13 切换到进程 B 后，B 的 VPN10 应映射到 PFN170。图保留 A 的条目又放入 B 的条目，于是缓存里出现两个 VPN10。这是有意展示“不带地址空间身份会怎样”，不是推荐硬件任意选其中一行。
 
-**课件程序与接口（p.8，原页片段）**
+p.14 指出矛盾：如果查询条件只有 VPN10，既不能分辨哪一项属于当前进程，也可能读到另一进程的内存。错误不在于两进程用了同一个虚拟页号；独立地址空间本来就允许重复编号。缺的是查找键中的地址空间身份。
 
-```text
-0:  int sum = 0 ;
-1:  for( i=0; i<10; i++){
-2:      sum+=a[i];
-3:  }
-```
-
-> **p.9** Temporal Locality
->
-> An instruction or data item that has been recently accessed will likely be re-accessed soon in the future.
->
-> Spatial Locality
->
-> If a program accesses memory at address x, it will likely soon access memory near x.
-
-**思路分析（逐步读）**
-
-1. sum 从 0 开始，i 依次取 0 到 9，每轮把 a[i] 加到 sum。
-2. a[i] 的地址由数组基址加 i 个元素大小得到，因此连续下标通常位于同一页或相邻页。
-3. 逐次求地址所属 VPN，才可判断 TLB 命中；十次访问不意味着十次 TLB 未命中。
-
-原图题设：页长 16 B，`int` 为 4 B，循环按顺序访问 `a[0]` 到 `a[9]`；前三个元素在 VPN6，中间四个在 VPN7，最后三个在 VPN8。只计数组数据访问，开始无这些转换且过程中不淘汰它们。
-
-序列为 `6,6,6,7,7,7,7,8,8,8`，第一次碰到 6、7、8 各 miss 一次，其他七次 hit，命中率 $7/10=70\%$。数组没有重复访问同一元素，也能因同页邻近元素产生空间局部性。若立刻重复循环且三项仍保留，十次都可能命中，这才体现时间局部性。若把取指和其他变量也计入分母，不能继续直接引用 70%。
-
-### p.10–11：谁填 TLB，条目包含什么
-
-> **p.10** Hardware handle the TLB miss entirely on CISC.
->
-> The hardware has to know exactly where the page tables are located in memory.
->
-> The hardware would “walk” the page table, find the correct page-table entry and extract the desired translation, update and retry instruction.
->
-> hardware-managed TLB.
->
-> RISC have what is known as a software-managed TLB.
->
-> On a TLB miss, the hardware raises exception( trap handler ).
->
-> Trap handler is code within the OS that is written with the express purpose of handling TLB miss.
-
-> **p.11** TLB is managed by Full Associative method.
->
-> A typical TLB might have 32,64, or 128 entries.
->
-> Hardware search the entire TLB in parallel to find the desired translation.
->
-> other bits: valid bits , protection bits, address-space identifier, dirty bit
-
-硬件管理时由页表遍历器完成；软件管理时 miss 引发异常，由 OS handler 查表并填入。课件以 CISC/RISC 作历史示例，不能推广为所有体系结构的永恒分类。
-
-图 p.11 条目是 VPN、PFN 和状态位；全相联示意意味着可以在多个位置找匹配项。有效位表示该 TLB 条目可用，保护位检查访问，ASID 区分地址空间。课件列出的 32/64/128 项是示例规模，不是本机规格。
-
-**补充：把一次访问的三种路径分开画。** 第一种，TLB有可用转换且权限允许：取得PFN，再访问目标数据。第二种，TLB没有该转换但PTE表明页已驻留：查页表、填TLB、继续或重试访问，不需要读盘。第三种，合法页尚未驻留：OS先安排取得页面，更新映射，再恢复执行。拒绝写只读页则是保护错误，不能通过“把页换入”修复。
-
-假设TLB查询1ns、一次内存访问100ns、单级页表，按串行且无其他缓存的简化模型，命中用101ns，未命中但驻留用201ns；若命中率90%，平均为0.9×101+0.1×201=111ns。这是自取数字的模型，不是本机测速。它说明增加命中率省掉的是页表访问，并没有把数据访问本身省掉；若换成多级页表或重叠查询，就要重新写成本式。
-
-### p.12–14：换进程后，同一个 VPN 会有两个答案
-
-逐图看状态：p.12 A 访问 VPN10，缓存 10→100；p.13 切到 B，它的 VPN10 应映射到170；p.14 两条只以 VPN 匹配的记录无法区分主人。问题来自虚拟页号只在某个地址空间内有意义，不是系统全局的唯一标识。
-
-### p.15–16：ASID 既隔离，也允许有意共享
+## ASID 与有意共享（p.15–16）
 
 > **p.15** Provide an address space identifier(ASID) field in the TLB.
 
-> **p.16** Two processes share a page.
->
-> Process 1 is sharing physical page 101 with Process2.
->
-> P1 maps this page into the 10th page of its address space.
->
-> P2 maps this page to the 50th page of its address space.
+p.15 添加 ASID 后，按 `(ASID, VPN)` 匹配。原图有效的两行如下；图中的空槽省略，不改变两条映射：
 
-> **p.16** Sharing of physical pages is useful as it reduces the number of physical pages in use.
+| ASID | VPN | PFN | valid | prot |
+|---:|---:|---:|---:|---|
+| 1（A） | 10 | 100 | 1 | rwx |
+| 2（B） | 10 | 170 | 1 | rwx |
 
-加 ASID 后，`(1,10)→100` 与 `(2,10)→170` 不冲突。另一种方案是切换时清空旧转换，但会付出后续冷 miss。
+当前 ASID=2 时查 VPN10，只能匹配 B 的170。切回 A 后，仍能复用 A 留在 TLB 中的100。**补充（通识）**：没有 ASID 的简单方案可在地址空间切换时使旧翻译失效；ASID 避免每次都这样清空，但标识重用、页表映射变化时仍需正确失效旧项，不能认为加了编号就永远不维护缓存。
 
-p.16 的共享例子改为 `(1,10)→101` 与 `(2,50)→101`。两个进程虚拟地址可以不同，仍看到同一物理页；映射相同的 PFN 才是共享的关键。ASID 区分查询键，并不要求 PFN 不同。
+p.16 是另一种情况：ASID1 的 VPN10 和 ASID2 的 VPN50 都指向 PFN101。它们的虚拟页号不同，物理存储却有意相同。如果两边访问同一页内 offset，就到达同一物理字节。这样共享代码或数据只占一份物理页；是否允许写仍由权限决定。把“相同 VPN 必须映到同 PFN”或“不同进程绝不能同 PFN”当规则，都与这两组例子相反。
 
-### p.17–18：LRU 更新“最近”，真实条目增加硬件细节
+## LRU 的十七次访问逐步推演（p.17）【延伸 L11 p.17（2022未核版）】
 
-> **p.17** LRU(Least Recently Used)
->
-> Evict an entry that has not recently been used.
->
-> Take advantage of locality in the memory-reference stream.
+> **p.17** Evict an entry that has not recently been used.
 
-> **p.18** 10 11  …                     19     …                                  31
+**题面块｜L11 p.17 · TLB Replacement Policy（原图数字）**
 
-> **p.18** All 64 bits of this TLB entry(example of MIPS R4000)
+```text
+3 个槽
+7 0 1 2 0 3 0 4 2 3 0 2 3 1 2 0 1
+Total 11 TLB miss
+```
 
-原题是容量三项、初始为空、按顺序访问 `7 0 1 2 0 3 0 4 2 3 0 3 2 1 2 0 1`，使用 LRU。命中也必须更新最近使用次序，不能只在 miss 时移动。完整逐步表在本节下方，得到11次 miss、6次hit，命中率 $6/17\approx35.29\%$。
+LRU 淘汰“距离上次访问最久”的项，既不是最早插入，也不是编号最小。为了看清更新时间，下表按最久 → 最近列缓存；这不是原图固定槽的纵向位置。
 
-p.18 用 MIPS R4000 介绍 G、ASID、C、D、V 等字段：全局共享、地址空间识别、缓存属性、修改和有效性是不同职责。旧PDF兼容图片的PFN行误显周转时间式；PPTX正文层实际为24位PFN、4KiB页，可寻址2^24×2^12=2^36B=64GiB主存。19位VPN对应此图限定的用户虚拟页范围，不能拿它直接替代PFN宽度。
+| 次序 | 请求 | 结果 | 被淘汰 | 访问后：最久 → 最近 |
+|---:|---:|---|---|---|
+| 1 | 7 | miss | 空槽 | 7 |
+| 2 | 0 | miss | 空槽 | 7,0 |
+| 3 | 1 | miss | 空槽 | 7,0,1 |
+| 4 | 2 | miss | 7 | 0,1,2 |
+| 5 | 0 | hit | — | 1,2,0 |
+| 6 | 3 | miss | 1 | 2,0,3 |
+| 7 | 0 | hit | — | 2,3,0 |
+| 8 | 4 | miss | 2 | 3,0,4 |
+| 9 | 2 | miss | 3 | 0,4,2 |
+| 10 | 3 | miss | 0 | 4,2,3 |
+| 11 | 0 | miss | 4 | 2,3,0 |
+| 12 | 2 | hit | — | 3,0,2 |
+| 13 | 3 | hit | — | 0,2,3 |
+| 14 | 1 | miss | 0 | 2,3,1 |
+| 15 | 2 | hit | — | 3,1,2 |
+| 16 | 0 | miss | 3 | 1,2,0 |
+| 17 | 1 | hit | — | 2,0,1 |
 
-:::hint 自测：页表映射改了，但旧TLB条目仍在，会怎样？ASID是否自动解决？
+共11 miss、6 hit，命中率 $6/17\approx35.29\%$。第5次访问0虽然不换出任何项，却把0变成最近使用，因此第6次淘汰1。这一步最能区分 LRU 和 FIFO。这里换的是 TLB 翻译项；丢掉翻译不等于把对应数据页从内存写到磁盘。
 
-TLB可能继续把访问送到旧PFN，甚至沿用旧权限；缓存转换必须与映射更新保持一致。ASID只区分条目属于哪个地址空间，并不自动让同一地址空间内的旧映射失效。实际内核需按硬件协议使相关转换失效，多核还需协调可能缓存该转换的其他核。这是正确性需求，不只是命中率问题。
+**考试角度**：（C 级 通识）常见考法是给引用串与容量，逐步填写命中、牺牲项及最终状态；每次 hit 后也要更新最近使用顺序。
 
-:::endhint
+## 实际条目字段与位数（p.18）
 
-**p.18 完整字段释义（按 PPTX 正文层重排）：**
+p.18 用 MIPS R4000 的示意条目把前面概念放在一起：VPN 是匹配标签；PFN 给出物理页框；ASID 区分地址空间；G 表示全局共享映射；C 控制缓存属性；V 表示翻译有效；D 在讲义表中写成页面已被写过的标志。不同架构字段的精确定义不能只凭这个示意图推广，尤其不要把 D 的名字自动等同于任意系统中的“硬件写过日志”。本页不据此编写真实处理器寄存器代码。
 
-|字段|原页含义|
-|---|---|
-|19-bit VPN|此示例的虚拟页号，其余虚拟范围保留给内核|
-|24-bit PFN|物理框号；4 KiB 页下覆盖 64 GiB|
-|G|跨进程全局共享页的标记|
-|ASID|区分地址空间|
-|C|决定硬件如何缓存该页的缓存属性|
-|D|标记该页已被写入|
-|V|该条目是否含有效转换|
+原始公式对象是 $2^{24}\times4\,\mathrm{KB}$，与24位 PFN 相符。公式按讲义重排，并按二进制单位写清：
 
-VPN/ASID 用来判断“是不是我要的那条转换”，PFN 回答“转到哪里”，其他位限定“是否可用及怎样使用”。64 位是图中整条 TLB 记录的宽度，不能将 64 直接代入成该例的虚拟地址位数。
+$$
+2^{24}\times 2^{12}\ \mathrm{B}=2^{36}\ \mathrm{B}=64\ \mathrm{GiB}.
+$$
 
-<a name="lru"></a>
-
-#### 原课件 p.17 的 LRU 全过程
-
-| 步 | 页号 | 结果 | 淘汰 | 由最旧到最新 |
-|---|---|---|---|---|
-| 1 | 7 | 未命中 | — | 7 |
-| 2 | 0 | 未命中 | — | 7,0 |
-| 3 | 1 | 未命中 | — | 7,0,1 |
-| 4 | 2 | 未命中 | 7 | 0,1,2 |
-| 5 | 0 | 命中 | — | 1,2,0 |
-| 6 | 3 | 未命中 | 1 | 2,0,3 |
-| 7 | 0 | 命中 | — | 2,3,0 |
-| 8 | 4 | 未命中 | 2 | 3,0,4 |
-| 9 | 2 | 未命中 | 3 | 0,4,2 |
-| 10 | 3 | 未命中 | 0 | 4,2,3 |
-| 11 | 0 | 未命中 | 4 | 2,3,0 |
-| 12 | 3 | 命中 | — | 2,0,3 |
-| 13 | 2 | 命中 | — | 0,3,2 |
-| 14 | 1 | 未命中 | 0 | 3,2,1 |
-| 15 | 2 | 命中 | — | 3,1,2 |
-| 16 | 0 | 未命中 | 3 | 1,2,0 |
-| 17 | 1 | 命中 | — | 2,0,1 |
-
-表中队列右端是最新访问项，故 miss 且满时淘汰左端。[回正文](#逐页伴读)。
+24位页框号有 $2^{24}$ 种取值；每框4 KiB，所以能编号64 GiB 的物理字节范围。它描述的是可寻址上限，不等于机器实际安装了64 GiB，也不是 TLB 容量。PDF 转换副本已按原公式对象修复旧预览图串入的显示错误；PPTX 原始字节未改。
 
 ## 本讲核心考点
 
-- [C] 明确 TLB 缓存转换，区分 TLB miss 与缺页。
-- [C] 在给定计数范围下计算数组访问命中率。
-- [C] 用 ASID 解释上下文切换与共享映射。
-- [C] 逐次维护 LRU，包括命中引起的顺序变化。
+- TLB 缓存翻译，不缓存程序数据；命中仍检查权限（p.5–7，C 级 通识）。
+- 区分页表项地址、物理地址以及不变的页内偏移（p.6–7，C 级 通识）。
+- 按真实数组起点数跨页次数，重算70%命中率（p.8–9，C 级 通识）。
+- 比较硬件和软件管理的 miss 路径（p.10，C 级 通识）。
+- 用 ASID 解释同 VPN 不同 PFN，以及不同 VPN 共享 PFN（p.12–16，C 级 通识）。
+- LRU 命中也更新次序；原串11 miss（p.17，C 级 通识）。
+- PFN 位数乘页大小得到可编号的物理容量（p.18，C 级 通识）。
 
 ## 附录
 
-完整演算已放回相应页的正文，原链接锚点继续保留。
+### A1 三个“没有”不能混淆
+
+TLB 没有翻译：查页表；虚拟页不合法：不能通过换入制造访问权限；合法页暂时不在内存：可能需要 L12 的缺页处理。这三件事分别属于缓存、地址空间有效性、页面驻留状态。读下一篇多级表时，仍沿用同样区分。
 
 ## 来源与证据
 
-- 原件：[L11-TLB与高级分页-2022未核.pptx](../旧版课件/L11-TLB与高级分页-2022未核.pptx)；[PDF副本](PDF/L11-TLB与高级分页-2022未核.pdf) p.1–18。本文页码均为 PDF 页号。
-- 考试证据：读了 课程大纲-2026T1.pdf、教学计划-2026T1.pdf、T08-期中参考-2025T2-题目-解答.pdf、T07-多级反馈队列-2025T2.pdf（p.13–15内嵌历史试题）；未识别用途的 PDF：无
+- 已读原件：[L11-TLB与高级分页-2026T1.pptx](../课件/L11-TLB与高级分页-2026T1.pptx) 全35页；本篇覆盖 p.1–18。页码为幻灯片序号，与派生 PDF 一一对应；图示已逐页核对。
+- 未读其他作业、试卷及个人/同学笔记；文中的自取算例与通识补充已单独标注。
 
-- 2026-10-13 内容补全：保留原页顺序与版本，补入对应页的程序、接口、字段、条件和演算；原程序片段保留课件行号、拼写与省略处，不能据此视为经过编译的完整软件。本文已有运行记录属于其标注日期，本次未重新运行课程容器或提交作业。
+考试证据：未读取考试、作业或大纲证据；考法如有说明，仅为通识（C 级）
