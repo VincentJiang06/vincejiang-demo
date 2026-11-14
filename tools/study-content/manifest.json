@@ -451,8 +451,8 @@
   },
   {
     "key": "CSCI3150/阅读导航.md",
-    "sourceSha256": "e3d88d091e80194128e7b927753869b37581d4f0d6272a80c4bf1778e34001ec",
-    "publishedSha256": "075f65425fe199f376396b0990181650dc7af7048f6a9bde7406f3641494f4ea",
+    "sourceSha256": "83c75ddd11ef2f2a3b881e7ff5c0a99e9d63f1606e9e424237f82456265f9dad",
+    "publishedSha256": "3faf8ee4c0b50e9cd8000997060ea4825b5f9e331f552c236659b9e277d73d19",
     "projection": true
   },
   {
@@ -589,32 +589,32 @@
   },
   {
     "key": "CSCI3150/L11-P1-TLB.md",
-    "sourceSha256": "1706731cb82e30bffaa779d9d39d6ff382404aa5363e67dfdde646c04e0df3ff",
-    "publishedSha256": "a26ecc7ed0bd28c546b0071655990f0148806cd3084e0c2c02d500f14c2ce323",
+    "sourceSha256": "e05ed23e9ca96f875f427b97ea89e812fb827600c9fce08729475ffef57edb11",
+    "publishedSha256": "8ef287a7e25bc16fde4f0da5ea75106ddd116c844204c51dab4c7ca0670289fb",
     "projection": true
   },
   {
     "key": "CSCI3150/L11-P2-高级分页.md",
-    "sourceSha256": "57821f321c84a17ddd145910aad89ae8d25938d38156b251ba383e5a86725cdb",
-    "publishedSha256": "f7b58009380627cbc000d3c224d6941a224144796864cbdc25eaf324154df923",
+    "sourceSha256": "123166fcb623aeae9a055c59636d4e6737ba0460c7fd117c8242ef9cf5f4449d",
+    "publishedSha256": "643ea94e06384a194cf55d7de89d43c8f664e6f2481716099d9dcf0debf65968",
     "projection": true
   },
   {
     "key": "CSCI3150/L12-交换空间与缺页.md",
-    "sourceSha256": "83697317e610b70c5683dcde97c7c9a868662b0369299ca9b6d0e9914102d75a",
-    "publishedSha256": "201febac13ea2dc27f77f4554a8153018e5fd59169eaa73f5c2b0bf8efbdfada",
+    "sourceSha256": "9b2bffce49fd5af83a2eb16644d5fcbe3e101d707932164b55f44af20c15ff1f",
+    "publishedSha256": "2aa00ae49c7adf7777f4ea4d49e5691105c4a5996c794318f4d6ec590c4caf20",
     "projection": true
   },
   {
     "key": "CSCI3150/L13-P1-线程与竞争.md",
-    "sourceSha256": "85910860f27afe548d7cab3d3045eb8af936e19a77972cf7700da00a30aabe9f",
-    "publishedSha256": "1faa20b55ab08105534cf513b5cdaaa7111a12c2ab971795bf8e77c8ee65f8e4",
+    "sourceSha256": "32ccc895d0b3f3845449e36f069f09340c9a5be5e20dfc3452e57844eedd09b9",
+    "publishedSha256": "ffdec430f7a31cc93a8d0f4ea35ed31464d057753fb9d2dbec99b0fd6bda5fe8",
     "projection": true
   },
   {
     "key": "CSCI3150/L13-P2-线程API.md",
-    "sourceSha256": "dc7986709429f311aef79525910000f82a8f14af29a7e3d0cdf132c866bf13de",
-    "publishedSha256": "a0d1ab15fdee423073699917a042fc5654814d564f6392714d1f5719a0b9af62",
+    "sourceSha256": "858659d6c29c710a254dd67e195dfa5421e60c33ca0a57004ce2ed1effc87b4f",
+    "publishedSha256": "f3a912736143d673758b144fde64de9529b1f3f378f384f59e01c9e9ccb94787",
     "projection": true
   },
   {
@@ -747,6 +747,36 @@
     "key": "CSCI3150/T12-FAT文件系统.md",
     "sourceSha256": "e32558d88b07283226ec8c0481e71be28517560cd342cfd180b976b0dc99e427",
     "publishedSha256": "7d5b1ed6c89e70fa1b561a68625f5c34f6f407c0047094bab3f8d04a72b7a7ac",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L11-P1-TLB-2026T1.md",
+    "sourceSha256": "3f3b7826ba7b1a81acee39dbd1f65ff50245e70516de140ea2b2fa880baa0253",
+    "publishedSha256": "250cb6f15992324a59792cebc8e5158a39d62527659bfab1df01253e1868f85b",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L11-P2-高级分页-2026T1.md",
+    "sourceSha256": "ba86e057d3d362c7435469b387058141e3b179382b19e0a5cda93ffe49bf4497",
+    "publishedSha256": "691383d255bcc5d5b5073541284293cf2c36e91955755480cbe7fd9937653119",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L12-交换空间与缺页-2026T1.md",
+    "sourceSha256": "98c9f20ccf9d1805e04845902dd57eea53457172058d1c69afd7950088a28e48",
+    "publishedSha256": "1acd16b4c93c26c4c9cf87f2da780e57872a499736d989b7fe6137c0740d202d",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L13-P1-线程与竞争-2026T1.md",
+    "sourceSha256": "6a7ba021ed524a5dc47a524d79b01af37d40c4e791b7d2cfdc49a3e3627bae31",
+    "publishedSha256": "8a773b5aaf4e069b0eb53546227d04adfa9e8b4fa28662666002092fa153c285",
+    "projection": true
+  },
+  {
+    "key": "CSCI3150/L13-P2-线程API-2026T1.md",
+    "sourceSha256": "a13be158a2850dcbe3c216e01df70374a196e50071fa0d4258c5f6c40027c4f9",
+    "publishedSha256": "3106e15caa1bb198774ce63c3be2e3113f5de67a1676fd1ba5e0e6e1efa6c4b5",
     "projection": true
   },
   {
