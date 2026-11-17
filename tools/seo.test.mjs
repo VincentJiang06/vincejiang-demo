@@ -4,9 +4,16 @@ import {mkdtempSync,readFileSync,writeFileSync,rmSync,existsSync} from 'node:fs'
 import {join} from 'node:path';
 import {tmpdir} from 'node:os';
 import {spawnSync} from 'node:child_process';
-import {esc,jsonLd} from './seo.mjs';
+import {esc,jsonLd,publicPagePath} from './seo.mjs';
 import {enrichStaticPages} from './static-seo.mjs';
 const ROOT=new URL('..',import.meta.url).pathname;
+
+test('explicit extensionless routes preserve unrelated file and directory URLs',()=>{
+ assert.equal(publicPagePath('/gena2122/presentation.html'),'/gena2122/presentation');
+ assert.equal(publicPagePath('/netstall/index.html'),'/netstall');
+ assert.equal(publicPagePath('/gena2122/index.html'),'/gena2122/');
+ assert.equal(publicPagePath('/study/example.html'),'/study/example.html');
+});
 
 test('metadata safely represents quoted text and script-like content',()=>{
  const value={name:'"x" </script><script>alert(1)</script>'};
@@ -40,6 +47,16 @@ test('built public pages have consistent host sitemaps, published Dots prose, an
   const sitemap=readFileSync(join(out,'sitemap.xml'),'utf8');
   assert.ok(sitemap.includes('<loc>https://vincejiang.com/netstall</loc>'));
   assert.doesNotMatch(sitemap, /<loc>https:\/\/vincejiang\.com\/(?:cellprobe\/?|netstall\/)<\/loc>/);
+  const presentationUrl='https://vincejiang.com/gena2122/presentation';
+  assert.equal(sitemap.split('<loc>'+presentationUrl+'</loc>').length-1,1);
+  assert.doesNotMatch(sitemap,/<loc>https:\/\/vincejiang\.com\/gena2122\/(?:presentation\.html|presentation-v2\.4(?:\.html)?)<\/loc>/);
+  const presentation=readFileSync(join(out,'gena2122/presentation.html'),'utf8');
+  assert.ok(presentation.includes('rel="canonical" href="'+presentationUrl+'"'));
+  assert.ok(presentation.includes('property="og:url" content="'+presentationUrl+'"'));
+  const redirect=readFileSync(join(out,'gena2122/presentation-v2.4.html'),'utf8');
+  assert.match(redirect,/<meta name="robots" content="noindex,follow">/);
+  assert.ok(redirect.includes("location.replace('/gena2122/presentation'+location.search+location.hash)"));
+  assert.ok(report.omitted.includes('https://vincejiang.com/gena2122/presentation-v2.4.html'));
   const notes=JSON.parse(readFileSync(join(ROOT,'tools/study-content/manifest.json'),'utf8'));
   for(const d of notes){
    const path='/study/2026T1/'+d.key.replace(/\.md$/,'.html');

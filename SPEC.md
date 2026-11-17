@@ -418,6 +418,8 @@ GENA2122名称依据现有课程材料的 Issues in American Culture & History�
 
 `tools/seo.mjs` 的 `publicPagePath` 将 `/netstall/index.html` 映射为 `/netstall`，构建 sitemap、静态元数据和审计共享映射；其余目录继续保留原有尾斜杠。SEO 集成测试验证新地址被收录且旧地址未残留。
 
+GENA2122 演示的稳定入口为 `/gena2122/presentation`，`publicPagePath` 另将 `/gena2122/presentation.html` 精确映射到该无后缀地址；由现有 Nginx `try_files $uri $uri/ $uri.html` 提供正文。旧 `/gena2122/presentation-v2.4` 保留 `noindex,follow` 跳转页，客户端跳转保留查询参数和幻灯片 hash；课程首页直接链接稳定入口。构建与审计沿用同一映射，sitemap 只收录新的正式地址，不收录跳转别名。
+
 
 ### CSCI3150 仅保留当期与短网址（2026-11-14）
 
