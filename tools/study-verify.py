@@ -20,7 +20,8 @@ def verify(root, desktop=None):
     for f in base.rglob('*'):
         if f.is_symlink(): errors.append(f'symlink: {f}')
         if not f.is_file(): continue
-        if f.suffix.lower() not in {'.html','.css','.js','.woff','.woff2','.ttf'} and f.name!='LICENSE': errors.append(f'unexpected asset: {f}')
+        is_handbook_download = f == base/'csci3150-neo/handbook.zip'
+        if not is_handbook_download and f.suffix.lower() not in {'.html','.css','.js','.woff','.woff2','.ttf'} and f.name!='LICENSE': errors.append(f'unexpected asset: {f}')
         if f.suffix=='.html':
             text=f.read_text(); p=Page();p.feed(text);pages[f.resolve()]=p
             for id,n in Counter(p.ids).items():

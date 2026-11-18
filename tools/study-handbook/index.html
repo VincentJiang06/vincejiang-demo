@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f7f3" />
+    <title>系统手册 · CSCI3150 操作系统</title>
+    <meta name="description" content="从一条命令读懂操作系统。按 16 讲学习进程、内存、文件系统与并发，并用交互实验检验自己的推理。" />
+    <link rel="canonical" href="https://vincejiang.com/study/csci3150-neo/" />
+    <meta property="og:title" content="操作系统学习手册 · CSCI3150" />
+    <meta property="og:description" content="16 讲中文教材，配有机制图、逐步演算、交互实验和 Tutorial 演练。" />
+    <meta property="og:url" content="https://vincejiang.com/study/csci3150-neo/" />
+    <meta property="og:image" content="https://vincejiang.com/assets/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="./style.css?v=0bab11868fc6" />
+    <link rel="stylesheet" href="./figures.css?v=dac505f59cdb" />
+  </head>
+  <body>
+    <a class="skip" href="#main">跳到正文</a>
+    <header>
+      <div class="bar">
+        <a class="brand" href="#home"><i aria-hidden="true">▥</i>系统手册</a>
+        <nav aria-label="站点导航">
+          <a href="/study/2026T1/CSCI3150/">课程笔记</a><a id="home" href="#home">课程总览</a><a id="lab" href="#lab">交互实验</a
+          ><a id="index" href="#index">知识索引</a><a id="resources" href="#resources">资料库</a>
+        </nav>
+        <button class="search-open" aria-label="搜索课程">
+          <span aria-hidden="true">⌕</span> 搜索 <kbd>/</kbd>
+        </button>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <h1>操作系统学习手册</h1>
+      <p>全套 16 讲从进程、内存与文件系统讲到并发。</p>
+      <p><a href="./handbook.zip" download>下载中文教材</a> · <a href="/study/2026T1/CSCI3150/">返回 CSCI3150 课程笔记</a></p>
+    </main>
+    <footer>
+      <span class="footer-brand">系统手册</span
+      ><span>CSCI3150 · Introduction to Operating Systems</span
+      ><a href="/study/2026T1/CSCI3150/">课程笔记</a><a href="#home">课程总览 ↑</a>
+    </footer>
+    <dialog id="searchbox">
+      <div class="dialog-head">
+        <label for="query">搜索整门课程</label
+        ><button id="close-search" aria-label="关闭搜索">×</button>
+      </div>
+      <input
+        id="query"
+        type="search"
+        autocomplete="off"
+        placeholder="输入中文、英文、讲次或页码，如「缺页」「fork」「L08」"
+      />
+      <div id="matches" aria-live="polite"></div>
+    </dialog>
+    <script src="./course.js?v=875f04545562"></script>
+    <script src="./diagrams.js?v=fb0d38e13273"></script>
+    <script src="./labs.js?v=011a9cd4c094"></script>
+    <script src="./memory-lab.js?v=f0ecb109ed41"></script>
+    <script src="./app.js?v=afea56283fed"></script>
+  </body>
+</html>

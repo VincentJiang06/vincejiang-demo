@@ -499,8 +499,8 @@
   },
   {
     "key": "CSCI3150/阅读导航.md",
-    "sourceSha256": "bc02d218fc3eaab314d1690f592af81fc308fb2d0438b4a04f99bfc6a96fec40",
-    "publishedSha256": "6ef4869dbe84afaee020e2a3b7ab4107b141f57887b5a0cba780676e1e8fb091",
+    "sourceSha256": "5f4893a64d47c82de61ce724a969ede1fedeb4e6d5eadd56436e689448cc2536",
+    "publishedSha256": "0f868cdb85e59f6a45782fdbe33e4440b341d81e3933831ef198b6a3ae2887bc",
     "projection": true
   },
   {
@@ -676,6 +676,30 @@
     "sourceSha256": "ec438c28c9f39c06e856ccb69203790859335cc10b669db9a1e8ffddff2d20d9",
     "publishedSha256": "332e1510aef6e3e8a6d3081778d38e8d4c07229f10b7db094485378d74c7610e",
     "projection": true
+  },
+  {
+    "key": "CSCI3150/L14-P1-锁.md",
+    "sourceSha256": "d581740355aa9d61c97350be4bbd07df6076605f99370745b5db5ba04e1dcb53",
+    "publishedSha256": "d581740355aa9d61c97350be4bbd07df6076605f99370745b5db5ba04e1dcb53",
+    "projection": false
+  },
+  {
+    "key": "CSCI3150/L14-P2-条件变量.md",
+    "sourceSha256": "9e620d5f2f8db7b0041acd00f5a4c479660052154c5194c1f690373b73c1ac6b",
+    "publishedSha256": "9e620d5f2f8db7b0041acd00f5a4c479660052154c5194c1f690373b73c1ac6b",
+    "projection": false
+  },
+  {
+    "key": "CSCI3150/L15-P1-信号量.md",
+    "sourceSha256": "242a9a3215ebdcf5a1d982a5f773892b61937faaa790f1c69294297310eecdbe",
+    "publishedSha256": "242a9a3215ebdcf5a1d982a5f773892b61937faaa790f1c69294297310eecdbe",
+    "projection": false
+  },
+  {
+    "key": "CSCI3150/L15-P2-常见并发问题.md",
+    "sourceSha256": "39488d5a572eb42822c65a02a901003eb888ab810ab93c946778b65de312f47e",
+    "publishedSha256": "39488d5a572eb42822c65a02a901003eb888ab810ab93c946778b65de312f47e",
+    "projection": false
   },
   {
     "key": "CSCI3150/Lab01-P1-环境配置.md",
