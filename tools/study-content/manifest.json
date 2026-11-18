@@ -1,8 +1,8 @@
 [
   {
     "key": "CSCI3130/阅读导航.md",
-    "sourceSha256": "17d05691b9f00797402600a89583c7a0ef16a6f004bb63a3592a27467ba503ed",
-    "publishedSha256": "a634c0e37b733994f4f63162734daa61f3c03d36bca8668d9417c3342d37d4f5",
+    "sourceSha256": "36f563c79080bf9c10e23f03e23f98ce1e918a66d2914d7dcac02d15cfd8c237",
+    "publishedSha256": "5b7df80ce9364990d51af73b2ed1f128192f7a22f821ad2d299f4097ea1c1200",
     "projection": true
   },
   {
@@ -46,6 +46,18 @@
     "sourceSha256": "40d5e92acc758246221a42d362d9e326ccf3c2b6e0cfa324790126a27898b31c",
     "publishedSha256": "40d5e92acc758246221a42d362d9e326ccf3c2b6e0cfa324790126a27898b31c",
     "projection": false
+  },
+  {
+    "key": "CSCI3130/HW05-2026T1-完整解析.md",
+    "sourceSha256": "ba5221b3135ee675a9f452064a965ec662bc4a7da4a35e015891fe2b732c2ab6",
+    "publishedSha256": "ca5b62cc597f72b9432c2cbf3426c1c887b350059bea3805cada5a99847d41c0",
+    "projection": true
+  },
+  {
+    "key": "CSCI3130/HW05-2026T1-最简标准答案.md",
+    "sourceSha256": "f83c6fb9b5cafba97011a5669bc9d7fd28a32ea5e6d618e41778fcf90a432336",
+    "publishedSha256": "d4b1fa9a6c8f99ce3c5c0455074f95227698e65eb3818f79b33b5aee66d917d7",
+    "projection": true
   },
   {
     "key": "CSCI3130/L00-P1-课程安排.md",
@@ -241,39 +253,39 @@
   },
   {
     "key": "CSCI3130/L08-P1-上下文无关泵引理.md",
-    "sourceSha256": "e476ffc2ef814dd64de492dceb613441405fed5aeb943c544f42e3364e551747",
-    "publishedSha256": "812fd234c2f3db134f8f3a1575433a4bba6a445201dcfa099475f1a47c050b16",
+    "sourceSha256": "25b41d66a8e4132f48e44a35d3342e476f771394a8f75ce7624d1dc266ffdc0c",
+    "publishedSha256": "dcee413ee8d8cc5ca2f1961a6670150b890524561220541d2fab10a0f02ac6e1",
     "projection": true
   },
   {
     "key": "CSCI3130/L08-P2-封闭性与判定.md",
-    "sourceSha256": "0f6ae3703e4ca5073142c3c5c08ec221609ef6e1f6d0a9b9070f871208d13c66",
-    "publishedSha256": "0f6ae3703e4ca5073142c3c5c08ec221609ef6e1f6d0a9b9070f871208d13c66",
-    "projection": false
+    "sourceSha256": "3338084ac05f5b079298e87d1480d9203ce2d74657c63aede41b8161c360f558",
+    "publishedSha256": "f71edf3a7ea0cbcde12ee5e37ed3eb9ce6dbc0b4dd361d393ea9e302481a5bfb",
+    "projection": true
   },
   {
     "key": "CSCI3130/L09-P1-标准图灵机与函数.md",
-    "sourceSha256": "8e28cda8e35c78776c8a2ee23aa079ac624b055a19493fe3732a4ed6e10bb4e4",
-    "publishedSha256": "1e2ecfc39fc22a331c447120992fa773e0a41e9d7903a424f3005ca088aec6c9",
+    "sourceSha256": "05d5d1aca7786d92ca8d86e7c89012f86d64e1c4fc72a59b5fac6995b89e0004",
+    "publishedSha256": "991693708fda8c711b45759e96618c26fa66263c48c1e8206895dcd5892087a8",
     "projection": true
   },
   {
     "key": "CSCI3130/L09-P2-图灵机组合.md",
-    "sourceSha256": "623f3ce520f2c3fb7a8328fee5fb63a874b476c29c510fc9bc3274280c15e18b",
-    "publishedSha256": "623f3ce520f2c3fb7a8328fee5fb63a874b476c29c510fc9bc3274280c15e18b",
+    "sourceSha256": "4bf259ab8685b55ef8a3a7a287e2e6d63ae0d15ca1366bd90c7d6696c0378a12",
+    "publishedSha256": "4bf259ab8685b55ef8a3a7a287e2e6d63ae0d15ca1366bd90c7d6696c0378a12",
     "projection": false
   },
   {
     "key": "CSCI3130/L09-P3-图灵论题.md",
-    "sourceSha256": "7ab7e0a471ff7f4e85b947a344370d5d615d7d1d3bb8432c882c697a49b7ce2c",
-    "publishedSha256": "7ab7e0a471ff7f4e85b947a344370d5d615d7d1d3bb8432c882c697a49b7ce2c",
+    "sourceSha256": "a960130298ca0f80c03f4fe03a181f263d23f3adcce25939760738f5a00d2fce",
+    "publishedSha256": "a960130298ca0f80c03f4fe03a181f263d23f3adcce25939760738f5a00d2fce",
     "projection": false
   },
   {
     "key": "CSCI3130/L09-P4-真减法小测.md",
-    "sourceSha256": "00df250f172251fc82eb0daf65b6f9d85f17fdd22d5b27b235b0ef5e91603876",
-    "publishedSha256": "43b03ea8343c6182ec00b7876d0eb9bf5b003e86f7febe70c80d425fe09b1e3c",
-    "projection": true
+    "sourceSha256": "383eac8779120b9c4dc57acdcc1cba7fabaef0c6095d43a3ba238dea4f595d98",
+    "publishedSha256": "383eac8779120b9c4dc57acdcc1cba7fabaef0c6095d43a3ba238dea4f595d98",
+    "projection": false
   },
   {
     "key": "CSCI3130/L10-P1-图灵机的基本变体.md",
