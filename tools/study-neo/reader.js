@@ -1,56 +1,168 @@
 "use strict";
+
 (() => {
-  const one=(s,root=document)=>root.querySelector(s), all=(s,root=document)=>[...root.querySelectorAll(s)];
-  const online=location.protocol!=="file:";
-  if(!online)all("[data-online],[data-download]").forEach(x=>x.hidden=true);
-  const unit=document.body.dataset.unit;
-  if(!unit){
-    const legacy=location.hash.match(/^#read\/l(\d\d)(?:\/|$)/);
-    const ids=["overview","overview","syscalls","syscalls","syscalls","filesystem","devices","cpu","cpu","memory","memory","memory","memory","threads","sync","sync"];
-    if(legacy&&ids[Number(legacy[1])])location.replace(ids[Number(legacy[1])]+".html");
-    const aliases={"#read/start":"overview.html","#read/tutorials":"index.html#labs","#lab/0":"cpu.html#workbench","#lab/1":"memory.html#workbench","#lab/2":"threads.html#workbench","#lab/3":"filesystem.html#workbench","#lab/4":"memory.html#workbench","#read/route":"index.html#catalog","#lab":"index.html#labs","#index":"index.html#catalog","#resources":"index.html#download"};
-    if(aliases[location.hash])location.replace(aliases[location.hash]);
-  }
-  for(const trace of all("[data-trace]")){
-    const frames=all(".frame",trace),tools=one(".trace-tools",trace);tools.hidden=false;
-    const prev=one("[data-prev]",trace),next=one("[data-next]",trace),toggle=one("[data-all]",trace),position=one("[data-position]",trace);
-    let n=0,expanded=false;position.setAttribute("aria-live","polite");
-    function draw(){frames.forEach((f,i)=>f.hidden=!expanded&&i!==n);position.textContent=expanded?frames.length+" 个状态":"状态 "+(n+1)+" / "+frames.length;prev.disabled=expanded||n===0;next.disabled=expanded||n===frames.length-1;toggle.textContent=expanded?"逐步阅读":"展开全部";toggle.setAttribute("aria-expanded",String(expanded));}
-    prev.onclick=()=>{n--;draw();};next.onclick=()=>{n++;draw();};toggle.onclick=()=>{expanded=!expanded;draw();};draw();
-  }
-  for(const form of all(".quiz")){
-    const correct=Number(form.dataset.answer),buttons=all("[data-option]",form),feedback=one(".feedback",form);
-    buttons.forEach((b,i)=>b.onclick=()=>{buttons.forEach(x=>{x.classList.remove("correct","incorrect");x.setAttribute("aria-pressed","false");});b.classList.add(i===correct?"correct":"incorrect");b.setAttribute("aria-pressed","true");feedback.textContent=i===correct?"答对了。对照下面的推导，检查你的理由。":"再看一次图中的初始条件。可以重选，也可以展开推导。";if(i===correct)one("details",form).open=true;});
-  }
-  if(unit){
-    document.documentElement.classList.add("js-book");
-    const lessons=all("[data-lesson]"),links=all("[data-goto]"),side=one(".side details"),narrow=matchMedia("(max-width:740px)");
-    if(narrow.matches)side.open=false;
-    function show(scroll){
-      let key;try{key=decodeURIComponent(location.hash.slice(1));}catch{key="";}
-      const skip=key==="main";
-      const current=(skip?lessons.find(l=>!l.hidden):lessons.find(l=>l.id===key))||lessons[0];lessons.forEach(l=>l.hidden=l!==current);
-      links.forEach(a=>{if(a.dataset.goto===current.id)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
-      if(narrow.matches)side.open=false;
-      document.title=(one("h1,h2",current)?.textContent||"操作系统图解课堂")+" · CSCI3150";
-      if(skip){const main=one("#main");main.tabIndex=-1;main.focus();}
-      else if(scroll){current.tabIndex=-1;current.focus({preventScroll:true});window.scrollTo(0,0);}
-      window.dispatchEvent(new Event("lessonchange"));
+  if (location.protocol === "file:") {
+    for (const link of document.querySelectorAll("[data-online], [data-download]")) {
+      link.hidden = true;
     }
-    window.addEventListener("hashchange",()=>show(true));show(false);
-    if(location.hash)requestAnimationFrame(()=>window.scrollTo(0,0));
   }
-  const dlg=one("#finder"),q=one("#lookup"),matches=one("#matches"),launch=one("[data-search-open]");
-  if(dlg&&typeof dlg.showModal==="function"){
-    launch.hidden=false;
-    function search(){const terms=q.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
-      matches.replaceChildren();if(!terms.length)return;
-      const found=(window.lessonIndex||[]).map(([part,name,url,body])=>{const title=(part+" "+name).toLowerCase(), hay=title+" "+body.toLowerCase();return {part,name,url,score:terms.every(t=>hay.includes(t))?terms.reduce((s,t)=>s+(title.includes(t)?5:1),0):0};}).filter(x=>x.score).sort((a,b)=>b.score-a.score).slice(0,18);
-      if(!found.length){matches.textContent="没有找到匹配的小课。可试试中英文术语，例如「页表」或「TLB」。";return;}
-      found.forEach(({part,name,url})=>{const a=document.createElement("a"),small=document.createElement("small");a.href=url;a.textContent=name;small.textContent=part;a.append(small);a.onclick=()=>dlg.close();matches.append(a);});
+
+  // Older editions linked into the handbook from the home page with hash routes.
+  if (document.querySelector(".landing")) {
+    const lecture = location.hash.match(/^#read\/l(\d\d)(?:\/|$)/);
+    const lectureUnits = [
+      "overview", "overview", "syscalls", "syscalls", "syscalls", "filesystem",
+      "devices", "cpu", "cpu", "memory", "memory", "memory", "memory", "threads", "sync", "sync",
+    ];
+    const routes = {
+      "#read/start": "read.html#unit-overview",
+      "#read/tutorials": "#labs",
+      "#lab/0": "read.html#cpu--workbench",
+      "#lab/1": "read.html#memory--workbench",
+      "#lab/2": "read.html#threads--workbench",
+      "#lab/3": "read.html#filesystem--workbench",
+      "#lab/4": "read.html#memory--workbench",
+      "#read/route": "#catalog",
+      "#lab": "#labs",
+      "#index": "#catalog",
+      "#resources": "#download",
+    };
+    const unit = lecture && lectureUnits[Number(lecture[1])];
+    const destination = unit ? "read.html#unit-" + unit : routes[location.hash];
+    if (destination) location.replace(destination);
+  }
+
+  // The contents follow the reading position. Anchors and browser history stay native.
+  const sections = Array.from(document.querySelectorAll(".unit-section[data-unit]"));
+  if (!sections.length && document.body.dataset.unit) sections.push(document.body);
+  const outlines = [];
+  const lessons = [];
+
+  for (const section of sections) {
+    const details = section.querySelector(".side details");
+    if (!details) continue;
+    const links = new Map(Array.from(details.querySelectorAll("a[data-goto]"),
+      link => [link.dataset.goto, link]));
+    let sectionStart = section.querySelector(".unit-band");
+    for (const article of section.querySelectorAll(".desk > article.lesson[id]")) {
+      const link = links.get(article.id);
+      if (!link) continue;
+      lessons.push({ startElement: sectionStart || article, link, details });
+      sectionStart = null;
     }
-    function open(){if(!dlg.open)dlg.showModal();q.focus();q.select();search();}
-    launch.onclick=open;q.oninput=search;
-    document.addEventListener("keydown",e=>{if(e.key==="/"&&!e.ctrlKey&&!e.metaKey&&!/input|textarea|select/i.test(e.target.tagName)){e.preventDefault();open();}});
+    outlines.push(details);
   }
+
+  if (lessons.length) {
+    document.documentElement.classList.add("has-outline");
+    const narrow = matchMedia("(max-width: 740px)");
+    const setMenuSize = () => {
+      for (const details of outlines) details.open = !narrow.matches;
+    };
+    setMenuSize();
+    narrow.addEventListener("change", setMenuSize);
+
+    let currentLink = null;
+    function markCurrent({ details, link }) {
+      if (currentLink === link) return;
+      if (currentLink) currentLink.removeAttribute("aria-current");
+      link.setAttribute("aria-current", "location");
+      currentLink = link;
+
+      // Keep long outlines legible using their own scrollbar.
+      const nav = link.closest("nav");
+      if (!details.open || !nav) return;
+      const bounds = nav.getBoundingClientRect();
+      const item = link.getBoundingClientRect();
+      if (item.top < bounds.top) nav.scrollTop += item.top - bounds.top;
+      else if (item.bottom > bounds.bottom) nav.scrollTop += item.bottom - bounds.bottom;
+    }
+
+    let anchorInset;
+    function measureInset() {
+      anchorInset = (parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0) + 1;
+    }
+    function updateOutline() {
+      // Ordered article positions allow even a long jump to need only a few layout reads.
+      let start = 0;
+      let end = lessons.length;
+      while (start < end) {
+        const mid = Math.floor((start + end) / 2);
+        if (lessons[mid].startElement.getBoundingClientRect().top <= anchorInset) start = mid + 1;
+        else end = mid;
+      }
+      const atEnd = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+      markCurrent(lessons[atEnd ? lessons.length - 1 : Math.max(0, start - 1)]);
+    }
+    let scheduled = false;
+    function scheduleUpdate() {
+      if (scheduled) return;
+      scheduled = true;
+      requestAnimationFrame(() => {
+        scheduled = false;
+        updateOutline();
+      });
+    }
+    for (const details of outlines) {
+      details.addEventListener("click", event => {
+        if (narrow.matches && event.target.closest("a[data-goto]")) details.open = false;
+      });
+    }
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", () => { measureInset(); scheduleUpdate(); });
+    window.addEventListener("pageshow", scheduleUpdate);
+    window.addEventListener("hashchange", scheduleUpdate);
+    measureInset();
+    scheduleUpdate();
+  }
+
+  const dialog = document.querySelector("#finder");
+  const query = document.querySelector("#lookup");
+  const matches = document.querySelector("#matches");
+  const launch = document.querySelector("[data-search-open]");
+  if (!dialog || typeof dialog.showModal !== "function" || !query || !matches || !launch) return;
+  launch.hidden = false;
+
+  function search() {
+    const terms = query.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    matches.replaceChildren();
+    if (!terms.length) return;
+    const results = [];
+    for (const [part, name, url, body] of window.lessonIndex || []) {
+      const title = (part + " " + name).toLowerCase();
+      const content = title + " " + body.toLowerCase();
+      if (terms.every(term => content.includes(term))) {
+        const score = terms.reduce((total, term) => total + (title.includes(term) ? 5 : 1), 0);
+        results.push({ part, name, url, score });
+      }
+    }
+    results.sort((a, b) => b.score - a.score);
+    if (!results.length) {
+      matches.textContent = "没有找到匹配的小课。可试试中英文术语，例如「页表」或「TLB」。";
+    }
+    for (const { part, name, url } of results.slice(0, 18)) {
+      const link = document.createElement("a");
+      const label = document.createElement("small");
+      link.href = url;
+      link.textContent = name;
+      label.textContent = part;
+      link.append(label);
+      link.addEventListener("click", () => dialog.close());
+      matches.append(link);
+    }
+  }
+  function openSearch() {
+    if (!dialog.open) dialog.showModal();
+    query.focus();
+    query.select();
+    search();
+  }
+  launch.addEventListener("click", openSearch);
+  query.addEventListener("input", search);
+  document.addEventListener("keydown", event => {
+    if (event.key !== "/" || event.ctrlKey || event.metaKey || event.altKey || event.defaultPrevented) return;
+    if (event.target.closest("input, textarea, select, [contenteditable]")) return;
+    event.preventDefault();
+    openSearch();
+  });
 })();

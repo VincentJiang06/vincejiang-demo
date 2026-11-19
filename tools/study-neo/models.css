@@ -1,0 +1,47 @@
+.model-settings {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-block: 16px 4px;
+}
+.model-select { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 6px 10px; }
+.model-count { color: var(--faint); font-size: 13px; }
+.model-states { list-style: none; padding: 0; margin: 12px 0 20px; }
+.model-state {
+  display: grid;
+  grid-template-columns: 2ch minmax(0, 1fr);
+  gap: 7px 12px;
+  padding: 15px 0;
+  border-block-start: 1px solid var(--line);
+  break-inside: avoid;
+}
+.model-state > .stepnum { align-self: baseline; grid-column: 1; }
+.model-state > :not(.stepnum) { grid-column: 2; }
+.model-state h3 { align-self: baseline; font-size: 17px; line-height: 1.5; }
+.model-state .cell-rack { gap: 4px; }
+.model-state .model-cell { padding: 5px 8px; min-width: 0; }
+.model-cell dt { color: var(--faint); font-size: 12px; }
+.model-cell dd { font-size: 15px; font-weight: 650; overflow-wrap: anywhere; }
+.model-note { color: var(--faint); font-size: 14px; line-height: 1.65; }
+.model-timeline { padding-inline: 4px; }
+.model-timeline .job-tape { margin: 2px 0 0; }
+.model-timeline .job-tape span { padding-block: 3px; }
+.model-axis { display: flex; font: 11px/1.5 var(--mono); color: var(--faint); }
+.model-axis span { flex: 1 1 0; width: 0; text-indent: -.3em; }
+.model-axis span:last-child { flex: 0 0 0; }
+.model-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+@media (max-width: 530px) {
+  .model-state { column-gap: 7px; }
+  .model-state .cell-rack { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media print {
+  .model-states .job-tape span { print-color-adjust: exact; }
+}

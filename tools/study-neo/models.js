@@ -104,19 +104,76 @@
       }
     }
   };
-  function el(tag,cls,txt){const e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e;}
-  for(const host of document.querySelectorAll("[data-model]")){
-    const model=models[host.dataset.model];if(!model)continue;let pos=0, states=model.run(0);
-    host.replaceChildren();const h=el("h2","",model.title),intro=el("p","lab-intro",model.intro);host.append(h,intro);
-    const label=el("label","model-select","实验条件　"),select=el("select");model.options.forEach((v,i)=>{const o=el("option","",v);o.value=i;select.append(o);});label.append(select);host.append(label);
-    const panel=el("div","model-frame");panel.setAttribute("aria-live","polite");host.append(panel);
-    const buttons=el("div","model-controls"), back=el("button","","← 上一步"),next=el("button","hot","下一步 →"),reset=el("button","","回到起点");buttons.append(back,next,reset);host.append(buttons);
-    function draw(){
-      const s=states[pos];panel.replaceChildren();panel.append(el("span","stepnum","状态 "+(pos+1)+" / "+states.length),el("h3","",s.label));
-      const rack=el("div","cell-rack");for(const x of s.cells){const item=el("div","model-cell "+x.status);item.append(el("small","",x.name),el("strong","",x.value));rack.append(item);}panel.append(rack);
-      if(s.track){const tape=el("div","job-tape");tape.setAttribute("aria-label","CPU 时间线");for(let i=0;i<7;i++){const n=s.track[i];tape.append(el("span",n?"job-"+n:"",n||"·"));}panel.append(tape);}
-      panel.append(el("p","",s.note));back.disabled=pos===0;next.disabled=pos===states.length-1;reset.disabled=pos===0;
+  function el(tag, className, text) {
+    const element = document.createElement(tag);
+    if (className) element.className = className;
+    if (text !== undefined) element.textContent = text;
+    return element;
+  }
+
+  function cpuTimeline(track, duration) {
+    const chart = el("div", "model-timeline");
+    const intervals = track.map((job, time) => `${time} 至 ${time + 1} 运行 ${job}`);
+    chart.setAttribute("role", "img");
+    chart.setAttribute("aria-label", "CPU 时间线，" + (intervals.join("，") || "尚未运行"));
+    const tape = el("div", "job-tape");
+    const axis = el("div", "model-axis");
+    for (let time = 0; time < duration; time++) {
+      const job = track[time];
+      tape.append(el("span", job ? "job-" + job : "", job || "·"));
+      axis.append(el("span", "", time));
     }
-    back.onclick=()=>{pos--;draw();};next.onclick=()=>{pos++;draw();};reset.onclick=()=>{pos=0;draw();};select.onchange=()=>{pos=0;states=model.run(+select.value);draw();};draw();
+    axis.append(el("span", "", duration));
+    chart.append(tape, axis);
+    return chart;
+  }
+
+  function stateItem(state, index, duration) {
+    const item = el("li", "model-state");
+    const number = el("span", "stepnum", String(index + 1).padStart(2, "0"));
+    number.setAttribute("aria-hidden", "true");
+    const heading = el("h3", "", state.label);
+    const fields = el("dl", "cell-rack");
+    for (const field of state.cells) {
+      const box = el("div", ("model-cell " + field.status).trim());
+      box.append(el("dt", "", field.name), el("dd", "", field.value));
+      fields.append(box);
+    }
+    item.append(number, heading, fields);
+    if (state.track) item.append(cpuTimeline(state.track, duration));
+    item.append(el("p", "model-note", state.note));
+    return item;
+  }
+
+  for (const host of document.querySelectorAll("[data-model]")) {
+    const model = models[host.dataset.model];
+    if (!model) continue;
+    const label = el("label", "model-select", "实验条件");
+    const select = el("select");
+    model.options.forEach((name, index) => {
+      const option = el("option", "", name);
+      option.value = index;
+      select.append(option);
+    });
+    label.append(select);
+
+    const settings = el("div", "model-settings");
+    const status = el("p", "model-count");
+    status.setAttribute("role", "status");
+    settings.append(label, status);
+    const list = el("ol", "model-states");
+    list.setAttribute("role", "list");
+    list.setAttribute("aria-label", "实验运行状态");
+    host.replaceChildren(el("h2", "", model.title), el("p", "lab-intro", model.intro), settings, list);
+
+    function renderRun() {
+      const index = select.selectedIndex;
+      const states = model.run(index);
+      const duration = states.at(-1).track?.length;
+      list.replaceChildren(...states.map((state, i) => stateItem(state, i, duration)));
+      status.replaceChildren(el("span", "model-sr-only", model.options[index] + "，"), `共 ${states.length} 个状态`);
+    }
+    select.addEventListener("change", renderRun);
+    renderRun();
   }
 })();

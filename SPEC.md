@@ -320,7 +320,7 @@ curl -s localhost:8080/health          # → ok
 
 ### CSCI3150 操作系统图解课堂
 
-`tools/study-build.mjs` 将 `tools/study-neo/` 中的静态教材部署到 `/study/csci3150-neo/`。Study 首页、学期页及 CSCI3150 课程页均设有入口。八个主题各有独立 HTML 页面，页内小课支持片段链接。离线包包含正文、图示、搜索及实验所需的本地资源。
+`tools/study-build.mjs` 将 `tools/study-neo/` 中的静态教材部署到 `/study/csci3150-neo/`。Study 首页、学期页及 CSCI3150 课程页均设有入口。八个主题在 `read.html` 连续排版，小课和实验均支持片段链接。原主题地址会保留小课或实验位置并转到连续正文。离线包包含正文、图示、搜索及实验所需的本地资源。
 
 ### CSCI3130 课件跟进（2026-11-13）
 
