@@ -2,10 +2,11 @@ import {readdirSync,readFileSync,writeFileSync,mkdirSync,lstatSync,existsSync} f
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
+import {localAssignment, publicStudySections} from './study-homework.mjs';
 export const COURSES=['CSCI3130','CSCI3150','CSCI3160','CSCI3230','GENA2122'];
-export const isNote=p=>p.endsWith('.md')&&!p.split('/').some(x=>x.endsWith('工作记录'))&&!p.split('/').some(x=>['核验','记忆库','PDF','AGENTS.md','CLAUDE.md','更新记录.md'].includes(x))&&p!=='README.md';
+export const isNote=p=>p.endsWith('.md')&&!localAssignment(p)&&!p.split('/').some(x=>x.endsWith('工作记录'))&&!p.split('/').some(x=>['核验','记忆库','PDF','AGENTS.md','CLAUDE.md','更新记录.md'].includes(x))&&p!=='README.md';
 export function publicText(s){
- return s.split('\n').filter(l=>!/^(- 编写：|本次来源核对范围|本次范围内索引共有|原件已归档，工作包已解压|.*`study\/exercise\/` 是用户明确指定)/.test(l))
+ return publicStudySections(s).split('\n').filter(l=>!/^(- 编写：|本次来源核对范围|本次范围内索引共有|原件已归档，工作包已解压|.*`study\/exercise\/` 是用户明确指定)/.test(l))
  .join('\n')
  .replace(/^本轮替换前的稿件和导航保存在.*$/gm,'')
  .replace(/^2026-10-19 已依据原始课件从头重写三稿。替换前稿件保存在.*$/gm,'')

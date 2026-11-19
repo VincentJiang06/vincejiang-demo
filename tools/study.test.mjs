@@ -28,8 +28,11 @@ test('study rendering preserves equations, explicit/repeated anchors and resolve
 
 test('publication projection removes workflow metadata and private paths without deleting academic prose', async () => {
  const {publicText, isNote} = await import('./study-import.mjs');
- assert.equal(isNote('exercise/Ex01.md'),true);
+ assert.equal(isNote('exercise/Ex01.md'),false);
  for(const name of ['核验/a.md','记忆库/L01.md','AGENTS.md','更新记录.md','PDF/a.pdf','Douglass-Opus55-工作记录/01-译文.md'])assert.equal(isNote(name),false);
+ const sample=publicText('# 讲义\n\n### A1 作业演练（非讲义内容）\n\nprivate solution\n\n### 课堂例题\n\nkeep this example');
+ assert.doesNotMatch(sample,/private solution/);
+ assert.match(sample,/keep this example/);
  const result=publicText('# 例题\n$x=1$\n- 编写：vince-course-study 4.2.0\n路径 `/Users/vince/Lab`。\n补充内容不进入讲义记忆库。');
  assert.match(result,/\$x=1\$/);assert.doesNotMatch(result,/vince-course|\/Users\/vince|记忆库/);
  assert.match(result,/课程工作目录/);
@@ -85,12 +88,11 @@ test('generated study pages version their UI assets so updated styles reach retu
   assert.match(retired,/noindex,follow/);
   assert.ok(decodeURI(retired).includes('url=/study/2026T1/CSCI3130/L01-L06-期中详细复习.html'));
   assert.doesNotMatch(retired,/<article>/);
-  for(const key of ['CSCI3230/HW01-2026T1-分级提示','CSCI3150/HW01-Shell分级提示']){
-   const hint=readFileSync(join(out,'study/2026T1',key+'.html'),'utf8');
-   const outside=hint.replace(/<article>[\s\S]*?<\/article>/,'');
-   assert.doesNotMatch(outside,/相邻笔记|HW01[^"<>]*解析|HW01-Shell进程与管道/);
-   assert.match(outside,/返回课程目录（离开提示模式）/);
-   assert.doesNotMatch(hint,/<details class="study-hint" open/);
+  for(const course of Object.keys(reviewFiles).concat(['CSCI3150','CSCI3230','GENA2122'])){
+   assert.doesNotMatch(readFileSync(join(out,'study/2026T1',course,'index.html'),'utf8'),/作业与题解/);
+  }
+  for(const key of ['CSCI3130/HW05-2026T1-完整解析','CSCI3230/HW01-2026T1-分级提示','CSCI3160/exercise/Ex01-随机算法与期望分析']){
+   assert.throws(()=>readFileSync(join(out,'study/2026T1',key+'.html')), {code:'ENOENT'});
   }
  } finally {rmSync(out,{recursive:true,force:true});}
 });
@@ -141,6 +143,7 @@ test('course-scoped import reads only selected sources and preserves other publi
   // Exercise CLI in an isolated copy so its default destination cannot touch the repo.
   const cli=join(root,'tools/study-import.mjs');mkdirSync(join(root,'tools'),{recursive:true});
   copyFileSync(fileURLToPath(new URL('./study-import.mjs',import.meta.url)),cli);
+  copyFileSync(fileURLToPath(new URL('./study-homework.mjs',import.meta.url)),join(root,'tools/study-homework.mjs'));
   const result=spawnSync(process.execPath,[cli,desktop,'--course=CSCI3230'],{encoding:'utf8'});
   assert.equal(result.status,0,result.stderr);
   assert.equal(readFileSync(join(root,'tools/study-content/CSCI3230/阅读导航.md'),'utf8'),authored);

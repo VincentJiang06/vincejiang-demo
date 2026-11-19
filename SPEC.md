@@ -314,7 +314,7 @@ curl -s localhost:8080/health          # → ok
 
 ## 15. Study 课程笔记
 
-入口 `/study/` 提供期中复习和学期目录；`/study/2026T1/` → 五个课号 → 对应笔记 `.html`，保留中文文件名和 `exercise/` 子目录。当前 298 份发布 Markdown 在 `tools/study-content/`，由 `tools/study-build.mjs` 在主构建/检查流程中处理；不会将该源目录复制到网站。CSCI3130、CSCI3150、CSCI3160、CSCI3230、GENA2122 分别为 81、55、86、65、11 份。
+入口 `/study/` 提供期中复习和学期目录。五门课的公开笔记列在 `tools/study-content/manifest.json`。作业、分级提示、习题集和答案只存本地；公开伴读与复习笔记移除对应的作业解答段。导入和发布使用同一套作业文件判定规则。
 
 每页具备自指 canonical、课程与文章区分的标题/简介及分享 metadata。正文页的 LearningResource 与可见课程笔记身份一致；“本站更新”和 dateModified 取发布副本的 Git 日期，不推断原课件日期。纯元数据优化不重导入 Desktop 笔记。
 
@@ -345,7 +345,7 @@ cd tools && npm test && npm run check
 
 复用 prompt：
 
-> 将桌面 CSCI3130、CSCI3150、CSCI3160、CSCI3230、GENA2122 的 study 学习笔记同步到 /study/2026T1/。先读取 SPEC §15，使用独立分支执行现有导入与检查，审查新增/变更及敏感内容；包含 study 内作业与实验解析，不读取或上传目录外资料、原课件和内部核验文件。不改本地源笔记。验证全文、公式、内部链接及手机实页，协调 main 提交顺序后沿现有 CI 发布，并报告该 SHA 的部署与线上验证结果。
+> 将桌面 CSCI3130、CSCI3150、CSCI3160、CSCI3230、GENA2122 的 study 学习笔记同步到 /study/2026T1/。先读取 SPEC §15，使用独立分支执行现有导入与检查，审查新增/变更及敏感内容；排除本地作业与题解，保留公开实验资料，不读取或上传目录外资料、原课件和内部核验文件。不改本地源笔记。验证全文、公式、内部链接及手机实页，协调 main 提交顺序后沿现有 CI 发布，并报告该 SHA 的部署与线上验证结果。
 
 ### 全量同步核对（2026-11-03）
 
