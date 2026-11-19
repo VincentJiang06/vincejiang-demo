@@ -1,0 +1,63 @@
+[data-scene] { min-width: 0; }
+[data-scene]:empty { display: none; }
+.course-scene {
+  margin: 1.35rem 0;
+  overflow: hidden;
+  background: #f9faf3;
+  color: #1c3028;
+  border: 1px solid #c3cdbb;
+  border-radius: 8px;
+}
+.course-scene .scene-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 15px;
+  background: #eaf0de;
+  border-bottom: 1px solid #cbd4c2;
+  font: 650 16px/1.45 var(--sans, system-ui, sans-serif);
+}
+.course-scene .scene-scale {
+  flex: none;
+  font: 600 13px/1.3 var(--sans, system-ui, sans-serif);
+  color: #284a37;
+  border: 1px solid #91a48b;
+  border-radius: 4px;
+  padding: 7px 10px;
+  background: #fbfcf6;
+}
+.course-scene .scene-scale[aria-pressed="true"] { background: #304f3d; color: white; }
+.course-scene .scene-scale:focus-visible, .course-scene .scene-scroll:focus-visible {
+  outline: 2px solid #26604c;
+  outline-offset: -2px;
+}
+.scene-scroll {
+  width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  background: #fbfcf6;
+}
+.course-scene .scene-scroll canvas {
+  display: block;
+  margin: 0 auto;
+  max-width: none;
+}
+.course-scene .scene-caption {
+  margin: 0;
+  padding: 11px 15px 13px;
+  border-top: 1px solid #d4dccb;
+  font: 400 14px/1.7 var(--sans, system-ui, sans-serif);
+  color: #344b3c;
+}
+@media (max-width: 520px) {
+  .course-scene .scene-heading { padding: 5px 9px 5px 12px; font-size: 15px; }
+  .course-scene .scene-scale { min-height: 40px; }
+  .course-scene .scene-caption { padding: 9px 12px 12px; }
+}
+@media print {
+  .course-scene { break-inside: avoid; }
+  .course-scene .scene-scale { display: none; }
+  .course-scene .scene-scroll canvas { max-width: 100%; height: auto !important; }
+}

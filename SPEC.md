@@ -318,6 +318,10 @@ curl -s localhost:8080/health          # → ok
 
 每页具备自指 canonical、课程与文章区分的标题/简介及分享 metadata。正文页的 LearningResource 与可见课程笔记身份一致；“本站更新”和 dateModified 取发布副本的 Git 日期，不推断原课件日期。纯元数据优化不重导入 Desktop 笔记。
 
+### CSCI3150 操作系统图解课堂
+
+`tools/study-build.mjs` 将 `tools/study-neo/` 中的静态教材部署到 `/study/csci3150-neo/`。Study 首页、学期页及 CSCI3150 课程页均设有入口。八个主题各有独立 HTML 页面，页内小课支持片段链接。离线包包含正文、图示、搜索及实验所需的本地资源。
+
 ### CSCI3130 课件跟进（2026-11-13）
 
 新增 Tutorial 7 五篇期中讲评（判断题、自动机、正则表达式、泵引理、文法与 CNF），并同步已有 Tutorial 8 Quiz 4 逐题详解；课程现为 81 篇，五门合计 286 篇。L07/L08 本学期原件与资料包哈希一致，六篇发布稿只更新来源身份和链接，保留线上深化正文及旧锚点。阅读导航加入新讲评入口；其他课程发布副本不变。仅发布学术 Markdown，原件、课程索引和核验材料保留本地。

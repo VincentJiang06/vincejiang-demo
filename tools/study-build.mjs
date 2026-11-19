@@ -9,9 +9,9 @@ const ROOT=fileURLToPath(new URL('../',import.meta.url));
 const assetVersion=f=>createHash('sha256').update(readFileSync(path.join(ROOT,'templates',f))).digest('hex').slice(0,12);
 const names={CSCI3130:'计算理论',CSCI3150:'操作系统',CSCI3160:'算法设计与分析',CSCI3230:'人工智能',GENA2122:'美国文化与历史议题'};
 const handbookEntry = `<a class="handbook-entry" href="/study/csci3150-neo/">
-  <span><small>CSCI3150</small><strong>操作系统学习手册</strong>
-  <span>从一行命令讲起，逐步理解进程、内存、文件系统与并发。</span></span>
-  <b>打开手册 <span aria-hidden="true">→</span></b></a>`;
+  <span><small>CSCI3150</small><strong>操作系统图解课堂</strong>
+  <span>八个知识板块，87 节图解小课。从第一条指令到线程同步，每块都能动手实验。</span></span>
+  <b>进入课堂 <span aria-hidden="true">→</span></b></a>`;
 const MIDTERM_PATH=BASE+'midterm/';
 const STUDY_REDIRECTS=JSON.parse(readFileSync(path.join(ROOT,'tools/study-redirects.json'),'utf8'));
 const redirectUrl=target=>{const [key,fragment]=target.split('#');return url(key)+(fragment?'#'+encodeURIComponent(fragment):'');};
@@ -57,8 +57,8 @@ export function buildStudy(out,{check=false}={}){
  if(check){console.error('study check ✓ '+JSON.stringify(metrics));return metrics;}
  const dest=path.join(out,'study/2026T1');mkdirSync(dest,{recursive:true});
  const write=(key,html)=>{const p=path.join(dest,key);mkdirSync(path.dirname(p),{recursive:true});writeFileSync(p,html);};
- cpSync(path.join(ROOT,'tools/study-handbook'),path.join(out,'study/csci3150-neo'),{recursive:true});
- write('CSCI3150/handbook/index.html', `<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="robots" content="noindex,follow"><link rel="canonical" href="https://vincejiang.com/study/csci3150-neo/"><title>操作系统学习手册</title><script>location.replace('/study/csci3150-neo/'+location.search+location.hash)</script><meta http-equiv="refresh" content="0;url=/study/csci3150-neo/"><p><a href="/study/csci3150-neo/">进入操作系统学习手册</a></p></html>`);
+ cpSync(path.join(ROOT,'tools/study-neo'),path.join(out,'study/csci3150-neo'),{recursive:true});
+ write('CSCI3150/handbook/index.html', `<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="robots" content="noindex,follow"><link rel="canonical" href="https://vincejiang.com/study/csci3150-neo/"><title>操作系统图解课堂</title><script>location.replace('/study/csci3150-neo/'+location.search+location.hash)</script><meta http-equiv="refresh" content="0;url=/study/csci3150-neo/"><p><a href="/study/csci3150-neo/">进入操作系统图解课堂</a></p></html>`);
  for(const f of ['study.css','study.js'])cpSync(path.join(ROOT,'templates',f),path.join(dest,f));
  mkdirSync(path.join(dest,'katex'),{recursive:true});cpSync(path.join(ROOT,'tools/node_modules/katex/dist/katex.min.css'),path.join(dest,'katex/katex.min.css'));
  cpSync(path.join(ROOT,'tools/node_modules/katex/dist/fonts'),path.join(dest,'katex/fonts'),{recursive:true});
