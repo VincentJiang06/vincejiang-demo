@@ -15,7 +15,7 @@ const handbookEntry = `<a class="handbook-entry" href="/study/csci3150-neo/">
   <b>进入课堂 <span aria-hidden="true">→</span></b></a>`;
 const aiHandbookEntry = `<a class="handbook-entry" href="/study/csci3230-neo/">
   <span><small>CSCI3230</small><strong>人工智能图解课堂</strong>
-  <span>从线性回归到医疗人工智能，连读十一讲、图解推导与可切换条件的实验。</span></span>
+  <span>从回归到医疗人工智能，连读十一讲实用案例、交互实验与三份作业的期末方法精讲。</span></span>
   <b>进入课堂 <span aria-hidden="true">→</span></b></a>`;
 const MIDTERM_PATH=BASE+'midterm/';
 const STUDY_REDIRECTS=JSON.parse(readFileSync(path.join(ROOT,'tools/study-redirects.json'),'utf8'));
