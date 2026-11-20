@@ -13,6 +13,10 @@ const handbookEntry = `<a class="handbook-entry" href="/study/csci3150-neo/">
   <span><small>CSCI3150</small><strong>操作系统图解课堂</strong>
   <span>八个知识板块，87 节图解小课。从第一条指令到线程同步，每块都能动手实验。</span></span>
   <b>进入课堂 <span aria-hidden="true">→</span></b></a>`;
+const aiHandbookEntry = `<a class="handbook-entry" href="/study/csci3230-neo/">
+  <span><small>CSCI3230</small><strong>人工智能图解课堂</strong>
+  <span>从线性回归到医疗人工智能，连读十一讲、图解推导与可切换条件的实验。</span></span>
+  <b>进入课堂 <span aria-hidden="true">→</span></b></a>`;
 const MIDTERM_PATH=BASE+'midterm/';
 const STUDY_REDIRECTS=JSON.parse(readFileSync(path.join(ROOT,'tools/study-redirects.json'),'utf8'));
 const redirectUrl=target=>{const [key,fragment]=target.split('#');return url(key)+(fragment?'#'+encodeURIComponent(fragment):'');};
@@ -60,17 +64,18 @@ export function buildStudy(out,{check=false}={}){
  const dest=path.join(out,'study/2026T1');mkdirSync(dest,{recursive:true});
  const write=(key,html)=>{const p=path.join(dest,key);mkdirSync(path.dirname(p),{recursive:true});writeFileSync(p,html);};
  cpSync(path.join(ROOT,'tools/study-neo'),path.join(out,'study/csci3150-neo'),{recursive:true});
+ cpSync(path.join(ROOT,'tools/study-ai-neo'),path.join(out,'study/csci3230-neo'),{recursive:true});
  write('CSCI3150/handbook/index.html', `<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="robots" content="noindex,follow"><link rel="canonical" href="https://vincejiang.com/study/csci3150-neo/"><title>操作系统图解课堂</title><script>location.replace('/study/csci3150-neo/'+location.search+location.hash)</script><meta http-equiv="refresh" content="0;url=/study/csci3150-neo/"><p><a href="/study/csci3150-neo/">进入操作系统图解课堂</a></p></html>`);
  for(const f of ['study.css','study.js'])cpSync(path.join(ROOT,'templates',f),path.join(dest,f));
  mkdirSync(path.join(dest,'katex'),{recursive:true});cpSync(path.join(ROOT,'tools/node_modules/katex/dist/katex.min.css'),path.join(dest,'katex/katex.min.css'));
  cpSync(path.join(ROOT,'tools/node_modules/katex/dist/fonts'),path.join(dest,'katex/fonts'),{recursive:true});
  cpSync(path.join(ROOT,'tools/node_modules/katex/LICENSE'),path.join(dest,'katex/LICENSE'));
- write('index.html',shell('2026T1 课程笔记',`<main id="main" class="landing"><p class="eyebrow">STUDY / 2026T1</p><h1>课程笔记</h1><p class="intro">从概念到推导，从例题到复习。</p>${handbookEntry}${midtermOverview()}<h2>全部课程</h2><div class="courses">${COURSES.map((c,i)=>`<a class="course" href="${BASE}${c}/"><span class="number">0${i+1}</span><span><b>${c}</b><strong>${names[c]}</strong><small>${docs.filter(d=>d.key.startsWith(c+'/')).length} 份笔记</small></span><span aria-hidden="true">↗</span></a>`).join('')}</div><p class="boundary">按课程收录伴读、辅导与实验解析。各篇保留原有资料版本；2026T1 是整理目录，部分笔记使用历史课件。</p></main>`));
+ write('index.html',shell('2026T1 课程笔记',`<main id="main" class="landing"><p class="eyebrow">STUDY / 2026T1</p><h1>课程笔记</h1><p class="intro">从概念到推导，从例题到复习。</p>${handbookEntry}${aiHandbookEntry}${midtermOverview()}<h2>全部课程</h2><div class="courses">${COURSES.map((c,i)=>`<a class="course" href="${BASE}${c}/"><span class="number">0${i+1}</span><span><b>${c}</b><strong>${names[c]}</strong><small>${docs.filter(d=>d.key.startsWith(c+'/')).length} 份笔记</small></span><span aria-hidden="true">↗</span></a>`).join('')}</div><p class="boundary">按课程收录伴读、辅导与实验解析。各篇保留原有资料版本；2026T1 是整理目录，部分笔记使用历史课件。</p></main>`));
  for(const c of COURSES){
   const ds=docs.filter(d=>d.key.startsWith(c+'/'));
   const groups=['期中复习','阅读与复习','课程伴读','辅导','实验','拓展阅读'].map(k=>({k,ds:ds.filter(d=>kind(d)===k)})).filter(g=>g.ds.length);
   const contents=groups.map(g=>`<section class="note-group"><h2>${g.k}<small>${g.ds.length}</small></h2><ul class="note-list">${g.ds.map(d=>`<li>${link(d)}</li>`).join('')}</ul></section>`).join('');
-  write(`${c}/index.html`,shell(`${c} ${names[c]}`,`<main id="main" class="landing"><p class="eyebrow">${c} / ${ds.length} 份笔记</p><h1>${names[c]}</h1>${c === 'CSCI3150' ? handbookEntry : ''}<label class="search">筛选笔记<input type="search" placeholder="输入讲次或主题…" aria-label="筛选课程笔记"></label><p id="filter-status" role="status"></p>${contents}</main>`,c));
+  write(`${c}/index.html`,shell(`${c} ${names[c]}`,`<main id="main" class="landing"><p class="eyebrow">${c} / ${ds.length} 份笔记</p><h1>${names[c]}</h1>${c === 'CSCI3150' ? handbookEntry : c === 'CSCI3230' ? aiHandbookEntry : ''}<label class="search">筛选笔记<input type="search" placeholder="输入讲次或主题…" aria-label="筛选课程笔记"></label><p id="filter-status" role="status"></p>${contents}</main>`,c));
   for(let i=0;i<ds.length;i++){
    const d=ds[i], hintMode=d.key.includes("分级提示"),updated=history['tools/study-content/'+d.key]?.slice(0,10);
    const nav=hintMode?`<p class="hint-boundary">提示模式 · 逐级展开<br><a href="${BASE}${c}/">返回课程目录（离开提示模式）</a></p>`:`<details class="course-nav"><summary>课程目录 · ${c}</summary><nav aria-label="课程目录">${groups.map(g=>`<h2>${g.k}</h2><ul>${g.ds.map(x=>`<li><a ${x===d?'aria-current="page" ':''}href="${esc(url(x.key))}">${esc(path.basename(x.key,'.md'))}</a></li>`).join('')}</ul>`).join('')}</nav></details>`;
@@ -84,7 +89,7 @@ export function buildStudy(out,{check=false}={}){
   const target=redirectUrl(destination);
   write(old.replace(/\.md$/,'.html'),`<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow"><meta http-equiv="refresh" content="0; url=${esc(target)}"><link rel="canonical" href="https://vincejiang.com${esc(target.split('#')[0])}"><title>学习文档地址已更新</title></head><body><p>学习文档已统一到当期目录。<a href="${esc(target)}">前往当前学习入口</a></p></body></html>`);
  }
- mkdirSync(path.join(out,'study'),{recursive:true});writeFileSync(path.join(out,'study/index.html'),shell('课程学习笔记',`<main id="main" class="landing"><p class="eyebrow">STUDY</p><h1>课程学习笔记</h1><p class="intro">按课程理解概念与推导，按复习范围回顾重点。</p>${handbookEntry}${midtermOverview()}<section class="note-group"><h2>课程目录</h2><p><a href="${BASE}">2026T1 · 查看全部课程笔记 →</a></p><p class="boundary">收录 CSCI3130、CSCI3150、CSCI3160、CSCI3230 和 GENA2122 的课程伴读与辅导。</p></section></main>`,'',false,{path:'/study/'}));
+ mkdirSync(path.join(out,'study'),{recursive:true});writeFileSync(path.join(out,'study/index.html'),shell('课程学习笔记',`<main id="main" class="landing"><p class="eyebrow">STUDY</p><h1>课程学习笔记</h1><p class="intro">按课程理解概念与推导，按复习范围回顾重点。</p>${handbookEntry}${aiHandbookEntry}${midtermOverview()}<section class="note-group"><h2>课程目录</h2><p><a href="${BASE}">2026T1 · 查看全部课程笔记 →</a></p><p class="boundary">收录 CSCI3130、CSCI3150、CSCI3160、CSCI3230 和 GENA2122 的课程伴读与辅导。</p></section></main>`,'',false,{path:'/study/'}));
  console.error('study build ✓ '+JSON.stringify(metrics));return metrics;
 }
 if(process.argv[1]===fileURLToPath(import.meta.url))buildStudy(process.argv[2]||'/tmp/vince-study-preview',{check:process.argv.includes('--check')});
