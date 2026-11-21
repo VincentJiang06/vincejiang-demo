@@ -78,14 +78,18 @@ function evidenceChoices(choices, selected, label, section) {
  ).join('')}</div>`;
 }
 
-function industryMap(name, label) {
+function industryMap(name, title, caption, evidence) {
  const height = name.startsWith('cotton-') ? 950 : name === 'textile-1905-capital' ? 1034 : 1000;
  const url = `maps/${name}.svg?v=20261121-text1`;
- return `<details class="evidence-disclosure" data-evidence-disclosure="map">
-  <summary>View geographic map</summary>
-  <p><a href="${url}" target="_blank" rel="noopener">Open full-size map (new tab)</a></p>
-  <img class="industry-map" src="${url}" width="1200" height="${height}" alt="${esc(label)}" loading="lazy" decoding="async">
- </details>`;
+ return `<figure class="industry-map-figure">
+  <img class="industry-map" src="${url}" width="1200" height="${height}" alt="${esc(title)}" decoding="async">
+  <figcaption>
+   <h3>${esc(title)}</h3>
+   <p class="map-caption">${esc(caption)}</p>
+   <a href="${url}" target="_blank" rel="noopener">Open full-size map (new tab)</a>
+   ${evidence}
+  </figcaption>
+ </figure>`;
 }
 
 function spindleEvidence() {
@@ -95,8 +99,7 @@ function spindleEvidence() {
  const ratio = row('southeast_to_new_england_spindles', year);
  const records = econ.filter(record => record.year === year && record.sync_group === 'cotton-spindles');
  const max = 20000000;
- return `<h3>Active cotton spindles in ${year}</h3>
-  <dl class="spindle-comparison">${[[southeast, 'Southeast (9 states)'], [england, 'New England']].map(([record, label]) => `
+ const comparison = `<dl class="spindle-comparison">${[[southeast, 'Southeast (9 states)'], [england, 'New England']].map(([record, label]) => `
    <div class="spindle-row">
     <dt>${label}</dt>
     <dd class="evidence-value">${fmt(record)}</dd>
@@ -104,13 +107,12 @@ function spindleEvidence() {
    </div>`).join('')}
   </dl>
   <p class="spindle-scale" aria-hidden="true"><span>0</span><span>20 million spindles</span></p>
-  <p class="evidence-note">Southeast to New England ratio <strong>${fmt(ratio)}</strong>. Spindles count equipment.</p>
+  <p class="evidence-note">Southeast to New England ratio <strong>${fmt(ratio)}</strong>. Spindles count equipment.</p>`;
+ return `${industryMap(`cotton-${year}`, `Active cotton spindles in ${year}`, content.maps.cotton.caption, comparison)}
   <details class="evidence-disclosure" data-evidence-disclosure="data"><summary>View counts, sources & definitions</summary>
-   <p class="evidence-note">${esc(content.maps.cotton.caption)}</p>
    <p class="evidence-note">${esc(content.maps.cotton.limit)}</p>
    ${table(records)}
-  </details>
-  ${industryMap(`cotton-${year}`, `Map of active cotton spindles in ${year}`)}`;
+  </details>`;
 }
 
 function networkSources(network, scope) {
@@ -136,13 +138,11 @@ function relationshipEvidence(section) {
  const network = capital ? base.layers[0] : base;
  const mapName = capital ? 'textile-1905-capital' : name;
  const copy = content.maps[mapName];
- return `<h3>${esc(copy.title)}</h3>
-  <p class="evidence-note">${esc(copy.caption)}</p>
-  <ol class="relationship-places" aria-label="Places numbered as on the map">
+ const places = `<ol class="relationship-places" aria-label="Places numbered as on the map">
    ${network.nodes.map(place => `<li><strong>${esc(place.display_label || place.city)}</strong><span>${esc(place.account || place.role)}${place.documentation_year ? ` · ${place.documentation_year}` : ''}</span></li>`).join('')}
-  </ol>
-  ${networkSources(network, copy.limit)}
-  ${industryMap(mapName, copy.title)}`;
+  </ol>`;
+ return `${industryMap(mapName, copy.title, copy.caption, places)}
+  ${networkSources(network, copy.limit)}`;
 }
 
 function fixedIndustryEvidence(section) {
@@ -173,7 +173,7 @@ function mapHTML(section) {
  const choiceLabel = cotton ? 'Cotton evidence' : section === 'pipe' ? 'Pipe company' : 'Cigarette industry evidence';
  const choice = cotton ? state.cottonMode : state[section];
  return `<section class="industry-evidence" aria-labelledby="industry-evidence-heading">
-  <h2 id="industry-evidence-heading">Industry evidence</h2>
+  <h2 id="industry-evidence-heading">Industry maps and evidence</h2>
   ${evidenceChoices(industryChoices[section], choice, choiceLabel, cotton ? null : section)}
   ${cotton ? `<div class="spindle-years" ${choice === 'spindles' ? '' : 'hidden'}>${evidenceChoices(spindleYears.map(year => [year, year]), state.cotton, 'Spindle census year', section)}</div>` : ''}
   <p class="sr-only" role="status" id="industry-evidence-status"></p>
@@ -385,7 +385,7 @@ function render() {
    <p class="deck">${esc(national ? content.subtitle : s.deck)}</p>
    ${national ? `<p class="thesis">${esc(content.thesis)}</p>` : ''}
    ${machine ? `<div class="case-jumps">
-    <a href="#${current}/evidence">Industry evidence</a><a href="#${current}/machine">Explore the machine</a>
+    <a href="#${current}/evidence">Maps and evidence</a><a href="#${current}/machine">Explore the machine</a>
    </div>` : ''}
   </div>`;
   if (national) html += `<section class="national-section"><h2>${esc(s.title)}</h2><p class="deck">${esc(s.deck)}</p>${nationalEvidenceHTML()}</section>`;
