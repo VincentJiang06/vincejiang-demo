@@ -1,7 +1,7 @@
 {
-  "title": "Factories Moved South. Did Machine-Making Follow?",
+  "title": "Factory Work Shifted South. Did Machine-Making Follow?",
   "subtitle": "Abolition, industrial capability and the regional division of American manufacturing, 1860–1929",
-  "thesis": "After emancipation, Southern firms expanded production while obtaining machinery and technical expertise from different places. Cotton mill owners could obtain looms from New England suppliers. Birmingham foundries developed casting techniques of their own, and a Durham cigarette firm built a national market while leasing its machines. The three cases trace who financed, operated and improved the machinery as production spread.",
+  "thesis": "After emancipation, Southern factories added jobs, but the ability to design and improve their machinery developed unevenly. Some South Carolina mills bought looms from Massachusetts. One Birmingham foundry developed its own casting process. A rival introduced a different process at its New Jersey works before adopting it in Birmingham. In Durham, a cigarette maker leased its machines, put its mechanics to work improving them and built a national market for their output.",
   "hero_note": "Regional statistics show where wage earners, output value, spindles and patents were recorded. Case maps show documented relationships among firms and places. These are different kinds of evidence. ‘South’ in the national series is the 13-state region used by the Bureau of Labor Statistics, which includes Kentucky and Oklahoma; it is not the Confederacy. The remainder of the country is called ‘rest of US’, not ‘the North’.",
   "sections": [
     {
@@ -21,7 +21,7 @@
         },
         {
           "heading": "What the value ratio measures",
-          "text": "In 1929 the South accounted for 11.7 percent of US product value and 15.2 percent of manufacturing wage earners. Dividing the first share by the second gives 0.77, compared with 1.01 in 1860 and 0.66 in 1899 (Poulton 1947, 7, table 2). A dollar of reported product included the materials that went into it. A change in the prices of those materials, or in the kinds of goods a region made, could move the ratio even if a worker made exactly as many units in an hour. The series can establish the scale of the recovery in employment. It cannot settle whether Southern workers became more productive.",
+          "text": "In 1929 the South accounted for 11.7 percent of US product value and 15.2 percent of manufacturing wage earners. Dividing the first share by the second gives 0.77, compared with 1.01 in 1860 and 0.66 in 1899 (Poulton 1947, 7, table 2). The reported value of finished goods included the value of the materials used to make them. A change in the prices of those materials, or in the kinds of goods a region made, could move the ratio even if a worker made exactly as many units in an hour. The series can establish the scale of the recovery in employment. It cannot settle whether Southern workers became more productive.",
           "citations": [
             "bls1947"
           ],
@@ -37,7 +37,7 @@
         },
         {
           "heading": "Where spinning and invention took place",
-          "text": "In 1899 the nine southeastern states had 21.8 percent of US cotton spindles in active production. They had 56.5 percent by 1929. New England’s share fell from 67.6 to 38.5 percent, so the ratio of southeastern to New England spindles rose from 0.32 to 1.47 (Poulton 1947, 9, table 3). Within a single year and a common set of regional definitions, Sutthiphisal finds a different distribution for textile invention. In 1910 Massachusetts accounted for about 22 percent of textile employment and 42 percent of textile patents. The study’s 14-state South employed 19 percent of textile workers and accounted for 7 percent of patents (Sutthiphisal 2006, PDF 12–13, 20).",
+          "text": "In 1899 the nine southeastern states had 21.8 percent of US cotton spindles in active production. They had 56.5 percent by 1929. New England’s share fell from 67.6 to 38.5 percent, so the ratio of southeastern to New England spindles rose from 0.32 to 1.47 (Poulton 1947, 9, table 3). Sutthiphisal compares textile employment with patenting in 1910, using a broader definition of the South. In 1910 Massachusetts accounted for about 22 percent of textile employment and 42 percent of textile patents. The study’s 14-state South employed 19 percent of textile workers and accounted for 7 percent of patents (Sutthiphisal 2006, PDF 12–13, 20).",
           "citations": [
             "bls1947",
             "sutthiphisal2006"
@@ -52,7 +52,7 @@
       "id": "cotton",
       "eyebrow": "Cotton textiles · the central test",
       "title": "Cotton mills in the South, loom makers in New England",
-      "deck": "Southern investors helped finance new cotton mills. Many mills obtained their looms from New England, where manufacturers employed the machinists behind a large share of textile patents.",
+      "deck": "Southern investors helped finance new cotton mills. South Carolina mills bought looms from Massachusetts, where employees of machinery firms accounted for a large share of the state’s textile patents.",
       "paragraphs": [
         {
           "heading": "Who subscribed to the mills?",
@@ -74,7 +74,7 @@
         },
         {
           "heading": "What changed at the loom",
-          "text": "When the filling yarn ran out on an ordinary loom, the weaver exchanged the shuttle, restarted the loom and refilled the empty shuttle. The Draper Company’s Northrop loom, built in Hopedale, Massachusetts, kept the shuttle in place. A filling fork detected the missing yarn and a mechanism called the transferrer pushed a fresh bobbin from the hopper into the shuttle, ejecting the old bobbin. A separate device stopped the loom when a warp thread broke (Draper 1905, 43–44, 49, 53, 57, 65). Draper claimed that one weaver could tend sixteen looms. A 1902 statement reprinted in its catalog counted 27,980 Northrops among 64,540 South Carolina looms running or on order. That total includes orders still to be filled (Draper 1905, 39 and frontispiece, PDF 6).",
+          "text": "When the filling yarn ran out on an ordinary loom, the weaver exchanged the shuttle, restarted the loom and refilled the empty shuttle. The Draper Company’s Northrop loom, built in Hopedale, Massachusetts, replenished the yarn in the same shuttle. A filling fork detected the missing yarn and a mechanism called the transferrer pushed a fresh bobbin from the hopper into the shuttle, ejecting the old bobbin. A separate device stopped the loom when a warp thread broke (Draper 1905, 43–44, 49, 53, 57, 65). Draper claimed that one weaver could tend sixteen looms. A 1902 statement reprinted in its catalog counted 27,980 Northrops among 64,540 South Carolina looms running or on order. That total includes orders still to be filled (Draper 1905, 39 and frontispiece, PDF 6).",
           "citations": [
             "draper1905"
           ],
@@ -93,7 +93,7 @@
         },
         {
           "heading": "Whose work reaches the patent record?",
-          "text": "Sutthiphisal follows inventions that entered the patent record and, where possible, identifies the inventor’s employer (2006, PDF 12–15, 19–20). Draper’s account of the Dwight filling detector helps explain why the employer matters. An agent at a customer mill devised a detector and Draper employees modified it (Draper 1905, 71). A count by mill location and a count by machinery firm would each capture only part of that work. The same caution applies to Southern mills. Their small share of recorded textile patents gives no count of repairs, adjustments or useful suggestions that never became patent applications.",
+          "text": "Sutthiphisal follows inventions that entered the patent record and, where possible, identifies the inventor’s employer (2006, PDF 12–15, 19–20). The Dwight filling detector illustrates a limit of assigning an invention to one employer. Crediting the mill alone would miss Draper’s revisions. Crediting only Draper would miss the mill agent’s original design (Draper 1905, 71). In Southern mills, too, workers could repair and adjust machinery without applying for patents. The patent totals give no count of that work.",
           "citations": [
             "sutthiphisal2006",
             "draper1905"
@@ -194,7 +194,7 @@
         },
         {
           "heading": "Southern organization at national scale",
-          "text": "Duke hired buyers to purchase leaf at loose-leaf warehouses and opened sales offices in major cities. Its New York office and factory gave it closer access to customers and advertising. As machine output overtook demand, marketing grew costly. In 1889 Duke spent $800,000 on advertising, one-fifth of gross sales (Porter 1969, 64–70). The following year five manufacturers formed the American Tobacco Company under New Jersey law. Duke became president, and the central offices were in New York (Porter 1969, 71–74).",
+          "text": "The Duke firm hired buyers to purchase tobacco at loose-leaf warehouses and opened sales offices in major cities. Opening offices and a factory in New York brought the firm closer to customers and gave it better access to advertising services. As machine output overtook demand, marketing grew costly. In 1889 Duke spent $800,000 on advertising, one-fifth of gross sales (Porter 1969, 64–70). The following year five manufacturers formed the American Tobacco Company under New Jersey law. Duke became president, and the central offices were in New York (Porter 1969, 71–74).",
           "citations": [
             "porter1969"
           ],
@@ -225,7 +225,7 @@
     {
       "id": "institutions",
       "eyebrow": "Institutions",
-      "title": "Rules that acted on different objects",
+      "title": "Who owned the equipment and who controlled its use?",
       "deck": "A mill could obtain equipment on credit. A branch foundry could receive a process under its parent’s patent rights. Each arrangement gave the producer access to machinery on different terms.",
       "paragraphs": [
         {
@@ -238,7 +238,7 @@
         },
         {
           "heading": "Patents, antitrust and corporate form",
-          "text": "The same legal right could operate at different levels. USCIP&F held exclusive US rights to the de Lavaud process and determined which plants received it first (O’Connor 1996, 24, 27–29). The Bonsack company retained its machines and charged manufacturers for each thousand cigarettes produced (Porter 1969, 68–69). Merger also changed the terms of competition. The pipe companies began merging before the Supreme Court upheld the ruling against their price agreement (O’Connor 1996, 16–18). The cigarette manufacturers used New Jersey law to form a holding company (Porter 1969, 73–74).",
+          "text": "USCIP&F held exclusive US rights to the de Lavaud process and determined which plants received it first (O’Connor 1996, 24, 27–29). The Bonsack company retained its machines and charged manufacturers for each thousand cigarettes produced (Porter 1969, 68–69). Merger also changed the terms of competition. The pipe companies began merging before the Supreme Court upheld the ruling against their price agreement (O’Connor 1996, 16–18). The cigarette manufacturers used New Jersey law to form a holding company (Porter 1969, 73–74).",
           "citations": [
             "us-pipe-haer",
             "porter1969"
@@ -247,7 +247,7 @@
           "inline_citations": true
         },
         {
-          "heading": "When opening a factory changes a different decision",
+          "heading": "Who could change a machine after it was installed?",
           "text": "For a textile mill, installing a loom settled where cloth would be woven. The mill might still turn to its supplier for a change in design, as Draper’s account of the Dwight detector illustrates (1905, 71). For a USCIP&F plant, membership in the combine gave access to a company-wide research operation. The parent could choose which works received a new process first (O’Connor 1996, 19–21, 27–29). These arrangements left different decisions in local hands. Counting new factories would capture each opening once and obscure the distinction.",
           "citations": [
             "draper1905",
@@ -261,7 +261,7 @@
     {
       "id": "conclusion",
       "eyebrow": "Conclusion",
-      "title": "Factories move more easily than capability",
+      "title": "Where machine design took place as factories expanded",
       "deck": "Emancipation changed the legal basis of Southern labor. Industrial employment recovered over the following decades, with different consequences for the people and firms who made the equipment.",
       "paragraphs": [
         {
@@ -285,7 +285,7 @@
         },
         {
           "heading": "A question to take to the next factory opening",
-          "text": "The course’s account of emancipation and Reconstruction puts the expansion of Southern industry in a history of changing labor relations (Galvan and Muñoz 2026, Lecture 3; Muñoz 2026, slide 4). The three cases suggest a question for a factory announcement today. Alongside the number of promised jobs, ask where engineers will test a new design, who may install it at another plant, and which firm will bear the cost of a failed trial. Employment figures can later show whether the jobs arrived. Answering those other questions takes evidence about how the business actually operates.",
+          "text": "The course’s account of emancipation and Reconstruction puts the expansion of Southern industry in a history of changing labor relations (Galvan and Muñoz 2026, week 3; Muñoz 2026, slide 4). The three cases suggest a question for a factory announcement today. Alongside the number of promised jobs, ask where engineers will test a new design, who may install it at another plant, and which firm will bear the cost of a failed trial. Employment figures can later show whether the jobs arrived. Answering those other questions takes evidence about how the business actually operates.",
           "citations": [],
           "inline_citations": true
         }
@@ -407,7 +407,7 @@
     "national": {
       "title": "Manufacturing in the thirteen-state South",
       "caption": "The region comprises Alabama, Arkansas, Florida, Georgia, Kentucky, Louisiana, Mississippi, North Carolina, Oklahoma, South Carolina, Tennessee, Texas and Virginia. Census coverage varies by year. Each share uses the national total as its denominator. The remainder includes every state outside the region.",
-      "limit": "Poulton 1947, 7, table 2 (PDF 13). The ratio divides the two rounded shares. Gross nominal product value includes materials and varies with the regional mix of industries. It cannot measure labor productivity."
+      "limit": "Poulton 1947, 7, table 2 (PDF 13). The ratio divides the South’s share of US nominal product value by its share of US manufacturing wage earners. Both shares are rounded in the source. Gross nominal product value includes materials and varies with the regional mix of industries. It cannot measure labor productivity."
     },
     "cotton": {
       "title": "Cotton spinning capacity, 1899–1929",
@@ -426,13 +426,13 @@
     "pipe-1906": {
       "title": "ACIPCO at the Atlanta convention, 1906",
       "caption": "The association’s membership list places the American Cast Iron Pipe Company in Birmingham. The attendance register names P. A. Ivy of that company at the September 1906 convention in Atlanta (American Public Works Association 1907, 7, 23). The line connects a member’s listed city with the meeting venue. The national pipe figures in the accompanying table date from 1926.",
-      "data_note": "O’Connor 1996, 27–28 (PDF 29–30). These approximate national tonnages imply 13.33 percent before rounding. The source gives the unit simply as tons. Its inconsistent 1929 figures are omitted."
+      "data_note": "O’Connor 1996, 27–28 (PDF 29–30). In 1926, about 200,000 of the 1.5 million tons of iron pipe produced in the United States were cast centrifugally, roughly 13 percent. The source gives the unit simply as tons. Its inconsistent 1929 figures are omitted."
     },
     "pipe-1913": {
       "title": "USCIP&F after reorganization, 1912–1913",
       "caption": "United States Cast Iron Pipe & Foundry concentrated its central offices and research at Burlington, New Jersey. The map shows its works in Birmingham, Bessemer, Anniston and Chattanooga. A district inset separates Birmingham from nearby Bessemer. ACIPCO was an independent company.",
       "limit": "The company proposed expanding Bessemer and Birmingham and abandoning older works in Cleveland, Buffalo and Louisville. A vice-president also had an office in Louisville. The proposal leaves the dates of any closures open. Bessemer adopted centrifugal casting in 1934. No date is established here for the Birmingham works (O’Connor 1996, 19, 21, 27–29).",
-      "data_note": "O’Connor 1996, 27–28 (PDF 29–30). These approximate national tonnages imply 13.33 percent before rounding. The source gives the unit simply as tons. Its inconsistent 1929 figures are omitted."
+      "data_note": "O’Connor 1996, 27–28 (PDF 29–30). In 1926, about 200,000 of the 1.5 million tons of iron pipe produced in the United States were cast centrifugally, roughly 13 percent. The source gives the unit simply as tons. Its inconsistent 1929 figures are omitted."
     },
     "cigarettes-1881": {
       "title": "Recruiting cigarette workers, 1881",
@@ -450,7 +450,7 @@
       "title": "Northrop automatic loom",
       "caption": "The reconstruction follows the forty-inch E model on catalog page 82. The action drawing on page 52 shows the A model.",
       "variant_note": "Draper listed No. 16 as its standard shuttle and six bobbin patterns. The catalog does not establish which shuttle and bobbin were fitted to the illustrated E model.",
-      "historical_reading": "Draper’s 1905 catalog shows the forty-inch E model with a No. 1 hopper and steel harness. Replenishing the bobbin while the shuttle stayed on the loom changed the weaver’s work. The catalog lists Southern mill customers. Machinery capital and invention remained concentrated elsewhere during these years (Sutthiphisal 2006, PDF 14–21, 47–48)."
+      "historical_reading": "Draper’s 1905 catalog shows the forty-inch E model with a No. 1 hopper and steel harness. Replenishing the bobbin while the shuttle stayed on the loom changed the weaver’s work. The catalog names Southern mills that bought Draper looms. In 1910 the regional distribution of textile patents more closely resembled the distribution of capital invested in textile machinery firms than that of mill employment (Sutthiphisal 2006, PDF 14–21, 47–48)."
     },
     "bonsack": {
       "title": "Bonsack cigarette machine",
@@ -1032,11 +1032,11 @@
     }
   ],
   "project_explanation": [
-    "A course lecture on the New South describes how Georgia and the Carolinas overtook New England in textiles (Muñoz 2026, slide 4). Who made the machines in those Southern mills? The question follows the course from emancipation and Reconstruction into the history of factory work (Galvan and Muñoz 2026, Lecture 3). The thirteen-state South’s share of US manufacturing wage earners rose from 7.7 percent in 1880 to 15.2 percent in 1929 (Poulton 1947, 7, table 2). The exhibit follows three industries to ask which kinds of technical work moved with those jobs.",
-    "In cotton, a mill owner could pay a machinery supplier partly in shares (Mitchell 1918, 205–15). Draper’s catalog names customers at Gaffney and Pelzer in South Carolina. Its shuttle drawing shows how a Massachusetts-built loom replenished the filling yarn while keeping the shuttle in service (Draper 1905, 49, 57, 59 and PDF 229, 233, 236). The exhibit pairs the drawing with a reconstruction so a reader can inspect the mechanism. In 1910 Massachusetts accounted for about 42 percent of textile patents, against 7 percent for the fourteen-state South (Sutthiphisal 2006, PDF 12–15, 19–20). A South Carolina mill could add weaving jobs when it ordered a loom from a Massachusetts designer.",
-    "In cast-iron pipe, it matters which Birmingham company we follow. The American Public Works Association listed a Birmingham firm, ACIPCO, and recorded its representative at an Atlanta meeting in 1906 (American Public Works Association 1907, 7, 23). Later, ACIPCO developed its own casting process. Its rival USCIP&F acquired American rights to a different design. The patent shows molten iron entering a revolving mold (Sensaud de Lavaud and Arens 1916, fig. 1). The order in which the rival’s plants received that process comes from company history (O’Connor 1996, 24–32). The two records answer different questions. A visitor can find a Birmingham producer by name in the convention register. To identify where a new process was tried, the visitor has to follow the decisions of each company. Treating the city as a single center of invention would conceal the difference between the two foundries.",
-    "In cigarettes, Bonsack’s specification describes how a machine forms, wraps and cuts a continuous length of filled paper (Bonsack 1881, specification 1). Duke leased machines, employed mechanics to make them run well and organized sales across the country (Porter 1969, 64–74). A firm could shape a national market without owning the design it depended on. Duke had a reason to make each machine reliable even while the supplier held the design. His advantage depended on how much saleable output his mechanics could obtain and how much of it his sales offices could place.",
-    "For a factory opening today, these cases suggest a second question after the jobs tally. If a machine needs a different design, who can try it, pay for the trial and put the result into production?"
+    "The course moves from emancipation and Reconstruction (Galvan and Muñoz 2026, week 3) to the rise of the New South. Georgia and the Carolinas overtook New England in textile production (Muñoz 2026, slide 4). Who supplied the machines in those Southern mills? The thirteen-state South’s share of US manufacturing wage earners rose from 7.7 percent in 1880 to 15.2 percent in 1929 (Poulton 1947, 7, table 2). Factory jobs and machine design followed different paths. Some South Carolina mills relied on Massachusetts loom makers, while a Birmingham foundry developed its own casting process.",
+    "A cotton mill could pay a machinery supplier partly in shares (Mitchell 1918, 205–15). Draper’s catalog lists mills in Gaffney and Pelzer, South Carolina, among its customers. The exhibit pairs a catalog drawing with a reconstruction to show how the Northrop loom fed a fresh bobbin into the same shuttle (Draper 1905, 49, 57, 59 and PDF 229, 233, 236). In Sutthiphisal’s 1910 sample, Massachusetts accounted for about 42 percent of US textile patents, compared with 7 percent in the study’s fourteen-state South (Sutthiphisal 2006, PDF 12–15, 19–20). Ordering a loom could expand weaving in South Carolina while providing work for a machine builder in Massachusetts.",
+    "Two Birmingham pipe makers took different routes to centrifugal casting. The register of the 1906 Atlanta convention lists a representative of the American Cast Iron Pipe Company (American Public Works Association 1907, 7, 23). The register places the firm in a trade association. O’Connor traces its technical work to experiments with a sand-lined mold at its Birmingham works. A rival, United States Cast Iron Pipe & Foundry, acquired US rights to a different process. The patent drawing shows how molten iron entered a revolving mold (Sensaud de Lavaud and Arens 1916, fig. 1). O’Connor’s plant history shows that the rival introduced this process at Burlington, New Jersey, before Birmingham (O’Connor 1996, 24–32).",
+    "In Durham, James Duke built a national cigarette business with machinery he leased. Bonsack’s patent describes a machine that wrapped tobacco in a continuous paper tube and cut it into cigarettes (Bonsack 1881, specification 1). Duke employed mechanics to improve the machines and negotiated a lower rate per thousand cigarettes than the supplier offered his competitors (Porter 1969, 64–74). The lease lowered Duke’s costs. His firm could use that advantage because its mechanics kept the machines running and its sales offices found buyers for their output.",
+    "A factory announcement today tells us where a company expects to employ workers. To judge whether it will also support local design work, we need to know who can change the machinery, pay for a trial and decide where to use the result."
   ],
   "course_materials": [
     "Galvan, Arantxa, and Marco Muñoz. 2026. “Issues in American Culture and History.” Fall 2026 GENA2122 syllabus, Chinese University of Hong Kong.",

@@ -702,7 +702,7 @@ chapterSelect.value=chapterFromHash();
 $('.chapter-picker').hidden=false;
 chapterSelect.addEventListener('change',()=>navigateChapter('#'+chapterSelect.value,{keepFocus:true}));
 
-Promise.all(['content','nodes','economic-indicators','industry-networks','asset-map'].map(n=>fetch(`data/${n}.json?v=20261121-disclosure2`,{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error(n+' '+r.status);return r.json();}))).then(([c,n,e,net,a])=>{
+Promise.all(['content','nodes','economic-indicators','industry-networks','asset-map'].map(n=>fetch(`data/${n}.json?v=20261121-academic-final`,{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error(n+' '+r.status);return r.json();}))).then(([c,n,e,net,a])=>{
  content=c;nodes=n;econ=e;networks=net;assets=a;
  render();
  revealChapterTarget(undefined,false);
