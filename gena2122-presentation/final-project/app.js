@@ -83,7 +83,7 @@ function evidenceChoices(choices, selected, label, section) {
 
 function industryMap(name, title, caption, evidence) {
  const height = name.startsWith('cotton-') ? 950 : name === 'textile-1905-capital' ? 1034 : 1000;
- const url = `maps/${name}.svg?v=20261121-sources1`;
+ const url = `maps/${name}.svg?v=20261121-citation-share`;
  return `<figure class="industry-map-figure">
   <img class="industry-map" src="${url}" width="1200" height="${height}" alt="${esc(title)}" decoding="async">
   <figcaption>
@@ -350,6 +350,15 @@ function bibliographyEntry(s) {
 
 function sourcesHTML() {
  const originals = {draper1905:'northrop',bonsack1881:'bonsack',delavaud1916:'delavaud'};
+ const paragraphs = content.sections.flatMap(section => section.paragraphs);
+ const counts = new Map();
+ let total = 0;
+ for (const paragraph of paragraphs) {
+  for (const id of new Set(paragraph.citations)) {
+   counts.set(id, (counts.get(id) || 0) + 1);
+   total++;
+  }
+ }
  return `<h1 class="section-heading" tabindex="-1">Sources & data</h1>
   <p class="deck">Follow a claim to its source. Component views distinguish the original drawing from an interpretive reconstruction.</p>
   <section class="source-method"><details><summary>Project explanation</summary>
@@ -361,12 +370,18 @@ function sourcesHTML() {
    <details><summary>View all ${econ.length} economic observations</summary>${table(econ)}</details>
   </section>
   <section class="source-method"><h2>Method & definitions</h2>${methodHTML()}</section>
-  <section><h2>Bibliography</h2><ol class="bibliography">${content.sources.map(s => `<li id="source-${s.id}">
+  <section><h2>Bibliography</h2>
+   <p>The ${paragraphs.length} chapter paragraphs contain ${total} citations to the works below. Each source counts once per paragraph. The percentages cover the chapter text only.</p>
+   <ol class="bibliography">${content.sources.map(s => {
+    const count = counts.get(s.id) || 0;
+    const share = total ? (100 * count / total).toFixed(1) : '0.0';
+    return `<li id="source-${s.id}">
    <p class="reference">${bibliographyEntry(s)}</p>
    <p>${esc({primary:'Firsthand source',secondary:'Secondary source',mixed:'Census tables and secondary analysis'}[s.type])} · ${esc(s.locator)}</p>
+   <p class="citation-share">${count} of ${total} chapter citations (${share}%)</p>
    <a href="${esc(s.reference_url)}" target="_blank" rel="noopener">Open external source</a>
    ${originals[s.id] ? btn('View original page',`data-node-source="${originals[s.id]}"`) : ''}
-  </li>`).join('')}</ol></section>
+  </li>`; }).join('')}</ol></section>
   <section class="source-method"><h2>Course materials</h2>${content.course_materials.map(text => `<p>${esc(text)}</p>`).join('')}
    <details><summary>AI assistance</summary>${content.assistance.map(text => `<p>${esc(text)}</p>`).join('')}</details>
   </section>`;
