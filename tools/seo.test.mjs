@@ -9,9 +9,9 @@ import {enrichStaticPages} from './static-seo.mjs';
 const ROOT=new URL('..',import.meta.url).pathname;
 
 test('explicit extensionless routes preserve unrelated file and directory URLs',()=>{
- assert.equal(publicPagePath('/gena2122/presentation.html'),'/gena2122/presentation');
+ assert.equal(publicPagePath('/gena2122-presentation/presentation/index.html'),'/gena2122-presentation/presentation/');
  assert.equal(publicPagePath('/netstall/index.html'),'/netstall');
- assert.equal(publicPagePath('/gena2122/index.html'),'/gena2122/');
+ assert.equal(publicPagePath('/gena2122-presentation/index.html'),'/gena2122-presentation/');
  assert.equal(publicPagePath('/study/example.html'),'/study/example.html');
 });
 
@@ -54,11 +54,8 @@ test('built public pages have consistent host sitemaps, published Dots prose, an
    assert.ok(html.includes('rel="canonical" href="'+url+'"'),url);
    assert.ok(html.includes('property="og:url" content="'+url+'"'),url);
   }
-  assert.doesNotMatch(sitemap,/<loc>https:\/\/vincejiang\.com\/gena2122\/(?:presentation(?:\.html)?|presentation-v2\.4(?:\.html)?)<\/loc>/);
-  const redirect=readFileSync(join(out,'gena2122/presentation-v2.4.html'),'utf8');
-  assert.match(redirect,/<meta name="robots" content="noindex,follow">/);
-  assert.ok(redirect.includes("location.replace('/gena2122/presentation'+location.search+location.hash)"));
-  assert.ok(report.omitted.includes('https://vincejiang.com/gena2122/presentation-v2.4.html'));
+  assert.equal(existsSync(join(out,'gena2122')),false,'historical editions must stay out of the image');
+  assert.ok(!sitemap.includes('<loc>https://vincejiang.com/gena2122/'));
   const notes=JSON.parse(readFileSync(join(ROOT,'tools/study-content/manifest.json'),'utf8'));
   for(const d of notes){
    const path='/study/2026T1/'+d.key.replace(/\.md$/,'.html');
