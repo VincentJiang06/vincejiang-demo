@@ -7,7 +7,7 @@ const chapters=['national','cotton','pipe','cigarettes','institutions','conclusi
 const machineIds={cotton:'northrop',pipe:'delavaud',cigarettes:'bonsack'};
 const machineState={northrop:{node:'northrop',expanded:false,compare:false},bonsack:{node:'bonsack',expanded:false,compare:false},delavaud:{node:'delavaud',expanded:false,compare:false}};
 const events=[]; function emit(type,detail){events.push({type,...detail});if(events.length>100)events.shift();document.dispatchEvent(new CustomEvent('exhibit:'+type,{detail}));}
-function fmt(r){if(!r||r.value===null)return 'Not listed separately';const v=r.value;if(r.unit==='percent')return (['centrifugally_cast_pipe_share','american_tobacco_constituent_cigarette_share'].includes(r.metric)?'≈ ':'')+v.toLocaleString('en-US',{maximumFractionDigits:1})+'%';if(r.unit==='ratio')return v.toFixed(2)+(r.region==='South_13'?' × US':' : 1');if(r.unit==='USD_nominal')return '$'+v.toLocaleString('en-US');return v.toLocaleString('en-US')+(r.unit==='tons_as_reported'?' tons':'');}
+function fmt(r){if(!r||r.value===null)return 'Not listed separately';const v=r.value;if(r.unit==='percent')return (['centrifugally_cast_pipe_share','american_tobacco_constituent_cigarette_share'].includes(r.metric)?'≈ ':'')+v.toLocaleString('en-US',{maximumFractionDigits:1})+'%';if(r.unit==='ratio')return v.toFixed(2)+(r.region==='South_13'?' × US':' : 1');if(r.unit==='USD_nominal')return '$'+v.toLocaleString('en-US');return r.unit==='tons_as_reported'?'≈ '+v.toLocaleString('en-US')+' tons':v.toLocaleString('en-US');}
 const row=(metric,year,region)=>econ.find(r=>r.metric===metric&&r.year===year&&(!region||r.region===region));
 const source=id=>content.sources.find(s=>s.id===id);
 function cite(ids,locator=''){return `<div class="citations">${ids.map(id=>`<button class="citation" data-source="${esc(id)}">${esc(source(id)?.author||id)}</button>`).join(' ')}${locator?` · ${esc(locator)}`:''}</div>`;}
@@ -39,14 +39,31 @@ function placeScanMarkers(){
 }
 const scanObserver=new ResizeObserver(placeScanMarkers);
 function observeScans(){scanObserver.disconnect();$$('.scan-hotspots').forEach(x=>scanObserver.observe(x));placeScanMarkers();}
-function scholarHTML(section){const ss=content.scholars.filter(s=>s.section===section);if(!ss.length)return '';return `<aside class="scholars" aria-label="Scholarly comparisons"><h2>In conversation with</h2>${ss.map(s=>`<article class="scholar"><h3>${esc(s.name)}</h3><p class="work">${esc(s.work)} · ${esc(s.year||'n.d.')}</p><p>${esc(s.position)}</p><details><summary>Supports, challenges & our response</summary><p><strong>Supports.</strong> ${esc(s.supports)}</p><p><strong>Challenges.</strong> ${esc(s.challenges)}</p><p><strong>Our response.</strong> ${esc(s.response)}</p>${cite([s.source_id],s.locator)}</details></article>`).join('')}</aside>`;}
+function scholarHTML(section) {
+ const cards = content.scholars.filter(card => card.section === section);
+ if (!cards.length) return '';
+ return `<aside class="scholars" aria-label="Scholarly comparisons"><h2>In conversation with</h2>${cards.map(card => `
+  <article class="scholar"><h3>${esc(card.name)}</h3>
+   <p class="work">${esc(card.work)} · ${esc(card.display_year || card.year || 'n.d.')}</p>
+   <p>${esc(card.position)} ${esc(card.supports)}</p>
+   <details><summary>Evidence &amp; interpretation</summary><p>${esc(card.challenges)} ${esc(card.response)}</p>
+    ${cite(card.source_ids || [card.source_id],card.locator)}
+   </details>
+  </article>`).join('')}</aside>`;
+}
+
 function proseHTML(section) {
  const heading = section.id === 'national' ? 'h3' : 'h2';
  return `<div class="reading-grid"><div class="prose">${section.paragraphs.map(p => `
-  <section><${heading}>${esc(p.heading)}</${heading}><p>${esc(p.text)}</p>${cite(p.citations,p.locator)}</section>`).join('')}
- </div>${scholarHTML(section.id)}</div><p class="takeaway">${esc(section.takeaway)}</p>`;
+  <section><${heading}>${esc(p.heading)}</${heading}><p>${esc(p.text)}</p>${cite(p.citations)}</section>`).join('')}
+ </div>${scholarHTML(section.id)}</div>${section.takeaway ? `<p class="takeaway">${esc(section.takeaway)}</p>` : ''}`;
 }
-function table(rows){return `<div class="table-wrap"><table><thead><tr><th scope="col">Indicator / region</th><th scope="col">Observed</th><th scope="col">Value</th><th scope="col">Source & definition</th></tr></thead><tbody>${rows.map(r=>`<tr><th scope="row">${esc(r.label_en)}<br>${esc(r.region.replaceAll('_',' '))}</th><td>${r.observation_year}</td><td class="numbers">${fmt(r)}</td><td>${esc(r.denominator)}<br>${esc(r.missing_reason||r.limits)}<br><button data-econ="${econ.indexOf(r)}" class="citation">${esc(r.locator)}</button></td></tr>`).join('')}</tbody></table></div>`;}
+function table(rows) {
+ const ordered = [...rows].sort((a, b) => a.observation_year - b.observation_year);
+ return `<div class="table-wrap"><table><thead><tr><th scope="col">Indicator / region</th><th scope="col">Observed</th><th scope="col">Value</th><th scope="col">Source</th></tr></thead><tbody>${ordered.map(r => `
+  <tr><th scope="row">${esc(r.label_en)}<br>${esc(r.region.replaceAll('_',' '))}</th><td>${r.observation_year}</td><td class="numbers">${fmt(r)}</td>
+  <td><button data-econ="${econ.indexOf(r)}" class="citation">${esc(r.locator)}</button></td></tr>`).join('')}</tbody></table></div>`;
+}
 
 const industryChoices = {
  cotton: [['spindles', 'Spindles · 1899–1929'], ['customers', 'Draper customers · 1905'], ['capital', 'Capital ties · 1881–1916']],
@@ -62,11 +79,12 @@ function evidenceChoices(choices, selected, label, section) {
 }
 
 function industryMap(name, label) {
- const height = name.startsWith('cotton-') ? 950 : name === 'pipe-1913' ? 1173 : name === 'textile-1905-capital' ? 1174 : 1000;
+ const height = name.startsWith('cotton-') ? 950 : name === 'textile-1905-capital' ? 1034 : 1000;
+ const url = `maps/${name}.svg?v=20261121-text1`;
  return `<details class="evidence-disclosure" data-evidence-disclosure="map">
   <summary>View geographic map</summary>
-  <p><a href="maps/${name}.svg" target="_blank" rel="noopener">Open full-size map (new tab)</a></p>
-  <img class="industry-map" src="maps/${name}.svg" width="1200" height="${height}" alt="${esc(label)}" loading="lazy" decoding="async">
+  <p><a href="${url}" target="_blank" rel="noopener">Open full-size map (new tab)</a></p>
+  <img class="industry-map" src="${url}" width="1200" height="${height}" alt="${esc(label)}" loading="lazy" decoding="async">
  </details>`;
 }
 
@@ -88,13 +106,14 @@ function spindleEvidence() {
   <p class="spindle-scale" aria-hidden="true"><span>0</span><span>20 million spindles</span></p>
   <p class="evidence-note">Southeast to New England ratio <strong>${fmt(ratio)}</strong>. Spindles count equipment.</p>
   <details class="evidence-disclosure" data-evidence-disclosure="data"><summary>View counts, sources & definitions</summary>
+   <p class="evidence-note">${esc(content.maps.cotton.caption)}</p>
    <p class="evidence-note">${esc(content.maps.cotton.limit)}</p>
    ${table(records)}
   </details>
   ${industryMap(`cotton-${year}`, `Map of active cotton spindles in ${year}`)}`;
 }
 
-function networkSources(network, boundaries) {
+function networkSources(network, scope) {
  const citations = new Map();
  for (const place of network.nodes) {
   const key = `${place.source_id}|${place.locator}`;
@@ -105,7 +124,7 @@ function networkSources(network, boundaries) {
   <summary>Scope & source references</summary>
   <ul class="evidence-source-list">${[...citations.values()].map(({id, locator, places}) =>
    `<li><strong>${esc(places.join(', '))}</strong>${cite([id], locator)}</li>`).join('')}</ul>
-  <ul class="evidence-limits">${[...boundaries, ...network.limits].map(note => `<li>${esc(note)}</li>`).join('')}</ul>
+  <ul class="evidence-limits">${[scope, ...network.limits].filter(Boolean).map(note => `<li>${esc(note)}</li>`).join('')}</ul>
  </details>`;
 }
 
@@ -115,37 +134,21 @@ function relationshipEvidence(section) {
  const name = cotton ? 'textile-1905' : `${section}-${state[section]}`;
  const base = networks.find(network => network.id === name);
  const network = capital ? base.layers[0] : base;
- const copy = content.maps[name];
- const title = cotton ? (capital ? 'Reported capital ties' : 'Draper’s mill customers') : copy.title;
- const descriptions = {
-  'textile-1905': 'Locations listed in Draper’s 1905 catalog. The catalog dates the documentation of the relationship.',
-  'textile-1905-capital': 'Evidence dates to 1881, 1882 and 1916 and was published in 1918. The examples cover stock ownership, equipment credit and preferred-stock control.',
-  'pipe-1906': 'Southern investors organized and financed ACIPCO in Atlanta in 1905. Its Birmingham plant opened in 1906.',
-  'pipe-1913': 'USCIP&F centralized research in Burlington and proposed expanding its Birmingham and Bessemer works. ACIPCO was a separate company.',
-  'cigarettes-1881': copy.caption,
-  'cigarettes-1890': 'American Tobacco brought five firms and four cities into one corporation, with its central offices in New York.'
- };
- const boundaries = {
-  'textile-1905': ['City centers locate documented ties. The catalog gives no purchase dates, and lines indicate relationships.'],
-  'textile-1905-capital': ['The historical accounts document different kinds of capital ties. The lines indicate named holdings.'],
-  'pipe-1906': [copy.limit],
-  'pipe-1913': [copy.limit],
-  'cigarettes-1881': [copy.limit],
-  'cigarettes-1890': [copy.limit]
- };
  const mapName = capital ? 'textile-1905-capital' : name;
- return `<h3>${esc(title)}</h3>
-  <p class="evidence-note">${esc(descriptions[mapName])}</p>
+ const copy = content.maps[mapName];
+ return `<h3>${esc(copy.title)}</h3>
+  <p class="evidence-note">${esc(copy.caption)}</p>
   <ol class="relationship-places" aria-label="Places numbered as on the map">
-   ${network.nodes.map(place => `<li><strong>${esc(place.city)}</strong><span>${esc(place.role)}${place.documentation_year ? ` · ${place.documentation_year}` : ''}</span></li>`).join('')}
+   ${network.nodes.map(place => `<li><strong>${esc(place.display_label || place.city)}</strong><span>${esc(place.account || place.role)}${place.documentation_year ? ` · ${place.documentation_year}` : ''}</span></li>`).join('')}
   </ol>
-  ${networkSources(network, boundaries[mapName])}
-  ${industryMap(mapName, title)}`;
+  ${networkSources(network, copy.limit)}
+  ${industryMap(mapName, copy.title)}`;
 }
 
 function fixedIndustryEvidence(section) {
  if (section === 'cotton') return `<details class="evidence-disclosure fixed-evidence">
   <summary>Textile employment and patents · 1870 and 1910</summary>
+  <p class="evidence-note">${esc(content.maps.cotton.data_note)}</p>
   ${table(econ.filter(record => record.metric.startsWith('textile_')))}
  </details>`;
 
@@ -157,6 +160,7 @@ function fixedIndustryEvidence(section) {
  return `<details class="evidence-disclosure fixed-evidence"><summary>${figures}</summary>
    <p class="evidence-note"><strong>${fmt(main)}</strong> ${label}.</p>
    ${table(rows)}
+   <p class="evidence-note">${esc(content.maps[`${section}-${state[section]}`].data_note)}</p>
   </details>`;
 }
 
@@ -250,7 +254,8 @@ function machineHTML(id) {
     </div>
     ${textOnly ? '<p class="caption">Documented in the source text.</p>' : ''}
     ${copy?.source_note ? `<p class="caption">${esc(copy.source_note)}</p>` : ''}
-    ${selected.variant_note ? `<p class="caption">${esc(selected.variant_note)}</p>` : ''}
+    ${schematic ? '<p class="caption">Each steel heddle hangs from a supporting bar. A broken warp thread lets its heddle drop into the vibrator’s path. Once the vibrator is blocked, the loom stops (Draper 1905, 65).</p>' : ''}
+    ${selected.variant_note && selected.variant_note !== copy?.source_note ? `<p class="caption">${esc(selected.variant_note)}</p>` : ''}
     <p class="caption">${esc(selected.locator)}</p>
     ${cite([selected.source_id])}
    </div>
@@ -258,11 +263,14 @@ function machineHTML(id) {
   </div>
   <details class="registry">
    <summary>View all ${machineNodes.length} nodes as a table</summary>
-   <div class="table-wrap"><table><thead><tr><th scope="col">Level</th><th scope="col">Component</th><th scope="col">Function</th><th scope="col">Source</th></tr></thead><tbody>
-    ${machineNodes.map(node => `<tr><td>L${node.level}</td><th scope="row"><button data-node="${node.id}" data-machine="${id}">${esc(node.name)}</button></th><td>${esc(content.component_copy.find(item => item.node_id === node.id)?.function)}</td><td><button data-node-source="${node.id}">${esc(node.locator)}</button></td></tr>`).join('')}
+   <div class="table-wrap"><table><thead><tr><th scope="col">Level</th><th scope="col">Component</th><th scope="col">Function and evidence</th><th scope="col">Source location</th></tr></thead><tbody>
+    ${machineNodes.map(node => {
+     const entry = content.component_copy.find(item => item.node_id === node.id);
+     return `<tr><td>L${node.level}</td><th scope="row"><button data-node="${node.id}" data-machine="${id}">${esc(node.name)}</button></th><td>${esc([entry.function, entry.source_note].filter(Boolean).join(' '))}</td><td><button data-node-source="${node.id}">${esc(node.locator)}</button></td></tr>`;
+    }).join('')}
    </tbody></table></div>
   </details>
-  <p class="caption machine-limit">Numbered markers are approximate navigation references. The components shown are a teaching selection documented in the sources, not an exhaustive factory bill of materials. Generated images do not establish dimensions or hidden geometry.</p>
+  <p class="caption machine-limit">Each assembly groups parts by the work they perform. An image ID identifies an interpretive reconstruction. Exploded positions and highlighted areas are approximate. Whole-page views supply no position for an individual part. Dimensions, hidden geometry and factory installations require separate evidence.</p>
  </section>`;
 }
 function nationalEvidenceHTML() {
@@ -278,7 +286,7 @@ function nationalEvidenceHTML() {
  const series = (rows,name) => `<polyline class="trend-line ${name}" points="${rows.map(r => `${x(r.year)},${y(r.value)}`).join(' ')}"/>`;
  const markers = (rows,name) => rows.map(r => `<span class="trend-point ${name}" style="left:${x(r.year)}%;top:${y(r.value)}%"></span>`).join('');
  const exact = r => r.unit === 'ratio' ? r.value.toFixed(2) : fmt(r);
- const sourceButton = `<button class="citation" data-econ="${econ.indexOf(wage.at(-1))}">Poulton 1947, table 2</button>`;
+ const sourceButton = `<button class="citation" data-econ="${econ.indexOf(wage.at(-1))}">Poulton 1947, 7, table 2 (PDF 13)</button>`;
  return `<figure class="national-evidence" aria-labelledby="trend-title">
   <div class="trend-figure">
    <h3 id="trend-title">Southern shares of US manufacturing</h3>
@@ -299,13 +307,14 @@ function nationalEvidenceHTML() {
    </dl>
   </div>
   <figcaption class="trend-caption">
-   <p>Eight census observations for the BLS 13-state South (${esc(wage[0].region_definition.replaceAll(' ', ', '))}). ${sourceButton}</p>
+   <p>Eight census dates for the thirteen-state South. ${sourceButton}</p>
    <details class="trend-data"><summary>View all eight census years</summary>
+    <p class="caption">${esc(content.maps.national.caption)}</p>
     <table aria-label="BLS 13-state South, manufacturing census observations">
-     <thead><tr><th scope="col">Year</th><th scope="col">Wage earners (% of US)</th><th scope="col">Nominal value (% of US)</th><th scope="col">Nominal value per wage earner (US = 1)</th></tr></thead>
+     <thead><tr><th scope="col">Year</th><th scope="col">Southern share of US wage earners</th><th scope="col">Southern share of US nominal product value</th><th scope="col">Southern value per wage earner (US = 1.00)</th></tr></thead>
      <tbody>${wage.map((r,i) => `<tr><th scope="row">${r.year}</th><td>${exact(r)}</td><td>${exact(value[i])}</td><td>${exact(ratios[i])}</td></tr>`).join('')}</tbody>
     </table>
-    <p class="caption">${esc(records.find(r => r.unit === 'ratio').limits)} ${esc(wage[0].limits)}</p>
+    <p class="caption">${esc(content.maps.national.limit)}</p>
    </details>
   </figcaption>
  </figure>`;
@@ -325,15 +334,24 @@ function institutionsHTML() {
     <div><dt>Comparison</dt><dd>${esc(r.comparison)}</dd></div>
     <div><dt>Limit</dt><dd>${esc(r.limit)}</dd></div>
    </dl>
-   ${cite(r.source_ids)}
+   ${cite(r.source_ids,r.locator)}
   </details>`).join('')}
  </section>`;
+}
+
+function bibliographyEntry(s) {
+ if (!s.italic_title) return esc(s.reference);
+ const [before, after] = s.reference.split(s.italic_title);
+ return esc(before) + '<i>' + esc(s.italic_title) + '</i>' + esc(after);
 }
 
 function sourcesHTML() {
  const originals = {draper1905:'northrop',bonsack1881:'bonsack',delavaud1916:'delavaud'};
  return `<h1 class="section-heading" tabindex="-1">Sources & data</h1>
   <p class="deck">Follow a claim to its source. Component views distinguish the original drawing from an interpretive reconstruction.</p>
+  <section class="source-method"><details><summary>Project explanation</summary>
+   ${content.project_explanation.map(text => `<p>${esc(text)}</p>`).join('')}
+  </details></section>
   <section class="data-section">
    <h2>Economic data</h2>
    <div class="data-downloads"><a href="data/economic-indicators.csv" download>Download CSV</a><a href="data/economic-indicators.json" download>Download JSON</a></div>
@@ -341,10 +359,14 @@ function sourcesHTML() {
   </section>
   <section class="source-method"><h2>Method & definitions</h2>${methodHTML()}</section>
   <section><h2>Bibliography</h2><ol class="bibliography">${content.sources.map(s => `<li id="source-${s.id}">
-   <h3>${esc(s.author)} · ${esc(s.year||'n.d.')}</h3><p>${esc(s.title)}</p><p>${esc(s.type)} · ${esc(s.locator)}</p>
-   <a href="${esc(s.url)}" target="_blank" rel="noopener">Open external source</a>
+   <p class="reference">${bibliographyEntry(s)}</p>
+   <p>${esc({primary:'Firsthand source',secondary:'Secondary source',mixed:'Census tables and secondary analysis'}[s.type])} · ${esc(s.locator)}</p>
+   <a href="${esc(s.reference_url)}" target="_blank" rel="noopener">Open external source</a>
    ${originals[s.id] ? btn('View original page',`data-node-source="${originals[s.id]}"`) : ''}
-  </li>`).join('')}</ol></section>`;
+  </li>`).join('')}</ol></section>
+  <section class="source-method"><h2>Course materials</h2>${content.course_materials.map(text => `<p>${esc(text)}</p>`).join('')}
+   <details><summary>AI assistance</summary>${content.assistance.map(text => `<p>${esc(text)}</p>`).join('')}</details>
+  </section>`;
 }
 
 function render() {
@@ -401,10 +423,10 @@ function showSource(trigger){
   if(path)figure=`<div class="source-page"><img src="${path}" width="1247" height="1800" alt="BLS original table page"></div>`;
  }
  const original=s?.url||r?.source, page=n&&/\.pdf(?:$|\?)/i.test(original||'')?n.pdf_page:null;
- const metadata=r?`<p><strong>${fmt(r)}</strong> · Observed: ${r.observation_year} · ${esc(r.region.replaceAll('_',' '))}</p><p>${esc(r.limits)}</p><p>${esc(r.denominator)}</p>`:'';
+ const metadata=r?`<p><strong>${fmt(r)}</strong> · Observed: ${r.observation_year} · ${esc(r.region.replaceAll('_',' '))}</p><p>${esc(r.limits)}</p>${r.denominator && r.denominator !== 'not applicable' ? `<p>${esc(r.denominator)}</p>` : ''}`:'';
  const originalLink=original?`<a href="${esc(original)}${page?'#page='+page:''}" target="_blank" rel="noopener">Open external original${page?' · PDF page '+page:''}</a>`:'';
  const relatedLinks=n?.also_pdf_pages?.map(p=>`<a href="${esc(original)}#page=${p}" target="_blank" rel="noopener">Related PDF page ${p}</a>`).join('')||'';
- $('#source-body').innerHTML=`${metadata}<p>${esc(s?.author||'')} · ${esc(s?.year||'')}</p><p>${esc(n?.locator||r?.locator||s?.locator||'')}</p><div class="source-actions">${originalLink}${relatedLinks}<a href="#sources">All sources &amp; data</a></div>${figure}`;
+ $('#source-body').innerHTML=`${metadata}<p>${esc(s?.author||'')} · ${esc(s?.year||'n.d.')}</p><p>${esc(n?.locator||r?.locator||s?.locator||'')}</p><div class="source-actions">${originalLink}${relatedLinks}<a href="#sources">All sources &amp; data</a></div>${figure}`;
  dialog.showModal();
  dialog.scrollTop=0;
  emit('sourceOpen',{source:id});
@@ -662,7 +684,7 @@ chapterSelect.value=chapterFromHash();
 $('.chapter-picker').hidden=false;
 chapterSelect.addEventListener('change',()=>navigateChapter('#'+chapterSelect.value,{keepFocus:true}));
 
-Promise.all(['content','nodes','economic-indicators','industry-networks','asset-map'].map(n=>fetch(`data/${n}.json`,{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error(n+' '+r.status);return r.json();}))).then(([c,n,e,net,a])=>{
+Promise.all(['content','nodes','economic-indicators','industry-networks','asset-map'].map(n=>fetch(`data/${n}.json?v=20261121-text1`,{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error(n+' '+r.status);return r.json();}))).then(([c,n,e,net,a])=>{
  content=c;nodes=n;econ=e;networks=net;assets=a;
  render();
  revealChapterTarget(undefined,false);

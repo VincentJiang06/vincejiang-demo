@@ -521,3 +521,10 @@ main {
     padding: 9px 4px;
   }
 }
+
+.bibliography .reference {
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.55;
+  max-width: 76ch;
+}

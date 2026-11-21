@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1173" viewBox="0 0 1200 1173" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" role="img" aria-labelledby="title desc">
 <title id="title">1913 · A southern production network and centralized research</title><desc id="desc">City-centre locators and documented relationships. Lines are not transport routes.</desc>
 <style>text{font-family:Arial,sans-serif}path{vector-effect:non-scaling-stroke}</style>
 <defs><pattern id="missing" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#eef1f1"/><path d="M-2,2L2,-2 M0,8L8,0 M6,10L10,6" stroke="#77898d" stroke-width="1"/></pattern></defs>
-<rect width="1200" height="1173" fill="#f8fbfc"/>
+<rect width="1200" height="1000" fill="#f8fbfc"/>
 <text x="44.0" y="52.0" font-size="28" fill="#203e48" text-anchor="start" font-weight="700">1913 · A southern production network and centralized research</text>
 <text x="44.0" y="84.0" font-size="15" fill="#203e48" text-anchor="start" font-weight="400">City-centre locators and documented relationships. Lines are not transport routes.</text>
 <defs><clipPath id="mapclip"><rect x="44" y="150" width="700" height="560"/></clipPath></defs><g clip-path="url(#mapclip)">
@@ -112,12 +112,7 @@
 <text x="610.0" y="638.3" font-size="12" fill="#203e48" text-anchor="start" font-weight="400">2. Birmingham</text>
 <circle cx="570.4515737212088" cy="669.3068170188725" r="5" fill="#367783"/>
 <text x="579.5" y="673.3" font-size="12" fill="#203e48" text-anchor="start" font-weight="400">3. Bessemer</text>
-<text x="44.0" y="808.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">HAER AL-32, printed pp19,21 / PDF pp21,23</text>
-<text x="44.0" y="853.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">Not individual equipment shipping routes.</text>
-<text x="44.0" y="893.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">Bessemer did not adopt centrifugal casting until 1934; no centrifugal icon before that year.</text>
-<text x="44.0" y="933.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">Birmingham centrifugal adoption date is unspecified.</text>
-<text x="44.0" y="973.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">ACIPCO is a separate company; this map must not imply its control by USCIP&amp;F.</text>
-<text x="44.0" y="1013.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">Cleveland, Buffalo and Louisville are proposed closures in the 1913 report, not proven closure dates.</text>
-<text x="44.0" y="1053.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">Louisville is both an office location and the site of works recommended for abandonment.</text>
-<text x="44.0" y="1093.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">Selected locations, not the complete company plant or office network; no full North/South site count implied.</text>
+<text x="44.0" y="808.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">O’Connor 1996, 19, 21, 27–29 (HAER AL-32).</text>
+<text x="44.0" y="853.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">Bessemer adopted centrifugal casting in 1934. No date is established here for the Birmingham works.</text>
+<text x="44.0" y="893.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">The proposal leaves the dates of any closures open.</text>
 </svg>

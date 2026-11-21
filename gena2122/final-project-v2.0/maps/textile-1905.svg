@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" role="img" aria-labelledby="title desc">
-<title id="title">1905 · Machine maker and documented mill customers</title><desc id="desc">City-centre locators and documented relationships. Lines are not transport routes.</desc>
+<title id="title">1905 · Draper’s mill customers</title><desc id="desc">City-centre locators and documented relationships. Lines are not transport routes.</desc>
 <style>text{font-family:Arial,sans-serif}path{vector-effect:non-scaling-stroke}</style>
 <defs><pattern id="missing" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#eef1f1"/><path d="M-2,2L2,-2 M0,8L8,0 M6,10L10,6" stroke="#77898d" stroke-width="1"/></pattern></defs>
 <rect width="1200" height="1000" fill="#f8fbfc"/>
-<text x="44.0" y="52.0" font-size="28" fill="#203e48" text-anchor="start" font-weight="700">1905 · Machine maker and documented mill customers</text>
+<text x="44.0" y="52.0" font-size="28" fill="#203e48" text-anchor="start" font-weight="700">1905 · Draper’s mill customers</text>
 <text x="44.0" y="84.0" font-size="15" fill="#203e48" text-anchor="start" font-weight="400">City-centre locators and documented relationships. Lines are not transport routes.</text>
 <defs><clipPath id="mapclip"><rect x="44" y="150" width="700" height="560"/></clipPath></defs><g clip-path="url(#mapclip)">
 <path d="M136.59,775.13L135.87,775.55L132.74,779.68L120.64,781.99L121.23,781.06L123.80,780.67L127.31,779.15L126.40,777.18L124.82,775.06L123.51,774.92L122.55,773.68L122.24,769.54L121.21,767.19L119.02,764.87L118.39,765.40L117.30,769.78L116.55,775.46L116.10,777.32L112.49,777.74L109.26,777.62L107.68,777.84L106.66,770.26L105.77,763.34L104.88,756.41L104.00,749.49L103.11,742.56L102.23,735.62L101.35,728.69L100.47,721.75L100.69,714.84L100.90,707.92L101.11,701.00L101.31,694.08L101.52,687.15L101.72,680.23L101.91,673.30L102.10,666.38L102.29,659.45L102.47,652.51L102.65,645.58L102.83,638.65L103.00,631.71L103.17,624.78L103.34,617.84L103.50,610.90L103.54,609.14L103.53,608.54L103.56,607.64L100.70,605.40L100.13,604.96L99.72,604.54L100.10,604.48L104.92,604.13L109.73,603.78L114.54,603.42L119.36,603.05L124.17,602.68L128.98,602.29L133.79,601.90L138.60,601.50L143.41,601.09L148.22,600.67L153.03,600.25L157.84,599.81L162.64,599.37L167.45,598.92L172.25,598.47L177.06,598.00L178.37,602.66L179.69,607.32L181.00,611.98L182.32,616.63L183.64,621.29L184.97,625.94L186.30,630.59L187.63,635.24L188.96,639.90L190.29,644.54L191.63,649.19L192.97,653.84L194.31,658.48L195.66,663.13L197.00,667.77L198.35,672.41L199.35,674.48L200.36,677.89L205.91,687.68L207.68,691.86L207.52,693.69L208.23,695.15L209.83,696.23L209.75,697.72L207.98,699.60L206.93,701.76L206.41,705.43L206.42,705.45L205.29,711.95L205.71,715.79L208.10,720.81L208.11,720.82L208.76,723.08L208.76,733.45L210.31,739.94L212.69,744.00L202.54,745.18L192.37,746.32L182.19,747.41L172.01,748.47L161.82,749.50L151.63,750.50L141.44,751.45L131.24,752.38L131.04,755.06L131.47,757.59L132.78,759.89L137.77,764.07L138.29,765.15L137.80,768.75L138.17,771.26L137.80,772.61L136.78,773.85L136.59,775.13Z M118.49,781.37L115.75,782.40L111.59,782.66L110.73,782.45L112.35,781.79L117.21,780.68L118.49,781.37Z" fill="#e0e7e9" stroke="#fff" stroke-width=".8"><title>Alabama</title></path>
@@ -67,45 +67,43 @@
 <circle cx="560.5095896813986" cy="288.0904925198788" r="11" fill="#f8fbfc" stroke="#367783"/>
 <text x="560.5" y="292.1" font-size="12" fill="#367783" text-anchor="middle" font-weight="400">1</text>
 <text x="780.0" y="171.0" font-size="18" fill="#367783" text-anchor="start" font-weight="700">1. Hopedale</text>
-<text x="780.0" y="193.0" font-size="13" fill="#203e48" text-anchor="start" font-weight="400">machine maker</text>
+<text x="780.0" y="193.0" font-size="13" fill="#203e48" text-anchor="start" font-weight="400">Draper Company, manufacturer.</text>
 <circle cx="526.6278833577576" cy="243.3914982392766" r="6" fill="#367783" stroke="white"/>
 <line x1="526.6278833577576" y1="243.3914982392766" x2="546.6278833577576" y2="219.3914982392766" stroke="#367783"/>
 <circle cx="546.6278833577576" cy="219.3914982392766" r="11" fill="#f8fbfc" stroke="#367783"/>
 <text x="546.6" y="223.4" font-size="12" fill="#367783" text-anchor="middle" font-weight="400">2</text>
 <text x="780.0" y="247.0" font-size="18" fill="#367783" text-anchor="start" font-weight="700">2. Lowell</text>
-<text x="780.0" y="269.0" font-size="13" fill="#203e48" text-anchor="start" font-weight="400">documented customer location</text>
+<text x="780.0" y="269.0" font-size="13" fill="#203e48" text-anchor="start" font-weight="400">Massachusetts Cotton Mills.</text>
 <circle cx="497.17510903279333" cy="269.6845694552945" r="6" fill="#367783" stroke="white"/>
 <line x1="497.17510903279333" y1="269.6845694552945" x2="471.17510903279333" y2="257.6845694552945" stroke="#367783"/>
 <circle cx="471.17510903279333" cy="257.6845694552945" r="11" fill="#f8fbfc" stroke="#367783"/>
 <text x="471.2" y="261.7" font-size="12" fill="#367783" text-anchor="middle" font-weight="400">3</text>
 <text x="780.0" y="323.0" font-size="18" fill="#367783" text-anchor="start" font-weight="700">3. Chicopee</text>
-<text x="780.0" y="345.0" font-size="13" fill="#203e48" text-anchor="start" font-weight="400">documented customer location</text>
+<text x="780.0" y="345.0" font-size="13" fill="#203e48" text-anchor="start" font-weight="400">Dwight Manufacturing Company.</text>
 <circle cx="193.96467458923797" cy="626.7330382460971" r="6" fill="#367783" stroke="white"/>
 <line x1="193.96467458923797" y1="626.7330382460971" x2="211.96467458923797" y2="608.7330382460971" stroke="#367783"/>
 <circle cx="211.96467458923797" cy="608.7330382460971" r="11" fill="#f8fbfc" stroke="#367783"/>
 <text x="212.0" y="612.7" font-size="12" fill="#367783" text-anchor="middle" font-weight="400">4</text>
 <text x="780.0" y="399.0" font-size="18" fill="#367783" text-anchor="start" font-weight="700">4. Lindale</text>
-<text x="780.0" y="421.0" font-size="13" fill="#203e48" text-anchor="start" font-weight="400">documented customer location</text>
+<text x="780.0" y="421.0" font-size="13" fill="#203e48" text-anchor="start" font-weight="400">Massachusetts Cotton Mills.</text>
 <circle cx="273.54785344512317" cy="599.2668719228532" r="6" fill="#367783" stroke="white"/>
 <line x1="273.54785344512317" y1="599.2668719228532" x2="245.54785344512317" y2="625.2668719228532" stroke="#367783"/>
 <circle cx="245.54785344512317" cy="625.2668719228532" r="11" fill="#f8fbfc" stroke="#367783"/>
 <text x="245.5" y="629.3" font-size="12" fill="#367783" text-anchor="middle" font-weight="400">5</text>
 <text x="780.0" y="475.0" font-size="18" fill="#367783" text-anchor="start" font-weight="700">5. Pelzer</text>
-<text x="780.0" y="497.0" font-size="13" fill="#203e48" text-anchor="start" font-weight="400">documented customer location</text>
+<text x="780.0" y="497.0" font-size="13" fill="#203e48" text-anchor="start" font-weight="400">Pelzer Manufacturing Company.</text>
 <circle cx="295.21207133878863" cy="579.8625694879909" r="6" fill="#367783" stroke="white"/>
 <line x1="295.21207133878863" y1="579.8625694879909" x2="320.21207133878863" y2="557.8625694879909" stroke="#367783"/>
 <circle cx="320.21207133878863" cy="557.8625694879909" r="11" fill="#f8fbfc" stroke="#367783"/>
 <text x="320.2" y="561.9" font-size="12" fill="#367783" text-anchor="middle" font-weight="400">6</text>
 <text x="780.0" y="551.0" font-size="18" fill="#367783" text-anchor="start" font-weight="700">6. Gaffney</text>
-<text x="780.0" y="573.0" font-size="13" fill="#203e48" text-anchor="start" font-weight="400">documented customer location</text>
+<text x="780.0" y="573.0" font-size="13" fill="#203e48" text-anchor="start" font-weight="400">Gaffney Manufacturing Company.</text>
 <circle cx="287.47132816673377" cy="585.6385982854702" r="6" fill="#367783" stroke="white"/>
 <line x1="287.47132816673377" y1="585.6385982854702" x2="325.47132816673377" y2="606.6385982854702" stroke="#367783"/>
 <circle cx="325.47132816673377" cy="606.6385982854702" r="11" fill="#f8fbfc" stroke="#367783"/>
 <text x="325.5" y="610.6" font-size="12" fill="#367783" text-anchor="middle" font-weight="400">7</text>
 <text x="780.0" y="627.0" font-size="18" fill="#367783" text-anchor="start" font-weight="700">7. Spartanburg</text>
-<text x="780.0" y="649.0" font-size="13" fill="#203e48" text-anchor="start" font-weight="400">documented customer location</text>
-<text x="44.0" y="765.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">Draper 1905, PDF pp229,232,235; manufacturer location title page</text>
-<text x="44.0" y="810.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">Year is catalog documentation date, not inferred purchase date.</text>
-<text x="44.0" y="850.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">Spartanburg is a city locator for Spartan Mills; no factory coordinates asserted.</text>
-<text x="44.0" y="890.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">Massachusetts Cotton Mills both mills must not be collapsed into Lowell alone.</text>
+<text x="780.0" y="649.0" font-size="13" fill="#203e48" text-anchor="start" font-weight="400">Spartan Mills. The point marks the city.</text>
+<text x="44.0" y="765.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">Draper 1905, title page and PDF 229, 232–233, 235–237.</text>
+<text x="44.0" y="810.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">The order list groups the Lowell and Lindale mills together. The directory identifies the two locations separately.</text>
 </svg>

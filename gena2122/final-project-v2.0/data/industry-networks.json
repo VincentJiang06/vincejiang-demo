@@ -3,85 +3,85 @@
     "id": "textile-1905",
     "year": 1905,
     "industry": "textiles",
-    "title": "Machine maker and documented mill customers",
-    "source": "Draper 1905, PDF pp229,232,235; manufacturer location title page",
+    "title": "Draper’s mill customers",
+    "source": "Draper 1905, title page and PDF 229, 232–233, 235–237.",
     "nodes": [
       {
         "city": "Hopedale",
-        "role": "machine maker",
+        "role": "Draper Company, manufacturer.",
         "coordinates": [
           -71.541,
           42.13
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "draper1905",
-        "locator": "Draper 1905, PDF pp229,232,235; manufacturer location title page"
+        "locator": "Draper 1905, title page"
       },
       {
         "city": "Lowell",
-        "role": "documented customer location",
+        "role": "Massachusetts Cotton Mills.",
         "coordinates": [
           -71.316,
           42.633
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "draper1905",
-        "locator": "Draper 1905, PDF pp229,232,235; manufacturer location title page"
+        "locator": "Draper 1905, PDF 229, 235"
       },
       {
         "city": "Chicopee",
-        "role": "documented customer location",
+        "role": "Dwight Manufacturing Company.",
         "coordinates": [
           -72.607,
           42.148
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "draper1905",
-        "locator": "Draper 1905, PDF pp229,232,235; manufacturer location title page"
+        "locator": "Draper 1905, PDF 229, 232"
       },
       {
         "city": "Lindale",
-        "role": "documented customer location",
+        "role": "Massachusetts Cotton Mills.",
         "coordinates": [
           -85.174,
           34.186
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "draper1905",
-        "locator": "Draper 1905, PDF pp229,232,235; manufacturer location title page"
+        "locator": "Draper 1905, PDF 229, 235"
       },
       {
         "city": "Pelzer",
-        "role": "documented customer location",
+        "role": "Pelzer Manufacturing Company.",
         "coordinates": [
           -82.455,
           34.643
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "draper1905",
-        "locator": "Draper 1905, PDF pp229,232,235; manufacturer location title page; city confirmed PDF p.236"
+        "locator": "Draper 1905, PDF 229, 236"
       },
       {
         "city": "Gaffney",
-        "role": "documented customer location",
+        "role": "Gaffney Manufacturing Company.",
         "coordinates": [
           -81.65,
           35.072
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "draper1905",
-        "locator": "Draper 1905, PDF pp229,232,235; manufacturer location title page; city confirmed PDF p.233"
+        "locator": "Draper 1905, PDF 229, 233"
       },
       {
         "city": "Spartanburg",
-        "role": "documented customer location",
+        "role": "Spartan Mills. The point marks the city.",
         "coordinates": [
           -81.933,
           34.95
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "draper1905",
-        "locator": "Draper 1905, PDF pp229,232,235; manufacturer location title page; city confirmed PDF p.237"
+        "locator": "Draper 1905, PDF 229, 237"
       }
     ],
     "edges": [
@@ -89,7 +89,7 @@
         "from": "Hopedale",
         "to": "Lowell",
         "type": "documented machine-maker / customer relation",
-        "source": "Draper 1905, PDF pp229,232,235",
+        "source": "Draper 1905, PDF 229, 235",
         "not_route": true,
         "source_id": "draper1905"
       },
@@ -97,7 +97,7 @@
         "from": "Hopedale",
         "to": "Chicopee",
         "type": "documented machine-maker / customer relation",
-        "source": "Draper 1905, PDF pp229,232,235",
+        "source": "Draper 1905, PDF 229, 232",
         "not_route": true,
         "source_id": "draper1905"
       },
@@ -105,7 +105,7 @@
         "from": "Hopedale",
         "to": "Lindale",
         "type": "documented machine-maker / customer relation",
-        "source": "Draper 1905, PDF pp229,232,235",
+        "source": "Draper 1905, PDF 229, 235",
         "not_route": true,
         "source_id": "draper1905"
       },
@@ -113,7 +113,7 @@
         "from": "Hopedale",
         "to": "Pelzer",
         "type": "documented machine-maker / customer relation",
-        "source": "Draper 1905, PDF pp229,232,235; city confirmed PDF p.236",
+        "source": "Draper 1905, PDF 229, 236",
         "not_route": true,
         "source_id": "draper1905"
       },
@@ -121,7 +121,7 @@
         "from": "Hopedale",
         "to": "Gaffney",
         "type": "documented machine-maker / customer relation",
-        "source": "Draper 1905, PDF pp229,232,235; city confirmed PDF p.233",
+        "source": "Draper 1905, PDF 229, 233",
         "not_route": true,
         "source_id": "draper1905"
       },
@@ -129,15 +129,13 @@
         "from": "Hopedale",
         "to": "Spartanburg",
         "type": "documented machine-maker / customer relation",
-        "source": "Draper 1905, PDF pp229,232,235; city confirmed PDF p.237",
+        "source": "Draper 1905, PDF 229, 237",
         "not_route": true,
         "source_id": "draper1905"
       }
     ],
     "limits": [
-      "Year is catalog documentation date, not inferred purchase date.",
-      "Spartanburg is a city locator for Spartan Mills; no factory coordinates asserted.",
-      "Massachusetts Cotton Mills both mills must not be collapsed into Lowell alone."
+      "The order list groups the Lowell and Lindale mills together. The directory identifies the two locations separately."
     ],
     "basemap_style": "neutral",
     "year_semantics": "catalog documentation date",
@@ -159,11 +157,11 @@
           1882,
           1916
         ],
-        "year_label": "Evidence dated 1881, 1882 and 1916; published 1918",
+        "year_label": "Newspaper reports and interviews cited in Mitchell’s 1918 dissertation.",
         "default_visible": false,
         "basemap_style": "neutral",
         "source_id": "mitchell1918",
-        "source": "Mitchell 1918, pp149,152,214–215; notes199,206,320,321",
+        "source": "Mitchell 1918, 149 n. 199, 152 n. 206, 214–15 nn. 320–321.",
         "nodes": [
           {
             "city": "Rock Hill",
@@ -174,12 +172,13 @@
             ],
             "coordinate_precision": "approximate city centre",
             "source_id": "mitchell1918",
-            "locator": "Mitchell 1918, p149, note199 (News and Courier, January 12, 1882)",
+            "locator": "Mitchell 1918, 149 n. 199",
             "documentation_year": 1882,
             "total_stock_usd": 100000,
             "outside_local_stock_usd": 15000,
             "outside_local_stock_city": "Charleston",
-            "render_role": "mill"
+            "render_role": "mill",
+            "account": "Charleston residents held $15,000 of the mill’s $100,000 stock. Local residents held the balance."
           },
           {
             "city": "Charleston",
@@ -190,7 +189,7 @@
             ],
             "coordinate_precision": "approximate city centre",
             "source_id": "mitchell1918",
-            "locator": "Mitchell 1918, pp149,152, notes199,206",
+            "locator": "Mitchell 1918, 149 n. 199, 152 n. 206",
             "render_role": "investor"
           },
           {
@@ -202,13 +201,14 @@
             ],
             "coordinate_precision": "approximate city centre",
             "source_id": "mitchell1918",
-            "locator": "Mitchell 1918, p152, note206 (News and Courier, May 21, 1881)",
+            "locator": "Mitchell 1918, 152 n. 206",
             "documentation_year": 1881,
             "local_stock_usd": 200000,
             "capital_stock_usd": 500000,
             "reported_paid_in_usd": 250000,
             "render_role": "mill",
-            "display_label": "Clifton / Spartanburg"
+            "display_label": "Clifton / Spartanburg",
+            "account": "Of $500,000 in nominal stock, $250,000 had been paid in. Reported holdings included $200,000 in Spartanburg, $150,000 in Charleston and $50,000 in Boston. Baltimore shareholders were named without an amount."
           },
           {
             "city": "Boston",
@@ -219,7 +219,7 @@
             ],
             "coordinate_precision": "approximate city centre",
             "source_id": "mitchell1918",
-            "locator": "Mitchell 1918, p152, note206",
+            "locator": "Mitchell 1918, 152 n. 206",
             "documentation_year": 1881,
             "render_role": "investor"
           },
@@ -232,7 +232,7 @@
             ],
             "coordinate_precision": "approximate city centre",
             "source_id": "mitchell1918",
-            "locator": "Mitchell 1918, p152, note206",
+            "locator": "Mitchell 1918, 152 n. 206",
             "documentation_year": 1881,
             "render_role": "investor"
           },
@@ -245,11 +245,12 @@
             ],
             "coordinate_precision": "approximate city centre",
             "source_id": "mitchell1918",
-            "locator": "Mitchell 1918, p214, note320 (Graydon interview, September 4, 1916)",
+            "locator": "Mitchell 1918, 214 n. 320",
             "documentation_year": 1916,
             "relationship_year": null,
             "render_role": "intermediary",
-            "limits": "Retrospective interview; exact transaction dates and Northern firms/cities not specified here."
+            "limits": "Retrospective interview; exact transaction dates and Northern firms/cities not specified here.",
+            "account": "An interview identified D. A. Tompkins as an agent for Northern machinery makers who accepted some payment in stock."
           },
           {
             "city": "Gastonia",
@@ -260,11 +261,12 @@
             ],
             "coordinate_precision": "approximate city centre",
             "source_id": "mitchell1918",
-            "locator": "Mitchell 1918, pp214–215, note321 (Gastonia interviews, September 14, 1916)",
+            "locator": "Mitchell 1918, 214–15 n. 321",
             "documentation_year": 1916,
             "relationship_year": null,
             "render_role": "mill",
-            "limits": "Preferred-stock control is a specific case, not evidence that Northern capital controlled all Southern mills."
+            "limits": "Preferred-stock control is a specific case, not evidence that Northern capital controlled all Southern mills.",
+            "account": "Interviewees recalled that machinery makers held a majority of the preferred stock. Neither interview locates a particular Northern supplier."
           }
         ],
         "edges": [
@@ -310,11 +312,8 @@
           }
         ],
         "limits": [
-          "These cases are not observations from 1905 and are not a single-year capital-flow map.",
-          "Reported subscriptions, paid-in capital, equipment credit and preferred-stock control are different measures.",
-          "No Northern supplier city is inferred for the Tompkins or Loray examples.",
-          "Reported Clifton holdings are not forced to sum to $500,000; Baltimore holdings are unspecified.",
-          "Mitchell cites earlier newspapers and retrospective interviews; those underlying sources have not been independently inspected here."
+          "At Clifton, the $500,000 figure is nominal stock. The reported cash paid in was $250,000.",
+          "The 1916 interviews identify no particular Northern supplier location."
         ]
       }
     ]
@@ -324,7 +323,7 @@
     "year": 1906,
     "industry": "pipe",
     "title": "ACIPCO: southern financing and a new plant",
-    "source": "HAER AL-35, printed p1 / PDF p3",
+    "source": "Historic American Engineering Record n.d., 1–2 (HAER AL-35).",
     "nodes": [
       {
         "city": "Atlanta",
@@ -335,18 +334,18 @@
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "acipco-haer",
-        "locator": "HAER AL-35, printed p1 / PDF p3"
+        "locator": "Historic American Engineering Record n.d., 1 (PDF 3)"
       },
       {
         "city": "Birmingham",
-        "role": "new ACIPCO plant, 1906",
+        "role": "ACIPCO plant built in 1906",
         "coordinates": [
           -86.802,
           33.52
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "acipco-haer",
-        "locator": "HAER AL-35, printed p1 / PDF p3"
+        "locator": "Historic American Engineering Record n.d., 1 (PDF 3)"
       }
     ],
     "edges": [
@@ -360,8 +359,7 @@
       }
     ],
     "limits": [
-      "ACIPCO is distinct from USCIP&F in the 1913 map; this is not one company changing headquarters.",
-      "The source identifies southern investors; no per-investor capital totals or precise funding routes are asserted."
+      "ACIPCO and USCIP&F were independent companies."
     ],
     "basemap_style": "neutral",
     "year_semantics": "documented historical relationship or reorganization",
@@ -377,7 +375,7 @@
     "year": 1913,
     "industry": "pipe",
     "title": "A southern production network and centralized research",
-    "source": "HAER AL-32, printed pp19,21 / PDF pp21,23",
+    "source": "O’Connor 1996, 19, 21, 27–29 (HAER AL-32).",
     "nodes": [
       {
         "city": "Burlington",
@@ -388,7 +386,7 @@
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "us-pipe-haer",
-        "locator": "HAER AL-32, printed pp19,21 / PDF pp21,23",
+        "locator": "O’Connor 1996, 19, 21 (PDF 21, 23)",
         "render_role": "office_research"
       },
       {
@@ -400,7 +398,7 @@
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "us-pipe-haer",
-        "locator": "HAER AL-32, printed pp19,21 / PDF pp21,23",
+        "locator": "O’Connor 1996, 19, 21 (PDF 21, 23)",
         "render_role": "production"
       },
       {
@@ -412,7 +410,7 @@
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "us-pipe-haer",
-        "locator": "HAER AL-32, printed pp19,21 / PDF pp21,23",
+        "locator": "O’Connor 1996, 19, 21 (PDF 21, 23)",
         "render_role": "production"
       },
       {
@@ -424,7 +422,7 @@
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "us-pipe-haer",
-        "locator": "HAER AL-32, printed pp19,21 / PDF pp21,23",
+        "locator": "O’Connor 1996, 19, 21 (PDF 21, 23)",
         "render_role": "production"
       },
       {
@@ -436,7 +434,7 @@
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "us-pipe-haer",
-        "locator": "HAER AL-32, printed pp19,21 / PDF pp21,23",
+        "locator": "O’Connor 1996, 19, 21 (PDF 21, 23)",
         "render_role": "production"
       },
       {
@@ -448,7 +446,7 @@
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "us-pipe-haer",
-        "locator": "O'Connor, HAER AL-32, printed pp19,21 / PDF pp21,23",
+        "locator": "O’Connor 1996, 19, 21 (PDF 21, 23)",
         "roles": [
           "office",
           "proposed_closure"
@@ -464,7 +462,7 @@
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "us-pipe-haer",
-        "locator": "O'Connor, HAER AL-32, printed p21 / PDF p23",
+        "locator": "O’Connor 1996, 21 (PDF 23)",
         "render_role": "proposed_closure"
       },
       {
@@ -476,7 +474,7 @@
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "us-pipe-haer",
-        "locator": "O'Connor, HAER AL-32, printed p21 / PDF p23",
+        "locator": "O’Connor 1996, 21 (PDF 23)",
         "render_role": "proposed_closure"
       }
     ],
@@ -523,13 +521,8 @@
       }
     ],
     "limits": [
-      "Not individual equipment shipping routes.",
-      "Bessemer did not adopt centrifugal casting until 1934; no centrifugal icon before that year.",
-      "Birmingham centrifugal adoption date is unspecified.",
-      "ACIPCO is a separate company; this map must not imply its control by USCIP&F.",
-      "Cleveland, Buffalo and Louisville are proposed closures in the 1913 report, not proven closure dates.",
-      "Louisville is both an office location and the site of works recommended for abandonment.",
-      "Selected locations, not the complete company plant or office network; no full North/South site count implied."
+      "Bessemer adopted centrifugal casting in 1934. No date is established here for the Birmingham works.",
+      "The proposal leaves the dates of any closures open."
     ],
     "basemap_style": "neutral",
     "year_semantics": "documented historical relationship or reorganization",
@@ -559,7 +552,7 @@
     "year": 1881,
     "industry": "cigarettes",
     "title": "Skilled labor and a southern producer",
-    "source": "Porter 1969, printed pp61–62",
+    "source": "Porter 1969, 61–62.",
     "nodes": [
       {
         "city": "New York",
@@ -570,7 +563,7 @@
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "porter1969",
-        "locator": "Porter 1969, printed pp61–62"
+        "locator": "Porter 1969, 61–62"
       },
       {
         "city": "Durham",
@@ -581,7 +574,7 @@
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "porter1969",
-        "locator": "Porter 1969, printed pp61–62"
+        "locator": "Porter 1969, 61–62"
       }
     ],
     "edges": [
@@ -595,7 +588,7 @@
       }
     ],
     "limits": [
-      "Bonsack inventor residence is a separate location, not evidence of machine factory location."
+      "The line traces recruitment from New York to Durham."
     ],
     "basemap_style": "neutral",
     "year_semantics": "documented historical relationship or reorganization",
@@ -612,7 +605,7 @@
     "year": 1890,
     "industry": "cigarettes",
     "title": "Southern production, national corporate organization",
-    "source": "Porter 1969, printed pp65,73–74 / PDF pp8,16–17",
+    "source": "Porter 1969, 59, 65, 70, 73–74.",
     "nodes": [
       {
         "city": "New York",
@@ -623,7 +616,7 @@
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "porter1969",
-        "locator": "Porter 1969, printed pp65,74 / PDF pp8,17",
+        "locator": "Porter 1969, 65, 74 (PDF 8, 17)",
         "companies": [
           "Kinney Tobacco Co.",
           "Goodwin & Co."
@@ -640,7 +633,7 @@
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "porter1969",
-        "locator": "Porter 1969, printed pp61–62,65,73 / PDF pp4–5,8,16",
+        "locator": "Porter 1969, 61–62, 65, 73 (PDF 4–5, 8, 16)",
         "companies": [
           "W. Duke, Sons & Co."
         ],
@@ -655,7 +648,7 @@
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "porter1969",
-        "locator": "Porter 1969, printed pp65,73 / PDF pp8,16",
+        "locator": "Porter 1969, 65, 73 (PDF 8, 16)",
         "companies": [
           "Allen & Ginter"
         ],
@@ -670,7 +663,7 @@
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "porter1969",
-        "locator": "Porter 1969, printed pp65,73 / PDF pp8,16",
+        "locator": "Porter 1969, 65, 73 (PDF 8, 16)",
         "companies": [
           "W. S. Kimball & Co."
         ],
@@ -704,8 +697,7 @@
       }
     ],
     "limits": [
-      "Incorporation in New Jersey is recorded separately, not placed at an invented city.",
-      "Five firms together produced approximately 90% of US cigarettes; not Duke alone."
+      "The company incorporated in New Jersey. Its central offices were in New York."
     ],
     "basemap_style": "neutral",
     "year_semantics": "documented historical relationship or reorganization",

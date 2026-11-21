@@ -68,8 +68,7 @@
 <circle cx="270.81040323432" cy="477.1770104515838" r="11" fill="#f8fbfc" stroke="#367783"/>
 <text x="270.8" y="481.2" font-size="12" fill="#367783" text-anchor="middle" font-weight="400">2</text>
 <text x="780.0" y="247.0" font-size="18" fill="#367783" text-anchor="start" font-weight="700">2. Birmingham</text>
-<text x="780.0" y="269.0" font-size="13" fill="#203e48" text-anchor="start" font-weight="400">new ACIPCO plant, 1906</text>
-<text x="44.0" y="765.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">HAER AL-35, printed p1 / PDF p3</text>
-<text x="44.0" y="810.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">ACIPCO is distinct from USCIP&amp;F in the 1913 map; this is not one company changing headquarters.</text>
-<text x="44.0" y="850.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">The source identifies southern investors; no per-investor capital totals or precise funding routes are asserted.</text>
+<text x="780.0" y="269.0" font-size="13" fill="#203e48" text-anchor="start" font-weight="400">ACIPCO plant built in 1906</text>
+<text x="44.0" y="765.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">Historic American Engineering Record n.d., 1–2 (HAER AL-35).</text>
+<text x="44.0" y="810.0" font-size="14" fill="#203e48" text-anchor="start" font-weight="400">ACIPCO and USCIP&amp;F were independent companies.</text>
 </svg>
