@@ -322,49 +322,49 @@
     "id": "pipe-1906",
     "year": 1906,
     "industry": "pipe",
-    "title": "ACIPCO: southern financing and a new plant",
-    "source": "Historic American Engineering Record n.d., 1–2 (HAER AL-35).",
+    "title": "ACIPCO at the Atlanta convention",
+    "source": "American Public Works Association (1907), membership p. 7 and convention attendance p. 23.",
     "nodes": [
       {
-        "city": "Atlanta",
-        "role": "company organized and financed, 1905",
-        "coordinates": [
-          -84.388,
-          33.749
-        ],
-        "coordinate_precision": "approximate city centre",
-        "source_id": "acipco-haer",
-        "locator": "Historic American Engineering Record n.d., 1 (PDF 3)"
-      },
-      {
         "city": "Birmingham",
-        "role": "ACIPCO plant built in 1906",
+        "role": "ACIPCO’s listed city; P. A. Ivy attended for the firm",
         "coordinates": [
           -86.802,
           33.52
         ],
         "coordinate_precision": "approximate city centre",
-        "source_id": "acipco-haer",
-        "locator": "Historic American Engineering Record n.d., 1 (PDF 3)"
+        "source_id": "apwa1907",
+        "locator": "American Public Works Association 1907, pp. 7, 23 (PDF 13, 29)"
+      },
+      {
+        "city": "Atlanta",
+        "role": "September 1906 convention of the American Public Works Association",
+        "coordinates": [
+          -84.388,
+          33.749
+        ],
+        "coordinate_precision": "approximate city centre",
+        "source_id": "apwa1907",
+        "locator": "American Public Works Association 1907, title page and p. 23 (PDF 7, 29)"
       }
     ],
     "edges": [
       {
-        "from": "Atlanta",
-        "to": "Birmingham",
-        "type": "company organization and selected plant site",
-        "source": "HAER AL-35, printed p1 / PDF p3",
+        "from": "Birmingham",
+        "to": "Atlanta",
+        "type": "member represented at the convention",
+        "source": "American Public Works Association 1907, pp. 7, 23",
         "not_route": true,
-        "source_id": "acipco-haer"
+        "source_id": "apwa1907"
       }
     ],
     "limits": [
-      "ACIPCO and USCIP&F were independent companies."
+      "The register records attendance. It gives no information about financing, ownership or machinery purchases."
     ],
     "basemap_style": "neutral",
-    "year_semantics": "documented historical relationship or reorganization",
+    "year_semantics": "conference date; proceedings printed in 1907",
     "coordinates_are": "approximate city centres, not factory sites",
-    "source_id": "acipco-haer",
+    "source_id": "apwa1907",
     "econ_observation_years": [
       1926
     ],

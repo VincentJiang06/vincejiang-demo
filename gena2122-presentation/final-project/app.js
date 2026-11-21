@@ -10,7 +10,10 @@ const events=[]; function emit(type,detail){events.push({type,...detail});if(eve
 function fmt(r){if(!r||r.value===null)return 'Not listed separately';const v=r.value;if(r.unit==='percent')return (['centrifugally_cast_pipe_share','american_tobacco_constituent_cigarette_share'].includes(r.metric)?'≈ ':'')+v.toLocaleString('en-US',{maximumFractionDigits:1})+'%';if(r.unit==='ratio')return v.toFixed(2)+(r.region==='South_13'?' × US':' : 1');if(r.unit==='USD_nominal')return '$'+v.toLocaleString('en-US');return r.unit==='tons_as_reported'?'≈ '+v.toLocaleString('en-US')+' tons':v.toLocaleString('en-US');}
 const row=(metric,year,region)=>econ.find(r=>r.metric===metric&&r.year===year&&(!region||r.region===region));
 const source=id=>content.sources.find(s=>s.id===id);
-function cite(ids,locator=''){return `<div class="citations">${ids.map(id=>`<button class="citation" data-source="${esc(id)}">${esc(source(id)?.author||id)}</button>`).join(' ')}${locator?` · ${esc(locator)}`:''}</div>`;}
+function cite(ids, locator = '') {
+ if (!ids.length) return '';
+ return `<div class="citations">${ids.map(id => `<button class="citation" data-source="${esc(id)}">${esc(source(id).author)}</button>`).join(' ')}${locator ? ` · ${esc(locator)}` : ''}</div>`;
+}
 function btn(label,attrs=''){return `<button ${attrs}>${label}</button>`;}
 function sourcePage(n,machine=null){return `<div class="source-page"><img src="${esc(n.figure)}" width="${n.figure_width}" height="${n.figure_height}" alt="Original source page: ${esc(n.locator)}">${n.bbox?`<span class="source-highlight" style="left:${n.bbox[0]*100}%;top:${n.bbox[1]*100}%;width:${n.bbox[2]*100}%;height:${n.bbox[3]*100}%"></span>`:''}${machine?scanHotspots(n,machine):''}</div>`;}
 function scanHotspots(n,id){const cs=nodes.filter(x=>x.parent===n.id&&x.figure===n.figure&&x.bbox);return `<div class="scan-hotspots" role="group" aria-label="Original-page component references"><svg class="scan-leaders" aria-hidden="true"></svg>${cs.map((x,i)=>`<button data-node="${x.id}" data-machine="${id}" data-x="${x.bbox[0]+x.bbox[2]/2}" data-y="${x.bbox[1]+x.bbox[3]/2}" style="left:${(x.bbox[0]+x.bbox[2]/2)*100}%;top:${(x.bbox[1]+x.bbox[3]/2)*100}%" aria-label="${i+1}. ${esc(x.name)}" title="${esc(x.name)}" tabindex="${i===0?0:-1}">${i+1}</button>`).join('')}</div>`;}
@@ -67,7 +70,7 @@ function table(rows) {
 
 const industryChoices = {
  cotton: [['spindles', 'Spindles · 1899–1929'], ['customers', 'Draper customers · 1905'], ['capital', 'Capital ties · 1881–1916']],
- pipe: [[1913, 'USCIP&F · 1913'], [1906, 'ACIPCO · 1905–06']],
+ pipe: [[1913, 'USCIP&F · 1913'], [1906, 'ACIPCO · 1906 convention']],
  cigarettes: [[1890, 'Merger · 1890'], [1881, 'Recruitment · 1881']]
 };
 const spindleYears = [1899, 1909, 1919, 1929];
@@ -80,7 +83,7 @@ function evidenceChoices(choices, selected, label, section) {
 
 function industryMap(name, title, caption, evidence) {
  const height = name.startsWith('cotton-') ? 950 : name === 'textile-1905-capital' ? 1034 : 1000;
- const url = `maps/${name}.svg?v=20261121-text1`;
+ const url = `maps/${name}.svg?v=20261121-sources1`;
  return `<figure class="industry-map-figure">
   <img class="industry-map" src="${url}" width="1200" height="${height}" alt="${esc(title)}" decoding="async">
   <figcaption>
@@ -684,7 +687,7 @@ chapterSelect.value=chapterFromHash();
 $('.chapter-picker').hidden=false;
 chapterSelect.addEventListener('change',()=>navigateChapter('#'+chapterSelect.value,{keepFocus:true}));
 
-Promise.all(['content','nodes','economic-indicators','industry-networks','asset-map'].map(n=>fetch(`data/${n}.json?v=20261121-text1`,{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error(n+' '+r.status);return r.json();}))).then(([c,n,e,net,a])=>{
+Promise.all(['content','nodes','economic-indicators','industry-networks','asset-map'].map(n=>fetch(`data/${n}.json?v=20261121-sources1`,{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error(n+' '+r.status);return r.json();}))).then(([c,n,e,net,a])=>{
  content=c;nodes=n;econ=e;networks=net;assets=a;
  render();
  revealChapterTarget(undefined,false);

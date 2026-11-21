@@ -21,23 +21,18 @@
         },
         {
           "heading": "What the value ratio measures",
-          "text": "Dividing the South’s share of product value by its share of wage earners gives gross nominal product value per wage earner relative to the US average. Calculated from the rounded census shares, the ratio fell from 1.01 in 1860 to 0.66 in 1899 and recovered to 0.77 in 1929 (Poulton 1947, 7, table 2). Product value includes material costs and varies with the mix of industries, so these figures cannot measure labor productivity. Kim (1997, 26–29) examines wages directly. In 1860 and 1900, lower pay within the same industries accounted for much of the South’s manufacturing income gap. Differences in industry mix mattered more between 1900 and 1947.",
+          "text": "In 1929 the South accounted for 11.7 percent of US product value and 15.2 percent of manufacturing wage earners. Dividing the first share by the second gives 0.77, compared with 1.01 in 1860 and 0.66 in 1899 (Poulton 1947, 7, table 2). A dollar of reported product included the materials that went into it. A change in the prices of those materials, or in the kinds of goods a region made, could move the ratio even if a worker made exactly as many units in an hour. The series can establish the scale of the recovery in employment. It cannot settle whether Southern workers became more productive.",
           "citations": [
-            "bls1947",
-            "kim1997"
+            "bls1947"
           ],
-          "paper_ref": "NAT-3; NAT-4",
           "inline_citations": true
         },
         {
-          "heading": "The cost of capital after the war",
-          "text": "Emancipation ended enslavers’ legal claims to people. Wartime destruction damaged Southern infrastructure, and the collapse of the Confederacy wiped out its currency and bonds. Southern banks became scarcer. Relative to the North, interest rates rose, wages fell and manufacturers used less capital per worker (Hutchinson and Margo 2004, 7–8, 24–27). National banking rules favored the concentration of new banks in the emerging manufacturing belt (Jaremski 2013, 6–7). The choice of equipment mattered. Between 1850 and 1880 output per worker was higher in steam-powered establishments than in unpowered ones, especially among larger plants (Atack, Bateman, and Margo 2006, 18–21).",
+          "heading": "What the census counts when a mill buys equipment",
+          "text": "Consider a Southern mill buying a loom from Massachusetts. Draper’s 1905 catalog names its Hopedale works and identifies mills in Gaffney and Pelzer as customers (Draper 1905, title page and PDF 229, 233, 236). Weaving at either mill added to manufacturing activity in South Carolina. Building the loom was a separate job in Massachusetts. A rise in Southern manufacturing employment could therefore accompany continuing demand for Northern machine builders. The customer entries document that connection, although they give no purchase dates and say nothing about what fraction of Southern looms came from Draper.",
           "citations": [
-            "hutchinson-margo2004",
-            "jaremski2013",
-            "atack2006"
+            "draper1905"
           ],
-          "paper_ref": "PRE-4; PRE-5; PRE-6; PRE-7; PRE-8; PRE-9; PRE-10; PRE-11",
           "inline_citations": true
         },
         {
@@ -70,10 +65,9 @@
         },
         {
           "heading": "Shares, machinery and sales credit",
-          "text": "Northern investors sometimes bought shares after local people had subscribed or when a mill expanded. Other ties grew out of selling equipment or cloth. A Greenville broker told Mitchell that machinery suppliers received about two-thirds of the price in cash. Suppliers often sold the shares they took in payment, while commission houses could both advance credit and keep the mill’s sales business for years. Loray Mill in Gastonia was unusual. After it reorganized, machinery makers retained a majority of its preferred stock (Mitchell 1918, 174–76, 205–15). Poulton (1947, 6) also describes machinery subscriptions and advances from commission houses. Read together, these accounts suggest how mills could obtain equipment even where bank credit was scarce.",
+          "text": "Northern investors sometimes bought shares after local people had subscribed or when a mill expanded. Other ties grew out of selling equipment or cloth. A Greenville broker told Mitchell that machinery suppliers received about two-thirds of the price in cash. Suppliers often sold the shares they took in payment, while commission houses could both advance credit and keep the mill’s sales business for years. Loray Mill in Gastonia was unusual. After it reorganized, machinery makers retained a majority of its preferred stock (Mitchell 1918, 174–76, 205–15). A supplier that sold its shares could continue to supply parts even after its name disappeared from the list of owners.",
           "citations": [
-            "mitchell1918",
-            "bls1947"
+            "mitchell1918"
           ],
           "paper_ref": "COT-CAP-3; COT-CAP-4; COT-CAP-5; COT-CAP-6; COT-CAP-7",
           "inline_citations": true
@@ -98,12 +92,21 @@
           "inline_citations": true
         },
         {
-          "heading": "What a patent count misses",
-          "text": "James Bessen estimates that weavers learning on the job accounted for between one-third and one-half of technical change in nineteenth-century New England weaving. His detailed worker records come from Lowell, and his loom series excludes automatic Northrop looms (Bessen 2008, 7, 12, 27–28). A weaver could improve the way a loom ran without filing a patent. Southern patent counts therefore leave open how much Southern workers learned on the mill floor.",
+          "heading": "Whose work reaches the patent record?",
+          "text": "Sutthiphisal follows inventions that entered the patent record and, where possible, identifies the inventor’s employer (2006, PDF 12–15, 19–20). Draper’s account of the Dwight filling detector helps explain why the employer matters. An agent at a customer mill devised a detector and Draper employees modified it (Draper 1905, 71). A count by mill location and a count by machinery firm would each capture only part of that work. The same caution applies to Southern mills. Their small share of recorded textile patents gives no count of repairs, adjustments or useful suggestions that never became patent applications.",
           "citations": [
-            "bessen2008"
+            "sutthiphisal2006",
+            "draper1905"
           ],
-          "paper_ref": "COT-SHOP-1; COT-SHOP-2",
+          "inline_citations": true
+        },
+        {
+          "heading": "Following a mill through two sources",
+          "text": "The finance map and the customer map answer different questions about a mill. Mitchell’s account of Rock Hill identifies who subscribed capital. Draper’s list identifies a supplier for named mills at Gaffney and Pelzer (Mitchell 1918, 149, 152; Draper 1905, PDF 229, 233, 236). These are three different towns. Matching them by state would turn separate records into a purchase that neither source documents. Read at their proper scale, they establish that residents could help start mills in South Carolina and that some mills bought machinery across state lines. Whether a particular shareholder chose a particular loom remains open.",
+          "citations": [
+            "mitchell1918",
+            "draper1905"
+          ],
           "inline_citations": true
         }
       ],
@@ -144,13 +147,21 @@
           "inline_citations": true
         },
         {
-          "heading": "ACIPCO’s alternative",
-          "text": "Southern investors organized ACIPCO in Atlanta in 1905 and built a foundry in Birmingham the following year (Historic American Engineering Record n.d., 1). Working for ACIPCO, William D. Moore began experimenting with a sand-lined mold in 1922. The company opened its first fully mechanized Mono-Cast shop in 1926 and had given up pit casting by 1930. O’Connor (1996, 30–32) identifies this as an independent route to centrifugal casting.",
+          "heading": "A Birmingham firm in Atlanta, then on its own shop floor",
+          "text": "The American Public Works Association lists the American Cast Iron Pipe Company as a Birmingham member. Its register of the September 1906 convention in Atlanta identifies P. A. Ivy as an attendee from that company (American Public Works Association 1907, 7, 23). The entry places the firm in a trade association and its representative at a meeting. Evidence for technical work in Birmingham comes from a different record. William D. Moore began experimenting with a sand-lined mold for ACIPCO in 1922. Its first mechanized Mono-Cast shop opened in 1926 (O’Connor 1996, 30–32). A contact in another city and the ability to develop a process at home could coexist.",
           "citations": [
-            "acipco-haer",
+            "apwa1907",
             "us-pipe-haer"
           ],
-          "paper_ref": "PIPE-ACI-1; PIPE-ACI-2",
+          "inline_citations": true
+        },
+        {
+          "heading": "What the patent leaves to the foundry",
+          "text": "Figure 1 of the 1916 patent lets a reader follow the delivery of molten iron into a rotating mold (Sensaud de Lavaud and Arens 1916, fig. 1). It gives no adoption date for a Birmingham plant. O’Connor traces the change across individual works. USCIP&F introduced the process at Burlington before Birmingham. Its Bessemer works adopted it in 1934 (O’Connor 1996, 24–29, 32). The date on a patent, the purchase of rights and the first use at a works belong to different timelines. Only the last one places the machine on a particular factory floor.",
+          "citations": [
+            "delavaud1916",
+            "us-pipe-haer"
+          ],
           "inline_citations": true
         }
       ],
@@ -198,6 +209,15 @@
           ],
           "paper_ref": "CIG-1898-1; CIG-1898-2; CIG-SUM-1",
           "inline_citations": true
+        },
+        {
+          "heading": "What the lease bought",
+          "text": "Bonsack’s drawing shows the sequence of operations that one machine could perform. The unit of payment in Duke’s lease was a thousand cigarettes (Bonsack 1881, specification 1; Porter 1969, 67–69). Together these details help explain why Duke employed mechanics even though another firm owned the machines. Keeping the paper feed, paste and cutter working in sequence mattered to the number of finished cigarettes the firm could sell. A favorable rate made each thousand cheaper to produce, but the drawings and lease price alone cannot tell us how often a machine stopped or how much tobacco was lost in a run.",
+          "citations": [
+            "bonsack1881",
+            "porter1969"
+          ],
+          "inline_citations": true
         }
       ],
       "takeaway": "Duke’s mechanics improved everyday operation while the supplier kept the machines. Purchasing and sales gave the Durham firm a second source of influence over a national industry."
@@ -209,14 +229,11 @@
       "deck": "A mill could obtain equipment on credit. A branch foundry could receive a process under its parent’s patent rights. Each arrangement gave the producer access to machinery on different terms.",
       "paragraphs": [
         {
-          "heading": "Credit and capacity",
-          "text": "The National Banking Acts imposed capital requirements that limited entry, particularly in rural areas. Jaremski (2013, 6–7, 13, 16, 19) links new banks to investment in his Midwestern and Northeastern samples. The South falls outside those estimates. Its banking system contracted during the Civil War (Hutchinson and Margo 2004, 7–8). Mitchell (1918, 205–215) records Southern mills obtaining equipment on credit from suppliers and advances from commission houses. Those accounts suggest how some mills financed expansion. Mitchell (1918, 170) also records tax relief on new factory machinery in South Carolina and on cotton and woolen mills in Georgia. The amounts invested because of those exemptions remain unknown.",
+          "heading": "What a share paid for",
+          "text": "A mill could give a machinery supplier shares for part of the price of its equipment. If the supplier sold those shares, the identity of the shareholder changed while the same loom remained on the floor. A commission house that advanced money could instead retain the right to sell the mill’s cloth for years. Mitchell records both arrangements (1918, 205–15). The terms of the transaction help explain how a mill acquired equipment and who handled its sales. A list of shareholders taken years later could miss the supplier’s role altogether.",
           "citations": [
-            "jaremski2013",
-            "hutchinson-margo2004",
             "mitchell1918"
           ],
-          "paper_ref": "CMP-3; CMP-4",
           "inline_citations": true
         },
         {
@@ -230,13 +247,12 @@
           "inline_citations": true
         },
         {
-          "heading": "Limits of the explanation",
-          "text": "The cotton evidence locates patents and machinery firms at particular dates (Sutthiphisal 2006, PDF 19–21). Kim’s national study examines a different question, how the geographic concentration of industries changed over time (Kim 1995, 903–904). Neither supplies a measure of what Southern manufacturing would have produced without interregional credit. The comparisons here concern the three industries for which we can identify who supplied equipment or controlled its use.",
+          "heading": "When opening a factory changes a different decision",
+          "text": "For a textile mill, installing a loom settled where cloth would be woven. The mill might still turn to its supplier for a change in design, as Draper’s account of the Dwight detector illustrates (1905, 71). For a USCIP&F plant, membership in the combine gave access to a company-wide research operation. The parent could choose which works received a new process first (O’Connor 1996, 19–21, 27–29). These arrangements left different decisions in local hands. Counting new factories would capture each opening once and obscure the distinction.",
           "citations": [
-            "sutthiphisal2006",
-            "kim1995"
+            "draper1905",
+            "us-pipe-haer"
           ],
-          "paper_ref": "CMP-7",
           "inline_citations": true
         }
       ],
@@ -249,37 +265,28 @@
       "deck": "Emancipation changed the legal basis of Southern labor. Industrial employment recovered over the following decades, with different consequences for the people and firms who made the equipment.",
       "paragraphs": [
         {
-          "heading": "Where the claim holds",
-          "text": "The South gained manufacturing workers after 1880, and the Southeast’s share of active cotton spindles passed New England’s by 1929 (Poulton 1947, 7, 9). Relative Southern capital costs had risen after the war (Hutchinson and Margo 2004, 7–8, 24–27). Mill owners could draw on supplier and merchant credit (Mitchell 1918, 205–215). Yet the 1907 machinery-capital estimate and the 1910 patent evidence still place much of textile machine making and invention in Massachusetts (Sutthiphisal 2006, PDF 12–13, 19–21, 47–48).",
+          "heading": "Where the cotton comparison holds",
+          "text": "The Southeast overtook New England in active cotton spindles between the 1899 and 1929 observations (Poulton 1947, 9, table 3). At the mill level, supplier credit explains one way owners could equip a plant before they had paid its machinery bill in full (Mitchell 1918, 205–15). At the machinery firm, textile patent records locate a substantial share of inventive work in Massachusetts in 1910 (Sutthiphisal 2006, PDF 19–21). Read together, the three records explain how a region could gain equipment and jobs while firms elsewhere continued to design much of that equipment.",
           "citations": [
             "bls1947",
-            "hutchinson-margo2004",
             "mitchell1918",
             "sutthiphisal2006"
           ],
-          "paper_ref": "CON-1",
           "inline_citations": true
         },
         {
-          "heading": "Where it does not",
-          "text": "Birmingham puts a geographical explanation to a harder test. ACIPCO developed Mono-Cast locally, while USCIP&F centralized research for its own works at Burlington (Historic American Engineering Record n.d., 1–2; O’Connor 1996, 19, 30–32). Durham adds a third possibility. Duke’s firm used leased machinery to build a national business through its mechanics, leaf buyers and sales offices (Porter 1969, 64–75). The location of a plant alone tells us little about who could change its tools or reach its customers.",
+          "heading": "Two different outcomes beyond cotton",
+          "text": "In Birmingham, two firms working in the same city organized research differently. ACIPCO developed a sand-lined casting process. USCIP&F centralized research at Burlington and introduced a different process across its works (O’Connor 1996, 19, 24–32). In Durham, Duke obtained machines on lease and used its own mechanics and sales organization to build a national business (Porter 1969, 64–75). These cases identify three separate decisions about who can change the manufacturing process, who can authorize its use elsewhere, and who can bring the resulting goods to market.",
           "citations": [
-            "acipco-haer",
             "us-pipe-haer",
             "porter1969"
           ],
-          "paper_ref": "CON-2; CMP-6",
           "inline_citations": true
         },
         {
-          "heading": "Emancipation is not convergence",
-          "text": "The course places emancipation and Reconstruction at a turning point, then turns to the uneven industrialization of the New South (Galvan and Muñoz 2026, schedule for Lecture 3; Muñoz 2026, slide 4). Regional labor markets remained divided, and capital remained costly in the postwar South (Kim and Margo 2003, 7; Hutchinson and Margo 2004, 7–8, 24). The location of textile invention offers another way to trace the limits of that transformation (Sutthiphisal 2006, PDF 19–21). The distinction also matters when a factory relocates today. A jobs count records whom it employs. To see what technical work moves with it, one would also need to locate the suppliers and engineers who can redesign its equipment.",
-          "citations": [
-            "kim-margo2003",
-            "hutchinson-margo2004",
-            "sutthiphisal2006"
-          ],
-          "paper_ref": "Course bridge written for the website, adapted from CON-3 and INT-2; the lecture link and the question framing are new website text, not verbatim paper content",
+          "heading": "A question to take to the next factory opening",
+          "text": "The course’s account of emancipation and Reconstruction puts the expansion of Southern industry in a history of changing labor relations (Galvan and Muñoz 2026, Lecture 3; Muñoz 2026, slide 4). The three cases suggest a question for a factory announcement today. Alongside the number of promised jobs, ask where engineers will test a new design, who may install it at another plant, and which firm will bear the cost of a failed trial. Employment figures can later show whether the jobs arrived. Answering those other questions takes evidence about how the business actually operates.",
+          "citations": [],
           "inline_citations": true
         }
       ],
@@ -287,71 +294,6 @@
     }
   ],
   "scholars": [
-    {
-      "id": "kim1995",
-      "section": "national",
-      "name": "Sukkoo Kim",
-      "work": "Expansion of Markets and the Geographic Distribution of Economic Activities: The Trends in U.S. Regional Manufacturing Structure, 1860–1987",
-      "year": 1995,
-      "position": "Kim’s index of regional manufacturing specialization rose between 1890 and 1914, remained high in the interwar years, and declined from the 1930s.",
-      "supports": "Textiles and tobacco became geographically concentrated even though both industries had relatively low skill and research requirements.",
-      "challenges": "Across industries, economies of scale and differences in regional resources fit the long-run pattern better than the benefits firms might gain simply by clustering.",
-      "response": "Employment patterns can locate a manufacturing industry. In cotton, the locations of machine shops and the employers named in patent records help locate the people who designed its equipment.",
-      "source_id": "kim1995",
-      "locator": "pp.887–888, 896–898, 903–904"
-    },
-    {
-      "id": "kim1997",
-      "section": "national",
-      "name": "Sukkoo Kim",
-      "work": "Economic Integration and Convergence: U.S. Regions, 1840–1987",
-      "year": 1997,
-      "position": "Kim separates the contribution of wages within industries from the contribution of the mix of industries to regional income differences.",
-      "supports": "He suggests that Southern manufacturers’ low capital per worker helps explain lower wages.",
-      "challenges": "The wage calculation cannot identify why capital was relatively scarce.",
-      "response": "The mill accounts supply one part of that history. They record the terms on which Southern manufacturers obtained capital and equipment.",
-      "source_id": "kim1997",
-      "locator": "pp.26–29, 31"
-    },
-    {
-      "id": "hutchinson-margo2004",
-      "section": "national",
-      "name": "William Hutchinson and Robert A. Margo",
-      "work": "The Impact of the Civil War on Capital Intensity and Labor Productivity in Southern Manufacturing",
-      "year": 2004,
-      "position": "The authors trace a postwar decline in the amount of capital Southern manufacturers used per worker. Borrowing became more expensive relative to wages.",
-      "supports": "Their estimated Southern decline in value added per worker, relative to the North, shrinks to near zero when the regression includes capital per worker.",
-      "challenges": "The establishment records end in 1880, and the census imperfectly measured capital.",
-      "response": "The estimates help explain the early postwar gap. The later growth of Southern mills requires evidence from later years.",
-      "source_id": "hutchinson-margo2004",
-      "locator": "pp.7–9, 12–13, 15–19, 24–27"
-    },
-    {
-      "id": "jaremski2013",
-      "section": "institutions",
-      "name": "Matthew S. Jaremski",
-      "work": "National Banking’s Role in U.S. Industrialization, 1850–1900",
-      "year": 2013,
-      "position": "Counties with new national banks gained manufacturing capital and output. In Jaremski’s establishment sample, firms with access to new banks were more likely to adopt steam.",
-      "supports": "The study connects local banking to investment in factories and equipment.",
-      "challenges": "Its Midwestern and Northeastern samples exclude Southern firms.",
-      "response": "For Southern mills, the evidence concerns credit from suppliers and merchants (Mitchell 1918, 205–215).",
-      "source_id": "jaremski2013",
-      "locator": "pp.6–7, 13, 16, 19"
-    },
-    {
-      "id": "kim-margo2003",
-      "section": "national",
-      "name": "Sukkoo Kim and Robert A. Margo",
-      "work": "Historical Perspectives on U.S. Economic Geography",
-      "year": 2003,
-      "position": "Kim and Margo trace how slowly Northern and Southern labor markets integrated. Regional differences in interest rates narrowed earlier than differences in wages.",
-      "supports": "Persistent wage differences put a limit on what emancipation alone can explain about regional earnings.",
-      "challenges": "The authors review explanations involving agricultural institutions, schooling and access to hiring networks.",
-      "response": "The exhibit’s evidence on machine builders complements these accounts. The account of Gavin Wright’s argument about Northern hiring networks comes through Kim and Margo’s survey.",
-      "source_id": "kim-margo2003",
-      "locator": "pp.7, 16–18, 44"
-    },
     {
       "id": "mitchell1918",
       "section": "cotton",
@@ -379,34 +321,19 @@
       "locator": "PDF 12–13, 15–21, 27, 47–48"
     },
     {
-      "id": "bessen2008",
-      "section": "cotton",
-      "name": "James Bessen",
-      "work": "More Machines or Better Machines?",
-      "year": 2008,
-      "position": "Bessen attributes much of the rise in output per New England weaver to technical change and studies how much workers contributed by learning on the job.",
-      "supports": "Worker records reveal gains in skill that leave no trace in a patent count.",
-      "challenges": "The detailed records concern Lowell weavers, and the loom series covers the period before widespread adoption of the automatic loom.",
-      "response": "Southern operators might also have improved shop practice. Bessen’s estimates apply to the New England case.",
-      "source_id": "bessen2008",
-      "locator": "pp.2, 7, 12, 27–28"
-    },
-    {
       "id": "oconnor-haer",
       "section": "pipe",
-      "name": "Richard O’Connor; HAER ACIPCO addendum",
-      "work": "United States Pipe and Foundry Company; American Cast Iron Pipe Company Plant",
-      "year": 0,
+      "name": "Richard O’Connor",
+      "work": "United States Pipe and Foundry Company",
+      "year": 1996,
       "position": "O’Connor locates successive changes in pipe casting at individual foundries, then traces the shift of research within USCIP&F to Burlington.",
       "supports": "Moore’s work on sand-lined molds at ACIPCO documents local invention in Birmingham.",
-      "challenges": "The separate HAER addendum calls Birmingham an early leader. It supplies no comparative adoption figures.",
-      "response": "The two histories can establish where particular work took place. Ranking Birmingham against other districts would require evidence from those districts.",
+      "challenges": "The sequence differs even between two works of the same company. Company ownership alone does not establish when a particular plant made the change.",
+      "response": "The exhibit uses separate plant dates where the report supplies them and leaves the Birmingham adoption year open.",
       "source_id": "us-pipe-haer",
-      "locator": "O’Connor 1996, 3, 13–32; Historic American Engineering Record n.d., 1–2",
-      "display_year": "1996 / n.d.",
+      "locator": "pp. 13–21, 24–32",
       "source_ids": [
-        "us-pipe-haer",
-        "acipco-haer"
+        "us-pipe-haer"
       ]
     },
     {
@@ -425,14 +352,14 @@
   ],
   "institution_rows": [
     {
-      "institution": "National Banking Acts and state-note tax",
-      "mechanism": "Capital requirements restricted entry by rural banks, and the tax on state bank notes favored the national system.",
-      "comparison": "In Jaremski’s samples, new banks were associated with county gains in capital and output and with steam adoption at individual establishments.",
-      "limit": "His manufacturing estimates cover Midwestern and Northeastern locations.",
+      "institution": "Supplier credit and share ownership",
+      "mechanism": "A supplier could accept shares for part of the machinery price and sell them later.",
+      "comparison": "At Loray Mill, machinery makers retained a majority of the preferred stock after reorganization.",
+      "limit": "The arrangement at Loray differed from the more usual sale of supplier shares.",
       "source_ids": [
-        "jaremski2013"
+        "mitchell1918"
       ],
-      "locator": "Jaremski 2013, 6–7, 13, 16, 19"
+      "locator": "Mitchell 1918, 205–15"
     },
     {
       "institution": "State tax exemptions",
@@ -497,8 +424,8 @@
       "caption": "Mitchell’s 1918 dissertation reproduces newspaper accounts of stock ownership and reports later interviews about machinery credit. Stock subscribed, cash paid in and control of preferred shares describe different arrangements. The dates below identify the original reports or interviews as cited by Mitchell."
     },
     "pipe-1906": {
-      "title": "ACIPCO in Atlanta and Birmingham, 1905–1906",
-      "caption": "Southern investors organized and financed the American Cast Iron Pipe Company in Atlanta in 1905. Its Birmingham plant was built in 1906. The source identifies the group of investors without giving individual stakes. The national pipe figures alongside this map are from 1926 (Historic American Engineering Record n.d., 1–2).",
+      "title": "ACIPCO at the Atlanta convention, 1906",
+      "caption": "The association’s membership list places the American Cast Iron Pipe Company in Birmingham. The attendance register names P. A. Ivy of that company at the September 1906 convention in Atlanta (American Public Works Association 1907, 7, 23). The line connects a member’s listed city with the meeting venue. The national pipe figures in the accompanying table date from 1926.",
       "data_note": "O’Connor 1996, 27–28 (PDF 29–30). These approximate national tonnages imply 13.33 percent before rounding. The source gives the unit simply as tons. Its inconsistent 1929 figures are omitted."
     },
     "pipe-1913": {
@@ -549,7 +476,7 @@
     },
     {
       "title": "Statistics and relationship maps",
-      "text": "The four spindle maps use census observation years. The other maps date each relationship to its source, such as the issue of a catalog or the adoption of a process. Statistics alongside the maps retain their observation years."
+      "text": "The four spindle maps use census observation years. The other maps date each relationship to its source, such as the issue of a catalog or the adoption of a process. Statistics alongside the maps retain their observation years. State outlines use Natural Earth 1:50m Admin 1 data (public domain) as modern geographic guides."
     },
     {
       "title": "Illustrations",
@@ -562,26 +489,16 @@
   ],
   "sources": [
     {
-      "id": "atack2006",
-      "author": "Jeremy Atack, Fred Bateman and Robert Margo",
-      "title": "Steam Power, Establishment Size, and Labor Productivity Growth in Nineteenth Century American Manufacturing, NBER WP 11931",
-      "year": 2006,
-      "type": "secondary",
-      "url": "https://www.nber.org/system/files/working_papers/w11931/w11931.pdf",
-      "locator": "pp.16–21, 28, 32–33",
-      "reference": "Atack, Jeremy, Fred Bateman, and Robert Margo. 2006. “Steam Power, Establishment Size, and Labor Productivity Growth in Nineteenth Century American Manufacturing.” NBER Working Paper 11931. National Bureau of Economic Research.",
-      "reference_url": "https://doi.org/10.3386/w11931"
-    },
-    {
-      "id": "bessen2008",
-      "author": "James Bessen",
-      "title": "More Machines or Better Machines?",
-      "year": 2008,
-      "type": "secondary",
-      "url": "https://users.nber.org/~confer/2008/prf08/bessen.pdf",
-      "locator": "pp.2–8, 12–14, 27–30",
-      "reference": "Bessen, James. 2008. “More Machines or Better Machines?” Working paper, November version.",
-      "reference_url": "https://users.nber.org/~confer/2008/prf08/bessen.pdf"
+      "id": "apwa1907",
+      "author": "American Public Works Association",
+      "title": "Second Convention, Atlanta, Ga., September 14th and 15th, 1906",
+      "year": 1907,
+      "type": "primary",
+      "url": "https://archive.org/download/americanpublicwo00amer/americanpublicwo00amer.pdf",
+      "reference_url": "https://archive.org/details/americanpublicwo00amer/page/23/mode/1up",
+      "short_citation": "American Public Works Association 1907",
+      "locator": "Membership list, p. 7 (PDF 13); Atlanta convention attendance register, p. 23 (PDF 29).",
+      "reference": "American Public Works Association. 1907. Second Convention, Atlanta, Ga., September 14th and 15th, 1906. LaHatte Printing & Stationery Co."
     },
     {
       "id": "bonsack1881",
@@ -600,79 +517,10 @@
       "title": "Labor-Saving Looms, 2nd ed.",
       "year": 1905,
       "type": "primary",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Labor-saving_looms_%28IA_laborsavinglooms02drap%29.pdf",
+      "url": "https://archive.org/download/laborsavinglooms02drap/laborsavinglooms02drap.pdf",
       "locator": "pp.39–71, 82, 86, 151–162; PDF pp.229, 232–233, 235–237",
       "reference": "Draper, George Otis. 1905. Labor-Saving Looms: A Brief Treatise on Plain Weaving and the Recent Improvements in That Line, with Special Reference to the Northrop Looms Manufactured by Draper Company, Hopedale, Mass., U.S.A. 2nd ed. Draper Company.",
-      "reference_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Labor-saving_looms_%28IA_laborsavinglooms02drap%29.pdf",
-      "italic_title": "Labor-Saving Looms: A Brief Treatise on Plain Weaving and the Recent Improvements in That Line, with Special Reference to the Northrop Looms Manufactured by Draper Company, Hopedale, Mass., U.S.A."
-    },
-    {
-      "id": "acipco-haer",
-      "author": "Historic American Engineering Record",
-      "title": "American Cast Iron Pipe Company Plant (ACIPCO), Addendum, HAER No. AL-35 (n.d.)",
-      "year": 0,
-      "type": "secondary",
-      "url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/al/al1000/al1010/data/al1010data.pdf",
-      "locator": "pp.1–2",
-      "reference": "Historic American Engineering Record. n.d. Addendum to American Cast Iron Pipe Company Plant (ACIPCO). HAER No. AL-35. National Park Service.",
-      "reference_url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/al/al1000/al1010/data/al1010data.pdf",
-      "italic_title": "Addendum to American Cast Iron Pipe Company Plant (ACIPCO)"
-    },
-    {
-      "id": "hutchinson-margo2004",
-      "author": "William Hutchinson and Robert A. Margo",
-      "title": "The Impact of the Civil War on Capital Intensity and Labor Productivity in Southern Manufacturing, NBER WP 10886",
-      "year": 2004,
-      "type": "secondary",
-      "url": "https://tile.loc.gov/storage-services/master/gdc/gdcebookspublic/20/05/61/55/99/2005615599/2005615599.pdf",
-      "locator": "pp.2–3, 7–9, 12–19, 24–29",
-      "reference": "Hutchinson, William, and Robert A. Margo. 2004. “The Impact of the Civil War on Capital Intensity and Labor Productivity in Southern Manufacturing.” NBER Working Paper 10886. National Bureau of Economic Research.",
-      "reference_url": "https://doi.org/10.3386/w10886"
-    },
-    {
-      "id": "jaremski2013",
-      "author": "Matthew S. Jaremski",
-      "title": "National Banking’s Role in U.S. Industrialization, 1850–1900, NBER WP 18789",
-      "year": 2013,
-      "type": "secondary",
-      "url": "https://www.nber.org/system/files/working_papers/w18789/w18789.pdf",
-      "locator": "pp.2, 6–9, 12–16, 19, 28",
-      "reference": "Jaremski, Matthew S. 2013. “National Banking’s Role in U.S. Industrialization, 1850–1900.” NBER Working Paper 18789. National Bureau of Economic Research.",
-      "reference_url": "https://doi.org/10.3386/w18789"
-    },
-    {
-      "id": "kim1995",
-      "author": "Sukkoo Kim",
-      "title": "Expansion of Markets and the Geographic Distribution of Economic Activities, Quarterly Journal of Economics 110(4)",
-      "year": 1995,
-      "type": "secondary",
-      "url": "https://people.duke.edu/~rcd2/Dissertation/References/Trade/qje1995.pdf",
-      "locator": "pp.881–904",
-      "reference": "Kim, Sukkoo. 1995. “Expansion of Markets and the Geographic Distribution of Economic Activities: The Trends in U.S. Regional Manufacturing Structure, 1860–1987.” Quarterly Journal of Economics 110 (4): 881–908.",
-      "reference_url": "https://doi.org/10.2307/2946643",
-      "italic_title": "Quarterly Journal of Economics"
-    },
-    {
-      "id": "kim1997",
-      "author": "Sukkoo Kim",
-      "title": "Economic Integration and Convergence: U.S. Regions, 1840–1987, NBER WP 6335",
-      "year": 1997,
-      "type": "secondary",
-      "url": "https://www.nber.org/system/files/working_papers/w6335/w6335.pdf",
-      "locator": "pp.1–7, 23–32",
-      "reference": "Kim, Sukkoo. 1997. “Economic Integration and Convergence: U.S. Regions, 1840–1987.” NBER Working Paper 6335. National Bureau of Economic Research.",
-      "reference_url": "https://doi.org/10.3386/w6335"
-    },
-    {
-      "id": "kim-margo2003",
-      "author": "Sukkoo Kim and Robert A. Margo",
-      "title": "Historical Perspectives on U.S. Economic Geography, NBER WP 9594",
-      "year": 2003,
-      "type": "secondary",
-      "url": "https://www.nber.org/system/files/working_papers/w9594/w9594.pdf",
-      "locator": "pp.3–18, 44–45, 55",
-      "reference": "Kim, Sukkoo, and Robert A. Margo. 2003. “Historical Perspectives on U.S. Economic Geography.” NBER Working Paper 9594. National Bureau of Economic Research.",
-      "reference_url": "https://doi.org/10.3386/w9594"
+      "reference_url": "https://archive.org/download/laborsavinglooms02drap/laborsavinglooms02drap.pdf"
     },
     {
       "id": "mitchell1918",
@@ -680,11 +528,10 @@
       "title": "The Rise of Cotton Mills in the South (PhD diss., Johns Hopkins University)",
       "year": 1918,
       "type": "secondary",
-      "url": "https://www.gutenberg.org/cache/epub/37784/pg37784-images.html",
+      "url": "https://archive.org/download/riseofcottonmill00mitc/riseofcottonmill00mitc.pdf",
       "locator": "pp.132–181, 202–215",
-      "reference": "Mitchell, Broadus. 1918. The Rise of Cotton Mills in the South. PhD diss., Johns Hopkins University. Project Gutenberg.",
-      "reference_url": "https://www.gutenberg.org/cache/epub/37784/pg37784-images.html",
-      "italic_title": "The Rise of Cotton Mills in the South"
+      "reference": "Mitchell, Broadus. 1918. The Rise of Cotton Mills in the South. PhD diss., Johns Hopkins University.",
+      "reference_url": "https://archive.org/download/riseofcottonmill00mitc/riseofcottonmill00mitc.pdf"
     },
     {
       "id": "us-pipe-haer",
@@ -695,8 +542,7 @@
       "url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/al/al1000/al1007/data/al1007data.pdf",
       "locator": "pp.2–32",
       "reference": "O’Connor, Richard. 1996. United States Pipe and Foundry Company. HAER No. AL-32. Historic American Engineering Record, National Park Service.",
-      "reference_url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/al/al1000/al1007/data/al1007data.pdf",
-      "italic_title": "United States Pipe and Foundry Company"
+      "reference_url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/al/al1000/al1007/data/al1007data.pdf"
     },
     {
       "id": "porter1969",
@@ -707,8 +553,7 @@
       "url": "https://people.duke.edu/~rcd2/Dissertation/References/Tobacco%20Specific/Company%20Specific/3111987.pdf",
       "locator": "pp.59–76",
       "reference": "Porter, Patrick G. 1969. “Origins of the American Tobacco Company.” Business History Review 43 (1): 59–76.",
-      "reference_url": "https://doi.org/10.2307/3111987",
-      "italic_title": "Business History Review"
+      "reference_url": "https://doi.org/10.2307/3111987"
     },
     {
       "id": "bls1947",
@@ -719,8 +564,7 @@
       "url": "https://fraser.stlouisfed.org/files/docs/publications/bls/bls_0898_1947.pdf",
       "locator": "6–7, 9, tables 1–3. The tables reproduce manufacturing census figures. Poulton’s interpretation is secondary.",
       "reference": "Poulton, Edgar E. 1947. “The Rise of Industry in the South.” In Labor in the South, 3–15. Bulletin 898. U.S. Bureau of Labor Statistics. U.S. Government Printing Office.",
-      "reference_url": "https://fraser.stlouisfed.org/files/docs/publications/bls/bls_0898_1947.pdf",
-      "italic_title": "Labor in the South"
+      "reference_url": "https://fraser.stlouisfed.org/files/docs/publications/bls/bls_0898_1947.pdf"
     },
     {
       "id": "delavaud1916",
@@ -1188,19 +1032,19 @@
     }
   ],
   "project_explanation": [
-    "The course lecture on the New South describes how Georgia and the Carolinas overtook New England in textile production (Muñoz 2026, slide 4). Who made the machines in those Southern mills? That question connects the course’s treatment of Reconstruction to the history of manufacturing after emancipation (Galvan and Muñoz 2026, Lecture 3). The census records a substantial recovery. The thirteen-state South’s share of US manufacturing wage earners rose from 7.7 percent in 1880 to 15.2 percent in 1929 (Poulton 1947, 7, table 2). The exhibit argues that a firm could gain workers and even lead a national market while relying on equipment designed elsewhere.",
-    "Cotton makes that distinction visible. The nine southeastern states’ share of US active cotton spindles rose from 21.8 percent in 1899 to 56.5 percent in 1929 (Poulton 1947, 9, table 3). For weaving, Draper’s 1905 catalog provides a different kind of evidence. In the Northrop loom’s shuttle assembly, “Compare with original” pairs the reconstruction with Draper’s drawing of the shuttle. The loom pushed a fresh bobbin into the shuttle and kept it in service (Draper 1905, 49, 57, 59). Draper lists customers in Gaffney and Pelzer, South Carolina (Draper 1905, PDF 229, 233, 236). Sutthiphisal’s broader textile evidence helps explain the pattern. Massachusetts accounted for 42 percent of US textile patents in 1910, the fourteen-state South for 7 percent. Inventors often came from the machinery trades (Sutthiphisal 2006, PDF 12–15, 19–20).",
-    "Birmingham’s foundries show where the cotton comparison breaks down. The 1916 de Lavaud–Arens patent shows how a rotating mold could cast pipe (Sensaud de Lavaud and Arens 1916, fig. 1). Birmingham’s independent American Cast Iron Pipe Company developed a different process and opened its first mechanized Mono-Cast shop in 1926 (O’Connor 1996, 30).",
-    "Durham’s cigarette industry complicates the comparison further. Bonsack patented a machine that formed, wrapped and cut cigarettes (Bonsack 1881, specification 1). Duke leased the machines, employed mechanics to improve their operation and built a national sales organization (Porter 1969, 64–74).",
-    "Capital grew more expensive in the South relative to the North in the early postwar decades (Hutchinson and Margo 2004, 7–8, 24–27). In the decades that followed, some Southern firms developed their own processes or organized a national market. For a factory relocation today, the historical comparison suggests a question that a jobs count leaves open. Which firms will be able to redesign the equipment once production begins?"
+    "A course lecture on the New South describes how Georgia and the Carolinas overtook New England in textiles (Muñoz 2026, slide 4). Who made the machines in those Southern mills? The question follows the course from emancipation and Reconstruction into the history of factory work (Galvan and Muñoz 2026, Lecture 3). The thirteen-state South’s share of US manufacturing wage earners rose from 7.7 percent in 1880 to 15.2 percent in 1929 (Poulton 1947, 7, table 2). The exhibit follows three industries to ask which kinds of technical work moved with those jobs.",
+    "In cotton, a mill owner could pay a machinery supplier partly in shares (Mitchell 1918, 205–15). Draper’s catalog names customers at Gaffney and Pelzer in South Carolina. Its shuttle drawing shows how a Massachusetts-built loom replenished the filling yarn while keeping the shuttle in service (Draper 1905, 49, 57, 59 and PDF 229, 233, 236). The exhibit pairs the drawing with a reconstruction so a reader can inspect the mechanism. In 1910 Massachusetts accounted for about 42 percent of textile patents, against 7 percent for the fourteen-state South (Sutthiphisal 2006, PDF 12–15, 19–20). A South Carolina mill could add weaving jobs when it ordered a loom from a Massachusetts designer.",
+    "In cast-iron pipe, it matters which Birmingham company we follow. The American Public Works Association listed a Birmingham firm, ACIPCO, and recorded its representative at an Atlanta meeting in 1906 (American Public Works Association 1907, 7, 23). Later, ACIPCO developed its own casting process. Its rival USCIP&F acquired American rights to a different design. The patent shows molten iron entering a revolving mold (Sensaud de Lavaud and Arens 1916, fig. 1). The order in which the rival’s plants received that process comes from company history (O’Connor 1996, 24–32). The two records answer different questions. A visitor can find a Birmingham producer by name in the convention register. To identify where a new process was tried, the visitor has to follow the decisions of each company. Treating the city as a single center of invention would conceal the difference between the two foundries.",
+    "In cigarettes, Bonsack’s specification describes how a machine forms, wraps and cuts a continuous length of filled paper (Bonsack 1881, specification 1). Duke leased machines, employed mechanics to make them run well and organized sales across the country (Porter 1969, 64–74). A firm could shape a national market without owning the design it depended on. Duke had a reason to make each machine reliable even while the supplier held the design. His advantage depended on how much saleable output his mechanics could obtain and how much of it his sales offices could place.",
+    "For a factory opening today, these cases suggest a second question after the jobs tally. If a machine needs a different design, who can try it, pay for the trial and put the result into production?"
   ],
   "course_materials": [
     "Galvan, Arantxa, and Marco Muñoz. 2026. “Issues in American Culture and History.” Fall 2026 GENA2122 syllabus, Chinese University of Hong Kong.",
     "Muñoz, Marco Gabriell. 2026. “American Empire and Industrialization.” GENA2122 Lecture IV, Chinese University of Hong Kong. Slide 4, “The ‘New’ (‘Rebuilt’) South.”"
   ],
   "assistance": [
-    "Anthropic’s Claude Opus 5.5 assisted with the research plan, case selection, synthesis of sources and historical argument. Claude drafted the original English exhibition text, scholarly comparisons, machine descriptions and project explanation.",
-    "OpenAI’s Codex (GPT) revised the project explanation, chapters, scholarly comparisons and machine entries for this edition. It checked data and citations against the available sources, edited map captions, prepared the data tables, and implemented and tested the exhibition.",
-    "OpenAI image generation produced the interpretive machine and component views. The original drawings come from Draper’s catalog and the two patents. The warp stop-motion schematic follows Draper’s written description."
+    "The project author chose the topic, developed the project’s ideas and argument, and wrote the prompts that guided the website. GPT assisted with background research and some searches for sources.",
+    "Claude and GPT helped design and build the website. Claude drafted English exhibition material and the initial project explanation. GPT revised the English, prepared comparative passages for this edition, checked data and citations against the available sources, prepared the maps and tables, and tested the site.",
+    "OpenAI image generation produced the interpretive reconstructions of machines and their parts. The catalog and patent illustrations reproduce the historical sources cited in the exhibit."
   ]
 }
