@@ -47,12 +47,14 @@ test('built public pages have consistent host sitemaps, published Dots prose, an
   const sitemap=readFileSync(join(out,'sitemap.xml'),'utf8');
   assert.ok(sitemap.includes('<loc>https://vincejiang.com/netstall</loc>'));
   assert.doesNotMatch(sitemap, /<loc>https:\/\/vincejiang\.com\/(?:cellprobe\/?|netstall\/)<\/loc>/);
-  const presentationUrl='https://vincejiang.com/gena2122/presentation';
-  assert.equal(sitemap.split('<loc>'+presentationUrl+'</loc>').length-1,1);
-  assert.doesNotMatch(sitemap,/<loc>https:\/\/vincejiang\.com\/gena2122\/(?:presentation\.html|presentation-v2\.4(?:\.html)?)<\/loc>/);
-  const presentation=readFileSync(join(out,'gena2122/presentation.html'),'utf8');
-  assert.ok(presentation.includes('rel="canonical" href="'+presentationUrl+'"'));
-  assert.ok(presentation.includes('property="og:url" content="'+presentationUrl+'"'));
+  for(const folder of ['gena2122-presentation','gena2122-presentation/presentation','gena2122-presentation/final-project']){
+   const url='https://vincejiang.com/'+folder+'/';
+   const html=readFileSync(join(out,folder,'index.html'),'utf8');
+   assert.equal(sitemap.split('<loc>'+url+'</loc>').length-1,1,url);
+   assert.ok(html.includes('rel="canonical" href="'+url+'"'),url);
+   assert.ok(html.includes('property="og:url" content="'+url+'"'),url);
+  }
+  assert.doesNotMatch(sitemap,/<loc>https:\/\/vincejiang\.com\/gena2122\/(?:presentation(?:\.html)?|presentation-v2\.4(?:\.html)?)<\/loc>/);
   const redirect=readFileSync(join(out,'gena2122/presentation-v2.4.html'),'utf8');
   assert.match(redirect,/<meta name="robots" content="noindex,follow">/);
   assert.ok(redirect.includes("location.replace('/gena2122/presentation'+location.search+location.hash)"));
