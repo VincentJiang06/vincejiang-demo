@@ -137,13 +137,11 @@ emoji**(排版不稳,星形用 CSS ::before 画)。
 
 ---
 
-### 3.4 S16-prediction 观赛入口（2026-10-24）
+### 3.4 公开作品入口与下线路径
 
-顶栏「S16观赛」和首页/Gallery 最新作品卡指向 `/S16-prediction/`。入口来自 `NAV_ITEMS` 和
-`site.config.json.gallery`；页面与只读采集服务由独立 S16 容器提供，不在主站静态目录重建。
-只读观察公开赔率：六源等权汇总，Polymarket / Thunderpick 双源走势在网页打开且比赛开始后每 30 秒更新，
-赛后展示终场结果；不提供下注功能。主站入口更新不需要重启 S16 服务。静态断链审计仅将该服务入口
-`/S16-prediction` 和 `/S16-prediction/` 识别为独立服务；可用性仍须用线上 HTTP 实测验证。
+`site.config.json.gallery` 登记每件作品的正式入口，首页、可搜索的 Gallery 及 `llms.txt` 共用。GENA2122 课程作品页链接到演示和期末展览。Netstall 使用无尾斜杠的支持地址。Dots、Reactor、CUHK Schedule 与迁到非官方中大的「慢科研」统计使用各自的规范域名，各域维护自己的 sitemap。
+
+生产环境通过挂载的 nginx 启动配置对 `/S16-prediction`、`/sound_dashboard` 及其子路径返回 410。`tools/seo.mjs` 记录这两个下线路径，构建时从主站 sitemap 排除，静态审计也将指向它们的链接计为断链。声音仪表盘仍可在本地构建。
 
 ## 4. 目录结构
 
@@ -427,7 +425,7 @@ GENA2122名称依据现有课程材料的 Issues in American Culture & History�
 
 `tools/seo.mjs` 的 `publicPagePath` 将 `/netstall/index.html` 映射为 `/netstall`，构建 sitemap、静态元数据和审计共享映射；其余目录继续保留原有尾斜杠。SEO 集成测试验证新地址被收录且旧地址未残留。
 
-GENA2122 演示的稳定入口为 `/gena2122/presentation`，`publicPagePath` 另将 `/gena2122/presentation.html` 精确映射到该无后缀地址；由现有 Nginx `try_files $uri $uri/ $uri.html` 提供正文。旧 `/gena2122/presentation-v2.4` 保留 `noindex,follow` 跳转页，客户端跳转保留查询参数和幻灯片 hash；课程首页直接链接稳定入口。构建与审计沿用同一映射，sitemap 只收录新的正式地址，不收录跳转别名。
+GENA2122 的正式目录为 `/gena2122-presentation/`，两个作品分别使用其下的 `presentation/` 和 `final-project/`。主站 sitemap 收录这三个地址；已迁移的旧入口由 `docker/site.conf` 重定向。
 
 
 ### CSCI3150 仅保留当期与短网址（2026-11-14）

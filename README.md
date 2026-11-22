@@ -9,7 +9,7 @@
 ## 加一个 demo
 
 1. 仓库根目录建文件夹 `my-demo/`,放 `index.html`(及其静态资源)。
-2. 在根 `index.html` 的列表里加一行链接到 `/my-demo/`。
+2. 在 `site.config.json` 的 `gallery` 中登记正式入口。首页、作品目录和 `llms.txt` 会随构建更新。
 3. `git push`。
 
 > 完整部署/架构/排障说明见 **[SPEC.md](SPEC.md)**。改部署逻辑请同步更新它。
@@ -28,6 +28,6 @@ CSCI3230 与 CSCI3150 的 HW01 另有分级提示版：按小问或实现单元�
 
 ## 声音仪表盘
 
-源码位于 `tools/sound-dashboard/`，上线地址 `/sound_dashboard/`。首次 `cd tools/sound-dashboard && npm ci`，然后在仓库根运行 `node tools/build-sound-dashboard.mjs`，再运行站点生成器。CI 和 Docker 已包含此步骤，生成的 `/sound_dashboard/` 不入 Git。
+原公开地址 `/sound_dashboard/` 已返回 HTTP 410。源码位于 `tools/sound-dashboard/`，可在本地使用。首次 `cd tools/sound-dashboard && npm ci`，然后在仓库根运行 `node tools/build-sound-dashboard.mjs`，再运行站点生成器。CI 和 Docker 已包含此步骤，生成的 `/sound_dashboard/` 不入 Git。
 
-命令行直接生成图片：进入 `tools/sound-dashboard`，`npm run build && npm link`，首次运行 `sound-dashboard --install-browser`，然后 `sound-dashboard --input examples/dashboard.json --jpeg card.jpg`。默认同时输出中英简介和正式分享链接。
+命令行直接生成图片：进入 `tools/sound-dashboard`，`npm run build && npm link`，首次运行 `sound-dashboard --install-browser`，然后 `sound-dashboard --input examples/dashboard.json --jpeg card.jpg`。

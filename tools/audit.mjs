@@ -5,7 +5,7 @@ import {readFileSync,writeFileSync,readdirSync,existsSync,mkdtempSync,statSync} 
 import {join,resolve} from 'node:path';
 import {tmpdir} from 'node:os';
 import MarkdownIt from 'markdown-it';
-import {publicPagePath} from './seo.mjs';
+import {publicPagePath,isRetiredMainPath} from './seo.mjs';
 const ROOT=new URL('..',import.meta.url).pathname;
 const args=process.argv.slice(2),arg=k=>args.includes(k)?args[args.indexOf(k)+1]:null;
 let DIR=arg('--dir');
@@ -16,11 +16,13 @@ const {unescapeAll:decode}=new MarkdownIt().utils;
 function attrs(tag){return Object.fromEntries([...tag.matchAll(/([\w:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)')/g)].map(m=>[m[1].toLowerCase(),decode(m[2]??m[3]) ]));}
 function files(dir,skip=[],base=''){return readdirSync(dir,{withFileTypes:true}).flatMap(e=>{if(e.name.startsWith('.')||(!base&&skip.includes(e.name)))return [];const p=join(dir,e.name);return e.isDirectory()?files(p,skip,base+'/'+e.name):e.name.endsWith('.html')?[p]:[];});}
 function resolves(url){const host=hosts.find(h=>h.origin===url.origin);if(!host)return true;
- if(url.origin==='https://vincejiang.com'&&['/status-ai/api','/S16-prediction','/S16-prediction/'].includes(url.pathname))return true; // documented separate public services; verify their routes against production
+ if(url.origin==='https://vincejiang.com'&&isRetiredMainPath(url.pathname))return false;
+ if(url.origin==='https://vincejiang.com'&&url.pathname==='/status-ai/api')return true; // separate public API
  let p;try{p=join(host.root,decodeURIComponent(url.pathname));}catch{return false;}for(const file of [p,join(p,'index.html'),p+'.html'])if(existsSync(file)&&statSync(file).isFile())return true;return false;}
 const pages=[],omitted=[];
 for(const host of hosts){for(const f of files(host.root,host.skip)){
  const html=readFileSync(f,'utf8'),url=new URL(publicPagePath(f.slice(host.root.length)),host.origin).href;
+ if(host.origin==='https://vincejiang.com'&&isRetiredMainPath(new URL(url).pathname)){omitted.push(url);continue;}
  const metas=(html.match(/<meta\b[^>]*>/gi)||[]).map(attrs),links=(html.match(/<link\b[^>]*>/gi)||[]).map(attrs);
  if(!/<html\b/i.test(html)||metas.some(m=>(m.name||'').toLowerCase()==='robots'&&/noindex/i.test(m.content||''))){omitted.push(url);continue;}
  const issues=[],suggestions=[],title=html.match(/<title>([^<]+)<\/title>/i)?.[1];
@@ -46,6 +48,6 @@ for(const h of hosts){const p=join(h.root,'sitemap.xml');if(!existsSync(p)){sm.p
  const invalid=locs.filter(u=>{try{const url=new URL(u);return url.origin!==h.origin||!resolves(url);}catch{return true;}});
  sm.push(`${h.origin}: ${locs.length} 条；缺失 ${missing.length}；无效 ${invalid.length}${missing.length?'\n  - 未收录: '+missing.slice(0,12).join(', '):''}${invalid.length?'\n  - 无效: '+invalid.slice(0,12).join(', '):''}`);
 }
-const dirty=pages.filter(p=>p.issues.length),report=[`# SEO / 可抓取性审计`,`完整且可索引页面 ${pages.length}；核心问题页 ${dirty.length}；跳过 noindex/片段 ${omitted.length}。社交卡片与 h1 建议单列，不作为搜索排名硬要求。`,`## 各主机 sitemap`,...sm.map(s=>'- '+s),`## 核心问题`,...dirty.map(p=>`- ${p.url}\n  - ${p.issues.join('\n  - ')}`),`## 建议`,...pages.filter(p=>p.suggestions.length).map(p=>`- ${p.url}: ${p.suggestions.join('；')}`),`## 解释`,`抓取允许和索引资格需结合线上 HTTP、robots.txt、CDN 与站长工具确认。llms.txt 只作现有内容索引，不计入排名得分。当前检查不测外链可达性或真实 Core Web Vitals。`].join('\n\n')+'\n';
+const dirty=pages.filter(p=>p.issues.length),report=[`# SEO / 可抓取性审计`,`完整且可索引页面 ${pages.length}；核心问题页 ${dirty.length}；跳过已下线、noindex 或 HTML 片段 ${omitted.length}。社交卡片与 h1 建议单列，不作为搜索排名硬要求。`,`## 各主机 sitemap`,...sm.map(s=>'- '+s),`## 核心问题`,...dirty.map(p=>`- ${p.url}\n  - ${p.issues.join('\n  - ')}`),`## 建议`,...pages.filter(p=>p.suggestions.length).map(p=>`- ${p.url}: ${p.suggestions.join('；')}`),`## 解释`,`抓取允许和索引资格需结合线上 HTTP、robots.txt、CDN 与站长工具确认。llms.txt 只作现有内容索引，不计入排名得分。当前检查不测外链可达性或真实 Core Web Vitals。`].join('\n\n')+'\n';
 console.log(report);if(arg('--out'))writeFileSync(arg('--out'),report);
 if(arg('--json'))writeFileSync(arg('--json'),JSON.stringify({pages,omitted,sitemaps:sm},null,2));

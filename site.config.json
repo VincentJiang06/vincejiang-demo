@@ -84,12 +84,39 @@
   ],
   "gallery": [
     {
-      "key": "s16-prediction",
-      "title": "S16-prediction · 全球总决赛观赛看板",
-      "href": "/S16-prediction/",
-      "date": "2026-10-24",
-      "desc": "只读观察公开赔率：六个来源等权汇总，Polymarket 与 Thunderpick 走势在开赛后每 30 秒更新，赛后显示终场赛果。不提供下注功能。",
-      "badge": "六源等权 · 30 秒走势",
+      "key": "gena2122-projects",
+      "title": "GENA2122 · 课程作品",
+      "href": "/gena2122-presentation/",
+      "date": "2026-11-21",
+      "desc": "两份课程作品：一场关于政治迷因与激进化的演示，以及一场用地图和史料追踪 1860–1929 年美国制造业迁移的互动展览。",
+      "badge": "课堂演示 · 期末展览",
+      "hue": null
+    },
+    {
+      "key": "not-slow-research",
+      "title": "「慢科研」联署者所在实验室的论文发表统计",
+      "href": "https://cuhkwild.com/not-slow-research/",
+      "date": "2026-10-20",
+      "desc": "按年份查看联署者所在实验室与课题组的正式论文和 arXiv 预印本，可查统计口径、覆盖范围和逐篇来源。",
+      "badge": "非官方中大 · 研究数据",
+      "hue": null
+    },
+    {
+      "key": "netstall",
+      "title": "Netstall · 网络测量工具支持",
+      "href": "/netstall",
+      "date": "2026-10-03",
+      "desc": "iPhone 上如何测量吞吐、延迟和连接稳定性，以及测量记录如何保存。含使用帮助、技术支持和隐私政策。",
+      "badge": "iPhone · 支持与隐私",
+      "hue": null
+    },
+    {
+      "key": "dots",
+      "title": "Dots · Mandy 的云朵书桌",
+      "href": "https://dots.vincejiang.com/",
+      "date": "2026-10-01",
+      "desc": "阅读 Hacker News 精读、收听每周华语歌单，也可以按期回看往日内容。",
+      "badge": "精读 · 歌单",
       "hue": null
     },
     {
@@ -99,15 +126,6 @@
       "date": "2026-10-01",
       "desc": "按课程阅读概念、算法与推导。期中复习专区收录 CSCI3130、CSCI3160 的详细知识点、简略总结与现有真题解析。",
       "badge": "课程笔记 · 期中复习",
-      "hue": null
-    },
-    {
-      "key": "sound-dashboard",
-      "title": "声音仪表盘",
-      "href": "/sound_dashboard/",
-      "date": "2026-10-09",
-      "desc": "记录耳机的五段频响与五项听感，切换主题，生成分享链接与轻量 JPEG。",
-      "badge": "交互工具 · 耳机听感",
       "hue": null
     },
     {

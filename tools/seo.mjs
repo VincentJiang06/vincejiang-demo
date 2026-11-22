@@ -10,3 +10,9 @@ const extensionlessRoutes = new Map([
  ['/netstall/index.html', '/netstall'],
 ]);
 export const publicPagePath = filePath => extensionlessRoutes.get(filePath) ?? filePath.replace(/index\.html$/, '');
+
+// These paths return 410 in production, including files still built for local use.
+const retiredMainPaths = new Set(['S16-prediction', 'sound_dashboard']);
+export function isRetiredMainPath(pathname) {
+  return retiredMainPaths.has(pathname.split('/')[1]);
+}

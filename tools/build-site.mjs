@@ -23,7 +23,7 @@ import { buildStudy } from './study-build.mjs';
 import { versionDotsAssets } from './dots-assets.mjs';
 import { buildDots } from './dots-build.mjs';
 import { enrichStaticPages } from './static-seo.mjs';
-import { publicPagePath } from './seo.mjs';
+import { publicPagePath, isRetiredMainPath } from './seo.mjs';
 
 const ROOT = new URL('..', import.meta.url).pathname.replace(/\/$/, '');
 const TPL = join(ROOT, 'templates');
@@ -49,7 +49,6 @@ const NAV_ITEMS = [
   { key: 'blog', label: 'Blog', href: '/blog/' },
   { key: 'research', label: 'Research', href: RESEARCH_PATH },
   { key: 'gallery', label: 'Gallery', href: '/gallery/' },
-  { key: 's16-prediction', label: 'S16观赛', href: '/S16-prediction/' },
   { key: 'study', label: 'Study', href: '/study/' },
   { key: 'cus', label: 'CU排课', href: 'https://cus.vincejiang.com', external: true },
 ];
@@ -636,7 +635,7 @@ function scanIndexablePages(dir = OUT, base = '') {
   const SITEMAP_SKIP = new Set(['reactor-study', 'dots']);   // 已迁子域:文件要留(nginx root 指它),但不进主站索引
   for (const e of readdirSync(dir, { withFileTypes: true })) {
     if (e.name.startsWith('.')) continue;
-    if (base === '' && SITEMAP_SKIP.has(e.name)) continue;
+    if (base === '' && (SITEMAP_SKIP.has(e.name) || isRetiredMainPath('/' + e.name))) continue;
     const full = join(dir, e.name);
     if (e.isDirectory()) { out.push(...scanIndexablePages(full, base + '/' + e.name)); continue; }
     if (!e.name.endsWith('.html')) continue;
@@ -669,7 +668,7 @@ function buildSitemap(posts) {
   for (const g of (CONFIG.gallery || [])) {
     if (/^https?:/.test(g.href)) continue;               // 只收本站内部作品
     const key = g.href.replace(/^\/|\/$/g, '');
-    const lm = dOnly(MANIFEST?.paths?.[key]) || newest;
+    const lm = dOnly(MANIFEST?.paths?.[key]);
     urls.push({ loc: g.href, lastmod: lm, cf: 'monthly', pri: '0.6' });
   }
   // 兜底:把产物里其余可索引页面补齐(显式条目优先,不覆盖)
@@ -777,6 +776,9 @@ function runCheck(posts) {
   // 每个对外发布的顶层目录必须有 index.html
   for (const c of contentDirs()) {
     if (c.dir && !ASSET_DIRS.has(c.name) && !existsSync(join(ROOT, c.name, 'index.html'))) err(`内容目录缺 index.html: ${c.name}/`);
+  }
+  for (const item of CONFIG.gallery || []) {
+    if (isRetiredMainPath(item.href)) err(`Gallery 仍指向已下线路径: ${item.href}`);
   }
   // collection.order 完整性:声明的 slug 必须都有对应文章(反之只 warn)
   for (const c of COLLECTIONS) {

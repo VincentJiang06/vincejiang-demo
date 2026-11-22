@@ -45,6 +45,17 @@ test('built public pages have consistent host sitemaps, published Dots prose, an
   assert.deepEqual(report.pages.filter(p=>p.issues.length).map(p=>({url:p.url,issues:p.issues})),[]);
   for(const line of report.sitemaps)assert.match(line,/缺失 0；无效 0/);
   const sitemap=readFileSync(join(out,'sitemap.xml'),'utf8');
+  const homeIndex=readFileSync(join(out,'index.html'),'utf8');
+  const galleryIndex=readFileSync(join(out,'gallery/index.html'),'utf8');
+  const llms=readFileSync(join(out,'llms.txt'),'utf8');
+  for(const index of [homeIndex,galleryIndex,llms,sitemap]){
+   assert.doesNotMatch(index,/\/(S16-prediction|sound_dashboard)(?:\/|["<)])/);
+  }
+  for(const href of ['/gena2122-presentation/','/netstall','https://dots.vincejiang.com/','https://cuhkwild.com/not-slow-research/']){
+   for(const index of [homeIndex,galleryIndex])assert.ok(index.includes('href="'+href+'"'),href);
+   assert.ok(llms.includes('('+new URL(href,'https://vincejiang.com').href+')'),href);
+  }
+  assert.doesNotMatch(sitemap, /<loc>https:\/\/(?:dots\.vincejiang|cuhkwild)\.com\//);
   assert.ok(sitemap.includes('<loc>https://vincejiang.com/netstall</loc>'));
   assert.doesNotMatch(sitemap, /<loc>https:\/\/vincejiang\.com\/(?:cellprobe\/?|netstall\/)<\/loc>/);
   for(const folder of ['gena2122-presentation','gena2122-presentation/presentation','gena2122-presentation/final-project']){
