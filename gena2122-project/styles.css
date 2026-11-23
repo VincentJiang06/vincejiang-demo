@@ -535,6 +535,19 @@ main {
   max-width: 76ch;
 }
 
+.project-masthead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2px 24px;
+}
+.project-byline {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
 .chapter-heading { margin: 5px 0 25px; }
 .chapter-heading .section-heading { max-width: 32ch; }
 .chapter-heading .hero-title { max-width: 27ch; }
