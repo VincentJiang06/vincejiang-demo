@@ -403,7 +403,7 @@ function sourceNotesHTML() {
 const scriptURL = document.currentScript.src;
 function resourceURL(path) {
  const asset = new URL(path,scriptURL);
- asset.searchParams.set('v','0aa65ac675c387b9');
+ asset.searchParams.set('v','0aa65ac675c387b9-2');
  return asset.href;
 }
 // Blob URLs keep both data exports downloadable when opened directly from Finder.
