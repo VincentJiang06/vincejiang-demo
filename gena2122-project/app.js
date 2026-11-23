@@ -1,4 +1,7 @@
 'use strict';
+// Local files live beside this script even when the page URL has no trailing slash.
+const scriptURL = document.currentScript.src;
+const resourceURL = path => new URL(path, scriptURL).href;
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let content, nodes, econ, networks, assets, current='national', sourceTrigger;
@@ -15,7 +18,7 @@ function cite(ids, locator = '') {
  return `<div class="citations">${ids.map(id => `<button class="citation" data-source="${esc(id)}">${esc(source(id).author)}</button>`).join(' ')}${locator ? ` · ${esc(locator)}` : ''}</div>`;
 }
 function btn(label,attrs=''){return `<button ${attrs}>${label}</button>`;}
-function sourcePage(n,machine=null){return `<div class="source-page"><img src="${esc(n.figure)}" width="${n.figure_width}" height="${n.figure_height}" alt="Original source page: ${esc(n.locator)}">${n.bbox?`<span class="source-highlight" style="left:${n.bbox[0]*100}%;top:${n.bbox[1]*100}%;width:${n.bbox[2]*100}%;height:${n.bbox[3]*100}%"></span>`:''}${machine?scanHotspots(n,machine):''}</div>`;}
+function sourcePage(n,machine=null){return `<div class="source-page"><img src="${esc(resourceURL(n.figure))}" width="${n.figure_width}" height="${n.figure_height}" alt="Original source page: ${esc(n.locator)}">${n.bbox?`<span class="source-highlight" style="left:${n.bbox[0]*100}%;top:${n.bbox[1]*100}%;width:${n.bbox[2]*100}%;height:${n.bbox[3]*100}%"></span>`:''}${machine?scanHotspots(n,machine):''}</div>`;}
 function scanHotspots(n,id){const cs=nodes.filter(x=>x.parent===n.id&&x.figure===n.figure&&x.bbox);return `<div class="scan-hotspots" role="group" aria-label="Original-page component references"><svg class="scan-leaders" aria-hidden="true"></svg>${cs.map((x,i)=>`<button data-node="${x.id}" data-machine="${id}" data-x="${x.bbox[0]+x.bbox[2]/2}" data-y="${x.bbox[1]+x.bbox[3]/2}" style="left:${(x.bbox[0]+x.bbox[2]/2)*100}%;top:${(x.bbox[1]+x.bbox[3]/2)*100}%" aria-label="${i+1}. ${esc(x.name)}" title="${esc(x.name)}" tabindex="${i===0?0:-1}">${i+1}</button>`).join('')}</div>`;}
 // Resolve scan-marker collisions in image pixels, including after responsive resizing.
 function placeScanMarkers(){
@@ -83,7 +86,7 @@ function evidenceChoices(choices, selected, label, section) {
 
 function industryMap(name, title, caption, evidence) {
  const height = name.startsWith('cotton-') ? 950 : name === 'textile-1905-capital' ? 1034 : 1000;
- const url = `maps/${name}.svg?v=20261121-citation-share`;
+ const url = resourceURL(`maps/${name}.svg?v=20261121-citation-share`);
  return `<figure class="industry-map-figure">
   <img class="industry-map" src="${url}" width="1200" height="${height}" alt="${esc(title)}" decoding="async">
   <figcaption>
@@ -190,7 +193,7 @@ function hotspots(n,id){const points=anchors[n.id];if(!points)return '';const cs
 function explosion(n,id,parts,expanded){
  const slots=parts.length<=3?[[15,18],[85,18],[50,83]]:parts.length<=4?[[15,18],[85,18],[15,82],[85,82]]:[[14,16],[86,16],[14,49],[86,49],[32,83],[68,83]];
  const pts=anchors[n.id]||[];
- return `<div class="assembly-view ${expanded?'is-expanded':''}" data-assembly="${n.id}"><div class="exploded-scene"><svg class="explosion-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">${parts.map((x,i)=>{const a=pts[i]||[50,50],b=slots[i];return `<line x1="${50+(a[0]-50)*.40}" y1="${46+(a[1]-50)*.30}" x2="${b[0]}" y2="${b[1]}"/><circle cx="${50+(a[0]-50)*.40}" cy="${46+(a[1]-50)*.30}" r=".6"/>`;}).join('')}</svg><div class="explosion-center"><img src="${n.asset}" alt="Interpretive reconstruction of ${esc(n.name)}"><span>${esc(n.name)}</span></div><div class="assembly-parts" id="${id}-core-parts" ${expanded?'':'inert'}>${parts.map((x,i)=>`<button class="part orbit-part" data-node="${x.id}" data-machine="${id}" style="--part-x:${slots[i][0]}%;--part-y:${slots[i][1]}%;--from-x:${50-slots[i][0]}cqw;--from-y:${(46-slots[i][1])*5.6}px"><img ${x.id==='northrop-shuttle-body'?'class="rotate"':''} src="${x.asset}" alt=""><span>${i+1}. ${esc(x.name)}</span></button>`).join('')}</div></div><span class="evidence-badge">Interpretive reconstruction</span><p class="caption explosion-note" ${expanded?'':'hidden'}>Offsets and leader endpoints are illustrative, not assembly geometry. Select a part to inspect its source.</p></div>`;
+ return `<div class="assembly-view ${expanded?'is-expanded':''}" data-assembly="${n.id}"><div class="exploded-scene"><svg class="explosion-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">${parts.map((x,i)=>{const a=pts[i]||[50,50],b=slots[i];return `<line x1="${50+(a[0]-50)*.40}" y1="${46+(a[1]-50)*.30}" x2="${b[0]}" y2="${b[1]}"/><circle cx="${50+(a[0]-50)*.40}" cy="${46+(a[1]-50)*.30}" r=".6"/>`;}).join('')}</svg><div class="explosion-center"><img src="${esc(resourceURL(n.asset))}" alt="Interpretive reconstruction of ${esc(n.name)}"><span>${esc(n.name)}</span></div><div class="assembly-parts" id="${id}-core-parts" ${expanded?'':'inert'}>${parts.map((x,i)=>`<button class="part orbit-part" data-node="${x.id}" data-machine="${id}" style="--part-x:${slots[i][0]}%;--part-y:${slots[i][1]}%;--from-x:${50-slots[i][0]}cqw;--from-y:${(46-slots[i][1])*5.6}px"><img ${x.id==='northrop-shuttle-body'?'class="rotate"':''} src="${esc(resourceURL(x.asset))}" alt=""><span>${i+1}. ${esc(x.name)}</span></button>`).join('')}</div></div><span class="evidence-badge">Interpretive reconstruction</span><p class="caption explosion-note" ${expanded?'':'hidden'}>Offsets and leader endpoints are illustrative, not assembly geometry. Select a part to inspect its source.</p></div>`;
 }
 function machineCanCompare(node) {
  return Boolean(node.asset) || node.render === 'SCH';
@@ -223,7 +226,7 @@ function machineHTML(id) {
  let art = '';
  if (comparing) {
   art = `<div class="compare-grid">
-   <div><p class="machine-view-label">${schematic ? 'Schematic from text' : 'Interpretive reconstruction'}</p>${schematic ? warpDiagram() : `<img ${selected.id === 'northrop-shuttle-body' ? 'class="rotate"' : ''} src="${selected.asset}" alt="Interpretive reconstruction of ${esc(selected.name)}">`}</div>
+   <div><p class="machine-view-label">${schematic ? 'Schematic from text' : 'Interpretive reconstruction'}</p>${schematic ? warpDiagram() : `<img ${selected.id === 'northrop-shuttle-body' ? 'class="rotate"' : ''} src="${esc(resourceURL(selected.asset))}" alt="Interpretive reconstruction of ${esc(selected.name)}">`}</div>
    <div><p class="machine-view-label">${sourceLabel}</p>${sourcePage(selected,id)}<p class="caption">${esc(selected.highlight_note)}</p></div>
   </div>`;
  } else if (explodedView) {
@@ -233,7 +236,7 @@ function machineHTML(id) {
  } else if (selected.asset) {
   const ratio = selected.image_width / selected.image_height;
   art = `<span class="evidence-badge">Interpretive reconstruction</span><div class="art-frame">
-   <img ${selected.id === 'northrop-shuttle-body' ? 'class="rotate"' : ''} src="${selected.asset}" alt="Interpretive reconstruction of ${esc(selected.name)}">
+   <img ${selected.id === 'northrop-shuttle-body' ? 'class="rotate"' : ''} src="${esc(resourceURL(selected.asset))}" alt="Interpretive reconstruction of ${esc(selected.name)}">
    <div class="image-overlay" style="--image-ratio:${ratio};aspect-ratio:${ratio}">${hotspots(selected,id)}</div>
   </div>`;
  } else if (!textOnly) {
@@ -366,7 +369,7 @@ function sourcesHTML() {
   </details></section>
   <section class="data-section">
    <h2>Economic data</h2>
-   <div class="data-downloads"><a href="data/economic-indicators.csv" download>Download CSV</a><a href="data/economic-indicators.json" download>Download JSON</a></div>
+   <div class="data-downloads"><a href="/gena2122-project/data/economic-indicators.csv" download>Download CSV</a><a href="/gena2122-project/data/economic-indicators.json" download>Download JSON</a></div>
    <details><summary>View all ${econ.length} economic observations</summary>${table(econ)}</details>
   </section>
   <section class="source-method"><h2>Method & definitions</h2>${methodHTML()}</section>
@@ -438,7 +441,7 @@ function showSource(trigger){
  if(n)figure=sourcePage(n)+`<p class="caption">${esc(n.highlight_note)}</p>`;
  if(r?.source_id==='bls1947'){
   const path=assets['sources/figures/'+(r.metric.includes('spindles')?'bls-015.png':'bls-013.png')];
-  if(path)figure=`<div class="source-page"><img src="${path}" width="1247" height="1800" alt="BLS original table page"></div>`;
+  if(path)figure=`<div class="source-page"><img src="${esc(resourceURL(path))}" width="1247" height="1800" alt="BLS original table page"></div>`;
  }
  const original=s?.url||r?.source, page=n&&/\.pdf(?:$|\?)/i.test(original||'')?n.pdf_page:null;
  const metadata=r?`<p><strong>${fmt(r)}</strong> · Observed: ${r.observation_year} · ${esc(r.region.replaceAll('_',' '))}</p><p>${esc(r.limits)}</p>${r.denominator && r.denominator !== 'not applicable' ? `<p>${esc(r.denominator)}</p>` : ''}`:'';
@@ -702,8 +705,8 @@ chapterSelect.value=chapterFromHash();
 $('.chapter-picker').hidden=false;
 chapterSelect.addEventListener('change',()=>navigateChapter('#'+chapterSelect.value,{keepFocus:true}));
 
-Promise.all(['content','nodes','economic-indicators','industry-networks','asset-map'].map(n=>fetch(`data/${n}.json?v=20261121-academic-final`,{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error(n+' '+r.status);return r.json();}))).then(([c,n,e,net,a])=>{
+Promise.all(['content','nodes','economic-indicators','industry-networks','asset-map'].map(n=>fetch(resourceURL(`data/${n}.json?v=20261121-academic-final`),{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error(n+' '+r.status);return r.json();}))).then(([c,n,e,net,a])=>{
  content=c;nodes=n;econ=e;networks=net;assets=a;
  render();
  revealChapterTarget(undefined,false);
-}).catch(e=>{$('#main').innerHTML='<div class="error"><h1>The exhibition could not load</h1><p>Reload this page to try again, or <a href="data/economic-indicators.csv">download the economic data</a>.</p></div>';console.error(e);});
+}).catch(e=>{$('#main').innerHTML='<div class="error"><h1>The exhibition could not load</h1><p>Reload this page to try again, or <a href="/gena2122-project/data/economic-indicators.csv">download the economic data</a>.</p></div>';console.error(e);});

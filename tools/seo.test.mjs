@@ -9,9 +9,9 @@ import {enrichStaticPages} from './static-seo.mjs';
 const ROOT=new URL('..',import.meta.url).pathname;
 
 test('explicit extensionless routes preserve unrelated file and directory URLs',()=>{
- assert.equal(publicPagePath('/gena2122-presentation/presentation/index.html'),'/gena2122-presentation/presentation/');
+ assert.equal(publicPagePath('/gena2122-project/index.html'),'/gena2122-project');
  assert.equal(publicPagePath('/netstall/index.html'),'/netstall');
- assert.equal(publicPagePath('/gena2122-presentation/index.html'),'/gena2122-presentation/');
+ assert.equal(publicPagePath('/gena2122-presentation/index.html'),'/gena2122-presentation');
  assert.equal(publicPagePath('/study/example.html'),'/study/example.html');
 });
 
@@ -51,19 +51,23 @@ test('built public pages have consistent host sitemaps, published Dots prose, an
   for(const index of [homeIndex,galleryIndex,llms,sitemap]){
    assert.doesNotMatch(index,/\/(S16-prediction|sound_dashboard)(?:\/|["<)])/);
   }
-  for(const href of ['/gena2122-presentation/','/netstall','https://dots.vincejiang.com/','https://cuhkwild.com/not-slow-research/']){
+  for(const href of ['/gena2122-project','/gena2122-presentation','/netstall','https://dots.vincejiang.com/','https://cuhkwild.com/not-slow-research/']){
    for(const index of [homeIndex,galleryIndex])assert.ok(index.includes('href="'+href+'"'),href);
    assert.ok(llms.includes('('+new URL(href,'https://vincejiang.com').href+')'),href);
   }
   assert.doesNotMatch(sitemap, /<loc>https:\/\/(?:dots\.vincejiang|cuhkwild)\.com\//);
   assert.ok(sitemap.includes('<loc>https://vincejiang.com/netstall</loc>'));
   assert.doesNotMatch(sitemap, /<loc>https:\/\/vincejiang\.com\/(?:cellprobe\/?|netstall\/)<\/loc>/);
-  for(const folder of ['gena2122-presentation','gena2122-presentation/presentation','gena2122-presentation/final-project']){
-   const url='https://vincejiang.com/'+folder+'/';
+  for(const folder of ['gena2122-presentation','gena2122-project']){
+   const url='https://vincejiang.com/'+folder;
    const html=readFileSync(join(out,folder,'index.html'),'utf8');
    assert.equal(sitemap.split('<loc>'+url+'</loc>').length-1,1,url);
    assert.ok(html.includes('rel="canonical" href="'+url+'"'),url);
    assert.ok(html.includes('property="og:url" content="'+url+'"'),url);
+  }
+  for(const oldDir of ['presentation','final-project']){
+   assert.equal(existsSync(join(out,'gena2122-presentation',oldDir)),false);
+   assert.ok(!sitemap.includes('<loc>https://vincejiang.com/gena2122-presentation/'+oldDir));
   }
   assert.equal(existsSync(join(out,'gena2122')),false,'historical editions must stay out of the image');
   assert.ok(!sitemap.includes('<loc>https://vincejiang.com/gena2122/'));

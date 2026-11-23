@@ -8,6 +8,8 @@ export function metadata({title, description, url, image, type='website', data})
 // Explicit extensionless routes served by docker/site.conf; other directory URLs retain '/'.
 const extensionlessRoutes = new Map([
  ['/netstall/index.html', '/netstall'],
+ ['/gena2122-project/index.html', '/gena2122-project'],
+ ['/gena2122-presentation/index.html', '/gena2122-presentation'],
 ]);
 export const publicPagePath = filePath => extensionlessRoutes.get(filePath) ?? filePath.replace(/index\.html$/, '');
 

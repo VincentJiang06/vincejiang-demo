@@ -757,7 +757,7 @@ function injectBeacon(dir) {
   // Dots 仅使用反馈所需匿名 Cookie，不注入全站访问埋点。
   if (dir === join(OUT, 'dots')) return;
   // GENA2122 v2.0 keeps exhibition interaction events local to the page.
-  if (dir === join(OUT, 'gena2122-presentation', 'final-project')) return;
+  if (dir === join(OUT, 'gena2122-project')) return;
   if (!existsSync(join(OUT, 'assets', 'beacon.js'))) return;
   for (const e of readdirSync(dir, { withFileTypes: true })) {
     const p = join(dir, e.name);

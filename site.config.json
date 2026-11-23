@@ -84,12 +84,21 @@
   ],
   "gallery": [
     {
-      "key": "gena2122-projects",
-      "title": "GENA2122 · 课程作品",
-      "href": "/gena2122-presentation/",
+      "key": "gena2122-project",
+      "title": "GENA2122 · 美国制造业的南移",
+      "href": "/gena2122-project",
       "date": "2026-11-21",
-      "desc": "两份课程作品：一场关于政治迷因与激进化的演示，以及一场用地图和史料追踪 1860–1929 年美国制造业迁移的互动展览。",
-      "badge": "课堂演示 · 期末展览",
+      "desc": "用地图、专利图和企业史料比较棉纺、铸管和卷烟业，追踪南方工厂与机器设计者之间的联系。",
+      "badge": "期末展览",
+      "hue": null
+    },
+    {
+      "key": "gena2122-presentation",
+      "title": "GENA2122 · 政治迷因与激进化",
+      "href": "/gena2122-presentation",
+      "date": "2026-11-21",
+      "desc": "以 Charlie Kirk 为案例，讨论政治迷因如何传播，以及不同信息流如何影响对同一个玩笑的理解。",
+      "badge": "课堂演示",
       "hue": null
     },
     {
