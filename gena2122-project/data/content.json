@@ -569,8 +569,8 @@
     "Muñoz, Marco Gabriell. 2026. “American Empire and Industrialization.” GENA2122 Lecture IV, Chinese University of Hong Kong. Slide 4, “The ‘New’ (‘Rebuilt’) South.”"
   ],
   "assistance": [
-    "I chose the topic and developed the research question and central argument. I made the final decisions about what to include and how to interpret the evidence.",
-    "I used GPT for background research, some source searches, and checks of data and citations. Claude drafted early versions of the exhibition text and project explanation, and GPT revised the English and drafted some of the comparisons in the final text.",
-    "I wrote the prompts that guided Claude and GPT in designing and coding the website. GPT prepared the maps and tables and tested the site. I used OpenAI’s image generation tool for the machine reconstructions. The catalog and patent drawings come from the cited historical sources."
+    "I chose the topic, framed the research question, and developed the exhibition’s central argument. I selected the evidence and made the final decisions about its interpretation.",
+    "I used GPT for background research, some source searches, and checks of data and citations. Claude drafted early versions of the exhibition text and project explanation. GPT revised the English and helped write some of the comparisons.",
+    "I wrote the prompts that guided Claude and GPT in designing and coding the website. GPT prepared the maps and tables and tested the site. The machine reconstructions were generated with OpenAI’s image tool. The catalog and patent drawings are historical sources."
   ]
 }

@@ -548,10 +548,18 @@ main {
   font-size: 14px;
   font-variant-numeric: tabular-nums;
 }
+/* Keep the full-bleed header and footer on the same axis as the exhibit. */
+@media (min-width: 1280px) {
+  .site-header, body > footer {
+    padding-inline: calc((100% - 1280px) / 2 + 3.3vw);
+  }
+}
 .chapter-heading { margin: 5px 0 25px; }
 .chapter-heading .section-heading { max-width: 32ch; }
 .chapter-heading .hero-title { max-width: 27ch; }
 .chapter-heading .deck { margin-bottom: 0; max-width: 74ch; }
+.chapter-heading .deck + .deck { margin-top: .6em; }
+.chapter-heading h1 { text-wrap: balance; }
 .chapter-heading .case-jumps { margin-top: 12px; }
 .chapter-visual { margin: 0 0 36px; }
 .national-tree {
@@ -628,6 +636,15 @@ main {
 .argument-points .patent-pairs th:first-child { text-align: left; }
 .argument-strip > p { max-width: 80ch; margin: 0 0 6px; }
 .argument-strip .citations { margin: 0; }
+.argument-strip:has(+ #case-evidence) { padding-bottom: 0; border-bottom: 0; }
+.national-section .argument-source { display: block; }
+@media (min-width: 960px) {
+  .argument-points {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: clamp(24px, 2.5vw, 36px);
+  }
+  .argument-points li { font-size: 17px; line-height: 1.55; }
+}
 
 .source-note-link { color: var(--accent); font-size: .94rem; font-weight: 600; text-underline-offset: .18em; }
 .machine .registry > button, .parts-index button {
@@ -656,6 +673,29 @@ main {
 .tool-references h3 { font-size: 1rem; margin: .85rem 0 .15rem; }
 .tool-references ul { display: flex; flex-wrap: wrap; gap: 0 1.3rem; margin: 0; padding: 0; list-style: none; }
 .tool-references a { min-height: 2rem; font-size: .9rem; text-underline-offset: .15em; }
+
+@media (min-width: 960px) {
+  :is(#source-course, #source-project, #source-assistance) {
+    display: grid;
+    grid-template-columns: minmax(13rem, 1fr) minmax(0, 3fr);
+    gap: 0 clamp(24px, 3vw, 48px);
+    align-items: start;
+    padding-block-start: 24px;
+    border-block-start: 1px solid var(--line);
+  }
+  :is(#source-course, #source-project, #source-assistance) > h2 {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+    font-size: clamp(24px, 2vw, 30px);
+    line-height: 1.2;
+  }
+  :is(#source-course, #source-project, #source-assistance) > :is(p, .tool-references) {
+    grid-column: 2;
+    max-width: 72ch;
+  }
+  :is(#source-course, #source-project, #source-assistance) > :last-child { margin-bottom: 0; }
+}
 
 .case-diagram {
   --case-teal: #286875;
@@ -996,10 +1036,11 @@ main {
 .syn-tree figcaption {
   grid-column: 1 / -1;
   margin: 0;
-  padding: .78em 0 .05em;
+  padding: .78em max(0px, calc(100% - 72ch)) .05em 0;
   border-top: 1px solid var(--syn-line);
   font-size: 1em;
-  font-weight: 600;
+  font-weight: 400;
+  line-height: 1.55;
   color: var(--syn-ink);
 }
 
