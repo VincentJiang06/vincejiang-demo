@@ -551,7 +551,7 @@
     "id": "cigarettes-1881",
     "year": 1881,
     "industry": "cigarettes",
-    "title": "Skilled labor and a southern producer",
+    "title": "Duke entered cigarette manufacturing in 1881",
     "source": "Porter 1969, 61–62.",
     "nodes": [
       {
@@ -591,7 +591,7 @@
       "The line traces recruitment from New York to Durham."
     ],
     "basemap_style": "neutral",
-    "year_semantics": "documented historical relationship or reorganization",
+    "year_semantics": "year the firm entered cigarette manufacturing",
     "coordinates_are": "approximate city centres, not factory sites",
     "source_id": "porter1969",
     "econ_observation_years": [

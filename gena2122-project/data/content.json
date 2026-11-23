@@ -1,490 +1,29 @@
 {
   "title": "Factory Work Shifted South. Did Machine-Making Follow?",
-  "subtitle": "Abolition, industrial capability and the regional division of American manufacturing, 1860–1929",
-  "thesis": "After emancipation, Southern factories added jobs, but the ability to design and improve their machinery developed unevenly. Some South Carolina mills bought looms from Massachusetts. One Birmingham foundry developed its own casting process. A rival introduced a different process at its New Jersey works before adopting it in Birmingham. In Durham, a cigarette maker leased its machines, put its mechanics to work improving them and built a national market for their output.",
-  "hero_note": "Regional statistics show where wage earners, output value, spindles and patents were recorded. Case maps show documented relationships among firms and places. These are different kinds of evidence. ‘South’ in the national series is the 13-state region used by the Bureau of Labor Statistics, which includes Kentucky and Oklahoma; it is not the Confederacy. The remainder of the country is called ‘rest of US’, not ‘the North’.",
   "sections": [
     {
       "id": "national",
-      "eyebrow": "National shift",
-      "title": "Southern manufacturing employment and product value",
-      "deck": "By 1929 the South employed a larger share of American manufacturing workers than it had before the Civil War. Its share of the value of manufactured goods had grown less.",
-      "paragraphs": [
-        {
-          "heading": "A delayed and uneven recovery",
-          "text": "In 1860 the 13-state South accounted for 10.1 percent of US manufacturing wage earners and 10.2 percent of the nominal value of manufactured goods. Both shares fell by 1880, to 7.7 and 5.9 percent respectively. The wage-earner share recovered to 14.0 percent in 1909, slipped to 13.0 in 1919, then reached 15.2 in 1929. By then the region employed about 1.34 million manufacturing wage earners, up from 209,000 in 1880, and accounted for 11.7 percent of national product value (Poulton 1947, 6–7, tables 1–2).",
-          "citations": [
-            "bls1947"
-          ],
-          "paper_ref": "NAT-2; PRE-11",
-          "inline_citations": true
-        },
-        {
-          "heading": "What the value ratio measures",
-          "text": "In 1929 the South accounted for 11.7 percent of US product value and 15.2 percent of manufacturing wage earners. Dividing the first share by the second gives 0.77, compared with 1.01 in 1860 and 0.66 in 1899 (Poulton 1947, 7, table 2). The reported value of finished goods included the value of the materials used to make them. A change in the prices of those materials, or in the kinds of goods a region made, could move the ratio even if a worker made exactly as many units in an hour. The series can establish the scale of the recovery in employment. It cannot settle whether Southern workers became more productive.",
-          "citations": [
-            "bls1947"
-          ],
-          "inline_citations": true
-        },
-        {
-          "heading": "What the census counts when a mill buys equipment",
-          "text": "Consider a Southern mill buying a loom from Massachusetts. Draper’s 1905 catalog names its Hopedale works and identifies mills in Gaffney and Pelzer as customers (Draper 1905, title page and PDF 229, 233, 236). Weaving at either mill added to manufacturing activity in South Carolina. Building the loom was a separate job in Massachusetts. A rise in Southern manufacturing employment could therefore accompany continuing demand for Northern machine builders. The customer entries document that connection, although they give no purchase dates and say nothing about what fraction of Southern looms came from Draper.",
-          "citations": [
-            "draper1905"
-          ],
-          "inline_citations": true
-        },
-        {
-          "heading": "Where spinning and invention took place",
-          "text": "In 1899 the nine southeastern states had 21.8 percent of US cotton spindles in active production. They had 56.5 percent by 1929. New England’s share fell from 67.6 to 38.5 percent, so the ratio of southeastern to New England spindles rose from 0.32 to 1.47 (Poulton 1947, 9, table 3). Sutthiphisal compares textile employment with patenting in 1910, using a broader definition of the South. In 1910 Massachusetts accounted for about 22 percent of textile employment and 42 percent of textile patents. The study’s 14-state South employed 19 percent of textile workers and accounted for 7 percent of patents (Sutthiphisal 2006, PDF 12–13, 20).",
-          "citations": [
-            "bls1947",
-            "sutthiphisal2006"
-          ],
-          "paper_ref": "NAT-7; NAT-9",
-          "inline_citations": true
-        }
-      ],
-      "takeaway": "From 1880 to 1929 the South gained 7.5 percentage points in its share of US manufacturing wage earners and 5.8 points in its share of nominal product value. The cotton case follows the firms and inventors behind a regional shift these totals can only describe."
+      "title": "Southern manufacturing employment and product value"
     },
     {
       "id": "cotton",
-      "eyebrow": "Cotton textiles · the central test",
-      "title": "Cotton mills in the South, loom makers in New England",
-      "deck": "Southern investors helped finance new cotton mills. South Carolina mills bought looms from Massachusetts, where employees of machinery firms accounted for a large share of the state’s textile patents.",
-      "paragraphs": [
-        {
-          "heading": "Who subscribed to the mills?",
-          "text": "The early mills drew heavily on local subscriptions. Broadus Mitchell cites an 1882 newspaper report that Rock Hill residents held all but $15,000 of their cotton factory’s $100,000 in stock. Charleston residents held the rest. An 1881 report on the Clifton mill near Spartanburg named stockholders in Spartanburg ($200,000), Charleston ($150,000), Boston ($50,000) and Baltimore, for which it gave no amount. Those holdings describe ownership. A promise to buy stock did not tell the mill how much cash it had in hand (Mitchell 1918, 136–37, 149, 152, 205).",
-          "citations": [
-            "mitchell1918"
-          ],
-          "paper_ref": "COT-CAP-1; COT-CAP-2",
-          "inline_citations": true
-        },
-        {
-          "heading": "Shares, machinery and sales credit",
-          "text": "Northern investors sometimes bought shares after local people had subscribed or when a mill expanded. Other ties grew out of selling equipment or cloth. A Greenville broker told Mitchell that machinery suppliers received about two-thirds of the price in cash. Suppliers often sold the shares they took in payment, while commission houses could both advance credit and keep the mill’s sales business for years. Loray Mill in Gastonia was unusual. After it reorganized, machinery makers retained a majority of its preferred stock (Mitchell 1918, 174–76, 205–15). A supplier that sold its shares could continue to supply parts even after its name disappeared from the list of owners.",
-          "citations": [
-            "mitchell1918"
-          ],
-          "paper_ref": "COT-CAP-3; COT-CAP-4; COT-CAP-5; COT-CAP-6; COT-CAP-7",
-          "inline_citations": true
-        },
-        {
-          "heading": "What changed at the loom",
-          "text": "When the filling yarn ran out on an ordinary loom, the weaver exchanged the shuttle, restarted the loom and refilled the empty shuttle. The Draper Company’s Northrop loom, built in Hopedale, Massachusetts, replenished the yarn in the same shuttle. A filling fork detected the missing yarn and a mechanism called the transferrer pushed a fresh bobbin from the hopper into the shuttle, ejecting the old bobbin. A separate device stopped the loom when a warp thread broke (Draper 1905, 43–44, 49, 53, 57, 65). Draper claimed that one weaver could tend sixteen looms. A 1902 statement reprinted in its catalog counted 27,980 Northrops among 64,540 South Carolina looms running or on order. That total includes orders still to be filled (Draper 1905, 39 and frontispiece, PDF 6).",
-          "citations": [
-            "draper1905"
-          ],
-          "paper_ref": "COT-MAC-1; COT-MAC-2; COT-MAC-3; COT-MAC-4 (first part only; the pp.182–183 report is excluded)",
-          "inline_citations": true
-        },
-        {
-          "heading": "Who patented improvements?",
-          "text": "Among textile patents in Sutthiphisal’s 1890 and 1910 samples for which inventors’ work histories are known, about half went to people who had worked in tools and machinery (Sutthiphisal 2006, PDF 14–15, table 1). In Massachusetts in 1910, employees of textile machinery firms accounted for about 55 percent of textile patents. About 85 percent of that group’s patents came from employees of Draper or Crompton & Knowles. Capital ratings in a 1907 manufacturers’ directory put the South’s share of textile-machinery capital at 0.2 percent (Sutthiphisal 2006, PDF 19–20, 47–48). Mills also contributed inventions. Draper credited the agent of the Dwight mill in Chicopee with designing a filling detector that Draper’s own inventors modified (Draper 1905, 71). In this instance the invention connected a mill and a machine maker in Massachusetts.",
-          "citations": [
-            "sutthiphisal2006",
-            "draper1905"
-          ],
-          "paper_ref": "COT-INV-1; COT-INV-2; COT-INV-3",
-          "inline_citations": true
-        },
-        {
-          "heading": "Whose work reaches the patent record?",
-          "text": "Sutthiphisal follows inventions that entered the patent record and, where possible, identifies the inventor’s employer (2006, PDF 12–15, 19–20). The Dwight filling detector illustrates a limit of assigning an invention to one employer. Crediting the mill alone would miss Draper’s revisions. Crediting only Draper would miss the mill agent’s original design (Draper 1905, 71). In Southern mills, too, workers could repair and adjust machinery without applying for patents. The patent totals give no count of that work.",
-          "citations": [
-            "sutthiphisal2006",
-            "draper1905"
-          ],
-          "inline_citations": true
-        },
-        {
-          "heading": "Following a mill through two sources",
-          "text": "The finance map and the customer map answer different questions about a mill. Mitchell’s account of Rock Hill identifies who subscribed capital. Draper’s list identifies a supplier for named mills at Gaffney and Pelzer (Mitchell 1918, 149, 152; Draper 1905, PDF 229, 233, 236). These are three different towns. Matching them by state would turn separate records into a purchase that neither source documents. Read at their proper scale, they establish that residents could help start mills in South Carolina and that some mills bought machinery across state lines. Whether a particular shareholder chose a particular loom remains open.",
-          "citations": [
-            "mitchell1918",
-            "draper1905"
-          ],
-          "inline_citations": true
-        }
-      ],
-      "takeaway": "Machinery credit helped Southern towns equip their mills. A supplier could sell its shares in a mill and still employ the people who designed its looms. The geography of mill ownership alone misses that relationship."
+      "title": "Cotton mills in the South, loom makers in New England"
     },
     {
       "id": "pipe",
-      "eyebrow": "Cast-iron pipe · a boundary case",
-      "title": "Southern process innovation, merged research",
-      "deck": "Two Birmingham foundries adopted centrifugal casting under different arrangements. One belonged to a national combine. The other developed a process of its own.",
-      "paragraphs": [
-        {
-          "heading": "Improvements made inside Southern works",
-          "text": "In 1886 David Giles developed a revolving casting pit at his Chattanooga foundry. Among later changes to pit casting, O’Connor singles out two works that redesigned the basic process, Clow in Ohio and the American Cast Iron Pipe Company (ACIPCO) in Birmingham. Clow adopted an English design. The Birmingham case shows how a foundry could develop technical skill where it cast pipe (O’Connor 1996, 13–16).",
-          "citations": [
-            "us-pipe-haer"
-          ],
-          "paper_ref": "PIPE-PRO-2; PIPE-PRO-3; PIPE-PRO-4",
-          "inline_citations": true
-        },
-        {
-          "heading": "Cartel, lawsuit, merger",
-          "text": "Four Southern pipe companies divided territory and coordinated bids. Addyston in Ohio and Dennis Long in Kentucky joined them in 1894. The four Southern members merged and then joined other firms to form United States Cast Iron Pipe & Foundry (USCIP&F). The move toward merger preceded the Supreme Court’s decision upholding the ruling against their price agreement. A review in 1912–1913 recommended enlarging the Bessemer and Birmingham works. Together, the company’s four principal Southern shops already produced about 200,000 tons a year. Research, once directed by individual plant managers, was centralized at Burlington, New Jersey (O’Connor 1996, 16–21).",
-          "citations": [
-            "us-pipe-haer"
-          ],
-          "paper_ref": "PIPE-CAR-1; PIPE-CAR-2; PIPE-CAR-3; PIPE-CAR-4",
-          "inline_citations": true
-        },
-        {
-          "heading": "A patent from Brazil, deployed by a corporation",
-          "text": "Dimitri Sensaud de Lavaud and Fernando Arens Jr. worked on centrifugal casting in Brazil. Their US patent shows a machine that fed molten metal into a revolving mold (Sensaud de Lavaud and Arens 1916, fig. 1 and PDF 4). USCIP&F acquired exclusive US rights in 1921. By 1926 its engineers had raised hourly output on a six-inch machine from about 15 pipes to about 40. The company introduced the process at Burlington first, then at Birmingham. Bessemer followed in 1934 (O’Connor 1996, 22–29, 32).",
-          "citations": [
-            "delavaud1916",
-            "us-pipe-haer"
-          ],
-          "paper_ref": "PIPE-CEN-1; PIPE-CEN-2; patent bibliographic data from delavaud1916, a website-only source used for the machine description",
-          "inline_citations": true
-        },
-        {
-          "heading": "A Birmingham firm in Atlanta, then on its own shop floor",
-          "text": "The American Public Works Association lists the American Cast Iron Pipe Company as a Birmingham member. Its register of the September 1906 convention in Atlanta identifies P. A. Ivy as an attendee from that company (American Public Works Association 1907, 7, 23). The entry places the firm in a trade association and its representative at a meeting. Evidence for technical work in Birmingham comes from a different record. William D. Moore began experimenting with a sand-lined mold for ACIPCO in 1922. Its first mechanized Mono-Cast shop opened in 1926 (O’Connor 1996, 30–32). A contact in another city and the ability to develop a process at home could coexist.",
-          "citations": [
-            "apwa1907",
-            "us-pipe-haer"
-          ],
-          "inline_citations": true
-        },
-        {
-          "heading": "What the patent leaves to the foundry",
-          "text": "Figure 1 of the 1916 patent lets a reader follow the delivery of molten iron into a rotating mold (Sensaud de Lavaud and Arens 1916, fig. 1). It gives no adoption date for a Birmingham plant. O’Connor traces the change across individual works. USCIP&F introduced the process at Burlington before Birmingham. Its Bessemer works adopted it in 1934 (O’Connor 1996, 24–29, 32). The date on a patent, the purchase of rights and the first use at a works belong to different timelines. Only the last one places the machine on a particular factory floor.",
-          "citations": [
-            "delavaud1916",
-            "us-pipe-haer"
-          ],
-          "inline_citations": true
-        }
-      ],
-      "takeaway": "A single city housed both a branch plant that received a process through its parent company and a firm that developed its own."
+      "title": "Southern process innovation, merged research"
     },
     {
       "id": "cigarettes",
-      "eyebrow": "Cigarettes · the strongest challenge",
-      "title": "A Southern firm made the machine run and organized a national market",
-      "deck": "James Duke built a national cigarette business with machines his company leased. The lease left room for his own mechanics to improve production.",
-      "paragraphs": [
-        {
-          "heading": "Skill from New York, a machine from Virginia",
-          "text": "The Duke firm recruited 125 immigrant cigarette rollers from New York to Durham as it entered the trade. In 1881, the year the firm began making cigarettes, the Virginian inventor James A. Bonsack patented a machine that performed the work in a sequence (Porter 1969, 61–64, 67). The specification follows tobacco from feeding and carding through wrapping, pasting and cutting. Bonsack claimed particular devices and combinations. The figure of 100,000 cigarettes in a ten-hour day was his own estimate (Bonsack 1881, specification 1, 4–5).",
-          "citations": [
-            "porter1969",
-            "bonsack1881"
-          ],
-          "paper_ref": "CIG-HAND-1; CIG-HAND-2; CIG-HAND-3",
-          "inline_citations": true
-        },
-        {
-          "heading": "Making the machine work",
-          "text": "Allen & Ginter tried a Bonsack machine in 1883 and gave it up. Duke leased several that year and put his mechanics to work on them. In 1885 the Bonsack Machine Company agreed to charge him 24 cents per thousand cigarettes, against the usual 30 or 33 cents. A supplement guaranteed a rate 25 percent below any competitor’s. The supplier retained ownership of the equipment. Successful operation and the lower rate gave Duke an advantage in the cost of making cigarettes (Porter 1969, 67–69).",
-          "citations": [
-            "porter1969"
-          ],
-          "paper_ref": "CIG-DUKE-1; CIG-DUKE-2; CIG-DUKE-4",
-          "inline_citations": true
-        },
-        {
-          "heading": "Southern organization at national scale",
-          "text": "The Duke firm hired buyers to purchase tobacco at loose-leaf warehouses and opened sales offices in major cities. Opening offices and a factory in New York brought the firm closer to customers and gave it better access to advertising services. As machine output overtook demand, marketing grew costly. In 1889 Duke spent $800,000 on advertising, one-fifth of gross sales (Porter 1969, 64–70). The following year five manufacturers formed the American Tobacco Company under New Jersey law. Duke became president, and the central offices were in New York (Porter 1969, 71–74).",
-          "citations": [
-            "porter1969"
-          ],
-          "paper_ref": "CIG-ORG-1; CIG-ORG-2; CIG-MERG-1; CIG-MERG-2",
-          "inline_citations": true
-        },
-        {
-          "heading": "What 1898 does not show",
-          "text": "When Continental Tobacco formed in 1898, financiers joined American Tobacco’s board. By the end of the year Duke was the only founder still on it. Porter (1969, 74–75) describes a shift from manufacturers to financiers who shared Duke’s expansion plans. By then the company operated nationally. The change in the board tells us who gained influence within that business.",
-          "citations": [
-            "porter1969"
-          ],
-          "paper_ref": "CIG-1898-1; CIG-1898-2; CIG-SUM-1",
-          "inline_citations": true
-        },
-        {
-          "heading": "What the lease bought",
-          "text": "Bonsack’s drawing shows the sequence of operations that one machine could perform. The unit of payment in Duke’s lease was a thousand cigarettes (Bonsack 1881, specification 1; Porter 1969, 67–69). Together these details help explain why Duke employed mechanics even though another firm owned the machines. Keeping the paper feed, paste and cutter working in sequence mattered to the number of finished cigarettes the firm could sell. A favorable rate made each thousand cheaper to produce, but the drawings and lease price alone cannot tell us how often a machine stopped or how much tobacco was lost in a run.",
-          "citations": [
-            "bonsack1881",
-            "porter1969"
-          ],
-          "inline_citations": true
-        }
-      ],
-      "takeaway": "Duke’s mechanics improved everyday operation while the supplier kept the machines. Purchasing and sales gave the Durham firm a second source of influence over a national industry."
+      "title": "A Southern firm made the machine run and organized a national market"
     },
     {
       "id": "institutions",
-      "eyebrow": "Institutions",
-      "title": "Who owned the equipment and who controlled its use?",
-      "deck": "A mill could obtain equipment on credit. A branch foundry could receive a process under its parent’s patent rights. Each arrangement gave the producer access to machinery on different terms.",
-      "paragraphs": [
-        {
-          "heading": "What a share paid for",
-          "text": "A mill could give a machinery supplier shares for part of the price of its equipment. If the supplier sold those shares, the identity of the shareholder changed while the same loom remained on the floor. A commission house that advanced money could instead retain the right to sell the mill’s cloth for years. Mitchell records both arrangements (1918, 205–15). The terms of the transaction help explain how a mill acquired equipment and who handled its sales. A list of shareholders taken years later could miss the supplier’s role altogether.",
-          "citations": [
-            "mitchell1918"
-          ],
-          "inline_citations": true
-        },
-        {
-          "heading": "Patents, antitrust and corporate form",
-          "text": "USCIP&F held exclusive US rights to the de Lavaud process and determined which plants received it first (O’Connor 1996, 24, 27–29). The Bonsack company retained its machines and charged manufacturers for each thousand cigarettes produced (Porter 1969, 68–69). Merger also changed the terms of competition. The pipe companies began merging before the Supreme Court upheld the ruling against their price agreement (O’Connor 1996, 16–18). The cigarette manufacturers used New Jersey law to form a holding company (Porter 1969, 73–74).",
-          "citations": [
-            "us-pipe-haer",
-            "porter1969"
-          ],
-          "paper_ref": "CMP-4; CMP-5",
-          "inline_citations": true
-        },
-        {
-          "heading": "Who could change a machine after it was installed?",
-          "text": "For a textile mill, installing a loom settled where cloth would be woven. The mill might still turn to its supplier for a change in design, as Draper’s account of the Dwight detector illustrates (1905, 71). For a USCIP&F plant, membership in the combine gave access to a company-wide research operation. The parent could choose which works received a new process first (O’Connor 1996, 19–21, 27–29). These arrangements left different decisions in local hands. Counting new factories would capture each opening once and obscure the distinction.",
-          "citations": [
-            "draper1905",
-            "us-pipe-haer"
-          ],
-          "inline_citations": true
-        }
-      ],
-      "takeaway": "A useful distinction runs through these arrangements. Financing a machine, using it and deciding how to improve it could fall to different firms."
+      "title": "Who owned the equipment and who controlled its use?"
     },
     {
       "id": "conclusion",
-      "eyebrow": "Conclusion",
-      "title": "Where machine design took place as factories expanded",
-      "deck": "Emancipation changed the legal basis of Southern labor. Industrial employment recovered over the following decades, with different consequences for the people and firms who made the equipment.",
-      "paragraphs": [
-        {
-          "heading": "Where the cotton comparison holds",
-          "text": "The Southeast overtook New England in active cotton spindles between the 1899 and 1929 observations (Poulton 1947, 9, table 3). At the mill level, supplier credit explains one way owners could equip a plant before they had paid its machinery bill in full (Mitchell 1918, 205–15). At the machinery firm, textile patent records locate a substantial share of inventive work in Massachusetts in 1910 (Sutthiphisal 2006, PDF 19–21). Read together, the three records explain how a region could gain equipment and jobs while firms elsewhere continued to design much of that equipment.",
-          "citations": [
-            "bls1947",
-            "mitchell1918",
-            "sutthiphisal2006"
-          ],
-          "inline_citations": true
-        },
-        {
-          "heading": "Two different outcomes beyond cotton",
-          "text": "In Birmingham, two firms working in the same city organized research differently. ACIPCO developed a sand-lined casting process. USCIP&F centralized research at Burlington and introduced a different process across its works (O’Connor 1996, 19, 24–32). In Durham, Duke obtained machines on lease and used its own mechanics and sales organization to build a national business (Porter 1969, 64–75). These cases identify three separate decisions about who can change the manufacturing process, who can authorize its use elsewhere, and who can bring the resulting goods to market.",
-          "citations": [
-            "us-pipe-haer",
-            "porter1969"
-          ],
-          "inline_citations": true
-        },
-        {
-          "heading": "A question to take to the next factory opening",
-          "text": "The course’s account of emancipation and Reconstruction puts the expansion of Southern industry in a history of changing labor relations (Galvan and Muñoz 2026, week 3; Muñoz 2026, slide 4). The three cases suggest a question for a factory announcement today. Alongside the number of promised jobs, ask where engineers will test a new design, who may install it at another plant, and which firm will bear the cost of a failed trial. Employment figures can later show whether the jobs arrived. Answering those other questions takes evidence about how the business actually operates.",
-          "citations": [],
-          "inline_citations": true
-        }
-      ],
-      "takeaway": ""
-    }
-  ],
-  "scholars": [
-    {
-      "id": "mitchell1918",
-      "section": "cotton",
-      "name": "Broadus Mitchell",
-      "work": "The Rise of Cotton Mills in the South",
-      "year": 1918,
-      "position": "Mitchell drew on newspapers from the 1880s and his own interviews in 1916. His dissertation argues for the importance of Southern initiative in mill building.",
-      "supports": "His accounts distinguish the sale of stock to local residents from a machinery maker’s acceptance of stock in payment.",
-      "challenges": "Participants sometimes disagreed about the scale of outside investment. Mitchell’s sympathy for the mill movement also shaped his interpretation.",
-      "response": "The project credits Mitchell for these reported accounts and distinguishes subscriptions, cash paid in and stock exchanged for machinery.",
-      "source_id": "mitchell1918",
-      "locator": "pp.136–152, 170–176, 205–215"
-    },
-    {
-      "id": "sutthiphisal2006",
-      "section": "cotton",
-      "name": "Dhanoos Sutthiphisal",
-      "work": "Learning-by-Producing and the Geographic Links between Invention and Production: Experience from the Second Industrial Revolution",
-      "year": 2006,
-      "position": "Sutthiphisal links patented textile inventions to the employers and work histories of their inventors.",
-      "supports": "Around 1910 Massachusetts’s share of patents was closer to its share of machinery capital than to its share of textile employment.",
-      "challenges": "The textile series includes wool and silk as well as cotton. Its 14-state South covers more territory than the nine-state spindle series.",
-      "response": "The patent evidence locates one kind of inventive work. Mill employment and loom operation answer different questions about what Southern workers could do.",
-      "source_id": "sutthiphisal2006",
-      "locator": "PDF 12–13, 15–21, 27, 47–48"
-    },
-    {
-      "id": "oconnor-haer",
-      "section": "pipe",
-      "name": "Richard O’Connor",
-      "work": "United States Pipe and Foundry Company",
-      "year": 1996,
-      "position": "O’Connor locates successive changes in pipe casting at individual foundries, then traces the shift of research within USCIP&F to Burlington.",
-      "supports": "Moore’s work on sand-lined molds at ACIPCO documents local invention in Birmingham.",
-      "challenges": "The sequence differs even between two works of the same company. Company ownership alone does not establish when a particular plant made the change.",
-      "response": "The exhibit uses separate plant dates where the report supplies them and leaves the Birmingham adoption year open.",
-      "source_id": "us-pipe-haer",
-      "locator": "pp. 13–21, 24–32",
-      "source_ids": [
-        "us-pipe-haer"
-      ]
-    },
-    {
-      "id": "porter1969",
-      "section": "cigarettes",
-      "name": "Patrick G. Porter",
-      "work": "Origins of the American Tobacco Company",
-      "year": 1969,
-      "position": "Porter explains the rise of American Tobacco by tracing Duke’s leases, its buying and selling operations, and the excess manufacturing capacity that preceded the merger.",
-      "supports": "The favorable Bonsack lease shows how an early user gained a cost advantage while the supplier still owned the equipment.",
-      "challenges": "Duke’s national position qualifies the textile case, where machine makers retained much of the technical expertise.",
-      "response": "Porter identifies the mechanics’ work on the leased machines. Ownership of any resulting improvements remains uncertain.",
-      "source_id": "porter1969",
-      "locator": "pp.61–75"
-    }
-  ],
-  "institution_rows": [
-    {
-      "institution": "Supplier credit and share ownership",
-      "mechanism": "A supplier could accept shares for part of the machinery price and sell them later.",
-      "comparison": "At Loray Mill, machinery makers retained a majority of the preferred stock after reorganization.",
-      "limit": "The arrangement at Loray differed from the more usual sale of supplier shares.",
-      "source_ids": [
-        "mitchell1918"
-      ],
-      "locator": "Mitchell 1918, 205–15"
-    },
-    {
-      "institution": "State tax exemptions",
-      "mechanism": "Mitchell records ten years of tax relief on new factory machinery in South Carolina and a ten-year exemption for cotton and woolen mills under Georgia’s 1872 statute.",
-      "comparison": "Both provisions applied to investment at mills.",
-      "limit": "Their effect on investment was unmeasured.",
-      "source_ids": [
-        "mitchell1918"
-      ],
-      "locator": "Mitchell 1918, 170 nn. 230–231"
-    },
-    {
-      "institution": "Exclusive patent rights",
-      "mechanism": "USCIP&F controlled US access to the de Lavaud process. The Bonsack company charged for machine use by output.",
-      "comparison": "ACIPCO developed another casting process. Duke’s mechanics improved the operation of leased machines.",
-      "limit": "The sources leave ownership of the cigarette-machine improvements open.",
-      "source_ids": [
-        "us-pipe-haer",
-        "porter1969"
-      ],
-      "locator": "O’Connor 1996, 24, 27–30; Porter 1969, 68–69"
-    },
-    {
-      "institution": "Antitrust law",
-      "mechanism": "The courts struck down the pipe companies’ territorial and price agreement.",
-      "comparison": "The four Southern members had already begun merging before the Supreme Court’s decision.",
-      "limit": "The chronology alone cannot establish why the firms merged.",
-      "source_ids": [
-        "us-pipe-haer"
-      ],
-      "locator": "O’Connor 1996, 16–18"
-    },
-    {
-      "institution": "New Jersey corporation law",
-      "mechanism": "New Jersey law permitted the tobacco manufacturers to form a holding company.",
-      "comparison": "American Tobacco incorporated in New Jersey and maintained its central offices in New York.",
-      "limit": "Incorporation identifies the legal jurisdiction. The location of management comes from evidence on the company’s offices.",
-      "source_ids": [
-        "porter1969"
-      ],
-      "locator": "Porter 1969, 73–74"
-    }
-  ],
-  "maps": {
-    "national": {
-      "title": "Manufacturing in the thirteen-state South",
-      "caption": "The region comprises Alabama, Arkansas, Florida, Georgia, Kentucky, Louisiana, Mississippi, North Carolina, Oklahoma, South Carolina, Tennessee, Texas and Virginia. Census coverage varies by year. Each share uses the national total as its denominator. The remainder includes every state outside the region.",
-      "limit": "Poulton 1947, 7, table 2 (PDF 13). The ratio divides the South’s share of US nominal product value by its share of US manufacturing wage earners. Both shares are rounded in the source. Gross nominal product value includes materials and varies with the regional mix of industries. It cannot measure labor productivity."
-    },
-    "cotton": {
-      "title": "Cotton spinning capacity, 1899–1929",
-      "caption": "Circle area represents active cotton spindles on the same scale in all four maps. The legend uses one million spindles as a reference. New England appears as a regional total. Florida has no separate observation in any of the four years. The state figures and the US totals appear in the economic tables.",
-      "limit": "Poulton 1947, 9, table 3 (PDF 15). These are equipment counts. The 1899 coverage includes 413,032 spindles outside cotton mills. No separate Florida figure is reported. In 1929 the eight listed states sum to 17,843,861 spindles and the published Southeast total is 17,843,852. The regional ratio uses the published total.",
-      "data_note": "Sutthiphisal 2006, PDF 12, 20, 29. The shares use the study’s definitions of national textile employment and selected patents. Textiles include more than cotton. The patent series captures only innovations in the selected classes. The study’s fourteen-state South differs from both Poulton regions."
-    },
-    "textile-1905": {
-      "title": "Draper’s mill customers, 1905",
-      "caption": "Draper identified Hopedale, Massachusetts, as its manufacturing base. Its catalog names customers in both New England and the South. The customer list dates the documentation. It gives no purchase date for the machines shown in the exhibit."
-    },
-    "textile-1905-capital": {
-      "title": "Cotton mill finance, evidence from 1881, 1882 and 1916",
-      "caption": "Mitchell’s 1918 dissertation reproduces newspaper accounts of stock ownership and reports later interviews about machinery credit. Stock subscribed, cash paid in and control of preferred shares describe different arrangements. The dates below identify the original reports or interviews as cited by Mitchell."
-    },
-    "pipe-1906": {
-      "title": "ACIPCO at the Atlanta convention, 1906",
-      "caption": "The association’s membership list places the American Cast Iron Pipe Company in Birmingham. The attendance register names P. A. Ivy of that company at the September 1906 convention in Atlanta (American Public Works Association 1907, 7, 23). The line connects a member’s listed city with the meeting venue. The national pipe figures in the accompanying table date from 1926.",
-      "data_note": "O’Connor 1996, 27–28 (PDF 29–30). In 1926, about 200,000 of the 1.5 million tons of iron pipe produced in the United States were cast centrifugally, roughly 13 percent. The source gives the unit simply as tons. Its inconsistent 1929 figures are omitted."
-    },
-    "pipe-1913": {
-      "title": "USCIP&F after reorganization, 1912–1913",
-      "caption": "United States Cast Iron Pipe & Foundry concentrated its central offices and research at Burlington, New Jersey. The map shows its works in Birmingham, Bessemer, Anniston and Chattanooga. A district inset separates Birmingham from nearby Bessemer. ACIPCO was an independent company.",
-      "limit": "The company proposed expanding Bessemer and Birmingham and abandoning older works in Cleveland, Buffalo and Louisville. A vice-president also had an office in Louisville. The proposal leaves the dates of any closures open. Bessemer adopted centrifugal casting in 1934. No date is established here for the Birmingham works (O’Connor 1996, 19, 21, 27–29).",
-      "data_note": "O’Connor 1996, 27–28 (PDF 29–30). In 1926, about 200,000 of the 1.5 million tons of iron pipe produced in the United States were cast centrifugally, roughly 13 percent. The source gives the unit simply as tons. Its inconsistent 1929 figures are omitted."
-    },
-    "cigarettes-1881": {
-      "title": "Recruiting cigarette workers, 1881",
-      "caption": "Duke recruited 125 immigrant cigarette workers from New York for production in Durham, North Carolina (Porter 1969, 61–62). The line traces recruitment. Bonsack’s patent gives his Virginia residence, which does not identify a machine factory (Bonsack 1881, specification 1).",
-      "data_note": "Porter 1969, 59, 70. The expenditure is in nominal dollars, and the sales percentage uses Duke’s gross sales. The 1890 production share covers all five firms that formed American Tobacco."
-    },
-    "cigarettes-1890": {
-      "title": "The American Tobacco merger, 1890",
-      "caption": "Five firms combined. Durham had W. Duke, Sons & Co., Richmond had Allen & Ginter, and Rochester had W. S. Kimball & Co. New York was home to both Kinney Tobacco Co. and Goodwin & Co. and became the combined company’s headquarters. The company incorporated in New Jersey. The five firms together accounted for approximately 90 percent of US cigarettes. The advertising figures in the accompanying data apply to Duke in 1889 (Porter 1969, 59, 65, 70, 73–74).",
-      "data_note": "Porter 1969, 59, 70. The expenditure is in nominal dollars, and the sales percentage uses Duke’s gross sales. The 1890 production share covers all five firms that formed American Tobacco."
-    }
-  },
-  "machines": {
-    "northrop": {
-      "title": "Northrop automatic loom",
-      "caption": "The reconstruction follows the forty-inch E model on catalog page 82. The action drawing on page 52 shows the A model.",
-      "variant_note": "Draper listed No. 16 as its standard shuttle and six bobbin patterns. The catalog does not establish which shuttle and bobbin were fitted to the illustrated E model.",
-      "historical_reading": "Draper’s 1905 catalog shows the forty-inch E model with a No. 1 hopper and steel harness. Replenishing the bobbin while the shuttle stayed on the loom changed the weaver’s work. The catalog names Southern mills that bought Draper looms. In 1910 the regional distribution of textile patents more closely resembled the distribution of capital invested in textile machinery firms than that of mill employment (Sutthiphisal 2006, PDF 14–21, 47–48)."
-    },
-    "bonsack": {
-      "title": "Bonsack cigarette machine",
-      "caption": "The pasting mechanism follows figures 3, 10 and 16. Figures 13–15 give alternative applicators.",
-      "variant_note": "Figure 17 shows an alternative with two shear blades.",
-      "historical_reading": "U.S. Patent 238,640 combines previously known operations into a continuous process. The drawings give a design for the machine. Porter draws on business records to explain how Duke’s mechanics improved the leased machines and how the firm developed a national market (Porter 1969, 64–74)."
-    },
-    "delavaud": {
-      "title": "De Lavaud–Arens centrifugal pipe machine",
-      "caption": "Figures 1 and 5 show solid triangular projections on the outside. Their function is unspecified.",
-      "variant_note": "The specification includes end ring f in the shell (PDF 4) and fixes it to trough V (PDF 5). Whether f rotates with the mold is unclear.",
-      "historical_reading": "The drawings in U.S. Patent 1,199,353 show the 1916 design for centrifugal casting. U.S. Pipe held exclusive American rights and decided which of its works would adopt the process first. ACIPCO developed its own sand-lined process (O’Connor 1996, 22–32). Later water-jacketed machines, ACIPCO’s Mono-Cast equipment and Bessemer’s 1934 installation fall outside these drawings."
-    }
-  },
-  "method_notes": [
-    {
-      "title": "Regions",
-      "text": "Poulton’s manufacturing figures cover 13 Southern states, and his spindle tables identify nine southeastern states. Sutthiphisal uses a 14-state South. Comparisons retain the original regional definitions, including New England. The remainder of the United States includes all states outside the stated group."
-    },
-    {
-      "title": "Indicators",
-      "text": "Nominal product value includes materials. Dividing it by the number of wage earners gives a gross value per worker, which also varies with industry mix. Active spindles count machinery in use. Patent counts cover inventions that entered the patent record."
-    },
-    {
-      "title": "Statistics and relationship maps",
-      "text": "The four spindle maps use census observation years. The other maps date each relationship to its source, such as the issue of a catalog or the adoption of a process. Statistics alongside the maps retain their observation years. State outlines use Natural Earth 1:50m Admin 1 data (public domain) as modern geographic guides."
-    },
-    {
-      "title": "Illustrations",
-      "text": "The scans reproduce pages from the catalog and patents. Highlight boxes locate details approximately. Generated views interpret the equipment and separate its parts for inspection. The Northrop warp stop-motion schematic follows the catalog’s written description."
-    },
-    {
-      "title": "Data checking",
-      "text": "A language-model assistant compared figures with the source scans and texts. The checking procedure did not include a blind independent audit. Missing observations remain unreported, including years for which the source gives no separate Florida figure."
+      "title": "Where machine design took place as factories expanded"
     }
   ],
   "sources": [
@@ -589,446 +128,433 @@
       "reference_url": "https://doi.org/10.3386/w12469"
     }
   ],
+  "maps": {
+    "national": {
+      "title": "Manufacturing in the thirteen-state South",
+      "caption": "The region comprises Alabama, Arkansas, Florida, Georgia, Kentucky, Louisiana, Mississippi, North Carolina, Oklahoma, South Carolina, Tennessee, Texas and Virginia. Census coverage varies by year. Each share uses the national total as its denominator. The remainder includes every state outside the region.",
+      "limit": "Poulton 1947, 7, table 2 (PDF 13). The ratio divides the South’s share of US nominal product value by its share of US manufacturing wage earners. Both shares are rounded in the source. Gross nominal product value includes materials and varies with the regional mix of industries. It cannot measure labor productivity."
+    },
+    "cotton": {
+      "title": "Cotton spinning capacity, 1899–1929",
+      "caption": "Circle area represents active cotton spindles on the same scale in all four maps. The legend uses one million spindles as a reference. New England appears as a regional total. Florida has no separate observation in any of the four years. The state figures and the US totals appear in the economic tables.",
+      "limit": "Poulton 1947, 9, table 3 (PDF 15). These are equipment counts. The 1899 coverage includes 413,032 spindles outside cotton mills. No separate Florida figure is reported. In 1929 the eight listed states sum to 17,843,861 spindles and the published Southeast total is 17,843,852. The regional ratio uses the published total.",
+      "data_note": "Sutthiphisal 2006, PDF 12, 20, 29. The shares use the study’s definitions of national textile employment and selected patents. Textiles include more than cotton. The patent series captures only innovations in the selected classes. The study’s fourteen-state South differs from both Poulton regions."
+    },
+    "textile-1905": {
+      "title": "Draper’s mill customers, 1905",
+      "caption": "Draper identified Hopedale, Massachusetts, as its manufacturing base. Its catalog names customers in both New England and the South. The customer list dates the documentation. It gives no purchase date for the machines shown in the exhibit."
+    },
+    "textile-1905-capital": {
+      "title": "Cotton mill finance, evidence from 1881, 1882 and 1916",
+      "caption": "Mitchell’s 1918 dissertation reproduces newspaper accounts of stock ownership and reports later interviews about machinery credit. Stock subscribed, cash paid in and control of preferred shares describe different arrangements. The dates below identify the original reports or interviews as cited by Mitchell."
+    },
+    "pipe-1906": {
+      "title": "ACIPCO at the Atlanta convention, 1906",
+      "caption": "The association’s membership list places the American Cast Iron Pipe Company in Birmingham. The attendance register names P. A. Ivy of that company at the September 1906 convention in Atlanta (American Public Works Association 1907, 7, 23). The line connects a member’s listed city with the meeting venue. The national pipe figures in the accompanying table date from 1926.",
+      "data_note": "O’Connor 1996, 27–28 (PDF 29–30). In 1926, about 200,000 of the 1.5 million tons of iron pipe produced in the United States were cast centrifugally, roughly 13 percent. The source gives the unit simply as tons. Its inconsistent 1929 figures are omitted."
+    },
+    "pipe-1913": {
+      "title": "USCIP&F after reorganization, 1912–1913",
+      "caption": "United States Cast Iron Pipe & Foundry concentrated its central offices and research at Burlington, New Jersey. The map shows its works in Birmingham, Bessemer, Anniston and Chattanooga. A district inset separates Birmingham from nearby Bessemer. ACIPCO was an independent company.",
+      "limit": "The company proposed expanding Bessemer and Birmingham and abandoning older works in Cleveland, Buffalo and Louisville. A vice-president also had an office in Louisville. The proposal leaves the dates of any closures open. Bessemer adopted centrifugal casting in 1934. No date is established here for the Birmingham works (O’Connor 1996, 19, 21, 27–29).",
+      "data_note": "O’Connor 1996, 27–28 (PDF 29–30). In 1926, about 200,000 of the 1.5 million tons of iron pipe produced in the United States were cast centrifugally, roughly 13 percent. The source gives the unit simply as tons. Its inconsistent 1929 figures are omitted."
+    },
+    "cigarettes-1881": {
+      "title": "Duke entered cigarette manufacturing in 1881",
+      "caption": "Duke entered the cigarette business in 1881 and brought 125 immigrant rollers from New York to Durham. Porter dates the firm’s entry and leaves the year of recruitment unspecified (Porter 1969, 61–62).",
+      "data_note": "Porter 1969, 59, 70. The expenditure is in nominal dollars, and the sales percentage uses Duke’s gross sales. The 1890 production share covers all five firms that formed American Tobacco."
+    },
+    "cigarettes-1890": {
+      "title": "The American Tobacco merger, 1890",
+      "caption": "Five firms combined. Durham had W. Duke, Sons & Co., Richmond had Allen & Ginter, and Rochester had W. S. Kimball & Co. New York was home to both Kinney Tobacco Co. and Goodwin & Co. and became the combined company’s headquarters. The company incorporated in New Jersey. The five firms together accounted for approximately 90 percent of US cigarettes. The advertising figures in the accompanying data apply to Duke in 1889 (Porter 1969, 59, 65, 70, 73–74).",
+      "data_note": "Porter 1969, 59, 70. The expenditure is in nominal dollars, and the sales percentage uses Duke’s gross sales. The 1890 production share covers all five firms that formed American Tobacco."
+    }
+  },
+  "machines": {
+    "northrop": {
+      "title": "Northrop automatic loom"
+    },
+    "bonsack": {
+      "title": "Bonsack cigarette machine"
+    },
+    "delavaud": {
+      "title": "De Lavaud–Arens centrifugal pipe machine"
+    }
+  },
+  "method_notes": [
+    {
+      "title": "Regions",
+      "text": "Poulton’s manufacturing figures cover 13 Southern states, and his spindle tables identify nine southeastern states. Sutthiphisal uses a 14-state South. Comparisons retain the original regional definitions, including New England. The remainder of the United States includes all states outside the stated group."
+    },
+    {
+      "title": "Indicators",
+      "text": "Nominal product value includes materials. Dividing it by the number of wage earners gives a gross value per worker, which also varies with industry mix. Active spindles count machinery in use. Patent counts cover inventions that entered the patent record."
+    },
+    {
+      "title": "Statistics and relationship maps",
+      "text": "The four spindle maps use census observation years. The other maps date each relationship to its source, such as the issue of a catalog or the adoption of a process. Statistics alongside the maps retain their observation years. State outlines use Natural Earth 1:50m Admin 1 data (public domain) as modern geographic guides."
+    },
+    {
+      "title": "Illustrations",
+      "text": "The scans reproduce pages from the catalog and patents. Highlight boxes locate details approximately. Generated views interpret the equipment and separate its parts for inspection. The Northrop warp stop-motion schematic follows the catalog’s written description."
+    },
+    {
+      "title": "Data checking",
+      "text": "A language-model assistant compared figures with the source scans and texts. The checking procedure did not include a blind independent audit. Missing observations remain unreported, including years for which the source gives no separate Florida figure."
+    }
+  ],
   "component_copy": [
     {
       "node_id": "northrop",
-      "function": "A Draper automatic loom that put fresh filling bobbins into the running shuttle and stopped when a warp thread broke.",
-      "source_note": ""
+      "function": "The loom changes bobbins automatically and stops when a warp thread breaks."
     },
     {
       "node_id": "northrop-shuttle",
-      "function": "Carries the filling bobbin across the loom and receives a fresh bobbin from the hopper without itself being removed.",
-      "source_note": "Draper listed No. 16 as its standard shuttle. The catalog does not identify the shuttle fitted to the illustrated E model."
+      "function": "The shuttle carries the weft across the loom and accepts fresh bobbins."
     },
     {
       "node_id": "northrop-shuttle-body",
-      "function": "Wooden body that holds the bobbin, eye casting and spring; the expelled bobbin falls through its exit opening.",
-      "source_note": ""
+      "function": "The wooden body holds the bobbin, thread guide and spring."
     },
     {
       "node_id": "northrop-eye",
-      "function": "Eye casting whose slot lets the thread of a newly transferred bobbin enter automatically as the shuttle is thrown.",
-      "source_note": "The casting includes a pocket for flannel friction material."
+      "function": "The slot guides the new bobbin’s thread into the shuttle eye."
     },
     {
       "node_id": "northrop-bobbin",
-      "function": "Removable bobbin of filling yarn, pushed into the shuttle by the transferrer while the empty one is expelled.",
-      "source_note": "Draper listed six patterns. No. 3 served ordinary yarn. The catalog describes a larger, No. 5-style butt on new looms and leaves the fitting on the illustrated E model unspecified."
+      "function": "The bobbin holds the weft yarn inside the shuttle."
     },
     {
       "node_id": "northrop-shuttle-spring",
-      "function": "Grips the bobbin in the shuttle; its several notches allow some variation in where the bobbin is received.",
-      "source_note": "The No. 167 shuttle used a different spring and cover."
+      "function": "The spring grips each fresh bobbin inside the shuttle."
     },
     {
       "node_id": "northrop-fastener",
-      "function": "Transverse bolt and nut that hold the eye casting in the wooden shuttle body.",
-      "source_note": ""
+      "function": "The bolt secures the thread guide to the wooden shuttle."
     },
     {
       "node_id": "northrop-replenishment",
-      "function": "When the filling breaks or runs out, the mechanism releases a fresh bobbin. It travels down from the hopper and seats in the shuttle.",
-      "source_note": "The action drawing on p. 52 shows the A model."
+      "function": "The hopper supplies a fresh bobbin when the weft breaks or runs out."
     },
     {
       "node_id": "northrop-hopper",
-      "function": "Rotating magazine of reserve bobbins, their thread ends wound round a central stud so new filling enters the eye.",
-      "source_note": "The E model shows a No. 1 hopper. Draper also illustrated a larger 24-bobbin variant."
+      "function": "The rotating hopper holds spare bobbins ready for transfer."
     },
     {
       "node_id": "northrop-transferrer",
-      "function": "Pivoted lever with a hammer head that presses the lowest reserve bobbin down into the shuttle when a change is called.",
-      "source_note": "The bunter on the lay strikes the dog to actuate the mechanism."
+      "function": "The lever pushes a fresh bobbin from the hopper into the shuttle."
     },
     {
       "node_id": "northrop-filling-fork",
-      "function": "When the filling is missing, the fork triggers the catch and vibrator. These operate rod B to start the change.",
-      "source_note": "Draper also discussed single and double forks."
+      "function": "The fork triggers a bobbin change when it detects missing weft."
     },
     {
       "node_id": "northrop-latch",
-      "function": "Rod B raises latch C against the bunter on the lay, which forcibly depresses the transferrer.",
-      "source_note": "Position detector E became standard among the Canadian licensees."
+      "function": "The rod lifts the latch so the moving lay can trigger the transferrer."
     },
     {
       "node_id": "northrop-warp-stop",
-      "function": "Stops the loom when a warp thread breaks, using the steel heddles themselves as detectors.",
-      "source_note": "Draper recommended the steel-harness system among four styles. Its text on p. 65 supplies the basis for the schematic."
+      "function": "A dropped heddle stops the loom when a warp thread breaks."
     },
     {
       "node_id": "northrop-heddles",
-      "function": "Thin, flat steel ribbons carrying the warp threads; a heddle drops when its thread breaks.",
-      "source_note": ""
+      "function": "Each steel heddle falls if its warp thread breaks."
     },
     {
       "node_id": "northrop-bars",
-      "function": "Bars on which the heddles hang through slots wider than the bars, so a released heddle can fall.",
-      "source_note": ""
+      "function": "The bars support the heddles and leave them room to drop."
     },
     {
       "node_id": "northrop-vibrator",
-      "function": "Moving part arrested by a dropped heddle; its arrest stops the loom through intermediate mechanisms.",
-      "source_note": "The catalog leaves the intermediate connections unspecified."
+      "function": "A falling heddle blocks the vibrator and stops the loom."
     },
     {
       "node_id": "northrop-lay",
-      "function": "Swinging lay with reed and shuttle boxes; its eccentric motion gives the shuttle time to cross and helps cover the cloth.",
-      "source_note": "The catalog treats these parts together in its discussion of the lay."
+      "function": "The lay swings the reed forward to press each weft thread into place."
     },
     {
       "node_id": "northrop-lay-wood",
-      "function": "Stiff, heavy wooden lay needed for heavy goods, roughed out and seasoned before finishing.",
-      "source_note": ""
+      "function": "The stiff wooden lay supports the reed during heavy weaving."
     },
     {
       "node_id": "northrop-reed",
-      "function": "Beats in the filling threads and provides a back guide for the shuttle.",
-      "source_note": ""
+      "function": "The reed guides the shuttle and presses each weft thread into place."
     },
     {
       "node_id": "northrop-boxes",
-      "function": "Box plates and binders at the ends of the lay that position and check the shuttle in its box.",
-      "source_note": "Draper distinguished between front- and back-binder looms."
+      "function": "The boxes catch and position the shuttle at each end."
     },
     {
       "node_id": "northrop-takeup",
-      "function": "Draws woven cloth forward one ratchet tooth per pick and winds it onto the cloth roll.",
-      "source_note": "This arrangement is described for the E model."
+      "function": "The mechanism draws the cloth forward and winds it onto a roll."
     },
     {
       "node_id": "northrop-takeup-roll",
-      "function": "A high-mounted metal roll advances the cloth. It sits just inside the breast beam.",
-      "source_note": "Its height could be adjusted."
+      "function": "The metal roll draws the woven cloth forward."
     },
     {
       "node_id": "northrop-ratchet",
-      "function": "Ratchet wheel advanced one tooth per pick by a pawl on the lay sword; a let-back pawl helps prevent thin places.",
-      "source_note": ""
+      "function": "A pawl advances the ratchet one tooth per pass of the shuttle."
     },
     {
       "node_id": "northrop-change-gears",
-      "function": "Change gear and intermediate gear linking ratchet wheel and take-up roll; each change-gear tooth usually represents two picks.",
-      "source_note": ""
+      "function": "The gears transmit motion from the ratchet to the take-up roll."
     },
     {
       "node_id": "northrop-cloth-roll",
-      "function": "Smooth iron roll, held against the take-up roll by racks, that winds the finished cloth.",
-      "source_note": ""
+      "function": "The iron roll winds up the finished cloth."
     },
     {
       "node_id": "northrop-frame-drive",
-      "function": "The frame carries the mechanisms, the pulley supplies power and the warp beam supplies yarn. The exhibit groups the three for comparison.",
-      "source_note": "The cross-section on printed p. 86 shows another variant."
+      "function": "The frame supports the loom, the pulley drives it and the beam supplies yarn."
     },
     {
       "node_id": "northrop-frame",
-      "function": "Loom frame carrying the mechanisms, drawn from the p.82 E-model illustration.",
-      "source_note": "The illustration supplies the visual evidence for this entry."
+      "function": "The frame supports the loom’s working parts."
     },
     {
       "node_id": "northrop-pulley",
-      "function": "Belt pulley through which power enters the loom, on the right-hand side in the p.82 E model.",
-      "source_note": "The variant illustrated on printed p. 86 has its pulleys on the left."
+      "function": "A drive belt turns the pulley to power the loom."
     },
     {
       "node_id": "northrop-warp-beam",
-      "function": "Beam holding the warp supply; Draper recommended no larger than 18-inch beams for fine yarn and 20-inch for coarse.",
-      "source_note": ""
+      "function": "The beam holds the loom’s supply of warp yarn."
     },
     {
       "node_id": "northrop-brake",
-      "function": "Brake and protector act when the loom bangs off; on some looms the brake also acts when the shipper handle is thrown off.",
-      "source_note": "Draper described different arrangements by loom class."
+      "function": "The brake acts when the loom’s protector trips."
     },
     {
       "node_id": "bonsack",
-      "function": "Patented machine that feeds, evens, forms, wraps, pastes and cuts a continuous cigarette in consecutive operations.",
-      "source_note": ""
+      "function": "The machine wraps a continuous roll of tobacco and cuts it into cigarettes."
     },
     {
       "node_id": "bonsack-forming",
-      "function": "Rolls evenly distributed tobacco on a moving belt into a compressed continuous filler before wrapping.",
-      "source_note": ""
+      "function": "A moving belt compresses loose tobacco into a continuous roll."
     },
     {
       "node_id": "bonsack-forming-trough",
-      "function": "Open trough with side guides and upturned edges that centres tobacco on the belt and converges toward the tube.",
-      "source_note": "In claim 5 the forming tube continues the trough."
+      "function": "The trough guides the tobacco toward the center of the moving belt."
     },
     {
       "node_id": "bonsack-compression-tube",
-      "function": "Tapering tube whose spiral groove curls the belt mainly on one side, compressing tobacco into a rope-like filler.",
-      "source_note": "Bonsack acknowledged earlier tapering tubes. His claim specifies a spiral groove and a flanged end."
+      "function": "A spiral groove curls the belt around the tobacco and compresses it."
     },
     {
       "node_id": "bonsack-forming-belt",
-      "function": "Endless roll-making belt, wider than the cigarette’s circumference, carrying tobacco through the trough and compressing tube.",
-      "source_note": ""
+      "function": "The belt carries tobacco through the forming trough and tube."
     },
     {
       "node_id": "bonsack-paste",
-      "function": "Delivers paste from a reservoir to an applicator that coats the paper’s lapping edge at the wrapping tube’s flange.",
-      "source_note": ""
+      "function": "The applicator coats the overlapping edge of the cigarette paper with paste."
     },
     {
       "node_id": "bonsack-paste-wheel",
-      "function": "Rotating pasting brush, set at right angles to the delivery wheel, that strikes the underside of the paper edge at flange b′.",
-      "source_note": "Figures 13–15 give alternative applicators."
+      "function": "The rotating brush spreads paste under the paper’s edge."
     },
     {
       "node_id": "bonsack-paste-delivery-wheel",
-      "function": "Concave wheel I² on shaft I³ that receives paste from the reservoir above and supplies the pasting brush.",
-      "source_note": ""
+      "function": "The wheel carries paste from the reservoir to the brush."
     },
     {
       "node_id": "bonsack-paste-reservoir",
-      "function": "Reservoir I⁴ on upright frame I⁵ above the delivery wheel, with netting at its lower end to break up lumps.",
-      "source_note": "The specification leaves the shape of the vessel open."
+      "function": "The reservoir holds paste above the delivery wheel."
     },
     {
       "node_id": "bonsack-plunger",
-      "function": "Screw plunger I⁶, forced down by the threads of its stem, that pushes paste out of the reservoir.",
-      "source_note": ""
+      "function": "The threaded plunger pushes paste out of the reservoir."
     },
     {
       "node_id": "bonsack-worm-drive",
-      "function": "Worm I⁸ turns worm wheel I⁷ on the plunger stem, which slides lengthwise so the plunger can descend.",
-      "source_note": "Belt I⁹ links the worm shaft to the shaft below."
+      "function": "The gears turn the plunger stem to push it downward."
     },
     {
       "node_id": "bonsack-feed",
-      "function": "Delivers hand-spread tobacco in equal measures and cards it into an even, uniform layer.",
-      "source_note": ""
+      "function": "The first belt and rollers spread measured tobacco into an even layer."
     },
     {
       "node_id": "bonsack-feed-belt",
-      "function": "First feed belt, divided into equal sections, each spread with an equal weight of shredded tobacco.",
-      "source_note": ""
+      "function": "Each belt section carries an equal weight of shredded tobacco."
     },
     {
       "node_id": "bonsack-feed-table",
-      "function": "Sheet-metal table with upturned sides; the belt runs round a back roller and over its curved front edge.",
-      "source_note": ""
+      "function": "The table supports the feed belt as it passes around the roller."
     },
     {
       "node_id": "bonsack-feed-roll",
-      "function": "Roughened roller B and an adjustable concave hold tobacco down so the card teeth take it evenly.",
-      "source_note": "Screws in slotted guides set the concave."
+      "function": "The roller holds the tobacco steady for the card teeth."
     },
     {
       "node_id": "bonsack-card-roll",
-      "function": "Card-clothed roller combing the tobacco, with a stripping roller throwing it onto the reciprocating carrier.",
-      "source_note": ""
+      "function": "One roller combs the tobacco and another strips it onto the carrier."
     },
     {
       "node_id": "bonsack-distribution",
-      "function": "Spreads the tobacco again, evens it a second time and delivers it to the hopper over the forming trough.",
-      "source_note": ""
+      "function": "A second set of rollers evens the tobacco before it enters the hopper."
     },
     {
       "node_id": "bonsack-carrier",
-      "function": "Endless belt in a sliding frame whose reciprocating motion strews lumps across the second feed belt.",
-      "source_note": "Bonsack allowed other forms of spreader."
+      "function": "The carrier moves back and forth to spread tobacco over the second belt."
     },
     {
       "node_id": "bonsack-second-belt",
-      "function": "Second feed belt D on a flanged table, receiving tobacco from the carrier and passing it to the second rollers.",
-      "source_note": ""
+      "function": "The belt carries tobacco from the spreader to the second set of rollers."
     },
     {
       "node_id": "bonsack-second-rolls",
-      "function": "Second roughened roller, concave, card roller and stripper, repeating the first set to even the tobacco further.",
-      "source_note": ""
+      "function": "The rollers comb the tobacco again and strip it into the hopper."
     },
     {
       "node_id": "bonsack-hopper",
-      "function": "Receives tobacco from the second stripper and drops it through a bottom outlet into the forming trough.",
-      "source_note": "The specification also allows a horizontal belt in place of the hopper."
+      "function": "The hopper drops tobacco into the forming trough."
     },
     {
       "node_id": "bonsack-wrapping",
-      "function": "Wraps the paper strip round the continuous filler using an independent belt narrower than the paper.",
-      "source_note": ""
+      "function": "A separate belt wraps paper around the continuous tobacco roll."
     },
     {
       "node_id": "bonsack-wrapping-tube",
-      "function": "Tapering tube whose spiral groove curls the paper; flange b′ briefly exposes the lapping edge for pasting.",
-      "source_note": ""
+      "function": "The tube curls the paper and leaves one edge exposed for pasting."
     },
     {
       "node_id": "bonsack-wrapping-belt",
-      "function": "Endless belt G², narrower than the paper strip, carrying paper and filler through the wrapping tube.",
-      "source_note": ""
+      "function": "The belt carries the paper and tobacco roll through the wrapping tube."
     },
     {
       "node_id": "bonsack-paper-spool",
-      "function": "Spool H′ feeding the continuous paper strip H, a consumable material rather than a machine part.",
-      "source_note": ""
+      "function": "The spool supplies a continuous strip of cigarette paper."
     },
     {
       "node_id": "bonsack-feed-wheel",
-      "function": "Toothed wheel H² giving the tobacco roll a positive feed into the wrapping tube so it does not choke.",
-      "source_note": ""
+      "function": "The toothed wheel pushes the tobacco roll into the wrapping tube."
     },
     {
       "node_id": "bonsack-cut-count",
-      "function": "Cuts the continuous cigarette into lengths and advances a partitioned belt one space for each cut.",
-      "source_note": ""
+      "function": "Each cut advances the counting belt one space."
     },
     {
       "node_id": "bonsack-holding-tube",
-      "function": "Holding tube J, in line with the wrapping tube, at whose outer edge the knife cuts the cigarette.",
-      "source_note": ""
+      "function": "The tube holds the wrapped tobacco steady for the knife."
     },
     {
       "node_id": "bonsack-knife",
-      "function": "Rotary cutting disk on a crank-carried bearing; a wheel on a segmental track counter-rotates it for a shear cut.",
-      "source_note": "Figure 17 shows an alternative with two shear blades."
+      "function": "The rotating disk cuts the wrapped roll into cigarettes."
     },
     {
       "node_id": "bonsack-knife-gears",
-      "function": "Eccentric differential gears K¹ and K² that speed the knife past the cigarette and slow it for the rest of the turn.",
-      "source_note": ""
+      "function": "The gears speed the knife through the cut and slow its return."
     },
     {
       "node_id": "bonsack-counting-belt",
-      "function": "Travelling belt L′ divided by spacing plates f into sections holding a package’s number of cigarettes.",
-      "source_note": "Chute L carries the cut cigarettes to the belt."
+      "function": "Each belt section collects enough cigarettes for one package."
     },
     {
       "node_id": "bonsack-count-drive",
-      "function": "A pawl worked by a pitman from the knife shaft advances ratchet L⁴, moving the belt one space per cut.",
-      "source_note": ""
+      "function": "The knife shaft drives a pawl that advances the counting belt."
     },
     {
       "node_id": "delavaud",
-      "function": "Patented machine that casts metal pipe in a rotating horizontal mold, where centrifugal force distributes the poured metal.",
-      "source_note": ""
+      "function": "The rotating mold spreads molten metal around its inner wall to form a pipe."
     },
     {
       "node_id": "delavaud-shell",
-      "function": "Mold A shapes the pipe exterior. Sand mold B forms the socket and sits on support C, held by clamps d and cam ring e. Ring f shapes one end face.",
-      "source_note": "The specification includes end ring f in the shell (PDF 4) and fixes it to trough V (PDF 5). Whether f rotates with the mold is unclear."
+      "function": "The metal mold shapes the pipe exterior and a sand mold forms its socket."
     },
     {
       "node_id": "delavaud-mold",
-      "function": "Metal mold in one or several joined pieces that forms the external surface of the pipe.",
-      "source_note": "Figures 1 and 5 show solid triangular projections on the outside. Their function is unspecified."
+      "function": "The metal mold forms the outside of the pipe."
     },
     {
       "node_id": "delavaud-sand-core",
-      "function": "Sand mold forming the inside of the pipe’s socket, the end that receives the next pipe’s smaller end.",
-      "source_note": "The sand mold is tooling used to cast the pipe."
+      "function": "The sand mold shapes the socket that receives the next pipe."
     },
     {
       "node_id": "delavaud-core-support",
-      "function": "Tubular metal piece supporting the sand socket mold, with flange c bearing against the mold’s end face.",
-      "source_note": ""
+      "function": "The metal support holds the socket mold in place."
     },
     {
       "node_id": "delavaud-cam-clamps",
-      "function": "Pivoted clamps with oppositely inclined outer faces that hold the core support in place in the mold.",
-      "source_note": "The specification calls for four clamps and illustrates one."
+      "function": "The clamps secure the socket mold’s support inside the larger mold."
     },
     {
       "node_id": "delavaud-cam-ring",
-      "function": "Ring surrounding the clamps that acts as a cam, tightening them when in its rearmost position.",
-      "source_note": ""
+      "function": "Sliding the ring back tightens the clamps."
     },
     {
       "node_id": "delavaud-end-ring",
-      "function": "Metal ring matching the mold’s internal diameter that molds one terminal face of the pipe.",
-      "source_note": "Blocks 15 hold the ring on trough V. It enters and leaves the shell with the trough."
+      "function": "The ring shapes one end face of the pipe."
     },
     {
       "node_id": "delavaud-support-drive",
-      "function": "Carries the shell on roller wheels and turns it, with bearings adjustable to the shell’s diameter.",
-      "source_note": ""
+      "function": "Rollers support and turn the mold during casting."
     },
     {
       "node_id": "delavaud-rollers",
-      "function": "Roller wheels on which the shell rests freely; flanges on the shell keep it from shifting lengthwise.",
-      "source_note": "Flanges 3a and 4a are on the shell."
+      "function": "The mold rests on the roller wheels as it turns."
     },
     {
       "node_id": "delavaud-axles",
-      "function": "Parallel axles carrying the roller wheels; axle 1 is driven through transmission 1a, while axle 2 only supports.",
-      "source_note": ""
+      "function": "One axle drives the rollers while the other provides support."
     },
     {
       "node_id": "delavaud-bearings",
-      "function": "Bearings for the axles, adjustable at right angles to them so the rollers suit the shell’s diameter.",
-      "source_note": ""
+      "function": "The bearings adjust the roller spacing to suit the mold diameter."
     },
     {
       "node_id": "delavaud-adjustment",
-      "function": "Endless screws 5a and 6a, turned by handwheels 7 and 8, set the positions of the bearings.",
-      "source_note": ""
+      "function": "The handwheels turn screws that reposition the axle bearings."
     },
     {
       "node_id": "delavaud-pour-carriage",
-      "function": "Moves the pouring trough into and out of the mold and supports it in position during casting.",
-      "source_note": ""
+      "function": "The carriage moves the pouring trough into and out of the mold."
     },
     {
       "node_id": "delavaud-trough",
-      "function": "Tubular trough with a long top opening and refractory lining, closed at the front and fed through a rear hopper.",
-      "source_note": "Bearings 21 and 22 allow it to tip and discharge the metal."
+      "function": "The lined trough tips molten metal into the mold."
     },
     {
       "node_id": "delavaud-carriage",
-      "function": "Car 10 supporting the trough’s rear end and running on guides parallel to the shell’s axis.",
-      "source_note": ""
+      "function": "The carriage supports the trough’s rear end and travels along the guides."
     },
     {
       "node_id": "delavaud-rails",
-      "function": "Guide lines 11, mounted in frame 11a, along which the carriage runs parallel to the shell axis.",
-      "source_note": ""
+      "function": "The guides keep the carriage moving parallel to the mold."
     },
     {
       "node_id": "delavaud-lead-screw",
-      "function": "Screw 12, turning in nut 13 fixed to the car, moves the trough forward and back.",
-      "source_note": "The patent gives few details about transmission 14."
+      "function": "The screw moves the carriage and its trough forward or back."
     },
     {
       "node_id": "delavaud-handwheel",
-      "function": "Handwheel 16 by which the lead screw can be turned to move the carriage.",
-      "source_note": "Figure 4 shows curved spokes."
+      "function": "Turning the handwheel moves the carriage through the lead screw."
     },
     {
       "node_id": "delavaud-support-arm",
-      "function": "Collapsible arm 25 whose opening 26 receives pin 27 on the trough, supporting the trough’s free end.",
-      "source_note": ""
+      "function": "The folding arm supports the free end of the trough."
     },
     {
       "node_id": "delavaud-latch",
-      "function": "Spring latch 28 holds the arm upright; pressing pedal 29 releases it to swing clear of the mold.",
-      "source_note": ""
+      "function": "Pressing the pedal releases the arm so it can swing clear."
     },
     {
       "node_id": "delavaud-ejector",
-      "function": "Temporary attachment fitted to the outer end of the trough to push the cast pipe out of the shell.",
-      "source_note": "The operator removes the attachment after use."
+      "function": "The attachment pushes the finished pipe out of the mold."
     },
     {
       "node_id": "delavaud-cooling",
-      "function": "Keeps the rotating shell cool during molding; the patent allows any suitable cooling means.",
-      "source_note": ""
+      "function": "Water sprays cool the rotating mold during casting."
     },
     {
       "node_id": "delavaud-spray-pipe",
-      "function": "Irrigating pipes 23 above the shell that squirt water onto it while the pipe is molded.",
-      "source_note": "The reconstruction shows the spray pipes. The water stream is omitted."
+      "function": "The perforated pipe sprays water onto the mold."
     },
     {
       "node_id": "delavaud-water-tank",
-      "function": "Tank 18 beneath the shell that collects the water sprayed by the irrigating pipes.",
-      "source_note": ""
+      "function": "The tank collects cooling water beneath the mold."
     },
     {
       "node_id": "delavaud-drain",
-      "function": "Drain outlet 19 through which water collected in tank 18 is discharged.",
-      "source_note": ""
+      "function": "The outlet drains water from the collecting tank."
     }
   ],
   "project_explanation": [
