@@ -7,6 +7,11 @@
     }
   }
 
+  const mast = document.querySelector('.mast');
+  const measureMast = () => document.documentElement.style.setProperty('--mast-height', mast.offsetHeight + 'px');
+  measureMast();
+  if (window.ResizeObserver) new ResizeObserver(measureMast).observe(mast);
+
   // The contents follow the reading position. Anchors and browser history stay native.
   const sections = Array.from(document.querySelectorAll(".unit-section[data-unit]"));
   if (!sections.length && document.body.dataset.unit) sections.push(document.body);
@@ -63,7 +68,7 @@
       let end = lessons.length;
       while (start < end) {
         const mid = Math.floor((start + end) / 2);
-        if (lessons[mid].startElement.getBoundingClientRect().top <= anchorInset) start = mid + 1;
+        if (lessons[mid].startElement.getBoundingClientRect().top <= anchorInset + 48) start = mid + 1;
         else end = mid;
       }
       const atEnd = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;

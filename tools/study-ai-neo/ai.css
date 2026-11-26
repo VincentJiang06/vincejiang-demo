@@ -1,89 +1,43 @@
-:root {
-  --paper:#f5f7f1; --surface:#fdfef9; --ink:#172f32; --deep:#153f43;
-  --faint:#435e5d; --green:#176a62; --mint:#d9e9db; --acid:#d4eaa2; --line:#c9d8cd;
-}
-:focus-visible {outline:3px solid #af5824;outline-offset:3px}
-.landing .hero {align-items:center}
-.hero .eyeline {flex-wrap:wrap;line-height:1.65}
-.hero-board {align-self:center;width:100%;color:#f7fbf2}
-.hero-board figcaption small {font-weight:500;font-size:13px;color:#cce3d5}
-.hero-board svg {display:block;width:100%;height:auto;border-radius:5px;background:#f8faf2;margin:8px 0}
-.hero-board p {min-height:4em;color:#e3eee5;font-size:14px;line-height:1.6;border-top:0;padding-top:0}
-.legend {display:flex;gap:15px;font-size:13px;color:#c9e7d4}
-.legend span+span {color:#f0c79d}
-.switches {display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 10px}
-.switches button,.expand,#magnifier button {border:1px solid var(--line);border-radius:5px;background:var(--surface);font:inherit;cursor:pointer;font-size:14px;min-height:34px;padding:4px 12px}
-.switches button[aria-pressed=true] {background:var(--deep);color:white;border-color:var(--deep)}
-.hero-board .switches button {background:transparent;color:#e1ece6;border-color:#77928a}
-.hero-board .switches button[aria-pressed=true] {background:#d4eaa2;border-color:#d4eaa2;color:#203d35}
-.card-top small {font-size:12px;font-weight:500;color:var(--faint)}
-.unit-card {border-top:3px solid #689988}
-.unit-card:nth-child(n+6):nth-child(-n+8){border-top-color:#627d96}
-.unit-card:nth-child(n+9){border-top-color:#a47951}
-.unit-card h3 {font-family:var(--serif);font-size:24px}
-.unit-card p {font-size:14px}
-.card-foot span {font-family:var(--mono);font-size:11px}
-.trace,.plot-panel,.bench:not(.hero-board),.applied {margin:20px 0;border:1px solid var(--line);border-radius:9px;background:var(--surface)}
-.trace {padding:14px 18px;background:#edf3e9}
-.trace figcaption,.plot-top h4,.trial h4 {font-size:16px;font-weight:700}
-.trace ol {list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:12px 0 0;padding:0;counter-reset:steps}
-.trace li {counter-increment:steps;border-left:1px solid #b8cebc;padding:0 12px;line-height:1.7;font-size:14px}
-.trace li:first-child {border:none;padding-left:0}
-.trace li::before {content:counter(steps,decimal-leading-zero);display:block;font:12px var(--mono);color:var(--green);padding-bottom:5px}
-.plot-panel {padding:15px 18px}
-.plot-top {display:flex;align-items:center;justify-content:space-between;gap:8px}
-.plot-panel svg,.zoom-body svg {display:block;width:100%;height:auto;max-height:292px;margin:11px auto;background:#f8faf2;border-radius:6px}
-.plot-panel figcaption,.zoom-body figcaption {font-size:14px;line-height:1.7;color:var(--faint)}
-.plot-panel .expand {font-size:13px;flex-shrink:0}
-table {width:100%;border-collapse:collapse;font-size:15px;line-height:1.65}
-.table-scroll {overflow:auto;max-width:100%;margin:14px 0;border:1px solid var(--line);border-radius:6px}
-td,th {padding:8px 11px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;min-width:4em;font-variant-numeric:tabular-nums}
-th {background:#e9f1e6;color:#1d4743;font-weight:700}
+/* Equations share the reader's text colour. KaTeX supplies the glyph metrics. */
+.inline-equation {display:inline-block;vertical-align:middle;max-width:100%;line-height:1.45}
+.inline-equation .katex {font-size:1.06em}
+.equation {overflow-x:auto;max-width:100%;padding:.75em .1em;margin:.9em 0;border-block:1px solid var(--line);font-size:1.04em;overscroll-behavior-inline:contain}
+.equation .katex-display {margin:.25em 0;text-align:left}
+.equation .katex-display>.katex {text-align:left;width:max-content;min-width:0;font-size:1.16em}
+.plot-panel,.trace,.bench:not(.hero-board),.applied {margin:1.4rem 0}
+.plot-panel,.bench:not(.hero-board),.applied {border:1px solid var(--line);padding:clamp(12px,2vw,21px)}
+.plot-top h4,.trial h4,.trace figcaption {font-size:1rem;line-height:1.55}
+.plot-panel svg,.hero-board svg,.zoom-body svg {display:block;width:100%;height:auto;max-height:300px;margin:10px auto;color:var(--ink);background:var(--paper)}
+.plot-panel figcaption,.zoom-body figcaption {font-size:.9rem;line-height:1.75;color:var(--secondary)}
+.trace figcaption {font-weight:700}
+.trace ol {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;list-style:none;counter-reset:step;padding:0;margin:.65rem 0}
+.trace li {border-top:1px solid var(--line);counter-increment:step;font-size:.91rem;line-height:1.7;padding-top:.4em}
+.trace li::before {content:counter(step) ".";display:block;font-size:.82rem;color:var(--secondary)}
+.table-scroll {max-width:100%;overflow:auto;margin:1em 0;overscroll-behavior-inline:contain;border-block:1px solid var(--line)}
+table {width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:.94rem;line-height:1.7}
+td,th {text-align:left;vertical-align:top;padding:.55em .7em;border-bottom:1px solid var(--line)}
+th {background:var(--wash);font-weight:650}
 tr:last-child td {border-bottom:0}
-.katex {white-space:normal;font-size:1.02em}
-.katex math {max-width:100%;overflow-x:auto;vertical-align:middle}
-.bench:not(.hero-board),.applied {padding:18px 20px}
-.bench:not(.hero-board) .switches {margin:0 0 14px}
-.trial+.trial {margin-top:12px}
-.trial[hidden]+.trial {margin-top:0}
-.trial .result {color:var(--green);font-weight:650}
-.applied {background:#f4efe2;border-color:#dbcfb4}
-.applied h4 {font:700 24px/1.5 var(--serif);margin:4px 0}
-.applied ol {margin:9px 0 0;padding-left:1.5em}
-.applied li {padding:3px 0 3px 3px;line-height:1.85}
-#magnifier {width:min(95vw,1000px);max-height:91vh;max-height:91dvh;padding:20px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
-#magnifier::backdrop {background:#102a2bd1}
-#magnifier form {display:flex;justify-content:space-between;align-items:center;gap:12px}
-.zoom-body svg {max-height:68vh}
-@media(max-width:740px){
-  .hero-board p {min-height:auto}
-  .lesson>h3 {font-size:clamp(26px,6.8vw,34px)}
-  .trace ol {grid-template-columns:1fr;gap:8px}
-  .trace li,.trace li:first-child {border:none;display:grid;grid-template-columns:26px 1fr;gap:8px;padding:0}
-  .trace li::before {padding:5px 0 0}
-  .plot-panel,.bench:not(.hero-board),.applied {padding:12px}
-  .unit-card h3 {font-size:19px}
-  .table-scroll {overscroll-behavior-inline:contain}
-  td,th {padding:6px 8px}
-  .hero-copy .eyeline {font-size:10px}
-  .plot-panel svg {min-height:95px}
-}
-@media(max-width:430px){
-  .card-foot {font-size:11px}
-  .unit-card {min-height:0}
-  .unit-card p {font-size:13px}
-  .hero h1 {font-size:clamp(36px,9vw,43px)}
-  .eyeline {letter-spacing:.05em}
-  .hero-actions {gap:12px}
+.switches {display:flex;gap:7px;flex-wrap:wrap;margin:.75em 0}
+.switches button,.expand {font-size:.86rem;min-height:34px}
+.switches button[aria-pressed=true] {background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.trial .result {font-weight:650}
+.trial+.trial {margin-top:12px}.trial[hidden]+.trial {margin-top:0}
+.applied h4,.case-study h4 {font-size:clamp(1.28rem,2.3vw,1.7rem);margin:.25em 0}
+.applied ol {padding-left:1.5em}
+.hook {margin:1em 0}
+.case-study {border-top:1px solid var(--ink);margin-top:1.8rem;padding-top:1rem}
+.case-related {font-size:.9rem}
+#magnifier {width:min(95vw,960px)}
+.zoom-body svg {max-height:65dvh}
+@media(max-width:760px) {
+  .trace ol {grid-template-columns:1fr;gap:6px}
+  .trace li {display:grid;grid-template-columns:1.4em 1fr;gap:.2em}
+  .table-scroll th,.table-scroll td {min-width:4.25em;padding:.45em .55em}
+  .equation {font-size:1rem}
 }
 @media print {
-  .switches,.expand {display:none}
   .trial[hidden] {display:block!important}
-  .plot-panel,.trace,.trial {break-inside:avoid}
+  .trace,.plot-panel,.trial,.equation {break-inside:avoid}
+  .equation {overflow:visible}
 }
-
-.case-study {border-top:2px solid var(--green);margin-top:28px;padding:20px 0 4px;scroll-margin-top:16px}
-.case-study h4 {font:700 clamp(21px,3vw,30px)/1.45 var(--serif);margin:6px 0 14px}
-.guide-refs a {text-decoration:underline;text-underline-offset:.22em}
-#contents a strong {font-weight:650}
-@media(max-width:740px){.mast nav .mast-labs {display:none}}
