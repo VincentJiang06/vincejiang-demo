@@ -34,10 +34,12 @@
       "year": 1907,
       "type": "primary",
       "url": "https://archive.org/download/americanpublicwo00amer/americanpublicwo00amer.pdf",
-      "reference_url": "https://archive.org/details/americanpublicwo00amer/page/23/mode/1up",
+      "reference_url": "https://archive.org/details/americanpublicwo00amer",
       "short_citation": "American Public Works Association 1907",
       "locator": "Membership list, p. 7 (PDF 13); Atlanta convention attendance register, p. 23 (PDF 29).",
-      "reference": "American Public Works Association. 1907. Second Convention, Atlanta, Ga., September 14th and 15th, 1906. LaHatte Printing & Stationery Co."
+      "reference": "American Public Works Association. 1907. Second Convention, Atlanta, Ga., September 14th and 15th, 1906. LaHatte Printing & Stationery Co.",
+      "italic_title": "Second Convention, Atlanta, Ga., September 14th and 15th, 1906",
+      "pdf_page_offset": 6
     },
     {
       "id": "bonsack1881",
@@ -46,9 +48,10 @@
       "year": 1881,
       "type": "primary",
       "url": "https://patentimages.storage.googleapis.com/c8/ea/24/463c1e13d10bd7/US238640.pdf",
-      "locator": "Sheets 1–5 (PDF pp.1–5); specification PDF pp.6–10",
+      "locator": "Drawing sheets 1–5 (PDF pp. 1–5). Specification and claims, 1–5 (PDF pp. 6–10).",
       "reference": "Bonsack, James A. 1881. “Cigarette Machine.” U.S. Patent 238,640, filed September 4, 1880, and issued March 8, 1881.",
-      "reference_url": "https://patents.google.com/patent/US238640A/en"
+      "reference_url": "https://patents.google.com/patent/US238640A/en",
+      "short_citation": "Bonsack 1881"
     },
     {
       "id": "draper1905",
@@ -57,9 +60,12 @@
       "year": 1905,
       "type": "primary",
       "url": "https://archive.org/download/laborsavinglooms02drap/laborsavinglooms02drap.pdf",
-      "locator": "pp.39–71, 82, 86, 151–162; PDF pp.229, 232–233, 235–237",
+      "locator": "Mechanism and parts, 39–71, 82, 86, 151–62. Sales and customers, 225, 228–29, 231–33 (PDF pp. 229, 232–33, 235–37).",
       "reference": "Draper, George Otis. 1905. Labor-Saving Looms: A Brief Treatise on Plain Weaving and the Recent Improvements in That Line, with Special Reference to the Northrop Looms Manufactured by Draper Company, Hopedale, Mass., U.S.A. 2nd ed. Draper Company.",
-      "reference_url": "https://archive.org/download/laborsavinglooms02drap/laborsavinglooms02drap.pdf"
+      "reference_url": "https://archive.org/download/laborsavinglooms02drap/laborsavinglooms02drap.pdf",
+      "short_citation": "Draper 1905",
+      "italic_title": "Labor-Saving Looms: A Brief Treatise on Plain Weaving and the Recent Improvements in That Line, with Special Reference to the Northrop Looms Manufactured by Draper Company, Hopedale, Mass., U.S.A.",
+      "pdf_page_offset": 4
     },
     {
       "id": "mitchell1918",
@@ -68,9 +74,12 @@
       "year": 1918,
       "type": "secondary",
       "url": "https://archive.org/download/riseofcottonmill00mitc/riseofcottonmill00mitc.pdf",
-      "locator": "pp.132–181, 202–215",
-      "reference": "Mitchell, Broadus. 1918. The Rise of Cotton Mills in the South. PhD diss., Johns Hopkins University.",
-      "reference_url": "https://archive.org/download/riseofcottonmill00mitc/riseofcottonmill00mitc.pdf"
+      "locator": "Printed pages 132–81 and 202–15, including 203 and 212–13 on machinery bought partly with shares.",
+      "reference": "Mitchell, Broadus. 1918. “The Rise of Cotton Mills in the South.” PhD diss., Johns Hopkins University.",
+      "reference_url": "https://archive.org/download/riseofcottonmill00mitc/riseofcottonmill00mitc.pdf",
+      "short_citation": "Mitchell 1918",
+      "pdf_page_offset": 15,
+      "pdf_page_scale": 2
     },
     {
       "id": "us-pipe-haer",
@@ -79,9 +88,12 @@
       "year": 1996,
       "type": "secondary",
       "url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/al/al1000/al1007/data/al1007data.pdf",
-      "locator": "pp.2–32",
+      "locator": "Printed pages 2–32. Casting rights, plant trials, and rival processes, 24, 27–32.",
       "reference": "O’Connor, Richard. 1996. United States Pipe and Foundry Company. HAER No. AL-32. Historic American Engineering Record, National Park Service.",
-      "reference_url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/al/al1000/al1007/data/al1007data.pdf"
+      "reference_url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/al/al1000/al1007/data/al1007data.pdf",
+      "short_citation": "O’Connor 1996",
+      "italic_title": "United States Pipe and Foundry Company",
+      "pdf_page_offset": 2
     },
     {
       "id": "porter1969",
@@ -90,9 +102,12 @@
       "year": 1969,
       "type": "secondary",
       "url": "https://people.duke.edu/~rcd2/Dissertation/References/Tobacco%20Specific/Company%20Specific/3111987.pdf",
-      "locator": "pp.59–76",
+      "locator": "Printed pages 59–76. Sales offices and mechanization, 64, 66–68.",
       "reference": "Porter, Patrick G. 1969. “Origins of the American Tobacco Company.” Business History Review 43 (1): 59–76.",
-      "reference_url": "https://doi.org/10.2307/3111987"
+      "reference_url": "https://doi.org/10.2307/3111987",
+      "short_citation": "Porter 1969",
+      "italic_title": "Business History Review",
+      "pdf_page_offset": -57
     },
     {
       "id": "bls1947",
@@ -102,8 +117,11 @@
       "type": "mixed",
       "url": "https://fraser.stlouisfed.org/files/docs/publications/bls/bls_0898_1947.pdf",
       "locator": "6–7, 9, tables 1–3. The tables reproduce manufacturing census figures. Poulton’s interpretation is secondary.",
-      "reference": "Poulton, Edgar E. 1947. “The Rise of Industry in the South.” In Labor in the South, 3–15. Bulletin 898. U.S. Bureau of Labor Statistics. U.S. Government Printing Office.",
-      "reference_url": "https://fraser.stlouisfed.org/files/docs/publications/bls/bls_0898_1947.pdf"
+      "reference": "Poulton, Edgar E. 1947. “The Rise of Industry in the South.” In Labor in the South, 3–15. U.S. Bureau of Labor Statistics Bulletin 898. U.S. Government Printing Office.",
+      "reference_url": "https://fraser.stlouisfed.org/files/docs/publications/bls/bls_0898_1947.pdf",
+      "short_citation": "Poulton 1947",
+      "italic_title": "Labor in the South",
+      "pdf_page_offset": 6
     },
     {
       "id": "delavaud1916",
@@ -112,20 +130,22 @@
       "year": 1916,
       "type": "primary",
       "url": "https://patentimages.storage.googleapis.com/e4/09/d0/b4b54e8a97505a/US1199353.pdf",
-      "locator": "Sheets 1–3 (PDF pp.1–3); specification and claims PDF pp.4–7",
+      "locator": "Drawing sheets 1–3 (PDF pp. 1–3). Specification and claims, 1–4 (PDF pp. 4–7).",
       "reference": "Sensaud de Lavaud, Dimitri, and Fernando Arens Jr. 1916. “Machine for Molding Metallic Tubes by Centrifugal Force.” U.S. Patent 1,199,353, filed November 6, 1915, and issued September 26, 1916.",
-      "reference_url": "https://patents.google.com/patent/US1199353A/en"
+      "reference_url": "https://patents.google.com/patent/US1199353A/en",
+      "short_citation": "Sensaud de Lavaud and Arens 1916"
     },
     {
       "id": "sutthiphisal2006",
       "author": "Dhanoos Sutthiphisal",
-      "title": "Learning-by-Producing and the Geographic Links between Invention and Production, NBER WP 12469",
+      "title": "Learning-by-Producing and the Geographic Links Between Invention and Production, NBER WP 12469",
       "year": 2006,
       "type": "secondary",
       "url": "https://www.nber.org/system/files/working_papers/w12469/w12469.pdf",
-      "locator": "PDF 10–21, 27, 47–48",
-      "reference": "Sutthiphisal, Dhanoos. 2006. “Learning-by-Producing and the Geographic Links between Invention and Production: Experience from the Second Industrial Revolution.” NBER Working Paper 12469. National Bureau of Economic Research.",
-      "reference_url": "https://doi.org/10.3386/w12469"
+      "locator": "PDF pp. 12, 19–21, 29 (appendix 1-A), and 47 (table 8).",
+      "reference": "Sutthiphisal, Dhanoos. 2006. “Learning-by-Producing and the Geographic Links Between Invention and Production: Experience from the Second Industrial Revolution.” NBER Working Paper 12469. National Bureau of Economic Research.",
+      "reference_url": "https://doi.org/10.3386/w12469",
+      "short_citation": "Sutthiphisal 2006"
     }
   ],
   "maps": {
@@ -138,7 +158,7 @@
       "title": "Cotton spinning capacity, 1899–1929",
       "caption": "Circle area represents active cotton spindles on the same scale in all four maps. The legend uses one million spindles as a reference. New England appears as a regional total. Florida has no separate observation in any of the four years. The state figures and the US totals appear in the economic tables.",
       "limit": "Poulton 1947, 9, table 3 (PDF 15). These are equipment counts. The 1899 coverage includes 413,032 spindles outside cotton mills. No separate Florida figure is reported. In 1929 the eight listed states sum to 17,843,861 spindles and the published Southeast total is 17,843,852. The regional ratio uses the published total.",
-      "data_note": "Sutthiphisal 2006, PDF 12, 20, 29. The shares use the study’s definitions of national textile employment and selected patents. Textiles include more than cotton. The patent series captures only innovations in the selected classes. The study’s fourteen-state South differs from both Poulton regions."
+      "data_note": "Sutthiphisal 2006, PDF pp. 12, 20, 29 (appendix 1-A), 47 (table 8). The shares use the study’s definitions of national textile employment and selected patents. Textiles include more than cotton. The patent series captures only innovations in the selected classes. The study’s fourteen-state South differs from both Poulton regions."
     },
     "textile-1905": {
       "title": "Draper’s mill customers, 1905",
@@ -559,18 +579,18 @@
   ],
   "project_explanation": [
     "The course moves from emancipation and Reconstruction (Galvan and Muñoz 2026, week 3) to the rise of the New South. Georgia and the Carolinas overtook New England in textile production (Muñoz 2026, slide 4). Who supplied the machines in those Southern mills? The thirteen-state South’s share of US manufacturing wage earners rose from 7.7 percent in 1880 to 15.2 percent in 1929 (Poulton 1947, 7, table 2). Factory jobs and machine design followed different paths. Some South Carolina mills relied on Massachusetts loom makers, while a Birmingham foundry developed its own casting process.",
-    "A cotton mill could pay a machinery supplier partly in shares (Mitchell 1918, 205–15). Draper’s catalog lists mills in Gaffney and Pelzer, South Carolina, among its customers. The exhibit pairs a catalog drawing with a reconstruction to show how the Northrop loom fed a fresh bobbin into the same shuttle (Draper 1905, 49, 57, 59 and PDF 229, 233, 236). In Sutthiphisal’s 1910 sample, Massachusetts accounted for about 42 percent of US textile patents, compared with 7 percent in the study’s fourteen-state South (Sutthiphisal 2006, PDF 12–15, 19–20). Ordering a loom could expand weaving in South Carolina while providing work for a machine builder in Massachusetts.",
-    "Two Birmingham pipe makers took different routes to centrifugal casting. The register of the 1906 Atlanta convention lists a representative of the American Cast Iron Pipe Company (American Public Works Association 1907, 7, 23). The register places the firm in a trade association. O’Connor traces its technical work to experiments with a sand-lined mold at its Birmingham works. A rival, United States Cast Iron Pipe & Foundry, acquired US rights to a different process. The patent drawing shows how molten iron entered a revolving mold (Sensaud de Lavaud and Arens 1916, fig. 1). O’Connor’s plant history shows that the rival introduced this process at Burlington, New Jersey, before Birmingham (O’Connor 1996, 24–32).",
-    "In Durham, James Duke built a national cigarette business with machinery he leased. Bonsack’s patent describes a machine that wrapped tobacco in a continuous paper tube and cut it into cigarettes (Bonsack 1881, specification 1). Duke employed mechanics to improve the machines and negotiated a lower rate per thousand cigarettes than the supplier offered his competitors (Porter 1969, 64–74). The lease lowered Duke’s costs. His firm could use that advantage because its mechanics kept the machines running and its sales offices found buyers for their output.",
+    "A cotton mill could pay a machinery supplier partly in shares (Mitchell 1918, 203, 212–13). Draper’s catalog lists mills in Gaffney and Pelzer, South Carolina, among its customers (Draper 1905, 229, 232). The exhibit pairs a catalog drawing with a reconstruction to show how the Northrop loom fed a fresh bobbin into the same shuttle (Draper 1905, 49, 53, 57). In Sutthiphisal’s 1910 sample, Massachusetts accounted for about 42 percent of US textile patents, compared with 7 percent in the study’s fourteen-state South (Sutthiphisal 2006, PDF pp. 20, 29 [app. 1-A], 47 [table 8]). Ordering a loom could expand weaving in South Carolina while providing work for a machine builder in Massachusetts.",
+    "Two Birmingham pipe makers took different routes to centrifugal casting. The register of the 1906 Atlanta convention lists a representative of the American Cast Iron Pipe Company (American Public Works Association 1907, 7, 23). The register places the firm in a trade association. O’Connor traces its technical work to experiments with a sand-lined mold at its Birmingham works. A rival, United States Cast Iron Pipe & Foundry, acquired US rights to a different process (O’Connor 1996, 24, 30–31). The patent drawing shows how molten iron entered a revolving mold (Sensaud de Lavaud and Arens 1916, fig. 1 and specification, 1). O’Connor’s plant history shows that the rival introduced this process at Burlington, New Jersey, before Birmingham (O’Connor 1996, 29).",
+    "In Durham, James Duke built a national cigarette business with machinery he leased. Bonsack’s patent describes a machine that wrapped tobacco in a continuous paper tube and cut it into cigarettes (Bonsack 1881, specification, 1). Duke employed mechanics to improve the machines and negotiated a lower rate per thousand cigarettes than the supplier offered his competitors (Porter 1969, 68). The lease lowered Duke’s costs. His firm could use that advantage because its mechanics kept the machines running and its sales offices found buyers for their output (Porter 1969, 64, 66–68).",
     "A factory announcement today tells us where a company expects to employ workers. To judge whether it will also support local design work, we need to know who can change the machinery, pay for a trial and decide where to use the result."
   ],
   "course_materials": [
-    "Galvan, Arantxa, and Marco Muñoz. 2026. “Issues in American Culture and History.” Fall 2026 GENA2122 syllabus, Chinese University of Hong Kong.",
-    "Muñoz, Marco Gabriell. 2026. “American Empire and Industrialization.” GENA2122 Lecture IV, Chinese University of Hong Kong. Slide 4, “The ‘New’ (‘Rebuilt’) South.”"
+    "Galvan, Arantxa, and Marco Muñoz. 2026. “Issues in American Culture and History.” GENA2122 course syllabus, The Chinese University of Hong Kong, Fall 2026.",
+    "Muñoz, Marco Gabriell. 2026. “American Empire and Industrialization.” GENA2122 lecture IV slides, The Chinese University of Hong Kong, Fall 2026."
   ],
   "assistance": [
-    "I conducted my own historical research for this project. I selected the sources and decided how to interpret the evidence in the cotton, cast-iron pipe, and cigarette cases. I take responsibility for every argument and for the final wording of the exhibition and the project explanation.",
-    "I used GPT for background research, some source searches, and checks of data and citations. Claude drafted early versions of the exhibition text and project explanation. GPT revised the English and helped write some of the comparisons.",
-    "I wrote the prompts that guided Claude and GPT in designing and coding the website. GPT prepared the maps and tables and tested the site. The machine reconstructions were generated with OpenAI’s image tool. The catalog and patent drawings are historical sources."
+    "I wanted to know who made the looms that South Carolina mills were buying. Draper’s customer list connected two mills, in Gaffney and Pelzer, to a manufacturer in Massachusetts. Across all three cases, I chose the sources and decided how to interpret them. Every argument is mine, and I take responsibility for the final wording of the exhibition and this paper.",
+    "GPT helped me find background material and some of the sources, and I used it to check figures and citations. Claude wrote early drafts of the exhibition and this paper. GPT helped draft passages comparing the industries and edited the English, including this statement.",
+    "I wrote the prompts for the design and code that Claude and GPT produced for the site. GPT built the maps and tables and tested the site. The machine views pair drawings from the catalog and patents with reconstructions made using OpenAI’s image tool."
   ]
 }

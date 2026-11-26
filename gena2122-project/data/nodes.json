@@ -58,7 +58,7 @@
     "source_id": "draper1905",
     "render": "REUSE",
     "chain": true,
-    "locator": "Printed 49, 59 (left drawing) · PDF 63 · Image northrop-shuttle-body",
+    "locator": "Printed 49, 59 (left drawing) · PDF 53, 63 · Image northrop-shuttle-body",
     "figure": "assets/northrop-shuttles59.webp",
     "pdf_page": 63,
     "bbox": [
@@ -71,7 +71,9 @@
     "asset": "assets/northrop-shuttle-body.webp",
     "figure_width": 1181,
     "figure_height": 1800,
-    "also_pdf_pages": [],
+    "also_pdf_pages": [
+      53
+    ],
     "image_width": 2172,
     "image_height": 724
   },
@@ -182,7 +184,7 @@
     "render": "IMG",
     "chain": false,
     "assembly_kind": "teaching functional group",
-    "locator": "Printed 49, 52, 57, 82 · PDF 53, 56, 61, 86 · Image v2-N07",
+    "locator": "Printed 49, 52 (A-model action), 57, 82 (E model) · PDF 53, 56, 61, 86 · Image v2-N07",
     "figure": "assets/northrop-transfer52.webp",
     "pdf_page": 56,
     "bbox": [
@@ -211,7 +213,7 @@
     "source_id": "draper1905",
     "render": "HS",
     "chain": false,
-    "locator": "Printed 46–49, 82 · PDF 53, 86",
+    "locator": "Printed 46–49, 82 · PDF 50–53, 86",
     "figure": "assets/northrop-e82.webp",
     "pdf_page": 86,
     "bbox": [
@@ -224,6 +226,9 @@
     "figure_width": 1181,
     "figure_height": 1800,
     "also_pdf_pages": [
+      50,
+      51,
+      52,
       53
     ]
   },
@@ -254,7 +259,7 @@
     "source_id": "draper1905",
     "render": "HS",
     "chain": false,
-    "locator": "Printed 49, 57 (A), 155–156 · PDF 53, 61",
+    "locator": "Printed 49, 57 (A), 155–156 · PDF 53, 61, 159–160",
     "figure": "assets/northrop-page57.webp",
     "pdf_page": 61,
     "bbox": null,
@@ -262,7 +267,9 @@
     "figure_width": 1181,
     "figure_height": 1800,
     "also_pdf_pages": [
-      53
+      53,
+      159,
+      160
     ]
   },
   {
@@ -273,16 +280,14 @@
     "source_id": "draper1905",
     "render": "TXT",
     "chain": false,
-    "locator": "Printed 57 (B, C, E) (text) · PDF 53, 61",
+    "locator": "Printed 57 (rod B, latch C, and detector linkage E) · PDF 61",
     "figure": "assets/northrop-page57.webp",
     "pdf_page": 61,
     "bbox": null,
     "evidence_type": "text",
     "figure_width": 1181,
     "figure_height": 1800,
-    "also_pdf_pages": [
-      53
-    ]
+    "also_pdf_pages": []
   },
   {
     "id": "northrop-warp-stop",
@@ -312,16 +317,14 @@
     "source_id": "draper1905",
     "render": "SCH",
     "chain": false,
-    "locator": "Printed 65 (text) · PDF 69, 86",
+    "locator": "Printed 65 (text) · PDF 69",
     "figure": "assets/northrop-warpstop65.webp",
     "pdf_page": 69,
     "bbox": null,
     "evidence_type": "text",
     "figure_width": 1005,
     "figure_height": 1533,
-    "also_pdf_pages": [
-      86
-    ]
+    "also_pdf_pages": []
   },
   {
     "id": "northrop-bars",
@@ -331,16 +334,14 @@
     "source_id": "draper1905",
     "render": "SCH",
     "chain": false,
-    "locator": "Printed 65 (text) · PDF 69, 86",
+    "locator": "Printed 65 (text) · PDF 69",
     "figure": "assets/northrop-warpstop65.webp",
     "pdf_page": 69,
     "bbox": null,
     "evidence_type": "text",
     "figure_width": 1005,
     "figure_height": 1533,
-    "also_pdf_pages": [
-      86
-    ]
+    "also_pdf_pages": []
   },
   {
     "id": "northrop-vibrator",
@@ -350,16 +351,14 @@
     "source_id": "draper1905",
     "render": "SCH",
     "chain": false,
-    "locator": "Printed 65 (text) · PDF 69, 86",
+    "locator": "Printed 65 (text) · PDF 69",
     "figure": "assets/northrop-warpstop65.webp",
     "pdf_page": 69,
     "bbox": null,
     "evidence_type": "text",
     "figure_width": 1005,
     "figure_height": 1533,
-    "also_pdf_pages": [
-      86
-    ]
+    "also_pdf_pages": []
   },
   {
     "id": "northrop-lay",
@@ -370,7 +369,7 @@
     "render": "HS",
     "chain": false,
     "assembly_kind": "teaching functional group",
-    "locator": "Printed 156–160 (text) · PDF 160–161",
+    "locator": "Printed 156–160 (text) · PDF 160–164",
     "figure": "assets/northrop-page156.webp",
     "pdf_page": 160,
     "bbox": null,
@@ -378,7 +377,10 @@
     "figure_width": 1181,
     "figure_height": 1800,
     "also_pdf_pages": [
-      161
+      161,
+      162,
+      163,
+      164
     ]
   },
   {
@@ -408,7 +410,7 @@
     "source_id": "draper1905",
     "render": "HS",
     "chain": false,
-    "locator": "Printed 157–159 (text) · PDF 161–162",
+    "locator": "Printed 157–159 (text) · PDF 161–163",
     "figure": "assets/northrop-page157.webp",
     "pdf_page": 161,
     "bbox": null,
@@ -416,7 +418,8 @@
     "figure_width": 1181,
     "figure_height": 1800,
     "also_pdf_pages": [
-      162
+      162,
+      163
     ]
   },
   {
@@ -447,7 +450,7 @@
     "render": "HS",
     "chain": false,
     "assembly_kind": "teaching functional group",
-    "locator": "Printed 82, 153–154 (text) · PDF 157–158",
+    "locator": "Printed 82, 153–154 (text) · PDF 86, 157–158",
     "figure": "assets/northrop-page153.webp",
     "pdf_page": 157,
     "bbox": null,
@@ -455,6 +458,7 @@
     "figure_width": 1181,
     "figure_height": 1800,
     "also_pdf_pages": [
+      86,
       158
     ]
   },
@@ -485,7 +489,7 @@
     "source_id": "draper1905",
     "render": "TXT",
     "chain": false,
-    "locator": "Printed 153–155 (text) · PDF 157–158",
+    "locator": "Printed 153–155 (text) · PDF 157–159",
     "figure": "assets/northrop-page153.webp",
     "pdf_page": 157,
     "bbox": null,
@@ -493,7 +497,8 @@
     "figure_width": 1181,
     "figure_height": 1800,
     "also_pdf_pages": [
-      158
+      158,
+      159
     ]
   },
   {
@@ -504,16 +509,14 @@
     "source_id": "draper1905",
     "render": "TXT",
     "chain": false,
-    "locator": "Printed 153 (text) · PDF 157–158",
+    "locator": "Printed 153 (text) · PDF 157",
     "figure": "assets/northrop-page153.webp",
     "pdf_page": 157,
     "bbox": null,
     "evidence_type": "text",
     "figure_width": 1181,
     "figure_height": 1800,
-    "also_pdf_pages": [
-      158
-    ]
+    "also_pdf_pages": []
   },
   {
     "id": "northrop-cloth-roll",
@@ -543,7 +546,7 @@
     "render": "HS",
     "chain": false,
     "assembly_kind": "teaching functional group",
-    "locator": "Printed 82, 86 · PDF 86, 90, 97",
+    "locator": "Printed 82, 86, 93 · PDF 86, 90, 97",
     "figure": "assets/northrop-e82.webp",
     "pdf_page": 86,
     "bbox": [
@@ -568,7 +571,7 @@
     "source_id": "draper1905",
     "render": "HS",
     "chain": false,
-    "locator": "Printed 82 · PDF 86, 90, 97",
+    "locator": "Printed 82 · PDF 86",
     "figure": "assets/northrop-e82.webp",
     "pdf_page": 86,
     "bbox": [
@@ -580,10 +583,7 @@
     "evidence_type": "catalog",
     "figure_width": 1181,
     "figure_height": 1800,
-    "also_pdf_pages": [
-      90,
-      97
-    ]
+    "also_pdf_pages": []
   },
   {
     "id": "northrop-pulley",
@@ -593,7 +593,7 @@
     "source_id": "draper1905",
     "render": "HS",
     "chain": false,
-    "locator": "Printed 82, 86 · PDF 86, 90, 97",
+    "locator": "Printed 82, 86, 93 · PDF 86, 90, 97",
     "figure": "assets/northrop-e82.webp",
     "pdf_page": 86,
     "bbox": [
@@ -688,7 +688,7 @@
     "render": "IMG",
     "chain": true,
     "assembly_kind": "teaching functional group",
-    "locator": "Figs. 3–7. Claims 5–7 · PDF 3–4, 7, 9–10 · Image v2-B02",
+    "locator": "Figs. 3–7 and claims 5–7 · PDF 3–4, 7, 9 · Image v2-B02",
     "figure": "assets/bonsack-04.webp",
     "pdf_page": 4,
     "bbox": [
@@ -704,8 +704,7 @@
     "also_pdf_pages": [
       3,
       7,
-      9,
-      10
+      9
     ],
     "image_width": 2172,
     "image_height": 724
@@ -718,7 +717,7 @@
     "source_id": "bonsack1881",
     "render": "IMG",
     "chain": true,
-    "locator": "Fig. 4 and upper part of Fig. 5. Claim 5 · PDF 4, 7 · Image v2-B03",
+    "locator": "Fig. 4, upper part of fig. 5, and claim 5 · PDF 4, 7, 9 · Image v2-B03",
     "figure": "assets/bonsack-04.webp",
     "pdf_page": 4,
     "bbox": [
@@ -732,7 +731,8 @@
     "figure_width": 1226,
     "figure_height": 1800,
     "also_pdf_pages": [
-      7
+      7,
+      9
     ],
     "image_width": 2172,
     "image_height": 724
@@ -745,7 +745,7 @@
     "source_id": "bonsack1881",
     "render": "IMG",
     "chain": true,
-    "locator": "Figs. 5 (lower part), 6, 7. Claim 6 · PDF 4, 7, 9–10 · Image v2-B04",
+    "locator": "Lower part of fig. 5, figs. 6–7, and claim 6 · PDF 4, 7, 9 · Image v2-B04",
     "figure": "assets/bonsack-04.webp",
     "pdf_page": 4,
     "bbox": [
@@ -760,8 +760,7 @@
     "figure_height": 1800,
     "also_pdf_pages": [
       7,
-      9,
-      10
+      9
     ],
     "image_width": 2172,
     "image_height": 724
@@ -802,7 +801,7 @@
     "render": "IMG",
     "chain": false,
     "assembly_kind": "teaching functional group",
-    "locator": "Figs. 3, 10, 16. Claim 9 · PDF 3–5, 8 · Image v2-B06",
+    "locator": "Figs. 3, 10, 16 and claim 9 · PDF 3–5, 8–9 · Image v2-B06",
     "figure": "assets/bonsack-03.webp",
     "pdf_page": 3,
     "bbox": [
@@ -818,7 +817,8 @@
     "also_pdf_pages": [
       4,
       5,
-      8
+      8,
+      9
     ],
     "image_width": 1024,
     "image_height": 1536
@@ -857,7 +857,7 @@
     "source_id": "bonsack1881",
     "render": "HS",
     "chain": false,
-    "locator": "Fig. 3 (I², I³). Claim 9 · PDF 3, 8, 10",
+    "locator": "Fig. 3 (I², I³) and claim 9 · PDF 3, 8–9",
     "figure": "assets/bonsack-03.webp",
     "pdf_page": 3,
     "bbox": [
@@ -871,7 +871,7 @@
     "figure_height": 1800,
     "also_pdf_pages": [
       8,
-      10
+      9
     ]
   },
   {
@@ -882,7 +882,7 @@
     "source_id": "bonsack1881",
     "render": "HS",
     "chain": false,
-    "locator": "Fig. 3 (I⁴, I⁵). Claim 9 · PDF 3, 8, 10",
+    "locator": "Fig. 3 (I⁴, I⁵) and claim 9 · PDF 3, 8–9",
     "figure": "assets/bonsack-03.webp",
     "pdf_page": 3,
     "bbox": [
@@ -896,7 +896,7 @@
     "figure_height": 1800,
     "also_pdf_pages": [
       8,
-      10
+      9
     ]
   },
   {
@@ -907,7 +907,7 @@
     "source_id": "bonsack1881",
     "render": "REUSE",
     "chain": false,
-    "locator": "Fig. 3 (I⁶). Claim 9 · PDF 3, 8, 10",
+    "locator": "Fig. 3 (I⁶) and claim 9 · PDF 3, 8–9",
     "figure": "assets/bonsack-03.webp",
     "pdf_page": 3,
     "bbox": [
@@ -921,7 +921,7 @@
     "figure_height": 1800,
     "also_pdf_pages": [
       8,
-      10
+      9
     ]
   },
   {
@@ -932,7 +932,7 @@
     "source_id": "bonsack1881",
     "render": "HS",
     "chain": false,
-    "locator": "Fig. 3 (I⁷, I⁸, I⁹). Claim 9 · PDF 3, 8, 10",
+    "locator": "Fig. 3 (I⁷, I⁸, I⁹) and claim 9 · PDF 3, 8–9",
     "figure": "assets/bonsack-03.webp",
     "pdf_page": 3,
     "bbox": [
@@ -946,7 +946,7 @@
     "figure_height": 1800,
     "also_pdf_pages": [
       8,
-      10
+      9
     ]
   },
   {
@@ -1127,7 +1127,7 @@
     "source_id": "bonsack1881",
     "render": "TXT",
     "chain": false,
-    "locator": "Specification, PDF 7 · PDF 2–3, 7",
+    "locator": "Fig. 2 and specification, 2 · PDF 2, 7",
     "figure": "assets/bonsack-text7.webp",
     "pdf_page": 7,
     "bbox": null,
@@ -1135,8 +1135,7 @@
     "figure_width": 1226,
     "figure_height": 1800,
     "also_pdf_pages": [
-      2,
-      3
+      2
     ]
   },
   {
@@ -1169,7 +1168,7 @@
     "render": "SCAN",
     "chain": false,
     "assembly_kind": "teaching functional group",
-    "locator": "Figs. 4, 8–11½. Claim 8 · PDF 3–4, 7–8, 10",
+    "locator": "Figs. 3–4, 8–11½ and claim 8 · PDF 3–4, 7–9",
     "figure": "assets/bonsack-04.webp",
     "pdf_page": 4,
     "bbox": null,
@@ -1180,7 +1179,7 @@
       3,
       7,
       8,
-      10
+      9
     ]
   },
   {
@@ -1191,7 +1190,7 @@
     "source_id": "bonsack1881",
     "render": "SCAN",
     "chain": false,
-    "locator": "Figs. 4, 8–11½ (G′, a′, b′). Claim 8 · PDF 3–4, 7–8, 10",
+    "locator": "Figs. 4, 8–11½ (G′, a′, b′) and claim 8 · PDF 4, 7–9",
     "figure": "assets/bonsack-04.webp",
     "pdf_page": 4,
     "bbox": null,
@@ -1199,10 +1198,9 @@
     "figure_width": 1226,
     "figure_height": 1800,
     "also_pdf_pages": [
-      3,
       7,
       8,
-      10
+      9
     ]
   },
   {
@@ -1213,7 +1211,7 @@
     "source_id": "bonsack1881",
     "render": "SCAN",
     "chain": false,
-    "locator": "Figs. 4, 8–11½ (G²). Claim 8 · PDF 3–4, 7–8, 10",
+    "locator": "Figs. 4, 8–11½ (G²) and claim 8 · PDF 4, 7–9",
     "figure": "assets/bonsack-04.webp",
     "pdf_page": 4,
     "bbox": null,
@@ -1221,10 +1219,9 @@
     "figure_width": 1226,
     "figure_height": 1800,
     "also_pdf_pages": [
-      3,
       7,
       8,
-      10
+      9
     ]
   },
   {
@@ -1235,7 +1232,7 @@
     "source_id": "bonsack1881",
     "render": "SCAN",
     "chain": false,
-    "locator": "Figs. 4, 8–11½ (H, H′). Claim 8 · PDF 3–4, 7–8, 10",
+    "locator": "Fig. 4 (H, H′) and specification, 2 · PDF 4, 7",
     "figure": "assets/bonsack-04.webp",
     "pdf_page": 4,
     "bbox": null,
@@ -1243,10 +1240,7 @@
     "figure_width": 1226,
     "figure_height": 1800,
     "also_pdf_pages": [
-      3,
-      7,
-      8,
-      10
+      7
     ]
   },
   {
@@ -1257,7 +1251,7 @@
     "source_id": "bonsack1881",
     "render": "SCAN",
     "chain": false,
-    "locator": "Figs. 4, 8–11½ (H²). Claim 8 · PDF 3–4, 7–8, 10",
+    "locator": "Fig. 4 (H²) and specification, 3 · PDF 4, 8",
     "figure": "assets/bonsack-04.webp",
     "pdf_page": 4,
     "bbox": null,
@@ -1265,10 +1259,7 @@
     "figure_width": 1226,
     "figure_height": 1800,
     "also_pdf_pages": [
-      3,
-      7,
-      8,
-      10
+      8
     ]
   },
   {
@@ -1280,7 +1271,7 @@
     "render": "SCAN",
     "chain": false,
     "assembly_kind": "teaching functional group",
-    "locator": "Fig. 12. Claims 10–12 · PDF 3, 5, 8–10",
+    "locator": "Figs. 3, 12 and specification, 3–4 (claims 10–12 describe the cutter) · PDF 3, 5, 8–10",
     "figure": "assets/bonsack-05.webp",
     "pdf_page": 5,
     "bbox": [
@@ -1307,7 +1298,7 @@
     "source_id": "bonsack1881",
     "render": "SCAN",
     "chain": false,
-    "locator": "Fig. 12 (J). Claims 10–12 · PDF 3, 5, 8–10",
+    "locator": "Fig. 12 (J) and claims 10 and 12 · PDF 5, 8–10",
     "figure": "assets/bonsack-05.webp",
     "pdf_page": 5,
     "bbox": [
@@ -1320,7 +1311,6 @@
     "figure_width": 1226,
     "figure_height": 1800,
     "also_pdf_pages": [
-      3,
       8,
       9,
       10
@@ -1334,7 +1324,7 @@
     "source_id": "bonsack1881",
     "render": "SCAN",
     "chain": false,
-    "locator": "Figs. 12, 17. Claims 10–12 · PDF 3, 5, 8–10",
+    "locator": "Figs. 12, 17 and claims 10–12 · PDF 5, 8–10",
     "figure": "assets/bonsack-05.webp",
     "pdf_page": 5,
     "bbox": [
@@ -1347,7 +1337,6 @@
     "figure_width": 1226,
     "figure_height": 1800,
     "also_pdf_pages": [
-      3,
       8,
       9,
       10
@@ -1361,7 +1350,7 @@
     "source_id": "bonsack1881",
     "render": "SCAN",
     "chain": false,
-    "locator": "Fig. 12 (K, K¹, K²). Claims 10–12 · PDF 3, 5, 8–10",
+    "locator": "Fig. 12 (K, K¹, K²) and claim 11 · PDF 5, 8, 10",
     "figure": "assets/bonsack-05.webp",
     "pdf_page": 5,
     "bbox": [
@@ -1374,9 +1363,7 @@
     "figure_width": 1226,
     "figure_height": 1800,
     "also_pdf_pages": [
-      3,
       8,
-      9,
       10
     ]
   },
@@ -1388,7 +1375,7 @@
     "source_id": "bonsack1881",
     "render": "SCAN",
     "chain": false,
-    "locator": "Fig. 12 (L′, f). Claims 10–12 · PDF 3, 5, 8–10",
+    "locator": "Fig. 12 (L′, f) and specification, 3–4 · PDF 5, 8–9",
     "figure": "assets/bonsack-05.webp",
     "pdf_page": 5,
     "bbox": [
@@ -1401,10 +1388,8 @@
     "figure_width": 1226,
     "figure_height": 1800,
     "also_pdf_pages": [
-      3,
       8,
-      9,
-      10
+      9
     ]
   },
   {
@@ -1415,7 +1400,7 @@
     "source_id": "bonsack1881",
     "render": "SCAN",
     "chain": false,
-    "locator": "Fig. 12 (L², L³, L⁴). Claims 10–12 · PDF 3, 5, 8–10",
+    "locator": "Fig. 12 (L²–L⁴) and specification, 3–4 · PDF 5, 8–9",
     "figure": "assets/bonsack-05.webp",
     "pdf_page": 5,
     "bbox": [
@@ -1428,10 +1413,8 @@
     "figure_width": 1226,
     "figure_height": 1800,
     "also_pdf_pages": [
-      3,
       8,
-      9,
-      10
+      9
     ]
   },
   {
@@ -1782,7 +1765,7 @@
     "render": "SCAN",
     "chain": false,
     "assembly_kind": "teaching functional group",
-    "locator": "Figs. 1, 2. Claims 1–11 · PDF 1–2, 4–5",
+    "locator": "Figs. 1–2 and claims 1–11 · PDF 1–2, 4–7",
     "figure": "assets/delavaud-2.webp",
     "pdf_page": 2,
     "bbox": [
@@ -1797,7 +1780,9 @@
     "also_pdf_pages": [
       1,
       4,
-      5
+      5,
+      6,
+      7
     ]
   },
   {
@@ -2076,7 +2061,7 @@
     "source_id": "delavaud1916",
     "render": "TXT",
     "chain": false,
-    "locator": "Specification, PDF 6. Fig. 2 · PDF 2, 6",
+    "locator": "Fig. 2 and specification, 3 · PDF 2, 6",
     "figure": "assets/delavaud-text6.webp",
     "pdf_page": 6,
     "bbox": null,

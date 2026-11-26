@@ -41,7 +41,7 @@
       },
       {
         "city": "Lindale",
-        "role": "Massachusetts Cotton Mills.",
+        "role": "Massachusetts Mills in Georgia.",
         "coordinates": [
           -85.174,
           34.186
@@ -161,7 +161,7 @@
         "default_visible": false,
         "basemap_style": "neutral",
         "source_id": "mitchell1918",
-        "source": "Mitchell 1918, 149 n. 199, 152 n. 206, 214–15 nn. 320–321.",
+        "source": "Mitchell 1918, 149n16, 152n23, 214n74, 214–15 (215n75).",
         "nodes": [
           {
             "city": "Rock Hill",
@@ -172,7 +172,7 @@
             ],
             "coordinate_precision": "approximate city centre",
             "source_id": "mitchell1918",
-            "locator": "Mitchell 1918, 149 n. 199",
+            "locator": "Mitchell 1918, 149n16",
             "documentation_year": 1882,
             "total_stock_usd": 100000,
             "outside_local_stock_usd": 15000,
@@ -189,7 +189,7 @@
             ],
             "coordinate_precision": "approximate city centre",
             "source_id": "mitchell1918",
-            "locator": "Mitchell 1918, 149 n. 199, 152 n. 206",
+            "locator": "Mitchell 1918, 149n16, 152n23",
             "render_role": "investor"
           },
           {
@@ -201,7 +201,7 @@
             ],
             "coordinate_precision": "approximate city centre",
             "source_id": "mitchell1918",
-            "locator": "Mitchell 1918, 152 n. 206",
+            "locator": "Mitchell 1918, 152n23",
             "documentation_year": 1881,
             "local_stock_usd": 200000,
             "capital_stock_usd": 500000,
@@ -219,7 +219,7 @@
             ],
             "coordinate_precision": "approximate city centre",
             "source_id": "mitchell1918",
-            "locator": "Mitchell 1918, 152 n. 206",
+            "locator": "Mitchell 1918, 152n23",
             "documentation_year": 1881,
             "render_role": "investor"
           },
@@ -232,7 +232,7 @@
             ],
             "coordinate_precision": "approximate city centre",
             "source_id": "mitchell1918",
-            "locator": "Mitchell 1918, 152 n. 206",
+            "locator": "Mitchell 1918, 152n23",
             "documentation_year": 1881,
             "render_role": "investor"
           },
@@ -245,7 +245,7 @@
             ],
             "coordinate_precision": "approximate city centre",
             "source_id": "mitchell1918",
-            "locator": "Mitchell 1918, 214 n. 320",
+            "locator": "Mitchell 1918, 214n74",
             "documentation_year": 1916,
             "relationship_year": null,
             "render_role": "intermediary",
@@ -261,7 +261,7 @@
             ],
             "coordinate_precision": "approximate city centre",
             "source_id": "mitchell1918",
-            "locator": "Mitchell 1918, 214–15 n. 321",
+            "locator": "Mitchell 1918, 214–15 (215n75)",
             "documentation_year": 1916,
             "relationship_year": null,
             "render_role": "mill",
@@ -275,7 +275,7 @@
             "to": "Rock Hill",
             "type": "stock ownership",
             "source_id": "mitchell1918",
-            "source": "Mitchell 1918, p149, note199",
+            "source": "Mitchell 1918, 149n16",
             "not_route": true,
             "amount_usd": 15000,
             "documentation_year": 1882
@@ -285,7 +285,7 @@
             "to": "Spartanburg",
             "type": "Clifton stock ownership",
             "source_id": "mitchell1918",
-            "source": "Mitchell 1918, p152, note206",
+            "source": "Mitchell 1918, 152n23",
             "not_route": true,
             "amount_usd": 150000,
             "documentation_year": 1881
@@ -295,7 +295,7 @@
             "to": "Spartanburg",
             "type": "Clifton stock ownership",
             "source_id": "mitchell1918",
-            "source": "Mitchell 1918, p152, note206",
+            "source": "Mitchell 1918, 152n23",
             "not_route": true,
             "amount_usd": 50000,
             "documentation_year": 1881
@@ -305,7 +305,7 @@
             "to": "Spartanburg",
             "type": "Clifton stock ownership; amount unspecified",
             "source_id": "mitchell1918",
-            "source": "Mitchell 1918, p152, note206",
+            "source": "Mitchell 1918, 152n23",
             "not_route": true,
             "amount_usd": null,
             "documentation_year": 1881
@@ -323,7 +323,7 @@
     "year": 1906,
     "industry": "pipe",
     "title": "ACIPCO at the Atlanta convention",
-    "source": "American Public Works Association (1907), membership p. 7 and convention attendance p. 23.",
+    "source": "American Public Works Association 1907, 7 (membership), 23 (attendance).",
     "nodes": [
       {
         "city": "Birmingham",
@@ -334,7 +334,7 @@
         ],
         "coordinate_precision": "approximate city centre",
         "source_id": "apwa1907",
-        "locator": "American Public Works Association 1907, pp. 7, 23 (PDF 13, 29)"
+        "locator": "American Public Works Association 1907, 7, 23 (PDF 13, 29)"
       },
       {
         "city": "Atlanta",
@@ -353,7 +353,7 @@
         "from": "Birmingham",
         "to": "Atlanta",
         "type": "member represented at the convention",
-        "source": "American Public Works Association 1907, pp. 7, 23",
+        "source": "American Public Works Association 1907, 7, 23",
         "not_route": true,
         "source_id": "apwa1907"
       }
@@ -483,7 +483,7 @@
         "from": "Burlington",
         "to": "Birmingham",
         "type": "corporate coordination / centralized research",
-        "source": "HAER AL-32, printed pp19,21",
+        "source": "O’Connor 1996, 19, 21 (PDF 21, 23)",
         "not_route": true,
         "source_id": "us-pipe-haer"
       },
@@ -491,7 +491,7 @@
         "from": "Burlington",
         "to": "Bessemer",
         "type": "corporate coordination / centralized research",
-        "source": "HAER AL-32, printed pp19,21",
+        "source": "O’Connor 1996, 19, 21 (PDF 21, 23)",
         "not_route": true,
         "source_id": "us-pipe-haer"
       },
@@ -499,7 +499,7 @@
         "from": "Burlington",
         "to": "Anniston",
         "type": "corporate coordination / centralized research",
-        "source": "HAER AL-32, printed pp19,21",
+        "source": "O’Connor 1996, 19, 21 (PDF 21, 23)",
         "not_route": true,
         "source_id": "us-pipe-haer"
       },
@@ -507,7 +507,7 @@
         "from": "Burlington",
         "to": "Chattanooga",
         "type": "corporate coordination / centralized research",
-        "source": "HAER AL-32, printed pp19,21",
+        "source": "O’Connor 1996, 19, 21 (PDF 21, 23)",
         "not_route": true,
         "source_id": "us-pipe-haer"
       },
@@ -516,7 +516,7 @@
         "to": "Louisville",
         "type": "offices within the same reorganized company",
         "source_id": "us-pipe-haer",
-        "source": "O'Connor, HAER AL-32, printed p19 / PDF p21",
+        "source": "O’Connor 1996, 19 (PDF 21)",
         "not_route": true
       }
     ],
@@ -582,7 +582,7 @@
         "from": "New York",
         "to": "Durham",
         "type": "125 immigrant cigarette workers recruited; no shipment route",
-        "source": "Porter 1969, printed p62",
+        "source": "Porter 1969, 62",
         "not_route": true,
         "source_id": "porter1969"
       }
@@ -676,7 +676,7 @@
         "to": "Durham",
         "type": "constituent company / central offices; not a shipment route",
         "source_id": "porter1969",
-        "source": "Porter 1969, printed pp65,73–74 / PDF pp8,16–17",
+        "source": "Porter 1969, 65, 73–74 (PDF 8, 16–17)",
         "not_route": true
       },
       {
@@ -684,7 +684,7 @@
         "to": "Richmond",
         "type": "constituent company / central offices; not a shipment route",
         "source_id": "porter1969",
-        "source": "Porter 1969, printed pp65,73–74 / PDF pp8,16–17",
+        "source": "Porter 1969, 65, 73–74 (PDF 8, 16–17)",
         "not_route": true
       },
       {
@@ -692,7 +692,7 @@
         "to": "Rochester",
         "type": "constituent company / central offices; not a shipment route",
         "source_id": "porter1969",
-        "source": "Porter 1969, printed pp65,73–74 / PDF pp8,16–17",
+        "source": "Porter 1969, 65, 73–74 (PDF 8, 16–17)",
         "not_route": true
       }
     ],
@@ -713,7 +713,7 @@
       "year": 1890,
       "city": null,
       "source_id": "porter1969",
-      "locator": "Porter 1969, printed p73 / PDF p16"
+      "locator": "Porter 1969, 73 (PDF 16)"
     }
   }
 ]
