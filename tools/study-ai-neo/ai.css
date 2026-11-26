@@ -41,3 +41,21 @@ tr:last-child td {border-bottom:0}
   .trace,.plot-panel,.trial,.equation {break-inside:avoid}
   .equation {overflow:visible}
 }
+
+
+/* Diagrams have a second layout for narrow screens. Wide matrices keep their labels at reading size. */
+.diagram-frame,.zoom-body .zoom-canvas {overflow-x:auto;max-width:100%;overscroll-behavior-inline:contain}
+.plot-panel svg.lesson-graphic {max-height:none;width:min(100%,540px);margin:12px auto}
+.plot-panel svg.compact-graphic {display:none}
+.lesson-graphic text {font-family:var(--sans);font-variant-numeric:tabular-nums}
+.plot-panel .plot-top h4 {font-size:1rem}
+.zoom-canvas svg.lesson-graphic {width:max(100%,var(--diagram-width));max-height:none;margin:0 auto}
+@media(max-width:600px) {
+  .plot-panel svg.wide-graphic {display:none}
+  .plot-panel svg.compact-graphic {display:block;width:max(100%,calc(var(--diagram-width) * .9));max-width:none}
+  .diagram-frame:focus-visible {outline-offset:-2px}
+}
+@media(max-width:760px) {
+  .trace li {display:block;position:relative;padding-inline-start:1.75em}
+  .trace li::before {position:absolute;inset-inline-start:0}
+}

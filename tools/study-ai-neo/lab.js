@@ -21,7 +21,13 @@ if(zoom && typeof zoom.showModal==='function') {
     button.addEventListener('click',()=>{
       const panel=button.closest('figure');
       zoom.querySelector('form strong').textContent=panel.querySelector('h4').textContent;
-      zoom.querySelector('.zoom-body').replaceChildren(panel.querySelector('svg').cloneNode(true),panel.querySelector('figcaption').cloneNode(true));
+      const canvas=document.createElement('div');
+      canvas.className='zoom-canvas';
+      canvas.tabIndex=0;
+      canvas.setAttribute('role','region');
+      canvas.setAttribute('aria-label',button.getAttribute('aria-label'));
+      canvas.append(panel.querySelector('svg').cloneNode(true));
+      zoom.querySelector('.zoom-body').replaceChildren(canvas,panel.querySelector('figcaption').cloneNode(true));
       zoom.showModal();
     });
   }
