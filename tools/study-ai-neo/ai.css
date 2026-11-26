@@ -49,10 +49,12 @@ tr:last-child td {border-bottom:0}
 .plot-panel svg.compact-graphic {display:none}
 .lesson-graphic text {font-family:var(--sans);font-variant-numeric:tabular-nums}
 .plot-panel .plot-top h4 {font-size:1rem}
+.plot-top .expand {flex:none;white-space:nowrap}
 .zoom-canvas svg.lesson-graphic {width:max(100%,var(--diagram-width));max-height:none;margin:0 auto}
 @media(max-width:600px) {
   .plot-panel svg.wide-graphic {display:none}
-  .plot-panel svg.compact-graphic {display:block;width:max(100%,calc(var(--diagram-width) * .9));max-width:none}
+  .plot-panel svg.compact-graphic {display:block;width:100%;max-width:none}
+  .wide-data svg.compact-graphic {min-width:calc(var(--diagram-width) * .9)}
   .diagram-frame:focus-visible {outline-offset:-2px}
 }
 @media(max-width:760px) {
