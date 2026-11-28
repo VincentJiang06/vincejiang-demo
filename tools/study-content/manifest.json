@@ -655,8 +655,8 @@
   },
   {
     "key": "CSCI3160/课程全览.md",
-    "sourceSha256": "e29d22662d5f661e980bb775906af1eee88b45b28a667cba5339f3ca111d5acc",
-    "publishedSha256": "cac100bc9d0909f7831f4cbef6451da3bd5b6c614f0b5bb0f705c969514da6b1",
+    "sourceSha256": "5d851c48a5915d748c4adcb9d9423812582bbe603a22198bbf585189df96e36e",
+    "publishedSha256": "e812bfe63cd3c9e748a9e38865e33e51eeca5ebd94031b1a4e465b2c160652b1",
     "projection": true
   },
   {
@@ -673,8 +673,8 @@
   },
   {
     "key": "CSCI3160/阅读导航.md",
-    "sourceSha256": "0a20f0df6df02a5d97cca97014bb6219a0c3b3ddd439fc9a0392f0f9e47c93d4",
-    "publishedSha256": "ae8e3f9a6d0189fe6ae7c3980db6fc2f32aa226d89d5529f754b83b36f08b371",
+    "sourceSha256": "2f9215e619b50f2d4d080de84741ff422359a525beb416d205f9c9fda0b1b867",
+    "publishedSha256": "a1310cd22da43c0ce44114b8068bb952a9111c5895aee08c7f2f9e76fac2aaff",
     "projection": true
   },
   {
@@ -841,8 +841,8 @@
   },
   {
     "key": "CSCI3160/L17-顶点覆盖与随机MAX-3SAT近似.md",
-    "sourceSha256": "ada75c37b879096afcbea31435a377f8a93f04ea6b40c835f8b7d475d6186d1f",
-    "publishedSha256": "6c469d078c1f27c98bea67c86b33291d37eaeebd23ac48062433a2b84490a25f",
+    "sourceSha256": "6b2c9519b958e939f8538c7e8b68f52c38c1cf4c1b2463e2bdbb6c4ecd175000",
+    "publishedSha256": "76c031f62a20841ad841d835fbc578e6b4ee626d8fb95e3a29a3412c61b243a2",
     "projection": true
   },
   {
@@ -973,8 +973,8 @@
   },
   {
     "key": "CSCI3160/T12-集合覆盖与击中集应用.md",
-    "sourceSha256": "9799a4063952a72a17fee91e00b5971f6afa4839775f5afdc9aa0f24c6ff80f3",
-    "publishedSha256": "9799a4063952a72a17fee91e00b5971f6afa4839775f5afdc9aa0f24c6ff80f3",
+    "sourceSha256": "68f0d092efda81da65745f07cc767c6011096bc356a17aae5299e9e971323568",
+    "publishedSha256": "68f0d092efda81da65745f07cc767c6011096bc356a17aae5299e9e971323568",
     "projection": false
   },
   {
@@ -1420,5 +1420,23 @@
     "sourceSha256": "3ddd68f91bb04715c5911c2db808c3e83922b541a25c61482e772bfe9551d5ec",
     "publishedSha256": "7f2cbe790c3632f25481299eae91103a86236585c8008dd10b0697ba42344cea",
     "projection": true
+  },
+  {
+    "key": "CSCI3160/L17-顶点覆盖与MAX3SAT-20261128.md",
+    "sourceSha256": "23eb1b3252a42e4033f7160f73ac9dc572554aeaba976c0ba7fd4912f11fc683",
+    "publishedSha256": "23eb1b3252a42e4033f7160f73ac9dc572554aeaba976c0ba7fd4912f11fc683",
+    "projection": false
+  },
+  {
+    "key": "CSCI3160/T10B-最大流的增广与证明.md",
+    "sourceSha256": "bd17436611e0f80a90e4a646ac6b1a95a82538955a68e117c1d49e16f16cb395",
+    "publishedSha256": "bd17436611e0f80a90e4a646ac6b1a95a82538955a68e117c1d49e16f16cb395",
+    "projection": false
+  },
+  {
+    "key": "CSCI3160/T12-覆盖与击中建模-20261128.md",
+    "sourceSha256": "56cde31277cc89ab0dc08cf1f48868c95f4ae68c627e87edf2c68ea206fa93fd",
+    "publishedSha256": "56cde31277cc89ab0dc08cf1f48868c95f4ae68c627e87edf2c68ea206fa93fd",
+    "projection": false
   }
 ]
