@@ -1,7 +1,7 @@
 # CSCI3160 L04 最小生成树与Prim算法
 
 > 课程：CSCI3160 Design and Analysis of Algorithms
-> 本讲：L04 最小生成树与Prim算法 · 原件 [L04-Greedy-02-Minimum-Spanning-Trees-未核-隐藏.pdf](../课件/L04-Greedy-02-Minimum-Spanning-Trees-未核-隐藏.pdf) p.1–22
+> 本讲：L04 最小生成树与Prim算法 · 原件 [Greedy 2: Minimum Spanning Trees](../课件/L04-Greedy-02-Minimum-Spanning-Trees-未核-隐藏.pdf) p.1–22
 > 定位：从带权图与生成树开始，逐轮执行 Prim，再证明为什么最轻跨割边可以安全加入。
 
 p.1 标题页。
@@ -112,7 +112,7 @@ S = {a,b}；F = {{a,b}}
 返回 F
 ```
 
-输入连通保证每次存在有限 key 的外部顶点。取最小 key 等于在所有跨边中取最轻边，因为每个外部顶点已保存它自己的最轻跨边，再在这些最小值中取全局最小即可。堆中每个外部顶点只占一个位置；必须能由顶点定位其堆位置，才能在 $O(\log\lvert V\rvert)$ 内更新。更细的堆操作可继续读 [T04](T04-Prim实现.md)，但本段已经给出所需状态与运行逻辑。
+输入连通保证每次存在有限 key 的外部顶点。取最小 key 等于在所有跨边中取最轻边，因为每个外部顶点已保存它自己的最轻跨边，再在这些最小值中取全局最小即可。堆中每个外部顶点只占一个位置；必须能由顶点定位其堆位置，才能在 $O(\log\lvert V\rvert)$ 内更新。堆中的顶点位置可用一个按顶点索引的数组维护。
 
 **考试角度**：（A 级（扫描件，视觉读取）：Final-2025T1-题目.pdf Q8，考另一种加删边交换证明及树的连通性；演练<a name="r-a1"></a>[见附录 A1](#a1)）。
 
@@ -161,8 +161,6 @@ S = {a,b}；F = {{a,b}}
 
 - 本次逐页复核：2026-10-13，依据上述本地课件；保留已发布深化内容，页码指 PDF 物理页。历史考试演练保留其原有出处，本次不将旧记录冒充重新阅卷。
 
-- 原件：[L04-Greedy-02-Minimum-Spanning-Trees-未核-隐藏.pdf](../课件/L04-Greedy-02-Minimum-Spanning-Trees-未核-隐藏.pdf)；页码均为 PDF 页号。
-- 版本记录（2026-09-17）：当时从教师官网下载并逐字节核对，与本地原件一致；此日期不是本次重新联网核验。原始学期未核，不据网页学期补猜。
-- 发布状态（2026-09-17 核验时）：官网链接所在行隐藏，当时按预习参考处理；不据此推断后续发布或考试范围。
+- 原件：[Greedy 2: Minimum Spanning Trees](../课件/L04-Greedy-02-Minimum-Spanning-Trees-未核-隐藏.pdf)；页码均为 PDF 页号。
 - 既有考试证据记录（2026-09-17）：当时读取了教师官网、Midterm-2021T1-题目.pdf、Midterm-2021T1-题解.pdf、Review-Quiz-2020T2-题目.pdf、Review-Quiz-2020T2-题解.pdf、Quiz-01-2025T1-题解.pdf、Midterm-A-2025T1-缺题干-解答.pdf、Quiz-02-2025T1-缺题干-解答.pdf、Quiz-03-2025T1-缺题干-解答.pdf、Final-2021T1-题解.pdf、Final-2024T1-缺判断-题目.pdf、Final-2025T1-题目.pdf、Final-2025T1-缺题干-解答.pdf；未识别用途的 PDF：无
 - 缺题干解答卷仅用于核对已取得的题面，不由答案反推题目。

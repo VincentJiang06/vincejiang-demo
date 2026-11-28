@@ -1,7 +1,7 @@
-# CSCI3160 T11 NP难归约与团问题
+# CSCI3160 T12 NP难归约与团问题
 
 > 课程：CSCI3160 Design and Analysis of Algorithms
-> 本讲：T11 NP难归约与团问题 · 原件 [T11-NP难归约-未核-隐藏.pdf](../辅导/T11-NP难归约-未核-隐藏.pdf) p.1–16
+> 本讲：Week 12 · Reductions for Proving NP-Hardness · 原件 [Reductions for Proving NP-Hardness](../辅导/T11-NP难归约-未核-隐藏.pdf) p.1–16
 > 定位：辅导；用 3-SAT 到 Clique 的完整构造理解归约方向和双向证明。
 
 ### p.1–3 先分清“难”在什么地方【新】
@@ -32,7 +32,7 @@ p.6 的问题是固定 k 是否容易。若 k=3，枚举所有三点组，每组
 
 p.7 的 variable 是真假未知量，literal 是变量或其否定，clause 是至多三个 literal 的 OR，formula 是这些 clause 的 AND。满足公式要求每个子句至少一个 literal 为真，并不要求每个 literal 都为真。
 
-**题面**（T11-NP难归约-未核-隐藏.pdf · 两个 Example · p.7；公式按讲义重排）
+**题面**（Week 12 · Reductions for Proving NP-Hardness · 两个 Example · p.7；公式按讲义重排）
 
 > **p.7** “The 3-SAT problem: Is there a truth assignment for the variables under which the formula evaluates to 1? Such an assignment is called a certificate.”
 
@@ -145,8 +145,6 @@ p.15 的 Maximum Clique 要输出最大团大小或一个最大团；例图最�
 
 - 本次逐页复核：2026-10-13，依据上述本地课件；保留已发布深化内容，页码指 PDF 物理页。历史考试演练保留其原有出处，本次不将旧记录冒充重新阅卷。
 
-- 原件：[T11-NP难归约-未核-隐藏.pdf](../辅导/T11-NP难归约-未核-隐藏.pdf)；页码均为 PDF 页号。
-- 版本记录（2026-09-17）：当时从教师官网下载并逐字节核对，与本地原件一致；此日期不是本次重新联网核验。原始学期未核，不据网页学期补猜。
-- 发布状态（2026-09-17 核验时）：官网链接所在行隐藏，当时按预习参考处理；不据此推断后续发布或考试范围。
+- 原件：[Reductions for Proving NP-Hardness](../辅导/T11-NP难归约-未核-隐藏.pdf)；页码均为 PDF 页号。
 - 既有考试证据记录（2026-09-17）：当时读取了教师官网、Midterm-2021T1-题目.pdf、Midterm-2021T1-题解.pdf、Review-Quiz-2020T2-题目.pdf、Review-Quiz-2020T2-题解.pdf、Quiz-01-2025T1-题解.pdf、Midterm-A-2025T1-缺题干-解答.pdf、Quiz-02-2025T1-缺题干-解答.pdf、Quiz-03-2025T1-缺题干-解答.pdf、Final-2021T1-题解.pdf、Final-2024T1-缺判断-题目.pdf、Final-2025T1-题目.pdf、Final-2025T1-缺题干-解答.pdf；未识别用途的 PDF：无
 - 缺题干解答卷仅用于核对已取得的题面，不由答案反推题目。

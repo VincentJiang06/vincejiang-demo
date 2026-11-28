@@ -1,7 +1,7 @@
 # CSCI3160 T06 DP方案恢复与空间
 
 > 课程：CSCI3160 Design and Analysis of Algorithms
-> 本讲：T06 DP方案恢复与空间 · 原件 [T06-动态规划技巧-未核-隐藏.pdf](../辅导/T06-动态规划技巧-未核-隐藏.pdf) p.1–18
+> 本讲：Week 6 · Dynamic Programming: Piggyback, Dependency, and Space · 原件 [Dynamic Programming: Piggyback, Dependency, and Space](../辅导/T06-动态规划技巧-未核-隐藏.pdf) p.1–18
 > 定位：不仅求最优值，还记录决策，并根据依赖关系判断能否压缩。
 > 承接：[L07 钢条切割](L07-钢条切割与最优方案恢复.md)、[L09 LCS](L09-最长公共子序列与回溯.md)
 
@@ -89,8 +89,6 @@ p.10 目标 f(4,10) 具体枚举 c=5,6,7,8,9，分别读取 (f(4,5),f(5,10))、(
 
 - 本次逐页复核：2026-10-13，依据上述本地课件；保留已发布深化内容，页码指 PDF 物理页。历史考试演练保留其原有出处，本次不将旧记录冒充重新阅卷。
 
-- 原件：[T06-动态规划技巧-未核-隐藏.pdf](../辅导/T06-动态规划技巧-未核-隐藏.pdf)；页码均为 PDF 页号。
-- 版本记录（2026-09-17）：当时从教师官网下载并逐字节核对，与本地原件一致；此日期不是本次重新联网核验。原始学期未核，不据网页学期补猜。
-- 发布状态（2026-09-17 核验时）：官网链接所在行隐藏，当时按预习参考处理；不据此推断后续发布或考试范围。
+- 原件：[Dynamic Programming: Piggyback, Dependency, and Space](../辅导/T06-动态规划技巧-未核-隐藏.pdf)；页码均为 PDF 页号。
 - 既有考试证据记录（2026-09-17）：当时读取了教师官网、Midterm-2021T1-题目.pdf、Midterm-2021T1-题解.pdf、Review-Quiz-2020T2-题目.pdf、Review-Quiz-2020T2-题解.pdf、Quiz-01-2025T1-题解.pdf、Midterm-A-2025T1-缺题干-解答.pdf、Quiz-02-2025T1-缺题干-解答.pdf、Quiz-03-2025T1-缺题干-解答.pdf、Final-2021T1-题解.pdf、Final-2024T1-缺判断-题目.pdf、Final-2025T1-题目.pdf、Final-2025T1-缺题干-解答.pdf；未识别用途的 PDF：无
 - 缺题干解答卷仅用于核对已取得的题面，不由答案反推题目。

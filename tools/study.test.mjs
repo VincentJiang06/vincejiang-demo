@@ -73,8 +73,14 @@ test('generated study pages version their UI assets so updated styles reach retu
   for(const entry of ['study/index.html','study/2026T1/index.html'])assert.match(readFileSync(join(out,entry),'utf8'),/href="\/study\/2026T1\/midterm\/"/);
   const redirects=JSON.parse(readFileSync(new URL('./study-redirects.json',import.meta.url),'utf8'));
   const nginx=readFileSync(new URL('../docker/site.conf',import.meta.url),'utf8');
-  const catalog=readFileSync(join(out,'study/2026T1/CSCI3150/index.html'),'utf8');
+  const course3160=decodeURI(readFileSync(join(out,'study/2026T1/CSCI3160/index.html'),'utf8'));
+  assert.match(course3160,/Quiz 3 · L15–L18/);
+  for(const ordered of [['L01-P1','L01-P2','L01-P3'],['L15-最大流','L16-顶点覆盖','L17-旅行商','L18-集合覆盖','L19-k-center'],['T08-白路径','T09-SCC','T10-负环检测','T10-补充','T11-最大流','T12-NP','T13-覆盖']]){
+   const offsets=ordered.map(k=>course3160.indexOf('/CSCI3160/'+k));
+   assert.ok(offsets.every((v,i)=>v>=0&&(!i||v>offsets[i-1])),ordered.join(' → '));
+  }
   for(const [old,destination] of Object.entries(redirects)){
+   const catalog=readFileSync(join(out,'study/2026T1',old.split('/')[0],'index.html'),'utf8');
    const [key,fragment]=destination.split('#');
    const oldUrl='/study/2026T1/'+old.replace(/\.md$/,'.html');
    const target='/study/2026T1/'+key.replace(/\.md$/,'.html');

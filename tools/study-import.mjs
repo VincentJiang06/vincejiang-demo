@@ -34,12 +34,28 @@ export function importNotes(desktop,dest,{courses=COURSES}={}){
   throw new Error('courses must be a non-empty list of distinct supported course codes: '+COURSES.join(', '));
  const manifest=path.join(dest,'manifest.json');
  // A scoped sync replaces only its own catalog entries; other course sources stay unread.
- const report=courses.length<COURSES.length&&existsSync(manifest)
-  ?JSON.parse(readFileSync(manifest,'utf8')).filter(d=>!courses.includes(d.key.split('/')[0])):[];
+ const existing=existsSync(manifest)?JSON.parse(readFileSync(manifest,'utf8')):[];
+ const report=existing.filter(d=>!courses.includes(d.key.split('/')[0]));
+ const curated=existing.filter(d=>d.key.startsWith('CSCI3160/'));
  for(const course of courses){
   const root=path.join(desktop,course,'study');
   if(lstatSync(path.dirname(root)).isSymbolicLink()||lstatSync(root).isSymbolicLink())throw new Error('study must be a real directory');
   const files=walk(root).sort((a,b)=>a.localeCompare(b,'zh-CN',{numeric:true}));
+  // Numbered archive files include retired editions. Preserve the reviewed public numbering.
+  if(course==='CSCI3160'&&curated.some(d=>d.sourceKey)){
+   const available=new Set(files.map(f=>course+'/'+f));
+   const retired=JSON.parse(readFileSync(new URL('./study-redirects.json',import.meta.url),'utf8'));
+   for(const d of curated){
+    const key=d.sourceKey||d.key;
+    if(!available.delete(key))throw new Error('Missing reviewed source: '+key);
+    const sha=createHash('sha256').update(readFileSync(path.join(root,key.slice(course.length+1)))).digest('hex');
+    if(sha!==d.sourceSha256)throw new Error('Update the official CSCI3160 edition for changed source: '+key);
+   }
+   const newLessons=[...available].filter(k=>/^CSCI3160\/[LT]\d/.test(k)&&!Object.hasOwn(retired,k)&&!curated.some(d=>d.key===k));
+   if(newLessons.length)throw new Error('Map new CSCI3160 lessons to the official syllabus: '+newLessons.join(', '));
+   report.push(...curated);
+   continue;
+  }
   for(const rel of files){
    const source=readFileSync(path.join(root,rel),'utf8');let text=publicText(source.replaceAll(path.join(root)+'/','').replaceAll(path.dirname(root)+'/','../'));
    if(course==='CSCI3160'&&rel==='exercise/Ex02-分治与线性合并.md')text=text.replaceAll('${a,b\\}$','$\\{a,b\\}$').replaceAll('${c,d\\}$','$\\{c,d\\}$');

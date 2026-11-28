@@ -1,7 +1,7 @@
 # CSCI3160 L02 · Part 4/4 Strassen矩阵乘法
 
 > 课程：CSCI3160 Design and Analysis of Algorithms
-> 本讲：L02，第 4 部分 / 共 4 部分 · 原件 [L02-Divide-and-Conquer-未核.pdf](../课件/L02-Divide-and-Conquer-未核.pdf) p.23–28
+> 本讲：L02，第 4 部分 / 共 4 部分 · 原件 [Basic 2: Divide and Conquer](../课件/L02-Divide-and-Conquer-未核.pdf) p.23–28
 > 定位：逐个验证七个乘积如何恢复四个输出块，并推导矩阵乘法复杂度。
 > 前后：上一份 [Part 3](L02-P3-二维支配.md)
 
@@ -139,7 +139,6 @@ $$
 
 - 本次逐页复核：2026-10-13，依据上述本地课件；保留已发布深化内容，页码指 PDF 物理页。历史考试演练保留其原有出处，本次不将旧记录冒充重新阅卷。
 
-- 原件：[L02-Divide-and-Conquer-未核.pdf](../课件/L02-Divide-and-Conquer-未核.pdf)，本部分 p.23–28；页码均为 PDF 页号。
-- 版本记录（2026-09-17）：当时从教师官网下载并逐字节核对，与本地原件一致；此日期不是本次重新联网核验。原始学期未核，不据网页学期补猜。
+- 原件：[Basic 2: Divide and Conquer](../课件/L02-Divide-and-Conquer-未核.pdf)，本部分 p.23–28；页码均为 PDF 页号。
 - 既有考试证据记录（2026-09-17）：当时读取了教师官网、Midterm-2021T1-题目.pdf、Midterm-2021T1-题解.pdf、Review-Quiz-2020T2-题目.pdf、Review-Quiz-2020T2-题解.pdf、Quiz-01-2025T1-题解.pdf、Midterm-A-2025T1-缺题干-解答.pdf、Quiz-02-2025T1-缺题干-解答.pdf、Quiz-03-2025T1-缺题干-解答.pdf、Final-2021T1-题解.pdf、Final-2024T1-缺判断-题目.pdf、Final-2025T1-题目.pdf、Final-2025T1-缺题干-解答.pdf；未识别用途的 PDF：无
 - 缺题干解答卷仅用于核对已取得的题面，不由答案反推题目。

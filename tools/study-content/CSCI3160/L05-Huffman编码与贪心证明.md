@@ -1,7 +1,7 @@
 # CSCI3160 L05 Huffman编码与贪心证明
 
 > 课程：CSCI3160 Design and Analysis of Algorithms
-> 本讲：L05 Huffman编码与贪心证明 · 原件 [L05-Greedy-03-Huffman-Codes-未核-隐藏.pdf](../课件/L05-Greedy-03-Huffman-Codes-未核-隐藏.pdf) p.1–23
+> 本讲：L05 Huffman编码与贪心证明 · 原件 [Greedy 3: Huffman Codes](../课件/L05-Greedy-03-Huffman-Codes-未核-隐藏.pdf) p.1–23
 > 定位：先理解前缀码为何可即时解码，再逐轮合并最小权节点，并用交换与收缩证明最优性。
 
 p.1 标题页。
@@ -18,7 +18,7 @@ p.3 利用频率缩短常见字母：a、b、c、d、e、f 的频率依次为 10
 
 ### 不歧义的前缀条件（p.4–5）【新】
 
-**题面**（L05-Greedy-03-Huffman-Codes-未核-隐藏.pdf · 解码例题 · p.4）
+**题面**（Greedy 3: Huffman Codes · 解码例题 · p.4）
 
 > **p.4** What is wrong with the encoding e = 0, b = 1, c = 00, a = 01, d = 10, f = 11? Ambiguity in decoding! For example, does the string 10 mean “be” or “d”?
 
@@ -182,8 +182,6 @@ $$
 
 - 本次逐页复核：2026-10-13，依据上述本地课件；保留已发布深化内容，页码指 PDF 物理页。历史考试演练保留其原有出处，本次不将旧记录冒充重新阅卷。
 
-- 原件：[L05-Greedy-03-Huffman-Codes-未核-隐藏.pdf](../课件/L05-Greedy-03-Huffman-Codes-未核-隐藏.pdf)；页码均为 PDF 页号。
-- 版本记录（2026-09-17）：当时从教师官网下载并逐字节核对，与本地原件一致；此日期不是本次重新联网核验。原始学期未核，不据网页学期补猜。
-- 发布状态（2026-09-17 核验时）：官网链接所在行隐藏，当时按预习参考处理；不据此推断后续发布或考试范围。
+- 原件：[Greedy 3: Huffman Codes](../课件/L05-Greedy-03-Huffman-Codes-未核-隐藏.pdf)；页码均为 PDF 页号。
 - 既有考试证据记录（2026-09-17）：当时读取了教师官网、Midterm-2021T1-题目.pdf、Midterm-2021T1-题解.pdf、Review-Quiz-2020T2-题目.pdf、Review-Quiz-2020T2-题解.pdf、Quiz-01-2025T1-题解.pdf、Midterm-A-2025T1-缺题干-解答.pdf、Quiz-02-2025T1-缺题干-解答.pdf、Quiz-03-2025T1-缺题干-解答.pdf、Final-2021T1-题解.pdf、Final-2024T1-缺判断-题目.pdf、Final-2025T1-题目.pdf、Final-2025T1-缺题干-解答.pdf；未识别用途的 PDF：无
 - 缺题干解答卷仅用于核对已取得的题面，不由答案反推题目。

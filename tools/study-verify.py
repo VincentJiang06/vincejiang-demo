@@ -41,7 +41,7 @@ def verify(root, desktop=None):
     if desktop:
         manifest=json.loads((Path(__file__).parent/'study-content/manifest.json').read_text())
         for d in manifest:
-            course,rel=d['key'].split('/',1)
+            course,rel=d.get('sourceKey',d['key']).split('/',1)
             f=Path(desktop)/course/'study'/rel
             if hashlib.sha256(f.read_bytes()).hexdigest()!=d['sourceSha256']:errors.append(f'source changed: {d["key"]}')
         print(f'Source hashes unchanged: {len(manifest)}')
